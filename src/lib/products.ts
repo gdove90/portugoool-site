@@ -13,9 +13,9 @@ import { Product, SHIRT_SIZES, ONE_SIZE, ProductCategory } from "./types";
 const JERSEY_FABRIC =
   "Lightweight performance knit. 100% recycled polyester. Moisture-wicking and breathable with a silky smooth finish, printed edge to edge.";
 const CASUAL_FABRIC =
-  "180 GSM soft-touch cotton-poly blend. Holds color, holds shape, feels broken-in from day one. DTG/DTF print compatible.";
+  "Soft 100% ring-spun cotton staple tee. Lightweight and breathable — holds color, holds shape, feels broken-in from day one.";
 const HEAVY_FABRIC =
-  "220 GSM heavyweight polyester blend. Soft-touch finish with real weight and structure. DTG/DTF print compatible.";
+  "Heavyweight garment-dyed 100% cotton. Oversized cut with real weight and structure.";
 
 const JERSEY_CARE =
   "Machine wash cold, inside out. No bleach. Hang dry. Do not iron the print.";
@@ -44,7 +44,7 @@ export const products: Product[] = [
     slug: "home-red-jersey",
     description:
       "The one you wear when it matters. Silky, breathable performance knit made for the moment it goes in.",
-    priceCents: 9500,
+    priceCents: 6100,
     compareAtPriceCents: null,
     color: "Deep Red",
     colorHex: "#C1121F",
@@ -53,12 +53,11 @@ export const products: Product[] = [
     careInstructions: JERSEY_CARE,
     images: [
       { src: "/products/home-red-jersey.webp", alt: "Home Red Jersey — front, on model" },
-      { src: "/products/home-red-jersey-alt.webp", alt: "Home Red Jersey — front detail" },
       { src: "/products/home-red-jersey-back.webp", alt: "Home Red Jersey — back, ready for custom name and number" },
     ],
     sizes: SHIRT_SIZES,
     category: "jersey",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     ...DROP_I,
     dropSoldCount: 212,
@@ -72,7 +71,7 @@ export const products: Product[] = [
     slug: "away-white-jersey",
     description:
       "Clean and loud at the same time. A crisp away-style jersey that shows up in every crowd photo.",
-    priceCents: 9500,
+    priceCents: 6100,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#FFFFFF",
@@ -81,12 +80,11 @@ export const products: Product[] = [
     careInstructions: JERSEY_CARE,
     images: [
       { src: "/products/away-white-jersey.webp", alt: "Away White Jersey — front, on model" },
-      { src: "/products/away-white-jersey-alt.webp", alt: "Away White Jersey — front detail" },
       { src: "/products/away-white-jersey-back.webp", alt: "Away White Jersey — back, ready for custom name and number" },
     ],
     sizes: SHIRT_SIZES,
     category: "jersey",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     ...DROP_I,
     dropSoldCount: 148,
@@ -100,7 +98,7 @@ export const products: Product[] = [
     slug: "blackout-edition-jersey",
     description:
       "All black, gold detail, zero apologies. The limited edition for fans who don't need to be told the score.",
-    priceCents: 10500,
+    priceCents: 6100,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -109,12 +107,11 @@ export const products: Product[] = [
     careInstructions: JERSEY_CARE,
     images: [
       { src: "/products/blackout-edition-jersey.webp", alt: "Blackout Edition Jersey — front, on model" },
-      { src: "/products/blackout-edition-jersey-alt.webp", alt: "Blackout Edition Jersey — front detail" },
       { src: "/products/blackout-edition-jersey-back.webp", alt: "Blackout Edition Jersey — back, ready for custom name and number" },
     ],
     sizes: SHIRT_SIZES,
     category: "jersey",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     ...DROP_I,
     dropSoldCount: 373,
@@ -128,7 +125,7 @@ export const products: Product[] = [
     slug: "emerald-edition-jersey",
     description:
       "Deep green with gold accents. A nation's color, cut for match day and everything after.",
-    priceCents: 10500,
+    priceCents: 6100,
     compareAtPriceCents: null,
     color: "Emerald Green",
     colorHex: "#0B3D2E",
@@ -137,12 +134,11 @@ export const products: Product[] = [
     careInstructions: JERSEY_CARE,
     images: [
       { src: "/products/emerald-edition-jersey.webp", alt: "Emerald Edition Jersey — front, on model" },
-      { src: "/products/emerald-edition-jersey-alt.webp", alt: "Emerald Edition Jersey — front detail" },
       { src: "/products/emerald-edition-jersey-back.webp", alt: "Emerald Edition Jersey — back, ready for custom name and number" },
     ],
     sizes: SHIRT_SIZES,
     category: "jersey",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     ...DROP_I,
     dropSoldCount: 84,
@@ -158,7 +154,7 @@ export const products: Product[] = [
     slug: "brush-script-tee",
     description:
       "The brand name in one loud stroke. Soft, heavy, and easy to live in.",
-    priceCents: 4200,
+    priceCents: 2300,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -166,11 +162,12 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/brush-script-tee.svg", alt: "PORTUGOOOL Brush Script Tee — front" },
+      { src: "/products/brush-script-tee.webp", alt: "PORTUGOOOL Brush Script Tee — front" },
+      { src: "/products/brush-script-tee-back.webp", alt: "PORTUGOOOL Brush Script Tee — back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
@@ -186,7 +183,7 @@ export const products: Product[] = [
     slug: "goool-tee",
     description:
       "The whole moment in one word. Wear the celebration.",
-    priceCents: 4400,
+    priceCents: 2300,
     compareAtPriceCents: null,
     color: "Deep Red",
     colorHex: "#C1121F",
@@ -194,11 +191,12 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/goool-tee.svg", alt: "GOOOOOOOL!!! Tee — front" },
+      { src: "/products/goool-tee.webp", alt: "GOOOOOOOL!!! Tee — front" },
+      { src: "/products/goool-tee-back.webp", alt: "GOOOOOOOL!!! Tee — back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
@@ -214,7 +212,7 @@ export const products: Product[] = [
     slug: "vamos-tee",
     description:
       "For the ones who start the chant. Soft-touch blend built for watch parties.",
-    priceCents: 4200,
+    priceCents: 2300,
     compareAtPriceCents: null,
     color: "Emerald Green",
     colorHex: "#0B3D2E",
@@ -222,11 +220,12 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/vamos-tee.svg", alt: "Vamos Portugooool Tee — front" },
+      { src: "/products/vamos-tee.webp", alt: "Vamos Portugooool Tee — front" },
+      { src: "/products/vamos-tee-back.webp", alt: "Vamos Portugooool Tee — back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
@@ -242,7 +241,7 @@ export const products: Product[] = [
     slug: "lisbon-to-the-world-tee",
     description:
       "One city, every living room, every corner bar. This one travels.",
-    priceCents: 4500,
+    priceCents: 2300,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#FFFFFF",
@@ -250,11 +249,12 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/lisbon-to-the-world-tee.svg", alt: "From Lisbon to the World Tee — front" },
+      { src: "/products/lisbon-to-the-world-tee.webp", alt: "From Lisbon to the World Tee — front" },
+      { src: "/products/lisbon-to-the-world-tee-back.webp", alt: "From Lisbon to the World Tee — back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
@@ -270,7 +270,7 @@ export const products: Product[] = [
     slug: "match-day-tee",
     description:
       "Some days are just different. Dress accordingly.",
-    priceCents: 3800,
+    priceCents: 2300,
     compareAtPriceCents: null,
     color: "Smoke Grey",
     colorHex: "#9CA3AF",
@@ -278,11 +278,12 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/match-day-tee.svg", alt: "Match Day Tee — front" },
+      { src: "/products/match-day-tee.webp", alt: "Match Day Tee — front" },
+      { src: "/products/match-day-tee-back.webp", alt: "Match Day Tee — back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
@@ -298,7 +299,7 @@ export const products: Product[] = [
     slug: "we-dont-whisper-goals-tee",
     description:
       "Heavyweight, oversized, and honest about who you are during a match.",
-    priceCents: 4800,
+    priceCents: 3300,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -306,11 +307,12 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/we-dont-whisper-goals-tee.svg", alt: "We Don't Whisper Goals Tee — front" },
+      { src: "/products/we-dont-whisper-goals-tee.webp", alt: "We Don't Whisper Goals Tee — front" },
+      { src: "/products/we-dont-whisper-goals-tee-back.webp", alt: "We Don't Whisper Goals Tee — back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
@@ -356,7 +358,7 @@ export const products: Product[] = [
     slug: "goool-cap",
     description:
       "Low-profile cap with the sound of victory stitched on the front.",
-    priceCents: 3000,
+    priceCents: 2900,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -366,7 +368,7 @@ export const products: Product[] = [
     images: [{ src: "/products/goool-cap.svg", alt: "GOOOOOL Cap" }],
     sizes: ONE_SIZE,
     category: "accessory",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
@@ -382,17 +384,17 @@ export const products: Product[] = [
     slug: "sticker-pack",
     description:
       "Six die-cut stickers. Laptops, bottles, and anything else that needs more noise.",
-    priceCents: 600,
+    priceCents: 1000,
     compareAtPriceCents: null,
     color: "Multi",
     colorHex: "#C9A227",
-    fabric: "Weatherproof vinyl, matte finish. Six designs per pack.",
-    fit: "One size · 5–8 cm each.",
-    careInstructions: "Dishwasher-safe. Peel and place once.",
+    fabric: "Kiss-cut matte vinyl sticker sheet. Six designs on one sheet.",
+    fit: "One sheet · 5.83″ × 8.27″ · six stickers.",
+    careInstructions: "Peel and place once.",
     images: [{ src: "/products/sticker-pack.svg", alt: "Sticker Pack — six die-cut stickers" }],
     sizes: ONE_SIZE,
     category: "accessory",
-    supplierType: "unassigned",
+    supplierType: "printful",
     isActive: true,
     isLimitedDrop: false,
     dropVersion: null,
