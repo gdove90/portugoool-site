@@ -37,5 +37,5 @@ One per surface, never stacked. See voice.md.
 ## Legal Guardrails (always)
 - No Portugal federation crests, no FIFA / World Cup marks, no player names
   or likenesses, no Nike/Adidas/Puma references
-- "Summer '26" is the approved language for tournament-adjacent copy
+- "Summer '26" — and in Portuguese, **"Verão '26"** — are the only approved tournament-adjacent phrases. Never "World Cup", "Copa", or "Mundial" in any copy. Portuguese lines may ship untranslated on garments (translation lives in the product description)
 - Every public surface carries the independent-brand disclaimer where practical
