@@ -16,7 +16,7 @@ like **Apple meets Nike** — never a typical Shopify template.
 
 Brand line: **"The Sound of Victory."**
 
-- Live site: https://portugoool.netlify.app
+- Live site: **https://portugoool.com** (Netlify DNS; `portugoool.netlify.app` is the underlying site)
 - Repo: `gdove90/portugoool-site` (main branch auto-deploys)
 - Extended brand documentation: [designs/00_brand/](designs/00_brand/README.md)
 
