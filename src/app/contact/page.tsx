@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // Simple mailto-based contact for launch — no backend needed.
 // TODO: swap for a Resend-powered /api/contact route when email is wired up.
-const CONTACT_EMAIL = "hello@portugooool.com";
+const CONTACT_EMAIL = "hello@portugoool.com"; // matches the owned domain
 
 export default function ContactPage() {
   const [name, setName] = useState("");

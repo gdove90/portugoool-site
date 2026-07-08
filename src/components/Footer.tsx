@@ -27,6 +27,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-paper/10 pt-6">
+          <nav className="mb-4 flex flex-wrap gap-x-5 gap-y-1 text-xs" aria-label="Legal">
+            <Link href="/refunds" className="text-paper/50 hover:text-paper">Refund Policy</Link>
+            <Link href="/terms" className="text-paper/50 hover:text-paper">Terms of Service</Link>
+            <Link href="/privacy" className="text-paper/50 hover:text-paper">Privacy Policy</Link>
+          </nav>
           <p className="text-xs leading-relaxed text-paper/40">
             © {new Date().getFullYear()} PORTUGOOOL. All rights reserved.
             PORTUGOOOL is an independent fan apparel brand. Not affiliated with,

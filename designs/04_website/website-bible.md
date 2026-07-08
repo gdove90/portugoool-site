@@ -332,6 +332,9 @@ full-viewport-width mobile, ~50vw ≥1024, thumbnails 64px.
   + red "Shop the Collection" → `/shop`.
 - **Checkout errors** (Stripe unset, product removed/sold out): inline
   `role="alert"` under the button — never a browser alert, never silent.
+- **Returns contract:** all sales final; defective/damaged/wrong items
+  replaced free (14 days from delivery, photos required). Full text:
+  `/refunds`. FAQ and any future checkout copy must match it.
 
 ---
 
@@ -403,7 +406,7 @@ full-viewport-width mobile, ~50vw ≥1024, thumbnails 64px.
 
 - **Layout:** single column, max 576px. H1 + one reassurance line
   ("we reply within one business day").
-- Name + message fields → mailto handoff to **hello@portugooool.com**
+- Name + message fields → mailto handoff to **hello@portugoool.com**
   [LIVE]. Direct email always printed as fallback below the button.
 - **[FUTURE]:** `/api/contact` via Resend replaces mailto (same layout);
   order-number field appears when order support volume justifies it.
@@ -533,6 +536,7 @@ invariant (§6) · performance budgets (§14) · legal standards (CLAUDE.md).
 | `/track-order` | Client | Self-serve order status |
 | `/cart` | Client | Checkout |
 | `/success` | Client | Clear cart, reassure |
+| `/refunds` · `/terms` · `/privacy` | Static | Legal — linked from footer + checkout |
 | `/api/checkout` · `/api/newsletter` | Dynamic POST | — |
 
 New pages default to static server components; client rendering requires

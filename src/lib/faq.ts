@@ -20,7 +20,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Can I return or exchange?",
     answer:
-      "Unworn, unwashed shirts without customization can be returned within 30 days. Customized shirts (name/number) are made just for you and are final sale unless defective — defects are always replaced free.",
+      "All sales are final — every piece is made to order, just for you. If your order arrives defective, damaged, or wrong, we replace it free: contact us within 14 days of delivery with photos. Double-check the fit notes and your customization spelling before ordering.",
   },
   {
     question: "How does customization work?",
