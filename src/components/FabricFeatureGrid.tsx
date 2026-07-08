@@ -1,7 +1,7 @@
 const FEATURES = [
   {
     title: "Lightweight & breathable",
-    body: "140–160 GSM performance polyester. Air moves through it.",
+    body: "100% recycled performance polyester. Air moves through it.",
   },
   {
     title: "Silky smooth feel",

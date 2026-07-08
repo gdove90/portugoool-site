@@ -4,12 +4,15 @@ Canonical fabric + print specs. Product data (`src/lib/products.ts` and the
 Supabase seed) mirrors this file — update here first.
 
 ## Jersey Fabrics (Performance Collection)
-- 140–160 GSM performance knit (production copy says 150 GSM)
-- 95% polyester / 5% elastane
-- Four-way stretch · moisture-wicking · silky smooth finish
-- Breathable athletic feel · athletic fit
-- Sublimation-friendly
-- Optional copy (only if supplier confirms): laser-cut ventilation, UPF protection
+- **CONFIRMED GARMENT (2026-07-08):** Printful "All-Over Print Recycled
+  Unisex Sports Jersey" — base cost ~$30.55, sizes 2XS–6XL
+- 100% recycled polyester, lightweight performance knit
+- Moisture-wicking · breathable · silky smooth finish
+- All-over sublimation (edge-to-edge print)
+- Athletic fit
+- Do NOT claim: elastane content, four-way stretch, exact GSM, laser-cut
+  ventilation, UPF — Printful does not confirm these for this garment.
+  Verify GSM from the listing when sampling before adding a number back.
 - Retail target: $85–120 (current: $95 home/away, $105 editions)
 
 ## T-Shirt Fabrics (Casual Collection)

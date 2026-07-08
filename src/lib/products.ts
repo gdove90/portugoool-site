@@ -11,7 +11,7 @@ import { Product, SHIRT_SIZES, ONE_SIZE, ProductCategory } from "./types";
 // ─────────────────────────────────────────────────────────────
 
 const JERSEY_FABRIC =
-  "150 GSM performance knit. 95% polyester, 5% elastane. Four-way stretch, moisture-wicking, silky smooth finish with a breathable athletic feel.";
+  "Lightweight performance knit. 100% recycled polyester. Moisture-wicking and breathable with a silky smooth finish, printed edge to edge.";
 const CASUAL_FABRIC =
   "180 GSM soft-touch cotton-poly blend. Holds color, holds shape, feels broken-in from day one. DTG/DTF print compatible.";
 const HEAVY_FABRIC =
@@ -43,7 +43,7 @@ export const products: Product[] = [
     name: "Home Red Jersey",
     slug: "home-red-jersey",
     description:
-      "The one you wear when it matters. Silky, four-way stretch performance knit made for the moment it goes in.",
+      "The one you wear when it matters. Silky, breathable performance knit made for the moment it goes in.",
     priceCents: 9500,
     compareAtPriceCents: null,
     color: "Deep Red",
