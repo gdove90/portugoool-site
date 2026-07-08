@@ -7,10 +7,11 @@ import DropBanner from "@/components/DropBanner";
 import EmailSignup from "@/components/EmailSignup";
 import FAQAccordion from "@/components/FAQAccordion";
 import { FAQ_ITEMS } from "@/lib/faq";
-import { getProductsByCategory } from "@/lib/products";
+import { getProductsByCategory, getJerseysByDrop } from "@/lib/products";
 
 export default function HomePage() {
-  const jerseys = getProductsByCategory("jersey");
+  const portugalJerseys = getJerseysByDrop("I");
+  const englandJerseys = getJerseysByDrop("II");
   const casual = getProductsByCategory("casual").slice(0, 4);
 
   return (
@@ -36,7 +37,7 @@ export default function HomePage() {
             View the drop →
           </Link>
         </div>
-        <ProductGrid products={jerseys} />
+        <ProductGrid products={portugalJerseys} />
         <div className="mt-8 text-center sm:hidden">
           <Link
             href="/drop"
@@ -44,6 +45,29 @@ export default function HomePage() {
           >
             View the drop
           </Link>
+        </div>
+      </section>
+
+      {/* Drop 02 — England */}
+      <section className="bg-smoke py-16 sm:py-20">
+        <div className="mx-auto max-w-content px-4 sm:px-6">
+          <div className="mb-8 flex items-end justify-between">
+            <div>
+              <h2 className="font-display text-3xl font-bold uppercase tracking-tightest text-ink sm:text-4xl">
+                ENG<span className="text-red">OOO</span>LAND
+              </h2>
+              <p className="mt-2 text-ink/60">
+                The England Collection · Drop 02 · Just landed.
+              </p>
+            </div>
+            <Link
+              href="/drop"
+              className="hidden text-sm font-semibold text-ink underline-offset-4 hover:underline sm:block"
+            >
+              View the drop →
+            </Link>
+          </div>
+          <ProductGrid products={englandJerseys} />
         </div>
       </section>
 

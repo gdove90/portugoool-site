@@ -29,10 +29,15 @@ const OVERSIZED_FIT = "Oversized fit. Drops loose on purpose. Size down for a st
 
 const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
 
-// Shared drop settings for Version I jerseys.
+// Shared drop settings per collection drop.
 const DROP_I = {
   isLimitedDrop: true,
   dropVersion: "I",
+  dropLimit: 500,
+};
+const DROP_II = {
+  isLimitedDrop: true,
+  dropVersion: "II",
   dropLimit: 500,
 };
 
@@ -142,6 +147,90 @@ export const products: Product[] = [
     isActive: true,
     ...DROP_I,
     dropSoldCount: 84,
+    customNameAvailable: true,
+    customNumberAvailable: true,
+    customizationPriceCents: CUSTOMIZATION_PRICE,
+  },
+
+
+  // == ENGOOOLAND - The England Collection / Drop 02 ==========
+  {
+    id: "10000000-0000-4000-8000-000000000005",
+    name: "ENGOOOLAND Home White Jersey",
+    slug: "engoooland-home-white-jersey",
+    description:
+      "The scream, embedded. Crisp white with the red and navy sash — chapter two starts loud.",
+    priceCents: 6100,
+    compareAtPriceCents: null,
+    color: "White",
+    colorHex: "#FFFFFF",
+    fabric: JERSEY_FABRIC,
+    fit: JERSEY_FIT,
+    careInstructions: JERSEY_CARE,
+    images: [
+      { src: "/products/engoooland-home-white-jersey.webp", alt: "ENGOOOLAND Home White Jersey — front, on model" },
+      { src: "/products/engoooland-home-white-jersey-back.webp", alt: "ENGOOOLAND Home White Jersey — back, ready for custom name and number" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "jersey",
+    supplierType: "printful",
+    isActive: true,
+    ...DROP_II,
+    dropSoldCount: 0,
+    customNameAvailable: true,
+    customNumberAvailable: true,
+    customizationPriceCents: CUSTOMIZATION_PRICE,
+  },
+  {
+    id: "10000000-0000-4000-8000-000000000006",
+    name: "ENGOOOLAND Away Red Jersey",
+    slug: "engoooland-away-red-jersey",
+    description:
+      "Deep red with white and navy movement. For the away days and the loud ends.",
+    priceCents: 6100,
+    compareAtPriceCents: null,
+    color: "Deep Red",
+    colorHex: "#C1121F",
+    fabric: JERSEY_FABRIC,
+    fit: JERSEY_FIT,
+    careInstructions: JERSEY_CARE,
+    images: [
+      { src: "/products/engoooland-away-red-jersey.webp", alt: "ENGOOOLAND Away Red Jersey — front, on model" },
+      { src: "/products/engoooland-away-red-jersey-back.webp", alt: "ENGOOOLAND Away Red Jersey — back, ready for custom name and number" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "jersey",
+    supplierType: "printful",
+    isActive: true,
+    ...DROP_II,
+    dropSoldCount: 0,
+    customNameAvailable: true,
+    customNumberAvailable: true,
+    customizationPriceCents: CUSTOMIZATION_PRICE,
+  },
+  {
+    id: "10000000-0000-4000-8000-000000000007",
+    name: "ENGOOOLAND Navy Jersey",
+    slug: "engoooland-navy-jersey",
+    description:
+      "England Navy with the red-white sash and a gold pinline. Quiet colour, loud intent.",
+    priceCents: 6100,
+    compareAtPriceCents: null,
+    color: "England Navy",
+    colorHex: "#0A1F3C",
+    fabric: JERSEY_FABRIC,
+    fit: JERSEY_FIT,
+    careInstructions: JERSEY_CARE,
+    images: [
+      { src: "/products/engoooland-navy-jersey.webp", alt: "ENGOOOLAND Navy Jersey — front, on model" },
+      { src: "/products/engoooland-navy-jersey-back.webp", alt: "ENGOOOLAND Navy Jersey — back, ready for custom name and number" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "jersey",
+    supplierType: "printful",
+    isActive: true,
+    ...DROP_II,
+    dropSoldCount: 0,
     customNameAvailable: true,
     customNumberAvailable: true,
     customizationPriceCents: CUSTOMIZATION_PRICE,
@@ -323,6 +412,125 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
 
+
+  // == England Collection casual tees (Drop 02) ===============
+  {
+    id: "20000000-0000-4000-8000-000000000007",
+    name: "ENGOOOLAND Echo Hero Tee",
+    slug: "engoooland-echo-hero-tee",
+    description:
+      "The Echo, oversized, in red and navy. Chapter two on a clean white staple.",
+    priceCents: 2300,
+    compareAtPriceCents: null,
+    color: "White",
+    colorHex: "#FFFFFF",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/engoooland-echo-hero-tee.webp", alt: "ENGOOOLAND Echo Hero Tee — front" },
+      { src: "/products/engoooland-echo-hero-tee-back.webp", alt: "ENGOOOLAND Echo Hero Tee — back" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "printful",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: "II",
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000008",
+    name: "From London to the World Tee",
+    slug: "london-to-the-world-tee",
+    description:
+      "One city, every corner bar. The London mirror of a Lisbon classic.",
+    priceCents: 2300,
+    compareAtPriceCents: null,
+    color: "England Navy",
+    colorHex: "#0A1F3C",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/london-to-the-world-tee.webp", alt: "From London to the World Tee — front" },
+      { src: "/products/london-to-the-world-tee-back.webp", alt: "From London to the World Tee — back" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "printful",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: "II",
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000009",
+    name: "Made for the Moment Tee",
+    slug: "made-for-the-moment-tee",
+    description:
+      "The tagline, front and center. Deep red, built for the second it goes in.",
+    priceCents: 2300,
+    compareAtPriceCents: null,
+    color: "Deep Red",
+    colorHex: "#C1121F",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/made-for-the-moment-tee.webp", alt: "Made for the Moment Tee — front" },
+      { src: "/products/made-for-the-moment-tee-back.webp", alt: "Made for the Moment Tee — back" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "printful",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: "II",
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000010",
+    name: "ENGOOOLAND Roar Tee",
+    slug: "engoooland-roar-tee",
+    description:
+      "Echo badge at the breast, the moment stacked beneath. Navy, understated, ready.",
+    priceCents: 2300,
+    compareAtPriceCents: null,
+    color: "England Navy",
+    colorHex: "#0A1F3C",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/engoooland-roar-tee.webp", alt: "ENGOOOLAND Roar Tee — front" },
+      { src: "/products/engoooland-roar-tee-back.webp", alt: "ENGOOOLAND Roar Tee — back" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "printful",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: "II",
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+
   // ── Accessory Collection ────────────────────────────────────
   {
     id: "30000000-0000-4000-8000-000000000001",
@@ -452,4 +660,10 @@ export function getLimitedDropProducts(): Product[] {
 
 export function getProductsByCategory(category: ProductCategory): Product[] {
   return products.filter((p) => p.isActive && p.category === category);
+}
+
+export function getJerseysByDrop(version: string): Product[] {
+  return products.filter(
+    (p) => p.isActive && p.category === "jersey" && p.dropVersion === version
+  );
 }

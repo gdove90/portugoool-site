@@ -21,6 +21,11 @@ canonical reference. Change here first, then in code.
 | Red Dark (hover) | `#8E0D17` | 142, 13, 23 | `red-dark` |
 | Smoke (section bg) | `#F4F4F2` | 244, 244, 242 | `smoke` |
 
+## Collection Colors
+| Name | HEX | Scope |
+|---|---|---|
+| England Navy | `#0A1F3C` | The England Collection (Drop 02) garments + swatches only — not a site UI token |
+
 ## Accent Colors
 
 | Name | HEX | RGB | Tailwind token |
