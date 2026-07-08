@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // Pre-launch landing takeover — covers the viewport (fixed, above the
@@ -118,12 +117,6 @@ export default function ComingSoon() {
           <p className="mt-3 text-sm text-red" role="alert">Something went wrong. Try again.</p>
         )}
 
-        <Link
-          href="/shop"
-          className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-paper/50 underline-offset-4 transition-colors hover:text-paper hover:underline"
-        >
-          Peek the collection →
-        </Link>
       </div>
     </div>
   );
