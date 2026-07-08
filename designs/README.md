@@ -11,6 +11,7 @@ tech packs, and product designs. **Start at [00_brand/](00_brand/README.md)**
 | [00_brand/](00_brand/) | Brand guide, colors, typography, logo rules, voice, materials, principles |
 | [01_moodboards/](01_moodboards/) | Visual inspiration boards |
 | [02_homepage/](02_homepage/) · [03_shop/](03_shop/) · [04_product-pages/](04_product-pages/) | Page designs (desktop + mobile) |
+| [04_website/website-bible.md](04_website/website-bible.md) | **Engineering spec of the storefront** — routes, contracts, data model, states |
 | [05_jerseys/](05_jerseys/) · [06_tshirts/](06_tshirts/) | Apparel: concepts → finals → tech-packs |
 | [07_accessories/](07_accessories/) | Hats, scarves, stickers, flags |
 | [08_packaging/](08_packaging/) | Shipping, inserts, labels |
