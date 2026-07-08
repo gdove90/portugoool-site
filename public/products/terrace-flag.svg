@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000"><rect width="800" height="1000" fill="#E8E4DE"/>
+  <rect x="150" y="240" width="14" height="560" fill="#8a8a8a"/>
+  <g>
+    <rect x="164" y="260" width="490" height="300" fill="#0B3D2E"/>
+    <rect x="164" y="260" width="196" height="300" fill="#C1121F"/>
+    <circle cx="360" cy="410" r="64" fill="#C9A227"/>
+    <text x="360" y="424" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-weight="bold" font-size="36" fill="#0A0A0A">GOL</text>
+    <text x="500" y="424" text-anchor="middle" font-family="Arial Narrow, Impact, sans-serif" font-weight="bold" font-size="34" letter-spacing="2" fill="#FFFFFF">PORTUGOOOL</text>
+  </g><text x="400" y="950" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" letter-spacing="4" fill="#0A0A0A" opacity="0.35">PORTUGOOOL · PLACEHOLDER</text></svg>

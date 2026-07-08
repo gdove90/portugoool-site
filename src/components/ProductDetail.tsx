@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Product, Size, CUSTOMIZATION_PRICE_CENTS } from "@/lib/types";
+import { Product, Size, remainingUnits, isSoldOut } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/lib/cart";
 import SizeSelector from "./SizeSelector";
@@ -13,7 +13,10 @@ export default function ProductDetail({ product }: { product: Product }) {
   const router = useRouter();
   const { addItem } = useCart();
 
-  const [selectedSize, setSelectedSize] = useState<Size | null>(null);
+  const singleSize = product.sizes.length === 1;
+  const [selectedSize, setSelectedSize] = useState<Size | null>(
+    singleSize ? product.sizes[0] : null
+  );
   const [activeImage, setActiveImage] = useState(0);
   const [customize, setCustomize] = useState(false);
   const [customName, setCustomName] = useState("");
@@ -21,15 +24,22 @@ export default function ProductDetail({ product }: { product: Product }) {
   const [sizeError, setSizeError] = useState(false);
   const [added, setAdded] = useState(false);
 
+  const soldOut = isSoldOut(product);
+  const remaining = remainingUnits(product);
+  const customizable =
+    product.customNameAvailable || product.customNumberAvailable;
+
   const hasCustomization =
     customize && (customName.trim() !== "" || customNumber.trim() !== "");
   const unitPriceCents =
-    product.priceCents + (hasCustomization ? CUSTOMIZATION_PRICE_CENTS : 0);
+    product.priceCents +
+    (hasCustomization ? product.customizationPriceCents : 0);
   const onSale =
     product.compareAtPriceCents != null &&
     product.compareAtPriceCents > product.priceCents;
 
   function handleAddToCart(goToCart: boolean) {
+    if (soldOut) return;
     if (!selectedSize) {
       setSizeError(true);
       return;
@@ -70,7 +80,9 @@ export default function ProductDetail({ product }: { product: Product }) {
             />
             {product.isLimitedDrop && (
               <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold">
-                Limited Drop
+                {soldOut
+                  ? "Sold Out"
+                  : `Limited Drop${product.dropVersion ? ` · Version ${product.dropVersion}` : ""}`}
               </span>
             )}
           </div>
@@ -122,10 +134,32 @@ export default function ProductDetail({ product }: { product: Product }) {
             )}
           </p>
 
-          {product.isLimitedDrop && product.inventoryDisplayCount != null && (
-            <p className="mt-2 text-sm font-semibold text-red">
-              Only {product.inventoryDisplayCount} left in this drop
-            </p>
+          {/* Limited drop status */}
+          {product.isLimitedDrop && product.dropLimit != null && (
+            <div className="mt-4 rounded-xl bg-smoke p-4">
+              <div className="flex items-center justify-between text-sm">
+                <span className="font-semibold text-ink">
+                  Drop Version {product.dropVersion ?? "I"} · {product.dropLimit} made
+                </span>
+                <span className={`font-bold ${soldOut ? "text-ink/50" : "text-red"}`}>
+                  {soldOut ? "Sold out" : `${remaining} remaining`}
+                </span>
+              </div>
+              {/* Remaining bar */}
+              <div
+                className="mt-2 h-1.5 overflow-hidden rounded-full bg-ink/10"
+                role="img"
+                aria-label={`${remaining} of ${product.dropLimit} units remaining`}
+              >
+                <div
+                  className="h-full rounded-full bg-red"
+                  style={{ width: `${((remaining ?? 0) / product.dropLimit) * 100}%` }}
+                />
+              </div>
+              <p className="mt-2 text-xs text-ink/60">
+                Once this drop sells out, it will not be reprinted.
+              </p>
+            </div>
           )}
 
           <p className="mt-4 text-base leading-relaxed text-ink/70">
@@ -133,49 +167,66 @@ export default function ProductDetail({ product }: { product: Product }) {
           </p>
 
           <div className="mt-6 space-y-5">
-            <div>
-              <SizeSelector
-                sizes={product.sizes}
-                selected={selectedSize}
-                onSelect={(s) => {
-                  setSelectedSize(s);
-                  setSizeError(false);
-                }}
+            {!singleSize && (
+              <div>
+                <SizeSelector
+                  sizes={product.sizes}
+                  selected={selectedSize}
+                  onSelect={(s) => {
+                    setSelectedSize(s);
+                    setSizeError(false);
+                  }}
+                />
+                {sizeError && (
+                  <p className="mt-2 text-sm font-medium text-red" role="alert">
+                    Select a size to continue.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {customizable && (
+              <CustomizationSelector
+                nameAvailable={product.customNameAvailable}
+                numberAvailable={product.customNumberAvailable}
+                priceCents={product.customizationPriceCents}
+                enabled={customize}
+                onToggle={setCustomize}
+                customName={customName}
+                onNameChange={setCustomName}
+                customNumber={customNumber}
+                onNumberChange={setCustomNumber}
               />
-              {sizeError && (
-                <p className="mt-2 text-sm font-medium text-red" role="alert">
-                  Select a size to continue.
+            )}
+
+            {soldOut ? (
+              <div className="rounded-xl border border-ink/15 p-5 text-center">
+                <p className="font-display text-xl font-bold uppercase tracking-tightest text-ink">
+                  This drop is gone.
                 </p>
-              )}
-            </div>
-
-            <CustomizationSelector
-              nameAvailable={product.customNameAvailable}
-              numberAvailable={product.customNumberAvailable}
-              enabled={customize}
-              onToggle={setCustomize}
-              customName={customName}
-              onNameChange={setCustomName}
-              customNumber={customNumber}
-              onNumberChange={setCustomNumber}
-            />
-
-            <div className="flex flex-col gap-3">
-              <button
-                type="button"
-                onClick={() => handleAddToCart(true)}
-                className="w-full rounded-full bg-red px-8 py-4 text-base font-semibold text-paper transition-colors hover:bg-red-dark"
-              >
-                Buy Now · {formatPrice(unitPriceCents)}
-              </button>
-              <button
-                type="button"
-                onClick={() => handleAddToCart(false)}
-                className="w-full rounded-full border border-ink px-8 py-4 text-base font-semibold text-ink transition-colors hover:bg-ink hover:text-paper"
-              >
-                {added ? "Added ✓" : "Add to Cart"}
-              </button>
-            </div>
+                <p className="mt-1 text-sm text-ink/60">
+                  It will not be reprinted. Join the list to hear about Version{" "}
+                  {product.dropVersion === "I" ? "II" : "next"} first.
+                </p>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-3">
+                <button
+                  type="button"
+                  onClick={() => handleAddToCart(true)}
+                  className="w-full rounded-full bg-red px-8 py-4 text-base font-semibold text-paper transition-colors hover:bg-red-dark"
+                >
+                  Buy Now · {formatPrice(unitPriceCents)}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleAddToCart(false)}
+                  className="w-full rounded-full border border-ink px-8 py-4 text-base font-semibold text-ink transition-colors hover:bg-ink hover:text-paper"
+                >
+                  {added ? "Added ✓" : "Add to Cart"}
+                </button>
+              </div>
+            )}
 
             {/* Trust copy */}
             <ul className="grid grid-cols-2 gap-2 text-xs text-ink/60">
@@ -188,15 +239,17 @@ export default function ProductDetail({ product }: { product: Product }) {
               <li className="flex items-center gap-1.5">
                 <TrustIcon /> Ships after production
               </li>
-              <li className="flex items-center gap-1.5">
-                <TrustIcon /> Limited drop
-              </li>
+              {product.isLimitedDrop && (
+                <li className="flex items-center gap-1.5">
+                  <TrustIcon /> Limited drop
+                </li>
+              )}
             </ul>
           </div>
 
           {/* Details */}
           <div className="mt-8 divide-y divide-ink/10 border-t border-ink/10">
-            <DetailRow label="Fabric" value={product.fabric} />
+            <DetailRow label="Material" value={product.fabric} />
             <DetailRow label="Fit" value={product.fit} />
             <DetailRow label="Care" value={product.careInstructions} />
           </div>

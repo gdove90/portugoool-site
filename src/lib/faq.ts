@@ -25,12 +25,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "How does customization work?",
     answer:
-      "Base shirts come clean, with no numbers. At checkout you can add a name and number to the back as an optional paid add-on. Pick any name up to 12 characters and any number 0–99.",
+      "Jerseys come clean — no names, no numbers. On any jersey page you can add a name (up to 12 characters) and number (0–99) to the back for a flat $15. Casual shirts and accessories ship as designed.",
   },
   {
     question: "What does 'limited drop' mean?",
     answer:
-      "We release designs in small batches. Once a drop sells out, it's gone — the next design launches in its place. No restocks, no reprints.",
+      "Each jersey drop is limited to 500 units. The product page shows how many are left. Once this drop sells out, it will not be reprinted — the next version launches in its place.",
   },
   {
     question: "Is this official Portugal team merchandise?",

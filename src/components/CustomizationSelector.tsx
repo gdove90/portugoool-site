@@ -1,11 +1,11 @@
 "use client";
 
-import { CUSTOMIZATION_PRICE_CENTS } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 
 interface CustomizationSelectorProps {
   nameAvailable: boolean;
   numberAvailable: boolean;
+  priceCents: number;
   enabled: boolean;
   onToggle: (enabled: boolean) => void;
   customName: string;
@@ -17,6 +17,7 @@ interface CustomizationSelectorProps {
 export default function CustomizationSelector({
   nameAvailable,
   numberAvailable,
+  priceCents,
   enabled,
   onToggle,
   customName,
@@ -37,7 +38,7 @@ export default function CustomizationSelector({
         />
         <span>
           <span className="block text-sm font-semibold text-ink">
-            Add name &amp; number · +{formatPrice(CUSTOMIZATION_PRICE_CENTS)}
+            Add name &amp; number · +{formatPrice(priceCents)}
           </span>
           <span className="mt-0.5 block text-xs text-ink/50">
             Printed on the back. Optional.

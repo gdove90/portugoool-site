@@ -15,15 +15,18 @@ export default function Hero() {
 
       <div className="relative mx-auto flex max-w-content flex-col items-start px-4 py-20 sm:px-6 sm:py-28 lg:py-36">
         <p className="mb-4 inline-block rounded-full border border-gold/40 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-gold">
-          Limited Drop 01 · Live Now
+          Drop Version I · 500 Made · Live Now
         </p>
 
         <h1 className="font-display text-6xl font-bold uppercase leading-none tracking-tightest sm:text-8xl lg:text-9xl">
           Portug<span className="text-red">ooo</span>l
         </h1>
 
-        <p className="mt-5 max-w-md text-lg text-paper/80 sm:text-xl">
-          The sound of the goal. The shirt for the moment.
+        <p className="mt-5 font-display text-2xl font-bold uppercase tracking-tightest text-gold sm:text-3xl">
+          The Sound of Victory.
+        </p>
+        <p className="mt-2 max-w-md text-lg text-paper/80 sm:text-xl">
+          Made for the moment it goes in.
         </p>
 
         <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">

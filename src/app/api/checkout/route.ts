@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getProductById } from "@/lib/products";
-import { CUSTOMIZATION_PRICE_CENTS, Size, ALL_SIZES } from "@/lib/types";
+import { Size, isSoldOut } from "@/lib/types";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe Checkout handoff.
@@ -61,13 +61,24 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-    if (!ALL_SIZES.includes(item.size) || !product.sizes.includes(item.size)) {
+    if (isSoldOut(product)) {
+      return NextResponse.json(
+        { error: `${product.name} is sold out — this drop will not be reprinted.` },
+        { status: 400 }
+      );
+    }
+    if (!product.sizes.includes(item.size)) {
       return NextResponse.json({ error: "Invalid size." }, { status: 400 });
     }
     const quantity = Math.max(1, Math.min(10, Math.floor(item.quantity)));
 
-    const customName = item.customName?.trim().slice(0, 12) || null;
-    const customNumber = item.customNumber?.trim().slice(0, 2) || null;
+    // Customization only counts when the product actually allows it.
+    const customName = product.customNameAvailable
+      ? item.customName?.trim().slice(0, 12) || null
+      : null;
+    const customNumber = product.customNumberAvailable
+      ? item.customNumber?.trim().slice(0, 2) || null
+      : null;
     const hasCustomization = Boolean(customName || customNumber);
 
     const descriptionParts = [`Size ${item.size}`, product.color];
@@ -80,7 +91,7 @@ export async function POST(req: NextRequest) {
         currency: "usd",
         unit_amount:
           product.priceCents +
-          (hasCustomization ? CUSTOMIZATION_PRICE_CENTS : 0),
+          (hasCustomization ? product.customizationPriceCents : 0),
         product_data: {
           name: hasCustomization
             ? `${product.name} (customized)`

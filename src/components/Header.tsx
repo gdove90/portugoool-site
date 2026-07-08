@@ -7,10 +7,10 @@ import MobileNav from "./MobileNav";
 
 const NAV_LINKS = [
   { href: "/shop", label: "Shop" },
-  { href: "/drop", label: "Limited Drop" },
+  { href: "/drop", label: "Limited Editions" },
+  { href: "/customize", label: "Customize" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {

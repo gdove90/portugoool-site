@@ -4,9 +4,9 @@ import EmailSignup from "@/components/EmailSignup";
 import { getLimitedDropProducts } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Limited Drop",
+  title: "Limited Editions",
   description:
-    "Small-batch releases. Once a drop sells out, the next design launches. No restocks.",
+    "Drop Version I — 500 units per jersey. Once this drop sells out, it will not be reprinted.",
 };
 
 export default function DropPage() {
@@ -17,14 +17,14 @@ export default function DropPage() {
       <section className="bg-ink py-14 text-paper sm:py-20">
         <div className="mx-auto max-w-content px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">
-            Drop 01 · Live now
+            Drop Version I · 500 units per jersey · Live now
           </p>
           <h1 className="mt-2 font-display text-4xl font-bold uppercase tracking-tightest sm:text-6xl">
-            Limited Drop
+            Limited Editions
           </h1>
           <p className="mt-4 max-w-lg text-paper/70">
-            Small batch. Numbered release. Once these sell out, the next design
-            launches — and this one never comes back.
+            Four jerseys. 500 of each, counted down live. Once this drop sells
+            out, it will not be reprinted — Version II takes its place.
           </p>
         </div>
       </section>
