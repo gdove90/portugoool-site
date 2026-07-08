@@ -8,6 +8,14 @@ with the three O's ("OOO") in Match Red against ink or paper.
   (the sound of the goal held long).
 - Always uppercase, always tight tracking. Never letter-spaced.
 
+## The Mark System (masters in `designs/12_logos/svg/`)
+- **GOOOL wordmark** (G + red OOO + L, Anton, −8° lean) — headers, lockups
+- **Slashed-OOO monogram** — typographic mark: garment chest text, patches
+- **Echo mark** (dot + three expanding arcs, red/red/gold) — favicon/app
+  icon/avatar AND apparel badge (left chest ~6cm, sleeve, or large back
+  print). Meaning: the scream radiating from the moment.
+- Rule: one mark per garment panel — never stack Echo + OOO together.
+
 ## Variants (to be produced → stored in `designs/12_logos/`)
 - [ ] Light: ink wordmark / red OOO — for paper backgrounds
 - [ ] Dark: paper wordmark / red OOO — for ink/green backgrounds

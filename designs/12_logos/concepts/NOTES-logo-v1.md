@@ -89,9 +89,12 @@ Caveats:
 - Source: GOOOL brand handoff (`../handoff_goool-brand/`), "Concept 01 ·
   The Echo" — dot + three expanding arcs (red/red/gold), the scream
   radiating from the moment.
-- **Role split:** slashed-OOO = apparel/garment monogram · **Echo mark =
-  digital identity** (favicon, app icon; candidate for loading states and
-  social avatar).
+- **Role split (updated 2026-07-08, owner call: "I like the echo on
+  shirts too"):** the Echo is a **full brand mark** — digital identity
+  (favicon/app/avatar) AND apparel. On garments: left-chest badge
+  (embroidery, the Polo-pony play), sleeve hit, or large back print.
+  The slashed-OOO remains the typographic monogram; the two never appear
+  side by side on the same garment panel.
 - Masters: `../svg/monogram-echo.svg` (transparent) and
   `monogram-echo-tile.svg` (ink tile). Live: `src/app/icon.svg` +
   `apple-icon.png` — verified legible at 16px on light and dark chrome.
