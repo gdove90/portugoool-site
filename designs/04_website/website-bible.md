@@ -161,9 +161,10 @@ Section order is a contract — reorder only via this document.
 - **Content hierarchy (centered):** wordmark H1 → display tagline → one CTA.
 - **Visual:** full-bleed crowd photo (`public/hero-crowd.webp`, ≤180KB,
   `next/image` priority — the LCP element) under a legibility gradient
-  (dark 55% top / open middle / dark 75% bottom). The current image is an
-  AI placeholder matching approved art direction — **replace with licensed
-  photography before launch** (same path, no code change).
+  (dark 55% top / open middle / dark 75% bottom). The image is
+  AI-generated and **cleared for production** per the AI imagery policy
+  (CLAUDE.md Image Standards): no likenesses, no marks, no legible text.
+  Swappable at the same path if real photography arrives later.
 - **Type:** H1 "Portugoool" in Permanent Marker (the single sanctioned
   usage — see typography.md): 150px desktop / 96px tablet / 60px mobile,
   0.95 line-height, soft shadow. Tagline "The Sound of Victory." in Anton,

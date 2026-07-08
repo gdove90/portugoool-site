@@ -222,7 +222,11 @@ touch-friendly targets (≥44px) · screen-reader support (semantic HTML,
 - SVG whenever possible (icons, logos, placeholders)
 - Optimize every raster image before it enters `public/`
 - Concepts and explorations live in `designs/` — **never** in `public/`
-- AI-generated mockups are references only; never ship them directly
+- **AI imagery policy:** atmosphere/emotion imagery (heroes, banners,
+  social) MAY be AI-generated if it contains no recognizable real-person
+  likeness, no crests/trademarks, and no legible text. **Product listing
+  photos must always show the real product** customers receive — never AI.
+  UI mockups (dc.html etc.) are references, never shipped directly.
 - Product image paths stay swappable: replace files, not code
 
 ---
