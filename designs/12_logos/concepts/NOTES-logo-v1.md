@@ -52,3 +52,31 @@ production-ready.** Fix list before any vectorization or use:
   wordmark primary/only/reverse×2/gold · monogram red/ink/paper/gold.
 - Remaining rollout: site header, favicon, OG image, embroidery digitize
   check for the cap.
+
+
+---
+
+# GOOOL draft bank (2026-07-08) — future reference, not current direction
+
+Filed as raw material to call upon later:
+
+- `goool-drafts_wordmark-styles.png` — 5 alternate wordmark treatments:
+  slash-cut heavy italic · thin condensed red · gold rounded ·
+  interlocking-O geometric (the most interesting alternate — Audi-ring
+  energy, could become a pattern/sock knit) · crown mark (caution: crowns
+  drift toward Real Madrid associations; use judiciously if ever).
+- `goool-drafts_apparel-applications.png` (.SHOP) and
+  `goool-drafts_apparel-applications-dotcom.png` (.COM) — full application
+  boards: embroidery patch styles (the raised red OOO puff patch is
+  excellent), tonal black-on-black garment marks, sponsor-placement map
+  (front/chest/sleeve/back-neck/lower-back/sock), 5 colorway lockups
+  (navy + dark green are new — not in colors.md; formalize before use).
+
+Caveats:
+1. **Domain suffix:** sheets show ".COM" and ".SHOP" — we own goool.shop
+   only. Any produced asset uses .SHOP or no suffix. Suffix-free marks
+   preferred on garments (domain ≠ logo on premium apparel).
+2. The striped jersey mocks include AI-drawn crests and a le-coq-like
+   sponsor mark — those rows are layout reference only, never print.
+3. Current approved system remains the v2 slashed-OOO + GOOOL wordmark
+   (../svg/). These drafts don't supersede it.
