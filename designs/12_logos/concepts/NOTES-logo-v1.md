@@ -36,3 +36,19 @@ production-ready.** Fix list before any vectorization or use:
 - [ ] Vector redraw as clean SVG (monogram + wordmark) → `../svg/`
 - [ ] Produce light/dark/gold variants per ../README.md
 - [ ] Then: site header, favicon, OG image rollout
+
+
+---
+
+# Logo v2 — APPROVED DIRECTION + vectorized (2026-07-08)
+
+- `logo-v2_final-sheet.png` — approved ChatGPT sheet: correct PORTUGOOOL
+  spelling (three O's), exact brand hexes, no crest/star references,
+  slash-cut OOO monogram. Official mark meaning: **the slash is the
+  moment the ball crosses the line.**
+- `logo-v2_vector-proof.png` — render proof of the production SVGs.
+- **Production masters live in `../svg/`** (outlined paths, no font
+  dependency; wordmark + monogram built from Anton glyphs, skewX −8°):
+  wordmark primary/only/reverse×2/gold · monogram red/ink/paper/gold.
+- Remaining rollout: site header, favicon, OG image, embroidery digitize
+  check for the cap.
