@@ -20,6 +20,16 @@ Brand lines (equal rank, universal — any garment, anywhere on the site):
 **"The Sound of Victory."** · **"Made for the Moment."**
 One per surface, never stacked. See voice.md.
 
+
+## Collection Naming (2026-07-08)
+Collections are NOT required to carry a GOOOL portmanteau:
+- Use a portmanteau only when natural and instantly readable —
+  **PORTUGOOOL** (Drop 01) qualifies; **ENGOOOLAND** is approved as one
+  candidate for an England collection, not a mandate.
+- When no portmanteau works, garments carry the **GOOOL house wordmark**
+  and the collection is named plainly ("The England Collection").
+- Never force it. A bad portmanteau costs more than a plain name.
+
 ## Brand Story
 <!-- The founding narrative. To be written with the owner. Beats to hit: -->
 - The stadium reaction · the family watch party · Portuguese neighborhoods

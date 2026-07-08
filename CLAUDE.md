@@ -15,7 +15,8 @@ Brand architecture: **GOOOL is the house brand** (domain: goool.shop).
 **PORTUGOOOL is The Portugal Collection** — chapter one, the name lives on
 the apparel and collection pages, not as the store brand. Future chapters
 follow the same pattern: nation-inspired colorways + the sound, never
-federation symbolism.
+federation symbolism. Collection portmanteaus (PORTUGOOOL, ENGOOOLAND) are
+optional — only when natural; otherwise the GOOOL house mark carries it.
 
 Every design decision reinforces excitement, celebration, pride, passion,
 and premium quality. The apparel is timeless, not trendy. The website feels
