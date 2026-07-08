@@ -8,14 +8,18 @@ const MESSAGE = "Drop 01 · Limited to 500 jerseys · Once it's gone, it's gone.
 const STORAGE_KEY = "portugooool-announcement-dismissed";
 
 export default function AnnouncementBar() {
-  // Render nothing until hydrated so a dismissed bar never flashes.
-  const [visible, setVisible] = useState(false);
+  // Render by default (server-side too) so first paint includes the bar —
+  // no layout shift for the common case. Hide after mount only for
+  // visitors who dismissed it this session.
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     try {
-      setVisible(window.sessionStorage.getItem(STORAGE_KEY) !== "1");
+      if (window.sessionStorage.getItem(STORAGE_KEY) === "1") {
+        setVisible(false);
+      }
     } catch {
-      setVisible(true);
+      // Storage unavailable — leave the bar up.
     }
   }, []);
 
