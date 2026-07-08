@@ -16,8 +16,9 @@ The fan brand for the sound of the goal — every league, every nation, every la
 **The sound of GOOOOOOOL.** Every product, page, and post should feel like
 the half-second after the ball crosses the line.
 
-Brand line: **"The Sound of Victory."**
-Apparel tagline: **"Made for the Moment."** (garments, tags, inserts — see voice.md)
+Brand lines (equal rank, universal — any garment, anywhere on the site):
+**"The Sound of Victory."** · **"Made for the Moment."**
+One per surface, never stacked. See voice.md.
 
 ## Brand Story
 <!-- The founding narrative. To be written with the owner. Beats to hit: -->
