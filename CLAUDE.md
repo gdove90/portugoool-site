@@ -1,4 +1,4 @@
-# PORTUGOOOL — Project Operating Manual
+# GOOOL — Project Operating Manual
 
 Permanent source of truth for every contributor: engineers, designers,
 marketers, manufacturers, and AI agents. Read this before changing anything.
@@ -7,8 +7,15 @@ marketers, manufacturers, and AI agents. Read this before changing anything.
 
 # Project Overview
 
-PORTUGOOOL does not sell shirts. It sells the emotion of hearing
-**"GOOOOOOOOL."**
+**GOOOL** (house brand, launched from the PORTUGOOOL pivot 2026-07-08)
+does not sell shirts. It sells the emotion of hearing **"GOOOOOOOOL"** —
+the one word every stadium on earth screams the same.
+
+Brand architecture: **GOOOL is the house brand** (domain: goool.shop).
+**PORTUGOOOL is The Portugal Collection** — chapter one, the name lives on
+the apparel and collection pages, not as the store brand. Future chapters
+follow the same pattern: nation-inspired colorways + the sound, never
+federation symbolism.
 
 Every design decision reinforces excitement, celebration, pride, passion,
 and premium quality. The apparel is timeless, not trendy. The website feels
@@ -16,7 +23,7 @@ like **Apple meets Nike** — never a typical Shopify template.
 
 Brand line: **"The Sound of Victory."**
 
-- Live site: **https://portugoool.com** (Netlify DNS; `portugoool.netlify.app` is the underlying site)
+- Live site: **https://portugoool.com** → becomes **https://goool.shop** once its nameservers land (phase 2 of the pivot; both domains stay, loser 301s to winner)
 - Repo: `gdove90/portugoool-site` (main branch auto-deploys)
 - Extended brand documentation: [designs/00_brand/](designs/00_brand/README.md)
 

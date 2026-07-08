@@ -35,6 +35,6 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Is this official Portugal team merchandise?",
     answer:
-      "No. PORTUGOOOL is an independent fan apparel brand. We use our own original designs and marks — nothing official, nothing licensed, just love for the game.",
+      "No. GOOOL is an independent fan apparel brand — the Portugal Collection celebrates the fans, not the federation. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
   },
 ];

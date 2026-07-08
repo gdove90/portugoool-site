@@ -7,7 +7,7 @@ import { Size, isSoldOut } from "@/lib/types";
 // Stripe Checkout handoff.
 //
 // TODO before launch:
-//   1. Create a Stripe account for PORTUGOOOL (separate from any other
+//   1. Create a Stripe account for GOOOL (separate from any other
 //      business) and put STRIPE_SECRET_KEY in .env.local / Netlify env.
 //   2. Add a webhook endpoint (checkout.session.completed) that writes
 //      the order + order_items rows to Supabase using the service role

@@ -23,10 +23,10 @@ export default function HomePage() {
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="font-display text-3xl font-bold uppercase tracking-tightest text-ink sm:text-4xl">
-              Drop Version I
+              The Portugal Collection
             </h2>
             <p className="mt-2 text-ink/60">
-              Four jerseys. 500 of each. A limited drop for the loudest fans.
+              Chapter one · Drop 01 · Four jerseys, 500 of each.
             </p>
           </div>
           <Link

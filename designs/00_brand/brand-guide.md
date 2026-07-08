@@ -1,4 +1,8 @@
-# PORTUGOOOL Brand Guide
+# GOOOL Brand Guide
+
+> **2026-07-08 pivot:** GOOOL is the house brand; PORTUGOOOL is The
+> Portugal Collection (chapter one). Everything below applies to the house
+> brand; collection-specific notes are marked.
 
 ## Mission
 <!-- Why the brand exists, in one or two sentences. Draft below — refine with owner. -->
@@ -6,7 +10,7 @@ Sell the emotion of the goal. Premium fan apparel for the moment the ball hits t
 
 ## Vision
 <!-- Where this goes in 3–5 years. -->
-The default shirt for Portuguese football fans worldwide — from Lisbon living rooms to New England watch parties.
+The fan brand for the sound of the goal — every league, every nation, every language that screams it. Portugal is chapter one.
 
 ## Core Emotion
 **The sound of GOOOOOOOL.** Every product, page, and post should feel like

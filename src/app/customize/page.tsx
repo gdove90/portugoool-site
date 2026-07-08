@@ -6,7 +6,7 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Customize Your Jersey",
   description:
-    "Add your name and number to any PORTUGOOOL jersey. Flat $15 add-on, printed on the back.",
+    "Add your name and number to any GOOOL jersey. Flat $15 add-on, printed on the back.",
 };
 
 export default function CustomizePage() {

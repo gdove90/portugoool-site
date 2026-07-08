@@ -5,7 +5,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Shipping, sizing, returns, customization, and production timing for PORTUGOOOL orders.",
+    "Shipping, sizing, returns, customization, and production timing for GOOOL orders.",
 };
 
 export default function FAQPage() {

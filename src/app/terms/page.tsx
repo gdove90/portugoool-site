@@ -22,7 +22,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Who we are</h2>
           <p className="mt-2">
-            PORTUGOOOL is an independent fan apparel brand. We are not
+            GOOOL is an independent fan apparel brand. We are not
             affiliated with, endorsed by, or connected to any football
             federation, club, league, tournament, or governing body. All
             designs and marks are original.
@@ -85,7 +85,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Intellectual property</h2>
           <p className="mt-2">
-            The PORTUGOOOL name, wordmark, designs, and site content are our
+            The GOOOL and PORTUGOOOL names, wordmarks, designs, and site content are our
             property. Don&apos;t reproduce them commercially without written
             permission.
           </p>

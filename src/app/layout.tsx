@@ -25,17 +25,17 @@ const marker = Permanent_Marker({
 
 export const metadata: Metadata = {
   title: {
-    default: "PORTUGOOOL — The sound of the goal. The shirt for the moment.",
-    template: "%s · PORTUGOOOL",
+    default: "GOOOL — The Sound of Victory. Premium futbol fan apparel.",
+    template: "%s · GOOOL",
   },
   description:
-    "Premium Portuguese-inspired soccer fan apparel. Lightweight, breathable game-day shirts released in limited drops. Independent fan brand — original designs only.",
+    "The sound every stadium screams, made wearable. Premium game-day jerseys and fan apparel in limited drops. Now live: The Portugal Collection. Independent brand — original designs only.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
   openGraph: {
-    title: "PORTUGOOOL",
-    description: "The sound of the goal. The shirt for the moment.",
+    title: "GOOOL",
+    description: "The Sound of Victory. Premium futbol fan apparel in limited drops.",
     type: "website",
   },
 };

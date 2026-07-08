@@ -5,35 +5,39 @@ import EmailSignup from "@/components/EmailSignup";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "PORTUGOOOL is an independent fan apparel brand born from the sound of the goal.",
+    "GOOOL is an independent fan apparel brand born from the sound every stadium on earth screams the same.",
 };
 
 export default function AboutPage() {
   return (
     <>
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
-        <h1 className="font-display text-4xl font-bold uppercase tracking-tightest text-ink sm:text-6xl">
+        <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-6xl">
           Born from<br />the <span className="text-red">sound</span>.
         </h1>
 
         <div className="mt-8 space-y-6 text-lg leading-relaxed text-ink/70">
           <p>
             You know the moment. The ball hits the net, the room explodes, and
-            one word stretches out forever: <strong className="text-ink">GOOOOOL</strong>.
+            one word stretches forever: <strong className="text-ink">GOOOOOL</strong>.
           </p>
           <p>
-            PORTUGOOOL exists for that moment. We make premium, lightweight
-            game-day shirts inspired by Portuguese football passion — built for
-            the stadium, the watch party, and everywhere in between.
+            It&apos;s the only word every stadium on earth screams the same —
+            São Paulo, Lisbon, Mexico City, and the loudest living room on
+            your street. GOOOL exists for that moment: premium, lightweight
+            game-day apparel built for the second it goes in.
           </p>
           <p>
-            Every design is original. Every release is a small-batch drop. When
-            a drop sells out, it&apos;s gone, and the next design takes its place.
+            We launch in chapters. First up:{" "}
+            <strong className="text-ink">The Portugal Collection</strong> —
+            PORTUGOOOL — four jerseys in deep red, white, black, and emerald,
+            500 of each. When a drop sells out, it&apos;s gone, and the next
+            chapter takes its place.
           </p>
           <p className="text-base text-ink/50">
-            PORTUGOOOL is an independent fan brand. We are not affiliated with
-            any federation, club, league, or governing body — just fans making
-            shirts for fans.
+            GOOOL is an independent fan brand. We are not affiliated with any
+            federation, club, league, or governing body — just fans making
+            shirts for fans, wherever the game is loud.
           </p>
         </div>
 

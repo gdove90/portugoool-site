@@ -1,7 +1,7 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
 // ─────────────────────────────────────────────────────────────
-// Supabase clients for the NEW, dedicated PORTUGOOOL project.
+// Supabase clients for the NEW, dedicated GOOOL project.
 // Clients are created lazily so the site builds and runs with mock
 // data before any Supabase env vars exist.
 // ─────────────────────────────────────────────────────────────

@@ -1,4 +1,7 @@
-# PORTUGOOOL — The Website Bible
+# GOOOL — The Website Bible
+
+> **2026-07-08 pivot:** GOOOL is the house brand; PORTUGOOOL is The
+> Portugal Collection (Drop 01). Copy contracts below reflect the pivot.
 
 **Master website specification.** The definitive reference for every page,
 layout, user flow, responsive breakpoint, and future UI decision. A new
@@ -165,7 +168,7 @@ Section order is a contract — reorder only via this document.
   AI-generated and **cleared for production** per the AI imagery policy
   (CLAUDE.md Image Standards): no likenesses, no marks, no legible text.
   Swappable at the same path if real photography arrives later.
-- **Type:** H1 "Portugoool" in Permanent Marker (the single sanctioned
+- **Type:** H1 "Goool" in Permanent Marker (the single sanctioned
   usage — see typography.md): 150px desktop / 96px tablet / 60px mobile,
   0.95 line-height, soft shadow. Tagline "The Sound of Victory." in Anton,
   34px desktop / 20px mobile, 0.16em tracking, paper.
@@ -184,10 +187,10 @@ Section order is a contract — reorder only via this document.
   SVG icons; 12px bold uppercase titles, 11px paper/50 subs.
 - **CTA:** none. This section never links.
 
-### 4.4 Featured Collection — Drop Version I [LIVE]
+### 4.4 Featured Collection — The Portugal Collection · Drop 01 [LIVE]
 - **Purpose:** put the four jerseys one tap from the hero.
-- **Content:** H2 "Drop Version I" + sub "Four jerseys. 500 of each. A
-  limited drop for the loudest fans." + 4 `ProductCard`s.
+- **Content:** H2 "The Portugal Collection" + sub "Chapter one · Drop 01 ·
+  Four jerseys, 500 of each." + 4 `ProductCard`s.
 - **Desktop:** header row with "View the drop →" link right; 4-up grid ≥1280.
 - **Tablet/Mobile:** 2-up grid; mobile swaps the header link for a
   full-width outline button below the grid.

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="font-display text-2xl font-bold uppercase tracking-tightest">
-              PORTUG<span className="text-red">OOO</span>L
+              G<span className="text-red">OOO</span>L
             </p>
             <p className="mt-2 max-w-xs text-sm text-paper/50">
               The sound of the goal. The shirt for the moment.
@@ -33,8 +33,8 @@ export default function Footer() {
             <Link href="/privacy" className="text-paper/50 hover:text-paper">Privacy Policy</Link>
           </nav>
           <p className="text-xs leading-relaxed text-paper/40">
-            © {new Date().getFullYear()} PORTUGOOOL. All rights reserved.
-            PORTUGOOOL is an independent fan apparel brand. Not affiliated with,
+            © {new Date().getFullYear()} GOOOL. All rights reserved.
+            GOOOL is an independent fan apparel brand. Not affiliated with,
             endorsed by, or connected to any football federation, club, league,
             or governing body. All designs and marks are original.
           </p>

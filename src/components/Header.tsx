@@ -26,9 +26,9 @@ export default function Header() {
         <Link
           href="/"
           className="font-display text-2xl uppercase tracking-tightest text-paper"
-          aria-label="PORTUGOOOL home"
+          aria-label="GOOOL home"
         >
-          PORTUG<span className="text-red">OOO</span>L
+          G<span className="text-red">OOO</span>L
         </Link>
 
         {/* Desktop nav */}

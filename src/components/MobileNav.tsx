@@ -37,7 +37,7 @@ export default function MobileNav({ open, onClose, links }: MobileNavProps) {
       <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-ink shadow-xl">
         <div className="flex h-16 items-center justify-between border-b border-paper/10 px-4">
           <span className="font-display text-lg uppercase tracking-tightest text-paper">
-            PORTUG<span className="text-red">OOO</span>L
+            G<span className="text-red">OOO</span>L
           </span>
           <button
             type="button"

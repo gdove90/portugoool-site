@@ -1,4 +1,4 @@
-// Shared domain types for PORTUGOOOL.
+// Shared domain types for GOOOL.
 // These mirror the Supabase `products` schema so the mock data in
 // `products.ts` can be swapped for a real DB fetch with no shape changes.
 

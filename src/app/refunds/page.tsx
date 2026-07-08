@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Refund Policy",
   description:
-    "All sales are final. Every PORTUGOOOL piece is made to order. Defective or damaged items are replaced free.",
+    "All sales are final. Every GOOOL piece is made to order. Defective or damaged items are replaced free.",
 };
 
 const CONTACT_EMAIL = "hello@portugoool.com";
@@ -19,7 +19,7 @@ export default function RefundsPage() {
         All sales are final.
       </p>
       <p className="mt-2 max-w-lg text-ink/60">
-        Every PORTUGOOOL piece is printed and made just for you after you
+        Every GOOOL piece is printed and made just for you after you
         order. Nothing sits in a warehouse — so we don&apos;t accept returns
         or exchanges.
       </p>

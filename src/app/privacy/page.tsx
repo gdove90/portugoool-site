@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "What PORTUGOOOL collects, why, and what we never do with it.",
+  description: "What GOOOL collects, why, and what we never do with it.",
 };
 
 const CONTACT_EMAIL = "hello@portugoool.com";
