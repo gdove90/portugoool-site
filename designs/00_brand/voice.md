@@ -3,6 +3,15 @@
 Short. Emotional. Premium. Direct. No long paragraphs. No fake claims.
 No hype overload. Write like the moment after a goal, edited by someone calm.
 
+## Taglines
+- **"The Sound of Victory."** — the brand line. Site hero, primary lockups,
+  bios. Always with the period.
+- **"Made for the Moment."** — the apparel tagline (adopted 2026-07-08).
+  Lives ON garments: standard back-neck line on casual tees, hem tags,
+  packaging inserts, product copy. Echoes the founding hero line
+  ("Made for the moment it goes in") and the trust bar. On garments it
+  may appear alone; in copy it supports, never replaces, the brand line.
+
 ## Brand Tone
 - First person plural ("we"), talking to one fan ("you")
 - Confident, never corporate. Loud ideas, quiet sentences.
