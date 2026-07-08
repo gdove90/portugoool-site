@@ -1,0 +1,446 @@
+import { Product, SHIRT_SIZES, ONE_SIZE, ProductCategory } from "./types";
+
+// ─────────────────────────────────────────────────────────────
+// Launch catalog — Drop Version I.
+// Mirrors the Supabase `products` table exactly (same UUIDs as the
+// seed migration). Swap `getProducts()` / `getProductBySlug()` for
+// Supabase queries later and nothing else changes.
+//
+// Image paths point at /public/products/*.svg placeholders — replace
+// each SVG with a real product photo when photography is ready.
+// ─────────────────────────────────────────────────────────────
+
+const JERSEY_FABRIC =
+  "150 GSM performance knit. 95% polyester, 5% elastane. Four-way stretch, moisture-wicking, silky smooth finish with a breathable athletic feel.";
+const CASUAL_FABRIC =
+  "180 GSM soft-touch cotton-poly blend. Holds color, holds shape, feels broken-in from day one. DTG/DTF print compatible.";
+const HEAVY_FABRIC =
+  "220 GSM heavyweight polyester blend. Soft-touch finish with real weight and structure. DTG/DTF print compatible.";
+
+const JERSEY_CARE =
+  "Machine wash cold, inside out. No bleach. Hang dry. Do not iron the print.";
+const CASUAL_CARE =
+  "Machine wash cold with like colors. Tumble dry low. Do not iron the print.";
+const ACCESSORY_CARE = "Spot clean or hand wash cold. Lay flat to dry.";
+
+const JERSEY_FIT = "Athletic fit. True to size. Size up for a relaxed feel.";
+const CASUAL_FIT = "Relaxed fit. Between sizes? Stay true.";
+const OVERSIZED_FIT = "Oversized fit. Drops loose on purpose. Size down for a standard fit.";
+
+const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
+
+// Shared drop settings for Version I jerseys.
+const DROP_I = {
+  isLimitedDrop: true,
+  dropVersion: "I",
+  dropLimit: 500,
+};
+
+export const products: Product[] = [
+  // ── Performance Jersey Collection ───────────────────────────
+  {
+    id: "10000000-0000-4000-8000-000000000001",
+    name: "Home Red Jersey",
+    slug: "home-red-jersey",
+    description:
+      "The one you wear when it matters. Silky, four-way stretch performance knit made for the moment it goes in.",
+    priceCents: 9500,
+    compareAtPriceCents: null,
+    color: "Deep Red",
+    colorHex: "#C1121F",
+    fabric: JERSEY_FABRIC,
+    fit: JERSEY_FIT,
+    careInstructions: JERSEY_CARE,
+    images: [
+      { src: "/products/home-red-jersey.svg", alt: "Home Red Jersey — front" },
+      { src: "/products/home-red-jersey-back.svg", alt: "Home Red Jersey — back with custom name and number" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "jersey",
+    supplierType: "unassigned",
+    isActive: true,
+    ...DROP_I,
+    dropSoldCount: 212,
+    customNameAvailable: true,
+    customNumberAvailable: true,
+    customizationPriceCents: CUSTOMIZATION_PRICE,
+  },
+  {
+    id: "10000000-0000-4000-8000-000000000002",
+    name: "Away White Jersey",
+    slug: "away-white-jersey",
+    description:
+      "Clean and loud at the same time. A crisp away-style jersey that shows up in every crowd photo.",
+    priceCents: 9500,
+    compareAtPriceCents: null,
+    color: "White",
+    colorHex: "#FFFFFF",
+    fabric: JERSEY_FABRIC,
+    fit: JERSEY_FIT,
+    careInstructions: JERSEY_CARE,
+    images: [
+      { src: "/products/away-white-jersey.svg", alt: "Away White Jersey — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "jersey",
+    supplierType: "unassigned",
+    isActive: true,
+    ...DROP_I,
+    dropSoldCount: 148,
+    customNameAvailable: true,
+    customNumberAvailable: true,
+    customizationPriceCents: CUSTOMIZATION_PRICE,
+  },
+  {
+    id: "10000000-0000-4000-8000-000000000003",
+    name: "Blackout Edition Jersey",
+    slug: "blackout-edition-jersey",
+    description:
+      "All black, gold detail, zero apologies. The limited edition for fans who don't need to be told the score.",
+    priceCents: 10500,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#0A0A0A",
+    fabric: JERSEY_FABRIC,
+    fit: JERSEY_FIT,
+    careInstructions: JERSEY_CARE,
+    images: [
+      { src: "/products/blackout-edition-jersey.svg", alt: "Blackout Edition Jersey — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "jersey",
+    supplierType: "unassigned",
+    isActive: true,
+    ...DROP_I,
+    dropSoldCount: 373,
+    customNameAvailable: true,
+    customNumberAvailable: true,
+    customizationPriceCents: CUSTOMIZATION_PRICE,
+  },
+  {
+    id: "10000000-0000-4000-8000-000000000004",
+    name: "Emerald Edition Jersey",
+    slug: "emerald-edition-jersey",
+    description:
+      "Deep green with gold accents. A nation's color, cut for match day and everything after.",
+    priceCents: 10500,
+    compareAtPriceCents: null,
+    color: "Emerald Green",
+    colorHex: "#0B3D2E",
+    fabric: JERSEY_FABRIC,
+    fit: JERSEY_FIT,
+    careInstructions: JERSEY_CARE,
+    images: [
+      { src: "/products/emerald-edition-jersey.svg", alt: "Emerald Edition Jersey — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "jersey",
+    supplierType: "unassigned",
+    isActive: true,
+    ...DROP_I,
+    dropSoldCount: 84,
+    customNameAvailable: true,
+    customNumberAvailable: true,
+    customizationPriceCents: CUSTOMIZATION_PRICE,
+  },
+
+  // ── Casual Shirt Collection ─────────────────────────────────
+  {
+    id: "20000000-0000-4000-8000-000000000001",
+    name: "PORTUGOOOL Brush Script Tee",
+    slug: "brush-script-tee",
+    description:
+      "The brand name in one loud stroke. Soft, heavy, and easy to live in.",
+    priceCents: 4200,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#0A0A0A",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/brush-script-tee.svg", alt: "PORTUGOOOL Brush Script Tee — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000002",
+    name: "GOOOOOOOL!!! Tee",
+    slug: "goool-tee",
+    description:
+      "The whole moment in one word. Wear the celebration.",
+    priceCents: 4400,
+    compareAtPriceCents: null,
+    color: "Deep Red",
+    colorHex: "#C1121F",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/goool-tee.svg", alt: "GOOOOOOOL!!! Tee — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000003",
+    name: "Vamos Portugooool Tee",
+    slug: "vamos-tee",
+    description:
+      "For the ones who start the chant. Soft-touch blend built for watch parties.",
+    priceCents: 4200,
+    compareAtPriceCents: null,
+    color: "Emerald Green",
+    colorHex: "#0B3D2E",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/vamos-tee.svg", alt: "Vamos Portugooool Tee — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000004",
+    name: "From Lisbon to the World Tee",
+    slug: "lisbon-to-the-world-tee",
+    description:
+      "One city, every living room, every corner bar. This one travels.",
+    priceCents: 4500,
+    compareAtPriceCents: null,
+    color: "White",
+    colorHex: "#FFFFFF",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/lisbon-to-the-world-tee.svg", alt: "From Lisbon to the World Tee — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000005",
+    name: "Match Day Tee",
+    slug: "match-day-tee",
+    description:
+      "Some days are just different. Dress accordingly.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Smoke Grey",
+    colorHex: "#9CA3AF",
+    fabric: CASUAL_FABRIC,
+    fit: CASUAL_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/match-day-tee.svg", alt: "Match Day Tee — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "20000000-0000-4000-8000-000000000006",
+    name: "We Don't Whisper Goals Tee",
+    slug: "we-dont-whisper-goals-tee",
+    description:
+      "Heavyweight, oversized, and honest about who you are during a match.",
+    priceCents: 4800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#0A0A0A",
+    fabric: HEAVY_FABRIC,
+    fit: OVERSIZED_FIT,
+    careInstructions: CASUAL_CARE,
+    images: [
+      { src: "/products/we-dont-whisper-goals-tee.svg", alt: "We Don't Whisper Goals Tee — front" },
+    ],
+    sizes: SHIRT_SIZES,
+    category: "casual",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+
+  // ── Accessory Collection ────────────────────────────────────
+  {
+    id: "30000000-0000-4000-8000-000000000001",
+    name: "Supporters Scarf",
+    slug: "supporters-scarf",
+    description:
+      "Double-sided knit scarf. Raise it at kickoff, wear it home after.",
+    priceCents: 2800,
+    compareAtPriceCents: null,
+    color: "Red / Green",
+    colorHex: "#C1121F",
+    fabric: "Double-sided acrylic knit with fringed ends. Stadium-weight.",
+    fit: "One size · 145 × 18 cm.",
+    careInstructions: ACCESSORY_CARE,
+    images: [
+      { src: "/products/supporters-scarf.svg", alt: "Supporters Scarf" },
+    ],
+    sizes: ONE_SIZE,
+    category: "accessory",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "30000000-0000-4000-8000-000000000002",
+    name: "GOOOOOL Cap",
+    slug: "goool-cap",
+    description:
+      "Low-profile cap with the sound of victory stitched on the front.",
+    priceCents: 3000,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#0A0A0A",
+    fabric: "Brushed cotton twill, embroidered front, adjustable strap.",
+    fit: "One size · adjustable.",
+    careInstructions: ACCESSORY_CARE,
+    images: [{ src: "/products/goool-cap.svg", alt: "GOOOOOL Cap" }],
+    sizes: ONE_SIZE,
+    category: "accessory",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "30000000-0000-4000-8000-000000000003",
+    name: "Sticker Pack",
+    slug: "sticker-pack",
+    description:
+      "Six die-cut stickers. Laptops, bottles, and anything else that needs more noise.",
+    priceCents: 600,
+    compareAtPriceCents: null,
+    color: "Multi",
+    colorHex: "#C9A227",
+    fabric: "Weatherproof vinyl, matte finish. Six designs per pack.",
+    fit: "One size · 5–8 cm each.",
+    careInstructions: "Dishwasher-safe. Peel and place once.",
+    images: [{ src: "/products/sticker-pack.svg", alt: "Sticker Pack — six die-cut stickers" }],
+    sizes: ONE_SIZE,
+    category: "accessory",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "30000000-0000-4000-8000-000000000004",
+    name: "Terrace Flag",
+    slug: "terrace-flag",
+    description:
+      "90 × 150 cm of pure celebration. For balconies, backyards, and full-time whistles.",
+    priceCents: 2400,
+    compareAtPriceCents: null,
+    color: "Red / Green / Gold",
+    colorHex: "#0B3D2E",
+    fabric: "Lightweight knitted polyester with reinforced grommets.",
+    fit: "One size · 90 × 150 cm.",
+    careInstructions: ACCESSORY_CARE,
+    images: [{ src: "/products/terrace-flag.svg", alt: "Terrace Flag" }],
+    sizes: ONE_SIZE,
+    category: "accessory",
+    supplierType: "unassigned",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+];
+
+// ── Data access (swap these for Supabase queries later) ───────
+
+export function getProducts(): Product[] {
+  return products.filter((p) => p.isActive);
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug && p.isActive);
+}
+
+export function getProductById(id: string): Product | undefined {
+  return products.find((p) => p.id === id && p.isActive);
+}
+
+export function getLimitedDropProducts(): Product[] {
+  return products.filter((p) => p.isActive && p.isLimitedDrop);
+}
+
+export function getProductsByCategory(category: ProductCategory): Product[] {
+  return products.filter((p) => p.isActive && p.category === category);
+}

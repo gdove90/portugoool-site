@@ -80,3 +80,18 @@ Caveats:
    sponsor mark — those rows are layout reference only, never print.
 3. Current approved system remains the v2 slashed-OOO + GOOOL wordmark
    (../svg/). These drafts don't supersede it.
+
+
+---
+
+# Echo Mark adopted as favicon (2026-07-08)
+
+- Source: GOOOL brand handoff (`../handoff_goool-brand/`), "Concept 01 ·
+  The Echo" — dot + three expanding arcs (red/red/gold), the scream
+  radiating from the moment.
+- **Role split:** slashed-OOO = apparel/garment monogram · **Echo mark =
+  digital identity** (favicon, app icon; candidate for loading states and
+  social avatar).
+- Masters: `../svg/monogram-echo.svg` (transparent) and
+  `monogram-echo-tile.svg` (ink tile). Live: `src/app/icon.svg` +
+  `apple-icon.png` — verified legible at 16px on light and dark chrome.

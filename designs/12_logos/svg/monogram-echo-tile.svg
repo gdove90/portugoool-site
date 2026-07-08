@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- GOOOL favicon — "The Echo Mark": the goal scream radiating from a point.
+       Ink tile so the mark reads on light and dark browser chrome. -->
+  <rect width="512" height="512" rx="104" fill="#0A0A0A"/>
+  <defs>
+    <clipPath id="echo"><rect x="167" y="0" width="345" height="512"/></clipPath>
+  </defs>
+  <circle cx="167" cy="256" r="30" fill="#FFFFFF"/>
+  <g clip-path="url(#echo)" fill="none">
+    <circle cx="167" cy="256" r="75" stroke="#C1121F" stroke-width="26"/>
+    <circle cx="167" cy="256" r="135" stroke="#C1121F" stroke-width="26"/>
+    <circle cx="167" cy="256" r="195" stroke="#C9A227" stroke-width="26"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220">
+  <!-- "The Echo Mark" — dot + three expanding arcs (the scream radiating).
+       Master on transparent, for light backgrounds. From the GOOOL brand
+       handoff (Logo Concept, "Concept 01 · The Echo"). -->
+  <defs><clipPath id="e"><rect x="54" y="0" width="186" height="220"/></clipPath></defs>
+  <circle cx="54" cy="110" r="15" fill="#0A0A0A"/>
+  <g clip-path="url(#e)" fill="none">
+    <circle cx="54" cy="110" r="38" stroke="#C1121F" stroke-width="13"/>
+    <circle cx="54" cy="110" r="68" stroke="#C1121F" stroke-width="13"/>
+    <circle cx="54" cy="110" r="98" stroke="#C9A227" stroke-width="13"/>
+  </g>
+</svg>
