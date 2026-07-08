@@ -1,46 +1,47 @@
+import Image from "next/image";
 import Link from "next/link";
 
+// Photo-led hero — Iteration 01 "Bold & Emotional"
+// (designs/02_homepage/handoff_drop01, website-bible §4.2).
+// hero-crowd.webp is an AI-generated placeholder matching the approved art
+// direction — replace with licensed photography before launch (same path).
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink text-paper">
-      {/* Subtle brand accents — pure CSS, no heavy assets */}
+    <section className="relative flex min-h-[560px] items-center justify-center overflow-hidden sm:min-h-[680px]">
+      <Image
+        src="/hero-crowd.webp"
+        alt="Fan with raised fist in a red-lit stadium crowd"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      {/* Legibility gradient — dark top and bottom, open middle */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 70% 20%, rgba(193,18,31,0.25), transparent), radial-gradient(ellipse 60% 50% at 20% 90%, rgba(11,61,46,0.35), transparent)",
+            "linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 35%, rgba(10,10,10,0.15) 55%, rgba(10,10,10,0.75) 92%)",
         }}
       />
 
-      <div className="relative mx-auto flex max-w-content flex-col items-start px-4 py-20 sm:px-6 sm:py-28 lg:py-36">
-        <p className="mb-4 inline-block rounded-full border border-gold/40 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-gold">
-          Drop Version I · 500 Made · Live Now
-        </p>
-
-        <h1 className="font-display text-6xl font-bold uppercase leading-none tracking-tightest sm:text-8xl lg:text-9xl">
-          Portug<span className="text-red">ooo</span>l
+      <div className="relative px-4 py-20 text-center">
+        <h1
+          className="font-marker text-6xl leading-[0.95] text-paper sm:text-8xl lg:text-[150px]"
+          style={{ textShadow: "0 6px 40px rgba(0,0,0,0.6)" }}
+        >
+          Portugoool
         </h1>
-
-        <p className="mt-5 font-display text-2xl font-bold uppercase tracking-tightest text-gold sm:text-3xl">
+        <p className="mt-4 font-display text-xl uppercase tracking-[0.16em] text-paper sm:text-3xl lg:text-[34px]">
           The Sound of Victory.
         </p>
-        <p className="mt-2 max-w-md text-lg text-paper/80 sm:text-xl">
-          Made for the moment it goes in.
-        </p>
-
-        <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+        <div className="mt-9">
           <Link
             href="/drop"
-            className="rounded-full bg-red px-8 py-4 text-center text-base font-semibold text-paper transition-colors hover:bg-red-dark"
+            className="inline-block w-full rounded-full bg-paper px-10 py-4 text-[15px] font-semibold text-ink shadow-[0_4px_24px_rgba(0,0,0,0.35)] transition-transform duration-150 hover:scale-[1.03] motion-reduce:transition-none motion-reduce:hover:scale-100 sm:w-auto"
           >
             Shop the Drop
-          </Link>
-          <Link
-            href="/shop"
-            className="rounded-full border border-paper/30 px-8 py-4 text-center text-base font-semibold text-paper transition-colors hover:border-paper hover:bg-paper/10"
-          >
-            View the Collection
           </Link>
         </div>
       </div>

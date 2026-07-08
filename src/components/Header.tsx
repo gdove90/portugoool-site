@@ -5,12 +5,14 @@ import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import MobileNav from "./MobileNav";
 
+// Nav labels are uppercase via CSS; "Summer '26" (not "World Cup") per the
+// legal standards in CLAUDE.md.
 const NAV_LINKS = [
   { href: "/shop", label: "Shop" },
   { href: "/drop", label: "Limited Editions" },
   { href: "/customize", label: "Customize" },
   { href: "/about", label: "About" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/world-cup", label: "Summer '26" },
 ];
 
 export default function Header() {
@@ -18,38 +20,38 @@ export default function Header() {
   const { count } = useCart();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-paper/10 bg-ink">
       <div className="mx-auto flex h-16 max-w-content items-center justify-between px-4 sm:px-6">
         {/* Wordmark — original brand mark, text only */}
         <Link
           href="/"
-          className="font-display text-2xl font-bold uppercase tracking-tightest text-ink"
+          className="font-display text-2xl uppercase tracking-tightest text-paper"
           aria-label="PORTUGOOOL home"
         >
           PORTUG<span className="text-red">OOO</span>L
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink/70 transition-colors hover:text-ink"
+              className="text-xs font-semibold uppercase tracking-[0.1em] text-paper/75 transition-colors hover:text-paper"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Link
             href="/cart"
-            className="relative flex h-10 w-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-smoke"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full text-paper transition-colors hover:bg-paper/10"
             aria-label={`Cart, ${count} item${count === 1 ? "" : "s"}`}
           >
             {/* Bag icon */}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M6 7h12l1 13H5L6 7z" />
               <path d="M9 7V5a3 3 0 0 1 6 0v2" />
             </svg>
@@ -71,7 +73,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-smoke md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-paper transition-colors hover:bg-paper/10 md:hidden"
             aria-label="Open menu"
             aria-expanded={menuOpen}
           >

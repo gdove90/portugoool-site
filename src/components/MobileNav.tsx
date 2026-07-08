@@ -27,22 +27,22 @@ export default function MobileNav({ open, onClose, links }: MobileNavProps) {
       {/* Backdrop */}
       <button
         type="button"
-        className="absolute inset-0 bg-ink/40"
+        className="absolute inset-0 bg-ink/60"
         onClick={onClose}
         aria-label="Close menu"
         tabIndex={-1}
       />
 
       {/* Panel */}
-      <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-paper shadow-xl">
-        <div className="flex h-16 items-center justify-between border-b border-ink/10 px-4">
-          <span className="font-display text-lg font-bold uppercase tracking-tightest">
+      <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-ink shadow-xl">
+        <div className="flex h-16 items-center justify-between border-b border-paper/10 px-4">
+          <span className="font-display text-lg uppercase tracking-tightest text-paper">
             PORTUG<span className="text-red">OOO</span>L
           </span>
           <button
             type="button"
             onClick={onClose}
-            className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-smoke"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-paper hover:bg-paper/10"
             aria-label="Close menu"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -57,7 +57,7 @@ export default function MobileNav({ open, onClose, links }: MobileNavProps) {
               key={link.href}
               href={link.href}
               onClick={onClose}
-              className="rounded-lg px-3 py-3 text-base font-medium text-ink transition-colors hover:bg-smoke"
+              className="rounded-lg px-3 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-paper/80 transition-colors hover:bg-paper/10 hover:text-paper"
             >
               {link.label}
             </Link>

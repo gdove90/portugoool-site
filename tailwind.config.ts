@@ -26,15 +26,17 @@ const config: Config = {
         smoke: "#F4F4F2", // off-white section background
       },
       fontFamily: {
-        // System stacks keep the build fast and fully offline-safe.
-        // Swap for a hosted display font (e.g. Anton / Oswald) later if desired.
+        // Display: Anton via next/font (decision recorded in
+        // designs/00_brand/typography.md). Condensed stack as fallback.
         display: [
+          "var(--font-anton)",
           '"Arial Narrow"',
-          '"Helvetica Neue Condensed"',
           "Impact",
           "system-ui",
           "sans-serif",
         ],
+        // Brush-script accent — hero wordmark only.
+        marker: ["var(--font-marker)", "cursive"],
         sans: [
           "system-ui",
           "-apple-system",

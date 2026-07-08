@@ -1,17 +1,23 @@
 # Typography
 
-Big, condensed, loud display type over a quiet system body. The launch build
-uses system stacks for speed; a hosted display font is the first planned
-upgrade (candidates below).
+Big, condensed, loud display type over a quiet system body.
 
 ## Display Font
-- **Current (production):** `"Arial Narrow", "Helvetica Neue Condensed", Impact, system-ui, sans-serif`
-- **Upgrade candidates:** Anton, Oswald, Archivo Black (pick one, document here, then implement)
+- **DECIDED (Iteration 01, 2026-07-08): Anton** — loaded via
+  `next/font/google` (subsetted, `--font-anton`), condensed system stack as
+  fallback. Single weight (400); do not rely on bolder weights.
 - Usage: wordmark, H1/H2, drop labels, jersey numbers. Always uppercase,
   tight tracking (`-0.03em`).
 
+## Accent Font (restricted)
+- **Permanent Marker** (`--font-marker`, `font-marker`) — brush-script
+  energy. Used in **exactly one place: the homepage hero wordmark**.
+  Never for headings, buttons, or body. Adding a second usage requires
+  updating this file first.
+
 ## Heading Font
-- Same as display. One display voice — no second decorative font.
+- Same as display (Anton). One display voice; the marker accent above is a
+  single sanctioned exception, not a second heading font.
 
 ## Body Font
 - System stack: `system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`

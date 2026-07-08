@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import ProductGrid from "@/components/ProductGrid";
 import FabricFeatureGrid from "@/components/FabricFeatureGrid";
 import DropBanner from "@/components/DropBanner";
@@ -15,6 +16,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <TrustBar />
 
       {/* Drop Version I — jerseys */}
       <section className="mx-auto max-w-content px-4 py-16 sm:px-6 sm:py-20">

@@ -118,10 +118,10 @@ Section order is a contract — reorder only via this document.
 
 | # | Section | Status |
 |---|---|---|
-| 0 | Announcement Bar | [FUTURE] |
-| 1 | Header | [LIVE] |
-| 2 | Hero | [LIVE] |
-| 3 | Trust Bar | [FUTURE] (trust copy lives on product/cart today) |
+| 0 | Announcement Bar | [LIVE — Iteration 01] |
+| 1 | Header | [LIVE — dark, Iteration 01] |
+| 2 | Hero | [LIVE — photo-led, Iteration 01] |
+| 3 | Trust Bar | [LIVE — Iteration 01] |
 | 4 | Featured Collection — Drop Version I | [LIVE] |
 | 5 | Fabric | [LIVE] |
 | 6 | Product Grid — casual preview | [LIVE] |
@@ -131,44 +131,56 @@ Section order is a contract — reorder only via this document.
 | 10 | Newsletter | [LIVE] |
 | 11 | Footer | [LIVE] |
 
-### 4.0 Announcement Bar [FUTURE]
+### 4.0 Announcement Bar [LIVE]
 - **Purpose:** one time-sensitive message (drop live, free-shipping threshold).
-- **Content:** single line ≤60 chars, optional link. One message at a time — never rotates.
-- **Layout:** full-width strip above header. Ink background, paper text,
-  gold link. 40px tall desktop, 36px mobile. Dismissible (×), remembered
-  per session.
-- **CTA:** inline text link only.
+- **Content:** single line ≤60 chars. One message at a time — never rotates.
+  Current copy (contract): "Drop 01 · Limited to 500 jerseys · Once it's
+  gone, it's gone."
+- **Layout:** full-width strip above header, site-wide. Red background,
+  paper text, 12px bold uppercase, 0.14em tracking, 40px tall. Dismissible
+  (×), remembered per session (sessionStorage). Scrolls away; header alone
+  is sticky.
+- **CTA:** none currently; inline text link permitted.
 
 ### 4.1 Header [LIVE]
 - **Purpose:** orientation + persistent path to cart and drop.
 - **Hierarchy:** wordmark → nav → cart → CTA.
-- **Desktop:** 64px tall, sticky, paper at 95% opacity + backdrop blur,
-  1px ink/10 bottom border. Nav: Shop · Limited Editions · Customize ·
-  About · FAQ. Red "Shop the Drop" pill right.
+- **Desktop:** 64px tall, sticky, ink background, 1px paper/10 bottom
+  border. Nav (12px semibold uppercase, 0.1em tracking, paper 75% → 100%
+  hover): Shop · Limited Editions · Customize · About · Summer '26 (FAQ
+  moved to footer). Red "Shop the Drop" pill right. Search/account icons
+  from the Iteration 01 mockup are intentionally omitted until those
+  features exist.
 - **Tablet:** same as desktop (nav appears ≥768px).
 - **Mobile:** wordmark + cart icon (badge = item count) + hamburger.
   Drawer: 288px, right-anchored, scroll-locked, links + full-width drop CTA.
 - **Spacing:** content gutters per §2.
 
-### 4.2 Hero [LIVE]
+### 4.2 Hero [LIVE — photo-led, Iteration 01]
 - **Purpose:** land the brand emotion in one screen.
-- **Content hierarchy:** drop eyebrow badge → wordmark H1 → gold brand line
-  ("The Sound of Victory.") → one-line sub → primary + secondary CTA.
-- **Visual hierarchy:** ink background with faint red/green radial glows
-  (pure CSS, no image dependency); type is the imagery.
-- **Desktop:** left-aligned block, 144px vertical padding, H1 at 128px.
-- **Tablet:** 112px padding, H1 96px.
-- **Mobile:** 80px padding, H1 60px, CTAs stacked full-width, primary first.
-- **CTA:** "Shop the Drop" (red, primary) → `/drop`; "View the Collection"
-  (outline) → `/shop`.
-- **Max copy:** sub-headline ≤60 chars. No paragraphs in the hero.
+- **Content hierarchy (centered):** wordmark H1 → display tagline → one CTA.
+- **Visual:** full-bleed crowd photo (`public/hero-crowd.webp`, ≤180KB,
+  `next/image` priority — the LCP element) under a legibility gradient
+  (dark 55% top / open middle / dark 75% bottom). The current image is an
+  AI placeholder matching approved art direction — **replace with licensed
+  photography before launch** (same path, no code change).
+- **Type:** H1 "Portugoool" in Permanent Marker (the single sanctioned
+  usage — see typography.md): 150px desktop / 96px tablet / 60px mobile,
+  0.95 line-height, soft shadow. Tagline "The Sound of Victory." in Anton,
+  34px desktop / 20px mobile, 0.16em tracking, paper.
+- **Section:** 680px min-height desktop, 560px mobile.
+- **CTA:** single — "Shop the Drop", paper pill / ink text, hover scale
+  1.03 (150ms; instant under reduced motion) → `/drop`. Full-width mobile.
+- **Max copy:** H1 + tagline only. No paragraphs, no second CTA.
 
-### 4.3 Trust Bar [FUTURE]
+### 4.3 Trust Bar [LIVE — dark variant]
 - **Purpose:** compress objections at first scroll.
-- **Content:** exactly 4 items: *Secure checkout · Made to order · Ships
-  after production · Limited drops*. Icon + ≤3 words each.
-- **Layout:** single row under hero; 2×2 grid on mobile. Smoke background,
-  40px vertical padding — visually a strip, not a section.
+- **Content:** exactly 4 items (title + sub): LIMITED DROPS / Never
+  Reprinted · PREMIUM QUALITY / Built to Perform · WORLDWIDE SHIPPING /
+  For Fans Everywhere · MADE FOR THE MOMENT / When It Hits Different.
+- **Layout:** ink strip directly under hero, paper/10 top border, 28px
+  padding. 4-across ≥1024px, 2×2 below. Gold (26px, 1.6 stroke) inline
+  SVG icons; 12px bold uppercase titles, 11px paper/50 subs.
 - **CTA:** none. This section never links.
 
 ### 4.4 Featured Collection — Drop Version I [LIVE]

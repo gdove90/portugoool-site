@@ -141,9 +141,9 @@ all pairs pass WCAG AA.
 
 # Typography Rules
 
-- **Display/Heading:** condensed uppercase stack (`font-display`); planned
-  upgrade to a hosted font (Anton/Oswald/Archivo Black — decide once,
-  document in designs/00_brand/typography.md)
+- **Display/Heading:** **Anton** via `next/font` (`font-display`, single
+  weight). **Permanent Marker** (`font-marker`) is a restricted accent —
+  hero wordmark only (see designs/00_brand/typography.md)
 - **Body:** system stack (`font-sans`)
 - **Buttons:** body stack, semibold, sentence case — never all-caps
 - **Scale:** hero `text-6xl→text-9xl`, section heads `text-3xl→text-4xl`,
@@ -167,8 +167,8 @@ Every component is reusable, typed, and lives in `src/components/`.
 | Forms | live (pattern) | Visible labels, rounded-lg inputs, inline validation |
 | Navigation (`Header`, `MobileNav`) | live | Sticky header, drawer on mobile |
 | Footer | live | Nav + independence disclaimer |
-| Announcement Bar | future | Single line, dismissible, one message at a time |
-| Trust Bar | live (inline) | Extract to component when reused a third time |
+| Announcement Bar | live | Single line, dismissible (session), one message at a time |
+| Trust Bar | live (`TrustBar`) | 4 items, gold icons on ink, never links |
 | Drop Counter | live (inline in `ProductDetail`) | "Drop Version N · X made · Y remaining" + bar |
 | Product Grid | live | 2-col mobile → 4-col desktop |
 | Product Gallery | live (inline) | Main image + thumbnails |
