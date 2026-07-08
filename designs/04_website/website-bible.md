@@ -116,6 +116,13 @@ Base styles = smallest screens; enhancements layer upward.
 
 ## 4. Homepage
 
+> **PRE-LAUNCH MODE (2026-07-08):** `/` currently serves a full-screen
+> coming-soon takeover (crowd backdrop, Echo mark, Goool wordmark,
+> "COMING SOON", email capture, peek link to /shop) while checkout is
+> gated on Stripe. The store homepage below is preserved in git — revert
+> the coming-soon commit on launch day. Store remains reachable at /shop.
+
+
 **Conversion goal:** click **Shop the Drop**.
 Section order is a contract — reorder only via this document.
 
