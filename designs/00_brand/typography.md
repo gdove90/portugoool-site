@@ -10,10 +10,10 @@ Big, condensed, loud display type over a quiet system body.
   tight tracking (`-0.03em`).
 
 ## Accent Font (restricted)
-- **Permanent Marker** (`--font-marker`, `font-marker`) — brush-script
-  energy. Used in **exactly one place: the homepage hero wordmark**.
-  Never for headings, buttons, or body. Adding a second usage requires
-  updating this file first.
+- **Permanent Marker / brush script** — brush energy. Sanctioned in
+  exactly two places: **the homepage hero wordmark** and **apparel
+  collection wordmarks on garment fronts** (per the Drop 01 jersey
+  files, 2026-07-08). Never for site headings, buttons, or body.
 
 ## Heading Font
 - Same as display (Anton). One display voice; the marker accent above is a
