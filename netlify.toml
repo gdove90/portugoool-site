@@ -8,3 +8,17 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# goool.shop is a brand-umbrella domain held for future use — until it
+# launches as its own storefront, it 301s to the main store.
+[[redirects]]
+  from = "https://goool.shop/*"
+  to = "https://portugoool.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.goool.shop/*"
+  to = "https://portugoool.com/:splat"
+  status = 301
+  force = true
