@@ -130,3 +130,12 @@ clean at small sizes, reads in every language. Joins:
 4. The track-jacket application mock has generic twin sleeve stripes —
    fine, but keep actual production away from three-stripe territory.
 5. Vector redraw needed (same pipeline as v2) before any production file.
+
+
+## GOL vectorized (2026-07-08) — pixel-traced for 1:1 fidelity
+Production masters in `../svg/`: `gol-wordmark-*` and `gol-slash-*` in
+four fills each — **gold-original `#B18844`** (exact hex sampled from the
+approved sheet — note it differs from brand gold), brand gold `#C9A227`,
+ink, paper. Traced from the sheet's pixels (potrace), not rebuilt from a
+font, so letterforms match the approved art exactly — see
+`logo-v3_gol-fidelity-proof.png` (top raster / bottom vector).
