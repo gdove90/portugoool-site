@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     template: "%s · GOOOL",
   },
   description:
-    "The sound every stadium screams, made wearable. Premium game-day jerseys and fan apparel in limited drops. Now live: The England Drop — ENGOOOLAND. Independent brand — original designs only.",
+    "The sound every stadium screams, made wearable. Premium game-day jerseys and fan apparel, made to order. Now live: The England Drop — ENGOOOLAND. Independent brand — original designs only.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
   openGraph: {
     title: "GOOOL",
-    description: "The Sound of Victory. Premium futbol fan apparel in limited drops.",
+    description: "The Sound of Victory. Premium futbol fan apparel, made to order.",
     type: "website",
   },
 };

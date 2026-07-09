@@ -58,7 +58,7 @@ export default function CustomizePage() {
           Pick your jersey
         </h2>
         <p className="mb-6 mt-1 text-sm text-ink/60">
-          All three are part of the England Drop — 500 units each.
+          Available on every ENGOOOLAND jersey.
         </p>
         <ProductGrid products={jerseys} />
 

@@ -108,7 +108,7 @@ export default function ComingSoon() {
           Coming Soon
         </p>
         <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
-          The England Drop · 500 jerseys per design. No reprints.
+          The England Drop — made to order, printed for you.
           <br />
           ENG<span className="text-red">OOO</span>LAND · The England Collection
         </p>

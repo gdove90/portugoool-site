@@ -6,14 +6,14 @@ export default function DropBanner() {
       <div className="mx-auto flex max-w-content flex-col items-start gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">
-            The England Drop · 500 units per jersey
+            The England Drop · ENGOOOLAND
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold uppercase tracking-tightest sm:text-4xl">
             When it&apos;s gone, it&apos;s gone.
           </h2>
           <p className="mt-3 max-w-lg text-paper/70">
-            Every jersey drop is limited to 500 units. Once this drop sells
-            out, it will not be reprinted — the next version takes its place.
+            Designs land in drops and can retire when the next one arrives.
+            Every piece is made to order, printed for you.
           </p>
         </div>
         <Link

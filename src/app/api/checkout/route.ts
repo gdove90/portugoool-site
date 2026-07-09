@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
     }
     if (isSoldOut(product)) {
       return NextResponse.json(
-        { error: `${product.name} is sold out — this drop will not be reprinted.` },
+        { error: `${product.name} is no longer available.` },
         { status: 400 }
       );
     }

@@ -1,57 +1,42 @@
 import type { Metadata } from "next";
 import ProductGrid from "@/components/ProductGrid";
 import EmailSignup from "@/components/EmailSignup";
-import { getJerseysByDrop } from "@/lib/products";
+import { getProductsByCategory } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Limited Editions",
+  title: "The England Drop",
   description:
-    "The England Drop — ENGOOOLAND. 500 units per jersey. Once this drop sells out, it will not be reprinted.",
+    "The England Drop — ENGOOOLAND. Premium performance jerseys, made to order.",
 };
 
 export default function DropPage() {
-  const portugal = getJerseysByDrop("I");
-  const england = getJerseysByDrop("II");
+  const england = getProductsByCategory("jersey");
 
   return (
     <>
       <section className="bg-ink py-14 text-paper sm:py-20">
         <div className="mx-auto max-w-content px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">
-            The England Drop · 500 units per jersey · No reprints
+            The England Drop · ENGOOOLAND · Live now
           </p>
           <h1 className="mt-2 font-display text-4xl font-bold uppercase tracking-tightest sm:text-6xl">
-            Limited Editions
+            The England Drop
           </h1>
           <p className="mt-4 max-w-lg text-paper/70">
-            ENGOOOLAND — The England Collection. 500 of each jersey,
-            counted down live. Once a drop sells out, it will not be
-            reprinted.
+            ENGOOOLAND — The England Collection. Every jersey made to
+            order and printed for you. Add your name and number, or wear
+            it clean.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-content px-4 py-12 sm:px-6 sm:py-16">
-        {portugal.length > 0 && (
-          <>
-            <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
-              The Portugal Collection
-            </h2>
-            <div className="mb-14 mt-6">
-              <ProductGrid products={portugal} />
-            </div>
-          </>
-        )}
-        {england.length > 0 && (
-          <>
-            <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
-              The England Collection
-            </h2>
-            <div className="mt-6">
-              <ProductGrid products={england} />
-            </div>
-          </>
-        )}
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
+          The England Collection
+        </h2>
+        <div className="mt-6">
+          <ProductGrid products={england} />
+        </div>
       </section>
 
       <EmailSignup />

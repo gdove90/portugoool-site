@@ -31,8 +31,8 @@ export default function AboutPage() {
             We launch in chapters. Now live:{" "}
             <strong className="text-ink">The England Collection</strong> —
             ENGOOOLAND — three jerseys in white, deep red, and England navy,
-            500 of each. When a drop sells out, it&apos;s gone, and the next
-            chapter takes its place.
+            every one made to order and printed for you. When the next
+            chapter lands, designs can retire.
           </p>
           <p className="text-base text-ink/50">
             GOOOL is an independent fan brand. We are not affiliated with any

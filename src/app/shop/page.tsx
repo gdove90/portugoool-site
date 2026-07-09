@@ -6,7 +6,7 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Performance jerseys, casual shirts, and match-day accessories. Limited drops, original designs.",
+    "Performance jerseys, performance tees, and match-day accessories. Made to order, original designs.",
 };
 
 const SECTIONS = [
@@ -14,7 +14,7 @@ const SECTIONS = [
     id: "jerseys",
     category: "jersey" as const,
     title: "Performance Jerseys",
-    blurb: "Limited to 500 per design. Add your name and number.",
+    blurb: "Made to order. Add your name and number.",
   },
   {
     id: "casual",

@@ -171,7 +171,7 @@ export default function CartPage() {
             <li>✓ Secure checkout via Stripe</li>
             <li>✓ Made to order</li>
             <li>✓ Ships after production</li>
-            <li>✓ Limited drop</li>
+            <li>✓ Original design</li>
           </ul>
         </div>
       </div>

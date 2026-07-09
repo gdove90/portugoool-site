@@ -38,7 +38,7 @@ Brand line: **"The Sound of Victory."**
 4. Large imagery
 5. Minimal UI
 6. Fast purchasing — no account required
-7. Limited drops — honest scarcity, never fake urgency
+7. Drops as releases, never fake scarcity — everything is made to order (POD)
 8. Quality over quantity
 
 Every page has **one primary conversion goal**. On most pages that goal is

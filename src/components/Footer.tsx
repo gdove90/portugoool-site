@@ -17,7 +17,7 @@ export default function Footer() {
           <nav className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm" aria-label="Footer">
             <Link href="/shop" className="text-paper/70 hover:text-paper">Shop</Link>
             <Link href="/about" className="text-paper/70 hover:text-paper">About</Link>
-            <Link href="/drop" className="text-paper/70 hover:text-paper">Limited Editions</Link>
+            <Link href="/drop" className="text-paper/70 hover:text-paper">The Drop</Link>
             <Link href="/faq" className="text-paper/70 hover:text-paper">FAQ</Link>
             <Link href="/customize" className="text-paper/70 hover:text-paper">Customize Your Jersey</Link>
             <Link href="/track-order" className="text-paper/70 hover:text-paper">Track Order</Link>

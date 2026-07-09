@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav";
 // legal standards in CLAUDE.md.
 const NAV_LINKS = [
   { href: "/shop", label: "Shop" },
-  { href: "/drop", label: "Limited Editions" },
+  { href: "/drop", label: "The Drop" },
   { href: "/customize", label: "Customize" },
   { href: "/about", label: "About" },
   { href: "/world-cup", label: "Summer '26" },

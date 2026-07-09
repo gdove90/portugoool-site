@@ -32,8 +32,8 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Products &amp; orders</h2>
           <p className="mt-2">
-            Every item is made to order. Limited drops are limited: once a
-            drop sells out, it is not reprinted. Placing an order is an offer
+            Every item is made to order and printed on demand. Placing an
+            order is an offer
             to purchase; we may refuse or cancel orders (including for
             suspected fraud or pricing errors) with a full refund of anything
             charged.

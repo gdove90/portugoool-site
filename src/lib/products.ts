@@ -41,9 +41,9 @@ const DROP_I = {
   dropLimit: 500,
 };
 const DROP_II = {
-  isLimitedDrop: true,
-  dropVersion: "II",
-  dropLimit: 500,
+  isLimitedDrop: false,
+  dropVersion: "II", // collection identity only — no scarcity claims (POD)
+  dropLimit: null,
 };
 
 export const products: Product[] = [

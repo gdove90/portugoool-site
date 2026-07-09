@@ -64,7 +64,7 @@ export default function Summer26Page() {
         </h2>
         <p className="mb-6 mt-1 text-sm text-ink/60">
           The England Drop — ENGOOOLAND, on sale while the whole world
-          watches. When it sells out, it will not be reprinted.
+          watches. Made to order, printed for you.
         </p>
         <ProductGrid products={jerseys} />
       </section>

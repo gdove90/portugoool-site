@@ -28,9 +28,9 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Jerseys come clean — no names, no numbers. On any jersey page you can add a name (up to 12 characters) and number (0–99) to the back for a flat $15. Casual shirts and accessories ship as designed.",
   },
   {
-    question: "What does 'limited drop' mean?",
+    question: "How do drops work?",
     answer:
-      "Each jersey drop is limited to 500 units. The product page shows how many are left. Once this drop sells out, it will not be reprinted — the next version launches in its place.",
+      "We release designs in drops — collections that land together. Everything is made to order: when you buy, your piece is printed for you. Designs can retire when the next drop lands.",
   },
   {
     question: "Is this official team merchandise?",
