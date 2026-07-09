@@ -10,6 +10,31 @@ export default function ComingSoon() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
+  // Discreet team-access unlock (validated server-side, sets the gate cookie)
+  const [showAccess, setShowAccess] = useState(false);
+  const [password, setPassword] = useState("");
+  const [accessError, setAccessError] = useState(false);
+  const [unlocking, setUnlocking] = useState(false);
+
+  async function unlock(e: React.FormEvent) {
+    e.preventDefault();
+    if (!password || unlocking) return;
+    setUnlocking(true);
+    setAccessError(false);
+    try {
+      const res = await fetch("/api/preview", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      if (!res.ok) throw new Error();
+      window.location.href = "/shop";
+    } catch {
+      setAccessError(true);
+      setUnlocking(false);
+    }
+  }
+
   // Lock the page behind the takeover (no stray scrollbar).
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -116,7 +141,39 @@ export default function ComingSoon() {
         {status === "error" && (
           <p className="mt-3 text-sm text-red" role="alert">Something went wrong. Try again.</p>
         )}
+      </div>
 
+      {/* Discreet team access — bottom of the page */}
+      <div className="absolute bottom-5 left-0 right-0 flex justify-center">
+        {showAccess ? (
+          <form onSubmit={unlock} className="flex items-center gap-2">
+            <label htmlFor="cs-pass" className="sr-only">Access password</label>
+            <input
+              id="cs-pass"
+              type="password"
+              autoFocus
+              value={password}
+              onChange={(e) => { setPassword(e.target.value); setAccessError(false); }}
+              placeholder="Password"
+              className={`w-44 rounded-full border bg-ink/60 px-4 py-2 text-sm text-paper placeholder:text-paper/40 backdrop-blur focus:outline-none ${accessError ? "border-red" : "border-paper/25 focus:border-gold"}`}
+            />
+            <button
+              type="submit"
+              disabled={unlocking}
+              className="rounded-full border border-paper/25 px-4 py-2 text-sm font-semibold text-paper/80 transition-colors hover:border-paper hover:text-paper disabled:opacity-60"
+            >
+              {unlocking ? "…" : "Enter"}
+            </button>
+          </form>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setShowAccess(true)}
+            className="text-[11px] font-semibold uppercase tracking-[0.2em] text-paper/40 transition-colors hover:text-paper/80"
+          >
+            Team access
+          </button>
+        )}
       </div>
     </div>
   );

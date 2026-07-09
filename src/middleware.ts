@@ -48,6 +48,7 @@ export function middleware(req: NextRequest) {
   const allowed =
     pathname === "/" ||
     pathname === "/api/newsletter" ||
+    pathname === "/api/preview" ||
     pathname.startsWith("/print/") ||
     pathname === "/icon.svg" ||
     pathname === "/apple-icon.png" ||
