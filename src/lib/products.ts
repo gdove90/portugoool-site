@@ -174,6 +174,7 @@ export const products: Product[] = [
     careInstructions: JERSEY_CARE,
     images: [
       { src: "/products/engoooland-home-white-jersey.webp", alt: "ENGOOOLAND Home White Jersey — front, on model" },
+      { src: "/products/engoooland-home-white-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
       { src: "/products/engoooland-home-white-jersey-back.webp", alt: "ENGOOOLAND Home White Jersey — back, ready for custom name and number" },
     ],
     sizes: SHIRT_SIZES,
@@ -201,6 +202,7 @@ export const products: Product[] = [
     careInstructions: JERSEY_CARE,
     images: [
       { src: "/products/engoooland-away-red-jersey.webp", alt: "ENGOOOLAND Away Red Jersey — front, on model" },
+      { src: "/products/engoooland-away-red-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
       { src: "/products/engoooland-away-red-jersey-back.webp", alt: "ENGOOOLAND Away Red Jersey — back, ready for custom name and number" },
     ],
     sizes: SHIRT_SIZES,
@@ -228,6 +230,7 @@ export const products: Product[] = [
     careInstructions: JERSEY_CARE,
     images: [
       { src: "/products/engoooland-navy-jersey.webp", alt: "ENGOOOLAND Navy Jersey — front, on model" },
+      { src: "/products/engoooland-navy-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
       { src: "/products/engoooland-navy-jersey-back.webp", alt: "ENGOOOLAND Navy Jersey — back, ready for custom name and number" },
     ],
     sizes: SHIRT_SIZES,
