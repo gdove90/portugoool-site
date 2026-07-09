@@ -6,7 +6,7 @@ export default function DropBanner() {
       <div className="mx-auto flex max-w-content flex-col items-start gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">
-            Drop Version I · 500 units per jersey
+            The England Drop · 500 units per jersey
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold uppercase tracking-tightest sm:text-4xl">
             When it&apos;s gone, it&apos;s gone.

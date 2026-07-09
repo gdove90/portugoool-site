@@ -33,8 +33,8 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Each jersey drop is limited to 500 units. The product page shows how many are left. Once this drop sells out, it will not be reprinted — the next version launches in its place.",
   },
   {
-    question: "Is this official Portugal team merchandise?",
+    question: "Is this official team merchandise?",
     answer:
-      "No. GOOOL is an independent fan apparel brand — the Portugal Collection celebrates the fans, not the federation. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
+      "No. GOOOL is an independent fan apparel brand — we celebrate the fans, not the federations. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
   },
 ];

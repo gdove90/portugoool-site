@@ -108,9 +108,9 @@ export default function ComingSoon() {
           Coming Soon
         </p>
         <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
-          Two collections. 500 jerseys each. No reprints.
+          The England Drop · 500 jerseys per design. No reprints.
           <br />
-          Drop 01 · Portugal &nbsp;—&nbsp; Drop 02 · ENGOOOLAND
+          ENG<span className="text-red">OOO</span>LAND · The England Collection
         </p>
 
         {status === "success" ? (

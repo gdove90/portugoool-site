@@ -12,7 +12,7 @@ import ComingSoon from "@/components/ComingSoon";
 export const metadata: Metadata = {
   title: "GOOOL — Coming Soon. The Sound of Victory.",
   description:
-    "Two collections. 500 jerseys each. No reprints. Drop 01 · Portugal — Drop 02 · ENGOOOLAND. Join the list for first access.",
+    "The England Drop — ENGOOOLAND. 500 jerseys per design. No reprints. Join the list for first access.",
 };
 
 export default function HomePage() {
