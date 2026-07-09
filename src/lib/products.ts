@@ -932,7 +932,7 @@ export const products: Product[] = [
     sizes: ONE_SIZE,
     category: "accessory",
     supplierType: "printful",
-    isActive: true,
+    isActive: false,
     isLimitedDrop: false,
     dropVersion: "II",
     dropLimit: null,
