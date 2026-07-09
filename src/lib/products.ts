@@ -912,6 +912,35 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
   },
+  {
+    id: "50000000-0000-4000-8000-000000000005",
+    name: "GOOOL England Cap",
+    slug: "goool-england-cap",
+    description:
+      "Red, white, and navy. GOOOL in navy thread, England in red, the cross on the shield. Part of The England Drop.",
+    priceCents: 3500,
+    compareAtPriceCents: null,
+    color: "Red / White",
+    colorHex: "#C1121F",
+    fabric: "Structured 5-panel trucker, embroidered front panel, mesh back, snapback.",
+    fit: "One size · snapback.",
+    careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
+    images: [
+      { src: "/products/goool-england-cap.webp", alt: "GOOOL England Cap — front" },
+      { src: "/products/goool-england-cap-alt.webp", alt: "GOOOL England Cap — angle" },
+    ],
+    sizes: ONE_SIZE,
+    category: "accessory",
+    supplierType: "printful",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: "II",
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────
