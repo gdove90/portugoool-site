@@ -32,18 +32,26 @@ export default function DropPage() {
       </section>
 
       <section className="mx-auto max-w-content px-4 py-12 sm:px-6 sm:py-16">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
-          The Portugal Collection <span className="text-ink/40">· Drop 01</span>
-        </h2>
-        <div className="mt-6">
-          <ProductGrid products={portugal} />
-        </div>
-        <h2 className="mt-14 font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
-          The England Collection <span className="text-ink/40">· Drop 02</span>
-        </h2>
-        <div className="mt-6">
-          <ProductGrid products={england} />
-        </div>
+        {portugal.length > 0 && (
+          <>
+            <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
+              The Portugal Collection <span className="text-ink/40">· Drop 01</span>
+            </h2>
+            <div className="mb-14 mt-6">
+              <ProductGrid products={portugal} />
+            </div>
+          </>
+        )}
+        {england.length > 0 && (
+          <>
+            <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
+              The England Collection <span className="text-ink/40">· Drop 02</span>
+            </h2>
+            <div className="mt-6">
+              <ProductGrid products={england} />
+            </div>
+          </>
+        )}
       </section>
 
       <EmailSignup />
