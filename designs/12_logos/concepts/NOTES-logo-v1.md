@@ -139,3 +139,47 @@ approved sheet — note it differs from brand gold), brand gold `#C9A227`,
 ink, paper. Traced from the sheet's pixels (potrace), not rebuilt from a
 font, so letterforms match the approved art exactly — see
 `logo-v3_gol-fidelity-proof.png` (top raster / bottom vector).
+
+---
+
+# Logo v4 — GOOOL identity presentation sheet (2026-07-09)
+
+Source: ChatGPT concept, `logo-v4_goool-identity-sheet.png`. Dark/gold
+full-identity system for the GOOOL house brand: primary italic wordmark,
+GOOOL.shop secondary, crest/badge set (shield + roundel with ball-and-
+pillars motif), G monogram + minimal marks, sponsor placement diagrams,
+embroidery/hardware applications (neck label, sleeve badge, zipper pull,
+hang tag), colorways, app icon / social avatar / favicon, brand-essence
+pillars. Footer locks up GOOOL.SHOP — aligned with the domain flip.
+
+## Legal pass — clean
+- Crest concepts are original (generic ball + abstract pillars; no
+  federation crest, no FIFA/UEFA resemblance, no three-lions/cross).
+- Apparel blanks carry no Nike/adidas/Puma-derivative marks.
+- No player likenesses, no World Cup language.
+
+## Must fix (brand consistency) before any production use
+1. **Tagline misassignment.** Sheet sets "THE LANGUAGE OF THE GAME"
+   under the GOOOL wordmark. That line belongs to the **GOL** lockup
+   only. GOOOL surfaces use "The Sound of Victory." or "Made for the
+   Moment." — one per surface.
+2. **New wordmark style.** The italic athletic GOOOL letterforms differ
+   from the production Anton-based goool wordmark and the Permanent
+   Marker hero mark. Treat as a *concept direction* for a future
+   refresh, not a replacement — no swap without a logo-guidelines.md
+   decision.
+3. **Palette.** Sheet gold reads brighter than token gold `#C9A227`
+   (and GOL gold-original `#B18844`). Re-sample to tokens if any element
+   graduates to production.
+4. **Lifestyle mockup contains an American football** (GOOOL-branded).
+   Wrong sport — decoration only, never a production reference.
+5. Colorway row includes red/blue/green wordmarks — fine as exploration;
+   production colorways stay within tokens per colors.md.
+
+## Keep / strong
+- Crest-badge direction (shield + roundel) — first credible GOOOL badge;
+  candidate for jersey badge + embroidery patch program
+- G monogram scales cleanly to app icon / favicon / zipper pull
+- Hardware program (neck label, hang tag, zipper pull) — premium and
+  feasible with Printful/Apliiq embroidery later
+- GOOOL.shop secondary lockup — use once domain flip lands
