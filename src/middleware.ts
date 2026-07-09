@@ -16,7 +16,9 @@ import { NextRequest, NextResponse } from "next/server";
 //   /print/*             production print files (Printful fetches these)
 //   icons + hero image   assets the landing needs
 //
-// LAUNCH DAY: delete this file (and restore the store homepage).
+// LAUNCH DAY: delete this file (and restore the store homepage). The
+// canonical-domain 301 below is also covered by netlify.toml redirect
+// rules, which take over once no middleware runs in front of them.
 // ─────────────────────────────────────────────────────────────
 
 const COOKIE = "goool_preview";
@@ -24,6 +26,21 @@ const COOKIE = "goool_preview";
 export function middleware(req: NextRequest) {
   const { pathname, searchParams } = req.nextUrl;
   const secret = process.env.PREVIEW_KEY;
+
+  // Canonical domain: middleware runs before Netlify redirect rules, so
+  // the portugoool.com → goool.shop 301 must happen here. /print/* stays
+  // reachable on both hosts (supplier file URLs reference the old domain).
+  const host = req.headers.get("host") ?? "";
+  if (
+    (host === "portugoool.com" || host === "www.portugoool.com" || host === "www.goool.shop") &&
+    !pathname.startsWith("/print/")
+  ) {
+    const url = req.nextUrl.clone();
+    url.protocol = "https";
+    url.host = "goool.shop";
+    url.port = "";
+    return NextResponse.redirect(url, 301);
+  }
 
   // Key in the URL → set the cookie and continue to the same page (clean URL).
   if (secret && searchParams.get("key") === secret) {
