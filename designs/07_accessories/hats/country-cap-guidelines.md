@@ -69,6 +69,22 @@ Current colorways:
 | England Red | Cranberry | White | White | same |
 | Argentina White | White | Navy #0A1F3C | Sky #75AADB | celeste bands, gold sun+edge |
 | Argentina Sky | Light Blue | White | White | same |
+| Italy Navy | Navy | White | Green #008C45 | tricolore vertical, gold edge |
+| Italy White | White | Navy #0A1F3C | Green #008C45 | same |
+| Netherlands Navy | Navy | White | Orange #F36C21 | r/w/b horizontal, gold edge |
+| Germany Black | Black | White | Red #DD0000 | black/red/gold horizontal, gold edge |
+| Germany White | White | Ink #0A0A0A | Red #DD0000 | same |
+| Belgium Red | Cranberry | Gold #C9A227 | Black #0A0A0A | black/yellow/red vertical, gold edge |
+| Belgium Black | Black | Gold #C9A227 | Red #EF3340 | same |
+| Norway Navy | Navy | White | Red #BA0C2F | Nordic cross, white edge |
+| Norway Red | Cranberry | White | White | same |
+| Spain Black | Black | Gold #C9A227 | Red #AA151B | red/yellow/red horizontal (wide center), gold edge |
+| Spain Red | Cranberry | Gold #C9A227 | Gold #C9A227 | same |
+| France Navy | Navy | White | Red #ED2939 | b/w/r vertical, gold edge |
+| France White | White | Navy #0A1F3C | Red #ED2939 | same |
+
+Known gap: **Netherlands Orange** — the 6245CM blank has no orange;
+colorway ships when an orange structured blank is sourced.
 
 ## Adding a new country
 

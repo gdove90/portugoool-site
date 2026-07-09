@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function DropPage() {
   const england = [
     ...getProductsByCategory("jersey"),
-    ...getProductsByCategory("accessory").filter((p) => p.dropVersion === "II"),
+    ...getProductsByCategory("hat").filter((p) => p.dropVersion === "II"),
   ];
 
   return (

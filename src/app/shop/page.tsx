@@ -6,7 +6,7 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Performance jerseys, performance tees, and match-day accessories. Made to order, original designs.",
+    "Performance jerseys, performance tees, and country caps. Made to order, original designs.",
 };
 
 const SECTIONS = [
@@ -23,10 +23,16 @@ const SECTIONS = [
     blurb: "Built for watch parties, match days, and every GOOOOOOOL.",
   },
   {
+    id: "hats",
+    category: "hat" as const,
+    title: "Hats",
+    blurb: "One cap, every nation. Embroidered front, crest on the side.",
+  },
+  {
     id: "accessories",
     category: "accessory" as const,
     title: "Accessories",
-    blurb: "Scarves, caps, stickers, flags. Finish the fit.",
+    blurb: "Scarves, stickers, flags. Finish the fit.",
   },
 ];
 
