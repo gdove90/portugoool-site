@@ -98,3 +98,35 @@ Caveats:
 - Masters: `../svg/monogram-echo.svg` (transparent) and
   `monogram-echo-tile.svg` (ink tile). Live: `src/app/icon.svg` +
   `apple-icon.png` — verified legible at 16px on light and dark chrome.
+
+
+---
+
+# Logo v3 — GOL mark (2026-07-08, owner: "we will use for designs")
+
+`logo-v3_gol-brand-sheet.png` — gold condensed GOL wordmark, slash cut
+through the O (same blade gesture as the OOO monogram), tagline
+"THE LANGUAGE OF THE GAME", minimal marks (solo slash · G · slashed O ·
+L), badge/garment/sponsor-placement examples, 9 colorways.
+
+## Role in the mark system (pending vectorization)
+GOL = the **garment wordmark for house/global designs** — short, embroiders
+clean at small sizes, reads in every language. Joins:
+- Echo — digital identity + apparel badge
+- Slashed-OOO — typographic monogram
+- GOOOL wordmark — site/lockups
+- Collection portmanteaus (PORTUGOOOL / ENGOOOLAND) — per-collection
+
+## To resolve before production use
+1. **Tagline conflict:** sheet introduces "The Language of the Game" —
+   voice.md currently sanctions exactly two brand lines. Adopt as third,
+   swap for one, or treat as GOL-mark-only lockup line? Owner call.
+2. **New colorway variants** (blue, bright red, green-on-black) not in
+   palette — formalize any that get used.
+3. **Trademark note:** "GOL" collides with GOL Linhas Aéreas (airline)
+   and GolTV (media) — different classes than apparel, but include GOL in
+   the USPTO Class 25 clearance alongside GOOOL before printing it on
+   garments for sale.
+4. The track-jacket application mock has generic twin sleeve stripes —
+   fine, but keep actual production away from three-stripe territory.
+5. Vector redraw needed (same pipeline as v2) before any production file.
