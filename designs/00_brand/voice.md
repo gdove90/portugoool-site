@@ -3,20 +3,25 @@
 Short. Emotional. Premium. Direct. No long paragraphs. No fake claims.
 No hype overload. Write like the moment after a goal, edited by someone calm.
 
-## Taglines (updated 2026-07-08, owner call)
-Two brand lines, **equal rank, universal use** — either may appear on any
-garment type (jerseys, tees, hoodies, accessories) and anywhere on the
-site. Both are brand association for all things goool.shop:
+## Taglines (updated 2026-07-09, owner call — mark-locked)
+Taglines are **owned by their mark**. Never cross them.
+
+**GOOOL** (house wordmark, GOOOL-branded product) — two lines, equal rank:
 - **"The Sound of Victory."**
 - **"Made for the Moment."**
-Rules: always with the period · one tagline per surface/panel (never both
-stacked together) · pick whichever fits the moment — Victory leans
-triumphant/loud, Moment leans intimate/ready.
+
+**GOL** (GOL mark, GOL-branded product) — one line, exclusive:
+- **"The Language of the Game."**
+
+Rules: always with the period · one tagline per surface/panel (never
+stacked) · a GOL product never carries a GOOOL line and vice versa ·
+for GOOOL, pick whichever fits — Victory leans triumphant/loud, Moment
+leans intimate/ready.
 
 ## Brand Tone
 - First person plural ("we"), talking to one fan ("you")
 - Confident, never corporate. Loud ideas, quiet sentences.
-- Honest scarcity: real counts, real deadlines — never fake urgency
+- Honest always: made to order, printed for you — never fake urgency or fake scarcity
 - Tag separators use `·` (middle dot). Sentence breaks use `.` or `:` — never dashes.
 
 ## Homepage Copy Style
@@ -24,7 +29,7 @@ triumphant/loud, Moment leans intimate/ready.
 - Subheads: one short sentence ("Made for the moment it goes in.")
 - Approved lines bank: "The sound of the goal." · "Wear the celebration." ·
   "Built for watch parties, match days, and every GOOOOOOOL." ·
-  "A limited drop for the loudest fans."
+  "Printed for you, made for the moment."
 
 ## Product Copy Style
 - 1–2 sentences max. Feeling first, fabric second.

@@ -16,9 +16,12 @@ The fan brand for the sound of the goal — every league, every nation, every la
 **The sound of GOOOOOOOL.** Every product, page, and post should feel like
 the half-second after the ball crosses the line.
 
-Brand lines (equal rank, universal — any garment, anywhere on the site):
-**"The Sound of Victory."** · **"Made for the Moment."**
-One per surface, never stacked. See voice.md.
+Brand lines are **mark-locked** (owner call, 2026-07-09):
+- **GOOOL** carries **"The Sound of Victory."** or **"Made for the
+  Moment."** (equal rank, one per surface, never stacked)
+- **GOL** carries **"The Language of the Game."** — exclusively, and
+  GOL never borrows a GOOOL line
+See voice.md.
 
 
 ## Collection Naming (2026-07-08)
