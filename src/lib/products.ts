@@ -165,7 +165,7 @@ export const products: Product[] = [
     slug: "engoooland-home-white-jersey",
     description:
       "The scream, embedded. Crisp white with the red and navy sash — chapter two starts loud.",
-    priceCents: 6100,
+    priceCents: 6500,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#FFFFFF",
@@ -192,7 +192,7 @@ export const products: Product[] = [
     slug: "engoooland-away-red-jersey",
     description:
       "Deep red with white and navy movement. For the away days and the loud ends.",
-    priceCents: 6100,
+    priceCents: 6500,
     compareAtPriceCents: null,
     color: "Deep Red",
     colorHex: "#C1121F",
@@ -219,7 +219,7 @@ export const products: Product[] = [
     slug: "engoooland-navy-jersey",
     description:
       "England Navy with the red-white sash and a gold pinline. Quiet colour, loud intent.",
-    priceCents: 6100,
+    priceCents: 6500,
     compareAtPriceCents: null,
     color: "England Navy",
     colorHex: "#0A1F3C",
@@ -544,7 +544,7 @@ export const products: Product[] = [
     slug: "gol-clean-sheet-tee",
     description:
       "The mark in ink on clean white. Performance fabric, daylight energy.",
-    priceCents: 3000,
+    priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#FFFFFF",
@@ -573,7 +573,7 @@ export const products: Product[] = [
     slug: "gol-gold-standard-tee",
     description:
       "Gold on black with a tonal slash. The house look, built to move.",
-    priceCents: 3000,
+    priceCents: 3500,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -602,7 +602,7 @@ export const products: Product[] = [
     slug: "gol-concrete-grey-tee",
     description:
       "The slash oversized, the mark up top. Street energy on performance poly.",
-    priceCents: 3000,
+    priceCents: 3500,
     compareAtPriceCents: null,
     color: "Sport Grey",
     colorHex: "#9CA3AF",
@@ -631,7 +631,7 @@ export const products: Product[] = [
     slug: "gol-concrete-white-tee",
     description:
       "Ink slash shoulder to hip, gold lockup. The loud one in white.",
-    priceCents: 3000,
+    priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#FFFFFF",
@@ -660,7 +660,7 @@ export const products: Product[] = [
     slug: "gol-concrete-black-tee",
     description:
       "Paper slash, gold mark. Blackout energy for the performance line.",
-    priceCents: 3000,
+    priceCents: 3500,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -799,7 +799,7 @@ export const products: Product[] = [
     slug: "gol-cap-black",
     description:
       "Gold GOL, stitched. Low-profile classic cap, adjustable strap.",
-    priceCents: 2900,
+    priceCents: 3500,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -828,7 +828,7 @@ export const products: Product[] = [
     slug: "gol-cap-white",
     description:
       "Ink GOL, stitched clean on white. Low-profile classic cap, adjustable strap.",
-    priceCents: 2900,
+    priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#FFFFFF",
