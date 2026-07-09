@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #0A0A0A; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #0A0A0A; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: #C1121F; }
+    summary::-webkit-details-marker { display: none; }
+  </style>
+</helmet>
+
+<div style="background:#FFFFFF; min-width:1200px" data-screen-label="Homepage — Iteration 01 Bold & Emotional">
+
+  <!-- 0 · Announcement bar -->
+  <sc-if value="{{ showAnnouncement }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#C1121F; color:#FFFFFF; text-align:center; height:40px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase">
+      Drop 01 · Limited to 500 jerseys · Once it's gone, it's gone.
+    </div>
+  </sc-if>
+
+  <!-- 1 · Header -->
+  <header style="background:#0A0A0A; border-bottom:1px solid rgba(255,255,255,0.08); position:relative; z-index:5">
+    <div style="max-width:1200px; margin:0 auto; height:64px; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:32px">
+      <a href="#" style="font-family:Anton, sans-serif; font-size:24px; letter-spacing:-0.03em; color:#FFFFFF; text-transform:uppercase" style-hover="color:#FFFFFF">PORTUG<span style="color:#C1121F">OOO</span>L</a>
+      <nav aria-label="Main" style="display:flex; align-items:center; gap:28px">
+        <a href="#drop-1" style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75)" style-hover="color:#FFFFFF">Shop</a>
+        <a href="#drop-1" style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75)" style-hover="color:#FFFFFF">Limited Editions</a>
+        <a href="#customize" style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75)" style-hover="color:#FFFFFF">Customize</a>
+        <a href="#faq" style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75)" style-hover="color:#FFFFFF">About</a>
+        <a href="#drop-1" style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.75)" style-hover="color:#FFFFFF">World Cup Collection</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:8px">
+        <button aria-label="Search" style="width:40px; height:40px; border-radius:9999px; border:none; background:transparent; color:#FFFFFF; display:flex; align-items:center; justify-content:center; cursor:pointer" style-hover="background:rgba(255,255,255,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+        </button>
+        <button aria-label="Account" style="width:40px; height:40px; border-radius:9999px; border:none; background:transparent; color:#FFFFFF; display:flex; align-items:center; justify-content:center; cursor:pointer" style-hover="background:rgba(255,255,255,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 5-5.5 8-5.5s6.5 1.5 8 5.5"></path></svg>
+        </button>
+        <button aria-label="Cart, 0 items" style="width:40px; height:40px; border-radius:9999px; border:none; background:transparent; color:#FFFFFF; display:flex; align-items:center; justify-content:center; cursor:pointer" style-hover="background:rgba(255,255,255,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"></path><path d="M9 7V5a3 3 0 0 1 6 0v2"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2 · Hero -->
+  <section style="position:relative; height:680px; background:#0A0A0A; overflow:hidden" data-screen-label="Hero">
+    <div style="position:absolute; inset:0">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hero-crowd" shape="rect" src="hero-crowd.png" placeholder="Drop the crowd / celebration photo here" hint-size="100%,680px"></x-import>
+    </div>
+    <div aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 35%, rgba(10,10,10,0.15) 55%, rgba(10,10,10,0.75) 92%)"></div>
+    <div style="position:absolute; inset:0; pointer-events:none; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 24px">
+      <h1 style="margin:0; font-family:'Permanent Marker', cursive; font-size:150px; line-height:0.95; color:#FFFFFF; text-shadow:0 6px 40px rgba(0,0,0,0.6)">Portugoool</h1>
+      <p style="margin:20px 0 0; font-family:Anton, sans-serif; font-size:34px; letter-spacing:0.16em; text-transform:uppercase; color:#FFFFFF; text-shadow:0 2px 20px rgba(0,0,0,0.6)">The Sound of Victory.</p>
+      <a href="#drop-1" style="pointer-events:auto; margin-top:36px; display:inline-block; background:{{ ctaBg }}; color:{{ ctaColor }}; border-radius:9999px; padding:16px 40px; font-size:15px; font-weight:600; box-shadow:0 4px 24px rgba(0,0,0,0.35)" style-hover="transform:scale(1.03)">Shop the Drop</a>
+    </div>
+  </section>
+
+  <!-- 3 · Trust bar -->
+  <div style="background:#0A0A0A; border-top:1px solid rgba(255,255,255,0.08); padding:28px 24px">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4, 1fr); gap:24px">
+      <div style="display:flex; align-items:center; gap:14px; justify-content:center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.6" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2"></rect><path d="M4 11h16M12 7v13"></path></svg>
+        <div><p style="margin:0; color:#FFFFFF; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase">Limited Drops</p><p style="margin:2px 0 0; color:rgba(255,255,255,0.5); font-size:11px">Never Reprinted</p></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px; justify-content:center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.6" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg>
+        <div><p style="margin:0; color:#FFFFFF; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase">Premium Quality</p><p style="margin:2px 0 0; color:rgba(255,255,255,0.5); font-size:11px">Built to Perform</p></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px; justify-content:center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18-3-3-3-15 0-18z"></path></svg>
+        <div><p style="margin:0; color:#FFFFFF; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase">Worldwide Shipping</p><p style="margin:2px 0 0; color:rgba(255,255,255,0.5); font-size:11px">For Fans Everywhere</p></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px; justify-content:center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.6" aria-hidden="true"><path d="M12 3l2.5 6 6.5 0.5-5 4.2 1.7 6.3L12 16.5 6.3 20l1.7-6.3-5-4.2 6.5-0.5L12 3z"></path></svg>
+        <div><p style="margin:0; color:#FFFFFF; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase">Made for the Moment</p><p style="margin:2px 0 0; color:rgba(255,255,255,0.5); font-size:11px">When It Hits Different</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 · Drop Version I -->
+  <section id="drop-1" style="max-width:1200px; margin:0 auto; padding:80px 24px" data-screen-label="Drop Version I">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:32px">
+      <div>
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-size:38px; letter-spacing:-0.01em; text-transform:uppercase; color:#0A0A0A">Drop Version I</h2>
+        <p style="margin:8px 0 0; color:rgba(10,10,10,0.6); font-size:16px">Four jerseys. 500 of each. A limited drop for the loudest fans.</p>
+      </div>
+      <a href="#drop-1" style="font-size:14px; font-weight:600; color:#0A0A0A" style-hover="text-decoration:underline; color:#0A0A0A">View the drop →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:24px">
+      <a href="#" style="display:block" aria-label="Home Red Jersey, $95">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/home-red-jersey.svg" alt="Home Red Jersey — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+          <span style="position:absolute; left:12px; top:12px; border-radius:9999px; background:#0A0A0A; color:#C9A227; padding:4px 12px; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Limited Drop</span>
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">Home Red Jersey</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#C1121F; border:1px solid rgba(10,10,10,0.15)"></span>Deep Red</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$95.00</p>
+        </div>
+      </a>
+      <a href="#" style="display:block" aria-label="Away White Jersey, $95">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/away-white-jersey.svg" alt="Away White Jersey — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+          <span style="position:absolute; left:12px; top:12px; border-radius:9999px; background:#0A0A0A; color:#C9A227; padding:4px 12px; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Limited Drop</span>
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">Away White Jersey</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#FFFFFF; border:1px solid rgba(10,10,10,0.15)"></span>White</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$95.00</p>
+        </div>
+      </a>
+      <a href="#" style="display:block" aria-label="Blackout Edition Jersey, $105">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/blackout-edition-jersey.svg" alt="Blackout Edition Jersey — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+          <span style="position:absolute; left:12px; top:12px; border-radius:9999px; background:#0A0A0A; color:#C9A227; padding:4px 12px; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Limited Drop</span>
+          <span style="position:absolute; left:12px; bottom:12px; border-radius:9999px; background:#C1121F; color:#FFFFFF; padding:4px 12px; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase">127 left</span>
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">Blackout Edition Jersey</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#0A0A0A; border:1px solid rgba(10,10,10,0.15)"></span>Black</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$105.00</p>
+        </div>
+      </a>
+      <a href="#" style="display:block" aria-label="Emerald Edition Jersey, $105">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/emerald-edition-jersey.svg" alt="Emerald Edition Jersey — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+          <span style="position:absolute; left:12px; top:12px; border-radius:9999px; background:#0A0A0A; color:#C9A227; padding:4px 12px; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase">Limited Drop</span>
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">Emerald Edition Jersey</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#0B3D2E; border:1px solid rgba(10,10,10,0.15)"></span>Emerald Green</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$105.00</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5 · Fabric -->
+  <section style="background:#F4F4F2; padding:80px 0" data-screen-label="The fabric">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px">
+      <h2 style="margin:0; font-family:Anton, sans-serif; font-size:38px; text-transform:uppercase; color:#0A0A0A">The fabric</h2>
+      <p style="margin:8px 0 0; max-width:512px; color:rgba(10,10,10,0.6)">Performance-style shirts. No heavy cotton. No stiff prints.</p>
+      <div style="margin-top:40px; display:grid; grid-template-columns:repeat(3, 1fr); gap:24px">
+        <div style="border-radius:12px; background:#FFFFFF; padding:24px"><h3 style="margin:0; font-size:16px; font-weight:600; color:#0A0A0A">Lightweight &amp; breathable</h3><p style="margin:6px 0 0; font-size:14px; line-height:1.6; color:rgba(10,10,10,0.6)">140–160 GSM performance polyester. Air moves through it.</p></div>
+        <div style="border-radius:12px; background:#FFFFFF; padding:24px"><h3 style="margin:0; font-size:16px; font-weight:600; color:#0A0A0A">Silky smooth feel</h3><p style="margin:6px 0 0; font-size:14px; line-height:1.6; color:rgba(10,10,10,0.6)">Soft hand feel that doesn't cling. Comfortable for 90+ minutes.</p></div>
+        <div style="border-radius:12px; background:#FFFFFF; padding:24px"><h3 style="margin:0; font-size:16px; font-weight:600; color:#0A0A0A">Moisture-wicking</h3><p style="margin:6px 0 0; font-size:14px; line-height:1.6; color:rgba(10,10,10,0.6)">Sweat moves out, not in. Stay dry through extra time.</p></div>
+        <div style="border-radius:12px; background:#FFFFFF; padding:24px"><h3 style="margin:0; font-size:16px; font-weight:600; color:#0A0A0A">Built for game day</h3><p style="margin:6px 0 0; font-size:14px; line-height:1.6; color:rgba(10,10,10,0.6)">Made for the stadium, the bar, and the living room couch.</p></div>
+        <div style="border-radius:12px; background:#FFFFFF; padding:24px"><h3 style="margin:0; font-size:16px; font-weight:600; color:#0A0A0A">Everyday comfortable</h3><p style="margin:6px 0 0; font-size:14px; line-height:1.6; color:rgba(10,10,10,0.6)">Premium enough for match day. Easy enough for every day.</p></div>
+        <div style="border-radius:12px; background:#FFFFFF; padding:24px"><h3 style="margin:0; font-size:16px; font-weight:600; color:#0A0A0A">Print that lasts</h3><p style="margin:6px 0 0; font-size:14px; line-height:1.6; color:rgba(10,10,10,0.6)">Sublimation-friendly fabric keeps color sharp, wash after wash.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Casual preview -->
+  <section style="max-width:1200px; margin:0 auto; padding:80px 24px" data-screen-label="Wear the celebration">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:32px">
+      <div>
+        <h2 style="margin:0; font-family:Anton, sans-serif; font-size:38px; text-transform:uppercase; color:#0A0A0A">Wear the celebration</h2>
+        <p style="margin:8px 0 0; color:rgba(10,10,10,0.6)">Built for watch parties, match days, and every GOOOOOOOL.</p>
+      </div>
+      <a href="#" style="font-size:14px; font-weight:600; color:#0A0A0A" style-hover="text-decoration:underline; color:#0A0A0A">View all →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:24px">
+      <a href="#" style="display:block" aria-label="PORTUGOOOL Brush Script Tee, $42">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/brush-script-tee.svg" alt="PORTUGOOOL Brush Script Tee — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">PORTUGOOOL Brush Script Tee</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#0A0A0A; border:1px solid rgba(10,10,10,0.15)"></span>Black</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$42.00</p>
+        </div>
+      </a>
+      <a href="#" style="display:block" aria-label="GOOOOOOOL!!! Tee, $44">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/goool-tee.svg" alt="GOOOOOOOL!!! Tee — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">GOOOOOOOL!!! Tee</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#C1121F; border:1px solid rgba(10,10,10,0.15)"></span>Deep Red</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$44.00</p>
+        </div>
+      </a>
+      <a href="#" style="display:block" aria-label="Vamos Portugooool Tee, $42">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/vamos-tee.svg" alt="Vamos Portugooool Tee — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">Vamos Portugooool Tee</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#0B3D2E; border:1px solid rgba(10,10,10,0.15)"></span>Emerald Green</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$42.00</p>
+        </div>
+      </a>
+      <a href="#" style="display:block" aria-label="From Lisbon to the World Tee, $45">
+        <div style="position:relative; aspect-ratio:4/5; border-radius:12px; background:#F4F4F2; overflow:hidden">
+          <img src="products/lisbon-to-the-world-tee.svg" alt="From Lisbon to the World Tee — front" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
+        </div>
+        <div style="margin-top:12px; display:flex; align-items:flex-start; justify-content:space-between; gap:8px">
+          <div><h3 style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">From Lisbon to the World Tee</h3><p style="margin:2px 0 0; display:flex; align-items:center; gap:6px; font-size:12px; color:rgba(10,10,10,0.5)"><span style="display:inline-block; width:12px; height:12px; border-radius:9999px; background:#FFFFFF; border:1px solid rgba(10,10,10,0.15)"></span>White</p></div>
+          <p style="margin:0; font-size:14px; font-weight:600; color:#0A0A0A">$45.00</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 7 · Customization -->
+  <section id="customize" style="background:#F4F4F2; padding:80px 0" data-screen-label="Customization">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center">
+      <div>
+        <p style="margin:0; font-size:12px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C1121F">Optional add-on · $15</p>
+        <h2 style="margin:8px 0 0; font-family:Anton, sans-serif; font-size:38px; text-transform:uppercase; color:#0A0A0A">Your name. Your number.</h2>
+        <p style="margin:16px 0 0; max-width:448px; line-height:1.6; color:rgba(10,10,10,0.6)">Every jersey ships clean — no names, no numbers. Want yours on the back? Add a name and number on the product page for a flat $15.</p>
+        <a href="#" style="margin-top:24px; display:inline-block; border-radius:9999px; background:#0A0A0A; color:#FFFFFF; padding:14px 32px; font-size:14px; font-weight:600" style-hover="background:rgba(10,10,10,0.8); color:#FFFFFF">Customize your jersey</a>
+      </div>
+      <div style="margin:0 auto; width:100%; max-width:384px; border-radius:12px; background:#FFFFFF; padding:40px; text-align:center">
+        <div style="border-radius:8px; background:#0B3D2E; color:#FFFFFF; padding:48px 24px">
+          <p style="margin:0; font-family:Anton, sans-serif; font-size:24px; letter-spacing:0.14em; text-transform:uppercase">SILVA</p>
+          <p style="margin:8px 0 0; font-family:Anton, sans-serif; font-size:96px; line-height:1; color:#C9A227">10</p>
+        </div>
+        <p style="margin:16px 0 0; font-size:12px; color:rgba(10,10,10,0.5)">Name + number add-on · printed on the back</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · Limited drop banner -->
+  <section style="background:#0B3D2E; color:#FFFFFF; padding:80px 0" data-screen-label="Limited drop banner">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:24px">
+      <div>
+        <p style="margin:0; font-size:12px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C9A227">Drop Version I · 500 units per jersey</p>
+        <h2 style="margin:8px 0 0; font-family:Anton, sans-serif; font-size:38px; text-transform:uppercase">When it's gone, it's gone.</h2>
+        <p style="margin:12px 0 0; max-width:512px; line-height:1.6; color:rgba(255,255,255,0.7)">Every jersey drop is limited to 500 units. Once this drop sells out, it will not be reprinted — the next version takes its place.</p>
+      </div>
+      <a href="#drop-1" style="flex-shrink:0; border-radius:9999px; background:#C9A227; color:#0A0A0A; padding:16px 32px; font-size:16px; font-weight:600" style-hover="background:#E4C65B; color:#0A0A0A">Shop the Drop</a>
+    </div>
+  </section>
+
+  <!-- 9 · FAQ preview -->
+  <section id="faq" style="max-width:1200px; margin:0 auto; padding:80px 24px" data-screen-label="FAQ">
+    <h2 style="margin:0; font-family:Anton, sans-serif; font-size:38px; text-transform:uppercase; color:#0A0A0A">Questions</h2>
+    <div style="margin-top:32px; border-top:1px solid rgba(10,10,10,0.1)">
+      <details open style="border-bottom:1px solid rgba(10,10,10,0.1)">
+        <summary style="cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; padding:20px 0; font-size:16px; font-weight:600; color:#0A0A0A">When will my order ship?<span aria-hidden="true" style="font-size:20px; font-weight:400; color:rgba(10,10,10,0.4)">+</span></summary>
+        <p style="margin:0; padding:0 0 20px; max-width:640px; font-size:14px; line-height:1.7; color:rgba(10,10,10,0.6)">Every shirt is made to order. Production takes 5–7 business days, then shipping takes 3–7 business days in the US. You'll get tracking by email the moment it ships.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(10,10,10,0.1)">
+        <summary style="cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; padding:20px 0; font-size:16px; font-weight:600; color:#0A0A0A">How does sizing run?<span aria-hidden="true" style="font-size:20px; font-weight:400; color:rgba(10,10,10,0.4)">+</span></summary>
+        <p style="margin:0; padding:0 0 20px; max-width:640px; font-size:14px; line-height:1.7; color:rgba(10,10,10,0.6)">Jersey-style shirts are an athletic fit and run true to size — size up if you want a relaxed feel. Casual shirts are a relaxed streetwear fit. Every product page lists the fit.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(10,10,10,0.1)">
+        <summary style="cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; padding:20px 0; font-size:16px; font-weight:600; color:#0A0A0A">Can I return or exchange?<span aria-hidden="true" style="font-size:20px; font-weight:400; color:rgba(10,10,10,0.4)">+</span></summary>
+        <p style="margin:0; padding:0 0 20px; max-width:640px; font-size:14px; line-height:1.7; color:rgba(10,10,10,0.6)">Unworn, unwashed shirts without customization can be returned within 30 days. Customized shirts (name/number) are made just for you and are final sale unless defective — defects are always replaced free.</p>
+      </details>
+      <details style="border-bottom:1px solid rgba(10,10,10,0.1)">
+        <summary style="cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; padding:20px 0; font-size:16px; font-weight:600; color:#0A0A0A">How does customization work?<span aria-hidden="true" style="font-size:20px; font-weight:400; color:rgba(10,10,10,0.4)">+</span></summary>
+        <p style="margin:0; padding:0 0 20px; max-width:640px; font-size:14px; line-height:1.7; color:rgba(10,10,10,0.6)">Jerseys come clean — no names, no numbers. On any jersey page you can add a name (up to 12 characters) and number (0–99) to the back for a flat $15. Casual shirts and accessories ship as designed.</p>
+      </details>
+    </div>
+    <a href="#" style="margin-top:24px; display:inline-block; font-size:14px; font-weight:600; color:#0A0A0A" style-hover="text-decoration:underline; color:#0A0A0A">All questions →</a>
+  </section>
+
+  <!-- 10 · Newsletter -->
+  <section style="background:#0A0A0A; color:#FFFFFF; padding:80px 0; text-align:center" data-screen-label="Newsletter">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px">
+      <h2 style="margin:0; font-family:Anton, sans-serif; font-size:38px; text-transform:uppercase">Get the next drop first.</h2>
+      <p style="margin:8px auto 0; max-width:448px; color:rgba(255,255,255,0.6)">Drops are small and sell out. The list hears about them before anyone else.</p>
+      <sc-if value="{{ subscribed }}" hint-placeholder-val="{{ false }}">
+        <p role="status" style="margin:32px 0 0; font-size:18px; font-weight:600; color:#C9A227">You're on the list. ⚽</p>
+      </sc-if>
+      <sc-if value="{{ notSubscribed }}" hint-placeholder-val="{{ true }}">
+        <div style="margin:32px auto 0; max-width:448px; display:flex; gap:12px">
+          <input type="email" placeholder="you@email.com" aria-label="Email address" style="flex:1; border-radius:9999px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.1); padding:14px 20px; color:#FFFFFF; font-size:15px; outline:none" style-focus="border-color:#C9A227">
+          <button onClick="{{ joinList }}" style="flex-shrink:0; border:none; cursor:pointer; border-radius:9999px; background:#C1121F; color:#FFFFFF; padding:14px 32px; font-size:15px; font-weight:600" style-hover="background:#8E0D17">Join the list</button>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- 11 · Footer -->
+  <footer style="background:#0A0A0A; color:#FFFFFF; padding:48px 0 40px; border-top:1px solid rgba(255,255,255,0.1)">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px">
+      <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:32px">
+        <div>
+          <p style="margin:0; font-family:Anton, sans-serif; font-size:24px; letter-spacing:-0.02em; text-transform:uppercase">PORTUG<span style="color:#C1121F">OOO</span>L</p>
+          <p style="margin:8px 0 0; max-width:320px; font-size:14px; color:rgba(255,255,255,0.5)">The sound of the goal. The shirt for the moment.</p>
+        </div>
+        <nav aria-label="Footer" style="display:grid; grid-template-columns:1fr 1fr; column-gap:48px; row-gap:8px; font-size:14px">
+          <a href="#drop-1" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">Shop</a>
+          <a href="#faq" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">About</a>
+          <a href="#drop-1" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">Limited Editions</a>
+          <a href="#faq" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">FAQ</a>
+          <a href="#customize" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">Customize Your Jersey</a>
+          <a href="#" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">Track Order</a>
+          <a href="#" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">Summer '26</a>
+          <a href="#" style="color:rgba(255,255,255,0.7)" style-hover="color:#FFFFFF">Contact</a>
+        </nav>
+      </div>
+      <div style="margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px">
+        <p style="margin:0; font-size:12px; line-height:1.7; color:rgba(255,255,255,0.4)">© 2026 PORTUGOOOL. All rights reserved. PORTUGOOOL is an independent fan apparel brand. Not affiliated with, endorsed by, or connected to any football federation, club, league, or governing body. All designs and marks are original.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnnouncement&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Header&quot;}, &quot;heroCta&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;paper&quot;, &quot;red&quot;], &quot;default&quot;: &quot;paper&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Hero&quot;}}">
+class Component extends DCLogic {
+  state = { subscribed: false };
+  renderVals() {
+    const cta = this.props.heroCta ?? "paper";
+    return {
+      showAnnouncement: this.props.showAnnouncement ?? true,
+      ctaBg: cta === "red" ? "#C1121F" : "#FFFFFF",
+      ctaColor: cta === "red" ? "#FFFFFF" : "#0A0A0A",
+      subscribed: this.state.subscribed,
+      notSubscribed: !this.state.subscribed,
+      joinList: () => this.setState({ subscribed: true }),
+    };
+  }
+}
+</script>
+</body>
+</html>

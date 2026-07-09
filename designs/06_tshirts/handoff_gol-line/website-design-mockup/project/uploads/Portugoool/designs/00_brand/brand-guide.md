@@ -1,0 +1,35 @@
+# PORTUGOOOL Brand Guide
+
+## Mission
+<!-- Why the brand exists, in one or two sentences. Draft below — refine with owner. -->
+Sell the emotion of the goal. Premium fan apparel for the moment the ball hits the net.
+
+## Vision
+<!-- Where this goes in 3–5 years. -->
+The default shirt for Portuguese football fans worldwide — from Lisbon living rooms to New England watch parties.
+
+## Core Emotion
+**The sound of GOOOOOOOL.** Every product, page, and post should feel like
+the half-second after the ball crosses the line.
+
+Brand line: **"The Sound of Victory."**
+
+## Brand Story
+<!-- The founding narrative. To be written with the owner. Beats to hit: -->
+- The stadium reaction · the family watch party · Portuguese neighborhoods
+- Kids celebrating · raw excitement
+- Not polished corporate sportswear — real fans, real noise
+
+## Design Philosophy
+- Big expressive typography
+- Clean premium layout — white space is part of the design
+- Match-day energy without clutter
+- Limited drops, honest scarcity
+- Independent fan brand: original marks only, never official federation /
+  FIFA / player / sportswear-company IP
+
+## Legal Guardrails (always)
+- No Portugal federation crests, no FIFA / World Cup marks, no player names
+  or likenesses, no Nike/Adidas/Puma references
+- "Summer '26" is the approved language for tournament-adjacent copy
+- Every public surface carries the independent-brand disclaimer where practical
