@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "What GOOOL collects, why, and what we never do with it.",
 };
 
-const CONTACT_EMAIL = "hello@portugoool.com";
+const CONTACT_EMAIL = "hello@goool.shop";
 
 export default function PrivacyPage() {
   return (

@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms that govern purchases and use of portugoool.com.",
+  description: "The terms that govern purchases and use of goool.shop.",
 };
 
-const CONTACT_EMAIL = "hello@portugoool.com";
+const CONTACT_EMAIL = "hello@goool.shop";
 
 export default function TermsPage() {
   return (
@@ -15,7 +15,7 @@ export default function TermsPage() {
         Terms of Service
       </h1>
       <p className="mt-2 max-w-lg text-ink/60">
-        By using portugoool.com or placing an order, you agree to these terms.
+        By using goool.shop or placing an order, you agree to these terms.
       </p>
 
       <div className="mt-10 space-y-8 text-sm leading-relaxed text-ink/60">

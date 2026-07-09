@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "All sales are final. Every GOOOL piece is made to order. Defective or damaged items are replaced free.",
 };
 
-const CONTACT_EMAIL = "hello@portugoool.com";
+const CONTACT_EMAIL = "hello@goool.shop";
 
 export default function RefundsPage() {
   return (
