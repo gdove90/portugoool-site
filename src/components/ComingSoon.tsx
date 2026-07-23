@@ -108,7 +108,7 @@ export default function ComingSoon() {
           Coming Soon
         </p>
         <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
-          The Crest Collection — made to order, printed for you.
+          The Crest Collection — original GOOOL designs.
           <br />
           G<span className="text-red">OOO</span>L · The Sound of Victory
         </p>

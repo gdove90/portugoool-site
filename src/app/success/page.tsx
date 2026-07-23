@@ -21,8 +21,8 @@ export default function SuccessPage() {
         Order confirmed.
       </h1>
       <p className="mx-auto mt-3 max-w-md text-ink/60">
-        Your shirt goes into production now. You&apos;ll get a confirmation
-        email, then tracking as soon as it ships.
+        You&apos;ll get a confirmation email, then tracking as soon as
+        your order ships.
       </p>
       <Link
         href="/shop"

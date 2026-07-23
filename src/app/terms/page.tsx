@@ -32,11 +32,9 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Products &amp; orders</h2>
           <p className="mt-2">
-            Every item is made to order and printed on demand. Placing an
-            order is an offer
-            to purchase; we may refuse or cancel orders (including for
-            suspected fraud or pricing errors) with a full refund of anything
-            charged.
+            Placing an order is an offer to purchase; we may refuse or
+            cancel orders (including for suspected fraud or pricing errors)
+            with a full refund of anything charged.
           </p>
         </section>
 
@@ -64,8 +62,8 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Shipping</h2>
           <p className="mt-2">
-            Production takes 5–7 business days, then shipping typically 3–7
-            business days in the US. Dates are estimates, not guarantees; if
+            Delivery is typically within 5–7 business days in the US.
+            Dates are estimates, not guarantees; if
             we can&apos;t ship within 30 days we&apos;ll notify you and offer
             a refund. See <Link href="/track-order" className="font-medium text-ink underline underline-offset-2">Track Order</Link> for how delivery works.
           </p>

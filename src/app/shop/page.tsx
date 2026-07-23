@@ -6,7 +6,7 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Performance jerseys, performance tees, and country caps. Made to order, original designs.",
+    "Performance jerseys, performance tees, and country caps. Original designs.",
 };
 
 const SECTIONS = [
@@ -14,7 +14,7 @@ const SECTIONS = [
     id: "jerseys",
     category: "jersey" as const,
     title: "Performance Jerseys",
-    blurb: "Made to order. Add your name and number.",
+    blurb: "Add your name and number.",
   },
   {
     id: "casual",
@@ -51,7 +51,7 @@ export default function ShopPage() {
             Shop
           </h1>
           <p className="mt-2 text-ink/60">
-            Every piece made to order. Every design original.
+            Every design original.
           </p>
         </div>
         <Link

@@ -6,7 +6,7 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "The Crest Collection",
   description:
-    "The Crest Collection — the official GOOOL crest on garment-dyed heavyweight cotton. Made to order.",
+    "The Crest Collection — the official GOOOL crest on garment-dyed heavyweight cotton.",
 };
 
 export default function DropPage() {
@@ -27,7 +27,7 @@ export default function DropPage() {
           </h1>
           <p className="mt-4 max-w-lg text-paper/70">
             The official GOOOL crest on garment-dyed heavyweight cotton.
-            Every piece made to order and printed for you.
+            Every design original.
           </p>
         </div>
       </section>

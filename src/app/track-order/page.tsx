@@ -19,14 +19,14 @@ export default function TrackOrderPage() {
         Track Order
       </h1>
       <p className="mt-2 text-ink/60">
-        Every shirt is made to order. Here&apos;s how the timeline works:
+        Here&apos;s how the timeline works:
       </p>
 
       <ol className="mt-8 space-y-4">
         {[
           ["Order confirmed", "Instant email receipt from our secure checkout."],
-          ["In production", "Your piece is printed and pressed — 5–7 business days."],
-          ["Shipped", "Tracking number lands in your inbox — 3–7 business days in the US."],
+          ["Shipped", "Tracking number lands in your inbox."],
+          ["Delivered", "Within 5–7 business days in the US."],
         ].map(([title, body], i) => (
           <li key={title} className="flex gap-4 rounded-xl bg-smoke p-4">
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink font-display font-bold text-gold">

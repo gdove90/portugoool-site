@@ -13,7 +13,7 @@ export default function DropBanner() {
           </h2>
           <p className="mt-3 max-w-lg text-paper/70">
             Designs land in drops and can retire when the next one arrives.
-            Every piece is made to order, printed for you.
+            Every design original.
           </p>
         </div>
         <Link

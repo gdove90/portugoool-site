@@ -855,8 +855,6 @@ export const products: Product[] = [
         { label: "Sleeve Length", values: { S: 9.06, M: 9.45, L: 9.45, XL: 10.24, XXL: 10.63 } },
       ],
     },
-    disclosure:
-      "This garment is produced specifically for you after your order is placed. Slight variations in garment dyed color and print placement are part of the individual character of each piece.",
   },
 
   // ── Accessory Collection ────────────────────────────────────

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Refund Policy",
   description:
-    "All sales are final. Every GOOOL piece is made to order. Defective or damaged items are replaced free.",
+    "All sales are final. Defective or damaged items are replaced free.",
 };
 
 const CONTACT_EMAIL = "hello@goool.shop";
@@ -19,9 +19,8 @@ export default function RefundsPage() {
         All sales are final.
       </p>
       <p className="mt-2 max-w-lg text-ink/60">
-        Every GOOOL piece is printed and made just for you after you
-        order. Nothing sits in a warehouse — so we don&apos;t accept returns
-        or exchanges.
+        We don&apos;t accept returns or exchanges — but if anything arrives
+        wrong, we make it right below.
       </p>
 
       <div className="mt-10 space-y-8">
@@ -60,8 +59,8 @@ export default function RefundsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Cancellations</h2>
           <p className="mt-2 text-sm leading-relaxed text-ink/60">
-            Orders go into production fast. If you need to cancel, email us
-            immediately — we can only cancel before production starts.
+            Orders are processed fast. If you need to cancel, email us
+            immediately — we can only cancel before your order is processed.
           </p>
         </section>
       </div>

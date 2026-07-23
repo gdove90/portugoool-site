@@ -10,7 +10,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "When will my order ship?",
     answer:
-      "Every shirt is made to order. Production takes 5–7 business days, then shipping takes 3–7 business days in the US. You'll get tracking by email the moment it ships.",
+      "Delivery is within 5–7 business days in the US. You'll get tracking by email the moment your order ships.",
   },
   {
     question: "How does sizing run?",
@@ -20,7 +20,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Can I return or exchange?",
     answer:
-      "All sales are final — every piece is made to order, just for you. If your order arrives defective, damaged, or wrong, we replace it free: contact us within 14 days of delivery with photos. Double-check the fit notes and your customization spelling before ordering.",
+      "All sales are final. If your order arrives defective, damaged, or wrong, we replace it free: contact us within 14 days of delivery with photos. Double-check the fit notes and your customization spelling before ordering.",
   },
   {
     question: "How does customization work?",
@@ -30,7 +30,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "How do drops work?",
     answer:
-      "We release designs in drops — collections that land together. Everything is made to order: when you buy, your piece is printed for you. Designs can retire when the next drop lands.",
+      "We release designs in drops — collections that land together. Designs can retire when the next drop lands.",
   },
   {
     question: "Is this official team merchandise?",

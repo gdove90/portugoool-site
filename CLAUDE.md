@@ -121,7 +121,9 @@ fast loading · simple checkout (one Stripe handoff, no accounts).
 
 Product pages keep price, size, customization, and the buy button above the
 fold on mobile. Trust copy sits near every buy button: *Secure checkout ·
-Made to order · Ships after production · Limited drop*.
+Delivery within 5–7 business days · Limited drop*. Never mention
+made-to-order/on-demand production in customer-facing copy (owner
+decision, 2026-07-23).
 
 ---
 

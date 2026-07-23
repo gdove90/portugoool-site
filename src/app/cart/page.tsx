@@ -169,8 +169,7 @@ export default function CartPage() {
 
           <ul className="mt-5 space-y-1.5 text-xs text-ink/60">
             <li>✓ Secure checkout via Stripe</li>
-            <li>✓ Made to order</li>
-            <li>✓ Ships after production</li>
+            <li>✓ Delivery within 5–7 business days</li>
             <li>✓ Original design</li>
           </ul>
         </div>

@@ -12,7 +12,7 @@ import ComingSoon from "@/components/ComingSoon";
 export const metadata: Metadata = {
   title: "GOOOL — Coming Soon. The Sound of Victory.",
   description:
-    "The Crest Collection — made to order, printed for you. Join the list for first access.",
+    "The Crest Collection — live now. Join the list for first access.",
 };
 
 export default function HomePage() {

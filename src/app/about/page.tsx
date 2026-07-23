@@ -30,9 +30,8 @@ export default function AboutPage() {
           <p>
             We launch in chapters. Now live:{" "}
             <strong className="text-ink">The Crest Collection</strong> —
-            the official GOOOL crest on garment-dyed heavyweight cotton,
-            every piece made to order and printed for you. When the next
-            chapter lands, designs can retire.
+            the official GOOOL crest on garment-dyed heavyweight cotton.
+            When the next chapter lands, designs can retire.
           </p>
           <p className="text-base text-ink/50">
             GOOOL is an independent fan brand. We are not affiliated with any
