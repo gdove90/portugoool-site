@@ -816,8 +816,6 @@ export const products: Product[] = [
         images: [
           { src: "/products/goool-oval-tee-cream.webp", alt: "GOOOL faded cream oversized t-shirt front view" },
           { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOOOL faded cream oversized t-shirt back view" },
-          { src: "/products/goool-oval-tee-cream-detail-front.webp", alt: "Front GOOOL oval wordmark detail on faded cream tee" },
-          { src: "/products/goool-oval-tee-cream-detail-back.webp", alt: "Upper back G mark detail on faded cream tee" },
           { src: "/products/goool-oval-tee-cream-detail-fit.webp", alt: "Oversized boxy fit detail, faded cream tee" },
           { src: "/products/goool-oval-tee-cream-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, faded cream tee" },
         ],
@@ -830,8 +828,6 @@ export const products: Product[] = [
         images: [
           { src: "/products/goool-oval-tee-charcoal.webp", alt: "GOOOL washed charcoal oversized t-shirt front view" },
           { src: "/products/goool-oval-tee-charcoal-back.webp", alt: "GOOOL washed charcoal oversized t-shirt back view" },
-          { src: "/products/goool-oval-tee-charcoal-detail-front.webp", alt: "Front GOOOL oval wordmark detail on washed charcoal tee" },
-          { src: "/products/goool-oval-tee-charcoal-detail-back.webp", alt: "Upper back G mark detail on washed charcoal tee" },
           { src: "/products/goool-oval-tee-charcoal-detail-fit.webp", alt: "Oversized boxy fit detail, washed charcoal tee" },
           { src: "/products/goool-oval-tee-charcoal-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, washed charcoal tee" },
         ],
@@ -844,8 +840,6 @@ export const products: Product[] = [
         images: [
           { src: "/products/goool-oval-tee-navy.webp", alt: "GOOOL dusty navy oversized t-shirt front view" },
           { src: "/products/goool-oval-tee-navy-back.webp", alt: "GOOOL dusty navy oversized t-shirt back view" },
-          { src: "/products/goool-oval-tee-navy-detail-front.webp", alt: "Front GOOOL oval wordmark detail on dusty navy tee" },
-          { src: "/products/goool-oval-tee-navy-detail-back.webp", alt: "Upper back G mark detail on dusty navy tee" },
           { src: "/products/goool-oval-tee-navy-detail-fit.webp", alt: "Oversized boxy fit detail, dusty navy tee" },
           { src: "/products/goool-oval-tee-navy-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, dusty navy tee" },
         ],
