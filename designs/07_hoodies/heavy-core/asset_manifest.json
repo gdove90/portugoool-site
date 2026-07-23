@@ -1,0 +1,121 @@
+{
+  "collection": "GOOOL Heavy Core Hoodie Collection",
+  "blank": "Lane Seven LS17001 Heavy Core Hoodie",
+  "printful_product_name": "Unisex Super Heavyweight Hoodie | Lane Seven LS17001",
+  "printful_catalog_product_id": 1540,
+  "generated": "2026-07-23",
+  "production_assets": [
+    {
+      "file": "GOOOL-GA-Shield-BLACK-Embroidery-Master-300dpi.png",
+      "pixels": [
+        3000,
+        3300
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    },
+    {
+      "file": "GOOOL-GA-Shield-BLACK-Printful-2.5x2.75in-300dpi.png",
+      "pixels": [
+        750,
+        825
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    },
+    {
+      "file": "GOOOL-GA-Shield-WHITE-Embroidery-Master-300dpi.png",
+      "pixels": [
+        3000,
+        3300
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    },
+    {
+      "file": "GOOOL-GA-Shield-WHITE-Printful-2.5x2.75in-300dpi.png",
+      "pixels": [
+        750,
+        825
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    },
+    {
+      "file": "GOOOL-Oval-Front-BLACK-10.5in-300dpi.png",
+      "pixels": [
+        3150,
+        970
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    },
+    {
+      "file": "GOOOL-Oval-Front-CREAM-10.5in-300dpi.png",
+      "pixels": [
+        3150,
+        970
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    },
+    {
+      "file": "GOOOL-Oval-G-Back-BLACK-2.25in-300dpi.png",
+      "pixels": [
+        675,
+        347
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    },
+    {
+      "file": "GOOOL-Oval-G-Back-CREAM-2.25in-300dpi.png",
+      "pixels": [
+        675,
+        347
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA",
+      "transparent": true
+    }
+  ],
+  "mockups": [
+    "H01-Black-GA-Embroidered-Mockup.png",
+    "H02-Cream-GA-Embroidered-Mockup.png",
+    "H03-Arona-GA-Embroidered-Mockup.png",
+    "H04-Black-Oval-Printed-Mockup.png",
+    "H05-Cream-Oval-Printed-Mockup.png",
+    "H06-Arona-Oval-Printed-Mockup.png"
+  ]
+}
