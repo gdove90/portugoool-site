@@ -4,14 +4,14 @@ For Claude Code, working in the repo (read `CLAUDE.md` first).
 Branch: `feat/crest-v2-line` — not main.
 
 ## What this line is
-6 casual tees, all on the **American Apparel 1301GD Unisex Garment-Dyed
+3 casual tees, all on the **American Apparel 1301GD Unisex Garment-Dyed
 Heavyweight Cotton Tee** via **Printful DTF printing**. Per-SKU garment color,
 artwork, and placement specs: `specs/*.md` in this package. Print files:
 `production/`. Product images for the site: `mockups/` (design mockups —
 replace with Printful-generated mockups or real photos before activating;
 per CLAUDE.md, listings never ship with concept art).
 
-## 1 · src/lib/products.ts — add 6 products
+## 1 · src/lib/products.ts — add 3 products
 New ID series `60000000-…` (crest line). Follow the existing entry shape exactly.
 Shared values: `category: "casual"`, `supplierType: "printful"`,
 `isActive: false` (activate only after samples pass), `sizes: SHIRT_SIZES`,
@@ -21,12 +21,9 @@ dropSoldCount: 0`), no customization, `fabric: HEAVY_FABRIC`,
 
 | # | id suffix | name | slug | priceCents | color / colorHex |
 |---|---|---|---|---|---|
-| 1a | …0001 | GOOOL Crest Tee — Cream | crest-tee-cream | 3300 | Faded Cream / #FFF9E9 |
-| 1b | …0002 | GOOOL Crest Tee — Faded Black | crest-tee-faded-black | 3300 | Faded Black / #55565A |
 | 1c | …0003 | GOOOL Crest Statement Tee — Cream | crest-statement-tee-cream | 3500 | Faded Cream / #FFF9E9 |
-| 1d | …0004 | GOOOL Full-Back Crest Tee — Faded Black | crest-fullback-tee-faded-black | 3800 | Faded Black / #55565A |
-| 1e | …0005 | GOOOL Crest Tee — Faded Navy (Center Front) | crest-centerfront-tee-faded-navy | 3500 | Faded Navy / #4F5C71 |
-| 1g | …0006 | GOOOL Crest Tee — Faded Navy | crest-tee-faded-navy | 3300 | Faded Navy / #4F5C71 |
+| 1d | …0004 | GOOOL Crest Statement Tee — Faded Black | crest-statement-tee-faded-black | 3500 | Faded Black / #55565A |
+| 1e | …0005 | GOOOL Crest Statement Tee — Faded Navy | crest-statement-tee-faded-navy | 3500 | Faded Navy / #4F5C71 |
 
 Descriptions: short, emotional, voice.md rules ("Premium restraint" — suggest
 one-liners, e.g. 1a: "The crest, quiet, where it belongs. Heavyweight
@@ -43,7 +40,7 @@ export const HEAVY_TEE_VARIANT_IDS: Record<string /* color */, Partial<Record<Si
 };
 ```
 
-Then extend `PRINTFUL_PRODUCTS` with the 6 slugs → `{ catalogProductId:
+Then extend `PRINTFUL_PRODUCTS` with the 3 slugs → `{ catalogProductId:
 PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["<color>"] }`.
 
 **Pulling the real IDs** (store "Portugoool" id 18439032, token in

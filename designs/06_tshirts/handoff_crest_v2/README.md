@@ -18,17 +18,14 @@ Cotton Tee** via **DTF printing** on Printful. Per-SKU exact specs live in `spec
 Colorways from the Printful dashboard: Faded Black #55565A · Faded Navy #4F5C71 ·
 Faded Cream #FFF9E9.
 
-## The 6 SKUs
+## The 3 SKUs — one design, three colorways
 | SKU | Garment | Placement | Artwork | Files |
 |---|---|---|---|---|
-| GOOOL-CREST-V2-DTF-LIGHT-LC-25 | Faded Cream #FFF9E9 | Left chest 2.50"w (pro jersey scale) | Light 2-color | crest LC + shoulder wordmark LIGHT + hem GREY |
-| GOOOL-CREST-V2-DTF-DARK-LC-25 | Faded Black #55565A | Left chest 2.50"w (pro jersey scale) | Dark reverse | crest LC + shoulder wordmark DARK + hem WHITE |
 | GOOOL-CREST-V2-DTF-LIGHT-CC-75 | Faded Cream #FFF9E9 | Center chest 7.50"w | Light 2-color | crest CC + shoulder wordmark LIGHT + hem GREY |
-| GOOOL-CREST-V2-DTF-DARK-FB-105 | Faded Black #55565A | Full back 10.50"w + LC 3.25" front | Dark reverse | FB crest + LC crest (no shoulder wordmark — full-back crest instead) |
-| GOOOL-CREST-V2-DTF-ONEWHT-CF-9 | Faded Navy #4F5C71 | Center front 9.00"w | One-color white | crest CF + shoulder wordmark ONEWHT + hem WHITE |
-| GOOOL-CREST-V2-DTF-DARK-LC-25-NVY | Faded Navy #4F5C71 | Left chest 2.50"w (pro jersey scale) | Dark reverse | crest LC + shoulder wordmark DARK + hem WHITE |
+| GOOOL-CREST-V2-DTF-DARK-CC-75 | Faded Black #55565A | Center chest 7.50"w | Dark reverse | crest CC + shoulder wordmark DARK + hem WHITE |
+| GOOOL-CREST-V2-DTF-DARK-CC-75-NVY | Faded Navy #4F5C71 | Center chest 7.50"w | Dark reverse | crest CC + shoulder wordmark DARK + hem WHITE |
 
-## Back treatment (all SKUs except FB-105)
+## Back treatment (all SKUs)
 - Shoulder blades: `GOOOL-WORDMARK-V2-SHOULDER-*.png` at 7.0" wide, centered,
   top edge ~2" below back collar. This is the crest's own wordmark + divider
   cropped 1:1 from the approved master — never retype it.

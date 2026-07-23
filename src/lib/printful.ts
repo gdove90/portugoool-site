@@ -49,10 +49,7 @@ export const PRINTFUL_PRODUCTS: Record<
   "away-white-jersey": { catalogProductId: PRINTFUL_JERSEY_PRODUCT_ID, variantIds: JERSEY_VARIANT_IDS },
   "blackout-edition-jersey": { catalogProductId: PRINTFUL_JERSEY_PRODUCT_ID, variantIds: JERSEY_VARIANT_IDS },
   "emerald-edition-jersey": { catalogProductId: PRINTFUL_JERSEY_PRODUCT_ID, variantIds: JERSEY_VARIANT_IDS },
-  "crest-tee-cream": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Cream"] },
-  "crest-tee-faded-black": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Black"] },
   "crest-statement-tee-cream": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Cream"] },
-  "crest-fullback-tee-faded-black": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Black"] },
-  "crest-centerfront-tee-faded-navy": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Navy"] },
-  "crest-tee-faded-navy": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Navy"] },
+  "crest-statement-tee-faded-black": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Black"] },
+  "crest-statement-tee-faded-navy": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Navy"] },
 };
