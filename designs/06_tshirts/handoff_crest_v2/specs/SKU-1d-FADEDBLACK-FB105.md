@@ -9,7 +9,7 @@
 ### Front — crest, pro left-chest (heart) position
 - Artwork: `production/GOOOL-CREST-V2-DTF-DARK-LC-25.png` (DARK reverse)
 - Crest width: **2.50"** (height 3.18" ≈ 8cm)
-- From collar seam: crest TOP edge 4.0" below the collar-to-shoulder seam junction
+- From collar seam: crest TOP edge 5.5" below the collar-to-shoulder seam junction
 - From center line: crest CENTER 4.0" toward wearer's left
 - Decoration: DTF · white #FFFFFF + red #C61322
 - Why it's right: identical heart-position badge as 1a/1b/1g — one consistent crest position across the whole line, exactly how a club treats its badge.

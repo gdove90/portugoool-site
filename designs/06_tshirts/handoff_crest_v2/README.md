@@ -54,7 +54,7 @@ Every measurement below sits inside Printful's published placement guidance:
 - Upload the `production/` PNGs as-is: transparent background, sRGB, 300 PPI ("DPI: 300" must show in Printful's file check — no "low resolution" warning)
 - In the mockup generator, set print size to the EXACT final width in the filename (LC-25 = 3.25", CC-75 = 7.5", CF-9 = 9", FB-105 = 10.5") — never stretch to fill the print area
 - Placements in the POD editor:
-  - Left chest (all LC SKUs): crest 2.50"w × 3.18"h (≈8cm, elite-kit scale), heart position — crest TOP 4.0" below the collar/shoulder seam junction, crest CENTER 4.0" left of the center line. One position, every colorway.
+  - Left chest (all LC SKUs): crest 2.50"w × 3.18"h (≈8cm, elite-kit scale), heart position — crest TOP 5.5" below the collar/shoulder seam junction (oversized-cut corrected; was 4"), crest CENTER 4.0" left of the center line. One position, every colorway.
   - Centered crests (CC-75 / CF-9): dead center, crest TOP edge 3.5" below the center-front collar seam — upper chest, clear of the collar seam, never stomach-level.
   - Full back (FB-105): centered, crest top 4.5" below back collar seam (name/number zone, clear of the shoulder yoke)
   - Shoulder wordmark: back placement, 7.0" wide, top ~2" below back collar — same back print file can include the hem URL if the platform allows only one back print: stack wordmark (top) + URL (bottom-aligned) in one back-area file on request

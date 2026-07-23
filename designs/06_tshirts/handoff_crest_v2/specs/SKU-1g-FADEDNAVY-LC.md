@@ -9,11 +9,11 @@
 ### Front — crest, pro left-chest (heart) position
 - Artwork: `production/GOOOL-CREST-V2-DTF-DARK-LC-25.png` (DARK reverse)
 - Crest width: **2.50"** (height 3.18" ≈ 8cm — elite-kit crest scale)
-- From collar seam: crest TOP edge **4.0"** below the collar-to-shoulder seam junction
+- From collar seam: crest TOP edge **5.5"** below the collar-to-shoulder seam junction (oversized cut correction — at 4" the badge rode the collarbone on live samples)
 - From center line: crest CENTER **4.0"** toward the wearer's left (heart side); never past 4.5" (drifts to armpit)
 - Decoration: DTF (this drop) · embroidery-ready at same size for future knits
 - Colors: white #FFFFFF + red #C61322
-- Why it's right: pro kits set the crest at the heart — roughly a hand's width below the collarbone line, centered on the pectoral. At 8cm it reads as a club badge, not a print; above 4" it crowds the collar, below 5" it sags off the chest.
+- Why it's right: pro kits set the crest at the heart — roughly a hand's width below the collarbone line, centered on the pectoral. At 8cm it reads as a club badge, not a print; on this oversized drop-shoulder cut, 5.5" puts the badge on the pectoral center — higher rides the collarbone, past 7" it sags off the chest.
 
 ### Back
 - Shoulder wordmark: `production/GOOOL-WORDMARK-V2-SHOULDER-DARK-7.png` — 7.00"w, centered, top edge **2.0"** below the back collar seam (sits between the shoulder blades, the pro name-bar zone)
