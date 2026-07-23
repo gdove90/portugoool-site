@@ -1,4 +1,4 @@
-import { Product, SHIRT_SIZES, ONE_SIZE, ProductCategory } from "./types";
+import { Product, SHIRT_SIZES, JERSEY_SIZES, ONE_SIZE, ProductCategory } from "./types";
 
 // ─────────────────────────────────────────────────────────────
 // Launch catalog — Drop Version I.
@@ -65,7 +65,7 @@ export const products: Product[] = [
       { src: "/products/home-red-jersey.webp", alt: "Home Red Jersey — front, on model" },
       { src: "/products/home-red-jersey-back.webp", alt: "Home Red Jersey — back, ready for custom name and number" },
     ],
-    sizes: SHIRT_SIZES,
+    sizes: JERSEY_SIZES,
     category: "jersey",
     supplierType: "printful",
     isActive: false,
@@ -92,7 +92,7 @@ export const products: Product[] = [
       { src: "/products/away-white-jersey.webp", alt: "Away White Jersey — front, on model" },
       { src: "/products/away-white-jersey-back.webp", alt: "Away White Jersey — back, ready for custom name and number" },
     ],
-    sizes: SHIRT_SIZES,
+    sizes: JERSEY_SIZES,
     category: "jersey",
     supplierType: "printful",
     isActive: false,
@@ -119,7 +119,7 @@ export const products: Product[] = [
       { src: "/products/blackout-edition-jersey.webp", alt: "Blackout Edition Jersey — front, on model" },
       { src: "/products/blackout-edition-jersey-back.webp", alt: "Blackout Edition Jersey — back, ready for custom name and number" },
     ],
-    sizes: SHIRT_SIZES,
+    sizes: JERSEY_SIZES,
     category: "jersey",
     supplierType: "printful",
     isActive: false,
@@ -146,7 +146,7 @@ export const products: Product[] = [
       { src: "/products/emerald-edition-jersey.webp", alt: "Emerald Edition Jersey — front, on model" },
       { src: "/products/emerald-edition-jersey-back.webp", alt: "Emerald Edition Jersey — back, ready for custom name and number" },
     ],
-    sizes: SHIRT_SIZES,
+    sizes: JERSEY_SIZES,
     category: "jersey",
     supplierType: "printful",
     isActive: false,
@@ -177,7 +177,7 @@ export const products: Product[] = [
       { src: "/products/engoooland-home-white-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
       { src: "/products/engoooland-home-white-jersey-back.webp", alt: "ENGOOOLAND Home White Jersey — back, ready for custom name and number" },
     ],
-    sizes: SHIRT_SIZES,
+    sizes: JERSEY_SIZES,
     category: "jersey",
     supplierType: "printful",
     isActive: false,
@@ -205,7 +205,7 @@ export const products: Product[] = [
       { src: "/products/engoooland-away-red-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
       { src: "/products/engoooland-away-red-jersey-back.webp", alt: "ENGOOOLAND Away Red Jersey — back, ready for custom name and number" },
     ],
-    sizes: SHIRT_SIZES,
+    sizes: JERSEY_SIZES,
     category: "jersey",
     supplierType: "printful",
     isActive: false,
@@ -233,7 +233,7 @@ export const products: Product[] = [
       { src: "/products/engoooland-navy-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
       { src: "/products/engoooland-navy-jersey-back.webp", alt: "ENGOOOLAND Navy Jersey — back, ready for custom name and number" },
     ],
-    sizes: SHIRT_SIZES,
+    sizes: JERSEY_SIZES,
     category: "jersey",
     supplierType: "printful",
     isActive: false,

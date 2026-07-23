@@ -2,9 +2,12 @@
 // These mirror the Supabase `products` schema so the mock data in
 // `products.ts` can be swapped for a real DB fetch with no shape changes.
 
-export type Size = "S" | "M" | "L" | "XL" | "XXL" | "3XL" | "OS";
+export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "OS";
 
-export const SHIRT_SIZES: Size[] = ["S", "M", "L", "XL", "XXL", "3XL"];
+export const SHIRT_SIZES: Size[] = ["S", "M", "L", "XL", "XXL"];
+
+/** Jerseys only — the jersey blank offers XS; the tee blanks do not. */
+export const JERSEY_SIZES: Size[] = ["XS", "S", "M", "L", "XL", "XXL"];
 export const ONE_SIZE: Size[] = ["OS"];
 export const ALL_SIZES: Size[] = [...SHIRT_SIZES, "OS"];
 

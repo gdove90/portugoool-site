@@ -14,12 +14,12 @@ export const PRINTFUL_JERSEY_PRODUCT_ID = 644;
  * Base costs at mapping time: S–XL $30.55 · 2XL $32.55 · 3XL $34.55.
  */
 export const JERSEY_VARIANT_IDS: Partial<Record<Size, number>> = {
+  XS: 16259,
   S: 16260,
   M: 16261,
   L: 16262,
   XL: 16263,
   XXL: 16264, // Printful calls this 2XL
-  "3XL": 16265,
 };
 
 /**
@@ -31,9 +31,9 @@ export const PRINTFUL_HEAVY_TEE_PRODUCT_ID = 1589;
 
 /** Crest V2 tee colors → per-size Printful variant ids (product 1589). */
 export const HEAVY_TEE_VARIANT_IDS: Record<string, Partial<Record<Size, number>>> = {
-  "Faded Black": { S: 50019, M: 50014, L: 50022, XL: 50015, XXL: 50028, "3XL": 50032 }, // Printful calls XXL "2XL"
-  "Faded Cream": { S: 50020, M: 50009, L: 50012, XL: 50023, XXL: 50026, "3XL": 50030 },
-  "Faded Navy": { S: 50021, M: 50013, L: 50007, XL: 50006, XXL: 50025, "3XL": 50033 },
+  "Faded Black": { S: 50019, M: 50014, L: 50022, XL: 50015, XXL: 50028 }, // Printful calls XXL "2XL"; no XS on the 1301GD blank
+  "Faded Cream": { S: 50020, M: 50009, L: 50012, XL: 50023, XXL: 50026 },
+  "Faded Navy": { S: 50021, M: 50013, L: 50007, XL: 50006, XXL: 50025 },
 };
 
 /**
