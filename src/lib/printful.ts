@@ -37,8 +37,39 @@ export const HEAVY_TEE_VARIANT_IDS: Record<string, Partial<Record<Size, number>>
 };
 
 /**
+ * Printful catalog product 713 — AS Colour 5082 Men's Oversized Faded
+ * T-Shirt. GOOOL Oval Mark Oversized Tee prints via DTF ("DTFILM" — the
+ * technique Printful markets as DTFlex). Verified against the live catalog
+ * 2026-07-23. All 18 variants (3 colors x S–3XL) in stock at mapping time.
+ */
+export const PRINTFUL_OVERSIZED_TEE_PRODUCT_ID = 713;
+
+/** Website color name → Printful source color + per-size variant ids + SKUs. */
+export const OVERSIZED_TEE_VARIANTS: Record<
+  string,
+  { supplierColor: string; sku: Partial<Record<Size, string>>; variantIds: Partial<Record<Size, number>> }
+> = {
+  "Faded Cream": {
+    supplierColor: "Faded Bone",
+    sku: { S: "GOOOL-OVAL-TEE-CREAM-S", M: "GOOOL-OVAL-TEE-CREAM-M", L: "GOOOL-OVAL-TEE-CREAM-L", XL: "GOOOL-OVAL-TEE-CREAM-XL", XXL: "GOOOL-OVAL-TEE-CREAM-2XL", "3XL": "GOOOL-OVAL-TEE-CREAM-3XL" },
+    variantIds: { S: 17570, M: 17575, L: 17580, XL: 17585, XXL: 17590, "3XL": 17595 }, // Printful calls XXL "2XL"
+  },
+  "Washed Charcoal": {
+    supplierColor: "Faded Black",
+    sku: { S: "GOOOL-OVAL-TEE-CHARCOAL-S", M: "GOOOL-OVAL-TEE-CHARCOAL-M", L: "GOOOL-OVAL-TEE-CHARCOAL-L", XL: "GOOOL-OVAL-TEE-CHARCOAL-XL", XXL: "GOOOL-OVAL-TEE-CHARCOAL-2XL", "3XL": "GOOOL-OVAL-TEE-CHARCOAL-3XL" },
+    variantIds: { S: 17569, M: 17574, L: 17579, XL: 17584, XXL: 17589, "3XL": 17594 },
+  },
+  "Dusty Navy": {
+    supplierColor: "Faded Indigo",
+    sku: { S: "GOOOL-OVAL-TEE-NAVY-S", M: "GOOOL-OVAL-TEE-NAVY-M", L: "GOOOL-OVAL-TEE-NAVY-L", XL: "GOOOL-OVAL-TEE-NAVY-XL", XXL: "GOOOL-OVAL-TEE-NAVY-2XL", "3XL": "GOOOL-OVAL-TEE-NAVY-3XL" },
+    variantIds: { S: 34463, M: 34465, L: 34467, XL: 34469, XXL: 34471, "3XL": 34473 },
+  },
+};
+
+/**
  * Product slug → Printful mapping. Jerseys + crest-v2 tees — GOL casual tees,
  * cap, and stickers get mapped once their blanks are chosen and sampled.
+ * The oval tee is variant-based: resolve by color via OVERSIZED_TEE_VARIANTS.
  * Scarf + flag are specialty-supplier products (see materials.md).
  */
 export const PRINTFUL_PRODUCTS: Record<

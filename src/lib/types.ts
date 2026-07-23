@@ -2,12 +2,14 @@
 // These mirror the Supabase `products` schema so the mock data in
 // `products.ts` can be swapped for a real DB fetch with no shape changes.
 
-export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "OS";
+export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "3XL" | "OS";
 
 export const SHIRT_SIZES: Size[] = ["S", "M", "L", "XL", "XXL"];
 
 /** Jerseys only — the jersey blank offers XS; the tee blanks do not. */
 export const JERSEY_SIZES: Size[] = ["XS", "S", "M", "L", "XL", "XXL"];
+/** AS Colour 5082 oversized blank — runs S through 3XL. */
+export const OVERSIZED_TEE_SIZES: Size[] = ["S", "M", "L", "XL", "XXL", "3XL"];
 export const ONE_SIZE: Size[] = ["OS"];
 export const ALL_SIZES: Size[] = [...SHIRT_SIZES, "OS"];
 
@@ -25,6 +27,28 @@ export type SupplierType =
 export interface ProductImage {
   src: string;
   alt: string;
+}
+
+/** One selectable colorway of a variant-based product (single product page,
+ *  multiple colors). The garment fulfilled is tied to the supplier's own
+ *  color name — the hex is presentation only. */
+export interface ColorVariant {
+  /** Customer-facing color name, e.g. "Faded Cream". */
+  name: string;
+  /** Supplier source color, e.g. Printful "Faded Bone". */
+  supplierColor: string;
+  /** Website swatch hex — presentation only, never sent to the supplier. */
+  hex: string;
+  /** SKU fragment, e.g. "CREAM" → GOOOL-OVAL-TEE-CREAM-M. */
+  skuFragment: string;
+  /** Gallery for this colorway (front first — used as the card image). */
+  images: ProductImage[];
+}
+
+/** Structured size guide sourced from the supplier's size chart. */
+export interface SizeGuide {
+  unit: "in";
+  measurements: { label: string; values: Partial<Record<Size, number>> }[];
 }
 
 export interface Product {
@@ -58,6 +82,16 @@ export interface Product {
   customNumberAvailable: boolean;
   /** Add-on price when a name/number is requested (jerseys: $15). */
   customizationPriceCents: number;
+  // ── Color variants (single page, multiple colorways) ────────
+  /** When present, the page shows a color selector; `color`/`colorHex`/
+   *  `images` mirror the first variant as the default presentation. */
+  colorVariants?: ColorVariant[];
+  /** Fit notice shown beside the size selector. */
+  fitNote?: string;
+  /** Supplier size chart rendered as an accessible table. */
+  sizeGuide?: SizeGuide;
+  /** Print-on-demand disclosure shown near the trust copy. */
+  disclosure?: string;
 }
 
 /** Units left in a counted drop, or null when the product isn't counted. */

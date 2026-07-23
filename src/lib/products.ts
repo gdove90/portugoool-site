@@ -1,4 +1,4 @@
-import { Product, SHIRT_SIZES, JERSEY_SIZES, ONE_SIZE, ProductCategory } from "./types";
+import { Product, SHIRT_SIZES, JERSEY_SIZES, OVERSIZED_TEE_SIZES, ONE_SIZE, ProductCategory } from "./types";
 
 // ─────────────────────────────────────────────────────────────
 // Launch catalog — Drop Version I.
@@ -774,6 +774,95 @@ export const products: Product[] = [
     customNameAvailable: false,
     customNumberAvailable: false,
     customizationPriceCents: 0,
+  },
+
+  // ── GOOOL Oval Mark Oversized Tee (AS Colour 5082, Printful DTF) ──
+  {
+    id: "60000000-0000-4000-8000-000000000007",
+    name: "GOOOL Oval Mark Oversized Tee",
+    slug: "goool-oval-tee",
+    description:
+      "The GOOOL Oval Mark Oversized Tee brings professional football identity into a heavyweight streetwear silhouette. Made from garment dyed cotton with a structured boxy fit, dropped shoulders, and wide neck ribbing, it is designed to feel substantial while maintaining an easy everyday drape. The front carries the GOOOL oval wordmark, while a smaller G mark sits beneath the back collar like the finishing detail on a professional training kit.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Faded Cream",
+    colorHex: "#FFF9E9",
+    fabric:
+      "100% carded cotton. Heavyweight 240 GSM (7.1 oz) fabric. Garment dyed and preshrunk.",
+    fit: "Boxy oversized fit with dropped shoulders, wide sleeves, and wide neck ribbing. Longer casual length.",
+    careInstructions:
+      "Machine wash cold and inside out on a gentle cycle with mild detergent, with similar colors. Non-chlorine bleach only when necessary. No fabric softener. Tumble dry low or hang dry. Cool iron inside out when necessary — never directly over the decoration. Do not dry clean.",
+    images: [
+      { src: "/products/goool-oval-tee-cream.webp", alt: "GOOOL faded cream oversized t-shirt front view" },
+      { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOOOL faded cream oversized t-shirt back view" },
+    ],
+    sizes: OVERSIZED_TEE_SIZES,
+    category: "tshirt",
+    supplierType: "printful",
+    isActive: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    colorVariants: [
+      {
+        name: "Faded Cream",
+        supplierColor: "Faded Bone",
+        hex: "#FFF9E9",
+        skuFragment: "CREAM",
+        images: [
+          { src: "/products/goool-oval-tee-cream.webp", alt: "GOOOL faded cream oversized t-shirt front view" },
+          { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOOOL faded cream oversized t-shirt back view" },
+          { src: "/products/goool-oval-tee-cream-detail-front.webp", alt: "Front GOOOL oval wordmark detail on faded cream tee" },
+          { src: "/products/goool-oval-tee-cream-detail-back.webp", alt: "Upper back G mark detail on faded cream tee" },
+          { src: "/products/goool-oval-tee-cream-detail-fit.webp", alt: "Oversized boxy fit detail, faded cream tee" },
+          { src: "/products/goool-oval-tee-cream-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, faded cream tee" },
+        ],
+      },
+      {
+        name: "Washed Charcoal",
+        supplierColor: "Faded Black",
+        hex: "#55565A",
+        skuFragment: "CHARCOAL",
+        images: [
+          { src: "/products/goool-oval-tee-charcoal.webp", alt: "GOOOL washed charcoal oversized t-shirt front view" },
+          { src: "/products/goool-oval-tee-charcoal-back.webp", alt: "GOOOL washed charcoal oversized t-shirt back view" },
+          { src: "/products/goool-oval-tee-charcoal-detail-front.webp", alt: "Front GOOOL oval wordmark detail on washed charcoal tee" },
+          { src: "/products/goool-oval-tee-charcoal-detail-back.webp", alt: "Upper back G mark detail on washed charcoal tee" },
+          { src: "/products/goool-oval-tee-charcoal-detail-fit.webp", alt: "Oversized boxy fit detail, washed charcoal tee" },
+          { src: "/products/goool-oval-tee-charcoal-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, washed charcoal tee" },
+        ],
+      },
+      {
+        name: "Dusty Navy",
+        supplierColor: "Faded Indigo",
+        hex: "#4F5C71",
+        skuFragment: "NAVY",
+        images: [
+          { src: "/products/goool-oval-tee-navy.webp", alt: "GOOOL dusty navy oversized t-shirt front view" },
+          { src: "/products/goool-oval-tee-navy-back.webp", alt: "GOOOL dusty navy oversized t-shirt back view" },
+          { src: "/products/goool-oval-tee-navy-detail-front.webp", alt: "Front GOOOL oval wordmark detail on dusty navy tee" },
+          { src: "/products/goool-oval-tee-navy-detail-back.webp", alt: "Upper back G mark detail on dusty navy tee" },
+          { src: "/products/goool-oval-tee-navy-detail-fit.webp", alt: "Oversized boxy fit detail, dusty navy tee" },
+          { src: "/products/goool-oval-tee-navy-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, dusty navy tee" },
+        ],
+      },
+    ],
+    fitNote:
+      "Boxy oversized fit with dropped shoulders. Choose your normal size for the intended oversized silhouette. Size down for a closer fit.",
+    sizeGuide: {
+      unit: "in",
+      measurements: [
+        { label: "Length", values: { S: 27.76, M: 29.13, L: 30.51, XL: 31.89, XXL: 33.27, "3XL": 34.06 } },
+        { label: "Width", values: { S: 20.08, M: 21.65, L: 23.23, XL: 24.8, XXL: 26.38, "3XL": 27.95 } },
+        { label: "Sleeve Length", values: { S: 9.06, M: 9.45, L: 9.45, XL: 10.24, XXL: 10.63, "3XL": 11.02 } },
+      ],
+    },
+    disclosure:
+      "This garment is produced specifically for you after your order is placed. Slight variations in garment dyed color and print placement are part of the individual character of each piece.",
   },
 
   // ── Accessory Collection ────────────────────────────────────

@@ -70,6 +70,17 @@ export async function POST(req: NextRequest) {
     if (!product.sizes.includes(item.size)) {
       return NextResponse.json({ error: "Invalid size." }, { status: 400 });
     }
+
+    // Variant products: the color must be one of the product's colorways;
+    // single-color products always use their own color.
+    let color = product.color;
+    if (product.colorVariants) {
+      const variant = product.colorVariants.find((v) => v.name === item.color);
+      if (!variant) {
+        return NextResponse.json({ error: "Invalid color." }, { status: 400 });
+      }
+      color = variant.name;
+    }
     const quantity = Math.max(1, Math.min(10, Math.floor(item.quantity)));
 
     // Customization only counts when the product actually allows it.
@@ -81,7 +92,7 @@ export async function POST(req: NextRequest) {
       : null;
     const hasCustomization = Boolean(customName || customNumber);
 
-    const descriptionParts = [`Size ${item.size}`, product.color];
+    const descriptionParts = [`Size ${item.size}`, color];
     if (customName) descriptionParts.push(`Name: ${customName}`);
     if (customNumber) descriptionParts.push(`Number: ${customNumber}`);
 
@@ -101,7 +112,7 @@ export async function POST(req: NextRequest) {
           metadata: {
             product_id: product.id,
             size: item.size,
-            color: product.color,
+            color,
             custom_name: customName ?? "",
             custom_number: customNumber ?? "",
           },

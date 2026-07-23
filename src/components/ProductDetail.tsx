@@ -17,6 +17,11 @@ export default function ProductDetail({ product }: { product: Product }) {
   const [selectedSize, setSelectedSize] = useState<Size | null>(
     singleSize ? product.sizes[0] : null
   );
+  const variants = product.colorVariants;
+  const [variantIdx, setVariantIdx] = useState(0);
+  const activeVariant = variants?.[variantIdx];
+  const images = activeVariant?.images ?? product.images;
+  const colorName = activeVariant?.name ?? product.color;
   const [activeImage, setActiveImage] = useState(0);
   const [customize, setCustomize] = useState(false);
   const [customName, setCustomName] = useState("");
@@ -48,8 +53,8 @@ export default function ProductDetail({ product }: { product: Product }) {
       productId: product.id,
       slug: product.slug,
       name: product.name,
-      color: product.color,
-      image: product.images[0].src,
+      color: colorName,
+      image: images[0].src,
       size: selectedSize,
       quantity: 1,
       unitPriceCents,
@@ -71,8 +76,8 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-smoke">
             <Image
-              src={product.images[activeImage].src}
-              alt={product.images[activeImage].alt}
+              src={images[activeImage].src}
+              alt={images[activeImage].alt}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -86,9 +91,9 @@ export default function ProductDetail({ product }: { product: Product }) {
               </span>
             )}
           </div>
-          {product.images.length > 1 && (
+          {images.length > 1 && (
             <div className="mt-3 flex gap-2">
-              {product.images.map((img, i) => (
+              {images.map((img, i) => (
                 <button
                   key={img.src}
                   type="button"
@@ -111,14 +116,43 @@ export default function ProductDetail({ product }: { product: Product }) {
             {product.name}
           </h1>
 
-          <p className="mt-2 flex items-center gap-2 text-sm text-ink/50">
-            <span
-              className="inline-block h-3.5 w-3.5 rounded-full border border-ink/15"
-              style={{ backgroundColor: product.colorHex }}
-              aria-hidden="true"
-            />
-            {product.color}
-          </p>
+          {variants ? (
+            <div className="mt-3">
+              <p className="text-sm text-ink/60">
+                Color: <span className="font-semibold text-ink">{colorName}</span>
+              </p>
+              <div className="mt-2 flex gap-2" role="radiogroup" aria-label="Select color">
+                {variants.map((v, i) => (
+                  <button
+                    key={v.name}
+                    type="button"
+                    role="radio"
+                    aria-checked={i === variantIdx}
+                    aria-label={v.name}
+                    onClick={() => {
+                      setVariantIdx(i);
+                      setActiveImage(0);
+                    }}
+                    className={`h-9 w-9 rounded-full border transition-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
+                      i === variantIdx
+                        ? "border-ink ring-2 ring-ink ring-offset-2"
+                        : "border-ink/20 hover:border-ink/50"
+                    }`}
+                    style={{ backgroundColor: v.hex }}
+                  />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <p className="mt-2 flex items-center gap-2 text-sm text-ink/50">
+              <span
+                className="inline-block h-3.5 w-3.5 rounded-full border border-ink/15"
+                style={{ backgroundColor: product.colorHex }}
+                aria-hidden="true"
+              />
+              {product.color}
+            </p>
+          )}
 
           <p className="mt-3 text-2xl font-semibold text-ink">
             {onSale && (
@@ -177,6 +211,11 @@ export default function ProductDetail({ product }: { product: Product }) {
                     setSizeError(false);
                   }}
                 />
+                {product.fitNote && (
+                  <p className="mt-2 text-xs leading-relaxed text-ink/60">
+                    {product.fitNote}
+                  </p>
+                )}
                 {sizeError && (
                   <p className="mt-2 text-sm font-medium text-red" role="alert">
                     Select a size to continue.
@@ -247,11 +286,55 @@ export default function ProductDetail({ product }: { product: Product }) {
             </ul>
           </div>
 
+          {product.disclosure && (
+            <p className="mt-4 rounded-xl bg-smoke p-4 text-xs leading-relaxed text-ink/60">
+              {product.disclosure}
+            </p>
+          )}
+
           {/* Details */}
           <div className="mt-8 divide-y divide-ink/10 border-t border-ink/10">
             <DetailRow label="Material" value={product.fabric} />
             <DetailRow label="Fit" value={product.fit} />
             <DetailRow label="Care" value={product.careInstructions} />
+            {product.sizeGuide && (
+              <div className="py-4">
+                <h2 className="text-sm font-semibold text-ink">Size guide</h2>
+                <div className="mt-2 overflow-x-auto">
+                  <table className="w-full min-w-[420px] text-left text-sm text-ink/70">
+                    <caption className="sr-only">
+                      Garment measurements in inches per size
+                    </caption>
+                    <thead>
+                      <tr className="border-b border-ink/10 text-xs uppercase tracking-wider text-ink/50">
+                        <th scope="col" className="py-2 pr-4 font-semibold">
+                          Measurement (in)
+                        </th>
+                        {product.sizes.map((s) => (
+                          <th key={s} scope="col" className="py-2 pr-3 font-semibold">
+                            {s === "XXL" ? "2XL" : s}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {product.sizeGuide.measurements.map((m) => (
+                        <tr key={m.label} className="border-b border-ink/5">
+                          <th scope="row" className="py-2 pr-4 font-medium text-ink">
+                            {m.label}
+                          </th>
+                          {product.sizes.map((s) => (
+                            <td key={s} className="py-2 pr-3">
+                              {m.values[s] ?? "—"}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
