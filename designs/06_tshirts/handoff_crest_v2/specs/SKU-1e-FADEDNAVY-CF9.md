@@ -10,7 +10,7 @@
 
 ### Front
 - Artwork: `production/GOOOL-CREST-V2-DTF-ONEWHT-CF-9.png` (ONE-COLOR WHITE — navy mid-value garment kills the 2-color art)
-- Placement: center front — 9.00"w, centered, top of art 2.5" below collar
+- Placement: center front — 9.00"w, centered, top of art 4.5" below collar (dropped 2" — sat too high on samples)
 
 ### Back
 - Shoulder wordmark: `production/GOOOL-WORDMARK-V2-SHOULDER-ONEWHT-7.png` — 7.00"w, centered, top ~2" below back collar

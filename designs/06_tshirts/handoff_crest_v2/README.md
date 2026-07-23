@@ -47,7 +47,7 @@ Faded Cream #FFF9E9.
 - In the mockup generator, set print size to the EXACT final width in the filename (LC-325 = 3.25", CC-75 = 7.5", CF-9 = 9", FB-105 = 10.5") — never stretch to fill the print area
 - Placements in the POD editor:
   - Left chest: use the "Left chest" preset (≈3.5" from center, ≈3" below shoulder seam)
-  - Center chest / center front: horizontally centered, top of art 3" (CC) / 2.5" (CF) below collar
+  - Center chest / center front: horizontally centered, top of art 5" (CC) / 4.5" (CF) below collar (revised +2" lower after live samples sat too high)
   - Full back: centered, top of art 4" below back collar
   - Shoulder wordmark: back placement, 7.0" wide, top ~2" below back collar — same back print file can include the hem URL if the platform allows only one back print: stack wordmark (top) + URL (bottom-aligned) in one back-area file on request
   - Hem URL: 5.0" wide, centered, dragged to the lowest allowed back position

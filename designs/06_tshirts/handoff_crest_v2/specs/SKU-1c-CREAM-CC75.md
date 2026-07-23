@@ -10,7 +10,7 @@
 
 ### Front
 - Artwork: `production/GOOOL-CREST-V2-DTF-LIGHT-CC-75.png` (LIGHT 2-color)
-- Placement: center chest — 7.50"w, centered, top of art 3" below collar
+- Placement: center chest — 7.50"w, centered, top of art 5" below collar (dropped 2" — sat too high on samples)
 
 ### Back
 - Shoulder wordmark: `production/GOOOL-WORDMARK-V2-SHOULDER-LIGHT-7.png` — 7.00"w, centered, top ~2" below back collar
