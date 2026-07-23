@@ -1,17 +1,19 @@
 # 1e · GOOOL-CREST-V2-DTF-ONEWHT-CF-9
 ## Garment (identical for all SKUs)
-- Product: Unisex Garment-Dyed Heavyweight Cotton Tee — American Apparel 1301GD (Printful catalog)
+- Product: Unisex Garment-Dyed Heavyweight Cotton Tee — American Apparel 1301GD (Printful catalog), oversized fit
 - Technique: **DTF printing** (select DTF, not DTG, on the product page)
-- Sizes: S–3XL
-- Colorway hexes (Printful tooltips): Faded Black #55565A · Faded Navy #4F5C71 · Faded Cream #FFF9E9 · Faded Khaki (~#C9A46A, confirm swatch in dashboard) · Faded Brown (unused this drop)
-- All art: transparent PNG, sRGB, 300 PPI at final size — upload as-is, set print width EXACTLY as specified, never stretch to fill
+- All art: transparent PNG, sRGB, 300 PPI at final size — set print width EXACTLY, never stretch; crest ratio locked 201:256, never redraw/recolor/distort
 
 ## Garment color: Faded Navy #4F5C71
 
-### Front
-- Artwork: `production/GOOOL-CREST-V2-DTF-ONEWHT-CF-9.png` (ONE-COLOR WHITE — navy mid-value garment kills the 2-color art)
-- Placement: center front — 9.00"w, centered, top of art 4.5" below collar (dropped 2" — sat too high on samples)
+### Front — large centered crest, upper chest
+- Artwork: `production/GOOOL-CREST-V2-DTF-ONEWHT-CF-9.png` (ONE-COLOR WHITE — navy mid-value garment kills 2-color art)
+- Crest width: **9.00"** (height 11.46")
+- From collar seam: crest TOP edge **3.5"** below the center-front collar seam
+- From center line: dead center (0")
+- Decoration: DTF · color white #FFFFFF only
+- Why it's right: at 9" the crest is the whole statement — anchoring its top edge 3.5" down centers its visual mass on the upper chest of the oversized cut; the crest bottom lands mid-torso, never stomach-level.
 
 ### Back
-- Shoulder wordmark: `production/GOOOL-WORDMARK-V2-SHOULDER-ONEWHT-7.png` — 7.00"w, centered, top ~2" below back collar
-- Hem URL: `production/GOOOL-HEM-URL-WHITE-5.png` — 5.00"w, centered, lowest allowed back-print position
+- Shoulder wordmark: `production/GOOOL-WORDMARK-V2-SHOULDER-ONEWHT-7.png` — 7.00"w, centered, top edge 2.0" below the back collar seam
+- Hem URL: `production/GOOOL-HEM-URL-WHITE-5.png` — 5.00"w, centered, lowest back-print position

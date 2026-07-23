@@ -21,12 +21,12 @@ Faded Cream #FFF9E9.
 ## The 6 SKUs
 | SKU | Garment | Placement | Artwork | Files |
 |---|---|---|---|---|
-| GOOOL-CREST-V2-DTF-LIGHT-LC-325 | Faded Cream #FFF9E9 | Left chest 3.25"w | Light 2-color | crest LC + shoulder wordmark LIGHT + hem GREY |
-| GOOOL-CREST-V2-DTF-DARK-LC-325 | Faded Black #55565A | Left chest 3.25"w | Dark reverse | crest LC + shoulder wordmark DARK + hem WHITE |
+| GOOOL-CREST-V2-DTF-LIGHT-LC-25 | Faded Cream #FFF9E9 | Left chest 2.50"w (pro jersey scale) | Light 2-color | crest LC + shoulder wordmark LIGHT + hem GREY |
+| GOOOL-CREST-V2-DTF-DARK-LC-25 | Faded Black #55565A | Left chest 2.50"w (pro jersey scale) | Dark reverse | crest LC + shoulder wordmark DARK + hem WHITE |
 | GOOOL-CREST-V2-DTF-LIGHT-CC-75 | Faded Cream #FFF9E9 | Center chest 7.50"w | Light 2-color | crest CC + shoulder wordmark LIGHT + hem GREY |
 | GOOOL-CREST-V2-DTF-DARK-FB-105 | Faded Black #55565A | Full back 10.50"w + LC 3.25" front | Dark reverse | FB crest + LC crest (no shoulder wordmark — full-back crest instead) |
 | GOOOL-CREST-V2-DTF-ONEWHT-CF-9 | Faded Navy #4F5C71 | Center front 9.00"w | One-color white | crest CF + shoulder wordmark ONEWHT + hem WHITE |
-| GOOOL-CREST-V2-DTF-DARK-LC-325-NVY | Faded Navy #4F5C71 | Left chest 3.25"w | Dark reverse | crest LC + shoulder wordmark DARK + hem WHITE |
+| GOOOL-CREST-V2-DTF-DARK-LC-25-NVY | Faded Navy #4F5C71 | Left chest 2.50"w (pro jersey scale) | Dark reverse | crest LC + shoulder wordmark DARK + hem WHITE |
 
 ## Back treatment (all SKUs except FB-105)
 - Shoulder blades: `GOOOL-WORDMARK-V2-SHOULDER-*.png` at 7.0" wide, centered,
@@ -44,11 +44,11 @@ Faded Cream #FFF9E9.
 ## Execution specs — POD print on cotton tees (Printful/Printify — the 6 tee SKUs)
 - Products: 100% cotton tees from the POD catalog (Bella+Canvas 3001 / Comfort Colors 1717 class); "sport grey" = the catalog's Athletic/Sport Heather variant
 - Upload the `production/` PNGs as-is: transparent background, sRGB, 300 PPI ("DPI: 300" must show in Printful's file check — no "low resolution" warning)
-- In the mockup generator, set print size to the EXACT final width in the filename (LC-325 = 3.25", CC-75 = 7.5", CF-9 = 9", FB-105 = 10.5") — never stretch to fill the print area
+- In the mockup generator, set print size to the EXACT final width in the filename (LC-25 = 3.25", CC-75 = 7.5", CF-9 = 9", FB-105 = 10.5") — never stretch to fill the print area
 - Placements in the POD editor:
-  - Left chest: use the "Left chest" preset (≈3.5" from center, ≈3" below shoulder seam)
-  - Center chest / center front: horizontally centered, top of art 5" (CC) / 4.5" (CF) below collar (revised +2" lower after live samples sat too high)
-  - Full back: centered, top of art 4" below back collar
+  - Left chest (all LC SKUs): crest 2.50"w × 3.18"h (≈8cm, elite-kit scale), heart position — crest TOP 4.0" below the collar/shoulder seam junction, crest CENTER 4.0" left of the center line. One position, every colorway.
+  - Centered crests (CC-75 / CF-9): dead center, crest TOP edge 3.5" below the center-front collar seam — upper chest, clear of the collar seam, never stomach-level.
+  - Full back (FB-105): centered, crest top 4.5" below back collar seam (name/number zone, clear of the shoulder yoke)
   - Shoulder wordmark: back placement, 7.0" wide, top ~2" below back collar — same back print file can include the hem URL if the platform allows only one back print: stack wordmark (top) + URL (bottom-aligned) in one back-area file on request
   - Hem URL: 5.0" wide, centered, dragged to the lowest allowed back position
 - POD handles underbase/pretreatment automatically — the correct variant per garment color is what matters: Light on white, Dark on black, one-color black on grey, one-color white on red
