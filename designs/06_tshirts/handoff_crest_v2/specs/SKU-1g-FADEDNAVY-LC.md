@@ -18,3 +18,6 @@
 ### Back
 - Shoulder wordmark: `production/GOOOL-WORDMARK-V2-SHOULDER-DARK-7.png` — 7.00"w, centered, top edge **2.0"** below the back collar seam (sits between the shoulder blades, the pro name-bar zone)
 - Hem URL: `production/GOOOL-HEM-URL-WHITE-5.png` — 5.00"w, centered, bottom-aligned to lowest back-print position
+
+### Printful compliance
+All sizes/positions sit inside Printful's placement guidance (left chest 2.5–5"w ~3" below neckline; large fronts 3–4" below collar; 15"×18" max print area on supported sizes). Confirm the product's File guidelines tab per garment size before publishing.

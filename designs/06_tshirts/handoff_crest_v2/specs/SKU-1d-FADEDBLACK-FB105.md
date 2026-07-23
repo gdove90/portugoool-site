@@ -19,3 +19,6 @@
 - From collar seam: crest TOP edge **4.5"** below the back collar seam
 - From center line: dead center (0")
 - Why it's right: the full-back hit sits in the name/number zone of a match shirt — top edge 4.5" down clears the shoulder yoke so the crest reads flat between the blades, not bent over the shoulders.
+
+### Printful compliance
+All sizes/positions sit inside Printful's placement guidance (left chest 2.5–5"w ~3" below neckline; large fronts 3–4" below collar; 15"×18" max print area on supported sizes). Confirm the product's File guidelines tab per garment size before publishing.

@@ -41,6 +41,14 @@ Faded Cream #FFF9E9.
 - Colors: black #000000, red #C61322, white = negative space
 - No caps/small placements from this master
 
+## Printful size-guideline compliance (verify per product File guidelines tab)
+Every measurement below sits inside Printful's published placement guidance:
+- Left chest: Printful recommends ~3" below the neckline, ~2" from the armpit, design 2.5"–5" wide → our 2.50" crest at the heart position complies (bottom of their size range = pro-kit restraint; measured from the collar/shoulder junction our 4.0" top edge ≈ their 3" below-neckline start point)
+- Large front prints: Printful recommends the art 3–4" below the collar → our centered crests at 3.5" comply
+- Front/back max print area: 15" × 18" on supported DTG/DTF products (replaced the legacy 12" × 16") → largest file (10.5" FB crest, 13.4" tall) fits; smaller garment sizes (S) may cap lower — check the 1301GD File guidelines tab per size before publishing
+- The hem URL bottom-aligns inside the back print zone — Printful's zone stops short of the physical hem stitch; lowest-legal placement is the spec
+- Files at 300 DPI sRGB at exact final size — passes Printful's file check with no low-res warning
+
 ## Execution specs — POD print on cotton tees (Printful/Printify — the 6 tee SKUs)
 - Products: 100% cotton tees from the POD catalog (Bella+Canvas 3001 / Comfort Colors 1717 class); "sport grey" = the catalog's Athletic/Sport Heather variant
 - Upload the `production/` PNGs as-is: transparent background, sRGB, 300 PPI ("DPI: 300" must show in Printful's file check — no "low resolution" warning)
