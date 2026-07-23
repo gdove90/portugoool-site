@@ -12,11 +12,11 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Summer '26 Collection",
   description:
-    "The biggest summer in football is happening now. The England Drop — ENGOOOLAND, live during Summer '26.",
+    "The biggest summer in football is happening now. The Crest Collection — live during Summer '26.",
 };
 
 export default function Summer26Page() {
-  const jerseys = getProductsByCategory("jersey");
+  const collection = getProductsByCategory("tshirt");
 
   return (
     <>
@@ -38,15 +38,15 @@ export default function Summer26Page() {
           </h1>
           <p className="mt-4 max-w-lg text-lg text-paper/80">
             The biggest summer in football is here — right now, in North
-            America. Every match, every scream, every GOOOOOL. The England
-            Drop is live while it happens.
+            America. Every match, every scream, every GOOOOOL. The Crest
+            Collection is live while it happens.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/drop"
               className="rounded-full bg-red px-8 py-4 text-center text-base font-semibold text-paper transition-colors hover:bg-red-dark"
             >
-              Shop the England Drop
+              Shop the Crest Collection
             </Link>
             <Link
               href="#list"
@@ -63,10 +63,10 @@ export default function Summer26Page() {
           Live during the moment
         </h2>
         <p className="mb-6 mt-1 text-sm text-ink/60">
-          The England Drop — ENGOOOLAND, on sale while the whole world
-          watches. Made to order, printed for you.
+          The Crest Collection — on sale while the whole world watches.
+          Made to order, printed for you.
         </p>
-        <ProductGrid products={jerseys} />
+        <ProductGrid products={collection} />
       </section>
 
       <div id="list">

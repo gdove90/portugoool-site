@@ -58,9 +58,16 @@ export default function CustomizePage() {
           Pick your jersey
         </h2>
         <p className="mb-6 mt-1 text-sm text-ink/60">
-          Available on every ENGOOOLAND jersey.
+          Available on every GOOOL jersey.
         </p>
-        <ProductGrid products={jerseys} />
+        {jerseys.length > 0 ? (
+          <ProductGrid products={jerseys} />
+        ) : (
+          <p className="rounded-xl bg-smoke px-6 py-10 text-center text-ink/60">
+            Jerseys are between drops right now. Join the list below — the
+            next chapter is coming.
+          </p>
+        )}
 
         <div className="mt-10 text-center">
           <Link

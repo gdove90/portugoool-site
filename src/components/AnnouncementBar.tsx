@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 // Announcement bar — website-bible §4.0.
 // One time-sensitive message, never rotates. Dismissal remembered per session.
-const MESSAGE = "The England Drop · ENGOOOLAND · Live now.";
+const MESSAGE = "The Crest Collection · Live now.";
 const STORAGE_KEY = "portugooool-announcement-dismissed";
 
 export default function AnnouncementBar() {

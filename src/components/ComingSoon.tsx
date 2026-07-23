@@ -108,9 +108,9 @@ export default function ComingSoon() {
           Coming Soon
         </p>
         <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
-          The England Drop — made to order, printed for you.
+          The Crest Collection — made to order, printed for you.
           <br />
-          ENG<span className="text-red">OOO</span>LAND · The England Collection
+          G<span className="text-red">OOO</span>L · The Sound of Victory
         </p>
 
         {status === "success" ? (

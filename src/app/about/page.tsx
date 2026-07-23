@@ -29,9 +29,9 @@ export default function AboutPage() {
           </p>
           <p>
             We launch in chapters. Now live:{" "}
-            <strong className="text-ink">The England Collection</strong> —
-            ENGOOOLAND — three jerseys in white, deep red, and England navy,
-            every one made to order and printed for you. When the next
+            <strong className="text-ink">The Crest Collection</strong> —
+            the official GOOOL crest on garment-dyed heavyweight cotton,
+            every piece made to order and printed for you. When the next
             chapter lands, designs can retire.
           </p>
           <p className="text-base text-ink/50">
