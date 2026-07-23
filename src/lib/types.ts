@@ -8,7 +8,7 @@ export const SHIRT_SIZES: Size[] = ["S", "M", "L", "XL", "XXL", "3XL"];
 export const ONE_SIZE: Size[] = ["OS"];
 export const ALL_SIZES: Size[] = [...SHIRT_SIZES, "OS"];
 
-export type ProductCategory = "jersey" | "casual" | "accessory" | "hat";
+export type ProductCategory = "jersey" | "casual" | "tshirt" | "accessory" | "hat";
 
 /** Future fulfillment routing — no integration yet, just clean structure. */
 export type SupplierType =

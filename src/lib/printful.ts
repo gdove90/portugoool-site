@@ -23,7 +23,21 @@ export const JERSEY_VARIANT_IDS: Partial<Record<Size, number>> = {
 };
 
 /**
- * Product slug → Printful mapping. Jerseys only for now — casual tees,
+ * Printful catalog product 1589 — American Apparel 1301GD Unisex Garment-Dyed
+ * Heavyweight Cotton Tee. Crest V2 line prints via DTF (catalog technique
+ * key "DTFILM"). Verified against the live catalog 2026-07-22.
+ */
+export const PRINTFUL_HEAVY_TEE_PRODUCT_ID = 1589;
+
+/** Crest V2 tee colors → per-size Printful variant ids (product 1589). */
+export const HEAVY_TEE_VARIANT_IDS: Record<string, Partial<Record<Size, number>>> = {
+  "Faded Black": { S: 50019, M: 50014, L: 50022, XL: 50015, XXL: 50028, "3XL": 50032 }, // Printful calls XXL "2XL"
+  "Faded Cream": { S: 50020, M: 50009, L: 50012, XL: 50023, XXL: 50026, "3XL": 50030 },
+  "Faded Navy": { S: 50021, M: 50013, L: 50007, XL: 50006, XXL: 50025, "3XL": 50033 },
+};
+
+/**
+ * Product slug → Printful mapping. Jerseys + crest-v2 tees — GOL casual tees,
  * cap, and stickers get mapped once their blanks are chosen and sampled.
  * Scarf + flag are specialty-supplier products (see materials.md).
  */
@@ -35,4 +49,10 @@ export const PRINTFUL_PRODUCTS: Record<
   "away-white-jersey": { catalogProductId: PRINTFUL_JERSEY_PRODUCT_ID, variantIds: JERSEY_VARIANT_IDS },
   "blackout-edition-jersey": { catalogProductId: PRINTFUL_JERSEY_PRODUCT_ID, variantIds: JERSEY_VARIANT_IDS },
   "emerald-edition-jersey": { catalogProductId: PRINTFUL_JERSEY_PRODUCT_ID, variantIds: JERSEY_VARIANT_IDS },
+  "crest-tee-cream": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Cream"] },
+  "crest-tee-faded-black": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Black"] },
+  "crest-statement-tee-cream": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Cream"] },
+  "crest-fullback-tee-faded-black": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Black"] },
+  "crest-centerfront-tee-faded-navy": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Navy"] },
+  "crest-tee-faded-navy": { catalogProductId: PRINTFUL_HEAVY_TEE_PRODUCT_ID, variantIds: HEAVY_TEE_VARIANT_IDS["Faded Navy"] },
 };

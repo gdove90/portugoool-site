@@ -23,6 +23,12 @@ const SECTIONS = [
     blurb: "Built for watch parties, match days, and every GOOOOOOOL.",
   },
   {
+    id: "tshirts",
+    category: "tshirt" as const,
+    title: "T-Shirts",
+    blurb: "The official crest on garment-dyed heavyweight cotton.",
+  },
+  {
     id: "hats",
     category: "hat" as const,
     title: "Hats",
