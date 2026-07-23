@@ -856,9 +856,9 @@ export const products: Product[] = [
     sizeGuide: {
       unit: "in",
       measurements: [
-        { label: "Length", values: { S: 27.76, M: 29.13, L: 30.51, XL: 31.89, XXL: 33.27, "3XL": 34.06 } },
-        { label: "Width", values: { S: 20.08, M: 21.65, L: 23.23, XL: 24.8, XXL: 26.38, "3XL": 27.95 } },
-        { label: "Sleeve Length", values: { S: 9.06, M: 9.45, L: 9.45, XL: 10.24, XXL: 10.63, "3XL": 11.02 } },
+        { label: "Length", values: { S: 27.76, M: 29.13, L: 30.51, XL: 31.89, XXL: 33.27 } },
+        { label: "Width", values: { S: 20.08, M: 21.65, L: 23.23, XL: 24.8, XXL: 26.38 } },
+        { label: "Sleeve Length", values: { S: 9.06, M: 9.45, L: 9.45, XL: 10.24, XXL: 10.63 } },
       ],
     },
     disclosure:
