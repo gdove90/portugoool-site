@@ -34,3 +34,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# Private production masters — never publish (public repo + public site).
+# Recoverable from the owner's packet zip; see GOOOL_POD_SAMPLE_SPECIFICATIONS.pdf.
+designs/GOOOL_POD_SAMPLE_PACKET/
+GOOOL_POD_SAMPLE_SPECIFICATIONS.pdf
+GOOOL_FILES_FOR_PORTUGOOOL.zip
