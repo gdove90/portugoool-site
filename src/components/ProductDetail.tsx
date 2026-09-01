@@ -75,7 +75,7 @@ export default function ProductDetail({ product }: { product: Product }) {
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
         {/* Images */}
         <div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-smoke">
+          <div className="relative aspect-square overflow-hidden rounded-xl bg-smoke">
             <Image
               src={images[activeImage].src}
               alt={images[activeImage].alt}

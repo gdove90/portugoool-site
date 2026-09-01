@@ -19,7 +19,7 @@ export default function ProductCard({ product }: { product: Product }) {
       className="group block"
       aria-label={`${product.name}, ${formatPrice(product.priceCents)}`}
     >
-      <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-smoke">
+      <div className="relative aspect-square overflow-hidden rounded-xl bg-smoke">
         <Image
           src={product.images[0].src}
           alt={product.images[0].alt}
