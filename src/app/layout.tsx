@@ -25,17 +25,17 @@ const marker = Permanent_Marker({
 
 export const metadata: Metadata = {
   title: {
-    default: "GOOOL — The Sound of Victory. Premium futbol fan apparel.",
+    default: "GOOOL — Made for the Moment. Premium futbol fan apparel.",
     template: "%s · GOOOL",
   },
   description:
-    "The sound every stadium screams, made wearable. Premium game-day jerseys and fan apparel. Now live: The Crest Collection. Independent brand — original designs only.",
+    "The sound every stadium screams, made wearable. Premium fan apparel. Coming soon: The First Capsule. Independent brand — original designs only.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
   openGraph: {
     title: "GOOOL",
-    description: "The Sound of Victory. Premium futbol fan apparel.",
+    description: "Made for the Moment. Premium futbol fan apparel.",
     type: "website",
   },
 };

@@ -13,7 +13,7 @@ export const OVERSIZED_TEE_SIZES: Size[] = ["S", "M", "L", "XL", "XXL"];
 export const ONE_SIZE: Size[] = ["OS"];
 export const ALL_SIZES: Size[] = [...SHIRT_SIZES, "OS"];
 
-export type ProductCategory = "jersey" | "casual" | "tshirt" | "accessory" | "hat";
+export type ProductCategory = "jersey" | "casual" | "tshirt" | "hoodie" | "accessory" | "hat";
 
 /** Future fulfillment routing — no integration yet, just clean structure. */
 export type SupplierType =
@@ -69,6 +69,8 @@ export interface Product {
   category: ProductCategory;
   supplierType: SupplierType;
   isActive: boolean;
+  /** false = visible but not purchasable (Coming Soon). Omitted = true. */
+  availableForSale?: boolean;
   // ── Limited drop ────────────────────────────────────────────
   isLimitedDrop: boolean;
   /** e.g. "I", "II" — displayed as "Drop Version I". */
@@ -98,6 +100,13 @@ export interface Product {
 export function remainingUnits(p: Product): number | null {
   if (p.dropLimit == null) return null;
   return Math.max(0, p.dropLimit - p.dropSoldCount);
+}
+
+/** Coming-soon gate: visible but not yet purchasable. Undefined means
+ *  available (all legacy products). Enforced in the UI and again
+ *  server-side at checkout. */
+export function isAvailableForSale(p: Product): boolean {
+  return p.availableForSale !== false;
 }
 
 export function isSoldOut(p: Product): boolean {

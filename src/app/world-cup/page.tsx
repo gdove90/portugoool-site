@@ -12,7 +12,7 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Summer '26 Collection",
   description:
-    "The biggest summer in football is happening now. The Crest Collection — live during Summer '26.",
+    "The biggest summer in football is happening now. The First Capsule — coming soon.",
 };
 
 export default function Summer26Page() {
@@ -46,7 +46,7 @@ export default function Summer26Page() {
               href="/drop"
               className="rounded-full bg-red px-8 py-4 text-center text-base font-semibold text-paper transition-colors hover:bg-red-dark"
             >
-              Shop the Crest Collection
+              See the First Capsule
             </Link>
             <Link
               href="#list"
@@ -63,7 +63,7 @@ export default function Summer26Page() {
           Live during the moment
         </h2>
         <p className="mb-6 mt-1 text-sm text-ink/60">
-          The Crest Collection — on sale while the whole world watches.
+          The First Capsule — coming soon while the whole world watches.
         </p>
         <ProductGrid products={collection} />
       </section>

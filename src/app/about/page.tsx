@@ -29,7 +29,7 @@ export default function AboutPage() {
           </p>
           <p>
             We launch in chapters. Now live:{" "}
-            <strong className="text-ink">The Crest Collection</strong> —
+            <strong className="text-ink">The First Capsule</strong> —
             the official GOOOL crest on garment-dyed heavyweight cotton.
             When the next chapter lands, designs can retire.
           </p>
