@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Product, Size, remainingUnits, isSoldOut } from "@/lib/types";
+import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/lib/cart";
 import SizeSelector from "./SizeSelector";
@@ -30,6 +30,7 @@ export default function ProductDetail({ product }: { product: Product }) {
   const [added, setAdded] = useState(false);
 
   const soldOut = isSoldOut(product);
+  const comingSoon = !isAvailableForSale(product);
   const remaining = remainingUnits(product);
   const customizable =
     product.customNameAvailable || product.customNumberAvailable;
@@ -44,7 +45,7 @@ export default function ProductDetail({ product }: { product: Product }) {
     product.compareAtPriceCents > product.priceCents;
 
   function handleAddToCart(goToCart: boolean) {
-    if (soldOut) return;
+    if (soldOut || comingSoon) return;
     if (!selectedSize) {
       setSizeError(true);
       return;
@@ -74,7 +75,7 @@ export default function ProductDetail({ product }: { product: Product }) {
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
         {/* Images */}
         <div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-smoke">
+          <div className="relative aspect-square overflow-hidden rounded-xl bg-smoke">
             <Image
               src={images[activeImage].src}
               alt={images[activeImage].alt}
@@ -98,7 +99,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   key={img.src}
                   type="button"
                   onClick={() => setActiveImage(i)}
-                  className={`relative h-20 w-16 overflow-hidden rounded-lg bg-smoke ${
+                  className={`relative h-20 w-20 overflow-hidden rounded-lg bg-smoke ${
                     i === activeImage ? "ring-2 ring-ink" : "opacity-70 hover:opacity-100"
                   }`}
                   aria-label={`View image ${i + 1}`}
@@ -201,7 +202,18 @@ export default function ProductDetail({ product }: { product: Product }) {
           </p>
 
           <div className="mt-6 space-y-5">
-            {!singleSize && (
+            {comingSoon && (
+              <p className="text-sm font-medium text-ink">
+                Launch sizing:{" "}
+                {product.sizes.includes("OS")
+                  ? "One Size"
+                  : product.sizes
+                      .map((sz) => (sz === "XXL" ? "2XL" : sz))
+                      .filter((sz, i, a) => i === 0 || i === a.length - 1)
+                      .join("\u2013")}
+              </p>
+            )}
+            {!comingSoon && !singleSize && (
               <div>
                 <SizeSelector
                   sizes={product.sizes}
@@ -238,7 +250,16 @@ export default function ProductDetail({ product }: { product: Product }) {
               />
             )}
 
-            {soldOut ? (
+            {comingSoon ? (
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                className="w-full cursor-not-allowed rounded-full bg-ink/10 px-8 py-4 text-base font-semibold text-ink/50"
+              >
+                Coming Soon
+              </button>
+            ) : soldOut ? (
               <div className="rounded-xl border border-ink/15 p-5 text-center">
                 <p className="font-display text-xl font-bold uppercase tracking-tightest text-ink">
                   This drop is gone.
@@ -268,6 +289,11 @@ export default function ProductDetail({ product }: { product: Product }) {
             )}
 
             {/* Trust copy */}
+            {comingSoon ? (
+              <p className="flex items-center gap-1.5 text-xs text-ink/60">
+                <TrustIcon /> Release details coming soon.
+              </p>
+            ) : (
             <ul className="grid grid-cols-2 gap-2 text-xs text-ink/60">
               <li className="flex items-center gap-1.5">
                 <TrustIcon /> Secure checkout
@@ -281,6 +307,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 </li>
               )}
             </ul>
+            )}
           </div>
 
           {product.disclosure && (

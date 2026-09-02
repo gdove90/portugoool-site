@@ -101,16 +101,16 @@ export default function ComingSoon() {
           Goool
         </h1>
         <p className="mt-3 font-display text-lg uppercase tracking-[0.16em] text-paper sm:text-2xl">
-          The Sound of Victory.
+          Made for the Moment.
         </p>
 
         <p className="mt-10 font-display text-3xl uppercase tracking-[0.3em] text-gold sm:text-5xl">
           Coming Soon
         </p>
         <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
-          The Crest Collection — original GOOOL designs.
+          The First Capsule — original GOOOL designs.
           <br />
-          G<span className="text-red">OOO</span>L · The Sound of Victory
+          G<span className="text-red">OOO</span>L · Made for the Moment
         </p>
 
         {status === "success" ? (

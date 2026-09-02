@@ -34,7 +34,7 @@ export default function Hero() {
           Goool
         </h1>
         <p className="mt-4 font-display text-xl uppercase tracking-[0.16em] text-paper sm:text-3xl lg:text-[34px]">
-          The Sound of Victory.
+          Made for the Moment.
         </p>
         <div className="mt-9">
           <Link

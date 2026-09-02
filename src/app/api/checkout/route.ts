@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getProductById } from "@/lib/products";
-import { Size, isSoldOut } from "@/lib/types";
+import { Size, isSoldOut, isAvailableForSale } from "@/lib/types";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe Checkout handoff.
@@ -58,6 +58,12 @@ export async function POST(req: NextRequest) {
     if (!product) {
       return NextResponse.json(
         { error: "A product in your cart is no longer available." },
+        { status: 400 }
+      );
+    }
+    if (!isAvailableForSale(product)) {
+      return NextResponse.json(
+        { error: `${product.name} is coming soon and cannot be purchased yet.` },
         { status: 400 }
       );
     }

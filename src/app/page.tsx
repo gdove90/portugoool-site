@@ -10,9 +10,9 @@ import ComingSoon from "@/components/ComingSoon";
 // ─────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "GOOOL — Coming Soon. The Sound of Victory.",
+  title: "GOOOL — Coming Soon. Made for the Moment.",
   description:
-    "The Crest Collection — live now. Join the list for first access.",
+    "The First Capsule — coming soon. Join the list for first access.",
 };
 
 export default function HomePage() {
