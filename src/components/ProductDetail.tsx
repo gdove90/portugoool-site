@@ -99,7 +99,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   key={img.src}
                   type="button"
                   onClick={() => setActiveImage(i)}
-                  className={`relative h-20 w-16 overflow-hidden rounded-lg bg-smoke ${
+                  className={`relative h-20 w-20 overflow-hidden rounded-lg bg-smoke ${
                     i === activeImage ? "ring-2 ring-ink" : "opacity-70 hover:opacity-100"
                   }`}
                   aria-label={`View image ${i + 1}`}
@@ -202,7 +202,18 @@ export default function ProductDetail({ product }: { product: Product }) {
           </p>
 
           <div className="mt-6 space-y-5">
-            {!singleSize && (
+            {comingSoon && (
+              <p className="text-sm font-medium text-ink">
+                Launch sizing:{" "}
+                {product.sizes.includes("OS")
+                  ? "One Size"
+                  : product.sizes
+                      .map((sz) => (sz === "XXL" ? "2XL" : sz))
+                      .filter((sz, i, a) => i === 0 || i === a.length - 1)
+                      .join("\u2013")}
+              </p>
+            )}
+            {!comingSoon && !singleSize && (
               <div>
                 <SizeSelector
                   sizes={product.sizes}
@@ -278,6 +289,11 @@ export default function ProductDetail({ product }: { product: Product }) {
             )}
 
             {/* Trust copy */}
+            {comingSoon ? (
+              <p className="flex items-center gap-1.5 text-xs text-ink/60">
+                <TrustIcon /> Release details coming soon.
+              </p>
+            ) : (
             <ul className="grid grid-cols-2 gap-2 text-xs text-ink/60">
               <li className="flex items-center gap-1.5">
                 <TrustIcon /> Secure checkout
@@ -291,6 +307,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 </li>
               )}
             </ul>
+            )}
           </div>
 
           {product.disclosure && (
