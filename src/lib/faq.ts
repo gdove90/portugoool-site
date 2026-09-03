@@ -15,7 +15,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "How does sizing run?",
     answer:
-      "Jersey-style shirts are an athletic fit and run true to size — size up if you want a relaxed feel. Casual shirts are a relaxed streetwear fit. Every product page lists the fit.",
+      "Jersey-style shirts are an athletic fit and run true to size, so size up if you want a relaxed feel. Casual shirts are a relaxed streetwear fit. Every product page lists the fit.",
   },
   {
     question: "Can I return or exchange?",
@@ -25,16 +25,16 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "How does customization work?",
     answer:
-      "Jerseys come clean — no names, no numbers. On any jersey page you can add a name (up to 12 characters) and number (0–99) to the back for a flat $15. Casual shirts and accessories ship as designed.",
+      "Jerseys come clean, with no names and no numbers. On any jersey page you can add a name (up to 12 characters) and number (0–99) to the back for a flat $15. Casual shirts and accessories ship as designed.",
   },
   {
     question: "How do drops work?",
     answer:
-      "We release designs in drops — collections that land together. Designs can retire when the next drop lands.",
+      "We release designs in drops: collections that land together. Designs can retire when the next drop lands.",
   },
   {
     question: "Is this official team merchandise?",
     answer:
-      "No. GOOOL is an independent fan apparel brand — we celebrate the fans, not the federations. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
+      "No. GOOOL is an independent fan apparel brand. We celebrate the fans, not the federations. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
   },
 ];

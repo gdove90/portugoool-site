@@ -1,19 +1,19 @@
 import { Product, SHIRT_SIZES, JERSEY_SIZES, OVERSIZED_TEE_SIZES, ONE_SIZE, ProductCategory } from "./types";
 
 // ─────────────────────────────────────────────────────────────
-// Launch catalog — Drop Version I.
+// Launch catalog · Drop Version I.
 // Mirrors the Supabase `products` table exactly (same UUIDs as the
 // seed migration). Swap `getProducts()` / `getProductBySlug()` for
 // Supabase queries later and nothing else changes.
 //
-// Image paths point at /public/products/*.svg placeholders — replace
+// Image paths point at /public/products/*.svg placeholders · replace
 // each SVG with a real product photo when photography is ready.
 // ─────────────────────────────────────────────────────────────
 
 const JERSEY_FABRIC =
   "Lightweight performance knit. 100% recycled polyester. Moisture-wicking and breathable with a silky smooth finish, printed edge to edge.";
 const CASUAL_FABRIC =
-  "Soft 100% ring-spun cotton staple tee. Lightweight and breathable — holds color, holds shape, feels broken-in from day one.";
+  "Soft 100% ring-spun cotton staple tee. Lightweight and breathable. Holds color, holds shape, and feels broken-in from day one.";
 const HEAVY_FABRIC =
   "Heavyweight garment-dyed 100% cotton. Oversized cut with real weight and structure.";
 
@@ -42,7 +42,7 @@ const DROP_I = {
 };
 const DROP_II = {
   isLimitedDrop: false,
-  dropVersion: "II", // collection identity only — no scarcity claims (POD)
+  dropVersion: "II", // collection identity only, no scarcity claims (POD)
   dropLimit: null,
 };
 
@@ -62,8 +62,8 @@ export const products: Product[] = [
     fit: JERSEY_FIT,
     careInstructions: JERSEY_CARE,
     images: [
-      { src: "/products/home-red-jersey.webp", alt: "Home Red Jersey — front, on model" },
-      { src: "/products/home-red-jersey-back.webp", alt: "Home Red Jersey — back, ready for custom name and number" },
+      { src: "/products/home-red-jersey.webp", alt: "Home Red Jersey · front, on model" },
+      { src: "/products/home-red-jersey-back.webp", alt: "Home Red Jersey · back, ready for custom name and number" },
     ],
     sizes: JERSEY_SIZES,
     category: "jersey",
@@ -89,8 +89,8 @@ export const products: Product[] = [
     fit: JERSEY_FIT,
     careInstructions: JERSEY_CARE,
     images: [
-      { src: "/products/away-white-jersey.webp", alt: "Away White Jersey — front, on model" },
-      { src: "/products/away-white-jersey-back.webp", alt: "Away White Jersey — back, ready for custom name and number" },
+      { src: "/products/away-white-jersey.webp", alt: "Away White Jersey · front, on model" },
+      { src: "/products/away-white-jersey-back.webp", alt: "Away White Jersey · back, ready for custom name and number" },
     ],
     sizes: JERSEY_SIZES,
     category: "jersey",
@@ -116,8 +116,8 @@ export const products: Product[] = [
     fit: JERSEY_FIT,
     careInstructions: JERSEY_CARE,
     images: [
-      { src: "/products/blackout-edition-jersey.webp", alt: "Blackout Edition Jersey — front, on model" },
-      { src: "/products/blackout-edition-jersey-back.webp", alt: "Blackout Edition Jersey — back, ready for custom name and number" },
+      { src: "/products/blackout-edition-jersey.webp", alt: "Blackout Edition Jersey · front, on model" },
+      { src: "/products/blackout-edition-jersey-back.webp", alt: "Blackout Edition Jersey · back, ready for custom name and number" },
     ],
     sizes: JERSEY_SIZES,
     category: "jersey",
@@ -143,8 +143,8 @@ export const products: Product[] = [
     fit: JERSEY_FIT,
     careInstructions: JERSEY_CARE,
     images: [
-      { src: "/products/emerald-edition-jersey.webp", alt: "Emerald Edition Jersey — front, on model" },
-      { src: "/products/emerald-edition-jersey-back.webp", alt: "Emerald Edition Jersey — back, ready for custom name and number" },
+      { src: "/products/emerald-edition-jersey.webp", alt: "Emerald Edition Jersey · front, on model" },
+      { src: "/products/emerald-edition-jersey-back.webp", alt: "Emerald Edition Jersey · back, ready for custom name and number" },
     ],
     sizes: JERSEY_SIZES,
     category: "jersey",
@@ -164,7 +164,7 @@ export const products: Product[] = [
     name: "ENGOOOLAND Home White Jersey",
     slug: "engoooland-home-white-jersey",
     description:
-      "The scream, embedded. Crisp white with the red and navy sash — chapter two starts loud.",
+      "The scream, embedded. Crisp white with the red and navy sash. Chapter two starts loud.",
     priceCents: 6500,
     compareAtPriceCents: null,
     color: "White",
@@ -173,9 +173,9 @@ export const products: Product[] = [
     fit: JERSEY_FIT,
     careInstructions: JERSEY_CARE,
     images: [
-      { src: "/products/engoooland-home-white-jersey.webp", alt: "ENGOOOLAND Home White Jersey — front, on model" },
-      { src: "/products/engoooland-home-white-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
-      { src: "/products/engoooland-home-white-jersey-back.webp", alt: "ENGOOOLAND Home White Jersey — back, ready for custom name and number" },
+      { src: "/products/engoooland-home-white-jersey.webp", alt: "ENGOOOLAND Home White Jersey · front, on model" },
+      { src: "/products/engoooland-home-white-jersey-ghost.webp", alt: "ENGOOOLAND jersey · exact fit, front view" },
+      { src: "/products/engoooland-home-white-jersey-back.webp", alt: "ENGOOOLAND Home White Jersey · back, ready for custom name and number" },
     ],
     sizes: JERSEY_SIZES,
     category: "jersey",
@@ -201,9 +201,9 @@ export const products: Product[] = [
     fit: JERSEY_FIT,
     careInstructions: JERSEY_CARE,
     images: [
-      { src: "/products/engoooland-away-red-jersey.webp", alt: "ENGOOOLAND Away Red Jersey — front, on model" },
-      { src: "/products/engoooland-away-red-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
-      { src: "/products/engoooland-away-red-jersey-back.webp", alt: "ENGOOOLAND Away Red Jersey — back, ready for custom name and number" },
+      { src: "/products/engoooland-away-red-jersey.webp", alt: "ENGOOOLAND Away Red Jersey · front, on model" },
+      { src: "/products/engoooland-away-red-jersey-ghost.webp", alt: "ENGOOOLAND jersey · exact fit, front view" },
+      { src: "/products/engoooland-away-red-jersey-back.webp", alt: "ENGOOOLAND Away Red Jersey · back, ready for custom name and number" },
     ],
     sizes: JERSEY_SIZES,
     category: "jersey",
@@ -229,9 +229,9 @@ export const products: Product[] = [
     fit: JERSEY_FIT,
     careInstructions: JERSEY_CARE,
     images: [
-      { src: "/products/engoooland-navy-jersey.webp", alt: "ENGOOOLAND Navy Jersey — front, on model" },
-      { src: "/products/engoooland-navy-jersey-ghost.webp", alt: "ENGOOOLAND jersey — exact fit, front view" },
-      { src: "/products/engoooland-navy-jersey-back.webp", alt: "ENGOOOLAND Navy Jersey — back, ready for custom name and number" },
+      { src: "/products/engoooland-navy-jersey.webp", alt: "ENGOOOLAND Navy Jersey · front, on model" },
+      { src: "/products/engoooland-navy-jersey-ghost.webp", alt: "ENGOOOLAND jersey · exact fit, front view" },
+      { src: "/products/engoooland-navy-jersey-back.webp", alt: "ENGOOOLAND Navy Jersey · back, ready for custom name and number" },
     ],
     sizes: JERSEY_SIZES,
     category: "jersey",
@@ -259,8 +259,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/brush-script-tee.webp", alt: "PORTUGOOOL Brush Script Tee — front" },
-      { src: "/products/brush-script-tee-back.webp", alt: "PORTUGOOOL Brush Script Tee — back" },
+      { src: "/products/brush-script-tee.webp", alt: "PORTUGOOOL Brush Script Tee · front" },
+      { src: "/products/brush-script-tee-back.webp", alt: "PORTUGOOOL Brush Script Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -288,8 +288,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/goool-tee.webp", alt: "GOOOOOOOL!!! Tee — front" },
-      { src: "/products/goool-tee-back.webp", alt: "GOOOOOOOL!!! Tee — back" },
+      { src: "/products/goool-tee.webp", alt: "GOOOOOOOL!!! Tee · front" },
+      { src: "/products/goool-tee-back.webp", alt: "GOOOOOOOL!!! Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -317,8 +317,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/vamos-tee.webp", alt: "Vamos Portugooool Tee — front" },
-      { src: "/products/vamos-tee-back.webp", alt: "Vamos Portugooool Tee — back" },
+      { src: "/products/vamos-tee.webp", alt: "Vamos Portugooool Tee · front" },
+      { src: "/products/vamos-tee-back.webp", alt: "Vamos Portugooool Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -346,8 +346,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/lisbon-to-the-world-tee.webp", alt: "From Lisbon to the World Tee — front" },
-      { src: "/products/lisbon-to-the-world-tee-back.webp", alt: "From Lisbon to the World Tee — back" },
+      { src: "/products/lisbon-to-the-world-tee.webp", alt: "From Lisbon to the World Tee · front" },
+      { src: "/products/lisbon-to-the-world-tee-back.webp", alt: "From Lisbon to the World Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -375,8 +375,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/match-day-tee.webp", alt: "Match Day Tee — front" },
-      { src: "/products/match-day-tee-back.webp", alt: "Match Day Tee — back" },
+      { src: "/products/match-day-tee.webp", alt: "Match Day Tee · front" },
+      { src: "/products/match-day-tee-back.webp", alt: "Match Day Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -404,8 +404,8 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/we-dont-whisper-goals-tee.webp", alt: "We Don't Whisper Goals Tee — front" },
-      { src: "/products/we-dont-whisper-goals-tee-back.webp", alt: "We Don't Whisper Goals Tee — back" },
+      { src: "/products/we-dont-whisper-goals-tee.webp", alt: "We Don't Whisper Goals Tee · front" },
+      { src: "/products/we-dont-whisper-goals-tee-back.webp", alt: "We Don't Whisper Goals Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -436,8 +436,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/engoooland-echo-hero-tee.webp", alt: "ENGOOOLAND Echo Hero Tee — front" },
-      { src: "/products/engoooland-echo-hero-tee-back.webp", alt: "ENGOOOLAND Echo Hero Tee — back" },
+      { src: "/products/engoooland-echo-hero-tee.webp", alt: "ENGOOOLAND Echo Hero Tee · front" },
+      { src: "/products/engoooland-echo-hero-tee-back.webp", alt: "ENGOOOLAND Echo Hero Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -465,8 +465,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/london-to-the-world-tee.webp", alt: "From London to the World Tee — front" },
-      { src: "/products/london-to-the-world-tee-back.webp", alt: "From London to the World Tee — back" },
+      { src: "/products/london-to-the-world-tee.webp", alt: "From London to the World Tee · front" },
+      { src: "/products/london-to-the-world-tee-back.webp", alt: "From London to the World Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -494,8 +494,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/made-for-the-moment-tee.webp", alt: "Made for the Moment Tee — front" },
-      { src: "/products/made-for-the-moment-tee-back.webp", alt: "Made for the Moment Tee — back" },
+      { src: "/products/made-for-the-moment-tee.webp", alt: "Made for the Moment Tee · front" },
+      { src: "/products/made-for-the-moment-tee-back.webp", alt: "Made for the Moment Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -523,8 +523,8 @@ export const products: Product[] = [
     fit: CASUAL_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/engoooland-roar-tee.webp", alt: "ENGOOOLAND Roar Tee — front" },
-      { src: "/products/engoooland-roar-tee-back.webp", alt: "ENGOOOLAND Roar Tee — back" },
+      { src: "/products/engoooland-roar-tee.webp", alt: "ENGOOOLAND Roar Tee · front" },
+      { src: "/products/engoooland-roar-tee-back.webp", alt: "ENGOOOLAND Roar Tee · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -555,8 +555,8 @@ export const products: Product[] = [
     fit: PERF_FIT,
     careInstructions: PERF_CARE,
     images: [
-      { src: "/products/gol-clean-sheet-tee.webp", alt: "GOL Clean Sheet Tee — front" },
-      { src: "/products/gol-clean-sheet-tee-alt.webp", alt: "GOL Clean Sheet Tee — detail" },
+      { src: "/products/gol-clean-sheet-tee.webp", alt: "GOL Clean Sheet Tee · front" },
+      { src: "/products/gol-clean-sheet-tee-alt.webp", alt: "GOL Clean Sheet Tee · detail" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -584,8 +584,8 @@ export const products: Product[] = [
     fit: PERF_FIT,
     careInstructions: PERF_CARE,
     images: [
-      { src: "/products/gol-gold-standard-tee.webp", alt: "GOL Gold Standard Tee — front" },
-      { src: "/products/gol-gold-standard-tee-alt.webp", alt: "GOL Gold Standard Tee — detail" },
+      { src: "/products/gol-gold-standard-tee.webp", alt: "GOL Gold Standard Tee · front" },
+      { src: "/products/gol-gold-standard-tee-alt.webp", alt: "GOL Gold Standard Tee · detail" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -613,8 +613,8 @@ export const products: Product[] = [
     fit: PERF_FIT,
     careInstructions: PERF_CARE,
     images: [
-      { src: "/products/gol-concrete-grey-tee.webp", alt: "GOL Concrete Tee — front" },
-      { src: "/products/gol-concrete-grey-tee-alt.webp", alt: "GOL Concrete Tee — detail" },
+      { src: "/products/gol-concrete-grey-tee.webp", alt: "GOL Concrete Tee · front" },
+      { src: "/products/gol-concrete-grey-tee-alt.webp", alt: "GOL Concrete Tee · detail" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -642,8 +642,8 @@ export const products: Product[] = [
     fit: PERF_FIT,
     careInstructions: PERF_CARE,
     images: [
-      { src: "/products/gol-concrete-white-tee.webp", alt: "GOL Concrete White Tee — front" },
-      { src: "/products/gol-concrete-white-tee-alt.webp", alt: "GOL Concrete White Tee — detail" },
+      { src: "/products/gol-concrete-white-tee.webp", alt: "GOL Concrete White Tee · front" },
+      { src: "/products/gol-concrete-white-tee-alt.webp", alt: "GOL Concrete White Tee · detail" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -671,8 +671,8 @@ export const products: Product[] = [
     fit: PERF_FIT,
     careInstructions: PERF_CARE,
     images: [
-      { src: "/products/gol-concrete-black-tee.webp", alt: "GOL Concrete Black Tee — front" },
-      { src: "/products/gol-concrete-black-tee-alt.webp", alt: "GOL Concrete Black Tee — detail" },
+      { src: "/products/gol-concrete-black-tee.webp", alt: "GOL Concrete Black Tee · front" },
+      { src: "/products/gol-concrete-black-tee-alt.webp", alt: "GOL Concrete Black Tee · detail" },
     ],
     sizes: SHIRT_SIZES,
     category: "casual",
@@ -690,7 +690,7 @@ export const products: Product[] = [
   // ── Crest V2 T-Shirt Line (AA 1301GD, Printful DTF) ─────────
   {
     id: "60000000-0000-4000-8000-000000000003",
-    name: "GOOOL Crest Statement Tee — Cream",
+    name: "GOOOL Crest Statement Tee · Cream",
     slug: "crest-statement-tee-cream",
     description:
       "The crest at full volume. One design, worn loud on cream.",
@@ -702,8 +702,8 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/crest-statement-tee-cream.webp", alt: "GOOOL Crest Statement Tee — Cream — front" },
-      { src: "/products/crest-statement-tee-cream-back.webp", alt: "GOOOL Crest Statement Tee — Cream — back" },
+      { src: "/products/crest-statement-tee-cream.webp", alt: "GOOOL Crest Statement Tee · Cream · front" },
+      { src: "/products/crest-statement-tee-cream-back.webp", alt: "GOOOL Crest Statement Tee · Cream · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "tshirt",
@@ -719,7 +719,7 @@ export const products: Product[] = [
   },
   {
     id: "60000000-0000-4000-8000-000000000004",
-    name: "GOOOL Crest Statement Tee — Faded Black",
+    name: "GOOOL Crest Statement Tee · Faded Black",
     slug: "crest-statement-tee-faded-black",
     description:
       "The crest at full volume, reversed in white on faded black.",
@@ -731,8 +731,8 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/crest-statement-tee-faded-black.webp", alt: "GOOOL Crest Statement Tee — Faded Black — front" },
-      { src: "/products/crest-statement-tee-faded-black-back.webp", alt: "GOOOL Crest Statement Tee — Faded Black — back" },
+      { src: "/products/crest-statement-tee-faded-black.webp", alt: "GOOOL Crest Statement Tee · Faded Black · front" },
+      { src: "/products/crest-statement-tee-faded-black-back.webp", alt: "GOOOL Crest Statement Tee · Faded Black · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "tshirt",
@@ -748,7 +748,7 @@ export const products: Product[] = [
   },
   {
     id: "60000000-0000-4000-8000-000000000005",
-    name: "GOOOL Crest Statement Tee — Faded Navy",
+    name: "GOOOL Crest Statement Tee · Faded Navy",
     slug: "crest-statement-tee-faded-navy",
     description:
       "The crest at full volume on dusty navy. The quiet-loud one.",
@@ -760,8 +760,8 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/crest-statement-tee-faded-navy.webp", alt: "GOOOL Crest Statement Tee — Faded Navy — front" },
-      { src: "/products/crest-statement-tee-faded-navy-back.webp", alt: "GOOOL Crest Statement Tee — Faded Navy — back" },
+      { src: "/products/crest-statement-tee-faded-navy.webp", alt: "GOOOL Crest Statement Tee · Faded Navy · front" },
+      { src: "/products/crest-statement-tee-faded-navy-back.webp", alt: "GOOOL Crest Statement Tee · Faded Navy · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "tshirt",
@@ -791,7 +791,7 @@ export const products: Product[] = [
       "100% carded cotton. Heavyweight 240 GSM (7.1 oz) fabric. Garment dyed and preshrunk.",
     fit: "Boxy oversized fit with dropped shoulders, wide sleeves, and wide neck ribbing. Longer casual length.",
     careInstructions:
-      "Machine wash cold and inside out on a gentle cycle with mild detergent, with similar colors. Non-chlorine bleach only when necessary. No fabric softener. Tumble dry low or hang dry. Cool iron inside out when necessary — never directly over the decoration. Do not dry clean.",
+      "Machine wash cold and inside out on a gentle cycle with mild detergent, with similar colors. Non-chlorine bleach only when necessary. No fabric softener. Tumble dry low or hang dry. Cool iron inside out when necessary · never directly over the decoration. Do not dry clean.",
     images: [
       { src: "/products/goool-oval-tee-cream.webp", alt: "GOOOL faded cream oversized t-shirt front view" },
       { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOOOL faded cream oversized t-shirt back view" },
@@ -925,7 +925,7 @@ export const products: Product[] = [
     fabric: "Kiss-cut matte vinyl sticker sheet. Six designs on one sheet.",
     fit: "One sheet · 5.83″ × 8.27″ · six stickers.",
     careInstructions: "Peel and place once.",
-    images: [{ src: "/products/sticker-pack.svg", alt: "Sticker Pack — six die-cut stickers" }],
+    images: [{ src: "/products/sticker-pack.svg", alt: "Sticker Pack · six die-cut stickers" }],
     sizes: ONE_SIZE,
     category: "accessory",
     supplierType: "printful",
@@ -980,8 +980,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/gol-cap-black.webp", alt: "GOL Cap Black — front" },
-      { src: "/products/gol-cap-black-alt.webp", alt: "GOL Cap Black — angle" },
+      { src: "/products/gol-cap-black.webp", alt: "GOL Cap Black · front" },
+      { src: "/products/gol-cap-black-alt.webp", alt: "GOL Cap Black · angle" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1009,8 +1009,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/gol-cap-white.webp", alt: "GOL Cap White — front" },
-      { src: "/products/gol-cap-white-alt.webp", alt: "GOL Cap White — angle" },
+      { src: "/products/gol-cap-white.webp", alt: "GOL Cap White · front" },
+      { src: "/products/gol-cap-white-alt.webp", alt: "GOL Cap White · angle" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1038,8 +1038,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-cap-black.webp", alt: "GOOOL Cap Black — front angle" },
-      { src: "/products/goool-cap-black-alt.webp", alt: "GOOOL Cap Black — front" },
+      { src: "/products/goool-cap-black.webp", alt: "GOOOL Cap Black · front angle" },
+      { src: "/products/goool-cap-black-alt.webp", alt: "GOOOL Cap Black · front" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1067,8 +1067,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-cap-white.webp", alt: "GOOOL Cap White — front angle" },
-      { src: "/products/goool-cap-white-alt.webp", alt: "GOOOL Cap White — front" },
+      { src: "/products/goool-cap-white.webp", alt: "GOOOL Cap White · front angle" },
+      { src: "/products/goool-cap-white-alt.webp", alt: "GOOOL Cap White · front" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1096,8 +1096,8 @@ export const products: Product[] = [
     fit: "One size · snapback.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap.webp", alt: "GOOOL England Cap — front" },
-      { src: "/products/goool-england-cap-alt.webp", alt: "GOOOL England Cap — angle" },
+      { src: "/products/goool-england-cap.webp", alt: "GOOOL England Cap · front" },
+      { src: "/products/goool-england-cap-alt.webp", alt: "GOOOL England Cap · angle" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1125,8 +1125,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap-white.webp", alt: "GOOOL England Cap White — front" },
-      { src: "/products/goool-england-cap-white-alt.webp", alt: "GOOOL England Cap White — side crest" },
+      { src: "/products/goool-england-cap-white.webp", alt: "GOOOL England Cap White · front" },
+      { src: "/products/goool-england-cap-white-alt.webp", alt: "GOOOL England Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1154,8 +1154,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap-navy.webp", alt: "GOOOL England Cap Navy — front" },
-      { src: "/products/goool-england-cap-navy-alt.webp", alt: "GOOOL England Cap Navy — side crest" },
+      { src: "/products/goool-england-cap-navy.webp", alt: "GOOOL England Cap Navy · front" },
+      { src: "/products/goool-england-cap-navy-alt.webp", alt: "GOOOL England Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1183,8 +1183,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap-red.webp", alt: "GOOOL England Cap Red — front" },
-      { src: "/products/goool-england-cap-red-alt.webp", alt: "GOOOL England Cap Red — side crest" },
+      { src: "/products/goool-england-cap-red.webp", alt: "GOOOL England Cap Red · front" },
+      { src: "/products/goool-england-cap-red-alt.webp", alt: "GOOOL England Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1212,8 +1212,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-argentina-cap-white.webp", alt: "GOOOL Argentina Cap White — front" },
-      { src: "/products/goool-argentina-cap-white-alt.webp", alt: "GOOOL Argentina Cap White — side crest" },
+      { src: "/products/goool-argentina-cap-white.webp", alt: "GOOOL Argentina Cap White · front" },
+      { src: "/products/goool-argentina-cap-white-alt.webp", alt: "GOOOL Argentina Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1241,8 +1241,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-argentina-cap-sky.webp", alt: "GOOOL Argentina Cap Sky Blue — front" },
-      { src: "/products/goool-argentina-cap-sky-alt.webp", alt: "GOOOL Argentina Cap Sky Blue — side crest" },
+      { src: "/products/goool-argentina-cap-sky.webp", alt: "GOOOL Argentina Cap Sky Blue · front" },
+      { src: "/products/goool-argentina-cap-sky-alt.webp", alt: "GOOOL Argentina Cap Sky Blue · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1272,8 +1272,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-italy-cap-navy.webp", alt: "GOOOL Italy Cap Navy — front" },
-      { src: "/products/goool-italy-cap-navy-alt.webp", alt: "GOOOL Italy Cap Navy — side crest" },
+      { src: "/products/goool-italy-cap-navy.webp", alt: "GOOOL Italy Cap Navy · front" },
+      { src: "/products/goool-italy-cap-navy-alt.webp", alt: "GOOOL Italy Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1301,8 +1301,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-italy-cap-white.webp", alt: "GOOOL Italy Cap White — front" },
-      { src: "/products/goool-italy-cap-white-alt.webp", alt: "GOOOL Italy Cap White — side crest" },
+      { src: "/products/goool-italy-cap-white.webp", alt: "GOOOL Italy Cap White · front" },
+      { src: "/products/goool-italy-cap-white-alt.webp", alt: "GOOOL Italy Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1330,8 +1330,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-netherlands-cap-navy.webp", alt: "GOOOL Netherlands Cap Navy — front" },
-      { src: "/products/goool-netherlands-cap-navy-alt.webp", alt: "GOOOL Netherlands Cap Navy — side crest" },
+      { src: "/products/goool-netherlands-cap-navy.webp", alt: "GOOOL Netherlands Cap Navy · front" },
+      { src: "/products/goool-netherlands-cap-navy-alt.webp", alt: "GOOOL Netherlands Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1359,8 +1359,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-netherlands-cap-white.webp", alt: "GOOOL Netherlands Cap White — front" },
-      { src: "/products/goool-netherlands-cap-white-alt.webp", alt: "GOOOL Netherlands Cap White — side crest" },
+      { src: "/products/goool-netherlands-cap-white.webp", alt: "GOOOL Netherlands Cap White · front" },
+      { src: "/products/goool-netherlands-cap-white-alt.webp", alt: "GOOOL Netherlands Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1388,8 +1388,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-germany-cap-black.webp", alt: "GOOOL Germany Cap Black — front" },
-      { src: "/products/goool-germany-cap-black-alt.webp", alt: "GOOOL Germany Cap Black — side crest" },
+      { src: "/products/goool-germany-cap-black.webp", alt: "GOOOL Germany Cap Black · front" },
+      { src: "/products/goool-germany-cap-black-alt.webp", alt: "GOOOL Germany Cap Black · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1417,8 +1417,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-germany-cap-white.webp", alt: "GOOOL Germany Cap White — front" },
-      { src: "/products/goool-germany-cap-white-alt.webp", alt: "GOOOL Germany Cap White — side crest" },
+      { src: "/products/goool-germany-cap-white.webp", alt: "GOOOL Germany Cap White · front" },
+      { src: "/products/goool-germany-cap-white-alt.webp", alt: "GOOOL Germany Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1446,8 +1446,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-belgium-cap-red.webp", alt: "GOOOL Belgium Cap Red — front" },
-      { src: "/products/goool-belgium-cap-red-alt.webp", alt: "GOOOL Belgium Cap Red — side crest" },
+      { src: "/products/goool-belgium-cap-red.webp", alt: "GOOOL Belgium Cap Red · front" },
+      { src: "/products/goool-belgium-cap-red-alt.webp", alt: "GOOOL Belgium Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1475,8 +1475,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-belgium-cap-black.webp", alt: "GOOOL Belgium Cap Black — front" },
-      { src: "/products/goool-belgium-cap-black-alt.webp", alt: "GOOOL Belgium Cap Black — side crest" },
+      { src: "/products/goool-belgium-cap-black.webp", alt: "GOOOL Belgium Cap Black · front" },
+      { src: "/products/goool-belgium-cap-black-alt.webp", alt: "GOOOL Belgium Cap Black · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1504,8 +1504,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-norway-cap-navy.webp", alt: "GOOOL Norway Cap Navy — front" },
-      { src: "/products/goool-norway-cap-navy-alt.webp", alt: "GOOOL Norway Cap Navy — side crest" },
+      { src: "/products/goool-norway-cap-navy.webp", alt: "GOOOL Norway Cap Navy · front" },
+      { src: "/products/goool-norway-cap-navy-alt.webp", alt: "GOOOL Norway Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1533,8 +1533,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-norway-cap-red.webp", alt: "GOOOL Norway Cap Red — front" },
-      { src: "/products/goool-norway-cap-red-alt.webp", alt: "GOOOL Norway Cap Red — side crest" },
+      { src: "/products/goool-norway-cap-red.webp", alt: "GOOOL Norway Cap Red · front" },
+      { src: "/products/goool-norway-cap-red-alt.webp", alt: "GOOOL Norway Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1562,8 +1562,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-spain-cap-black.webp", alt: "GOOOL Spain Cap Black — front" },
-      { src: "/products/goool-spain-cap-black-alt.webp", alt: "GOOOL Spain Cap Black — side crest" },
+      { src: "/products/goool-spain-cap-black.webp", alt: "GOOOL Spain Cap Black · front" },
+      { src: "/products/goool-spain-cap-black-alt.webp", alt: "GOOOL Spain Cap Black · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1591,8 +1591,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-spain-cap-red.webp", alt: "GOOOL Spain Cap Red — front" },
-      { src: "/products/goool-spain-cap-red-alt.webp", alt: "GOOOL Spain Cap Red — side crest" },
+      { src: "/products/goool-spain-cap-red.webp", alt: "GOOOL Spain Cap Red · front" },
+      { src: "/products/goool-spain-cap-red-alt.webp", alt: "GOOOL Spain Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1620,8 +1620,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-france-cap-navy.webp", alt: "GOOOL France Cap Navy — front" },
-      { src: "/products/goool-france-cap-navy-alt.webp", alt: "GOOOL France Cap Navy — side crest" },
+      { src: "/products/goool-france-cap-navy.webp", alt: "GOOOL France Cap Navy · front" },
+      { src: "/products/goool-france-cap-navy-alt.webp", alt: "GOOOL France Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1649,8 +1649,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-france-cap-white.webp", alt: "GOOOL France Cap White — front" },
-      { src: "/products/goool-france-cap-white-alt.webp", alt: "GOOOL France Cap White — side crest" },
+      { src: "/products/goool-france-cap-white.webp", alt: "GOOOL France Cap White · front" },
+      { src: "/products/goool-france-cap-white-alt.webp", alt: "GOOOL France Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",

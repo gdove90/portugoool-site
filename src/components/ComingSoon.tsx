@@ -112,7 +112,7 @@ export default function ComingSoon() {
           Coming Soon
         </p>
         <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
-          The First Capsule — original GOOOL designs.
+          The First Capsule. Original GOOOL designs.
           <br />
           GOOOL · Made for the Moment
         </p>

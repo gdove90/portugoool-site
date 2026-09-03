@@ -24,14 +24,14 @@ export default function CustomizePage() {
               Your name.<br />Your number.
             </h1>
             <p className="mt-4 max-w-md text-paper/70">
-              Every jersey ships clean — no names, no numbers. Want yours on
+              Every jersey ships clean, with no names and no numbers. Want yours on
               the back? Add any name up to 12 characters and any number 0–99
               on the product page. Printed to order, just for you.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-paper/70">
               <li>✓ Any name, up to 12 characters</li>
               <li>✓ Any number, 0–99</li>
-              <li>✓ Flat $15 — added at checkout, fully optional</li>
+              <li>✓ Flat $15, added at checkout, fully optional</li>
               <li>✓ Customized jerseys are made for you and final sale</li>
             </ul>
           </div>
@@ -64,8 +64,8 @@ export default function CustomizePage() {
           <ProductGrid products={jerseys} />
         ) : (
           <p className="rounded-xl bg-smoke px-6 py-10 text-center text-ink/60">
-            Jerseys are between drops right now. Join the list below — the
-            next chapter is coming.
+            Jerseys are between drops right now. Join the list below, because
+            the next chapter is coming.
           </p>
         )}
 

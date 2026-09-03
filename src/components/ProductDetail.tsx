@@ -349,7 +349,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                           </th>
                           {product.sizes.map((s) => (
                             <td key={s} className="py-2 pr-3">
-                              {m.values[s] ?? "—"}
+                              {m.values[s] ?? "–"}
                             </td>
                           ))}
                         </tr>

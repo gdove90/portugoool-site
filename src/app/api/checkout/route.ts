@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         error:
-          "Checkout isn't live yet — we're putting the finishing touches on the drop. Join the email list to hear the moment it opens.",
+          "Checkout isn't live yet. We're putting the finishing touches on the drop, so join the email list to hear the moment it opens.",
       },
       { status: 503 }
     );

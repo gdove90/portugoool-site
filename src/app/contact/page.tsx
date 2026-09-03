@@ -21,7 +21,7 @@ export default function ContactPage() {
         Contact
       </h1>
       <p className="mt-2 text-ink/60">
-        Questions about an order, sizing, or a drop? Send it over — we reply
+        Questions about an order, sizing, or a drop? Send it over and we reply
         within one business day.
       </p>
 

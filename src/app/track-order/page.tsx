@@ -87,7 +87,7 @@ export default function TrackOrderPage() {
         <Link href="/contact" className="font-semibold text-ink underline underline-offset-2">
           Contact us
         </Link>{" "}
-        — we reply within one business day.
+        and we reply within one business day.
       </p>
     </div>
   );

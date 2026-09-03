@@ -19,13 +19,13 @@ export default function RefundsPage() {
         All sales are final.
       </p>
       <p className="mt-2 max-w-lg text-ink/60">
-        We don&apos;t accept returns or exchanges — but if anything arrives
+        We don&apos;t accept returns or exchanges, but if anything arrives
         wrong, we make it right below.
       </p>
 
       <div className="mt-10 space-y-8">
         <section>
-          <h2 className="text-lg font-semibold text-ink">Defects &amp; damage — on us</h2>
+          <h2 className="text-lg font-semibold text-ink">Defects &amp; damage: on us</h2>
           <p className="mt-2 text-sm leading-relaxed text-ink/60">
             If your order arrives defective, damaged, misprinted, or it&apos;s
             the wrong item, we make it right at no cost: a free replacement,
@@ -41,7 +41,7 @@ export default function RefundsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">What doesn&apos;t qualify</h2>
           <ul className="mt-2 space-y-1.5 text-sm text-ink/60">
-            <li>· Wrong size ordered — check the fit notes on each product page before buying</li>
+            <li>· Wrong size ordered. Check the fit notes on each product page before buying</li>
             <li>· Change of mind or style preference</li>
             <li>· Custom names/numbers printed exactly as you entered them</li>
             <li>· Normal wear, or damage from care outside the instructions</li>
@@ -60,7 +60,7 @@ export default function RefundsPage() {
           <h2 className="text-lg font-semibold text-ink">Cancellations</h2>
           <p className="mt-2 text-sm leading-relaxed text-ink/60">
             Orders are processed fast. If you need to cancel, email us
-            immediately — we can only cancel before your order is processed.
+            immediately, since we can only cancel before your order is processed.
           </p>
         </section>
       </div>

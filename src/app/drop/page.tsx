@@ -7,7 +7,7 @@ import { Product } from "@/lib/types";
 export const metadata: Metadata = {
   title: "The First Capsule",
   description:
-    "The GOOOL First Capsule — performance tee, heavyweight hoodie, casual tee, and touchline cap. Coming soon.",
+    "The GOOOL First Capsule: performance tee, heavyweight hoodie, casual tee, and touchline cap. Coming soon.",
 };
 
 const CAPSULE_ORDER = [

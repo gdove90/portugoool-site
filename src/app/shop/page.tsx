@@ -6,7 +6,7 @@ import { Product } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "The GOOOL First Capsule — performance tee, heavyweight hoodie, casual tee, and touchline cap. Coming soon.",
+    "The GOOOL First Capsule: performance tee, heavyweight hoodie, casual tee, and touchline cap. Coming soon.",
 };
 
 // First Capsule: one deliberate premium order, not category grouping.
@@ -29,7 +29,7 @@ export default function ShopPage() {
           The First Capsule
         </h1>
         <p className="mt-2 max-w-lg text-ink/60">
-          Four pieces. One mark. Every design original — coming soon.
+          Four pieces. One mark. Every design original. Coming soon.
         </p>
       </div>
 

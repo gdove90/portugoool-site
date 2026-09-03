@@ -22,20 +22,20 @@ export default function AboutPage() {
             one word stretches forever: <strong className="text-ink">GOOOOOL</strong>.
           </p>
           <p>
-            It&apos;s the only word every stadium on earth screams the same —
-            São Paulo, Lisbon, Mexico City, and the loudest living room on
+            It&apos;s the only word every stadium on earth screams the same, from
+            São Paulo, Lisbon, Mexico City to the loudest living room on
             your street. GOOOL exists for that moment: premium, lightweight
             game-day apparel built for the second it goes in.
           </p>
           <p>
             We launch in chapters. Now live:{" "}
-            <strong className="text-ink">The First Capsule</strong> —
+            <strong className="text-ink">The First Capsule</strong>, with
             the official GOOOL crest on garment-dyed heavyweight cotton.
             When the next chapter lands, designs can retire.
           </p>
           <p className="text-base text-ink/50">
             GOOOL is an independent fan brand. We are not affiliated with any
-            federation, club, league, or governing body — just fans making
+            federation, club, league, or governing body. Just fans making
             shirts for fans, wherever the game is loud.
           </p>
         </div>

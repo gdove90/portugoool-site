@@ -41,7 +41,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Pricing &amp; payment</h2>
           <p className="mt-2">
-            Prices are in USD. Payment is processed securely by Stripe — we
+            Prices are in USD. Payment is processed securely by Stripe, and we
             never see or store your card details. Applicable sales tax and
             shipping are shown at checkout.
           </p>
@@ -50,7 +50,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Customization</h2>
           <p className="mt-2">
-            Custom names and numbers are printed exactly as entered — check
+            Custom names and numbers are printed exactly as entered, so check
             your spelling before paying. We may reject customization text
             that is offensive, infringes third-party rights (including player
             names used in a way that implies endorsement), or is unlawful;
