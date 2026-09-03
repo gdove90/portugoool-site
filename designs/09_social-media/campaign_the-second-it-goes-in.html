@@ -1,0 +1,1126 @@
+<title>The Second It Goes In</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+<style>
+  :root{
+    --paper:#FCFBF8; --ink:#111113; --red:#C61322; --natural:#E7DFCC;
+    --mut:#5A5A60; --line:#E3E0D8; --band:#111113; --band-text:#FCFBF8;
+    --chip:#F1EDE2; --code:#F4F2EB;
+  }
+  :root:not([data-theme="light"]){ }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#131315; --ink:#F0EEE8; --red:#E8394A; --natural:#3A372E;
+      --mut:#9C9CA3; --line:#2A2A2E; --band:#000; --band-text:#F0EEE8;
+      --chip:#222225; --code:#1D1D20;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#131315; --ink:#F0EEE8; --red:#E8394A; --natural:#3A372E;
+    --mut:#9C9CA3; --line:#2A2A2E; --band:#000; --band-text:#F0EEE8;
+    --chip:#222225; --code:#1D1D20;
+  }
+  body{background:var(--paper);color:var(--ink);font:15px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 90px}
+  h1,h2,h3,.disp{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase;text-wrap:balance;line-height:1.05}
+  h1{font-size:clamp(44px,8vw,84px);margin:0}
+  h2{font-size:30px;margin:0 0 6px}
+  h3{font-size:19px;margin:26px 0 8px}
+  p{max-width:70ch}
+  .mut{color:var(--mut)}
+  .redline{height:5px;background:var(--red);width:120px;margin:18px 0}
+  header.hero{padding:64px 0 30px}
+  .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
+  .band{background:var(--band);color:var(--band-text);margin:56px -20px 26px;padding:26px 20px 22px}
+  .band .wrapin{max-width:900px;margin:0 auto}
+  .band h2{color:var(--band-text);font-size:34px}
+  .band .k{color:var(--red);font-family:Anton;letter-spacing:.14em;font-size:12px}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0}
+  th{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;text-align:left;color:var(--mut);border-bottom:2px solid var(--ink);padding:6px 10px 6px 0}
+  td{border-bottom:1px solid var(--line);padding:8px 10px 8px 0;vertical-align:top}
+  .tscroll{overflow-x:auto}
+  .chip{display:inline-block;background:var(--chip);border-radius:3px;padding:2px 9px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+  .chip.red{background:var(--red);color:#fff}
+  .chip.nat{background:var(--natural)}
+  .day{border-top:2px solid var(--ink);padding:20px 0 26px;margin-top:26px}
+  .dayhead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .dayno{font-family:Anton;font-size:38px;color:var(--red);min-width:74px}
+  .daytitle{font-family:Anton;font-size:21px;text-transform:uppercase;letter-spacing:.02em}
+  .fields{display:grid;grid-template-columns:150px 1fr;gap:6px 18px;margin-top:14px;font-size:13.5px}
+  .fields b{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);font-weight:600;padding-top:2px}
+  .cap{background:var(--chip);border-left:3px solid var(--red);padding:10px 14px;margin:6px 0;font-size:13.5px;white-space:pre-wrap}
+  code,.mono{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:var(--code);padding:1px 5px;border-radius:3px}
+  ul{padding-left:20px}
+  li{margin:3px 0}
+  .cols2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px 34px}
+  .note{border:1px solid var(--line);background:var(--chip);padding:12px 16px;font-size:13.5px;margin:14px 0}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:22px 0 8px}
+  .toc a{display:block;border:1px solid var(--line);padding:10px 12px;text-decoration:none;color:var(--ink);font-family:Anton;text-transform:uppercase;font-size:14px;letter-spacing:.03em}
+  .toc a:hover{border-color:var(--red);color:var(--red)}
+  .toc a span{display:block;font-family:-apple-system,"Segoe UI",sans-serif;font-size:11px;color:var(--mut);letter-spacing:0;text-transform:none;margin-top:2px}
+  a{color:var(--red)}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">GOOOL · Instagram Launch Campaign · 30 Days · Prelaunch → Waitlist</div>
+  <h1>The Second<br>It Goes In</h1>
+  <div class="redline"></div>
+  <p class="mut" style="max-width:62ch">A complete, production-ready campaign for the GOOOL First Capsule. Every day, every caption, every ad, every shot. Built for a small team, a phone, and a brand that already knows exactly what it is.</p>
+  <nav class="toc">
+    <a href="#audit">Audit<span>Facts vs. assumptions</span></a>
+    <a href="#p1">Part 1<span>Campaign foundation</span></a>
+    <a href="#p2">Part 2<span>30-day calendar</span></a>
+    <a href="#p3">Part 3<span>Paid advertising</span></a>
+    <a href="#p4">Part 4<span>Production package</span></a>
+    <a href="#p5">Part 5<span>Publishing &amp; performance</span></a>
+  </nav>
+</header>
+
+<section id="audit">
+  <h2>Project audit</h2>
+  <div class="redline" style="width:70px;height:3px"></div>
+  <h3>Confirmed facts (from the repo, the live site, and the spec packet)</h3>
+  <ul>
+    <li><b>Launch assortment — exactly four products, live on goool.shop as Coming Soon:</b> GOOOL Performance Badge Tee, $48, black, S–2XL, 3.8&nbsp;oz 100% recycled polyester with PosiCharge (Sport-Tek ST720), crest printed at the visual center of the chest, blank back · GOOOL Core Hoodie, $78, black, S–2XL, 10&nbsp;oz 3-end fleece, 70/30 cotton-poly (Independent IND4000), underlined wordmark centered across the chest, blank back · GOOOL Casual Wordmark Tee, $38, washed black, S–2XL, 6.5&nbsp;oz garment-dyed ring-spun cotton (Bella+Canvas 4810GD), underlined wordmark centered, blank back · GOOOL Touchline Cap, $36, black/natural, one size, structured five-panel (OTTO 31-069), flat-embroidered wordmark on the front panel only.</li>
+    <li><b>Store readiness: prelaunch.</b> Checkout is disabled on every product and enforced server-side. The public site is a coming-soon landing page with an email signup. Therefore the campaign's only honest conversion action is <b>the waitlist</b> — no "shop now," no "available now," anywhere, until checkout opens.</li>
+    <li><b>Approved artwork:</b> the soccer-ball crest with GOOOL banner and red accent bar; the underlined GOOOL wordmark with the red underline segment; white-on-dark and black-on-light versions. Colors: print white #FFFFFF, GOOOL red #C61322, black #000000. Nothing gets redrawn, recolored, or repositioned.</li>
+    <li><b>Approved imagery on hand today:</b> four plain-background product mockups and four stadium/field lifestyle images (all 1600×1600, decoration at true production scale). These are the only product visuals authorized until physical samples arrive and are approved.</li>
+    <li><b>Physical samples are not yet ordered.</b> Print-accurate photography of real garments cannot exist yet. The calendar below is engineered so the first half runs entirely on approved renders, typography, sound, and atmosphere; garment-on-body production is scheduled against sample arrival.</li>
+    <li><b>"The Sound of Victory"</b> is an approved brand expression for campaign voice and audio identity. It is <b>not printed or embroidered on any launch product</b> (the cap's side slogan was rejected), so it may never be presented as a product feature.</li>
+    <li><b>Taglines:</b> "Made for the Moment." is the live site tagline. Brand separators use the middle dot. Copy style: short, confident, no em dashes.</li>
+    <li><b>Legal rails:</b> no federation crests, club badges, league marks, player names or likenesses, broadcast footage, or borrowed music. No fake scarcity, invented reviews, or unverified claims. All designs original.</li>
+    <li><b>Voice:</b> loud ideas, quiet sentences. First person plural. Honest always.</li>
+  </ul>
+  <h3>Working assumptions (proceeding, flag if wrong)</h3>
+  <ul>
+    <li>Instagram handle is <span class="mono">@goool.shop</span> (matches the domain; dots are valid in IG handles).</li>
+    <li>Home base for shooting is Rhode Island / New England: local pitches, an empty stand, city streets.</li>
+    <li>Day 1 is the first day you can post consistently; no fixed calendar date is attached below, so the plan slides intact to any start date.</li>
+    <li>A friend-and-family cast of 2–3 people (one primary) is reachable; no paid models required.</li>
+  </ul>
+  <h3>Blocking questions, all in one list</h3>
+  <ul>
+    <li>Is the IG handle registered, and is it <span class="mono">@goool.shop</span>?</li>
+    <li>Target month for checkout opening (drives how hard Days 22–30 push toward "the drop is next").</li>
+    <li>Monthly paid budget ceiling: lean $600, recommended $1,500, or aggressive $3,600 (plans in Part 3).</li>
+    <li>Will the founder appear on camera and in voiceover? Two calendar days improve if yes; both include founder-free fallbacks.</li>
+    <li>Sample order ETA once placed, so the Part 4 shoot weekend can be pinned to real dates.</li>
+  </ul>
+</section>
+<div class="band" id="p1"><div class="wrapin"><div class="k">PART 1</div><h2>Campaign foundation</h2></div></div>
+
+<section>
+  <h3>1 · Campaign name</h3>
+  <p><b class="disp" style="font-size:22px">THE SECOND IT GOES IN.</b><br>
+  Already living in the brand's own copy ("built for the second it goes in"), so the campaign inherits language the site speaks natively. Short form for on-screen text: <b>THE SECOND.</b></p>
+
+  <h3>2 · Central idea</h3>
+  <p>Every goal compresses a lifetime of feeling into roughly one second: the inhale before, the impact, the eruption after. Nobody remembers what they were wearing. GOOOL exists for the people who live for that second anyway. The campaign slows that second down, frame by frame, for 30 days, and dresses it.</p>
+
+  <h3>3 · Manifesto (pinned post copy, also voiceover for the anthem reel)</h3>
+  <div class="cap">There is one second every fan on earth understands.
+The stadium inhales. The living room stands up. The street goes quiet.
+Then it goes in.
+Nobody practices what they do in that second. It just comes out of you.
+We make clothing for the people who live for it.
+Four pieces. One mark. No noise.
+GOOOL. Made for the Moment.</div>
+
+  <h3>4 · Customer insight</h3>
+  <p>Football fans in the US live between two wardrobes: replica kits that feel like costumes off the pitch, and streetwear that says nothing about the game they love. The insight: <b>people want to carry the feeling of football without wearing a team.</b> A goal is the one experience that belongs to every fan of every club and no federation. GOOOL owns the emotion, not the allegiance.</p>
+
+  <h3>5 · Emotional promise</h3>
+  <p>Wear the second you live for. When someone who knows the game sees the crest, they feel the roar without a word being said.</p>
+
+  <h3>6 · Functional promise (spec-verified only)</h3>
+  <ul>
+    <li>Performance Badge Tee: 3.8&nbsp;oz recycled polyester with PosiCharge, athletic fit, taped neck. Built to train in.</li>
+    <li>Core Hoodie: true 10&nbsp;oz heavyweight fleece, cotton face, generous fit. Structure you can feel.</li>
+    <li>Casual Wordmark Tee: 6.5&nbsp;oz garment-dyed cotton, relaxed fit, lived-in finish out of the box.</li>
+    <li>Touchline Cap: firm buckram front, structured five-panel, curved visor, flat embroidery.</li>
+    <li>All decoration centered, all backs blank, one mark. That restraint is the design story.</li>
+  </ul>
+
+  <h3>7 · Audiences</h3>
+  <div class="tscroll"><table>
+    <tr><th>Segment</th><th>Who</th><th>What they want</th><th>Role</th></tr>
+    <tr><td><b>P1 · Players</b></td><td>21–38, plays weekly (league, pickup, five-a-side), trains, watches everything</td><td>Gear that works at training and doesn't look like a jersey at dinner</td><td>Primary buyer, performance tee + cap entry point</td></tr>
+    <tr><td><b>P2 · Football-culture streetwear</b></td><td>18–34, follows the game as culture: boots, kits-as-fashion, football Twitter/TikTok</td><td>Understated pieces that signal insider status without a club badge</td><td>Primary buyer, hoodie + casual tee entry point</td></tr>
+    <tr><td><b>S1 · Matchday Americans</b></td><td>25–45, US soccer wave: MLS crowds, USMNT/USWNT watch parties, World Cup energy</td><td>Something to wear to the bar that isn't a $180 replica</td><td>Secondary, seasonal surges</td></tr>
+    <tr><td><b>S2 · Style-first neutrals</b></td><td>Likes clean black staples; the football meaning is a bonus discovery</td><td>A heavyweight hoodie and cap that simply look right</td><td>Secondary, broad-targeting spillover</td></tr>
+  </table></div>
+
+  <h3>8 · Message hierarchy</h3>
+  <ol>
+    <li><b>The feeling:</b> the second it goes in belongs to everyone. (campaign layer)</li>
+    <li><b>The mark:</b> one crest, one wordmark, no team, no noise. (brand layer)</li>
+    <li><b>The garments:</b> real weights, real fabrics, centered decoration, blank backs. (product layer)</li>
+    <li><b>The action:</b> the First Capsule is coming; the list hears first. (conversion layer)</li>
+  </ol>
+  <p class="mut">Every post leads with layer 1 or 3 and closes with layer 4. Layer 2 is carried visually, not written.</p>
+
+  <h3>9 · Voice and caption guidelines</h3>
+  <ul>
+    <li>Short lines. Full sentences. No em dashes. Middle dot as separator: <span class="mono">GOOOL · Made for the Moment.</span></li>
+    <li>Confident, never hype. Say "heavyweight," never "insane quality." Never beg ("smash that follow").</li>
+    <li>One CTA per caption, always the same act during prelaunch: <b>Join the list at goool.shop.</b> Vary the sentence, never the destination.</li>
+    <li>Captions 1–4 lines for reels, up to 8 for carousels and brand-story posts. First line must survive truncation.</li>
+    <li>Hashtags: 3–6, chosen per post from the bank in Part 5. Never the same block twice running.</li>
+    <li>Spell the brand GOOOL in text, always.</li>
+  </ul>
+
+  <h3>10–11 · Visual direction</h3>
+  <div class="cols2">
+    <div>
+      <p><b>Palette.</b> Black garments, white mark, one red accent per frame maximum (the crest bar, the underline, a red thread on set). Environments in concrete grey, pitch green at dusk, natural cream (the cap's second color). Never rainbow, never busy.</p>
+      <p><b>Lighting.</b> Hard single-source light with real shadows (phone flash, one LED panel, or low sun). Night pitch floodlights. Indoor: one window, everything else off. The brand look is contrast, not glow.</p>
+      <p><b>Framing.</b> Verticals 4:5 and 9:16, centered subjects, generous negative space above. Product macro shots dead-center, mirroring the centered-decoration design rule. Grid coherence: alternate dark frame / light frame so the profile checkerboards.</p>
+    </div>
+    <div>
+      <p><b>Texture.</b> Fleece loops, twill weave, embroidery thread, DTF ink sheen, chain-link, worn goal netting, concrete. Shoot texture close enough to feel it.</p>
+      <p><b>Environment.</b> Empty pitches at golden hour and under lights, stadium tunnels and stands (public/park level, no pro venues), locker benches, city walks, a couch on matchday. Never a trophy-room fantasy.</p>
+      <p><b>Casting.</b> Real players and real fans, 20s–30s, athletic but not fitness-model staged. Faces optional; hands, backs of heads, and silhouettes carry half the campaign. Style with what the audience owns: black shorts, faded denim, white socks, real boots.</p>
+    </div>
+  </div>
+
+  <h3>12 · Content pillars (recur weekly)</h3>
+  <div class="tscroll"><table>
+    <tr><th>Pillar</th><th>What it is</th><th>Cadence</th></tr>
+    <tr><td><b>THE SECOND</b></td><td>Anthem-level emotion: sound, slow motion, the goal moment abstracted</td><td>1×/week</td></tr>
+    <tr><td><b>BUILT</b></td><td>Product truth: fabric weights, placement specs, construction close-ups</td><td>2×/week</td></tr>
+    <tr><td><b>WORN</b></td><td>Styling and life: pitch to street, training to travel</td><td>2×/week</td></tr>
+    <tr><td><b>THE MARK</b></td><td>Brand story: the crest, the wordmark, why no team, why blank backs</td><td>1×/week</td></tr>
+    <tr><td><b>FIRST CHAPTER</b></td><td>Founder/BTS: building the brand in the open, samples, decisions</td><td>1×/week</td></tr>
+    <tr><td><b>TERRACE TALK</b></td><td>Community prompts: questions, polls, fan rituals around goals</td><td>Stories, 2–3×/week</td></tr>
+  </table></div>
+
+  <h3>13 · Organic-to-paid journey</h3>
+  <p>Organic reels seed the emotion → best performers (saves + 75% watch) get promoted as awareness ads within 72 hours → profile visitors and 50%+ video viewers enter retargeting → retargeting serves product-truth carousels and the waitlist ad → goool.shop email capture → email owns the launch moment. Paid never runs creative that organic hasn't validated, except the two purpose-built waitlist ads in Part 3.</p>
+
+  <h3>14 · Three pinned posts</h3>
+  <ol>
+    <li><b>Pin 1 · The anthem reel (Day 1).</b> The manifesto over sound and dark frames. Introduces the feeling.</li>
+    <li><b>Pin 2 · The mark carousel (Day 4).</b> Crest and wordmark anatomy: what it means, why there is no team. Introduces the brand.</li>
+    <li><b>Pin 3 · The First Capsule carousel (Day 9).</b> All four garments, real specs, real prices, waitlist CTA. Introduces the clothing.</li>
+  </ol>
+
+  <h3>15 · How "The Sound of Victory" is used</h3>
+  <p>It is the campaign's <b>audio identity, not a slogan on repeat.</b> Rules: it appears in exactly five places across 30 days: the Day 1 anthem, the Day 8 sound-design reel built entirely around it, the Day 15 mark film, one Story series (Day 18), and the Day 29 close. In audio it is the crowd roar itself; in text it appears title-case, once per piece, never as a hashtag, never as a product claim (nothing in the capsule carries it as decoration). Between those five moments the campaign expresses the same idea through craft: sound design of stadium air, inhales, silence before impact. The phrase stays rare so it stays loaded.</p>
+</section>
+<div class="band" id="p2"><div class="wrapin"><div class="k">PART 2</div><h2>30-day calendar</h2><p style="color:var(--band-text);opacity:.75;max-width:70ch;margin:6px 0 0">Phases: Days 1–7 <b>Tease</b> · 8–14 <b>Reveal</b> · 15–21 <b>Educate</b> · 22–27 <b>Convert</b> · 28–30 <b>Reinforce + Retarget</b>. Days 1–14 require no physical garments (approved renders, type, sound, atmosphere only). Sample-dependent days carry a ◆ and a render-based fallback, so the calendar survives any shipping delay.</p></div></div>
+
+<section>
+
+<div class="day"><div class="dayhead"><span class="dayno">01</span><span class="daytitle">The Anthem</span> <span class="chip red">Tease</span> <span class="chip">Reel · Pin 1</span></div>
+<div class="fields">
+<b>Objective</b><span>Plant the flag. Establish the feeling and the account in one piece. Reach + follows.</span>
+<b>Subject</b><span>The brand itself. No product visible.</span>
+<b>Hook (0–2s)</b><span>Black frame. A stadium inhales (crowd audio swells then cuts to silence). Text: "There is one second every fan on earth understands."</span>
+<b>Concept</b><span>The manifesto as a 32-second film of almost-nothing: darkness, breath, grass, net, light. The goal is never shown. The roar is.</span>
+<b>Shots</b><span>1) black + audio only (3s) · 2) macro grass at dusk, shallow focus (3s) · 3) goal net swaying, backlit (4s) · 4) silhouette of one person standing alone in an empty stand (5s) · 5) hard cut to white wordmark on black at the roar (3s) · 6) hold: crest fades in under it (4s). Slow motion on 2–4.</span>
+<b>On-screen text</b><span>Lines of the manifesto, one per shot, ending "GOOOL · Made for the Moment."</span>
+<b>Audio</b><span>Original sound design: room tone, one deep inhale, silence, then a crowd roar you own (record at a local match or layer voices; no broadcast audio). This roar becomes the brand's recurring audio signature: The Sound of Victory.</span>
+<b>Edit rhythm</b><span>Long holds, one hard cut at the roar. Restraint is the style.</span>
+<b>Cover frame</b><span>White wordmark on black. Text: "THE SECOND IT GOES IN."</span>
+</div>
+<div class="cap">There is one second every fan on earth understands.
+We make clothing for it.
+GOOOL. The First Capsule is coming.
+Join the list at goool.shop and hear it first.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list at goool.shop (link in bio).</span>
+<b>Stories</b><span>3 frames: 1) repost reel · 2) black frame, "New here. Four pieces. One mark." · 3) link sticker to goool.shop, "The list hears first."</span>
+<b>Organic/Paid</b><span>Both. This is Ad A1 (Part 3) after 72h validation.</span>
+<b>Audience</b><span>All; optimized for P1+P2 cold reach.</span>
+<b>Metric</b><span>3s hold rate, completes, follows per reach.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">02</span><span class="daytitle">The Inhale</span> <span class="chip red">Tease</span> <span class="chip">Static + Stories</span></div>
+<div class="fields">
+<b>Objective</b><span>Set the grid's visual language. Saves + profile visits.</span>
+<b>Subject</b><span>Atmosphere: the moment before.</span>
+<b>Hook</b><span>A 4:5 photograph of an empty goal under floodlights, fog or breath in the air, perfectly centered.</span>
+<b>Production</b><span>One evening, any local pitch with lights. Phone on tripod, center of the six-yard box, expose for the lights. Alternate: chain-link fence with pitch bokeh behind.</span>
+<b>On-image text</b><span>None. The caption works.</span>
+</div>
+<div class="cap">The quiet part.
+Every roar starts as a held breath.
+GOOOL · The First Capsule · Coming Soon</div>
+<div class="fields">
+<b>CTA</b><span>Follow along. (Soft day; no link push.)</span>
+<b>Stories</b><span>TERRACE TALK, 2 frames: 1) poll on the photo: "Where does the second hit hardest?" [Stadium] [Living room] · 2) results teaser: "Both are correct."</span>
+<b>Organic/Paid</b><span>Organic only.</span>
+<b>Audience</b><span>Followers + hashtag discovery.</span>
+<b>Metric</b><span>Saves, profile visits.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">03</span><span class="daytitle">One Mark, No Team</span> <span class="chip red">Tease</span> <span class="chip">Reel</span></div>
+<div class="fields">
+<b>Objective</b><span>First look at the crest. Differentiate from club merch instantly.</span>
+<b>Subject</b><span>The crest artwork (approved file, untouched).</span>
+<b>Hook (0–2s)</b><span>Extreme close-up of black fabric texture. Text: "No badge. No federation. No permission needed."</span>
+<b>Concept</b><span>12 seconds. The camera pulls back from texture as the white crest resolves dead-center (digital comp of the approved crest over the approved plain tee mockup; no invented garment angles). One line at a time explains what it is.</span>
+<b>Shots</b><span>Screen-recorded slow zoom-out on the approved mockup file, re-timed in the edit; final frame is the untouched mockup.</span>
+<b>On-screen text</b><span>"This is not a club." / "It's the second they all share." / "GOOOL."</span>
+<b>Audio</b><span>Low sub swell, one heartbeat, silence at the reveal.</span>
+<b>Cover frame</b><span>Crest centered on black. "ONE MARK."</span>
+</div>
+<div class="cap">Every club has a crest. This one belongs to the goal itself.
+The First Capsule carries it dead center. Coming soon.
+List at goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list at goool.shop.</span>
+<b>Stories</b><span>2 frames: reel repost · crest on black with question sticker: "What do you see in it?"</span>
+<b>Organic/Paid</b><span>Both. Becomes Ad A2 if 3s hold &gt; 30%.</span>
+<b>Audience</b><span>P2 football-culture cold.</span>
+<b>Metric</b><span>Hold rate, shares.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">04</span><span class="daytitle">The Mark, Explained</span> <span class="chip red">Tease</span> <span class="chip">Carousel · Pin 2</span></div>
+<div class="fields">
+<b>Objective</b><span>Brand story depth. Saves + follows from people deciding if this brand is for them.</span>
+<b>Subject</b><span>Crest + wordmark anatomy.</span>
+<b>Slides</b><span>1) Cover: crest large on black, "THE MARK" · 2) crest with three thin callout lines: the shield ("built like a club, owned by no one"), the ball with the swoosh of motion ("the moment of impact"), the red bar ("the one second of eruption") · 3) the underlined wordmark: "Four letters can't hold the sound. GOOOL is how it actually feels." · 4) the red underline segment close-up: "The red is the roar." · 5) both marks on black: "No team. Every team. GOOOL." · 6) end card: "The First Capsule · Coming Soon · goool.shop"</span>
+<b>Design</b><span>Approved artwork files only, centered, on pure black. Callouts in thin white rules, 11px-equivalent caps type. No effects.</span>
+</div>
+<div class="cap">Why four O's? Because three isn't long enough.
+The mark on the First Capsule is ours alone: a crest for the second every fan shares, whoever they support.
+Save this one. The list at goool.shop hears everything first.</div>
+<div class="fields">
+<b>CTA</b><span>Save + join the list.</span>
+<b>Stories</b><span>3 frames: slides 2 and 3 reposted, then link sticker frame.</span>
+<b>Organic/Paid</b><span>Organic; pinned permanently.</span>
+<b>Audience</b><span>Followers + P2.</span>
+<b>Metric</b><span>Saves per reach.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">05</span><span class="daytitle">Founder Note</span> <span class="chip red">Tease</span> <span class="chip">Static (text) + Stories</span></div>
+<div class="fields">
+<b>Objective</b><span>Trust. A face or a voice behind the mark. Follows + DMs.</span>
+<b>Subject</b><span>FIRST CHAPTER pillar. Founder-optional: text post works without a face.</span>
+<b>Visual</b><span>4:5 black frame, white type, a short letter set like a team sheet. If founder on camera: 20s selfie video at a pitch, golden hour, same words spoken.</span>
+<b>On-image text</b><span>"We started GOOOL with one belief: the best moment in sports doesn't belong to a club. It belongs to whoever's watching when it goes in. Four pieces. One mark. Built slow, launched loud. · G."</span>
+</div>
+<div class="cap">Building this in the open. Ask us anything in the comments and we'll answer all of it.
+GOOOL · The First Capsule · Coming Soon</div>
+<div class="fields">
+<b>CTA</b><span>Comment a question.</span>
+<b>Stories</b><span>Q&amp;A sticker: "Ask about the brand, the clothes, the plan." Save answers to a Highlight called FIRST CHAPTER.</span>
+<b>Organic/Paid</b><span>Organic only.</span>
+<b>Audience</b><span>Followers.</span>
+<b>Metric</b><span>Comments, DMs, Story replies.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">06</span><span class="daytitle">Silhouette</span> <span class="chip red">Tease</span> <span class="chip">Reel</span></div>
+<div class="fields">
+<b>Objective</b><span>Tease the garments without revealing them. Anticipation, shares.</span>
+<b>Subject</b><span>All four pieces as shadows.</span>
+<b>Hook (0–2s)</b><span>Hard light sweeps across a wall; four hanging silhouettes appear. Text: "Four pieces. You've seen none of them."</span>
+<b>Concept</b><span>15s. The approved plain mockups rendered as pure black silhouettes (fill the garment shapes with black digitally; no redesign, outlines only) revealed one at a time by a moving light gradient. Numbers count 01–04.</span>
+<b>Shots</b><span>Digitally animated from the four approved mockup files. Prompt in Part 4 asset list.</span>
+<b>On-screen text</b><span>"01 · built to train" / "02 · built to last" / "03 · built to live in" / "04 · built to top it off" / "Revealed this week."</span>
+<b>Audio</b><span>Four kick-drum hits, one per reveal, over stadium room tone.</span>
+<b>Cover frame</b><span>Four silhouettes in a row. "01–04."</span>
+</div>
+<div class="cap">The First Capsule, still in the tunnel.
+Reveals start this week. The list at goool.shop sees them first.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list to see them first.</span>
+<b>Stories</b><span>Countdown sticker: "First reveal." 2 frames.</span>
+<b>Organic/Paid</b><span>Both eligible.</span>
+<b>Audience</b><span>Followers + engaged viewers of Days 1/3.</span>
+<b>Metric</b><span>Completes, countdown opt-ins.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">07</span><span class="daytitle">Terrace Talk Sunday</span> <span class="chip red">Tease</span> <span class="chip">Stories-led</span></div>
+<div class="fields">
+<b>Objective</b><span>Community rhythm; rest the feed before reveal week.</span>
+<b>Stories</b><span>5 frames: 1) "Sunday ritual check." poll: watch at home / at the bar / I'm playing · 2) "Your goal celebration in one emoji" question sticker · 3) repost 3 best answers (with permission) · 4) empty-pitch photo from Day 2 shoot, "Tomorrow: 01." · 5) countdown sticker.</span>
+<b>Organic/Paid</b><span>Organic Stories only.</span>
+<b>Metric</b><span>Sticker interactions, replies.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">08</span><span class="daytitle">Reveal 01 · Performance Badge Tee</span> <span class="chip red">Reveal</span> <span class="chip">Reel</span></div>
+<div class="fields">
+<b>Objective</b><span>First product reveal. Profile visits + list signups.</span>
+<b>Subject</b><span>Performance Badge Tee, $48, black, S–2XL.</span>
+<b>Hook (0–2s)</b><span>Total silence, black screen: "The Sound of Victory has a uniform." (One of the five sanctioned uses.)</span>
+<b>Concept</b><span>18s sound-design reel. The approved plain mockup and the soccer-field lifestyle render trade frames in rhythm with a building crowd: inhale → murmur → roar. At the roar, the crest fills the frame (true placement, center chest).</span>
+<b>Shots</b><span>Approved renders only, Ken Burns moves, digital light sweep. No fabricated angles.</span>
+<b>On-screen text</b><span>"01 · PERFORMANCE BADGE TEE" / "3.8 oz recycled polyester · PosiCharge" / "Athletic fit · S–2XL" / "$48" / "Coming Soon."</span>
+<b>Audio</b><span>The Day 1 roar, re-cut. This reel IS the Sound of Victory piece.</span>
+<b>Cover frame</b><span>Plain mockup centered. "01."</span>
+</div>
+<div class="cap">01 · The Performance Badge Tee. $48.
+Recycled polyester that manages sweat, an athletic cut, and the crest at dead center. Train in it, celebrate in it.
+Coming soon. The list at goool.shop gets the opening whistle.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list at goool.shop.</span>
+<b>Stories</b><span>3 frames: reel · spec sheet frame (weight, fit, sizes, price as clean type) · link sticker.</span>
+<b>Organic/Paid</b><span>Both. Ad B1 base creative.</span>
+<b>Audience</b><span>P1 players cold + all warm.</span>
+<b>Metric</b><span>Profile visits, signups (UTM day08).</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">09</span><span class="daytitle">The First Capsule</span> <span class="chip red">Reveal</span> <span class="chip">Carousel · Pin 3</span></div>
+<div class="fields">
+<b>Objective</b><span>Full assortment on the record. The campaign's reference post.</span>
+<b>Subject</b><span>All four products, real specs, real prices.</span>
+<b>Slides</b><span>1) Cover: four plain mockups in a 2×2 grid on black, "THE FIRST CAPSULE" · 2) Performance Badge Tee: mockup + "3.8 oz recycled poly · athletic fit · S–2XL · $48" · 3) Core Hoodie: mockup + "10 oz heavyweight fleece · generous fit · S–2XL · $78" · 4) Casual Wordmark Tee: mockup + "6.5 oz garment-dyed cotton · relaxed fit · S–2XL · $38" · 5) Touchline Cap: mockup + "structured five-panel · flat embroidery · one size · $36" · 6) all four again: "Four pieces. One mark. Blank backs. No noise." · 7) end card: "Coming Soon · the list hears first · goool.shop"</span>
+<b>Design</b><span>Approved mockups untouched, consistent margins, spec lines in caps under each. Alternating black/white slide grounds.</span>
+</div>
+<div class="cap">The First Capsule, in full.
+A tee built to train in. A hoodie with real weight. A garment-dyed staple. A structured cap.
+Every back blank. Every mark centered. Every piece coming soon.
+Join the list at goool.shop and hear it first.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>4 frames: one product each with link sticker on the last.</span>
+<b>Organic/Paid</b><span>Both. This is Ad B2 (catalog-style consideration).</span>
+<b>Audience</b><span>All warm + P1/P2 cold.</span>
+<b>Metric</b><span>Saves, signups.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">10</span><span class="daytitle">Reveal 02 · Core Hoodie</span> <span class="chip red">Reveal</span> <span class="chip">Reel</span></div>
+<div class="fields">
+<b>Objective</b><span>Hero the highest-value piece. Signups.</span>
+<b>Subject</b><span>Core Hoodie, $78.</span>
+<b>Hook (0–2s)</b><span>Macro of the stadium-tunnel lifestyle render slowly sharpening. Text: "10 ounces. That's the whole pitch."</span>
+<b>Concept</b><span>15s built on weight as the story. Numbers count up on screen (3&nbsp;oz… 6&nbsp;oz… 10&nbsp;oz) against tighter and tighter crops of the hoodie renders; at 10 the full tunnel shot lands with a bass hit.</span>
+<b>On-screen text</b><span>"Most hoodies stop at 8." / "Ours starts at 10." / "10 oz fleece · cotton face · generous fit" / "$78 · Coming Soon."</span>
+<b>Audio</b><span>Metronome click accelerating into one deep hit. No roar today (spacing the signature).</span>
+<b>Cover frame</b><span>Tunnel render. "02 · 10 OZ."</span>
+</div>
+<div class="cap">02 · The Core Hoodie. $78.
+Ten-ounce fleece with a cotton face and a wordmark straight down the middle. The heavyweight the walk-out deserves.
+Coming soon. List at goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>2 frames: reel + "hoodie or tee first?" poll.</span>
+<b>Organic/Paid</b><span>Both. Ad B3 base.</span>
+<b>Audience</b><span>P2 streetwear cold + warm.</span>
+<b>Metric</b><span>Completes, signups.</span>
+</div></div>
+<div class="day"><div class="dayhead"><span class="dayno">11</span><span class="daytitle">Reveal 03 · Casual Wordmark Tee</span> <span class="chip red">Reveal</span> <span class="chip">Static + Stories</span></div>
+<div class="fields">
+<b>Objective</b><span>Position the everyday entry point at $38. Saves.</span>
+<b>Subject</b><span>Casual Wordmark Tee, washed black.</span>
+<b>Visual</b><span>4:5 crop of the approved soccer-field lifestyle render, garment centered, generous sky. Second image in the post: the plain mockup.</span>
+<b>On-image text</b><span>None; render speaks.</span>
+</div>
+<div class="cap">03 · The Casual Wordmark Tee. $38.
+Garment-dyed heavyweight cotton, so the washed black is already lived-in the first time you pull it on. Relaxed fit, dropped shoulder, wordmark straight across the chest.
+The one you reach for every day it isn't matchday. Coming soon. List at goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>TERRACE TALK: "Describe washed black in one word" question sticker over the render.</span>
+<b>Organic/Paid</b><span>Organic; render reused in Ad B2.</span>
+<b>Audience</b><span>Followers + S2 style-first.</span>
+<b>Metric</b><span>Saves per reach.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">12</span><span class="daytitle">Reveal 04 · Touchline Cap</span> <span class="chip red">Reveal</span> <span class="chip">Reel</span></div>
+<div class="fields">
+<b>Objective</b><span>Complete the reveals; the cap is the impulse-price gateway ($36).</span>
+<b>Subject</b><span>Touchline Cap, black/natural.</span>
+<b>Hook (0–2s)</b><span>The stadium lifestyle render upside down, rotating to level. Text: "The manager's view."</span>
+<b>Concept</b><span>12s. Rotation settles on the cap render; three crops walk the details the spec confirms: buckram-structured front, flat embroidery, curved visor, snap. Ends on plain mockup.</span>
+<b>On-screen text</b><span>"04 · TOUCHLINE CAP" / "structured five-panel" / "flat embroidery, dead center" / "one size · $36 · Coming Soon."</span>
+<b>Audio</b><span>Clean percussive taps matching each crop; final tap is a cap snap sound.</span>
+<b>Cover frame</b><span>Cap plain mockup. "04."</span>
+</div>
+<div class="cap">04 · The Touchline Cap. $36.
+Black and natural, structured front, the wordmark stitched flat and centered. The piece that goes everywhere the game goes.
+That's the whole First Capsule. The list at goool.shop hears the launch first.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>3 frames: all four reveals recapped with "01/02/03/04" then link sticker.</span>
+<b>Organic/Paid</b><span>Both.</span>
+<b>Audience</b><span>All.</span>
+<b>Metric</b><span>Profile visits.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">13</span><span class="daytitle">Why Blank Backs</span> <span class="chip red">Reveal</span> <span class="chip">Carousel</span></div>
+<div class="fields">
+<b>Objective</b><span>Turn a spec decision into brand philosophy. Shares among design-minded followers.</span>
+<b>Subject</b><span>The deliberate restraint of the capsule.</span>
+<b>Slides</b><span>1) Cover: the back of the plain hoodie mockup, entirely blank: "WE LEFT IT BLANK." · 2) "No name. No number. No slogan. The back of a shirt is where brands shout. We don't." · 3) crest close crop: "One mark, front and center. That's the whole argument." · 4) "Blank means yours. Your name goes on what you do in it." · 5) end card: "The First Capsule · Coming Soon · goool.shop"</span>
+<b>Design</b><span>Backs from approved mockups; typographic slides in campaign style.</span>
+</div>
+<div class="cap">Every back in the First Capsule is blank on purpose.
+We put one mark where it matters and left the rest to you.
+Coming soon. List at goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Share this with someone who hates loud merch.</span>
+<b>Stories</b><span>Slide 2 reposted + "agree?" slider sticker.</span>
+<b>Organic/Paid</b><span>Organic.</span>
+<b>Audience</b><span>P2 + S2.</span>
+<b>Metric</b><span>Shares, saves.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">14</span><span class="daytitle">Week-Two Close · The List</span> <span class="chip red">Reveal</span> <span class="chip">Stories-led + Static</span></div>
+<div class="fields">
+<b>Objective</b><span>First direct waitlist push now that all four pieces are public. Signups.</span>
+<b>Feed visual</b><span>4:5 black frame, white type only: "Seen all four? · The list hears the launch first. · goool.shop" with the underlined wordmark beneath.</span>
+<b>Stories</b><span>5 frames: 1) "Two weeks in. Four pieces out." · 2–4) fastest 3 reels reposted with view counts hidden · 5) link sticker frame: "First to know beats first to refresh. Join at goool.shop."</span>
+</div>
+<div class="cap">All four pieces are on the table.
+What happens next happens to the list first: launch date, first looks at the real garments, and the opening of the store.
+One link. goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list at goool.shop.</span>
+<b>Organic/Paid</b><span>Feed post boosted to warm audiences (Ad C1 support).</span>
+<b>Audience</b><span>Engagers of Days 1–13.</span>
+<b>Metric</b><span>Signups (UTM day14).</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">15</span><span class="daytitle">The Mark Film</span> <span class="chip red">Educate</span> <span class="chip">Reel</span></div>
+<div class="fields">
+<b>Objective</b><span>Mid-campaign brand peak; the piece people send to friends. Shares.</span>
+<b>Subject</b><span>THE MARK pillar. Sanctioned Sound of Victory use #3.</span>
+<b>Hook (0–2s)</b><span>A slow zoom into the red bar of the crest. Text: "The red is the roar."</span>
+<b>Concept</b><span>25s anatomy film. Each element of the crest gets 4 seconds and one sentence, ending with the whole mark assembling from its parts (animated from the approved layered artwork, no redraw) as the roar hits.</span>
+<b>On-screen text</b><span>"The shield: built like a club, owned by no one." / "The ball: the exact moment of impact." / "The sweep: the shot you replay all week." / "The red: the roar." / "GOOOL · The Sound of Victory."</span>
+<b>Audio</b><span>Quiet score building to the signature roar.</span>
+<b>Cover frame</b><span>Crest exploded into parts. "ANATOMY."</span>
+</div>
+<div class="cap">Four parts. One second.
+This is the mark the First Capsule carries, and what every line of it means.
+Coming soon. The list at goool.shop hears it first.</div>
+<div class="fields">
+<b>CTA</b><span>Send this to your football group chat.</span>
+<b>Stories</b><span>Reel + question sticker: "Which detail did you catch first?"</span>
+<b>Organic/Paid</b><span>Both. Ad A3 candidate.</span>
+<b>Audience</b><span>Broad cold.</span>
+<b>Metric</b><span>Shares, completes.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">16</span><span class="daytitle">◆ Sample Day</span> <span class="chip red">Educate</span> <span class="chip">Reel (BTS)</span></div>
+<div class="fields">
+<b>Objective</b><span>FIRST CHAPTER trust: show the physical product journey honestly.</span>
+<b>Subject</b><span>Samples arriving / in production. ◆ Requires samples; fallback below.</span>
+<b>Hook (0–2s)</b><span>Box cutter opening a shipping box. Text: "The first GOOOL garments in existence."</span>
+<b>Concept</b><span>20s unboxing shot on phone, one take feel: box opens, tissue, first lift of the hoodie, crest catch-light on the tee, try-on from behind (blank back proves the design promise). Honest voiceover: "These are samples. We approve every stitch before you ever pay for one."</span>
+<b>Fallback if samples not yet in hand</b><span>"Proof, not promises" reel: screen-record the actual spec packet pages (placement diagrams, tolerances) with voiceover: "Before a single garment ships, every placement is specified to the eighth of an inch. This is the paperwork your hoodie has to pass." Same objective, zero garments needed.</span>
+<b>On-screen text</b><span>"Sample check" / "centering tolerance: 1/8 in" / "wash tests next" / "then, and only then, the launch."</span>
+<b>Audio</b><span>Natural sound + voiceover.</span>
+<b>Cover frame</b><span>Open box or spec sheet. "PROOF."</span>
+</div>
+<div class="cap">We don't launch until these pass.
+Centering, color, stitch density, three wash cycles. The boring part is the part you'll feel.
+List at goool.shop for the moment they pass.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>3 frames of detail checks + poll: "Wash test count: enough?"</span>
+<b>Organic/Paid</b><span>Organic.</span>
+<b>Audience</b><span>Followers.</span>
+<b>Metric</b><span>Watch time, replies.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">17</span><span class="daytitle">Fabric School · 10 oz</span> <span class="chip red">Educate</span> <span class="chip">Carousel</span></div>
+<div class="fields">
+<b>Objective</b><span>Product education that justifies $78. Saves.</span>
+<b>Subject</b><span>BUILT pillar: what garment weight actually means.</span>
+<b>Slides</b><span>1) Cover: "WHAT DOES 10 OZ ACTUALLY MEAN?" white on black · 2) "Fabric is weighed per square yard. Most fast-fashion hoodies: 7–8 oz." · 3) "The Core Hoodie: 10 oz, three-end fleece, cotton face. You feel it the second you lift it." · 4) "Heavier fabric holds shape, holds warmth, and survives the season." · 5) hoodie plain mockup + "$78 · S–2XL · Coming Soon" · 6) "Questions about fit or fabric? Comments are open."</span>
+<b>Design</b><span>Big numerals in Anton-style type, one fact per slide.</span>
+</div>
+<div class="cap">Weight is the spec nobody explains. Here's the two-minute version, and why the Core Hoodie starts where most hoodies stop.
+List at goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Save for launch day.</span>
+<b>Stories</b><span>Slides 2–3 + quiz sticker: "Average fast-fashion hoodie weight?"</span>
+<b>Organic/Paid</b><span>Organic; feeds Ad B3 retarget variant.</span>
+<b>Audience</b><span>Warm.</span>
+<b>Metric</b><span>Saves.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">18</span><span class="daytitle">Where It Lives</span> <span class="chip red">Educate</span> <span class="chip">Stories-led</span></div>
+<div class="fields">
+<b>Objective</b><span>Show breadth of wear occasions without physical product. Sanctioned SoV use #4.</span>
+<b>Stories</b><span>6 frames: 1) "One capsule. Five places it belongs." · 2) training pitch photo (empty, your own): "the session" + performance tee mockup inset · 3) bar table with a scarf-free setup: "the watch party" + casual tee inset · 4) airport window: "the away day" + hoodie inset · 5) city crosswalk: "the everyday" + cap inset · 6) black frame: "Everywhere the Sound of Victory follows you. · goool.shop" link sticker.</span>
+<b>Production</b><span>Four quick location photos on phone, no people needed; product insets are the approved mockups framed small.</span>
+<b>Organic/Paid</b><span>Organic Stories; frames 2–5 become Ad C2 Stories ad.</span>
+<b>Metric</b><span>Link taps.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">19</span><span class="daytitle">◆ On Body, For Real</span> <span class="chip red">Educate</span> <span class="chip">Static ×2 (photo day)</span></div>
+<div class="fields">
+<b>Objective</b><span>First real photography drops (from Part 4 Shoot Day 1). Profile heat.</span>
+<b>Subject</b><span>Performance tee + cap on the primary cast member. ◆ Requires approved samples; fallback: hold Day 22's typographic post here and shift photos forward.</span>
+<b>Visual</b><span>Two 4:5 frames from the batch shoot: (a) golden-hour pitch, player seated on the goal line, tee crest centered to camera; (b) tight back-of-head cap shot showing the blank rear, floodlights bokeh.</span>
+</div>
+<div class="cap">First real frames. No renders, no mockups, the actual garments.
+The list at goool.shop gets the launch date before anyone.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>BTS from the shoot: 3 frames, tripod setup, light test, the shot.</span>
+<b>Organic/Paid</b><span>Organic; strongest frame reserved for Ad C3.</span>
+<b>Audience</b><span>All.</span>
+<b>Metric</b><span>Profile visits, follows.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">20</span><span class="daytitle">Styling: One Hoodie, Three Ways</span> <span class="chip red">Educate</span> <span class="chip">Reel ◆</span></div>
+<div class="fields">
+<b>Objective</b><span>WORN pillar; prove wearable-beyond-the-pitch. Saves + shares.</span>
+<b>Subject</b><span>Core Hoodie styled 3 ways. ◆ Samples; fallback: carousel of the three outfits flat-laid from own wardrobe around the hoodie mockup frame.</span>
+<b>Hook (0–2s)</b><span>Jump-cut triple of the same person in three doorways. Text: "Same hoodie. Three lives."</span>
+<b>Shots</b><span>12s: 1) training: hoodie over shorts, ball under arm (4s) · 2) matchday: hoodie + denim + cap (4s) · 3) travel: hoodie + joggers + duffel (4s). Each ends frozen with a label.</span>
+<b>On-screen text</b><span>"the session / the match / the away day" then "$78 · Coming Soon."</span>
+<b>Audio</b><span>Three-beat rhythm track; door-close sound on each cut.</span>
+<b>Cover frame</b><span>Triple split. "3 WAYS."</span>
+</div>
+<div class="cap">One hoodie, zero outfit decisions.
+The Core Hoodie was cut to live past the final whistle. $78, coming soon.
+List at goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Save the fit ideas.</span>
+<b>Stories</b><span>Poll: "Which fit? 1 / 2 / 3."</span>
+<b>Organic/Paid</b><span>Both; Ad B3 retarget variant.</span>
+<b>Audience</b><span>P2 + S2.</span>
+<b>Metric</b><span>Saves, completes.</span>
+</div></div>
+<div class="day"><div class="dayhead"><span class="dayno">21</span><span class="daytitle">Terrace Talk · The Ritual</span> <span class="chip red">Educate</span> <span class="chip">Stories-led + UGC seed</span></div>
+<div class="fields">
+<b>Objective</b><span>Community depth before conversion week; harvest permissioned fan stories.</span>
+<b>Stories</b><span>5 frames: 1) "Every fan has a goal ritual. What's yours?" question sticker · 2–3) repost best Day 7 answers with typographic treatment · 4) "Best answer gets a spot in our launch-week story." · 5) crest frame, no CTA.</span>
+<b>Feed</b><span>None. Rest day for the grid.</span>
+<b>Organic/Paid</b><span>Organic.</span>
+<b>Metric</b><span>Replies; count of usable permissioned quotes for Day 27.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">22</span><span class="daytitle">Convert Week Opens · Why A List</span> <span class="chip red">Convert</span> <span class="chip">Static (typographic)</span></div>
+<div class="fields">
+<b>Objective</b><span>Reframe the waitlist as the insider move. Signups.</span>
+<b>Visual</b><span>4:5 black frame. White type set like a team sheet: "THE LIST · hears the launch date first · sees the real garments first · gets the store door opened first · goool.shop". Wordmark bottom center.</span>
+</div>
+<div class="cap">No countdown clocks. No fake stock bars. Just an honest order of operations: the list first, everyone else after.
+goool.shop. Ten seconds. Done.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list at goool.shop.</span>
+<b>Stories</b><span>2 frames: the post + link sticker with "ten seconds" copy.</span>
+<b>Organic/Paid</b><span>Both. This is Ad C1's static twin.</span>
+<b>Audience</b><span>All warm.</span>
+<b>Metric</b><span>Signups (UTM day22).</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">23</span><span class="daytitle">◆ The Detail Reel</span> <span class="chip red">Convert</span> <span class="chip">Reel (macro)</span></div>
+<div class="fields">
+<b>Objective</b><span>Desire through craft. The reel that makes people zoom.</span>
+<b>Subject</b><span>Macro details across all four samples. ◆ Fallback: macro pans across the approved 1600px renders (they hold at 2× zoom) framed as "render vs. reality coming soon."</span>
+<b>Hook (0–2s)</b><span>Extreme macro of embroidery thread catching light. Text: "Zoom in. We did."</span>
+<b>Shots</b><span>16s: embroidery ridge on cap (3s) · DTF ink sheen on crest curve (3s) · fleece loops inside hoodie cuff (3s) · garment-dye grain on washed black (3s) · slow pull-back to all four laid flat in a cross formation (4s).</span>
+<b>On-screen text</b><span>One-word labels: "stitch / ink / fleece / dye / capsule."</span>
+<b>Audio</b><span>ASMR-adjacent: fabric brushes, thread ticks, one low note under.</span>
+<b>Cover frame</b><span>Embroidery macro. "ZOOM IN."</span>
+</div>
+<div class="cap">The parts you'll never see in a product photo are the parts you'll feel every day.
+The First Capsule is close. The list at goool.shop feels it first.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>Reel + "which detail wins?" poll.</span>
+<b>Organic/Paid</b><span>Both. Ad C3 base creative.</span>
+<b>Audience</b><span>Warm + retarget pool.</span>
+<b>Metric</b><span>Watch time, signups.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">24</span><span class="daytitle">Objection Day · The FAQ Carousel</span> <span class="chip red">Convert</span> <span class="chip">Carousel</span></div>
+<div class="fields">
+<b>Objective</b><span>Clear purchase blockers before launch. DM reduction, signups.</span>
+<b>Slides</b><span>1) Cover: "YOU ASKED. STRAIGHT ANSWERS." · 2) "When does it launch? When the physical samples pass every check. The list hears the date first." · 3) "How do the fits run? Performance tee: athletic, true to size. Hoodie: generous. Casual tee: relaxed. Cap: adjustable." · 4) "Sizes? S–2XL across all three garments." · 5) "Prices? $48 tee · $78 hoodie · $38 casual tee · $36 cap. No games later." · 6) "Are you a club? No. One mark, every fan. That's the point." · 7) end card: goool.shop.</span>
+<b>Design</b><span>Q in grey caps, A in white, one pair per slide.</span>
+</div>
+<div class="cap">Real questions from the comments, answered without marketing voice.
+Anything else, ask below. The list at goool.shop hears everything first.</div>
+<div class="fields">
+<b>CTA</b><span>Ask anything in the comments.</span>
+<b>Stories</b><span>Q&amp;A sticker round 2; answers saved to FIRST CHAPTER highlight.</span>
+<b>Organic/Paid</b><span>Organic; slides 3–5 reused in retargeting ad D2.</span>
+<b>Audience</b><span>Warm.</span>
+<b>Metric</b><span>Comments answered, saves.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">25</span><span class="daytitle">◆ The Second, On Film</span> <span class="chip red">Convert</span> <span class="chip">Reel (hero)</span></div>
+<div class="fields">
+<b>Objective</b><span>The campaign's emotional peak with real product. Shares + follows surge before launch push.</span>
+<b>Subject</b><span>THE SECOND pillar on real bodies. ◆ Needs samples + 2 cast; fallback: re-cut Day 1 anthem with the four reveal frames intercut.</span>
+<b>Hook (0–2s)</b><span>Slow-mo: a ball leaves a boot, frame cuts to black before any goal. Text: "You know what happens next."</span>
+<b>Shots</b><span>28s: night pitch. 1) lace-up, tee visible (3s) · 2) breath cloud under floodlight, hoodie (3s) · 3) ball struck, slow-mo, cut to black (3s) · 4) SILENCE, black, 1.5s · 5) eruption: two cast celebrating, no goal shown, pure reaction, crest catching light (6s) · 6) still: both seated on goal line, backs to camera, blank backs (5s) · 7) wordmark + roar (4s).</span>
+<b>On-screen text</b><span>Only at the end: "You never see the goal. You always feel it. · GOOOL."</span>
+<b>Audio</b><span>The signature roar held back until shot 5. This is the piece the roar was built for.</span>
+<b>Cover frame</b><span>The celebration still. "THE SECOND."</span>
+</div>
+<div class="cap">We never show the goal. We don't need to.
+The First Capsule is days away. The list at goool.shop opens the door first.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list. Bring a friend who gets it.</span>
+<b>Stories</b><span>Reel + countdown sticker re-arm.</span>
+<b>Organic/Paid</b><span>Both. Ad A4 hero for launch retargeting.</span>
+<b>Audience</b><span>Broad + all warm.</span>
+<b>Metric</b><span>Shares, follows, signups.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">26</span><span class="daytitle">Price Honesty Post</span> <span class="chip red">Convert</span> <span class="chip">Static</span></div>
+<div class="fields">
+<b>Objective</b><span>Preempt price objections with the receipts. Trust conversion.</span>
+<b>Visual</b><span>4:5 split: hoodie plain mockup left; right column typographic breakdown: "10 oz fleece, not 8 · cotton face yarn · centered DTF, 1/8-in tolerance · blank back, no filler print · $78."</span>
+</div>
+<div class="cap">$78 is not a random number.
+It's a ten-ounce fleece, a cotton face, and placement standards we reject samples over. When it launches, that's what you're paying for. Nothing else.
+List at goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>Same treatment for the $48 tee, 2 frames.</span>
+<b>Organic/Paid</b><span>Organic + retarget ad D2 support.</span>
+<b>Audience</b><span>Warm, price-hesitant.</span>
+<b>Metric</b><span>Saves, DM sentiment.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">27</span><span class="daytitle">The Terrace Speaks</span> <span class="chip red">Convert</span> <span class="chip">Carousel (UGC quotes)</span></div>
+<div class="fields">
+<b>Objective</b><span>Social proof without fake reviews: real permissioned fan answers from Days 7/21.</span>
+<b>Slides</b><span>1) Cover: "WE ASKED. YOU ANSWERED." · 2–5) one fan answer per slide, typeset white on black, credited by first name + @handle with permission ("the goal ritual" answers) · 6) "This is who the First Capsule is for." · 7) goool.shop end card.</span>
+<b>Design</b><span>Quote marks in red, everything else monochrome. No invented quotes, ever; if fewer than four good permissioned answers exist, run three and say so.</span>
+</div>
+<div class="cap">No paid reviews exist for a product that hasn't shipped. But the people are already here.
+Launch is next. goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list before the door opens.</span>
+<b>Stories</b><span>Each quote as a frame, tagging the authors.</span>
+<b>Organic/Paid</b><span>Organic only (UGC permissions are organic-scope).</span>
+<b>Audience</b><span>Warm.</span>
+<b>Metric</b><span>Tagged-author reshares, signups.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">28</span><span class="daytitle">Retarget · What You Missed</span> <span class="chip red">Retarget</span> <span class="chip">Reel (recap)</span></div>
+<div class="fields">
+<b>Objective</b><span>Re-engage the 90% who saw one post and moved on.</span>
+<b>Hook (0–2s)</b><span>Rapid 4-frame flash of all four plain mockups. Text: "28 days in 28 seconds."</span>
+<b>Shots</b><span>A pulse-cut recap: anthem frame, crest anatomy, each reveal (2s each), detail macro, the Day 25 celebration still, ending on THE LIST typographic frame.</span>
+<b>On-screen text</b><span>Running counter "01→04", then "One list. One door. goool.shop."</span>
+<b>Audio</b><span>Drumline rhythm, roar stinger at end.</span>
+<b>Cover frame</b><span>2×2 product grid. "THE STORY SO FAR."</span>
+</div>
+<div class="cap">Four pieces revealed. One mark explained. Zero shortcuts taken.
+All that's left is the door. The list at goool.shop opens it first.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>3-frame recap + link.</span>
+<b>Organic/Paid</b><span>Primarily paid: Ad D1 to engagers/viewers who never visited the site.</span>
+<b>Audience</b><span>Warm non-converters.</span>
+<b>Metric</b><span>Signups per 1k reached.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">29</span><span class="daytitle">The Sound, Complete</span> <span class="chip red">Reinforce</span> <span class="chip">Reel (audio piece)</span></div>
+<div class="fields">
+<b>Objective</b><span>Close the emotional loop. Sanctioned Sound of Victory use #5.</span>
+<b>Hook (0–2s)</b><span>Waveform animating across black. Text: "We recorded a month of this."</span>
+<b>Concept</b><span>18s: the campaign's collected audio (inhales, chants recorded at local pitches with consent, the signature roar) plays over a slow crawl of every frame posted this month arranged as one filmstrip. Ends on the crest.</span>
+<b>On-screen text</b><span>"30 days of the Sound of Victory." / "The clothing lands next." / "goool.shop."</span>
+<b>Audio</b><span>The montage IS the audio story.</span>
+<b>Cover frame</b><span>Waveform + crest. "THE SOUND."</span>
+</div>
+<div class="cap">A brand about one second took thirty days to introduce itself. Worth it.
+The Sound of Victory isn't printed on anything. It's what happens around you when it goes in. The clothes are just ready for it.
+Final call before the door: goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list.</span>
+<b>Stories</b><span>"Best frame of the month?" poll across 4 frames.</span>
+<b>Organic/Paid</b><span>Organic.</span>
+<b>Audience</b><span>All.</span>
+<b>Metric</b><span>Completes, sentiment.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno">30</span><span class="daytitle">Door Notice</span> <span class="chip red">Reinforce</span> <span class="chip">Static + full Story stack</span></div>
+<div class="fields">
+<b>Objective</b><span>Formal close of Month 1; set the launch expectation without a fake date. Final signup sweep.</span>
+<b>Visual</b><span>4:5, the four plain mockups in a single row on black, wordmark below, one line: "NEXT: THE DOOR."</span>
+</div>
+<div class="cap">Month one: the mark, the four pieces, the standard.
+Month two: the launch. The exact date lands in inboxes before it lands here.
+If you've read this far, you already know where the list is. goool.shop.</div>
+<div class="fields">
+<b>CTA</b><span>Join the list at goool.shop.</span>
+<b>Stories</b><span>6 frames: month recap (3 best posts) · "one door" typographic frame · link sticker frame · thank-you frame with the crest.</span>
+<b>Organic/Paid</b><span>Organic + final flight of Ads C1/D1.</span>
+<b>Audience</b><span>All.</span>
+<b>Metric</b><span>Month-1 totals against Part 5 dashboard.</span>
+</div></div>
+
+</section>
+<div class="band" id="p3"><div class="wrapin"><div class="k">PART 3</div><h2>Paid Instagram advertising</h2><p style="color:var(--band-text);opacity:.75;max-width:70ch;margin:6px 0 0">Structure: because checkout is closed, there is no purchase-conversion tier this month. The funnel is Awareness (A) → Consideration (B) → Waitlist conversion (C) → Retargeting (D). Sales campaigns activate in Month 2 only after checkout opens. Pixel + CAPI must be verified before the first dollar (checklist in Part 5).</p></div></div>
+
+<section>
+<h3>Campaign architecture</h3>
+<div class="tscroll"><table>
+<tr><th>Tier</th><th>Meta objective</th><th>Audience</th><th>Ads</th></tr>
+<tr><td><b>A · Awareness</b></td><td>Video views / reach</td><td>Broad US 18–44, interest-light (soccer, football culture); Advantage+ on</td><td>A1–A4</td></tr>
+<tr><td><b>B · Consideration</b></td><td>Traffic (landing views)</td><td>Broad + 2 interest stacks (players; football streetwear)</td><td>B1–B3</td></tr>
+<tr><td><b>C · Waitlist</b></td><td>Leads/Conversions (email signup event)</td><td>Warm: 50% video viewers 30d, IG engagers 30d, site visitors 30d</td><td>C1–C3</td></tr>
+<tr><td><b>D · Retargeting</b></td><td>Conversions (signup)</td><td>Engagers + visitors who did NOT sign up; cart/customer lists N/A until checkout</td><td>D1–D2</td></tr>
+</table></div>
+<p class="mut">Targeting philosophy: start broad, let creative do the targeting. Interest stacks exist only as a B-tier test cell. Lookalikes wait until the email list passes ~1,000 (Month 2). Never micro-target below 2M audience size.</p>
+
+<h3>The twelve ads</h3>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">A1</span><span class="daytitle">Anthem / 30s</span> <span class="chip">Reel · Awareness</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 1 anthem reel, unchanged.</span>
+<b>Hook</b><span>"There is one second every fan on earth understands."</span>
+<b>Primary text</b><span>One second. Every fan. No club required. GOOOL is premium football apparel for the moment itself. The First Capsule is coming.</span>
+<b>Headline / CTA</b><span>"The Second It Goes In" · <b>Learn More</b> → goool.shop</span>
+<b>Alt hooks</b><span>1) "You already know this feeling." · 2) "No goal in this video. You'll still feel it." · 3) "Close your eyes. You can hear it."</span>
+<b>Retarget variation</b><span>Cut to 15s, end card swaps to "The list hears first."</span>
+<b>Why it works</b><span>Emotion-first prospecting builds the cheapest qualified video-view pool for C/D tiers.</span>
+<b>Judge by / rules</b><span>ThruPlay cost + 3s hold. Keep if hold ≥ 30%; refresh hook if 20–30%; kill under 20% after 3 days / $40.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">A2</span><span class="daytitle">One Mark / 12s</span> <span class="chip">Reel · Awareness</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 3 crest reveal reel.</span>
+<b>Hook</b><span>"No badge. No federation. No permission needed."</span>
+<b>Primary text</b><span>Every crest belongs to a club. Ours belongs to the goal. GOOOL · The First Capsule · Coming Soon.</span>
+<b>Headline / CTA</b><span>"One Mark. Every Fan." · <b>Learn More</b></span>
+<b>Alt hooks</b><span>1) "This is not a club." · 2) "The only crest with no enemies." · 3) "Whose side is this on? Yours."</span>
+<b>Retarget variation</b><span>Adds spec end-card (four products + prices).</span>
+<b>Why</b><span>Sharpest differentiation message; filters in exactly P2.</span>
+<b>Judge / rules</b><span>Hold rate + profile visits. Same 30/20 thresholds.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">A3</span><span class="daytitle">Anatomy / 25s</span> <span class="chip">Reel · Awareness</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 15 mark film.</span>
+<b>Hook</b><span>"The red is the roar."</span>
+<b>Primary text</b><span>Four parts. One second. The story inside the GOOOL crest.</span>
+<b>Headline / CTA</b><span>"Anatomy of the Mark" · <b>Learn More</b></span>
+<b>Alt hooks</b><span>1) "Every line of this crest means something." · 2) "Built like a club. Owned by no one." · 3) "Watch the mark assemble."</span>
+<b>Retarget variation</b><span>None; awareness only.</span>
+<b>Why</b><span>Save-heavy creative recruits the design-literate half of the audience.</span>
+<b>Judge / rules</b><span>Completes + shares; kill only if completes &lt; 10%.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">A4</span><span class="daytitle">The Second / 28s</span> <span class="chip">Reel · Awareness (launch-ready hero)</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 25 night-pitch film (real garments). Runs final week only.</span>
+<b>Hook</b><span>"You know what happens next."</span>
+<b>Primary text</b><span>We never show the goal. We don't need to. GOOOL. Made for the Moment.</span>
+<b>Headline / CTA</b><span>"Made for the Moment" · <b>Sign Up</b></span>
+<b>Alt hooks</b><span>1) "The goal is off camera. On purpose." · 2) "Slow the best second down." · 3) "Floodlights on."</span>
+<b>Retarget variation</b><span>15s cut straight to celebration + list end-card.</span>
+<b>Why</b><span>The proof piece: brand + real product + emotion in one asset carried into Month 2 launch ads.</span>
+<b>Judge / rules</b><span>Hold + signups assisted. Keep regardless through launch unless hold &lt; 20%.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">B1</span><span class="daytitle">Tee Spec / 18s</span> <span class="chip">Reel · Consideration</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 8 performance tee reveal.</span>
+<b>Hook</b><span>"The Sound of Victory has a uniform."</span>
+<b>Primary text</b><span>3.8 oz recycled polyester with PosiCharge. Athletic fit, S–2XL, the crest at dead center. $48, coming soon. The list hears first.</span>
+<b>Headline / CTA</b><span>"Performance Badge Tee · $48" · <b>Sign Up</b></span>
+<b>Alt hooks</b><span>1) "Train in it. Celebrate in it." · 2) "A training top with no team." · 3) "$48. Centered. Coming."</span>
+<b>Retarget variation</b><span>Adds FAQ slide 3 (fit guidance) as trailer frame.</span>
+<b>Why</b><span>Product-first entry for P1; recycled-poly claim is spec-verified.</span>
+<b>Judge / rules</b><span>Landing-view cost + signup assists. Kill if CPLV &gt; 2× account average after $50.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">B2</span><span class="daytitle">Capsule Catalog</span> <span class="chip">Carousel · Consideration</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 9 carousel, slides 1–5 + end card.</span>
+<b>Hook (cover)</b><span>2×2 grid: "FOUR PIECES. ONE MARK."</span>
+<b>Primary text</b><span>The GOOOL First Capsule: a performance tee ($48), a 10 oz hoodie ($78), a garment-dyed staple ($38), and a structured cap ($36). All blank-backed. All coming soon.</span>
+<b>Headline / CTA</b><span>"The First Capsule" · <b>Sign Up</b></span>
+<b>Alt hooks</b><span>Covers rotated: hoodie-first / cap-first / type-only.</span>
+<b>Retarget variation</b><span>Card order flips to the product each user engaged with most (manual variant per product).</span>
+<b>Why</b><span>Carousel swipes = strongest intent signal available pre-checkout.</span>
+<b>Judge / rules</b><span>Swipe depth + CPLV. Keep if swipe-through ≥ 15%.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">B3</span><span class="daytitle">Ten Ounces / 15s</span> <span class="chip">Reel · Consideration</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 10 hoodie weight reel.</span>
+<b>Hook</b><span>"10 ounces. That's the whole pitch."</span>
+<b>Primary text</b><span>Most hoodies stop at 8 oz. The Core Hoodie starts at 10: heavyweight fleece, cotton face, generous fit. $78, coming soon.</span>
+<b>Headline / CTA</b><span>"The 10 oz Standard" · <b>Sign Up</b></span>
+<b>Alt hooks</b><span>1) "Pick up most hoodies. Now pick up ours." · 2) "Weight is the spec nobody explains." · 3) "8 oz is a t-shirt with sleeves."</span>
+<b>Retarget variation</b><span>Day 20 styling reel replaces it for warm audiences.</span>
+<b>Why</b><span>Single-number story; the most repeatable ad format the brand owns.</span>
+<b>Judge / rules</b><span>Hold + CPLV; standard thresholds.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">C1</span><span class="daytitle">The List / static</span> <span class="chip">Static · Waitlist conversion</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 22 typographic "THE LIST" frame, 4:5 and 9:16 versions.</span>
+<b>Hook</b><span>"First to know beats first to refresh."</span>
+<b>Primary text</b><span>The GOOOL First Capsule launches to the list before anyone else: the date, the first real photos, the open door. Ten seconds to join.</span>
+<b>Headline / CTA</b><span>"The List Hears First" · <b>Sign Up</b> → goool.shop</span>
+<b>Alt hooks</b><span>1) "No countdown clocks. Just an order of operations." · 2) "Inbox first. Feed second." · 3) "One link. Ten seconds."</span>
+<b>Retarget variation</b><span>Adds the 2×2 product grid as background at 20% opacity.</span>
+<b>Why</b><span>Zero-friction ask matched exactly to the only conversion that exists.</span>
+<b>Judge / rules</b><span>Cost per signup. Keep ≤ $2.50; revise $2.50–4; kill &gt; $4 after $60.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">C2</span><span class="daytitle">Where It Lives</span> <span class="chip">Stories · Waitlist conversion</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 18 story frames 2–5 as a 4-card Stories ad, swipe-up on each.</span>
+<b>Hook</b><span>"One capsule. Five places it belongs."</span>
+<b>Primary text (overlay)</b><span>"the session / the watch party / the away day / the everyday" · final card: "Join the list · goool.shop."</span>
+<b>Headline / CTA</b><span><b>Sign Up</b></span>
+<b>Alt hooks</b><span>Reordered first card per audience: players get "the session" first; streetwear gets "the everyday" first.</span>
+<b>Retarget variation</b><span>N/A (already warm-targeted).</span>
+<b>Why</b><span>Native Stories rhythm; occasion framing widens the buyer's self-image.</span>
+<b>Judge / rules</b><span>Signup cost + card drop-off; kill if 75% drop by card 2.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">C3</span><span class="daytitle">Zoom In / 16s</span> <span class="chip">Reel · Waitlist conversion</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 23 macro detail reel.</span>
+<b>Hook</b><span>"Zoom in. We did."</span>
+<b>Primary text</b><span>Stitch, ink, fleece, dye. The details you'll feel every day, launching soon. The list at goool.shop gets the door first.</span>
+<b>Headline / CTA</b><span>"Built, Not Printed" · <b>Sign Up</b></span>
+<b>Alt hooks</b><span>1) "Product photos hide this." · 2) "Turn your sound on for the fabric." · 3) "1/8-inch tolerances, on a t-shirt."</span>
+<b>Retarget variation</b><span>Ends on the exact product the viewer engaged with.</span>
+<b>Why</b><span>Craft close-ups are the highest-converting warm creative in apparel.</span>
+<b>Judge / rules</b><span>Signup cost; same C1 thresholds.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">D1</span><span class="daytitle">28 Seconds</span> <span class="chip">Reel · Retargeting</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 28 recap reel.</span>
+<b>Hook</b><span>"28 days in 28 seconds."</span>
+<b>Primary text</b><span>You saw one post. Here's the whole story: four pieces, one mark, one list. goool.shop.</span>
+<b>Headline / CTA</b><span>"The Story So Far" · <b>Sign Up</b></span>
+<b>Alt hooks</b><span>1) "Still thinking? Fair. Watch this." · 2) "Everything since Day 1, fast." · 3) "One month, one minute, one link."</span>
+<b>Retarget variation</b><span>This is the retarget.</span>
+<b>Why</b><span>Compresses the narrative for people the algorithm showed exactly once.</span>
+<b>Judge / rules</b><span>Signup cost vs C-tier; expect 30–50% cheaper. Kill if not.</span>
+</div></div>
+
+<div class="day"><div class="dayhead"><span class="dayno" style="font-size:26px">D2</span><span class="daytitle">Straight Answers</span> <span class="chip">Carousel · Retargeting</span></div>
+<div class="fields">
+<b>Creative</b><span>Day 24 FAQ slides 2–5 + end card.</span>
+<b>Hook (cover)</b><span>"YOU ASKED. STRAIGHT ANSWERS."</span>
+<b>Primary text</b><span>Launch timing, fits, sizes, prices. No marketing voice, just the answers, then one link.</span>
+<b>Headline / CTA</b><span>"Before You Decide" · <b>Sign Up</b></span>
+<b>Alt hooks</b><span>1) "The four questions everyone DMs us." · 2) "Fits, sizes, prices. In writing." · 3) "Asked and answered."</span>
+<b>Retarget variation</b><span>This is the retarget.</span>
+<b>Why</b><span>Objection-handling to visitors who bounced from the landing page.</span>
+<b>Judge / rules</b><span>Signup cost; kill &gt; $4 after $40.</span>
+</div></div>
+
+<h3>Three 30-day budgets</h3>
+<div class="tscroll"><table>
+<tr><th>Plan</th><th>Daily</th><th>30-day total</th><th>A · Awareness</th><th>B · Consideration</th><th>C · Waitlist</th><th>D · Retarget</th><th>Shape</th></tr>
+<tr><td><b>Lean test</b></td><td>$20</td><td>$600</td><td>$240 (40%)</td><td>$120 (20%)</td><td>$180 (30%)</td><td>$60 (10%)</td><td>Days 1–10 A only; C opens Day 11; D opens Day 22. One ad live per tier.</td></tr>
+<tr><td><b>Recommended</b></td><td>$50</td><td>$1,500</td><td>$525 (35%)</td><td>$300 (20%)</td><td>$450 (30%)</td><td>$225 (15%)</td><td>2 A-ads rotating from Day 1; B from Day 8; C from Day 11; D from Day 18. Weekly loser-kill, winner +20%.</td></tr>
+<tr><td><b>Aggressive</b></td><td>$120</td><td>$3,600</td><td>$1,080 (30%)</td><td>$720 (20%)</td><td>$1,260 (35%)</td><td>$540 (15%)</td><td>Full matrix live by Day 8; 3-cell hook tests per tier; scale winners daily. Requires same-day comment coverage.</td></tr>
+</table></div>
+<p class="mut">All plans spend nothing on Day 30's final 48h except C/D. No performance guarantees; thresholds above define kill/keep discipline instead.</p>
+
+<h3>A/B testing matrix</h3>
+<div class="tscroll"><table>
+<tr><th>Variable</th><th>Cells</th><th>Where tested</th><th>Decision metric</th></tr>
+<tr><td>Hook</td><td>Primary vs 3 alternates</td><td>Every A and C ad, one swap per week max</td><td>3s hold</td></tr>
+<tr><td>Emotion vs product first</td><td>A1 vs B1 head-to-head, same budget</td><td>Week 2</td><td>Cost per signup (assisted)</td></tr>
+<tr><td>Video length</td><td>A1 30s vs 15s cut</td><td>Week 3</td><td>ThruPlay + signup assist</td></tr>
+<tr><td>CTA button</td><td>Learn More vs Sign Up</td><td>C1</td><td>Cost per signup</td></tr>
+<tr><td>Caption length</td><td>1-line vs 4-line primary text</td><td>B2</td><td>CTR</td></tr>
+<tr><td>Lifestyle vs studio</td><td>B2 cover: lifestyle render vs plain mockup grid</td><td>Week 2–3</td><td>Swipe rate</td></tr>
+<tr><td>Cold vs warm</td><td>C1 broad vs engager-only</td><td>Week 3–4</td><td>Cost per signup</td></tr>
+</table></div>
+<p class="mut">One variable per test, $30 minimum per cell, 3-day minimum runtime, no mid-test edits (edits reset learning).</p>
+</section>
+<div class="band" id="p4"><div class="wrapin"><div class="k">PART 4</div><h2>Production package</h2><p style="color:var(--band-text);opacity:.75;max-width:70ch;margin:6px 0 0">Everything below is executable by one or two people with a modern phone, a tripod, one LED panel, and CapCut or similar. Two shooting layers: <b>Layer R</b> (renders + type + atmosphere, available today) and <b>Layer S</b> (samples on body, unlocked when the Apliiq samples pass owner approval).</p></div></div>
+
+<section>
+<h3>1 · Master photography shot list</h3>
+<div class="tscroll"><table>
+<tr><th>#</th><th>Shot</th><th>Layer</th><th>Frames</th><th>Feeds days</th></tr>
+<tr><td>P1</td><td>Empty goal under floodlights, centered, fog/breath</td><td>R</td><td>4:5 + 9:16</td><td>2, 7, 18</td></tr>
+<tr><td>P2</td><td>Chain-link foreground, pitch bokeh</td><td>R</td><td>4:5</td><td>2 alt, covers</td></tr>
+<tr><td>P3</td><td>Empty stand, one silhouette seated</td><td>R</td><td>9:16</td><td>1, 25</td></tr>
+<tr><td>P4</td><td>Locations pack: bar table, airport window, crosswalk, bench</td><td>R</td><td>9:16</td><td>18, C2</td></tr>
+<tr><td>P5</td><td>Tee on cast, goal-line seated, golden hour, crest centered</td><td>S</td><td>4:5 + 9:16</td><td>19, A4</td></tr>
+<tr><td>P6</td><td>Cap back-of-head, blank rear, floodlight bokeh</td><td>S</td><td>4:5</td><td>19</td></tr>
+<tr><td>P7</td><td>Hoodie 3-outfit set (training / matchday / travel)</td><td>S</td><td>9:16 ×3</td><td>20</td></tr>
+<tr><td>P8</td><td>Macro set: embroidery, DTF sheen, fleece loops, dye grain</td><td>S</td><td>1:1 + 9:16</td><td>23, 26, C3</td></tr>
+<tr><td>P9</td><td>Flat-lay: four pieces in cross formation</td><td>S</td><td>1:1</td><td>23, 30</td></tr>
+<tr><td>P10</td><td>Celebration pair, no ball in frame, night pitch</td><td>S</td><td>9:16</td><td>25, A4, covers</td></tr>
+</table></div>
+
+<h3>2 · Master video shot list</h3>
+<div class="tscroll"><table>
+<tr><th>#</th><th>Clip</th><th>Layer</th><th>Notes</th><th>Feeds</th></tr>
+<tr><td>V1</td><td>Grass macro rack focus, dusk, 120fps</td><td>R</td><td>3–5s usable</td><td>1</td></tr>
+<tr><td>V2</td><td>Goal net sway, backlit, 120fps</td><td>R</td><td>tripod, wind or hand assist</td><td>1, 29</td></tr>
+<tr><td>V3</td><td>Crowd-roar audio capture at a local match (with consent) + friend-group layered chant</td><td>R</td><td>audio only; this becomes the signature roar</td><td>1, 8, 15, 25, 29</td></tr>
+<tr><td>V4</td><td>Mockup motion pack: light-sweep and zoom animations over the 8 approved images</td><td>R</td><td>made in CapCut/AE; prompts below</td><td>3, 6, 8, 10, 12</td></tr>
+<tr><td>V5</td><td>Sample unboxing, one take, natural light</td><td>S</td><td>phone handheld, 4K</td><td>16</td></tr>
+<tr><td>V6</td><td>Lace-up / breath / strike (cut before contact), 120fps night pitch</td><td>S</td><td>floodlights required</td><td>25</td></tr>
+<tr><td>V7</td><td>Celebration burst, two cast, 120fps</td><td>S</td><td>multiple takes; faces optional</td><td>25, 28</td></tr>
+<tr><td>V8</td><td>Macro fabric pans with audio (thread ticks, fabric brush)</td><td>S</td><td>slider or slow hand</td><td>23</td></tr>
+<tr><td>V9</td><td>Try-on mirror clips, 3 fits</td><td>S</td><td>vertical, stable</td><td>20</td></tr>
+</table></div>
+
+<h3>3 · Locations</h3>
+<ul>
+<li><b>Primary:</b> a public park pitch with evening floodlights (shoot permit-free; avoid league signage in frame). Scout two in the Providence area.</li>
+<li><b>Secondary:</b> municipal stadium stands at open hours (empty-stand silhouettes); a neighborhood bar (ask the owner, shoot before open); airport departures window (public side); one clean city crosswalk.</li>
+<li><b>Studio-equivalent:</b> any matte-black wall or backdrop paper for macro and flat-lay work.</li>
+</ul>
+
+<h3>4 · Casting</h3>
+<ul>
+<li>One primary cast member (fits a size M/L sample, comfortable moving on pitch, face optional on camera).</li>
+<li>One secondary for the Day 25 celebration two-shot.</li>
+<li>Founder voice for voiceovers if approved; otherwise text-on-screen carries every piece.</li>
+<li>Simple release form signed for anyone on camera; usernames credited only with written permission.</li>
+</ul>
+
+<h3>5 · Styling combinations</h3>
+<ul>
+<li>Performance tee + black training shorts + white socks + boots (session).</li>
+<li>Casual tee + faded straight denim + clean white sneakers (everyday).</li>
+<li>Hoodie + tapered joggers + duffel (travel) · hoodie + denim + cap (matchday) · hoodie half-zipped over performance tee (session warm-up).</li>
+<li>Cap worn forward only in hero frames; backward allowed once in BTS. Nothing else branded in any frame.</li>
+</ul>
+
+<h3>6 · Product-detail shots (repeat of P8, specified)</h3>
+<ul>
+<li>Cap embroidery at 45° raking light to show thread ridge; include the red underline segment in one frame.</li>
+<li>Crest DTF at grazing angle to catch ink sheen against matte poly.</li>
+<li>Hoodie cuff interior fleece pulled slightly to show loop density.</li>
+<li>Washed-black dye grain in daylight shadow, no filter.</li>
+<li>Neck label 1×1 satin (once samples carry it), straight-on.</li>
+</ul>
+
+<h3>7 · Framing requirements</h3>
+<p>Everything shot 4K vertical. Deliverables per asset: 9:16 master (1080×1920), 4:5 feed crop (1080×1350), 1:1 fallback (1080×1080). Compose center-weighted with headroom so all three crops survive. Product always dead-center on detail shots.</p>
+
+<h3>8 · Lighting</h3>
+<ul>
+<li>Golden hour ±40 min for warm pitch frames; floodlights after dark for the campaign's signature contrast.</li>
+<li>One LED panel (or phone flash through a white tee as diffusion) for macro work, raked at 30–45°.</li>
+<li>Never mixed household light. If it looks orange indoors, kill the room lights and use the panel.</li>
+</ul>
+
+<h3>9 · Props and set</h3>
+<p>One ball (unbranded or logo taped), black gaffer tape, white socks ×2, duffel, water bottle (label off), release forms, lens cloth, extra phone battery. Nothing else appears in frame.</p>
+
+<h3>10 · Batch schedules</h3>
+<div class="cols2">
+<div><b>One-day schedule (Layer S, samples in hand)</b><ul>
+<li>16:00 flat-lay + macro (P8, P9, V8) indoors</li>
+<li>17:30 golden hour: P5, P7 outfits 1–2</li>
+<li>19:00 dusk: P6, V6 rehearsal</li>
+<li>19:45 floodlights: V6, V7, P10</li>
+<li>21:00 wrap; backup all files same night</li>
+</ul></div>
+<div><b>Two-day schedule (recommended)</b><ul>
+<li>Day A (no cast): P1–P4 locations pack + V1–V3 audio/atmosphere</li>
+<li>Day B (cast + samples): the one-day schedule above, minus time pressure</li>
+</ul></div>
+</div>
+
+<h3>11 · Ready-before-Day-1 checklist</h3>
+<ul>
+<li>☐ IG handle secured, bio set: "Premium football apparel · The First Capsule · Coming Soon" + goool.shop link</li>
+<li>☐ The 8 approved renders exported to all three crops</li>
+<li>☐ Wordmark/crest white + black PNGs in the phone's camera roll</li>
+<li>☐ V3 roar recorded and mastered (the whole campaign leans on it)</li>
+<li>☐ P1–P4 + V1–V2 shot (one evening)</li>
+<li>☐ Days 1–7 assets edited, captioned, scheduled</li>
+<li>☐ Meta Business Suite connected, Pixel + CAPI verified (Part 5)</li>
+<li>☐ Highlight covers made: FIRST CHAPTER, THE CAPSULE, TERRACE</li>
+</ul>
+
+<h3>12 · File naming</h3>
+<p><span class="mono">GOOOL_[DAY##]_[PILLAR]_[FORMAT]_[CROP]_v#</span> · example: <span class="mono">GOOOL_D08_BUILT_REEL_916_v2.mp4</span>. Folders: <span class="mono">/01_RAW /02_EDITS /03_FINAL /04_ADS /05_AUDIO /06_BRAND</span>. Raw footage backed up to cloud the same night it is shot.</p>
+
+<h3>13 · Export specs</h3>
+<p>Reels: 1080×1920, H.264, 30fps (source 60/120 conformed), 8–12 Mbps, loudness −14 LUFS. Feed: 1080×1350 JPG quality 90+, sRGB. Carousels: identical dimensions every slide. No watermarks, no TikTok re-exports.</p>
+
+<h3>14 · Cover templates</h3>
+<p>Two covers only, alternating: (A) image cover with a 3-letter-max Anton-style caps label bottom-center; (B) black typographic cover, white caps, red underline rule. This is what makes the grid read as one brand.</p>
+
+<h3>15 · Caption + approval workflow</h3>
+<p>Captions written 48h ahead in a shared doc → owner approval pass (facts, prices, claims) → scheduled in Meta Business Suite → day-of: first 30 minutes reserved for replying to every comment. Nothing publishes without the Part 5 QC checklist.</p>
+
+<h3>Digital-asset prompts (render-preserving)</h3>
+<div class="note"><b>Silhouette animation (Day 6):</b> "Using the four supplied GOOOL product mockup images unchanged, fill each garment's exact silhouette with solid black on a #0A0A0A background, then animate a soft white light gradient sweeping left to right revealing each silhouette in sequence, numbered 01–04 in white condensed capitals bottom center. Do not alter garment shapes, proportions, or add details."</div>
+<div class="note"><b>Mockup motion pack (V4):</b> "Animate slow 6-second push-in and light-sweep passes over the supplied GOOOL mockup PNG. The artwork, placement, and colors must remain exactly as supplied; no new angles, no fabric simulation, no re-lighting of the print itself."</div>
+<div class="note"><b>Crest assembly (Day 15):</b> "Using the supplied layered GOOOL crest artwork, animate the shield outline, ball, motion sweep, banner, and red bar assembling in sequence over 20 seconds on black. Elements move and fade only; never redraw, warp, recolor, or restyle any path."</div>
+</section>
+<div class="band" id="p5"><div class="wrapin"><div class="k">PART 5</div><h2>Publishing &amp; performance</h2></div></div>
+
+<section>
+<h3>Posting windows (starting hypotheses, revise with Insights after Day 14)</h3>
+<p>Feed/reels: Tue–Fri 11:30 or 18:30 ET; weekend 10:00 ET. Stories: morning frame by 9:00, evening set 19:00–21:00. Match-adjacent days: post 2h before major US-audience kickoffs, never during. Treat all of this as hypothesis until your own Insights disagree.</p>
+
+<h3>Community management</h3>
+<ul>
+<li>First 30 minutes after every post: reply to every comment, with substance over emojis.</li>
+<li>DMs answered within 12h; questions about launch date get the honest line: "When samples pass. The list hears the date first: goool.shop."</li>
+<li>Never argue; price pushback gets the Day 26 breakdown, not defensiveness. Delete only spam/abuse; hide nothing else.</li>
+<li>Ask permission in DM before reposting anyone's content or words; keep screenshots of consent.</li>
+</ul>
+
+<h3>Pre-publication QC checklist</h3>
+<ul>
+<li>☐ Brand spelled GOOOL; marks are approved files, unaltered</li>
+<li>☐ No "shop now / available now" while checkout is closed</li>
+<li>☐ Prices/specs match the site exactly ($48/$78/$38/$36; S–2XL; one size)</li>
+<li>☐ No federation/club/player references, no borrowed audio</li>
+<li>☐ No em dashes; middle-dot separators; one CTA</li>
+<li>☐ Crops verified 9:16 and 4:5; cover template A or B applied</li>
+<li>☐ Link + UTM tested; alt text written on feed posts</li>
+</ul>
+
+<h3>Pixel + CAPI readiness (before any paid spend)</h3>
+<ul>
+<li>☐ Meta Pixel installed on goool.shop; PageView firing on the landing page</li>
+<li>☐ Email signup fires a <span class="mono">Lead</span> (or CompleteRegistration) event on the success state</li>
+<li>☐ Conversions API connected (Meta's gateway or server-side) and deduplicating with the browser pixel</li>
+<li>☐ Domain verified in Business Manager; events prioritized (Lead first)</li>
+<li>☐ Test events verified from a phone on cellular before the first campaign publishes</li>
+</ul>
+
+<h3>UTM structure</h3>
+<p><span class="mono">goool.shop/?utm_source=instagram&amp;utm_medium=[organic|paid|stories]&amp;utm_campaign=second_m1&amp;utm_content=[d08_reel|a1_anthem|c1_list…]</span> so every signup traces to a day or an ad.</p>
+
+<h3>Weekly dashboard (one page, every Sunday)</h3>
+<div class="tscroll"><table>
+<tr><th>Layer</th><th>Metrics</th><th>Source</th></tr>
+<tr><td>Awareness</td><td>Reach, 3s hold %, completes, follower delta</td><td>IG Insights / Ads Manager</td></tr>
+<tr><td>Engagement</td><td>Saves/reach, shares, comments, Story sticker taps</td><td>IG Insights</td></tr>
+<tr><td>Traffic</td><td>Site sessions by UTM, link taps</td><td>Netlify analytics / UTMs</td></tr>
+<tr><td>Conversion</td><td>List signups total + per source, cost per signup (paid)</td><td>Email tool + Ads Manager</td></tr>
+<tr><td>Advertising</td><td>Spend, CPLV, CP-signup by ad, frequency (cap ~2.5 for warm)</td><td>Ads Manager</td></tr>
+</table></div>
+
+<h3>Review cadence</h3>
+<ul>
+<li><b>Day 7:</b> creative check. Rank the week's posts by saves+shares per reach; the top pattern shapes week 2's BUILT/WORN mix. Kill any ad below hold threshold.</li>
+<li><b>Day 14:</b> funnel check. Are video-view pools ≥ 10k? Is organic signup ≥ paid? Decide budget plan up/down one tier.</li>
+<li><b>Day 21:</b> conversion check. Cost per signup trend, C vs D efficiency, sample-shoot assets reviewed against the grid look.</li>
+<li><b>Day 30:</b> full retro against the dashboard; write the three sentences that describe what the audience proved it wants; lock Month 2.</li>
+</ul>
+
+<h3>Winning-creative rules</h3>
+<ul>
+<li>A post "wins" when it beats the account median on its own metric (saves for BUILT, shares for THE SECOND, signups for conversion posts) by 50%+.</li>
+<li>Winners get: a sequel within 7 days, promotion to the matching ad tier within 72h, and their hook grammar noted in a running "hooks that work" list.</li>
+<li>An organic post becomes an ad only if it passes QC as an ad (rights, claims, crops) and maps to a tier objective; nothing gets boosted "because it did numbers."</li>
+</ul>
+
+<h3>Month 2, contingent on Month 1</h3>
+<ul>
+<li><b>If checkout opens:</b> the campaign flips to launch week: the list gets a 24h head start (fulfilling every promise made), A4 and the winning C-ad convert to Sales-objective campaigns with the four product pages as destinations, and "Coming Soon" language retires site-wide the same hour. Retargeting adds cart-abandoner and purchaser exclusion audiences the day they technically exist.</li>
+<li><b>If samples slip:</b> Month 2 runs the WORN and FIRST CHAPTER pillars harder (real garments now exist even unapproved, shown honestly as in-testing), holds paid at C/D tiers only, and keeps the list warm weekly rather than daily. Honesty is the retention strategy.</li>
+<li><b>Either way:</b> lookalike audiences activate when the list passes 1,000; the second capsule teaser (or restock story) begins in the final week of Month 2 using the same tease grammar Days 1–7 proved out.</li>
+</ul>
+
+<div style="margin-top:60px;border-top:2px solid var(--ink);padding-top:18px" class="mut">
+<b style="color:var(--ink)">GOOOL · The Second It Goes In</b> · Campaign playbook v1 · Built against the live site, the approved capsule artwork, and the POD spec packet · Prelaunch mode: every CTA is the list until checkout opens.
+</div>
+</section>
+</section>
+</div>
