@@ -40,3 +40,6 @@ yarn-error.log*
 designs/GOOOL_POD_SAMPLE_PACKET/
 GOOOL_POD_SAMPLE_SPECIFICATIONS.pdf
 GOOOL_FILES_FOR_PORTUGOOOL.zip
+
+# Campaign asset pack archive (contents committed uncompressed alongside)
+designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack.zip
