@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import MobileNav from "./MobileNav";
@@ -22,13 +23,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-paper/10 bg-ink">
       <div className="mx-auto flex h-16 max-w-content items-center justify-between px-4 sm:px-6">
-        {/* Wordmark — original brand mark, text only */}
-        <Link
-          href="/"
-          className="font-display text-2xl uppercase tracking-tightest text-paper"
-          aria-label="GOOOL home"
-        >
-          G<span className="text-red">OOO</span>L
+        {/* Wordmark — the approved underlined GOOOL mark */}
+        <Link href="/" aria-label="GOOOL home" className="flex items-center">
+          <Image
+            src="/brand/goool-wordmark-white.png"
+            alt="GOOOL"
+            width={130}
+            height={45}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}

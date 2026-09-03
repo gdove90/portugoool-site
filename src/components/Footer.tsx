@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,9 +7,12 @@ export default function Footer() {
       <div className="mx-auto max-w-content px-4 sm:px-6">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="font-display text-2xl font-bold uppercase tracking-tightest">
-              G<span className="text-red">OOO</span>L
-            </p>
+            <Image
+              src="/brand/goool-wordmark-white.png"
+              alt="GOOOL"
+              width={130}
+              height={45}
+            />
             <p className="mt-2 max-w-xs text-sm text-paper/50">
               The sound of the goal. The shirt for the moment.
             </p>

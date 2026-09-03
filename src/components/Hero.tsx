@@ -27,11 +27,15 @@ export default function Hero() {
       />
 
       <div className="relative px-4 py-20 text-center">
-        <h1
-          className="font-marker text-6xl leading-[0.95] text-paper sm:text-8xl lg:text-[150px]"
-          style={{ textShadow: "0 6px 40px rgba(0,0,0,0.6)" }}
-        >
-          Goool
+        <h1 aria-label="GOOOL">
+          <Image
+            src="/brand/goool-wordmark-white.png"
+            alt="GOOOL"
+            width={420}
+            height={146}
+            priority
+            className="mx-auto drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)] lg:w-[560px]"
+          />
         </h1>
         <p className="mt-4 font-display text-xl uppercase tracking-[0.16em] text-paper sm:text-3xl lg:text-[34px]">
           Made for the Moment.

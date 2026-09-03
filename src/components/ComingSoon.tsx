@@ -94,11 +94,15 @@ export default function ComingSoon() {
           </g>
         </svg>
 
-        <h1
-          className="mt-6 font-marker text-6xl leading-[0.95] text-paper sm:text-8xl"
-          style={{ textShadow: "0 6px 40px rgba(0,0,0,0.6)" }}
-        >
-          Goool
+        <h1 className="mt-8" aria-label="GOOOL">
+          <Image
+            src="/brand/goool-wordmark-white.png"
+            alt="GOOOL"
+            width={340}
+            height={118}
+            priority
+            className="mx-auto drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)] sm:w-[440px]"
+          />
         </h1>
         <p className="mt-3 font-display text-lg uppercase tracking-[0.16em] text-paper sm:text-2xl">
           Made for the Moment.
@@ -110,7 +114,7 @@ export default function ComingSoon() {
         <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
           The First Capsule — original GOOOL designs.
           <br />
-          G<span className="text-red">OOO</span>L · Made for the Moment
+          GOOOL · Made for the Moment
         </p>
 
         {status === "success" ? (
