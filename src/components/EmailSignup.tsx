@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -33,13 +34,18 @@ export default function EmailSignup() {
           Get the next drop first.
         </h2>
         <p className="mx-auto mt-2 max-w-md text-paper/60">
-          Drops are small and sell out. The list hears about them before anyone else.
+          New releases, early access, and the occasional offer. No noise.
         </p>
 
         {status === "success" ? (
-          <p className="mt-8 text-lg font-semibold text-gold" role="status">
+          <div className="mt-8" role="status">
+          <p className="text-lg font-semibold text-gold">
             You&apos;re on the list. ⚽
           </p>
+          <Link href="/shop" className="mt-3 inline-block font-semibold text-paper underline underline-offset-4">
+            See the First Capsule →
+          </Link>
+          </div>
         ) : (
           <form
             onSubmit={handleSubmit}
@@ -65,6 +71,12 @@ export default function EmailSignup() {
               {status === "loading" ? "Joining…" : "Join the list"}
             </button>
           </form>
+        )}
+
+        {status !== "success" && (
+          <p className="mx-auto mt-3 max-w-md text-xs text-paper/60">
+            By joining, you agree to receive GOOOL marketing emails. Unsubscribe anytime.
+          </p>
         )}
 
         {status === "error" && (
