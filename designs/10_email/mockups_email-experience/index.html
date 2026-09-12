@@ -1,0 +1,305 @@
+<title>GOOOL Email Experience</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+<style>
+  :root{
+    --paper:#FFFFFF; --smoke:#F4F4F2; --ink:#0A0A0A; --red:#C1121F; --red-dark:#8E0D17;
+    --gold:#C9A227; --mut:#6B6B70; --line:#E5E5E3; --page:#FAFAF8; --chipnew:#0A0A0A;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --page:#161618; --mut:#9A9AA1; --line:#2C2C30; }
+  }
+  :root[data-theme="dark"]{ --page:#161618; --mut:#9A9AA1; --line:#2C2C30; }
+  body{margin:0;background:var(--page);color:var(--ink);font:15px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) body{color:#EDEDEA} }
+  :root[data-theme="dark"] body{color:#EDEDEA}
+  .wrap{max-width:1060px;margin:0 auto;padding:48px 20px 90px}
+  .anton{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.02}
+  h1{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6vw,64px);margin:0;line-height:1.02}
+  .sub{color:var(--mut);max-width:64ch;margin:14px 0 0}
+  .board{margin-top:64px}
+  .bhead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-top:2px solid currentColor;padding-top:14px}
+  .bno{font-family:Anton;font-size:26px;color:var(--red)}
+  .btitle{font-family:Anton;font-size:20px;text-transform:uppercase}
+  .chip{font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;border-radius:999px;font-weight:700}
+  .chip.live{background:#DCEFE2;color:#0B3D2E}
+  .chip.new{background:var(--red);color:#fff}
+  .chip.demo{background:var(--gold);color:var(--ink)}
+  .note{color:var(--mut);font-size:13px;max-width:78ch;margin:8px 0 20px}
+  .frames{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+  .frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 34px rgba(0,0,0,.09);background:#fff;color:#0A0A0A}
+  .flabel{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin:0 0 8px;font-weight:700}
+  .desk{width:640px;max-width:100%}
+  .mob{width:315px;max-width:100%}
+  .email{width:620px;max-width:100%;background:var(--smoke)}
+  /* ── shared brand pieces inside mockups ── */
+  .band{background:#0A0A0A;color:#fff;text-align:center}
+  .pill{display:inline-block;border-radius:999px;background:var(--red);color:#fff;font-weight:600;padding:13px 30px;font-size:15px}
+  .pill.small{padding:10px 22px;font-size:13px}
+  .field{border-radius:999px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.10);color:rgba(255,255,255,.45);padding:12px 20px;font-size:14px;text-align:left}
+  .micro{font-size:11px;color:rgba(255,255,255,.45);margin-top:12px}
+  .microlink{text-decoration:underline;color:inherit}
+  /* homepage section */
+  .sig{padding:52px 36px}
+  .sig h2{font-family:Anton;font-size:32px;margin:0;text-transform:uppercase}
+  .sig p.lead{color:rgba(255,255,255,.6);margin:10px auto 26px;max-width:420px;font-size:14.5px}
+  .sigrow{display:flex;gap:10px;max-width:430px;margin:0 auto}
+  .sigrow .field{flex:1}
+  .mob .sigrow{flex-direction:column}
+  .mob .sig{padding:40px 22px}
+  .mob .sig h2{font-size:26px}
+  /* popup */
+  .pagebg{background:#fff;position:relative;min-height:430px;overflow:hidden}
+  .fakehero{position:absolute;inset:0;background:#0A0A0A}
+  .fakehero img{width:62%;opacity:.5;display:block;margin:70px auto 0}
+  .dim{position:absolute;inset:0;background:rgba(10,10,10,.55)}
+  .modal{position:relative;z-index:2;background:#fff;border-radius:18px;max-width:400px;margin:56px auto;padding:34px 32px 28px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.4)}
+  .modal .x{position:absolute;top:14px;right:18px;font-size:22px;line-height:1;color:#0A0A0A;font-weight:400}
+  .modal h3{font-family:Anton;font-size:24px;text-transform:uppercase;margin:16px 0 6px}
+  .modal p{font-size:13.5px;color:#5A5A60;margin:0 0 18px}
+  .modal .field{border:1px solid #D9D9D6;background:#fff;color:#9B9B98;width:100%;box-sizing:border-box;margin-bottom:10px}
+  .modal .pill{width:100%;box-sizing:border-box}
+  .modal .micro{color:#8A8A88}
+  .nothanks{display:block;font-size:12px;color:#8A8A88;text-decoration:underline;margin-top:12px}
+  .sheet{position:relative;z-index:2;background:#fff;border-radius:18px 18px 0 0;margin-top:190px;padding:28px 24px 22px;text-align:center;box-shadow:0 -14px 50px rgba(0,0,0,.4)}
+  .grab{width:44px;height:4px;border-radius:2px;background:#D9D9D6;margin:0 auto 16px}
+  /* email frames */
+  .eshell{padding:26px 18px}
+  .ecard{max-width:520px;margin:0 auto;background:#fff;border-radius:2px;overflow:hidden;border:1px solid #E5E5E3}
+  .ehead{background:#0A0A0A;padding:26px 0;text-align:center}
+  .ehead img{width:132px;display:block;margin:0 auto}
+  .ebody{padding:30px 30px 8px;text-align:center}
+  .ebody h2{font-family:Anton;font-size:26px;text-transform:uppercase;margin:0 0 4px}
+  .etag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:700;margin:0 0 14px}
+  .ebody p{font-size:14px;color:#4A4A4A;max-width:40ch;margin:0 auto 8px}
+  .egrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:20px 30px}
+  .egrid figure{margin:0;text-align:center}
+  .egrid img{width:100%;border-radius:8px;background:#F4F4F2;display:block}
+  .egrid figcaption{font-size:12px;margin-top:6px;font-weight:600}
+  .egrid .pr{color:#6B6B70;font-weight:400}
+  .ecta{text-align:center;padding:6px 0 30px}
+  .efoot{border-top:1px solid #E5E5E3;padding:20px 30px 26px;text-align:center;font-size:11px;color:#8A8A88;line-height:1.7}
+  .efoot a{color:#8A8A88}
+  .emeta{max-width:520px;margin:0 auto 10px;font-size:12px;color:var(--mut)}
+  .emeta b{color:inherit}
+  /* dashboard */
+  .dash{background:#0F0F11;color:#EDEDEA;padding:26px;width:860px;max-width:100%}
+  .dash *{box-sizing:border-box}
+  .dhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:10px;flex-wrap:wrap}
+  .dhead img{width:104px}
+  .dtitle{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A8A92}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+  .tile{background:#17171A;border:1px solid #26262B;border-radius:12px;padding:16px 18px}
+  .tile .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A8A92}
+  .tile .v{font-family:Anton;font-size:34px;margin-top:4px;font-variant-numeric:tabular-nums}
+  .tile .d{font-size:11.5px;color:#7BC894;margin-top:2px}
+  .dcols{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;margin-top:12px}
+  @media (max-width:760px){.dcols{grid-template-columns:1fr}}
+  .panel{background:#17171A;border:1px solid #26262B;border-radius:12px;padding:16px 18px}
+  .panel h4{margin:0 0 10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8A8A92}
+  .drow{display:flex;justify-content:space-between;gap:10px;font-size:13px;border-bottom:1px solid #222227;padding:7px 0}
+  .drow:last-child{border-bottom:0}
+  .drow .t{color:#8A8A92;font-variant-numeric:tabular-nums}
+  .bar{height:8px;border-radius:4px;background:#26262B;overflow:hidden;margin:5px 0 12px}
+  .bar i{display:block;height:100%;background:var(--red)}
+  .bar.g i{background:var(--gold)}
+  .status{font-size:10px;padding:2px 9px;border-radius:999px;background:#26262B;color:#B9B9C0;letter-spacing:.08em;text-transform:uppercase}
+  .status.ready{background:#1E3327;color:#7BC894}
+  footer.pagefoot{margin-top:70px;border-top:1px solid var(--line);padding-top:16px;color:var(--mut);font-size:13px}
+</style>
+
+<div class="wrap">
+<header>
+  <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:12px">GOOOL · Email Experience · Reviewable Mockups · Nothing Published</div>
+  <h1>Signup, Email &amp;<br>Owner Dashboard</h1>
+  <p class="sub">Six surfaces on the existing brand system: live wordmark assets, capsule product imagery, the site's ink/paper/red tokens, Anton display type, and pill controls. Boards marked <span class="chip live">already live</span> exist on goool.shop today and show only the proposed delta. Email joins with an address only; no accounts, no passwords. Support mail (hello@goool.shop) stays separate from marketing sends.</p>
+</header>
+
+<!-- 1 ─ homepage signup -->
+<div class="board">
+  <div class="bhead"><span class="bno">01</span><span class="btitle">Homepage signup section</span><span class="chip live">already live</span><span class="chip new">delta proposed</span></div>
+  <p class="note">The site already ships this section (ink band, this exact heading, email-only field, pill button). Two proposed changes only: the promise line now names what subscribers get, and consent microcopy is added under the button. Everything else is untouched.</p>
+  <div class="frames">
+    <div>
+      <p class="flabel">Desktop · proposed copy</p>
+      <div class="frame desk"><div class="band sig">
+        <h2>Get the next drop first.</h2>
+        <p class="lead">New releases, early access, and the occasional offer. No noise.</p>
+        <div class="sigrow"><div class="field">you@email.com</div><span class="pill">Join the list</span></div>
+        <p class="micro">By joining you agree to receive GOOOL email. One-tap <span class="microlink">unsubscribe</span>, anytime.</p>
+      </div></div>
+    </div>
+    <div>
+      <p class="flabel">Mobile · stacked</p>
+      <div class="frame mob"><div class="band sig">
+        <h2>Get the next drop first.</h2>
+        <p class="lead">New releases, early access, and the occasional offer. No noise.</p>
+        <div class="sigrow"><div class="field">you@email.com</div><span class="pill">Join the list</span></div>
+        <p class="micro">By joining you agree to receive GOOOL email. One-tap <span class="microlink">unsubscribe</span>, anytime.</p>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 ─ popup -->
+<div class="board">
+  <div class="bhead"><span class="bno">02</span><span class="btitle">Signup popup</span><span class="chip new">new</span></div>
+  <p class="note">Restrained: fires once per visitor after meaningful scroll, never on landing. Clear close, visible "No thanks," same consent line. Mobile uses a bottom sheet instead of a centered modal.</p>
+  <div class="frames">
+    <div>
+      <p class="flabel">Desktop · modal over page</p>
+      <div class="frame desk"><div class="pagebg">
+        <div class="fakehero"><img src="assets/wordmark-white.png" alt=""></div>
+        <div class="dim"></div>
+        <div class="modal">
+          <span class="x">×</span>
+          <img src="assets/wordmark-ink.png" alt="GOOOL" style="width:110px;margin:0 auto;display:block">
+          <h3>Get the next drop first.</h3>
+          <p>New releases and early access, straight from the source.</p>
+          <div class="field">you@email.com</div>
+          <span class="pill">Join the list</span>
+          <p class="micro">By joining you agree to receive GOOOL email. Unsubscribe anytime.</p>
+          <span class="nothanks">No thanks</span>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="flabel">Mobile · bottom sheet</p>
+      <div class="frame mob"><div class="pagebg" style="min-height:430px">
+        <div class="fakehero"><img src="assets/wordmark-white.png" alt="" style="width:70%;margin-top:46px"></div>
+        <div class="dim"></div>
+        <div class="sheet">
+          <div class="grab"></div>
+          <h3 class="anton" style="font-size:21px;margin:0 0 4px">Get the next drop first.</h3>
+          <p style="font-size:13px;color:#5A5A60;margin:0 0 14px">New releases and early access, straight from the source.</p>
+          <div class="field" style="border:1px solid #D9D9D6;background:#fff;color:#9B9B98;margin-bottom:10px">you@email.com</div>
+          <span class="pill" style="display:block">Join the list</span>
+          <p class="micro" style="color:#8A8A88">Unsubscribe anytime.</p>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 ─ success -->
+<div class="board">
+  <div class="bhead"><span class="bno">03</span><span class="btitle">Signup success state</span><span class="chip live">already live</span><span class="chip new">delta proposed</span></div>
+  <p class="note">The inline success state exists today ("You're on the list."). Proposed delta: add the route back into the store so the moment converts to browsing.</p>
+  <div class="frames">
+    <div>
+      <p class="flabel">Inline replacement of the form</p>
+      <div class="frame desk"><div class="band sig" style="padding:44px 36px">
+        <h2 style="color:#C9A227">You're on the list.</h2>
+        <p class="lead" style="margin-bottom:16px">The next drop lands in your inbox before it lands anywhere else.</p>
+        <span style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600;font-size:14px">See the First Capsule →</span>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 ─ welcome email -->
+<div class="board">
+  <div class="bhead"><span class="bno">04</span><span class="btitle">Welcome email</span><span class="chip new">new</span></div>
+  <p class="note">Sends once on signup. 520px single column, bulletproof layout, live product imagery. Slogan for this surface: Made for the Moment.</p>
+  <div class="frames"><div>
+    <p class="flabel">600px email client render</p>
+    <div class="emeta"><b>From:</b> GOOOL &lt;hello@goool.shop&gt; · <b>Subject:</b> You're on the list. · <b>Preheader:</b> Four pieces. One mark. You'll hear it first.</div>
+    <div class="frame email"><div class="eshell"><div class="ecard">
+      <div class="ehead"><img src="assets/wordmark-white.png" alt="GOOOL"></div>
+      <div class="ebody">
+        <p class="etag">Made for the Moment.</p>
+        <h2>You're in.</h2>
+        <p>The First Capsule is four pieces with one mark: a performance tee, a heavyweight hoodie, a garment-dyed staple, and a structured cap. You'll get the launch before anyone else, plus early access and the occasional offer.</p>
+      </div>
+      <div class="egrid">
+        <figure><img src="assets/tee.webp" alt="GOOOL Performance Badge Tee in black"><figcaption>Performance Badge Tee <span class="pr">· $48</span></figcaption></figure>
+        <figure><img src="assets/hoodie.webp" alt="GOOOL Core Hoodie in black"><figcaption>Core Hoodie <span class="pr">· $78</span></figcaption></figure>
+        <figure><img src="assets/casual.webp" alt="GOOOL Casual Wordmark Tee in washed black"><figcaption>Casual Wordmark Tee <span class="pr">· $38</span></figcaption></figure>
+        <figure><img src="assets/cap.webp" alt="GOOOL Touchline Cap, front logo only"><figcaption>Touchline Cap <span class="pr">· $36</span></figcaption></figure>
+      </div>
+      <div class="ecta"><span class="pill">Explore GOOOL</span></div>
+      <div class="efoot">
+        You're receiving this because you joined the list at goool.shop.<br>
+        <a href="#">Unsubscribe</a> · <a href="#">Email preferences</a> · Questions? <a href="mailto:hello@goool.shop">hello@goool.shop</a><br>
+        GOOOL · [mailing address] · goool.shop
+      </div>
+    </div></div></div>
+  </div></div>
+</div>
+
+<!-- 5 ─ drop announcement -->
+<div class="board">
+  <div class="bhead"><span class="bno">05</span><span class="btitle">Drop announcement email</span><span class="chip new">new · template</span></div>
+  <p class="note">Template held until checkout opens; it never sends while the store says Coming Soon. Lifestyle image leads, products follow, one CTA. Slogan for this surface: The Sound of Victory.</p>
+  <div class="frames"><div>
+    <p class="flabel">600px email client render</p>
+    <div class="emeta"><b>From:</b> GOOOL &lt;hello@goool.shop&gt; · <b>Subject:</b> The First Capsule is live. · <b>Preheader:</b> You're hearing it first, as promised.</div>
+    <div class="frame email"><div class="eshell"><div class="ecard">
+      <div class="ehead"><img src="assets/wordmark-white.png" alt="GOOOL"></div>
+      <img src="assets/tunnel.webp" alt="GOOOL Core Hoodie worn in a stadium tunnel" style="width:100%;display:block">
+      <div class="ebody" style="padding-top:26px">
+        <p class="etag">The Sound of Victory.</p>
+        <h2>The door is open.</h2>
+        <p>The First Capsule is live at goool.shop. You're hearing it first, exactly as promised when you joined.</p>
+      </div>
+      <div class="egrid">
+        <figure><img src="assets/tee.webp" alt="GOOOL Performance Badge Tee in black"><figcaption>Performance Badge Tee <span class="pr">· $48</span></figcaption></figure>
+        <figure><img src="assets/hoodie.webp" alt="GOOOL Core Hoodie in black"><figcaption>Core Hoodie <span class="pr">· $78</span></figcaption></figure>
+        <figure><img src="assets/casual.webp" alt="GOOOL Casual Wordmark Tee in washed black"><figcaption>Casual Wordmark Tee <span class="pr">· $38</span></figcaption></figure>
+        <figure><img src="assets/cap.webp" alt="GOOOL Touchline Cap, front logo only"><figcaption>Touchline Cap <span class="pr">· $36</span></figcaption></figure>
+      </div>
+      <div class="ecta"><span class="pill">Shop the Drop</span></div>
+      <div class="efoot">
+        You're receiving this because you joined the list at goool.shop.<br>
+        <a href="#">Unsubscribe</a> · <a href="#">Email preferences</a> · Questions? <a href="mailto:hello@goool.shop">hello@goool.shop</a><br>
+        GOOOL · [mailing address] · goool.shop
+      </div>
+    </div></div></div>
+  </div></div>
+</div>
+
+<!-- 6 ─ dashboard -->
+<div class="board">
+  <div class="bhead"><span class="bno">06</span><span class="btitle">Private owner dashboard</span><span class="chip new">new</span><span class="chip demo">all numbers are demo data</span></div>
+  <p class="note">Owner-only view (would live behind the existing preview gate). Marketing subscribers only; support email never appears here. Every figure below is illustrative.</p>
+  <div class="frames"><div>
+    <p class="flabel">Desktop · 860px</p>
+    <div class="frame dash">
+      <div class="dhead">
+        <img src="assets/wordmark-white.png" alt="GOOOL">
+        <span class="dtitle">Email · Owner Dashboard · Demo Data</span>
+      </div>
+      <div class="tiles">
+        <div class="tile"><div class="k">Subscribers</div><div class="v">128</div><div class="d">+12 this week</div></div>
+        <div class="tile"><div class="k">Signups · 7 days</div><div class="v">12</div><div class="d">best day: Sun</div></div>
+        <div class="tile"><div class="k">Welcome opens</div><div class="v">67%</div><div class="d">demo figure</div></div>
+        <div class="tile"><div class="k">Click rate</div><div class="v">9.4%</div><div class="d">demo figure</div></div>
+      </div>
+      <div class="dcols">
+        <div class="panel">
+          <h4>Recent signups (demo)</h4>
+          <div class="drow"><span>m•••@gmail.com</span><span class="t">2h ago · popup</span></div>
+          <div class="drow"><span>j•••@outlook.com</span><span class="t">6h ago · homepage</span></div>
+          <div class="drow"><span>s•••@yahoo.com</span><span class="t">1d ago · coming soon page</span></div>
+          <div class="drow"><span>a•••@gmail.com</span><span class="t">1d ago · drop page</span></div>
+          <div class="drow"><span>r•••@icloud.com</span><span class="t">2d ago · popup</span></div>
+        </div>
+        <div class="panel">
+          <h4>Campaign drafts</h4>
+          <div class="drow"><span>Welcome · automation</span><span class="status ready">Ready</span></div>
+          <div class="drow"><span>Drop announcement</span><span class="status">Held for launch</span></div>
+          <div class="drow"><span>Sample story · Sept</span><span class="status">Draft</span></div>
+          <h4 style="margin-top:18px">Performance (demo)</h4>
+          <div style="font-size:12px;color:#8A8A92">Welcome · opens 67%</div>
+          <div class="bar"><i style="width:67%"></i></div>
+          <div style="font-size:12px;color:#8A8A92">Welcome · clicks 9.4%</div>
+          <div class="bar g"><i style="width:9.4%"></i></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<footer class="pagefoot">
+  Reviewable mockups only: no provider connected, no data collected, nothing published to goool.shop. Wordmark and product imagery are the live production assets, untouched. Cap appears front-view only, blank sides and back, per the approved spec.
+</footer>
+</div>
