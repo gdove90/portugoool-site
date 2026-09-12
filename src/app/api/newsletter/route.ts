@@ -2,10 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
 
 // Newsletter signup → newsletter_signups table.
-// Works in two modes:
-//   - Supabase configured: inserts the email (duplicates are fine — unique
-//     constraint makes the insert a no-op conflict we treat as success).
-//   - Not configured yet: accepts and logs, so the UI works pre-launch.
+// Storage is required: if it is not configured the request fails with an
+// honest 503 so the visitor is never told they joined when nothing was
+// saved. Subscriber addresses are never written to logs.
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -24,9 +23,11 @@ export async function POST(req: NextRequest) {
 
   const supabase = getSupabaseAdmin();
   if (!supabase) {
-    // Pre-launch placeholder: Supabase not wired up yet.
-    console.log("[newsletter] signup (no DB configured):", email);
-    return NextResponse.json({ ok: true });
+    console.error("[newsletter] storage unavailable: SUPABASE_SERVICE_ROLE_KEY not configured");
+    return NextResponse.json(
+      { error: "Signups are temporarily down. Please try again soon." },
+      { status: 503 }
+    );
   }
 
   const { error } = await supabase

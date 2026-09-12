@@ -8,6 +8,7 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function EmailSignup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("Something went wrong. Try again.");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -19,7 +20,11 @@ export default function EmailSignup() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      if (!res.ok) throw new Error("signup failed");
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        setErrorMsg(body?.error ?? "Something went wrong. Try again.");
+        throw new Error("signup failed");
+      }
       setStatus("success");
       setEmail("");
     } catch {
@@ -75,13 +80,13 @@ export default function EmailSignup() {
 
         {status !== "success" && (
           <p className="mx-auto mt-3 max-w-md text-xs text-paper/60">
-            By joining, you agree to receive GOOOL marketing emails. Unsubscribe anytime.
+            By joining, you agree to receive GOOOL marketing emails. Opt out anytime at hello@goool.shop.
           </p>
         )}
 
         {status === "error" && (
           <p className="mt-3 text-sm text-red" role="alert">
-            Something went wrong. Try again.
+            {errorMsg}
           </p>
         )}
       </div>

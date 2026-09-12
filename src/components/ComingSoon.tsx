@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 export default function ComingSoon() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("Something went wrong. Try again.");
 
   // Discreet team-access unlock (validated server-side, sets the gate cookie)
   const [showAccess, setShowAccess] = useState(false);
@@ -54,7 +55,11 @@ export default function ComingSoon() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        setErrorMsg(body?.error ?? "Something went wrong. Try again.");
+        throw new Error();
+      }
       setStatus("success");
     } catch {
       setStatus("error");
@@ -143,7 +148,7 @@ export default function ComingSoon() {
           </form>
         )}
         {status === "error" && (
-          <p className="mt-3 text-sm text-red" role="alert">Something went wrong. Try again.</p>
+          <p className="mt-3 text-sm text-red" role="alert">{errorMsg}</p>
         )}
       </div>
 
