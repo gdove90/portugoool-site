@@ -62,7 +62,14 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-    if (!isAvailableForSale(product)) {
+    // Controlled-testing exception to Coming Soon: only when BOTH the
+    // Stripe key is a TEST key (sk_test_) and CHECKOUT_TEST_MODE=true.
+    // Real (live) keys can never use this path, the whole site sits
+    // behind the preview cookie anyway, and test-mode payments cannot
+    // charge money. Remove CHECKOUT_TEST_MODE after verification.
+    const testCheckout =
+      secretKey.startsWith("sk_test_") && process.env.CHECKOUT_TEST_MODE === "true";
+    if (!isAvailableForSale(product) && !testCheckout) {
       return NextResponse.json(
         { error: `${product.name} is coming soon and cannot be purchased yet.` },
         { status: 400 }

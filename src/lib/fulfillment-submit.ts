@@ -333,9 +333,17 @@ export async function reconcileOrder(
 }
 
 /**
- * Operator-authorized release: after a HUMAN has verified in the Apliiq
- * dashboard that no order exists for this reference, move a parked
- * order back to pending_submission so exactly one retry can run.
+ * Operator-authorized release. AUTHORIZATION BAR (read before using):
+ * our client aborting a request only stops US waiting — Apliiq may
+ * still have received and may still be processing the original order.
+ * An empty dashboard or empty list is NOT sufficient evidence. Release
+ * only after AFFIRMATIVE verification that the original submission was
+ * not accepted and is not still processing: enough time elapsed for
+ * supplier-side processing, the dashboard checked for the order number
+ * across ALL states (including unprocessed/held orders), and, if any
+ * ambiguity remains, Apliiq support has confirmed in writing that no
+ * order exists for this order_number. Then this moves the parked order
+ * back to pending_submission so exactly one retry can run.
  */
 export async function releaseOrder(
   store: OrdersStore,

@@ -18,6 +18,11 @@ import { reconcileOrder, releaseOrder, submitPaidOrder } from "@/lib/fulfillment
 //              dashboard and then uses…
 //   release    …operator-authorized move needs_reconcile →
 //              pending_submission (exactly one retry becomes possible).
+//              A client timeout or an empty dashboard/list is NOT
+//              sufficient: Apliiq may have received and may still be
+//              processing the original. Release only after affirmative
+//              verification (see the release runbook in
+//              designs/11_fulfillment/apliiq-product-mapping.md).
 //   submit     Submit a pending_submission order now — the recovery
 //              path for queued orders (a Stripe event replay would hit
 //              event dedupe and never reach submission). Applies the

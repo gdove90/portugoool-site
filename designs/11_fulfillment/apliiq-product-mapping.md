@@ -121,6 +121,35 @@ cover S-2XL on all three additions (ST720 and IND4000 run xs-xxxl,
 per-size stock is confirmed at order time. Seven saved products total;
 no orders placed.
 
+## Manual recovery runbook (orders parked in needs_reconcile)
+
+An order lands in `needs_reconcile` when a submission attempt timed
+out or got an ambiguous response. THE TRAP TO AVOID: our client
+aborting the request only stopped US from waiting — Apliiq may have
+received the order and may still be processing it. An empty dashboard
+or an empty API listing is NOT proof of absence (processing delay,
+pagination, undocumented lookup semantics).
+
+Before authorizing a retry (`action: release` on /api/fulfillment-ops),
+ALL of the following:
+
+1. Run `action: reconcile` first. If Apliiq's listing shows the order
+   number, it is recorded automatically and you are done — no retry.
+2. Wait long enough for supplier-side processing (give it hours, not
+   minutes, unless support says otherwise).
+3. Check the Apliiq dashboard for the order number (GOOOL-XXXXXXXX)
+   across ALL order states, including unprocessed/held/draft orders,
+   not just the default view.
+4. If anything is ambiguous — or the amount at stake makes a duplicate
+   painful — email Apliiq support with the order_number and get
+   written confirmation that no such order exists.
+5. Only then `action: release` (parks → pending_submission), then
+   `action: submit`. The attempt lock still guarantees at most one
+   in-flight submission.
+
+Duplicates cost real money and real garments; when in doubt, leave the
+order parked and ask.
+
 ## Known deviation log
 
 - 2026-09-14: the original Apliiq drafts used wrong artwork (an 8 in
