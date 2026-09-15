@@ -42,6 +42,29 @@ changes). First-generation saves rendered art off-center or missing;
 all four were rebuilt with event-driven positioning and their grid
 mockups visually confirmed centered.
 
+## Alternate colorway samples (added 2026-09-15)
+
+Owner-approved second colorway (concept board 06; final colors chosen
+from Apliiq's actual stock). Artwork masters recolored pixel-for-pixel
+on the approved palette: navy #182A40, cream #EEE5D5 (unused; white tee
+took the navy badge instead), burgundy #742E3D. Production files live
+in `designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/`.
+
+| Apliiq product id | Name | Verified state |
+|---|---|---|
+| 6099046 | GOOOL Performance Badge Tee White | ST720 White only; navy/burgundy crest 5.00x6.40 in, transfer, centered (preview verified) |
+| 6099060 | GOOOL Casual Wordmark Tee Grey | 4810GD Washed Grey only; navy/burgundy wordmark 6.75x2.34 in, transfer, centered, contrast verified |
+| 6099064 | GOOOL Core Hoodie Bone | IND4000 Bone only; navy/burgundy wordmark 6.75x2.34 in, transfer, centered high chest (rebuilt on approved palette; off-palette v1 deleted) |
+
+Notes: Apliiq stocks NO navy ST720 (white/silver/true royal/black/true
+red/iron grey only) and NO bone 4810GD (13 washed colors) - owner chose
+White and Washed Grey instead. The concept board's navy cap was NOT
+approved; the single Black/Natural Touchline Cap is unchanged. SKUs
+cover S-2XL on all three additions (ST720 and IND4000 run xs-xxxl,
+4810GD xs-4xl); Bella+Canvas provides no automated inventory feed, so
+per-size stock is confirmed at order time. Seven saved products total;
+no orders placed.
+
 ## Known deviation log
 
 - 2026-09-14: the original Apliiq drafts used wrong artwork (an 8 in
