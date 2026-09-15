@@ -24,8 +24,36 @@ in Stripe → owner places the matching Apliiq order by hand from this
 table. Apliiq account: hello@goool.shop. `supplier_type` in the schema is
 ready for automated routing later.
 
+## Apliiq saved products (built 2026-09-14, Claude-driven session)
+
+| Apliiq product id | Name | Status |
+|---|---|---|
+| 6098934 | GOOOL Performance Badge Tee | Correct: ST720 Black, packet crest 5.00x6.40 in, transfer, centered upper chest |
+| 6098923 | GOOOL Casual Wordmark Tee | Correct: 4810GD Washed Black, packet wordmark 6.75x2.34 in, transfer, centered |
+| 6098879 | GOOOL Core Hoodie | Correct: IND4000 Black, packet wordmark 6.75x2.34 in, transfer, centered high chest |
+| 6098898 | GOOOL Touchline Cap | Correct: OTTO 31-069 Black/Natural, front flat embroidery 3.75x1.30 in, black + cranberry (201C) threads, no puff |
+| 6082421 | (old) GOOOL Casual Wordmark Tee | Artless leftover, replaced by 6098923; DELETE or rename OLD |
+| 6082418 | (old) Sustainable Athletic Tee | Artless leftover, replaced by 6098934; DELETE or rename OLD |
+
 ## Known deviation log
 
+- 2026-09-14: the original Apliiq drafts used wrong artwork (an 8 in
+  shoulder-variant wordmark on the 4810GD; front-CC-DARK on the ST720).
+  Both products were rebuilt from the exact packet files; see the
+  table above.
+- 2026-09-14 OWNER DECISION: the cap ships FRONT WORDMARK ONLY. The
+  packet's right-side "THE SOUND OF VICTORY" embroidery is dropped,
+  matching the website photos.
+- 2026-09-14 retraction: an earlier report that 4810GD Washed Black and
+  ST720 were discontinued at Apliiq was FALSE (hidden template text was
+  misread); both blanks are live.
+- Cap red thread: Cranberry (PMS 201C), the numerically nearest stock
+  thread to #C61322; confirm on the digitized proof.
+- New products may carry an extra default color (e.g. Silver on ST720,
+  Bone on IND4000) alongside Black; remove extras in the product's
+  "color offered" menu before ordering.
+
+## Superseded log entries
 - 2026-09-14: Apliiq draft of the 4810GD casual tee found using
   `goool-wordmark-v2-shoulder-dark-7.png` at 8 × 2.75 in. Both wrong
   (file not in the packet manifest; size exceeds spec 6.75 × 2.34 in).
@@ -33,7 +61,6 @@ ready for automated routing later.
   sample or customer order.
 
 ## Release gate
-
 Per the packet: no customer fulfillment until the physical samples are
 approved in writing by the owner. Sample sizes for the three garments
 are still OWNER TO CONFIRM.
