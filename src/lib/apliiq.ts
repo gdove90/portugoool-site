@@ -79,24 +79,40 @@ export function apliiqSubmitEnabled(): boolean {
 }
 
 /**
+ * A destination only counts as a simulator when it is a loopback URL.
+ * Setting APLIIQ_API_BASE to anything else — including, explicitly,
+ * https://api.apliiq.com — gets the full real-destination treatment.
+ */
+const SIMULATOR_HOSTS = new Set(["localhost", "127.0.0.1", "[::1]", "::1"]);
+
+export function isSimulatedDestination(): boolean {
+  const base = process.env.APLIIQ_API_BASE;
+  if (!base) return false;
+  try {
+    return SIMULATOR_HOSTS.has(new URL(base).hostname.toLowerCase());
+  } catch {
+    return false; // unparseable base: treat as real → strictest checks
+  }
+}
+
+/**
  * Environment isolation for REAL submissions — never a matter of
- * remembering which env vars are set where. A submission that would
- * reach api.apliiq.com (no APLIIQ_API_BASE override) additionally
- * requires ALL of:
- *   · a LIVE-mode Stripe event (test events can never order garments)
+ * remembering which env vars are set where. Any non-loopback
+ * destination (the default api.apliiq.com, an explicit override to it,
+ * or anything unrecognizable) additionally requires ALL of:
+ *   · a LIVE-mode payment (test events can never order garments)
  *   · Netlify production context (previews/branch deploys are refused;
  *     locally CONTEXT is unset, so local runs are refused too)
- * An overridden APLIIQ_API_BASE targets a simulator by definition, so
- * only the explicit APLIIQ_SUBMIT_ENABLED flag applies there.
+ * Only loopback simulators are exempt, and apliiqFetch refuses
+ * redirects, so a simulator can never bounce a request to the real API.
  */
 export function submissionEnvironmentAllowed(livemode: boolean): {
   allowed: boolean;
   reason?: string;
 } {
-  const overridden = Boolean(process.env.APLIIQ_API_BASE);
-  if (overridden) return { allowed: true };
+  if (isSimulatedDestination()) return { allowed: true };
   if (!livemode) {
-    return { allowed: false, reason: "Stripe TEST-mode event; real Apliiq submission refused." };
+    return { allowed: false, reason: "Stripe TEST-mode payment; real Apliiq submission refused." };
   }
   if (process.env.CONTEXT !== "production") {
     return {
@@ -137,6 +153,9 @@ async function apliiqFetch(
       },
       body: init.body,
       signal: controller.signal,
+      // A redirect could move an authenticated order request to another
+      // host (e.g. a "simulator" bouncing to the real API). Refuse them.
+      redirect: "error",
     });
   } finally {
     clearTimeout(timer);

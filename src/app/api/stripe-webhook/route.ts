@@ -59,7 +59,8 @@ function readItemsMetadata(md: Record<string, string> | null): MetaItem[] | null
 
 function buildOrderRows(
   session: Stripe.Checkout.Session,
-  paid: boolean
+  paid: boolean,
+  livemode: boolean
 ): { order: OrderRow; items: OrderItemRow[]; unmapped: string[] } | { error: string } {
   const metaItems = readItemsMetadata(session.metadata);
   if (!metaItems || metaItems.length === 0) {
@@ -129,6 +130,11 @@ function buildOrderRows(
     submission_last_error:
       unmapped.length > 0 ? `Unmapped variants: ${unmapped.join("; ")}` : null,
     paid_at: paid ? new Date().toISOString() : null,
+    // Persisted so later ops-driven submissions apply the same
+    // live-mode gate the original event carried.
+    livemode,
+    submission_attempt_id: null,
+    submission_started_at: null,
   };
 
   return { order, items, unmapped };
@@ -197,7 +203,7 @@ export async function POST(req: NextRequest) {
       session.payment_status === "no_payment_required" ||
       event.type === "checkout.session.async_payment_succeeded";
 
-    const built = buildOrderRows(session, paid);
+    const built = buildOrderRows(session, paid, event.livemode);
     if ("error" in built) {
       console.error("stripe-webhook: cannot build order:", built.error);
       // 200: retrying will never fix a malformed session; keep it visible in logs.

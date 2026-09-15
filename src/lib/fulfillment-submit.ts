@@ -2,6 +2,7 @@ import crypto from "crypto";
 import {
   apliiqSubmitEnabled,
   findOrderByNumber,
+  isSimulatedDestination,
   submissionEnvironmentAllowed,
   submitOrder,
   ApliiqOrderPayload,
@@ -119,6 +120,7 @@ export interface SubmitOutcome {
     | "left_pending_disabled"
     | "left_pending_environment"
     | "lock_not_acquired"
+    | "stale_result_discarded"
     | "failed"
     | "needs_reconcile"
     | "not_eligible";
@@ -160,36 +162,78 @@ export async function submitPaidOrder(
     return { action: "failed", detail: payload.error };
   }
 
-  // The lock: only one caller wins this transition.
-  const locked = await store.transitionSubmission(orderId, "pending_submission", "submitting");
+  // The lock: only one caller wins this transition. The attempt id +
+  // start time identify THIS in-flight request: result writes are
+  // guarded on the attempt id (a stale response can never overwrite a
+  // newer attempt), and reconciliation refuses to touch an attempt
+  // younger than the expiry window.
+  const attemptId = crypto.randomUUID();
+  const locked = await store.transitionSubmission(orderId, "pending_submission", "submitting", {
+    submission_attempt_id: attemptId,
+    submission_started_at: new Date().toISOString(),
+  });
   if (!locked) return { action: "lock_not_acquired" };
 
   const result = await submitOrder(payload);
   switch (result.outcome) {
-    case "accepted":
-      await store.transitionSubmission(orderId, "submitting", "accepted", {
-        apliiq_order_id: result.apliiqOrderId,
-        submission_last_error: null,
-      });
+    case "accepted": {
+      const won = await store.transitionSubmission(
+        orderId,
+        "submitting",
+        "accepted",
+        { apliiq_order_id: result.apliiqOrderId, submission_last_error: null },
+        attemptId
+      );
+      if (!won) return { action: "stale_result_discarded", detail: "accepted (attempt superseded)" };
       await store.setFulfillmentStatus(orderId, "submitted");
       return { action: "submitted_accepted", detail: result.apliiqOrderId };
-    case "received_pending":
-      await store.transitionSubmission(orderId, "submitting", "submitted", {
-        apliiq_order_id: result.apliiqOrderId,
-        submission_last_error: result.message || null,
-      });
+    }
+    case "received_pending": {
+      const won = await store.transitionSubmission(
+        orderId,
+        "submitting",
+        "submitted",
+        { apliiq_order_id: result.apliiqOrderId, submission_last_error: result.message || null },
+        attemptId
+      );
+      if (!won) return { action: "stale_result_discarded", detail: "202 (attempt superseded)" };
       return { action: "submitted_pending", detail: result.message };
-    case "rejected":
-      await store.transitionSubmission(orderId, "submitting", "failed", {
-        submission_last_error: `HTTP ${result.status}: ${result.message}`,
-      });
+    }
+    case "rejected": {
+      const won = await store.transitionSubmission(
+        orderId,
+        "submitting",
+        "failed",
+        { submission_last_error: `HTTP ${result.status}: ${result.message}` },
+        attemptId
+      );
+      if (!won) return { action: "stale_result_discarded", detail: "rejection (attempt superseded)" };
       return { action: "failed", detail: result.message };
-    case "unknown":
-      await store.transitionSubmission(orderId, "submitting", "needs_reconcile", {
-        submission_last_error: result.message,
-      });
+    }
+    case "unknown": {
+      const won = await store.transitionSubmission(
+        orderId,
+        "submitting",
+        "needs_reconcile",
+        { submission_last_error: result.message },
+        attemptId
+      );
+      if (!won) return { action: "stale_result_discarded", detail: "timeout (attempt superseded)" };
       return { action: "needs_reconcile", detail: result.message };
+    }
   }
+}
+
+/**
+ * How long a `submitting` attempt is considered possibly-active. Must
+ * comfortably exceed the HTTP client timeout (the fetch is hard-aborted
+ * at APLIIQ_TIMEOUT_MS, so past this window no request can still be in
+ * flight from this codebase).
+ */
+export function submissionExpiryMs(): number {
+  const clientTimeout = Number(process.env.APLIIQ_TIMEOUT_MS ?? 20000);
+  const configured = Number(process.env.APLIIQ_SUBMIT_EXPIRY_MS ?? 15 * 60 * 1000);
+  return Math.max(configured, clientTimeout * 3);
 }
 
 /**
@@ -210,9 +254,33 @@ export async function reconcileOrder(
     return { resolved: false, detail: `Order is ${from}; nothing to reconcile.` };
   }
 
+  // An attempt younger than the expiry window may still be in flight
+  // (its HTTP request is hard-aborted at the client timeout, and the
+  // expiry is enforced to exceed that) — touching it could race the
+  // live request. Refuse.
+  if (from === "submitting") {
+    const startedAt = order.submission_started_at
+      ? new Date(order.submission_started_at).getTime()
+      : 0;
+    const age = Date.now() - startedAt;
+    if (startedAt > 0 && age < submissionExpiryMs()) {
+      return {
+        resolved: false,
+        detail: `Submission attempt is ${Math.round(age / 1000)}s old and may still be active (expiry ${Math.round(submissionExpiryMs() / 1000)}s); refusing to reconcile a live attempt.`,
+      };
+    }
+  }
+
   const referenceDates = [order.paid_at ? new Date(order.paid_at) : new Date()];
   const lookup = await findOrderByNumber(orderNumber(orderId), referenceDates);
   if (lookup === null) {
+    // Ambiguity: an expired `submitting` order at least demotes to
+    // needs_reconcile so its dead attempt no longer looks live.
+    if (from === "submitting") {
+      await store.transitionSubmission(orderId, "submitting", "needs_reconcile", {
+        submission_last_error: "Attempt expired; Apliiq listing unavailable or unrecognizable.",
+      });
+    }
     return {
       resolved: false,
       detail:
@@ -231,13 +299,63 @@ export async function reconcileOrder(
         : "State changed concurrently; re-inspect the order.",
     };
   }
+
+  // NOT FOUND. Against the real Apliiq API, absence from the month
+  // listing is not proof the order was never accepted (processing
+  // delays, pagination, undocumented lookup semantics) — so absence
+  // NEVER auto-authorizes another real submission. A human verifies in
+  // the Apliiq dashboard and uses the ops "release" action. Loopback
+  // simulators may opt in for tests via APLIIQ_TRUST_LIST_ABSENCE.
+  const trustAbsence =
+    isSimulatedDestination() && process.env.APLIIQ_TRUST_LIST_ABSENCE === "true";
+  if (!trustAbsence) {
+    if (from === "submitting") {
+      await store.transitionSubmission(orderId, "submitting", "needs_reconcile", {
+        submission_last_error:
+          "Attempt expired; not in Apliiq's listing, but absence is not authoritative. Verify in the Apliiq dashboard, then use the ops release action.",
+      });
+    }
+    return {
+      resolved: false,
+      detail:
+        "Order is absent from Apliiq's listing, but absence is not authoritative (processing delay/pagination possible). Verify manually in the Apliiq dashboard, then POST action=release to authorize one retry.",
+    };
+  }
   const moved = await store.transitionSubmission(orderId, from, "pending_submission", {
     submission_last_error: null,
   });
   return {
     resolved: moved,
     detail: moved
-      ? "Apliiq confirmed no record; order released for a safe retry."
+      ? "Simulator confirmed no record; order released for a safe retry."
+      : "State changed concurrently; re-inspect the order.",
+  };
+}
+
+/**
+ * Operator-authorized release: after a HUMAN has verified in the Apliiq
+ * dashboard that no order exists for this reference, move a parked
+ * order back to pending_submission so exactly one retry can run.
+ */
+export async function releaseOrder(
+  store: OrdersStore,
+  orderId: string
+): Promise<{ resolved: boolean; detail: string }> {
+  const order = await store.getOrderById(orderId);
+  if (!order) return { resolved: false, detail: "Order not found." };
+  if (order.submission_status !== "needs_reconcile") {
+    return {
+      resolved: false,
+      detail: `Order is ${order.submission_status}; only needs_reconcile orders can be released (run reconcile first).`,
+    };
+  }
+  const moved = await store.transitionSubmission(orderId, "needs_reconcile", "pending_submission", {
+    submission_last_error: null,
+  });
+  return {
+    resolved: moved,
+    detail: moved
+      ? "Released for one retry on operator authority."
       : "State changed concurrently; re-inspect the order.",
   };
 }

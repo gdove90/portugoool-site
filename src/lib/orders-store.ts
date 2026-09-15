@@ -54,6 +54,11 @@ export interface OrderRow {
   apliiq_order_id: string | null;
   submission_last_error: string | null;
   paid_at: string | null;
+  /** Payment mode persisted from the Stripe event; gates real submission. */
+  livemode: boolean;
+  /** Identity + start time of the submission attempt holding the lock. */
+  submission_attempt_id: string | null;
+  submission_started_at: string | null;
 }
 
 export interface ShipmentRow {
@@ -88,7 +93,14 @@ export interface OrdersStore {
     orderId: string,
     from: OrderRow["submission_status"],
     to: OrderRow["submission_status"],
-    fields?: Partial<Pick<OrderRow, "apliiq_order_id" | "submission_last_error">>
+    fields?: Partial<
+      Pick<
+        OrderRow,
+        "apliiq_order_id" | "submission_last_error" | "submission_attempt_id" | "submission_started_at"
+      >
+    >,
+    /** When set, the update applies only if the stored attempt id matches. */
+    guardAttemptId?: string
   ): Promise<boolean>;
   setOrderStatus(orderId: string, status: OrderRow["status"]): Promise<void>;
   addShipment(shipment: ShipmentRow): Promise<void>;
@@ -189,14 +201,21 @@ class SupabaseStore implements OrdersStore {
     orderId: string,
     from: OrderRow["submission_status"],
     to: OrderRow["submission_status"],
-    fields: Partial<Pick<OrderRow, "apliiq_order_id" | "submission_last_error">> = {}
+    fields: Partial<
+      Pick<
+        OrderRow,
+        "apliiq_order_id" | "submission_last_error" | "submission_attempt_id" | "submission_started_at"
+      >
+    > = {},
+    guardAttemptId?: string
   ) {
-    const { data, error } = await this.db
+    let q = this.db
       .from("orders")
       .update({ submission_status: to, ...fields })
       .eq("id", orderId)
-      .eq("submission_status", from)
-      .select("id");
+      .eq("submission_status", from);
+    if (guardAttemptId !== undefined) q = q.eq("submission_attempt_id", guardAttemptId);
+    const { data, error } = await q.select("id");
     if (error) throw new Error(`submission transition failed: ${error.message}`);
     return (data?.length ?? 0) > 0;
   }
@@ -326,12 +345,19 @@ class FileStore implements OrdersStore {
     orderId: string,
     from: OrderRow["submission_status"],
     to: OrderRow["submission_status"],
-    fields: Partial<Pick<OrderRow, "apliiq_order_id" | "submission_last_error">> = {}
+    fields: Partial<
+      Pick<
+        OrderRow,
+        "apliiq_order_id" | "submission_last_error" | "submission_attempt_id" | "submission_started_at"
+      >
+    > = {},
+    guardAttemptId?: string
   ) {
     return this.withLock(() => {
       const s = this.load();
       const o = s.orders[orderId];
       if (!o || o.submission_status !== from) return false;
+      if (guardAttemptId !== undefined && o.submission_attempt_id !== guardAttemptId) return false;
       Object.assign(o, { submission_status: to }, fields);
       this.save(s);
       return true;

@@ -38,19 +38,25 @@ Netlify `CONTEXT=production` AND a live-mode Stripe event — test
 events, previews, and local runs are refused in code, not by
 convention. Apliiq account: hello@goool.shop.
 
-### Rollout order (each step verified behind the closed purchase gate before the next)
+### Rollout order (every step happens and is verified while purchasing stays CLOSED; purchasing opens LAST)
 
 1. Apply migration 0026 in the Supabase SQL editor.
 2. Configure Stripe (secret key, webhook endpoint + secret, shipping
    rate, tax decision) — verify with Stripe TEST mode end to end; the
-   environment gate keeps test events away from Apliiq by design.
+   in-code environment gate refuses test events toward Apliiq even if
+   every flag is set.
 3. Configure the Apliiq custom store (APP_ID / shared secret,
    Fulfillment URL) and `FULFILLMENT_OPS_KEY`.
 4. Transactional email decision (Resend or equivalent) — customers
    currently get the order reference on /success plus Stripe's receipt.
 5. Physical samples approved in writing (the packet release gate).
-6. Open purchasing (`availableForSale: true`) — and only after that,
-   flip `APLIIQ_SUBMIT_ENABLED=true` in the production context.
+6. Enable fulfillment: `APLIIQ_SUBMIT_ENABLED=true` in the production
+   context — purchasing is still closed, so nothing can flow yet.
+   Review any queued orders (`submission_status=pending_submission`,
+   `needs_reconcile`, `failed`) via the ops endpoint and clear the
+   queue deliberately.
+7. Open purchasing LAST (`availableForSale: true`), only after
+   fulfillment readiness is demonstrated end to end.
 
 ## Verified per-size fulfillment SKUs (read from Apliiq records 2026-09-15)
 

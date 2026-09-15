@@ -283,10 +283,12 @@ async function main() {
     const sessR6 = makeSession();
     await sendEvent("checkout.session.completed", sessR6);
     let o = orderBySession(sessR6.id);
-    // simulate a crash: force the state back to `submitting`
+    // simulate a crash: force the state back to an EXPIRED `submitting`
     const s = readStore();
     s.orders[o.id].submission_status = "submitting";
     s.orders[o.id].apliiq_order_id = null;
+    s.orders[o.id].submission_attempt_id = "attempt-crashed";
+    s.orders[o.id].submission_started_at = new Date(Date.now() - 2 * 3600 * 1000).toISOString();
     writeStore(s);
 
     // (a) Apliiq HAS it → recorded, no resubmission
@@ -300,12 +302,48 @@ async function main() {
     const s2 = readStore();
     s2.orders[o.id].submission_status = "submitting";
     s2.orders[o.id].apliiq_order_id = null;
+    s2.orders[o.id].submission_attempt_id = "attempt-crashed-2";
+    s2.orders[o.id].submission_started_at = new Date(Date.now() - 2 * 3600 * 1000).toISOString();
     writeStore(s2);
     await scenario({ mode: "ok", listOrders: [] });
     const rec2 = await opsReconcile(o.id);
     check("R6b stuck `submitting` + absent → released for safe retry", rec2.body.resolved === true && orderBySession(sessR6.id).submission_status === "pending_submission", JSON.stringify(rec2.body));
     await sendEvent("checkout.session.completed", sessR6);
     check("R6c released order resubmits exactly once", orderBySession(sessR6.id).submission_status === "accepted" && mock.posts.length === postsBefore + 1, `posts=${mock.posts.length - postsBefore}`);
+  }
+
+  // N1. reconciliation refuses an ACTIVE submission attempt
+  {
+    await scenario({ mode: "ok" });
+    const sessN1 = makeSession();
+    await sendEvent("checkout.session.completed", sessN1);
+    const o = orderBySession(sessN1.id);
+    const s = readStore();
+    s.orders[o.id].submission_status = "submitting";
+    s.orders[o.id].submission_attempt_id = "attempt-live";
+    s.orders[o.id].submission_started_at = new Date().toISOString(); // just started
+    writeStore(s);
+    const rec = await opsReconcile(o.id);
+    check("N1 reconcile refuses a live `submitting` attempt", rec.body.resolved === false && /may still be active/.test(rec.body.detail) && orderBySession(sessN1.id).submission_status === "submitting", JSON.stringify(rec.body));
+  }
+
+  // N2. expired attempt + ambiguous listing → demoted to needs_reconcile, still parked
+  {
+    await scenario({ mode: "ok" });
+    const sessN2 = makeSession();
+    await sendEvent("checkout.session.completed", sessN2);
+    const o = orderBySession(sessN2.id);
+    const s = readStore();
+    s.orders[o.id].submission_status = "submitting";
+    s.orders[o.id].submission_attempt_id = "attempt-dead";
+    s.orders[o.id].submission_started_at = new Date(Date.now() - 2 * 3600 * 1000).toISOString();
+    s.orders[o.id].apliiq_order_id = null;
+    writeStore(s);
+    await scenario({ mode: "ok", listBody: { unexpected: true } });
+    const rec = await opsReconcile(o.id);
+    const after = orderBySession(sessN2.id);
+    check("N2 expired attempt + ambiguous listing → needs_reconcile, parked", rec.body.resolved === false && after.submission_status === "needs_reconcile", `${after.submission_status}`);
+    await scenario({ mode: "ok" });
   }
 
   // R1. snapshot immutability: metadata price/SKU win over the catalog

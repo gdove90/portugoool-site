@@ -52,7 +52,8 @@ end $$;
 do $$
 declare n1 int; n2 int;
 begin
-  update public.orders set submission_status = 'submitting'
+  update public.orders set submission_status = 'submitting',
+    submission_attempt_id = 'attempt-A', submission_started_at = now()
     where stripe_session_id = 'cs_test_dupe' and submission_status = 'pending_submission';
   get diagnostics n1 = row_count;
   update public.orders set submission_status = 'submitting'
@@ -62,6 +63,29 @@ begin
     raise exception 'FAIL: CAS transition rows: first=% second=%', n1, n2;
   end if;
   raise notice 'PASS: compare-and-set transition wins exactly once (1 then 0 rows)';
+end $$;
+
+-- 4b. attempt-id guard: a stale attempt cannot write the result
+do $$
+declare n1 int; n2 int;
+begin
+  update public.orders set submission_status = 'accepted'
+    where stripe_session_id = 'cs_test_dupe'
+      and submission_status = 'submitting'
+      and submission_attempt_id = 'attempt-STALE';
+  get diagnostics n1 = row_count;
+  update public.orders set submission_status = 'accepted'
+    where stripe_session_id = 'cs_test_dupe'
+      and submission_status = 'submitting'
+      and submission_attempt_id = 'attempt-A';
+  get diagnostics n2 = row_count;
+  if n1 <> 0 or n2 <> 1 then
+    raise exception 'FAIL: attempt guard rows: stale=% current=%', n1, n2;
+  end if;
+  -- restore for later assertions
+  update public.orders set submission_status = 'pending_submission'
+    where stripe_session_id = 'cs_test_dupe';
+  raise notice 'PASS: attempt-id guard blocks stale writes (0 rows) and admits the owner (1 row)';
 end $$;
 
 -- 5. order snapshot columns persist and read back intact
@@ -75,13 +99,15 @@ begin
     amount_tax_cents = 0,
     shipping_name = 'Test Buyer',
     shipping_address = '{"line1":"1 Stadium Way","city":"Providence","state":"RI","postal_code":"02901","country":"US"}'::jsonb,
-    paid_at = now()
+    paid_at = now(),
+    livemode = true
   where stripe_session_id = 'cs_test_dupe';
   select * into r from public.orders where stripe_session_id = 'cs_test_dupe';
-  if r.shipping_address->>'line1' <> '1 Stadium Way' or r.amount_shipping_cents <> 950 then
+  if r.shipping_address->>'line1' <> '1 Stadium Way' or r.amount_shipping_cents <> 950
+     or r.livemode <> true then
     raise exception 'FAIL: snapshot columns did not round-trip';
   end if;
-  raise notice 'PASS: order snapshot columns round-trip (jsonb address, amounts)';
+  raise notice 'PASS: order snapshot columns round-trip (jsonb address, amounts, livemode)';
 end $$;
 
 -- 6. order_items snapshot columns + FK

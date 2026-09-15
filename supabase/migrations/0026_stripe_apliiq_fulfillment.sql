@@ -28,6 +28,12 @@ alter table public.orders
   add column if not exists apliiq_order_id text,
   add column if not exists submission_status text not null default 'not_submitted',
   add column if not exists submission_last_error text,
+  -- payment mode from the Stripe event; gates real supplier submission
+  add column if not exists livemode boolean not null default false,
+  -- identity + start time of the submission attempt holding the lock:
+  -- stale responses are discarded and live attempts are never reconciled
+  add column if not exists submission_attempt_id text,
+  add column if not exists submission_started_at timestamptz,
   add column if not exists paid_at timestamptz,
   add column if not exists submitted_at timestamptz,
   -- customer-facing lookup handle: unguessable, printed on confirmations
