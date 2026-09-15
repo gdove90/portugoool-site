@@ -94,7 +94,9 @@ export default function ProductDetail({ product }: { product: Product }) {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              // contain, not cover: portrait model shots must never crop
+              // faces or hems; square garment mockups fill the frame either way
+              className="object-contain"
             />
             {product.isLimitedDrop && (
               <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold">
@@ -116,7 +118,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   }`}
                   aria-label={`View image ${i + 1}`}
                 >
-                  <Image src={img.src} alt="" fill sizes="64px" className="object-cover" />
+                  <Image src={img.src} alt="" fill sizes="64px" className="object-cover object-top" />
                 </button>
               ))}
             </div>
