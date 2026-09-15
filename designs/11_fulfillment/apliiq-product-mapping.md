@@ -17,12 +17,43 @@ Shared rules (all garments): DTF/transfer front only · backs blank ·
 sizes S–2XL (cap One Size) · GOOOL 1×1 in satin private label on the
 three garments, never the cap · center tolerance ±0.25 in max, scale ±2%.
 
-## Order flow (until automation exists)
+## Order flow (automated pipeline built 2026-09-15; live sales still gated)
 
-Checkout is closed today (Coming Soon). When Stripe opens: orders arrive
-in Stripe → owner places the matching Apliiq order by hand from this
-table. Apliiq account: hello@goool.shop. `supplier_type` in the schema is
-ready for automated routing later.
+Checkout is closed today (Coming Soon). The integration exists and is
+tested end to end against simulated services:
+
+Stripe Checkout → `/api/stripe-webhook` (signature-verified, the only
+payment authority) → order snapshot in Supabase (`orders`,
+`order_items`, `stripe_events`, `order_shipments`; migration 0026) →
+Apliiq `POST /v1/Order` using the per-size SKUs below → Apliiq
+Fulfillment URL callback (`/api/apliiq-fulfillment`, HMAC-verified) →
+`/track-order` lookup by order reference + email.
+
+The executable mapping lives in `src/lib/fulfillment.ts`; this table
+mirrors it. Real supplier submission is hard-gated behind
+`APLIIQ_SUBMIT_ENABLED=true` (unset everywhere today). Apliiq account:
+hello@goool.shop.
+
+## Verified per-size fulfillment SKUs (read from Apliiq records 2026-09-15)
+
+A saved-design id is NOT a SKU. Apliiq's Order API takes the per-size
+SKUs below (`APQ-{savedProduct}S{sizeCode}A1`). Launch sizes S–2XL only
+(cap One Size); XS/3XL+ SKUs exist at Apliiq but are not sold.
+
+| Garment / color | Apliiq id | S | M | L | XL | 2XL |
+|---|---|---|---|---|---|---|
+| Perf Tee Black | 6098962 | APQ-6098962S6A1 | APQ-6098962S7A1 | APQ-6098962S8A1 | APQ-6098962S1A1 | APQ-6098962S2A1 |
+| Perf Tee White | 6099046 | APQ-6099046S6A1 | APQ-6099046S7A1 | APQ-6099046S8A1 | APQ-6099046S1A1 | APQ-6099046S2A1 |
+| Perf Tee True Royal | 6099129 | APQ-6099129S6A1 | APQ-6099129S7A1 | APQ-6099129S8A1 | APQ-6099129S1A1 | APQ-6099129S2A1 |
+| Hoodie Black | 6098974 | APQ-6098974S6A1 | APQ-6098974S7A1 | APQ-6098974S8A1 | APQ-6098974S1A1 | APQ-6098974S2A1 |
+| Hoodie Bone | 6099064 | APQ-6099064S6A1 | APQ-6099064S7A1 | APQ-6099064S8A1 | APQ-6099064S1A1 | APQ-6099064S2A1 |
+| Casual Tee Washed Black | 6098963 | APQ-6098963S6A1 | APQ-6098963S7A1 | APQ-6098963S8A1 | APQ-6098963S1A1 | APQ-6098963S2A1 |
+| Casual Tee Washed Grey | 6099060 | APQ-6099060S6A1 | APQ-6099060S7A1 | APQ-6099060S8A1 | APQ-6099060S1A1 | APQ-6099060S2A1 |
+| Touchline Cap Black/Natural | 6098980 | One Size: APQ-6098980S34A1 | | | | |
+
+Unmapped combinations make an order fail loudly (`submission_status =
+failed` with the exact variant named); the pipeline never substitutes a
+color, size, or garment.
 
 ## Apliiq saved products (final, verified 2026-09-15)
 

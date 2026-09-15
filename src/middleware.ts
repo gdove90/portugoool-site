@@ -66,6 +66,14 @@ export function middleware(req: NextRequest) {
     pathname === "/" ||
     pathname === "/api/newsletter" ||
     pathname === "/api/preview" ||
+    // Server-to-server endpoints: Stripe and Apliiq webhooks (and the
+    // customer-facing status lookups) can never carry the preview
+    // cookie. Each route does its own authentication.
+    pathname === "/api/stripe-webhook" ||
+    pathname === "/api/apliiq-fulfillment" ||
+    pathname === "/api/order-status" ||
+    pathname === "/api/track-order" ||
+    pathname === "/api/fulfillment-ops" ||
     pathname.startsWith("/print/") ||
     pathname.startsWith("/brand/") ||
     // Product imagery must stay fetchable without the preview cookie: the

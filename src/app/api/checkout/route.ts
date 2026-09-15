@@ -130,6 +130,53 @@ export async function POST(req: NextRequest) {
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ?? req.nextUrl.origin;
 
+  // Shipping is a deliberate business decision, never an accident:
+  // without a configured Stripe shipping rate we refuse checkout
+  // instead of quietly giving free shipping. Set STRIPE_SHIPPING_RATE_ID
+  // (a shr_… rate created in the Stripe dashboard) to open this path.
+  const shippingRateId = process.env.STRIPE_SHIPPING_RATE_ID;
+  if (!shippingRateId) {
+    return NextResponse.json(
+      { error: "Checkout isn't live yet: shipping rates are still being configured." },
+      { status: 503 }
+    );
+  }
+
+  // Compact order snapshot for the payment webhook, chunked to respect
+  // Stripe's 500-char metadata value limit. The webhook rebuilds the
+  // order from this plus server-side catalog prices — never from the
+  // browser.
+  const compactItems = items.map((item) => {
+    const product = getProductById(item.productId)!;
+    const customName = product.customNameAvailable
+      ? item.customName?.trim().slice(0, 12) || undefined
+      : undefined;
+    const customNumber = product.customNumberAvailable
+      ? item.customNumber?.trim().slice(0, 2) || undefined
+      : undefined;
+    return {
+      p: item.productId,
+      c: product.colorVariants
+        ? product.colorVariants.find((v) => v.name === item.color)!.name
+        : product.color,
+      s: item.size,
+      q: Math.max(1, Math.min(10, Math.floor(item.quantity))),
+      ...(customName ? { n: customName } : {}),
+      ...(customNumber ? { m: customNumber } : {}),
+    };
+  });
+  const itemsJson = JSON.stringify(compactItems);
+  const metadata: Record<string, string> = {};
+  for (let i = 0; i * 450 < itemsJson.length; i++) {
+    metadata[`items_${i}`] = itemsJson.slice(i * 450, (i + 1) * 450);
+  }
+  if (Object.keys(metadata).length > 40) {
+    return NextResponse.json(
+      { error: "Cart is too large for a single checkout. Please split it up." },
+      { status: 400 }
+    );
+  }
+
   try {
     const stripe = new Stripe(secretKey);
     const session = await stripe.checkout.sessions.create({
@@ -138,6 +185,8 @@ export async function POST(req: NextRequest) {
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "PT", "GB"],
       },
+      shipping_options: [{ shipping_rate: shippingRateId }],
+      metadata,
       success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/cart`,
       // Customer email is collected by Stripe Checkout itself.
