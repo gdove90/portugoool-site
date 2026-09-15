@@ -48,9 +48,8 @@ export default function Footer() {
           </nav>
           <p className="text-xs leading-relaxed text-paper/40">
             © {new Date().getFullYear()} GOOOL. All rights reserved.
-            GOOOL is an independent fan apparel brand. Not affiliated with,
-            endorsed by, or connected to any football federation, club, league,
-            or governing body. All designs and marks are original.
+            Original soccer sportswear. Built for the love of the game.
+            Made for the Moment.
           </p>
         </div>
       </div>
