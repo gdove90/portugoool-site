@@ -1712,7 +1712,7 @@ export const products: Product[] = [
         hex: "#2E48B6",
         skuFragment: "TRUE_ROYAL",
         images: [
-          { src: "/products/GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V2.png", alt: "GOOOL Performance Badge Tee in true royal, front view with the cream GOOOL crest" },
+          { src: "/products/GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V3.png", alt: "GOOOL Performance Badge Tee in true royal, front view with the cream GOOOL crest" },
           { src: "/products/GOOOL_LIFESTYLE_06_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V2.png", alt: "GOOOL Performance Badge Tee in true royal worn on a stadium field" },
         ],
       },
