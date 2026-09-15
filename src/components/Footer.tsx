@@ -51,6 +51,11 @@ export default function Footer() {
             Original soccer sportswear. Built for the love of the game.
             Made for the Moment.
           </p>
+          <p className="mt-2 text-xs leading-relaxed text-paper/40">
+            GOOOL is an independent brand. Not affiliated with, endorsed by,
+            or connected to any football federation, club, league, or
+            governing body. All designs and marks are original.
+          </p>
         </div>
       </div>
     </footer>
