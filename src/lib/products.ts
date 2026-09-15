@@ -1683,7 +1683,8 @@ export const products: Product[] = [
       { src: "/products/GOOOL_MOCKUP_01_ST720_PERFORMANCE_TEE_BLACK.png", alt: "GOOOL Performance Badge Tee in black, front view with the centered GOOOL crest" },
       { src: "/products/GOOOL_LIFESTYLE_01_ST720_PERFORMANCE_TEE_SOCCER_FIELD.png", alt: "GOOOL Performance Badge Tee worn on a soccer field" },
     ],
-    // Colorways mirror the saved Apliiq designs (Black 6098962, White 6099046).
+    // Colorways mirror the saved Apliiq designs
+    // (Black 6098962, White 6099046, True Royal 6099129).
     colorVariants: [
       {
         name: "Black",
@@ -1702,6 +1703,15 @@ export const products: Product[] = [
         skuFragment: "WHITE",
         images: [
           { src: "/products/GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE.png", alt: "GOOOL Performance Badge Tee in white, front view with the navy GOOOL crest" },
+        ],
+      },
+      {
+        name: "True Royal",
+        supplierColor: "true royal",
+        hex: "#2E48B6",
+        skuFragment: "TRUE_ROYAL",
+        images: [
+          { src: "/products/GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL.png", alt: "GOOOL Performance Badge Tee in true royal, front view with the cream GOOOL crest" },
         ],
       },
     ],

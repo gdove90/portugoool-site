@@ -55,6 +55,7 @@ in `designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/`.
 | 6099046 | GOOOL Performance Badge Tee White | ST720 White only; navy/burgundy crest 5.00x6.40 in, transfer, centered (preview verified) |
 | 6099060 | GOOOL Casual Wordmark Tee Grey | 4810GD Washed Grey only; navy/burgundy wordmark 6.75x2.34 in, transfer, centered, contrast verified |
 | 6099064 | GOOOL Core Hoodie Bone | IND4000 Bone only; navy/burgundy wordmark 6.75x2.34 in, transfer, centered high chest (rebuilt on approved palette; off-palette v1 deleted) |
+| 6099129 | GOOOL Performance Badge Tee True Royal | ST720 True Royal only; cream/burgundy crest `GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png` (cream #EEE5D5 base, burgundy #742E3D underline) 5.00x6.40 in, transfer, front only, back/sleeves blank. Saved position verified against the black original from the rendered mockup: canonical left 125.3 / top 164.4 vs black 125.3 / 163.4 (10 px/in space; 0.09 in delta, inside the ±0.25 in tolerance). ArtworkId 8133250, PAFId 5944867. SKUs xs-xxxl (S-2XL covered; site sells S-2XL only). Added 2026-09-15, no order placed |
 
 Notes: Apliiq stocks NO navy ST720 (white/silver/true royal/black/true
 red/iron grey only) and NO bone 4810GD (13 washed colors) - owner chose
