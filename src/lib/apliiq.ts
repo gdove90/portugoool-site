@@ -78,6 +78,35 @@ export function apliiqSubmitEnabled(): boolean {
   return process.env.APLIIQ_SUBMIT_ENABLED === "true" && apliiqConfigured();
 }
 
+/**
+ * Environment isolation for REAL submissions — never a matter of
+ * remembering which env vars are set where. A submission that would
+ * reach api.apliiq.com (no APLIIQ_API_BASE override) additionally
+ * requires ALL of:
+ *   · a LIVE-mode Stripe event (test events can never order garments)
+ *   · Netlify production context (previews/branch deploys are refused;
+ *     locally CONTEXT is unset, so local runs are refused too)
+ * An overridden APLIIQ_API_BASE targets a simulator by definition, so
+ * only the explicit APLIIQ_SUBMIT_ENABLED flag applies there.
+ */
+export function submissionEnvironmentAllowed(livemode: boolean): {
+  allowed: boolean;
+  reason?: string;
+} {
+  const overridden = Boolean(process.env.APLIIQ_API_BASE);
+  if (overridden) return { allowed: true };
+  if (!livemode) {
+    return { allowed: false, reason: "Stripe TEST-mode event; real Apliiq submission refused." };
+  }
+  if (process.env.CONTEXT !== "production") {
+    return {
+      allowed: false,
+      reason: `Deploy context '${process.env.CONTEXT ?? "local"}' is not production; real Apliiq submission refused.`,
+    };
+  }
+  return { allowed: true };
+}
+
 function authHeader(body: string): string {
   const { appId, secret } = credentials()!;
   const rts = Math.floor(Date.now() / 1000).toString();
@@ -161,25 +190,65 @@ export async function submitOrder(
 }
 
 /**
- * Reconciliation: list this month's (and if needed last month's) orders
- * and look for our order_number. Used after an "unknown" submit outcome
- * so a timeout can never turn into a blind duplicate order.
+ * Reconciliation: list Apliiq orders around the order's OWN dates and
+ * look for our order_number. Used after an "unknown" submit outcome so
+ * a timeout can never turn into a blind duplicate order.
+ *
+ * Deliberately conservative — "not found" (which authorizes a retry)
+ * is only returned when every listing in the window came back as a
+ * well-formed, comparable, plausibly complete order list:
+ *   · non-array / unexpected shapes           → null (unresolved)
+ *   · rows lacking any comparable number field → null (unresolved)
+ *   · suspiciously large pages (possible pagination truncation)
+ *     without a hit                            → null (unresolved)
+ * The response contract beyond "GET /v1/Order?month&year returns the
+ * period's orders" is undocumented; anything surprising stays
+ * unresolved and keeps the order parked in needs_reconcile.
  */
+const LIST_TRUNCATION_GUARD = 200;
+
+function extractOrderArray(body: unknown): unknown[] | null {
+  if (Array.isArray(body)) return body;
+  if (body && typeof body === "object") {
+    for (const key of ["orders", "Orders", "data", "items", "results"]) {
+      const v = (body as Record<string, unknown>)[key];
+      if (Array.isArray(v)) return v;
+    }
+  }
+  return null;
+}
+
+function rowMatches(row: unknown, orderNumber: string): boolean | null {
+  if (!row || typeof row !== "object") return null; // not comparable
+  const r = row as Record<string, unknown>;
+  const candidates = [r.order_number, r.orderNumber, r.OrderNumber, r.name, r.Name];
+  const comparable = candidates.filter((c) => c != null);
+  if (comparable.length === 0) return null; // nothing to compare against
+  return comparable.some((c) => String(c) === orderNumber);
+}
+
 export async function findOrderByNumber(
-  orderNumber: string
+  orderNumber: string,
+  referenceDates: Date[] = []
 ): Promise<{ found: boolean; apliiqOrderId?: string } | null> {
-  const now = new Date();
-  const windows = [
-    { month: now.getUTCMonth() + 1, year: now.getUTCFullYear() },
-    ...(now.getUTCDate() <= 3
-      ? [
-          {
-            month: ((now.getUTCMonth() + 11) % 12) + 1,
-            year: now.getUTCMonth() === 0 ? now.getUTCFullYear() - 1 : now.getUTCFullYear(),
-          },
-        ]
-      : []),
-  ];
+  // Search every month touched by the order's lifecycle (creation,
+  // payment, submission attempt) plus the current month.
+  const monthKeys = new Map<string, { month: number; year: number }>();
+  for (const d of [...referenceDates, new Date()]) {
+    if (Number.isNaN(d.getTime())) continue;
+    // include the month itself and the following one (a submission just
+    // before midnight on the 31st can land in Apliiq dated either side)
+    for (const shift of [0, 1]) {
+      const m = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + shift, 1));
+      const key = `${m.getUTCFullYear()}-${m.getUTCMonth() + 1}`;
+      monthKeys.set(key, { month: m.getUTCMonth() + 1, year: m.getUTCFullYear() });
+    }
+  }
+  const windows = [...monthKeys.values()].slice(0, 6);
+
+  let sawIncomparableRows = false;
+  let sawPossiblyTruncatedList = false;
+
   for (const w of windows) {
     let res: Response;
     try {
@@ -188,27 +257,32 @@ export async function findOrderByNumber(
       return null; // reconciliation itself failed — stay in needs_reconcile
     }
     if (!res.ok) return null;
-    let orders: unknown;
+    let body: unknown;
     try {
-      orders = await res.json();
+      body = await res.json();
     } catch {
       return null;
     }
-    if (Array.isArray(orders)) {
-      const hit = orders.find(
-        (o) =>
-          o &&
-          typeof o === "object" &&
-          ("order_number" in o
-            ? String((o as { order_number: unknown }).order_number) === orderNumber
-            : false)
-      );
-      if (hit) {
-        const id = (hit as { id?: unknown }).id;
+    const orders = extractOrderArray(body);
+    if (orders === null) return null; // unexpected shape — never authorize retry
+
+    for (const row of orders) {
+      const match = rowMatches(row, orderNumber);
+      if (match === null) {
+        sawIncomparableRows = true;
+        continue;
+      }
+      if (match) {
+        const id = (row as { id?: unknown; Id?: unknown }).id ?? (row as { Id?: unknown }).Id;
         return { found: true, apliiqOrderId: id != null ? String(id) : undefined };
       }
     }
+    if (orders.length >= LIST_TRUNCATION_GUARD) sawPossiblyTruncatedList = true;
   }
+
+  // No hit anywhere. Only certify absence when every row was comparable
+  // and no listing looked truncated.
+  if (sawIncomparableRows || sawPossiblyTruncatedList) return null;
   return { found: false };
 }
 

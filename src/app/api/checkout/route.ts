@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getProductById } from "@/lib/products";
+import { resolveApliiqSku } from "@/lib/fulfillment";
 import { Size, isSoldOut, isAvailableForSale } from "@/lib/types";
 
 // ─────────────────────────────────────────────────────────────
@@ -142,29 +143,50 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Compact order snapshot for the payment webhook, chunked to respect
-  // Stripe's 500-char metadata value limit. The webhook rebuilds the
-  // order from this plus server-side catalog prices — never from the
-  // browser.
-  const compactItems = items.map((item) => {
+  // Immutable purchase snapshot for the payment webhook, chunked to
+  // respect Stripe's 500-char metadata value limit. Prices AND Apliiq
+  // fulfillment SKUs are resolved NOW, at checkout creation, and ride
+  // with the session: later catalog edits can never change what a
+  // completed payment fulfills — including delayed payments and
+  // webhook retries. Metadata is set server-side, so it is not
+  // client-tamperable.
+  const compactItems = [];
+  for (const item of items) {
     const product = getProductById(item.productId)!;
+    const color = product.colorVariants
+      ? product.colorVariants.find((v) => v.name === item.color)!.name
+      : product.color;
     const customName = product.customNameAvailable
       ? item.customName?.trim().slice(0, 12) || undefined
       : undefined;
     const customNumber = product.customNumberAvailable
       ? item.customNumber?.trim().slice(0, 2) || undefined
       : undefined;
-    return {
+    const hasCustomization = Boolean(customName || customNumber);
+    const unitCents =
+      product.priceCents + (hasCustomization ? product.customizationPriceCents : 0);
+
+    // A variant we cannot fulfill must never be sold: fail before payment.
+    const mapping = resolveApliiqSku(item.productId, color, item.size);
+    if (!mapping) {
+      return NextResponse.json(
+        { error: `${product.name} in ${color} (${item.size}) can't be ordered right now.` },
+        { status: 400 }
+      );
+    }
+
+    compactItems.push({
       p: item.productId,
-      c: product.colorVariants
-        ? product.colorVariants.find((v) => v.name === item.color)!.name
-        : product.color,
+      c: color,
       s: item.size,
       q: Math.max(1, Math.min(10, Math.floor(item.quantity))),
+      u: unitCents,
+      k: mapping.sku,
+      a: mapping.apliiqProductId,
       ...(customName ? { n: customName } : {}),
       ...(customNumber ? { m: customNumber } : {}),
-    };
-  });
+    });
+  }
   const itemsJson = JSON.stringify(compactItems);
   const metadata: Record<string, string> = {};
   for (let i = 0; i * 450 < itemsJson.length; i++) {

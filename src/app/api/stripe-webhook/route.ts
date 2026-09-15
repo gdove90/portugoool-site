@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import { getProductById } from "@/lib/products";
 import { Size } from "@/lib/types";
-import { resolveApliiqSku } from "@/lib/fulfillment";
 import { getOrdersStore, OrderItemRow, OrderRow } from "@/lib/orders-store";
 import { submitPaidOrder } from "@/lib/fulfillment-submit";
 
@@ -35,6 +33,9 @@ interface MetaItem {
   c: string; // color
   s: Size; // size
   q: number; // quantity
+  u?: number; // unit price cents, fixed at checkout creation
+  k?: string; // Apliiq SKU, fixed at checkout creation
+  a?: number; // Apliiq saved-product id, fixed at checkout creation
   n?: string; // custom name
   m?: string; // custom number
 }
@@ -65,16 +66,21 @@ function buildOrderRows(
     return { error: "Session has no items metadata; cannot build order snapshot." };
   }
 
+  // The snapshot in metadata is authoritative: it was written server-side
+  // when the session was created, with the price the customer was charged
+  // and the Apliiq SKU that variant resolved to AT PURCHASE TIME. The
+  // current catalog is deliberately not consulted — later edits must not
+  // change what a completed payment fulfills. A session missing snapshot
+  // fields is recorded but never auto-submitted.
   const items: OrderItemRow[] = [];
   const unmapped: string[] = [];
   for (const mi of metaItems) {
-    const product = getProductById(mi.p);
-    if (!product) return { error: `Unknown product ${mi.p} in session metadata.` };
-    const hasCustomization = Boolean(mi.n || mi.m);
-    const unit =
-      product.priceCents + (hasCustomization ? product.customizationPriceCents : 0);
-    const mapping = resolveApliiqSku(mi.p, mi.c, mi.s);
-    if (!mapping) unmapped.push(`${product.name} / ${mi.c} / ${mi.s}`);
+    if (typeof mi.u !== "number" || mi.u < 0) {
+      return { error: `Item ${mi.p} has no price snapshot; refusing to guess.` };
+    }
+    if (!mi.k || typeof mi.a !== "number") {
+      unmapped.push(`${mi.p} / ${mi.c} / ${mi.s} (no SKU snapshot)`);
+    }
     items.push({
       product_id: mi.p,
       size: mi.s,
@@ -82,9 +88,9 @@ function buildOrderRows(
       quantity: mi.q,
       custom_name: mi.n ?? null,
       custom_number: mi.m ?? null,
-      unit_price_cents: unit,
-      apliiq_product_id: mapping?.apliiqProductId ?? null,
-      apliiq_sku: mapping?.sku ?? null,
+      unit_price_cents: mi.u,
+      apliiq_product_id: typeof mi.a === "number" ? mi.a : null,
+      apliiq_sku: mi.k ?? null,
     });
   }
 
@@ -211,11 +217,13 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Only confirmed-paid orders ever reach Apliiq; the release gate
-    // (APLIIQ_SUBMIT_ENABLED) and the CAS lock live inside.
+    // Only confirmed-paid orders ever reach Apliiq. The release gate
+    // (APLIIQ_SUBMIT_ENABLED), the environment isolation (live-mode
+    // event + production context), the persisted-snapshot read, and
+    // the CAS lock all live inside submitPaidOrder.
     let submission: string | undefined;
     if (paid) {
-      const outcome = await submitPaidOrder(store, orderId, built.items);
+      const outcome = await submitPaidOrder(store, orderId, { livemode: event.livemode });
       submission = outcome.action;
     }
     await store.recordEvent(event.id, event.type);

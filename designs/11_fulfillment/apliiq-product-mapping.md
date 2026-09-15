@@ -30,9 +30,27 @@ Fulfillment URL callback (`/api/apliiq-fulfillment`, HMAC-verified) →
 `/track-order` lookup by order reference + email.
 
 The executable mapping lives in `src/lib/fulfillment.ts`; this table
-mirrors it. Real supplier submission is hard-gated behind
-`APLIIQ_SUBMIT_ENABLED=true` (unset everywhere today). Apliiq account:
-hello@goool.shop.
+mirrors it. Prices and SKUs are snapshotted into the Stripe session at
+checkout creation and fulfillment reads only that persisted snapshot,
+so later catalog edits never change what a paid order ships. Real
+supplier submission is layered behind `APLIIQ_SUBMIT_ENABLED=true` AND
+Netlify `CONTEXT=production` AND a live-mode Stripe event — test
+events, previews, and local runs are refused in code, not by
+convention. Apliiq account: hello@goool.shop.
+
+### Rollout order (each step verified behind the closed purchase gate before the next)
+
+1. Apply migration 0026 in the Supabase SQL editor.
+2. Configure Stripe (secret key, webhook endpoint + secret, shipping
+   rate, tax decision) — verify with Stripe TEST mode end to end; the
+   environment gate keeps test events away from Apliiq by design.
+3. Configure the Apliiq custom store (APP_ID / shared secret,
+   Fulfillment URL) and `FULFILLMENT_OPS_KEY`.
+4. Transactional email decision (Resend or equivalent) — customers
+   currently get the order reference on /success plus Stripe's receipt.
+5. Physical samples approved in writing (the packet release gate).
+6. Open purchasing (`availableForSale: true`) — and only after that,
+   flip `APLIIQ_SUBMIT_ENABLED=true` in the production context.
 
 ## Verified per-size fulfillment SKUs (read from Apliiq records 2026-09-15)
 

@@ -77,6 +77,8 @@ export interface OrdersStore {
   getOrderById(orderId: string): Promise<(OrderRow & { id: string }) | null>;
   listOrdersByEmail(email: string): Promise<(OrderRow & { id: string })[]>;
   listShipments(orderId: string): Promise<ShipmentRow[]>;
+  /** The persisted purchase snapshot — fulfillment reads THIS, not the catalog. */
+  listOrderItems(orderId: string): Promise<OrderItemRow[]>;
   /**
    * Compare-and-set on submission_status: succeeds only when the current
    * value matches `from`. This is the lock preventing concurrent double
@@ -172,6 +174,15 @@ class SupabaseStore implements OrdersStore {
       .eq("order_id", orderId);
     if (error) throw new Error(`shipments select failed: ${error.message}`);
     return (data ?? []) as ShipmentRow[];
+  }
+
+  async listOrderItems(orderId: string) {
+    const { data, error } = await this.db
+      .from("order_items")
+      .select("*")
+      .eq("order_id", orderId);
+    if (error) throw new Error(`order_items select failed: ${error.message}`);
+    return (data ?? []) as OrderItemRow[];
   }
 
   async transitionSubmission(
@@ -307,6 +318,9 @@ class FileStore implements OrdersStore {
   }
   async listShipments(orderId: string) {
     return this.load().shipments.filter((sh) => sh.order_id === orderId);
+  }
+  async listOrderItems(orderId: string) {
+    return this.load().items[orderId] ?? [];
   }
   async transitionSubmission(
     orderId: string,
