@@ -1671,7 +1671,7 @@ export const products: Product[] = [
     name: "GOOOL Performance Badge Tee",
     slug: "goool-performance-tee",
     description:
-      "Lightweight training tee with the GOOOL crest printed at the visual center of the chest. Athletic fit, taped neck, blank back. Black.",
+      "Lightweight training tee with the GOOOL crest printed at the visual center of the chest. Athletic fit, taped neck, blank back.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1682,6 +1682,28 @@ export const products: Product[] = [
     images: [
       { src: "/products/GOOOL_MOCKUP_01_ST720_PERFORMANCE_TEE_BLACK.png", alt: "GOOOL Performance Badge Tee in black, front view with the centered GOOOL crest" },
       { src: "/products/GOOOL_LIFESTYLE_01_ST720_PERFORMANCE_TEE_SOCCER_FIELD.png", alt: "GOOOL Performance Badge Tee worn on a soccer field" },
+    ],
+    // Colorways mirror the saved Apliiq designs (Black 6098962, White 6099046).
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#0A0A0A",
+        skuFragment: "BLACK",
+        images: [
+          { src: "/products/GOOOL_MOCKUP_01_ST720_PERFORMANCE_TEE_BLACK.png", alt: "GOOOL Performance Badge Tee in black, front view with the centered GOOOL crest" },
+          { src: "/products/GOOOL_LIFESTYLE_01_ST720_PERFORMANCE_TEE_SOCCER_FIELD.png", alt: "GOOOL Performance Badge Tee worn on a soccer field" },
+        ],
+      },
+      {
+        name: "White",
+        supplierColor: "White",
+        hex: "#F4F4F4",
+        skuFragment: "WHITE",
+        images: [
+          { src: "/products/GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE.png", alt: "GOOOL Performance Badge Tee in white, front view with the navy GOOOL crest" },
+        ],
+      },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
@@ -1701,7 +1723,7 @@ export const products: Product[] = [
     name: "GOOOL Core Hoodie",
     slug: "goool-heavyweight-hoodie",
     description:
-      "Heavyweight pullover hoodie with the underlined GOOOL wordmark centered across the chest. Generous fit, kangaroo pocket, blank back. Black.",
+      "Heavyweight pullover hoodie with the underlined GOOOL wordmark centered across the chest. Generous fit, kangaroo pocket, blank back.",
     priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1712,6 +1734,28 @@ export const products: Product[] = [
     images: [
       { src: "/products/GOOOL_MOCKUP_02_IND4000_HOODIE_BLACK.png", alt: "GOOOL Core Hoodie in black, front view with the centered underlined GOOOL wordmark" },
       { src: "/products/GOOOL_LIFESTYLE_02_IND4000_HOODIE_STADIUM_TUNNEL.png", alt: "GOOOL Core Hoodie worn in a stadium tunnel" },
+    ],
+    // Colorways mirror the saved Apliiq designs (Black 6098974, Bone 6099064).
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#0A0A0A",
+        skuFragment: "BLACK",
+        images: [
+          { src: "/products/GOOOL_MOCKUP_02_IND4000_HOODIE_BLACK.png", alt: "GOOOL Core Hoodie in black, front view with the centered underlined GOOOL wordmark" },
+          { src: "/products/GOOOL_LIFESTYLE_02_IND4000_HOODIE_STADIUM_TUNNEL.png", alt: "GOOOL Core Hoodie worn in a stadium tunnel" },
+        ],
+      },
+      {
+        name: "Bone",
+        supplierColor: "Bone",
+        hex: "#E9E4D8",
+        skuFragment: "BONE",
+        images: [
+          { src: "/products/GOOOL_MOCKUP_06_IND4000_HOODIE_BONE.png", alt: "GOOOL Core Hoodie in bone, front view with the navy underlined GOOOL wordmark" },
+        ],
+      },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
@@ -1731,7 +1775,7 @@ export const products: Product[] = [
     name: "GOOOL Casual Wordmark Tee",
     slug: "goool-heavyweight-casual-tee",
     description:
-      "Garment-dyed heavyweight cotton tee in washed black. Relaxed fit, semi-dropped shoulder, the underlined GOOOL wordmark centered across the chest. Blank back.",
+      "Garment-dyed heavyweight cotton tee. Relaxed fit, semi-dropped shoulder, the underlined GOOOL wordmark centered across the chest. Blank back.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Washed Black",
@@ -1742,6 +1786,28 @@ export const products: Product[] = [
     images: [
       { src: "/products/GOOOL_MOCKUP_03_4810GD_CASUAL_TEE_WASHED_BLACK.png", alt: "GOOOL Casual Wordmark Tee in washed black, front view with the centered underlined GOOOL wordmark" },
       { src: "/products/GOOOL_LIFESTYLE_03_4810GD_CASUAL_TEE_SOCCER_FIELD.png", alt: "GOOOL Casual Wordmark Tee worn on a soccer field" },
+    ],
+    // Colorways mirror the saved Apliiq designs (Washed Black 6098963, Washed Grey 6099060).
+    colorVariants: [
+      {
+        name: "Washed Black",
+        supplierColor: "Washed Black",
+        hex: "#2E2E30",
+        skuFragment: "WBLACK",
+        images: [
+          { src: "/products/GOOOL_MOCKUP_03_4810GD_CASUAL_TEE_WASHED_BLACK.png", alt: "GOOOL Casual Wordmark Tee in washed black, front view with the centered underlined GOOOL wordmark" },
+          { src: "/products/GOOOL_LIFESTYLE_03_4810GD_CASUAL_TEE_SOCCER_FIELD.png", alt: "GOOOL Casual Wordmark Tee worn on a soccer field" },
+        ],
+      },
+      {
+        name: "Washed Grey",
+        supplierColor: "Washed Grey",
+        hex: "#8E8B87",
+        skuFragment: "WGREY",
+        images: [
+          { src: "/products/GOOOL_MOCKUP_07_4810GD_CASUAL_TEE_WASHED_GREY.png", alt: "GOOOL Casual Wordmark Tee in washed grey, front view with the navy underlined GOOOL wordmark" },
+        ],
+      },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",

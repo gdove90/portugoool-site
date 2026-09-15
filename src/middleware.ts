@@ -68,6 +68,9 @@ export function middleware(req: NextRequest) {
     pathname === "/api/preview" ||
     pathname.startsWith("/print/") ||
     pathname.startsWith("/brand/") ||
+    // Product imagery must stay fetchable without the preview cookie: the
+    // next/image optimizer requests these server-side with no cookies.
+    pathname.startsWith("/products/") ||
     pathname === "/icon.svg" ||
     pathname === "/apple-icon.png" ||
     pathname === "/hero-crowd.webp";

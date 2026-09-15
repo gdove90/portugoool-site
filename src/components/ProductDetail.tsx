@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/lib/cart";
@@ -19,6 +19,18 @@ export default function ProductDetail({ product }: { product: Product }) {
   );
   const variants = product.colorVariants;
   const [variantIdx, setVariantIdx] = useState(0);
+  // A shop-card selection arrives as ?color=; window.location keeps the
+  // page statically renderable (no useSearchParams Suspense requirement).
+  useEffect(() => {
+    if (!variants) return;
+    const wanted = new URLSearchParams(window.location.search).get("color");
+    if (!wanted) return;
+    const idx = variants.findIndex(
+      (v) => v.name.toLowerCase() === wanted.toLowerCase()
+    );
+    if (idx > 0) setVariantIdx(idx);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const activeVariant = variants?.[variantIdx];
   const images = activeVariant?.images ?? product.images;
   const colorName = activeVariant?.name ?? product.color;
