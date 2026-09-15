@@ -24,16 +24,23 @@ in Stripe → owner places the matching Apliiq order by hand from this
 table. Apliiq account: hello@goool.shop. `supplier_type` in the schema is
 ready for automated routing later.
 
-## Apliiq saved products (built 2026-09-14, Claude-driven session)
+## Apliiq saved products (final, verified 2026-09-15)
 
-| Apliiq product id | Name | Status |
+Exactly four saved products remain; every superseded or artless
+duplicate was deleted with owner approval on 2026-09-15.
+
+| Apliiq product id | Name | Verified state |
 |---|---|---|
-| 6098934 | GOOOL Performance Badge Tee | Correct: ST720 Black, packet crest 5.00x6.40 in, transfer, centered upper chest |
-| 6098923 | GOOOL Casual Wordmark Tee | Correct: 4810GD Washed Black, packet wordmark 6.75x2.34 in, transfer, centered |
-| 6098879 | GOOOL Core Hoodie | Correct: IND4000 Black, packet wordmark 6.75x2.34 in, transfer, centered high chest |
-| 6098898 | GOOOL Touchline Cap | Correct: OTTO 31-069 Black/Natural, front flat embroidery 3.75x1.30 in, black + cranberry (201C) threads, no puff |
-| 6082421 | (old) GOOOL Casual Wordmark Tee | Artless leftover, replaced by 6098923; DELETE or rename OLD |
-| 6082418 | (old) Sustainable Athletic Tee | Artless leftover, replaced by 6098934; DELETE or rename OLD |
+| 6098962 | GOOOL Performance Badge Tee | ST720 Black only; packet crest 5.00x6.40 in, transfer, centered (drag-recorded position; mockup verified) |
+| 6098963 | GOOOL Casual Wordmark Tee | 4810GD Washed Black; packet wordmark 6.75x2.34 in, transfer, centered (verified) |
+| 6098974 | GOOOL Core Hoodie | IND4000 Black only (Bone removed); packet wordmark 6.75x2.34 in, transfer, centered high chest (verified) |
+| 6098980 | GOOOL Touchline Cap | OTTO 31-069 Black/Natural; front flat embroidery 3.75x1.30 in, black + cranberry (201C), no puff, front only (verified) |
+
+Positioning note: Apliiq's old customizer only persists artwork
+position through real drag events (its Knockout model ignores raw CSS
+changes). First-generation saves rendered art off-center or missing;
+all four were rebuilt with event-driven positioning and their grid
+mockups visually confirmed centered.
 
 ## Known deviation log
 
