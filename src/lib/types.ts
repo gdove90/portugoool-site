@@ -90,6 +90,15 @@ export interface Product {
   colorVariants?: ColorVariant[];
   /** Fit notice shown beside the size selector. */
   fitNote?: string;
+  /**
+   * Manufacturing-origin claim shown near the price. Publish ONLY what
+   * supplier documentation supports: "Made in USA" needs the garment
+   * itself made here (FTC all-or-virtually-all standard); imported
+   * garments decorated domestically use "Printed in the USA". Never
+   * inferred from printing or shipping location — leave unset and flag
+   * for supplier confirmation when origin is undocumented.
+   */
+  originLabel?: "Made in USA" | "Printed in the USA";
   /** Supplier size chart rendered as an accessible table. */
   sizeGuide?: SizeGuide;
   /** Print-on-demand disclosure shown near the trust copy. */

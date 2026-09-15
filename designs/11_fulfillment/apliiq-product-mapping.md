@@ -121,6 +121,25 @@ cover S-2XL on all three additions (ST720 and IND4000 run xs-xxxl,
 per-size stock is confirmed at order time. Seven saved products total;
 no orders placed.
 
+## Manufacturing origin (verified from Apliiq records 2026-09-15)
+
+| Blank | Garment made in | Decoration | Published label |
+|---|---|---|---|
+| Sport-Tek ST720 | Ethiopia | DTF transfer, Apliiq US facilities (LA/Philadelphia) | Printed in the USA |
+| Independent IND4000 | China | DTF transfer, Apliiq US facilities | Printed in the USA |
+| Bella+Canvas 4810GD | Nicaragua | DTF transfer, Apliiq US facilities | Printed in the USA |
+| OTTO 31-069 cap | Myanmar | Flat embroidery, Apliiq US facilities | NONE - flagged |
+
+No product qualifies for "Made in USA" (FTC all-or-virtually-all
+standard; every blank is imported per Apliiq's own MadeIn records).
+Decoration location documented by Apliiq's published pages (US
+production facilities in Los Angeles and Philadelphia).
+
+FLAGGED - Touchline Cap: it is embroidered, not printed, so
+"Printed in the USA" would misdescribe it and no label is published.
+Owner to confirm with Apliiq whether an "Embroidered in the USA"
+claim is wanted and accurate before adding one.
+
 ## Manual recovery runbook (orders parked in needs_reconcile)
 
 An order lands in `needs_reconcile` when a submission attempt timed

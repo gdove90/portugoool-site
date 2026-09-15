@@ -187,6 +187,11 @@ export default function ProductDetail({ product }: { product: Product }) {
                 includes name &amp; number
               </span>
             )}
+            {product.originLabel && (
+              <span className="ml-3 align-middle text-[11px] font-semibold uppercase tracking-widest text-ink/40">
+                {product.originLabel}
+              </span>
+            )}
           </p>
 
           {/* Limited drop status */}

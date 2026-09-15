@@ -123,7 +123,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </p>
           )}
         </div>
-        <Link href={href} className="block">
+        <Link href={href} className="block text-right">
           <p className="text-sm font-semibold text-ink">
             {onSale && (
               <span className="mr-1.5 font-normal text-ink/40 line-through">
@@ -132,6 +132,11 @@ export default function ProductCard({ product }: { product: Product }) {
             )}
             {formatPrice(product.priceCents)}
           </p>
+          {product.originLabel && (
+            <p className="mt-1 text-[10px] font-semibold uppercase leading-tight tracking-[0.12em] text-ink/40">
+              {product.originLabel}
+            </p>
+          )}
         </Link>
       </div>
     </div>

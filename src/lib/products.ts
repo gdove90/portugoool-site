@@ -1717,6 +1717,9 @@ export const products: Product[] = [
         ],
       },
     ],
+    // Garment made in Ethiopia (Apliiq record); decorated at Apliiq's US
+    // facilities (LA/Philadelphia) - so Printed in the USA, never Made in.
+    originLabel: "Printed in the USA",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "apliiq",
@@ -1770,6 +1773,9 @@ export const products: Product[] = [
         ],
       },
     ],
+    // Garment made in China (Apliiq record); decorated at Apliiq's US
+    // facilities (LA/Philadelphia) - so Printed in the USA, never Made in.
+    originLabel: "Printed in the USA",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
     supplierType: "apliiq",
@@ -1823,6 +1829,9 @@ export const products: Product[] = [
         ],
       },
     ],
+    // Garment made in Nicaragua (Apliiq record); decorated at Apliiq's US
+    // facilities (LA/Philadelphia) - so Printed in the USA, never Made in.
+    originLabel: "Printed in the USA",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "apliiq",
