@@ -1702,7 +1702,7 @@ export const products: Product[] = [
         hex: "#F4F4F4",
         skuFragment: "WHITE",
         images: [
-          { src: "/products/GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE.png", alt: "GOOOL Performance Badge Tee in white, front view with the navy GOOOL crest" },
+          { src: "/products/GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE_V2.png", alt: "GOOOL Performance Badge Tee in white, front view with the navy GOOOL crest" },
           { src: "/products/GOOOL_LIFESTYLE_05_ST720_PERFORMANCE_TEE_WHITE.png", alt: "GOOOL Performance Badge Tee in white worn on a stadium field" },
         ],
       },
@@ -1712,7 +1712,7 @@ export const products: Product[] = [
         hex: "#2E48B6",
         skuFragment: "TRUE_ROYAL",
         images: [
-          { src: "/products/GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL.png", alt: "GOOOL Performance Badge Tee in true royal, front view with the cream GOOOL crest" },
+          { src: "/products/GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V2.png", alt: "GOOOL Performance Badge Tee in true royal, front view with the cream GOOOL crest" },
           { src: "/products/GOOOL_LIFESTYLE_06_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V2.png", alt: "GOOOL Performance Badge Tee in true royal worn on a stadium field" },
         ],
       },
@@ -1765,7 +1765,7 @@ export const products: Product[] = [
         hex: "#E9E4D8",
         skuFragment: "BONE",
         images: [
-          { src: "/products/GOOOL_MOCKUP_06_IND4000_HOODIE_BONE.png", alt: "GOOOL Core Hoodie in bone, front view with the navy underlined GOOOL wordmark" },
+          { src: "/products/GOOOL_MOCKUP_06_IND4000_HOODIE_BONE_V2.png", alt: "GOOOL Core Hoodie in bone, front view with the navy underlined GOOOL wordmark" },
           { src: "/products/GOOOL_LIFESTYLE_07_IND4000_HOODIE_BONE.png", alt: "GOOOL Core Hoodie in bone worn in a stadium tunnel" },
         ],
       },
@@ -1818,7 +1818,7 @@ export const products: Product[] = [
         hex: "#8E8B87",
         skuFragment: "WGREY",
         images: [
-          { src: "/products/GOOOL_MOCKUP_07_4810GD_CASUAL_TEE_WASHED_GREY.png", alt: "GOOOL Casual Wordmark Tee in washed grey, front view with the navy underlined GOOOL wordmark" },
+          { src: "/products/GOOOL_MOCKUP_07_4810GD_CASUAL_TEE_WASHED_GREY_V2.png", alt: "GOOOL Casual Wordmark Tee in washed grey, front view with the navy underlined GOOOL wordmark" },
           { src: "/products/GOOOL_LIFESTYLE_08_4810GD_CASUAL_TEE_WASHED_GREY.png", alt: "GOOOL Casual Wordmark Tee in washed grey worn on a stadium field" },
         ],
       },

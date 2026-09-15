@@ -147,6 +147,12 @@ export default function ProductDetail({ product }: { product: Product }) {
                     onClick={() => {
                       setVariantIdx(i);
                       setActiveImage(0);
+                      // Keep ?color= honest: the URL must always agree with
+                      // the color on screen (no navigation, history replaced).
+                      const url = new URL(window.location.href);
+                      if (i === 0) url.searchParams.delete("color");
+                      else url.searchParams.set("color", v.name);
+                      window.history.replaceState(null, "", url);
                     }}
                     className={`h-9 w-9 rounded-full border transition-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
                       i === variantIdx
