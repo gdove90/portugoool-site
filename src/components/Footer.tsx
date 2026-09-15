@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-ink py-12 text-paper">
       <div className="mx-auto max-w-content px-4 sm:px-6">
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <Image
               src="/brand/goool-wordmark-white.png"
@@ -14,19 +14,29 @@ export default function Footer() {
               height={45}
             />
             <p className="mt-2 max-w-xs text-sm text-paper/50">
-              The sound of the goal. The shirt for the moment.
+              The Sound of Victory.
             </p>
           </div>
 
-          <nav className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm" aria-label="Footer">
-            <Link href="/shop" className="text-paper/70 hover:text-paper">Shop</Link>
-            <Link href="/about" className="text-paper/70 hover:text-paper">About</Link>
-            <Link href="/drop" className="text-paper/70 hover:text-paper">The Drop</Link>
-            <Link href="/faq" className="text-paper/70 hover:text-paper">FAQ</Link>
-            <Link href="/customize" className="text-paper/70 hover:text-paper">Customize Your Jersey</Link>
-            <Link href="/track-order" className="text-paper/70 hover:text-paper">Track Order</Link>
-            <Link href="/world-cup" className="text-paper/70 hover:text-paper">Summer &apos;26</Link>
-            <Link href="/contact" className="text-paper/70 hover:text-paper">Contact</Link>
+          <nav className="flex gap-16 sm:gap-20" aria-label="Footer">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-paper/40">
+                Explore
+              </p>
+              <ul className="mt-2 space-y-0.5 text-sm">
+                <li><Link href="/shop" className="inline-block py-2.5 text-paper/70 hover:text-paper">Collection</Link></li>
+                <li><Link href="/about" className="inline-block py-2.5 text-paper/70 hover:text-paper">About</Link></li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-paper/40">
+                Support
+              </p>
+              <ul className="mt-2 space-y-0.5 text-sm">
+                <li><Link href="/contact" className="inline-block py-2.5 text-paper/70 hover:text-paper">Contact</Link></li>
+                <li><Link href="/faq" className="inline-block py-2.5 text-paper/70 hover:text-paper">FAQ</Link></li>
+              </ul>
+            </div>
           </nav>
         </div>
 
