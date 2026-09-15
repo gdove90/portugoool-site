@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabaseAdmin } from "@/lib/supabase";
+import { createHash } from "crypto";
 
-// Newsletter signup → newsletter_signups table.
-// Storage is required: if it is not configured the request fails with an
-// honest 503 so the visitor is never told they joined when nothing was
-// saved. Subscriber addresses are never written to logs.
+// Newsletter signup → Mailchimp audience (owner decision, 2026-09-14).
+// Mailchimp is the subscriber source of truth: hosted unsubscribe links,
+// welcome automation, and campaign sends all live there. Storage is
+// required: if the integration is not configured the request fails with
+// an honest 503 so the visitor is never told they joined when nothing
+// was saved. Subscriber addresses are never written to logs.
+//
+// Env (Netlify + .env.local, never committed):
+//   MAILCHIMP_API_KEY      key ends in -usN, which is the datacenter
+//   MAILCHIMP_AUDIENCE_ID  Audience → Settings → "Audience ID"
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -21,21 +27,53 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Enter a valid email." }, { status: 400 });
   }
 
-  const supabase = getSupabaseAdmin();
-  if (!supabase) {
-    console.error("[newsletter] storage unavailable: SUPABASE_SERVICE_ROLE_KEY not configured");
+  const apiKey = process.env.MAILCHIMP_API_KEY;
+  const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
+  const datacenter = apiKey?.split("-").pop();
+  if (!apiKey || !audienceId || !datacenter?.startsWith("us")) {
+    console.error("[newsletter] storage unavailable: Mailchimp env not configured");
     return NextResponse.json(
       { error: "Signups are temporarily down. Please try again soon." },
       { status: 503 }
     );
   }
 
-  const { error } = await supabase
-    .from("newsletter_signups")
-    .upsert({ email }, { onConflict: "email", ignoreDuplicates: true });
+  // PUT by MD5(email) is Mailchimp's idempotent upsert: new visitors are
+  // subscribed, repeat signups are a no-op, and anyone who unsubscribed
+  // stays unsubscribed (status_if_new only applies to new members).
+  const memberHash = createHash("md5").update(email).digest("hex");
+  const res = await fetch(
+    `https://${datacenter}.api.mailchimp.com/3.0/lists/${audienceId}/members/${memberHash}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Basic ${Buffer.from(`anystring:${apiKey}`).toString("base64")}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email_address: email,
+        status_if_new: "subscribed",
+        tags: ["waitlist"],
+      }),
+    }
+  ).catch(() => null);
 
-  if (error) {
-    console.error("[newsletter] insert error:", error.message);
+  if (!res) {
+    console.error("[newsletter] mailchimp unreachable");
+    return NextResponse.json(
+      { error: "Could not save your email. Try again." },
+      { status: 500 }
+    );
+  }
+
+  if (!res.ok) {
+    // Mailchimp rejects undeliverable/role addresses with 400.
+    const detail = await res.json().catch(() => null);
+    if (res.status === 400) {
+      console.error("[newsletter] mailchimp rejected signup:", detail?.title ?? "Bad Request");
+      return NextResponse.json({ error: "Enter a valid email." }, { status: 400 });
+    }
+    console.error("[newsletter] mailchimp error:", res.status, detail?.title ?? "");
     return NextResponse.json(
       { error: "Could not save your email. Try again." },
       { status: 500 }
