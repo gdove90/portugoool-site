@@ -66,11 +66,11 @@ export default function MobileNav({ open, onClose, links }: MobileNavProps) {
 
         <div className="mt-auto p-4">
           <Link
-            href="/drop"
+            href="/contact"
             onClick={onClose}
-            className="block rounded-full bg-red px-5 py-3 text-center text-sm font-semibold text-paper transition-colors hover:bg-red-dark"
+            className="block rounded-full border border-paper/40 px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.1em] text-paper transition-colors hover:border-paper hover:bg-paper/10"
           >
-            Shop the Drop
+            Contact
           </Link>
         </div>
       </div>

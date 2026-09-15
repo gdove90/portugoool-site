@@ -3,22 +3,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { useCart } from "@/lib/cart";
 import MobileNav from "./MobileNav";
 
-// Nav labels are uppercase via CSS; "Summer '26" (not "World Cup") per the
-// legal standards in CLAUDE.md.
+// One route to the garments: Collection. The logo is the Home link.
 const NAV_LINKS = [
-  { href: "/shop", label: "Shop" },
-  { href: "/drop", label: "The Drop" },
-  { href: "/customize", label: "Customize" },
+  { href: "/shop", label: "Collection" },
   { href: "/about", label: "About" },
-  { href: "/world-cup", label: "Summer '26" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { count } = useCart();
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 border-b border-paper/10 bg-ink">
@@ -35,19 +33,39 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-xs font-semibold uppercase tracking-[0.1em] text-paper/75 transition-colors hover:text-paper"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
+          {NAV_LINKS.map((link) => {
+            const active = pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={`text-xs font-semibold uppercase tracking-[0.1em] transition-colors hover:text-paper ${
+                  active
+                    ? "text-paper underline decoration-red decoration-2 underline-offset-8"
+                    : "text-paper/75"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/contact"
+            aria-current={pathname.startsWith("/contact") ? "page" : undefined}
+            className={`hidden rounded-full border px-5 py-2 text-xs font-semibold uppercase tracking-[0.1em] transition-colors md:inline-block ${
+              pathname.startsWith("/contact")
+                ? "border-paper text-ink bg-paper"
+                : "border-paper/40 text-paper hover:border-paper hover:bg-paper/10"
+            }`}
+          >
+            Contact
+          </Link>
+
           <Link
             href="/cart"
             className="relative flex h-10 w-10 items-center justify-center rounded-full text-paper transition-colors hover:bg-paper/10"
@@ -63,13 +81,6 @@ export default function Header() {
                 {count}
               </span>
             )}
-          </Link>
-
-          <Link
-            href="/drop"
-            className="hidden rounded-full bg-red px-5 py-2 text-sm font-semibold text-paper transition-colors hover:bg-red-dark md:inline-block"
-          >
-            Shop the Drop
           </Link>
 
           {/* Mobile menu button */}
