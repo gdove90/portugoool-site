@@ -35,6 +35,6 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Is this official team merchandise?",
     answer:
-      "No. GOOOL is an independent fan apparel brand. We celebrate the fans, not the federations. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
+      "No. GOOOL is an independent brand. We are not affiliated with any federation, club, league, or governing body. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
   },
 ];
