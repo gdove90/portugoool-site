@@ -67,6 +67,7 @@ export function middleware(req: NextRequest) {
     pathname === "/api/newsletter" ||
     pathname === "/api/preview" ||
     pathname.startsWith("/print/") ||
+    pathname.startsWith("/brand/") ||
     pathname === "/icon.svg" ||
     pathname === "/apple-icon.png" ||
     pathname === "/hero-crowd.webp";
