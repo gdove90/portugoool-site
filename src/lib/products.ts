@@ -1875,6 +1875,151 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
   },
+
+  // == GOOOL Athletics (concept line; Coming Soon, quoting stage) ==
+  // Source of truth: designs/16_goool_athletics/GOOOL_ATHLETICS_POD_Packet_v1.pdf
+  // (v1, 18 Sep 2026: NOT a production release). Blank, retail price, size
+  // range and supplier are unconfirmed, so: priceCents 0 (shown as "Price to
+  // be announced"), supplierType "unassigned", no Apliiq mapping, and
+  // availableForSale false. Checkout refuses all three on every one of
+  // those grounds. Front/back images are flat illustrations of the real
+  // print masters at the packet's proposed width and collar offset; the
+  // third image is the owner's concept render, captioned as such.
+  {
+    id: "80000000-0000-4000-8000-000000000001",
+    name: "GOOOL Athletics Modern Sport Tee",
+    slug: "goool-athletics-modern-sport-tee",
+    description:
+      "Bold, forward-leaning GOOOL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOOOL Athletics mark at the upper back. Solid black crewneck.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#0A0A0A",
+    fabric: "Premium cotton crewneck tee, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
+    fit: "Relaxed body with a moderate dropped shoulder.",
+    careInstructions: "Care instructions follow the approved blank and print process.",
+    images: [
+      {
+        src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_FRONT.webp",
+        alt: "GOOOL Athletics Modern Sport Tee, front: white GOOOL wordmark with red underline and ATHLETICS on a black tee",
+        caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_BACK.webp",
+        alt: "GOOOL Athletics Modern Sport Tee, back: small white GOOOL Athletics mark below the collar",
+        caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_CONCEPT.webp",
+        alt: "Concept render of the GOOOL Athletics Modern Sport Tee, front and back",
+        caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "unassigned",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    disclosure:
+      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000002",
+    name: "GOOOL Athletics Varsity Tee",
+    slug: "goool-athletics-varsity-tee",
+    description:
+      "Arched collegiate GOOOL in warm ivory with a thin dark red outline, ATHLETICS below between short rules. Small ivory GOOOL Athletics mark at the upper back. Washed black crewneck.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Washed Black",
+    colorHex: "#2E2E30",
+    fabric: "Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
+    fit: "Relaxed body with a moderate dropped shoulder.",
+    careInstructions: "Care instructions follow the approved blank and print process.",
+    images: [
+      {
+        src: "/products/GOOOL_ATHLETICS_02_VARSITY_FRONT.webp",
+        alt: "GOOOL Athletics Varsity Tee, front: arched ivory GOOOL with dark red outline and ATHLETICS on a washed black tee",
+        caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_02_VARSITY_BACK.webp",
+        alt: "GOOOL Athletics Varsity Tee, back: small ivory GOOOL Athletics mark below the collar",
+        caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_02_VARSITY_CONCEPT.webp",
+        alt: "Concept render of the GOOOL Athletics Varsity Tee, front and back",
+        caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "unassigned",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    disclosure:
+      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000003",
+    name: "GOOOL Athletics Minimal Club Tee",
+    slug: "goool-athletics-minimal-club-tee",
+    description:
+      "Small black GOOOL Athletics mark at the left chest. Large black GOOOL and ATHLETICS across the upper back with a single red underline. Natural cream crewneck.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Natural",
+    colorHex: "#E9E2D2",
+    fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
+    fit: "Relaxed body with a moderate dropped shoulder.",
+    careInstructions: "Care instructions follow the approved blank and print process.",
+    images: [
+      {
+        src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_FRONT.webp",
+        alt: "GOOOL Athletics Minimal Club Tee, front: small black GOOOL Athletics mark at the left chest of a natural cream tee",
+        caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_BACK.webp",
+        alt: "GOOOL Athletics Minimal Club Tee, back: large black GOOOL and ATHLETICS with a red underline across the upper back",
+        caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_CONCEPT.webp",
+        alt: "Concept render of the GOOOL Athletics Minimal Club Tee, front and back",
+        caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "unassigned",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    disclosure:
+      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+  },
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

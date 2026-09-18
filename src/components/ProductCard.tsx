@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Product, isSoldOut, isAvailableForSale, remainingUnits } from "@/lib/types";
+import { Product, isSoldOut, isAvailableForSale, remainingUnits, hasPrice } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -12,6 +12,7 @@ export default function ProductCard({ product }: { product: Product }) {
     product.compareAtPriceCents > product.priceCents;
   const soldOut = isSoldOut(product);
   const comingSoon = !isAvailableForSale(product);
+  const priced = hasPrice(product);
   const remaining = remainingUnits(product);
   // Only surface the countdown when it's actually getting scarce — honest urgency.
   const lowStock = !soldOut && remaining != null && remaining <= 150;
@@ -32,7 +33,11 @@ export default function ProductCard({ product }: { product: Product }) {
       <Link
         href={href}
         className="block"
-        aria-label={`${product.name}, ${formatPrice(product.priceCents)}`}
+        aria-label={
+          priced
+            ? `${product.name}, ${formatPrice(product.priceCents)}`
+            : `${product.name}, price to be announced`
+        }
       >
         <div className="relative aspect-square overflow-hidden rounded-xl bg-smoke">
           {/* Every variant image stays mounted so switching never flashes. */}
@@ -124,14 +129,20 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
         </div>
         <Link href={href} className="block text-right">
-          <p className="text-sm font-semibold text-ink">
-            {onSale && (
-              <span className="mr-1.5 font-normal text-ink/40 line-through">
-                {formatPrice(product.compareAtPriceCents!)}
-              </span>
-            )}
-            {formatPrice(product.priceCents)}
-          </p>
+          {priced ? (
+            <p className="text-sm font-semibold text-ink">
+              {onSale && (
+                <span className="mr-1.5 font-normal text-ink/40 line-through">
+                  {formatPrice(product.compareAtPriceCents!)}
+                </span>
+              )}
+              {formatPrice(product.priceCents)}
+            </p>
+          ) : (
+            <p className="text-xs font-semibold uppercase tracking-wider text-ink/50">
+              Price TBA
+            </p>
+          )}
           {product.originLabel && (
             <p className="mt-1 text-[10px] font-semibold uppercase leading-tight tracking-[0.12em] text-ink/40">
               {product.originLabel}

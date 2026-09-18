@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale } from "@/lib/types";
+import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale, hasPrice } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/lib/cart";
 import SizeSelector from "./SizeSelector";
@@ -43,6 +43,7 @@ export default function ProductDetail({ product }: { product: Product }) {
 
   const soldOut = isSoldOut(product);
   const comingSoon = !isAvailableForSale(product);
+  const priced = hasPrice(product);
   const remaining = remainingUnits(product);
   const customizable =
     product.customNameAvailable || product.customNumberAvailable;
@@ -106,6 +107,11 @@ export default function ProductDetail({ product }: { product: Product }) {
               </span>
             )}
           </div>
+          {images[activeImage].caption && (
+            <p className="mt-2 text-xs leading-relaxed text-ink/50">
+              {images[activeImage].caption}
+            </p>
+          )}
           {images.length > 1 && (
             <div className="mt-3 flex gap-2">
               {images.map((img, i) => (
@@ -181,7 +187,13 @@ export default function ProductDetail({ product }: { product: Product }) {
                 {formatPrice(product.compareAtPriceCents!)}
               </span>
             )}
-            {formatPrice(unitPriceCents)}
+            {priced ? (
+              formatPrice(unitPriceCents)
+            ) : (
+              <span className="text-base font-semibold uppercase tracking-wider text-ink/50">
+                Price to be announced
+              </span>
+            )}
             {hasCustomization && (
               <span className="ml-2 text-sm font-normal text-ink/50">
                 includes name &amp; number

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
-import { Size, isSoldOut, isAvailableForSale } from "@/lib/types";
+import { Size, isSoldOut, isAvailableForSale, hasPrice } from "@/lib/types";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe Checkout handoff.
@@ -72,6 +72,14 @@ export async function POST(req: NextRequest) {
     if (!isAvailableForSale(product) && !testCheckout) {
       return NextResponse.json(
         { error: `${product.name} is coming soon and cannot be purchased yet.` },
+        { status: 400 }
+      );
+    }
+    // No retail price yet: refused even under the controlled-testing
+    // exception, so a $0 line can never be handed to Stripe.
+    if (!hasPrice(product)) {
+      return NextResponse.json(
+        { error: `${product.name} is not priced yet and cannot be purchased.` },
         { status: 400 }
       );
     }

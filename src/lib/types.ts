@@ -27,6 +27,9 @@ export type SupplierType =
 export interface ProductImage {
   src: string;
   alt: string;
+  /** Shown under the gallery when the image is not a product photo
+   *  (e.g. a concept render or a flat artwork illustration). */
+  caption?: string;
 }
 
 /** One selectable colorway of a variant-based product (single product page,
@@ -116,6 +119,12 @@ export function remainingUnits(p: Product): number | null {
  *  server-side at checkout. */
 export function isAvailableForSale(p: Product): boolean {
   return p.availableForSale !== false;
+}
+
+/** A product whose retail price has not been set yet (priceCents = 0)
+ *  shows "Price to be announced" and can never reach checkout. */
+export function hasPrice(p: Product): boolean {
+  return p.priceCents > 0;
 }
 
 export function isSoldOut(p: Product): boolean {
