@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ProductGrid from "@/components/ProductGrid";
 import { getProductBySlug } from "@/lib/products";
 import { Product } from "@/lib/types";
@@ -53,8 +54,17 @@ export default function ShopPage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-red">
               Next up
             </p>
-            <h2 className="mt-2 font-display text-3xl font-bold uppercase tracking-tightest text-ink sm:text-4xl">
-              GOOOL Athletics
+            <h2 className="mt-3">
+              <Image
+                src="/brand/goool-wordmark-ink.png"
+                alt="GOOOL"
+                width={720}
+                height={250}
+                className="h-auto w-44 sm:w-52"
+              />
+              <span className="mt-2 block text-xs font-semibold uppercase tracking-widest text-ink sm:text-sm">
+                Athletics
+              </span>
             </h2>
             <p className="mt-2 max-w-lg text-ink/60">
               Three tees. One mark, three ways. In development. Coming soon.
