@@ -64,14 +64,15 @@ the price survives the one open cost question (below).
 Cost basis, all ESTIMATES from public apliiq.com pages fetched
 2026-09-19, standard plan, no VIP discount: dropship blanks 3010 $9.50
 and 4810GD $12.62 (catalog listings); transfer print $7.49 per location
-(the 3010 page shows $9.50 blank and $16.99 with one print); small
-second location estimated $5.00 (Apliiq publishes no size tiers);
-private label $2.50 pay-as-you-go; Apliiq fulfillment fee $1.00 per
-item. Estimated production cost $25.49 / $28.61 / $25.49; if the second
-print bills at the full $7.49, $27.98 / $31.10 / $27.98. The prices
-above hold at least 32% contribution after Stripe (2.9% + $0.30) in
-that worse case. Shipping is charged to the customer at checkout; sales
-tax, if enabled, is added at checkout.
+regardless of size up to 203 sq in, +$0.08 per sq in over (Apliiq's
+rendered pricing table on the AS Colour 5101 page: blank $29.36,
+transfer print $36.85; the 3010 page agrees: $9.50 blank, $16.99 with
+one print); embroidery on the same table is +$9.99 up to 15,000
+stitches; private label $2.50 pay-as-you-go; Apliiq fulfillment fee
+$1.00 per item. Estimated production cost with front and back prints:
+$27.98 / $31.10 / $27.98. The prices above hold 32.8% / 31.7% / 32.8%
+contribution after Stripe (2.9% + $0.30). Shipping is charged to the
+customer at checkout; sales tax, if enabled, is added at checkout.
 
 Before purchasing opens, replace the estimates with the seller prices
 from the Apliiq design tool (store linked): front + back transfer at
