@@ -1878,11 +1878,12 @@ export const products: Product[] = [
 
   // == GOOOL Athletics (concept line; Coming Soon, quoting stage) ==
   // Source of truth: designs/16_goool_athletics/GOOOL_ATHLETICS_POD_Packet_v1.pdf
-  // (v1, 18 Sep 2026: NOT a production release). Blank, retail price, size
-  // range and supplier are unconfirmed, so: priceCents 0 (shown as "Price to
-  // be announced"), supplierType "unassigned", no Apliiq mapping, and
-  // availableForSale false. Checkout refuses all three on every one of
-  // those grounds. Front/back images are flat illustrations of the real
+  // (v1, 18 Sep 2026: NOT a production release). Blank, size range and
+  // supplier are unconfirmed, so: supplierType "unassigned", no Apliiq
+  // mapping, and availableForSale false. Checkout refuses all three on
+  // every one of those grounds. Retail prices set 2026-09-19 (owner
+  // decision) from the cost basis in designs/16_goool_athletics/README.md,
+  // "Pricing". Front/back images are flat illustrations of the real
   // print masters at the packet's proposed width and collar offset; the
   // third image is the owner's concept render, captioned as such.
   {
@@ -1891,7 +1892,7 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-tee",
     description:
       "Bold, forward-leaning GOOOL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOOOL Athletics mark at the upper back. Solid black crewneck.",
-    priceCents: 0,
+    priceCents: 4400,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -1946,7 +1947,7 @@ export const products: Product[] = [
     slug: "goool-athletics-varsity-tee",
     description:
       "Arched collegiate GOOOL in warm ivory with a thin dark red outline, ATHLETICS below between short rules. Small ivory GOOOL Athletics mark at the upper back. Washed black crewneck.",
-    priceCents: 0,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#2E2E30",
@@ -2001,7 +2002,7 @@ export const products: Product[] = [
     slug: "goool-athletics-minimal-club-tee",
     description:
       "Small black GOOOL Athletics mark at the left chest. Large black GOOOL and ATHLETICS across the upper back with a single red underline. Natural cream crewneck.",
-    priceCents: 0,
+    priceCents: 4400,
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E9E2D2",

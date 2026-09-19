@@ -1,9 +1,9 @@
--- 0027: GOOOL Athletics concept line (three tees, Coming Soon, unpriced).
+-- 0027: GOOOL Athletics concept line (three tees, Coming Soon, not for sale).
 -- Idempotent: safe to run more than once. Mirrors src/lib/products.ts
 -- (same UUIDs). Source: designs/16_goool_athletics/GOOOL_ATHLETICS_POD_Packet_v1.pdf
--- (v1, 18 Sep 2026, quoting stage: no blank, price, size range or supplier
--- confirmed). price_cents 0 = "Price to be announced"; the checkout route
--- refuses unpriced, unavailable and unmapped products server-side.
+-- (v1, 18 Sep 2026, quoting stage: no blank, size range or supplier
+-- confirmed). Retail set 2026-09-19: $44 / $48 / $44 (basis in the design
+-- README). The checkout route refuses unavailable and unmapped products.
 -- Apply via the Supabase dashboard SQL editor (established workflow).
 
 insert into public.products
@@ -16,7 +16,7 @@ values
 (
   '80000000-0000-4000-8000-000000000001', 'GOOOL Athletics Modern Sport Tee', 'goool-athletics-modern-sport-tee',
   'Bold, forward-leaning GOOOL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOOOL Athletics mark at the upper back. Solid black crewneck.',
-  0, null, 'Black', '#0A0A0A',
+  4400, null, 'Black', '#0A0A0A',
   'Premium cotton crewneck tee, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.',
   'Relaxed body with a moderate dropped shoulder.',
   'Care instructions follow the approved blank and print process.',
@@ -27,7 +27,7 @@ values
 (
   '80000000-0000-4000-8000-000000000002', 'GOOOL Athletics Varsity Tee', 'goool-athletics-varsity-tee',
   'Arched collegiate GOOOL in warm ivory with a thin dark red outline, ATHLETICS below between short rules. Small ivory GOOOL Athletics mark at the upper back. Washed black crewneck.',
-  0, null, 'Washed Black', '#2E2E30',
+  4800, null, 'Washed Black', '#2E2E30',
   'Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.',
   'Relaxed body with a moderate dropped shoulder.',
   'Care instructions follow the approved blank and print process.',
@@ -38,7 +38,7 @@ values
 (
   '80000000-0000-4000-8000-000000000003', 'GOOOL Athletics Minimal Club Tee', 'goool-athletics-minimal-club-tee',
   'Small black GOOOL Athletics mark at the left chest. Large black GOOOL and ATHLETICS across the upper back with a single red underline. Natural cream crewneck.',
-  0, null, 'Natural', '#E9E2D2',
+  4400, null, 'Natural', '#E9E2D2',
   'Premium cotton crewneck tee, natural cream, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.',
   'Relaxed body with a moderate dropped shoulder.',
   'Care instructions follow the approved blank and print process.',
