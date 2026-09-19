@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 
 interface MobileNavProps {
@@ -36,9 +37,13 @@ export default function MobileNav({ open, onClose, links }: MobileNavProps) {
       {/* Panel */}
       <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-ink shadow-xl">
         <div className="flex h-16 items-center justify-between border-b border-paper/10 px-4">
-          <span className="font-display text-lg uppercase tracking-tightest text-paper">
-            G<span className="text-red">OOO</span>L
-          </span>
+          <Image
+            src="/brand/goool-wordmark-white.png"
+            alt="GOOOL"
+            width={130}
+            height={45}
+            className="h-auto w-24"
+          />
           <button
             type="button"
             onClick={onClose}
