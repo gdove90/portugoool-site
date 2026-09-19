@@ -30,6 +30,18 @@ photos replace them after sample approval.
 Print masters (`print_masters/`, six files at packet widths, 300 PPI)
 are the production artwork and stay here, never in `public/`.
 
+Model shots (`model_shots/`, 2026-09-19): six AI-generated concept model
+renders (front + back per tee, male models, outdoor concrete stadium)
+delivered by the owner from a Codex session, with `generation-prompts.md`
+alongside. Owner instruction 2026-09-19: these go in each tee's product
+gallery, matched strictly to their own product. On-site they are always
+captioned "Concept model render. Not a photograph of a manufactured
+sample." - the same rule as the concept boards: never presented as
+product photography, replaced by real photos after sample approval.
+Web copies: `public/products/GOOOL_ATHLETICS_*_MODEL_{FRONT,BACK}.webp`.
+Legal pass clean: original GOOOL marks only, AI models with no real
+person's likeness, no third-party brands.
+
 Legal pass (2026-09-18): original GOOOL wordmark treatments only; no
 federation/FIFA/UEFA/World Cup marks, no third-party brand elements,
 no player likenesses. Varsity arch is a generic lettering style.

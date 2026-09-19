@@ -1910,6 +1910,16 @@ export const products: Product[] = [
         caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
       },
       {
+        src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_MODEL_FRONT.webp",
+        alt: "Model wearing the GOOOL Athletics Modern Sport Tee outside a stadium, front view",
+        caption: "Concept model render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_MODEL_BACK.webp",
+        alt: "Model wearing the GOOOL Athletics Modern Sport Tee outside a stadium, back view",
+        caption: "Concept model render. Not a photograph of a manufactured sample.",
+      },
+      {
         src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_CONCEPT.webp",
         alt: "Concept render of the GOOOL Athletics Modern Sport Tee, front and back",
         caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
@@ -1955,6 +1965,16 @@ export const products: Product[] = [
         caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
       },
       {
+        src: "/products/GOOOL_ATHLETICS_02_VARSITY_MODEL_FRONT.webp",
+        alt: "Model wearing the GOOOL Athletics Varsity Tee outside a stadium, front view",
+        caption: "Concept model render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_02_VARSITY_MODEL_BACK.webp",
+        alt: "Model wearing the GOOOL Athletics Varsity Tee outside a stadium, back view",
+        caption: "Concept model render. Not a photograph of a manufactured sample.",
+      },
+      {
         src: "/products/GOOOL_ATHLETICS_02_VARSITY_CONCEPT.webp",
         alt: "Concept render of the GOOOL Athletics Varsity Tee, front and back",
         caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
@@ -1998,6 +2018,16 @@ export const products: Product[] = [
         src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_BACK.webp",
         alt: "GOOOL Athletics Minimal Club Tee, back: large black GOOOL and ATHLETICS with a red underline across the upper back",
         caption: "Artwork illustration at the proposed print size and placement. Not a photo of a finished garment.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_MODEL_FRONT.webp",
+        alt: "Model wearing the GOOOL Athletics Minimal Club Tee outside a stadium, front view",
+        caption: "Concept model render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_MODEL_BACK.webp",
+        alt: "Model wearing the GOOOL Athletics Minimal Club Tee outside a stadium, back view",
+        caption: "Concept model render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_CONCEPT.webp",
