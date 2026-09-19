@@ -1703,7 +1703,7 @@ export const products: Product[] = [
         skuFragment: "WHITE",
         images: [
           { src: "/products/GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE_V2.png", alt: "GOOOL Performance Badge Tee in white, front view with the navy GOOOL crest" },
-          { src: "/products/GOOOL_LIFESTYLE_05_ST720_PERFORMANCE_TEE_WHITE.png", alt: "GOOOL Performance Badge Tee in white worn on a stadium field" },
+          { src: "/products/GOOOL_LIFESTYLE_05_ST720_PERFORMANCE_TEE_WHITE.png", alt: "GOOOL Performance Badge Tee in white worn on a stadium field", aspectRatio: 1122 / 1402 },
         ],
       },
       {
@@ -1713,7 +1713,7 @@ export const products: Product[] = [
         skuFragment: "TRUE_ROYAL",
         images: [
           { src: "/products/GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V3.png", alt: "GOOOL Performance Badge Tee in true royal, front view with the cream GOOOL crest" },
-          { src: "/products/GOOOL_LIFESTYLE_06_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V2.png", alt: "GOOOL Performance Badge Tee in true royal worn on a stadium field" },
+          { src: "/products/GOOOL_LIFESTYLE_06_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V2.png", alt: "GOOOL Performance Badge Tee in true royal worn on a stadium field", aspectRatio: 1122 / 1402 },
         ],
       },
     ],
@@ -1769,7 +1769,7 @@ export const products: Product[] = [
         skuFragment: "BONE",
         images: [
           { src: "/products/GOOOL_MOCKUP_06_IND4000_HOODIE_BONE_V2.png", alt: "GOOOL Core Hoodie in bone, front view with the navy underlined GOOOL wordmark" },
-          { src: "/products/GOOOL_LIFESTYLE_07_IND4000_HOODIE_BONE.png", alt: "GOOOL Core Hoodie in bone worn in a stadium tunnel" },
+          { src: "/products/GOOOL_LIFESTYLE_07_IND4000_HOODIE_BONE.png", alt: "GOOOL Core Hoodie in bone worn in a stadium tunnel", aspectRatio: 1122 / 1402 },
         ],
       },
     ],
@@ -1825,7 +1825,7 @@ export const products: Product[] = [
         skuFragment: "WGREY",
         images: [
           { src: "/products/GOOOL_MOCKUP_07_4810GD_CASUAL_TEE_WASHED_GREY_V2.png", alt: "GOOOL Casual Wordmark Tee in washed grey, front view with the navy underlined GOOOL wordmark" },
-          { src: "/products/GOOOL_LIFESTYLE_08_4810GD_CASUAL_TEE_WASHED_GREY.png", alt: "GOOOL Casual Wordmark Tee in washed grey worn on a stadium field" },
+          { src: "/products/GOOOL_LIFESTYLE_08_4810GD_CASUAL_TEE_WASHED_GREY.png", alt: "GOOOL Casual Wordmark Tee in washed grey worn on a stadium field", aspectRatio: 1122 / 1402 },
         ],
       },
     ],
@@ -1912,16 +1912,19 @@ export const products: Product[] = [
       },
       {
         src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_MODEL_FRONT.webp",
+        aspectRatio: 1122 / 1402,
         alt: "Model wearing the GOOOL Athletics Modern Sport Tee outside a stadium, front view",
         caption: "Concept model render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_MODEL_BACK.webp",
+        aspectRatio: 1122 / 1402,
         alt: "Model wearing the GOOOL Athletics Modern Sport Tee outside a stadium, back view",
         caption: "Concept model render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_ATHLETICS_01_MODERN_SPORT_CONCEPT.webp",
+        aspectRatio: 1536 / 896,
         alt: "Concept render of the GOOOL Athletics Modern Sport Tee, front and back",
         caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
       },
@@ -1967,16 +1970,19 @@ export const products: Product[] = [
       },
       {
         src: "/products/GOOOL_ATHLETICS_02_VARSITY_MODEL_FRONT.webp",
+        aspectRatio: 1122 / 1402,
         alt: "Model wearing the GOOOL Athletics Varsity Tee outside a stadium, front view",
         caption: "Concept model render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_ATHLETICS_02_VARSITY_MODEL_BACK.webp",
+        aspectRatio: 1122 / 1402,
         alt: "Model wearing the GOOOL Athletics Varsity Tee outside a stadium, back view",
         caption: "Concept model render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_ATHLETICS_02_VARSITY_CONCEPT.webp",
+        aspectRatio: 1536 / 896,
         alt: "Concept render of the GOOOL Athletics Varsity Tee, front and back",
         caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
       },
@@ -2022,16 +2028,19 @@ export const products: Product[] = [
       },
       {
         src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_MODEL_FRONT.webp",
+        aspectRatio: 1122 / 1402,
         alt: "Model wearing the GOOOL Athletics Minimal Club Tee outside a stadium, front view",
         caption: "Concept model render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_MODEL_BACK.webp",
+        aspectRatio: 1122 / 1402,
         alt: "Model wearing the GOOOL Athletics Minimal Club Tee outside a stadium, back view",
         caption: "Concept model render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_ATHLETICS_03_MINIMAL_CLUB_CONCEPT.webp",
+        aspectRatio: 1536 / 896,
         alt: "Concept render of the GOOOL Athletics Minimal Club Tee, front and back",
         caption: "Concept render from the design brief. Not a photograph of a manufactured sample.",
       },

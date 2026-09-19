@@ -88,15 +88,19 @@ export default function ProductDetail({ product }: { product: Product }) {
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
         {/* Images */}
         <div>
-          <div className="relative aspect-square overflow-hidden rounded-xl bg-smoke">
+          <div
+            className="relative overflow-hidden rounded-xl bg-smoke"
+            // The frame takes the image's own shape, so a wide concept board
+            // or a portrait model shot fills it edge to edge: nothing is
+            // cropped, nothing is stretched, and no backdrop shows through.
+            style={{ aspectRatio: images[activeImage].aspectRatio ?? 1 }}
+          >
             <Image
               src={images[activeImage].src}
               alt={images[activeImage].alt}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              // contain, not cover: portrait model shots must never crop
-              // faces or hems; square garment mockups fill the frame either way
               className="object-contain"
             />
             {product.isLimitedDrop && (
