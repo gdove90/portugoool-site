@@ -95,3 +95,65 @@ Stripe webhook are unaffected. No keys, refs or connection strings changed.
 No prices published, no live Stripe activation, no supplier submission
 enabled, no labels purchased, no samples ordered, nothing posted to
 Instagram.
+
+---
+
+# Addendum — same day, later session
+
+## Correction to my own earlier flag about the 50 products
+
+The first version of this file said "if catalog reads are ever flipped to
+the database, 50 products become purchasable at old prices." That
+overstated the exposure. Measured properly:
+
+```
+is_active | available_for_sale | rows | min_price | max_price
+----------+--------------------+------+-----------+----------
+true      | false              |    4 |      3600 |      7800
+false     | true               |   50 |      1000 |      6500
+```
+
+A clean two-way split. Every one of the 50 rows flagged sellable is
+ALREADY retired (`is_active = false`); migrations 0021-0024 cleared
+`is_active` but never cleared `available_for_sale`. And:
+
+- an anon-key read of `public.products` returns exactly 4 rows (the RLS
+  policy hides inactive rows from the public role), none sellable
+- `grep` for `from("products")` across `src/` returns nothing: the site
+  does not read the catalog from Supabase at all today
+
+So there is no live exposure. The real trap is narrower: a future
+read-path switch on a SERVICE-ROLE client, which bypasses RLS and would
+see 50 rows claiming to be sellable.
+
+Correction prepared as `supabase/migrations/0030_retire_legacy_available_flags.sql`.
+It only ever closes availability, deletes nothing, changes no price or
+image, and is idempotent. NOT YET APPLIED — the write was blocked by the
+permission classifier, which is correct for a production data update.
+Apply it in the SQL editor, or authorise me to.
+
+## Pre-payment verification (requested before any card is entered)
+
+Read from the live Netlify production environment and Stripe:
+
+| Control | State | Evidence |
+|---|---|---|
+| Checkout mode | TEST | `CHECKOUT_TEST_MODE=true` (all contexts); Stripe key resolves `mode: test` |
+| Session mode | TEST | `livemode: false` on the created session |
+| Supplier submission | DISABLED | `APLIIQ_SUBMIT_ENABLED` is **absent entirely** from the Netlify environment, so the gate returns `left_pending_disabled` |
+| Environment gate | second layer | `submissionEnvironmentAllowed(livemode)` refuses non-live/non-production even if the flag were set |
+
+Two further gaps this surfaced, both needed before live fulfillment:
+- No Apliiq credentials are configured at all (no APP_ID, no shared
+  secret, no `FULFILLMENT_OPS_KEY`). Submission could not run even if
+  enabled.
+- `PREVIEW_KEY` is the literal string `gary`, is not marked secret, and
+  is set for all contexts. It bypasses the Coming Soon gate. Worth
+  rotating to a long random value before launch.
+
+Stripe account onboarding is still incomplete: `charges_enabled=false`,
+`payouts_enabled=false`, `details_submitted=false`, with
+`requirements_currently_due` EMPTY, meaning onboarding has not been
+started rather than being under review. Live mode cannot be enabled until
+the owner completes business and bank details in Stripe directly.
+Shipping is still the `GOOOL TEST shipping` rate at $9.50.

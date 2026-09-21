@@ -173,26 +173,39 @@ order parked and ask.
 
 ## Known deviation log
 
-- 2026-09-21 SUPPLIER BLOCKER, casual tee 3.00 in revision NOT APPLIED
-  AT APLIIQ. The owner revision (3.25 in -> 3.00 in below the bottom
-  centre-front collar seam, both casual colorways, width unchanged at
-  6.75 in) is recorded in the spec, packages 06/07 and the table above,
-  but saved designs 6098963 and 6099060 still carry the 3.25 in
-  placement. Apliiq exposes no way to change artwork position on an
-  already-saved design. Verified this session: /product/<id> offers only
-  rename, replace-blank, add/remove colour, upload hi-res, add note,
-  remove artwork and attach label; the saved-designs list's only row
-  action is rename; and the customizer always opens a NEW design -
-  ?pid=, ?productId=, ?did=, ?id=, ?p= and ?edit= all return a
-  byte-identical fresh page with no saved artwork loaded.
-  Applying 3.00 in therefore requires creating replacement saved designs,
-  which produces NEW product ids and NEW per-size SKUs and would break the
-  verified fulfillment mapping in src/lib/fulfillment.ts. NOT done
-  unilaterally. OWNER DECISION required: (a) accept new ids/SKUs for these
-  two colorways and let the mapping be re-pointed, or (b) ask Apliiq
-  support to reposition the existing saved designs in place. Until one is
-  chosen, supplier placement and website imagery both remain at the old
-  target and no physical sample may be approved against 3.00 in.
+- 2026-09-21 CASUAL TEE 3.00 IN: OWNER-APPROVED, SUPPLIER CANNOT APPLY IT.
+  The placement decision is settled and is NOT in question: top of the
+  visible front artwork sits 3.00 in below the bottom centre-front collar
+  seam, both Washed Black and Washed Grey, visible width unchanged at
+  6.75 in. Spec, packages 06/07 and the table above all carry it.
+
+  THE EXACT SUPPLIER CONSTRAINT: Apliiq has no edit path for artwork
+  POSITION on a design that has already been saved. Verified 2026-09-21
+  against the live account:
+    · /product/<id> action menu offers exactly: upload hi res, add note,
+      remove. No reposition, no re-open in customizer.
+    · the product page model exposes replace-blank, add/remove colour,
+      add note, attach label and rename only; `serviceItems` carries
+      Width_Inch/Height_Inch but no X/Y, so position is not editable there.
+    · the saved-designs list row has ONE action, and it is rename
+      ("name your design"), not edit.
+    · the customizer never loads a saved design: ?pid= ?productId= ?did=
+      ?id= ?p= and ?edit= all return a byte-identical fresh page.
+  Position is fixed at creation time. That is a limitation of Apliiq, not
+  an open question about the design.
+
+  OPTIONS, all of which need the owner to pick one:
+   (a) Create replacement saved designs at 3.00 in and re-point the
+       mapping. Cost: NEW product ids and NEW per-size SKUs for these two
+       colourways; src/lib/fulfillment.ts must be updated in the same
+       change or paid orders would resolve to the old designs. The old
+       designs would be renamed SUPERSEDED, not deleted.
+   (b) Ask Apliiq support to reposition 6098963 and 6099060 in place,
+       keeping ids and SKUs. Slower, but nothing downstream changes.
+   (c) Ship the current 3.25 in placement for these two colourways and
+       apply 3.00 in only to designs created from now on.
+  Until one is chosen, 6098963 and 6099060 still carry 3.25 in and no
+  physical sample may be approved against the 3.00 in target.
 
 - 2026-09-14: the original Apliiq drafts used wrong artwork (an 8 in
   shoulder-variant wordmark on the 4810GD; front-CC-DARK on the ST720).
