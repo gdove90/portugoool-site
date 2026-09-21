@@ -80,3 +80,77 @@ All targets come from Apliiq's rendered mockups, which are the supplier's own
 renders, not photographs of manufactured samples. This establishes
 render-to-render agreement, not colorimetric accuracy against physical
 fabric. Physical sample approval remains the gate.
+
+---
+
+# Round 2 — the two blocked colourways, unblocked
+
+Owner approved regenerating the detail crops on a light studio backdrop.
+
+## Why round 1 failed, precisely
+
+Luminance could not separate garment from backdrop on the detail crops: the
+separation was NEGATIVE, -8 levels on Modern Sport and -17 on Varsity. The
+backdrop and the fabric overlap in brightness, so any luminance-keyed mask
+either misses or bisects the garment. That is the whole story.
+
+## The fix
+
+The backdrops are synthetic gradients measuring 0.000 local texture at p99,
+against real fabric grain of 1.19 and 4.08. Segmenting on TEXTURE rather
+than brightness separates them cleanly. The backdrop was then replaced with
+the house studio field and the colour correction applied with a mask that
+finally covers the whole garment.
+
+Garment and artwork pixels are original throughout. No lettering was
+regenerated, per the CLAUDE.md rule.
+
+## Result
+
+| File | fabric | coverage | per-row band |
+|---|---|---|---|
+| MODERN_PERFORMANCE_FRONT_V2 | 28 -> 55 (#373737) | 99.5% | 88,100,99,99,100,100,100,100 |
+| MODERN_PERFORMANCE_BACK_DETAIL_V2 | 29 -> 55 (#373737) | 99.7% | 94,100,100,100,100,100,100,100 |
+| STD_VARSITY_FRONT | 34 -> 38 (#262626) | 100.0% | all 100 |
+| STD_VARSITY_BACK | 29 -> 38 (#262626) | 98.9% | 100,100,98,97,100,100,100 |
+| VARSITY_BACK_DETAIL_V1 | 30 -> 38 (#262626) | 99.7% | 98,100,100,... |
+
+Background pixels changed: 0 on every studio plate.
+
+Independent verification, both SHIP:
+- Modern Sport: front 55.0 and back detail 54.3, a 0.7-level spread. The
+  back detail had 48,276 pure-black pixels before and exactly 0 after, so
+  backdrop replacement is complete. Partial coverage gone: per-band gain is
+  1.875-1.893 top to bottom, dead uniform.
+- Varsity: front 37, back 38, detail 38 against a 38 target. The old ~20%
+  luminance gap between the detail crop and its plates is gone.
+- Speckle is not a defect here: noise multiplier 1.90x against a tonal gain
+  of 1.88-1.95x, i.e. existing grain carried along by the lift. A real
+  speckle event needs a local multiplier near 6x. Fabric histograms are
+  fully contiguous, so no posterisation.
+
+## A correction to a verifier's advice, worth recording
+
+One verifier suggested nudging the regenerated backdrop from #F3F4F1 up to
+#F6F5F3 to match the Modern Sport front plate. A survey of all 75 product
+images shows that is backwards: #F3F4F1 (242.67) IS the house studio field,
+the modal value of the catalogue. The outlier is
+GOOOL_MODERN_PERFORMANCE_FRONT_V2 at 245.28, which is untouched original
+photography and predates all of this work. The regenerated crops are the
+files that match the standard. If anyone wants the set perfectly uniform,
+the fix is to bring that front plate DOWN, not the crops up - and it is
+~1.1% on a near-white field, cosmetic polish, not a gate.
+
+## Known, not a blocker
+
+The regenerated crops have zero backdrop grain where photographed plates
+carry 0.1-0.9. Invisible at PDP tile size or in a grid with whitespace. It
+would only show if a regenerated crop sat edge-to-edge at full bleed
+against a photographed plate in a hero or lookbook layout.
+
+## Catalogue status after this round
+
+10 of 14 colourways now match Apliiq's shipping colour. Not corrected:
+Performance Badge White and Circular Badge Ivory (unsafe to mask, occupancy
+0.231 and 0.26, and both already measured as matching), and Touchline Cap
+(two-tone, needs per-region handling).

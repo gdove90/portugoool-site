@@ -2020,7 +2020,7 @@ export const products: Product[] = [
     priceCents: 5000,
     compareAtPriceCents: null,
     color: "Washed Black",
-    colorHex: "#2E2E30",
+    colorHex: "#262626",
     fabric: "Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
@@ -2222,7 +2222,7 @@ export const products: Product[] = [
       {
         name: "Black",
         supplierColor: "Black",
-        hex: "#0A0A0A",
+        hex: "#373737",
         skuFragment: "BLACK",
         images: [
           {
