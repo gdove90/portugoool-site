@@ -1697,7 +1697,7 @@ export const products: Product[] = [
       {
         name: "Black",
         supplierColor: "Black",
-        hex: "#0A0A0A",
+        hex: "#373737",
         skuFragment: "BLACK",
         images: [
           {
@@ -1733,7 +1733,7 @@ export const products: Product[] = [
       {
         name: "True Royal",
         supplierColor: "true royal",
-        hex: "#2E48B6",
+        hex: "#3249A6",
         skuFragment: "TRUE_ROYAL",
         images: [
           {
@@ -1795,7 +1795,7 @@ export const products: Product[] = [
       {
         name: "Black",
         supplierColor: "Black",
-        hex: "#0A0A0A",
+        hex: "#1E1E1E",
         skuFragment: "BLACK",
         images: [
           {
@@ -1813,7 +1813,7 @@ export const products: Product[] = [
       {
         name: "Bone",
         supplierColor: "Bone",
-        hex: "#E9E4D8",
+        hex: "#CFCAC7",
         skuFragment: "BONE",
         images: [
           {
@@ -1875,7 +1875,7 @@ export const products: Product[] = [
       {
         name: "Washed Black",
         supplierColor: "Washed Black",
-        hex: "#2E2E30",
+        hex: "#262626",
         skuFragment: "WBLACK",
         images: [
           {
@@ -1893,7 +1893,7 @@ export const products: Product[] = [
       {
         name: "Washed Grey",
         supplierColor: "Washed Grey",
-        hex: "#8E8B87",
+        hex: "#7D7D7B",
         skuFragment: "WGREY",
         images: [
           {
@@ -2065,7 +2065,7 @@ export const products: Product[] = [
     priceCents: 4600,
     compareAtPriceCents: null,
     color: "Natural",
-    colorHex: "#E9E2D2",
+    colorHex: "#E5E5DD",
     fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
@@ -2155,7 +2155,7 @@ export const products: Product[] = [
     priceCents: 9300,
     compareAtPriceCents: null,
     color: "Gray Heather",
-    colorHex: "#C7C7C9",
+    colorHex: "#B2B2B2",
     fabric: "Premium heavyweight fleece crewneck, gray heather, rib collar, cuffs and hem. Blank and fabric weight are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
