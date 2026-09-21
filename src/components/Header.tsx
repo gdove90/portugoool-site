@@ -20,9 +20,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-paper/10 bg-ink">
-      <div className="mx-auto flex h-16 max-w-content items-center justify-between px-4 sm:px-6">
+      {/* Full-width bar: logo | viewport-centered nav | actions. The 1fr
+          side columns keep the nav centered even though the logo and
+          action group widths differ. */}
+      <div className="grid h-16 w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-4 sm:px-6 lg:px-12">
         {/* Wordmark — the approved underlined GOOOL mark */}
-        <Link href="/" aria-label="GOOOL home" className="flex items-center">
+        <Link href="/" aria-label="GOOOL home" className="flex items-center justify-self-start">
           <Image
             src="/brand/goool-wordmark-white.png"
             alt="GOOOL"
@@ -53,7 +56,7 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="col-start-3 flex items-center gap-3 justify-self-end">
           <Link
             href="/contact"
             aria-current={pathname.startsWith("/contact") ? "page" : undefined}
