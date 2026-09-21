@@ -157,3 +157,65 @@ Stripe account onboarding is still incomplete: `charges_enabled=false`,
 started rather than being under review. Live mode cannot be enabled until
 the owner completes business and bank details in Stripe directly.
 Shipping is still the `GOOOL TEST shipping` rate at $9.50.
+
+---
+
+# Addendum 2 — corrections accepted, preview key rotated
+
+## Two corrections from the owner, both verified in code
+
+1. **`left_pending_disabled` is NOT a submission_status.** Confirmed: it
+   appears only in the `action:` return union of `submitPaidOrder`
+   (`fulfillment-submit.ts:120`) and never reaches the database. The
+   webhook stores (`stripe-webhook/route.ts:117`):
+
+   ```
+   submission_status: paid
+     ? (unmapped.length > 0 ? "failed" : "pending_submission")
+     : "not_submitted"
+   ```
+
+   So for our test session — paid, with a complete SKU snapshot — the
+   CORRECT stored value is **`pending_submission`**, and that is fully
+   consistent with supplier submission being disabled. Verification must
+   assert `pending_submission`, not any "disabled" string.
+
+2. **Stripe onboarding state must not be inferred from an empty
+   `currently_due`.** My earlier note claimed onboarding "has not been
+   started" on that basis. Withdrawn — an empty array does not prove
+   that. What is verified is only: `charges_enabled=false`,
+   `payouts_enabled=false`, `details_submitted=false`. The actual stage
+   must be read in the live Stripe Dashboard by the owner.
+
+## Preview key rotated (owner-approved)
+
+The weak key (4 characters, not marked secret, all contexts) is replaced
+with 256 bits of url-safe randomness, stored as a Netlify SECRET in the
+production context. The value was generated into the session scratchpad
+and passed by shell substitution from that file, so it never appeared in
+a command line, a tool argument, this repository or the chat. `.env.local`
+was updated in place so local tooling keeps working; `git check-ignore`
+confirms that file is ignored.
+
+Rotation verified against production after a full rebuild
+(deploy `6ab0f368a10b67f9c791454c`, state ready):
+
+| Request to https://goool.shop/shop | Result |
+|---|---|
+| no key | 307 (gated) |
+| OLD key | 307 — rejected |
+| NEW key | 200 — owner preview works |
+
+The new value is readable only from `.env.local` on this machine; Netlify
+stores it write-only as a secret. If it is lost, rotate again rather than
+trying to recover it.
+
+## Stripe rehearsal still pending payment
+
+Checked, not assumed: three sessions exist, ALL `status=open`,
+`payment_status=unpaid`, `livemode=false`. Zero payment_intents and zero
+`checkout.session.completed` events in the account. No completed-payment
+event has been fabricated and none will be.
+
+The most recent session is valid until 2026-09-22T08:54:55Z, so a new
+link is unnecessary until then.
