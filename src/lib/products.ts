@@ -2240,7 +2240,12 @@ export const products: Product[] = [
       {
         name: "True Royal",
         supplierColor: "true royal",
-        hex: "#2E48B6",
+        // Sampled from Apliiq's OWN rendered garment for saved design
+        // 6113361, not from their swatch hex. Their API reports the
+        // swatch as #2E48B6, but the rendered garment body measures
+        // #354CAA - softer and less saturated. The render is what
+        // actually ships, so it governs both this swatch and the imagery.
+        hex: "#354CAA",
         skuFragment: "ROYAL",
         images: [
           {
