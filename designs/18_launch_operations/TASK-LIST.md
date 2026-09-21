@@ -9,9 +9,9 @@ Stripe first; work on approved imagery/copy cleanup while external account steps
 | DB-01 | P0 | Restore GOOOL Supabase query access and inspect migrations | blocked_authentication | Owner/Claude |
 | DB-02 | P0 | Apply only missing order/catalog migrations | pending_inspection | Claude |
 | PAY-03 | P0 | Complete test purchase through webhook, order and tracking | pending_database | Claude |
-| COST-01 | P1 | Verify supplier costs for every offered variant | blocked_supplier_login_in_Codex | Claude in authenticated Apliiq session |
-| PRICE-01 | P1 | Calculate and review six new retail prices | waiting_verified_costs | Claude/Owner |
-| PRICE-02 | P1 | Publish verified prices consistently | blocked_by_owner_cost_policy | Claude |
+| COST-01 | P1 | Verify supplier costs for every offered variant | 30_new_variant_item_quotes_verified_landed_costs_pending | Codex/Claude |
+| PRICE-01 | P1 | Calculate and review six new retail prices | six_display_prices_owner_authorized | Codex/Owner |
+| PRICE-02 | P1 | Publish owner-authorized prices consistently | implementation_complete_deployment_pending | Codex |
 | SHIP-01 | P1 | Finalize actual shipping charge and delivery wording | waiting_supplier_quote | Claude/Owner |
 | TAG-01 | P1 | Choose compatible label with actual-size proof | supplier_proof_pending | Claude/Owner |
 | ART-01 | P1 | Apply casual tee3in placement in supplier and website | prompt_ready_execution_pending | Claude |
@@ -36,7 +36,7 @@ Stripe first; work on approved imagery/copy cleanup while external account steps
 - **DB-01:** Correct project oexibflpshttgzmdvhpr query succeeds; run LAUNCH-DB-CHECK.sql. Connector currently returns password authentication failure. Do not touch the other listed project.
 - **DB-02:** Verify0026 order schema and0027–0029 product records. Apply only necessary changes and read back. Do not blindly replay0027: it resets prices/images.
 - **PAY-03:** Complete controlled Stripe test payment; verify event delivered once, correct order number/immutable snapshot persisted, success and tracking work, retry produces no duplicate, no Apliiq production submission.
-- **COST-01:** Fill COST-INPUTS.json for66 size/color variants with exact saved-design quote, print/embroidery, label, application, packing, shipping, size surcharges and evidence. Codex browser is signed out; public starting-price ranges are insufficient.
+- **COST-01:** Fill COST-INPUTS.json for66 size/color variants with exact saved-design quote, print/embroidery, label, application, packing, shipping, size surcharges and evidence. Codex signed in and verified all six new saved-design dropship costs and size surcharges (30 variants). Full landed costs remain incomplete. See APLIIQ-PRICING-RESEARCH-2026-09-21.md; public starting-price ranges are insufficient.
 - **PRICE-01:** Run calculate-prices.py after quotes; compare contribution and largest-size costs. Internal previous 48/48/48/42/78/52 suggestions are not approved website prices.
 - **PRICE-02:** Only after costs verified and prices finalized, update server catalog, DB product records, product cards/detail/metadata and checkout values. All six currently unpriced pieces need real prices; never display $0.
 - **SHIP-01:** Quote single and multi-item US orders including size/fulfillment split effects. $9.50 is a TEST placeholder, not an approved live policy. Record shipping handling and realistic production/transit windows.

@@ -1,0 +1,152 @@
+{
+  "checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+  "status": "supplier_item_quotes_verified_retail_margin_under_owner_discussion",
+  "website_prices_changed": false,
+  "custom_store_record_created": {
+    "name": "GOOOL",
+    "id": 199130,
+    "credentials_viewed_or_copied": false,
+    "fulfillment_callback_configured": false,
+    "orders_placed": false
+  },
+  "account_tier": "free",
+  "evidence_method": "Authenticated Apliiq saved-product pages: dropship this product quote and bulk dropship size selector. Earlier sample/bulk prices are not dropship costs.",
+  "planning_assumptions": {
+    "printed_label_usd": 3,
+    "label_note": "Published $150/50 service includes production, storage and pressing workflow. No inventory purchased or label attached. Compatibility/proof remains launch gate. This is a costing allowance, not proof of finished labeled samples.",
+    "fulfillment_per_item_usd": 1,
+    "domestic_card_fee_fraction": 0.029,
+    "fixed_card_fee_usd": 0.3,
+    "return_reprint_reserve_fraction": 0.05,
+    "recommended_minimum_contribution_fraction": 0.4,
+    "prior_planning_target_fraction": 0.5,
+    "shipping": "Charged separately; exact garment weights, customer charges, packaging, tax and shipping processing fee reconciliation remain unverified. Do not represent product-only contribution as net profit."
+  },
+  "sources": {
+    "label": "https://www.apliiq.com/private-label/printed-labels-pressed-on-demand",
+    "fulfillment": "https://help.apliiq.com/portal/en/kb/articles/understanding-apliiq-dropship-product-pricing",
+    "shipping": "https://docs.google.com/spreadsheets/d/1xCdUcsEBXwN08Ei4cXkXvQU_s0a6cCN9d6SVqABQYLM/edit?usp=sharing"
+  },
+  "products": [
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "name": "Modern Sport cotton",
+      "saved_design_id": 6112026,
+      "blank": "Bella+Canvas 3010",
+      "supplier_color": "Black",
+      "source_url": "https://www.apliiq.com/product/6112026/GOOOL-Athletics-Modern-Sport-Tee",
+      "base_dropship_quote_usd": 24.48,
+      "xxl_surcharge_usd": 2,
+      "sizes_without_surcharge": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "proposed_retail_usd": 64,
+      "xxl_cost_including_planned_label_and_fulfillment_usd": 30.48,
+      "xxl_contribution_before_shipping_and_tax_processing_usd": 28.16,
+      "xxl_contribution_percent": 44.0
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "name": "Varsity",
+      "saved_design_id": 6112032,
+      "blank": "Bella+Canvas 4810GD",
+      "supplier_color": "Washed Black",
+      "source_url": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee",
+      "base_dropship_quote_usd": 27.6,
+      "xxl_surcharge_usd": 1.5,
+      "sizes_without_surcharge": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "proposed_retail_usd": 68,
+      "xxl_cost_including_planned_label_and_fulfillment_usd": 33.1,
+      "xxl_contribution_before_shipping_and_tax_processing_usd": 29.23,
+      "xxl_contribution_percent": 42.99
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "name": "Minimal Club",
+      "saved_design_id": 6112018,
+      "blank": "Bella+Canvas 3010",
+      "supplier_color": "Natural",
+      "source_url": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee",
+      "base_dropship_quote_usd": 24.48,
+      "xxl_surcharge_usd": 2,
+      "sizes_without_surcharge": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "proposed_retail_usd": 64,
+      "xxl_cost_including_planned_label_and_fulfillment_usd": 30.48,
+      "xxl_contribution_before_shipping_and_tax_processing_usd": 28.16,
+      "xxl_contribution_percent": 44.0
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "name": "Circular Badge",
+      "saved_design_id": 6112033,
+      "blank": "Comfort Colors C1717",
+      "supplier_color": "Ivory",
+      "source_url": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee",
+      "base_dropship_quote_usd": 17.04,
+      "xxl_surcharge_usd": 2,
+      "sizes_without_surcharge": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "proposed_retail_usd": 48,
+      "xxl_cost_including_planned_label_and_fulfillment_usd": 23.04,
+      "xxl_contribution_before_shipping_and_tax_processing_usd": 20.87,
+      "xxl_contribution_percent": 43.48
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "name": "Circular Center Crewneck",
+      "saved_design_id": 6112046,
+      "blank": "AS Colour 5150",
+      "supplier_color": "Athletic Heather",
+      "source_url": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck",
+      "base_dropship_quote_usd": 55.29,
+      "xxl_surcharge_usd": 2.5,
+      "sizes_without_surcharge": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "proposed_retail_usd": 128,
+      "xxl_cost_including_planned_label_and_fulfillment_usd": 61.79,
+      "xxl_contribution_before_shipping_and_tax_processing_usd": 55.8,
+      "xxl_contribution_percent": 43.59
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "name": "Modern Sport Performance",
+      "saved_design_id": 6112037,
+      "blank": "Sport-Tek ST720",
+      "supplier_color": "Black",
+      "source_url": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee",
+      "base_dropship_quote_usd": 25.58,
+      "xxl_surcharge_usd": 2,
+      "sizes_without_surcharge": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "proposed_retail_usd": 64,
+      "xxl_cost_including_planned_label_and_fulfillment_usd": 31.58,
+      "xxl_contribution_before_shipping_and_tax_processing_usd": 27.06,
+      "xxl_contribution_percent": 42.28
+    }
+  ]
+}

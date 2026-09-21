@@ -618,7 +618,6 @@
       "color": "Black",
       "size": "S",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -635,7 +634,6 @@
       "color": "Black",
       "size": "M",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -652,7 +650,6 @@
       "color": "Black",
       "size": "L",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -669,7 +666,6 @@
       "color": "Black",
       "size": "XL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -686,7 +682,6 @@
       "color": "Black",
       "size": "XXL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -703,7 +698,6 @@
       "color": "Washed Black",
       "size": "S",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -720,7 +714,6 @@
       "color": "Washed Black",
       "size": "M",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -737,7 +730,6 @@
       "color": "Washed Black",
       "size": "L",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -754,7 +746,6 @@
       "color": "Washed Black",
       "size": "XL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -771,7 +762,6 @@
       "color": "Washed Black",
       "size": "XXL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -788,7 +778,6 @@
       "color": "Natural",
       "size": "S",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -805,7 +794,6 @@
       "color": "Natural",
       "size": "M",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -822,7 +810,6 @@
       "color": "Natural",
       "size": "L",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -839,7 +826,6 @@
       "color": "Natural",
       "size": "XL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -856,7 +842,6 @@
       "color": "Natural",
       "size": "XXL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -873,7 +858,6 @@
       "color": "Ivory",
       "size": "S",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -890,7 +874,6 @@
       "color": "Ivory",
       "size": "M",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -907,7 +890,6 @@
       "color": "Ivory",
       "size": "L",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -924,7 +906,6 @@
       "color": "Ivory",
       "size": "XL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -941,7 +922,6 @@
       "color": "Ivory",
       "size": "XXL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -958,7 +938,6 @@
       "color": "Gray Heather",
       "size": "S",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -975,7 +954,6 @@
       "color": "Gray Heather",
       "size": "M",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -992,7 +970,6 @@
       "color": "Gray Heather",
       "size": "L",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -1009,7 +986,6 @@
       "color": "Gray Heather",
       "size": "XL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -1026,7 +1002,6 @@
       "color": "Gray Heather",
       "size": "XXL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -1043,7 +1018,6 @@
       "color": "Black",
       "size": "S",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -1060,7 +1034,6 @@
       "color": "Black",
       "size": "M",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -1077,7 +1050,6 @@
       "color": "Black",
       "size": "L",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -1094,7 +1066,6 @@
       "color": "Black",
       "size": "XL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",
@@ -1111,7 +1082,6 @@
       "color": "Black",
       "size": "XXL",
       "missing": [
-        "supplier_garment_and_decoration_usd",
         "label_unit_usd",
         "label_application_usd",
         "packaging_usd",

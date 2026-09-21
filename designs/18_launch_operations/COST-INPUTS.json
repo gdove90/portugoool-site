@@ -1,5 +1,5 @@
 {
-  "status": "costs_unverified_prices_must_remain_unpublished",
+  "status": "six_new_products_garment_decoration_costs_verified_full_landed_costs_pending",
   "model_assumptions": {
     "target_contribution_fraction_of_item_price": 0.5,
     "return_reprint_reserve_fraction_of_item_price": 0.05,
@@ -848,7 +848,7 @@
       "saved_design_id": 6112026,
       "supplier_sku": "APQ-6112026S6A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -857,10 +857,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112026/GOOOL-Athletics-Modern-Sport-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000001",
@@ -871,7 +872,7 @@
       "saved_design_id": 6112026,
       "supplier_sku": "APQ-6112026S7A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -880,10 +881,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112026/GOOOL-Athletics-Modern-Sport-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000001",
@@ -894,7 +896,7 @@
       "saved_design_id": 6112026,
       "supplier_sku": "APQ-6112026S8A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -903,10 +905,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112026/GOOOL-Athletics-Modern-Sport-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000001",
@@ -917,7 +920,7 @@
       "saved_design_id": 6112026,
       "supplier_sku": "APQ-6112026S1A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -926,10 +929,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112026/GOOOL-Athletics-Modern-Sport-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000001",
@@ -940,7 +944,7 @@
       "saved_design_id": 6112026,
       "supplier_sku": "APQ-6112026S2A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 26.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -949,10 +953,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112026/GOOOL-Athletics-Modern-Sport-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000002",
@@ -963,7 +968,7 @@
       "saved_design_id": 6112032,
       "supplier_sku": "APQ-6112032S6A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 27.6,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -972,10 +977,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000002",
@@ -986,7 +992,7 @@
       "saved_design_id": 6112032,
       "supplier_sku": "APQ-6112032S7A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 27.6,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -995,10 +1001,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000002",
@@ -1009,7 +1016,7 @@
       "saved_design_id": 6112032,
       "supplier_sku": "APQ-6112032S8A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 27.6,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1018,10 +1025,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000002",
@@ -1032,7 +1040,7 @@
       "saved_design_id": 6112032,
       "supplier_sku": "APQ-6112032S1A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 27.6,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1041,10 +1049,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000002",
@@ -1055,7 +1064,7 @@
       "saved_design_id": 6112032,
       "supplier_sku": "APQ-6112032S2A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 29.1,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1064,10 +1073,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000003",
@@ -1078,7 +1088,7 @@
       "saved_design_id": 6112018,
       "supplier_sku": "APQ-6112018S6A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1087,10 +1097,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000003",
@@ -1101,7 +1112,7 @@
       "saved_design_id": 6112018,
       "supplier_sku": "APQ-6112018S7A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1110,10 +1121,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000003",
@@ -1124,7 +1136,7 @@
       "saved_design_id": 6112018,
       "supplier_sku": "APQ-6112018S8A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1133,10 +1145,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000003",
@@ -1147,7 +1160,7 @@
       "saved_design_id": 6112018,
       "supplier_sku": "APQ-6112018S1A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 24.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1156,10 +1169,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000003",
@@ -1170,7 +1184,7 @@
       "saved_design_id": 6112018,
       "supplier_sku": "APQ-6112018S2A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 26.48,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1179,10 +1193,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000004",
@@ -1193,7 +1208,7 @@
       "saved_design_id": 6112033,
       "supplier_sku": "APQ-6112033S6A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 17.04,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1202,10 +1217,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000004",
@@ -1216,7 +1232,7 @@
       "saved_design_id": 6112033,
       "supplier_sku": "APQ-6112033S7A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 17.04,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1225,10 +1241,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000004",
@@ -1239,7 +1256,7 @@
       "saved_design_id": 6112033,
       "supplier_sku": "APQ-6112033S8A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 17.04,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1248,10 +1265,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000004",
@@ -1262,7 +1280,7 @@
       "saved_design_id": 6112033,
       "supplier_sku": "APQ-6112033S1A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 17.04,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1271,10 +1289,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000004",
@@ -1285,7 +1304,7 @@
       "saved_design_id": 6112033,
       "supplier_sku": "APQ-6112033S2A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 19.04,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1294,10 +1313,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000005",
@@ -1308,7 +1328,7 @@
       "saved_design_id": 6112046,
       "supplier_sku": "APQ-6112046S6A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 55.29,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1317,10 +1337,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000005",
@@ -1331,7 +1352,7 @@
       "saved_design_id": 6112046,
       "supplier_sku": "APQ-6112046S7A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 55.29,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1340,10 +1361,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000005",
@@ -1354,7 +1376,7 @@
       "saved_design_id": 6112046,
       "supplier_sku": "APQ-6112046S8A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 55.29,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1363,10 +1385,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000005",
@@ -1377,7 +1400,7 @@
       "saved_design_id": 6112046,
       "supplier_sku": "APQ-6112046S1A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 55.29,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1386,10 +1409,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000005",
@@ -1400,7 +1424,7 @@
       "saved_design_id": 6112046,
       "supplier_sku": "APQ-6112046S2A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 57.79,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1409,10 +1433,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000006",
@@ -1423,7 +1448,7 @@
       "saved_design_id": 6112037,
       "supplier_sku": "APQ-6112037S6A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 25.58,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1432,10 +1457,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000006",
@@ -1446,7 +1472,7 @@
       "saved_design_id": 6112037,
       "supplier_sku": "APQ-6112037S7A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 25.58,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1455,10 +1481,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000006",
@@ -1469,7 +1496,7 @@
       "saved_design_id": 6112037,
       "supplier_sku": "APQ-6112037S8A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 25.58,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1478,10 +1505,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000006",
@@ -1492,7 +1520,7 @@
       "saved_design_id": 6112037,
       "supplier_sku": "APQ-6112037S1A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 25.58,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1501,10 +1529,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     },
     {
       "product_id": "80000000-0000-4000-8000-000000000006",
@@ -1515,7 +1544,7 @@
       "saved_design_id": 6112037,
       "supplier_sku": "APQ-6112037S2A1",
       "currency": "usd",
-      "supplier_garment_and_decoration_usd": null,
+      "supplier_garment_and_decoration_usd": 27.58,
       "label_unit_usd": null,
       "label_application_usd": null,
       "packaging_usd": null,
@@ -1524,10 +1553,11 @@
       "setup_amortization_usd": null,
       "customer_shipping_charge_usd": null,
       "quote_verified": false,
-      "quote_evidence": null,
-      "quote_checked_at_utc": null,
-      "label_included_in_garment_quote": null,
-      "note": "Quote one-unit order in this size/color; avoid double-counting bundled decoration/label charges. Explicit zero only when verified."
+      "quote_evidence": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee; see APLIIQ-PRICING-RESEARCH-2026-09-21.json",
+      "quote_checked_at_utc": "2026-09-21T10:26:01.497594+00:00",
+      "label_included_in_garment_quote": false,
+      "note": "Garment plus saved decoration and size surcharge verified in authenticated dropship quote. Full landed-cost verification remains incomplete: label application/compatibility, packaging, shipping and tax treatment. Nulls intentionally retained; do not treat as zero. Retail margin is under owner discussion.",
+      "garment_decoration_quote_verified": true
     }
   ]
 }

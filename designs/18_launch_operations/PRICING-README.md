@@ -1,3 +1,5 @@
+> **Update:** The owner has now authorized the six display prices. See [PRICING-RELEASE-2026-09-21.md](PRICING-RELEASE-2026-09-21.md). The historical hold below is superseded for these six prices only; unresolved cost checks remain launch gates.
+
 # Pricing stays unpublished until costs are verified
 
 Owner decision: **keep prices unpublished until costs are verified**. Six active products remain Price TBA. Do not insert placeholder prices in products.ts, database, structured data or checkout. Existing $48 badge tee /$78 hoodie /$38 casual tee /$36 cap stay unchanged, but verify their margins too.

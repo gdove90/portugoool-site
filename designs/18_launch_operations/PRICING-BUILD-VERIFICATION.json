@@ -1,0 +1,80 @@
+{
+  "mode": "local-build",
+  "checked_at_utc": "2026-09-21T10:30:46.004Z",
+  "activeProducts": 10,
+  "pricedProducts": 10,
+  "allPassed": true,
+  "anonymousGate": null,
+  "checks": [
+    {
+      "slug": "goool-performance-tee",
+      "price_usd": 48,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "price_usd": 78,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "price_usd": 38,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-touchline-cap",
+      "price_usd": 36,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "price_usd": 64,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "price_usd": 68,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "price_usd": 64,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "price_usd": 48,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "price_usd": 128,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "price_usd": 64,
+      "priceVisible": true,
+      "comingSoon": true,
+      "pass": true
+    }
+  ]
+}

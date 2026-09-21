@@ -1964,22 +1964,19 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
 
-  // == GOOOL Athletics (concept line; Coming Soon, quoting stage) ==
-  // Source of truth: designs/16_goool_athletics/GOOOL_ATHLETICS_POD_Packet_v1.pdf
-  // (v1, 18 Sep 2026: NOT a production release). Blank, retail price, size
-  // range and supplier are unconfirmed, so: priceCents 0 (shown as "Price to
-  // be announced"), supplierType "unassigned", no Apliiq mapping, and
-  // availableForSale false. Checkout refuses all three on every one of
-  // those grounds. Front/back images are flat illustrations of the real
-  // print masters at the packet's proposed width and collar offset; the
-  // third image is the owner's concept render, captioned as such.
+  // == GOOOL Athletics (Coming Soon; owner-authorized retail prices) ==
+  // Retail pricing: designs/18_launch_operations/PRICING-RELEASE-2026-09-21.md.
+  // Saved-design garment/print costs are verified; labeling, shipping and
+  // sample approval remain launch gates. Pricing does not authorize sales.
+  // Keep supplierType unassigned and availableForSale false until readiness
+  // is verified. Gallery images remain disclosed concept renders.
   {
     id: "80000000-0000-4000-8000-000000000001",
     name: "GOOOL Athletics Modern Sport Tee",
     slug: "goool-athletics-modern-sport-tee",
     description:
       "Bold, forward-leaning GOOOL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOOOL Athletics mark at the upper back. Solid black crewneck.",
-    priceCents: 0,
+    priceCents: 6400,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -2011,7 +2008,7 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
     disclosure:
-      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   {
     id: "80000000-0000-4000-8000-000000000002",
@@ -2019,7 +2016,7 @@ export const products: Product[] = [
     slug: "goool-athletics-varsity-tee",
     description:
       "Arched collegiate GOOOL in warm ivory with a thin dark red outline, ATHLETICS below between short rules. Small ivory GOOOL Athletics mark at the upper back. Washed black crewneck.",
-    priceCents: 0,
+    priceCents: 6800,
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#2E2E30",
@@ -2051,7 +2048,7 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
     disclosure:
-      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   {
     id: "80000000-0000-4000-8000-000000000003",
@@ -2059,7 +2056,7 @@ export const products: Product[] = [
     slug: "goool-athletics-minimal-club-tee",
     description:
       "Small black GOOOL Athletics mark at the left chest. Large black GOOOL and ATHLETICS across the upper back with a single red underline. Natural cream crewneck.",
-    priceCents: 0,
+    priceCents: 6400,
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E9E2D2",
@@ -2091,7 +2088,7 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
     disclosure:
-      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   // Circular-logo family (designs/16_goool_athletics/circular_logo/,
   // 2026-09-20): twelve archived options; only GA-CIRCLE-08 and
@@ -2101,7 +2098,7 @@ export const products: Product[] = [
   // color literally named "gray heather"; Athletic Heather is its only
   // heather gray and the owner approved it on 2026-09-21, so the
   // "Gray Heather" strings below stay as descriptive site copy). The
-  // unpriced, unpurchasable Coming Soon posture is unchanged: it waits
+  // priced, unpurchasable Coming Soon posture is unchanged: it waits
   // on physical sample approval, not on supplier mapping.
   {
     id: "80000000-0000-4000-8000-000000000004",
@@ -2109,7 +2106,7 @@ export const products: Product[] = [
     slug: "goool-athletics-circular-badge-tee",
     description:
       "Circular GOOOL Athletics mark in navy at the wearer's left chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Ivory crewneck tee.",
-    priceCents: 0,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Ivory",
     colorHex: "#E9E1D7",
@@ -2141,7 +2138,7 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
     disclosure:
-      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   {
     id: "80000000-0000-4000-8000-000000000005",
@@ -2149,7 +2146,7 @@ export const products: Product[] = [
     slug: "goool-athletics-circular-center-crewneck",
     description:
       "Circular GOOOL Athletics mark in forest green, small and centered on the upper chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Gray heather crewneck sweatshirt.",
-    priceCents: 0,
+    priceCents: 12800,
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#C7C7C9",
@@ -2181,7 +2178,7 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
     disclosure:
-      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   // Modern Sport Performance edition (owner-authorized 2026-09-21,
   // designs/launch-image-package-2026-09-21/START-HERE-OWNER-UPDATE.md):
@@ -2196,7 +2193,7 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
       "The Modern Sport graphic on a performance training tee: white GOOOL with a red underline and spaced ATHLETICS across the chest, small white GOOOL Athletics mark at the upper back. Black athletic-fit crewneck.",
-    priceCents: 0,
+    priceCents: 6400,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -2223,7 +2220,7 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
     disclosure:
-      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
 ];
 
