@@ -1676,7 +1676,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "3.8 oz 100% recycled polyester with PosiCharge (Sport-Tek ST720).",
+    fabric: "3.8 oz 100% recycled polyester with PosiCharge.",
     fit: "Athletic fit. True to size.",
     careInstructions: "Machine wash cold. Tumble dry low. Do not iron the print.",
     images: [
@@ -1775,7 +1775,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "10 oz (330 gsm) 3-end fleece, 70/30 cotton-poly with 100% cotton face yarn (Independent Trading Co. IND4000).",
+    fabric: "10 oz (330 gsm) 3-end fleece, 70/30 cotton-poly with 100% cotton face yarn.",
     fit: "Generous, relaxed fit.",
     careInstructions: "Machine wash cold. Tumble dry low. Do not iron the print.",
     images: [
@@ -1855,7 +1855,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#2E2E30",
-    fabric: "6.5 oz 100% ring-spun cotton, garment-dyed (Bella+Canvas 4810GD).",
+    fabric: "6.5 oz 100% ring-spun cotton, garment-dyed.",
     fit: "Relaxed heavyweight fit, semi-dropped shoulder.",
     careInstructions: "Machine wash cold with like colors. Tumble dry low.",
     images: [
@@ -1935,7 +1935,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",
-    fabric: "65/35 polyester-cotton twill with firm buckram front (OTTO 31-069).",
+    fabric: "65/35 polyester-cotton twill with firm buckram front.",
     fit: "Adjustable - One Size. Structured mid-profile crown.",
     careInstructions: "Spot clean only.",
     images: [
