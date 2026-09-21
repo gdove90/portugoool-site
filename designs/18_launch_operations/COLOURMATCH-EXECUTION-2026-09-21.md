@@ -154,3 +154,50 @@ against a photographed plate in a hero or lookbook layout.
 Performance Badge White and Circular Badge Ivory (unsafe to mask, occupancy
 0.231 and 0.26, and both already measured as matching), and Touchline Cap
 (two-tone, needs per-region handling).
+
+---
+
+# Round 3 — Touchline Cap (two-tone)
+
+Owner approved. The cap needed per-region handling because a single median
+conflates the cream crown with the black brim - that is what produced the
+brown #776651 in round 1.
+
+Measured separately against Apliiq's own render (design 6098980):
+
+| Region | site before | Apliiq | site after |
+|---|---|---|---|
+| Crown, front | #E2D4C4 | #E4DFC9 | **#E4DFC9** |
+| Crown, back | #E4D6C6 | #E4DFC9 | **#E4DFC8** |
+| Brim, front | luminance 37 | 61 | **59** |
+| Strap, back | #383029 | no reference | untouched |
+
+Background changed: mean 0.08-0.11, p99 of 2. Embroidery protected.
+
+## A defect caught and fixed before shipping
+
+The first attempt neutralised the dark regions per-channel. Converting a
+brown (57,49,41) to neutral grey multiplies the blue channel by 1.49, which
+swung every dark pixel blue: the back snapback strap turned navy and the
+under-brim shadows picked up a green cast. Visible immediately in the
+mockup.
+
+Three corrections: the brim is now lifted by LUMINANCE only, one factor
+across all channels, so hue cannot shift; the crown weight falls to zero on
+dark pixels so shadows sit at identity instead of blending into the brim
+factor; and the back strap is left untouched entirely. It is hardware, not
+fabric, and Apliiq renders only a front view, so there is no reference for
+it - inventing one would be guessing.
+
+## Note on the crown
+
+This is the most visible change in the whole colour-match exercise. The
+crown moves from a warm pinkish cream to a cooler, greener cream, because
+that is what Apliiq ships. Cream reads as a hue in a way near-black does
+not, so this one is genuinely noticeable. Owner approved it on the mockup.
+
+## Catalogue status
+
+11 of 14 colourways now match Apliiq's shipping colour. Remaining:
+Performance Badge White and Circular Badge Ivory, both skipped as unsafe to
+mask (occupancy 0.231 and 0.26) and both already measuring as matching.

@@ -1934,7 +1934,7 @@ export const products: Product[] = [
     priceCents: 3600,
     compareAtPriceCents: null,
     color: "Black/Natural",
-    colorHex: "#E8E0CE",
+    colorHex: "#E4DFC9",
     fabric: "65/35 polyester-cotton twill with firm buckram front (OTTO 31-069).",
     fit: "Adjustable - One Size. Structured mid-profile crown.",
     careInstructions: "Spot clean only.",
