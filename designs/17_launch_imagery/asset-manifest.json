@@ -1,0 +1,197 @@
+[
+  {
+    "key": "performance-black",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_01_ST720_PERFORMANCE_TEE_BLACK.png",
+    "desc": "black athletic polyester tee, centered white crest with red accent",
+    "back": null,
+    "slug": "goool-performance-tee",
+    "color": "Black",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/performance-black-front.png",
+      "standardized/performance-black-back.png",
+      "stadium/performance-black-front.png",
+      "stadium/performance-black-back.png"
+    ]
+  },
+  {
+    "key": "performance-white",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE_V2.png",
+    "desc": "white athletic polyester tee, centered navy crest with burgundy accent",
+    "back": null,
+    "slug": "goool-performance-tee",
+    "color": "White",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/performance-white-front-v2.png",
+      "standardized/performance-white-back.png",
+      "stadium/performance-white-front.png",
+      "stadium/performance-white-back.png"
+    ]
+  },
+  {
+    "key": "performance-royal",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V3.png",
+    "desc": "true royal blue athletic polyester tee, centered cream crest with burgundy accent",
+    "back": null,
+    "slug": "goool-performance-tee",
+    "color": "True Royal",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/performance-royal-front.png",
+      "standardized/performance-royal-back.png",
+      "stadium/performance-royal-front.png",
+      "stadium/performance-royal-back.png"
+    ]
+  },
+  {
+    "key": "hoodie-black",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_02_IND4000_HOODIE_BLACK.png",
+    "desc": "black heavyweight pullover hoodie, kangaroo pocket, underlined chest wordmark",
+    "back": null,
+    "slug": "goool-heavyweight-hoodie",
+    "color": "Black",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/hoodie-black-front.png",
+      "standardized/hoodie-black-back.png",
+      "stadium/hoodie-black-front.png",
+      "stadium/hoodie-black-back.png"
+    ]
+  },
+  {
+    "key": "hoodie-bone",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_06_IND4000_HOODIE_BONE_V2.png",
+    "desc": "bone heavyweight pullover hoodie, kangaroo pocket, navy/burgundy underlined chest wordmark",
+    "back": null,
+    "slug": "goool-heavyweight-hoodie",
+    "color": "Bone",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/hoodie-bone-front.png",
+      "standardized/hoodie-bone-back.png",
+      "stadium/hoodie-bone-front.png",
+      "stadium/hoodie-bone-back.png"
+    ]
+  },
+  {
+    "key": "casual-washed-black",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_03_4810GD_CASUAL_TEE_WASHED_BLACK.png",
+    "desc": "washed black heavyweight relaxed cotton tee, underlined centered chest wordmark",
+    "back": null,
+    "slug": "goool-heavyweight-casual-tee",
+    "color": "Washed Black",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/casual-washed-black-front.png",
+      "standardized/casual-washed-black-back.png",
+      "stadium/casual-washed-black-front.png",
+      "stadium/casual-washed-black-back.png"
+    ]
+  },
+  {
+    "key": "casual-washed-grey",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_07_4810GD_CASUAL_TEE_WASHED_GREY_V2.png",
+    "desc": "washed grey heavyweight relaxed cotton tee, navy/burgundy underlined centered chest wordmark",
+    "back": null,
+    "slug": "goool-heavyweight-casual-tee",
+    "color": "Washed Grey",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/casual-washed-grey-front.png",
+      "standardized/casual-washed-grey-back.png",
+      "stadium/casual-washed-grey-front.png",
+      "stadium/casual-washed-grey-back.png"
+    ]
+  },
+  {
+    "key": "touchline-cap",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_04_OTTO31069_CAP_BLACK_NATURAL.png",
+    "desc": "black/natural structured cap, embroidered front wordmark, adjustable snap back",
+    "back": null,
+    "slug": "goool-touchline-cap",
+    "color": "Black/Natural",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/touchline-cap-front.png",
+      "standardized/touchline-cap-back.png",
+      "stadium/touchline-cap-front.png",
+      "stadium/touchline-cap-back.png"
+    ]
+  },
+  {
+    "key": "modern-sport",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_01_MODERN_SPORT_FRONT.webp",
+    "desc": "black relaxed cotton tee, white GOOOL red underline ATHLETICS chest graphic",
+    "back": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_01_MODERN_SPORT_BACK.webp",
+    "slug": "goool-athletics-modern-sport-tee",
+    "color": "Black",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/modern-sport-front.png",
+    "standardized/modern-sport-back-v3.png",
+      "stadium/modern-sport-front-v2.png",
+      "stadium/modern-sport-back-v2.png"
+    ]
+  },
+  {
+    "key": "varsity",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_02_VARSITY_FRONT.webp",
+    "desc": "washed black relaxed cotton tee, ivory arched varsity GOOOL dark red outline ATHLETICS",
+    "back": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_02_VARSITY_BACK.webp",
+    "slug": "goool-athletics-varsity-tee",
+    "color": "Washed Black",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/varsity-front.png",
+    "standardized/varsity-back-v3.png",
+      "stadium/varsity-front.png",
+      "stadium/varsity-back.png"
+    ]
+  },
+  {
+    "key": "minimal-club",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_03_MINIMAL_CLUB_FRONT.webp",
+    "desc": "natural cream relaxed cotton tee, small black left chest GOOOL ATHLETICS",
+    "back": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_03_MINIMAL_CLUB_BACK.webp",
+    "slug": "goool-athletics-minimal-club-tee",
+    "color": "Natural",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/minimal-club-front.png",
+      "standardized/minimal-club-back.png",
+      "stadium/minimal-club-front-v2.png",
+      "stadium/minimal-club-back-v2.png"
+    ]
+  },
+  {
+    "key": "circular-badge",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_CIRCLE_08_BADGE_TEE.webp",
+    "desc": "ivory relaxed cotton tee, navy circular GOOOL ATHLETICS lettering at wearer left chest, 3 inch width",
+    "back": null,
+    "slug": "goool-athletics-circular-badge-tee",
+    "color": "Ivory",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/circular-badge-front.png",
+      "standardized/circular-badge-back.png",
+      "stadium/circular-badge-front.png",
+      "stadium/circular-badge-back.png"
+    ]
+  },
+  {
+    "key": "circular-crewneck",
+    "front": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_CIRCLE_09_CENTER_CREWNECK.webp",
+    "desc": "gray heather crewneck sweatshirt, small forest-green circular GOOOL ATHLETICS lettering centered high chest, 2.5 inch width",
+    "back": null,
+    "slug": "goool-athletics-circular-center-crewneck",
+    "color": "Gray Heather",
+    "status": "concept-render",
+    "gallery": [
+      "standardized/circular-crewneck-front.png",
+      "standardized/circular-crewneck-back.png",
+      "stadium/circular-crewneck-front.png",
+      "stadium/circular-crewneck-back.png"
+    ]
+  }
+]
