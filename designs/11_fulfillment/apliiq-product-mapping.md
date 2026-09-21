@@ -1,3 +1,5 @@
+> **Current artwork authority:** [asset library](../00_asset-library/START-HERE.md). The Casual Wordmark Tee now uses [3.00in placement](../00_asset-library/CASUAL-TEE-PLACEMENT-REVISION.md), superseding the old PDF target. Historical cap/label directions below remain superseded by the library decisions.
+
 # Apliiq Fulfillment Mapping — First Capsule
 
 One row per sellable website product. When a customer order comes in,
@@ -10,7 +12,7 @@ mirrors `designs/GOOOL_POD_SAMPLE_PACKET/GOOOL_POD_SAMPLE_SPECIFICATIONS.pdf`
 |---|---|---|---|---|---|---|
 | GOOOL Performance Badge Tee (…0001) | $48 | Sport-Tek ST720 | Black | `GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png` | 5.00 × 6.40 in | Crest top 2.25 in below collar seam, centered |
 | GOOOL Core Hoodie (…0002) | $78 | Independent IND4000 | Black | `GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png` | 6.75 × 2.34 in | Art top 4.00 in below hood/neck seam, centered; ≥1.5 in above pocket |
-| GOOOL Casual Wordmark Tee (…0003) | $38 | Bella+Canvas 4810GD | **Washed Black** (never plain Black without owner approval) | `GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png` | 6.75 × 2.34 in | Art top 3.25 in below collar seam, centered |
+| GOOOL Casual Wordmark Tee (…0003) | $38 | Bella+Canvas 4810GD | **Washed Black** (never plain Black without owner approval) | `GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png` | 6.75 × 2.34 in | Art top 3.00 in below bottom collar seam, centered (both casual colorways; owner revision2026-09-21) |
 | GOOOL Touchline Cap (…0004) | $36 | OTTO 31-069 | Black/Natural | Front: `..._WORDMARK_FRONT_EMBROIDERY_REFERENCE.pdf/png` 3.75 × 1.30 in · Right side: `..._SOUND_OF_VICTORY_RIGHT_SIDE.svg/png` 2.25 × 0.86 in | flat embroidery, no puff | Front centered 0.50 in above visor seam; slogan wearer's right, 0.55 in above sweatband; rear + left blank |
 
 Shared rules (all garments): DTF/transfer front only · backs blank ·
@@ -170,6 +172,27 @@ Duplicates cost real money and real garments; when in doubt, leave the
 order parked and ask.
 
 ## Known deviation log
+
+- 2026-09-21 SUPPLIER BLOCKER, casual tee 3.00 in revision NOT APPLIED
+  AT APLIIQ. The owner revision (3.25 in -> 3.00 in below the bottom
+  centre-front collar seam, both casual colorways, width unchanged at
+  6.75 in) is recorded in the spec, packages 06/07 and the table above,
+  but saved designs 6098963 and 6099060 still carry the 3.25 in
+  placement. Apliiq exposes no way to change artwork position on an
+  already-saved design. Verified this session: /product/<id> offers only
+  rename, replace-blank, add/remove colour, upload hi-res, add note,
+  remove artwork and attach label; the saved-designs list's only row
+  action is rename; and the customizer always opens a NEW design -
+  ?pid=, ?productId=, ?did=, ?id=, ?p= and ?edit= all return a
+  byte-identical fresh page with no saved artwork loaded.
+  Applying 3.00 in therefore requires creating replacement saved designs,
+  which produces NEW product ids and NEW per-size SKUs and would break the
+  verified fulfillment mapping in src/lib/fulfillment.ts. NOT done
+  unilaterally. OWNER DECISION required: (a) accept new ids/SKUs for these
+  two colorways and let the mapping be re-pointed, or (b) ask Apliiq
+  support to reposition the existing saved designs in place. Until one is
+  chosen, supplier placement and website imagery both remain at the old
+  target and no physical sample may be approved against 3.00 in.
 
 - 2026-09-14: the original Apliiq drafts used wrong artwork (an 8 in
   shoulder-variant wordmark on the 4810GD; front-CC-DARK on the ST720).
