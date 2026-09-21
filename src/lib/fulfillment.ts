@@ -179,9 +179,23 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // Circular Center Crewneck (id ...0005) is intentionally unmapped:
-  // AS Colour 5150 offers Athletic Heather, not "gray heather"; the
-  // owner's color decision is pending and no saved design exists yet.
+  // GOOOL Athletics Circular Center Crewneck (AS Colour 5150 Made Crew).
+  // The catalog color string is "Gray Heather"; the supplier's only
+  // heather gray on this blank is "Athletic Heather" (color id 2873),
+  // confirmed by the owner on 2026-09-21. The site copy keeps the
+  // descriptive name, the supplier variant is the authority.
+  "80000000-0000-4000-8000-000000000005": {
+    "Gray Heather": {
+      apliiqProductId: 6112046,
+      skus: {
+        S: "APQ-6112046S6A1",
+        M: "APQ-6112046S7A1",
+        L: "APQ-6112046S8A1",
+        XL: "APQ-6112046S1A1",
+        XXL: "APQ-6112046S2A1",
+      },
+    },
+  },
 };
 
 export interface ResolvedFulfillment {

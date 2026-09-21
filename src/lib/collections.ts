@@ -42,7 +42,7 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     name: "Match Ready",
     subtitle: "Athletic Performance",
     filterLabel: "Performance",
-    slugs: ["goool-performance-tee"],
+    slugs: ["goool-performance-tee", "goool-athletics-modern-sport-performance-tee"],
   },
   {
     key: "headwear",

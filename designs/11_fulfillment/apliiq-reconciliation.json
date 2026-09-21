@@ -1,13 +1,13 @@
 {
-  "generated": "2026-09-22 (post-creation)",
+  "generated": "2026-09-21 (all 14 colorways closed)",
   "workflow": "authenticated Chrome session via claude-in-chrome; old customizer; file_upload to hidden inputs; synthetic MouseEvent drags on .svgWrap; /merchandise/detail for SKUs",
   "totals": {
     "colorways": 14,
     "verified": 8,
-    "created": 5,
+    "created": 6,
     "pending": 0,
-    "owner_decision": 1,
-    "note": "Only Circular Center Crewneck remains: owner must confirm AS Colour 5150 Athletic Heather (no gray heather offered)."
+    "owner_decision": 0,
+    "note": "Complete. All 14 colorways have verified saved designs and per-size SKUs. Purchasing, sample-approval and fulfillment gates are untouched; no orders placed."
   },
   "rows": [
     {
@@ -235,12 +235,20 @@
       "product": "GOOOL Athletics Circular Center Crewneck",
       "color": "Gray Heather",
       "slug": "goool-athletics-circular-center-crewneck",
-      "blank": "AS Colour 5150 Made Crew - NO gray heather; offers black, Natural, Ink Blue, ATHLETIC HEATHER",
-      "saved_design_id": null,
-      "per_size_skus": null,
-      "status": "OWNER-DECISION",
-      "note": "Athletic Heather is the only heather gray; awaiting owner confirmation",
-      "verified": null
+      "blank": "AS Colour 5150 Made Crew (garment 1488, 100% cotton French terry, made in China)",
+      "supplier_color": "Athletic Heather (color id 2873)",
+      "saved_design_id": 6112046,
+      "per_size_skus": {
+        "S": "APQ-6112046S6A1",
+        "M": "APQ-6112046S7A1",
+        "L": "APQ-6112046S8A1",
+        "XL": "APQ-6112046S1A1",
+        "XXL": "APQ-6112046S2A1",
+        "XXXL": "APQ-6112046S21A1"
+      },
+      "status": "CREATED-VERIFIED",
+      "note": "Owner approved Athletic Heather 2026-09-21 (no 'gray heather' exists on this blank; the four offered colors were re-read live before building). Athletic Heather only, default black deselected. Front-only 2.5x2.53 forest-green circular mark (GA-CIRCLE-09-FOREST-PRINT.png), transfer print; back blank per spec. 6 sizes s-xxxl, no XS on this blank, sold S-2XL fully covered. Site colorway string stays 'Gray Heather'.",
+      "verified": "2026-09-21 live account (created this session)"
     },
     {
       "product": "GOOOL Athletics Modern Sport Performance Tee",

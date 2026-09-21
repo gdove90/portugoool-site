@@ -2235,10 +2235,14 @@ export const products: Product[] = [
   },
   // Circular-logo family (designs/16_goool_athletics/circular_logo/,
   // 2026-09-20): twelve archived options; only GA-CIRCLE-08 and
-  // GA-CIRCLE-09 were designated for the site. Proposed blanks
-  // (Comfort Colors 1717 ivory, AS Colour 5150 gray heather) are
-  // UNVERIFIED with the supplier, so the same unpriced, unpurchasable
-  // Coming Soon posture as the three tees above applies.
+  // GA-CIRCLE-09 were designated for the site. Both blanks are now
+  // verified with the supplier: Comfort Colors C1717 Ivory, and AS
+  // Colour 5150 Made Crew in Athletic Heather (that blank offers no
+  // color literally named "gray heather"; Athletic Heather is its only
+  // heather gray and the owner approved it on 2026-09-21, so the
+  // "Gray Heather" strings below stay as descriptive site copy). The
+  // unpriced, unpurchasable Coming Soon posture is unchanged: it waits
+  // on physical sample approval, not on supplier mapping.
   {
     id: "80000000-0000-4000-8000-000000000004",
     name: "GOOOL Athletics Circular Badge Tee",
@@ -2326,6 +2330,48 @@ export const products: Product[] = [
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
+    supplierType: "unassigned",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    disclosure:
+      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+  },
+  // Modern Sport Performance edition (owner-authorized 2026-09-21,
+  // designs/launch-image-package-2026-09-21/START-HERE-OWNER-UPDATE.md):
+  // the approved Modern Sport graphic on a genuine performance blank.
+  // Separate product from the cotton Modern Sport tee; the performance
+  // garment itself (ST720 family candidate) is unverified with the
+  // supplier, so no fabric claims, no price, not purchasable. Gallery
+  // is front concept only until the back/model set exists.
+  {
+    id: "80000000-0000-4000-8000-000000000006",
+    name: "GOOOL Athletics Modern Sport Performance Tee",
+    slug: "goool-athletics-modern-sport-performance-tee",
+    description:
+      "The Modern Sport graphic on a performance training tee: white GOOOL with a red underline and spaced ATHLETICS across the chest, small white GOOOL Athletics mark at the upper back. Black athletic-fit crewneck.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#0A0A0A",
+    fabric: "Performance polyester training tee. Blank, fabric weight and construction are confirmed at sample approval.",
+    fit: "Athletic fit. Confirmed at sample approval.",
+    careInstructions: "Care instructions follow the approved blank and print process.",
+    images: [
+      {
+        src: "/products/GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp",
+        alt: "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
     supplierType: "unassigned",
     isActive: true,
     availableForSale: false,

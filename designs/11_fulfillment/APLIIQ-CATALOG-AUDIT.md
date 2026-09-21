@@ -32,7 +32,7 @@ superseded by the Modern Sport Performance addition (owner update
 | 10 | Varsity Tee / Washed Black | 4810GD Washed Black (packet proposal) | none | none | MISSING |
 | 11 | Minimal Club Tee / Natural | BC 3010 Natural (packet proposal) | none | none | MISSING |
 | 12 | Circular Badge Tee / Ivory | Comfort Colors 1717 ivory (UNVERIFIED) | none | none | MISSING |
-| 13 | Circular Crewneck / Gray Heather | AS Colour 5150 gray heather (UNVERIFIED) | none | none | MISSING |
+| 13 | Circular Crewneck / Gray Heather | AS Colour 5150 Athletic Heather | 6112046 | APQ-6112046S{6,7,8,1,2}A1 | VERIFIED |
 | 14 | Modern Sport Performance Tee / Black | ST720 Black (candidate, verify set-in sleeves) | none | none | MISSING |
 
 Per-size mapping completeness: rows 1-8 have full offered-size SKU
@@ -87,12 +87,46 @@ Vertical placement uses the box-calibration convention (print box top
 = collar + 0.91in) carried over from the approved capsule designs;
 physical sample proofs remain the final geometric gate.
 
-## Remaining blocked item
+## Final colorway closed (2026-09-21, owner decision + same-session build)
 
-GOOOL Athletics Circular Center Crewneck: AS Colour 5150 Made Crew
-offers black, Natural, Ink Blue, Athletic Heather - no "gray heather".
-Athletic Heather is the only heather gray. OWNER DECISION pending;
-design not created. Everything else is complete.
+OWNER DECISION: Athletic Heather approved for the Circular Center
+Crewneck. The four colors offered on AS Colour 5150 Made Crew were
+re-read live from the customizer before building - black (50), Natural
+(923), Ink Blue (2846), Athletic Heather (2873) - independently
+confirming that no "gray heather" exists on this blank.
+
+- 6112046 GOOOL Athletics Circular Center Crewneck - AS Colour 5150
+  Made Crew (garment 1488, 100% cotton French terry, made in China),
+  Athletic Heather ONLY (color 2873, default black deselected), front
+  2.5 x 2.53 in forest-green circular mark from
+  GA-CIRCLE-09-FOREST-PRINT.png, transfer print, FRONT VIEW ONLY (back
+  blank per spec). Sizes s-xxxl (6; no XS on this blank, so the sold
+  S-2XL range is fully covered). Reopened and verified against
+  merchandise/detail, and the rendered mockup visually confirms a small
+  centered upper-chest mark.
+
+All 14 colorways now have verified saved designs and per-size SKUs.
+
+### Placement note specific to this build
+
+The saved geometry is X 442 / Y 566 / W 64 / H 65 in the customizer's
+canonical space (25.6 px/in = DOM 8 px/in x scaleSize 3.2). Against the
+15 x 19 in print box at X 281.6 / Y 499.2 that is horizontally centered
+and 2.61 in below the box top, i.e. 3.52 in below the collar seam on
+the box-calibration convention (target 3.50 in; 0.02 in of integer-pixel
+rounding, well inside the +/-0.25 in tolerance).
+
+WORKFLOW CORRECTION for future runs: `designState.GetSelectedArts()`
+(the save payload) is built from the MODEL, not from the DOM. Writing
+`.svgWrap` CSS alone changes nothing, and synthetic jQuery-UI resize
+drags did not take either. What worked was setting the artwork model
+fields - `position.left/top`, `size.width/height`, `Width_Inch`,
+`Height_Inch` - and the matching CSS, then saving. Two further traps
+hit this session: resizing the browser window RESET the color selection
+back to the default (re-check colors immediately before saving), and
+the canvas silently re-renders at a different scale (scale16 -> 8 px/in),
+so always re-measure the print box and derive px/in from it rather than
+reusing a remembered scale.
 
 ## Original blocked / next actions (superseded above)
 
