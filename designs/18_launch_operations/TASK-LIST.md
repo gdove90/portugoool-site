@@ -11,7 +11,7 @@ Stripe first; work on approved imagery/copy cleanup while external account steps
 | PAY-03 | P0 | Complete test purchase through webhook, order and tracking | pending_database | Claude |
 | COST-01 | P1 | Verify supplier costs for every offered variant | 30_new_variant_item_quotes_verified_landed_costs_pending | Codex/Claude |
 | PRICE-01 | P1 | Calculate and review six new retail prices | six_display_prices_owner_authorized | Codex/Owner |
-| PRICE-02 | P1 | Publish owner-authorized prices consistently | implementation_complete_deployment_pending | Codex |
+| PRICE-02 | P1 | Publish owner-authorized prices consistently | deployed_verified_all_10_products | Codex |
 | SHIP-01 | P1 | Finalize actual shipping charge and delivery wording | waiting_supplier_quote | Claude/Owner |
 | TAG-01 | P1 | Choose compatible label with actual-size proof | supplier_proof_pending | Claude/Owner |
 | ART-01 | P1 | Apply casual tee3in placement in supplier and website | prompt_ready_execution_pending | Claude |

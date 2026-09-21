@@ -22,3 +22,8 @@ The owner's screenshot and CASUAL-TEE-PLACEMENT-VERIFICATION.json confirm that t
 ## Claude handoff
 
 Work in C:\Users\gdove\OneDrive\Desktop\GOOOL. Preserve the published six prices and approved studio tiles. Finish the Casual Wordmark Tee placement in both colors: visible artwork top 3.00in below the bottom center-front collar seam, width 6.75in. Update Apliiq and garment-only website imagery, preserve originals, reopen the saved designs, and show dimensioned before/after evidence. Do not replace the logo, move the whole photograph, or mark physical samples approved. Keep Coming Soon and real fulfillment disabled. Pricing has been authorized for display; unresolved landed costs remain launch checks.
+
+## Deployment verification
+
+Production deployment 6ab107734e189f0008826534 is ready for commit 6fbfef92db3f22fdc2529aa50a1ba502c2387d79. Build, lint and TypeScript checks passed. PRICING-LIVE-VERIFICATION.json confirms all ten active products show their prices and remain Coming Soon; anonymous shop requests still redirect to the prelaunch landing page. No image asset or supplier placement was changed.
+
