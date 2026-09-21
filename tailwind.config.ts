@@ -24,6 +24,10 @@ const config: Config = {
           light: "#E4C65B",
         },
         smoke: "#F4F4F2", // off-white section background
+        // Studio backdrop for LIGHT garments (white/ivory/bone/natural):
+        // white-on-white loses fabric edges, so those assets sit on a
+        // controlled neutral gray. Formalizes the placeholder in CLAUDE.md.
+        studio: "#E5E5E3",
       },
       fontFamily: {
         // Display: Anton via next/font (decision recorded in

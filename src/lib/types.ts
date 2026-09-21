@@ -106,6 +106,23 @@ export interface Product {
   sizeGuide?: SizeGuide;
   /** Print-on-demand disclosure shown near the trust copy. */
   disclosure?: string;
+  /**
+   * Which studio backdrop this product's IMAGE ASSETS were shot on, so
+   * galleries, cards, thumbnails and colour switches all present the
+   * same field and no seam shows at the asset edge.
+   *
+   *   "light"   - near-white field; correct for dark and mid garments.
+   *   "neutral" - controlled neutral gray (`studio`), for white, ivory,
+   *               bone and natural garments, where a white field would
+   *               erase the fabric edge.
+   *
+   * This is declared per product rather than inferred from filenames:
+   * a filename-based CSS condition breaks silently the moment an asset
+   * is renamed or a colourway is added. Set it to match the bytes of the
+   * asset actually shipped — changing it without re-shooting the asset
+   * produces exactly the mismatched rectangle it exists to prevent.
+   */
+  imageBackdrop?: "light" | "neutral";
 }
 
 /** Units left in a counted drop, or null when the product isn't counted. */

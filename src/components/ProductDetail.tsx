@@ -92,7 +92,9 @@ export default function ProductDetail({ product }: { product: Product }) {
         {/* Images */}
         <div>
           <div
-            className="relative aspect-[4/5] overflow-hidden rounded-xl bg-paper"
+            className={`relative aspect-[4/5] overflow-hidden rounded-xl ${
+              product.imageBackdrop === "neutral" ? "bg-studio" : "bg-smoke"
+            }`}
             onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
             onTouchEnd={(e) => {
               if (touchStartX == null) return;
@@ -158,7 +160,9 @@ export default function ProductDetail({ product }: { product: Product }) {
                   key={img.src}
                   type="button"
                   onClick={() => setActiveImage(i)}
-                  className={`relative h-20 w-20 overflow-hidden rounded-lg bg-paper ${
+                  className={`relative h-20 w-20 overflow-hidden rounded-lg ${
+                    product.imageBackdrop === "neutral" ? "bg-studio" : "bg-smoke"
+                  } ${
                     i === activeImage ? "ring-2 ring-ink" : "opacity-70 hover:opacity-100"
                   }`}
                   aria-label={`View image ${i + 1}`}

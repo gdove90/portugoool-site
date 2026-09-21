@@ -39,7 +39,11 @@ export default function ProductCard({ product }: { product: Product }) {
             : `${product.name}, price to be announced`
         }
       >
-        <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-paper">
+        <div
+          className={`relative aspect-[4/5] overflow-hidden rounded-xl ${
+            product.imageBackdrop === "neutral" ? "bg-studio" : "bg-smoke"
+          }`}
+        >
           {/* Every variant image stays mounted so switching never flashes. */}
           {(variants ?? [null]).map((v, i) => {
             const img = v ? v.images[0] : product.images[0];
