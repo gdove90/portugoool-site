@@ -1,3 +1,9 @@
+> **Approved catalog cleanup:** Follow [CLAUDE-LAUNCH-PRIORITY-PROMPT.md](CLAUDE-LAUNCH-PRIORITY-PROMPT.md): garment-only imagery, seamless white 4:5 frames, and remove Printed in the USA marketing badges. Preserve original images and exact production artwork. Older requests to refresh generated model views are superseded. New prices remain unpublished until costs are verified.
+
+> **Current launch priorities and communication preference:** Read [LAUNCH-TASK-LIST.md](LAUNCH-TASK-LIST.md). Prioritize Stripe, then verified costs/new prices, product readiness and an Instagram-only launch. Owner explicitly requires new prices to stay unpublished until costs are verified. Include a ready-to-copy next-action prompt in every response.
+
+> **Artwork audit — 2026-09-21:** Current artwork authority for all active and unlaunched designs: [designs/00_asset-library/START-HERE.md](designs/00_asset-library/START-HERE.md). Read its family-specific source selections and conflict register before the historical brand rules below. Current v2 packages include ARTWORK-AUDIT.md; original and derived files have different roles.
+
 # GOOOL — Project Operating Manual
 
 Permanent source of truth for every contributor: engineers, designers,
@@ -52,7 +58,7 @@ Every page has **one primary conversion goal**. On most pages that goal is
 |---|---|
 | Framework | Next.js 14 (App Router) + TypeScript |
 | Styling | Tailwind CSS (tokens in `tailwind.config.ts`) |
-| Hosting | Netlify (project `portugoool`, `@netlify/plugin-nextjs`) |
+| Hosting | Netlify (project `goool-shop`, `@netlify/plugin-nextjs`) |
 | Database | Supabase (project ref `oexibflpshttgzmdvhpr`, dedicated free org) |
 | Payments | Stripe Checkout (server-side pricing only) |
 | Source | GitHub (`gdove90/portugoool-site`) |
@@ -73,9 +79,19 @@ or reference anything from **HireOnTheFly** or **LocalChef RI**.
 Kept separate, always: repositories · Supabase projects · Stripe accounts ·
 Netlify sites · environment variables · GitHub Actions · assets · databases.
 
-The Supabase project lives in its own free org ("portugoool"). The
-org-scoped Supabase MCP connector sees only the HireOnTheFly org — use the
-Management API or CLI with a user token for this project's database.
+The Supabase project lives in its own free org, renamed 2026-09-21 from
+"portugoool" to "GOOOL"; the project itself is now "GOOOL" too. Only the
+display names changed — project ref `oexibflpshttgzmdvhpr` and every key
+and connection string are unaffected.
+
+The org-scoped Supabase MCP connector CANNOT see this project. Verified
+2026-09-21: `list_projects` through that connector returns only
+`localchefri` (an earlier note here said HireOnTheFly; that was wrong).
+The empty result is the isolation working, not an outage — never read it
+as "the GOOOL database is missing". Use the authenticated Supabase SQL
+editor (the established workflow, named in each migration header), or the
+Management API / CLI with a user token. Never run GOOOL SQL against the
+connector's project.
 
 ---
 
