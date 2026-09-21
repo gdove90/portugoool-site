@@ -1,0 +1,233 @@
+{
+  "generated": "2026-09-22",
+  "workflow": "authenticated Chrome session via claude-in-chrome; old customizer; file_upload to hidden inputs; synthetic MouseEvent drags on .svgWrap; /merchandise/detail for SKUs",
+  "totals": {
+    "colorways": 14,
+    "verified": 8,
+    "created": 1,
+    "pending": 4,
+    "owner_decision": 1
+  },
+  "rows": [
+    {
+      "product": "GOOOL Performance Badge Tee",
+      "color": "Black",
+      "slug": "goool-performance-tee",
+      "blank": "Sport-Tek ST720 (Sustainable Athletic Tee, Ethiopia)",
+      "saved_design_id": 6098962,
+      "per_size_skus": {
+        "XS": "APQ-6098962S5A1",
+        "S": "APQ-6098962S6A1",
+        "M": "APQ-6098962S7A1",
+        "L": "APQ-6098962S8A1",
+        "XL": "APQ-6098962S1A1",
+        "XXL": "APQ-6098962S2A1",
+        "XXXL": "APQ-6098962S21A1"
+      },
+      "status": "VERIFIED",
+      "note": "",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Performance Badge Tee",
+      "color": "White",
+      "slug": "goool-performance-tee",
+      "blank": "Sport-Tek ST720",
+      "saved_design_id": 6099046,
+      "per_size_skus": {
+        "XS": "APQ-6099046S5A1",
+        "S": "APQ-6099046S6A1",
+        "M": "APQ-6099046S7A1",
+        "L": "APQ-6099046S8A1",
+        "XL": "APQ-6099046S1A1",
+        "XXL": "APQ-6099046S2A1",
+        "XXXL": "APQ-6099046S21A1"
+      },
+      "status": "VERIFIED",
+      "note": "",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Performance Badge Tee",
+      "color": "True Royal",
+      "slug": "goool-performance-tee",
+      "blank": "Sport-Tek ST720",
+      "saved_design_id": 6099129,
+      "per_size_skus": {
+        "XS": "APQ-6099129S5A1",
+        "S": "APQ-6099129S6A1",
+        "M": "APQ-6099129S7A1",
+        "L": "APQ-6099129S8A1",
+        "XL": "APQ-6099129S1A1",
+        "XXL": "APQ-6099129S2A1",
+        "XXXL": "APQ-6099129S21A1"
+      },
+      "status": "VERIFIED",
+      "note": "garmentColor true royal 2e48b6 confirmed",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Core Hoodie",
+      "color": "Black",
+      "slug": "goool-heavyweight-hoodie",
+      "blank": "Independent IND4000 (China)",
+      "saved_design_id": 6098974,
+      "per_size_skus": {
+        "XS": "APQ-6098974S5A1",
+        "S": "APQ-6098974S6A1",
+        "M": "APQ-6098974S7A1",
+        "L": "APQ-6098974S8A1",
+        "XL": "APQ-6098974S1A1",
+        "XXL": "APQ-6098974S2A1",
+        "XXXL": "APQ-6098974S21A1"
+      },
+      "status": "VERIFIED",
+      "note": "4XL S61 also available",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Core Hoodie",
+      "color": "Bone",
+      "slug": "goool-heavyweight-hoodie",
+      "blank": "Independent IND4000",
+      "saved_design_id": 6099064,
+      "per_size_skus": {
+        "XS": "APQ-6099064S5A1",
+        "S": "APQ-6099064S6A1",
+        "M": "APQ-6099064S7A1",
+        "L": "APQ-6099064S8A1",
+        "XL": "APQ-6099064S1A1",
+        "XXL": "APQ-6099064S2A1",
+        "XXXL": "APQ-6099064S21A1"
+      },
+      "status": "VERIFIED",
+      "note": "garmentColor Bone ebe3e0 confirmed",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Casual Wordmark Tee",
+      "color": "Washed Black",
+      "slug": "goool-heavyweight-casual-tee",
+      "blank": "Bella+Canvas 4810GD (Nicaragua)",
+      "saved_design_id": 6098963,
+      "per_size_skus": {
+        "XS": "APQ-6098963S5A1",
+        "S": "APQ-6098963S6A1",
+        "M": "APQ-6098963S7A1",
+        "L": "APQ-6098963S8A1",
+        "XL": "APQ-6098963S1A1",
+        "XXL": "APQ-6098963S2A1",
+        "XXXL": "APQ-6098963S21A1"
+      },
+      "status": "VERIFIED",
+      "note": "",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Casual Wordmark Tee",
+      "color": "Washed Grey",
+      "slug": "goool-heavyweight-casual-tee",
+      "blank": "Bella+Canvas 4810GD",
+      "saved_design_id": 6099060,
+      "per_size_skus": {
+        "XS": "APQ-6099060S5A1",
+        "S": "APQ-6099060S6A1",
+        "M": "APQ-6099060S7A1",
+        "L": "APQ-6099060S8A1",
+        "XL": "APQ-6099060S1A1",
+        "XXL": "APQ-6099060S2A1",
+        "XXXL": "APQ-6099060S21A1"
+      },
+      "status": "VERIFIED",
+      "note": "",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Touchline Cap",
+      "color": "Black/Natural",
+      "slug": "goool-touchline-cap",
+      "blank": "OTTO 31-069 (Myanmar)",
+      "saved_design_id": 6098980,
+      "per_size_skus": {
+        "OS": "APQ-6098980S34A1"
+      },
+      "status": "VERIFIED",
+      "note": "",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Athletics Minimal Club Tee",
+      "color": "Natural",
+      "slug": "goool-athletics-minimal-club-tee",
+      "blank": "Bella+Canvas 3010 Heavyweight Tee (Nicaragua)",
+      "saved_design_id": 6112002,
+      "per_size_skus": {
+        "XS": "APQ-6112002S5A1",
+        "S": "APQ-6112002S6A1",
+        "M": "APQ-6112002S7A1",
+        "L": "APQ-6112002S8A1",
+        "XL": "APQ-6112002S1A1",
+        "XXL": "APQ-6112002S2A1",
+        "XXXL": "APQ-6112002S21A1"
+      },
+      "status": "CREATED-NEEDS-COLOR-FIX",
+      "note": "Front 3.5in wearer-left and 12in back placed exactly; saved with black AND Natural colorways - black must be removed so Natural is the single color",
+      "verified": "2026-09-22 live account"
+    },
+    {
+      "product": "GOOOL Athletics Modern Sport Tee",
+      "color": "Black",
+      "slug": "goool-athletics-modern-sport-tee",
+      "blank": "BC 3010 black (verified available)",
+      "saved_design_id": null,
+      "per_size_skus": null,
+      "status": "PENDING-CREATE",
+      "note": "GA-01 masters cleaned, upload-ready",
+      "verified": null
+    },
+    {
+      "product": "GOOOL Athletics Varsity Tee",
+      "color": "Washed Black",
+      "slug": "goool-athletics-varsity-tee",
+      "blank": "BC 4810GD Washed Black (verified via 6098963)",
+      "saved_design_id": null,
+      "per_size_skus": null,
+      "status": "PENDING-CREATE",
+      "note": "",
+      "verified": null
+    },
+    {
+      "product": "GOOOL Athletics Circular Badge Tee",
+      "color": "Ivory",
+      "slug": "goool-athletics-circular-badge-tee",
+      "blank": "Comfort Colors C1717 Ivory (verified available)",
+      "saved_design_id": null,
+      "per_size_skus": null,
+      "status": "PENDING-CREATE",
+      "note": "master GA-CIRCLE-08 900px ready",
+      "verified": null
+    },
+    {
+      "product": "GOOOL Athletics Circular Center Crewneck",
+      "color": "Gray Heather",
+      "slug": "goool-athletics-circular-center-crewneck",
+      "blank": "AS Colour 5150 Made Crew - NO gray heather; offers black, Natural, Ink Blue, ATHLETIC HEATHER",
+      "saved_design_id": null,
+      "per_size_skus": null,
+      "status": "OWNER-DECISION",
+      "note": "Athletic Heather is the only heather gray; awaiting owner confirmation",
+      "verified": null
+    },
+    {
+      "product": "GOOOL Athletics Modern Sport Performance Tee",
+      "color": "Black",
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "blank": "Sport-Tek ST720 black (verified via 6098962)",
+      "saved_design_id": null,
+      "per_size_skus": null,
+      "status": "PENDING-CREATE",
+      "note": "set-in sleeve construction per manufacturer; renders showing raglan are wrong",
+      "verified": null
+    }
+  ]
+}
