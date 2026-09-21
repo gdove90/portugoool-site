@@ -35,6 +35,9 @@ export default function ProductDetail({ product }: { product: Product }) {
   const images = activeVariant?.images ?? product.images;
   const colorName = activeVariant?.name ?? product.color;
   const [activeImage, setActiveImage] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const showImage = (i: number) =>
+    setActiveImage((i + images.length) % images.length);
   const [customize, setCustomize] = useState(false);
   const [customName, setCustomName] = useState("");
   const [customNumber, setCustomNumber] = useState("");
@@ -88,7 +91,16 @@ export default function ProductDetail({ product }: { product: Product }) {
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
         {/* Images */}
         <div>
-          <div className="relative aspect-square overflow-hidden rounded-xl bg-smoke">
+          <div
+            className="relative aspect-square overflow-hidden rounded-xl bg-smoke"
+            onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
+            onTouchEnd={(e) => {
+              if (touchStartX == null) return;
+              const dx = e.changedTouches[0].clientX - touchStartX;
+              if (Math.abs(dx) > 40) showImage(activeImage + (dx < 0 ? 1 : -1));
+              setTouchStartX(null);
+            }}
+          >
             <Image
               src={images[activeImage].src}
               alt={images[activeImage].alt}
@@ -99,6 +111,33 @@ export default function ProductDetail({ product }: { product: Product }) {
               // faces or hems; square garment mockups fill the frame either way
               className="object-contain"
             />
+            {images.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => showImage(activeImage - 1)}
+                  aria-label="Previous image"
+                  className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-paper/80 text-ink shadow-sm transition-colors hover:bg-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M15 6l-6 6 6 6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => showImage(activeImage + 1)}
+                  aria-label="Next image"
+                  className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-paper/80 text-ink shadow-sm transition-colors hover:bg-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M9 6l6 6-6 6" />
+                  </svg>
+                </button>
+                <span className="sr-only" aria-live="polite">
+                  Image {activeImage + 1} of {images.length}
+                </span>
+              </>
+            )}
             {product.isLimitedDrop && (
               <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold">
                 {soldOut
@@ -113,7 +152,7 @@ export default function ProductDetail({ product }: { product: Product }) {
             </p>
           )}
           {images.length > 1 && (
-            <div className="mt-3 flex gap-2">
+            <div className="mt-3 flex flex-wrap gap-2">
               {images.map((img, i) => (
                 <button
                   key={img.src}
