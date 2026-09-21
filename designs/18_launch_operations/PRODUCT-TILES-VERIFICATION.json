@@ -1,0 +1,121 @@
+{
+  "products": 10,
+  "assets": 27,
+  "unchangedAssets": true,
+  "checks": [
+    {
+      "view": "desktop-shop",
+      "images": true,
+      "tiles": 10,
+      "overflow": false
+    },
+    {
+      "view": "goool-performance-tee",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-performance-tee",
+      "color": "Black",
+      "images": true
+    },
+    {
+      "view": "goool-performance-tee",
+      "color": "White",
+      "images": true
+    },
+    {
+      "view": "goool-performance-tee",
+      "color": "True Royal",
+      "images": true
+    },
+    {
+      "view": "goool-heavyweight-hoodie",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-heavyweight-hoodie",
+      "color": "Black",
+      "images": true
+    },
+    {
+      "view": "goool-heavyweight-hoodie",
+      "color": "Bone",
+      "images": true
+    },
+    {
+      "view": "goool-heavyweight-casual-tee",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-heavyweight-casual-tee",
+      "color": "Washed Black",
+      "images": true
+    },
+    {
+      "view": "goool-heavyweight-casual-tee",
+      "color": "Washed Grey",
+      "images": true
+    },
+    {
+      "view": "goool-touchline-cap",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-athletics-modern-sport-tee",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-athletics-varsity-tee",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-athletics-minimal-club-tee",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-athletics-circular-badge-tee",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-athletics-circular-center-crewneck",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "goool-athletics-modern-sport-performance-tee",
+      "images": true,
+      "originBadge": 0,
+      "noModelReferences": true
+    },
+    {
+      "view": "mobile-shop",
+      "overflow": false
+    },
+    {
+      "view": "mobile-ivory",
+      "overflow": false
+    },
+    {
+      "view": "mobile-ivory-back",
+      "correctImage": "GOOOL Athletics Circular Badge Tee in ivory, back view"
+    }
+  ],
+  "errors": []
+}

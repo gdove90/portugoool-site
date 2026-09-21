@@ -22,7 +22,6 @@ export default function ProductCard({ product }: { product: Product }) {
   const variants = product.colorVariants;
   const [variantIdx, setVariantIdx] = useState(0);
   const activeVariant = variants?.[variantIdx];
-  const cardImage = activeVariant?.images[0] ?? product.images[0];
   const href =
     variants && variantIdx > 0
       ? `/shop/${product.slug}?color=${encodeURIComponent(activeVariant!.name)}`
@@ -40,7 +39,7 @@ export default function ProductCard({ product }: { product: Product }) {
         }
       >
         <div
-          className={`relative aspect-[4/5] overflow-hidden rounded-xl ${
+          className={`product-media relative aspect-[4/5] overflow-hidden ${
             product.imageBackdrop === "neutral" ? "bg-studio" : "bg-smoke"
           }`}
         >
@@ -54,8 +53,9 @@ export default function ProductCard({ product }: { product: Product }) {
                 src={img.src}
                 alt={active ? img.alt : ""}
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className={`object-cover transition-transform duration-300 group-hover:scale-[1.03] ${
+                sizes="(min-width: 1480px) 326px, (min-width: 1280px) 25vw, (min-width: 1024px) 33vw, 50vw"
+                quality={90}
+                className={`object-contain ${
                   active ? "opacity-100" : "opacity-0"
                 }`}
                 aria-hidden={!active}

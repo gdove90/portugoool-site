@@ -9,3 +9,22 @@ html {
 body {
   @apply bg-paper text-ink antialiased;
 }
+
+@layer components {
+  /* Keep each original studio image intact. A consistent, quiet tile edge
+     separates pale backdrops from the page without recoloring the garment. */
+  .product-media {
+    border-radius: 2px;
+    isolation: isolate;
+  }
+
+  .product-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: 1px solid rgb(10 10 10 / 7%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}

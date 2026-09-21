@@ -92,7 +92,7 @@ export default function ProductDetail({ product }: { product: Product }) {
         {/* Images */}
         <div>
           <div
-            className={`relative aspect-[4/5] overflow-hidden rounded-xl ${
+            className={`product-media relative aspect-[4/5] overflow-hidden ${
               product.imageBackdrop === "neutral" ? "bg-studio" : "bg-smoke"
             }`}
             onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
@@ -109,8 +109,8 @@ export default function ProductDetail({ product }: { product: Product }) {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              // contain, not cover: portrait model shots must never crop
-              // faces or hems; square garment mockups fill the frame either way
+              quality={90}
+              // Preserve the complete garment and its original studio backdrop.
               className="object-contain"
             />
             {images.length > 1 && (
@@ -160,14 +160,14 @@ export default function ProductDetail({ product }: { product: Product }) {
                   key={img.src}
                   type="button"
                   onClick={() => setActiveImage(i)}
-                  className={`relative h-20 w-20 overflow-hidden rounded-lg ${
+                  className={`product-media relative h-20 w-16 overflow-hidden ${
                     product.imageBackdrop === "neutral" ? "bg-studio" : "bg-smoke"
                   } ${
-                    i === activeImage ? "ring-2 ring-ink" : "opacity-70 hover:opacity-100"
+                    i === activeImage ? "ring-2 ring-ink" : "ring-1 ring-ink/10 hover:ring-ink/40"
                   }`}
                   aria-label={`View image ${i + 1}`}
                 >
-                  <Image src={img.src} alt="" fill sizes="64px" className="object-cover object-top" />
+                  <Image src={img.src} alt="" fill sizes="64px" quality={90} className="object-contain" />
                 </button>
               ))}
             </div>
