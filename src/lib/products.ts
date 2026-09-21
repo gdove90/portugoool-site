@@ -2194,7 +2194,7 @@ export const products: Product[] = [
     name: "GOOOL Athletics Modern Sport Performance Tee",
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
-      "The Modern Sport graphic on a performance training tee: white GOOOL with a red underline and spaced ATHLETICS across the chest, small white GOOOL Athletics mark at the upper back. Black athletic-fit crewneck.",
+      "The Modern Sport graphic on a performance training tee: white GOOOL with a red underline and spaced ATHLETICS across the chest, small white GOOOL Athletics mark at the upper back. Athletic-fit crewneck in black or true royal.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
@@ -2212,6 +2212,48 @@ export const products: Product[] = [
         src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
         alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print",
         caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    // Second colourway approved by the owner 2026-09-21. True Royal is a
+    // stock ST720 colour (Apliiq colour 371, #2e48b6) on the SAME blank as
+    // Black, with the SAME artwork files at the same sizes, so the two
+    // colourways differ only in garment colour.
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#0A0A0A",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+            alt: "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+            alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, black garment",
+            caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "True Royal",
+        supplierColor: "true royal",
+        hex: "#2E48B6",
+        skuFragment: "ROYAL",
+        images: [
+          {
+            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT.png",
+            alt: "GOOOL Athletics Modern Sport Performance Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL.png",
+            alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, true royal blue garment",
+            caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],

@@ -166,7 +166,11 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Athletics Modern Sport Performance Tee (Sport-Tek ST720, black)
+  // GOOOL Athletics Modern Sport Performance Tee (Sport-Tek ST720).
+  // Two colourways on the SAME blank (garment 782) with the SAME artwork
+  // files at the same sizes - front GA-01-F 11 x 3.73 in, back GA-01-B
+  // 3.25 x 1.11 in, transfer print. Apliiq keeps one saved design per
+  // colour, so each colour resolves to its own product id and SKU set.
   "80000000-0000-4000-8000-000000000006": {
     Black: {
       apliiqProductId: 6112037,
@@ -176,6 +180,16 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
         L: "APQ-6112037S8A1",
         XL: "APQ-6112037S1A1",
         XXL: "APQ-6112037S2A1",
+      },
+    },
+    "True Royal": {
+      apliiqProductId: 6113361,
+      skus: {
+        S: "APQ-6113361S6A1",
+        M: "APQ-6113361S7A1",
+        L: "APQ-6113361S8A1",
+        XL: "APQ-6113361S1A1",
+        XXL: "APQ-6113361S2A1",
       },
     },
   },
