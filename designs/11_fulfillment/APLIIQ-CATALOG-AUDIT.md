@@ -54,7 +54,47 @@ S1/S2; cap one-size S34). Rows 9-14 have zero SKU coverage.
 - Decoration: DTF per current project records. Cap remains front
   embroidery only (owner removed the side slogan).
 
-## Blocked / next actions
+## Completion update (2026-09-22, authenticated session via Chrome)
+
+All eight PRIOR rows re-verified live (garment, color, origin, actual
+per-size SKUs from /merchandise/detail). Five missing designs CREATED,
+placed with the packet dimensions, saved, reopened and verified
+(views, artwork sizes, colors, SKUs read back):
+
+- 6112026 GOOOL Athletics Modern Sport Tee - BC 3010 black, F 11x3.73
+  + B 3.25x1.11 (white only), Front+Back confirmed.
+- 6112032 GOOOL Athletics Varsity Tee - 4810GD Washed Black,
+  F 11x5.28 + B 3.25x1.56 (ivory only), Front+Back confirmed.
+- 6112018 GOOOL Athletics Minimal Club Tee - BC 3010 Natural,
+  F 3.5x1.1 wearer-left badge + B 12x4.63, Front+Back confirmed.
+- 6112033 GOOOL Athletics Circular Badge Tee - C1717 Ivory (made in
+  Dominican Republic), front-only 3x3 navy badge, sizes S-3XL.
+- 6112037 GOOOL Athletics Modern Sport Performance Tee - ST720 black
+  (Ethiopia, set-in sleeves), F 11x3.73 + B 3.25x1.11.
+
+Workflow notes discovered this session (for future runs): the
+customizer multi-selects colors (deselect the default before saving);
+switching view tabs re-binds the currently SELECTED artwork to the new
+view, so deselect (click empty canvas) after each placement; artwork
+placement view is confirmed by the svgWrap image#### class and,
+authoritatively, by merchandise/detail images[].ViewLabel.
+
+Superseded intermediates 6112001 and 6112012 are renamed "SUPERSEDED
+do not use" (not deleted, per the no-deletion rule); the owner may
+delete them.
+
+Vertical placement uses the box-calibration convention (print box top
+= collar + 0.91in) carried over from the approved capsule designs;
+physical sample proofs remain the final geometric gate.
+
+## Remaining blocked item
+
+GOOOL Athletics Circular Center Crewneck: AS Colour 5150 Made Crew
+offers black, Natural, Ink Blue, Athletic Heather - no "gray heather".
+Athletic Heather is the only heather gray. OWNER DECISION pending;
+design not created. Everything else is complete.
+
+## Original blocked / next actions (superseded above)
 
 1. BLOCKED on the authenticated apliiq.com session (login page is up
    in the browser pane; owner signs in as hello@goool.shop, no stored

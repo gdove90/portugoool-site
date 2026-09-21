@@ -1,12 +1,13 @@
 {
-  "generated": "2026-09-22",
+  "generated": "2026-09-22 (post-creation)",
   "workflow": "authenticated Chrome session via claude-in-chrome; old customizer; file_upload to hidden inputs; synthetic MouseEvent drags on .svgWrap; /merchandise/detail for SKUs",
   "totals": {
     "colorways": 14,
     "verified": 8,
-    "created": 1,
-    "pending": 4,
-    "owner_decision": 1
+    "created": 5,
+    "pending": 0,
+    "owner_decision": 1,
+    "note": "Only Circular Center Crewneck remains: owner must confirm AS Colour 5150 Athletic Heather (no gray heather offered)."
   },
   "rows": [
     {
@@ -160,52 +161,75 @@
       "color": "Natural",
       "slug": "goool-athletics-minimal-club-tee",
       "blank": "Bella+Canvas 3010 Heavyweight Tee (Nicaragua)",
-      "saved_design_id": 6112002,
+      "saved_design_id": 6112018,
       "per_size_skus": {
-        "XS": "APQ-6112002S5A1",
-        "S": "APQ-6112002S6A1",
-        "M": "APQ-6112002S7A1",
-        "L": "APQ-6112002S8A1",
-        "XL": "APQ-6112002S1A1",
-        "XXL": "APQ-6112002S2A1",
-        "XXXL": "APQ-6112002S21A1"
+        "XS": "APQ-6112018S5A1",
+        "S": "APQ-6112018S6A1",
+        "M": "APQ-6112018S7A1",
+        "L": "APQ-6112018S8A1",
+        "XL": "APQ-6112018S1A1",
+        "XXL": "APQ-6112018S2A1",
+        "XXXL": "APQ-6112018S21A1"
       },
-      "status": "CREATED-NEEDS-COLOR-FIX",
-      "note": "Front 3.5in wearer-left and 12in back placed exactly; saved with black AND Natural colorways - black must be removed so Natural is the single color",
-      "verified": "2026-09-22 live account"
+      "status": "CREATED-VERIFIED",
+      "note": "BC 3010 Natural single color; Front 3.5x1.1 badge wearer-left + Back 12x4.63; views Front+Back confirmed via merchandise/detail; reopened on product page. Intermediates 6112001/6112012 renamed SUPERSEDED (owner may delete).",
+      "verified": "2026-09-22 live account (created this session)"
     },
     {
       "product": "GOOOL Athletics Modern Sport Tee",
       "color": "Black",
       "slug": "goool-athletics-modern-sport-tee",
       "blank": "BC 3010 black (verified available)",
-      "saved_design_id": null,
-      "per_size_skus": null,
-      "status": "PENDING-CREATE",
-      "note": "GA-01 masters cleaned, upload-ready",
-      "verified": null
+      "saved_design_id": 6112026,
+      "per_size_skus": {
+        "XS": "APQ-6112026S5A1",
+        "S": "APQ-6112026S6A1",
+        "M": "APQ-6112026S7A1",
+        "L": "APQ-6112026S8A1",
+        "XL": "APQ-6112026S1A1",
+        "XXL": "APQ-6112026S2A1",
+        "XXXL": "APQ-6112026S21A1"
+      },
+      "status": "CREATED-VERIFIED",
+      "note": "BC 3010 black; Front 11x3.73 (cleaned GA-01-F) + Back 3.25x1.11 white-only; views Front+Back confirmed.",
+      "verified": "2026-09-22 live account (created this session)"
     },
     {
       "product": "GOOOL Athletics Varsity Tee",
       "color": "Washed Black",
       "slug": "goool-athletics-varsity-tee",
       "blank": "BC 4810GD Washed Black (verified via 6098963)",
-      "saved_design_id": null,
-      "per_size_skus": null,
-      "status": "PENDING-CREATE",
-      "note": "",
-      "verified": null
+      "saved_design_id": 6112032,
+      "per_size_skus": {
+        "XS": "APQ-6112032S5A1",
+        "S": "APQ-6112032S6A1",
+        "M": "APQ-6112032S7A1",
+        "L": "APQ-6112032S8A1",
+        "XL": "APQ-6112032S1A1",
+        "XXL": "APQ-6112032S2A1",
+        "XXXL": "APQ-6112032S21A1"
+      },
+      "status": "CREATED-VERIFIED",
+      "note": "4810GD Washed Black; Front 11x5.28 + Back 3.25x1.56 ivory-only; views Front+Back confirmed; 8 sizes XS-4XL available.",
+      "verified": "2026-09-22 live account (created this session)"
     },
     {
       "product": "GOOOL Athletics Circular Badge Tee",
       "color": "Ivory",
       "slug": "goool-athletics-circular-badge-tee",
       "blank": "Comfort Colors C1717 Ivory (verified available)",
-      "saved_design_id": null,
-      "per_size_skus": null,
-      "status": "PENDING-CREATE",
-      "note": "master GA-CIRCLE-08 900px ready",
-      "verified": null
+      "saved_design_id": 6112033,
+      "per_size_skus": {
+        "S": "APQ-6112033S6A1",
+        "M": "APQ-6112033S7A1",
+        "L": "APQ-6112033S8A1",
+        "XL": "APQ-6112033S1A1",
+        "XXL": "APQ-6112033S2A1",
+        "XXXL": "APQ-6112033S21A1"
+      },
+      "status": "CREATED-VERIFIED",
+      "note": "C1717 Ivory (made in Dominican Republic); Front-only 3x3 navy circular badge at wearer-left chest; 6 sizes S-3XL; no back print per spec.",
+      "verified": "2026-09-22 live account (created this session)"
     },
     {
       "product": "GOOOL Athletics Circular Center Crewneck",
@@ -223,11 +247,19 @@
       "color": "Black",
       "slug": "goool-athletics-modern-sport-performance-tee",
       "blank": "Sport-Tek ST720 black (verified via 6098962)",
-      "saved_design_id": null,
-      "per_size_skus": null,
-      "status": "PENDING-CREATE",
-      "note": "set-in sleeve construction per manufacturer; renders showing raglan are wrong",
-      "verified": null
+      "saved_design_id": 6112037,
+      "per_size_skus": {
+        "XS": "APQ-6112037S5A1",
+        "S": "APQ-6112037S6A1",
+        "M": "APQ-6112037S7A1",
+        "L": "APQ-6112037S8A1",
+        "XL": "APQ-6112037S1A1",
+        "XXL": "APQ-6112037S2A1",
+        "XXXL": "APQ-6112037S21A1"
+      },
+      "status": "CREATED-VERIFIED",
+      "note": "ST720 black (set-in sleeves per manufacturer, Ethiopia); same GA-01 cleaned artwork, Front 11x3.73 + Back 3.25x1.11; separate product from cotton Modern Sport.",
+      "verified": "2026-09-22 live account (created this session)"
     }
   ]
 }

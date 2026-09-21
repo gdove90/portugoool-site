@@ -109,6 +109,79 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     // The cap has no colorVariants on the site; its catalog color string
     // is "Black/Natural" and that is the only decorated colorway.
   },
+  // ── GOOOL Athletics additions (saved designs created and SKUs read
+  // from merchandise/detail on 2026-09-22). The catalog still gates all
+  // of these behind priceCents 0 + availableForSale false +
+  // supplierType "unassigned"; mapping them here does NOT open
+  // purchasing, it records the verified supplier identifiers.
+  // GOOOL Athletics Modern Sport Tee (Bella+Canvas 3010, black)
+  "80000000-0000-4000-8000-000000000001": {
+    Black: {
+      apliiqProductId: 6112026,
+      skus: {
+        S: "APQ-6112026S6A1",
+        M: "APQ-6112026S7A1",
+        L: "APQ-6112026S8A1",
+        XL: "APQ-6112026S1A1",
+        XXL: "APQ-6112026S2A1",
+      },
+    },
+  },
+  // GOOOL Athletics Varsity Tee (Bella+Canvas 4810GD, Washed Black)
+  "80000000-0000-4000-8000-000000000002": {
+    "Washed Black": {
+      apliiqProductId: 6112032,
+      skus: {
+        S: "APQ-6112032S6A1",
+        M: "APQ-6112032S7A1",
+        L: "APQ-6112032S8A1",
+        XL: "APQ-6112032S1A1",
+        XXL: "APQ-6112032S2A1",
+      },
+    },
+  },
+  // GOOOL Athletics Minimal Club Tee (Bella+Canvas 3010, Natural)
+  "80000000-0000-4000-8000-000000000003": {
+    Natural: {
+      apliiqProductId: 6112018,
+      skus: {
+        S: "APQ-6112018S6A1",
+        M: "APQ-6112018S7A1",
+        L: "APQ-6112018S8A1",
+        XL: "APQ-6112018S1A1",
+        XXL: "APQ-6112018S2A1",
+      },
+    },
+  },
+  // GOOOL Athletics Circular Badge Tee (Comfort Colors C1717, Ivory)
+  "80000000-0000-4000-8000-000000000004": {
+    Ivory: {
+      apliiqProductId: 6112033,
+      skus: {
+        S: "APQ-6112033S6A1",
+        M: "APQ-6112033S7A1",
+        L: "APQ-6112033S8A1",
+        XL: "APQ-6112033S1A1",
+        XXL: "APQ-6112033S2A1",
+      },
+    },
+  },
+  // GOOOL Athletics Modern Sport Performance Tee (Sport-Tek ST720, black)
+  "80000000-0000-4000-8000-000000000006": {
+    Black: {
+      apliiqProductId: 6112037,
+      skus: {
+        S: "APQ-6112037S6A1",
+        M: "APQ-6112037S7A1",
+        L: "APQ-6112037S8A1",
+        XL: "APQ-6112037S1A1",
+        XXL: "APQ-6112037S2A1",
+      },
+    },
+  },
+  // Circular Center Crewneck (id ...0005) is intentionally unmapped:
+  // AS Colour 5150 offers Athletic Heather, not "gray heather"; the
+  // owner's color decision is pending and no saved design exists yet.
 };
 
 export interface ResolvedFulfillment {
