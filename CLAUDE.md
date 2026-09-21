@@ -1,8 +1,14 @@
+> **Production lettering hold:** [Measured small-letter failures and latest crewneck font](designs/19_colorway-and-back-print-review/README.md) govern every upload. Use the crewneck FRONT badge font on its curved back, not italic Modern Sport. Correct failed actual-size lettering before production; sharp concepts are not print approval.
+
+> **Latest owner decisions (2026-09-21):** Modern Sport is performance-only; cotton is archived with files retained. Pricing now targets 25% modeled contribution: [current price model](designs/18_launch_operations/PRICING-25-PERCENT.md). [Current design review](designs/19_colorway-and-back-print-review/README.md) supersedes the straight crewneck back layout and seven-active-product color plan: six color proposals remain, crew lettering follows the collar curve, and detail views apply only to small back prints. Keep sewn-tag/sample/payment requirements.
+
+> **Latest launch/tag decision:** Read [CLAUDE-LAUNCH-PRIORITY-PROMPT.md](CLAUDE-LAUNCH-PRIORITY-PROMPT.md). Owner requires the approved sewn tag; any necessary alternative needs a mockup and approval first. No physical samples are approved. Stripe live activation remains unconfirmed. A 24-hour target does not waive product or payment checks.
+
 > **Current price publication:** The owner authorized publishing all six Athletics retail prices on 2026-09-21. Read [PRICING-RELEASE-2026-09-21.md](designs/18_launch_operations/PRICING-RELEASE-2026-09-21.md). This supersedes the earlier publication hold for these six prices; full landed-cost and product-readiness checks remain open. Casual wordmark placement is still unfinished.
 
-> **Current catalog presentation:** Follow [PRODUCT-TILES-IMPLEMENTATION.md](designs/18_launch_operations/PRODUCT-TILES-IMPLEMENTATION.md). The owner approved reference-style 4:5 studio tiles with visible separation and original garment images preserved. This supersedes blanket white-background/no-box requirements in older prompts. Generated model references and price-area origin badges stay removed. Do not repeat masking or recoloring of garment assets. New prices remain unpublished until costs are verified.
+> **Current catalog presentation:** Follow [PRODUCT-TILES-IMPLEMENTATION.md](designs/18_launch_operations/PRODUCT-TILES-IMPLEMENTATION.md). The owner approved reference-style 4:5 studio tiles with visible separation and original garment images preserved. This supersedes blanket white-background/no-box requirements in older prompts. Generated model references and price-area origin badges stay removed. Do not repeat masking or recoloring of garment assets. The six new prices were subsequently authorized and published; see the price publication note above.
 
-> **Current launch priorities and communication preference:** Read [LAUNCH-TASK-LIST.md](LAUNCH-TASK-LIST.md). Prioritize Stripe, then verified costs/new prices, product readiness and an Instagram-only launch. Owner explicitly requires new prices to stay unpublished until costs are verified. Include a ready-to-copy next-action prompt in every response.
+> **Current launch priorities and communication preference:** Read [LAUNCH-TASK-LIST.md](LAUNCH-TASK-LIST.md). Prioritize Stripe, then verified costs/new prices, product readiness and an Instagram-only launch. Owner subsequently authorized the six displayed prices; full landed costs remain launch checks. Include a ready-to-copy next-action prompt in every response.
 
 > **Artwork audit — 2026-09-21:** Current artwork authority for all active and unlaunched designs: [designs/00_asset-library/START-HERE.md](designs/00_asset-library/START-HERE.md). Read its family-specific source selections and conflict register before the historical brand rules below. Current v2 packages include ARTWORK-AUDIT.md; original and derived files have different roles.
 
@@ -176,7 +182,7 @@ all pairs pass WCAG AA.
 - **Buttons:** body stack, semibold, sentence case — never all-caps
 - **Scale:** hero `text-6xl→text-9xl`, section heads `text-3xl→text-4xl`,
   body `text-base`, captions `text-xs`
-- **Letter spacing:** display gets `tracking-tightest` (−0.03em); tiny
+- **Letter spacing:** display gets `tracking-tightest` (âˆ’0.03em); tiny
   eyebrow labels get `tracking-widest`; nothing in between
 - **Line height:** `leading-none` for display, `leading-relaxed` for body
 - **Responsive:** set mobile size first, scale with `sm:`/`lg:` prefixes

@@ -1,3 +1,5 @@
+> **Production lettering hold:** [Measured small-letter failures and latest crewneck font](designs/19_colorway-and-back-print-review/README.md) govern every upload. Use the crewneck FRONT badge font on its curved back, not italic Modern Sport. Correct failed actual-size lettering before production; sharp concepts are not print approval.
+
 > **New owner placement decision:** [Casual Wordmark Tee](designs/00_asset-library/CASUAL-TEE-PLACEMENT-REVISION.md), both colorways: front artwork top **3.00in below collar**, width **6.75in**. Apply in Apliiq and website imagery; execution is pending.
 
 # GOOOL — current artwork and upload packages

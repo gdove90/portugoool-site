@@ -1,3 +1,5 @@
+> **Owner decision — 2026-09-21:** Implement the approved sewn fabric tag shown in approved-tag-concept.png. Preserve the black background, exact navigation GOOOL lettering, WHITE–RED–WHITE segmented line and white ATHLETICS. A heat-applied printed label is NOT an approved substitute. If the selected supplier cannot reproduce the approved concept, first show a supplier-compatible alternative mockup, with actual dimensions, attachment method and any visual differences, for owner approval. No alternative approval or label purchase has been given. No physical samples are approved.
+
 > **Artwork audit — 2026-09-21:** The owner-approved concept remains the visual reference. Current flat SVG/PNG files in the v2 package are a later source-derived composition candidate, not an exact copy or a recovered native vector. See [the label family](../00_asset-library/ARTWORK-FAMILIES.md) and require actual-size visual/manufacturing proof.
 
 # GOOOL ATHLETICS standard brand label

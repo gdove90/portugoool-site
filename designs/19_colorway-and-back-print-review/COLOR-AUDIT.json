@@ -1,0 +1,439 @@
+{
+  "scope": "13 current colorway packages, excluding archived cotton Modern Sport. Read-only opaque-pixel audit; dominant ink equality does not certify every accent, mockup, supplier upload or physical print. Blank backs remain blank except the separately proposed crewneck back.",
+  "crewneck_front_source_ink": "#0A371E",
+  "required_crewneck_back_ink": "#0A371E",
+  "crewneck_back_master_exists": false,
+  "rows": [
+    {
+      "package": "01-goool-performance-tee-black",
+      "product": "GOOOL Performance Badge Tee",
+      "color": "Black",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/01_Performance_Tee_Artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+          "sha256": "ca2f9bbcac8e9d0c902b4141f0b7b36428b34f2015f345b0250d85ada424218b",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#FFFFFF",
+              "opaque_pixels": 560262
+            },
+            {
+              "hex": "#C61322",
+              "opaque_pixels": 2275
+            },
+            {
+              "hex": "#C7091A",
+              "opaque_pixels": 89
+            },
+            {
+              "hex": "#C70415",
+              "opaque_pixels": 84
+            },
+            {
+              "hex": "#C70717",
+              "opaque_pixels": 77
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "02-goool-performance-tee-white",
+      "product": "GOOOL Performance Badge Tee",
+      "color": "White",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png",
+          "sha256": "81dc846b9080c6121e76f525fc26dc13e39b4a54cfbf6e99580e416971b54b31",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#182A40",
+              "opaque_pixels": 560262
+            },
+            {
+              "hex": "#742E3D",
+              "opaque_pixels": 3086
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "03-goool-performance-tee-true-royal",
+      "product": "GOOOL Performance Badge Tee",
+      "color": "True Royal",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png",
+          "sha256": "a530cd0eafef365280b6c20ff573e3a690143a78abc63f918a8cf0f956cffd3a",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#EEE5D5",
+              "opaque_pixels": 560262
+            },
+            {
+              "hex": "#742E3D",
+              "opaque_pixels": 3086
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "04-goool-heavyweight-hoodie-black",
+      "product": "GOOOL Core Hoodie",
+      "color": "Black",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/02_Hoodie_Artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+          "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#FFFFFF",
+              "opaque_pixels": 368826
+            },
+            {
+              "hex": "#C61322",
+              "opaque_pixels": 7401
+            },
+            {
+              "hex": "#C51322",
+              "opaque_pixels": 330
+            },
+            {
+              "hex": "#C80415",
+              "opaque_pixels": 282
+            },
+            {
+              "hex": "#C70C1C",
+              "opaque_pixels": 202
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "05-goool-heavyweight-hoodie-bone",
+      "product": "GOOOL Core Hoodie",
+      "color": "Bone",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+          "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#182A40",
+              "opaque_pixels": 368826
+            },
+            {
+              "hex": "#742E3D",
+              "opaque_pixels": 9787
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "06-goool-heavyweight-casual-tee-washed-black",
+      "product": "GOOOL Casual Wordmark Tee",
+      "color": "Washed Black",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/03_Casual_Tee_Artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+          "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#FFFFFF",
+              "opaque_pixels": 368826
+            },
+            {
+              "hex": "#C61322",
+              "opaque_pixels": 7401
+            },
+            {
+              "hex": "#C51322",
+              "opaque_pixels": 330
+            },
+            {
+              "hex": "#C80415",
+              "opaque_pixels": 282
+            },
+            {
+              "hex": "#C70C1C",
+              "opaque_pixels": 202
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "07-goool-heavyweight-casual-tee-washed-grey",
+      "product": "GOOOL Casual Wordmark Tee",
+      "color": "Washed Grey",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+          "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#182A40",
+              "opaque_pixels": 368826
+            },
+            {
+              "hex": "#742E3D",
+              "opaque_pixels": 9787
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "08-goool-touchline-cap-black-natural",
+      "product": "GOOOL Touchline Cap",
+      "color": "Black/Natural",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+          "shape_source": "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+          "sha256": "661f917ecd0c09f62532697da15c27cdc3cd8230bfccb7265452885451e0f14d",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#000000",
+              "opaque_pixels": 112889
+            },
+            {
+              "hex": "#C61322",
+              "opaque_pixels": 3120
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "10-goool-athletics-varsity-tee-washed-black",
+      "product": "GOOOL Athletics Varsity Tee",
+      "color": "Washed Black",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-F_3300px.png",
+          "shape_source": "designs/16_goool_athletics/print_masters/GA-02-F_3300px.png",
+          "sha256": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#E8DFCA",
+              "opaque_pixels": 1168694
+            },
+            {
+              "hex": "#8E3438",
+              "opaque_pixels": 234436
+            },
+            {
+              "hex": "#8D3438",
+              "opaque_pixels": 7512
+            },
+            {
+              "hex": "#E7DEC9",
+              "opaque_pixels": 5942
+            },
+            {
+              "hex": "#8C3438",
+              "opaque_pixels": 86
+            }
+          ]
+        },
+        {
+          "face": "back",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-B_975px.png",
+          "shape_source": "designs/16_goool_athletics/print_masters/GA-02-B_975px.png",
+          "sha256": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#E8DFCA",
+              "opaque_pixels": 98180
+            },
+            {
+              "hex": "#F8EFD8",
+              "opaque_pixels": 589
+            },
+            {
+              "hex": "#F7EED7",
+              "opaque_pixels": 544
+            },
+            {
+              "hex": "#EAE1CC",
+              "opaque_pixels": 461
+            },
+            {
+              "hex": "#F7EDD7",
+              "opaque_pixels": 424
+            }
+          ]
+        }
+      ],
+      "primary_ink_match": true,
+      "status": "dominant_source_ink_matches"
+    },
+    {
+      "package": "11-goool-athletics-minimal-club-tee-natural",
+      "product": "GOOOL Athletics Minimal Club Tee",
+      "color": "Natural",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-F_1050px.png",
+          "shape_source": "designs/16_goool_athletics/print_masters/GA-03-F_1050px.png",
+          "sha256": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#171717",
+              "opaque_pixels": 89647
+            },
+            {
+              "hex": "#181818",
+              "opaque_pixels": 3519
+            },
+            {
+              "hex": "#191919",
+              "opaque_pixels": 903
+            },
+            {
+              "hex": "#1A1A1A",
+              "opaque_pixels": 5
+            }
+          ]
+        },
+        {
+          "face": "back",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-B_3600px.png",
+          "shape_source": "designs/16_goool_athletics/print_masters/GA-03-B_3600px.png",
+          "sha256": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#171717",
+              "opaque_pixels": 1163514
+            },
+            {
+              "hex": "#C52D32",
+              "opaque_pixels": 181272
+            },
+            {
+              "hex": "#181818",
+              "opaque_pixels": 10406
+            },
+            {
+              "hex": "#191919",
+              "opaque_pixels": 4185
+            },
+            {
+              "hex": "#1A1A1A",
+              "opaque_pixels": 884
+            }
+          ]
+        }
+      ],
+      "primary_ink_match": true,
+      "status": "dominant_source_ink_matches"
+    },
+    {
+      "package": "12-goool-athletics-circular-badge-tee-ivory",
+      "product": "GOOOL Athletics Circular Badge Tee",
+      "color": "Ivory",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/artwork/GA-CIRCLE-08-NAVY-PRINT.png",
+          "shape_source": "designs\\16_goool_athletics\\logos\\GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png",
+          "sha256": "3a642d9ebf6ca9f6ee0d7a81d3de7d8a9aa19e62eac9243cc4d5d1a5d57ae21a",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#0E2B4C",
+              "opaque_pixels": 659636
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "13-goool-athletics-circular-center-crewneck-gray-heather",
+      "product": "GOOOL Athletics Circular Center Crewneck",
+      "color": "Gray Heather",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/artwork/GA-CIRCLE-09-FOREST-PRINT.png",
+          "shape_source": "designs\\16_goool_athletics\\logos\\GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png",
+          "sha256": "e55ca60206a097a09d980c52b1e944ba66da82a0af984969a892c1fe07fc6066",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#0A371E",
+              "opaque_pixels": 456602
+            }
+          ]
+        }
+      ],
+      "status": "front_only_current_configuration"
+    },
+    {
+      "package": "14-goool-athletics-modern-sport-performance-tee-black",
+      "product": "GOOOL Athletics Modern Sport Performance Tee",
+      "color": "Black",
+      "artworks": [
+        {
+          "face": "front",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-F_3300px_CLEAN.png",
+          "shape_source": "designs/16_goool_athletics/print_masters/upload/GA-01-F_3300px_CLEAN.png",
+          "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#FFFFFF",
+              "opaque_pixels": 1060546
+            },
+            {
+              "hex": "#C52D32",
+              "opaque_pixels": 422400
+            }
+          ]
+        },
+        {
+          "face": "back",
+          "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-B_975px_CLEAN.png",
+          "shape_source": "designs/16_goool_athletics/print_masters/upload/GA-01-B_975px_CLEAN.png",
+          "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+          "dominant_opaque_colors": [
+            {
+              "hex": "#FFFFFF",
+              "opaque_pixels": 73831
+            }
+          ]
+        }
+      ],
+      "primary_ink_match": true,
+      "status": "dominant_source_ink_matches"
+    }
+  ]
+}

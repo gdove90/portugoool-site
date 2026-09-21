@@ -1,3 +1,5 @@
+> **Superseded pricing:** The owner approved the 25% model and archived cotton Modern Sport. Use [PRICING-25-PERCENT.md](PRICING-25-PERCENT.md). Historical numbers below are preserved as evidence, not current instructions.
+
 > **Update:** The owner has now authorized the six display prices. See [PRICING-RELEASE-2026-09-21.md](PRICING-RELEASE-2026-09-21.md). The historical hold below is superseded for these six prices only; unresolved cost checks remain launch gates.
 
 # Pricing stays unpublished until costs are verified

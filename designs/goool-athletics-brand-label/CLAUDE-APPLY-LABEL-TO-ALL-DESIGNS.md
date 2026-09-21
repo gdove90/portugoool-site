@@ -1,3 +1,5 @@
+> **Owner decision — 2026-09-21:** Implement the approved sewn fabric tag shown in approved-tag-concept.png. Preserve the black background, exact navigation GOOOL lettering, WHITE–RED–WHITE segmented line and white ATHLETICS. A heat-applied printed label is NOT an approved substitute. If the selected supplier cannot reproduce the approved concept, first show a supplier-compatible alternative mockup, with actual dimensions, attachment method and any visual differences, for owner approval. No alternative approval or label purchase has been given. No physical samples are approved.
+
 Work in C:\Users\gdove\OneDrive\Desktop\GOOOL.
 
 The owner approved the GOOOL ATHLETICS tag shown in designs/goool-athletics-brand-label/approved-tag-concept.png. Read that folder's README.md and apply this label direction across every current GOOOL saved Apliiq design, including every offered color/size and the new Modern Sport Performance Tee when its design is created.

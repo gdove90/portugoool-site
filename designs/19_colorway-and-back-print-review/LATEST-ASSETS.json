@@ -1,0 +1,43 @@
+[
+  {
+    "path": "public/products/GOOOL_VARSITY_BACK_DETAIL_V1.png",
+    "generated_source": "exec-0880cf27-e80f-45fb-9371-093ea77f0066.png",
+    "sha256": "cfa7a360ca40c8704756fc02b0ba678ed75230ce654f4749069f7ffff95837d6",
+    "status": "concept_not_production_master"
+  },
+  {
+    "path": "public/products/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+    "generated_source": "exec-0d14984c-58b9-42b4-a1f7-c4d4b8eec243.png",
+    "sha256": "0f0b50c14b55fecdf24768124b97f9610a5aea4c06734f12bbc4b88df24a5b03",
+    "status": "concept_not_production_master"
+  },
+  {
+    "path": "public/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+    "generated_source": "exec-ce071076-8bff-45e6-93b3-07e3985152b4.png",
+    "sha256": "35437f06d8bd373e34565e5cc5bd3821faa357881103d20987903c6623b20db9",
+    "status": "concept_not_production_master"
+  },
+  {
+    "path": "designs/19_colorway-and-back-print-review/crewneck-curved-back-review-v2.png",
+    "generated_source": "exec-4c40101c-5df5-48fd-a1d6-7fd865b3ada0.png",
+    "sha256": "e3303e80b721dd1eba320b1411bbc4c7c423e8824c501fb876749436f179670b",
+    "status": "superseded_rejected_font"
+  },
+  {
+    "path": "designs/19_colorway-and-back-print-review/modern-sport-performance-review-v2.png",
+    "generated_source": "exec-cacf1aea-e2f5-4279-b5b4-0dd20465a573.png",
+    "sha256": "f4a55544f09e55633892888446f5197695a4a50433c16e94b264789da9069627",
+    "status": "concept_not_production_master"
+  },
+  {
+    "path": "designs/19_colorway-and-back-print-review/crewneck-matching-front-review-v3.png",
+    "generated_source": "exec-4248236f-7c8b-484b-b800-74aa221825ed.png",
+    "sha256": "563eb6dc0bf2d6b5732fa1935f3fdf476a920bbb04b9703e3df6d75371ab3ce5",
+    "status": "superseded_by_v4_color_match_review"
+  },
+  {
+    "path": "designs/19_colorway-and-back-print-review/crewneck-color-match-review-v4.png",
+    "sha256": "515309c170f9ccb56fdaf82e7b0c071fee5e8f1602762e7bd1ef6ac44e09d817",
+    "status": "current_front_back_color_concept_production_proof_pending"
+  }
+]

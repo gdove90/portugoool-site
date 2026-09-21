@@ -1,0 +1,90 @@
+{
+  "mode": "local",
+  "checked_at_utc": "2026-09-21T12:14:55.385Z",
+  "allPassed": true,
+  "activeProducts": 9,
+  "checks": [
+    {
+      "slug": "goool-performance-tee",
+      "price_usd": 37,
+      "comingSoon": true,
+      "detailImages": 0,
+      "pass": true
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "price_usd": 65,
+      "comingSoon": true,
+      "detailImages": 0,
+      "pass": true
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "price_usd": 39,
+      "comingSoon": true,
+      "detailImages": 0,
+      "pass": true
+    },
+    {
+      "slug": "goool-touchline-cap",
+      "price_usd": 36,
+      "comingSoon": true,
+      "detailImages": 0,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "price_usd": 50,
+      "comingSoon": true,
+      "detailImages": 1,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "price_usd": 46,
+      "comingSoon": true,
+      "detailImages": 0,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "price_usd": 35,
+      "comingSoon": true,
+      "detailImages": 0,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "price_usd": 93,
+      "comingSoon": true,
+      "detailImages": 0,
+      "pass": true
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "price_usd": 48,
+      "comingSoon": true,
+      "detailImages": 1,
+      "pass": true
+    }
+  ],
+  "archiveRedirect": {
+    "status": 307,
+    "location": "http://localhost:3077/shop/goool-athletics-modern-sport-performance-tee"
+  },
+  "anonymousGate": 307,
+  "assets": [
+    {
+      "name": "GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+      "status": 200
+    },
+    {
+      "name": "GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+      "status": 200
+    },
+    {
+      "name": "GOOOL_VARSITY_BACK_DETAIL_V1.png",
+      "status": 200
+    }
+  ]
+}

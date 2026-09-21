@@ -1,0 +1,204 @@
+{
+  "created_at_utc": "2026-09-21T11:16:04.252563+00:00",
+  "generation_tool": "Built-in image_gen; existing local garment images used as edit targets. No CLI fallback.",
+  "status": "concept_review_only",
+  "catalog_scope": "9 active products, 13 existing colorways; 6 active single-color products need a second. Cotton Modern Sport archived by owner. If all six proposals are implemented: 19 active colorways.",
+  "already_multicolor": [
+    {
+      "name": "Performance Badge Tee",
+      "colors": [
+        "Black",
+        "White",
+        "True Royal"
+      ]
+    },
+    {
+      "name": "Core Hoodie",
+      "colors": [
+        "Black",
+        "Bone"
+      ]
+    },
+    {
+      "name": "Casual Wordmark Tee",
+      "colors": [
+        "Washed Black",
+        "Washed Grey"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "key": "crewneck",
+      "name": "Circular Center Crewneck",
+      "blank": "AS Colour 5150",
+      "current_color": "Athletic Heather (site: Gray Heather)",
+      "proposed_color": "Natural",
+      "artwork_notes": "Owner direction: match front/back forest-green ink and rounded upright front-badge lettering. Shallow U collar curve. V4 pairs both faces for color review; no production back master certified. Natural remains proposed.",
+      "mockup": "crewneck-color-match-review-v4.png",
+      "source_generated_file": "exec-3116512f-0ccf-4021-a286-63cdb1b15800.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "515309c170f9ccb56fdaf82e7b0c071fee5e8f1602762e7bd1ef6ac44e09d817",
+      "apliiq_catalog_url": "https://www.apliiq.com/customize/mens/sweatshirts/Made-Crew",
+      "color_listed_on_apliiq": true,
+      "size_inventory_verified": false,
+      "owner_approved": false,
+      "supplier_proof_approved": false,
+      "production_artwork_ready": false,
+      "apliiq_implemented": false,
+      "website_implemented": false,
+      "superseded_mockups": [
+        "crewneck-review-v1.png",
+        "crewneck-curved-back-review-v2.png",
+        "crewneck-matching-front-review-v3.png"
+      ],
+      "front_ink_hex": "#0A371E",
+      "required_back_ink_hex": "#0A371E"
+    },
+    {
+      "key": "modern-sport-cotton",
+      "name": "Modern Sport cotton tee",
+      "blank": "Bella+Canvas 3010",
+      "current_color": "Black",
+      "proposed_color": "Forest",
+      "artwork_notes": "White lettering and red underline unchanged.",
+      "mockup": "modern-sport-cotton-review-v1.png",
+      "source_generated_file": "exec-8087aab2-83fa-4fbb-9b42-17df6f93fa52.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "4e429b07e96724c50533f5a6e5002b43f22bc7ff5f10b686d5b6521f5ca5aa98",
+      "apliiq_catalog_url": "https://www.apliiq.com/customize/mens/tshirts/Heavyweight-Tee",
+      "color_listed_on_apliiq": true,
+      "size_inventory_verified": false,
+      "owner_approved": false,
+      "supplier_proof_approved": false,
+      "production_artwork_ready": false,
+      "apliiq_implemented": false,
+      "website_implemented": false,
+      "status": "archived_not_for_current_launch"
+    },
+    {
+      "key": "varsity",
+      "name": "Varsity tee",
+      "blank": "Bella+Canvas 4810GD",
+      "current_color": "Washed Black",
+      "proposed_color": "Washed Navy",
+      "artwork_notes": "Cream letters, burgundy outline and existing artwork unchanged.",
+      "mockup": "varsity-review-v1.png",
+      "source_generated_file": "exec-b84c23ba-29e2-4ea9-b72c-d9a1cde6c435.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "9f02c9cb1f91e34b8f11a48da60e7487d37fca7405a953463161e2e02bdfed66",
+      "apliiq_catalog_url": "https://www.apliiq.com/customize/mens/tshirts/Heavyweight-Garment-Dyed-Tee",
+      "color_listed_on_apliiq": true,
+      "size_inventory_verified": false,
+      "owner_approved": false,
+      "supplier_proof_approved": false,
+      "production_artwork_ready": false,
+      "apliiq_implemented": false,
+      "website_implemented": false
+    },
+    {
+      "key": "minimal-club",
+      "name": "Minimal Club tee",
+      "blank": "Bella+Canvas 3010",
+      "current_color": "Natural",
+      "proposed_color": "Black",
+      "artwork_notes": "Proposed black color uses off-white ink for contrast. Existing large back artwork must receive matching contrast treatment in its later production proof.",
+      "mockup": "minimal-club-review-v1.png",
+      "source_generated_file": "exec-f9fd634f-f480-46ea-a107-8cc6b1c27fa7.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "51acffe01363a54a9b0af14fd247ee1c4173114b67ec1f072a4a65f10066f41a",
+      "apliiq_catalog_url": "https://www.apliiq.com/customize/mens/tshirts/Heavyweight-Tee",
+      "color_listed_on_apliiq": true,
+      "size_inventory_verified": false,
+      "owner_approved": false,
+      "supplier_proof_approved": false,
+      "production_artwork_ready": false,
+      "apliiq_implemented": false,
+      "website_implemented": false
+    },
+    {
+      "key": "circular-badge",
+      "name": "Circular Badge tee",
+      "blank": "Comfort Colors C1717",
+      "current_color": "Ivory",
+      "proposed_color": "Pepper",
+      "artwork_notes": "Proposed Pepper uses ivory circular left-chest artwork. Blank back retained.",
+      "mockup": "circular-badge-review-v1.png",
+      "source_generated_file": "exec-f6ccb137-2338-4d2a-9a80-1f8920fc5655.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "19249465220d613cc87986f619f296f4d39e8aba2d6ff674c672d1b2bb45a81a",
+      "apliiq_catalog_url": "https://www.apliiq.com/customize/mens/tshirts/Comfort-Colors-Heavyweight-T-Shirt",
+      "color_listed_on_apliiq": true,
+      "size_inventory_verified": false,
+      "owner_approved": false,
+      "supplier_proof_approved": false,
+      "production_artwork_ready": false,
+      "apliiq_implemented": false,
+      "website_implemented": false
+    },
+    {
+      "key": "modern-sport-performance",
+      "name": "Modern Sport Performance tee",
+      "blank": "Sport-Tek ST720",
+      "current_color": "Black",
+      "proposed_color": "True Royal",
+      "artwork_notes": "Set-in sleeve construction corrected to ST720. Previous raglan concept rejected as construction evidence.",
+      "mockup": "modern-sport-performance-review-v2.png",
+      "source_generated_file": "exec-cacf1aea-e2f5-4279-b5b4-0dd20465a573.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "f4a55544f09e55633892888446f5197695a4a50433c16e94b264789da9069627",
+      "apliiq_catalog_url": "https://www.apliiq.com/customize/mens/tshirts/Sustainable-Athletic-Tee",
+      "color_listed_on_apliiq": true,
+      "size_inventory_verified": false,
+      "owner_approved": false,
+      "supplier_proof_approved": false,
+      "production_artwork_ready": false,
+      "apliiq_implemented": false,
+      "website_implemented": false,
+      "superseded_mockup": "modern-sport-performance-review-v1.png"
+    },
+    {
+      "key": "touchline-cap",
+      "name": "Touchline Cap",
+      "blank": "OTTO 31-069",
+      "current_color": "Black/Natural",
+      "proposed_color": "Navy/Natural",
+      "artwork_notes": "Proposed navy thread replaces black wordmark/outer lines; red center retained. Seamless five-panel front follows actual blank; old website mockup has an inaccurate front center seam.",
+      "mockup": "touchline-cap-review-v1.png",
+      "source_generated_file": "exec-84e1cb10-2f1c-40e8-b8fa-c88d85d24df4.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "6c7ae8fd38ef17258222ea24068f21097fb858d22c8b3a1336291c503604aeda",
+      "apliiq_catalog_url": "https://www.apliiq.com/customize/mens/hats/Otto-Natural-Baseball-Cap",
+      "color_listed_on_apliiq": true,
+      "size_inventory_verified": false,
+      "owner_approved": false,
+      "supplier_proof_approved": false,
+      "production_artwork_ready": false,
+      "apliiq_implemented": false,
+      "website_implemented": false
+    }
+  ],
+  "production_changes_made": false,
+  "website_catalog_changes": "Cotton archive, modeled price update and detail concepts prepared separately; color/crewneck variants NOT implemented."
+}

@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-21T08:54:52.620Z",
+  "checked_at_utc": "2026-09-21T10:35:43.815Z",
   "mode": "test",
   "operations": "Stripe read-only account/config inspection; optional test Checkout Session creation without payment",
   "account": {
@@ -33,16 +33,5 @@
       "amount": 950,
       "currency": "usd"
     }
-  ],
-  "checkout_http_status": 200,
-  "checkout": {
-    "session_id": "cs_test_a1WUNnx4n0C7gJu5f2ZNiRekjWpvuv85yADhh5OkM2NpF7LD94rMPZyLwD",
-    "livemode": false,
-    "payment_status": "unpaid",
-    "status": "open",
-    "amount_total": 4750,
-    "currency": "usd",
-    "shipping_rate_id": "shr_1UHzkjBtaM9tSdZuO7f4GTcA",
-    "success_url_path": "https://goool.shop/success"
-  }
+  ]
 }

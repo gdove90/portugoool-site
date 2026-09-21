@@ -165,7 +165,8 @@ export default function ProductDetail({ product }: { product: Product }) {
                   } ${
                     i === activeImage ? "ring-2 ring-ink" : "ring-1 ring-ink/10 hover:ring-ink/40"
                   }`}
-                  aria-label={`View image ${i + 1}`}
+                  aria-label={`View image ${i + 1}: ${img.alt}`}
+                  aria-pressed={i === activeImage}
                 >
                   <Image src={img.src} alt="" fill sizes="64px" quality={90} className="object-contain" />
                 </button>

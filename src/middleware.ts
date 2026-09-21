@@ -59,6 +59,12 @@ export function middleware(req: NextRequest) {
 
   // Valid cookie → full site.
   if (secret && req.cookies.get(COOKIE)?.value === secret) {
+    // Keep archived cotton links useful without exposing the preview catalog.
+    if (pathname === "/shop/goool-athletics-modern-sport-tee") {
+      const url = req.nextUrl.clone();
+      url.pathname = "/shop/goool-athletics-modern-sport-performance-tee";
+      return NextResponse.redirect(url, 307);
+    }
     return NextResponse.next();
   }
 

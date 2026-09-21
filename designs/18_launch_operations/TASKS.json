@@ -1,13 +1,12 @@
 {
-  "updated_at_utc": "2026-09-21T08:47:30.246091+00:00",
+  "updated_at_utc": "2026-09-21T11:32:46.254654+00:00",
   "owner_priorities": [
-    "Stripe first",
-    "Verify costs before publishing new prices",
-    "Instagram only",
-    "Launch earliest fully ready subset",
-    "Approved garment-only galleries; preserve generated model originals",
-    "Seamless white 4:5 product imagery",
-    "Remove Printed in the USA marketing badges"
+    "Stripe first; live status requires confirmation",
+    "Implement owner-authorized 25% contribution model; preserve explicit unknown landed costs and approved sewn-tag direction.",
+    "Approved sewn tag; show any required alternative mockup before substitution",
+    "No physical samples approved; release earliest fully ready subset",
+    "Instagram only; 24-hour reveal/signups is an option, not an approved sales launch",
+    "Preserve reference-style 4:5 studio tiles and light-garment contrast"
   ],
   "tasks": [
     {
@@ -32,18 +31,19 @@
       "id": "DB-01",
       "priority": 0,
       "title": "Restore GOOOL Supabase query access and inspect migrations",
-      "status": "blocked_authentication",
+      "status": "sql_editor_access_reported_connector_separate",
       "owner": "Owner/Claude",
       "definition_of_done": "Correct project oexibflpshttgzmdvhpr query succeeds; run LAUNCH-DB-CHECK.sql. Connector currently returns password authentication failure. Do not touch the other listed project.",
-      "depends_on": []
+      "depends_on": [],
+      "latest_evidence": "SESSION-EVIDENCE-2026-09-21.md reports SQL editor access and 0026 applied; connector failure must not be interpreted as missing database. Recheck the working access path before migration work."
     },
     {
       "id": "DB-02",
       "priority": 0,
       "title": "Apply only missing order/catalog migrations",
-      "status": "pending_inspection",
+      "status": "0026_reported_applied_remaining_catalog_reconciliation_pending",
       "owner": "Claude",
-      "definition_of_done": "Verify0026 order schema and0027\u20130029 product records. Apply only necessary changes and read back. Do not blindly replay0027: it resets prices/images.",
+      "definition_of_done": "Verify0026 order schema and0027–0029 product records. Apply only necessary changes and read back. Do not blindly replay0027: it resets prices/images.",
       "depends_on": [
         "DB-01"
       ]
@@ -52,45 +52,49 @@
       "id": "PAY-03",
       "priority": 0,
       "title": "Complete test purchase through webhook, order and tracking",
-      "status": "pending_database",
+      "status": "unpaid_test_sessions_rehearsal_pending",
       "owner": "Claude",
       "definition_of_done": "Complete controlled Stripe test payment; verify event delivered once, correct order number/immutable snapshot persisted, success and tracking work, retry produces no duplicate, no Apliiq production submission.",
       "depends_on": [
         "PAY-01",
         "DB-02"
-      ]
+      ],
+      "latest_evidence": "LAUNCH-CONFIG-AUDIT-2026-09-21.json: all three returned test sessions unpaid; paid order chain is unproven."
     },
     {
       "id": "COST-01",
       "priority": 1,
       "title": "Verify supplier costs for every offered variant",
-      "status": "blocked_supplier_login_in_Codex",
+      "status": "30_new_variant_item_quotes_verified_landed_costs_pending",
       "owner": "Claude in authenticated Apliiq session",
-      "definition_of_done": "Fill COST-INPUTS.json for66 size/color variants with exact saved-design quote, print/embroidery, label, application, packing, shipping, size surcharges and evidence. Codex browser is signed out; public starting-price ranges are insufficient.",
-      "depends_on": []
+      "definition_of_done": "Fill COST-INPUTS.json for66 size/color variants with exact saved-design quote, print/embroidery, label, application, packing, shipping, size surcharges and evidence. Thirty new variant item costs verified; complete all remaining landed costs with evidence. Public starting-price ranges are insufficient.",
+      "depends_on": [],
+      "latest_evidence": "APLIIQ-PRICING-RESEARCH-2026-09-21.json; labels, packing and actual shipping remain unresolved."
     },
     {
       "id": "PRICE-01",
       "priority": 1,
       "title": "Calculate and review six new retail prices",
-      "status": "waiting_verified_costs",
+      "status": "six_display_prices_owner_authorized",
       "owner": "Claude/Owner",
       "definition_of_done": "Run calculate-prices.py after quotes; compare contribution and largest-size costs. Internal previous 48/48/48/42/78/52 suggestions are not approved website prices.",
       "depends_on": [
         "COST-01"
-      ]
+      ],
+      "latest_evidence": "PRICING-RELEASE-2026-09-21.md"
     },
     {
       "id": "PRICE-02",
       "priority": 1,
-      "title": "Publish verified prices consistently",
-      "status": "blocked_by_owner_cost_policy",
+      "title": "Publish owner-authorized prices consistently",
+      "status": "deployed_verified_all_10_products",
       "owner": "Claude",
-      "definition_of_done": "Only after costs verified and prices finalized, update server catalog, DB product records, product cards/detail/metadata and checkout values. All six currently unpriced pieces need real prices; never display $0.",
+      "definition_of_done": "Owner-authorized prices appear consistently in runtime catalog, cards, details and metadata; checkout reads server-authoritative prices. Verify DB price authority before any future switch; no blind migration overwrite. Unknown costs remain launch checks.",
       "depends_on": [
         "PRICE-01",
         "DB-02"
-      ]
+      ],
+      "latest_evidence": "PRICING-LIVE-VERIFICATION.json; runtime catalog src/lib/products.ts; no database price migration performed."
     },
     {
       "id": "SHIP-01",
@@ -107,10 +111,11 @@
       "id": "TAG-01",
       "priority": 1,
       "title": "Choose compatible label with actual-size proof",
-      "status": "supplier_proof_pending",
+      "status": "not_implemented_sewn_service_and_proof_pending",
       "owner": "Claude/Owner",
-      "definition_of_done": "Keep approved black/white/red Athletics visual. Compare color-capable service per blank, actual 1in legibility, attachment, supply+application cost. No standard white-stock black-only substitution. No label purchase without owner review.",
-      "depends_on": []
+      "definition_of_done": "Keep approved black/white/red Athletics visual. Compare color-capable service per blank, actual 1in legibility, attachment, supply+application cost. No standard white-stock black-only substitution. No label purchase without owner review. Owner reaffirmed sewn approved mockup. Any required alternative must be shown as a feasible mockup and approved before implementation. Verify per-design attachment after supply exists.",
+      "depends_on": [],
+      "latest_evidence": "TAG-IMPLEMENTATION-AUDIT-2026-09-21.json; owner requires approved sewn concept or alternative mockup approval first."
     },
     {
       "id": "ART-01",
@@ -134,12 +139,13 @@
       "id": "SAMPLE-01",
       "priority": 1,
       "title": "Approve physical samples for the first release subset",
-      "status": "owner_sample_approval_required",
+      "status": "owner_confirmed_none_approved",
       "owner": "Owner",
       "definition_of_done": "Approve blank, sizing, decoration, label and after-care evidence per released variant. Apply artwork tasks only to affected products in the release. Select the first ready subset; unready pieces remain Coming Soon. No paid sample orders are authorized by this task list alone.",
       "depends_on": [
         "TAG-01"
-      ]
+      ],
+      "latest_evidence": "Owner explicit reply 2026-09-21: No physical samples approved yet."
     },
     {
       "id": "PAY-04",
@@ -225,41 +231,112 @@
       "id": "IMG-01",
       "priority": 1,
       "title": "Remove generated model views from active galleries",
-      "status": "approved_execution_pending",
+      "status": "deployed_verified",
       "owner": "Claude",
       "definition_of_done": "All product/color galleries and other customer-facing references use garment-only images; original files preserved. New audit inventory reviewed before edits. No replacement people generated.",
-      "depends_on": []
+      "depends_on": [],
+      "latest_evidence": "PRODUCT-TILES-IMPLEMENTATION.md and PRODUCT-TILES-VERIFICATION.json"
     },
     {
       "id": "IMG-02",
       "priority": 1,
       "title": "Standardize sharp garment imagery and seamless 4:5 frames",
-      "status": "approved_execution_pending",
+      "status": "reference_tiles_deployed_placement_work_separate",
       "owner": "Claude",
-      "definition_of_done": "Front/back/detail use verified blanks/colors and exact approved artwork. Consistent category scale, seamless white backgrounds and restrained shadows; fix baked-in backgrounds and CSS. No cropped edges, unsupported upscaling, or fabricated sample evidence. Retain concept captions.",
-      "depends_on": []
+      "definition_of_done": "Preserve reference-style 4:5 tiles with visible separation, complete silhouettes and light-garment contrast. Use exact approved blanks/colors/artwork; retain concept captions and source images. No blanket whitening or destructive garment masking.",
+      "depends_on": [],
+      "latest_evidence": "PRODUCT-TILES-IMPLEMENTATION.md; existing garment assets preserved; ART-01/ART-02 remain open."
     },
     {
       "id": "COPY-01",
       "priority": 1,
       "title": "Remove Printed in the USA price-area marketing badges",
-      "status": "approved_execution_pending",
+      "status": "deployed_verified",
       "owner": "Claude",
       "definition_of_done": "Remove the three current product badges and any other current marketing occurrences. No replacement price badge. Preserve accurate required origin records. Optional artwork-specific brand copy only.",
-      "depends_on": []
+      "depends_on": [],
+      "latest_evidence": "PRODUCT-TILES-IMPLEMENTATION.md and production pricing verification; no replacement origin badge."
     },
     {
       "id": "WEB-QA",
       "priority": 1,
       "title": "Verify imagery cleanup and release preview",
-      "status": "approved_execution_pending",
+      "status": "deployed_tiles_and_prices_verified",
       "owner": "Claude",
       "definition_of_done": "Review every active product/colorway at mobile and desktop sizes, image clarity, complete silhouettes, gallery controls, alt text, related cards, no stale model/origin references and unchanged pricing/sales gates. Run relevant checks and provide preview evidence.",
       "depends_on": [
         "IMG-01",
         "IMG-02",
         "COPY-01"
-      ]
+      ],
+      "latest_evidence": "PRODUCT-TILES-VERIFICATION.json and PRICING-LIVE-VERIFICATION.json; new placement changes still require their own QA."
+    },
+    {
+      "id": "FUL-01",
+      "priority": 0,
+      "title": "Configure and verify existing Apliiq store integration",
+      "status": "production_app_credentials_absent",
+      "owner": "Claude",
+      "definition_of_done": "Use existing GOOOL custom store 199130; configure credentials securely, verify integration and callbacks, exact SKU mappings and disabled submission during rehearsal. Activate only after product/launch gates pass.",
+      "depends_on": [],
+      "latest_evidence": "LAUNCH-CONFIG-AUDIT-2026-09-21.json"
+    },
+    {
+      "id": "COLOR-01",
+      "priority": 1,
+      "title": "Review six second-color proposals for nine active garments",
+      "status": "six_concepts_ready_owner_review_pending",
+      "owner": "Codex/Claude/Owner",
+      "definition_of_done": "Cotton Modern Sport is archived by owner. Review six current boards; then verify stock, source artwork, proof and quote, implement Apliiq before website.",
+      "depends_on": [],
+      "latest_evidence": "designs/19_colorway-and-back-print-review/manifest.json"
+    },
+    {
+      "id": "ART-03",
+      "priority": 1,
+      "title": "Proof crewneck curved back with matching front font and forest-green ink",
+      "status": "v4_color_match_concept_ready_production_master_pending",
+      "owner": "Codex/Claude/Owner",
+      "definition_of_done": "Use front circular badge rounded upright lettering on shallow U collar curve; v1 straight and v2 italic rejected. Measure actual-size strokes/seam clearance, prepare proof, quote new print and verify physical sample.",
+      "depends_on": [],
+      "latest_evidence": "designs/19_colorway-and-back-print-review/COLOR-MATCH.md"
+    },
+    {
+      "id": "PRICE-25",
+      "priority": 1,
+      "title": "Apply 25% modeled contribution pricing",
+      "status": "implemented_locally_deployment_pending",
+      "owner": "Codex",
+      "definition_of_done": "Nine active prices match PRICING-25-PERCENT.json, source/runtime/live checks pass; full landed-cost uncertainties remain explicit.",
+      "depends_on": []
+    },
+    {
+      "id": "CAT-ARCHIVE",
+      "priority": 1,
+      "title": "Archive cotton Modern Sport for performance-only launch",
+      "status": "implemented_locally_deployment_pending",
+      "owner": "Codex",
+      "definition_of_done": "Cotton record retained inactive, collection removed, previous URL redirects to performance; source files and supplier design preserved.",
+      "depends_on": []
+    },
+    {
+      "id": "IMAGE-DETAIL",
+      "priority": 1,
+      "title": "Add small back-print detail concepts",
+      "status": "implemented_locally_deployment_pending",
+      "owner": "Codex",
+      "definition_of_done": "Varsity and Modern Sport Performance detail concepts in galleries; no blank-back or large-back products affected. Correct performance set-in sleeves.",
+      "depends_on": []
+    },
+    {
+      "id": "ART-LEGIBILITY",
+      "priority": 0,
+      "title": "Correct measured sub-2mm lettering before production",
+      "status": "measured_failures_source_revision_and_supplier_proof_required",
+      "owner": "Codex/Claude/Owner",
+      "definition_of_done": "Rework Modern Sport performance front/back, Varsity back and Minimal Club front fine text; inspect all other artwork. Preserve font families; measure supplier requirements at actual sizes and verify physical prints before sale. Never mark concept images as production proof.",
+      "depends_on": [],
+      "latest_evidence": "designs/19_colorway-and-back-print-review/LETTERING-PREFLIGHT.json"
     }
   ]
 }

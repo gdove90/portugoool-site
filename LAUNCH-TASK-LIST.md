@@ -1,9 +1,13 @@
+> **Latest owner decisions (2026-09-21):** Modern Sport is performance-only; cotton is archived with files retained. Pricing now targets 25% modeled contribution: [current price model](designs/18_launch_operations/PRICING-25-PERCENT.md). [Current design review](designs/19_colorway-and-back-print-review/README.md) supersedes the straight crewneck back layout and seven-active-product color plan: six color proposals remain, crew lettering follows the collar curve, and detail views apply only to small back prints. Keep sewn-tag/sample/payment requirements.
+
 # GOOOL launch — start here
 
-[Prioritized task list](designs/18_launch_operations/TASK-LIST.md) · [Claude execution prompt](CLAUDE-LAUNCH-PRIORITY-PROMPT.md) · [Stripe next steps](designs/18_launch_operations/STRIPE-NEXT-STEPS.md) · [Verified-cost pricing](designs/18_launch_operations/PRICING-README.md) · [Instagram-only launch plan](designs/18_launch_operations/INSTAGRAM-LAUNCH-PLAN.md) · [Ready-to-review copy](designs/18_launch_operations/INSTAGRAM-COPY-READY.md).
+[Current execution prompt](CLAUDE-LAUNCH-PRIORITY-PROMPT.md) · [Task list](designs/18_launch_operations/TASK-LIST.md) · [Machine-readable tasks](designs/18_launch_operations/TASKS.json).
 
-Stripe first. New prices remain unpublished until costs are verified. Instagram is the only social launch channel. No public launch date yet; release the first fully approved subset when payment, costs and product checks pass.
+Latest owner decisions, 2026-09-21: preserve the approved sewn tag; show any necessary alternative mockup before substitution. No physical samples approved. Stripe live activation unconfirmed. Aim for the earliest fully ready sales release; an Instagram reveal and signup launch within 24 hours is the proposed fallback, not an opened store.
 
-Approved visual direction: garment-only galleries, seamless white4:5 frames, accurate sharp artwork and no Printed in the USA price badges. [Audit and evidence](designs/18_launch_operations/IMAGERY-AUDIT.md). Implementation remains pending; the updated execution prompt includes this work.
+All ten catalog products have published prices and remain Coming Soon. The six-price publication supersedes the earlier hold; full landed costs remain launch checks. Preserve the deployed reference-style studio tiles and contrast for light garments. Casual wordmark placement remains unfinished.
 
-**Session 2026-09-21:** DB access resolved and migration 0026 applied. [Evidence](designs/18_launch_operations/SESSION-EVIDENCE-2026-09-21.md). Next action: run one real Stripe test-card checkout end to end. Open flag: the database has 50 products marked available_for_sale while the site serves the 10-product mock catalog.
+Evidence: [Price release](designs/18_launch_operations/PRICING-RELEASE-2026-09-21.md), [presentation](designs/18_launch_operations/PRODUCT-TILES-IMPLEMENTATION.md), [tag account audit](designs/18_launch_operations/TAG-IMPLEMENTATION-AUDIT-2026-09-21.json), [production configuration and unpaid tests](designs/18_launch_operations/LAUNCH-CONFIG-AUDIT-2026-09-21.json), [Stripe test-key preflight](designs/18_launch_operations/stripe-launch-preflight-result.json).
+
+Priority: verify/complete Stripe onboarding and paid test rehearsal; finish sewn-tag proof and casual placement; securely configure existing Apliiq store integration; verify shipping/costs and obtain physical sample approval. Keep useful independent work moving. Existing [Instagram drafts](designs/18_launch_operations/INSTAGRAM-COPY-READY.md) remain for review, not published posts.

@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-09-21T10:37:46.058Z",
+  "production_function_variable_presence": {
+    "STRIPE_SECRET_KEY": true,
+    "STRIPE_WEBHOOK_SECRET": true,
+    "STRIPE_SHIPPING_RATE_ID": true,
+    "APLIIQ_APP_ID": false,
+    "APLIIQ_SHARED_SECRET": false,
+    "APLIIQ_SUBMIT_ENABLED": false,
+    "MAILCHIMP_API_KEY": true,
+    "MAILCHIMP_AUDIENCE_ID": true
+  },
+  "note": "Presence does not prove credentials valid or fulfillment enabled. No values are printed.",
+  "stripe_test_sessions_checked": 3,
+  "stripe_test_paid_sessions_found": 0,
+  "stripe_test_more_sessions": false,
+  "landing_status": 200,
+  "landing_has_signup_form": true
+}

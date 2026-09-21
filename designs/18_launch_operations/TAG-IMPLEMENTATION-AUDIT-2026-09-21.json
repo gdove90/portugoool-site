@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-09-21T10:45:12.844947+00:00",
+  "observed_on": "2026-09-21",
+  "account_page": "https://www.apliiq.com/verified/subscriptions",
+  "observations": {
+    "neck_prints": "You haven't setup your neck prints yet!",
+    "private_labels": "You haven't setup your private labels yet!",
+    "printed_labels": "You haven't created any printed labels yet.",
+    "woven_labels": "You haven't created any woven labels yet."
+  },
+  "saved_design_spot_check": {
+    "product_id": "6112046",
+    "url": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck",
+    "branding_ui": "setup new branding",
+    "scope": "One reopened design; not a per-design rollout verification."
+  },
+  "tag_rollout_verified": false,
+  "approved_finish": "Sewn fabric tag matching approved-tag-concept.png",
+  "alternative_finish_approved": false,
+  "purchase_authorized": false,
+  "physical_samples_approved": false,
+  "next_action": "Verify sewn full-color service compatibility and actual-size legibility; prepare a dimensioned proof. Show any required alternative mockup before substitution."
+}
