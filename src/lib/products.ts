@@ -1981,7 +1981,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "Premium cotton crewneck tee, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
+    fabric: "Premium cotton crewneck tee, opaque, rib collar. Fabric weight and construction are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2021,7 +2021,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#262626",
-    fabric: "Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
+    fabric: "Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar. Fabric weight and construction are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2066,7 +2066,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E5E5DD",
-    fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar. Blank and fabric weight are confirmed at sample approval.",
+    fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar. Fabric weight and construction are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2116,7 +2116,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Ivory",
     colorHex: "#E9E1D7",
-    fabric: "Premium heavyweight cotton crewneck tee, ivory. Blank and fabric weight are confirmed at sample approval.",
+    fabric: "Premium heavyweight cotton crewneck tee, ivory. Fabric weight and construction are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2156,7 +2156,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#B2B2B2",
-    fabric: "Premium heavyweight fleece crewneck, gray heather, rib collar, cuffs and hem. Blank and fabric weight are confirmed at sample approval.",
+    fabric: "Premium heavyweight fleece crewneck, gray heather, rib collar, cuffs and hem. Fabric weight and construction are confirmed at sample approval.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2199,7 +2199,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "Performance polyester training tee. Blank, fabric weight and construction are confirmed at sample approval.",
+    fabric: "Performance polyester training tee. Fabric weight and construction are confirmed at sample approval.",
     fit: "Athletic fit. Confirmed at sample approval.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
