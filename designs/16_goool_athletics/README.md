@@ -30,6 +30,12 @@ photos replace them after sample approval.
 Print masters (`print_masters/`, six files at packet widths, 300 PPI)
 are the production artwork and stay here, never in `public/`.
 
+Logos (`logos/`, 2026-09-20): circular GOOOL Athletics wordmark badge
+(GOOOL arched over ATHLETICS, 1254x1254 PNG, transparent background),
+delivered by the owner via a ChatGPT share link. Legal pass clean:
+original mark, three O's, no third-party elements. Not yet used on the
+site or any garment.
+
 Model shots (`model_shots/`, 2026-09-19): six AI-generated concept model
 renders (front + back per tee, male models, outdoor concrete stadium)
 delivered by the owner from a Codex session, with `generation-prompts.md`
