@@ -4,7 +4,11 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-ink py-12 text-paper">
-      <div className="mx-auto max-w-content px-4 sm:px-6">
+      {/* Gutters match Header.tsx exactly (px-4 sm:px-6 lg:px-12) so the
+          footer content lines up with the nav at every breakpoint. The
+          previous mx-auto max-w-content capped it at 1200px, which left
+          the footer visibly inset from the full-width header on desktop. */}
+      <div className="w-full px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <Image
