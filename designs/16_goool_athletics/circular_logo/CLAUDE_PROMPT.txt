@@ -1,0 +1,43 @@
+Act as the senior ecommerce engineer and apparel production lead for GOOOL Athletics, working in the existing GOOOL / portugoool project.
+
+Execute this work using the attached GOOOL_ATHLETICS_Circular_Launch_Packet. Do not stop at a plan. First inspect the actual repository, current catalog, existing designs folder, current deployment status, and Apliiq integration. Use current project evidence rather than assuming older conversations describe today's live state.
+
+OBJECTIVE
+Put ALL 12 circular-logo options into the existing designs folder as separately named images, then prepare ONLY the two launch additions below. Preserve all existing first-launch products and the three earlier GOOOL Athletics designs wherever they already exist. This packet adds a circular-logo family; it does not replace those earlier designs.
+
+THE TWO LAUNCH ADDITIONS
+1. GA-CIRCLE-08: Ivory tee with NAVY circular GOOOL ATHLETICS lettering on the WEARER'S LEFT CHEST (viewer right). Proposed blank: Comfort Colors 1717, listed by Apliiq as C1717. Proposed badge width: 3 inches. Image: individual_mockups/08_tee_ivory_navy_left-chest-badge.png.
+2. GA-CIRCLE-09: Gray/heather crewneck sweatshirt with FOREST-GREEN circular GOOOL ATHLETICS lettering SMALL AND CENTERED BETWEEN THE PECS. Proposed blank: AS Colour Made Crew 5150. Proposed logo width: 2.5 inches. Image: individual_mockups/09_crewneck_gray-heather_forest-green_small-center.png.
+
+These are the pair recommended in the design discussion and designated for this handoff. Do not claim the exact blank/color combinations, prices, or production files have already been approved by Apliiq. The owner can revise the selection. The hoodie and other ten looks stay in the design archive; do not add them as new launch products.
+
+DESIGN FOLDER WORK
+- Locate the user's existing portugoool project and its designs / goool athletics folder. Reuse its real naming and structure. Do not create a new unrelated project or claim access to the user's Desktop unless you actually have it.
+- Create a non-destructive circular-logo subfolder, with individual_mockups/, logo_reference/, and the packet documents. Copy every numbered PNG as its own image. Do not use either grouped presentation board as a product image.
+- Preserve the filenames and GA-CIRCLE identifiers from OPTION_MANIFEST.json. Confirm exactly 12 individual garment images are present and readable.
+- Store all concepts under the private design archive. Copy only the two designated launch images, or verified replacements, into the site's established public product-asset location when needed. Design folder placement alone is not a website/catalog update.
+- Add a short launch-selection note identifying GA-CIRCLE-08 and GA-CIRCLE-09. Preserve existing assets and catalog records; avoid duplicate products on reruns.
+
+LOGO AND PRODUCTION REQUIREMENTS
+- Exact wording is GOOOL ATHLETICS: GOOOL has THREE Os. GOOOL arcs over the top; ATHLETICS arcs around the bottom. The letters form the circle, with empty center and no drawn circle, shield, or extra emblem.
+- The supplied logo file is the approved visual reference. The garment mockups are newly rendered individual concept images, not measured manufacturing proofs or print masters. Minor rendering differences must not redefine the logo.
+- Reuse a matching approved editable logo master if one already exists. Otherwise prepare faithful production artwork from the supplied logo reference using Apliiq's current file requirements, and show the proof before treating it as production approved. Do not print the garment mockup itself or merely upscale the reference and label it vector artwork.
+- Use current Apliiq decoration capabilities. DTF is the existing garment direction unless current project records supersede it. Badge describes PLACEMENT here, not an authorization to change to embroidery or a sewn patch. Do not add a back print just because older products have one.
+- Treat 3-inch and 2.5-inch diameters as proposed physical dimensions. Verify placement on the actual blank, readable ATHLETICS lettering, supplier limits, and size grading. Preserve the circular proportions.
+- Verify each exact blank/color/size through Apliiq. In particular, do not assume gray/heather is offered for AS Colour 5150 because it appears in a generated mockup. If it is unavailable, finish the reversible site and design work, identify the closest suitable Apliiq alternative and its cost, and obtain the owner's choice before substituting the blank or color.
+- Use S–2XL only if those sizes are supported by the selected variants. Follow the current no-2XL-surcharge policy unless explicitly changed by the owner. Do not invent available inventory, garment specifications, or exact color matches.
+
+CATALOG AND PRICING
+- Add the two circular-logo products alongside the existing launch collection using the existing catalog/database architecture, image pipeline, variant selectors, checkout and fulfillment integration.
+- Use simple customer names such as Circular Badge Tee and Circular Center Crewneck, consistent with existing naming. Write concise factual descriptions only after blank specifications are verified. Do not introduce unsupported quality, fabric, origin, or sustainability claims.
+- Set up color, size, decoration placement and their correct image mapping. Every sellable size must resolve to a real Apliiq fulfillment variant and the correct design/placement. Never invent supplier IDs.
+- Audit the current approved pricing method and comparable launch products, then calculate from actual current Apliiq garment, decoration, label, fulfillment/shipping and payment costs. Show the cost basis, retail price, gross margin, and any price increase against the relevant existing comparable. Do not confuse markup with gross margin. Use null/pending for missing costs rather than fake prices.
+- Honor current owner price constraints and existing pricing approvals. Prepare a concrete pricing proposal if these two pieces lack approved retail prices. Do not assume the old tee or hoodie price applies to a different blank or a crewneck.
+- Use the provided images for design review and preview. Before treating them as sale-ready product photography, reconcile silhouette, color, dimensions and printing with actual supplier proofs; replace with accurate supplier mockups or approved sample photos where necessary.
+- Leave unresolved new products in the site's existing draft or coming-soon state with purchases disabled. Do not weaken checkout gates to make incomplete products appear finished. Preserve the existing store's current gate state.
+
+VERIFY AND DELIVER
+- Complete all unblocked implementation work. Check the two product pages on mobile and desktop, images, selected size/color, cart behavior when applicable, fulfillment mappings, and meaningful existing project checks.
+- Produce the preview through the project's existing workflow and report actual results. Follow existing deployment authorization; do not infer a new production-launch approval solely from this packet. Do not repeat a release already deployed.
+- Report: exact designs-folder path; all 12 filenames copied; the two added launch product records/URLs; verified Apliiq blank/color/size mappings; pricing evidence; preview link and commit if applicable; and the specific remaining supplier/artwork decisions.
+- If a supplier account or repository is inaccessible, finish the file organization and other accessible work, then state the exact missing access and what remains. Never claim an Apliiq upload, product creation, deployment, or order happened unless verified.

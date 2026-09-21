@@ -23,6 +23,8 @@ const ATHLETICS_ORDER = [
   "goool-athletics-modern-sport-tee",
   "goool-athletics-varsity-tee",
   "goool-athletics-minimal-club-tee",
+  "goool-athletics-circular-badge-tee",
+  "goool-athletics-circular-center-crewneck",
 ];
 
 function bySlugs(slugs: string[]): Product[] {

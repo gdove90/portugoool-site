@@ -33,8 +33,20 @@ are the production artwork and stay here, never in `public/`.
 Logos (`logos/`, 2026-09-20): circular GOOOL Athletics wordmark badge
 (GOOOL arched over ATHLETICS, 1254x1254 PNG, transparent background),
 delivered by the owner via a ChatGPT share link. Legal pass clean:
-original mark, three O's, no third-party elements. Not yet used on the
-site or any garment.
+original mark, three O's, no third-party elements. This is the approved
+reference for the circular-logo family below.
+
+Circular-logo family (`circular_logo/`, 2026-09-20): twelve garment
+concept options built on that mark (tees, crewneck, hoodie in five
+colorways x three placements), delivered as the owner's
+Circular_Launch_Packet with PRODUCTION_NOTES.md and the handoff prompt.
+All twelve are archived; only GA-CIRCLE-08 (ivory/navy badge tee) and
+GA-CIRCLE-09 (gray heather/forest green center crewneck) are on the
+site, as Coming Soon, unpriced, unpurchasable (ids
+80000000-...-0004/0005, migration 0028). See
+circular_logo/LAUNCH_SELECTION.md for identifiers, proposed blanks and
+the unverified-supplier caveats. Legal pass clean across all twelve:
+original mark only, no third-party elements.
 
 Model shots (`model_shots/`, 2026-09-19): six AI-generated concept model
 renders (front + back per tee, male models, outdoor concrete stadium)

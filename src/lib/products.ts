@@ -2050,6 +2050,82 @@ export const products: Product[] = [
     disclosure:
       "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
   },
+  // Circular-logo family (designs/16_goool_athletics/circular_logo/,
+  // 2026-09-20): twelve archived options; only GA-CIRCLE-08 and
+  // GA-CIRCLE-09 were designated for the site. Proposed blanks
+  // (Comfort Colors 1717 ivory, AS Colour 5150 gray heather) are
+  // UNVERIFIED with the supplier, so the same unpriced, unpurchasable
+  // Coming Soon posture as the three tees above applies.
+  {
+    id: "80000000-0000-4000-8000-000000000004",
+    name: "GOOOL Athletics Circular Badge Tee",
+    slug: "goool-athletics-circular-badge-tee",
+    description:
+      "Circular GOOOL Athletics mark in navy at the wearer's left chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Ivory crewneck tee.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Ivory",
+    colorHex: "#E9E1D7",
+    fabric: "Premium heavyweight cotton crewneck tee, ivory. Blank and fabric weight are confirmed at sample approval.",
+    fit: "Relaxed body with a moderate dropped shoulder.",
+    careInstructions: "Care instructions follow the approved blank and print process.",
+    images: [
+      {
+        src: "/products/GOOOL_ATHLETICS_CIRCLE_08_BADGE_TEE.webp",
+        alt: "GOOOL Athletics Circular Badge Tee: navy circular GOOOL Athletics mark at the left chest of an ivory tee",
+        caption: "Concept render at the proposed logo size and placement. Not a photo of a finished garment.",
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "unassigned",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    disclosure:
+      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000005",
+    name: "GOOOL Athletics Circular Center Crewneck",
+    slug: "goool-athletics-circular-center-crewneck",
+    description:
+      "Circular GOOOL Athletics mark in forest green, small and centered on the upper chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Gray heather crewneck sweatshirt.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Gray Heather",
+    colorHex: "#C7C7C9",
+    fabric: "Premium heavyweight fleece crewneck, gray heather, rib collar, cuffs and hem. Blank and fabric weight are confirmed at sample approval.",
+    fit: "Relaxed body with a moderate dropped shoulder.",
+    careInstructions: "Care instructions follow the approved blank and print process.",
+    images: [
+      {
+        src: "/products/GOOOL_ATHLETICS_CIRCLE_09_CENTER_CREWNECK.webp",
+        alt: "GOOOL Athletics Circular Center Crewneck: small forest-green circular GOOOL Athletics mark centered on the upper chest of a gray heather crewneck",
+        caption: "Concept render at the proposed logo size and placement. Not a photo of a finished garment.",
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "unassigned",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    disclosure:
+      "In development. Blank, sizing and price are being finalized with the production partner. Product photography follows sample approval.",
+  },
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────
