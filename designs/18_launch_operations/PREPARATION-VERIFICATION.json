@@ -1,0 +1,15 @@
+{
+  "local_preparation": "PASS",
+  "tasks": 20,
+  "cost_variants": 66,
+  "unverified_cost_variants": 66,
+  "new_prices_published": false,
+  "instagram_posts_published": false,
+  "pricing_calculator_unverified_inputs_refused": true,
+  "pricing_calculator_hypothetical_math_passed": true,
+  "stripe_test_session_created": true,
+  "payment_completed": false,
+  "database_inspection": "blocked_connector_authentication",
+  "supplier_cost_inspection": "blocked_no_authenticated_Apliiq_session",
+  "public_site_code_modified": false
+}

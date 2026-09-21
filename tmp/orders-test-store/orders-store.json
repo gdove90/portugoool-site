@@ -1,0 +1,873 @@
+{
+  "events": {
+    "evt_c137c9ad53304c43bdec09bfd2ee648b": "checkout.session.completed",
+    "evt_replayed_fixed": "checkout.session.completed",
+    "evt_ce1f1b1f131a449497c093b91f771946": "checkout.session.completed",
+    "evt_4c480dd5a5174641b658581956e7246d": "checkout.session.completed",
+    "evt_08c9b5cfaafc44bfa4d385023dae7e6e": "checkout.session.completed",
+    "evt_395ec6c77c84492183d635eee32c602a": "checkout.session.completed",
+    "evt_ac2a8bda25614833b84cbd72c4601cdf": "checkout.session.completed",
+    "evt_5fbcef2df1fe4ea0978baa4e311bddf1": "checkout.session.completed",
+    "evt_1aeee8aa53eb41fca7f36c50935f6914": "checkout.session.completed",
+    "evt_b8ca34b4c3fc41778d066605c8789df8": "checkout.session.completed",
+    "evt_fe7faef2cdd54c99a5d5140ea81f7d09": "checkout.session.completed",
+    "evt_9ad20cb125a74ee9a0d27b55ff56a2a9": "checkout.session.completed",
+    "evt_60a71b5e562e49a8ae68e0d29f01ff20": "checkout.session.completed",
+    "evt_8942f084487145419036b8c4f7230b25": "checkout.session.completed",
+    "evt_d7f3f54e98cb4205aa9bae7ac4b74f79": "checkout.session.completed",
+    "evt_3049134aa7af48fc80c0f5db5e3191ff": "checkout.session.completed",
+    "evt_f7936ee10aa343a390990e8f2b774650": "checkout.session.completed",
+    "evt_9889fd17606d43eaba85448636263880": "checkout.session.async_payment_succeeded",
+    "evt_69f3bae9b9f14e80af99766e64043cbd": "checkout.session.async_payment_succeeded",
+    "evt_73f7f0655c6e4231a4caac17d65d9877": "checkout.session.completed",
+    "evt_5babd4102b55412c85f4d681305cb3f5": "checkout.session.completed",
+    "evt_dfe90ca7ad0c47518c94fc3003a1fc25": "checkout.session.async_payment_failed",
+    "evt_b2ff72e02ec647a1b85c9a2e581bd5f8": "checkout.session.completed",
+    "evt_dd7b35244efd475caddec261620aba31": "checkout.session.completed",
+    "evt_ea059efc1c124e889ab04f5128e9be67": "checkout.session.completed",
+    "evt_1de5ea949c3f493daf7a4a7413f41425": "checkout.session.completed"
+  },
+  "orders": {
+    "ba2cbb20-d2eb-4d77-93ef-bee6d4232e0e": {
+      "stripe_session_id": "cs_test_0d2de3e90e12493899cd459f6fad9b99",
+      "stripe_payment_intent": "pi_5a7ac2045f6848ff858df00e",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900001",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:34:59.073Z",
+      "livemode": false,
+      "submission_attempt_id": "afd33f29-b785-4547-bcba-96c3fd85490c",
+      "submission_started_at": "2026-09-21T05:34:59.078Z",
+      "id": "ba2cbb20-d2eb-4d77-93ef-bee6d4232e0e"
+    },
+    "3092343a-6c6c-4e3b-8468-9edce093b499": {
+      "stripe_session_id": "cs_test_90758e649a584509975f2c5e6734fe6c",
+      "stripe_payment_intent": "pi_20e6fd62238b488eaa20f36c",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900002",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:34:59.235Z",
+      "livemode": false,
+      "submission_attempt_id": "3dc8483b-a8c3-4fe1-a8f4-0ffb56a88db9",
+      "submission_started_at": "2026-09-21T05:34:59.240Z",
+      "id": "3092343a-6c6c-4e3b-8468-9edce093b499"
+    },
+    "fe62e10c-ba3c-4154-aaca-356a5b11a48d": {
+      "stripe_session_id": "cs_test_5025b77e87c54ae38b9b4de62a3bb0dd",
+      "stripe_payment_intent": "pi_978ad4c4fbf8446691142e29",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "submitted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900003",
+      "submission_last_error": "{\"id\":900003}",
+      "paid_at": "2026-09-21T05:34:59.586Z",
+      "livemode": false,
+      "submission_attempt_id": "c44444f4-3054-4eb3-862b-02482bed228b",
+      "submission_started_at": "2026-09-21T05:34:59.589Z",
+      "id": "fe62e10c-ba3c-4154-aaca-356a5b11a48d"
+    },
+    "1c03099b-8870-4200-a579-24b848b63a7b": {
+      "stripe_session_id": "cs_test_4ac373a5e3384119826b7360b3f423ea",
+      "stripe_payment_intent": "pi_3b4c1ea42d9d4f5e833d5ddd",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900004",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:34:59.631Z",
+      "livemode": false,
+      "submission_attempt_id": "35dd7335-a4f7-494d-a9df-d0e1fb713da3",
+      "submission_started_at": "2026-09-21T05:35:19.961Z",
+      "id": "1c03099b-8870-4200-a579-24b848b63a7b"
+    },
+    "9f6774bf-c9c1-4cbe-a181-1fc4236f0f65": {
+      "stripe_session_id": "cs_test_55b0d269c9614b1e90a8c472a538a571",
+      "stripe_payment_intent": "pi_f795a334c97840fd844f149d",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "submitted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "777001",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:35:19.998Z",
+      "livemode": false,
+      "submission_attempt_id": "d11e2643-bac7-4599-add8-f51466725335",
+      "submission_started_at": "2026-09-21T05:35:20.002Z",
+      "id": "9f6774bf-c9c1-4cbe-a181-1fc4236f0f65"
+    },
+    "808bb9b9-5fbb-4976-87ac-2746d6119576": {
+      "stripe_session_id": "cs_test_8bcadaf8bbae4840b888ed9a663e9fcc",
+      "stripe_payment_intent": "pi_e6e18980be194e969c84ee4e",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "needs_reconcile",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": "No response from Apliiq (AbortError); reconcile before any retry.",
+      "paid_at": "2026-09-21T05:35:40.074Z",
+      "livemode": false,
+      "submission_attempt_id": "5c0528d7-f7bd-4018-b914-3a90d7413cbb",
+      "submission_started_at": "2026-09-21T05:35:40.078Z",
+      "id": "808bb9b9-5fbb-4976-87ac-2746d6119576"
+    },
+    "6aaffdb8-0e74-4324-82f5-c9d26ab32653": {
+      "stripe_session_id": "cs_test_a88f4532db5f40cfb0669752da10378f",
+      "stripe_payment_intent": "pi_c09059c2930d4208b5d8cb93",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "needs_reconcile",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": "No response from Apliiq (AbortError); reconcile before any retry.",
+      "paid_at": "2026-09-21T05:36:00.145Z",
+      "livemode": false,
+      "submission_attempt_id": "47960d93-16e0-4845-ada6-a5e4482400dc",
+      "submission_started_at": "2026-09-21T05:36:00.149Z",
+      "id": "6aaffdb8-0e74-4324-82f5-c9d26ab32653"
+    },
+    "f7040355-0775-4449-a558-a328785f4e33": {
+      "stripe_session_id": "cs_test_662103549c314e93b10bc3e019a3cc9b",
+      "stripe_payment_intent": "pi_4cf9d545cb8642dd90051e3e",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "submitted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "888",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:36:20.520Z",
+      "livemode": false,
+      "submission_attempt_id": "8221cc75-a5f5-4399-a66c-72350c47b4b7",
+      "submission_started_at": "2026-09-21T05:36:20.525Z",
+      "id": "f7040355-0775-4449-a558-a328785f4e33"
+    },
+    "01a64085-4dc1-4393-9776-0b3809d94c1a": {
+      "stripe_session_id": "cs_test_dcf606a4cec64481a4dc87501db83e85",
+      "stripe_payment_intent": "pi_7ced7c64796a4c5a98fc1650",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900006",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:36:40.611Z",
+      "livemode": false,
+      "submission_attempt_id": "de6d671d-4ba6-412f-a82f-9c30c306f238",
+      "submission_started_at": "2026-09-21T05:36:40.704Z",
+      "id": "01a64085-4dc1-4393-9776-0b3809d94c1a"
+    },
+    "6cf5e447-e359-4252-aa05-24fcfce7cfee": {
+      "stripe_session_id": "cs_test_eeb96dbc853d4f5ba7ad405314b95400",
+      "stripe_payment_intent": "pi_f31bd32dfb3f47e4b86445b3",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "submitting",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900007",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:36:40.742Z",
+      "livemode": false,
+      "submission_attempt_id": "attempt-live",
+      "submission_started_at": "2026-09-21T05:36:40.760Z",
+      "id": "6cf5e447-e359-4252-aa05-24fcfce7cfee"
+    },
+    "f3e106c2-a166-46fe-a0ef-8801a7ca4d2a": {
+      "stripe_session_id": "cs_test_d0d2483546c24f16b3c6fb9e4308d412",
+      "stripe_payment_intent": "pi_71f757e08ceb49da81e976dc",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "needs_reconcile",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": "Attempt expired; Apliiq listing unavailable or unrecognizable.",
+      "paid_at": "2026-09-21T05:36:40.796Z",
+      "livemode": false,
+      "submission_attempt_id": "attempt-dead",
+      "submission_started_at": "2026-09-21T03:36:40.815Z",
+      "id": "f3e106c2-a166-46fe-a0ef-8801a7ca4d2a"
+    },
+    "6ce886dd-30d3-4861-8fbc-8ea45a5f6d6d": {
+      "stripe_session_id": "cs_test_d45455fc139e47a0b51f312b9d288038",
+      "stripe_payment_intent": "pi_4d8d21848f4c443aa36b4f9f",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900009",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:36:40.864Z",
+      "livemode": false,
+      "submission_attempt_id": "81b837d9-77a1-4b49-a1bb-799e583ebdb9",
+      "submission_started_at": "2026-09-21T05:36:40.868Z",
+      "id": "6ce886dd-30d3-4861-8fbc-8ea45a5f6d6d"
+    },
+    "60b60890-15ce-419d-be74-59236815ea71": {
+      "stripe_session_id": "cs_test_ec2a73ec8fd54736b1a1c446fc2d5c59",
+      "stripe_payment_intent": "pi_7fcec5bacc024c5cb46e3a8e",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900010",
+      "submission_last_error": null,
+      "paid_at": null,
+      "livemode": false,
+      "submission_attempt_id": "6aa08395-a2f5-48e2-9dcf-eb5c623b97df",
+      "submission_started_at": "2026-09-21T05:36:40.953Z",
+      "id": "60b60890-15ce-419d-be74-59236815ea71"
+    },
+    "c450c515-6b86-48e2-820d-bd9d2db2e2a2": {
+      "stripe_session_id": "cs_test_aedfe998b70c4d428cbacb9b0a24667a",
+      "stripe_payment_intent": "pi_5e4a297736fc4e67a31c006d",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900011",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:36:40.989Z",
+      "livemode": false,
+      "submission_attempt_id": "12abf411-50db-4246-a47b-a9d1c20713db",
+      "submission_started_at": "2026-09-21T05:36:40.993Z",
+      "id": "c450c515-6b86-48e2-820d-bd9d2db2e2a2"
+    },
+    "16f0e905-7ecd-43d6-a859-a723998efecf": {
+      "stripe_session_id": "cs_test_468712d480e54614a30fbf54d83c7504",
+      "stripe_payment_intent": "pi_688a0f9172774efeb2da547e",
+      "customer_email": "buyer@example.com",
+      "status": "cancelled",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "not_submitted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": null,
+      "paid_at": null,
+      "livemode": false,
+      "submission_attempt_id": null,
+      "submission_started_at": null,
+      "id": "16f0e905-7ecd-43d6-a859-a723998efecf"
+    },
+    "de46dc05-e063-490b-8677-06bdc6b175b1": {
+      "stripe_session_id": "cs_test_12d966312aff4df0a9490da310ce7730",
+      "stripe_payment_intent": "pi_a6af7231a019424a9bb3ae1c",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "failed",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": "HTTP 400: {\"message\":\"bad sku\"}",
+      "paid_at": "2026-09-21T05:36:41.113Z",
+      "livemode": false,
+      "submission_attempt_id": "4bad30a0-51dd-4850-8a81-04dd11e16c2f",
+      "submission_started_at": "2026-09-21T05:36:41.118Z",
+      "id": "de46dc05-e063-490b-8677-06bdc6b175b1"
+    },
+    "b6980b14-e5bb-468c-bf2f-33a76687bcc0": {
+      "stripe_session_id": "cs_test_f192c9f895124cf3b31d6c0bdb9311ca",
+      "stripe_payment_intent": "pi_b70c13d9d24e4a75a5ac9122",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "failed",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": "Unmapped variants: 70000000-0000-4000-8000-000000000001 / Neon Green / M (no SKU snapshot)",
+      "paid_at": "2026-09-21T05:36:41.151Z",
+      "livemode": false,
+      "submission_attempt_id": null,
+      "submission_started_at": null,
+      "id": "b6980b14-e5bb-468c-bf2f-33a76687bcc0"
+    },
+    "8b96a5fd-3ada-4e48-883b-179e872e3c2a": {
+      "stripe_session_id": "cs_test_103d4574e8c6471493895c0732b5c6d7",
+      "stripe_payment_intent": "pi_1e624f292fee453a855da2bc",
+      "customer_email": "capfan@example.com",
+      "status": "paid",
+      "fulfillment_status": "shipped",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900012",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:36:41.175Z",
+      "livemode": false,
+      "submission_attempt_id": "fed151f6-db1d-437c-af18-c0ef1638b0f9",
+      "submission_started_at": "2026-09-21T05:36:41.179Z",
+      "id": "8b96a5fd-3ada-4e48-883b-179e872e3c2a"
+    },
+    "b67eca97-4363-449a-8870-aa0baf6f5719": {
+      "stripe_session_id": "cs_test_3abc0e6643d74d538ef2eff72412f4d1",
+      "stripe_payment_intent": "pi_6c4f06a57fca4912aaeb867a",
+      "customer_email": "buyer@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 5750,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 950,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Test Buyer",
+      "shipping_address": {
+        "line1": "1 Stadium Way",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02901",
+        "country": "US"
+      },
+      "apliiq_order_id": "900013",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:36:42.206Z",
+      "livemode": false,
+      "submission_attempt_id": "10f6f9c1-b14c-4a3d-9d02-80c569613e1d",
+      "submission_started_at": "2026-09-21T05:36:42.212Z",
+      "id": "b67eca97-4363-449a-8870-aa0baf6f5719"
+    }
+  },
+  "items": {
+    "ba2cbb20-d2eb-4d77-93ef-bee6d4232e0e": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "3092343a-6c6c-4e3b-8468-9edce093b499": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "fe62e10c-ba3c-4154-aaca-356a5b11a48d": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "1c03099b-8870-4200-a579-24b848b63a7b": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "9f6774bf-c9c1-4cbe-a181-1fc4236f0f65": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "808bb9b9-5fbb-4976-87ac-2746d6119576": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "6aaffdb8-0e74-4324-82f5-c9d26ab32653": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "f7040355-0775-4449-a558-a328785f4e33": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "01a64085-4dc1-4393-9776-0b3809d94c1a": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "6cf5e447-e359-4252-aa05-24fcfce7cfee": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "f3e106c2-a166-46fe-a0ef-8801a7ca4d2a": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "6ce886dd-30d3-4861-8fbc-8ea45a5f6d6d": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 9999,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-SNAPSHOT-PROOF-SKU"
+      }
+    ],
+    "60b60890-15ce-419d-be74-59236815ea71": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "c450c515-6b86-48e2-820d-bd9d2db2e2a2": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "16f0e905-7ecd-43d6-a859-a723998efecf": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "de46dc05-e063-490b-8677-06bdc6b175b1": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "True Royal",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099129,
+        "apliiq_sku": "APQ-6099129S7A1"
+      }
+    ],
+    "b6980b14-e5bb-468c-bf2f-33a76687bcc0": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "M",
+        "color": "Neon Green",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": null,
+        "apliiq_sku": null
+      }
+    ],
+    "8b96a5fd-3ada-4e48-883b-179e872e3c2a": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000004",
+        "size": "OS",
+        "color": "Black/Natural",
+        "quantity": 2,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 3600,
+        "apliiq_product_id": 6098980,
+        "apliiq_sku": "APQ-6098980S34A1"
+      }
+    ],
+    "b67eca97-4363-449a-8870-aa0baf6f5719": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "S",
+        "color": "White",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099046,
+        "apliiq_sku": "APQ-6099046S6A1"
+      },
+      {
+        "product_id": "70000000-0000-4000-8000-000000000002",
+        "size": "XXL",
+        "color": "Bone",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 7800,
+        "apliiq_product_id": 6099064,
+        "apliiq_sku": "APQ-6099064S2A1"
+      },
+      {
+        "product_id": "70000000-0000-4000-8000-000000000003",
+        "size": "L",
+        "color": "Washed Grey",
+        "quantity": 3,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 3800,
+        "apliiq_product_id": 6099060,
+        "apliiq_sku": "APQ-6099060S8A1"
+      }
+    ]
+  },
+  "shipments": [
+    {
+      "order_id": "8b96a5fd-3ada-4e48-883b-179e872e3c2a",
+      "status": "success",
+      "tracking_company": "USPS",
+      "tracking_numbers": [
+        "9400100000000000000001"
+      ],
+      "tracking_urls": [
+        "https://tools.usps.com/go/TrackConfirmAction?tLabels=9400100000000000000001"
+      ],
+      "line_items": [
+        {
+          "sku": "APQ-6098980S34A1",
+          "quantity": 2
+        }
+      ]
+    }
+  ]
+}

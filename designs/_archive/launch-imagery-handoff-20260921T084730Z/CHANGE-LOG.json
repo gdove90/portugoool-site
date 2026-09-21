@@ -1,0 +1,62 @@
+[
+  {
+    "path": "CLAUDE-LAUNCH-PRIORITY-PROMPT.md",
+    "before_sha256": "a8c4d416bdf6472e0f609560337f62ce4791cdc052f556fddb538da4d9230f50",
+    "after_sha256": "c9980afe6cd32fe9eb951b119a1bb459c54e4fa09fa17f9f95346d02b970cdd0"
+  },
+  {
+    "path": "designs/18_launch_operations/IMAGERY-AUDIT.md",
+    "before_sha256": null,
+    "after_sha256": "8bff85eb5757accb777df3b56f4477ec6ea5002e88533c64a0f9d64743d1a9fa"
+  },
+  {
+    "path": "designs/18_launch_operations/imagery-audit/imagery-audit-active.json",
+    "before_sha256": null,
+    "after_sha256": "841ffbf674cc1e70f8ee7b32a4ee715aff9f2d21e1c961a591f8ed4901eb36c2"
+  },
+  {
+    "path": "designs/18_launch_operations/imagery-audit/imagery-audit-metadata.json",
+    "before_sha256": null,
+    "after_sha256": "20f1aa04b764a25ab1f98392a538578216cc58e4ecf9ee7dc0acf4a9180f62e1"
+  },
+  {
+    "path": "designs/18_launch_operations/imagery-audit/imagery-live-verification.json",
+    "before_sha256": null,
+    "after_sha256": "b165527f7f41585766ce312e5c901ad2e9569d6a05a3450254f8d7cae08911dc"
+  },
+  {
+    "path": "designs/18_launch_operations/imagery-audit/audit-models-front.jpg",
+    "before_sha256": null,
+    "after_sha256": "4dbbc6a3e7fee5bc854988560ecb7fd8abf73967c728e94b0daaf8e266de5009"
+  },
+  {
+    "path": "designs/18_launch_operations/imagery-audit/audit-models-back.jpg",
+    "before_sha256": null,
+    "after_sha256": "8c16a8857bfc03cf909fcf8eb4f6fb5526cd49d7bb1460c5eb29b9aed4d34ec5"
+  },
+  {
+    "path": "designs/18_launch_operations/imagery-audit/audit-garments.jpg",
+    "before_sha256": null,
+    "after_sha256": "44908616642fc058a888c2ab661aec21f228a830fb102edcae65fd5796e4ba5d"
+  },
+  {
+    "path": "designs/18_launch_operations/TASKS.json",
+    "before_sha256": "b8ad8e815cb17d4c90a6fddc9cfbfe6edd8e8261c0ea8b6f5907176c83c5d148",
+    "after_sha256": "c6a4a6b911a61294e4bcf02f3566b93d6abce38fb1e12e2186ba67bb3b6db17c"
+  },
+  {
+    "path": "designs/18_launch_operations/TASK-LIST.md",
+    "before_sha256": "800bf0442164533a24a4b7a3f7b8a95cd80c523b9eaa611e35dbe19c736f029a",
+    "after_sha256": "9d0ed517310d0f81729be6768d5939a36076c9b6939f02de53a0bb5d0ed23217"
+  },
+  {
+    "path": "LAUNCH-TASK-LIST.md",
+    "before_sha256": "8510fe35fd44e16e520fffb2c7c89b701dfc6cba2eeb2a5574d3c2a77a92ecc9",
+    "after_sha256": "575ff3f66e47bcb08e5083b8d3ea729c6f2306a142b8cc95a22c6e252f7d0a3a"
+  },
+  {
+    "path": "CLAUDE.md",
+    "before_sha256": "05725290df4bcc00f85e955d7022dcad60ab4bf8308b1c90c41fb319d2ac2185",
+    "after_sha256": "eafea382685692040852b37637acca5c7d7abd70764e565d7b24d1c0d3a770cc"
+  }
+]

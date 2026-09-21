@@ -1,0 +1,48 @@
+{
+  "checked_at_utc": "2026-09-21T08:54:52.620Z",
+  "mode": "test",
+  "operations": "Stripe read-only account/config inspection; optional test Checkout Session creation without payment",
+  "account": {
+    "id": "acct_1UHzc3BtaM9tSdZu",
+    "business_website": "https://goool.shop",
+    "charges_enabled": false,
+    "payouts_enabled": false,
+    "details_submitted": false,
+    "requirements_currently_due": [],
+    "requirements_disabled_reason": null
+  },
+  "webhooks": [
+    {
+      "id": "we_1UHzlPBtaM9tSdZuyGt4Zvat",
+      "url": "https://goool.shop/api/stripe-webhook",
+      "status": "enabled",
+      "livemode": false,
+      "events": [
+        "checkout.session.completed",
+        "checkout.session.async_payment_succeeded",
+        "checkout.session.async_payment_failed"
+      ]
+    }
+  ],
+  "shipping_rates": [
+    {
+      "id": "shr_1UHzkjBtaM9tSdZuO7f4GTcA",
+      "name": "GOOOL TEST shipping",
+      "active": true,
+      "livemode": false,
+      "amount": 950,
+      "currency": "usd"
+    }
+  ],
+  "checkout_http_status": 200,
+  "checkout": {
+    "session_id": "cs_test_a1WUNnx4n0C7gJu5f2ZNiRekjWpvuv85yADhh5OkM2NpF7LD94rMPZyLwD",
+    "livemode": false,
+    "payment_status": "unpaid",
+    "status": "open",
+    "amount_total": 4750,
+    "currency": "usd",
+    "shipping_rate_id": "shr_1UHzkjBtaM9tSdZuO7f4GTcA",
+    "success_url_path": "https://goool.shop/success"
+  }
+}

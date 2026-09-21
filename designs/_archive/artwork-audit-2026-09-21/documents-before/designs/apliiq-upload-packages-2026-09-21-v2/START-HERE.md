@@ -1,0 +1,18 @@
+# GOOOL garment execution package — revision 2
+
+Current canonical path: C:/Users/gdove/OneDrive/Desktop/GOOOL/designs/apliiq-upload-packages-2026-09-21-v2
+
+**14 colorways / 10 active products.** Missing local artwork and measured placement targets are prepared. See [REVISION-2.md](REVISION-2.md) for the exact changes and their limits. Individual self-contained packages and ZIPs include dimensioned front/back proof sheets, artwork, label files, supplier records, per-size verification and physical sample acceptance forms.
+
+- [Visual catalog and garment proofs](CATALOG-PROOFS.html)
+- [Claude execution prompt](CLAUDE-IMPORT-PROMPT.md)
+- [Catalog manifest](CATALOG-INDEX.json)
+- [Supplier research](SUPPLIER-RESEARCH.md)
+- [Artwork provenance](production-assets/ARTWORK-PROVENANCE.json)
+
+Run `python verify-packages.py` to check packaged bytes, archive integrity, artwork exports and coverage. Read verification scope: local file checks are not Apliiq account verification or a manufacturing sign-off. The new label service/size/material decision, per-blank supplier proofs and physical sample approval remain required. No customer orders should be released based solely on a mockup or a filled specification.
+
+V1 remains archived unchanged. Use v2 for the current art and placement targets. Original archived files with older instructions do not override the current owner decisions or REVISION-2.md.
+
+
+Latest source refresh: [SAVED-DESIGN-UPDATES.md](SAVED-DESIGN-UPDATES.md) records 13 saved colorways and one missing crewneck, plus the performance-width and circular-canvas corrections required before approval.

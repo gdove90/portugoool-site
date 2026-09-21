@@ -1,0 +1,19 @@
+{
+  "revision": "casual-placement-3in-2026-09-21",
+  "owner_instruction_at_utc": "2026-09-21T08:12:02.532264+00:00",
+  "product_slug": "goool-heavyweight-casual-tee",
+  "colorways": [
+    "Washed Black",
+    "Washed Grey"
+  ],
+  "previous_vertical_offset_in": 3.25,
+  "vertical_offset_in": 3,
+  "vertical_offset_mm": 76.2,
+  "visible_width_in": 6.75,
+  "anchor": "top of visible artwork below bottom center-front collar seam",
+  "owner_design_target_approved": true,
+  "supplier_update_status": "pending_Claude_execution",
+  "website_update_status": "pending_Claude_execution",
+  "artwork_bytes_changed": false,
+  "physical_sample_approved": false
+}

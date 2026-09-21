@@ -92,7 +92,7 @@ export default function ProductDetail({ product }: { product: Product }) {
         {/* Images */}
         <div>
           <div
-            className="relative aspect-square overflow-hidden rounded-xl bg-smoke"
+            className="relative aspect-[4/5] overflow-hidden rounded-xl bg-paper"
             onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
             onTouchEnd={(e) => {
               if (touchStartX == null) return;
@@ -158,7 +158,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   key={img.src}
                   type="button"
                   onClick={() => setActiveImage(i)}
-                  className={`relative h-20 w-20 overflow-hidden rounded-lg bg-smoke ${
+                  className={`relative h-20 w-20 overflow-hidden rounded-lg bg-paper ${
                     i === activeImage ? "ring-2 ring-ink" : "opacity-70 hover:opacity-100"
                   }`}
                   aria-label={`View image ${i + 1}`}
@@ -236,11 +236,6 @@ export default function ProductDetail({ product }: { product: Product }) {
             {hasCustomization && (
               <span className="ml-2 text-sm font-normal text-ink/50">
                 includes name &amp; number
-              </span>
-            )}
-            {product.originLabel && (
-              <span className="ml-3 align-middle text-[11px] font-semibold uppercase tracking-widest text-ink/40">
-                {product.originLabel}
               </span>
             )}
           </p>

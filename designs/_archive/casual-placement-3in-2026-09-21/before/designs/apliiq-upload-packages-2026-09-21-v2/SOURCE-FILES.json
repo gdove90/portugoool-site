@@ -1,0 +1,275 @@
+{
+  "source_project_root": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "files": {
+    "designs/goool-athletics-brand-label/approved-tag-concept.png": {
+      "sha256": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+      "bytes": 2543099
+    },
+    "designs/goool-athletics-brand-label/source-navigation-wordmark-white.png": {
+      "sha256": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+      "bytes": 40501
+    },
+    "designs/goool-athletics-brand-label/README.md": {
+      "sha256": "d2e13a745dde7ecaa83b406c35960d1e3ab9f23e8133350ec0748dfaab3359da",
+      "bytes": 2638
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/GOOOL_POD_SAMPLE_SPECIFICATIONS.pdf": {
+      "sha256": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+      "bytes": 908234
+    },
+    "public/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp": {
+      "sha256": "61e9fc61e9edb764d1275afc45446c0ffb156cd55a182087be044b11414f4feb",
+      "bytes": 38062
+    },
+    "public/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp": {
+      "sha256": "820e451c7a74abcba85d4ca2232daf0c89564ccd8b04c8f3eb7e3f5059a32ce3",
+      "bytes": 26430
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/01_Performance_Tee_Artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png": {
+      "sha256": "ca2f9bbcac8e9d0c902b4141f0b7b36428b34f2015f345b0250d85ada424218b",
+      "bytes": 526119
+    },
+    "public/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp": {
+      "sha256": "228eeef8ec53001cd7c9d24c26d0ef5a27e81e006daff8bbb2a03959361218de",
+      "bytes": 34546
+    },
+    "public/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp": {
+      "sha256": "de61d1c95c28263b8c03f9189be4790907beef58aa711004606e6e3ddcbfd8c1",
+      "bytes": 21222
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png": {
+      "sha256": "81dc846b9080c6121e76f525fc26dc13e39b4a54cfbf6e99580e416971b54b31",
+      "bytes": 513720
+    },
+    "public/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp": {
+      "sha256": "e0624a89300e04c517d36e5c5b4986eb83c0736a4112847a33bc5432957655a1",
+      "bytes": 84372
+    },
+    "public/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp": {
+      "sha256": "f7a7928c6235bf422aeb149b43c1ed7adb34e3b8fa44a9f6bfa222eb194207ae",
+      "bytes": 51282
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png": {
+      "sha256": "a530cd0eafef365280b6c20ff573e3a690143a78abc63f918a8cf0f956cffd3a",
+      "bytes": 513045
+    },
+    "public/products/GOOOL_STD_HOODIE_BLACK_FRONT.webp": {
+      "sha256": "270bca016b0b82fcd3dca75b894a4fd6c49072c0a1e4d8c398591ab1163a2f9c",
+      "bytes": 36546
+    },
+    "public/products/GOOOL_STD_HOODIE_BLACK_BACK.webp": {
+      "sha256": "91c5cd1e72fa7115e0145026ebdc2701290f52c777a85c05108fe2d629cf4932",
+      "bytes": 26054
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/02_Hoodie_Artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png": {
+      "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+      "bytes": 192502
+    },
+    "public/products/GOOOL_STD_HOODIE_BONE_FRONT.webp": {
+      "sha256": "b0f917f361f999249b34a34444e256eab9160b371419345e0c624de5b4710171",
+      "bytes": 42532
+    },
+    "public/products/GOOOL_STD_HOODIE_BONE_BACK.webp": {
+      "sha256": "6ca954aa3c68e77261b06fccbedbeec83804e826d053b3e366a720963fc8e597",
+      "bytes": 29884
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png": {
+      "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+      "bytes": 183719
+    },
+    "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp": {
+      "sha256": "79bbb1f3c447d340eb6ffcb9f80c49cce1b093b9afb854ab944183ac1177cdf9",
+      "bytes": 40438
+    },
+    "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp": {
+      "sha256": "886260259b7d2fdea7e1946c3b653bb4d15901c280d518d0b852bf184e1c5854",
+      "bytes": 38268
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/03_Casual_Tee_Artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png": {
+      "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+      "bytes": 192502
+    },
+    "public/products/GOOOL_STD_CASUAL_WASHED_GREY_FRONT.webp": {
+      "sha256": "20c91f65ee2027ef26a0d53daf576f534175d752f8f11615cad4539e8eb63234",
+      "bytes": 88956
+    },
+    "public/products/GOOOL_STD_CASUAL_WASHED_GREY_BACK.webp": {
+      "sha256": "37c9cc5ae1edb80e64dc9c7f34818896a78789df5858a15fd4660854365ed7be",
+      "bytes": 91302
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.pdf": {
+      "sha256": "55ec1e78db0daf8e29f3f4269c11b4d926909486d1487ed50568f9a3f9e74775",
+      "bytes": 68722
+    },
+    "public/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp": {
+      "sha256": "19fa384c4c51bf626e1c77874db26d8e3ebb50c6d952573c05d0fe5cc49048fa",
+      "bytes": 96532
+    },
+    "public/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp": {
+      "sha256": "2b139e8031c46e24899ab5832803a540faa387161e9ece4088957bade49b8c07",
+      "bytes": 87304
+    },
+    "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png": {
+      "sha256": "661f917ecd0c09f62532697da15c27cdc3cd8230bfccb7265452885451e0f14d",
+      "bytes": 72518
+    },
+    "designs/16_goool_athletics/GOOOL_ATHLETICS_POD_Packet_v1.pdf": {
+      "sha256": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+      "bytes": 7425789
+    },
+    "public/products/GOOOL_STD_MODERN_SPORT_FRONT.webp": {
+      "sha256": "59e560cf93543b944353e49b255feafc74855f1a296f85873078c64505cb9a28",
+      "bytes": 27670
+    },
+    "public/products/GOOOL_STD_MODERN_SPORT_BACK.webp": {
+      "sha256": "128fe6e282575d8a69f6352537eda7690eff84ccbd49503876b3e5e734deebd9",
+      "bytes": 24216
+    },
+    "designs/16_goool_athletics/print_masters/upload/GA-01-F_3300px_CLEAN.png": {
+      "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+      "bytes": 115619
+    },
+    "designs/16_goool_athletics/print_masters/upload/GA-01-B_975px_CLEAN.png": {
+      "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+      "bytes": 24965
+    },
+    "public/products/GOOOL_STD_VARSITY_FRONT.webp": {
+      "sha256": "f91e2bbd547190ecd397034e5c0feec822a1620494440e39115e44204bd2f08d",
+      "bytes": 37470
+    },
+    "public/products/GOOOL_STD_VARSITY_BACK.webp": {
+      "sha256": "c0530eae78af6bbbe73cab8e78927c118f802b03ffad123ae6d8b3b6172cefd3",
+      "bytes": 27296
+    },
+    "designs/16_goool_athletics/print_masters/GA-02-F_3300px.png": {
+      "sha256": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+      "bytes": 546592
+    },
+    "designs/16_goool_athletics/print_masters/GA-02-B_975px.png": {
+      "sha256": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+      "bytes": 52886
+    },
+    "public/products/GOOOL_STD_MINIMAL_CLUB_FRONT.webp": {
+      "sha256": "a7152372523a8e24c3619f7b78ccf76cca3a9a47e073056075abcf45befa25b0",
+      "bytes": 24056
+    },
+    "public/products/GOOOL_STD_MINIMAL_CLUB_BACK.webp": {
+      "sha256": "8cbe313d0592e4792b3e61a9c131c8433aaa160ce77bb81bcb02d2b430c3031e",
+      "bytes": 25836
+    },
+    "designs/16_goool_athletics/print_masters/GA-03-F_1050px.png": {
+      "sha256": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+      "bytes": 47702
+    },
+    "designs/16_goool_athletics/print_masters/GA-03-B_3600px.png": {
+      "sha256": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+      "bytes": 246009
+    },
+    "designs/16_goool_athletics/circular_logo/PRODUCTION_NOTES.md": {
+      "sha256": "2679d71fafc377235b6a1c55895ce0ecb21394e8e207b7a88bc9983e18f16979",
+      "bytes": 2585
+    },
+    "designs/16_goool_athletics/circular_logo/LAUNCH_SELECTION.md": {
+      "sha256": "2604b42b713a2f2b3f4c347aa064769e22ac4c7ebb2a582ba26646008b91c53f",
+      "bytes": 1846
+    },
+    "designs/16_goool_athletics/logos/GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png": {
+      "sha256": "db0d404138b5a00d72bf6debf775c19306fc8bbe1ed645d6e9343a660228b192",
+      "bytes": 322305
+    },
+    "public/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp": {
+      "sha256": "b466d38e72f7319e0d4b90d0049024bba9c4788d75760abddc93f7715cf9ac0b",
+      "bytes": 35558
+    },
+    "public/products/GOOOL_STD_CIRCULAR_BADGE_BACK.webp": {
+      "sha256": "f596403c83d2077c9b36cf2505974b526eead7055694a0b8817bdf65928cc223",
+      "bytes": 31172
+    },
+    "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-08_BADGE_NAVY_900px.png": {
+      "sha256": "81cbfcc07ca59db0082850c50a75c6b7b3b9ba2465e9e0ed98591db921300ce8",
+      "bytes": 112185
+    },
+    "public/products/GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp": {
+      "sha256": "c4eda143fd04611afd96cd222ef6743bd4989f095d5bddd3b2807229bd5e30d6",
+      "bytes": 157186
+    },
+    "public/products/GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp": {
+      "sha256": "ba85905b4ecfda2db9979dd67024a941159a7667245b5c21718ab7e02ff235ef",
+      "bytes": 128992
+    },
+    "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-09_CREW_FOREST_750px.png": {
+      "sha256": "239024d8b5958992db959be1f7934f11bcae2a75c39ef61245307b872bbecd84",
+      "bytes": 80422
+    },
+    "public/products/GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp": {
+      "sha256": "a320b96b6399a3f0c148f7fbf0abb4460b86362c986a84e4e3c3679a485a6d1d",
+      "bytes": 26202
+    },
+    "src/lib/products.ts": {
+      "sha256": "fa5ef418f2440f72335f883d9cab924df830ac0887558277786e09eb201d3d3f",
+      "bytes": 92112
+    },
+    "src/lib/types.ts": {
+      "sha256": "ab303ed938a788df77d38d9a6d9bb15af2a0d398ca9486118930fccf0cf8a0d4",
+      "bytes": 5672
+    },
+    "src/lib/fulfillment.ts": {
+      "sha256": "928472145db4af939432ec8adc60a5cecdf3f58c0ca55ce2e2a405dab89499b5",
+      "bytes": 6901
+    },
+    "designs/11_fulfillment/apliiq-reconciliation.json": {
+      "sha256": "238b1278bd626c5eabd525e3f98caaed1deb6f8afd91f3ca70f42357dc8933c6",
+      "bytes": 10150
+    },
+    "designs/11_fulfillment/APLIIQ-CATALOG-AUDIT.md": {
+      "sha256": "782ae1e12c8bc179a68d5a0f5493433d93bbbc01a4fb86e93233c7676bd8f2d9",
+      "bytes": 8497
+    },
+    "designs/11_fulfillment/apliiq-product-mapping.md": {
+      "sha256": "7ee97527046a42ba80a2028b9fa556196f1406226bfe1dd9b60a05f6ec497765",
+      "bytes": 12660
+    },
+    "public/brand/goool-wordmark-white.png": {
+      "sha256": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+      "bytes": 40501
+    },
+    "designs/17_launch_imagery/performance-concepts/CONCEPT-NOTES.md": {
+      "sha256": "1c2bfa0354417ef57afe540f52198ce8bf144608995c15e3f215c3849825eaa9",
+      "bytes": 2455
+    }
+  },
+  "source_refresh_at_utc": "2026-09-21T07:16:08.661543+00:00",
+  "audit_source_document_changes": [
+    {
+      "path": "designs/goool-athletics-brand-label/README.md",
+      "before_sha256": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+      "after_sha256": "d2e13a745dde7ecaa83b406c35960d1e3ab9f23e8133350ec0748dfaab3359da",
+      "reason": "Audit notice only"
+    },
+    {
+      "path": "src/lib/products.ts",
+      "before_sha256": "8754a3959e5a7f4910b746008e9fa1489f268f482d98164f4222145c56a11bdc",
+      "after_sha256": "fa5ef418f2440f72335f883d9cab924df830ac0887558277786e09eb201d3d3f",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    },
+    {
+      "path": "src/lib/fulfillment.ts",
+      "before_sha256": "74f0927d7692439876f4db8f52f98c9712a7277097bf5b3b79f451b251a22b4c",
+      "after_sha256": "928472145db4af939432ec8adc60a5cecdf3f58c0ca55ce2e2a405dab89499b5",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    },
+    {
+      "path": "designs/11_fulfillment/apliiq-reconciliation.json",
+      "before_sha256": "c346284caaba4b01fe07671290a1b35deb9678a50aa3e026b4e0038da7a220c9",
+      "after_sha256": "238b1278bd626c5eabd525e3f98caaed1deb6f8afd91f3ca70f42357dc8933c6",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    },
+    {
+      "path": "designs/11_fulfillment/APLIIQ-CATALOG-AUDIT.md",
+      "before_sha256": "22ceaefce552cdfef925b738855b4968b498f8caf79d6357edadd391e73ce2fb",
+      "after_sha256": "782ae1e12c8bc179a68d5a0f5493433d93bbbc01a4fb86e93233c7676bd8f2d9",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    }
+  ]
+}

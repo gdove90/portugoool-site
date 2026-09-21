@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "package_id": "08-goool-touchline-cap-black-natural",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "70000000-0000-4000-8000-000000000004",
+    "slug": "goool-touchline-cap",
+    "name": "GOOOL Touchline Cap",
+    "website_color": "Black/Natural",
+    "website_sizes": [
+      "OS"
+    ],
+    "url": "https://goool.shop/shop/goool-touchline-cap"
+  },
+  "garment": {
+    "brand_model": "OTTO 31-069",
+    "supplier_color_candidate": "Black/Natural",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "OTTO 31-069 (Myanmar)"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "VERIFIED",
+    "source_reported_design_id": 6098980,
+    "reported_skus_for_website_sizes": {
+      "OS": "APQ-6098980S34A1"
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false
+  },
+  "decoration": {
+    "method": "Flat embroidery, front only; no puff",
+    "artwork": [
+      {
+        "source_project_path": "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+        "sha256": "661f917ecd0c09f62532697da15c27cdc3cd8230bfccb7265452885451e0f14d",
+        "bytes": 72518,
+        "face": "front",
+        "visible_width_in": 3.75,
+        "vertical_offset_in": 0.5,
+        "horizontal_position": "front panel centerline",
+        "vertical_anchor": "BOTTOM of visible embroidery ABOVE visor seam",
+        "dimension_status": "sample_specification_target",
+        "path": "reference-only/embroidery/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+        "pixels": [
+          1125,
+          391
+        ],
+        "alpha_bbox_px": [
+          0,
+          0,
+          1125,
+          391
+        ],
+        "visible_pixels": [
+          1125,
+          391
+        ],
+        "effective_ppi_at_target_visible_width": 300.0,
+        "proportional_visible_height_in": 1.303333,
+        "canvas_width_in_for_target_visible_width": 3.75,
+        "visible_top_inset_in_at_target": 0.0,
+        "raster_modified_by_package_builder": false,
+        "usage": "reference_only_do_not_upload_until_blockers_resolved"
+      }
+    ],
+    "back": "blank",
+    "sleeves": "blank",
+    "cap_side_and_rear": "blank",
+    "notes": [
+      "Target height 1.30in. Black and cranberry thread; original packet specifies nearest stock PMS 201 C to brand red #C61322, subject to thread proof. No side slogan or rear artwork."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 2,
+      "rotation_degrees": null,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    }
+  },
+  "label": {
+    "required": true,
+    "placement": "supported interior cap location TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": null,
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+      "sha256": "19fa384c4c51bf626e1c77874db26d8e3ebb50c6d952573c05d0fe5cc49048fa",
+      "bytes": 96532
+    },
+    {
+      "path": "reference-only/mockups/2-GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+      "sha256": "2b139e8031c46e24899ab5832803a540faa387161e9ece4088957bade49b8c07",
+      "bytes": 87304
+    }
+  ],
+  "unresolved_requirements": [
+    "Supplier digitization and sew-out proof required; provided PNG/PDF are embroidery references, not machine stitch files.",
+    "Brand label flat master, color-capable supplier service, supply ID, per-blank compatibility and proof remain unverified.",
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false
+  }
+}

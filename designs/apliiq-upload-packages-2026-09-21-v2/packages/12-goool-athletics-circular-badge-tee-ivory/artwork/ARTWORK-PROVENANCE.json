@@ -1,0 +1,38 @@
+{
+  "source": "designs\\16_goool_athletics\\logos\\GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png",
+  "source_sha256": "db0d404138b5a00d72bf6debf775c19306fc8bbe1ed645d6e9343a660228b192",
+  "source_pixels": [
+    1254,
+    1254
+  ],
+  "source_crop": null,
+  "source_alpha_threshold": 128,
+  "outline_bbox_px": [
+    159,
+    151,
+    1083,
+    1085
+  ],
+  "outline_width_px": 924,
+  "outline_height_px": 934,
+  "covered_source_pixels": 176904,
+  "path_run_area_px": 176904,
+  "vectorization": "Unsmoothed source-pixel run outlines; threshold edges may differ by a pixel. No invented resolution, new lettering or smoothing. Compare proof to source.",
+  "svg": "GA-CIRCLE-08-NAVY-PRINT.svg",
+  "visible_width_in": 3,
+  "visible_height_in": 3.0324675324675323,
+  "color": "#0E2B4C",
+  "equivalent_source_samples_per_inch": 308,
+  "aspect_ratio_preserved": true,
+  "canvas_tightly_fits_artwork": true,
+  "artwork_state": "prepared_for_supplier_proof_not_manufacturing_approved",
+  "png": "GA-CIRCLE-08-NAVY-PRINT.png",
+  "png_sha256": "3a642d9ebf6ca9f6ee0d7a81d3de7d8a9aa19e62eac9243cc4d5d1a5d57ae21a",
+  "svg_sha256": "480228dd55d2e707decf7a42e45d1edbe7302953e6f8add6d8733d6aa3cf8e9c",
+  "export_pixels": [
+    1800,
+    1819
+  ],
+  "export_ppi": 600,
+  "note_export": "Rasterized from newly authored SVG at 600ppi. Export sampling does not add detail to source-derived outlines."
+}

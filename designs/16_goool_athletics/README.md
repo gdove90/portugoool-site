@@ -1,3 +1,5 @@
+> **Artwork audit — 2026-09-21:** Current roster and source selections: [artwork library](../00_asset-library/START-HERE.md). The current site catalog has10 active products/14 colorways overall. Preserve GA originals; CLEAN variants and circular derivatives retain their own provenance. Older development/mapping statements below are historical.
+
 # GOOOL Athletics — concept line (2026-09-18)
 
 Three tee concepts, extracted at full resolution (1536x1024) from the

@@ -1,0 +1,221 @@
+{
+  "updated_at_utc": "2026-09-21T08:35:13.454609+00:00",
+  "owner_priorities": [
+    "Stripe first",
+    "Verify costs before publishing new prices",
+    "Instagram only",
+    "Launch earliest fully ready subset"
+  ],
+  "tasks": [
+    {
+      "id": "PAY-01",
+      "priority": 0,
+      "title": "Verify deployed Stripe test connection",
+      "status": "complete",
+      "owner": "Codex",
+      "definition_of_done": "Test key matches goool.shop account; enabled test webhook; HTTP200 test checkout created; livemode false, unpaid, $47.50 total. This does not prove paid-webhook persistence.",
+      "depends_on": []
+    },
+    {
+      "id": "PAY-02",
+      "priority": 0,
+      "title": "Complete Stripe business activation and bank onboarding",
+      "status": "owner_action_required",
+      "owner": "Owner with Claude guidance",
+      "definition_of_done": "Business details submitted, activation requirements cleared, charges and payouts enabled. Enter sensitive details directly in Stripe, never chat.",
+      "depends_on": []
+    },
+    {
+      "id": "DB-01",
+      "priority": 0,
+      "title": "Restore GOOOL Supabase query access and inspect migrations",
+      "status": "blocked_authentication",
+      "owner": "Owner/Claude",
+      "definition_of_done": "Correct project oexibflpshttgzmdvhpr query succeeds; run LAUNCH-DB-CHECK.sql. Connector currently returns password authentication failure. Do not touch the other listed project.",
+      "depends_on": []
+    },
+    {
+      "id": "DB-02",
+      "priority": 0,
+      "title": "Apply only missing order/catalog migrations",
+      "status": "pending_inspection",
+      "owner": "Claude",
+      "definition_of_done": "Verify0026 order schema and0027–0029 product records. Apply only necessary changes and read back. Do not blindly replay0027: it resets prices/images.",
+      "depends_on": [
+        "DB-01"
+      ]
+    },
+    {
+      "id": "PAY-03",
+      "priority": 0,
+      "title": "Complete test purchase through webhook, order and tracking",
+      "status": "pending_database",
+      "owner": "Claude",
+      "definition_of_done": "Complete controlled Stripe test payment; verify event delivered once, correct order number/immutable snapshot persisted, success and tracking work, retry produces no duplicate, no Apliiq production submission.",
+      "depends_on": [
+        "PAY-01",
+        "DB-02"
+      ]
+    },
+    {
+      "id": "COST-01",
+      "priority": 1,
+      "title": "Verify supplier costs for every offered variant",
+      "status": "blocked_supplier_login_in_Codex",
+      "owner": "Claude in authenticated Apliiq session",
+      "definition_of_done": "Fill COST-INPUTS.json for66 size/color variants with exact saved-design quote, print/embroidery, label, application, packing, shipping, size surcharges and evidence. Codex browser is signed out; public starting-price ranges are insufficient.",
+      "depends_on": []
+    },
+    {
+      "id": "PRICE-01",
+      "priority": 1,
+      "title": "Calculate and review six new retail prices",
+      "status": "waiting_verified_costs",
+      "owner": "Claude/Owner",
+      "definition_of_done": "Run calculate-prices.py after quotes; compare contribution and largest-size costs. Internal previous 48/48/48/42/78/52 suggestions are not approved website prices.",
+      "depends_on": [
+        "COST-01"
+      ]
+    },
+    {
+      "id": "PRICE-02",
+      "priority": 1,
+      "title": "Publish verified prices consistently",
+      "status": "blocked_by_owner_cost_policy",
+      "owner": "Claude",
+      "definition_of_done": "Only after costs verified and prices finalized, update server catalog, DB product records, product cards/detail/metadata and checkout values. All six currently unpriced pieces need real prices; never display $0.",
+      "depends_on": [
+        "PRICE-01",
+        "DB-02"
+      ]
+    },
+    {
+      "id": "SHIP-01",
+      "priority": 1,
+      "title": "Finalize actual shipping charge and delivery wording",
+      "status": "waiting_supplier_quote",
+      "owner": "Claude/Owner",
+      "definition_of_done": "Quote single and multi-item US orders including size/fulfillment split effects. $9.50 is a TEST placeholder, not an approved live policy. Record shipping handling and realistic production/transit windows.",
+      "depends_on": [
+        "COST-01"
+      ]
+    },
+    {
+      "id": "TAG-01",
+      "priority": 1,
+      "title": "Choose compatible label with actual-size proof",
+      "status": "supplier_proof_pending",
+      "owner": "Claude/Owner",
+      "definition_of_done": "Keep approved black/white/red Athletics visual. Compare color-capable service per blank, actual 1in legibility, attachment, supply+application cost. No standard white-stock black-only substitution. No label purchase without owner review.",
+      "depends_on": []
+    },
+    {
+      "id": "ART-01",
+      "priority": 1,
+      "title": "Apply casual tee3in placement in supplier and website",
+      "status": "prompt_ready_execution_pending",
+      "owner": "Claude",
+      "definition_of_done": "Apply existing prompt to6098963/6099060; front visible top3in below bottom collar seam, width6.75in unchanged. Reopen proof; update both colors and front model/gallery images.",
+      "depends_on": []
+    },
+    {
+      "id": "ART-02",
+      "priority": 1,
+      "title": "Close circular scale and Modern Sport performance width issues",
+      "status": "pending_proof",
+      "owner": "Claude/Owner",
+      "definition_of_done": "Verify circular visible art dimensions; reconcile performance9in target vs saved11in with a dimensioned approved proof. Preserve original geometry and distinct cotton/performance blanks.",
+      "depends_on": []
+    },
+    {
+      "id": "SAMPLE-01",
+      "priority": 1,
+      "title": "Approve physical samples for the first release subset",
+      "status": "owner_sample_approval_required",
+      "owner": "Owner",
+      "definition_of_done": "Approve blank, sizing, decoration, label and after-care evidence per released variant. Apply artwork tasks only to affected products in the release. Select the first ready subset; unready pieces remain Coming Soon. No paid sample orders are authorized by this task list alone.",
+      "depends_on": [
+        "TAG-01"
+      ]
+    },
+    {
+      "id": "PAY-04",
+      "priority": 0,
+      "title": "Configure live Stripe credentials/webhook/shipping and validate mode separation",
+      "status": "waiting_activation_and_rehearsal",
+      "owner": "Claude",
+      "definition_of_done": "Use matching LIVE key, LIVE webhook secret and LIVE shipping rate in correct Netlify function contexts; remove test bypass, verify signature and event modes, redeploy safely. Keep product gates until launch review.",
+      "depends_on": [
+        "PAY-02",
+        "PAY-03",
+        "SHIP-01"
+      ]
+    },
+    {
+      "id": "IG-01",
+      "priority": 2,
+      "title": "Prepare Instagram-only teaser and reveal drafts",
+      "status": "drafts_prepared",
+      "owner": "Codex/Claude",
+      "definition_of_done": "Use INSTAGRAM-LAUNCH-PLAN.md and INSTAGRAM-COPY-READY.md. Reuse existing atmosphere assets and current wordmark; exclude stale FOUR PIECES/old prices/countdowns. No other social channels.",
+      "depends_on": []
+    },
+    {
+      "id": "IG-02",
+      "priority": 2,
+      "title": "Verify Instagram profile, link and measurement",
+      "status": "account_action_pending",
+      "owner": "Owner/Claude",
+      "definition_of_done": "Confirm actual handle, professional dashboard, profile copy and working bio link; use Insights and tracked links where supported. No passwords in chat, no assumed publishing access.",
+      "depends_on": []
+    },
+    {
+      "id": "IG-03",
+      "priority": 2,
+      "title": "Review and publish brand-only Instagram teasers",
+      "status": "awaiting_content_review",
+      "owner": "Owner/Claude",
+      "definition_of_done": "Review first3 drafts; post organically to Instagram only when authorized. Avoid sales/date claims; no ads, outreach DMs, crossposts or auto email campaigns.",
+      "depends_on": [
+        "IG-01",
+        "IG-02"
+      ]
+    },
+    {
+      "id": "IG-04",
+      "priority": 2,
+      "title": "Capture real garment launch content",
+      "status": "waiting_samples",
+      "owner": "Owner/Claude",
+      "definition_of_done": "Photograph/film approved samples: fit, chest/back, fabric, tag and movement. Generated imagery is not evidence of actual sample quality.",
+      "depends_on": [
+        "SAMPLE-01"
+      ]
+    },
+    {
+      "id": "LAUNCH-01",
+      "priority": 0,
+      "title": "Launch the first fully ready subset",
+      "status": "gated",
+      "owner": "Owner/Claude",
+      "definition_of_done": "Finalize product subset, verified costs/prices for each included variant (unready pieces stay closed), shipping/returns/support, payment/order/confirmation/track test, sample approval, accurate imagery and homepage routing. Then open only approved products and verify mobile purchase flow.",
+      "depends_on": [
+        "PAY-04",
+        "SAMPLE-01",
+        "IG-04"
+      ]
+    },
+    {
+      "id": "IG-05",
+      "priority": 2,
+      "title": "Publish launch-day Instagram sequence",
+      "status": "waiting_launch",
+      "owner": "Owner/Claude",
+      "definition_of_done": "After live checkout and product links work publicly: launch Reel, product carousel and Stories with exact approved prices/links. No launch countdown until date is real.",
+      "depends_on": [
+        "LAUNCH-01",
+        "IG-02"
+      ]
+    }
+  ]
+}

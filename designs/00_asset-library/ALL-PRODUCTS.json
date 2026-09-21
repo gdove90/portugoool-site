@@ -1,0 +1,2098 @@
+{
+  "catalog_source": "src/lib/products.ts",
+  "catalog_sha256": "fa5ef418f2440f72335f883d9cab924df830ac0887558277786e09eb201d3d3f",
+  "active_count": 10,
+  "inactive_count": 54,
+  "products": [
+    {
+      "product_id": "10000000-0000-4000-8000-000000000001",
+      "slug": "home-red-jersey",
+      "name": "Home Red Jersey",
+      "catalog_active": false,
+      "family": "jerseys",
+      "artwork_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-01-casa-red-BACK.png",
+          "sha256": "5f6ba85aa519dd34791d7770fa1757a3384d8c543e158748e9f23ffcbd453c9e",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-01-casa-red-FRONT.png",
+          "sha256": "7f5fb26c0671e2a40ea19d2798a4086e8efc1dbf3372443397609c867c193568",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-01-casa-red-SLEEVES.png",
+          "sha256": "175ba76d0dadcc133725387b7310883fd64fa8416364ae7b22bcfdc4175c962a",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "10000000-0000-4000-8000-000000000002",
+      "slug": "away-white-jersey",
+      "name": "Away White Jersey",
+      "catalog_active": false,
+      "family": "jerseys",
+      "artwork_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-02-marfim-white-BACK.png",
+          "sha256": "c6e9ead345b31116c60a0ede6c7d4c116f184e6959b6ffff7dc6b437ba1d11f2",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-02-marfim-white-FRONT.png",
+          "sha256": "bfdf9afd5d502af4419cc4e8cedacb73bc47a6cbd9036010148ddfbad18cabd3",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-02-marfim-white-SLEEVES.png",
+          "sha256": "89dc7fe6203e8713463a26a101b854688d454734ca1468c945fb35ed46d44768",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "10000000-0000-4000-8000-000000000003",
+      "slug": "blackout-edition-jersey",
+      "name": "Blackout Edition Jersey",
+      "catalog_active": false,
+      "family": "jerseys",
+      "artwork_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-03-noite-black-BACK.png",
+          "sha256": "45bec8cbb5a71e1bac8ebc9849a0df3e5fae32c969db2fcec2df8709408e9131",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-03-noite-black-FRONT.png",
+          "sha256": "1d6cf37496684bcd2c3388307c83e84a89be7ac467f5991c7de27fb98cf9e394",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-03-noite-black-SLEEVES.png",
+          "sha256": "93de2402af1e165d6eea3e8431638de6903662498a1275c2fca99c291c1b44a8",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "10000000-0000-4000-8000-000000000004",
+      "slug": "emerald-edition-jersey",
+      "name": "Emerald Edition Jersey",
+      "catalog_active": false,
+      "family": "jerseys",
+      "artwork_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-04-emerald-green-BACK.png",
+          "sha256": "00c55dcaaf5a4d0be4c0f3a5b60308c56e5015137204b318f3b9f47dda87687a",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-04-emerald-green-FRONT.png",
+          "sha256": "19d70d65c532dc4f5a79e73555529fe0c490dc93a7af8d076184d27632669b0c",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-04-emerald-green-SLEEVES.png",
+          "sha256": "17d023721867dc30cc16ea1f5d006fe7936b2955d7bb640070714fcc43be0c1c",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "10000000-0000-4000-8000-000000000005",
+      "slug": "engoooland-home-white-jersey",
+      "name": "ENGOOOLAND Home White Jersey",
+      "catalog_active": false,
+      "family": "jerseys",
+      "artwork_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-E1-home-white-BACK.png",
+          "sha256": "581f711c0b71a5ea92652cd377a3df34d37b645dbee74ac1efb2c16a80492e07",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E1-home-white-FRONT.png",
+          "sha256": "72f6bce7c7981ce30182d6de68bb4d3c87fde8957de22d46396981bfdf477264",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E1-home-white-SLEEVES.png",
+          "sha256": "89dc7fe6203e8713463a26a101b854688d454734ca1468c945fb35ed46d44768",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "10000000-0000-4000-8000-000000000006",
+      "slug": "engoooland-away-red-jersey",
+      "name": "ENGOOOLAND Away Red Jersey",
+      "catalog_active": false,
+      "family": "jerseys",
+      "artwork_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-E2-away-red-BACK.png",
+          "sha256": "bf1eff9d18a33fe8e011429dec4c0c71de83518d797b7b12e2072036e0fcb8cd",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E2-away-red-FRONT.png",
+          "sha256": "d315964f92be5f2db0fb74c687cdd1975fd42f434fd86c4735b2ecbadc66973e",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E2-away-red-SLEEVES.png",
+          "sha256": "175ba76d0dadcc133725387b7310883fd64fa8416364ae7b22bcfdc4175c962a",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "10000000-0000-4000-8000-000000000007",
+      "slug": "engoooland-navy-jersey",
+      "name": "ENGOOOLAND Navy Jersey",
+      "catalog_active": false,
+      "family": "jerseys",
+      "artwork_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-E3-navy-BACK.png",
+          "sha256": "ce744a66322ee84d9887ac5f822cef968f7d430ff766586fbdc47e4e2cb0a786",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E3-navy-FRONT.png",
+          "sha256": "52fde8a5408a393012c22bd25b24127f2b08201e448a35665d7884f200cbf591",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E3-navy-SLEEVES.png",
+          "sha256": "5d6ef800ac31a03ba6618c7cd26452de9dcba9c1cfd2ed9a406aba6de1565645",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000001",
+      "slug": "brush-script-tee",
+      "name": "PORTUGOOOL Brush Script Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/brush-script-tee-FRONT.png",
+          "sha256": "f676c151a681fc95d38518d867ba2a9acf3b3e8c280a748c82819bf0bd81fca0",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000002",
+      "slug": "goool-tee",
+      "name": "GOOOOOOOL!!! Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/goool-tee-FRONT.png",
+          "sha256": "43434c548004d2e1587a83795017f375909f39e1a6c80cd72642083da0f8cbea",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000003",
+      "slug": "vamos-tee",
+      "name": "Vamos Portugooool Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/vamos-tee-FRONT.png",
+          "sha256": "3fb0f164c9d908158a7ad77d16588d943117b10ef9b2b766fb8f2b16e16f6680",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000004",
+      "slug": "lisbon-to-the-world-tee",
+      "name": "From Lisbon to the World Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/lisbon-to-the-world-tee-FRONT.png",
+          "sha256": "1860b6dc5b82c413be60f5a3bda0666f5db33f2706e25eedf208f068140453fd",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000005",
+      "slug": "match-day-tee",
+      "name": "Match Day Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/match-day-tee-FRONT.png",
+          "sha256": "a55fbd52e8a976bffdc13d1cd81bf7e1e5edf812ca9828361fbb64261945b6d7",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000006",
+      "slug": "we-dont-whisper-goals-tee",
+      "name": "We Don't Whisper Goals Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/we-dont-whisper-goals-tee-FRONT.png",
+          "sha256": "f8f971e5ef41190b3d4370de7fdd849b3f097fb85eb6e90a2e7874f9422688f8",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000007",
+      "slug": "engoooland-echo-hero-tee",
+      "name": "ENGOOOLAND Echo Hero Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-ET1-echo-hero-BACK.png",
+          "sha256": "a37efff741b53273ca1f7f32e6f4d77c6bd7d76383520d648519b09a8f819238",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET1-echo-hero-FRONT.png",
+          "sha256": "3febce316ee9b186935c99941fbb8c292de5dd2af7239313f47e531c109a443f",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000008",
+      "slug": "london-to-the-world-tee",
+      "name": "From London to the World Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-ET2-london-BACK.png",
+          "sha256": "6a9fc8d0991aecc7f36ebe3156390868c6489655db29f4680b266fd7f1e3f52e",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET2-london-FRONT.png",
+          "sha256": "b68e1747beacbd5ed7a45f7d922268882e6b62fabe01099eb665ce457b11c4ce",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000009",
+      "slug": "made-for-the-moment-tee",
+      "name": "Made for the Moment Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-ET3-moment-BACK.png",
+          "sha256": "ba4de4d4bcd4f43fbe58ca3a6b92ce91bdc7b0ebc825f2770e0471a00cac52f6",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET3-moment-FRONT.png",
+          "sha256": "199497b30826cc26c6f78d933025a9deaa65f368d12b31c34f7b5da393aef7bd",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "20000000-0000-4000-8000-000000000010",
+      "slug": "engoooland-roar-tee",
+      "name": "ENGOOOLAND Roar Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-ET4-roar-BACK.png",
+          "sha256": "aa2d65f958cb55cc26d8606ea8005795598be95c9811643d832bce28719beb6f",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET4-roar-FRONT.png",
+          "sha256": "a901f42191e813e6055baac888480a05897a052d242ffc50cee2fbaa3aa0fa7a",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "40000000-0000-4000-8000-000000000007",
+      "slug": "gol-clean-sheet-tee",
+      "name": "GOL Clean Sheet Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-G1-clean-sheet-BACK.png",
+          "sha256": "68ae4f684800ccd07cc2c7a570bf13e283a23d59ab4bd0ea15c8792587a5bbf0",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G1-clean-sheet-FRONT.png",
+          "sha256": "6eb23411cf7ebcf157d060e169699675b40fda57a98a7009fb61d07b35ff07dc",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "40000000-0000-4000-8000-000000000008",
+      "slug": "gol-gold-standard-tee",
+      "name": "GOL Gold Standard Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-G2-gold-standard-BACK.png",
+          "sha256": "eb7a267b18e17d1054db3da007a09e205bdf77e89d37b5eded330ce43f6b2650",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G2-gold-standard-FRONT.png",
+          "sha256": "594652ea7460f1ac4b8c183308cda5d2869976408bcbde934d9fd2397dff839d",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "40000000-0000-4000-8000-000000000009",
+      "slug": "gol-concrete-grey-tee",
+      "name": "GOL Concrete Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-G3-concrete-BACK.png",
+          "sha256": "d1dad0c7122cd9dd5606076173ad078efe064e94a119a3c4b16138dfa9531fda",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G3-concrete-FRONT.png",
+          "sha256": "9384f2535136a705a6878926e0e13a8230b624334c81d63f6a5f95add1d22e77",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "40000000-0000-4000-8000-000000000010",
+      "slug": "gol-concrete-white-tee",
+      "name": "GOL Concrete White Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-G4-concrete-white-BACK.png",
+          "sha256": "58c2229d30d3dcf66ccb746849b4c8323a3059256685deb8060392afc2ee9523",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G4-concrete-white-FRONT.png",
+          "sha256": "6cefa4d052384c6a2941214b4a912c03c25732b79524fb459be1a1b8e2d08731",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "40000000-0000-4000-8000-000000000011",
+      "slug": "gol-concrete-black-tee",
+      "name": "GOL Concrete Black Tee",
+      "catalog_active": false,
+      "family": "legacy-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/finals/tee-G5-concrete-black-BACK.png",
+          "sha256": "e2ecb1ef10db4c605b7e5e9cf028a29a5c75db57709fb6db38a914908248c7f6",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G5-concrete-black-FRONT.png",
+          "sha256": "b17549a534826eb4c9475bc1edc6a246c8c7ca8536e123012ca38147696ff8a1",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "60000000-0000-4000-8000-000000000003",
+      "slug": "crest-statement-tee-cream",
+      "name": "GOOOL Crest Statement Tee Â· Cream",
+      "catalog_active": false,
+      "family": "crest-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-DARK-CC-75.png",
+          "sha256": "d5f49cbf1a4b3c9b1c378340150a1ec48cf0b82802805b13e2adb16e1842da8f",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-LIGHT-CC-75.png",
+          "sha256": "ece4fcd47a4084662e6b139bcd2a7ce69c57c18bfd9b25e4b8ceac3789d54fa6",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-GREY-5.png",
+          "sha256": "bc75321dc62c4a5d05c9339b1874db0a1912c05923d70a5be4bc8e0d02c4b763",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-WHITE-5.png",
+          "sha256": "7895390acfb47e4b5b92099dcce6e801a0e2d28be8235cab5b74e604cfd26fb9",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-DARK-7.png",
+          "sha256": "07ae4923ef635ab1a05a245dc80f0116b6dbf779ca92b61a6390f065dfae9d4c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-LIGHT-7.png",
+          "sha256": "137cab38bccf307ed0b4329321381042d6e2766c00cc663f2c961f0c5ee03c7c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "60000000-0000-4000-8000-000000000004",
+      "slug": "crest-statement-tee-faded-black",
+      "name": "GOOOL Crest Statement Tee Â· Faded Black",
+      "catalog_active": false,
+      "family": "crest-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-DARK-CC-75.png",
+          "sha256": "d5f49cbf1a4b3c9b1c378340150a1ec48cf0b82802805b13e2adb16e1842da8f",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-LIGHT-CC-75.png",
+          "sha256": "ece4fcd47a4084662e6b139bcd2a7ce69c57c18bfd9b25e4b8ceac3789d54fa6",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-GREY-5.png",
+          "sha256": "bc75321dc62c4a5d05c9339b1874db0a1912c05923d70a5be4bc8e0d02c4b763",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-WHITE-5.png",
+          "sha256": "7895390acfb47e4b5b92099dcce6e801a0e2d28be8235cab5b74e604cfd26fb9",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-DARK-7.png",
+          "sha256": "07ae4923ef635ab1a05a245dc80f0116b6dbf779ca92b61a6390f065dfae9d4c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-LIGHT-7.png",
+          "sha256": "137cab38bccf307ed0b4329321381042d6e2766c00cc663f2c961f0c5ee03c7c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "60000000-0000-4000-8000-000000000005",
+      "slug": "crest-statement-tee-faded-navy",
+      "name": "GOOOL Crest Statement Tee Â· Faded Navy",
+      "catalog_active": false,
+      "family": "crest-tees",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-DARK-CC-75.png",
+          "sha256": "d5f49cbf1a4b3c9b1c378340150a1ec48cf0b82802805b13e2adb16e1842da8f",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-LIGHT-CC-75.png",
+          "sha256": "ece4fcd47a4084662e6b139bcd2a7ce69c57c18bfd9b25e4b8ceac3789d54fa6",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-GREY-5.png",
+          "sha256": "bc75321dc62c4a5d05c9339b1874db0a1912c05923d70a5be4bc8e0d02c4b763",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-WHITE-5.png",
+          "sha256": "7895390acfb47e4b5b92099dcce6e801a0e2d28be8235cab5b74e604cfd26fb9",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-DARK-7.png",
+          "sha256": "07ae4923ef635ab1a05a245dc80f0116b6dbf779ca92b61a6390f065dfae9d4c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-LIGHT-7.png",
+          "sha256": "137cab38bccf307ed0b4329321381042d6e2766c00cc663f2c961f0c5ee03c7c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "60000000-0000-4000-8000-000000000007",
+      "slug": "goool-oval-tee",
+      "name": "GOOOL Oval Mark Oversized Tee",
+      "catalog_active": false,
+      "family": "oval",
+      "artwork_files": [
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-BACK-CHARCOAL.png",
+          "sha256": "245d1222cc03f73349f5f265faf839b801f1c5038b855dc8a1472476e5f3f2c7",
+          "pixels": [
+            1800,
+            1800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-BACK-CREAM.png",
+          "sha256": "80036bba3e483c08c2eb9ce490938a0ba7d183a383e0def891b62c80ca5181e2",
+          "pixels": [
+            1800,
+            1800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-FRONT-CHARCOAL.png",
+          "sha256": "cc702bdc21e616109a858c8b16c284ccc47bb68009c4d4afc58c30bd81d6151b",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-FRONT-CREAM.png",
+          "sha256": "3e51519831ccf0aa325cb1776e147db4f79b28d043045165ab3df318a5cf1557",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-back-charcoal.png",
+          "sha256": "8dcd59e9f91a05be430ce3f6b0dbe05727f5c83bdaa2eb0bad25fa9562d2e163",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-back-cream.png",
+          "sha256": "98896adafdccd7f18560e686ef9594067c5c3ce8249c110d99a46f9a9e495c2f",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-front-charcoal.png",
+          "sha256": "fcce88d5ac43fdba9d3c97ddac3ed57d2eea1b85770ba094be00875f1c4c2ca7",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-front-cream.png",
+          "sha256": "f2d06ba9f7878368794313b358ae1686def4a69be95e1d88cefc54bafa8876f2",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "30000000-0000-4000-8000-000000000001",
+      "slug": "supporters-scarf",
+      "name": "Supporters Scarf",
+      "catalog_active": false,
+      "family": "accessory-concepts",
+      "artwork_files": [],
+      "package_specs": [],
+      "status": "concept_only_missing_complete_print_package",
+      "open_items": [
+        "Complete manufacturing artwork and supplier package not located."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "30000000-0000-4000-8000-000000000002",
+      "slug": "goool-cap",
+      "name": "GOOOOOL Cap",
+      "catalog_active": false,
+      "family": "accessory-concepts",
+      "artwork_files": [],
+      "package_specs": [],
+      "status": "concept_only_missing_complete_print_package",
+      "open_items": [
+        "Complete manufacturing artwork and supplier package not located."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "30000000-0000-4000-8000-000000000003",
+      "slug": "sticker-pack",
+      "name": "Sticker Pack",
+      "catalog_active": false,
+      "family": "accessory-concepts",
+      "artwork_files": [],
+      "package_specs": [],
+      "status": "concept_only_missing_complete_print_package",
+      "open_items": [
+        "Complete manufacturing artwork and supplier package not located."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "30000000-0000-4000-8000-000000000004",
+      "slug": "terrace-flag",
+      "name": "Terrace Flag",
+      "catalog_active": false,
+      "family": "accessory-concepts",
+      "artwork_files": [],
+      "package_specs": [],
+      "status": "concept_only_missing_complete_print_package",
+      "open_items": [
+        "Complete manufacturing artwork and supplier package not located."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000001",
+      "slug": "gol-cap-black",
+      "name": "GOL Cap Black",
+      "catalog_active": false,
+      "family": "gol-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/gol/cap-gol-gold.png",
+          "sha256": "ceb773ce6441b075ced669e0eda8f756b9b126fcfeebfb760bb538bbec555d9e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Exact side-slogan pairing requires historical product spec; do not choose by filename similarity."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000002",
+      "slug": "gol-cap-white",
+      "name": "GOL Cap White",
+      "catalog_active": false,
+      "family": "gol-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/gol/cap-gol-ink.png",
+          "sha256": "8beac3f5de136f216ec112fab34c398c9538679eb5cff4ac5a27669fab42c51d",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Exact side-slogan pairing requires historical product spec; do not choose by filename similarity."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000003",
+      "slug": "goool-cap-black",
+      "name": "GOOOL Cap Black",
+      "catalog_active": false,
+      "family": "gol-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/gol/cap-goool-gold.png",
+          "sha256": "5a9bd8d979bb4f3aa375661163af696beb3c24873b90136021f0fff8914c381e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Exact side-slogan pairing requires historical product spec; do not choose by filename similarity."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000004",
+      "slug": "goool-cap-white",
+      "name": "GOOOL Cap White",
+      "catalog_active": false,
+      "family": "gol-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/gol/cap-goool-ink.png",
+          "sha256": "1f1eab70b70e9cea08918372fc8e4b0d5bc9b982e995874229e6e15c5ffbbbd8",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Exact side-slogan pairing requires historical product spec; do not choose by filename similarity."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000005",
+      "slug": "goool-england-cap",
+      "name": "GOOOL England Cap",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-goool-england-front.png",
+          "sha256": "95fba8407a781575951c3cd50db025415608f49827f03e58d5f8533467cd37c3",
+          "pixels": [
+            1890,
+            765
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Original England cap is distinct from later three-color country system; verify exact side/back spec."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000006",
+      "slug": "goool-england-cap-white",
+      "name": "GOOOL England Cap White",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-eng-front-white.png",
+          "sha256": "0d9f6649e4acf55d588650fe43ac35c4ba9a8c0fcc7e059cc3489a1ab5797ac5",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-side-shield.png",
+          "sha256": "8c1ba050c46a5c51454b1282fa3a01798fe09e096d51d562962cc7526694a02e",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000007",
+      "slug": "goool-england-cap-navy",
+      "name": "GOOOL England Cap Navy",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-eng-front-navy.png",
+          "sha256": "f99cfcf11b180323d24b0623a3c9cd65d6b5e3ad13ef06eb364e9a87fca62c75",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-side-shield.png",
+          "sha256": "8c1ba050c46a5c51454b1282fa3a01798fe09e096d51d562962cc7526694a02e",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000008",
+      "slug": "goool-england-cap-red",
+      "name": "GOOOL England Cap Red",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-eng-front-red.png",
+          "sha256": "46935eabe7f15b02ec239bd4c466d81cb16b98f734fe6602a9ad0cd9e584c225",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-side-shield.png",
+          "sha256": "8c1ba050c46a5c51454b1282fa3a01798fe09e096d51d562962cc7526694a02e",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000009",
+      "slug": "goool-argentina-cap-white",
+      "name": "GOOOL Argentina Cap White",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-arg-front-white.png",
+          "sha256": "d7a6e91987ff7b2df0af36fdd76e02b7cda5f07884b3d19102cf48f1984a109e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-arg-side-shield.png",
+          "sha256": "229f206693ed583e67decbd8fedb0d7e3cf509f085357fd15b4e507b8f1596fb",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000010",
+      "slug": "goool-argentina-cap-sky",
+      "name": "GOOOL Argentina Cap Sky Blue",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-arg-front-sky.png",
+          "sha256": "297d91a4f5d47d6fafff843fc8771e4c44fa0bdc7292418be0dce2790b54a792",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-arg-side-shield.png",
+          "sha256": "229f206693ed583e67decbd8fedb0d7e3cf509f085357fd15b4e507b8f1596fb",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000011",
+      "slug": "goool-italy-cap-navy",
+      "name": "GOOOL Italy Cap Navy",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-ita-front-navy.png",
+          "sha256": "bbb8d88ce11808ad9f45a1e575c72f1b31afef6b59e01a7b166e1dd81d35a717",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ita-side-shield.png",
+          "sha256": "c0970a87e401c26ccf9fb25f7d58344a04c5d273ee00cb757d0c83cea144a9c1",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000012",
+      "slug": "goool-italy-cap-white",
+      "name": "GOOOL Italy Cap White",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-ita-front-white.png",
+          "sha256": "4be37678414549242fd8208a24ea00efdd1efc04bbd53882415b9d9744f709e3",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ita-side-shield.png",
+          "sha256": "c0970a87e401c26ccf9fb25f7d58344a04c5d273ee00cb757d0c83cea144a9c1",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000013",
+      "slug": "goool-netherlands-cap-navy",
+      "name": "GOOOL Netherlands Cap Navy",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-ned-front-navy.png",
+          "sha256": "99b51cf5953299ad2033e2363b6afeeebf7f2599833977cd26b859db592bed62",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ned-side-shield.png",
+          "sha256": "7e4fef94bf73bbd54b5d2e32bebc2bbcb1850f09ec12922940cd9e4a797d7dc0",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000024",
+      "slug": "goool-netherlands-cap-white",
+      "name": "GOOOL Netherlands Cap White",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-ned-front-white.png",
+          "sha256": "0e9c126333244ceff2bad40a48ef15f448fc3e66eeead5e6242f920cdeeffc2e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ned-side-shield.png",
+          "sha256": "7e4fef94bf73bbd54b5d2e32bebc2bbcb1850f09ec12922940cd9e4a797d7dc0",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000014",
+      "slug": "goool-germany-cap-black",
+      "name": "GOOOL Germany Cap Black",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-ger-front-black.png",
+          "sha256": "0c7ae93e3695941175899cf4207f03186e931018164fba007de885f835710d53",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ger-side-shield.png",
+          "sha256": "fcc0f56a8ae4a6a2d2b29cdbba4a6ddfa1e75da11eaded0f04af8bc09a8006c5",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000015",
+      "slug": "goool-germany-cap-white",
+      "name": "GOOOL Germany Cap White",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-ger-front-white.png",
+          "sha256": "bdfd5367feb84bbdb884ddcc1cb072fdde1d7e9102d91d811ed8527f80f43dbc",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ger-side-shield.png",
+          "sha256": "fcc0f56a8ae4a6a2d2b29cdbba4a6ddfa1e75da11eaded0f04af8bc09a8006c5",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000016",
+      "slug": "goool-belgium-cap-red",
+      "name": "GOOOL Belgium Cap Red",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-bel-front-red.png",
+          "sha256": "6ee99665029e6ad31535f4c814d8671bfe8662169bd35966499a372e98c53107",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-bel-side-shield.png",
+          "sha256": "de07b4e2ce22e9d43332d601761ac7c10b08f18209914718fee4e0c90bab9479",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000017",
+      "slug": "goool-belgium-cap-black",
+      "name": "GOOOL Belgium Cap Black",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-bel-front-black.png",
+          "sha256": "32d680bf917943ffb9508da1b284ae498d8b1cd92b84a081433f6b078e420e18",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-bel-side-shield.png",
+          "sha256": "de07b4e2ce22e9d43332d601761ac7c10b08f18209914718fee4e0c90bab9479",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000018",
+      "slug": "goool-norway-cap-navy",
+      "name": "GOOOL Norway Cap Navy",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-nor-front-navy.png",
+          "sha256": "4ae4c5a03730bbead2e388e061c777046b2c9449f66c1010214db14d62d0e9c0",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-nor-side-shield.png",
+          "sha256": "a08051594313b45eb936c101b0ba7abbd696ca3fb03d5690b336ff12e10eb3bb",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000019",
+      "slug": "goool-norway-cap-red",
+      "name": "GOOOL Norway Cap Red",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-nor-front-red.png",
+          "sha256": "8576e976569f23cfeef3c3e12d7ddce4ff452f9e59ff77a1dfffe80b6b7765ed",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-nor-side-shield.png",
+          "sha256": "a08051594313b45eb936c101b0ba7abbd696ca3fb03d5690b336ff12e10eb3bb",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000020",
+      "slug": "goool-spain-cap-black",
+      "name": "GOOOL Spain Cap Black",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-esp-front-black.png",
+          "sha256": "39e2cd61e9df1ed3fcf221027be7778338b5c79f2d156d0650b253dc49b1479b",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-esp-side-shield.png",
+          "sha256": "cc7fb53b28fa891be66af7cda3996042aeb0c5d16bae4989e7ca8a0d106b9b86",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000021",
+      "slug": "goool-spain-cap-red",
+      "name": "GOOOL Spain Cap Red",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-esp-front-red.png",
+          "sha256": "f12c5fd1e7b0bc705f06d7ad570ad7ec21d5e52ffdb29830f7cb11b06d880888",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-esp-side-shield.png",
+          "sha256": "cc7fb53b28fa891be66af7cda3996042aeb0c5d16bae4989e7ca8a0d106b9b86",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000022",
+      "slug": "goool-france-cap-navy",
+      "name": "GOOOL France Cap Navy",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-fra-front-navy.png",
+          "sha256": "167885004c981c4ab36e1ad1a71921297e6ee26388ef7668b30c75ac2d070f67",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-fra-side-shield.png",
+          "sha256": "f694933c7fc4dca0c0f69e0ed4124ae7e770ea38c24fb1f3820c526837cfcab5",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "50000000-0000-4000-8000-000000000023",
+      "slug": "goool-france-cap-white",
+      "name": "GOOOL France Cap White",
+      "catalog_active": false,
+      "family": "country-caps",
+      "artwork_files": [
+        {
+          "path": "public/print/drop02/cap-fra-front-white.png",
+          "sha256": "88c0313f509d38efdd9905349368d707644dbac067b2f6c94ddef9d51a1d9fdc",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-fra-side-shield.png",
+          "sha256": "f694933c7fc4dca0c0f69e0ed4124ae7e770ea38c24fb1f3820c526837cfcab5",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "package_specs": [],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [
+        "Back-art selection and exact supplier color/placement require individual proof."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "70000000-0000-4000-8000-000000000001",
+      "slug": "goool-performance-tee",
+      "name": "GOOOL Performance Badge Tee",
+      "catalog_active": true,
+      "family": "core-capsule",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+          "sha256": "ca2f9bbcac8e9d0c902b4141f0b7b36428b34f2015f345b0250d85ada424218b",
+          "pixels": [
+            1500,
+            1920
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png",
+          "sha256": "81dc846b9080c6121e76f525fc26dc13e39b4a54cfbf6e99580e416971b54b31",
+          "pixels": [
+            1500,
+            1920
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png",
+          "sha256": "a530cd0eafef365280b6c20ff573e3a690143a78abc63f918a8cf0f956cffd3a",
+          "pixels": [
+            1500,
+            1920
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/spec.json",
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/spec.json",
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "70000000-0000-4000-8000-000000000002",
+      "slug": "goool-heavyweight-hoodie",
+      "name": "GOOOL Core Hoodie",
+      "catalog_active": true,
+      "family": "core-capsule",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+          "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+          "pixels": [
+            2025,
+            703
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+          "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+          "pixels": [
+            2025,
+            703
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/spec.json",
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "70000000-0000-4000-8000-000000000003",
+      "slug": "goool-heavyweight-casual-tee",
+      "name": "GOOOL Casual Wordmark Tee",
+      "catalog_active": true,
+      "family": "core-capsule",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+          "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+          "pixels": [
+            2025,
+            703
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+          "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+          "pixels": [
+            2025,
+            703
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/spec.json",
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "70000000-0000-4000-8000-000000000004",
+      "slug": "goool-touchline-cap",
+      "name": "GOOOL Touchline Cap",
+      "catalog_active": true,
+      "family": "core-capsule",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+          "sha256": "661f917ecd0c09f62532697da15c27cdc3cd8230bfccb7265452885451e0f14d",
+          "pixels": [
+            1125,
+            391
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "80000000-0000-4000-8000-000000000001",
+      "slug": "goool-athletics-modern-sport-tee",
+      "name": "GOOOL Athletics Modern Sport Tee",
+      "catalog_active": true,
+      "family": "modern",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-B_975px_CLEAN.png",
+          "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+          "pixels": [
+            975,
+            333
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-F_3300px_CLEAN.png",
+          "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+          "pixels": [
+            3300,
+            1118
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "80000000-0000-4000-8000-000000000002",
+      "slug": "goool-athletics-varsity-tee",
+      "name": "GOOOL Athletics Varsity Tee",
+      "catalog_active": true,
+      "family": "varsity",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-B_975px.png",
+          "sha256": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+          "pixels": [
+            975,
+            467
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-F_3300px.png",
+          "sha256": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+          "pixels": [
+            3300,
+            1584
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "80000000-0000-4000-8000-000000000003",
+      "slug": "goool-athletics-minimal-club-tee",
+      "name": "GOOOL Athletics Minimal Club Tee",
+      "catalog_active": true,
+      "family": "minimal",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-B_3600px.png",
+          "sha256": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+          "pixels": [
+            3600,
+            1389
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-F_1050px.png",
+          "sha256": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+          "pixels": [
+            1050,
+            331
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "80000000-0000-4000-8000-000000000004",
+      "slug": "goool-athletics-circular-badge-tee",
+      "name": "GOOOL Athletics Circular Badge Tee",
+      "catalog_active": true,
+      "family": "circular",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/artwork/GA-CIRCLE-08-NAVY-PRINT.svg",
+          "sha256": "480228dd55d2e707decf7a42e45d1edbe7302953e6f8add6d8733d6aa3cf8e9c",
+          "pixels": null,
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "80000000-0000-4000-8000-000000000005",
+      "slug": "goool-athletics-circular-center-crewneck",
+      "name": "GOOOL Athletics Circular Center Crewneck",
+      "catalog_active": true,
+      "family": "circular",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/artwork/GA-CIRCLE-09-FOREST-PRINT.svg",
+          "sha256": "b2eb1c69980d9b2bc8ddeca07d5195ed8e6362a3dfc6cd151e30793db3a8c55c",
+          "pixels": null,
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "product_id": "80000000-0000-4000-8000-000000000006",
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "name": "GOOOL Athletics Modern Sport Performance Tee",
+      "catalog_active": true,
+      "family": "modern",
+      "artwork_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-B_975px_CLEAN.png",
+          "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+          "pixels": [
+            975,
+            333
+          ],
+          "role": "delivery_copy_or_snapshot"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-F_3300px_CLEAN.png",
+          "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+          "pixels": [
+            3300,
+            1118
+          ],
+          "role": "delivery_copy_or_snapshot"
+        }
+      ],
+      "package_specs": [
+        "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/spec.json"
+      ],
+      "status": "existing_artwork_supplier_proof_required",
+      "open_items": [],
+      "manufacturing_approved_by_this_audit": false
+    }
+  ]
+}

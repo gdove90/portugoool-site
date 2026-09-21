@@ -1,0 +1,2483 @@
+[
+  {
+    "sha256": "487aef4f2e6a7a0fdd3dc22415577f0911fe17818df0d5fbaf283ac6419adbaf",
+    "bytes_each": 2178560,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/hero-crowd.png",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/assets/hero-crowd.png",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/hero-crowd.png",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/hero-crowd.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/hero-crowd.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/assets/hero-crowd.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/hero-crowd.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/assets/hero-crowd.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/hero-crowd.png"
+    ]
+  },
+  {
+    "sha256": "f0fe606aedae9bb07af711436ea57dd5045e46dbc74179514081e6b6a11e8876",
+    "bytes_each": 792,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/away-white-jersey.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/away-white-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/away-white-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/away-white-jersey.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/away-white-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/away-white-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/away-white-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/away-white-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/away-white-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/away-white-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/away-white-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/away-white-jersey.svg"
+    ]
+  },
+  {
+    "sha256": "7a7075e2fec5f4467047643caabd8fcbcdc2845e93201df2a10876de98020b63",
+    "bytes_each": 762,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/blackout-edition-jersey.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/blackout-edition-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/blackout-edition-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/blackout-edition-jersey.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/blackout-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/blackout-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/blackout-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/blackout-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/blackout-edition-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/blackout-edition-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/blackout-edition-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/blackout-edition-jersey.svg"
+    ]
+  },
+  {
+    "sha256": "5768ab36b48727e275913781a6948a5b7a05aa2666b0d2a66cba1ea0601baf40",
+    "bytes_each": 750,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/brush-script-tee.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/brush-script-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/brush-script-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/brush-script-tee.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/brush-script-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/brush-script-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/brush-script-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/brush-script-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/brush-script-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/brush-script-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/brush-script-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/brush-script-tee.svg"
+    ]
+  },
+  {
+    "sha256": "82488c6f003000a93bc677a02694bed1319d69ec5b346e5447c8cb190ef42534",
+    "bytes_each": 761,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/emerald-edition-jersey.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/emerald-edition-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/emerald-edition-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/emerald-edition-jersey.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/emerald-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/emerald-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/emerald-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/emerald-edition-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/emerald-edition-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/emerald-edition-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/emerald-edition-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/emerald-edition-jersey.svg"
+    ]
+  },
+  {
+    "sha256": "f990ccd03aaab135e47ac2be873bd25d1821c0ad7c8debe4de2a46ba816f1b51",
+    "bytes_each": 766,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/goool-tee.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/goool-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/goool-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/goool-tee.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/goool-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/goool-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/goool-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/goool-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/goool-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/goool-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/goool-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/goool-tee.svg"
+    ]
+  },
+  {
+    "sha256": "5c14382c81250e27e6f874798df268a3ffd180d27c86a7eb8f19a1cab99d7f67",
+    "bytes_each": 758,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/home-red-jersey.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/home-red-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/home-red-jersey.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/home-red-jersey.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/home-red-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/home-red-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/home-red-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/home-red-jersey.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/home-red-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/home-red-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/home-red-jersey.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/home-red-jersey.svg"
+    ]
+  },
+  {
+    "sha256": "da7a3d4369310988acd4e9a9cc50061f433707da38baec8ae3ee2afa25746a2a",
+    "bytes_each": 794,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/lisbon-to-the-world-tee.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/lisbon-to-the-world-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/lisbon-to-the-world-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/lisbon-to-the-world-tee.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/lisbon-to-the-world-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/lisbon-to-the-world-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/lisbon-to-the-world-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/lisbon-to-the-world-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/lisbon-to-the-world-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/lisbon-to-the-world-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/lisbon-to-the-world-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/lisbon-to-the-world-tee.svg"
+    ]
+  },
+  {
+    "sha256": "e550f1c3ad8377367931abc71cad38289c32a267ffb83fd58edd5301451b94ab",
+    "bytes_each": 759,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/vamos-tee.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/products/vamos-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/products/vamos-tee.svg",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/vamos-tee.svg",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/products/vamos-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/products/vamos-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/products/vamos-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/products/vamos-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/vamos-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/products/vamos-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/products/vamos-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/vamos-tee.svg"
+    ]
+  },
+  {
+    "sha256": "845d73d8626de4c43c70325fd3f8908886c8ef295dd2a1a9a5c44e71c16bc450",
+    "bytes_each": 2080366,
+    "canonical_file": "designs/ChatGPT Image Jul 7, 2026, 10_37_21 PM.png",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/designs/ChatGPT Image Jul 7, 2026, 10_37_21 PM.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/designs/ChatGPT Image Jul 7, 2026, 10_37_21 PM.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/designs/ChatGPT Image Jul 7, 2026, 10_37_21 PM.png",
+      "designs/ChatGPT Image Jul 7, 2026, 10_37_21 PM.png"
+    ]
+  },
+  {
+    "sha256": "f0f10bd37c5fb5604ea49216bf402becf1c1ef564a83ad1eac6e3e592e8aaaf9",
+    "bytes_each": 817,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/goool-cap.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/goool-cap.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/goool-cap.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/goool-cap.svg"
+    ]
+  },
+  {
+    "sha256": "8ff57f43b8a34793c8a010986904d776c2a45b63adf20cc79cb22fe447c2734a",
+    "bytes_each": 915,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/home-red-jersey-back.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/home-red-jersey-back.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/home-red-jersey-back.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/home-red-jersey-back.svg"
+    ]
+  },
+  {
+    "sha256": "15167f7703f4361961c170555b1fe6496d93a079051684135415f947ccbdf850",
+    "bytes_each": 763,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/match-day-tee.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/match-day-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/match-day-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/match-day-tee.svg"
+    ]
+  },
+  {
+    "sha256": "91cbeeab89523416992c1a00d1a5448e18e9f7bc65dbdeb5fcb00af77bd69ee6",
+    "bytes_each": 1334,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/sticker-pack.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/sticker-pack.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/sticker-pack.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/sticker-pack.svg"
+    ]
+  },
+  {
+    "sha256": "fcefebd5f24c1ff2740085876ecfad2a0ae7f81a10d753a568dba55906f7fec9",
+    "bytes_each": 2091,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/supporters-scarf.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/supporters-scarf.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/supporters-scarf.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/supporters-scarf.svg"
+    ]
+  },
+  {
+    "sha256": "92ec99ba0da31a2b1ac0cf1ec37750ce7e435f89f85fcfa9d286a33a1f861d4f",
+    "bytes_each": 922,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/terrace-flag.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/terrace-flag.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/terrace-flag.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/terrace-flag.svg"
+    ]
+  },
+  {
+    "sha256": "9c90723779db52dfb167a2056cd98fcd21f862d848a04a4d2bc06611f8babfeb",
+    "bytes_each": 765,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/we-dont-whisper-goals-tee.svg",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/uploads/Portugoool/public/products/we-dont-whisper-goals-tee.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/Portugoool/public/products/we-dont-whisper-goals-tee.svg",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/Portugoool/public/products/we-dont-whisper-goals-tee.svg"
+    ]
+  },
+  {
+    "sha256": "5f6ba85aa519dd34791d7770fa1757a3384d8c543e158748e9f23ffcbd453c9e",
+    "bytes_each": 260499,
+    "canonical_file": "designs/05_jerseys/finals/jersey-01-casa-red-BACK.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-01-casa-red-BACK.png",
+      "public/print/drop01/jersey-01-casa-red-BACK.png"
+    ]
+  },
+  {
+    "sha256": "7f5fb26c0671e2a40ea19d2798a4086e8efc1dbf3372443397609c867c193568",
+    "bytes_each": 575502,
+    "canonical_file": "designs/05_jerseys/finals/jersey-01-casa-red-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-01-casa-red-FRONT.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-01-casa-red-FRONT.png",
+      "public/print/drop01/jersey-01-casa-red-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "175ba76d0dadcc133725387b7310883fd64fa8416364ae7b22bcfdc4175c962a",
+    "bytes_each": 36531,
+    "canonical_file": "designs/05_jerseys/finals/jersey-01-casa-red-SLEEVES.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-01-casa-red-SLEEVES.png",
+      "designs/05_jerseys/finals/jersey-E2-away-red-SLEEVES.png",
+      "public/print/drop01/jersey-01-casa-red-SLEEVES.png",
+      "public/print/drop02/jersey-E2-away-red-SLEEVES.png"
+    ]
+  },
+  {
+    "sha256": "c6e9ead345b31116c60a0ede6c7d4c116f184e6959b6ffff7dc6b437ba1d11f2",
+    "bytes_each": 261597,
+    "canonical_file": "designs/05_jerseys/finals/jersey-02-marfim-white-BACK.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-02-marfim-white-BACK.png",
+      "public/print/drop01/jersey-02-marfim-white-BACK.png"
+    ]
+  },
+  {
+    "sha256": "bfdf9afd5d502af4419cc4e8cedacb73bc47a6cbd9036010148ddfbad18cabd3",
+    "bytes_each": 608981,
+    "canonical_file": "designs/05_jerseys/finals/jersey-02-marfim-white-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-02-marfim-white-FRONT.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-02-marfim-white-FRONT.png",
+      "public/print/drop01/jersey-02-marfim-white-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "89dc7fe6203e8713463a26a101b854688d454734ca1468c945fb35ed46d44768",
+    "bytes_each": 36530,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E1-home-white-SLEEVES.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-02-marfim-white-SLEEVES.png",
+      "designs/05_jerseys/finals/jersey-E1-home-white-SLEEVES.png",
+      "public/print/drop01/jersey-02-marfim-white-SLEEVES.png",
+      "public/print/drop02/jersey-E1-home-white-SLEEVES.png"
+    ]
+  },
+  {
+    "sha256": "45bec8cbb5a71e1bac8ebc9849a0df3e5fae32c969db2fcec2df8709408e9131",
+    "bytes_each": 261036,
+    "canonical_file": "designs/05_jerseys/finals/jersey-03-noite-black-BACK.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-03-noite-black-BACK.png",
+      "public/print/drop01/jersey-03-noite-black-BACK.png"
+    ]
+  },
+  {
+    "sha256": "1d6cf37496684bcd2c3388307c83e84a89be7ac467f5991c7de27fb98cf9e394",
+    "bytes_each": 542156,
+    "canonical_file": "designs/05_jerseys/finals/jersey-03-noite-black-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-03-noite-black-FRONT.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-03-noite-black-FRONT.png",
+      "public/print/drop01/jersey-03-noite-black-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "93de2402af1e165d6eea3e8431638de6903662498a1275c2fca99c291c1b44a8",
+    "bytes_each": 36528,
+    "canonical_file": "designs/05_jerseys/finals/jersey-03-noite-black-SLEEVES.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-03-noite-black-SLEEVES.png",
+      "public/print/drop01/jersey-03-noite-black-SLEEVES.png"
+    ]
+  },
+  {
+    "sha256": "00c55dcaaf5a4d0be4c0f3a5b60308c56e5015137204b318f3b9f47dda87687a",
+    "bytes_each": 260781,
+    "canonical_file": "designs/05_jerseys/finals/jersey-04-emerald-green-BACK.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-04-emerald-green-BACK.png",
+      "public/print/drop01/jersey-04-emerald-green-BACK.png"
+    ]
+  },
+  {
+    "sha256": "19d70d65c532dc4f5a79e73555529fe0c490dc93a7af8d076184d27632669b0c",
+    "bytes_each": 570847,
+    "canonical_file": "designs/05_jerseys/finals/jersey-04-emerald-green-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-04-emerald-green-FRONT.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-04-emerald-green-FRONT.png",
+      "public/print/drop01/jersey-04-emerald-green-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "17d023721867dc30cc16ea1f5d006fe7936b2955d7bb640070714fcc43be0c1c",
+    "bytes_each": 36531,
+    "canonical_file": "designs/05_jerseys/finals/jersey-04-emerald-green-SLEEVES.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-04-emerald-green-SLEEVES.png",
+      "public/print/drop01/jersey-04-emerald-green-SLEEVES.png"
+    ]
+  },
+  {
+    "sha256": "581f711c0b71a5ea92652cd377a3df34d37b645dbee74ac1efb2c16a80492e07",
+    "bytes_each": 266831,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E1-home-white-BACK.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-E1-home-white-BACK.png",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E1-home-white-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/jersey-E1-home-white-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/jersey-E1-home-white-BACK.png",
+      "public/print/drop02/jersey-E1-home-white-BACK.png"
+    ]
+  },
+  {
+    "sha256": "72f6bce7c7981ce30182d6de68bb4d3c87fde8957de22d46396981bfdf477264",
+    "bytes_each": 234197,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E1-home-white-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-E1-home-white-FRONT.png",
+      "public/print/drop02/jersey-E1-home-white-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "bf1eff9d18a33fe8e011429dec4c0c71de83518d797b7b12e2072036e0fcb8cd",
+    "bytes_each": 265861,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E2-away-red-BACK.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-E2-away-red-BACK.png",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E2-away-red-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/jersey-E2-away-red-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/jersey-E2-away-red-BACK.png",
+      "public/print/drop02/jersey-E2-away-red-BACK.png"
+    ]
+  },
+  {
+    "sha256": "d315964f92be5f2db0fb74c687cdd1975fd42f434fd86c4735b2ecbadc66973e",
+    "bytes_each": 217756,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E2-away-red-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-E2-away-red-FRONT.png",
+      "public/print/drop02/jersey-E2-away-red-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "ce744a66322ee84d9887ac5f822cef968f7d430ff766586fbdc47e4e2cb0a786",
+    "bytes_each": 266397,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E3-navy-BACK.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-E3-navy-BACK.png",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E3-navy-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/jersey-E3-navy-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/jersey-E3-navy-BACK.png",
+      "public/print/drop02/jersey-E3-navy-BACK.png"
+    ]
+  },
+  {
+    "sha256": "52fde8a5408a393012c22bd25b24127f2b08201e448a35665d7884f200cbf591",
+    "bytes_each": 221095,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E3-navy-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-E3-navy-FRONT.png",
+      "public/print/drop02/jersey-E3-navy-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "5d6ef800ac31a03ba6618c7cd26452de9dcba9c1cfd2ed9a406aba6de1565645",
+    "bytes_each": 36531,
+    "canonical_file": "designs/05_jerseys/finals/jersey-E3-navy-SLEEVES.png",
+    "paths": [
+      "designs/05_jerseys/finals/jersey-E3-navy-SLEEVES.png",
+      "public/print/drop02/jersey-E3-navy-SLEEVES.png"
+    ]
+  },
+  {
+    "sha256": "3285fb4f4cf978acfd4d2b6090c60630ee898ce972e04dd2d6fa4d66f30cbd66",
+    "bytes_each": 1177056,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1a-casa-vermelha.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/mockups/jersey-1a-casa-vermelha.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/mockups/jersey-1a-casa-vermelha.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1a-casa-vermelha.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/mockups/jersey-1a-casa-vermelha.png"
+    ]
+  },
+  {
+    "sha256": "63763ee30f69d62117509cc342c6e2b804f6b882eccdbfff9556620366b453f8",
+    "bytes_each": 957017,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1b-noite.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/mockups/jersey-1b-noite.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/mockups/jersey-1b-noite.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1b-noite.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/mockups/jersey-1b-noite.png"
+    ]
+  },
+  {
+    "sha256": "6ed972eba97462d1be993f8ea86cf601869d70a679632009e5f4896574b95a7b",
+    "bytes_each": 1317861,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1c-atlantico.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/mockups/jersey-1c-atlantico.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/mockups/jersey-1c-atlantico.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1c-atlantico.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/mockups/jersey-1c-atlantico.png"
+    ]
+  },
+  {
+    "sha256": "de39f7050f4eaeb7a15fa0b340c8f2f57c4449f6f921c9201120025a99ba4261",
+    "bytes_each": 1222919,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1d-marfim.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/mockups/jersey-1d-marfim.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/mockups/jersey-1d-marfim.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/mockups/jersey-1d-marfim.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/mockups/jersey-1d-marfim.png"
+    ]
+  },
+  {
+    "sha256": "ed9a1049c02a26b97748e287054b99ce720c9397b72347ead9521c27a56bccf6",
+    "bytes_each": 264644,
+    "canonical_file": "designs/05_jerseys/handoff_echo-apparel/printful/jersey-01-casa-red-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-01-casa-red-BACK.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-01-casa-red-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-01-casa-red-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/jersey-01-casa-red-BACK.png"
+    ]
+  },
+  {
+    "sha256": "fed1c19869378291365115fb07480b13dc3a3f18226c989426bba1225b290e35",
+    "bytes_each": 563858,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-01-casa-red-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-01-casa-red-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-01-casa-red-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "cd45eb4def9863c1ddff6ed88fb073c0f3a83be12908812c1f39c0fd80376dab",
+    "bytes_each": 265841,
+    "canonical_file": "designs/05_jerseys/handoff_echo-apparel/printful/jersey-02-marfim-white-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-02-marfim-white-BACK.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-02-marfim-white-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-02-marfim-white-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/jersey-02-marfim-white-BACK.png"
+    ]
+  },
+  {
+    "sha256": "e975e1a31c1819e962d45b7cae308d56ddecc9e57d6845dddf33b05dd4ff1b8e",
+    "bytes_each": 596622,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-02-marfim-white-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-02-marfim-white-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-02-marfim-white-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "c47e41804c13d6ab3bd0babbb7289378695247caf560d6932e084f7e33cb5b93",
+    "bytes_each": 264220,
+    "canonical_file": "designs/05_jerseys/handoff_echo-apparel/printful/jersey-03-noite-black-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-03-noite-black-BACK.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-03-noite-black-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-03-noite-black-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/jersey-03-noite-black-BACK.png"
+    ]
+  },
+  {
+    "sha256": "3067defc9e5d36e8db57673a42c07735aeffead10dbdc0556e8b780e52cd6123",
+    "bytes_each": 531165,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-03-noite-black-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-03-noite-black-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-03-noite-black-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "a5618047b0a56ab07cec1583b7efe987f7eef02dace800c0e858305f516f0614",
+    "bytes_each": 263830,
+    "canonical_file": "designs/05_jerseys/handoff_echo-apparel/printful/jersey-04-emerald-green-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-04-emerald-green-BACK.png",
+      "designs/05_jerseys/handoff_echo-apparel/printful/jersey-04-emerald-green-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-04-emerald-green-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/jersey-04-emerald-green-BACK.png"
+    ]
+  },
+  {
+    "sha256": "1efd8729a7f4f3dad6bd8cb9e5f77d11419c240489d1956a61d72212d41d4045",
+    "bytes_each": 559391,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-04-emerald-green-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/jersey-04-emerald-green-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/jersey-04-emerald-green-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "d0e5b6b64a8267fc79a97deaafe9733bddda5df644183ed757ecdc3eafa56154",
+    "bytes_each": 61644,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-back-hem-goool-shop-gold.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-back-hem-goool-shop-gold.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-back-hem-goool-shop-gold.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-back-hem-goool-shop-gold.png"
+    ]
+  },
+  {
+    "sha256": "e3a28e67873f13426e4cdf170f051206c0d1b0306b69298f1cc6989886edb295",
+    "bytes_each": 56531,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-back-hem-goool-shop-ink.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-back-hem-goool-shop-ink.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-back-hem-goool-shop-ink.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-back-hem-goool-shop-ink.png"
+    ]
+  },
+  {
+    "sha256": "361b88661299f63376e7a081f9c50f9560d4dcb3d8960aa02d279e1740a48b50",
+    "bytes_each": 52252,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-back-hem-goool-shop-white.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-back-hem-goool-shop-white.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-back-hem-goool-shop-white.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-back-hem-goool-shop-white.png"
+    ]
+  },
+  {
+    "sha256": "6b906602a4e91dcf9801003b0a5e29ecbc08e14246605ff37d97d38e4af2b102",
+    "bytes_each": 490260,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T1-echo-hero-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T1-echo-hero-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-T1-echo-hero-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T1-echo-hero-BACK.png"
+    ]
+  },
+  {
+    "sha256": "0a2d792661e5bd6f9e0be7ef5e1104b8e67de1a2d5f954f6dab7c54f1128ee83",
+    "bytes_each": 549958,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T1-echo-hero-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T1-echo-hero-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-T1-echo-hero-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T1-echo-hero-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "7b8e1319eed2d156abc6aaa6d841435aa5469ffd19d515dad139bd3b95620c12",
+    "bytes_each": 499461,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T2-echo-word-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T2-echo-word-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-T2-echo-word-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T2-echo-word-BACK.png"
+    ]
+  },
+  {
+    "sha256": "cdd11ea07ae4286c757e4f8465635f7001dfd3406730478f216e6c185c5183b9",
+    "bytes_each": 96679,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T2-echo-word-FRONT-leftchest.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T2-echo-word-FRONT-leftchest.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-T2-echo-word-FRONT-leftchest.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T2-echo-word-FRONT-leftchest.png"
+    ]
+  },
+  {
+    "sha256": "397562b71cd022e224b3ba610ecc7e50312c3a184900525d4464d3d7c95cdc41",
+    "bytes_each": 488998,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T3-radiating-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T3-radiating-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-T3-radiating-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T3-radiating-BACK.png"
+    ]
+  },
+  {
+    "sha256": "d8816f3fb0b346a175383b1c046ff972535a400406ce35d85a3f8da1d6c34bd7",
+    "bytes_each": 594373,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T3-radiating-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T3-radiating-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-T3-radiating-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful/tee-T3-radiating-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "148a93507327246056203a82057be059cb0ef3690d9016ff60941228586cdad0",
+    "bytes_each": 556668,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T5-spray-stack-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful/tee-T5-spray-stack-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful/tee-T5-spray-stack-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "8fd240aa8fafbd6bda379a13150f9e63c303e01c55b265d15912c47c22d3c359",
+    "bytes_each": 516038,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E1-home-white-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E1-home-white-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/jersey-E1-home-white-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "c2205660601ac4bb7c9edb47c52d5e7a49d4208b80b8a1c4f6abdd75591bcf38",
+    "bytes_each": 499094,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E2-away-red-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E2-away-red-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/jersey-E2-away-red-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "279691805f8b5ed6f7a0deed625313783263eb9861b62be6dd7a797de51bca51",
+    "bytes_each": 497835,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E3-navy-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/jersey-E3-navy-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/jersey-E3-navy-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "a37efff741b53273ca1f7f32e6f4d77c6bd7d76383520d648519b09a8f819238",
+    "bytes_each": 539387,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET1-echo-hero-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET1-echo-hero-BACK.png",
+      "designs/06_tshirts/finals/tee-ET1-echo-hero-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET1-echo-hero-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/tee-ET1-echo-hero-BACK.png"
+    ]
+  },
+  {
+    "sha256": "3febce316ee9b186935c99941fbb8c292de5dd2af7239313f47e531c109a443f",
+    "bytes_each": 549737,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET1-echo-hero-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET1-echo-hero-FRONT.png",
+      "designs/06_tshirts/finals/tee-ET1-echo-hero-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET1-echo-hero-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/tee-ET1-echo-hero-FRONT.png",
+      "public/print/drop02/tee-ET1-echo-hero-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "6a9fc8d0991aecc7f36ebe3156390868c6489655db29f4680b266fd7f1e3f52e",
+    "bytes_each": 505790,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET2-london-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET2-london-BACK.png",
+      "designs/06_tshirts/finals/tee-ET2-london-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET2-london-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/tee-ET2-london-BACK.png"
+    ]
+  },
+  {
+    "sha256": "b68e1747beacbd5ed7a45f7d922268882e6b62fabe01099eb665ce457b11c4ce",
+    "bytes_each": 589499,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET2-london-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET2-london-FRONT.png",
+      "designs/06_tshirts/finals/tee-ET2-london-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET2-london-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/tee-ET2-london-FRONT.png",
+      "public/print/drop02/tee-ET2-london-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "ba4de4d4bcd4f43fbe58ca3a6b92ce91bdc7b0ebc825f2770e0471a00cac52f6",
+    "bytes_each": 507432,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET3-moment-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET3-moment-BACK.png",
+      "designs/06_tshirts/finals/tee-ET3-moment-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET3-moment-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/tee-ET3-moment-BACK.png"
+    ]
+  },
+  {
+    "sha256": "199497b30826cc26c6f78d933025a9deaa65f368d12b31c34f7b5da393aef7bd",
+    "bytes_each": 539243,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET3-moment-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET3-moment-FRONT.png",
+      "designs/06_tshirts/finals/tee-ET3-moment-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET3-moment-FRONT.png",
+      "public/print/drop02/tee-ET3-moment-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "aa2d65f958cb55cc26d8606ea8005795598be95c9811643d832bce28719beb6f",
+    "bytes_each": 508521,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET4-roar-BACK.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET4-roar-BACK.png",
+      "designs/06_tshirts/finals/tee-ET4-roar-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET4-roar-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/tee-ET4-roar-BACK.png"
+    ]
+  },
+  {
+    "sha256": "a901f42191e813e6055baac888480a05897a052d242ffc50cee2fbaa3aa0fa7a",
+    "bytes_each": 541707,
+    "canonical_file": "designs/06_tshirts/finals/tee-ET4-roar-FRONT.png",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/printful-drop02/tee-ET4-roar-FRONT.png",
+      "designs/06_tshirts/finals/tee-ET4-roar-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/printful-drop02/tee-ET4-roar-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-drop02/tee-ET4-roar-FRONT.png",
+      "public/print/drop02/tee-ET4-roar-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "a742dd7dd314959955015a2b927c2555b038e9d930a56ce4310bc91f5d23ad3e",
+    "bytes_each": 595745,
+    "canonical_file": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-BLACK-Embroidery-Master-300dpi.png",
+    "paths": [
+      "designs/06_tshirts/athletics-tee/source/goool-ga-badge-black-master-3000x3300-300dpi.png",
+      "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-BLACK-Embroidery-Master-300dpi.png"
+    ]
+  },
+  {
+    "sha256": "97e2c0f1086c8c3ffac21d5a0551183875dbd4e61a07f5928d46c54ec94338f3",
+    "bytes_each": 77608,
+    "canonical_file": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-BLACK-Printful-2.5x2.75in-300dpi.png",
+    "paths": [
+      "designs/06_tshirts/athletics-tee/source/goool-ga-badge-black-printful-750x825-300dpi.png",
+      "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-BLACK-Printful-2.5x2.75in-300dpi.png"
+    ]
+  },
+  {
+    "sha256": "d1e4de800de0acbd33b6a73839e8e2034b5d50a3e4213f9ede5147e8c5b365e8",
+    "bytes_each": 627460,
+    "canonical_file": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-WHITE-Embroidery-Master-300dpi.png",
+    "paths": [
+      "designs/06_tshirts/athletics-tee/source/goool-ga-badge-white-master-3000x3300-300dpi.png",
+      "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-WHITE-Embroidery-Master-300dpi.png"
+    ]
+  },
+  {
+    "sha256": "dc3353e67613e5354e60222bbacc21ba9b54cca1c4f6981844f5889e73d76080",
+    "bytes_each": 83708,
+    "canonical_file": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-WHITE-Printful-2.5x2.75in-300dpi.png",
+    "paths": [
+      "designs/06_tshirts/athletics-tee/source/goool-ga-badge-white-printful-750x825-300dpi.png",
+      "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-WHITE-Printful-2.5x2.75in-300dpi.png"
+    ]
+  },
+  {
+    "sha256": "f676c151a681fc95d38518d867ba2a9acf3b3e8c280a748c82819bf0bd81fca0",
+    "bytes_each": 57996,
+    "canonical_file": "designs/06_tshirts/finals/brush-script-tee-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/brush-script-tee-FRONT.png",
+      "public/print/tees/brush-script-tee.png"
+    ]
+  },
+  {
+    "sha256": "43434c548004d2e1587a83795017f375909f39e1a6c80cd72642083da0f8cbea",
+    "bytes_each": 57436,
+    "canonical_file": "designs/06_tshirts/finals/goool-tee-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/goool-tee-FRONT.png",
+      "public/print/tees/goool-tee.png"
+    ]
+  },
+  {
+    "sha256": "1860b6dc5b82c413be60f5a3bda0666f5db33f2706e25eedf208f068140453fd",
+    "bytes_each": 61990,
+    "canonical_file": "designs/06_tshirts/finals/lisbon-to-the-world-tee-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/lisbon-to-the-world-tee-FRONT.png",
+      "public/print/tees/lisbon-to-the-world-tee.png"
+    ]
+  },
+  {
+    "sha256": "a55fbd52e8a976bffdc13d1cd81bf7e1e5edf812ca9828361fbb64261945b6d7",
+    "bytes_each": 40590,
+    "canonical_file": "designs/06_tshirts/finals/match-day-tee-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/match-day-tee-FRONT.png",
+      "public/print/tees/match-day-tee.png"
+    ]
+  },
+  {
+    "sha256": "68ae4f684800ccd07cc2c7a570bf13e283a23d59ab4bd0ea15c8792587a5bbf0",
+    "bytes_each": 510142,
+    "canonical_file": "designs/06_tshirts/finals/tee-G1-clean-sheet-BACK.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G1-clean-sheet-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G1-clean-sheet-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G1-clean-sheet-BACK.png",
+      "public/print/gol/tee-G1-clean-sheet-BACK.png"
+    ]
+  },
+  {
+    "sha256": "6eb23411cf7ebcf157d060e169699675b40fda57a98a7009fb61d07b35ff07dc",
+    "bytes_each": 516779,
+    "canonical_file": "designs/06_tshirts/finals/tee-G1-clean-sheet-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G1-clean-sheet-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G1-clean-sheet-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G1-clean-sheet-FRONT.png",
+      "public/print/gol/tee-G1-clean-sheet-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "eb7a267b18e17d1054db3da007a09e205bdf77e89d37b5eded330ce43f6b2650",
+    "bytes_each": 503895,
+    "canonical_file": "designs/06_tshirts/finals/tee-G2-gold-standard-BACK.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G2-gold-standard-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G2-gold-standard-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G2-gold-standard-BACK.png",
+      "public/print/gol/tee-G2-gold-standard-BACK.png"
+    ]
+  },
+  {
+    "sha256": "594652ea7460f1ac4b8c183308cda5d2869976408bcbde934d9fd2397dff839d",
+    "bytes_each": 147081,
+    "canonical_file": "designs/06_tshirts/finals/tee-G2-gold-standard-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G2-gold-standard-FRONT.png",
+      "public/print/gol/tee-G2-gold-standard-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "d1dad0c7122cd9dd5606076173ad078efe064e94a119a3c4b16138dfa9531fda",
+    "bytes_each": 502020,
+    "canonical_file": "designs/06_tshirts/finals/tee-G3-concrete-BACK.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G3-concrete-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G3-concrete-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G3-concrete-BACK.png",
+      "public/print/gol/tee-G3-concrete-BACK.png"
+    ]
+  },
+  {
+    "sha256": "9384f2535136a705a6878926e0e13a8230b624334c81d63f6a5f95add1d22e77",
+    "bytes_each": 460374,
+    "canonical_file": "designs/06_tshirts/finals/tee-G3-concrete-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G3-concrete-FRONT.png",
+      "public/print/gol/tee-G3-concrete-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "58c2229d30d3dcf66ccb746849b4c8323a3059256685deb8060392afc2ee9523",
+    "bytes_each": 517382,
+    "canonical_file": "designs/06_tshirts/finals/tee-G4-concrete-white-BACK.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G4-concrete-white-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G4-concrete-white-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G4-concrete-white-BACK.png",
+      "public/print/gol/tee-G4-concrete-white-BACK.png"
+    ]
+  },
+  {
+    "sha256": "6cefa4d052384c6a2941214b4a912c03c25732b79524fb459be1a1b8e2d08731",
+    "bytes_each": 467787,
+    "canonical_file": "designs/06_tshirts/finals/tee-G4-concrete-white-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G4-concrete-white-FRONT.png",
+      "public/print/gol/tee-G4-concrete-white-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "e2ecb1ef10db4c605b7e5e9cf028a29a5c75db57709fb6db38a914908248c7f6",
+    "bytes_each": 511202,
+    "canonical_file": "designs/06_tshirts/finals/tee-G5-concrete-black-BACK.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G5-concrete-black-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G5-concrete-black-BACK.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G5-concrete-black-BACK.png",
+      "public/print/gol/tee-G5-concrete-black-BACK.png"
+    ]
+  },
+  {
+    "sha256": "b17549a534826eb4c9475bc1edc6a246c8c7ca8536e123012ca38147696ff8a1",
+    "bytes_each": 623142,
+    "canonical_file": "designs/06_tshirts/finals/tee-G5-concrete-black-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/tee-G5-concrete-black-FRONT.png",
+      "public/print/gol/tee-G5-concrete-black-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "3fb0f164c9d908158a7ad77d16588d943117b10ef9b2b766fb8f2b16e16f6680",
+    "bytes_each": 61754,
+    "canonical_file": "designs/06_tshirts/finals/vamos-tee-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/vamos-tee-FRONT.png",
+      "public/print/tees/vamos-tee.png"
+    ]
+  },
+  {
+    "sha256": "f8f971e5ef41190b3d4370de7fdd849b3f097fb85eb6e90a2e7874f9422688f8",
+    "bytes_each": 57429,
+    "canonical_file": "designs/06_tshirts/finals/we-dont-whisper-goals-tee-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/finals/we-dont-whisper-goals-tee-FRONT.png",
+      "public/print/tees/we-dont-whisper-goals-tee.png"
+    ]
+  },
+  {
+    "sha256": "b0b452e85e3155cbf98b6630ff564dcb1759e2aa34318ede84fba822007a31cf",
+    "bytes_each": 169,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-gold-original.svg",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/gol-slash-gold-original.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-gold-original.svg"
+    ]
+  },
+  {
+    "sha256": "1383ecf6e09bf180e6502cd9f48f0cb0c262e920711d77d0f6c72fc60d1a9a83",
+    "bytes_each": 169,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-greydark.svg",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/gol-slash-greydark.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-greydark.svg"
+    ]
+  },
+  {
+    "sha256": "5bb06134343b145ab83db1b21702835151f2dfa779d2f780c7625745ccdfd433",
+    "bytes_each": 169,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-ink.svg",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/gol-slash-ink.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-ink.svg"
+    ]
+  },
+  {
+    "sha256": "376da713415f947e4c48129861f24123c3bc015a3556211d9d24c8c5886a85ea",
+    "bytes_each": 169,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-paper.svg",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/gol-slash-paper.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-slash-paper.svg"
+    ]
+  },
+  {
+    "sha256": "ee0826e7ed8cac7a795e7e2c6df15fbbdf67bc30fa0898ba006d378c45010d9f",
+    "bytes_each": 8453,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-wordmark-gold-original.svg",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/gol-wordmark-gold-original.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-wordmark-gold-original.svg"
+    ]
+  },
+  {
+    "sha256": "251e4daf1e0c22ec798bd45f4053433abff0a2ef3b7a3f948f682fa86a8653ed",
+    "bytes_each": 8453,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-wordmark-ink.svg",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/gol-wordmark-ink.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-wordmark-ink.svg"
+    ]
+  },
+  {
+    "sha256": "c33db6d567622006c53ae39d72194f02f4c090b28978867e2428d380b6db66d0",
+    "bytes_each": 8453,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-wordmark-paper.svg",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/gol-wordmark-paper.svg",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/gol-wordmark-paper.svg"
+    ]
+  },
+  {
+    "sha256": "d7d9d9625fe87dd39345849b07d720260ff592a5590ce37b63748e8766bd0321",
+    "bytes_each": 1468175,
+    "canonical_file": "designs/12_logos/concepts/logo-v3_gol-brand-sheet.png",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/gol-assets/logo-v3_gol-brand-sheet.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/gol-assets/logo-v3_gol-brand-sheet.png",
+      "designs/12_logos/concepts/logo-v3_gol-brand-sheet.png"
+    ]
+  },
+  {
+    "sha256": "64b20ae1a3308ef6a582a38e70bc8f8e03c65bdede072a540b7869d8c8839bc7",
+    "bytes_each": 582208,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G2-gold-standard-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G2-gold-standard-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G2-gold-standard-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "ee3b12dfa3353568d93a57d867a14f9766295e76bc7268bed4d88d3bad48676f",
+    "bytes_each": 598158,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G3-concrete-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G3-concrete-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G3-concrete-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "d59fef6135917efe9e92c9b19fc3ee8273c1cae0eb8e89c6c9ca473308609081",
+    "bytes_each": 604357,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G4-concrete-white-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G4-concrete-white-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G4-concrete-white-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "0147acb4e044e8405cc67a5aa356051011120106f5e59ca94140e1f9d9ad9902",
+    "bytes_each": 594230,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G5-concrete-black-FRONT.png",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/printful-gol/tee-G5-concrete-black-FRONT.png",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/printful-gol/tee-G5-concrete-black-FRONT.png"
+    ]
+  },
+  {
+    "sha256": "9ad0d108cc91d5d1bc9544ca7d61011f45a051eb1b27e1c2e28d986dcd2bae73",
+    "bytes_each": 2695775,
+    "canonical_file": "designs/15_reference/inspiration/kit-moodboard-01_DO-NOT-PRINT_fpf-crest-player-likeness.png",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/ChatGPT Image Jul 8, 2026, 05_14_42 AM.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/ChatGPT Image Jul 8, 2026, 05_14_42 AM.png",
+      "designs/15_reference/inspiration/kit-moodboard-01_DO-NOT-PRINT_fpf-crest-player-likeness.png"
+    ]
+  },
+  {
+    "sha256": "f16764ac4b8010e5c3aeb1279c02af8b899f5b74fb3e8634593dad515a897f61",
+    "bytes_each": 2504864,
+    "canonical_file": "designs/15_reference/inspiration/kit-moodboard-02_DO-NOT-PRINT_puma-fpf-marks.png",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/uploads/ChatGPT Image Jul 8, 2026, 05_15_08 AM.png",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/uploads/ChatGPT Image Jul 8, 2026, 05_15_08 AM.png",
+      "designs/15_reference/inspiration/kit-moodboard-02_DO-NOT-PRINT_puma-fpf-marks.png"
+    ]
+  },
+  {
+    "sha256": "8ca3b7784ec64f3d630ea0a8a50ae2f4b53649c0c5cb468cf47e397d7330ffab",
+    "bytes_each": 36592,
+    "canonical_file": "public/brand/goool-wordmark-ink.png",
+    "paths": [
+      "designs/10_email/mockups_email-experience/assets/wordmark-ink.png",
+      "public/brand/goool-wordmark-ink.png"
+    ]
+  },
+  {
+    "sha256": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+    "bytes_each": 40501,
+    "canonical_file": "public/brand/goool-wordmark-white.png",
+    "paths": [
+      "designs/10_email/mockups_email-experience/assets/wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/01-goool-performance-tee-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/02-goool-performance-tee-white/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/03-goool-performance-tee-true-royal/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/04-goool-heavyweight-hoodie-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/05-goool-heavyweight-hoodie-bone/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/06-goool-heavyweight-casual-tee-washed-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/07-goool-heavyweight-casual-tee-washed-grey/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/08-goool-touchline-cap-black-natural/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/09-goool-athletics-modern-sport-tee-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/10-goool-athletics-varsity-tee-washed-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/11-goool-athletics-minimal-club-tee-natural/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/12-goool-athletics-circular-badge-tee-ivory/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/14-goool-athletics-modern-sport-performance-tee-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/reference-only/source-navigation-wordmark-white.png",
+      "designs/goool-athletics-brand-label/source-navigation-wordmark-white.png",
+      "public/brand/goool-wordmark-white.png"
+    ]
+  },
+  {
+    "sha256": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+    "bytes_each": 7425789,
+    "canonical_file": "designs/16_goool_athletics/GOOOL_ATHLETICS_POD_Packet_v1.pdf",
+    "paths": [
+      "designs/16_goool_athletics/GOOOL_ATHLETICS_POD_Packet_v1.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/09-goool-athletics-modern-sport-tee-black/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/legacy-specifications.pdf"
+    ]
+  },
+  {
+    "sha256": "db0d404138b5a00d72bf6debf775c19306fc8bbe1ed645d6e9343a660228b192",
+    "bytes_each": 322305,
+    "canonical_file": "designs/16_goool_athletics/logos/GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png",
+    "paths": [
+      "designs/16_goool_athletics/logos/GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/original-logo-reference.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/original-logo-reference.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/original-logo-reference.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/original-logo-reference.png"
+    ]
+  },
+  {
+    "sha256": "e763199614160a542780facb513da3f282a70bba6e21756ab34edba3c71bb51b",
+    "bytes_each": 1809147,
+    "canonical_file": "designs/16_goool_athletics/model_shots/01-modern-sport-front.png",
+    "paths": [
+      "designs/16_goool_athletics/model_shots/01-modern-sport-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/modern-sport-front.png"
+    ]
+  },
+  {
+    "sha256": "79e00b9aeb068f1e1b4d7a58b4d23b506f93399eedad55ddf048814bf741c3e6",
+    "bytes_each": 1784492,
+    "canonical_file": "designs/16_goool_athletics/model_shots/02-modern-sport-back.png",
+    "paths": [
+      "designs/16_goool_athletics/model_shots/02-modern-sport-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/modern-sport-back.png"
+    ]
+  },
+  {
+    "sha256": "a0fae824adc63615734e225a2b030d730a086e7bc75ee406e93e1f7a3230f29b",
+    "bytes_each": 1959902,
+    "canonical_file": "designs/17_launch_imagery/stadium/varsity-front.png",
+    "paths": [
+      "designs/16_goool_athletics/model_shots/03-varsity-front.png",
+      "designs/17_launch_imagery/stadium/varsity-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/varsity-front.png"
+    ]
+  },
+  {
+    "sha256": "9f3dd241e2535376d2cbbed626aeae60a2ccde8a57fd2dfe6fb1d085d0034181",
+    "bytes_each": 1938214,
+    "canonical_file": "designs/17_launch_imagery/stadium/varsity-back.png",
+    "paths": [
+      "designs/16_goool_athletics/model_shots/04-varsity-back.png",
+      "designs/17_launch_imagery/stadium/varsity-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/varsity-back.png"
+    ]
+  },
+  {
+    "sha256": "7d099fa5413b566ff7e7537220f96bb240f250bd066b15b3078cad26e3718d4b",
+    "bytes_each": 1895822,
+    "canonical_file": "designs/16_goool_athletics/model_shots/05-minimal-club-front.png",
+    "paths": [
+      "designs/16_goool_athletics/model_shots/05-minimal-club-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/minimal-club-front.png"
+    ]
+  },
+  {
+    "sha256": "80cdebb59b0dd808f7236fac0e13fb5b8b5f14bd0fd89a9d328b135e82d135ac",
+    "bytes_each": 1804537,
+    "canonical_file": "designs/16_goool_athletics/model_shots/06-minimal-club-back.png",
+    "paths": [
+      "designs/16_goool_athletics/model_shots/06-minimal-club-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/minimal-club-back.png"
+    ]
+  },
+  {
+    "sha256": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+    "bytes_each": 52886,
+    "canonical_file": "designs/16_goool_athletics/print_masters/GA-02-B_975px.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/GA-02-B_975px.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-B_975px.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-B_975px.png"
+    ]
+  },
+  {
+    "sha256": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+    "bytes_each": 546592,
+    "canonical_file": "designs/16_goool_athletics/print_masters/GA-02-F_3300px.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/GA-02-F_3300px.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-F_3300px.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-F_3300px.png"
+    ]
+  },
+  {
+    "sha256": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+    "bytes_each": 246009,
+    "canonical_file": "designs/16_goool_athletics/print_masters/GA-03-B_3600px.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/GA-03-B_3600px.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-B_3600px.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-B_3600px.png"
+    ]
+  },
+  {
+    "sha256": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+    "bytes_each": 47702,
+    "canonical_file": "designs/16_goool_athletics/print_masters/GA-03-F_1050px.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/GA-03-F_1050px.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-F_1050px.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-F_1050px.png"
+    ]
+  },
+  {
+    "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+    "bytes_each": 24965,
+    "canonical_file": "designs/16_goool_athletics/print_masters/upload/GA-01-B_975px_CLEAN.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/upload/GA-01-B_975px_CLEAN.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-B_975px_CLEAN.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/proposed-artwork/GA-01-B_975px_CLEAN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-B_975px_CLEAN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-B_975px_CLEAN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/proposed-artwork/GA-01-B_975px_CLEAN.png"
+    ]
+  },
+  {
+    "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+    "bytes_each": 115619,
+    "canonical_file": "designs/16_goool_athletics/print_masters/upload/GA-01-F_3300px_CLEAN.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/upload/GA-01-F_3300px_CLEAN.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-F_3300px_CLEAN.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/proposed-artwork/GA-01-F_3300px_CLEAN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-F_3300px_CLEAN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-F_3300px_CLEAN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/proposed-artwork/GA-01-F_3300px_CLEAN.png"
+    ]
+  },
+  {
+    "sha256": "81cbfcc07ca59db0082850c50a75c6b7b3b9ba2465e9e0ed98591db921300ce8",
+    "bytes_each": 112185,
+    "canonical_file": "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/artwork-needs-resolution/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/artwork-needs-resolution/GA-CIRCLE-08_BADGE_NAVY_900px.png"
+    ]
+  },
+  {
+    "sha256": "239024d8b5958992db959be1f7934f11bcae2a75c39ef61245307b872bbecd84",
+    "bytes_each": 80422,
+    "canonical_file": "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-09_CREW_FOREST_750px.png",
+    "paths": [
+      "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-09_CREW_FOREST_750px.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/artwork-needs-resolution/GA-CIRCLE-09_CREW_FOREST_750px.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/artwork-needs-resolution/GA-CIRCLE-09_CREW_FOREST_750px.png"
+    ]
+  },
+  {
+    "sha256": "ae61c6911dcb384a4c797679903b0c2b88be4d5af7e12600c3feb0dbe880b253",
+    "bytes_each": 1364511,
+    "canonical_file": "designs/17_launch_imagery/performance-concepts/athletics-performance-front.png",
+    "paths": [
+      "designs/17_launch_imagery/performance-concepts/athletics-performance-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/performance-concepts/athletics-performance-front.png"
+    ]
+  },
+  {
+    "sha256": "78f6eacca917114aa904109f51fbec412ee7272f788fc2299f17e6d6773c5757",
+    "bytes_each": 1498498,
+    "canonical_file": "designs/17_launch_imagery/performance-concepts/training-line-performance-front.png",
+    "paths": [
+      "designs/17_launch_imagery/performance-concepts/training-line-performance-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/performance-concepts/training-line-performance-front.png"
+    ]
+  },
+  {
+    "sha256": "1384d2efff7785c32eb265c667bfb2d7e149c0a2e69eb2177cf5bcb8d67a0436",
+    "bytes_each": 1911968,
+    "canonical_file": "designs/17_launch_imagery/stadium/casual-washed-black-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/casual-washed-black-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/casual-washed-black-back.png"
+    ]
+  },
+  {
+    "sha256": "8fef07fb8df2b048c9a689ca917c10d0e3d2221e399e15bd23481a7494727a0c",
+    "bytes_each": 1849362,
+    "canonical_file": "designs/17_launch_imagery/stadium/casual-washed-black-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/casual-washed-black-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/casual-washed-black-front.png"
+    ]
+  },
+  {
+    "sha256": "f817554ad62bc237b1030f3429a18127746364a9954c739989be1ea88bc14f3f",
+    "bytes_each": 1948829,
+    "canonical_file": "designs/17_launch_imagery/stadium/casual-washed-grey-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/casual-washed-grey-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/casual-washed-grey-back.png"
+    ]
+  },
+  {
+    "sha256": "b96adc13a40ac0f848fb41abc2c8148c05865e0a2cdefae3201e2a6ab0221ace",
+    "bytes_each": 1956705,
+    "canonical_file": "designs/17_launch_imagery/stadium/casual-washed-grey-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/casual-washed-grey-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/casual-washed-grey-front.png"
+    ]
+  },
+  {
+    "sha256": "bd90a373cdb03886516ef73e74a5c497e8f72802b5a0edce7856dc66589af06a",
+    "bytes_each": 1790234,
+    "canonical_file": "designs/17_launch_imagery/stadium/circular-badge-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/circular-badge-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/circular-badge-back.png"
+    ]
+  },
+  {
+    "sha256": "e44f0faa4d8e1677d80539c8cf157fcf432d4c2b9d6b76db5fd6f7d44ca9c4e2",
+    "bytes_each": 1813403,
+    "canonical_file": "designs/17_launch_imagery/stadium/circular-badge-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/circular-badge-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/circular-badge-front.png"
+    ]
+  },
+  {
+    "sha256": "6b420e0be89339414b479df6749031af616b9bc7ebfb7027dc0ab17f8a09d30f",
+    "bytes_each": 2074558,
+    "canonical_file": "designs/17_launch_imagery/stadium/circular-crewneck-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/circular-crewneck-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/circular-crewneck-back.png"
+    ]
+  },
+  {
+    "sha256": "5fe7fce9e9d19efcecc18ec087f9f03f25906b757b6511cf5186928dc6664691",
+    "bytes_each": 2102206,
+    "canonical_file": "designs/17_launch_imagery/stadium/circular-crewneck-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/circular-crewneck-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/circular-crewneck-front.png"
+    ]
+  },
+  {
+    "sha256": "2259453b24eaa543097381b0be0669f31bf56dd3af1883e70db1355519a974fe",
+    "bytes_each": 1822646,
+    "canonical_file": "designs/17_launch_imagery/stadium/hoodie-black-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/hoodie-black-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/hoodie-black-back.png"
+    ]
+  },
+  {
+    "sha256": "d93bdc52eb065a4946e144d74a6ef3e5d0b7f80793e5177c809fedd4c40f72fa",
+    "bytes_each": 1868340,
+    "canonical_file": "designs/17_launch_imagery/stadium/hoodie-black-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/hoodie-black-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/hoodie-black-front.png"
+    ]
+  },
+  {
+    "sha256": "f5c8dbf2817a034ea24cec50b996f3d040b1bbc716be1b1178c3a0acb974c95c",
+    "bytes_each": 1709036,
+    "canonical_file": "designs/17_launch_imagery/stadium/hoodie-bone-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/hoodie-bone-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/hoodie-bone-back.png"
+    ]
+  },
+  {
+    "sha256": "79acf98103e512e7b95897ecc27524fa6a1b7df7e2054b12e0153d1f8cf38813",
+    "bytes_each": 1811557,
+    "canonical_file": "designs/17_launch_imagery/stadium/hoodie-bone-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/hoodie-bone-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/hoodie-bone-front.png"
+    ]
+  },
+  {
+    "sha256": "9e2695f0c34af6e6f3fe4978ffe63fd4c4d9199aa7b117bcc2bbeec38a3138bd",
+    "bytes_each": 1717996,
+    "canonical_file": "designs/17_launch_imagery/stadium/minimal-club-back-v2.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/minimal-club-back-v2.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/minimal-club-back-v2.png"
+    ]
+  },
+  {
+    "sha256": "4b1d65da0bc3acfd73d1d7f2a192c05a7c66bcb7bc3aa374f1ff054c85b7f17a",
+    "bytes_each": 1744602,
+    "canonical_file": "designs/17_launch_imagery/stadium/minimal-club-front-v2.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/minimal-club-front-v2.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/minimal-club-front-v2.png"
+    ]
+  },
+  {
+    "sha256": "2d4e8e5bf1c855f3281287808b22598244404d7a37c613e7e2ed1bd5e86ddc9f",
+    "bytes_each": 1724352,
+    "canonical_file": "designs/17_launch_imagery/stadium/modern-sport-back-v2.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/modern-sport-back-v2.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/modern-sport-back-v2.png"
+    ]
+  },
+  {
+    "sha256": "443294281abc19142d0981cf7174951c9316a8094c4b5764651938839668ba7a",
+    "bytes_each": 1693313,
+    "canonical_file": "designs/17_launch_imagery/stadium/modern-sport-front-v2.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/modern-sport-front-v2.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/modern-sport-front-v2.png"
+    ]
+  },
+  {
+    "sha256": "3261b42c930441d73c5dfa11063ac1337557bf123d400126217c615053d2b6e4",
+    "bytes_each": 1798543,
+    "canonical_file": "designs/17_launch_imagery/stadium/performance-black-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/performance-black-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/performance-black-back.png"
+    ]
+  },
+  {
+    "sha256": "15a179c68d0dd9ddbd86342ed036433ca17c3e05306ac200f24cab232f6b0123",
+    "bytes_each": 1814702,
+    "canonical_file": "designs/17_launch_imagery/stadium/performance-black-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/performance-black-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/performance-black-front.png"
+    ]
+  },
+  {
+    "sha256": "89d8da3777cd4fcf89585bbbf7873c641542b4da7b7c2da3a5c402c839f543f7",
+    "bytes_each": 1911501,
+    "canonical_file": "designs/17_launch_imagery/stadium/performance-royal-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/performance-royal-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/performance-royal-back.png"
+    ]
+  },
+  {
+    "sha256": "022befa536278f27509cd74603829b47ff2a3abf1b308e04293775e0922b3afa",
+    "bytes_each": 1948149,
+    "canonical_file": "designs/17_launch_imagery/stadium/performance-royal-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/performance-royal-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/performance-royal-front.png"
+    ]
+  },
+  {
+    "sha256": "82595095f2f299534700c1ab6bb311eb682bafee08be3bd5d6a401f4345f1a54",
+    "bytes_each": 1798562,
+    "canonical_file": "designs/17_launch_imagery/stadium/performance-white-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/performance-white-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/performance-white-back.png"
+    ]
+  },
+  {
+    "sha256": "4d4172104eadb83e2de69643bcecc43b8dbf8414be94ba7b078cbf7582abe43a",
+    "bytes_each": 1862559,
+    "canonical_file": "designs/17_launch_imagery/stadium/performance-white-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/performance-white-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/performance-white-front.png"
+    ]
+  },
+  {
+    "sha256": "414e81cfb2661fd6aecc3a8ce9f5e7b405945792f2ea4c3bb47ff57a98ebdecd",
+    "bytes_each": 1855222,
+    "canonical_file": "designs/17_launch_imagery/stadium/touchline-cap-back.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/touchline-cap-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/touchline-cap-back.png"
+    ]
+  },
+  {
+    "sha256": "b7585a9c03de6c5ec81096db180aefc9f1c98ef3a185886514d3a5c7d082fae7",
+    "bytes_each": 1919475,
+    "canonical_file": "designs/17_launch_imagery/stadium/touchline-cap-front.png",
+    "paths": [
+      "designs/17_launch_imagery/stadium/touchline-cap-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/stadium/touchline-cap-front.png"
+    ]
+  },
+  {
+    "sha256": "4195169be5bf894d9f353b3b38a4998e21a06b241aa0c49a4b2e3bf5c54e07a8",
+    "bytes_each": 1606985,
+    "canonical_file": "designs/17_launch_imagery/standardized/casual-washed-black-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/casual-washed-black-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/casual-washed-black-back.png"
+    ]
+  },
+  {
+    "sha256": "440ef5cbdad29c8d3f047cfa820163de5094f25a54dead72bc35961ddad9874c",
+    "bytes_each": 1467024,
+    "canonical_file": "designs/17_launch_imagery/standardized/casual-washed-black-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/casual-washed-black-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/casual-washed-black-front.png"
+    ]
+  },
+  {
+    "sha256": "ad12ea37bd49f3a957aaa86fc39920ddaf76ad184d1ba3850105d36633b7cd7e",
+    "bytes_each": 1766245,
+    "canonical_file": "designs/17_launch_imagery/standardized/casual-washed-grey-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/casual-washed-grey-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/casual-washed-grey-back.png"
+    ]
+  },
+  {
+    "sha256": "ee51396651a8c15e5cc5baf9ed09d7d1324a85cc22146aa0f2fef82d70b4d55a",
+    "bytes_each": 1738929,
+    "canonical_file": "designs/17_launch_imagery/standardized/casual-washed-grey-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/casual-washed-grey-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/casual-washed-grey-front.png"
+    ]
+  },
+  {
+    "sha256": "da6087c45c4b5861f231b4e674858a115a079dc7fdc001ca04efe4c37345ed50",
+    "bytes_each": 1483607,
+    "canonical_file": "designs/17_launch_imagery/standardized/circular-badge-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/circular-badge-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/circular-badge-back.png"
+    ]
+  },
+  {
+    "sha256": "c0ccfa4072fa946853f513e60bef50aafd253fe4e8a0b2f0666151d35d83f72f",
+    "bytes_each": 1513117,
+    "canonical_file": "designs/17_launch_imagery/standardized/circular-badge-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/circular-badge-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/circular-badge-front.png"
+    ]
+  },
+  {
+    "sha256": "0ecfc0112af2b6dd6465a609f9d1f1e0ce38d78e4444aa49510313f33973509f",
+    "bytes_each": 2050925,
+    "canonical_file": "designs/17_launch_imagery/standardized/circular-crewneck-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/circular-crewneck-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/circular-crewneck-back.png"
+    ]
+  },
+  {
+    "sha256": "7a57e7d8f5c2fa2ac81a23128638abb9cc8c537f59cd751b07182477fe82e52c",
+    "bytes_each": 2100072,
+    "canonical_file": "designs/17_launch_imagery/standardized/circular-crewneck-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/circular-crewneck-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/circular-crewneck-front.png"
+    ]
+  },
+  {
+    "sha256": "d0081fa109e9b8febf6f4518ef67417ab113735b0822a9cbd779e69edb295141",
+    "bytes_each": 1584684,
+    "canonical_file": "designs/17_launch_imagery/standardized/hoodie-black-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/hoodie-black-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/hoodie-black-back.png"
+    ]
+  },
+  {
+    "sha256": "fc7d164fff9e6e47d535f2472947e6a1f0317a6bbc455c953cbf51f502fd2be6",
+    "bytes_each": 1521601,
+    "canonical_file": "designs/17_launch_imagery/standardized/hoodie-black-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/hoodie-black-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/hoodie-black-front.png"
+    ]
+  },
+  {
+    "sha256": "e18480abe0b0a6ff4c53bbde265dec8db6f795fa93c2ffa60f9161cae92721dc",
+    "bytes_each": 1605389,
+    "canonical_file": "designs/17_launch_imagery/standardized/hoodie-bone-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/hoodie-bone-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/hoodie-bone-back.png"
+    ]
+  },
+  {
+    "sha256": "00da9bdc398410e2e719e42fedc3de1bed98f71256bd5ff8395123366a0aff48",
+    "bytes_each": 1605474,
+    "canonical_file": "designs/17_launch_imagery/standardized/hoodie-bone-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/hoodie-bone-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/hoodie-bone-front.png"
+    ]
+  },
+  {
+    "sha256": "064c1e3f7ae07b9c7ef2fe316c0b297f21676d5fa920dd95031db562e5994939",
+    "bytes_each": 1410719,
+    "canonical_file": "designs/17_launch_imagery/standardized/minimal-club-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/minimal-club-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/minimal-club-back.png"
+    ]
+  },
+  {
+    "sha256": "9df7560c3644cdb49117122f5c5fa53915600a8e3c5905599ee88378928d6ebc",
+    "bytes_each": 1378089,
+    "canonical_file": "designs/17_launch_imagery/standardized/minimal-club-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/minimal-club-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/minimal-club-front.png"
+    ]
+  },
+  {
+    "sha256": "ca3d587e8391f88e7b523991ff346eae3ba0df9660337cddeef8af91785e18c8",
+    "bytes_each": 1486156,
+    "canonical_file": "designs/17_launch_imagery/standardized/modern-sport-back-v3.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/modern-sport-back-v3.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/modern-sport-back-v3.png"
+    ]
+  },
+  {
+    "sha256": "322eee8512e24739ee5a21a049a9d64e73fd5e0913f47b1e8d01a813a153aa8b",
+    "bytes_each": 1422302,
+    "canonical_file": "designs/17_launch_imagery/standardized/modern-sport-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/modern-sport-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/modern-sport-front.png"
+    ]
+  },
+  {
+    "sha256": "c4c27d7dc2c327f10fb350c1e2600126e3a3db337cc2855708dcde69eac2d202",
+    "bytes_each": 1566720,
+    "canonical_file": "designs/17_launch_imagery/standardized/performance-black-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/performance-black-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/performance-black-back.png"
+    ]
+  },
+  {
+    "sha256": "fc7e41f6045b626c3c19832c6024ef67699784b064866b86feb253c71d9e2530",
+    "bytes_each": 1493629,
+    "canonical_file": "designs/17_launch_imagery/standardized/performance-black-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/performance-black-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/performance-black-front.png"
+    ]
+  },
+  {
+    "sha256": "1403216dcdf7f8d8fe7fc91622781c889c17357ffa9b42b3e66a695d8ddb5df8",
+    "bytes_each": 1688480,
+    "canonical_file": "designs/17_launch_imagery/standardized/performance-royal-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/performance-royal-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/performance-royal-back.png"
+    ]
+  },
+  {
+    "sha256": "52875f7d35ff352c7996216c00cdff4d495621690d84a8917aa730c7cef22328",
+    "bytes_each": 1761373,
+    "canonical_file": "designs/17_launch_imagery/standardized/performance-royal-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/performance-royal-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/performance-royal-front.png"
+    ]
+  },
+  {
+    "sha256": "fc8c546ab90a61ac879ccf6b3c97cb2c5081e2595bf05ce7fa4b01a0620757d8",
+    "bytes_each": 1486546,
+    "canonical_file": "designs/17_launch_imagery/standardized/performance-white-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/performance-white-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/performance-white-back.png"
+    ]
+  },
+  {
+    "sha256": "b0dbd05acfbc52336adb5a678571206ff4ad78d14e1af5d7f2f848baf4364b4d",
+    "bytes_each": 1516571,
+    "canonical_file": "designs/17_launch_imagery/standardized/performance-white-front-v2.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/performance-white-front-v2.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/performance-white-front-v2.png"
+    ]
+  },
+  {
+    "sha256": "a6f0dafabd890e7c7df1ad58a020f07352664b10e3a79183994af48af53ecee0",
+    "bytes_each": 1785760,
+    "canonical_file": "designs/17_launch_imagery/standardized/touchline-cap-back.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/touchline-cap-back.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/touchline-cap-back.png"
+    ]
+  },
+  {
+    "sha256": "0259e9ab60f5aad846965f97633ababa35daa5f3fb330d5bb2f083015053262e",
+    "bytes_each": 1715031,
+    "canonical_file": "designs/17_launch_imagery/standardized/touchline-cap-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/touchline-cap-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/touchline-cap-front.png"
+    ]
+  },
+  {
+    "sha256": "2ade23181360645f57533c944779c6079d7e9642cc0f4e2a7981b3e40210df18",
+    "bytes_each": 1524414,
+    "canonical_file": "designs/17_launch_imagery/standardized/varsity-back-v3.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/varsity-back-v3.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/varsity-back-v3.png"
+    ]
+  },
+  {
+    "sha256": "5820c484bfe10635de572a33cb54258d78b2640dbc7aedc3a765c0d4f2058e1e",
+    "bytes_each": 1473020,
+    "canonical_file": "designs/17_launch_imagery/standardized/varsity-front.png",
+    "paths": [
+      "designs/17_launch_imagery/standardized/varsity-front.png",
+      "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original/standardized/varsity-front.png"
+    ]
+  },
+  {
+    "sha256": "ca2f9bbcac8e9d0c902b4141f0b7b36428b34f2015f345b0250d85ada424218b",
+    "bytes_each": 526119,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/01_Performance_Tee_Artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/01-goool-performance-tee-black/artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/01_Performance_Tee_Artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+      "output/pdf/GOOOL_SAMPLE_PACKET_FRONT_ONLY_2026-09-12/01_Performance_Tee_Artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png"
+    ]
+  },
+  {
+    "sha256": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+    "bytes_each": 2543099,
+    "canonical_file": "designs/goool-athletics-brand-label/approved-tag-concept.png",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/01-goool-performance-tee-black/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/02-goool-performance-tee-white/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/03-goool-performance-tee-true-royal/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/04-goool-heavyweight-hoodie-black/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/05-goool-heavyweight-hoodie-bone/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/06-goool-heavyweight-casual-tee-washed-black/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/07-goool-heavyweight-casual-tee-washed-grey/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/08-goool-touchline-cap-black-natural/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/09-goool-athletics-modern-sport-tee-black/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/10-goool-athletics-varsity-tee-washed-black/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/11-goool-athletics-minimal-club-tee-natural/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/12-goool-athletics-circular-badge-tee-ivory/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/reference-only/approved-tag-concept.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/14-goool-athletics-modern-sport-performance-tee-black/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/reference-only/approved-tag-concept.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/reference-only/approved-tag-concept.png",
+      "designs/goool-athletics-brand-label/approved-tag-concept.png"
+    ]
+  },
+  {
+    "sha256": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+    "bytes_each": 908234,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/GOOOL_POD_SAMPLE_SPECIFICATIONS.pdf",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/01-goool-performance-tee-black/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/02-goool-performance-tee-white/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/03-goool-performance-tee-true-royal/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/04-goool-heavyweight-hoodie-black/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/05-goool-heavyweight-hoodie-bone/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/legacy-specifications.pdf",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/08-goool-touchline-cap-black-natural/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/legacy-specifications.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/legacy-specifications.pdf",
+      "designs/GOOOL_POD_SAMPLE_PACKET/GOOOL_POD_SAMPLE_SPECIFICATIONS.pdf"
+    ]
+  },
+  {
+    "sha256": "61e9fc61e9edb764d1275afc45446c0ffb156cd55a182087be044b11414f4feb",
+    "bytes_each": 38062,
+    "canonical_file": "public/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/01-goool-performance-tee-black/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+      "public/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "820e451c7a74abcba85d4ca2232daf0c89564ccd8b04c8f3eb7e3f5059a32ce3",
+    "bytes_each": 26430,
+    "canonical_file": "public/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/01-goool-performance-tee-black/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+      "public/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "81dc846b9080c6121e76f525fc26dc13e39b4a54cfbf6e99580e416971b54b31",
+    "bytes_each": 513720,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/02-goool-performance-tee-white/artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png"
+    ]
+  },
+  {
+    "sha256": "228eeef8ec53001cd7c9d24c26d0ef5a27e81e006daff8bbb2a03959361218de",
+    "bytes_each": 34546,
+    "canonical_file": "public/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/02-goool-performance-tee-white/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+      "public/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "de61d1c95c28263b8c03f9189be4790907beef58aa711004606e6e3ddcbfd8c1",
+    "bytes_each": 21222,
+    "canonical_file": "public/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/02-goool-performance-tee-white/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+      "public/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "a530cd0eafef365280b6c20ff573e3a690143a78abc63f918a8cf0f956cffd3a",
+    "bytes_each": 513045,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/03-goool-performance-tee-true-royal/artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png"
+    ]
+  },
+  {
+    "sha256": "e0624a89300e04c517d36e5c5b4986eb83c0736a4112847a33bc5432957655a1",
+    "bytes_each": 84372,
+    "canonical_file": "public/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/03-goool-performance-tee-true-royal/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+      "public/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "f7a7928c6235bf422aeb149b43c1ed7adb34e3b8fa44a9f6bfa222eb194207ae",
+    "bytes_each": 51282,
+    "canonical_file": "public/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/03-goool-performance-tee-true-royal/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+      "public/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+    "bytes_each": 192502,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/02_Hoodie_Artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/04-goool-heavyweight-hoodie-black/artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/06-goool-heavyweight-casual-tee-washed-black/artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/02_Hoodie_Artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/03_Casual_Tee_Artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+      "output/pdf/GOOOL_SAMPLE_PACKET_FRONT_ONLY_2026-09-12/02_Hoodie_Artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+      "output/pdf/GOOOL_SAMPLE_PACKET_FRONT_ONLY_2026-09-12/03_Casual_Tee_Artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png"
+    ]
+  },
+  {
+    "sha256": "270bca016b0b82fcd3dca75b894a4fd6c49072c0a1e4d8c398591ab1163a2f9c",
+    "bytes_each": 36546,
+    "canonical_file": "public/products/GOOOL_STD_HOODIE_BLACK_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/04-goool-heavyweight-hoodie-black/reference-only/mockups/1-GOOOL_STD_HOODIE_BLACK_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/reference-only/mockups/1-GOOOL_STD_HOODIE_BLACK_FRONT.webp",
+      "public/products/GOOOL_STD_HOODIE_BLACK_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "91c5cd1e72fa7115e0145026ebdc2701290f52c777a85c05108fe2d629cf4932",
+    "bytes_each": 26054,
+    "canonical_file": "public/products/GOOOL_STD_HOODIE_BLACK_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/04-goool-heavyweight-hoodie-black/reference-only/mockups/2-GOOOL_STD_HOODIE_BLACK_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/reference-only/mockups/2-GOOOL_STD_HOODIE_BLACK_BACK.webp",
+      "public/products/GOOOL_STD_HOODIE_BLACK_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+    "bytes_each": 183719,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/05-goool-heavyweight-hoodie-bone/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/07-goool-heavyweight-casual-tee-washed-grey/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png"
+    ]
+  },
+  {
+    "sha256": "b0f917f361f999249b34a34444e256eab9160b371419345e0c624de5b4710171",
+    "bytes_each": 42532,
+    "canonical_file": "public/products/GOOOL_STD_HOODIE_BONE_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/05-goool-heavyweight-hoodie-bone/reference-only/mockups/1-GOOOL_STD_HOODIE_BONE_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/reference-only/mockups/1-GOOOL_STD_HOODIE_BONE_FRONT.webp",
+      "public/products/GOOOL_STD_HOODIE_BONE_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "6ca954aa3c68e77261b06fccbedbeec83804e826d053b3e366a720963fc8e597",
+    "bytes_each": 29884,
+    "canonical_file": "public/products/GOOOL_STD_HOODIE_BONE_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/05-goool-heavyweight-hoodie-bone/reference-only/mockups/2-GOOOL_STD_HOODIE_BONE_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/reference-only/mockups/2-GOOOL_STD_HOODIE_BONE_BACK.webp",
+      "public/products/GOOOL_STD_HOODIE_BONE_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "79bbb1f3c447d340eb6ffcb9f80c49cce1b093b9afb854ab944183ac1177cdf9",
+    "bytes_each": 40438,
+    "canonical_file": "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/mockups/1-GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/mockups/1-GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
+      "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "886260259b7d2fdea7e1946c3b653bb4d15901c280d518d0b852bf184e1c5854",
+    "bytes_each": 38268,
+    "canonical_file": "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/mockups/2-GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/mockups/2-GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp",
+      "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "20c91f65ee2027ef26a0d53daf576f534175d752f8f11615cad4539e8eb63234",
+    "bytes_each": 88956,
+    "canonical_file": "public/products/GOOOL_STD_CASUAL_WASHED_GREY_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/mockups/1-GOOOL_STD_CASUAL_WASHED_GREY_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/mockups/1-GOOOL_STD_CASUAL_WASHED_GREY_FRONT.webp",
+      "public/products/GOOOL_STD_CASUAL_WASHED_GREY_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "37c9cc5ae1edb80e64dc9c7f34818896a78789df5858a15fd4660854365ed7be",
+    "bytes_each": 91302,
+    "canonical_file": "public/products/GOOOL_STD_CASUAL_WASHED_GREY_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/mockups/2-GOOOL_STD_CASUAL_WASHED_GREY_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/mockups/2-GOOOL_STD_CASUAL_WASHED_GREY_BACK.webp",
+      "public/products/GOOOL_STD_CASUAL_WASHED_GREY_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "55ec1e78db0daf8e29f3f4269c11b4d926909486d1487ed50568f9a3f9e74775",
+    "bytes_each": 68722,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.pdf",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/front-reference.pdf",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/front-reference.pdf",
+      "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.pdf",
+      "output/pdf/GOOOL_SAMPLE_PACKET_FRONT_ONLY_2026-09-12/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.pdf"
+    ]
+  },
+  {
+    "sha256": "661f917ecd0c09f62532697da15c27cdc3cd8230bfccb7265452885451e0f14d",
+    "bytes_each": 72518,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+      "output/pdf/GOOOL_SAMPLE_PACKET_FRONT_ONLY_2026-09-12/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png"
+    ]
+  },
+  {
+    "sha256": "19fa384c4c51bf626e1c77874db26d8e3ebb50c6d952573c05d0fe5cc49048fa",
+    "bytes_each": 96532,
+    "canonical_file": "public/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/08-goool-touchline-cap-black-natural/reference-only/mockups/1-GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/mockups/1-GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+      "public/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "2b139e8031c46e24899ab5832803a540faa387161e9ece4088957bade49b8c07",
+    "bytes_each": 87304,
+    "canonical_file": "public/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/08-goool-touchline-cap-black-natural/reference-only/mockups/2-GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/mockups/2-GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+      "public/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "59e560cf93543b944353e49b255feafc74855f1a296f85873078c64505cb9a28",
+    "bytes_each": 27670,
+    "canonical_file": "public/products/GOOOL_STD_MODERN_SPORT_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/09-goool-athletics-modern-sport-tee-black/reference-only/mockups/1-GOOOL_STD_MODERN_SPORT_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/reference-only/mockups/1-GOOOL_STD_MODERN_SPORT_FRONT.webp",
+      "public/products/GOOOL_STD_MODERN_SPORT_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "128fe6e282575d8a69f6352537eda7690eff84ccbd49503876b3e5e734deebd9",
+    "bytes_each": 24216,
+    "canonical_file": "public/products/GOOOL_STD_MODERN_SPORT_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/09-goool-athletics-modern-sport-tee-black/reference-only/mockups/2-GOOOL_STD_MODERN_SPORT_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/reference-only/mockups/2-GOOOL_STD_MODERN_SPORT_BACK.webp",
+      "public/products/GOOOL_STD_MODERN_SPORT_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "f91e2bbd547190ecd397034e5c0feec822a1620494440e39115e44204bd2f08d",
+    "bytes_each": 37470,
+    "canonical_file": "public/products/GOOOL_STD_VARSITY_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/mockups/1-GOOOL_STD_VARSITY_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/mockups/1-GOOOL_STD_VARSITY_FRONT.webp",
+      "public/products/GOOOL_STD_VARSITY_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "c0530eae78af6bbbe73cab8e78927c118f802b03ffad123ae6d8b3b6172cefd3",
+    "bytes_each": 27296,
+    "canonical_file": "public/products/GOOOL_STD_VARSITY_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/mockups/2-GOOOL_STD_VARSITY_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/mockups/2-GOOOL_STD_VARSITY_BACK.webp",
+      "public/products/GOOOL_STD_VARSITY_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "a7152372523a8e24c3619f7b78ccf76cca3a9a47e073056075abcf45befa25b0",
+    "bytes_each": 24056,
+    "canonical_file": "public/products/GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/mockups/1-GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/mockups/1-GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
+      "public/products/GOOOL_STD_MINIMAL_CLUB_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "8cbe313d0592e4792b3e61a9c131c8433aaa160ce77bb81bcb02d2b430c3031e",
+    "bytes_each": 25836,
+    "canonical_file": "public/products/GOOOL_STD_MINIMAL_CLUB_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/mockups/2-GOOOL_STD_MINIMAL_CLUB_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/mockups/2-GOOOL_STD_MINIMAL_CLUB_BACK.webp",
+      "public/products/GOOOL_STD_MINIMAL_CLUB_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "b466d38e72f7319e0d4b90d0049024bba9c4788d75760abddc93f7715cf9ac0b",
+    "bytes_each": 35558,
+    "canonical_file": "public/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/mockups/1-GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/mockups/1-GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
+      "public/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "f596403c83d2077c9b36cf2505974b526eead7055694a0b8817bdf65928cc223",
+    "bytes_each": 31172,
+    "canonical_file": "public/products/GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/mockups/2-GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/mockups/2-GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
+      "public/products/GOOOL_STD_CIRCULAR_BADGE_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "c4eda143fd04611afd96cd222ef6743bd4989f095d5bddd3b2807229bd5e30d6",
+    "bytes_each": 157186,
+    "canonical_file": "public/products/GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/mockups/1-GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/mockups/1-GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
+      "public/products/GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "ba85905b4ecfda2db9979dd67024a941159a7667245b5c21718ab7e02ff235ef",
+    "bytes_each": 128992,
+    "canonical_file": "public/products/GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/mockups/2-GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/mockups/2-GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp",
+      "public/products/GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp"
+    ]
+  },
+  {
+    "sha256": "a320b96b6399a3f0c148f7fbf0abb4460b86362c986a84e4e3c3679a485a6d1d",
+    "bytes_each": 26202,
+    "canonical_file": "public/products/GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp",
+    "paths": [
+      "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/mockups/1-GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/mockups/1-GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp",
+      "public/products/GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp"
+    ]
+  },
+  {
+    "sha256": "4bc5de6c77b9a20fc30ae809a5307e9b6c170d79e4919cef9e57803e98555e81",
+    "bytes_each": 17331,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png"
+    ]
+  },
+  {
+    "sha256": "e67e80ebadc436f25de7f508884e8ee1671024a7563b4d6776db1a1552716917",
+    "bytes_each": 32020,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg"
+    ]
+  },
+  {
+    "sha256": "a633ec57863afc6eb8c538eca3ea52f9d20d06dfc018d75105b20eee840fb9ff",
+    "bytes_each": 43903,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png"
+    ]
+  },
+  {
+    "sha256": "fe8ad4fb0876e5901446535883c02db3eb4e04d2ae1c9b605a13c79498f882fb",
+    "bytes_each": 32020,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg"
+    ]
+  },
+  {
+    "sha256": "3a642d9ebf6ca9f6ee0d7a81d3de7d8a9aa19e62eac9243cc4d5d1a5d57ae21a",
+    "bytes_each": 105405,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-08-NAVY-PRINT.png",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/artwork/GA-CIRCLE-08-NAVY-PRINT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-08-NAVY-PRINT.png"
+    ]
+  },
+  {
+    "sha256": "480228dd55d2e707decf7a42e45d1edbe7302953e6f8add6d8733d6aa3cf8e9c",
+    "bytes_each": 53558,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-08-NAVY-PRINT.svg",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/artwork/GA-CIRCLE-08-NAVY-PRINT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-08-NAVY-PRINT.svg"
+    ]
+  },
+  {
+    "sha256": "e55ca60206a097a09d980c52b1e944ba66da82a0af984969a892c1fe07fc6066",
+    "bytes_each": 85856,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-09-FOREST-PRINT.png",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/artwork/GA-CIRCLE-09-FOREST-PRINT.png",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-09-FOREST-PRINT.png"
+    ]
+  },
+  {
+    "sha256": "b2eb1c69980d9b2bc8ddeca07d5195ed8e6362a3dfc6cd151e30793db3a8c55c",
+    "bytes_each": 53562,
+    "canonical_file": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-09-FOREST-PRINT.svg",
+    "paths": [
+      "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/artwork/GA-CIRCLE-09-FOREST-PRINT.svg",
+      "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-09-FOREST-PRINT.svg"
+    ]
+  },
+  {
+    "sha256": "02ce4d42b76963764c870fe2b7eff6f07ab3e92ba72c14a2000997b2427eae3e",
+    "bytes_each": 27444,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/05_Private_Label_Artwork/GOOOL_PRIVATE_LABEL_APPAREL_MASTER.png",
+    "paths": [
+      "designs/goool-badge-future-designs/goool-shield-football-source.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/05_Private_Label_Artwork/GOOOL_PRIVATE_LABEL_APPAREL_MASTER.png",
+      "output/pdf/GOOOL_SAMPLE_PACKET_FRONT_ONLY_2026-09-12/05_Private_Label_Artwork/GOOOL_PRIVATE_LABEL_APPAREL_MASTER.png"
+    ]
+  },
+  {
+    "sha256": "98273f506ab6e56eafdd52a776f5ad9e1770536df3f0dd46816f01b9bf9fab76",
+    "bytes_each": 1857535,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/second colorway first capsule",
+    "paths": [
+      "designs/GOOOL_POD_SAMPLE_PACKET/06_Alternate_Colorway_Concepts/GOOOL_NAVY_CREAM_BURGUNDY_CONCEPT_BOARD.png",
+      "designs/GOOOL_POD_SAMPLE_PACKET/second colorway first capsule"
+    ]
+  },
+  {
+    "sha256": "2fca1f6a0be3b3290937be9e483fc8fbe3cd2f07be630675afb78f9677dc066e",
+    "bytes_each": 1887586,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/01_Performance_Tee/GOOOL_MODEL_ST720_TRUE_ROYAL.png",
+    "paths": [
+      "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/01_Performance_Tee/GOOOL_MODEL_ST720_TRUE_ROYAL.png",
+      "designs/model-mockups/alternate-colorways/GOOOL_MODEL_ST720_TRUE_ROYAL.png",
+      "public/products/GOOOL_LIFESTYLE_06_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V2.png"
+    ]
+  },
+  {
+    "sha256": "465014a0ffbe913db54431ba7d4e8a97bbb74d5438de7ea47f77e170110838b6",
+    "bytes_each": 1873092,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/01_Performance_Tee/GOOOL_MODEL_ST720_WHITE.png",
+    "paths": [
+      "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/01_Performance_Tee/GOOOL_MODEL_ST720_WHITE.png",
+      "designs/model-mockups/alternate-colorways/GOOOL_MODEL_ST720_WHITE.png",
+      "public/products/GOOOL_LIFESTYLE_05_ST720_PERFORMANCE_TEE_WHITE.png"
+    ]
+  },
+  {
+    "sha256": "f360c21ac2ebf499b15502bdc3757796824e5c0114a77f555093b8779f9ca10d",
+    "bytes_each": 1864816,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/02_Core_Hoodie/GOOOL_MODEL_IND4000_BONE.png",
+    "paths": [
+      "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/02_Core_Hoodie/GOOOL_MODEL_IND4000_BONE.png",
+      "designs/model-mockups/alternate-colorways/GOOOL_MODEL_IND4000_BONE.png",
+      "public/products/GOOOL_LIFESTYLE_07_IND4000_HOODIE_BONE.png"
+    ]
+  },
+  {
+    "sha256": "7f54684185bbbd8a20e53e32c7afa057994eb0efda95468a6ffd921a6efd167a",
+    "bytes_each": 2072442,
+    "canonical_file": "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/03_Casual_Tee/GOOOL_MODEL_4810GD_WASHED_GREY.png",
+    "paths": [
+      "designs/GOOOL_POD_SAMPLE_PACKET/08_Model_Mockups/03_Casual_Tee/GOOOL_MODEL_4810GD_WASHED_GREY.png",
+      "designs/model-mockups/alternate-colorways/GOOOL_MODEL_4810GD_WASHED_GREY.png",
+      "public/products/GOOOL_LIFESTYLE_08_4810GD_CASUAL_TEE_WASHED_GREY.png"
+    ]
+  },
+  {
+    "sha256": "1adedbb235a382a9d268f794af3e029922556603656ef88920baccc1f05d548a",
+    "bytes_each": 19742,
+    "canonical_file": "public/products/lisbon-to-the-world-tee-back.webp",
+    "paths": [
+      "public/products/engoooland-echo-hero-tee-back.webp",
+      "public/products/lisbon-to-the-world-tee-back.webp"
+    ]
+  },
+  {
+    "sha256": "b36ee76ea1b70a27d8afe3a1c58e374c1733b6d01b7e86ec84745d05bf744b5f",
+    "bytes_each": 24278,
+    "canonical_file": "public/products/engoooland-roar-tee-back.webp",
+    "paths": [
+      "public/products/engoooland-roar-tee-back.webp",
+      "public/products/london-to-the-world-tee-back.webp"
+    ]
+  },
+  {
+    "sha256": "58e019f1f11629f23c9bbb4aa6a7c5e180afd7b7abbd61b7b6044160c5987e7e",
+    "bytes_each": 34740,
+    "canonical_file": "public/products/goool-tee-back.webp",
+    "paths": [
+      "public/products/goool-tee-back.webp",
+      "public/products/made-for-the-moment-tee-back.webp"
+    ]
+  },
+  {
+    "sha256": "6a557c47221ba2a73747c3f045409f03ae68b80f45745f0cfdc2ee506f33417e",
+    "bytes_each": 32785,
+    "canonical_file": "designs/02_homepage/handoff_drop01/website-design-mockup/project/Portugoool Homepage.dc.html",
+    "paths": [
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/Portugoool Homepage.dc.html",
+      "designs/02_homepage/handoff_drop01/website-design-mockup/project/design_handoff_homepage_iteration01/Portugoool Homepage.dc.html",
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/Portugoool Homepage.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Portugoool Homepage.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/Portugoool Homepage.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_homepage_iteration01/Portugoool Homepage.dc.html",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/Portugoool Homepage.dc.html",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/design_handoff_homepage_iteration01/Portugoool Homepage.dc.html"
+    ]
+  },
+  {
+    "sha256": "87ce6b32b62c7c0dd02c8a84094911958f38e62a002b383883a016495917cba4",
+    "bytes_each": 32649,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Apparel Spec Sheet.dc.html",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/Apparel Spec Sheet.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Apparel Spec Sheet.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/Apparel Spec Sheet.dc.html"
+    ]
+  },
+  {
+    "sha256": "15c16d6fd075a6813361ea2be57732b63826dc725d8751bbc2d72a74790a92b4",
+    "bytes_each": 26527,
+    "canonical_file": "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/ENGOOOLAND Drop 02 Spec Sheet.dc.html",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/ENGOOOLAND Drop 02 Spec Sheet.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/ENGOOOLAND Drop 02 Spec Sheet.dc.html"
+    ]
+  },
+  {
+    "sha256": "cd06e257890d10719830c09b4607ed578259339a08977784d44f6404e98bde6c",
+    "bytes_each": 18614,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/GOOOL Brand.dc.html",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/GOOOL Brand.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/GOOOL Brand.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/GOOOL Brand.dc.html"
+    ]
+  },
+  {
+    "sha256": "b422592162d448bb76aefaca0af442dcc1b5077674818b67ce3eb690d4e9b0fe",
+    "bytes_each": 9296,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Logo Concept.dc.html",
+    "paths": [
+      "designs/05_jerseys/handoff_drop02_england/design_handoff_goool_rebrand/Logo Concept.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Logo Concept.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_goool_rebrand/Logo Concept.dc.html",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/Logo Concept.dc.html"
+    ]
+  },
+  {
+    "sha256": "ea38493fd2398e7bb5fd95e236cb2261681738720beb97afa8a5087a81021758",
+    "bytes_each": 43601,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Apparel Concepts.dc.html",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Apparel Concepts.dc.html",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/Apparel Concepts.dc.html"
+    ]
+  },
+  {
+    "sha256": "d3a65cc8ce0e759849eaa1ca985d0fbc49bafb3212f9029731ca08d1bda42293",
+    "bytes_each": 206,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Canvas.dc.html",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/Canvas.dc.html",
+      "designs/12_logos/handoff_goool-brand/website-design-mockup/project/Canvas.dc.html"
+    ]
+  },
+  {
+    "sha256": "3c9d0ec7fbb78cdac89822795e59b4592d13eb41603bc926fd396371b7485531",
+    "bytes_each": 14446,
+    "canonical_file": "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/GOL Line Tees.dc.html",
+    "paths": [
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/GOL Line Tees.dc.html",
+      "designs/06_tshirts/handoff_gol-line/website-design-mockup/project/design_handoff_gol_line/GOL Line Tees.dc.html"
+    ]
+  }
+]

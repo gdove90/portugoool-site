@@ -1,0 +1,1539 @@
+{
+  "root": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL",
+  "staging": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\artwork-audit\\staged",
+  "at_utc": "2026-09-21T07:53:01.817144+00:00",
+  "moves": [
+    {
+      "source": "designs/apliiq-upload-packages-2026-09-21",
+      "destination": "designs/_archive/artwork-audit-2026-09-21/apliiq-upload-packages-v1",
+      "files": {
+        "CATALOG-INDEX.json": "d7e8f21a2c37bee386839abd4b9f5e75a115fdb5f66b733ec3151605e8f0fdfa",
+        "CLAUDE-IMPORT-PROMPT.md": "f85485a89e457623a09dec30894992e18324fc8570411265edab62d7971f54f5",
+        "OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "PACKAGE-FILES.json": "e94122a9be6c2433d810278d859ee5fd5d31ee007ca208941c3e159dbc97751f",
+        "SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "SOURCE-FILES.json": "19f9a7f4d5c3c3b5f2541dd6c9d3dbf8bef7fbae42ec155a97bcdb367d9aff30",
+        "START-HERE.md": "48eeaf88e0b2670a14b81684de2b57d69c467c63a8b58cd80f11d322cbc21d7e",
+        "VERIFICATION-RESULT.json": "bae53de37c4197ae8cee4b8f900bd1601e539b728e3ea1816870e5a29b85063d",
+        "verify-packages.py": "e2b04d5efc46b8700ca1789c4f2e21cb6b6e39e8feebfdcadbdd5ae8aa02307b",
+        "archives/01-goool-performance-tee-black.zip": "d597fd8588d2856afec86f6e568c3f3832bcd17233ee0f0d2058ec28cf74a4c8",
+        "archives/02-goool-performance-tee-white.zip": "f9888d4e6e46acdb31f79af55ef77da8f8615dcf7834170cd5bb5e803fcc86e4",
+        "archives/03-goool-performance-tee-true-royal.zip": "95a4b2aa60e6d66c789fef437c09472ba162f727e0c740bae791672fa832ca2d",
+        "archives/04-goool-heavyweight-hoodie-black.zip": "bf0e90e29aff0e90742c75555c79c6fac70ef47e965c1b501de4a45e9d1319e3",
+        "archives/05-goool-heavyweight-hoodie-bone.zip": "42ca570964d3a2ef3040fb2d0de8bc24857c726a6fc5e340db3fb4cbd789b633",
+        "archives/06-goool-heavyweight-casual-tee-washed-black.zip": "f590b3768fa63637e24bd909be9a06c9b17f84ea5e0ccaade97be194943366f2",
+        "archives/07-goool-heavyweight-casual-tee-washed-grey.zip": "57b3a591fcbc8aaa664e8a654fefccbed0648e2729011e4cd6e4480484857177",
+        "archives/08-goool-touchline-cap-black-natural.zip": "02ad52f19ecfdd56c48a2fa827590a44c6559a5aaaa09439e3c42089f84942c1",
+        "archives/09-goool-athletics-modern-sport-tee-black.zip": "fddad0c9428ada7ec4687ca7fdc0a00de57fa9b50086e64260b975a9606a2e04",
+        "archives/10-goool-athletics-varsity-tee-washed-black.zip": "e389d6dc1c88e9908d91190cd5eba3ffdd814fd08761126a1a955f7a669e118f",
+        "archives/11-goool-athletics-minimal-club-tee-natural.zip": "0c76403b35c1300f2f2879f77005a9e4043bf273b99f1dbddde798dc0f8e2373",
+        "archives/12-goool-athletics-circular-badge-tee-ivory.zip": "50a34e94b19b1d41d526b30f0f894b12b02c7b18f32900a88e08fa9a2af1fb0f",
+        "archives/13-goool-athletics-circular-center-crewneck-gray-heather.zip": "ca4dbc685db2ae5eaf267e53eacac8ebeb8b78bf3972448fa118ed005578687b",
+        "archives/14-goool-athletics-modern-sport-performance-tee-black.zip": "0425da6241aae92bcfca05bf732d434975f853b80cb1dba86ad2b04f646a0695",
+        "build-provenance/build_packages.py": "87610c66a1d7ffcaed73ce926ceef0eefbfdf4c0c86a9f3659a3f5e8b5d8a99d",
+        "build-provenance/export-catalog.cjs": "0db6ab4948485c6aeff2adc057c3ffad9061f4cd5098c2fa2060566b29c52433",
+        "build-provenance/finalize_packages.py": "95276fcf2bf61ae2043b6078365f18942aab6e54910f5fec7ea3dc70105feeaf",
+        "source-snapshot/active-catalog.json": "e83612b03a7d70a655dae69874f39d27fc27892e6fb42c3882ccf4faf09a9acd",
+        "source-snapshot/circular-PRODUCTION_NOTES.md": "2679d71fafc377235b6a1c55895ce0ecb21394e8e207b7a88bc9983e18f16979",
+        "packages/01-goool-performance-tee-black/import-plan.json": "0b27d0bac8cddd424c405af68922cea3826fca9e93e40bf4cfe99845d7ec5f20",
+        "packages/01-goool-performance-tee-black/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/01-goool-performance-tee-black/SHA256SUMS.json": "81300a8b2f364a7fda61dfdb6e2670e46b7ecab5ec66dda101702f3fb4b75ff0",
+        "packages/01-goool-performance-tee-black/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/01-goool-performance-tee-black/spec.json": "0e8fce3a754a06f8bfb8d7e35ff06691c96a7b70e6121e5de6a6d26fd8f023d6",
+        "packages/01-goool-performance-tee-black/SPEC.md": "00929fea643d0c44a93f20fad8c228fabfa39ac75fb2950c93f0fcf8b9c48d8b",
+        "packages/01-goool-performance-tee-black/verification-record.json": "6baf3a0eebc0f8d0cbb7e37642bdb900bc3ae6d515178c956ec43beda73d53f4",
+        "packages/02-goool-performance-tee-white/import-plan.json": "e2b9abef7fd707551eec4ee9f2b971d35d7cf46daa1c64010cf0fd280aa74305",
+        "packages/02-goool-performance-tee-white/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/02-goool-performance-tee-white/SHA256SUMS.json": "b9468a3beba85310c7c07a4cc12db38a81e0df57e4ac8a8f2a4187244b3139be",
+        "packages/02-goool-performance-tee-white/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/02-goool-performance-tee-white/spec.json": "2e23f49c23adc278a1cf5a25e87bb2be582789556d067c48f3405af4dc620343",
+        "packages/02-goool-performance-tee-white/SPEC.md": "e3918e967c23dc8d264a38259b686a335e659c40dcc3501de786e08537b6b330",
+        "packages/02-goool-performance-tee-white/verification-record.json": "af3c2981c40d6057faa7a85451acf7b83e9127e984bdbedb4c01a5dc9c992a46",
+        "packages/03-goool-performance-tee-true-royal/import-plan.json": "93dfa6bd3576c71b607bc54f787788bbe5653d23fa5c2d5d21cdbdc218a1e14e",
+        "packages/03-goool-performance-tee-true-royal/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/03-goool-performance-tee-true-royal/SHA256SUMS.json": "bdef0817b54170650fe4730afac56daf7dc1b5daea7a3aecbb06815667ef5b94",
+        "packages/03-goool-performance-tee-true-royal/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/03-goool-performance-tee-true-royal/spec.json": "4ae78dd67ad3ede26bd8c22025bfb3e4d5fa1f2a92c2bc9fd570dfe5ae00ad1c",
+        "packages/03-goool-performance-tee-true-royal/SPEC.md": "1a5a29473f98cd7d78472a50c0510505178d8da3c444849854a5d5d05a496200",
+        "packages/03-goool-performance-tee-true-royal/verification-record.json": "f9d5985dbcaa546207958f24cda14ae607ee71b84b782f207f51f260a8c154cd",
+        "packages/04-goool-heavyweight-hoodie-black/import-plan.json": "788a6faa941fd500d0d9d0447e6c79bfefee7df972f97917874897f0b29b61c6",
+        "packages/04-goool-heavyweight-hoodie-black/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/04-goool-heavyweight-hoodie-black/SHA256SUMS.json": "8f219146cf088beb7831f1309057ad314d53a639298f519e6eb71dde381ddd0a",
+        "packages/04-goool-heavyweight-hoodie-black/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/04-goool-heavyweight-hoodie-black/spec.json": "6fea28f8c7946181a596fc421647d4d8037d6d598e32e073e6358136fea83fa6",
+        "packages/04-goool-heavyweight-hoodie-black/SPEC.md": "dff93dfd051e5e17dbd9d1c4e7eb417f98e933932f2700f1d3ae0a316723aa17",
+        "packages/04-goool-heavyweight-hoodie-black/verification-record.json": "237af9b81808e3924829e48999b2b30845fe01b0a770f75ddef938667d39eba7",
+        "packages/05-goool-heavyweight-hoodie-bone/import-plan.json": "bdf753f1e29692a3ca5c531a5b656cd22db90ac51de83aa3e93ad830c051e874",
+        "packages/05-goool-heavyweight-hoodie-bone/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/05-goool-heavyweight-hoodie-bone/SHA256SUMS.json": "ac2e6154a405db1acaf208540f7e8d735ae92e247b2fe83dd1946505e9306c15",
+        "packages/05-goool-heavyweight-hoodie-bone/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/05-goool-heavyweight-hoodie-bone/spec.json": "016115b69aff50e15f07d432bf4af365481287e8a474c4ea7110368854cff2ae",
+        "packages/05-goool-heavyweight-hoodie-bone/SPEC.md": "7014ad01d41c9db6441f035c7d853edcae26181fa8ea5ec64f6b9cad0d4ef870",
+        "packages/05-goool-heavyweight-hoodie-bone/verification-record.json": "2dfa45dcecc35b93ad3ab87ba0639cdc0681d24bcdb2264f99395bc6ec01733b",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/import-plan.json": "55b370d83cbb7f3c2e5bdced43fd6d2cb1f44e5092ba737363c248e9c6977fdf",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/SHA256SUMS.json": "a02e5263072501c3cee3abbe07246857b56d53625c0d751ba79632b780360890",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/spec.json": "771041a2caa15367a3edff903c4c067489351e7b8406ed06f12fca61b44a000a",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/SPEC.md": "6b06701c393416c6323aa3663db87a4a67bcb976bbbf3931bae5990fccaae0bf",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/verification-record.json": "5a7186fe01c9f4ae2aedbd999b0d303e820ab5353f5563ad3a01a192312fe798",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/import-plan.json": "7492ec4c20ba82abd6ab339f9aa42ad7a2ce5d4368dd751af300b1e53d8f1dc1",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/SHA256SUMS.json": "b819bc76087722adbbd8d79d0576d62d2dfa54c83ee3e642b87a87d6af9dbfc6",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/spec.json": "de8684022908acc5275f797280eff33526c367d33d75173ee8fd0b759012c0b5",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/SPEC.md": "2af06deb7723b3da4919c6239e95214ecb55bc26d7f412af6e67633857f9d7fd",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/verification-record.json": "946a66502e9d06311e4c24932e86f0f6bddae142f2b58e818fe39cec2d1fba6a",
+        "packages/08-goool-touchline-cap-black-natural/import-plan.json": "96198fa44d8dc42eb2b4ca088a8c9e379e7b6eab4a1cc8900d77cd0c02c3f8fb",
+        "packages/08-goool-touchline-cap-black-natural/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/08-goool-touchline-cap-black-natural/SHA256SUMS.json": "73143cb692fc9b613d2828a57e2633e7e2bcc67dd07371be32c655b8831b7be2",
+        "packages/08-goool-touchline-cap-black-natural/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/08-goool-touchline-cap-black-natural/spec.json": "d25682ea165cb15985c3ed2ec595bb75eb44e3a69e3cbfdc9e24e0d2f95f8bd4",
+        "packages/08-goool-touchline-cap-black-natural/SPEC.md": "57e203e2925ac91ab1304be04b1800404e1b0cbfc27c7a4368b8d7ee1cde48db",
+        "packages/08-goool-touchline-cap-black-natural/verification-record.json": "d538d484d7f785d4f37a3d53c295c566a6042c6a854f5c804838fed7d8551689",
+        "packages/09-goool-athletics-modern-sport-tee-black/import-plan.json": "3b0cbcd93ae49e71477f69fce5b1ae93de277ce15855b4bff5886aed8535f97f",
+        "packages/09-goool-athletics-modern-sport-tee-black/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/09-goool-athletics-modern-sport-tee-black/SHA256SUMS.json": "cc9959f1085faeaa18d5025f62a7db52e686c4b431ec50527bfeb0e03061e1b4",
+        "packages/09-goool-athletics-modern-sport-tee-black/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/09-goool-athletics-modern-sport-tee-black/spec.json": "0ad7e48bf69b56daffaa0ecfd0b5a0c91dee8c6b7e0d44737370cdf70b45e985",
+        "packages/09-goool-athletics-modern-sport-tee-black/SPEC.md": "267ae8b912d7101cca15b6e9d793374ef5e1f6a886804de7a711c782bf270491",
+        "packages/09-goool-athletics-modern-sport-tee-black/verification-record.json": "e40d0cfe871e0c76ebe947396c13ebe1c2d6b1db1bef082099452635f352bc25",
+        "packages/10-goool-athletics-varsity-tee-washed-black/import-plan.json": "ce23cb1be95b0ad0dd164ff9693c24ba1050d30158c49e668d54362896ffe3e8",
+        "packages/10-goool-athletics-varsity-tee-washed-black/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/10-goool-athletics-varsity-tee-washed-black/SHA256SUMS.json": "5033bad159fa8fce7a086a83ab4771b002e048173f069d7c6bae52d706c3cd60",
+        "packages/10-goool-athletics-varsity-tee-washed-black/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/10-goool-athletics-varsity-tee-washed-black/spec.json": "0dcc42b60ae3e32e3af80b753f3b0e222675094796ab3af3f4100e4c3495dc51",
+        "packages/10-goool-athletics-varsity-tee-washed-black/SPEC.md": "8a44d43a6d68f855ac1320f862882ba88e4dc45d7d7487bdbe433975c8a20472",
+        "packages/10-goool-athletics-varsity-tee-washed-black/verification-record.json": "e3f3c9e5bfe3f05bfdfac152d1ef359a0b1d54bc7eb321c0e6ec95f1fbf8fd7d",
+        "packages/11-goool-athletics-minimal-club-tee-natural/import-plan.json": "9f159ce7b5735fb0f99db96dbc3bea3f9d35dc5b2862fdd8bf513cea0e420d1e",
+        "packages/11-goool-athletics-minimal-club-tee-natural/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/11-goool-athletics-minimal-club-tee-natural/SHA256SUMS.json": "1e21cc2623752e74779ba97133442b58d4414b8213ee1ab52603d4cf65680729",
+        "packages/11-goool-athletics-minimal-club-tee-natural/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/11-goool-athletics-minimal-club-tee-natural/spec.json": "f29e8217312d6127b1bb8eb4e6c1bb23c392194c35a605b137ba4aaf947511a2",
+        "packages/11-goool-athletics-minimal-club-tee-natural/SPEC.md": "e90aa044bcde61ff3b8a8885065ad53b30a56e008a361caad57d46bc15017675",
+        "packages/11-goool-athletics-minimal-club-tee-natural/verification-record.json": "405d70e2422c1572118302935863b897c823c4f65ad11ae4400430aaa537619c",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/import-plan.json": "6f976d3bbdf84ed7a60c9957e08b3cebecffe6947b95942778d910b7d90acc3d",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/SHA256SUMS.json": "84fa542b64abd6df4ad59dcc4cdf606dbf310d33065128ff66b953483339dab9",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/spec.json": "2a1168d662f1304299b84008afc76321f3db26f144e1f6c0cd83742c26426c82",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/SPEC.md": "ab3f392a0205c25644b854c96d6b760914ff7d718127c8633034b81139ce5cfd",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/verification-record.json": "7156dd284071fe97fd91bc135a4829fe887e3560747f22ee3492ce2b2828a5cb",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/import-plan.json": "6e9300ad95fe9c852309be447038d3497d2ad2b44be9634160eb5ccd17e37521",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/SHA256SUMS.json": "fa8b223b59b8dd117e432d153bcd508736a019842a73ab3df3344f0cbf51bc39",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/spec.json": "28077534709816ab6bac139c4bdae395ae85260b8c0eee866b47b54a1f903e08",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/SPEC.md": "f6792d2737f4f923e27368ae0c10de328ef4e22d21265a69647a7d1acd2bd6c3",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/verification-record.json": "c6539ab3bdb851abbd1b15a716e72afed881f5ddb95ea74ecb5036231af6d2cc",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/import-plan.json": "03ec78402652df28a9da6ff5540fc44bc56301fc0102e5c765eca1bb86857ad7",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/SHA256SUMS.json": "aa71ce436bff112deb27d47e1af8c443cde98831a6cc8adc316f999232cd7da2",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/spec.json": "86dccd0f1c1f95cc037ba7278b0fddd4a76a52bc96a2df7cc2ed4a30d582b8b5",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/SPEC.md": "1d56cad32d56d0757f140438c2f681ea020219e267885ca440c200f3ec175ac5",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/verification-record.json": "801f9c144ee506f46b72e477ad2a3e24c1414d509823c0fcbf606b184edca41b",
+        "packages/01-goool-performance-tee-black/artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png": "ca2f9bbcac8e9d0c902b4141f0b7b36428b34f2015f345b0250d85ada424218b",
+        "packages/01-goool-performance-tee-black/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/01-goool-performance-tee-black/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/01-goool-performance-tee-black/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/01-goool-performance-tee-black/reference-only/supplier-record.json": "f3e1a8f7ea98e0ab28f3409fb2357eb3efbc9c01e4061cb32ef14ec53efe539d",
+        "packages/01-goool-performance-tee-black/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/01-goool-performance-tee-black/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/01-goool-performance-tee-black/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/01-goool-performance-tee-black/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp": "61e9fc61e9edb764d1275afc45446c0ffb156cd55a182087be044b11414f4feb",
+        "packages/01-goool-performance-tee-black/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_BLACK_BACK.webp": "820e451c7a74abcba85d4ca2232daf0c89564ccd8b04c8f3eb7e3f5059a32ce3",
+        "packages/02-goool-performance-tee-white/artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png": "81dc846b9080c6121e76f525fc26dc13e39b4a54cfbf6e99580e416971b54b31",
+        "packages/02-goool-performance-tee-white/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/02-goool-performance-tee-white/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/02-goool-performance-tee-white/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/02-goool-performance-tee-white/reference-only/supplier-record.json": "8d570e87d81341b75695210b02cd9b7e756e352b40c722525e926823c32408bc",
+        "packages/02-goool-performance-tee-white/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/02-goool-performance-tee-white/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/02-goool-performance-tee-white/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/02-goool-performance-tee-white/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp": "228eeef8ec53001cd7c9d24c26d0ef5a27e81e006daff8bbb2a03959361218de",
+        "packages/02-goool-performance-tee-white/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_WHITE_BACK.webp": "de61d1c95c28263b8c03f9189be4790907beef58aa711004606e6e3ddcbfd8c1",
+        "packages/03-goool-performance-tee-true-royal/artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png": "a530cd0eafef365280b6c20ff573e3a690143a78abc63f918a8cf0f956cffd3a",
+        "packages/03-goool-performance-tee-true-royal/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/03-goool-performance-tee-true-royal/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/03-goool-performance-tee-true-royal/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/03-goool-performance-tee-true-royal/reference-only/supplier-record.json": "cc5c6a1ba5c4fc3a655d65bfc4f7c23d4ed11980f809833efb68d19d60003b58",
+        "packages/03-goool-performance-tee-true-royal/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/03-goool-performance-tee-true-royal/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/03-goool-performance-tee-true-royal/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/03-goool-performance-tee-true-royal/reference-only/mockups/1-GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp": "e0624a89300e04c517d36e5c5b4986eb83c0736a4112847a33bc5432957655a1",
+        "packages/03-goool-performance-tee-true-royal/reference-only/mockups/2-GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp": "f7a7928c6235bf422aeb149b43c1ed7adb34e3b8fa44a9f6bfa222eb194207ae",
+        "packages/04-goool-heavyweight-hoodie-black/artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+        "packages/04-goool-heavyweight-hoodie-black/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/04-goool-heavyweight-hoodie-black/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/04-goool-heavyweight-hoodie-black/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/04-goool-heavyweight-hoodie-black/reference-only/supplier-record.json": "1493c3047bf03a7dc015f6784913d9e78c3470cd430e73c5109a3d818a3b58d2",
+        "packages/04-goool-heavyweight-hoodie-black/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/04-goool-heavyweight-hoodie-black/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/04-goool-heavyweight-hoodie-black/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/04-goool-heavyweight-hoodie-black/reference-only/mockups/1-GOOOL_STD_HOODIE_BLACK_FRONT.webp": "270bca016b0b82fcd3dca75b894a4fd6c49072c0a1e4d8c398591ab1163a2f9c",
+        "packages/04-goool-heavyweight-hoodie-black/reference-only/mockups/2-GOOOL_STD_HOODIE_BLACK_BACK.webp": "91c5cd1e72fa7115e0145026ebdc2701290f52c777a85c05108fe2d629cf4932",
+        "packages/05-goool-heavyweight-hoodie-bone/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+        "packages/05-goool-heavyweight-hoodie-bone/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/05-goool-heavyweight-hoodie-bone/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/05-goool-heavyweight-hoodie-bone/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/05-goool-heavyweight-hoodie-bone/reference-only/supplier-record.json": "a936b6c2ca47f16175c14d2641a98b328c585443096b8f651a31fe5ceb97e5ae",
+        "packages/05-goool-heavyweight-hoodie-bone/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/05-goool-heavyweight-hoodie-bone/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/05-goool-heavyweight-hoodie-bone/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/05-goool-heavyweight-hoodie-bone/reference-only/mockups/1-GOOOL_STD_HOODIE_BONE_FRONT.webp": "b0f917f361f999249b34a34444e256eab9160b371419345e0c624de5b4710171",
+        "packages/05-goool-heavyweight-hoodie-bone/reference-only/mockups/2-GOOOL_STD_HOODIE_BONE_BACK.webp": "6ca954aa3c68e77261b06fccbedbeec83804e826d053b3e366a720963fc8e597",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/supplier-record.json": "247a6e9aca61fd08930869efe6dfecb1156f6d552a61d0c446590904ed12471f",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/mockups/1-GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp": "79bbb1f3c447d340eb6ffcb9f80c49cce1b093b9afb854ab944183ac1177cdf9",
+        "packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/mockups/2-GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp": "886260259b7d2fdea7e1946c3b653bb4d15901c280d518d0b852bf184e1c5854",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/supplier-record.json": "af16ba59a77ff3938b4715599949767502ab6f9839751f1f69f6811e7462d836",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/mockups/1-GOOOL_STD_CASUAL_WASHED_GREY_FRONT.webp": "20c91f65ee2027ef26a0d53daf576f534175d752f8f11615cad4539e8eb63234",
+        "packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/mockups/2-GOOOL_STD_CASUAL_WASHED_GREY_BACK.webp": "37c9cc5ae1edb80e64dc9c7f34818896a78789df5858a15fd4660854365ed7be",
+        "packages/08-goool-touchline-cap-black-natural/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/08-goool-touchline-cap-black-natural/reference-only/legacy-specifications-text.txt": "dd8d353e6edb324de641c4618fbd210174d673d8ccad86c22be339273571027c",
+        "packages/08-goool-touchline-cap-black-natural/reference-only/legacy-specifications.pdf": "10615ed01b9004fa08a0370093c60d16bb0eecae814acc670e2af821d1e666f4",
+        "packages/08-goool-touchline-cap-black-natural/reference-only/supplier-record.json": "db526a123bd5b2dd963f034b2a86c38bcf3529d8577e9a22fbf213b2ec7f5d65",
+        "packages/08-goool-touchline-cap-black-natural/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/08-goool-touchline-cap-black-natural/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/08-goool-touchline-cap-black-natural/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/front-reference.pdf": "55ec1e78db0daf8e29f3f4269c11b4d926909486d1487ed50568f9a3f9e74775",
+        "packages/08-goool-touchline-cap-black-natural/reference-only/embroidery/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png": "661f917ecd0c09f62532697da15c27cdc3cd8230bfccb7265452885451e0f14d",
+        "packages/08-goool-touchline-cap-black-natural/reference-only/mockups/1-GOOOL_STD_TOUCHLINE_CAP_FRONT.webp": "19fa384c4c51bf626e1c77874db26d8e3ebb50c6d952573c05d0fe5cc49048fa",
+        "packages/08-goool-touchline-cap-black-natural/reference-only/mockups/2-GOOOL_STD_TOUCHLINE_CAP_BACK.webp": "2b139e8031c46e24899ab5832803a540faa387161e9ece4088957bade49b8c07",
+        "packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-B_975px_CLEAN.png": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+        "packages/09-goool-athletics-modern-sport-tee-black/artwork/GA-01-F_3300px_CLEAN.png": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+        "packages/09-goool-athletics-modern-sport-tee-black/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/09-goool-athletics-modern-sport-tee-black/reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+        "packages/09-goool-athletics-modern-sport-tee-black/reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+        "packages/09-goool-athletics-modern-sport-tee-black/reference-only/supplier-record.json": "930cd7fe683da6f68ffa3817f019329c94e0e83fbb0ade322baa5dd4e9a55d9f",
+        "packages/09-goool-athletics-modern-sport-tee-black/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/09-goool-athletics-modern-sport-tee-black/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/09-goool-athletics-modern-sport-tee-black/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/09-goool-athletics-modern-sport-tee-black/reference-only/mockups/1-GOOOL_STD_MODERN_SPORT_FRONT.webp": "59e560cf93543b944353e49b255feafc74855f1a296f85873078c64505cb9a28",
+        "packages/09-goool-athletics-modern-sport-tee-black/reference-only/mockups/2-GOOOL_STD_MODERN_SPORT_BACK.webp": "128fe6e282575d8a69f6352537eda7690eff84ccbd49503876b3e5e734deebd9",
+        "packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-B_975px.png": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+        "packages/10-goool-athletics-varsity-tee-washed-black/artwork/GA-02-F_3300px.png": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+        "packages/10-goool-athletics-varsity-tee-washed-black/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/10-goool-athletics-varsity-tee-washed-black/reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+        "packages/10-goool-athletics-varsity-tee-washed-black/reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+        "packages/10-goool-athletics-varsity-tee-washed-black/reference-only/supplier-record.json": "81c6fae55d6e320a5e5002f9e63bf6fc88329226a40acf641224b464073aaced",
+        "packages/10-goool-athletics-varsity-tee-washed-black/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/10-goool-athletics-varsity-tee-washed-black/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/10-goool-athletics-varsity-tee-washed-black/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/10-goool-athletics-varsity-tee-washed-black/reference-only/mockups/1-GOOOL_STD_VARSITY_FRONT.webp": "f91e2bbd547190ecd397034e5c0feec822a1620494440e39115e44204bd2f08d",
+        "packages/10-goool-athletics-varsity-tee-washed-black/reference-only/mockups/2-GOOOL_STD_VARSITY_BACK.webp": "c0530eae78af6bbbe73cab8e78927c118f802b03ffad123ae6d8b3b6172cefd3",
+        "packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-B_3600px.png": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+        "packages/11-goool-athletics-minimal-club-tee-natural/artwork/GA-03-F_1050px.png": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+        "packages/11-goool-athletics-minimal-club-tee-natural/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/11-goool-athletics-minimal-club-tee-natural/reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+        "packages/11-goool-athletics-minimal-club-tee-natural/reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+        "packages/11-goool-athletics-minimal-club-tee-natural/reference-only/supplier-record.json": "5505f6f53a5522d27a2c9507650093d89ba8c2b1e293a502e7f7d50992fe7730",
+        "packages/11-goool-athletics-minimal-club-tee-natural/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/11-goool-athletics-minimal-club-tee-natural/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/11-goool-athletics-minimal-club-tee-natural/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/11-goool-athletics-minimal-club-tee-natural/reference-only/mockups/1-GOOOL_STD_MINIMAL_CLUB_FRONT.webp": "a7152372523a8e24c3619f7b78ccf76cca3a9a47e073056075abcf45befa25b0",
+        "packages/11-goool-athletics-minimal-club-tee-natural/reference-only/mockups/2-GOOOL_STD_MINIMAL_CLUB_BACK.webp": "8cbe313d0592e4792b3e61a9c131c8433aaa160ce77bb81bcb02d2b430c3031e",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/LAUNCH_SELECTION.md": "2604b42b713a2f2b3f4c347aa064769e22ac4c7ebb2a582ba26646008b91c53f",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/original-logo-reference.png": "db0d404138b5a00d72bf6debf775c19306fc8bbe1ed645d6e9343a660228b192",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/PRODUCTION_NOTES.md": "2679d71fafc377235b6a1c55895ce0ecb21394e8e207b7a88bc9983e18f16979",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/supplier-record.json": "7967236806e07666242d377bdcc4a1427c0eabee4b9b88943954e6820ff754d4",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/artwork-needs-resolution/GA-CIRCLE-08_BADGE_NAVY_900px.png": "81cbfcc07ca59db0082850c50a75c6b7b3b9ba2465e9e0ed98591db921300ce8",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/mockups/1-GOOOL_STD_CIRCULAR_BADGE_FRONT.webp": "b466d38e72f7319e0d4b90d0049024bba9c4788d75760abddc93f7715cf9ac0b",
+        "packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/mockups/2-GOOOL_STD_CIRCULAR_BADGE_BACK.webp": "f596403c83d2077c9b36cf2505974b526eead7055694a0b8817bdf65928cc223",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/LAUNCH_SELECTION.md": "2604b42b713a2f2b3f4c347aa064769e22ac4c7ebb2a582ba26646008b91c53f",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/original-logo-reference.png": "db0d404138b5a00d72bf6debf775c19306fc8bbe1ed645d6e9343a660228b192",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/PRODUCTION_NOTES.md": "2679d71fafc377235b6a1c55895ce0ecb21394e8e207b7a88bc9983e18f16979",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/supplier-record.json": "f04021352299b9e4c4a62d5c4d6fc4e75a6708b5f787822ac3f87242398c54d5",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/artwork-needs-resolution/GA-CIRCLE-09_CREW_FOREST_750px.png": "239024d8b5958992db959be1f7934f11bcae2a75c39ef61245307b872bbecd84",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/mockups/1-GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp": "c4eda143fd04611afd96cd222ef6743bd4989f095d5bddd3b2807229bd5e30d6",
+        "packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/mockups/2-GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp": "ba85905b4ecfda2db9979dd67024a941159a7667245b5c21718ab7e02ff235ef",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/supplier-record.json": "fec313e922587421421269eee89bdd7fcef0bc3026bcb0a39e98f31367563ae4",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/mockups/1-GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp": "a320b96b6399a3f0c148f7fbf0abb4460b86362c986a84e4e3c3679a485a6d1d",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/proposed-artwork/GA-01-B_975px_CLEAN.png": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+        "packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/proposed-artwork/GA-01-F_3300px_CLEAN.png": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+        "source-snapshot/designs/11_fulfillment/APLIIQ-CATALOG-AUDIT.md": "5aba7ef64db7489823aedeb4a74f43ac7556aebb574d1e3ba740fefff0f52f7c",
+        "source-snapshot/designs/11_fulfillment/apliiq-product-mapping.md": "7ee97527046a42ba80a2028b9fa556196f1406226bfe1dd9b60a05f6ec497765",
+        "source-snapshot/designs/11_fulfillment/apliiq-reconciliation.json": "7f85283c967addb37168b46c947c25b9089734ec2dcd244ed0079cf5afd4bf15",
+        "source-snapshot/src/lib/fulfillment.ts": "2a2a9832bb1e1b77366960dd98d0a58ffc7b5f17db86371376288b2ac56523ab",
+        "source-snapshot/src/lib/products.ts": "8754a3959e5a7f4910b746008e9fa1489f268f482d98164f4222145c56a11bdc",
+        "source-snapshot/src/lib/types.ts": "ab303ed938a788df77d38d9a6d9bb15af2a0d398ca9486118930fccf0cf8a0d4"
+      }
+    },
+    {
+      "source": "designs/launch-image-package-2026-09-21",
+      "destination": "designs/_archive/artwork-audit-2026-09-21/launch-image-package-original",
+      "files": {
+        "asset-manifest.json": "86aab95404af25446b6c0a4758282c747f0b6a3beb3d35e1248714152780b619",
+        "CLAUDE-APLIIQ-CATALOG-AUDIT.md": "0467f06e1ce1610eaf37f0de6538e457e7f2f85ab58dbfcf5cdd77255334f8d3",
+        "CLAUDE-NEXT-STEPS.md": "0a93b2939166539fb94fa3f08baeefc4e4fcfb7ad769996dec0eca4b0f853002",
+        "file-audit.json": "8b4f71200b4e6592e863faa16d725b4aec1599402bd1f4cbb0330a08ca7052e4",
+        "generation-prompts.json": "037ce7b177d3d5011004c74f9a934bfa8a7d095eb2bc7cf15eceed905d77fd6b",
+        "index.html": "f5a3e2558bc333fda7249785696f2ec10454bd1bb01d070bcac4e63d6b044fb5",
+        "PROMPT-SET.md": "9eaf351a817c65caf7c7ae195ccd8870b9e37d110201d4c0bcd2cccfc90c1473",
+        "QA-NOTES.md": "1290e81df84e21e8c1726b175b6b94e7252873553c717f3690aa6e0047fb201a",
+        "README.md": "25f0b107b925e550bb7a7a2ea13af5e93c263205cc27ad799253033d42217fb8",
+        "START-HERE-OWNER-UPDATE.md": "76f8c3ecef939cdbbe09e303942b8c6682b9c2b9d50fce8fe0c19b13845ed5bc",
+        "verify-package.mjs": "c375c2fa79ff6ca04140d063b796556aab79e93b7dc9e91ccd64157d6683531f",
+        "performance-concepts/athletics-performance-front.png": "ae61c6911dcb384a4c797679903b0c2b88be4d5af7e12600c3feb0dbe880b253",
+        "performance-concepts/CONCEPT-NOTES.md": "62a7589dde61495ebfa1b95626dd748e5e3ca3ee0e32ed5190fe7b5400dfceb8",
+        "performance-concepts/training-line-performance-front.png": "78f6eacca917114aa904109f51fbec412ee7272f788fc2299f17e6d6773c5757",
+        "stadium/casual-washed-black-back.png": "1384d2efff7785c32eb265c667bfb2d7e149c0a2e69eb2177cf5bcb8d67a0436",
+        "stadium/casual-washed-black-front.png": "8fef07fb8df2b048c9a689ca917c10d0e3d2221e399e15bd23481a7494727a0c",
+        "stadium/casual-washed-grey-back.png": "f817554ad62bc237b1030f3429a18127746364a9954c739989be1ea88bc14f3f",
+        "stadium/casual-washed-grey-front.png": "b96adc13a40ac0f848fb41abc2c8148c05865e0a2cdefae3201e2a6ab0221ace",
+        "stadium/circular-badge-back.png": "bd90a373cdb03886516ef73e74a5c497e8f72802b5a0edce7856dc66589af06a",
+        "stadium/circular-badge-front.png": "e44f0faa4d8e1677d80539c8cf157fcf432d4c2b9d6b76db5fd6f7d44ca9c4e2",
+        "stadium/circular-crewneck-back.png": "6b420e0be89339414b479df6749031af616b9bc7ebfb7027dc0ab17f8a09d30f",
+        "stadium/circular-crewneck-front.png": "5fe7fce9e9d19efcecc18ec087f9f03f25906b757b6511cf5186928dc6664691",
+        "stadium/hoodie-black-back.png": "2259453b24eaa543097381b0be0669f31bf56dd3af1883e70db1355519a974fe",
+        "stadium/hoodie-black-front.png": "d93bdc52eb065a4946e144d74a6ef3e5d0b7f80793e5177c809fedd4c40f72fa",
+        "stadium/hoodie-bone-back.png": "f5c8dbf2817a034ea24cec50b996f3d040b1bbc716be1b1178c3a0acb974c95c",
+        "stadium/hoodie-bone-front.png": "79acf98103e512e7b95897ecc27524fa6a1b7df7e2054b12e0153d1f8cf38813",
+        "stadium/minimal-club-back-v2.png": "9e2695f0c34af6e6f3fe4978ffe63fd4c4d9199aa7b117bcc2bbeec38a3138bd",
+        "stadium/minimal-club-back.png": "80cdebb59b0dd808f7236fac0e13fb5b8b5f14bd0fd89a9d328b135e82d135ac",
+        "stadium/minimal-club-front-v2.png": "4b1d65da0bc3acfd73d1d7f2a192c05a7c66bcb7bc3aa374f1ff054c85b7f17a",
+        "stadium/minimal-club-front.png": "7d099fa5413b566ff7e7537220f96bb240f250bd066b15b3078cad26e3718d4b",
+        "stadium/modern-sport-back-v2.png": "2d4e8e5bf1c855f3281287808b22598244404d7a37c613e7e2ed1bd5e86ddc9f",
+        "stadium/modern-sport-back.png": "79e00b9aeb068f1e1b4d7a58b4d23b506f93399eedad55ddf048814bf741c3e6",
+        "stadium/modern-sport-front-v2.png": "443294281abc19142d0981cf7174951c9316a8094c4b5764651938839668ba7a",
+        "stadium/modern-sport-front.png": "e763199614160a542780facb513da3f282a70bba6e21756ab34edba3c71bb51b",
+        "stadium/performance-black-back.png": "3261b42c930441d73c5dfa11063ac1337557bf123d400126217c615053d2b6e4",
+        "stadium/performance-black-front.png": "15a179c68d0dd9ddbd86342ed036433ca17c3e05306ac200f24cab232f6b0123",
+        "stadium/performance-royal-back.png": "89d8da3777cd4fcf89585bbbf7873c641542b4da7b7c2da3a5c402c839f543f7",
+        "stadium/performance-royal-front.png": "022befa536278f27509cd74603829b47ff2a3abf1b308e04293775e0922b3afa",
+        "stadium/performance-white-back.png": "82595095f2f299534700c1ab6bb311eb682bafee08be3bd5d6a401f4345f1a54",
+        "stadium/performance-white-front.png": "4d4172104eadb83e2de69643bcecc43b8dbf8414be94ba7b078cbf7582abe43a",
+        "stadium/touchline-cap-back.png": "414e81cfb2661fd6aecc3a8ce9f5e7b405945792f2ea4c3bb47ff57a98ebdecd",
+        "stadium/touchline-cap-front.png": "b7585a9c03de6c5ec81096db180aefc9f1c98ef3a185886514d3a5c7d082fae7",
+        "stadium/varsity-back.png": "9f3dd241e2535376d2cbbed626aeae60a2ccde8a57fd2dfe6fb1d085d0034181",
+        "stadium/varsity-front.png": "a0fae824adc63615734e225a2b030d730a086e7bc75ee406e93e1f7a3230f29b",
+        "standardized/casual-washed-black-back.png": "4195169be5bf894d9f353b3b38a4998e21a06b241aa0c49a4b2e3bf5c54e07a8",
+        "standardized/casual-washed-black-front.png": "440ef5cbdad29c8d3f047cfa820163de5094f25a54dead72bc35961ddad9874c",
+        "standardized/casual-washed-grey-back.png": "ad12ea37bd49f3a957aaa86fc39920ddaf76ad184d1ba3850105d36633b7cd7e",
+        "standardized/casual-washed-grey-front.png": "ee51396651a8c15e5cc5baf9ed09d7d1324a85cc22146aa0f2fef82d70b4d55a",
+        "standardized/circular-badge-back.png": "da6087c45c4b5861f231b4e674858a115a079dc7fdc001ca04efe4c37345ed50",
+        "standardized/circular-badge-front.png": "c0ccfa4072fa946853f513e60bef50aafd253fe4e8a0b2f0666151d35d83f72f",
+        "standardized/circular-crewneck-back.png": "0ecfc0112af2b6dd6465a609f9d1f1e0ce38d78e4444aa49510313f33973509f",
+        "standardized/circular-crewneck-front.png": "7a57e7d8f5c2fa2ac81a23128638abb9cc8c537f59cd751b07182477fe82e52c",
+        "standardized/hoodie-black-back.png": "d0081fa109e9b8febf6f4518ef67417ab113735b0822a9cbd779e69edb295141",
+        "standardized/hoodie-black-front.png": "fc7d164fff9e6e47d535f2472947e6a1f0317a6bbc455c953cbf51f502fd2be6",
+        "standardized/hoodie-bone-back.png": "e18480abe0b0a6ff4c53bbde265dec8db6f795fa93c2ffa60f9161cae92721dc",
+        "standardized/hoodie-bone-front.png": "00da9bdc398410e2e719e42fedc3de1bed98f71256bd5ff8395123366a0aff48",
+        "standardized/minimal-club-back.png": "064c1e3f7ae07b9c7ef2fe316c0b297f21676d5fa920dd95031db562e5994939",
+        "standardized/minimal-club-front.png": "9df7560c3644cdb49117122f5c5fa53915600a8e3c5905599ee88378928d6ebc",
+        "standardized/modern-sport-back-v2.png": "8c36b885711809d3c9b90b43cde11e06f32d3ee3154a9d444271eb2008c73829",
+        "standardized/modern-sport-back-v3.png": "ca3d587e8391f88e7b523991ff346eae3ba0df9660337cddeef8af91785e18c8",
+        "standardized/modern-sport-back.png": "4a9b6659a892cdaf992b38e36f8b78f11c7e0db3c0f2b0a3b8f292fbde5957e4",
+        "standardized/modern-sport-front.png": "322eee8512e24739ee5a21a049a9d64e73fd5e0913f47b1e8d01a813a153aa8b",
+        "standardized/performance-black-back.png": "c4c27d7dc2c327f10fb350c1e2600126e3a3db337cc2855708dcde69eac2d202",
+        "standardized/performance-black-front.png": "fc7e41f6045b626c3c19832c6024ef67699784b064866b86feb253c71d9e2530",
+        "standardized/performance-royal-back.png": "1403216dcdf7f8d8fe7fc91622781c889c17357ffa9b42b3e66a695d8ddb5df8",
+        "standardized/performance-royal-front.png": "52875f7d35ff352c7996216c00cdff4d495621690d84a8917aa730c7cef22328",
+        "standardized/performance-white-back.png": "fc8c546ab90a61ac879ccf6b3c97cb2c5081e2595bf05ce7fa4b01a0620757d8",
+        "standardized/performance-white-front-v2.png": "b0dbd05acfbc52336adb5a678571206ff4ad78d14e1af5d7f2f848baf4364b4d",
+        "standardized/performance-white-front.png": "6193c694ed7e0005f2dfa5214084cd8cf78edbbc7641c505c6e9da1a04085d3e",
+        "standardized/touchline-cap-back.png": "a6f0dafabd890e7c7df1ad58a020f07352664b10e3a79183994af48af53ecee0",
+        "standardized/touchline-cap-front.png": "0259e9ab60f5aad846965f97633ababa35daa5f3fb330d5bb2f083015053262e",
+        "standardized/varsity-back-v3.png": "2ade23181360645f57533c944779c6079d7e9642cc0f4e2a7981b3e40210df18",
+        "standardized/varsity-back.png": "e355b8fdcce785fc7fb493c5553273738a6976e3efd25dba8dd3738a31dc9805",
+        "standardized/varsity-front.png": "5820c484bfe10635de572a33cb54258d78b2640dbc7aedc3a765c0d4f2058e1e"
+      }
+    }
+  ],
+  "changes": [
+    {
+      "path": "APLIIQ-UPLOAD-START-HERE.md",
+      "before_sha256": "323d99c91e0e721c75172e13a147edbecf7ac38570fdd4390db1c4dcabddcc8e",
+      "after_sha256": "37dafd30826e1c7e036ec3d9da4ec95f3f67420c2ae55f4e42337694a1bcec60",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/APLIIQ-UPLOAD-START-HERE.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "ARTWORK-START-HERE.md",
+      "before_sha256": null,
+      "after_sha256": "b1f45a14b19e321115d83e2876467a6d25f946ecd03997cd79a8eea62e950fbc",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "CLAUDE.md",
+      "before_sha256": "8a3b693cb425db62297d976074d4981cb9392a60d67199285b78429959f16ee7",
+      "after_sha256": "c86c0affe0607b47e42827b5398c944c4e30065abd6d3f20a4e62ad2bc10411b",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/CLAUDE.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/ALL-PRODUCTS.json",
+      "before_sha256": null,
+      "after_sha256": "94a117671d5759a86786aec8db8b42e09d2fb789763f07accc9d2343c118e023",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/ALL-PRODUCTS.md",
+      "before_sha256": null,
+      "after_sha256": "70cca673d88d8cdb1e580bccacc4721cab4427d56a536bce6d44fa6f7e993b41",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/ARTWORK-FAMILIES.md",
+      "before_sha256": null,
+      "after_sha256": "98dca45676204193996a1690ae2dbbfc04d614bc66e3ef565e9e33bf3f66192a",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/AUDIT-REPORT.md",
+      "before_sha256": null,
+      "after_sha256": "53bc1c1901c1ef7f76464078e22dc778b58913f70d703c10f51c2f21c66986cf",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/CLAUDE-ARTWORK-HANDOFF.md",
+      "before_sha256": null,
+      "after_sha256": "eb21abf432390d09dc685b595f241ebf362646d6fb0ae8c434622244f01956da",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/CONFLICT-REGISTER.json",
+      "before_sha256": null,
+      "after_sha256": "19f0db6592e9c8db25a1ee6c85c54ae94cadacf8171e780c8a5f6468a24d3a91",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/DUPLICATE-GROUPS.json",
+      "before_sha256": null,
+      "after_sha256": "762d066b70899fa7044b7722e3e238c28b6c947631e45e59514b7bf736b2f91d",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/INVENTORY-BEFORE.json",
+      "before_sha256": null,
+      "after_sha256": "366e45352e0123455544a043c3af6153649371652ae3e1e57b49c08a051f99d1",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/MASTER-ARTWORK-INDEX.json",
+      "before_sha256": null,
+      "after_sha256": "c796415801e073b5500d94db3d12da749d1b66ed9fa2e129c14ee7cf9a9eb54d",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/START-HERE.md",
+      "before_sha256": null,
+      "after_sha256": "12962b4eb19d958c46df13ea5ff045aaf7f0f31fda6d20c81fac99d435f2b4af",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/00_asset-library/UNIQUE-ASSETS.json",
+      "before_sha256": null,
+      "after_sha256": "3e1e182a3850589a59ed84a071db357b93c8b236980a62e3bfb1758ceaf9f649",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/06_tshirts/handoff_crest_v2/README.md",
+      "before_sha256": "ffd242f6453d7f46a0d1f07d4501af7badb0fb133b9944ac941b5df16742db5a",
+      "after_sha256": "8c39db19b61889703a939755ad877416c6f425181f5642f80208b6900aefa49e",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/06_tshirts/handoff_crest_v2/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/12_logos/README.md",
+      "before_sha256": "81dbfdc04636ee846b74625619211a50eb24194244d8e55b343866ca61b0e980",
+      "after_sha256": "065e2a5b9e524fa3c34656fff6b2adcd65a7bc3f425f611d103a0ba3b1417472",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/12_logos/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/16_goool_athletics/README.md",
+      "before_sha256": "b60945f41c48db2870c1b0d1b39ee89742b656bc47fed0bc787b29c16249debc",
+      "after_sha256": "dc5a9ab9ad6cd2e25d7197a4358c8ca7e1112fa3f175573fe0ab8ab4ab70bdf8",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/16_goool_athletics/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/17_launch_imagery/README.md",
+      "before_sha256": "25f0b107b925e550bb7a7a2ea13af5e93c263205cc27ad799253033d42217fb8",
+      "after_sha256": "ca72cbfce2669f9982c8fc2c1deb15c13b608fbaf6a5d21d2e6659b916a98123",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/17_launch_imagery/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/_archive/artwork-audit-2026-09-21/README.md",
+      "before_sha256": null,
+      "after_sha256": "bb7ba9c675a7e262ee015d4dda451dfe117a160acb97b974f7c269813304edea",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21/README.md",
+      "before_sha256": null,
+      "after_sha256": "228cf0b504b5e2dab451d499786abfba5631549a66bdf47ca592a133b9cb829b",
+      "backup": null,
+      "under_moved_folder": true
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21/START-HERE.md",
+      "before_sha256": "48eeaf88e0b2670a14b81684de2b57d69c467c63a8b58cd80f11d322cbc21d7e",
+      "after_sha256": "228cf0b504b5e2dab451d499786abfba5631549a66bdf47ca592a133b9cb829b",
+      "backup": null,
+      "under_moved_folder": true
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/01-goool-performance-tee-black.zip",
+      "before_sha256": "a93891d66cbc68245bad25d30153223c71555ada464083c27bc690ef50e5c155",
+      "after_sha256": "9f1578e87155c0f85129495b98e309605f91a43f371027285d79ee6790d323b1",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/01-goool-performance-tee-black.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/02-goool-performance-tee-white.zip",
+      "before_sha256": "46eb72ff7680424c9074d1d2ae8142c32690fe9de4ee243dffb5bbf2900549d0",
+      "after_sha256": "56af781d73cc05fac2648591951bab2b2d138f0ffbb816352401220df3a59947",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/02-goool-performance-tee-white.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/03-goool-performance-tee-true-royal.zip",
+      "before_sha256": "7b50666a93933bcf3f9303d157c1befd48546d5cd7d444445e8b78c78c2dabe9",
+      "after_sha256": "9da8aafd37fa172d3879c3c1795c039ff086f32972e64a8807c8c18644b6cbfb",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/03-goool-performance-tee-true-royal.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/04-goool-heavyweight-hoodie-black.zip",
+      "before_sha256": "bef7977832aee09bb31237fe058c7ef791f8ec046ddb77bae286522e747e69d0",
+      "after_sha256": "025736d6775cb0fa7159e1bd1faac9ec4d1ce28213867711a8a3950978cb0e84",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/04-goool-heavyweight-hoodie-black.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/05-goool-heavyweight-hoodie-bone.zip",
+      "before_sha256": "e4a1d505c2a24a9d984d9ef43c5b09fc3f305dad26f388d5a573a0d8997375ac",
+      "after_sha256": "d548a174475542a206d9406f6ba700fe82383a8b56aa7c4ba6bc4bd7177ec005",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/05-goool-heavyweight-hoodie-bone.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/06-goool-heavyweight-casual-tee-washed-black.zip",
+      "before_sha256": "1cffc556b6f6b40b73897f9dd9459b50fb17d2bb132abb3cb36f3e483687980f",
+      "after_sha256": "6f0a11527daf04b4a7ef56a1921566edb767b710d1e31d5320cbc1e60613d8d0",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/06-goool-heavyweight-casual-tee-washed-black.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/07-goool-heavyweight-casual-tee-washed-grey.zip",
+      "before_sha256": "88ff28e9c0685e18a0e2a904be49dbc13961713eeb662d65cdfd894e3f2e4837",
+      "after_sha256": "e61eaf94786583f9739e90f736665e987529fb3adac1b0ba917951ccc06f8a30",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/07-goool-heavyweight-casual-tee-washed-grey.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/08-goool-touchline-cap-black-natural.zip",
+      "before_sha256": "aafa5718883c46f93e2d6029edfac5fa6967bde23b7654d9c608c45310645d95",
+      "after_sha256": "ede856e36bef5c6ab96917ad8828793dcf3c4f9a9306de71a9b9c2bdf9fea3ff",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/08-goool-touchline-cap-black-natural.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/09-goool-athletics-modern-sport-tee-black.zip",
+      "before_sha256": "d7e34a87bfe1f9efb80a8a90378e9c219de4203f968d653969e873b729987a84",
+      "after_sha256": "de6f1c316b7954cd87de5ed8f24d35fcf2996b711a78ded9197fa13f542e6bae",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/09-goool-athletics-modern-sport-tee-black.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/10-goool-athletics-varsity-tee-washed-black.zip",
+      "before_sha256": "8b6a480f9a485d26037c7b5c78da656b4d9a34fc162ff044ed7a17df31204ea4",
+      "after_sha256": "c4516da74e31041af93ec8030ccd592595b991f4bddd013fb0a080d0b9faba08",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/10-goool-athletics-varsity-tee-washed-black.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/11-goool-athletics-minimal-club-tee-natural.zip",
+      "before_sha256": "e9cda5e4d5f66c67fcfd095af3a976d8169860a64772eff6c71d08ab89611758",
+      "after_sha256": "2c3735a5e022cd405fc5d566575665874119aa72b57b4da6f7bd7c7f6b3811c7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/11-goool-athletics-minimal-club-tee-natural.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/12-goool-athletics-circular-badge-tee-ivory.zip",
+      "before_sha256": "7798fba5a53f82c44c8ec9524b277dac630db10565359f77d8ac0f30219a0d6f",
+      "after_sha256": "7f40903ec04b9c7c3bbf69410df7fb08a340ed01e36235954fe51f2f0fea215d",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/12-goool-athletics-circular-badge-tee-ivory.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/13-goool-athletics-circular-center-crewneck-gray-heather.zip",
+      "before_sha256": "d94913327b8398822a95b052c044a259abb36c85ffbe0176523bde448914273a",
+      "after_sha256": "5baadac2c48296d5b581abc8cf14bc9e74f2a1576d79bf3fd7f9cfb94e25400a",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/13-goool-athletics-circular-center-crewneck-gray-heather.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/archives/14-goool-athletics-modern-sport-performance-tee-black.zip",
+      "before_sha256": "f8de9e24aea6520c6a1487031ca26757600e360ef2b2d77a6a58ae77bdbfd533",
+      "after_sha256": "05dfb230058d456150f02601abfd2a0fcb60196cc921e2db3871257fd0e58e14",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips/14-goool-athletics-modern-sport-performance-tee-black.zip",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/ARTWORK-AUDIT-CHANGES.json",
+      "before_sha256": null,
+      "after_sha256": "0edda93ce788dcc1b2f46375d5a8f1d62dd438dd77a1c8d10bec5dc03ab2bbb4",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "72e0f8c43af3ff6c1c38d7bfde84ebd5c5c7ca490e91d2cac64567d41bd24302",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/CATALOG-INDEX.json",
+      "before_sha256": "77eccf7854ddf1b3a163530f9ff7f6d01762e3b2c26c682b79ee6442881e7653",
+      "after_sha256": "e996016ebf20912b67e00f96e644b094e33ab9d41c84fd3b637e7f426915c453",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/CATALOG-INDEX.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/CLAUDE-IMPORT-PROMPT.md",
+      "before_sha256": "1cbb6fe00f7c0076e339e0c9619066495e5897cf2065d7e6009320fea8510968",
+      "after_sha256": "2324699e5003b2c56917afc846b779632eb2802953689a566e8678d6df33cf87",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/CLAUDE-IMPORT-PROMPT.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/PACKAGE-FILES.json",
+      "before_sha256": "be4536511661e28235b1118f7f23e0963ee2a1f9fc8e88dff9f774b4114c24b1",
+      "after_sha256": "3f1ad359aa41b4a967cf0ea0d3dbd352bafa178ab9edefacda9804ad406517b4",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/PACKAGE-FILES.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/reference-only/supplier-record.json",
+      "before_sha256": "f3e1a8f7ea98e0ab28f3409fb2357eb3efbc9c01e4061cb32ef14ec53efe539d",
+      "after_sha256": "80bffafc3c6440715d6224112e2a75d51b4801f3c7b852d00b61a72ab3fd3dea",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SHA256SUMS.json",
+      "before_sha256": "3d9717ef12e41108d06a0dc69ba7fea6d149cfb15a25822187bf3a3b8855dcc0",
+      "after_sha256": "cc0e5e36102ad5fcf0a1c79f90222bf0f434b9782dc4cb9d31fa6aa0c8e1b747",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/spec.json",
+      "before_sha256": "b6a48d29e00857434f0c507202f2362be53efe6dee144bcd4a692ff5cee55486",
+      "after_sha256": "fa6624ccefa780206a5809d5e246d61803e21ec70da6a46975d38573603457d2",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SPEC.md",
+      "before_sha256": "80fcef631635134ef12f45e479b22e676024ce6984e1b96db40a5fb096358f07",
+      "after_sha256": "2e8c40fd26ad68f3ec26eeb25d78637aa4325cc43db85023886257565329bbe0",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/reference-only/supplier-record.json",
+      "before_sha256": "8d570e87d81341b75695210b02cd9b7e756e352b40c722525e926823c32408bc",
+      "after_sha256": "df5c6f71ca10659d7eb256a6197c2b29b8d8e1db2e031e2f7789d403548fa3a5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SHA256SUMS.json",
+      "before_sha256": "1f17ec4a241c7d13cadade0892a3496ac3fc87253bc07671497f6916914b5f45",
+      "after_sha256": "c9b6f3352b4f85f3fca17f6e95b980c5bc3ee0c69913267391041b5e0d50c4dc",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/spec.json",
+      "before_sha256": "bc534a829bf9d6482e3ccc6bc074224ccec57844393f5605f3012e4cf9a78b3a",
+      "after_sha256": "1ee499824dc610f0a0a327e75e66fba60206fb2cf0940d4283bc327794e6a426",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SPEC.md",
+      "before_sha256": "344c61a606fce820c4479a5377d8c53755e53fd7ebc1b0a275648e821a6b1313",
+      "after_sha256": "d075e6c52df2ddf6489697f5d2140442798c368f7f5c90374ed344a597504b4d",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/reference-only/supplier-record.json",
+      "before_sha256": "cc5c6a1ba5c4fc3a655d65bfc4f7c23d4ed11980f809833efb68d19d60003b58",
+      "after_sha256": "d2060ce27fa8f2804d1ee2a5acd91f6435739ff12f49feafe3365c6411699925",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SHA256SUMS.json",
+      "before_sha256": "bb7e47c97768f3f549c45dac23b0b16fcb5aa22a730aab8707a738c458f1c5e9",
+      "after_sha256": "ee56192340613a791ad664fae5891cf1234a578cf55474524716204d9908809e",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/spec.json",
+      "before_sha256": "aeb61aa4419a8d3be7ff031ddace63932b80f05fa837159e82c3c75056c6fedb",
+      "after_sha256": "1fc3caa7bdd77d0a25b048e7c7e699c32c25cecb9cba129ab8e2d78593917a45",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SPEC.md",
+      "before_sha256": "0bb0d19807124ed6bf4a4f929ae2421a6aba9bcb072f3127246143ea48c25dbe",
+      "after_sha256": "9ce5ef570ca60b54df4f44ec61590504b60d13ae2603dc46b183885e54bcf146",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/reference-only/supplier-record.json",
+      "before_sha256": "1493c3047bf03a7dc015f6784913d9e78c3470cd430e73c5109a3d818a3b58d2",
+      "after_sha256": "07aa67fc71073a9268dbaaba87e86856b1e44a1ce94b45b33bd454af92e61af9",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/SHA256SUMS.json",
+      "before_sha256": "1993da4658cb09037bc531ee8c0c99a39929d02562a734b819fe699f553ef960",
+      "after_sha256": "305c5119c3479e6064b1f8828ea7ddefa0bd020527dbe9a14a7e7f84812c3831",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/spec.json",
+      "before_sha256": "5beedfaa5419a3ed67879ad50330d448464d9c0fa8cc22e2d7bce74a14723f0b",
+      "after_sha256": "2ade1a3c70fb54ba239e4149d58c58e44cfbcfbe9a6b4af3afb92ddbd3da5e41",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/SPEC.md",
+      "before_sha256": "c8e5e8a79bd329d6ddbe40cad1868a00f12f254f5171535beaff8b080b388642",
+      "after_sha256": "a9c7662bd447aa3f900edbb0a07a9511527d61407ece01c25d7dc170fd3c7127",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/04-goool-heavyweight-hoodie-black/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/reference-only/supplier-record.json",
+      "before_sha256": "a936b6c2ca47f16175c14d2641a98b328c585443096b8f651a31fe5ceb97e5ae",
+      "after_sha256": "fa8b5eeac863fe96975d8246d72f8ece9fabdb39138d6910e43296268cd16ded",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/SHA256SUMS.json",
+      "before_sha256": "1c409ee81d9c87d7a8a4cc66b7112ee52bd8ed9150eea5ea2656fc5d84766ea0",
+      "after_sha256": "2d91b7b4550c091a2ab924a9a21e8fe6fa89212507fd6dcc5019640d4549fb98",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/spec.json",
+      "before_sha256": "0008674730009c290752131f3ef79a0a6a6e6f0984938ddc6108e43704e34684",
+      "after_sha256": "0d5ed58925aae8c543e222be494017dd16f6f70200d28fd44cbc00893e1d7fca",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/SPEC.md",
+      "before_sha256": "6d05082a8099cf9032cc3edbc990eec5715fc76a3917f642ebff88e6fc45b53c",
+      "after_sha256": "6c7c3570a428f6f8565a914686458926e7e991107ac30d9ae739560ccd8b5abb",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/05-goool-heavyweight-hoodie-bone/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/supplier-record.json",
+      "before_sha256": "247a6e9aca61fd08930869efe6dfecb1156f6d552a61d0c446590904ed12471f",
+      "after_sha256": "80c28c2d267c75d220acb97a2b39dde8d1e386a9fded97fa00a08f7e32b50152",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/SHA256SUMS.json",
+      "before_sha256": "0373d6c37e1ded8d952fdb953302199eb6a24f7728e4d5c7c7bc92e6f0213247",
+      "after_sha256": "8a1e3a49209a07248a882f8a5474907994de9fee6da2b5ce43282d2883e0a60d",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/spec.json",
+      "before_sha256": "42bcba9d51ddd8af323a08d207ed5b14da114ab0fbe694c6fc5dadabbf6b3ca0",
+      "after_sha256": "05bb2c323894e53951bd00ab1e108adc15875e47bfe2c68448b34fe76555acd2",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/SPEC.md",
+      "before_sha256": "5264709fff683d554700803252f34d0c915094c3948b603bcc4a4a9671784fe2",
+      "after_sha256": "289ec114d7853253cd411987c22c464f518628de27f3b2791432ced3ddf26f51",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/06-goool-heavyweight-casual-tee-washed-black/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/supplier-record.json",
+      "before_sha256": "af16ba59a77ff3938b4715599949767502ab6f9839751f1f69f6811e7462d836",
+      "after_sha256": "c35652468e3fded09ac3259d5c9ee1bab59df204433888620bfc0926e939b447",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/SHA256SUMS.json",
+      "before_sha256": "de156f8d5d37ae1fdcb59b5738dfb5b20ce6297a1bfcb514095e9f18e07f4cc2",
+      "after_sha256": "ae7bcbe61ba18282b03aef01227a1d64d788a65f6b5b4584af3bdb9c3750f174",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/spec.json",
+      "before_sha256": "34406f47b02d2079d6c4b3ff548858eaaa7632b35b4d6c45fe6c60f972ef56aa",
+      "after_sha256": "61980c61a71984ea1b324afc270c85cbbb3c246b101eddedec2b50ebc3a4c14a",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/SPEC.md",
+      "before_sha256": "53fec3d5bbcb5f8ad6ad3ed83a0ea642d03d103debed2b43b7ec624926200476",
+      "after_sha256": "335c0518796ddef751f7f41976c5b29dcfcb6f71d7ac26d8593cf3791e6946b7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/07-goool-heavyweight-casual-tee-washed-grey/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/supplier-record.json",
+      "before_sha256": "db526a123bd5b2dd963f034b2a86c38bcf3529d8577e9a22fbf213b2ec7f5d65",
+      "after_sha256": "dc5a998722b9258c455d591b1af62e298cf5a29e9e423fa02cf582dc54707b74",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SHA256SUMS.json",
+      "before_sha256": "9ab0fa01470714b995d14183811cd0a2961d6d205a353a4c0e4977ba449df355",
+      "after_sha256": "f877485e25fdb23cc21a7939e54984e82c7d84bf5487e5c8106a1e9b34caf194",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/spec.json",
+      "before_sha256": "7dd8ff8fba9950788fd00726c943740efc13b64051f5f40835156ed33dd03d72",
+      "after_sha256": "a60cb41a31330569b2d4b60bfa8dc46cb8f75418858f59f40b642d8906fa7d89",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SPEC.md",
+      "before_sha256": "e67e46ec36238175c456ec96a6d2cf1f8856abefd258a050a92607d49511d0df",
+      "after_sha256": "268d9673b74cd5bb2fd476071100929f45fed292da00d3925c94b4d99d259af2",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/reference-only/supplier-record.json",
+      "before_sha256": "481df545b5d2fded1013ddb0b6d51628f8ffe85da02bec132306cecc5b548ab8",
+      "after_sha256": "c668fa927272389923af54fab1f14c86e05786bb282465f5f7b7147a83198fe1",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/SHA256SUMS.json",
+      "before_sha256": "902de73b3686d6c6ea60ae45f6a07be32fc3d51c342dbc63abbea9e676f4727e",
+      "after_sha256": "a69413f662b9db51449677a78c5872e655afc8ccbeca86e511734871c6539727",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/spec.json",
+      "before_sha256": "e6dcfc1c4da1add7e1641d2c7db9249007eabd040c6a7202ffa6e8de653cac24",
+      "after_sha256": "dc772459ccfbe39db56e1715003b7295f45c0100a8675c87ff9597057941796f",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/SPEC.md",
+      "before_sha256": "bc7e7bdd5d06eeb30707d591cc77e7ec91cfba4cb7ace21709737b2f4372b8a5",
+      "after_sha256": "c664adb5d6a41b9365c96fdb745b837c2c897144d1de9119a6102d82d184dff2",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/09-goool-athletics-modern-sport-tee-black/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/supplier-record.json",
+      "before_sha256": "40e9181f9299bae4ce4e0517248204f146f705968b25452809446d25eb25179d",
+      "after_sha256": "d1ee43b6210079a053d598088b1ed68dd1f36d2fa3844e6a9a0c9cdeebf5d956",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/SHA256SUMS.json",
+      "before_sha256": "213cebe820bcd77dd981755e1f964ba96fc6aefde8ee4f54d37fc262b3ac8713",
+      "after_sha256": "a0630c4b4e3adfd17b5b284f79d92845b1fad0c0ed2b3cd2d16d07707d023854",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/spec.json",
+      "before_sha256": "ce1271bc3b386fd2bd6a2ef1845fba6ab70f36ab59bb92c6a5482f4d6478fd42",
+      "after_sha256": "4e057f067e9347d78524f6933a1135a06d10eaca2720b9647c94e60c24c708dd",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/SPEC.md",
+      "before_sha256": "61a28aa7c8d508ddd7d75bba7890e2e28f6db620e5aab715d69a4ce3382b7973",
+      "after_sha256": "f888f12deed869f7e3d45be1dff0abfe33198822960ddee7170bf200eced2359",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/10-goool-athletics-varsity-tee-washed-black/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/supplier-record.json",
+      "before_sha256": "88c2b99bd851ebecfe4c01245c0416b88af493613d7535c161276d6023732a7d",
+      "after_sha256": "5055fce15ba8efce032e58af1cd11ca02e944b5c83d7a1ae52619bda20618891",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/SHA256SUMS.json",
+      "before_sha256": "b4f8d121cd472f5c61a4e2be6db64ef13fcd7a27bb4ff0c1bd79a06b8affea59",
+      "after_sha256": "ee099fc514a33e11524af9c7eed7e38cdcd8885906c3c6171fff5c95c90289e2",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/spec.json",
+      "before_sha256": "0e59c989a8a2aa720444d6aff6cc31100aa3d05592439e8df4aced83a436dccc",
+      "after_sha256": "d6bbf75b92ce554dca2fe6dd247c871b228406ea989032b1f4405ecdcdd9f310",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/SPEC.md",
+      "before_sha256": "aea15481d6e2a07d470694ad08369ca38225195aa9fb6748be770c49f6771b5a",
+      "after_sha256": "a5717ce1f908483c63805d3044679370e5e4e3db612a1bdd8c0c6e472e96cf2e",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/11-goool-athletics-minimal-club-tee-natural/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/supplier-record.json",
+      "before_sha256": "61d9e98332768b0a6f5e11d305046faefc67c1550de3b1f68be7d4e3e88ef3d0",
+      "after_sha256": "ee23d3d02a5cba86b7f39fdd79fd089dd7ae6b3a3986e188ecb639a7a887b63a",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/SHA256SUMS.json",
+      "before_sha256": "f50dd90c28c35458995b564a9bc4fc3b4afd44dbc199d9bd353d2c5017b439b0",
+      "after_sha256": "328579d1b3767c77d76b7757f2f8affda0512d7a4b94e964e6dea17b50b1fcb0",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/spec.json",
+      "before_sha256": "2538279a2b100785428f7720cbe0800f513ed08dac34143085a844d97ae850ea",
+      "after_sha256": "9cb886d49faf172caf3e89df8e8725691748717d2192c23ca3a29292630cb502",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/SPEC.md",
+      "before_sha256": "92d5ee93279f7d67e70ba6d484f948f6fa1e5732c1d802b73e964244608844f0",
+      "after_sha256": "8ab4d4be2762b03964a42b060eba2b9ced79ecf5e19ee164ce6b64311b14fdf9",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/12-goool-athletics-circular-badge-tee-ivory/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/supplier-record.json",
+      "before_sha256": "f04021352299b9e4c4a62d5c4d6fc4e75a6708b5f787822ac3f87242398c54d5",
+      "after_sha256": "711364b78bffeed88ab2f61c435485d4710675d09bdce6a09e0cb3713c3f91d2",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/SHA256SUMS.json",
+      "before_sha256": "8973f02006fcd362750de02760250c4c58a9bba22d927d6a0124c4652be937b2",
+      "after_sha256": "3fb1adf8b542d7264c97247a2e69167b508f61aec6681022faa643e974441b75",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/spec.json",
+      "before_sha256": "92c48b422c83db962b515b80297711401eafed2fdd5ca059d667631052b30f03",
+      "after_sha256": "63203c1a377b01fa89e1e7c6fdbadd216d7e977edc5f3383c72eb95592110e61",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/SPEC.md",
+      "before_sha256": "a89687777f155c6c4dbed20e4479e1307c37c0536807559daaf4c3b716968952",
+      "after_sha256": "8cf5ac2df83e11bd278d9f676dd9b070da509f5789a1735345a83a49c3b80529",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/13-goool-athletics-circular-center-crewneck-gray-heather/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/ARTWORK-AUDIT.md",
+      "before_sha256": null,
+      "after_sha256": "3f3c74db2067a106b9c65af3be791e463120e0289da1d327f535f61040ba4a3f",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/README.md",
+      "before_sha256": "7dd4a959d95810d96d34c5865acde8bcce7f064b3c67b24801bcbf4fdd31d77a",
+      "after_sha256": "59d81301309756dacbe6041f25d5b64d4c8aecebdf6c866a5c356e7f0ec988e7",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/supplier-record.json",
+      "before_sha256": "d42052733bd14c3c2e5286f75955f4f8a49599ae71d8a95024cf9e342182f5f2",
+      "after_sha256": "0f7a492f7fccf0e62fc267f650fa7a45f3c156ca64198bd6c63f7976d9894eed",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/reference-only/supplier-record.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SHA256SUMS.json",
+      "before_sha256": "f056af41154d1e90019a7c5383533781c1a1f316ad59264eed97036205bf50df",
+      "after_sha256": "bc3a2cfa810f88b199dc32c612580a3f48fa1ee8aa4b49bf12be898f6ec88ab6",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SHA256SUMS.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/spec.json",
+      "before_sha256": "c0de137ff817ad9de13a047ed9be411ea3ae739dd6dbc4527fbce83000784650",
+      "after_sha256": "934c330bef28a502b8f1e03b2f23a9c6cb8256efc47f2773c6dbb6aeb015cc97",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/spec.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SPEC.md",
+      "before_sha256": "f9f63ae3d8d033c575dd35c2e50d858ee1e51c43e9b96a201e28a41bc4a204fe",
+      "after_sha256": "ec021e26ef102a7f5f90e79c151194e12956cbf1bb710423eef5680326a7aaaf",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SPEC.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/REVISION-2.md",
+      "before_sha256": "df812de8700bd42ea641d7bc39afdda3543f8ba143cd4ef593fdfa9747059a46",
+      "after_sha256": "d1d59f4193bf32bafd58e330c0f8a6d1744004a1194011248a17f0370066c5f5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/REVISION-2.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/SAVED-DESIGN-UPDATES.md",
+      "before_sha256": "ec98fd472f8c806bd95baaa43f5c6c2564417ea8a7ab4371d55bd6d22287041a",
+      "after_sha256": "8a50c31d6ef8fe4f6b530be902db0222d285315766db4689cae145edacdd9b2c",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/SAVED-DESIGN-UPDATES.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/SOURCE-FILES.json",
+      "before_sha256": "75cc382ba38a5284dd5755241c88bf7ebc5109886ae6da3d8e226f04939c7f40",
+      "after_sha256": "9a5240b01a3391f45ef58ca1bff53d53399e21b40b66e9b94eb44d1d4ee683a0",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/SOURCE-FILES.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/designs/11_fulfillment/APLIIQ-CATALOG-AUDIT.md",
+      "before_sha256": "22ceaefce552cdfef925b738855b4968b498f8caf79d6357edadd391e73ce2fb",
+      "after_sha256": "782ae1e12c8bc179a68d5a0f5493433d93bbbc01a4fb86e93233c7676bd8f2d9",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/designs/11_fulfillment/APLIIQ-CATALOG-AUDIT.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/designs/11_fulfillment/apliiq-reconciliation.json",
+      "before_sha256": "c346284caaba4b01fe07671290a1b35deb9678a50aa3e026b4e0038da7a220c9",
+      "after_sha256": "238b1278bd626c5eabd525e3f98caaed1deb6f8afd91f3ca70f42357dc8933c6",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/designs/11_fulfillment/apliiq-reconciliation.json",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/src/lib/fulfillment.ts",
+      "before_sha256": "74f0927d7692439876f4db8f52f98c9712a7277097bf5b3b79f451b251a22b4c",
+      "after_sha256": "928472145db4af939432ec8adc60a5cecdf3f58c0ca55ce2e2a405dab89499b5",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/src/lib/fulfillment.ts",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/src/lib/products.ts",
+      "before_sha256": "8754a3959e5a7f4910b746008e9fa1489f268f482d98164f4222145c56a11bdc",
+      "after_sha256": "fa5ef418f2440f72335f883d9cab924df830ac0887558277786e09eb201d3d3f",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/source-snapshot/src/lib/products.ts",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/apliiq-upload-packages-2026-09-21-v2/START-HERE.md",
+      "before_sha256": "88ee885ef384b142ab5829dc025a25edd31f7ced460abab64c35b23a8aff2033",
+      "after_sha256": "6cac27ec08f243550d77913262fd9800cb2a4ecd58f20a06319dcff6d2722dfa",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/apliiq-upload-packages-2026-09-21-v2/START-HERE.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/goool-athletics-brand-label/README.md",
+      "before_sha256": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+      "after_sha256": "d2e13a745dde7ecaa83b406c35960d1e3ab9f23e8133350ec0748dfaab3359da",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/goool-athletics-brand-label/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/goool-badge-future-designs/README.md",
+      "before_sha256": "0984588eb56fa64819f5ce5134b20b338b9b564ac338e7a7cc01b49f31ab21bf",
+      "after_sha256": "32d17b3f0c9919296e327c018bdcfe6bd4f423a68736d1e88ca9852b8877d159",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/goool-badge-future-designs/README.md",
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/GOOOL_POD_SAMPLE_PACKET/README.md",
+      "before_sha256": null,
+      "after_sha256": "927bebea3a70c9bc063fe814c9945eafde79e21b270289200bc3760e56b187cd",
+      "backup": null,
+      "under_moved_folder": false
+    },
+    {
+      "path": "designs/launch-image-package-2026-09-21/README.md",
+      "before_sha256": "25f0b107b925e550bb7a7a2ea13af5e93c263205cc27ad799253033d42217fb8",
+      "after_sha256": "bcdeb2ff88aa71cb668210d9a06585fb1ea763a299871c96305c79e542831e5e",
+      "backup": null,
+      "under_moved_folder": true
+    },
+    {
+      "path": "designs/launch-image-package-2026-09-21/START-HERE.md",
+      "before_sha256": null,
+      "after_sha256": "bcdeb2ff88aa71cb668210d9a06585fb1ea763a299871c96305c79e542831e5e",
+      "backup": null,
+      "under_moved_folder": true
+    },
+    {
+      "path": "designs/README.md",
+      "before_sha256": "23b8ca7f0f83ec0b7a56a61070654375e115f690cdebc45b355e125898c5f226",
+      "after_sha256": "2c5d6b516bf14713e141ee3e173371ac04b81f5c0dce7c656d5e481c23fdd686",
+      "backup": "designs/_archive/artwork-audit-2026-09-21/documents-before/designs/README.md",
+      "under_moved_folder": false
+    }
+  ]
+}

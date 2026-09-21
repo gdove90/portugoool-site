@@ -219,3 +219,85 @@ event has been fabricated and none will be.
 
 The most recent session is valid until 2026-09-22T08:54:55Z, so a new
 link is unnecessary until then.
+
+---
+
+# Addendum 3 — catalog imagery cleanup
+
+Re-inventoried rather than assuming the earlier four-colorway figure.
+`src/lib/products.ts` referenced 184 image entries / 170 unique files
+across 64 slug entries, of which **26 were stadium model shots** (20
+unique files) — matching the audit's count.
+
+## Applied
+
+1. **Model shots removed from customer-facing galleries.** All 26
+   references deleted from `products.ts`; 0 remain; no gallery ended up
+   empty. Every original file is untouched on disk in
+   `public/products/` and in `designs/17_launch_imagery/stadium/`.
+
+2. **4:5 framing.** `ProductCard` and `ProductDetail` used
+   `aspect-square`, but every studio asset is 1122x1402 = exactly 4:5.
+   The square containers were CROPPING the garments. Both now use
+   `aspect-[4/5]`, so assets display at their native ratio.
+
+3. **Gray CSS panels.** Image containers changed `bg-smoke` (#F4F4F2) ->
+   `bg-paper` (#FFFFFF) in `ProductCard` and both the main image and
+   thumbnails in `ProductDetail`. The two `bg-smoke` text panels in
+   `ProductDetail` were deliberately left; they are copy blocks, not
+   image areas.
+
+4. **"Printed in the USA" removed from price areas.** The badge rendered
+   inline in the price line in both `ProductCard` and `ProductDetail`;
+   both render blocks are gone. The `originLabel` DATA is deliberately
+   retained in `products.ts` and `types.ts` — it is an accurate supplier
+   record and the origin table in `apliiq-product-mapping.md` still
+   governs. No substitute manufacturing claim was introduced.
+
+5. **Embedded backgrounds normalized to pure white — 119 of 123.**
+   Originals preserved in
+   `designs/_archive/imagery-pre-whitebg-2026-09-21/`.
+
+## The failure this caught, and the guard added
+
+First attempt used border-connected components at tolerance 16 and
+**damaged the Ivory Circular Badge tee**: the fabric is within tolerance
+of the #F3F4F1 backdrop, so the fill bled through the garment and left
+it blotchy. All 123 images were reverted from backup (git confirmed
+byte-identical to the committed originals) before anything was
+committed. Interior hole-filling did not fix it either — the bleed
+connects to the outside background, so it is not an enclosed hole.
+
+A guard was added instead: a full garment shot must occupy 28-72% of a
+4:5 frame, and any image failing that band is left untouched. Verified
+after processing on the two riskiest cases: the Bone hoodie (lightest
+garment that does process) and the Washed Black casual tee both keep
+silhouette, pocket, cuffs and artwork intact with a clean white field.
+
+**4 images held back by the guard — these need regenerated source
+assets, not a pixel fix:**
+
+| File | garment area measured |
+|---|---|
+| GOOOL_STD_CIRCULAR_BADGE_FRONT.webp | 26.0% |
+| GOOOL_STD_CIRCULAR_BADGE_BACK.webp | 20.4% |
+| GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp | 23.1% |
+| GOOOL_STD_PERFORMANCE_WHITE_BACK.webp | 10.7% |
+
+Both are the near-white colorways (Ivory, White). Until their assets are
+re-rendered on a true white backdrop, those two colorways will show a
+faint #F3F4F1 field against the now-white panel. No automated matte can
+separate near-white fabric from a near-white backdrop safely.
+
+## Also fixed
+
+`tsconfig.json` excluded only `node_modules`, so the archived snapshot
+copies under `designs/_archive/.../source-snapshot/src/lib/*.ts` were
+being typechecked and produced 2 pre-existing module-resolution errors.
+Added `designs`, `output`, `tmp` to `exclude`. Typecheck is now clean and
+`npm run build` succeeds.
+
+## Not done
+
+Casual design recreation (option A) at Apliiq is still outstanding — it
+is browser work against the customizer and was not reached this session.

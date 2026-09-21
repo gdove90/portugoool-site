@@ -1,0 +1,16 @@
+{
+  "package_id": "13-goool-athletics-circular-center-crewneck-gray-heather",
+  "automation_contract": "Agent-readable instructions; this is NOT an Apliiq-native ZIP/API import schema. No automatic submission.",
+  "steps": [
+    "Read REVISION-2.md, SPEC.md, spec.json, OWNER-DECISIONS.md and label/README.md; verify SHA256SUMS.json. PNG exports are provided for the new SVG artwork.",
+    "Check exact blank and available color/size variants in authenticated Apliiq. Select closest available same-blank color; record swatch evidence. Do not swap models.",
+    "Reopen recorded design ID where supplied. Resolve all relevant blockers before changing that design. Do not infer IDs/SKUs from a numbering pattern.",
+    "Use only specified face-specific art paths. Preserve bytes/aspect ratio and visible print width. Account for alpha margins; anchor collar distances to visible artwork, not canvas.",
+    "Confirm front/back/sleeve/cap blank areas and inspect proof at actual size. Verify newly authored placement targets using supplier templates and dimensioned proofs; never use guessed drag coordinates.",
+    "Use the prepared flat label artwork and resolve the service/material/size proof and supported color-capable service; verify per-blank interior placement, legibility, margins and preserved garment information. No paid supply order.",
+    "Save only authorized draft design changes, reopen, and check correct single color, sizes, art, placement and label attachment. Capture evidence.",
+    "Fill verification-record.json with actual supplier design/variant IDs and per-size SKUs, proof paths/URLs, measured positions and fresh timestamps. Keep unresolved fields null.",
+    "Reconcile catalog/fulfillment references only with verified IDs and correct supplier color names; keep Coming Soon and fulfillment gates. No sample purchase or production release."
+  ],
+  "revision": "2"
+}

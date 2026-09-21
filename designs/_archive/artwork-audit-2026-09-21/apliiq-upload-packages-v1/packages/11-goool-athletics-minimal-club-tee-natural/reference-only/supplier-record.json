@@ -1,0 +1,19 @@
+{
+  "product": "GOOOL Athletics Minimal Club Tee",
+  "color": "Natural",
+  "slug": "goool-athletics-minimal-club-tee",
+  "blank": "Bella+Canvas 3010 Heavyweight Tee (Nicaragua)",
+  "saved_design_id": 6112002,
+  "per_size_skus": {
+    "XS": "APQ-6112002S5A1",
+    "S": "APQ-6112002S6A1",
+    "M": "APQ-6112002S7A1",
+    "L": "APQ-6112002S8A1",
+    "XL": "APQ-6112002S1A1",
+    "XXL": "APQ-6112002S2A1",
+    "XXXL": "APQ-6112002S21A1"
+  },
+  "status": "CREATED-NEEDS-COLOR-FIX",
+  "note": "Front 3.5in wearer-left and 12in back placed exactly; saved with black AND Natural colorways - black must be removed so Natural is the single color",
+  "verified": "2026-09-22 live account"
+}

@@ -39,7 +39,7 @@ export default function ProductCard({ product }: { product: Product }) {
             : `${product.name}, price to be announced`
         }
       >
-        <div className="relative aspect-square overflow-hidden rounded-xl bg-smoke">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-paper">
           {/* Every variant image stays mounted so switching never flashes. */}
           {(variants ?? [null]).map((v, i) => {
             const img = v ? v.images[0] : product.images[0];
@@ -141,11 +141,6 @@ export default function ProductCard({ product }: { product: Product }) {
           ) : (
             <p className="text-xs font-semibold uppercase tracking-wider text-ink/50">
               Price TBA
-            </p>
-          )}
-          {product.originLabel && (
-            <p className="mt-1 text-[10px] font-semibold uppercase leading-tight tracking-[0.12em] text-ink/40">
-              {product.originLabel}
             </p>
           )}
         </Link>

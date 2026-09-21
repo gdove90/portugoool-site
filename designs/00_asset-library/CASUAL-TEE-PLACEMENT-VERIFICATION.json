@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "revision": 2,
+  "checks": 1743,
+  "products": 10,
+  "packages": 14,
+  "source_freshness_checked": true,
+  "errors": [],
+  "scope": "File/archive integrity, catalog and per-size coverage, completed placement fields, proof links, artwork/label export dimensions. No supplier account or manufacturing approval.",
+  "placement_revision": "casual-placement-3in-2026-09-21",
+  "casual_packages_updated": 2,
+  "supplier_changed_by_this_task": false,
+  "website_images_changed_by_this_task": false,
+  "original_artwork_unchanged": true
+}

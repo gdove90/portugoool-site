@@ -1,0 +1,19 @@
+{
+  "artwork/GA-02-B_975px.png": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+  "artwork/GA-02-F_3300px.png": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+  "import-plan.json": "ce23cb1be95b0ad0dd164ff9693c24ba1050d30158c49e668d54362896ffe3e8",
+  "label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+  "label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+  "label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+  "label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+  "OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+  "reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+  "reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+  "reference-only/mockups/1-GOOOL_STD_VARSITY_FRONT.webp": "f91e2bbd547190ecd397034e5c0feec822a1620494440e39115e44204bd2f08d",
+  "reference-only/mockups/2-GOOOL_STD_VARSITY_BACK.webp": "c0530eae78af6bbbe73cab8e78927c118f802b03ffad123ae6d8b3b6172cefd3",
+  "reference-only/supplier-record.json": "81c6fae55d6e320a5e5002f9e63bf6fc88329226a40acf641224b464073aaced",
+  "SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+  "spec.json": "0dcc42b60ae3e32e3af80b753f3b0e222675094796ab3af3f4100e4c3495dc51",
+  "SPEC.md": "8a44d43a6d68f855ac1320f862882ba88e4dc45d7d7487bdbe433975c8a20472",
+  "verification-record.json": "e3f3c9e5bfe3f05bfdfac152d1ef359a0b1d54bc7eb321c0e6ec95f1fbf8fd7d"
+}

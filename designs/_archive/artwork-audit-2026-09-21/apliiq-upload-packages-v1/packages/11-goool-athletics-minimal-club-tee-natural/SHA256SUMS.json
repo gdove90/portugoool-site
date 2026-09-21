@@ -1,0 +1,19 @@
+{
+  "artwork/GA-03-B_3600px.png": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+  "artwork/GA-03-F_1050px.png": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+  "import-plan.json": "9f159ce7b5735fb0f99db96dbc3bea3f9d35dc5b2862fdd8bf513cea0e420d1e",
+  "label/README.md": "38b2c8e3f2077d1d7cadb4f305083c42d9656d48a66acee268b97ea78252e4f2",
+  "label/reference-only/approved-tag-concept.png": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+  "label/reference-only/README.md": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+  "label/reference-only/source-navigation-wordmark-white.png": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+  "OWNER-DECISIONS.md": "ec6e646b6ac17d07c7ee9ee90a494d09e7fd77f6899706992a182a5a88f3f8e0",
+  "reference-only/legacy-specifications-text.txt": "427092a769362c0c449fddc95cd134b229293209443212cdf2eea6dcfb10bd66",
+  "reference-only/legacy-specifications.pdf": "d974455e4cea60e77b17dcdba6c118dd2405c5f0d8494e2f1bb70834f963c20f",
+  "reference-only/mockups/1-GOOOL_STD_MINIMAL_CLUB_FRONT.webp": "a7152372523a8e24c3619f7b78ccf76cca3a9a47e073056075abcf45befa25b0",
+  "reference-only/mockups/2-GOOOL_STD_MINIMAL_CLUB_BACK.webp": "8cbe313d0592e4792b3e61a9c131c8433aaa160ce77bb81bcb02d2b430c3031e",
+  "reference-only/supplier-record.json": "5505f6f53a5522d27a2c9507650093d89ba8c2b1e293a502e7f7d50992fe7730",
+  "SOURCE-CONFLICTS.md": "13b29fc125d788904da5eb8e67f2106dbe3f8f57a65baec0f45b22c7ce212794",
+  "spec.json": "f29e8217312d6127b1bb8eb4e6c1bb23c392194c35a605b137ba4aaf947511a2",
+  "SPEC.md": "e90aa044bcde61ff3b8a8885065ad53b30a56e008a361caad57d46bc15017675",
+  "verification-record.json": "405d70e2422c1572118302935863b897c823c4f65ad11ae4400430aaa537619c"
+}

@@ -1,0 +1,51 @@
+{
+  "events": {
+    "evt_recovery_1": "checkout.session.completed"
+  },
+  "orders": {
+    "aef2bf51-b53a-4be7-b19f-588600a0b2cc": {
+      "stripe_session_id": "cs_test_recovery_2b7ceb880cf34b828e26b4c4056c7558",
+      "stripe_payment_intent": "pi_recovery",
+      "customer_email": "recovery@example.com",
+      "status": "paid",
+      "fulfillment_status": "submitted",
+      "submission_status": "accepted",
+      "total_cents": 4800,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 0,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Rec Overy",
+      "shipping_address": {
+        "line1": "3 Retry Rd",
+        "city": "Warwick",
+        "state": "RI",
+        "postal_code": "02886",
+        "country": "US"
+      },
+      "apliiq_order_id": "424242",
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:37:19.936Z",
+      "livemode": false,
+      "submission_attempt_id": "340522d7-1252-4643-87e0-de1584273aaa",
+      "submission_started_at": "2026-09-21T05:37:40.337Z",
+      "id": "aef2bf51-b53a-4be7-b19f-588600a0b2cc"
+    }
+  },
+  "items": {
+    "aef2bf51-b53a-4be7-b19f-588600a0b2cc": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "L",
+        "color": "White",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6099046,
+        "apliiq_sku": "APQ-6099046S8A1"
+      }
+    ]
+  },
+  "shipments": []
+}

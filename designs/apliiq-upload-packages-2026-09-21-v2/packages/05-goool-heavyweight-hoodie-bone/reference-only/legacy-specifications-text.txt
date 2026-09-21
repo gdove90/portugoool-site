@@ -1,0 +1,323 @@
+REFERENCE ONLY: see OWNER-DECISIONS.md and SOURCE-CONFLICTS.md for overrides.
+
+PAGE 1
+GOOOL / POD SAMPLE SPECIFICATION PACKET
+PRODUCTION CONTROL / PAGE 1 OF 7
+PRODUCTION SUMMARY
+Four physical samples only
+Apliiq sample order specification. Automatic fulfillment remains disabled until physical approval.
+ORDER HOLD: OWNER MUST CONFIRM THREE GARMENT SAMPLE SIZES
+ID
+EXACT BLANK
+COLOR
+FRONT
+SAMPLE
+BACK
+01
+Sport-Tek ST720
+Black
+Badge / DTF
+1 / size TBD
+Blank
+02
+Independent IND4000
+Black
+Wordmark / DTF
+1 / size TBD
+Blank
+03
+Bella+Canvas 4810GD
+Washed Black
+Wordmark / DTF
+1 / size TBD
+Blank
+04
+OTTO 31-069
+Black/Natural
+Front wordmark + right-side
+slogan
+1 / adjustable
+Blank rear
+Global production controls
+Use only the production files named in this packet. No redraw, substitution, recolor, stretch, compression, added type, or portal-generated
+replacement artwork.
+Garment sellable sizes are S, M, L, XL, and 2XL. Sample size is not authorized until the owner confirms it in writing.
+All three garment backs are intentionally blank. The cap carries the approved wordmark on front and THE SOUND OF VICTORY on the wearer's
+right side; rear remains blank.
+Center to the physical garment or front-panel axis. Target center deviation is 0.125 in or less; reject any sample beyond +/-0.25 in.
+Apply the approved 1 x 1 in GOOOL private satin neck label to all three garments. Do not apply it to the cap.
+The new side slogan is a separate owner-directed embroidery lockup. Do not substitute a font, retype it in the portal, or combine it with the front
+wordmark file.
+PRODUCTION AUTHORITY
+Written dimensions and named files control. Technical drawings communicate placement only. If the Apliiq portal prevents an exact setup, stop and
+return the proof for owner approval before ordering.
+SAMPLE PRODUCTION ONLY / WRITTEN DIMENSIONS CONTROL / NO ARTWORK SUBSTITUTIONS
+ISSUED 2026-09-01
+
+
+PAGE 2
+GOOOL / POD SAMPLE SPECIFICATION PACKET
+PRODUCTION CONTROL / PAGE 2 OF 7
+ARTWORK CONTROL
+Approved artwork and extracted color standards
+Production derivatives preserve the supplied geometry and proportions. Only transparent outer margins were removed.
+APPROVED BADGE / CREST
+ST720 FRONT ONLY
+APPROVED UNDERLINED WORDMARK
+HOODIE + CASUAL TEE + CAP
+Master audit and production derivatives
+CONTROL
+SOURCE
+TRIM AUDIT
+PRODUCTION RESULT
+Badge source
+1607 x 2047 px
+Visible bounds 1549 x 1983 px
+Final 1500 x 1920 px / 5.00 x 6.40 in
+Wordmark source
+2048 x 727 px
+Visible bounds 2048 x 711 px
+Final 2025 x 703 px / 6.75 x 2.34 in
+Centering
+Visible bounds drive axis
+Badge horizontal bias +0.03 in
+No geometry change; align visible-bound center
+Extracted production colors
+PRINT WHITE
+sRGB 255 / 255 / 255
+#FFFFFF
+GOOOL RED
+sRGB 198 / 19 / 34
+#C61322
+DARK THREAD / LABEL
+sRGB 0 / 0 / 0
+#000000
+PREPRESS RULES
+Transparent PNG, sRGB, 300 DPI at final physical size; one-pixel safety border may be added automatically by Apliiq.
+Do not remove internal negative spaces, distressed edge detail, the underline gap, or the red accent.
+Cap conversion maps print white to black embroidery thread and preserves the extracted red. Apliiq performs machine-specific digitization.
+Cap side slogan is supplied as a path-based SVG plus 300-DPI PNG. The front wordmark remains the exact approved raster reference; no DST file is
+fabricated.
+SAMPLE PRODUCTION ONLY / WRITTEN DIMENSIONS CONTROL / NO ARTWORK SUBSTITUTIONS
+ISSUED 2026-09-01
+
+
+PAGE 3
+GOOOL / POD SAMPLE SPECIFICATION PACKET
+PRODUCTION CONTROL / PAGE 3 OF 7
+SAMPLE 01
+Men's athletic performance shirt
+Sport-Tek ST720 / Black / approved badge / centered front DTF / blank back
+MANUFACTURER / STYLE
+Sport-Tek ST720 PosiCharge Re-Compete Tee / Apliiq Sustainable Athletic Tee
+FABRIC / BUILD
+3.8 oz/yd2; 100% recycled polyester with PosiCharge; taped neck; set-in sleeves; athletic fit
+SIZES / SAMPLE
+Sellable S, M, L, XL, 2XL / quantity 1 / SAMPLE SIZE: OWNER TO CONFIRM BEFORE ORDER
+ARTWORK FILE
+GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png
+FINAL ART SIZE
+5.00 in W x 6.40 in H / 1500 x 1920 px / 300 DPI
+PLACEMENT
+Visible-bound center on physical garment axis; crest top point 2.25 in below bottom of front collar seam,
+beginning between the pecs
+DECORATION / BACK
+Apliiq transfer / DTF front only / back has NO DECORATION
+TOLERANCE
+Target center deviation <=0.125 in; maximum acceptable +/-0.25 in; scale +/-2%
+PRIVATE LABEL
+Apply GOOOL 1 x 1 in black-on-white satin private label if live blank support is confirmed
+TECHNICAL PLACEMENT MOCKUP / WRITTEN DIMENSIONS CONTROL
+FRONT / CENTER AXIS
+BACK / NO DECORATION
+Crest top point: 2.25 in below collar seam / shield extends toward upper midsection
+POLYESTER HEAT CONTROL
+Low-cure adhesive + bleed blocker / protective pad / cool flat / no hot stacking
+SAMPLE PRODUCTION ONLY / WRITTEN DIMENSIONS CONTROL / NO ARTWORK SUBSTITUTIONS
+ISSUED 2026-09-01
+
+
+PAGE 4
+GOOOL / POD SAMPLE SPECIFICATION PACKET
+PRODUCTION CONTROL / PAGE 4 OF 7
+SAMPLE 02
+Men's premium simple hoodie
+Independent IND4000 / Black / approved underlined wordmark / centered front DTF / blank back
+MANUFACTURER / STYLE
+Independent Trading Co. IND4000 Heavyweight Pullover Hoodie
+FABRIC / BUILD
+10 oz (330 gsm) 3-end fleece; Black 70% cotton / 30% polyester; 100% cotton face yarn; generous fit
+SIZES / SAMPLE
+Sellable S, M, L, XL, 2XL / quantity 1 / SAMPLE SIZE: OWNER TO CONFIRM BEFORE ORDER
+ARTWORK FILE
+GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png
+FINAL ART SIZE
+6.75 in W x 2.34 in H / 2025 x 703 px / 300 DPI
+PLACEMENT
+Visible-bound center on physical axis; art top 4.00 in below hood/neck seam; internal GOOOL lettering axis
+approx. 4.66 in below seam across pec line
+CLEARANCE
+Maintain at least 1.50 in between artwork bottom and kangaroo-pocket top edge
+DECORATION / BACK
+Apliiq transfer / DTF front only / back has NO DECORATION
+TOLERANCE
+Target center deviation <=0.125 in; maximum acceptable +/-0.25 in; scale +/-2%
+PRIVATE LABEL
+Apply approved 1 x 1 in black-on-white satin GOOOL private label; remove manufacturer tag
+TECHNICAL PLACEMENT MOCKUP / WRITTEN DIMENSIONS CONTROL
+FRONT / CENTER AXIS
+BACK / NO DECORATION
+GOOOL lettering crosses pec line / art top 4.00 in below hood-neck seam
+MINIMAL SCALE CONTROL
+Do not enlarge to fill the portal print area / keep drawcords and pocket clear
+SAMPLE PRODUCTION ONLY / WRITTEN DIMENSIONS CONTROL / NO ARTWORK SUBSTITUTIONS
+ISSUED 2026-09-01
+
+
+PAGE 5
+GOOOL / POD SAMPLE SPECIFICATION PACKET
+PRODUCTION CONTROL / PAGE 5 OF 7
+SAMPLE 03
+Men's premium simple casual tee
+Bella+Canvas 4810GD / Washed Black / same underlined wordmark / centered front DTF / blank back
+MANUFACTURER / STYLE
+Bella+Canvas 4810GD Heavyweight Garment-Dyed Tee
+FABRIC / BUILD
+6.5 oz/yd2; 18 singles; 100% ring-spun cotton; relaxed fit; semi-dropped shoulder; side-seamed
+COLOR
+Washed Black. If the exact live Apliiq color is unavailable, STOP; do not substitute Black without owner
+approval
+SIZES / SAMPLE
+Sellable S, M, L, XL, 2XL / quantity 1 / SAMPLE SIZE: OWNER TO CONFIRM BEFORE ORDER
+ARTWORK FILE
+GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png
+FINAL ART SIZE
+6.75 in W x 2.34 in H / 2025 x 703 px / 300 DPI
+PLACEMENT
+Visible-bound center on physical axis; art top 3.25 in below collar seam; internal GOOOL lettering axis approx.
+3.91 in below seam across pec line
+DECORATION / BACK
+Apliiq transfer / DTF front only / back has NO DECORATION
+TOLERANCE
+Target center deviation <=0.125 in; maximum acceptable +/-0.25 in; scale +/-2%
+PRIVATE LABEL
+Apply approved 1 x 1 in black-on-white satin GOOOL private label; remove manufacturer tag
+TECHNICAL PLACEMENT MOCKUP / WRITTEN DIMENSIONS CONTROL
+FRONT / CENTER AXIS
+BACK / NO DECORATION
+GOOOL lettering crosses pec line / art top 3.25 in below collar seam
+GARMENT-DYE HEAT CONTROL
+Use low-temperature DTF under 300 F / test for scorching, halo, dye shift, and shade variance
+SAMPLE PRODUCTION ONLY / WRITTEN DIMENSIONS CONTROL / NO ARTWORK SUBSTITUTIONS
+ISSUED 2026-09-01
+
+
+PAGE 6
+GOOOL / POD SAMPLE SPECIFICATION PACKET
+PRODUCTION CONTROL / PAGE 6 OF 7
+SAMPLE 04
+Structured coordinating cap
+OTTO 31-069 / Black-Natural / front wordmark + right-side slogan / flat embroidery
+MANUFACTURER / STYLE
+OTTO 31-069 structured seamless five-panel mid-profile cap
+FABRIC / BUILD
+65% polyester / 35% cotton twill; firm buckram front; slightly curved visor; plastic snap; one size
+COLOR / SAMPLE
+Black/Natural / adjustable one size / quantity 1
+FRONT FILES
+GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png +
+GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.pdf
+SIDE FILES
+GOOOL_SAMPLE_04_OTTO31069_SOUND_OF_VICTORY_RIGHT_SIDE.svg +
+GOOOL_SAMPLE_04_OTTO31069_SOUND_OF_VICTORY_RIGHT_SIDE.png
+FRONT ART / PLACEMENT
+3.75 in W x 1.30 in H; center on seamless front; bottom edge 0.50 in above visor seam
+RIGHT-SIDE ART
+2.25 in W x 0.86 in H; center in Apliiq wearer's-right field; bottom edge 0.55 in above sweatband seam
+DECORATION
+Two flat-embroidery placements; no puff; Apliiq performs machine-specific digitization and supplies both proofs
+THREAD MAP
+Front: white source -> stock black thread; red -> nearest thread to #C61322. Side slogan: stock black thread
+only
+TOLERANCE
+Target center deviation <=0.125 in; maximum acceptable +/-0.25 in; no visible tilt
+REAR / LEFT SIDE
+NO DECORATION. Slogan is authorized on wearer's right side only
+TECHNICAL EMBROIDERY MOCKUP / WRITTEN DIMENSIONS CONTROL
+FRONT / 3.75 IN W FLAT EMBROIDERY
+WEARER'S RIGHT / SLOGAN EMBROIDERY
+Center on seamless front panel; bottom edge 0.50 in above upper visor seam
+DIGITIZATION CONTROL
+Front + right-side proofs required / reject puckering, broken letters, wrong side, or red misregistration
+SAMPLE PRODUCTION ONLY / WRITTEN DIMENSIONS CONTROL / NO ARTWORK SUBSTITUTIONS
+ISSUED 2026-09-01
+
+
+PAGE 7
+GOOOL / POD SAMPLE SPECIFICATION PACKET
+PRODUCTION CONTROL / PAGE 7 OF 7
+FILE INDEX AND APPROVAL
+Production file manifest and sample-release gate
+Every filename below must match the supplied package exactly. No additional artwork is authorized.
+FOLDER
+EXACT FILENAME
+PRODUCTION USE
+SHA-256
+01_Performance_Tee_Artwork
+GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png
+ST720 front / 5.00 x 6.40 in
+ca2f9bbcac8e
+02_Hoodie_Artwork
+GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png
+IND4000 front / 6.75 x 2.34 in
+e853b475085f
+03_Casual_Tee_Artwork
+GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png
+4810GD front / 6.75 x 2.34 in
+e853b475085f
+04_Cap_Embroidery_Artwork
+GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFE
+RENCE.png
+Black-red digitizing reference
+661f917ecd0c
+04_Cap_Embroidery_Artwork
+GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFE
+RENCE.pdf
+3.75 in production PDF
+55ec1e78db0d
+04_Cap_Embroidery_Artwork
+GOOOL_SAMPLE_04_OTTO31069_SOUND_OF_VICTORY_RIGHT_SIDE.svg
+Right-side vector outlines
+e6eadbb366f5
+04_Cap_Embroidery_Artwork
+GOOOL_SAMPLE_04_OTTO31069_SOUND_OF_VICTORY_RIGHT_SIDE.png
+Right side / 2.25 x 0.86 in
+83a35c5f6376
+05_Private_Label_Artwork
+GOOOL_PRIVATE_LABEL_APPAREL_MASTER.png
+1 x 1 in satin label
+02ce4d42b769
+Pre-order owner approvals
+Confirm the sample size for ST720, IND4000, and 4810GD. No garment sample order may proceed while size is TBD.
+Confirm the Apliiq live color names: ST720 Black, IND4000 Black, 4810GD Washed Black, and OTTO 31-069 Black/Natural.
+Approve Apliiq portal proofs showing exact style code, front dimensions, reference measurements, blank backs, and private labels.
+Approve the two-line THE SOUND OF VICTORY lockup and the wearer's-right side location in the Apliiq digitized proof.
+Physical sample approval checklist
+Exact centering and scale
+Crest top + pec-line placement
+White-black-red accuracy
+Sharp edges and opacity
+Print hand and flexibility
+Front embroidery clarity
+Side slogan legibility
+No cap puckering or tilt
+Garment construction
+Private-label installation
+Three-wash shrinkage
+Three-wash print durability
+Actual workout comfort - ST720
+Written owner release
+RELEASE STANDARD
+No sample approval means no customer fulfillment. Apliiq digitized proof and the physical cap sew-out both require written GOOOL approval.
+SAMPLE PRODUCTION ONLY / WRITTEN DIMENSIONS CONTROL / NO ARTWORK SUBSTITUTIONS
+ISSUED 2026-09-01

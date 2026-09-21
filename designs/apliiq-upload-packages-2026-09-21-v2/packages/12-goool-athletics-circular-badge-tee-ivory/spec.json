@@ -1,0 +1,190 @@
+{
+  "schema_version": "2.0",
+  "package_id": "12-goool-athletics-circular-badge-tee-ivory",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "80000000-0000-4000-8000-000000000004",
+    "slug": "goool-athletics-circular-badge-tee",
+    "name": "GOOOL Athletics Circular Badge Tee",
+    "website_color": "Ivory",
+    "website_sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "url": "https://goool.shop/shop/goool-athletics-circular-badge-tee"
+  },
+  "garment": {
+    "brand_model": "Comfort Colors C1717",
+    "supplier_color_candidate": "Ivory",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "Comfort Colors C1717 Ivory (verified available)"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "CREATED-VERIFIED",
+    "source_reported_design_id": 6112033,
+    "reported_skus_for_website_sizes": {
+      "S": "APQ-6112033S6A1",
+      "M": "APQ-6112033S7A1",
+      "L": "APQ-6112033S8A1",
+      "XL": "APQ-6112033S1A1",
+      "XXL": "APQ-6112033S2A1"
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false,
+    "source_reported_note": "C1717 Ivory (made in Dominican Republic); Front-only 3x3 navy circular badge at wearer-left chest; 6 sizes S-3XL; no back print per spec."
+  },
+  "decoration": {
+    "method": "DTF / transfer; supplier process confirmation required",
+    "artwork": [
+      {
+        "face": "front",
+        "path": "artwork/GA-CIRCLE-08-NAVY-PRINT.svg",
+        "png_export_path": "artwork/GA-CIRCLE-08-NAVY-PRINT.png",
+        "sha256": "480228dd55d2e707decf7a42e45d1edbe7302953e6f8add6d8733d6aa3cf8e9c",
+        "asset_type": "source-derived_svg_outlines",
+        "source_project_path": "designs\\16_goool_athletics\\logos\\GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png",
+        "source_sha256": "db0d404138b5a00d72bf6debf775c19306fc8bbe1ed645d6e9343a660228b192",
+        "visible_width_in": 3,
+        "proportional_visible_height_in": 3.0324675324675323,
+        "horizontal_offset_wearer_left_in": 3.5,
+        "horizontal_position": "artwork center 3.5in wearer-left of body centerline (viewer right)",
+        "vertical_offset_in": 3,
+        "vertical_anchor": "top of visible artwork below bottom front collar seam",
+        "dimension_status": "new_authored_design_target_supplier_proof_required",
+        "effective_source_samples_per_inch": 308,
+        "canvas_width_in_for_target_visible_width": 3,
+        "visible_top_inset_in_at_target": 0,
+        "usage": "draft_upload_candidate_supplier_artwork_and_placement_proof_required",
+        "width_mm": 76.2,
+        "height_mm": 77.0247,
+        "vertical_offset_mm": 76.2,
+        "png_export_sha256": "3a642d9ebf6ca9f6ee0d7a81d3de7d8a9aa19e62eac9243cc4d5d1a5d57ae21a",
+        "png_export_pixels": [
+          1800,
+          1819
+        ],
+        "png_export_ppi": 600
+      }
+    ],
+    "back": "blank",
+    "sleeves": "blank",
+    "cap_side_and_rear": "not applicable",
+    "notes": [
+      "Lettering forms circle: no enclosing ring, disk, shield or extra wording. Navy on Ivory."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 3,
+      "rotation_degrees": 2,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    },
+    "legacy_reference_artwork": [
+      {
+        "source_project_path": "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+        "sha256": "81cbfcc07ca59db0082850c50a75c6b7b3b9ba2465e9e0ed98591db921300ce8",
+        "bytes": 112185,
+        "face": "front",
+        "visible_width_in": 3,
+        "vertical_offset_in": null,
+        "horizontal_position": "wearer-left chest; measured offset pending",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "diameter_target_not_final_placement",
+        "path": "reference-only/artwork-needs-resolution/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+        "pixels": [
+          900,
+          900
+        ],
+        "alpha_bbox_px": [
+          109,
+          105,
+          780,
+          783
+        ],
+        "visible_pixels": [
+          671,
+          678
+        ],
+        "effective_ppi_at_target_visible_width": 223.666667,
+        "proportional_visible_height_in": 3.031297,
+        "canvas_width_in_for_target_visible_width": 4.023845,
+        "visible_top_inset_in_at_target": 0.469449,
+        "raster_modified_by_package_builder": false,
+        "usage": "reference_only_do_not_upload_until_blockers_resolved"
+      }
+    ]
+  },
+  "label": {
+    "required": true,
+    "placement": "inside neck, supplier-compatible attachment TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md",
+    "flat_png_export": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+    "flat_artwork_prepared": true,
+    "supplier_service_candidate": "Apliiq full-color printed label; inside-neck compatibility and material appearance require proof",
+    "alternate_review_size_in": 2,
+    "flat_master_sha256": "e67e80ebadc436f25de7f508884e8ee1671024a7563b4d6776db1a1552716917",
+    "flat_png_sha256": "4bc5de6c77b9a20fc30ae809a5307e9b6c170d79e4919cef9e57803e98555e81",
+    "layout_approval_status": "derived_composition_candidate_not_exact_original_concept"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
+      "sha256": "b466d38e72f7319e0d4b90d0049024bba9c4788d75760abddc93f7715cf9ac0b",
+      "bytes": 35558
+    },
+    {
+      "path": "reference-only/mockups/2-GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
+      "sha256": "f596403c83d2077c9b36cf2505974b526eead7055694a0b8817bdf65928cc223",
+      "bytes": 31172
+    }
+  ],
+  "unresolved_requirements": [
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales.",
+    "Label artwork is prepared; select a compatible service, verify small-detail legibility and inside placement, obtain supply ID and production proof before applying. One-inch woven layout is not automatically viable.",
+    "Verify newly authored collar/center offsets and original non-square aspect ratio on all offered sizes. SVG outline edge and color proof required.",
+    "Reopen 6112033: recorded 3x3in older padded artwork can undersize the visible badge. Replace with tightly bounded v2 print file at 3in visible width / 3.0324675in height and verify placement."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false,
+    "local_artwork_and_placement_package_complete": true
+  },
+  "revision_built_at_utc": "2026-09-21T07:06:10.630348+00:00",
+  "execution_policy": {
+    "reference_mockups": "Visual intent only; supplier blank and dimensions control manufacturing. Update misleading mockup construction before sale.",
+    "per_size_scaling": "Use stated width across offered sizes only if verified to fit. If supplier scales any size, capture exact dimensions and review representative proof; no silent scaling.",
+    "customer_release_rule": "Do not sell this color/size until correct saved design/variant, front/back art and size, label, material/fit, sample and product imagery are verified.",
+    "no_invented_sample_results": true
+  },
+  "artwork_audit": {
+    "date": "2026-09-21",
+    "read_first": "ARTWORK-AUDIT.md",
+    "source_library": "designs/00_asset-library/START-HERE.md",
+    "artwork_bytes_changed": false,
+    "label_layout_status": "later_composition_candidate_compare_to_original_approved_concept",
+    "newer_files_automatically_supersede_originals": false,
+    "supplier_manufacturing_approval_granted": false,
+    "circular_source_status": "Original1254px raster is shape authority. SVG pixel-run traces and600ppi PNGs are proof derivatives; no added detail."
+  }
+}

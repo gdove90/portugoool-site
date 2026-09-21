@@ -1,0 +1,460 @@
+REFERENCE ONLY: see OWNER-DECISIONS.md and SOURCE-CONFLICTS.md for overrides.
+
+PAGE 1
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+01 / BRIEF & STATUS
+Three looks. One brand.
+Prepared for the POD production partner | Contact: Gary Dove | gdove90@gmail.com
+Purpose: quote, reconstruct print artwork, confirm garment choices and prepare sample proofs for three
+GOOOL ATHLETICS T-shirt concepts. This packet is ready to send for supplier review. It does not authorize
+printing, ordering, billing or substitutions.
+Style
+Direction
+Reference garment
+GA-01 / Modern Sport
+Bold sport wordmark; front and upper back
+Solid black crewneck tee
+GA-02 / Varsity
+Collegiate arch; front and upper back
+Washed black crewneck tee
+GA-03 / Minimal Club
+Small left chest; large upper back
+Natural / cream crewneck tee
+What the owner has established
+Use the visible brand name GOOOL ATHLETICS. Spelling is G + O + O + O + L: three O letters. All three
+concepts remain in consideration; Varsity and Minimal Club are the owner's favorites. No final master-logo
+selection has been approved in this thread. Do not place "LLC" on the garment.
+What is proposed in this packet
+Print sizes, placement offsets, color targets, blank criteria, sample quantities and acceptance tolerances
+below are development proposals. Confirm them on a dimensioned supplier proof and obtain owner
+approval before a physical sample. Final bulk/POD release requires separate sample approval.
+Critical file distinction
+The three supplied PNGs are AI-generated visual references, not print separations. They contain
+garment photography, shadows and layout labels. Rebuild clean artwork; do not crop a shirt image and
+print it. No final vector masters, transparent production PNGs or licensed font files are included.
+Packet map
+02 Garments & scope | 03-05 Individual style sheets | 06 Placement & grading
+07 Artwork deliverables | 08 Color & decoration | 09 Sample inspection
+10 Supplier quote worksheet | 11 Approvals & file inventory
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+1
+
+
+PAGE 2
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+02 / GARMENTS & SCOPE
+Blank and finish requirements
+Treat these as three T-shirt graphics/colorways. A hoodie, hat, performance-fabric version or additional
+colorway is outside this request and needs a separate specification. The Modern Sport name describes the
+graphic; it does not approve a polyester performance blank.
+Item
+Proposed requirement / supplier response needed
+Silhouette
+Adult men's / suitable unisex crewneck; relaxed body; moderate dropped shoulder;
+opaque fabric; rib collar. Match the visual intent rather than promising exact mockup
+drape.
+Fabric / weight
+Proposed premium casual tee: cotton face, approximately 200-240 GSM. Return actual
+fiber composition, fabric weight, shrinkage information and decoration compatibility.
+GA-01 black
+Uniform solid black; avoid visible wash fading unless approved.
+GA-02 washed black
+Garment-dyed or comparable washed black appearance. Show actual blank swatch and
+variation between pieces; no distress holes.
+GA-03 natural
+Natural / cream / off-white. Supply actual color name and code. Do not substitute bright
+white without approval.
+Blank selection
+Vendor to quote manufacturer, exact model/SKU and supplier color code for each style.
+Prefer the same base fit where available; disclose differences. No blank is newly approved
+by this packet.
+Size range
+Planning range S-2XL, subject to owner confirmation. Supply manufacturer measurements
+and any size-dependent costs. Physical sample size is still TBD.
+Labels
+Quote stock labeling and optional GOOOL ATHLETICS private neck label separately. New
+label artwork is not supplied. Preserve required garment information; confirm your
+relabeling process.
+Packaging
+Quote standard individual POD packaging. State optional branded packing slip / mailer
+costs separately; no custom packaging approved.
+Request current stock coverage, stockout handling, order routing and substitution policy. Written approval is required for
+any change to manufacturer, blank model, fabric, dye color or print process after sample signoff.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+2
+
+
+PAGE 3
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+03 / STYLE SHEET
+GA-01  |  Modern Sport
+Reference appearance only. Every listed measurement is a proposed sample target.
+Solid black blank. Large white forward-leaning GOOOL across chest, red underline and smaller widely
+spaced white ATHLETICS underneath. Upper-back mark is white only; no red line.
+Location / art ID
+Visible artwork width
+Placement target
+Front / GA-01-F
+11.00 in / 279.4 mm wide
+Centered; top edge 3.00 in below front collar seam
+Back / GA-01-B
+3.25 in / 82.6 mm wide
+Centered; top edge 2.00 in below back collar seam
+Artwork notes: Preserve the rounded, extended athletic letterforms and compact vertical spacing. Keep
+all three O letters distinct. The red underline belongs only on the front. Do not add a swoosh, crest or
+slogan.
+Height: proportional to the approved reconstructed artwork; supplier must state final height on proof. Width refers to
+visible ink bounds, not canvas or transparent padding.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+3
+
+
+PAGE 4
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+04 / STYLE SHEET
+GA-02  |  Varsity
+Reference appearance only. Every listed measurement is a proposed sample target.
+Washed black blank. Arched collegiate GOOOL in warm ivory, with restrained dark red outline accents and
+dark negative space. Small ATHLETICS below, flanked by short ivory rules. Small ivory upper-back brand
+mark.
+Location / art ID
+Visible artwork width
+Placement target
+Front / GA-02-F
+11.00 in / 279.4 mm wide
+Centered; top edge 3.00 in below front collar seam
+Back / GA-02-B
+3.25 in / 82.6 mm wide
+Centered; top edge 2.00 in below back collar seam
+Artwork notes: Keep the arch, block serifs and thin red contour visible. Rebuild outline layers explicitly;
+confirm whether black detail is garment knockout or printed black. Any worn texture must be intentional in
+artwork and approved. Do not simulate garment wrinkles as distress.
+Height: proportional to the approved reconstructed artwork; supplier must state final height on proof. Width refers to
+visible ink bounds, not canvas or transparent padding.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+4
+
+
+PAGE 5
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+05 / STYLE SHEET
+GA-03  |  Minimal Club
+Reference appearance only. Every listed measurement is a proposed sample target.
+Natural / cream blank. Small black GOOOL over tracked ATHLETICS at wearer's left chest. Large black
+GOOOL and ATHLETICS across the upper back with a restrained red underline.
+Location / art ID
+Visible artwork width
+Placement target
+Front / GA-03-F
+3.50 in / 88.9 mm wide
+Wearer's left chest; center 3.50 in left of centerline; top
+3.00 in below front collar seam
+Back / GA-03-B
+12.00 in / 304.8 mm wide
+Centered; top edge 2.75 in below back collar seam
+Artwork notes: Front has no red underline. Keep the back wordmark bold and clean, with ATHLETICS
+spaced across a similar width. The left chest is the wearer's left, which appears on the viewer's right in the
+front mockup.
+Height: proportional to the approved reconstructed artwork; supplier must state final height on proof. Width refers to
+visible ink bounds, not canvas or transparent padding.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+5
+
+
+PAGE 6
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+06 / PLACEMENT & SIZE GRADING
+Measure the ink, not the canvas
+Measurement convention
+Lay the garment flat without stretching. Use the bottom seam of the rib collar at center front or center back
+as the vertical origin. Measure straight down the body centerline to a horizontal line through the highest
+visible printed point. For the left-chest graphic, use the same front origin and its specified horizontal center
+offset. Do not measure from the top of the rib or the shoulder seam.
+Center-front and center-back graphics align to the garment body centerline. All widths cover the whole
+visible lockup, including any underline or flanking rules. Keep the artwork aspect ratio locked. Height is
+recorded after artwork reconstruction; never stretch letters to fill an arbitrary box.
+Location
+S-2XL starting proposal
+Supplier must validate
+GA-01-F / GA-02-F
+One 11.00 in-wide print across sizes
+Actual print area and chest/armhole
+clearance, especially S
+GA-01-B / GA-02-B
+One 3.25 in-wide print across sizes
+ATHLETICS readability and minimum
+line/letter thickness
+GA-03-F
+One 3.50 in-wide print; 3.50 in left
+offset
+Placement on S and 2XL; no crowding
+at armhole or excessive outer shift
+GA-03-B
+One 12.00 in-wide print across sizes
+Max safe width on S and back platen
+restrictions
+If one size does not fit safely
+Return an exception proof showing the affected size, revised width and offset, and additional costs. Owner
+must approve any S-M / L-2XL grading split. Do not silently scale artwork per order. Provide dimensioned
+front/back proofs for S, the chosen sample size, and 2XL.
+Proposed acceptance tolerances
+Attribute
+Target for supplier agreement
+Position
+Within +/-0.25 in (6.4 mm) horizontally and vertically of the approved location
+Print dimensions
+Within +/-3% of approved width and height, preserving aspect ratio
+Rotation
+No more than 2 degrees off approved alignment
+Clearance
+Propose at least 1.00 in from visible ink to seams/armholes; use a larger clearance
+if the chosen process requires it
+These tolerances are proposed acceptance terms, not a statement of supplier capability. Declare exceptions in the quote
+before approval.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+6
+
+
+PAGE 7
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+07 / ARTWORK DEVELOPMENT
+Six clean print masters required
+Supplier or appointed designer to reconstruct each front/back graphic from the reference. Exact fonts are
+not specified or licensed by this packet. Match the visual direction, disclose fonts used and confirm
+commercial print rights. Any font substitution or shape change requires a visual proof.
+Art ID
+Target width
+300 PPI width*
+Proposed palette
+GA-01-F
+11.00 in
+3300 px
+White + red
+GA-01-B
+3.25 in
+975 px
+White
+GA-02-F
+11.00 in
+3300 px
+Ivory + dark red; black TBD
+GA-02-B
+3.25 in
+975 px
+Ivory
+GA-03-F
+3.50 in
+1050 px
+Black
+GA-03-B
+12.00 in
+3600 px
+Black + red
+*Pixel widths apply to visible artwork at the proposed physical size. Raster height must follow the approved aspect ratio.
+Do not upscale the supplied mockup to meet these dimensions.
+Deliverables to return for approval
+1. Editable vector master for each location (AI or SVG) with clean paths and outlined type; preserve an
+editable type version separately if licensed.
+2. Print PDF for each location at 1:1 physical size, with outlined fonts and no garment photo.
+3. Transparent PNG for each location at 300 PPI at final size, if accepted by the chosen workflow. Use the
+supplier's requested color profile and disclose it.
+4. Dimensioned garment proof listing blank SKU/color, size, art width x height, collar offset, horizontal
+offset, decoration method and color references.
+5. Source font names, palette definition, revision number and a file manifest.
+Artwork preflight
+Check exact spelling; verify transparency/knockouts; remove backdrop, garment shadows and concept
+headings; resolve stray points and unintended distress; confirm minimum strokes and counters at the
+smallest back print. Ask the printer to generate any process-specific white underbase or separations. Never
+add an underbase manually without its specification.
+Version control
+Use names such as GA-02_Front_v01_PROOF.pdf. After owner approval, issue a new clearly labeled
+production revision and list its matching proof. Keep obsolete revisions out of the fulfillment workflow.
+Production masters are a required next deliverable and are not included in this packet.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+7
+
+
+PAGE 8
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+08 / COLOR & DECORATION
+Color targets and print proposals
+The following screen values are proposed reconstruction targets, not colors measured from the
+mockups and not approved Pantone matches. Approve physical output on the actual garment. Supplier to
+provide its closest reproducible ink/transfer values and color-managed proof.
+Color role
+Proposed screen target
+Application
+White
+#FFFFFF
+GA-01 front/back
+Core red
+#C52D32
+GA-01 front underline; GA-03 back underline
+Warm ivory
+#E8DFCA
+GA-02 front/back
+Varsity dark red
+#8E3438
+GA-02 front outline accent
+Black
+#171717
+GA-03 front/back; GA-02 printed black only if
+required
+Decoration quote
+Baseline proposal: DTF for both print locations on the selected cotton tees, subject to supplier
+capability and sample approval. Prioritize crisp type, opaque light ink on black and a flexible hand. Quote
+DTG as an optional comparison if it better achieves the appearance; list changes in hand, vibrancy, cost and
+care. Do not switch processes after approval.
+Large solid graphics may feel heavier depending on the process. Flag expected hand-feel on GA-01 front
+and GA-03 back before sampling. For washed/garment-dyed blanks, confirm compatibility and any risk of
+dye migration, scorching or press marks. Supplier owns process settings based on the actual materials.
+Fine detail and line treatment
+Keep decorative lines proportional to the approved reconstructed graphic. As a starting proposal, use a core
+red underline around 0.10 in thick at full chest/back scale; finalize visually. Supplier must disclose its
+minimum line, gap and text sizes and show a 100% close-up of small ATHLETICS lettering and the Varsity
+outlines. Do not thicken, simplify or drop detail without approval.
+Color approval record
+Record actual blank color code, approved ink/transfer references, profile/workflow and dated sample
+photos. No device-screen image can serve as the sole physical color standard. Use the approved physical
+sample as the appearance reference for subsequent orders.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+8
+
+
+PAGE 9
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+09 / PHYSICAL SAMPLES
+Approve appearance and wear
+Proposed sample request: one finished shirt per concept, three shirts total, printed front and back. This
+is a quotation request only. Owner must confirm sample sizes, quantities, shipping details, price and
+artwork proofs before samples are ordered.
+Check
+Acceptance / evidence requested
+Identity
+Correct GOOOL spelling with three O letters; ATHLETICS spelled correctly; no LLC,
+unapproved slogan or mockup heading.
+Blank
+Actual manufacturer, model, color, size, fabric and weight match the approved proof; no
+unapproved replacement.
+Geometry
+Measure print width, height and collar offsets with a ruler. Verify centerline / left-chest
+placement and agreed tolerances.
+Print finish
+No lifting edges, unwanted cracks, pinholes, exposed underbase halo, adhesive residue,
+heat damage or visible press rectangle. Intentional approved Varsity texture is exempt from
+crack-free solid-ink expectations.
+Fine type
+ATHLETICS remains readable at small back/chest scale; letter counters open; red contours
+and fine rules intact.
+Color / feel
+Match approved physical references; record opacity and fabric show-through. Owner
+evaluates softness, print feel, drape and overall fit.
+Wash review
+Proposed owner test: five wash/dry cycles according to the supplied care instructions.
+Photograph before/after; check lifting, cracking, color loss and distortion. Record chest/body
+dimensions before and after; compare with the supplier's declared shrinkage allowance.
+Fulfillment
+Check folded presentation, label information, packing slip accuracy and packaging. Send
+care instructions for the chosen blank/process.
+Photos and records
+Provide full front/back photos on a flat surface, detail crops of every print, collar/label photos and ruler
+photos of placements. Use neutral lighting with no filters. Record sample date, order ID, blank lot if
+available and artwork revision. Keep one approved physical reference or agree an alternative standard.
+When a sample fails
+Document the issue against the approved proof and agree the correction/re-sample plan before fulfillment
+is enabled. Ask the supplier to state its remedy and reprint policy in the quote; this packet does not
+presume acceptance of commercial terms.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+9
+
+
+PAGE 10
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+10 / SUPPLIER REPLY
+Quote and capability worksheet
+Please return the following information for each style. A fill-in text response sheet is included in the ZIP.
+Quote in your stated currency, separating taxes and delivery. Do not treat this request as a purchase order.
+Quote line
+Response needed for GA-01, GA-02 and GA-03
+Blank
+Manufacturer/model; color name/code; actual fiber/weight; size chart; fit; available size
+range; stock position; alternate option identified separately.
+Decoration
+Method per location; maximum print dimensions; minimum detail limits; color/profile
+requirements; placement tolerances; achievable match to each reference.
+Artwork setup
+Reconstruction cost per graphic; six locations in total; included revisions;
+vector/source-file ownership and delivery; any font licensing costs.
+Sample pricing
+Blank + front print + back print + optional label + setup + shipping + tax; final sample
+cost per style; sample production lead time.
+POD unit pricing
+S, M, L, XL and 2XL costs; front/back print costs; label/packing costs; fulfillment fee; any
+platform or subscription fees.
+Shipping
+Origin and destinations supported; first/additional item rates; combined shipment of
+mixed styles; tracking; average dispatch and transit estimates.
+Operations
+MOQ if any; stockout handling; order integration options; address/order change cutoff;
+artwork revision control; return/reprint and defect reporting policies.
+Approval / timing
+Proof turnaround; sample production time after approval; time to enable POD; quote
+validity; payment terms; written exceptions to this specification.
+Supplier acknowledgment
+Company / contact: __________________________________________________
+Email: ______________________________________________________________
+Quote reference / currency / valid until: ___________________________________
+Exceptions attached: yes / no    Date: __________________________________
+Recipient and POD account details are intentionally unfilled. Owner will supply the final business/billing name and
+shipping address; a legal entity name change is not verified by this design packet.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+10
+
+
+PAGE 11
+GOOOL ATHLETICS  /  SUPPLIER PACKET  /  V1.0
+11 / RELEASE CONTROL
+Approvals and file inventory
+Required decisions before sampling
+Confirm the exact blank and color for each style; final sample sizes/quantities; reconstructed typography
+and all six print files; final dimensions and offsets; method and physical color targets; label option; total
+sample price and delivery address. The supplier must flag deviations rather than silently resolve them.
+Two separate approval stages
+Stage
+Owner approval record
+A / Sample authorization
+Approved proof revision(s): _________________________________
+Blank SKU/color per style: __________________________________
+Sample sizes/quantities: ___________________________________
+Accepted quote / total: ____________________________________
+Owner name / date: ______________________________________
+B / Production release
+Physical samples accepted: _________________________________
+Final production artwork revisions: ___________________________
+Approved sizes/colorways: __________________________________
+Authorized POD launch or order reference: _____________________
+Owner name / date: ______________________________________
+Approval of a concept image alone is not production release. Any change after signoff to artwork, blank,
+placement, color or process requires an updated proof and approval appropriate to that change. No
+approval has been prefilled.
+What is included
+File / folder
+Use
+GOOOL_ATHLETICS_POD_Packet_v1.pdf
+This supplier brief and technical development
+specification
+Reference_Mockups/01_Modern_Sport.png
+Original front/back concept reference
+Reference_Mockups/02_Varsity.png
+Original front/back concept reference
+Reference_Mockups/03_Minimal_Club.png
+Original front/back concept reference
+Supplier_Response_v1.txt
+Editable quote and approval response fields
+README.txt
+Handoff status, extraction instructions and missing
+artwork list
+All three reference images are 1536 x 1024 pixels. No standalone print logo, vector master, font license, embroidery file
+or private-label artwork is included. Archive folder: designs/goool athletics/POD_Packet_v1/.
+18 SEP 2026  |  QUOTING + ARTWORK DEVELOPMENT  |  NOT A PRODUCTION RELEASE
+11

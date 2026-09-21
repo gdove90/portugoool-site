@@ -1,0 +1,93 @@
+{
+  "events": {
+    "evt_envgate_1789969083971": "checkout.session.completed",
+    "evt_envgate_1789969085576": "checkout.session.completed"
+  },
+  "orders": {
+    "d8edd193-01c7-4b02-8eaf-e61ec575ce60": {
+      "stripe_session_id": "cs_test_envgate_aa6f03099f79423c95ce7ced9a97bb0d",
+      "stripe_payment_intent": "pi_envgate",
+      "customer_email": "gate@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "pending_submission",
+      "total_cents": 4800,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 0,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Gate Test",
+      "shipping_address": {
+        "line1": "2 Gate St",
+        "city": "Boston",
+        "state": "MA",
+        "postal_code": "02101",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:38:05.363Z",
+      "livemode": false,
+      "submission_attempt_id": null,
+      "submission_started_at": null,
+      "id": "d8edd193-01c7-4b02-8eaf-e61ec575ce60"
+    },
+    "679cf26b-f3f7-40d3-b291-7862e7608efc": {
+      "stripe_session_id": "cs_test_envgate_8b60aa8c5cb44fbc871c665f95b8d506",
+      "stripe_payment_intent": "pi_envgate",
+      "customer_email": "gate@example.com",
+      "status": "paid",
+      "fulfillment_status": "unfulfilled",
+      "submission_status": "pending_submission",
+      "total_cents": 4800,
+      "amount_subtotal_cents": 4800,
+      "amount_shipping_cents": 0,
+      "amount_tax_cents": 0,
+      "currency": "usd",
+      "shipping_name": "Gate Test",
+      "shipping_address": {
+        "line1": "2 Gate St",
+        "city": "Boston",
+        "state": "MA",
+        "postal_code": "02101",
+        "country": "US"
+      },
+      "apliiq_order_id": null,
+      "submission_last_error": null,
+      "paid_at": "2026-09-21T05:38:05.622Z",
+      "livemode": true,
+      "submission_attempt_id": null,
+      "submission_started_at": null,
+      "id": "679cf26b-f3f7-40d3-b291-7862e7608efc"
+    }
+  },
+  "items": {
+    "d8edd193-01c7-4b02-8eaf-e61ec575ce60": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "L",
+        "color": "Black",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6098962,
+        "apliiq_sku": "APQ-6098962S8A1"
+      }
+    ],
+    "679cf26b-f3f7-40d3-b291-7862e7608efc": [
+      {
+        "product_id": "70000000-0000-4000-8000-000000000001",
+        "size": "L",
+        "color": "Black",
+        "quantity": 1,
+        "custom_name": null,
+        "custom_number": null,
+        "unit_price_cents": 4800,
+        "apliiq_product_id": 6098962,
+        "apliiq_sku": "APQ-6098962S8A1"
+      }
+    ]
+  },
+  "shipments": []
+}

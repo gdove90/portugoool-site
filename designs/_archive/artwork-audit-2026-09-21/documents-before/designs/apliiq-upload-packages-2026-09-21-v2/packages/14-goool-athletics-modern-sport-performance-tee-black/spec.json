@@ -1,0 +1,182 @@
+{
+  "schema_version": "2.0",
+  "package_id": "14-goool-athletics-modern-sport-performance-tee-black",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "80000000-0000-4000-8000-000000000006",
+    "slug": "goool-athletics-modern-sport-performance-tee",
+    "name": "GOOOL Athletics Modern Sport Performance Tee",
+    "website_color": "Black",
+    "website_sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "url": "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee"
+  },
+  "garment": {
+    "brand_model": "Sport-Tek ST720",
+    "supplier_color_candidate": "Black",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "Sport-Tek ST720 black (verified via 6098962)"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "CREATED-VERIFIED",
+    "source_reported_design_id": 6112037,
+    "reported_skus_for_website_sizes": {
+      "S": "APQ-6112037S6A1",
+      "M": "APQ-6112037S7A1",
+      "L": "APQ-6112037S8A1",
+      "XL": "APQ-6112037S1A1",
+      "XXL": "APQ-6112037S2A1"
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false,
+    "source_reported_note": "ST720 black (set-in sleeves per manufacturer, Ethiopia); same GA-01 cleaned artwork, Front 11x3.73 + Back 3.25x1.11; separate product from cotton Modern Sport."
+  },
+  "decoration": {
+    "method": "DTF / transfer; supplier process confirmation required",
+    "artwork": [
+      {
+        "source_project_path": "designs/16_goool_athletics/print_masters/upload/GA-01-F_3300px_CLEAN.png",
+        "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+        "bytes": 115619,
+        "face": "front",
+        "visible_width_in": 9,
+        "vertical_offset_in": 3,
+        "horizontal_position": "body centerline",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "new_authored_design_target_supplier_proof_required",
+        "path": "artwork/GA-01-F_3300px_CLEAN.png",
+        "pixels": [
+          3300,
+          1118
+        ],
+        "alpha_bbox_px": [
+          0,
+          14,
+          3300,
+          1118
+        ],
+        "visible_pixels": [
+          3300,
+          1104
+        ],
+        "effective_ppi_at_target_visible_width": 366.666667,
+        "proportional_visible_height_in": 3.010909,
+        "canvas_width_in_for_target_visible_width": 9,
+        "visible_top_inset_in_at_target": 0.038182,
+        "raster_modified_by_package_builder": false,
+        "usage": "draft_upload_candidate_supplier_artwork_and_placement_proof_required",
+        "horizontal_offset_wearer_left_in": 0,
+        "width_mm": 228.6,
+        "height_mm": 76.4771,
+        "vertical_offset_mm": 76.2
+      },
+      {
+        "source_project_path": "designs/16_goool_athletics/print_masters/upload/GA-01-B_975px_CLEAN.png",
+        "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+        "bytes": 24965,
+        "face": "back",
+        "visible_width_in": 3.25,
+        "vertical_offset_in": 2,
+        "horizontal_position": "body centerline",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "new_authored_design_target_supplier_proof_required",
+        "path": "artwork/GA-01-B_975px_CLEAN.png",
+        "pixels": [
+          975,
+          333
+        ],
+        "alpha_bbox_px": [
+          0,
+          2,
+          975,
+          333
+        ],
+        "visible_pixels": [
+          975,
+          331
+        ],
+        "effective_ppi_at_target_visible_width": 300,
+        "proportional_visible_height_in": 1.103333,
+        "canvas_width_in_for_target_visible_width": 3.25,
+        "visible_top_inset_in_at_target": 0.006667,
+        "raster_modified_by_package_builder": false,
+        "usage": "draft_upload_candidate_supplier_artwork_and_placement_proof_required",
+        "horizontal_offset_wearer_left_in": 0,
+        "width_mm": 82.55,
+        "height_mm": 28.0247,
+        "vertical_offset_mm": 50.8
+      }
+    ],
+    "back": "specified back artwork only",
+    "sleeves": "blank",
+    "cap_side_and_rear": "not applicable",
+    "notes": [
+      "Front white GOOOL / red underline / white ATHLETICS; back white only. Digital palette reference red #C52D32, white #FFFFFF. Compare cleaned art to original design.",
+      "Separate Modern Sport performance design; do not overwrite badge design 6098962. ST720 set-in sleeves; reject raglan mockup as construction evidence. Supplier must confirm polyester transfer compatibility."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 3,
+      "rotation_degrees": 2,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    }
+  },
+  "label": {
+    "required": true,
+    "placement": "inside neck, supplier-compatible attachment TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md",
+    "flat_png_export": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+    "flat_artwork_prepared": true,
+    "supplier_service_candidate": "Apliiq full-color printed label; inside-neck compatibility and material appearance require proof",
+    "alternate_review_size_in": 2,
+    "flat_master_sha256": "e67e80ebadc436f25de7f508884e8ee1671024a7563b4d6776db1a1552716917",
+    "flat_png_sha256": "4bc5de6c77b9a20fc30ae809a5307e9b6c170d79e4919cef9e57803e98555e81"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_ATHLETICS_MODERN_SPORT_PERF_FRONT.webp",
+      "sha256": "a320b96b6399a3f0c148f7fbf0abb4460b86362c986a84e4e3c3679a485a6d1d",
+      "bytes": 26202
+    }
+  ],
+  "unresolved_requirements": [
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales.",
+    "Label artwork is prepared; select a compatible service, verify small-detail legibility and inside placement, obtain supply ID and production proof before applying. One-inch woven layout is not automatically viable.",
+    "Verify authored 9in front/3.25in rear with 3in/2in collar offsets on ST720 S-2XL, including polyester process and actual print-area approval.",
+    "Reopen 6112037: source reports 11in front. Reconcile to the v2 authored 9in concept target and record measured proof before approval."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false,
+    "local_artwork_and_placement_package_complete": true
+  },
+  "revision_built_at_utc": "2026-09-21T07:06:10.630348+00:00",
+  "execution_policy": {
+    "reference_mockups": "Visual intent only; supplier blank and dimensions control manufacturing. Update misleading mockup construction before sale.",
+    "per_size_scaling": "Use stated width across offered sizes only if verified to fit. If supplier scales any size, capture exact dimensions and review representative proof; no silent scaling.",
+    "customer_release_rule": "Do not sell this color/size until correct saved design/variant, front/back art and size, label, material/fit, sample and product imagery are verified.",
+    "no_invented_sample_results": true
+  }
+}

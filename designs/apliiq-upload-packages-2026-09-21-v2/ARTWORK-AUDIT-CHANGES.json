@@ -1,0 +1,39 @@
+{
+  "at_utc": "2026-09-21T07:53:01.817144+00:00",
+  "source_document_changes": [
+    {
+      "path": "designs/goool-athletics-brand-label/README.md",
+      "before_sha256": "9aabc696358e4b67f05583261844127392ba8d7612f2b9144b0e981c06a9d11d",
+      "after_sha256": "d2e13a745dde7ecaa83b406c35960d1e3ab9f23e8133350ec0748dfaab3359da",
+      "reason": "Audit notice only"
+    },
+    {
+      "path": "src/lib/products.ts",
+      "before_sha256": "8754a3959e5a7f4910b746008e9fa1489f268f482d98164f4222145c56a11bdc",
+      "after_sha256": "fa5ef418f2440f72335f883d9cab924df830ac0887558277786e09eb201d3d3f",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    },
+    {
+      "path": "src/lib/fulfillment.ts",
+      "before_sha256": "74f0927d7692439876f4db8f52f98c9712a7277097bf5b3b79f451b251a22b4c",
+      "after_sha256": "928472145db4af939432ec8adc60a5cecdf3f58c0ca55ce2e2a405dab89499b5",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    },
+    {
+      "path": "designs/11_fulfillment/apliiq-reconciliation.json",
+      "before_sha256": "c346284caaba4b01fe07671290a1b35deb9678a50aa3e026b4e0038da7a220c9",
+      "after_sha256": "238b1278bd626c5eabd525e3f98caaed1deb6f8afd91f3ca70f42357dc8933c6",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    },
+    {
+      "path": "designs/11_fulfillment/APLIIQ-CATALOG-AUDIT.md",
+      "before_sha256": "22ceaefce552cdfef925b738855b4968b498f8caf79d6357edadd391e73ce2fb",
+      "after_sha256": "782ae1e12c8bc179a68d5a0f5493433d93bbbc01a4fb86e93233c7676bd8f2d9",
+      "reason": "Newer external source incorporated into delivery snapshot; audit did not modify this source"
+    }
+  ],
+  "artwork_changed": false,
+  "packages_updated": 14,
+  "previous_zip_location": "designs/_archive/artwork-audit-2026-09-21/pre-audit-v2-zips",
+  "scope": "Provenance and instruction addendum; original and derivative graphics preserved byte-for-byte."
+}

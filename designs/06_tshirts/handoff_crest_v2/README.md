@@ -1,3 +1,5 @@
+> **Artwork audit — 2026-09-21:** Scope correction: the three actual SKU specs are1cCREAM,1dFADEDBLACK and1eFADEDNAVY, allCC75. Earlier prose mentioning sixSKUs or other placements is historical. Keep source art and platform-placement templates separate. See [current family index](../../00_asset-library/ARTWORK-FAMILIES.md).
+
 # GOOOL Crest V2 — Shirt Lineup Handoff
 
 Approved lineup from design review (July 2026). Implement in the repo at

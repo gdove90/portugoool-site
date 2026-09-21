@@ -1,0 +1,1189 @@
+{
+  "status": "blocked_unverified_costs",
+  "variants": [
+    {
+      "slug": "goool-performance-tee",
+      "color": "Black",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "Black",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "Black",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "Black",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "Black",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "White",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "White",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "White",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "White",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "White",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "True Royal",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "True Royal",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "True Royal",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "True Royal",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-performance-tee",
+      "color": "True Royal",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Black",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Black",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Black",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Black",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Black",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Bone",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Bone",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Bone",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Bone",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "color": "Bone",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Black",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Black",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Black",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Black",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Black",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Grey",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Grey",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Grey",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Grey",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "color": "Washed Grey",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-touchline-cap",
+      "color": "Black/Natural",
+      "size": "OS",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "color": "Black",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "color": "Black",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "color": "Black",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "color": "Black",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "color": "Black",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "color": "Washed Black",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "color": "Washed Black",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "color": "Washed Black",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "color": "Washed Black",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "color": "Washed Black",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "color": "Natural",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "color": "Natural",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "color": "Natural",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "color": "Natural",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "color": "Natural",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "color": "Ivory",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "color": "Ivory",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "color": "Ivory",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "color": "Ivory",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "color": "Ivory",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "color": "Gray Heather",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "color": "Gray Heather",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "color": "Gray Heather",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "color": "Gray Heather",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "color": "Gray Heather",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "color": "Black",
+      "size": "S",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "color": "Black",
+      "size": "M",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "color": "Black",
+      "size": "L",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "color": "Black",
+      "size": "XL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "color": "Black",
+      "size": "XXL",
+      "missing": [
+        "supplier_garment_and_decoration_usd",
+        "label_unit_usd",
+        "label_application_usd",
+        "packaging_usd",
+        "supplier_shipping_usd",
+        "other_variable_costs_usd",
+        "setup_amortization_usd",
+        "customer_shipping_charge_usd",
+        "verified quote evidence and date"
+      ],
+      "calculated_floor_usd": null
+    }
+  ],
+  "products": [
+    {
+      "slug": "goool-performance-tee",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-heavyweight-hoodie",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-heavyweight-casual-tee",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-touchline-cap",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-athletics-modern-sport-tee",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-athletics-varsity-tee",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-athletics-minimal-club-tee",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-athletics-circular-badge-tee",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-athletics-circular-center-crewneck",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    },
+    {
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "uniform_price_candidate_usd": null,
+      "status": "blocked_unverified_costs",
+      "website_publish_authorized": false
+    }
+  ]
+}

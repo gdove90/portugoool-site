@@ -1,0 +1,27 @@
+{
+  "package_id": "13-goool-athletics-circular-center-crewneck-gray-heather",
+  "status": "NOT_YET_ACCOUNT_VERIFIED",
+  "verified_at_utc": null,
+  "verified_by": null,
+  "exact_blank": null,
+  "exact_supplier_color": null,
+  "supplier_color_variant_id": null,
+  "swatch_evidence": null,
+  "saved_design_id": null,
+  "per_size_skus": {
+    "S": null,
+    "M": null,
+    "L": null,
+    "XL": null,
+    "XXL": null
+  },
+  "actual_art_sha256_by_face": {},
+  "actual_visible_dimensions_and_offsets_by_face": {},
+  "artwork_proof": null,
+  "label_flat_master_sha256": null,
+  "label_service_and_supply_id": null,
+  "label_attachment_evidence": null,
+  "unsupported_options": [],
+  "all_blockers_resolved": false,
+  "sample_approval_evidence": null
+}

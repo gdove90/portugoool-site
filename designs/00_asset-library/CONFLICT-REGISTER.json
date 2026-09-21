@@ -1,0 +1,86 @@
+[
+  {
+    "id": "C01",
+    "state": "resolved_instruction",
+    "issue": "Older sample PDFs authorize Touchline right-side slogan.",
+    "resolution": "Current Touchline front-only; both sides and rear blank. Preserve old files as history."
+  },
+  {
+    "id": "C02",
+    "state": "resolved_instruction",
+    "issue": "Old shield/satin private label competes with approved Athletics concept.",
+    "resolution": "Current brand tag is navigation GOOOL plus 3-segment line and ATHLETICS on black. Shield badge retained only as future design; flat tag is a later proof candidate."
+  },
+  {
+    "id": "C03",
+    "state": "resolved_provenance",
+    "issue": "New circular SVG/600ppi PNG could be mistaken for a higher-quality original.",
+    "resolution": "Original 1254px raster remains shape authority; newer outputs are threshold-128 derivatives with 308/369.6 effective source samples per inch."
+  },
+  {
+    "id": "C04",
+    "state": "supplier_proof_required",
+    "issue": "Circular 3in old padded canvas does not equal 3in visible artwork.",
+    "resolution": "Use current visible-width target and preserved aspect ratio; compare new tight derivative to original before approval. Saved design needs dimensional review."
+  },
+  {
+    "id": "C05",
+    "state": "supplier_proof_required",
+    "issue": "Modern Sport performance package target9in conflicts with source-reported saved11in.",
+    "resolution": "Keep discrepancy explicit. Obtain matching dimensioned proof against intended mockup; neither width is certified as owner-approved by this audit."
+  },
+  {
+    "id": "C06",
+    "state": "resolved_owner_policy_supplier_swatch_pending",
+    "issue": "Gray Heather vs supplier Athletic Heather for AS Colour5150.",
+    "resolution": "Use closest offered supplier color on same blank. Athletic Heather candidate; record exact supplier swatch/name/variant. No blank substitution."
+  },
+  {
+    "id": "C07",
+    "state": "resolved_scope",
+    "issue": "Old9products/13colorways and sixCrestSKU prose.",
+    "resolution": "Current catalog10/14; all64products indexed. Crest Statement has3 actual SKU specs. Historical gallery counts do not govern roster."
+  },
+  {
+    "id": "C08",
+    "state": "resolved_source_selection",
+    "issue": "Drop01 original handoff back has font-fallback defect.",
+    "resolution": "Select designs/05_jerseys/finals backs which document Anton repair; keep fullbleed panels and originals."
+  },
+  {
+    "id": "C09",
+    "state": "resolved_reference_classification",
+    "issue": "H04 HeavyCore mockup shows backG on hood.",
+    "resolution": "Mockup is nonconforming. Historical techpack requires upper back body, not hood."
+  },
+  {
+    "id": "C10",
+    "state": "resolved_scope",
+    "issue": "Different GOL/GOOOL/PORTUGOOOL, color palettes and blanks might be merged.",
+    "resolution": "Separate families retained; native artwork chosen only within exact design family. Countrycap side marks are not affected by Touchline decision."
+  },
+  {
+    "id": "C11",
+    "state": "missing_source",
+    "issue": "Countrycap generator and GA requested nativeSVG/PDF/EPS master trio absent.",
+    "resolution": "Retain existing best-known exports; do not claim reproducible/native-vector package complete."
+  },
+  {
+    "id": "C12",
+    "state": "missing_package",
+    "issue": "Accessory/A4 concepts lack complete isolated production artwork/specs.",
+    "resolution": "Keep concept-only status in product/family inventory; no invented finished artwork or supplier mapping."
+  },
+  {
+    "id": "C13",
+    "state": "supplier_proof_required",
+    "issue": "Large crest rasters/working traces and flat label not independently verified as source-quality manufacturing masters.",
+    "resolution": "Preserve approved visual references and source variants; actual-size edge, spacing, palette and manufacturing proof required."
+  },
+  {
+    "id": "C14",
+    "state": "owner_target_resolved_supplier_and_website_execution_pending",
+    "issue": "Casual Wordmark mockup and3.25in target sit lower than Athletics3in target.",
+    "resolution": "Owner adopts3.00in front collar-to-artwork-top for both casual colors, same6.75in width. Updated specs/proofs; older references historical; Claude must apply/reopen saved designs and correct website imagery."
+  }
+]

@@ -1,0 +1,2790 @@
+{
+  "schema": "1.0",
+  "audited_at_utc": "2026-09-21T07:53:01.817144+00:00",
+  "families": [
+    {
+      "id": "navigation",
+      "title": "Current navigation GOOOL",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "public/brand/goool-wordmark-white.png",
+          "sha256": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+          "pixels": [
+            720,
+            250
+          ],
+          "role": "logo_source_or_variant"
+        }
+      ],
+      "reference_files": [],
+      "instructions": [
+        "Exact current navigation lettering with three Os and three separate white/red/white underline segments. Do not replace with Anton legacy wordmarks or GOL artwork.",
+        "720x250 raster authority for this specific navigation geometry. A larger crest shoulder wordmark is a related variant, not automatically pixel-identical."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "label",
+      "title": "GOOOL Athletics standard brand label",
+      "status": "derived_layout_candidate_not_manufacturing_approved",
+      "selected_files": [
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+          "sha256": "4bc5de6c77b9a20fc30ae809a5307e9b6c170d79e4919cef9e57803e98555e81",
+          "pixels": [
+            600,
+            600
+          ],
+          "role": "source_derived_proof_candidate"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+          "sha256": "e67e80ebadc436f25de7f508884e8ee1671024a7563b4d6776db1a1552716917",
+          "pixels": null,
+          "role": "source_derived_proof_candidate"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+          "sha256": "a633ec57863afc6eb8c538eca3ea52f9d20d06dfc018d75105b20eee840fb9ff",
+          "pixels": [
+            1200,
+            1200
+          ],
+          "role": "source_derived_proof_candidate"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+          "sha256": "fe8ad4fb0876e5901446535883c02db3eb4e04d2ae1c9b605a13c79498f882fb",
+          "pixels": null,
+          "role": "source_derived_proof_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/goool-athletics-brand-label/approved-tag-concept.png",
+          "sha256": "2d94fa3083d221e050b8f23dc7d415b8f59c929fa6f827082ef2f33277a45100",
+          "pixels": [
+            1536,
+            1024
+          ],
+          "role": "tag_concept_reference"
+        },
+        {
+          "path": "public/brand/goool-wordmark-white.png",
+          "sha256": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+          "pixels": [
+            720,
+            250
+          ],
+          "role": "logo_source_or_variant"
+        }
+      ],
+      "instructions": [
+        "Approved-tag-concept.png remains the owner-approved visual concept. The flat SVG/PNG is a later composition candidate, not an exact reproduction or a recovered original vector.",
+        "Flat composition traces navigation PNG at alpha>=128 and uses ATHLETICS from the GA-03-F lower band. Spacing and edges need comparison against the approved concept.",
+        "Black background, white current navigation GOOOL, three white/red/white segments, white spaced ATHLETICS underneath. Nominal 1x1in; 2in file is an alternative for review, not an approved size change.",
+        "Confirm actual-size lettering, red detail, attachment and per-blank compatibility. Historical shield/satin-label directions are superseded. Cap interior branding requires a compatible method."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "core-capsule",
+      "title": "First Capsule original product-specific artwork",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/01_Performance_Tee_Artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+          "sha256": "ca2f9bbcac8e9d0c902b4141f0b7b36428b34f2015f345b0250d85ada424218b",
+          "pixels": [
+            1500,
+            1920
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/02_Hoodie_Artwork/GOOOL_SAMPLE_02_IND4000_WORDMARK_FRONT_6.75IN.png",
+          "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+          "pixels": [
+            2025,
+            703
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/03_Casual_Tee_Artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+          "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+          "pixels": [
+            2025,
+            703
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.pdf",
+          "sha256": "55ec1e78db0daf8e29f3f4269c11b4d926909486d1487ed50568f9a3f9e74775",
+          "pixels": null,
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/04_Cap_Embroidery_Artwork/GOOOL_SAMPLE_04_OTTO31069_WORDMARK_FRONT_EMBROIDERY_REFERENCE.png",
+          "sha256": "661f917ecd0c09f62532697da15c27cdc3cd8230bfccb7265452885451e0f14d",
+          "pixels": [
+            1125,
+            391
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_01_ST720_BADGE_NAVY_BURGUNDY_FRONT_5IN.png",
+          "sha256": "81dc846b9080c6121e76f525fc26dc13e39b4a54cfbf6e99580e416971b54b31",
+          "pixels": [
+            1500,
+            1920
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+          "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+          "pixels": [
+            2025,
+            703
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_03_ST720_BADGE_CREAM_BURGUNDY_FRONT_5IN.png",
+          "sha256": "a530cd0eafef365280b6c20ff573e3a690143a78abc63f918a8cf0f956cffd3a",
+          "pixels": [
+            1500,
+            1920
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "output/pdf/GOOOL_SAMPLE_PACKET_FRONT_ONLY_2026-09-12/GOOOL_POD_SAMPLE_SPECIFICATIONS_FRONT_ONLY.pdf",
+          "sha256": "fa97a65d162d2490c64a2746840f97eed5e3319f231f52499ab951ca436eefe5",
+          "pixels": null,
+          "role": "historical_specification_reference"
+        }
+      ],
+      "instructions": [
+        "Keep exact original product upload geometry/palette. Hoodie and casual white/red wordmark files are byte-identical: one shared design with two intentional package filenames.",
+        "ST720 crest front 5in; hoodie/4810GD front wordmark 6.75in; OTTO31-069 front flat embroidery 3.75in. Preserve the placement targets in the current v2 spec. Garment backs blank; cap sides/rear blank.",
+        "The 2026-09-12 front-only PDF supersedes cap-slogan directions in both older sample PDFs. Even the front-only PDF has an obsolete shield neck-label instruction; use current Athletics label direction.",
+        "Large crest-v2 files remain available in their own family. They do not silently replace palette-specific sample uploads."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "modern",
+      "title": "Modern Sport cotton and performance",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/16_goool_athletics/print_masters/upload/GA-01-B_975px_CLEAN.png",
+          "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+          "pixels": [
+            975,
+            333
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/upload/GA-01-F_3300px_CLEAN.png",
+          "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+          "pixels": [
+            3300,
+            1118
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-01-B_975px.png",
+          "sha256": "551ec2f9f7c80e49678fc0217016b227fb9c71897bce7d1317b912a1fef2fae1",
+          "pixels": [
+            975,
+            333
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-01-F_3300px.png",
+          "sha256": "418b54b9e71672a5bd14dd974b57f3baf9b137fd9517205ccf2acd2f37e1ac52",
+          "pixels": [
+            3300,
+            1118
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "instructions": [
+        "Keep front and back as separate placements and preserve original colors and aspect ratios. Full raster print artwork; do not replace with crops from model imagery.",
+        "CLEAN files are selected delivery candidates; the first GA-01 originals remain archived as source alternatives, not deleted. Same 3300x1118 / 975x333 pixel sizes, no resolution gain claimed.",
+        "BC3010 cotton and ST720 performance are separate products. Cotton front target 11in. Performance v2 target is 9in but saved-design notes report 11in: unresolved production-scale discrepancy; compare a dimensioned proof before accepting either as approved."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "varsity",
+      "title": "Athletics Varsity",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-02-B_975px.png",
+          "sha256": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+          "pixels": [
+            975,
+            467
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-02-F_3300px.png",
+          "sha256": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+          "pixels": [
+            3300,
+            1584
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-02-B_975px.png",
+          "sha256": "bdc4de00c7bd5909e63875b6b4760ffb00f745f7f05fcc81f6c64a6a3346fe84",
+          "pixels": [
+            975,
+            467
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-02-F_3300px.png",
+          "sha256": "e2658e9b3a9acbc4ea93e404603ceb7c9e9e8a3040c84ed7ee55438a18e2617a",
+          "pixels": [
+            3300,
+            1584
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "instructions": [
+        "Keep front and back as separate placements and preserve original colors and aspect ratios. Full raster print artwork; do not replace with crops from model imagery."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "minimal",
+      "title": "Athletics Minimal Club",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-03-B_3600px.png",
+          "sha256": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+          "pixels": [
+            3600,
+            1389
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-03-F_1050px.png",
+          "sha256": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+          "pixels": [
+            1050,
+            331
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-03-B_3600px.png",
+          "sha256": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+          "pixels": [
+            3600,
+            1389
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/GA-03-F_1050px.png",
+          "sha256": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+          "pixels": [
+            1050,
+            331
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "instructions": [
+        "Keep front and back as separate placements and preserve original colors and aspect ratios. Full raster print artwork; do not replace with crops from model imagery."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "circular",
+      "title": "Athletics circular wordmark — all 12 concepts",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/16_goool_athletics/logos/GOOOL_ATHLETICS_CIRCULAR_WORDMARK_1254px.png",
+          "sha256": "db0d404138b5a00d72bf6debf775c19306fc8bbe1ed645d6e9343a660228b192",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "logo_source_or_variant"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/01_tee_pepper_cream_large-center.png",
+          "sha256": "813f1236cc4abce3b7bb6e36d7d4d9311fce4b860982ae182ab4f230fe1073ab",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/02_tee_ivory_navy_large-center.png",
+          "sha256": "bf94d97f5abbf24705ff89847caee1c9c0f7c56ba35765ea35f55a955d911278",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/03_tee_black_red_large-center.png",
+          "sha256": "e0f0e0c50633e5fd23a2d4ffa67afe911e9cb885d4fe9e33979f66381edfe0c6",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/04_tee_moss_cream_large-center.png",
+          "sha256": "28942ed0b97028c8ef09d216241aff95a65d878db963f532dfe3fe60cf9f544e",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/05_crewneck_gray-heather_forest-green_large-center.png",
+          "sha256": "4a736675ffd9b83b0158188f1dd8f09c0d6702e58d77ef036a0474c2aa8e83d4",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/06_hoodie_black_cream_large-center.png",
+          "sha256": "9179a6a4f243957d893e2348c3c671feaf133ade09bbd407411ec5c8bdc8f48e",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/07_tee_ivory_navy_small-center.png",
+          "sha256": "93ca24e83437425f52e6e326d4b33465f39d8c68eff826a1dfa30bcf4ec1001b",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/08_tee_ivory_navy_left-chest-badge.png",
+          "sha256": "50ba9db7af561d3d96bb042a0533b2f190b00864a7769fd0da8c07a7ef2522c2",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/09_crewneck_gray-heather_forest-green_small-center.png",
+          "sha256": "811b82ad7f034cc288dfc336fd872a42b4daa5ce923f5d2192c48717f87c0767",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/10_crewneck_gray-heather_forest-green_left-chest-badge.png",
+          "sha256": "5c18374dd64ce81a06aed1568664cb14525eeb8e797082802c339219705c4907",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/11_hoodie_black_cream_small-center.png",
+          "sha256": "b6556d0a03c75609fedc5cc80a899849059a8580b52e25a2355a1ae9cabc7a5c",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/circular_logo/individual_mockups/12_hoodie_black_cream_left-chest-badge.png",
+          "sha256": "621425c1c796b8114fb7df5da81906eb941d98262eb1a60364417f34504ca100",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+          "sha256": "81cbfcc07ca59db0082850c50a75c6b7b3b9ba2465e9e0ed98591db921300ce8",
+          "pixels": [
+            900,
+            900
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-09_CREW_FOREST_750px.png",
+          "sha256": "239024d8b5958992db959be1f7934f11bcae2a75c39ef61245307b872bbecd84",
+          "pixels": [
+            750,
+            750
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-08-NAVY-PRINT.png",
+          "sha256": "3a642d9ebf6ca9f6ee0d7a81d3de7d8a9aa19e62eac9243cc4d5d1a5d57ae21a",
+          "pixels": [
+            1800,
+            1819
+          ],
+          "role": "source_derived_proof_candidate"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-08-NAVY-PRINT.svg",
+          "sha256": "480228dd55d2e707decf7a42e45d1edbe7302953e6f8add6d8733d6aa3cf8e9c",
+          "pixels": null,
+          "role": "source_derived_proof_candidate"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-09-FOREST-PRINT.png",
+          "sha256": "e55ca60206a097a09d980c52b1e944ba66da82a0af984969a892c1fe07fc6066",
+          "pixels": [
+            1500,
+            1516
+          ],
+          "role": "source_derived_proof_candidate"
+        },
+        {
+          "path": "designs/apliiq-upload-packages-2026-09-21-v2/production-assets/GA-CIRCLE-09-FOREST-PRINT.svg",
+          "sha256": "b2eb1c69980d9b2bc8ddeca07d5195ed8e6362a3dfc6cd151e30793db3a8c55c",
+          "pixels": null,
+          "role": "source_derived_proof_candidate"
+        }
+      ],
+      "instructions": [
+        "1254x1254 original raster is the shape source. The occupied alpha>=128 area is 924x934px. Retain original proportions; do not force a square silhouette.",
+        "New navy/forest SVGs are threshold-128 pixel-run traces and recolors. Their 600ppi PNGs add sampling, not source detail: 308 source samples/in at 3in wide; 369.6 at 2.5in.",
+        "The old 900/750px colored files include padding. A 3in canvas on the 900px file gives only about 2.24in visible art. New tight exports are proof candidates, not approved replacements based on file age.",
+        "Concept08 left-chest Ivory tee and concept09 centered gray crew are active. Other ten circular concepts are retained unlaunched. Width/placement/supplier proof is still required."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "crest-v2",
+      "title": "GOOOL football crest v2 and future shield badge",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_DarkGarment_Transparent.png",
+          "sha256": "63c303122189ae41775521ae9ae00133b7a4ec17d197213e72c9d39d7bb2bf44",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_LightGarment_Transparent.png",
+          "sha256": "9bb4d1ee027376c079a03d58289d3440ac5be0690ec328a0e34f583c023a279d",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_OneColor_Black.png",
+          "sha256": "3a722e7000c14d10d16dc65bca0ae057e0400b0961dfe4c752cc6744f6f30ce5",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_OneColor_White.png",
+          "sha256": "893eec667d557626ec62c2a94f242dc211431861fdee0209c1a738cc91d2f828",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_Preview_Transparent.png",
+          "sha256": "c6b474bbc08ebfac45669b53f4abff15b8e4cf14abf57b0b4f80d6a3ab1a078c",
+          "pixels": [
+            1426,
+            1800
+          ],
+          "role": "logo_source_or_variant"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_Approved_WhiteBackground.png",
+          "sha256": "6ca98814bec83878908bf937b9fcb049b76a27698e2dd0db1649cded58d7244a",
+          "pixels": [
+            840,
+            1060
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_DarkGarment_Transparent.png",
+          "sha256": "63c303122189ae41775521ae9ae00133b7a4ec17d197213e72c9d39d7bb2bf44",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_LightGarment_Transparent.png",
+          "sha256": "9bb4d1ee027376c079a03d58289d3440ac5be0690ec328a0e34f583c023a279d",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_OneColor_Black.png",
+          "sha256": "3a722e7000c14d10d16dc65bca0ae057e0400b0961dfe4c752cc6744f6f30ce5",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_OneColor_White.png",
+          "sha256": "893eec667d557626ec62c2a94f242dc211431861fdee0209c1a738cc91d2f828",
+          "pixels": [
+            3566,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_POD_Production_Specification.pdf",
+          "sha256": "275ef0e73c12943f2c649256a02bb04e25405d4007d5e07b1fea31713f1bbb87",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_Preview_Transparent.png",
+          "sha256": "c6b474bbc08ebfac45669b53f4abff15b8e4cf14abf57b0b4f80d6a3ab1a078c",
+          "pixels": [
+            1426,
+            1800
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/GOOOL_Crest_Working_Vector_Trace.svg",
+          "sha256": "c59db281f459d23a7edc8faab3e2cfd43352e3d7fff90ccd330ac39614af47bb",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v2/README.txt",
+          "sha256": "44dc5e6938c6486932364291ded435d31ce74e39555d284ce07c9705c6ee10a5",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/goool-badge-future-designs/goool-shield-football-source.png",
+          "sha256": "02ce4d42b76963764c870fe2b7eff6f07ab3e92ba72c14a2000997b2427eae3e",
+          "pixels": [
+            300,
+            300
+          ],
+          "role": "design_or_reference_asset"
+        },
+        {
+          "path": "designs/goool-badge-future-designs/goool-shield-football-tag-concept.png",
+          "sha256": "75701f74442d720fc09b7a7321e43c4e62f62c8006fa4567b6e089e3d41f8a83",
+          "pixels": [
+            1536,
+            1024
+          ],
+          "role": "tag_concept_reference"
+        }
+      ],
+      "instructions": [
+        "3566x4500 transparent variants are the largest located rasters in this family. Original-detail provenance is unverified; rough extraction edges remain. Do not certify them as native 4500px detail or assume size alone improves an existing upload.",
+        "Approved white-background PNG governs the historical visual. Working_Vector_Trace.svg is an automated working trace and does not replace it.",
+        "The saved 300x300 future shield is a small monochrome variant/reference, not the highest-resolution full-color master. Preserve this future design; never use it as the current standard label."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "gol-trophy",
+      "title": "GOL trophy crest",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_Approved_4500H.png",
+          "sha256": "689998e6a72b4f267cb4c01da388608e2ec09057fd1815db8233102a7e6a7c22",
+          "pixels": [
+            3398,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_OneColor_4500H.png",
+          "sha256": "60c7b6c58a19feb11a78fa0c069e0389ffa08186f80f6b0d21f67f32bdfb60df",
+          "pixels": [
+            3390,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Embroidery_Specification_Sheet.png",
+          "sha256": "e7db1760125f65153a6941c9b7b31563be92a9f3e9fd0bd8dea3b1de4844198b",
+          "pixels": [
+            1530,
+            1980
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Print_Specification_Sheet.png",
+          "sha256": "1be2c681f7935c07b8570766bed510c51b7bcb5e7c58db543742ca732efbf631",
+          "pixels": [
+            1530,
+            1980
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_Approved_4500H.png",
+          "sha256": "689998e6a72b4f267cb4c01da388608e2ec09057fd1815db8233102a7e6a7c22",
+          "pixels": [
+            3398,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_Approved_Transparent.png",
+          "sha256": "65515905beef4f3eff898ce2d3ec7c16f85ca6ab0d990d91fbd594622f4adbf2",
+          "pixels": [
+            922,
+            1221
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_Flat_Transparent.png",
+          "sha256": "8aae628fe5d0c65da5ea5659d5fde57f6b6e3b3bd64c5a9e24e2b17c485b7f06",
+          "pixels": [
+            913,
+            1212
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_Master_WorkingTrace.svg",
+          "sha256": "fbf41669ffdc01650c9c22481ebc6abcf95124cd85623195668948a2b4fa3d63",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_OneColor.svg",
+          "sha256": "3d6d0b31425311b0976cddd69ef3fad7a145aba1756839fcc651d882ee40854f",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_OneColor_4500H.png",
+          "sha256": "60c7b6c58a19feb11a78fa0c069e0389ffa08186f80f6b0d21f67f32bdfb60df",
+          "pixels": [
+            3390,
+            4500
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/GOL_Trophy_Crest_POD_Production_Specification.pdf",
+          "sha256": "7cf1d6e70b96a0fddabde5a3412c25f9410cd245f37d1436bdc1e5b82a0693b3",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/gol-trophy-v1/README_GOL_Crest_Production_Package.txt",
+          "sha256": "d93692b7711b5c35894d06b0e645bf69d979324656aea602695b083a2de01024",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        }
+      ],
+      "instructions": [
+        "GOL is a distinct three-letter design; do not correct it to GOOOL. Preserve approved, flat, one-color, and working-trace roles.",
+        "Large rasters and traced SVGs are not evidence of recovered native vector detail. Compare vendor tracing against the original approved transparent reference."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "legacy-vectors",
+      "title": "Legacy wordmarks, monograms and crest v1",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/12_logos/badge/goool-crest-v1/badge-v1_crest.png",
+          "sha256": "0b50ddbf3801bf431588e0d850bec81e1bbefef8351c64a2474a49cfd997ffc6",
+          "pixels": [
+            1254,
+            1254
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/badge/goool-crest-v1/badge-v1_crest_transparent.png",
+          "sha256": "e05b8baf8e6837e976b16344acaeb793d669287573393559e9ea3af75e3f3cf2",
+          "pixels": [
+            859,
+            1237
+          ],
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-slash-gold-original.svg",
+          "sha256": "0376d793845ef9dda4618c7e56f76017a0b39775bd6649d5b648a41802c45384",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-slash-gold.svg",
+          "sha256": "e40cf8b7751179133509ba7f0de89e246a5a1d9e225dcc0c1e504b5e37648055",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-slash-ink.svg",
+          "sha256": "dd4430d3ab751670065afb6c54f9fdb700469b093059ca73bf2066d0f2a1ae3c",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-slash-paper.svg",
+          "sha256": "22fe61ac9a5fd8b3c616b6fe6740426545042dd6718ddf56fe171bd576a04a55",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-wordmark-gold-original.svg",
+          "sha256": "95b7b08bc20c859f6bb5bf732e081f99dc366affe8ade5c25de8c5d333d71251",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-wordmark-gold.svg",
+          "sha256": "4e525f267e7a67e9e67c86d8a749ff9a67a01c9553d20e958735731991686ead",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-wordmark-ink.svg",
+          "sha256": "911b8af1cd9861832764880a353869412af1192094a82a8717dfd83ea2bb786e",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/gol-wordmark-paper.svg",
+          "sha256": "4d77166eebdb4c8b1767618643594bf16084f2f4228e26b5687337252d67f077",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/goool-extended-wordmark-gold.svg",
+          "sha256": "a723687572a8712d705ae5aab904504e4c0b426f13ab5105c8462bcce5167a80",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/goool-extended-wordmark-ink.svg",
+          "sha256": "3b7d8f37231ad840acb35f7eeae50b14ce979b9d5afbc79e6b6d46ddd809c871",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/goool-wordmark-gold.svg",
+          "sha256": "2d84f0e8d4e0f777fb96a7393db4fd54c69e53d5f6e1812c0ba051c5e87d5014",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/goool-wordmark-only.svg",
+          "sha256": "64b6235a72d444313920a2d8ac3a2cc0163cef34f7d5f6ee5ed30e5c76596ea3",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/goool-wordmark-primary.svg",
+          "sha256": "84fdc66dee44938c3b147f1cbbb516414a2bc1fa15546ce7c172f5d916288786",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/goool-wordmark-reverse-allpaper.svg",
+          "sha256": "ddff5542eb7564a2d81e5ee663efcfe7f11695f4622d04a91ca28b022ef6e0c2",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/goool-wordmark-reverse-paper.svg",
+          "sha256": "11424df20c6480491c834faeff4d413343eb7da5ce2101c84b06d9d72ddd2fbe",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/monogram-echo-tile.svg",
+          "sha256": "56f8f562f8173702ae0bcf7e02dd3d04a04789bd3d1f662e41a4b14d702f87f9",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/monogram-echo.svg",
+          "sha256": "9e7c51686dd05b269dd5526b96c7f969c667077a142fadc27b790591ff30908f",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/monogram-gold.svg",
+          "sha256": "7e666ea9135f825c9c2161402131a5adac825626a52da181289059a808b54f05",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/monogram-ink.svg",
+          "sha256": "395773b40429f2d509e7952938954194cbfa47c57cd11c8a5d27154aff7b385e",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/monogram-paper.svg",
+          "sha256": "ec6e68106175906e253c7ca2668172fba3ee8a7d922311df9fe0454926bcb122",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/monogram-red.svg",
+          "sha256": "065f050c7d1958d07eedf8cbab507c186085433f9a148bff3e0ba467c18cf6e2",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/wordmark-gold.svg",
+          "sha256": "50f0a8667139de634d7672d3b736a40aa0edd12e32b37074444fc98b90e9174a",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/wordmark-only.svg",
+          "sha256": "45ed2b6ab7631f7506182f804f64f1ff8a41252bf1337b3273b847a7c9d03139",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/wordmark-primary.svg",
+          "sha256": "e7c4f8869b177327d1440dcaa88f5417cb30539cfd5535f3811ab5c69725b26d",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/wordmark-reverse-allpaper.svg",
+          "sha256": "aff4efe636d04a656c2fac9fb247fd15ae7dc1047a4d561d3bb71baeb5561461",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        },
+        {
+          "path": "designs/12_logos/svg/wordmark-reverse-paper.svg",
+          "sha256": "8a29a6611a006af177aee80a1f10da4dbdab43ffbb8d93354c56d354ce8c9449",
+          "pixels": null,
+          "role": "logo_source_or_variant"
+        }
+      ],
+      "reference_files": [],
+      "instructions": [
+        "PORTUGOOOL, tall Anton GOOOL, extended GOOOL, GOL, echo monograms and crest-v1 are distinct design families. Do not merge based on similar names.",
+        "Native path assets are preferable for their own geometry; trace/raster/text flags are recorded in UNIQUE-ASSETS.json. Check live fonts before manufacturing.",
+        "GOL gold #B18844 and country-cap gold #C9A227 are intentional family-specific palettes. Do not globally recolor them to the current navigation palette."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "jerseys",
+      "title": "Portugal and England jerseys — 7 products",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/05_jerseys/finals/jersey-01-casa-red-BACK.png",
+          "sha256": "5f6ba85aa519dd34791d7770fa1757a3384d8c543e158748e9f23ffcbd453c9e",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-01-casa-red-FRONT.png",
+          "sha256": "7f5fb26c0671e2a40ea19d2798a4086e8efc1dbf3372443397609c867c193568",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-01-casa-red-SLEEVES.png",
+          "sha256": "175ba76d0dadcc133725387b7310883fd64fa8416364ae7b22bcfdc4175c962a",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-02-marfim-white-BACK.png",
+          "sha256": "c6e9ead345b31116c60a0ede6c7d4c116f184e6959b6ffff7dc6b437ba1d11f2",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-02-marfim-white-FRONT.png",
+          "sha256": "bfdf9afd5d502af4419cc4e8cedacb73bc47a6cbd9036010148ddfbad18cabd3",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-02-marfim-white-SLEEVES.png",
+          "sha256": "89dc7fe6203e8713463a26a101b854688d454734ca1468c945fb35ed46d44768",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-03-noite-black-BACK.png",
+          "sha256": "45bec8cbb5a71e1bac8ebc9849a0df3e5fae32c969db2fcec2df8709408e9131",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-03-noite-black-FRONT.png",
+          "sha256": "1d6cf37496684bcd2c3388307c83e84a89be7ac467f5991c7de27fb98cf9e394",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-03-noite-black-SLEEVES.png",
+          "sha256": "93de2402af1e165d6eea3e8431638de6903662498a1275c2fca99c291c1b44a8",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-04-emerald-green-BACK.png",
+          "sha256": "00c55dcaaf5a4d0be4c0f3a5b60308c56e5015137204b318f3b9f47dda87687a",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-04-emerald-green-FRONT.png",
+          "sha256": "19d70d65c532dc4f5a79e73555529fe0c490dc93a7af8d076184d27632669b0c",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-04-emerald-green-SLEEVES.png",
+          "sha256": "17d023721867dc30cc16ea1f5d006fe7936b2955d7bb640070714fcc43be0c1c",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E1-home-white-BACK.png",
+          "sha256": "581f711c0b71a5ea92652cd377a3df34d37b645dbee74ac1efb2c16a80492e07",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E1-home-white-FRONT.png",
+          "sha256": "72f6bce7c7981ce30182d6de68bb4d3c87fde8957de22d46396981bfdf477264",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E1-home-white-SLEEVES.png",
+          "sha256": "89dc7fe6203e8713463a26a101b854688d454734ca1468c945fb35ed46d44768",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E2-away-red-BACK.png",
+          "sha256": "bf1eff9d18a33fe8e011429dec4c0c71de83518d797b7b12e2072036e0fcb8cd",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E2-away-red-FRONT.png",
+          "sha256": "d315964f92be5f2db0fb74c687cdd1975fd42f434fd86c4735b2ecbadc66973e",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E2-away-red-SLEEVES.png",
+          "sha256": "175ba76d0dadcc133725387b7310883fd64fa8416364ae7b22bcfdc4175c962a",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E3-navy-BACK.png",
+          "sha256": "ce744a66322ee84d9887ac5f822cef968f7d430ff766586fbdc47e4e2cb0a786",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E3-navy-FRONT.png",
+          "sha256": "52fde8a5408a393012c22bd25b24127f2b08201e448a35665d7884f200cbf591",
+          "pixels": [
+            3000,
+            4000
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/05_jerseys/finals/jersey-E3-navy-SLEEVES.png",
+          "sha256": "5d6ef800ac31a03ba6618c7cd26452de9dcba9c1cfd2ed9a406aba6de1565645",
+          "pixels": [
+            4950,
+            2250
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [],
+      "instructions": [
+        "Select all 21 finals: front/back/sleeves for each of seven jerseys. Keep full-bleed panel dimensions, do not trim as isolated chest logos.",
+        "Drop01 finals backs fix a serif-font fallback in the old handoff. Finals override handoff_echo-apparel backs; public/print copies are runtime aliases.",
+        "Historical Printful templates are not automatically suitable for an Apliiq blank. Re-map cut/sew panels only after the actual supplier template is verified."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "legacy-tees",
+      "title": "Portugal, England and GOL tees — 15 products",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/06_tshirts/finals/brush-script-tee-FRONT.png",
+          "sha256": "f676c151a681fc95d38518d867ba2a9acf3b3e8c280a748c82819bf0bd81fca0",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/goool-tee-FRONT.png",
+          "sha256": "43434c548004d2e1587a83795017f375909f39e1a6c80cd72642083da0f8cbea",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/lisbon-to-the-world-tee-FRONT.png",
+          "sha256": "1860b6dc5b82c413be60f5a3bda0666f5db33f2706e25eedf208f068140453fd",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/match-day-tee-FRONT.png",
+          "sha256": "a55fbd52e8a976bffdc13d1cd81bf7e1e5edf812ca9828361fbb64261945b6d7",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET1-echo-hero-BACK.png",
+          "sha256": "a37efff741b53273ca1f7f32e6f4d77c6bd7d76383520d648519b09a8f819238",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET1-echo-hero-FRONT.png",
+          "sha256": "3febce316ee9b186935c99941fbb8c292de5dd2af7239313f47e531c109a443f",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET2-london-BACK.png",
+          "sha256": "6a9fc8d0991aecc7f36ebe3156390868c6489655db29f4680b266fd7f1e3f52e",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET2-london-FRONT.png",
+          "sha256": "b68e1747beacbd5ed7a45f7d922268882e6b62fabe01099eb665ce457b11c4ce",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET3-moment-BACK.png",
+          "sha256": "ba4de4d4bcd4f43fbe58ca3a6b92ce91bdc7b0ebc825f2770e0471a00cac52f6",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET3-moment-FRONT.png",
+          "sha256": "199497b30826cc26c6f78d933025a9deaa65f368d12b31c34f7b5da393aef7bd",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET4-roar-BACK.png",
+          "sha256": "aa2d65f958cb55cc26d8606ea8005795598be95c9811643d832bce28719beb6f",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-ET4-roar-FRONT.png",
+          "sha256": "a901f42191e813e6055baac888480a05897a052d242ffc50cee2fbaa3aa0fa7a",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G1-clean-sheet-BACK.png",
+          "sha256": "68ae4f684800ccd07cc2c7a570bf13e283a23d59ab4bd0ea15c8792587a5bbf0",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G1-clean-sheet-FRONT.png",
+          "sha256": "6eb23411cf7ebcf157d060e169699675b40fda57a98a7009fb61d07b35ff07dc",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G2-gold-standard-BACK.png",
+          "sha256": "eb7a267b18e17d1054db3da007a09e205bdf77e89d37b5eded330ce43f6b2650",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G2-gold-standard-FRONT.png",
+          "sha256": "594652ea7460f1ac4b8c183308cda5d2869976408bcbde934d9fd2397dff839d",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G3-concrete-BACK.png",
+          "sha256": "d1dad0c7122cd9dd5606076173ad078efe064e94a119a3c4b16138dfa9531fda",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G3-concrete-FRONT.png",
+          "sha256": "9384f2535136a705a6878926e0e13a8230b624334c81d63f6a5f95add1d22e77",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G4-concrete-white-BACK.png",
+          "sha256": "58c2229d30d3dcf66ccb746849b4c8323a3059256685deb8060392afc2ee9523",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G4-concrete-white-FRONT.png",
+          "sha256": "6cefa4d052384c6a2941214b4a912c03c25732b79524fb459be1a1b8e2d08731",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G5-concrete-black-BACK.png",
+          "sha256": "e2ecb1ef10db4c605b7e5e9cf028a29a5c75db57709fb6db38a914908248c7f6",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/tee-G5-concrete-black-FRONT.png",
+          "sha256": "b17549a534826eb4c9475bc1edc6a246c8c7ca8536e123012ca38147696ff8a1",
+          "pixels": [
+            4500,
+            5100
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/vamos-tee-FRONT.png",
+          "sha256": "3fb0f164c9d908158a7ad77d16588d943117b10ef9b2b766fb8f2b16e16f6680",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/finals/we-dont-whisper-goals-tee-FRONT.png",
+          "sha256": "f8f971e5ef41190b3d4370de7fdd849b3f097fb85eb6e90a2e7874f9422688f8",
+          "pixels": [
+            1800,
+            2400
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [],
+      "instructions": [
+        "Select final front/back pairs where supplied; Portugal six tees have front files only. Preserve canvas placement and intended empty areas.",
+        "GOL G1–G5 and England ET1–ET4 use their own graphics and palettes. No generic navigation-logo substitution. Public/print duplicates remain for website dependencies."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "crest-tees",
+      "title": "Crest Statement tees — 3 product specs",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-DARK-CC-75.png",
+          "sha256": "d5f49cbf1a4b3c9b1c378340150a1ec48cf0b82802805b13e2adb16e1842da8f",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-CREST-V2-DTF-LIGHT-CC-75.png",
+          "sha256": "ece4fcd47a4084662e6b139bcd2a7ce69c57c18bfd9b25e4b8ceac3789d54fa6",
+          "pixels": [
+            2250,
+            2866
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-GREY-5.png",
+          "sha256": "bc75321dc62c4a5d05c9339b1874db0a1912c05923d70a5be4bc8e0d02c4b763",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-HEM-URL-WHITE-5.png",
+          "sha256": "7895390acfb47e4b5b92099dcce6e801a0e2d28be8235cab5b74e604cfd26fb9",
+          "pixels": [
+            1500,
+            260
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-DARK-7.png",
+          "sha256": "07ae4923ef635ab1a05a245dc80f0116b6dbf779ca92b61a6390f065dfae9d4c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/production/GOOOL-WORDMARK-V2-SHOULDER-LIGHT-7.png",
+          "sha256": "137cab38bccf307ed0b4329321381042d6e2766c00cc663f2c961f0c5ee03c7c",
+          "pixels": [
+            2100,
+            746
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/specs/SKU-1c-CREAM-CC75.md",
+          "sha256": "b8c76415e0e51c202d8fa94df64603921e1611481194bc16b95f22160133c639",
+          "pixels": null,
+          "role": "design_or_reference_asset"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/specs/SKU-1d-FADEDBLACK-CC75.md",
+          "sha256": "0402dd478a672c3ba83cfdf18decaceefc616b14787c4e9cbee4ead6718e96ad",
+          "pixels": null,
+          "role": "design_or_reference_asset"
+        },
+        {
+          "path": "designs/06_tshirts/handoff_crest_v2/specs/SKU-1e-FADEDNAVY-CC75.md",
+          "sha256": "7b0fa65f0bd4ecceecb2bd09e4a51d171160d6eace499057f9a028a90ae707c4",
+          "pixels": null,
+          "role": "design_or_reference_asset"
+        }
+      ],
+      "instructions": [
+        "SKU-1c CREAM, 1d FADEDBLACK, 1e FADEDNAVY are the three actual spec files, all CC75 center-front 7.5in. Older prose mentioning six SKUs and other placements is not a catalog instruction.",
+        "Use the named SKU spec for front/back/hem URL placement; do not apply this garment’s back marks to core ST720 or 4810GD.",
+        "Separate isolated art from Printful full-area templates. Transparent-canvas dimensions are not visible artwork dimensions."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "oval",
+      "title": "GOOOL Oval tee",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-BACK-CHARCOAL.png",
+          "sha256": "245d1222cc03f73349f5f265faf839b801f1c5038b855dc8a1472476e5f3f2c7",
+          "pixels": [
+            1800,
+            1800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-BACK-CREAM.png",
+          "sha256": "80036bba3e483c08c2eb9ce490938a0ba7d183a383e0def891b62c80ca5181e2",
+          "pixels": [
+            1800,
+            1800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-FRONT-CHARCOAL.png",
+          "sha256": "cc702bdc21e616109a858c8b16c284ccc47bb68009c4d4afc58c30bd81d6151b",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/GOOOL-OVAL-FRONT-CREAM.png",
+          "sha256": "3e51519831ccf0aa325cb1776e147db4f79b28d043045165ab3df318a5cf1557",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-back-charcoal.png",
+          "sha256": "8dcd59e9f91a05be430ce3f6b0dbe05727f5c83bdaa2eb0bad25fa9562d2e163",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-back-cream.png",
+          "sha256": "98896adafdccd7f18560e686ef9594067c5c3ce8249c110d99a46f9a9e495c2f",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-front-charcoal.png",
+          "sha256": "fcce88d5ac43fdba9d3c97ddac3ed57d2eea1b85770ba094be00875f1c4c2ca7",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/oval-tee/production/printarea-front-cream.png",
+          "sha256": "f2d06ba9f7878368794313b358ae1686def4a69be95e1d88cefc54bafa8876f2",
+          "pixels": [
+            3600,
+            4800
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [],
+      "instructions": [
+        "Preserve isolated front/back artwork separately from printarea-front/back templates. They have different canvas placements and are not interchangeable duplicate files.",
+        "Use correct cream/charcoal contrast for the specific garment. Supplier placement proof is required."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "ga-ua",
+      "title": "GA shield embroidery — Under Armour concept",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/06_tshirts/athletics-tee/production/goool-ga-shield-embroidery-black-2.5x2.75.png",
+          "sha256": "ed251e98f63246d909f3c66a5dba1b897ea17b6a5e0d87eedad2a7f86780774a",
+          "pixels": [
+            750,
+            825
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/athletics-tee/production/goool-ga-shield-embroidery-white-2.5x2.75.png",
+          "sha256": "7cf97b44b647bf05b80a892416d94b2cb14b11ddb0ac01e93fbc45811e98e361",
+          "pixels": [
+            750,
+            825
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/06_tshirts/athletics-tee/source/goool-ga-badge-black-master-3000x3300-300dpi.png",
+          "sha256": "a742dd7dd314959955015a2b927c2555b038e9d930a56ce4310bc91f5d23ad3e",
+          "pixels": [
+            3000,
+            3300
+          ],
+          "role": "design_or_reference_asset"
+        },
+        {
+          "path": "designs/06_tshirts/athletics-tee/source/goool-ga-badge-black-printful-750x825-300dpi.png",
+          "sha256": "97e2c0f1086c8c3ffac21d5a0551183875dbd4e61a07f5928d46c54ec94338f3",
+          "pixels": [
+            750,
+            825
+          ],
+          "role": "design_or_reference_asset"
+        },
+        {
+          "path": "designs/06_tshirts/athletics-tee/source/goool-ga-badge-white-master-3000x3300-300dpi.png",
+          "sha256": "d1e4de800de0acbd33b6a73839e8e2034b5d50a3e4213f9ede5147e8c5b365e8",
+          "pixels": [
+            3000,
+            3300
+          ],
+          "role": "design_or_reference_asset"
+        },
+        {
+          "path": "designs/06_tshirts/athletics-tee/source/goool-ga-badge-white-printful-750x825-300dpi.png",
+          "sha256": "dc3353e67613e5354e60222bbacc21ba9b54cca1c4f6981844f5889e73d76080",
+          "pixels": [
+            750,
+            825
+          ],
+          "role": "design_or_reference_asset"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/06_tshirts/athletics-tee/specs/GA-BADGE-EMBROIDERY-UA-SPEC.md",
+          "sha256": "a7ede7fbde857764ed59c7adc2f4c347a5e8847274683b66e2cc0f33c17e8453",
+          "pixels": null,
+          "role": "design_or_reference_asset"
+        }
+      ],
+      "instructions": [
+        "UA1383264 embroidery is separate from A4N3142 printed concept tees. Spec requests one-color 2.5x2.75in left-chest embroidery.",
+        "Retain large shield raster source and small upload exports. The spec requests SVG/PDF/EPS masters, but a matching native vector trio has not been located; do not claim this requirement is complete.",
+        "Supplier digitization and monogram/negative-space proof required."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "a4-concepts",
+      "title": "A4 athletic tee concepts — navy wordmark and black shield",
+      "status": "concept_only_missing_complete_print_package",
+      "selected_files": [
+        {
+          "path": "designs/06_tshirts/athletics-tee/reference/GOOOL-ATHLETICS-BLACK-SHIELD-model.png",
+          "sha256": "b94b86366e5f38de736b7edf7d76e19e091fcd9bf21e554c08f828d035def48c",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "reference_only"
+        },
+        {
+          "path": "designs/06_tshirts/athletics-tee/reference/GOOOL-ATHLETICS-NAVY-WORDMARK-model.png",
+          "sha256": "72b7390aacfd6a4cbf83f6f4cdcc4d3fe4d300051bf747328de2556dc1c180b0",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "reference_only"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/06_tshirts/athletics-tee/README.md",
+          "sha256": "5e478f4a95bb937d50e0d1e5d933591df8dc3cdd46be670314e11d129985947a",
+          "pixels": null,
+          "role": "design_or_reference_asset"
+        }
+      ],
+      "instructions": [
+        "Concepts refer to A4N3142, distinct from current Sport-Tek ST720 and Under Armour embroidery. Isolated final front/back files and exact placement specs are not fully located.",
+        "Do not manufacture from model/mockup crops or substitute UA embroidery artwork for a full printed A4 concept."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "heavy-core",
+      "title": "Heavy Core hoodies — 2 programs, 6 unlaunched looks",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-BLACK-Embroidery-Master-300dpi.png",
+          "sha256": "a742dd7dd314959955015a2b927c2555b038e9d930a56ce4310bc91f5d23ad3e",
+          "pixels": [
+            3000,
+            3300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-BLACK-Printful-2.5x2.75in-300dpi.png",
+          "sha256": "97e2c0f1086c8c3ffac21d5a0551183875dbd4e61a07f5928d46c54ec94338f3",
+          "pixels": [
+            750,
+            825
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-WHITE-Embroidery-Master-300dpi.png",
+          "sha256": "d1e4de800de0acbd33b6a73839e8e2034b5d50a3e4213f9ede5147e8c5b365e8",
+          "pixels": [
+            3000,
+            3300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-GA-Shield-WHITE-Printful-2.5x2.75in-300dpi.png",
+          "sha256": "dc3353e67613e5354e60222bbacc21ba9b54cca1c4f6981844f5889e73d76080",
+          "pixels": [
+            750,
+            825
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-Oval-Front-BLACK-10.5in-300dpi.png",
+          "sha256": "2f18902168ff7da765119a739cd3c8a57f9eb44e58d9db2e818c60f2abd34e82",
+          "pixels": [
+            3150,
+            970
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-Oval-Front-CREAM-10.5in-300dpi.png",
+          "sha256": "3668680669fdeed7bde93e5a015a7fd809acf456122287d94ce32880f941fc72",
+          "pixels": [
+            3150,
+            970
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-Oval-G-Back-BLACK-2.25in-300dpi.png",
+          "sha256": "50ebc9339e16164dc88dff4b7c407bb566cdbe82fd3b4df78c9cc8d00959d27a",
+          "pixels": [
+            675,
+            347
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/production/GOOOL-Oval-G-Back-CREAM-2.25in-300dpi.png",
+          "sha256": "60d6e2030200d1f47e8ee923132b50ced20675ef69328879a79ff0e00844ee64",
+          "pixels": [
+            675,
+            347
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/07_hoodies/heavy-core/mockups/H01-Black-GA-Embroidered-Mockup.png",
+          "sha256": "df8abceb99bd4581c27d2c6fc9a2289e6ebb094cc9f6ac8c6ea6496eaf195ce7",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/mockups/H02-Cream-GA-Embroidered-Mockup.png",
+          "sha256": "cdafbf50faad4ec131e18c2c81defdcd86923109dede863dd002fd2117cdc12e",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/mockups/H03-Arona-GA-Embroidered-Mockup.png",
+          "sha256": "5626a845231ef405e849cdff496158ea249bf0c6db507ac8931ce21db6b5f98d",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/mockups/H04-Black-Oval-Printed-Mockup.png",
+          "sha256": "6118dbe13992f5c9ae09c2f703f74989c203c5a02fc4c4785136cb62c6205ee4",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/mockups/H05-Cream-Oval-Printed-Mockup.png",
+          "sha256": "0d84b9eb268d45a6f6737853b3317e317db25456390a73e6d633819a95e1a3a1",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/mockups/H06-Arona-Oval-Printed-Mockup.png",
+          "sha256": "a63adea7662132d30f1bc0e36c27298e803ae798f94b3eae6e57745ecd36bda8",
+          "pixels": [
+            1448,
+            1086
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/07_hoodies/heavy-core/specs/GOOOL_Heavy_Core_Hoodies_Printful_Tech_Pack.pdf",
+          "sha256": "11e229e5c24fea49957c36ab1a57aa7157dcab172bb0a6fefa103c4943f2998c",
+          "pixels": null,
+          "role": "historical_specification_reference"
+        }
+      ],
+      "instructions": [
+        "Lane Seven LS17001 is a separate unlaunched blank, not current IND4000. Preserve GA embroidery and Oval front/back programs.",
+        "H04 black Oval mockup is NONCONFORMING: back G is pictured on hood. Tech pack requires upper back BODY, 2.75in below hood seam. Do not execute hood placement.",
+        "Tech pack and asset_manifest govern historical artwork sizes. Current supplier availability, mapping, pricing and physical samples remain unverified."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "country-caps",
+      "title": "Country caps — historical embroidery designs",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "public/print/drop02/cap-arg-front-sky.png",
+          "sha256": "297d91a4f5d47d6fafff843fc8771e4c44fa0bdc7292418be0dce2790b54a792",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-arg-front-white.png",
+          "sha256": "d7a6e91987ff7b2df0af36fdd76e02b7cda5f07884b3d19102cf48f1984a109e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-arg-side-shield.png",
+          "sha256": "229f206693ed583e67decbd8fedb0d7e3cf509f085357fd15b4e507b8f1596fb",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-back-gold.png",
+          "sha256": "36b0a9a5ef04bf70551676a044c3a60d88bc7090167b1c609a43a6a899d31484",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-back-ink-on-white.png",
+          "sha256": "d371fcc40b61e3c9ab1dc6edbf3ab4d5192029ebe43fef52b6324580b66ddb9c",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-bel-front-black.png",
+          "sha256": "32d680bf917943ffb9508da1b284ae498d8b1cd92b84a081433f6b078e420e18",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-bel-front-red.png",
+          "sha256": "6ee99665029e6ad31535f4c814d8671bfe8662169bd35966499a372e98c53107",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-bel-side-shield.png",
+          "sha256": "de07b4e2ce22e9d43332d601761ac7c10b08f18209914718fee4e0c90bab9479",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-back-navy-on-white.png",
+          "sha256": "a158c39d2c7d5d41fd33d82af3baa30c4b712f4d10c3f0c7f6bc306ac0b710ff",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-back-white.png",
+          "sha256": "a7c20ac6d339698ee8ef0a6b2f592e5c47e788aec204a8132bec967da0806ed4",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-front-navy.png",
+          "sha256": "f99cfcf11b180323d24b0623a3c9cd65d6b5e3ad13ef06eb364e9a87fca62c75",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-front-red.png",
+          "sha256": "46935eabe7f15b02ec239bd4c466d81cb16b98f734fe6602a9ad0cd9e584c225",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-front-white.png",
+          "sha256": "0d9f6649e4acf55d588650fe43ac35c4ba9a8c0fcc7e059cc3489a1ab5797ac5",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-eng-side-shield.png",
+          "sha256": "8c1ba050c46a5c51454b1282fa3a01798fe09e096d51d562962cc7526694a02e",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-esp-front-black.png",
+          "sha256": "39e2cd61e9df1ed3fcf221027be7778338b5c79f2d156d0650b253dc49b1479b",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-esp-front-red.png",
+          "sha256": "f12c5fd1e7b0bc705f06d7ad570ad7ec21d5e52ffdb29830f7cb11b06d880888",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-esp-side-shield.png",
+          "sha256": "cc7fb53b28fa891be66af7cda3996042aeb0c5d16bae4989e7ca8a0d106b9b86",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-fra-front-navy.png",
+          "sha256": "167885004c981c4ab36e1ad1a71921297e6ee26388ef7668b30c75ac2d070f67",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-fra-front-white.png",
+          "sha256": "88c0313f509d38efdd9905349368d707644dbac067b2f6c94ddef9d51a1d9fdc",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-fra-side-shield.png",
+          "sha256": "f694933c7fc4dca0c0f69e0ed4124ae7e770ea38c24fb1f3820c526837cfcab5",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ger-front-black.png",
+          "sha256": "0c7ae93e3695941175899cf4207f03186e931018164fba007de885f835710d53",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ger-front-white.png",
+          "sha256": "bdfd5367feb84bbdb884ddcc1cb072fdde1d7e9102d91d811ed8527f80f43dbc",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ger-side-shield.png",
+          "sha256": "fcc0f56a8ae4a6a2d2b29cdbba4a6ddfa1e75da11eaded0f04af8bc09a8006c5",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-goool-england-front.png",
+          "sha256": "95fba8407a781575951c3cd50db025415608f49827f03e58d5f8533467cd37c3",
+          "pixels": [
+            1890,
+            765
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ita-front-navy.png",
+          "sha256": "bbb8d88ce11808ad9f45a1e575c72f1b31afef6b59e01a7b166e1dd81d35a717",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ita-front-white.png",
+          "sha256": "4be37678414549242fd8208a24ea00efdd1efc04bbd53882415b9d9744f709e3",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ita-side-shield.png",
+          "sha256": "c0970a87e401c26ccf9fb25f7d58344a04c5d273ee00cb757d0c83cea144a9c1",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ned-front-navy.png",
+          "sha256": "99b51cf5953299ad2033e2363b6afeeebf7f2599833977cd26b859db592bed62",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ned-front-white.png",
+          "sha256": "0e9c126333244ceff2bad40a48ef15f448fc3e66eeead5e6242f920cdeeffc2e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-ned-side-shield.png",
+          "sha256": "7e4fef94bf73bbd54b5d2e32bebc2bbcb1850f09ec12922940cd9e4a797d7dc0",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-nor-front-navy.png",
+          "sha256": "4ae4c5a03730bbead2e388e061c777046b2c9449f66c1010214db14d62d0e9c0",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-nor-front-red.png",
+          "sha256": "8576e976569f23cfeef3c3e12d7ddce4ff452f9e59ff77a1dfffe80b6b7765ed",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/drop02/cap-nor-side-shield.png",
+          "sha256": "a08051594313b45eb936c101b0ba7abbd696ca3fb03d5690b336ff12e10eb3bb",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/07_accessories/hats/country-cap-guidelines.md",
+          "sha256": "e5e33f6db10eea5f15557ac5cb3c0046fbd53d1648558c0ac87bb6add0a10d90",
+          "pixels": null,
+          "role": "design_or_reference_asset"
+        }
+      ],
+      "instructions": [
+        "Front, country side-shield and back files are separate placements. Country caps retain their own side marks; the Touchline no-side-slogan decision does not delete these designs.",
+        "country-cap-guidelines.md refers to scratchpad logogen/gen-country-caps.js, which is absent from GOOOL. Existing PNG exports and extended-wordmark SVGs are retained; regeneration is not currently reproducible from that missing script.",
+        "The catalog includes Netherlands White while guidelines only list Navy and discuss an unavailable Orange proposal. Use actual catalog-specific files; verify supplier swatch rather than inventing an Orange SKU.",
+        "Embroidery PNGs are artwork references, not production digitization files. Confirm each colorway and back-art contrast; do not infer variant IDs."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "gol-caps",
+      "title": "GOL and GOOOL caps with legacy side slogans",
+      "status": "existing_artwork_supplier_proof_required",
+      "selected_files": [
+        {
+          "path": "public/print/gol/cap-gol-gold.png",
+          "sha256": "ceb773ce6441b075ced669e0eda8f756b9b126fcfeebfb760bb538bbec555d9e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-gol-ink.png",
+          "sha256": "8beac3f5de136f216ec112fab34c398c9538679eb5cff4ac5a27669fab42c51d",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-goool-gold.png",
+          "sha256": "5a9bd8d979bb4f3aa375661163af696beb3c24873b90136021f0fff8914c381e",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-goool-ink.png",
+          "sha256": "1f1eab70b70e9cea08918372fc8e4b0d5bc9b982e995874229e6e15c5ffbbbd8",
+          "pixels": [
+            1650,
+            600
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-side-language-gold.png",
+          "sha256": "e18100868e68dad9f33b53ae9f89db6ddedd801d86baa3672a4aa63d521a42ad",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-side-language-ink.png",
+          "sha256": "4ec1416216f5b4ce9690c19dc633ffabe422670219f212f5f5ae43267d8003db",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-side-moment-gold.png",
+          "sha256": "a0441129c7b9b0dd4864f963bc5c8803f887b0f13880cbd12527256c693b5f6e",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-side-moment-ink.png",
+          "sha256": "9bced6dc8d39aec503942e7d31dd47096fc93e7010eba08c0ec105f1819cf336",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-side-victory-gold.png",
+          "sha256": "4118ab676d38e63bd322b4e2b7037e46409ba8570a4fe8ce041486f087531c5b",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        },
+        {
+          "path": "public/print/gol/cap-side-victory-ink.png",
+          "sha256": "cb497418d7ef0452de13c2fbb4eed4dd794a1f4c687cfd97a43a639bb4931c89",
+          "pixels": [
+            600,
+            300
+          ],
+          "role": "print_or_embroidery_artwork_candidate"
+        }
+      ],
+      "reference_files": [],
+      "instructions": [
+        "Separate GOL/GOOOL and gold/ink front designs. Side slogans are retained as distinct historical variants; do not add them to current Touchline cap.",
+        "Per-product side-slogan/blank mapping requires its specific historical spec; the existence of a side file does not authorize it on every cap."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "accessory-concepts",
+      "title": "Scarf, original cap, stickers and terrace flag",
+      "status": "concept_only_missing_complete_print_package",
+      "selected_files": [
+        {
+          "path": "public/products/goool-cap.svg",
+          "sha256": "d4225bf95583dbdc2091a40703031feaee6bb72472e0d6fb5fd10b41f7169f30",
+          "pixels": null,
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "public/products/sticker-pack.svg",
+          "sha256": "4ec0a15f685751a3f2182de03a2ab8004613dba3e03e7f79f61d675e44e61ae5",
+          "pixels": null,
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "public/products/supporters-scarf.svg",
+          "sha256": "9b4434fe06a1c95687e9bff83a33c7e82d7671dc8439b272e152569ceb0ca7dd",
+          "pixels": null,
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "public/products/terrace-flag.svg",
+          "sha256": "aa223cf93f9a218901213844c86fad52f368cc8e8431ece64e3db0365ac4d7e1",
+          "pixels": null,
+          "role": "mockup_or_gallery_reference"
+        }
+      ],
+      "reference_files": [],
+      "instructions": [
+        "Catalog/mockup concept assets retained. Complete supplier-ready artwork, manufacturing templates and per-variant specs have not been located; do not claim ready for Apliiq."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    },
+    {
+      "id": "launch-imagery",
+      "title": "Current gallery concept selections",
+      "status": "concept_gallery_not_print_artwork",
+      "selected_files": [
+        {
+          "path": "designs/17_launch_imagery/performance-concepts/athletics-performance-front.png",
+          "sha256": "ae61c6911dcb384a4c797679903b0c2b88be4d5af7e12600c3feb0dbe880b253",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/performance-concepts/training-line-performance-front.png",
+          "sha256": "78f6eacca917114aa904109f51fbec412ee7272f788fc2299f17e6d6773c5757",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/casual-washed-black-back.png",
+          "sha256": "1384d2efff7785c32eb265c667bfb2d7e149c0a2e69eb2177cf5bcb8d67a0436",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/casual-washed-black-front.png",
+          "sha256": "8fef07fb8df2b048c9a689ca917c10d0e3d2221e399e15bd23481a7494727a0c",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/casual-washed-grey-back.png",
+          "sha256": "f817554ad62bc237b1030f3429a18127746364a9954c739989be1ea88bc14f3f",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/casual-washed-grey-front.png",
+          "sha256": "b96adc13a40ac0f848fb41abc2c8148c05865e0a2cdefae3201e2a6ab0221ace",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/circular-badge-back.png",
+          "sha256": "bd90a373cdb03886516ef73e74a5c497e8f72802b5a0edce7856dc66589af06a",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/circular-badge-front.png",
+          "sha256": "e44f0faa4d8e1677d80539c8cf157fcf432d4c2b9d6b76db5fd6f7d44ca9c4e2",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/circular-crewneck-back.png",
+          "sha256": "6b420e0be89339414b479df6749031af616b9bc7ebfb7027dc0ab17f8a09d30f",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/circular-crewneck-front.png",
+          "sha256": "5fe7fce9e9d19efcecc18ec087f9f03f25906b757b6511cf5186928dc6664691",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/hoodie-black-back.png",
+          "sha256": "2259453b24eaa543097381b0be0669f31bf56dd3af1883e70db1355519a974fe",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/hoodie-black-front.png",
+          "sha256": "d93bdc52eb065a4946e144d74a6ef3e5d0b7f80793e5177c809fedd4c40f72fa",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/hoodie-bone-back.png",
+          "sha256": "f5c8dbf2817a034ea24cec50b996f3d040b1bbc716be1b1178c3a0acb974c95c",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/hoodie-bone-front.png",
+          "sha256": "79acf98103e512e7b95897ecc27524fa6a1b7df7e2054b12e0153d1f8cf38813",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/minimal-club-back-v2.png",
+          "sha256": "9e2695f0c34af6e6f3fe4978ffe63fd4c4d9199aa7b117bcc2bbeec38a3138bd",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/minimal-club-front-v2.png",
+          "sha256": "4b1d65da0bc3acfd73d1d7f2a192c05a7c66bcb7bc3aa374f1ff054c85b7f17a",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/modern-sport-back-v2.png",
+          "sha256": "2d4e8e5bf1c855f3281287808b22598244404d7a37c613e7e2ed1bd5e86ddc9f",
+          "pixels": [
+            1121,
+            1403
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/modern-sport-front-v2.png",
+          "sha256": "443294281abc19142d0981cf7174951c9316a8094c4b5764651938839668ba7a",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/performance-black-back.png",
+          "sha256": "3261b42c930441d73c5dfa11063ac1337557bf123d400126217c615053d2b6e4",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/performance-black-front.png",
+          "sha256": "15a179c68d0dd9ddbd86342ed036433ca17c3e05306ac200f24cab232f6b0123",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/performance-royal-back.png",
+          "sha256": "89d8da3777cd4fcf89585bbbf7873c641542b4da7b7c2da3a5c402c839f543f7",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/performance-royal-front.png",
+          "sha256": "022befa536278f27509cd74603829b47ff2a3abf1b308e04293775e0922b3afa",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/performance-white-back.png",
+          "sha256": "82595095f2f299534700c1ab6bb311eb682bafee08be3bd5d6a401f4345f1a54",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/performance-white-front.png",
+          "sha256": "4d4172104eadb83e2de69643bcecc43b8dbf8414be94ba7b078cbf7582abe43a",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/touchline-cap-back.png",
+          "sha256": "414e81cfb2661fd6aecc3a8ce9f5e7b405945792f2ea4c3bb47ff57a98ebdecd",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/touchline-cap-front.png",
+          "sha256": "b7585a9c03de6c5ec81096db180aefc9f1c98ef3a185886514d3a5c7d082fae7",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/varsity-back.png",
+          "sha256": "9f3dd241e2535376d2cbbed626aeae60a2ccde8a57fd2dfe6fb1d085d0034181",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/stadium/varsity-front.png",
+          "sha256": "a0fae824adc63615734e225a2b030d730a086e7bc75ee406e93e1f7a3230f29b",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/casual-washed-black-back.png",
+          "sha256": "4195169be5bf894d9f353b3b38a4998e21a06b241aa0c49a4b2e3bf5c54e07a8",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/casual-washed-black-front.png",
+          "sha256": "440ef5cbdad29c8d3f047cfa820163de5094f25a54dead72bc35961ddad9874c",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/casual-washed-grey-back.png",
+          "sha256": "ad12ea37bd49f3a957aaa86fc39920ddaf76ad184d1ba3850105d36633b7cd7e",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/casual-washed-grey-front.png",
+          "sha256": "ee51396651a8c15e5cc5baf9ed09d7d1324a85cc22146aa0f2fef82d70b4d55a",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/circular-badge-back.png",
+          "sha256": "da6087c45c4b5861f231b4e674858a115a079dc7fdc001ca04efe4c37345ed50",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/circular-badge-front.png",
+          "sha256": "c0ccfa4072fa946853f513e60bef50aafd253fe4e8a0b2f0666151d35d83f72f",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/circular-crewneck-back.png",
+          "sha256": "0ecfc0112af2b6dd6465a609f9d1f1e0ce38d78e4444aa49510313f33973509f",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/circular-crewneck-front.png",
+          "sha256": "7a57e7d8f5c2fa2ac81a23128638abb9cc8c537f59cd751b07182477fe82e52c",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/hoodie-black-back.png",
+          "sha256": "d0081fa109e9b8febf6f4518ef67417ab113735b0822a9cbd779e69edb295141",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/hoodie-black-front.png",
+          "sha256": "fc7d164fff9e6e47d535f2472947e6a1f0317a6bbc455c953cbf51f502fd2be6",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/hoodie-bone-back.png",
+          "sha256": "e18480abe0b0a6ff4c53bbde265dec8db6f795fa93c2ffa60f9161cae92721dc",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/hoodie-bone-front.png",
+          "sha256": "00da9bdc398410e2e719e42fedc3de1bed98f71256bd5ff8395123366a0aff48",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/minimal-club-back.png",
+          "sha256": "064c1e3f7ae07b9c7ef2fe316c0b297f21676d5fa920dd95031db562e5994939",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/minimal-club-front.png",
+          "sha256": "9df7560c3644cdb49117122f5c5fa53915600a8e3c5905599ee88378928d6ebc",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/modern-sport-back-v3.png",
+          "sha256": "ca3d587e8391f88e7b523991ff346eae3ba0df9660337cddeef8af91785e18c8",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/modern-sport-front.png",
+          "sha256": "322eee8512e24739ee5a21a049a9d64e73fd5e0913f47b1e8d01a813a153aa8b",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/performance-black-back.png",
+          "sha256": "c4c27d7dc2c327f10fb350c1e2600126e3a3db337cc2855708dcde69eac2d202",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/performance-black-front.png",
+          "sha256": "fc7e41f6045b626c3c19832c6024ef67699784b064866b86feb253c71d9e2530",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/performance-royal-back.png",
+          "sha256": "1403216dcdf7f8d8fe7fc91622781c889c17357ffa9b42b3e66a695d8ddb5df8",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/performance-royal-front.png",
+          "sha256": "52875f7d35ff352c7996216c00cdff4d495621690d84a8917aa730c7cef22328",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/performance-white-back.png",
+          "sha256": "fc8c546ab90a61ac879ccf6b3c97cb2c5081e2595bf05ce7fa4b01a0620757d8",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/performance-white-front-v2.png",
+          "sha256": "b0dbd05acfbc52336adb5a678571206ff4ad78d14e1af5d7f2f848baf4364b4d",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/touchline-cap-back.png",
+          "sha256": "a6f0dafabd890e7c7df1ad58a020f07352664b10e3a79183994af48af53ecee0",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/touchline-cap-front.png",
+          "sha256": "0259e9ab60f5aad846965f97633ababa35daa5f3fb330d5bb2f083015053262e",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/varsity-back-v3.png",
+          "sha256": "2ade23181360645f57533c944779c6079d7e9642cc0f4e2a7981b3e40210df18",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        },
+        {
+          "path": "designs/17_launch_imagery/standardized/varsity-front.png",
+          "sha256": "5820c484bfe10635de572a33cb54258d78b2640dbc7aedc3a765c0d4f2058e1e",
+          "pixels": [
+            1122,
+            1402
+          ],
+          "role": "mockup_or_gallery_reference"
+        }
+      ],
+      "reference_files": [
+        {
+          "path": "designs/17_launch_imagery/asset-manifest.json",
+          "sha256": "86aab95404af25446b6c0a4758282c747f0b6a3beb3d35e1248714152780b619",
+          "pixels": null,
+          "role": "mockup_or_gallery_reference"
+        }
+      ],
+      "instructions": [
+        "asset-manifest.json selects the intended gallery revisions. Earlier v1/v2 alternates are reference history, not competing print masters.",
+        "Current catalog is 10 products/14 colorways; the older gallery manifest was authored for 9/13 and is not the product roster.",
+        "Generated images are concept references. Verify garment silhouette, print position and colors against supplier proofs/physical samples. Never extract manufacturing artwork from them."
+      ],
+      "manufacturing_approved_by_this_audit": false
+    }
+  ]
+}

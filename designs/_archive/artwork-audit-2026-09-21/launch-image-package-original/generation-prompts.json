@@ -1,0 +1,264 @@
+{
+  "tool": "Built-in image_gen",
+  "note": "Partial verbatim call archive. See PROMPT-SET.md for the reusable final specifications across all assets. The two retained Varsity stadium images predate this package. Use asset-manifest.json for final selections; superseded outputs may also appear here.",
+  "jobs": [
+    {
+      "key": "performance-black",
+      "view": "front",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_01_ST720_PERFORMANCE_TEE_BLACK.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-black-front.png",
+      "prompt": "Use case: product-mockup. Create one standardized studio FRONT product-only concept image of this exact black GOOOL Performance Badge Tee. Edit target image 1: preserve garment, seams, black color, exact crest artwork, spelling GOOOL with three O's, logo proportions and placement. Change presentation to a clean symmetrical straight-on flat garment presentation, whole garment entirely visible with no perspective, centered on uniform light gray #F4F4F2. Portrait 4:5 canvas, garment bounds occupy 78% of canvas height with balanced top/bottom margins, soft subtle shadow, diffuse upper-left lighting. No people, hanger, mannequin, props, labels, captions, border or watermark. Preserve athletic short-sleeve proportions and polyester texture. Do not redesign or enlarge artwork. One image, one garment."
+    },
+    {
+      "key": "performance-black",
+      "view": "back",
+      "prompt": "Use case: product-mockup. Image 1 is the exact garment FRONT reference. Create a matching BACK product-only studio view of this black athletic polyester tee, centered white crest with red accent. Back is confirmed entirely blank: no crest, no text, no decoration. Image 2 sets the exact framing, scale, background, lighting and photographic presentation. Show the same garment turned fully around, higher rear collar, no front neck opening. Whole garment centered, no cropping, 4:5 portrait canvas, garment occupies 78% height, uniform neutral #F4F4F2 background, soft upper-left diffuse lighting and subtle shadow. No person, hanger, mannequin, labels, props or watermark. One garment only, rear view.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_01_ST720_PERFORMANCE_TEE_BLACK.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-black-back.png"
+    },
+    {
+      "key": "performance-white",
+      "view": "front",
+      "prompt": "Use case: product-mockup. Image 1 is the garment/artwork reference: white athletic polyester tee, centered navy crest with burgundy accent. Image 2 is the REQUIRED studio presentation standard. Make ONE FRONT product-only concept render matching image 2's straight-on symmetrical flat presentation, 4:5 portrait canvas, 78% height occupancy, centered garment, full sleeves/hem visible, neutral light gray #F4F4F2 background, diffuse upper-left light, soft shadow. Keep exact artwork from image 1, GOOOL spelled with THREE Os, all colors and placement unchanged. Match natural garment proportions. No people, hangers, mannequins, props, labels, watermark, or redesign. High detail fabric.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE_V2.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-black-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-white-front.png"
+    },
+    {
+      "key": "performance-royal",
+      "view": "front",
+      "prompt": "Use case: product-mockup. Image 1 is the garment/artwork reference: true royal blue athletic polyester tee, centered cream crest with burgundy accent. Image 2 is the REQUIRED studio presentation standard. Make ONE FRONT product-only concept render matching image 2's straight-on symmetrical flat presentation, 4:5 portrait canvas, 78% height occupancy, centered garment, full sleeves/hem visible, neutral light gray #F4F4F2 background, diffuse upper-left light, soft shadow. Keep exact artwork from image 1, GOOOL spelled with THREE Os, all colors and placement unchanged. Match natural garment proportions. No people, hangers, mannequins, props, labels, watermark, or redesign. High detail fabric.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V3.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-black-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-royal-front.png"
+    },
+    {
+      "key": "performance-white",
+      "view": "front-correction",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-white-front.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE_V2.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Edit image 1 only. Change ONLY the small center dash between the two long horizontal navy rules inside the crest, directly below GOOOL and above the soccer ball, from navy to BURGUNDY #742E3D as shown in image 2. All remaining navy artwork, white garment, shape, canvas, framing, background, light, print size, seams must remain pixel-faithful to image 1. No other edits. One image.",
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-white-front-v2.png"
+    },
+    {
+      "key": "athletics-performance",
+      "view": "concept-front",
+      "prompt": "Use case: product-mockup. Create ONE FRONT view concept of the proposed GOOOL ATHLETICS Performance Tee. Image 1 supplies the black athletic polyester garment and studio framing/light/background; REMOVE its crest entirely. Image 2 supplies the exact approved GOOOL ATHLETICS white chest graphic and solid RED underline, retain the slashed forward leaning GOOOL with exactly three O's and small spaced ATHLETICS. Apply that graphic at 9 inches wide to centered upper chest of the athletic black tee, not a relaxed cotton blank. Plain black sleeves and body, no extra graphics. Render whole garment straight-on, symmetrical with complete hem/sleeves, neutral #F4F4F2 studio background, diffuse upper-left light, 4:5 portrait and 78% height, no labels or props. This is a concept preview, not a technical manufacturing proof. One garment only.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-black-front.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_01_MODERN_SPORT_FRONT.webp"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\performance-concepts\\athletics-performance-front.png"
+    },
+    {
+      "key": "training-line-performance",
+      "view": "concept-front",
+      "prompt": "Use case: product-mockup. Create one FRONT studio concept of an original GOOOL Training Line performance tee, black athletic polyester. Image 1 gives the garment only; completely REMOVE crest. Image 2 supplies the exact small white slashed GOOOL / ATHLETICS wordmark, transfer this small mark to the wearer's LEFT chest (viewer right) at proposed 3 inch width. GOOOL = G O O O L, precisely three O's, keep distinctive letter cuts and small ATHLETICS beneath. Add one restrained original straight red vertical dash, 0.15 inch wide by 1.75 inches tall, immediately to the viewer-left of the small chest lockup, contained entirely inside this small decoration area. No other graphics, sleeve stripes or chest-wide line. Plain blank back implied. Premium clean training identity. Full garment front straight on centered, 4:5 portrait, uniform #F4F4F2 background, same 78% garment height and light/shadow as image 1, complete hem/sleeves, no people, hangers, labels or watermark. One garment, front only.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\standardized\\performance-black-front.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_01_MODERN_SPORT_BACK.webp"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\performance-concepts\\training-line-performance-front.png"
+    },
+    {
+      "key": "performance-black",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact black athletic polyester tee, centered white crest with red accent garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_01_ST720_PERFORMANCE_TEE_BLACK.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-black-front.png"
+    },
+    {
+      "key": "performance-black",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same black athletic polyester tee, centered white crest with red accent, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-black-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-black-back.png"
+    },
+    {
+      "key": "performance-white",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact white athletic polyester tee, centered navy crest with burgundy accent garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_05_ST720_PERFORMANCE_TEE_WHITE_V2.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-white-front.png"
+    },
+    {
+      "key": "performance-white",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same white athletic polyester tee, centered navy crest with burgundy accent, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-white-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-white-back.png"
+    },
+    {
+      "key": "performance-royal",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact true royal blue athletic polyester tee, centered cream crest with burgundy accent garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_08_ST720_PERFORMANCE_TEE_TRUE_ROYAL_V3.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-royal-front.png"
+    },
+    {
+      "key": "performance-royal",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same true royal blue athletic polyester tee, centered cream crest with burgundy accent, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-royal-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\performance-royal-back.png"
+    },
+    {
+      "key": "hoodie-black",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact black heavyweight pullover hoodie, kangaroo pocket, underlined chest wordmark garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_02_IND4000_HOODIE_BLACK.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\hoodie-black-front.png"
+    },
+    {
+      "key": "hoodie-black",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same black heavyweight pullover hoodie, kangaroo pocket, underlined chest wordmark, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\hoodie-black-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\hoodie-black-back.png"
+    },
+    {
+      "key": "hoodie-bone",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact bone heavyweight pullover hoodie, kangaroo pocket, navy/burgundy underlined chest wordmark garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_06_IND4000_HOODIE_BONE_V2.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\hoodie-bone-front.png"
+    },
+    {
+      "key": "hoodie-bone",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same bone heavyweight pullover hoodie, kangaroo pocket, navy/burgundy underlined chest wordmark, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\hoodie-bone-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\hoodie-bone-back.png"
+    },
+    {
+      "key": "casual-washed-black",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact washed black heavyweight relaxed cotton tee, underlined centered chest wordmark garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_03_4810GD_CASUAL_TEE_WASHED_BLACK.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\casual-washed-black-front.png"
+    },
+    {
+      "key": "casual-washed-black",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same washed black heavyweight relaxed cotton tee, underlined centered chest wordmark, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\casual-washed-black-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\casual-washed-black-back.png"
+    },
+    {
+      "key": "casual-washed-grey",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact washed grey heavyweight relaxed cotton tee, navy/burgundy underlined centered chest wordmark garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_07_4810GD_CASUAL_TEE_WASHED_GREY_V2.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\casual-washed-grey-front.png"
+    },
+    {
+      "key": "casual-washed-grey",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same washed grey heavyweight relaxed cotton tee, navy/burgundy underlined centered chest wordmark, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\casual-washed-grey-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\casual-washed-grey-back.png"
+    },
+    {
+      "key": "touchline-cap",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact black/natural structured cap, embroidered front wordmark, adjustable snap back garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. Show model wearing the exact natural cap with black curved visor forward, front embroidery precisely as source, plain unbranded black T-shirt. Portrait crop head and shoulders, full cap and upper chest visible; cap is hero. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_MOCKUP_04_OTTO31069_CAP_BLACK_NATURAL.png",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\touchline-cap-front.png"
+    },
+    {
+      "key": "touchline-cap",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same black/natural structured cap, embroidered front wordmark, adjustable snap back, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Close head-and-shoulders rear portrait, cap still worn visor forward (not backward), show natural crown and BLACK snap adjustment, same plain black tee. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\touchline-cap-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\touchline-cap-back.png"
+    },
+    {
+      "key": "circular-badge",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact ivory relaxed cotton tee, navy circular GOOOL ATHLETICS lettering at wearer left chest, 3 inch width garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_CIRCLE_08_BADGE_TEE.webp",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\circular-badge-front.png"
+    },
+    {
+      "key": "circular-badge",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same ivory relaxed cotton tee, navy circular GOOOL ATHLETICS lettering at wearer left chest, 3 inch width, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\circular-badge-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\circular-badge-back.png"
+    },
+    {
+      "key": "circular-crewneck",
+      "view": "model-front",
+      "prompt": "Use case: identity-preserve / product-mockup. Image 1 is the exact gray heather crewneck sweatshirt, small forest-green circular GOOOL ATHLETICS lettering centered high chest, 2.5 inch width garment/artwork reference. Image 2 is ONLY the male model identity and concrete outdoor stadium setting reference. Replace the garment in image 2 with the exact product in image 1. Preserve the same male face, hair, body, skin tone and stadium style. FRONT view, square to camera, arms relaxed by sides, hands visible and away from print, head through mid-thigh crop, full sleeves and garment hem visible, plain dark charcoal pants. No cap or accessory. Garment fit/cut/color/print scale and placement match image 1. Preserve exact GOOOL logo, THREE Os, distinctive letter cuts, red/burgundy details, every artwork element. No added logos, slogans or sleeve/back decoration. Photoreal concept, diffuse overcast light, pale outdoor concrete stadium pillars and railings softly behind, no crowd or visible sponsor logos, natural fabric drape, clear unobstructed print. 4:5 portrait, one male person, no inset, caption or watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\public\\products\\GOOOL_ATHLETICS_CIRCLE_09_CENTER_CREWNECK.webp",
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\mens-stadium-images\\01-modern-sport-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\circular-crewneck-front.png"
+    },
+    {
+      "key": "circular-crewneck",
+      "view": "model-back",
+      "prompt": "Use case: identity-preserve. Image 1 is the completed FRONT model reference. Create the matching BACK view of the same male person, exact same gray heather crewneck sweatshirt, small forest-green circular GOOOL ATHLETICS lettering centered high chest, 2.5 inch width, same skin/hair/build, same pants, same outdoor concrete stadium location and lighting. Turn model 180 degrees, fully facing away from camera, no face or front print visible. Garment back is CONFIRMED COMPLETELY BLANK, no lettering or emblem. Head-to-mid-thigh framing matching reference, arms relaxed by sides, same full garment view and margins. Hood DOWN on hoodies, reveal entire back and hood, no front pocket. Match exact camera height, garment color, natural fabric and 4:5 portrait crop. No added decorations or props. One male model only, no collage, labels, watermark.",
+      "source": [
+        "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\circular-crewneck-front.png"
+      ],
+      "output": "C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\output\\launch-image-package\\stadium\\circular-crewneck-back.png"
+    }
+  ]
+}

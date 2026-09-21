@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "package_id": "12-goool-athletics-circular-badge-tee-ivory",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "80000000-0000-4000-8000-000000000004",
+    "slug": "goool-athletics-circular-badge-tee",
+    "name": "GOOOL Athletics Circular Badge Tee",
+    "website_color": "Ivory",
+    "website_sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "url": "https://goool.shop/shop/goool-athletics-circular-badge-tee"
+  },
+  "garment": {
+    "brand_model": "Comfort Colors C1717",
+    "supplier_color_candidate": "Ivory",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "Comfort Colors C1717 Ivory (verified available)"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "PENDING-CREATE",
+    "source_reported_design_id": null,
+    "reported_skus_for_website_sizes": {
+      "S": null,
+      "M": null,
+      "L": null,
+      "XL": null,
+      "XXL": null
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false
+  },
+  "decoration": {
+    "method": "DTF / transfer; supplier process confirmation required",
+    "artwork": [
+      {
+        "source_project_path": "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+        "sha256": "81cbfcc07ca59db0082850c50a75c6b7b3b9ba2465e9e0ed98591db921300ce8",
+        "bytes": 112185,
+        "face": "front",
+        "visible_width_in": 3,
+        "vertical_offset_in": null,
+        "horizontal_position": "wearer-left chest; measured offset pending",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "diameter_target_not_final_placement",
+        "path": "reference-only/artwork-needs-resolution/GA-CIRCLE-08_BADGE_NAVY_900px.png",
+        "pixels": [
+          900,
+          900
+        ],
+        "alpha_bbox_px": [
+          109,
+          105,
+          780,
+          783
+        ],
+        "visible_pixels": [
+          671,
+          678
+        ],
+        "effective_ppi_at_target_visible_width": 223.666667,
+        "proportional_visible_height_in": 3.031297,
+        "canvas_width_in_for_target_visible_width": 4.023845,
+        "visible_top_inset_in_at_target": 0.469449,
+        "raster_modified_by_package_builder": false,
+        "usage": "reference_only_do_not_upload_until_blockers_resolved"
+      }
+    ],
+    "back": "blank",
+    "sleeves": "blank",
+    "cap_side_and_rear": "not applicable",
+    "notes": [
+      "Lettering forms circle: no enclosing ring, disk, shield or extra wording. Navy on Ivory."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 3,
+      "rotation_degrees": 2,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    }
+  },
+  "label": {
+    "required": true,
+    "placement": "inside neck, supplier-compatible attachment TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": null,
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
+      "sha256": "b466d38e72f7319e0d4b90d0049024bba9c4788d75760abddc93f7715cf9ac0b",
+      "bytes": 35558
+    },
+    {
+      "path": "reference-only/mockups/2-GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
+      "sha256": "f596403c83d2077c9b36cf2505974b526eead7055694a0b8817bdf65928cc223",
+      "bytes": 31172
+    }
+  ],
+  "unresolved_requirements": [
+    "Circular artwork has only about 224 effective ppi at target visible width; provide adequate faithful production master or obtain explicit supplier acceptance of actual resolution.",
+    "Resolve diameter versus non-square visible bounds and measured collar/horizontal offsets before upload.",
+    "Brand label flat master, color-capable supplier service, supply ID, per-blank compatibility and proof remain unverified.",
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "strategy": "The Second It Goes In — Instagram only",
+  "selected_assets": [
+    {
+      "path": "designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack/02_STORY_REEL_916/GOOOL_P1_FLOODLIT_GOAL_916_v1.png",
+      "sha256": "b394a7102f3bbd22d23983409dd3d31984b50ff38fe6a31affafa34bda54da65",
+      "usage": "brand atmosphere/type source; not product proof"
+    },
+    {
+      "path": "designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack/02_STORY_REEL_916/GOOOL_V1_WET_GRASS_MACRO_916_v1.png",
+      "sha256": "ff8b9860e519923180820c15ffdc701a2b2b5fa7c0937bfa60e240b70f355df3",
+      "usage": "brand atmosphere/type source; not product proof"
+    },
+    {
+      "path": "designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack/02_STORY_REEL_916/GOOOL_V2_BACKLIT_NET_916_v1.png",
+      "sha256": "f95978276f8eaa37e59a0c8bdbb1076a0ff6c0796a4e2b4b4133302dccb9b4ba",
+      "usage": "brand atmosphere/type source; not product proof"
+    },
+    {
+      "path": "designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack/02_STORY_REEL_916/GOOOL_P2_CHAINLINK_PITCH_916_v1.png",
+      "sha256": "c85cb3ee5d41a37a9c940117fc4ad37a2554c358b894d9e6fb528e296f17ceca",
+      "usage": "brand atmosphere/type source; not product proof"
+    },
+    {
+      "path": "designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack/05_TYPE_CARDS/GOOOL_D01_ANTHEM_COVER_916.svg",
+      "sha256": "542ea13b2d8a912149966935642be33ed889d48565ddef49358ee0e860456eb5",
+      "usage": "brand atmosphere/type source; not product proof"
+    },
+    {
+      "path": "designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack/05_TYPE_CARDS/GOOOL_D01_ANTHEM_COVER_45.svg",
+      "sha256": "4c5cdbc7db5e31dfac63b237d323184010cabaf01257601785ae9937d52735bd",
+      "usage": "brand atmosphere/type source; not product proof"
+    },
+    {
+      "path": "public/brand/goool-wordmark-white.png",
+      "sha256": "66918c4054e2c0644dbb73932015c3d13a4b6058a28ea5eed5bd70b7e705fcf1",
+      "usage": "brand atmosphere/type source; not product proof"
+    }
+  ],
+  "excluded_until_updated": [
+    "D05 founder card says FOUR PIECES and no longer matches the 10-product catalog",
+    "D30 door notice implies open checkout",
+    "FAQ/shipping/pricing cards require current policy verification"
+  ],
+  "assets_modified": false,
+  "publishing_done": false
+}

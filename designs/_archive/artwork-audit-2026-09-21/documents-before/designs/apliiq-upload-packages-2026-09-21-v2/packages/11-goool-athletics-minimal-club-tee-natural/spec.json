@@ -1,0 +1,186 @@
+{
+  "schema_version": "2.0",
+  "package_id": "11-goool-athletics-minimal-club-tee-natural",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "80000000-0000-4000-8000-000000000003",
+    "slug": "goool-athletics-minimal-club-tee",
+    "name": "GOOOL Athletics Minimal Club Tee",
+    "website_color": "Natural",
+    "website_sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "url": "https://goool.shop/shop/goool-athletics-minimal-club-tee"
+  },
+  "garment": {
+    "brand_model": "Bella+Canvas 3010",
+    "supplier_color_candidate": "Natural",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "Bella+Canvas 3010 Heavyweight Tee (Nicaragua)"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "CREATED-VERIFIED",
+    "source_reported_design_id": 6112018,
+    "reported_skus_for_website_sizes": {
+      "S": "APQ-6112018S6A1",
+      "M": "APQ-6112018S7A1",
+      "L": "APQ-6112018S8A1",
+      "XL": "APQ-6112018S1A1",
+      "XXL": "APQ-6112018S2A1"
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false,
+    "source_reported_note": "BC 3010 Natural single color; Front 3.5x1.1 badge wearer-left + Back 12x4.63; views Front+Back confirmed via merchandise/detail; reopened on product page. Intermediates 6112001/6112012 renamed SUPERSEDED (owner may delete)."
+  },
+  "decoration": {
+    "method": "DTF / transfer; supplier process confirmation required",
+    "artwork": [
+      {
+        "source_project_path": "designs/16_goool_athletics/print_masters/GA-03-F_1050px.png",
+        "sha256": "e3e3e87c425d00d065b116059f8418d3cfe7e2451e03dd462e22437d31673bfa",
+        "bytes": 47702,
+        "face": "front",
+        "visible_width_in": 3.5,
+        "vertical_offset_in": 3,
+        "horizontal_position": "artwork CENTER 3.5in wearer-left of body centerline (viewer right)",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "sample_specification_target",
+        "path": "artwork/GA-03-F_1050px.png",
+        "pixels": [
+          1050,
+          331
+        ],
+        "alpha_bbox_px": [
+          0,
+          0,
+          1050,
+          331
+        ],
+        "visible_pixels": [
+          1050,
+          331
+        ],
+        "effective_ppi_at_target_visible_width": 300,
+        "proportional_visible_height_in": 1.103333,
+        "canvas_width_in_for_target_visible_width": 3.5,
+        "visible_top_inset_in_at_target": 0,
+        "raster_modified_by_package_builder": false,
+        "usage": "draft_upload_candidate_requires_proof",
+        "horizontal_offset_wearer_left_in": 3.5,
+        "width_mm": 88.9,
+        "height_mm": 28.0247,
+        "vertical_offset_mm": 76.2
+      },
+      {
+        "source_project_path": "designs/16_goool_athletics/print_masters/GA-03-B_3600px.png",
+        "sha256": "3351e6b056930da686ee69ed8bf4ff733ab24074635be7cdd6bea8374b994e5a",
+        "bytes": 246009,
+        "face": "back",
+        "visible_width_in": 12,
+        "vertical_offset_in": 2.75,
+        "horizontal_position": "body centerline",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "sample_specification_target",
+        "path": "artwork/GA-03-B_3600px.png",
+        "pixels": [
+          3600,
+          1389
+        ],
+        "alpha_bbox_px": [
+          0,
+          0,
+          3600,
+          1389
+        ],
+        "visible_pixels": [
+          3600,
+          1389
+        ],
+        "effective_ppi_at_target_visible_width": 300,
+        "proportional_visible_height_in": 4.63,
+        "canvas_width_in_for_target_visible_width": 12,
+        "visible_top_inset_in_at_target": 0,
+        "raster_modified_by_package_builder": false,
+        "usage": "draft_upload_candidate_requires_proof",
+        "horizontal_offset_wearer_left_in": 0,
+        "width_mm": 304.8,
+        "height_mm": 117.602,
+        "vertical_offset_mm": 69.85
+      }
+    ],
+    "back": "specified back artwork only",
+    "sleeves": "blank",
+    "cap_side_and_rear": "not applicable",
+    "notes": [
+      "Front black only, no red. Back black/red; digital targets black #171717 and red #C52D32."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 3,
+      "rotation_degrees": 2,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    }
+  },
+  "label": {
+    "required": true,
+    "placement": "inside neck, supplier-compatible attachment TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md",
+    "flat_png_export": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+    "flat_artwork_prepared": true,
+    "supplier_service_candidate": "Apliiq full-color printed label; inside-neck compatibility and material appearance require proof",
+    "alternate_review_size_in": 2,
+    "flat_master_sha256": "e67e80ebadc436f25de7f508884e8ee1671024a7563b4d6776db1a1552716917",
+    "flat_png_sha256": "4bc5de6c77b9a20fc30ae809a5307e9b6c170d79e4919cef9e57803e98555e81"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
+      "sha256": "a7152372523a8e24c3619f7b78ccf76cca3a9a47e073056075abcf45befa25b0",
+      "bytes": 24056
+    },
+    {
+      "path": "reference-only/mockups/2-GOOOL_STD_MINIMAL_CLUB_BACK.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_MINIMAL_CLUB_BACK.webp",
+      "sha256": "8cbe313d0592e4792b3e61a9c131c8433aaa160ce77bb81bcb02d2b430c3031e",
+      "bytes": 25836
+    }
+  ],
+  "unresolved_requirements": [
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales.",
+    "Label artwork is prepared; select a compatible service, verify small-detail legibility and inside placement, obtain supply ID and production proof before applying. One-inch woven layout is not automatically viable."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false,
+    "local_artwork_and_placement_package_complete": true
+  },
+  "revision_built_at_utc": "2026-09-21T07:06:10.630348+00:00",
+  "execution_policy": {
+    "reference_mockups": "Visual intent only; supplier blank and dimensions control manufacturing. Update misleading mockup construction before sale.",
+    "per_size_scaling": "Use stated width across offered sizes only if verified to fit. If supplier scales any size, capture exact dimensions and review representative proof; no silent scaling.",
+    "customer_release_rule": "Do not sell this color/size until correct saved design/variant, front/back art and size, label, material/fit, sample and product imagery are verified.",
+    "no_invented_sample_results": true
+  }
+}

@@ -1,0 +1,18 @@
+> **Latest casual tee placement:** [owner revision](CASUAL-TEE-PLACEMENT-REVISION.md) sets3.00in below the bottom collar seam for both colorways. Older3.25in directions are superseded.
+
+# Current revision
+
+Read REVISION-2.md first. The following are historical findings from v1; circular resolution, missing collar targets and flat label artwork have now been addressed locally. Supplier verification and label service/proof remain open.
+
+# Source conflicts and required resolutions
+
+1. Supplier IDs/SKUs in the reconciliation JSON are Claude's recorded account observations, not independently rechecked by this package build. That JSON says 2026-09-22, later than this build's 2026-09-21 UTC date. Record a fresh verification timestamp and account evidence; do not treat the date as proof. The older audit Markdown and fulfillment source may omit newer designs.
+2. Minimal Club saved design 6112002 reportedly includes both Black and Natural. Remove the unintended Black variant and then recheck every Natural size SKU; do not import the reported SKUs as executable mappings before that check.
+3. Crewneck color owner decision is resolved: choose the closest available color on AS Colour 5150. Athletic Heather is the candidate reported by the supplier notes; compare the actual swatch. Keep the website's old Gray Heather name distinct until catalog reconciliation.
+4. The new tag supersedes old shield label instructions in the core PDF. A black-and-white-only label service cannot reproduce the red segment. Obtain matching flat artwork, color-capable service, finished dimensions, safe/sewing margins, per-blank placement and supplier proof. No label supply ID is yet established.
+5. The core PDF's cap side slogan is superseded. The cap's front embroidery reference is not a stitch file; supplier digitization and sew-out approval remain required.
+6. Circular files have transparent margins. The 900px tee file has only 671px visible width; the 750px crew file has only 560px visible width. At 3in/2.5in visible width these provide about 224ppi, not 300ppi. Their width and height differ slightly. Resolve production artwork, diameter interpretation and measured collar/center offsets before upload. Preserve the existing files as reference; do not upsample to claim added detail.
+7. Cotton Modern Sport packet targets 11in front. The separate performance concept proposes 9in front and 3.25in back, with no confirmed collar offsets. Do not silently inherit cotton dimensions or use those proposals as approved settings.
+8. New athletics blank selections come from supplier reconciliation, while the original athletics PDF describes proposed cotton construction more generally. Verify exact model, fabric, fit, color and printable area against the chosen garment. Never infer blank identity from a model render.
+9. Cleaned GA-01 files are newer selected candidates; compare against the original packet for lettering, red underline, spacing and knockout transparency. GA-02 reconstructed/distressed edges and tiny text need proof inspection. All sample dimensions are targets, not a claim of final manufacturing approval.
+10. The photographed-looking website images are concept renders. Preserve garment construction, logo, color, framing and scale consistency when updating imagery after supplier verification. Do not upload mockup pictures as print art.

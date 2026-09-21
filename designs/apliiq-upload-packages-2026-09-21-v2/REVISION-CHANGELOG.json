@@ -1,0 +1,41 @@
+{
+  "revision": 2,
+  "built_at_utc": "2026-09-21T07:06:10.630348+00:00",
+  "previous_package": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\designs\\apliiq-upload-packages-2026-09-21",
+  "owner_request": "Create the missing work for each garment so customers get proper garments matching the mockups.",
+  "artwork_created": [
+    "GA-CIRCLE-08-NAVY",
+    "GA-CIRCLE-09-FOREST",
+    "LABEL-1IN",
+    "LABEL-2IN"
+  ],
+  "new_targets": {
+    "circle_tee": [
+      3,
+      3,
+      3.5
+    ],
+    "circle_crew": [
+      2.5,
+      3.5,
+      0
+    ],
+    "modern_performance_front": [
+      9,
+      3,
+      0
+    ],
+    "modern_performance_back": [
+      3.25,
+      2,
+      0
+    ]
+  },
+  "coordinate_order": [
+    "visible_width_in",
+    "top_below_bottom_collar_seam_in",
+    "center_wearer_left_in"
+  ],
+  "supplier_account_modified": false,
+  "physical_samples_verified": false
+}

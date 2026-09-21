@@ -1,0 +1,92 @@
+[
+  {
+    "path": "CLAUDE-LAUNCH-PRIORITY-PROMPT.md",
+    "before": null,
+    "after": "a8c4d416bdf6472e0f609560337f62ce4791cdc052f556fddb538da4d9230f50"
+  },
+  {
+    "path": "CLAUDE.md",
+    "before": "c86c0affe0607b47e42827b5398c944c4e30065abd6d3f20a4e62ad2bc10411b",
+    "after": "05725290df4bcc00f85e955d7022dcad60ab4bf8308b1c90c41fb319d2ac2185"
+  },
+  {
+    "path": "LAUNCH-TASK-LIST.md",
+    "before": null,
+    "after": "8510fe35fd44e16e520fffb2c7c89b701dfc6cba2eeb2a5574d3c2a77a92ecc9"
+  },
+  {
+    "path": "designs/18_launch_operations/calculate-prices.py",
+    "before": null,
+    "after": "0c694930ca7416c36df52c1f68d0961a59fda6b84d783e02c285561e911cc448"
+  },
+  {
+    "path": "designs/18_launch_operations/COST-INPUTS.json",
+    "before": null,
+    "after": "e6f933a3f505004bfd88b8b6818828cc8639bca94fa9907d9b41d04629fbb21f"
+  },
+  {
+    "path": "designs/18_launch_operations/INSTAGRAM-ASSET-SELECTION.json",
+    "before": null,
+    "after": "80914846fa518ec2b88cbb374c60ba405919fe3065905eeda8461ae617bdfef8"
+  },
+  {
+    "path": "designs/18_launch_operations/INSTAGRAM-COPY-READY.md",
+    "before": null,
+    "after": "83d13fcdb1745c7e5cf11a5821b93e47ae43a274cc7b746fd0816779b89ad878"
+  },
+  {
+    "path": "designs/18_launch_operations/INSTAGRAM-LAUNCH-PLAN.md",
+    "before": null,
+    "after": "4171abb5594892afacefc5d2ffb5812a630932dc8396e6656caaa149b618e21d"
+  },
+  {
+    "path": "designs/18_launch_operations/INSTAGRAM-METRICS-TEMPLATE.json",
+    "before": null,
+    "after": "b6deedab32a5d3c685df3f605a34280f0d98c0351dcb9fd3a4caafed899ee135"
+  },
+  {
+    "path": "designs/18_launch_operations/LAUNCH-DB-CHECK.sql",
+    "before": null,
+    "after": "4b6c37740b3333cb8bff187e614e19be4e60ef18678a8c59aae4aa0ac13277fc"
+  },
+  {
+    "path": "designs/18_launch_operations/PREPARATION-VERIFICATION.json",
+    "before": null,
+    "after": "d6ab597a3091299ac46076febb4ec2e10dc4c6fbe5f4749b2dab3c26e61aaab5"
+  },
+  {
+    "path": "designs/18_launch_operations/PRICE-CALCULATION.json",
+    "before": null,
+    "after": "d09764678915b3ea0a3fa059b05b1b16150dd088732f481a4defa4f008d0fea5"
+  },
+  {
+    "path": "designs/18_launch_operations/PRICING-README.md",
+    "before": null,
+    "after": "82a4e662b41c97fbb1b957a491cbe911fa5f9d36fea67db585bb16bf82934ba3"
+  },
+  {
+    "path": "designs/18_launch_operations/stripe-launch-preflight.mjs",
+    "before": null,
+    "after": "330fd0b4c131bd9fd67c565b5aa641b3080c99be9b5b4dac1164c4d9f8c5e4c3"
+  },
+  {
+    "path": "designs/18_launch_operations/STRIPE-NEXT-STEPS.md",
+    "before": null,
+    "after": "f36c48471776010a3c761085cb391a72f1c0d42bce706a5a81493c4e028ea7ae"
+  },
+  {
+    "path": "designs/18_launch_operations/STRIPE-PREFLIGHT-RESULT.json",
+    "before": null,
+    "after": "f915008e07e81068669f05c63f7eba606bca443f88604fa47bc100fbc77e3de6"
+  },
+  {
+    "path": "designs/18_launch_operations/TASK-LIST.md",
+    "before": null,
+    "after": "800bf0442164533a24a4b7a3f7b8a95cd80c523b9eaa611e35dbe19c736f029a"
+  },
+  {
+    "path": "designs/18_launch_operations/TASKS.json",
+    "before": null,
+    "after": "b8ad8e815cb17d4c90a6fddc9cfbfe6edd8e8261c0ea8b6f5907176c83c5d148"
+  }
+]

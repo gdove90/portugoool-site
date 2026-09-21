@@ -1,0 +1,150 @@
+{
+  "schema_version": "2.0",
+  "package_id": "05-goool-heavyweight-hoodie-bone",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "70000000-0000-4000-8000-000000000002",
+    "slug": "goool-heavyweight-hoodie",
+    "name": "GOOOL Core Hoodie",
+    "website_color": "Bone",
+    "website_sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "url": "https://goool.shop/shop/goool-heavyweight-hoodie"
+  },
+  "garment": {
+    "brand_model": "Independent Trading Co. IND4000",
+    "supplier_color_candidate": "Bone",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "Independent IND4000"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "VERIFIED",
+    "source_reported_design_id": 6099064,
+    "reported_skus_for_website_sizes": {
+      "S": "APQ-6099064S6A1",
+      "M": "APQ-6099064S7A1",
+      "L": "APQ-6099064S8A1",
+      "XL": "APQ-6099064S1A1",
+      "XXL": "APQ-6099064S2A1"
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false,
+    "source_reported_note": "garmentColor Bone ebe3e0 confirmed"
+  },
+  "decoration": {
+    "method": "DTF / transfer; supplier process confirmation required",
+    "artwork": [
+      {
+        "source_project_path": "designs/GOOOL_POD_SAMPLE_PACKET/07_Alternate_Colorway_Artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+        "sha256": "658c5f657ca0f9c793e51780ed230ee0cc03000ffc387cfceaf358edac3399f5",
+        "bytes": 183719,
+        "face": "front",
+        "visible_width_in": 6.75,
+        "vertical_offset_in": 4,
+        "horizontal_position": "body centerline",
+        "vertical_anchor": "top of visible artwork below hood/neck seam",
+        "dimension_status": "sample_specification_target",
+        "path": "artwork/GOOOL_ALT_02_WORDMARK_NAVY_BURGUNDY_FRONT_6.75IN.png",
+        "pixels": [
+          2025,
+          703
+        ],
+        "alpha_bbox_px": [
+          0,
+          0,
+          2025,
+          703
+        ],
+        "visible_pixels": [
+          2025,
+          703
+        ],
+        "effective_ppi_at_target_visible_width": 300,
+        "proportional_visible_height_in": 2.343333,
+        "canvas_width_in_for_target_visible_width": 6.75,
+        "visible_top_inset_in_at_target": 0,
+        "raster_modified_by_package_builder": false,
+        "usage": "draft_upload_candidate_requires_proof",
+        "horizontal_offset_wearer_left_in": 0,
+        "width_mm": 171.45,
+        "height_mm": 59.5207,
+        "vertical_offset_mm": 101.6
+      }
+    ],
+    "back": "blank",
+    "sleeves": "blank",
+    "cap_side_and_rear": "not applicable",
+    "notes": [
+      "Target height 2.34in (raster proportional height 2.3433in). Maintain at least 1.5in clearance above pocket. Verify fiber composition for this color."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 2,
+      "rotation_degrees": null,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    }
+  },
+  "label": {
+    "required": true,
+    "placement": "inside neck, supplier-compatible attachment TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md",
+    "flat_png_export": "label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+    "flat_artwork_prepared": true,
+    "supplier_service_candidate": "Apliiq full-color printed label; inside-neck compatibility and material appearance require proof",
+    "alternate_review_size_in": 2,
+    "flat_master_sha256": "e67e80ebadc436f25de7f508884e8ee1671024a7563b4d6776db1a1552716917",
+    "flat_png_sha256": "4bc5de6c77b9a20fc30ae809a5307e9b6c170d79e4919cef9e57803e98555e81"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_STD_HOODIE_BONE_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_HOODIE_BONE_FRONT.webp",
+      "sha256": "b0f917f361f999249b34a34444e256eab9160b371419345e0c624de5b4710171",
+      "bytes": 42532
+    },
+    {
+      "path": "reference-only/mockups/2-GOOOL_STD_HOODIE_BONE_BACK.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_HOODIE_BONE_BACK.webp",
+      "sha256": "6ca954aa3c68e77261b06fccbedbeec83804e826d053b3e366a720963fc8e597",
+      "bytes": 29884
+    }
+  ],
+  "unresolved_requirements": [
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales.",
+    "Label artwork is prepared; select a compatible service, verify small-detail legibility and inside placement, obtain supply ID and production proof before applying. One-inch woven layout is not automatically viable."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false,
+    "local_artwork_and_placement_package_complete": true
+  },
+  "revision_built_at_utc": "2026-09-21T07:06:10.630348+00:00",
+  "execution_policy": {
+    "reference_mockups": "Visual intent only; supplier blank and dimensions control manufacturing. Update misleading mockup construction before sale.",
+    "per_size_scaling": "Use stated width across offered sizes only if verified to fit. If supplier scales any size, capture exact dimensions and review representative proof; no silent scaling.",
+    "customer_release_rule": "Do not sell this color/size until correct saved design/variant, front/back art and size, label, material/fit, sample and product imagery are verified.",
+    "no_invented_sample_results": true
+  }
+}

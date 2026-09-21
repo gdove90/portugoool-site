@@ -1,0 +1,389 @@
+{
+  "generatedAt": "2026-09-21T04:18:22.779Z",
+  "products": 9,
+  "colorways": 13,
+  "galleryImages": 52,
+  "conceptImages": 2,
+  "checked": 54,
+  "errors": [],
+  "results": [
+    {
+      "path": "standardized/performance-black-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1493629,
+      "sha256": "fc7e41f6045b626c3c19832c6024ef67699784b064866b86feb253c71d9e2530"
+    },
+    {
+      "path": "standardized/performance-black-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1566720,
+      "sha256": "c4c27d7dc2c327f10fb350c1e2600126e3a3db337cc2855708dcde69eac2d202"
+    },
+    {
+      "path": "stadium/performance-black-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1814702,
+      "sha256": "15a179c68d0dd9ddbd86342ed036433ca17c3e05306ac200f24cab232f6b0123"
+    },
+    {
+      "path": "stadium/performance-black-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1798543,
+      "sha256": "3261b42c930441d73c5dfa11063ac1337557bf123d400126217c615053d2b6e4"
+    },
+    {
+      "path": "standardized/performance-white-front-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1516571,
+      "sha256": "b0dbd05acfbc52336adb5a678571206ff4ad78d14e1af5d7f2f848baf4364b4d"
+    },
+    {
+      "path": "standardized/performance-white-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1486546,
+      "sha256": "fc8c546ab90a61ac879ccf6b3c97cb2c5081e2595bf05ce7fa4b01a0620757d8"
+    },
+    {
+      "path": "stadium/performance-white-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1862559,
+      "sha256": "4d4172104eadb83e2de69643bcecc43b8dbf8414be94ba7b078cbf7582abe43a"
+    },
+    {
+      "path": "stadium/performance-white-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1798562,
+      "sha256": "82595095f2f299534700c1ab6bb311eb682bafee08be3bd5d6a401f4345f1a54"
+    },
+    {
+      "path": "standardized/performance-royal-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1761373,
+      "sha256": "52875f7d35ff352c7996216c00cdff4d495621690d84a8917aa730c7cef22328"
+    },
+    {
+      "path": "standardized/performance-royal-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1688480,
+      "sha256": "1403216dcdf7f8d8fe7fc91622781c889c17357ffa9b42b3e66a695d8ddb5df8"
+    },
+    {
+      "path": "stadium/performance-royal-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1948149,
+      "sha256": "022befa536278f27509cd74603829b47ff2a3abf1b308e04293775e0922b3afa"
+    },
+    {
+      "path": "stadium/performance-royal-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1911501,
+      "sha256": "89d8da3777cd4fcf89585bbbf7873c641542b4da7b7c2da3a5c402c839f543f7"
+    },
+    {
+      "path": "standardized/hoodie-black-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1521601,
+      "sha256": "fc7d164fff9e6e47d535f2472947e6a1f0317a6bbc455c953cbf51f502fd2be6"
+    },
+    {
+      "path": "standardized/hoodie-black-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1584684,
+      "sha256": "d0081fa109e9b8febf6f4518ef67417ab113735b0822a9cbd779e69edb295141"
+    },
+    {
+      "path": "stadium/hoodie-black-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1868340,
+      "sha256": "d93bdc52eb065a4946e144d74a6ef3e5d0b7f80793e5177c809fedd4c40f72fa"
+    },
+    {
+      "path": "stadium/hoodie-black-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1822646,
+      "sha256": "2259453b24eaa543097381b0be0669f31bf56dd3af1883e70db1355519a974fe"
+    },
+    {
+      "path": "standardized/hoodie-bone-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1605474,
+      "sha256": "00da9bdc398410e2e719e42fedc3de1bed98f71256bd5ff8395123366a0aff48"
+    },
+    {
+      "path": "standardized/hoodie-bone-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1605389,
+      "sha256": "e18480abe0b0a6ff4c53bbde265dec8db6f795fa93c2ffa60f9161cae92721dc"
+    },
+    {
+      "path": "stadium/hoodie-bone-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1811557,
+      "sha256": "79acf98103e512e7b95897ecc27524fa6a1b7df7e2054b12e0153d1f8cf38813"
+    },
+    {
+      "path": "stadium/hoodie-bone-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1709036,
+      "sha256": "f5c8dbf2817a034ea24cec50b996f3d040b1bbc716be1b1178c3a0acb974c95c"
+    },
+    {
+      "path": "standardized/casual-washed-black-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1467024,
+      "sha256": "440ef5cbdad29c8d3f047cfa820163de5094f25a54dead72bc35961ddad9874c"
+    },
+    {
+      "path": "standardized/casual-washed-black-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1606985,
+      "sha256": "4195169be5bf894d9f353b3b38a4998e21a06b241aa0c49a4b2e3bf5c54e07a8"
+    },
+    {
+      "path": "stadium/casual-washed-black-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1849362,
+      "sha256": "8fef07fb8df2b048c9a689ca917c10d0e3d2221e399e15bd23481a7494727a0c"
+    },
+    {
+      "path": "stadium/casual-washed-black-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1911968,
+      "sha256": "1384d2efff7785c32eb265c667bfb2d7e149c0a2e69eb2177cf5bcb8d67a0436"
+    },
+    {
+      "path": "standardized/casual-washed-grey-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1738929,
+      "sha256": "ee51396651a8c15e5cc5baf9ed09d7d1324a85cc22146aa0f2fef82d70b4d55a"
+    },
+    {
+      "path": "standardized/casual-washed-grey-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1766245,
+      "sha256": "ad12ea37bd49f3a957aaa86fc39920ddaf76ad184d1ba3850105d36633b7cd7e"
+    },
+    {
+      "path": "stadium/casual-washed-grey-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1956705,
+      "sha256": "b96adc13a40ac0f848fb41abc2c8148c05865e0a2cdefae3201e2a6ab0221ace"
+    },
+    {
+      "path": "stadium/casual-washed-grey-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1948829,
+      "sha256": "f817554ad62bc237b1030f3429a18127746364a9954c739989be1ea88bc14f3f"
+    },
+    {
+      "path": "standardized/touchline-cap-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1715031,
+      "sha256": "0259e9ab60f5aad846965f97633ababa35daa5f3fb330d5bb2f083015053262e"
+    },
+    {
+      "path": "standardized/touchline-cap-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1785760,
+      "sha256": "a6f0dafabd890e7c7df1ad58a020f07352664b10e3a79183994af48af53ecee0"
+    },
+    {
+      "path": "stadium/touchline-cap-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1919475,
+      "sha256": "b7585a9c03de6c5ec81096db180aefc9f1c98ef3a185886514d3a5c7d082fae7"
+    },
+    {
+      "path": "stadium/touchline-cap-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1855222,
+      "sha256": "414e81cfb2661fd6aecc3a8ce9f5e7b405945792f2ea4c3bb47ff57a98ebdecd"
+    },
+    {
+      "path": "standardized/modern-sport-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1422302,
+      "sha256": "322eee8512e24739ee5a21a049a9d64e73fd5e0913f47b1e8d01a813a153aa8b"
+    },
+    {
+      "path": "standardized/modern-sport-back-v3.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1486156,
+      "sha256": "ca3d587e8391f88e7b523991ff346eae3ba0df9660337cddeef8af91785e18c8"
+    },
+    {
+      "path": "stadium/modern-sport-front-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1693313,
+      "sha256": "443294281abc19142d0981cf7174951c9316a8094c4b5764651938839668ba7a"
+    },
+    {
+      "path": "stadium/modern-sport-back-v2.png",
+      "width": 1121,
+      "height": 1403,
+      "bytes": 1724352,
+      "sha256": "2d4e8e5bf1c855f3281287808b22598244404d7a37c613e7e2ed1bd5e86ddc9f"
+    },
+    {
+      "path": "standardized/varsity-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1473020,
+      "sha256": "5820c484bfe10635de572a33cb54258d78b2640dbc7aedc3a765c0d4f2058e1e"
+    },
+    {
+      "path": "standardized/varsity-back-v3.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1524414,
+      "sha256": "2ade23181360645f57533c944779c6079d7e9642cc0f4e2a7981b3e40210df18"
+    },
+    {
+      "path": "stadium/varsity-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1959902,
+      "sha256": "a0fae824adc63615734e225a2b030d730a086e7bc75ee406e93e1f7a3230f29b"
+    },
+    {
+      "path": "stadium/varsity-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1938214,
+      "sha256": "9f3dd241e2535376d2cbbed626aeae60a2ccde8a57fd2dfe6fb1d085d0034181"
+    },
+    {
+      "path": "standardized/minimal-club-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1378089,
+      "sha256": "9df7560c3644cdb49117122f5c5fa53915600a8e3c5905599ee88378928d6ebc"
+    },
+    {
+      "path": "standardized/minimal-club-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1410719,
+      "sha256": "064c1e3f7ae07b9c7ef2fe316c0b297f21676d5fa920dd95031db562e5994939"
+    },
+    {
+      "path": "stadium/minimal-club-front-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1744602,
+      "sha256": "4b1d65da0bc3acfd73d1d7f2a192c05a7c66bcb7bc3aa374f1ff054c85b7f17a"
+    },
+    {
+      "path": "stadium/minimal-club-back-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1717996,
+      "sha256": "9e2695f0c34af6e6f3fe4978ffe63fd4c4d9199aa7b117bcc2bbeec38a3138bd"
+    },
+    {
+      "path": "standardized/circular-badge-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1513117,
+      "sha256": "c0ccfa4072fa946853f513e60bef50aafd253fe4e8a0b2f0666151d35d83f72f"
+    },
+    {
+      "path": "standardized/circular-badge-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1483607,
+      "sha256": "da6087c45c4b5861f231b4e674858a115a079dc7fdc001ca04efe4c37345ed50"
+    },
+    {
+      "path": "stadium/circular-badge-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1813403,
+      "sha256": "e44f0faa4d8e1677d80539c8cf157fcf432d4c2b9d6b76db5fd6f7d44ca9c4e2"
+    },
+    {
+      "path": "stadium/circular-badge-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1790234,
+      "sha256": "bd90a373cdb03886516ef73e74a5c497e8f72802b5a0edce7856dc66589af06a"
+    },
+    {
+      "path": "standardized/circular-crewneck-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2100072,
+      "sha256": "7a57e7d8f5c2fa2ac81a23128638abb9cc8c537f59cd751b07182477fe82e52c"
+    },
+    {
+      "path": "standardized/circular-crewneck-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2050925,
+      "sha256": "0ecfc0112af2b6dd6465a609f9d1f1e0ce38d78e4444aa49510313f33973509f"
+    },
+    {
+      "path": "stadium/circular-crewneck-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2102206,
+      "sha256": "5fe7fce9e9d19efcecc18ec087f9f03f25906b757b6511cf5186928dc6664691"
+    },
+    {
+      "path": "stadium/circular-crewneck-back.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2074558,
+      "sha256": "6b420e0be89339414b479df6749031af616b9bc7ebfb7027dc0ab17f8a09d30f"
+    },
+    {
+      "path": "performance-concepts/athletics-performance-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1364511,
+      "sha256": "ae61c6911dcb384a4c797679903b0c2b88be4d5af7e12600c3feb0dbe880b253"
+    },
+    {
+      "path": "performance-concepts/training-line-performance-front.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 1498498,
+      "sha256": "78f6eacca917114aa904109f51fbec412ee7272f788fc2299f17e6d6773c5757"
+    }
+  ]
+}

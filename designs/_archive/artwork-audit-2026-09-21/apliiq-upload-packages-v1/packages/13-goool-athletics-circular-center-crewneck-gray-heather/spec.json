@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "package_id": "13-goool-athletics-circular-center-crewneck-gray-heather",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "80000000-0000-4000-8000-000000000005",
+    "slug": "goool-athletics-circular-center-crewneck",
+    "name": "GOOOL Athletics Circular Center Crewneck",
+    "website_color": "Gray Heather",
+    "website_sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "url": "https://goool.shop/shop/goool-athletics-circular-center-crewneck"
+  },
+  "garment": {
+    "brand_model": "AS Colour 5150 Made Crew",
+    "supplier_color_candidate": "Athletic Heather",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "AS Colour 5150 Made Crew - NO gray heather; offers black, Natural, Ink Blue, ATHLETIC HEATHER"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "OWNER-DECISION",
+    "source_reported_design_id": null,
+    "reported_skus_for_website_sizes": {
+      "S": null,
+      "M": null,
+      "L": null,
+      "XL": null,
+      "XXL": null
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false
+  },
+  "decoration": {
+    "method": "DTF / transfer; supplier process confirmation required",
+    "artwork": [
+      {
+        "source_project_path": "designs/16_goool_athletics/print_masters/upload/GA-CIRCLE-09_CREW_FOREST_750px.png",
+        "sha256": "239024d8b5958992db959be1f7934f11bcae2a75c39ef61245307b872bbecd84",
+        "bytes": 80422,
+        "face": "front",
+        "visible_width_in": 2.5,
+        "vertical_offset_in": null,
+        "horizontal_position": "centerline, upper sternum; measured collar offset pending",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "diameter_target_not_final_placement",
+        "path": "reference-only/artwork-needs-resolution/GA-CIRCLE-09_CREW_FOREST_750px.png",
+        "pixels": [
+          750,
+          750
+        ],
+        "alpha_bbox_px": [
+          91,
+          87,
+          651,
+          653
+        ],
+        "visible_pixels": [
+          560,
+          566
+        ],
+        "effective_ppi_at_target_visible_width": 224.0,
+        "proportional_visible_height_in": 2.526786,
+        "canvas_width_in_for_target_visible_width": 3.348214,
+        "visible_top_inset_in_at_target": 0.388393,
+        "raster_modified_by_package_builder": false,
+        "usage": "reference_only_do_not_upload_until_blockers_resolved"
+      }
+    ],
+    "back": "blank",
+    "sleeves": "blank",
+    "cap_side_and_rear": "not applicable",
+    "notes": [
+      "Forest-green lettering on closest supplier heather gray. Athletic Heather is now owner-authorized as the same-blank candidate, subject to swatch verification."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 3,
+      "rotation_degrees": 2,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    }
+  },
+  "label": {
+    "required": true,
+    "placement": "inside neck, supplier-compatible attachment TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": null,
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
+      "sha256": "c4eda143fd04611afd96cd222ef6743bd4989f095d5bddd3b2807229bd5e30d6",
+      "bytes": 157186
+    },
+    {
+      "path": "reference-only/mockups/2-GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp",
+      "sha256": "ba85905b4ecfda2db9979dd67024a941159a7667245b5c21718ab7e02ff235ef",
+      "bytes": 128992
+    }
+  ],
+  "unresolved_requirements": [
+    "Circular artwork has only about 224 effective ppi at target visible width; provide adequate faithful production master or obtain explicit supplier acceptance of actual resolution.",
+    "Resolve diameter versus non-square visible bounds and measured collar/horizontal offsets before upload.",
+    "Brand label flat master, color-capable supplier service, supply ID, per-blank compatibility and proof remain unverified.",
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false
+  }
+}

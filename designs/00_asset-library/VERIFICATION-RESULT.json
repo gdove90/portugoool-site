@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "at_utc": "2026-09-21T07:58:37.023928+00:00",
+  "post_install_checks": 1637,
+  "original_files_preserved": 1469,
+  "original_unique_hashes_preserved": 860,
+  "catalog_products": 64,
+  "active_products": 10,
+  "inactive_products": 54,
+  "design_families": 21,
+  "public_artwork_unchanged": true,
+  "package_verifier": {
+    "status": "PASS",
+    "revision": 2,
+    "checks": 1735,
+    "products": 10,
+    "packages": 14,
+    "source_freshness_checked": true,
+    "errors": [],
+    "scope": "File/archive integrity, catalog and per-size coverage, completed placement fields, proof links, artwork/label export dimensions. No supplier account or manufacturing approval."
+  },
+  "errors": [],
+  "scope": "Local byte preservation, source selection references, package/ZIP integrity and catalog coverage. Not visual identity certification for every historical concept, supplier account verification or manufacturing approval."
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "package_id": "06-goool-heavyweight-casual-tee-washed-black",
+  "built_at_utc": "2026-09-21T06:52:56.677776+00:00",
+  "product": {
+    "id": "70000000-0000-4000-8000-000000000003",
+    "slug": "goool-heavyweight-casual-tee",
+    "name": "GOOOL Casual Wordmark Tee",
+    "website_color": "Washed Black",
+    "website_sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "url": "https://goool.shop/shop/goool-heavyweight-casual-tee"
+  },
+  "garment": {
+    "brand_model": "Bella+Canvas 4810GD",
+    "supplier_color_candidate": "Washed Black",
+    "color_policy": "closest available supplier color on same blank, visually checked against mockup; record exact name and variant ID",
+    "swatch_verified_in_this_build": false,
+    "source_reported_blank": "Bella+Canvas 4810GD (Nicaragua)"
+  },
+  "supplier_record": {
+    "source": "reference-only/supplier-record.json",
+    "source_reported_status": "VERIFIED",
+    "source_reported_design_id": 6098963,
+    "reported_skus_for_website_sizes": {
+      "S": "APQ-6098963S6A1",
+      "M": "APQ-6098963S7A1",
+      "L": "APQ-6098963S8A1",
+      "XL": "APQ-6098963S1A1",
+      "XXL": "APQ-6098963S2A1"
+    },
+    "independently_verified_in_this_build": false,
+    "executable_fulfillment_mapping": false
+  },
+  "decoration": {
+    "method": "DTF / transfer; supplier process confirmation required",
+    "artwork": [
+      {
+        "source_project_path": "designs/GOOOL_POD_SAMPLE_PACKET/03_Casual_Tee_Artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+        "sha256": "e853b475085f342f75d6a5b23c3220aa3f89c062bb0c657bdb303661e48a5025",
+        "bytes": 192502,
+        "face": "front",
+        "visible_width_in": 6.75,
+        "vertical_offset_in": 3.25,
+        "horizontal_position": "body centerline",
+        "vertical_anchor": "top of visible artwork below bottom collar seam",
+        "dimension_status": "sample_specification_target",
+        "path": "artwork/GOOOL_SAMPLE_03_4810GD_WORDMARK_FRONT_6.75IN.png",
+        "pixels": [
+          2025,
+          703
+        ],
+        "alpha_bbox_px": [
+          0,
+          0,
+          2025,
+          703
+        ],
+        "visible_pixels": [
+          2025,
+          703
+        ],
+        "effective_ppi_at_target_visible_width": 300.0,
+        "proportional_visible_height_in": 2.343333,
+        "canvas_width_in_for_target_visible_width": 6.75,
+        "visible_top_inset_in_at_target": 0.0,
+        "raster_modified_by_package_builder": false,
+        "usage": "draft_upload_candidate_requires_proof"
+      }
+    ],
+    "back": "blank",
+    "sleeves": "blank",
+    "cap_side_and_rear": "not applicable",
+    "notes": [
+      "Target height 2.34in (raster proportional height 2.3433in). Garment-dyed cotton; supplier must verify process."
+    ],
+    "tolerances": {
+      "status": "packet_sample_targets_subject_to_supplier_confirmation",
+      "horizontal_vertical_in": 0.25,
+      "scale_percent": 2,
+      "rotation_degrees": null,
+      "additional": "Core target centering within 0.125in; max 0.25in. Athletics maintain minimum 1in seam clearance where applicable. Verify smallest offered size; do not silently auto-scale."
+    }
+  },
+  "label": {
+    "required": true,
+    "placement": "inside neck, supplier-compatible attachment TBD",
+    "nominal_finished_size_in": [
+      1,
+      1
+    ],
+    "flat_upload_master": null,
+    "supplier_service": null,
+    "supplier_supply_id": null,
+    "applied_and_verified": false,
+    "readme": "label/README.md"
+  },
+  "mockup_references": [
+    {
+      "path": "reference-only/mockups/1-GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
+      "sha256": "79bbb1f3c447d340eb6ffcb9f80c49cce1b093b9afb854ab944183ac1177cdf9",
+      "bytes": 40438
+    },
+    {
+      "path": "reference-only/mockups/2-GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp",
+      "usage": "concept_only_never_upload_as_artwork",
+      "source_project_path": "public/products/GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp",
+      "sha256": "886260259b7d2fdea7e1946c3b653bb4d15901c280d518d0b852bf184e1c5854",
+      "bytes": 38268
+    }
+  ],
+  "unresolved_requirements": [
+    "Brand label flat master, color-capable supplier service, supply ID, per-blank compatibility and proof remain unverified.",
+    "Fresh account verification required for exact blank, color, offered sizes, decoration placement and saved design IDs/SKUs.",
+    "Supplier production proof/sample approval and existing release checks remain required; package readiness does not authorize manufacturing or sales."
+  ],
+  "release": {
+    "package_files_verified": true,
+    "all_manufacturing_specs_final": false,
+    "ready_for_unattended_upload": false,
+    "supplier_design_verified_by_this_build": false,
+    "production_or_sales_enabled": false
+  }
+}

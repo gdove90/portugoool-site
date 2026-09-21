@@ -1,3 +1,5 @@
+> **Artwork audit — 2026-09-21:** Current product roster is10 active products/14 colorways. The gallery manifest below was authored for9/13 and still selects its own image revisions; it is not the current catalog. [Artwork library](../00_asset-library/START-HERE.md) governs source choice. Modern Sport ST720 performance is now a separate catalog product; supplier proof remains pending.
+
 # GOOOL launch image package
 
 Working package for the nine-product First Capsule, thirteen colorways. Created 2026-09-20/21 using the built-in image-generation tool and the existing approved reference files. These are concept renders, not photographs of manufactured samples, technical proofs, or production print masters.
