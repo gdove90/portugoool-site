@@ -11,10 +11,10 @@ owner's design packet (`GOOOL_ATHLETICS_POD_Packet_v1.pdf`, filed here).
 
 Status (2026-09-18): ON THE SITE AS COMING SOON, not purchasable.
 Catalog entries `goool-athletics-{modern-sport,varsity,minimal-club}-tee`
-(ids `80000000-…-0001/2/3`, migration 0027) are active, unpriced
-(`priceCents: 0`, shown as "Price to be announced"), `supplierType:
-"unassigned"`, `availableForSale: false`, and have no Apliiq mapping, so
-checkout refuses them on four independent grounds. Not in the Apliiq
+(ids `80000000-…-0001/2/3`, migration 0027) are active, priced (see
+"Pricing" below), `supplierType: "unassigned"`, `availableForSale: false`,
+and have no Apliiq mapping, so checkout refuses them on three independent
+grounds. Not in the Apliiq
 catalog; no blank, price, size range or sample approved (packet v1 is a
 quoting document, not a production release).
 
@@ -54,3 +54,33 @@ no player likenesses. Varsity arch is a generic lettering style.
 
 These are AI-generated concept boards: per CLAUDE.md image policy they
 live in designs/ and are never shipped as product listing photos.
+
+## Pricing (owner decision 2026-09-19)
+
+| Design | Blank | Retail |
+|---|---|---|
+| Modern Sport | proposed Bella+Canvas 3010 Black | $44 |
+| Varsity | Bella+Canvas 4810GD Washed Black (approved capsule blank) | $48 |
+| Minimal Club | proposed Bella+Canvas 3010 Natural | $44 |
+
+One price S-2XL; the 2XL upcharge is absorbed. Method: proportional to
+the Casual Wordmark Tee ($38) on estimated Apliiq costs, rounded up so
+the price survives the one open cost question (below).
+
+Cost basis, all ESTIMATES from public apliiq.com pages fetched
+2026-09-19, standard plan, no VIP discount: dropship blanks 3010 $9.50
+and 4810GD $12.62 (catalog listings); transfer print $7.49 per location
+regardless of size up to 203 sq in, +$0.08 per sq in over (Apliiq's
+rendered pricing table on the AS Colour 5101 page: blank $29.36,
+transfer print $36.85; the 3010 page agrees: $9.50 blank, $16.99 with
+one print); embroidery on the same table is +$9.99 up to 15,000
+stitches; private label $2.50 pay-as-you-go; Apliiq fulfillment fee
+$1.00 per item. Estimated production cost with front and back prints:
+$27.98 / $31.10 / $27.98. The prices above hold 32.8% / 31.7% / 32.8%
+contribution after Stripe (2.9% + $0.30). Shipping is charged to the
+customer at checkout; sales tax, if enabled, is added at checkout.
+
+Before purchasing opens, replace the estimates with the seller prices
+from the Apliiq design tool (store linked): front + back transfer at
+packet sizes with private label, the 2XL upcharge, the account plan,
+and the Stripe shipping rate. Re-run the proportional check then.
