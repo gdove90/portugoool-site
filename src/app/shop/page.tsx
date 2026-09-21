@@ -1,41 +1,15 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import ProductGrid from "@/components/ProductGrid";
-import { getProductBySlug } from "@/lib/products";
-import { Product } from "@/lib/types";
+import ShopCollections from "@/components/ShopCollections";
+import { resolveCollections } from "@/lib/collections";
 
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "The GOOOL First Capsule: performance tee, heavyweight hoodie, casual tee, and touchline cap. Plus the GOOOL Athletics tees. Coming soon.",
+    "The First Capsule: everyday staples with athletic purpose, grouped into Off the Pitch, Warm-Up Club, Match Ready and Touchline Essentials. Coming soon.",
 };
 
-// First Capsule: one deliberate premium order, not category grouping.
-const CAPSULE_ORDER = [
-  "goool-performance-tee",
-  "goool-heavyweight-hoodie",
-  "goool-heavyweight-casual-tee",
-  "goool-touchline-cap",
-];
-
-// GOOOL Athletics: the three concept tees, in packet order (GA-01..03).
-const ATHLETICS_ORDER = [
-  "goool-athletics-modern-sport-tee",
-  "goool-athletics-varsity-tee",
-  "goool-athletics-minimal-club-tee",
-  "goool-athletics-circular-badge-tee",
-  "goool-athletics-circular-center-crewneck",
-];
-
-function bySlugs(slugs: string[]): Product[] {
-  return slugs
-    .map((slug) => getProductBySlug(slug))
-    .filter((p): p is Product => p != null && p.isActive);
-}
-
 export default function ShopPage() {
-  const capsule = bySlugs(CAPSULE_ORDER);
-  const athletics = bySlugs(ATHLETICS_ORDER);
+  const collections = resolveCollections();
 
   return (
     <div className="mx-auto max-w-content px-4 py-10 sm:px-6 sm:py-14">
@@ -44,37 +18,11 @@ export default function ShopPage() {
           The First Capsule
         </h1>
         <p className="mt-2 max-w-lg text-ink/60">
-          Four pieces. One mark. Every design original. Coming soon.
+          Everyday staples. Athletic purpose. The first GOOOL capsule.
         </p>
       </div>
 
-      <ProductGrid products={capsule} />
-
-      {athletics.length > 0 && (
-        <section id="athletics" className="mt-16 border-t border-ink/10 pt-12 sm:mt-20 sm:pt-14">
-          <div className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-red">
-              Next up
-            </p>
-            <h2 className="mt-3">
-              <Image
-                src="/brand/goool-wordmark-ink.png"
-                alt="GOOOL"
-                width={720}
-                height={250}
-                className="h-auto w-44 sm:w-52"
-              />
-              <span className="mt-2 block text-xs font-semibold uppercase tracking-widest text-ink sm:text-sm">
-                Athletics
-              </span>
-            </h2>
-            <p className="mt-2 max-w-lg text-ink/60">
-              Three tees. One mark, three ways. In development. Coming soon.
-            </p>
-          </div>
-          <ProductGrid products={athletics} />
-        </section>
-      )}
+      <ShopCollections collections={collections} />
     </div>
   );
 }
