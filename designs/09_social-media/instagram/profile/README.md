@@ -1,16 +1,24 @@
 # Instagram profile picture
 
-`ig-avatar-modern-sport-full-1080.png` — 1080 × 1080 RGBA. **This is the
-one to upload.**
+`ig-avatar-modern-sport-full-1080.png` — 1080 × 1080 RGBA.
+
+**Not the live avatar.** The owner went with the GOOOL-only mark on
+2026-09-22: at the 32 and 40 px sizes Instagram actually renders an
+avatar, the ATHLETICS band stops being legible. This file is kept as
+the full-lockup reference.
 
 The Modern Sport mark from the performance tee (GA-01-F), the full
 lockup: GOOOL, the red rule and ATHLETICS, sized to 88% of the canvas
 on a black round. Built to Instagram's avatar spec and verified at
 1080 × 1080 before filing.
 
-Instagram circle-crops avatars, which is why the full lockup was chosen
-over the tighter "GOOOL and the rule" alternative: at 88% width nothing
-clips at the crop edge.
+Instagram circle-crops avatars. At 88% width nothing clips at the crop
+edge, which is what this lockup was built for — but legibility at
+avatar sizes beat completeness, and the GOOOL-only crop won.
+
+The tighter alternative exists in the source project as
+`ig-avatar-modern-sport-tight-1080.png`. It was not exported here; if
+the live avatar ever needs rebuilding, pull that one.
 
 ## Do not print from this file
 
