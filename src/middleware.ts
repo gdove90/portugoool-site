@@ -1,14 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // ─────────────────────────────────────────────────────────────
-// PRE-LAUNCH HARD GATE: every route redirects to the coming-soon
-// landing — unless the visitor has the preview cookie.
+// LANDING CURTAIN, NOT A LOCK.
 //
-// Owner access: visit any URL with ?key=<PREVIEW_KEY> once
-// (e.g. https://portugoool.com/?key=...). That sets a 30-day cookie
-// and unlocks the full site on this browser. The key lives in the
-// PREVIEW_KEY env var (Netlify + .env.local) — never hardcoded,
-// because this repo is public.
+// The splash at / is deliberately kept as the landing experience, but
+// it no longer turns anyone away: its Enter button calls /api/preview,
+// which sets this cookie for any visitor who clicks. First visit sees
+// the splash, one click goes through, and the cookie remembers it.
+//
+// Treat the site as PUBLIC. Nothing that genuinely needs protecting may
+// sit behind this cookie: order lookups authenticate themselves in
+// /api/track-order, and purchasing is gated by availableForSale. The
+// ?key=<PREVIEW_KEY> URL still works as a way to skip the splash.
 //
 // Always allowed (no cookie needed):
 //   /                    coming-soon page

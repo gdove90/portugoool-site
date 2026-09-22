@@ -11,29 +11,22 @@ export default function ComingSoon() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("Something went wrong. Try again.");
 
-  // Discreet team-access unlock (validated server-side, sets the gate cookie)
-  const [showAccess, setShowAccess] = useState(false);
-  const [password, setPassword] = useState("");
-  const [accessError, setAccessError] = useState(false);
-  const [unlocking, setUnlocking] = useState(false);
+  // Entry to the shop. Open to everyone: the splash is kept as the
+  // landing experience, not as a lock. Clicking sets the gate cookie
+  // and goes straight through.
+  const [entering, setEntering] = useState(false);
 
-  async function unlock(e: React.FormEvent) {
-    e.preventDefault();
-    if (!password || unlocking) return;
-    setUnlocking(true);
-    setAccessError(false);
+  async function enter() {
+    if (entering) return;
+    setEntering(true);
     try {
-      const res = await fetch("/api/preview", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
-      });
-      if (!res.ok) throw new Error();
-      window.location.href = "/shop";
+      await fetch("/api/preview", { method: "POST" });
     } catch {
-      setAccessError(true);
-      setUnlocking(false);
+      // Even if the cookie call fails, send them on. The worst case is
+      // the middleware bounces them back here, which is where they are
+      // already - far better than a dead button.
     }
+    window.location.href = "/shop";
   }
 
   // Lock the page behind the takeover (no stray scrollbar).
@@ -152,37 +145,22 @@ export default function ComingSoon() {
         )}
       </div>
 
-      {/* Discreet team access — bottom of the page */}
-      <div className="absolute bottom-5 left-0 right-0 flex justify-center">
-        {showAccess ? (
-          <form onSubmit={unlock} className="flex items-center gap-2">
-            <label htmlFor="cs-pass" className="sr-only">Access password</label>
-            <input
-              id="cs-pass"
-              type="password"
-              autoFocus
-              value={password}
-              onChange={(e) => { setPassword(e.target.value); setAccessError(false); }}
-              placeholder="Password"
-              className={`w-44 rounded-full border bg-ink/60 px-4 py-2 text-sm text-paper placeholder:text-paper/40 backdrop-blur focus:outline-none ${accessError ? "border-red" : "border-paper/25 focus:border-gold"}`}
-            />
-            <button
-              type="submit"
-              disabled={unlocking}
-              className="rounded-full border border-paper/25 px-4 py-2 text-sm font-semibold text-paper/80 transition-colors hover:border-paper hover:text-paper disabled:opacity-60"
-            >
-              {unlocking ? "…" : "Enter"}
-            </button>
-          </form>
-        ) : (
-          <button
-            type="button"
-            onClick={() => setShowAccess(true)}
-            className="text-[11px] font-semibold uppercase tracking-[0.2em] text-paper/40 transition-colors hover:text-paper/80"
-          >
-            Team access
-          </button>
-        )}
+      {/* Enter the shop — open to everyone */}
+      <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2">
+        <button
+          type="button"
+          onClick={enter}
+          disabled={entering}
+          className="group rounded-full border border-paper/40 px-9 py-3 font-display text-sm uppercase tracking-[0.22em] text-paper transition-colors hover:border-gold hover:text-gold disabled:opacity-60"
+        >
+          {entering ? "Entering…" : "Enter"}
+          <span aria-hidden className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+            &rarr;
+          </span>
+        </button>
+        <p className="text-[11px] uppercase tracking-[0.2em] text-paper/40">
+          Browse the collection
+        </p>
       </div>
     </div>
   );
