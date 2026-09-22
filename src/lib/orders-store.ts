@@ -79,6 +79,8 @@ export interface OrdersStore {
   createOrder(order: OrderRow, items: OrderItemRow[]): Promise<{ orderId: string; created: boolean }>;
   getOrderBySession(sessionId: string): Promise<(OrderRow & { id: string }) | null>;
   getOrderByApliiqId(apliiqOrderId: string): Promise<(OrderRow & { id: string }) | null>;
+  /** Refund/dispute events identify the order by payment intent, not session. */
+  getOrderByPaymentIntent(pi: string): Promise<(OrderRow & { id: string }) | null>;
   getOrderById(orderId: string): Promise<(OrderRow & { id: string }) | null>;
   listOrdersByEmail(email: string): Promise<(OrderRow & { id: string })[]>;
   listShipments(orderId: string): Promise<ShipmentRow[]>;
@@ -197,6 +199,9 @@ class SupabaseStore implements OrdersStore {
   }
   getOrderById(orderId: string) {
     return this.getOne("id", orderId);
+  }
+  getOrderByPaymentIntent(pi: string) {
+    return this.getOne("stripe_payment_intent", pi);
   }
 
   async listOrdersByEmail(email: string) {
@@ -374,6 +379,11 @@ class FileStore implements OrdersStore {
   async getOrderById(orderId: string) {
     const s = this.load();
     return s.orders[orderId] ?? null;
+  }
+  async getOrderByPaymentIntent(pi: string) {
+    return (
+      Object.values(this.load().orders).find((o) => o.stripe_payment_intent === pi) ?? null
+    );
   }
   async listOrdersByEmail(email: string) {
     const s = this.load();

@@ -138,7 +138,16 @@ function authHeader(body: string): string {
 async function apliiqFetch(
   path: string,
   init: { method: string; body?: string },
-  timeoutMs = Number(process.env.APLIIQ_TIMEOUT_MS ?? 20000)
+  // 6s, not 20s. This fetch is awaited INSIDE the Stripe webhook
+  // handler, which runs as a Netlify synchronous function with a 10s
+  // default budget. At 20s the platform killed the handler before the
+  // client timeout could fire, so the CAS lock stayed in `submitting`
+  // with no result written and no 200 returned to Stripe - an orphaned
+  // order plus a retry storm. 6s leaves headroom for signature
+  // verification, the order write and the response. An abort here is
+  // classified "unknown", which parks the order in needs_reconcile for
+  // the reconcile path rather than guessing.
+  timeoutMs = Number(process.env.APLIIQ_TIMEOUT_MS ?? 6000)
 ): Promise<Response> {
   const base = process.env.APLIIQ_API_BASE ?? DEFAULT_BASE;
   const controller = new AbortController();

@@ -54,9 +54,19 @@ convention. Apliiq account: hello@goool.shop.
 5. Physical samples approved in writing (the packet release gate).
 6. Enable fulfillment: `APLIIQ_SUBMIT_ENABLED=true` in the production
    context — purchasing is still closed, so nothing can flow yet.
-   Review any queued orders (`submission_status=pending_submission`,
-   `needs_reconcile`, `failed`) via the ops endpoint and clear the
-   queue deliberately.
+   Review any queued orders via the ops endpoint and clear the queue
+   deliberately. `POST /api/fulfillment-ops` with `FULFILLMENT_OPS_KEY`:
+
+   | submission_status   | action      | meaning |
+   |---------------------|-------------|---------|
+   | `pending_submission`| `submit`    | send it to Apliiq now |
+   | `failed`            | `retry`     | Apliiq refused it, or the payload could not be built. Fix the cause first, then re-queue. Cannot duplicate: nothing was ever accepted. |
+   | `needs_reconcile`   | `reconcile` | outcome unknown (timeout / 5xx / accepted with no usable id). Checks Apliiq's listing for our order_number before anything is resent. |
+   | `submitting` (stale)| `reconcile` | attempt older than the expiry window |
+   | `needs_reconcile` after a clean reconcile | `release` | operator authorises one retry |
+
+   Do NOT use `release` on a `failed` order - it only accepts
+   `needs_reconcile`. That is what `retry` is for.
 7. Open purchasing LAST (`availableForSale: true`), only after
    fulfillment readiness is demonstrated end to end.
 

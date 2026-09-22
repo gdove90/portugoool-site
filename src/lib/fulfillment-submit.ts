@@ -189,15 +189,34 @@ export async function submitPaidOrder(
       return { action: "submitted_accepted", detail: result.apliiqOrderId };
     }
     case "received_pending": {
+      // Apliiq took the order but did not hand back an id we could
+      // parse (202, or a 200 whose body was not JSON / had no top-level
+      // `id`). Recording that as `submitted` with apliiq_order_id null
+      // permanently orphaned the order: the shipment callback resolves
+      // orders ONLY by apliiq_order_id, so a stored NULL can never
+      // match, the tracking numbers were discarded, and `submitted` is
+      // neither reconcilable nor releasable - no way back. Park it in
+      // needs_reconcile instead, which is exactly what that state is
+      // for: reconcileOrder looks the order up in Apliiq's listing by
+      // our own order_number and backfills the id.
+      const knownId = result.apliiqOrderId && result.apliiqOrderId.trim() !== "";
+      const to = knownId ? "submitted" : "needs_reconcile";
       const won = await store.transitionSubmission(
         orderId,
         "submitting",
-        "submitted",
-        { apliiq_order_id: result.apliiqOrderId, submission_last_error: result.message || null },
+        to,
+        {
+          apliiq_order_id: knownId ? result.apliiqOrderId : null,
+          submission_last_error: knownId
+            ? result.message || null
+            : `Apliiq accepted the order but returned no usable id; reconcile to recover it. Body: ${result.message ?? ""}`.slice(0, 500),
+        },
         attemptId
       );
       if (!won) return { action: "stale_result_discarded", detail: "202 (attempt superseded)" };
-      return { action: "submitted_pending", detail: result.message };
+      return knownId
+        ? { action: "submitted_pending", detail: result.message }
+        : { action: "needs_reconcile", detail: "accepted without a usable Apliiq order id" };
     }
     case "rejected": {
       const won = await store.transitionSubmission(
@@ -364,6 +383,64 @@ export async function releaseOrder(
     resolved: moved,
     detail: moved
       ? "Released for one retry on operator authority."
+      : "State changed concurrently; re-inspect the order.",
+  };
+}
+
+/**
+ * Re-queue an order that Apliiq REJECTED, or that never reached Apliiq
+ * because its payload could not be built.
+ *
+ * `failed` used to be a terminal state with no way out. submitPaidOrder
+ * accepts only `pending_submission`, reconcileOrder only
+ * needs_reconcile/`submitting`, releaseOrder only needs_reconcile - so
+ * a paid order knocked into `failed` by one transient HTTP 429, 408 or
+ * a briefly-rotated 401 was unfulfillable forever and the documented
+ * runbook (designs/11_fulfillment/apliiq-product-mapping.md) told the
+ * operator to "release" it, which always refused. The money was
+ * captured and only a hand-written UPDATE could free it.
+ *
+ * Retrying `failed` cannot duplicate an order. Every path into it means
+ * Apliiq definitely did not take the order:
+ *   - buildApliiqPayload error   -> no HTTP request was ever made
+ *   - outcome "rejected"         -> a <500 non-2xx, i.e. Apliiq refused
+ *   - unmapped variant at intake -> written before Apliiq is contacted
+ * The genuinely ambiguous outcomes (network abort, >=500) go to
+ * needs_reconcile instead, and that path still requires reconcile
+ * first. So this is safe in a way that releasing needs_reconcile is
+ * deliberately not.
+ *
+ * It does NOT fix the cause. If the rejection was a bad address or a
+ * missing SKU snapshot, correct that first - the retry will just fail
+ * again, which is the correct and visible outcome.
+ */
+export async function retrySubmission(
+  store: OrdersStore,
+  orderId: string
+): Promise<{ resolved: boolean; detail: string }> {
+  const order = await store.getOrderById(orderId);
+  if (!order) return { resolved: false, detail: "Order not found." };
+  if (order.status !== "paid") {
+    return {
+      resolved: false,
+      detail: `Order status is ${order.status}; only a paid order may be re-queued.`,
+    };
+  }
+  if (order.submission_status !== "failed") {
+    return {
+      resolved: false,
+      detail: `Order is ${order.submission_status}; retry only re-queues a failed order (use reconcile for needs_reconcile/submitting).`,
+    };
+  }
+  const moved = await store.transitionSubmission(orderId, "failed", "pending_submission", {
+    submission_last_error: null,
+    submission_attempt_id: null,
+    submission_started_at: null,
+  });
+  return {
+    resolved: moved,
+    detail: moved
+      ? `Re-queued for submission. Previous failure: ${order.submission_last_error ?? "(none recorded)"}`
       : "State changed concurrently; re-inspect the order.",
   };
 }

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { getOrdersStore } from "@/lib/orders-store";
-import { reconcileOrder, releaseOrder, submitPaidOrder } from "@/lib/fulfillment-submit";
+import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "@/lib/fulfillment-submit";
 
 // ─────────────────────────────────────────────────────────────
 // Minimal operator endpoint (no dashboard exists yet — callable with
@@ -59,6 +59,15 @@ export async function POST(req: NextRequest) {
 
   if (body.action === "reconcile" && body.orderId) {
     const result = await reconcileOrder(store, body.orderId);
+    return NextResponse.json(result);
+  }
+
+  if (body.action === "retry" && body.orderId) {
+    // Re-queue an order Apliiq rejected, or one whose payload could not
+    // be built. Safe against duplicates: every path into `failed` means
+    // Apliiq definitively did not take the order. Ambiguous outcomes go
+    // to needs_reconcile and still require reconcile first.
+    const result = await retrySubmission(store, body.orderId);
     return NextResponse.json(result);
   }
 

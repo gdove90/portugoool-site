@@ -167,6 +167,11 @@ export async function POST(req: NextRequest) {
     "checkout.session.completed",
     "checkout.session.async_payment_succeeded",
     "checkout.session.async_payment_failed",
+    // Money leaving again. Without these the order stayed status='paid'
+    // forever after a refund, and the ops `submit` action would happily
+    // manufacture and ship a fully refunded order.
+    "charge.refunded",
+    "charge.dispute.created",
   ]);
   if (!relevant.has(event.type)) {
     return NextResponse.json({ received: true, ignored: event.type });
@@ -187,6 +192,63 @@ export async function POST(req: NextRequest) {
     // and CAS layers, which make double processing harmless.
     if (await store.hasEvent(event.id)) {
       return NextResponse.json({ received: true, duplicate: true });
+    }
+
+    // ── Money going back out ──────────────────────────────────
+    // These carry a Charge/Dispute, NOT a Checkout Session, so they are
+    // handled before anything touches `session`. Both halt fulfillment
+    // by moving the order off status 'paid', which is the only status
+    // submitPaidOrder will act on.
+    if (event.type === "charge.refunded" || event.type === "charge.dispute.created") {
+      const obj = event.data.object as { payment_intent?: string | null; refunded?: boolean; amount_refunded?: number; amount?: number };
+      const pi = typeof obj.payment_intent === "string" ? obj.payment_intent : null;
+      const order = pi ? await store.getOrderByPaymentIntent(pi) : null;
+      if (!order) {
+        // Nothing to halt (e.g. a payment that never produced an order).
+        await store.recordEvent(event.id, event.type);
+        return NextResponse.json({ received: true, matched: false });
+      }
+      const dispute = event.type === "charge.dispute.created";
+      const fullyRefunded = obj.refunded === true ||
+        (typeof obj.amount_refunded === "number" && typeof obj.amount === "number" && obj.amount_refunded >= obj.amount);
+
+      let applied: string;
+      if (dispute) {
+        await store.setOrderStatus(order.id, "cancelled");
+        applied = "cancelled (dispute opened)";
+      } else if (fullyRefunded) {
+        await store.setOrderStatus(order.id, "refunded");
+        applied = "refunded";
+      } else {
+        // Partial refund: do NOT silently cancel the rest of the order.
+        // Flag it and leave the status for a human.
+        applied = "partial refund recorded; status unchanged";
+      }
+
+      // If Apliiq already has it, saying "cancelled" here would be a
+      // lie about the physical world - the garment is printing or gone.
+      const alreadyWithSupplier =
+        order.submission_status === "submitted" ||
+        order.submission_status === "accepted" ||
+        order.submission_status === "submitting";
+      const note = alreadyWithSupplier
+        ? `${event.type}: ${applied}. ALREADY WITH SUPPLIER (submission_status=${order.submission_status}${order.apliiq_order_id ? `, apliiq_order_id=${order.apliiq_order_id}` : ""}) - cancel with Apliiq manually.`
+        : `${event.type}: ${applied}.`;
+      await store.transitionSubmission(
+        order.id,
+        order.submission_status,
+        order.submission_status,
+        { submission_last_error: note.slice(0, 500) }
+      );
+      if (alreadyWithSupplier) console.error("stripe-webhook:", note);
+
+      await store.recordEvent(event.id, event.type);
+      return NextResponse.json({
+        received: true,
+        order: order.id,
+        applied,
+        alreadyWithSupplier,
+      });
     }
 
     if (event.type === "checkout.session.async_payment_failed") {
@@ -227,10 +289,21 @@ export async function POST(req: NextRequest) {
     // (APLIIQ_SUBMIT_ENABLED), the environment isolation (live-mode
     // event + production context), the persisted-snapshot read, and
     // the CAS lock all live inside submitPaidOrder.
+    // Submission must not decide whether Stripe gets a 200. The payment
+    // is already recorded at this point; a supplier-side failure is an
+    // ops problem, not a reason to make Stripe retry the event for days
+    // and re-attempt submission on every delivery. Failures land in
+    // submission_status/submission_last_error and are recoverable
+    // through /api/fulfillment-ops (reconcile / retry / release).
     let submission: string | undefined;
     if (paid) {
-      const outcome = await submitPaidOrder(store, orderId, { livemode: event.livemode });
-      submission = outcome.action;
+      try {
+        const outcome = await submitPaidOrder(store, orderId, { livemode: event.livemode });
+        submission = outcome.action;
+      } catch (err) {
+        console.error("stripe-webhook: submission threw for order", orderId, err);
+        submission = "errored";
+      }
     }
     await store.recordEvent(event.id, event.type);
     return NextResponse.json({
