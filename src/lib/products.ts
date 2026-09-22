@@ -1934,7 +1934,11 @@ export const products: Product[] = [
     slug: "goool-touchline-cap",
     description:
       "Structured five-panel cap in black and natural. Flat-embroidered GOOOL wordmark centered on the front panel, curved visor, adjustable snap. Blank back.",
-    priceCents: 3600,
+    // $48, not $36: the embroidered cap costs $29.88/unit on Apliiq's dropship
+    // rate (blank $14.06 + flat embroidery), the highest decoration cost in the
+    // catalog. At $36 that was a 17% margin - the only product under the floor.
+    // $48 puts it at 38% without depending on the VIP subscription.
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",
