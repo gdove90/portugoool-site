@@ -27,7 +27,7 @@ export default function DropPage() {
       <section className="bg-ink py-14 text-paper sm:py-20">
         <div className="mx-auto max-w-content px-4 sm:px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">
-            The First Capsule · GOOOL · Coming Soon
+            The First Capsule · GOOOL · Now Live
           </p>
           <h1 className="mt-2 font-display text-4xl font-bold uppercase tracking-tightest sm:text-6xl">
             The First Capsule

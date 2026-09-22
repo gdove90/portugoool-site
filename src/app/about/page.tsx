@@ -34,7 +34,7 @@ export default function AboutPage() {
             wherever the day takes you.
           </p>
           <p>
-            The First Capsule is coming soon. Find your colors. Make them
+            The First Capsule is here. Find your colors. Make them
             yours.
           </p>
           <p className="font-semibold text-ink">

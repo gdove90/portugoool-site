@@ -86,32 +86,23 @@ export default function ComingSoon() {
           Made for the Moment.
         </p>
 
-        <p className="mt-10 font-display text-3xl uppercase tracking-[0.3em] text-gold sm:text-5xl">
-          Coming Soon
-        </p>
-        <p className="mt-4 max-w-md text-sm text-paper/70 sm:text-base">
-          The First Capsule. Original GOOOL designs.
-          <br />
-          GOOOL · Made for the Moment
-        </p>
-
-      </div>
-
-      {/* Enter the shop — open to everyone */}
-      <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2">
+        {/* The CTA takes the slot the Coming Soon headline used to hold:
+            it is the one thing we want a visitor to do. */}
         <button
           type="button"
           onClick={enter}
           disabled={entering}
-          className="group rounded-full border border-paper/40 px-9 py-3 font-display text-sm uppercase tracking-[0.22em] text-paper transition-colors hover:border-gold hover:text-gold disabled:opacity-60"
+          className="group mt-10 rounded-full border-2 border-gold px-12 py-4 font-display text-3xl uppercase tracking-[0.3em] text-gold transition-colors hover:bg-gold hover:text-ink disabled:opacity-60 sm:px-16 sm:py-5 sm:text-5xl"
         >
-          {entering ? "Entering…" : "Enter"}
-          <span aria-hidden className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+          {entering ? "Entering" : "Enter"}
+          <span aria-hidden className="ml-3 inline-block transition-transform group-hover:translate-x-1">
             &rarr;
           </span>
         </button>
-        <p className="text-[11px] uppercase tracking-[0.2em] text-paper/40">
-          Browse the collection
+        <p className="mt-5 max-w-md text-sm text-paper/70 sm:text-base">
+          The First Capsule. Original GOOOL designs.
+          <br />
+          GOOOL · Made for the Moment
         </p>
       </div>
     </div>

@@ -12,7 +12,7 @@ import { getProductsByCategory } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Summer '26 Collection",
   description:
-    "The biggest summer in football is happening now. The First Capsule is coming soon.",
+    "The biggest summer in football is happening now. The First Capsule is here.",
 };
 
 export default function Summer26Page() {
@@ -63,7 +63,7 @@ export default function Summer26Page() {
           Live during the moment
         </h2>
         <p className="mb-6 mt-1 text-sm text-ink/60">
-          The First Capsule, coming soon while the whole world watches.
+          The First Capsule, here while the whole world watches.
         </p>
         <ProductGrid products={collection} />
       </section>
