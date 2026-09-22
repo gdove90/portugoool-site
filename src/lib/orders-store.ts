@@ -200,13 +200,29 @@ class SupabaseStore implements OrdersStore {
   }
 
   async listOrdersByEmail(email: string) {
+    // ilike treats % and _ as wildcards, and this value comes straight
+    // from the public /api/track-order body. Unescaped, "%@%" matched
+    // EVERY order in the table, so anyone holding just an order
+    // reference - a forwarded screenshot, a shared receipt, a support
+    // paste - could read that order without knowing the email. The
+    // email is the only access control on order lookup, so escape the
+    // wildcards (and the escape character itself, first) and keep
+    // ilike purely for case-insensitive matching.
+    // PostgREST also rewrites * to % inside an ilike pattern, so
+    // escaping alone is not provably sufficient. Escape what we can,
+    // then re-check the result in JS on an exact case-insensitive
+    // comparison, which is immune to whatever the pattern layer does.
+    const literal = email.replace(/\\/g, "\\\\").replace(/[%_*]/g, (c) => `\\${c}`);
     const { data, error } = await this.db
       .from("orders")
       .select("*")
-      .ilike("customer_email", email)
+      .ilike("customer_email", literal)
       .limit(50);
     if (error) throw new Error(`orders select failed: ${error.message}`);
-    return (data ?? []) as (OrderRow & { id: string })[];
+    const wanted = email.trim().toLowerCase();
+    return ((data ?? []) as (OrderRow & { id: string })[]).filter(
+      (o) => (o.customer_email ?? "").trim().toLowerCase() === wanted
+    );
   }
 
   async listShipments(orderId: string) {
