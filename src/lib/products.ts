@@ -2128,7 +2128,7 @@ export const products: Product[] = [
     slug: "goool-athletics-minimal-club-tee",
     description:
       "Small black GOOOL Athletics mark at the left chest. Large black GOOOL and ATHLETICS across the upper back with a single red underline. Natural cream crewneck.",
-    priceCents: 5800,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E5E5DD",
@@ -2178,7 +2178,7 @@ export const products: Product[] = [
     slug: "goool-athletics-circular-badge-tee",
     description:
       "Circular GOOOL Athletics mark in navy at the wearer's left chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Ivory crewneck tee.",
-    priceCents: 3800,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Ivory",
     colorHex: "#E9E1D7",
