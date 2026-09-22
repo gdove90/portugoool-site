@@ -1678,7 +1678,7 @@ export const products: Product[] = [
     colorHex: "#0A0A0A",
     fabric: "3.8 oz 100% recycled polyester with PosiCharge.",
     fit: "Athletic fit. True to size.",
-    careInstructions: "Machine wash cold. Tumble dry low. Do not iron the print.",
+    careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
@@ -1777,7 +1777,7 @@ export const products: Product[] = [
     colorHex: "#0A0A0A",
     fabric: "10 oz (330 gsm) 3-end fleece with a 100% cotton face yarn. Black is 70/30 cotton-poly.",
     fit: "Generous, relaxed fit.",
-    careInstructions: "Machine wash cold. Tumble dry low. Do not iron the print.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_FRONT.webp",
@@ -1857,7 +1857,7 @@ export const products: Product[] = [
     colorHex: "#2E2E30",
     fabric: "6.5 oz 100% ring-spun cotton, garment-dyed.",
     fit: "Relaxed heavyweight fit, semi-dropped shoulder.",
-    careInstructions: "Machine wash cold with like colors. Tumble dry low.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
@@ -1944,7 +1944,7 @@ export const products: Product[] = [
     colorHex: "#E4DFC9",
     fabric: "65/35 polyester-cotton twill with firm buckram front.",
     fit: "Adjustable - One Size. Structured mid-profile crown.",
-    careInstructions: "Spot clean only.",
+    careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
       {
         src: "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
@@ -2008,7 +2008,7 @@ export const products: Product[] = [
     colorHex: "#0A0A0A",
     fabric: "Premium cotton crewneck tee, opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
-    careInstructions: "Care instructions follow the approved blank and print process.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_MODERN_SPORT_FRONT.webp",
@@ -2046,7 +2046,7 @@ export const products: Product[] = [
     colorHex: "#262626",
     fabric: "6.5 oz 100% ring-spun cotton, garment-dyed. Opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
-    careInstructions: "Care instructions follow the approved blank and print process.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_VARSITY_FRONT.webp",
@@ -2130,7 +2130,7 @@ export const products: Product[] = [
     colorHex: "#E5E5DD",
     fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
-    careInstructions: "Care instructions follow the approved blank and print process.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
@@ -2180,7 +2180,7 @@ export const products: Product[] = [
     colorHex: "#E9E1D7",
     fabric: "Premium heavyweight cotton crewneck tee, ivory.",
     fit: "Relaxed body with a moderate dropped shoulder.",
-    careInstructions: "Care instructions follow the approved blank and print process.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
@@ -2217,8 +2217,8 @@ export const products: Product[] = [
     color: "Gray Heather",
     colorHex: "#B2B2B2",
     fabric: "100% cotton French terry crewneck, gray heather, rib collar, cuffs and hem.",
-    fit: "Relaxed body with a moderate dropped shoulder.",
-    careInstructions: "Care instructions follow the approved blank and print process.",
+    fit: "Relaxed crewneck fit. Ribbed collar, cuffs and hem.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low or lay flat to keep the shape. Do not bleach. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
@@ -2259,7 +2259,7 @@ export const products: Product[] = [
     colorHex: "#0A0A0A",
     fabric: "Performance polyester training tee.",
     fit: "Athletic fit.",
-    careInstructions: "Care instructions follow the approved blank and print process.",
+    careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
