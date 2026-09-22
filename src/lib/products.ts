@@ -2200,7 +2200,7 @@ export const products: Product[] = [
     slug: "goool-athletics-circular-center-crewneck",
     description:
       "Circular GOOOL Athletics mark in forest green, small and centered on the upper chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Gray heather crewneck sweatshirt.",
-    priceCents: 9300,
+    priceCents: 8800,
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#B2B2B2",
