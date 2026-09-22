@@ -9,8 +9,8 @@ import { useEffect, useState } from "react";
 // Kept deliberately after opening the store: the owner wants its
 // imagery and tone as the entry to the brand. It no longer gates
 // anything and no longer captures email. One Enter button, straight
-// into the collection. The newsletter signup still lives on /about,
-// /drop and /world-cup, so nothing was lost by removing it here.
+// into the collection. The newsletter signup still lives on /about
+// and /drop, so nothing was lost by removing it here.
 export default function ComingSoon() {
   // Entry to the shop. Open to everyone: the splash is kept as the
   // landing experience, not as a lock. Clicking sets the gate cookie

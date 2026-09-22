@@ -28,3 +28,13 @@
   to = "https://goool.shop/:splat"
   status = 301
   force = true
+
+# /world-cup was a seasonal campaign page, retired 2026-09-22: the
+# tournament is over and GOOOL is an everyday brand. Nothing on the
+# site linked to it, but any inbound link lands on the collection
+# rather than a 404.
+[[redirects]]
+  from = "/world-cup"
+  to = "/shop"
+  status = 301
+  force = true
