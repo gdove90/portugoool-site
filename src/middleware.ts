@@ -45,6 +45,17 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
+  // Retired routes. These must be handled HERE, not in netlify.toml:
+  // middleware runs first, and the gate below would bounce an unknown
+  // path to the splash before any Netlify redirect rule was consulted.
+  // /world-cup was a seasonal campaign page, retired 2026-09-22.
+  if (pathname === "/world-cup") {
+    const url = req.nextUrl.clone();
+    url.pathname = "/shop";
+    url.search = "";
+    return NextResponse.redirect(url, 301);
+  }
+
   // Key in the URL → set the cookie and continue to the same page (clean URL).
   if (secret && searchParams.get("key") === secret) {
     const url = req.nextUrl.clone();

@@ -30,9 +30,12 @@
   force = true
 
 # /world-cup was a seasonal campaign page, retired 2026-09-22: the
-# tournament is over and GOOOL is an everyday brand. Nothing on the
-# site linked to it, but any inbound link lands on the collection
-# rather than a 404.
+# tournament is over and GOOOL is an everyday brand.
+#
+# The actual redirect lives in src/middleware.ts, NOT here. Middleware
+# runs before Netlify redirect rules, and its catch-all bounces unknown
+# paths to the splash, so a rule at this layer never ran. Kept only as
+# the fallback for when middleware is eventually deleted.
 [[redirects]]
   from = "/world-cup"
   to = "/shop"
