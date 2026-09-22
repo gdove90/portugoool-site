@@ -133,30 +133,32 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     },
   },
   // GOOOL Athletics Varsity Tee (Bella+Canvas 4810GD, Washed Black)
-  // Front print only (11in, GA-02-F) - the back mark (GA-02-B) was dropped
+  // Front print only (12.5in, GA-02-F) - the back mark (GA-02-B) was dropped
   // 2026-09-21 because it could not be placed to match the site's concept
-  // art within Back Box 1 (see products.ts). Washed Black rebuilt at
-  // 6113914 (was 6112032, front+back - now VOID in Apliiq); Washed Navy is
-  // a genuinely new colorway at 6113912.
+  // art within Back Box 1 (see products.ts). Scaled from 11in to 12.5in
+  // 2026-09-21 (owner decision) - 14in was tested and rejected, it crowds
+  // the sleeve seams; 12.5in leaves real margin on both sides. Both
+  // colorways rebuilt again at 6114178 / 6114196 (were 6113914 / 6113912,
+  // 11in - now VOID in Apliiq, no in-place resize exists there).
   "80000000-0000-4000-8000-000000000002": {
     "Washed Black": {
-      apliiqProductId: 6113914,
+      apliiqProductId: 6114178,
       skus: {
-        S: "APQ-6113914S6A1",
-        M: "APQ-6113914S7A1",
-        L: "APQ-6113914S8A1",
-        XL: "APQ-6113914S1A1",
-        XXL: "APQ-6113914S2A1",
+        S: "APQ-6114178S6A1",
+        M: "APQ-6114178S7A1",
+        L: "APQ-6114178S8A1",
+        XL: "APQ-6114178S1A1",
+        XXL: "APQ-6114178S2A1",
       },
     },
     "Washed Navy": {
-      apliiqProductId: 6113912,
+      apliiqProductId: 6114196,
       skus: {
-        S: "APQ-6113912S6A1",
-        M: "APQ-6113912S7A1",
-        L: "APQ-6113912S8A1",
-        XL: "APQ-6113912S1A1",
-        XXL: "APQ-6113912S2A1",
+        S: "APQ-6114196S6A1",
+        M: "APQ-6114196S7A1",
+        L: "APQ-6114196S8A1",
+        XL: "APQ-6114196S1A1",
+        XXL: "APQ-6114196S2A1",
       },
     },
   },

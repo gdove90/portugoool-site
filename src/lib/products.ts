@@ -2039,12 +2039,14 @@ export const products: Product[] = [
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
-    // Colorways mirror the saved Apliiq designs (Washed Black 6113914, Washed
-    // Navy 6113912) - front print only, 11in GA-02-F. The back mark (GA-02-B)
-    // was dropped 2026-09-21: on this blank, Back Box 1 starts too low to
-    // reach the site's concept placement, so the owner chose to cut the back
-    // print rather than ship a mismatched garment. 6112032 (front+back,
-    // Washed Black) is superseded and marked VOID in Apliiq.
+    // Colorways mirror the saved Apliiq designs (Washed Black 6114178, Washed
+    // Navy 6114196) - front print only, 12.5in GA-02-F (scaled up from 11in
+    // 2026-09-21; 14in was tested and rejected for crowding the sleeve
+    // seams). The back mark (GA-02-B) was dropped 2026-09-21: on this blank,
+    // Back Box 1 starts too low to reach the site's concept placement, so
+    // the owner chose to cut the back print rather than ship a mismatched
+    // garment. 6112032 (front+back) and 6113914/6113912 (front-only, 11in)
+    // are superseded and marked VOID in Apliiq.
     colorVariants: [
       {
         name: "Washed Black",
