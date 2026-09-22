@@ -2,38 +2,44 @@
  * One-shot Stripe live-mode cutover.
  *
  * Run this yourself once the real GOOOL Stripe account is activated.
- * It is written so the live secret key never leaves your machine and is
- * never typed into a chat, a file, or a browser form: you pass it in an
- * environment variable, this script uses it to call Stripe directly,
- * and it hands the resulting ids to the Netlify CLI.
+ * The live secret key never leaves your machine and is never typed into
+ * a chat: pass it in an environment variable, or keep it in
+ * .env.stripe-live.local (gitignored) and let this script read it.
  *
  *   STRIPE_LIVE_KEY=sk_live_xxx node scripts/go-live-stripe.mjs
+ *   node scripts/go-live-stripe.mjs --commit          (reads the file)
  *
- * Add --commit to actually write. Without it the script only reports
- * what it would do (and still refuses to touch anything if the account
- * is not ready).
+ * WITHOUT --commit nothing is created or written anywhere. An earlier
+ * version of this script got that wrong: it created the live shipping
+ * rate and the live webhook endpoint unconditionally and then printed
+ * "Dry run only - nothing was changed", which was a lie. Every mutating
+ * call is now behind the same flag, and the dry run reports exactly
+ * what it would do.
  *
- * What it does, in order, stopping at the first problem:
- *   1. Refuses anything that is not an sk_live_ key.
- *   2. Refuses unless the account reports charges_enabled AND
- *      payouts_enabled - i.e. really activated, not a sandbox.
- *   3. Creates a LIVE $9.50 shipping rate (test-mode shr_ ids are not
- *      valid against a live key - this is the one that bit us).
- *   4. Creates the LIVE webhook endpoint for goool.shop and captures
- *      its signing secret, which Stripe returns only at creation.
- *   5. Writes STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET and
+ * Steps, stopping at the first problem:
+ *   1. Refuse anything that is not an sk_live_ key.
+ *   2. Refuse unless the account reports charges_enabled AND
+ *      payouts_enabled - really activated, not a sandbox.
+ *   3. Reuse or create a LIVE shipping rate. Test-mode shr_ ids are not
+ *      valid against a live key; that is what bit us before.
+ *   4. Create the LIVE webhook endpoint and capture its signing secret,
+ *      which Stripe returns only at creation.
+ *   5. Write STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET and
  *      STRIPE_SHIPPING_RATE_ID into the Netlify production context.
- *   6. Unsets CHECKOUT_TEST_MODE, so the Coming Soon gate is real again
- *      and nothing can be bought until availableForSale is opened.
+ *   6. Unset CHECKOUT_TEST_MODE so the Coming Soon gate is real again.
  *
- * It deliberately does NOT open sales. availableForSale stays false in
+ * It does NOT open sales. availableForSale stays false in
  * src/lib/products.ts; that is a separate, deliberate commit.
  */
 import { execFileSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 
-const KEY = process.env.STRIPE_LIVE_KEY;
 const COMMIT = process.argv.includes("--commit");
+const REPLACE_WEBHOOK = process.argv.includes("--replace-webhook");
 const SITE = "https://goool.shop";
+const SHIPPING_CENTS = Number(process.env.SHIPPING_AMOUNT_CENTS ?? 950);
+const SHIPPING_NAME = process.env.SHIPPING_DISPLAY_NAME ?? "Standard shipping";
 const WEBHOOK_EVENTS = [
   "checkout.session.completed",
   "checkout.session.async_payment_succeeded",
@@ -47,7 +53,17 @@ function die(msg) {
   process.exit(1);
 }
 
-async function stripe(path, params, method = "POST") {
+// Key from env, or from the gitignored local file.
+function readKey() {
+  if (process.env.STRIPE_LIVE_KEY) return process.env.STRIPE_LIVE_KEY.trim();
+  const f = path.join(process.cwd(), ".env.stripe-live.local");
+  if (!fs.existsSync(f)) return null;
+  const m = fs.readFileSync(f, "utf8").match(/^\s*STRIPE_LIVE_KEY\s*=\s*(.+)$/m);
+  return m ? m[1].trim().replace(/^["']|["']$/g, "") : null;
+}
+const KEY = readKey();
+
+async function stripe(pathname, params, method = "POST") {
   const body = new URLSearchParams();
   const add = (k, v) => {
     if (Array.isArray(v)) v.forEach((x) => body.append(`${k}[]`, String(x)));
@@ -56,7 +72,8 @@ async function stripe(path, params, method = "POST") {
     else body.append(k, String(v));
   };
   Object.entries(params ?? {}).forEach(([k, v]) => add(k, v));
-  const res = await fetch(`https://api.stripe.com/v1/${path}`, {
+  const qs = method === "GET" && body.toString() ? `?${body}` : "";
+  const res = await fetch(`https://api.stripe.com/v1/${pathname}${qs}`, {
     method,
     headers: {
       Authorization: `Basic ${Buffer.from(`${KEY}:`).toString("base64")}`,
@@ -81,11 +98,22 @@ function netlify(name, value, secret = false) {
 }
 
 // 1 ── key shape
-if (!KEY) die("Set STRIPE_LIVE_KEY. Example:\n    STRIPE_LIVE_KEY=sk_live_xxx node scripts/go-live-stripe.mjs --commit");
-if (!KEY.startsWith("sk_live_")) {
-  die(`STRIPE_LIVE_KEY is not a live key (starts with "${KEY.slice(0, 8)}"). ` +
-      `A test or sandbox key here would create test-mode objects and quietly leave the store unable to take money.`);
+if (!KEY) {
+  die(
+    "No live key found.\n" +
+    "    Either:  STRIPE_LIVE_KEY=sk_live_xxx node scripts/go-live-stripe.mjs --commit\n" +
+    "    Or put STRIPE_LIVE_KEY=sk_live_xxx in .env.stripe-live.local (gitignored) and re-run."
+  );
 }
+if (!KEY.startsWith("sk_live_")) {
+  die(
+    `That is not a live key (starts with "${KEY.slice(0, 8)}"). A test or sandbox key here ` +
+    `would create test-mode objects and quietly leave the store unable to take money. ` +
+    `Use the STANDARD secret key from Developers -> API keys, not a restricted key.`
+  );
+}
+
+console.log(`\n${COMMIT ? "LIVE RUN - this will create and write." : "DRY RUN - nothing will be created or written."}`);
 
 // 2 ── account really activated
 console.log("\nChecking the account is activated...");
@@ -104,33 +132,74 @@ if (/sandbox/i.test(acct.settings?.dashboard?.display_name ?? "")) {
   die("The account display name still says 'sandbox'. Switch to the live account before running this.");
 }
 
-// 3 ── live shipping rate
-console.log("\nCreating the live shipping rate...");
-const rate = await stripe("shipping_rates", {
-  display_name: "Standard shipping",
-  type: "fixed_amount",
-  fixed_amount: { amount: 950, currency: "usd" },
-  delivery_estimate: { minimum: { unit: "business_day", value: 3 }, maximum: { unit: "business_day", value: 7 } },
-});
-console.log(`  ${rate.id}  $${(rate.fixed_amount.amount / 100).toFixed(2)}  livemode=${rate.livemode}`);
-if (!rate.livemode) die("Stripe returned a test-mode shipping rate; aborting before it reaches Netlify.");
+// 3 ── shipping rate: reuse an identical live one rather than piling up duplicates
+console.log(`\nLive shipping rate (${SHIPPING_NAME}, $${(SHIPPING_CENTS / 100).toFixed(2)})...`);
+const existingRates = await stripe("shipping_rates", { limit: 100, active: true }, "GET");
+let rate = (existingRates.data ?? []).find(
+  (r) =>
+    r.livemode === true &&
+    r.display_name === SHIPPING_NAME &&
+    r.fixed_amount?.amount === SHIPPING_CENTS &&
+    r.fixed_amount?.currency === "usd"
+);
+if (rate) {
+  console.log(`  reusing existing ${rate.id}`);
+} else if (!COMMIT) {
+  console.log(`  would create a new live rate at $${(SHIPPING_CENTS / 100).toFixed(2)}`);
+} else {
+  rate = await stripe("shipping_rates", {
+    display_name: SHIPPING_NAME,
+    type: "fixed_amount",
+    fixed_amount: { amount: SHIPPING_CENTS, currency: "usd" },
+    delivery_estimate: {
+      minimum: { unit: "business_day", value: 3 },
+      maximum: { unit: "business_day", value: 7 },
+    },
+  });
+  console.log(`  created ${rate.id}  livemode=${rate.livemode}`);
+  if (!rate.livemode) die("Stripe returned a test-mode shipping rate; aborting before it reaches Netlify.");
+}
 
-// 4 ── live webhook endpoint
-console.log("\nCreating the live webhook endpoint...");
-const hook = await stripe("webhook_endpoints", {
-  url: `${SITE}/api/stripe-webhook`,
-  enabled_events: WEBHOOK_EVENTS,
-  description: "GOOOL production webhook (live)",
-});
-console.log(`  ${hook.id} -> ${hook.url}`);
-console.log(`  events: ${WEBHOOK_EVENTS.join(", ")}`);
-if (!hook.secret) die("Stripe did not return a signing secret; delete the endpoint and retry.");
+// 4 ── webhook endpoint. Its secret is returned ONLY at creation, so an
+// endpoint that already exists cannot be adopted; say so instead of
+// silently adding a second one whose deliveries would fail signature.
+console.log("\nLive webhook endpoint...");
+const existingHooks = await stripe("webhook_endpoints", { limit: 100 }, "GET");
+const clash = (existingHooks.data ?? []).find((h) => h.url === `${SITE}/api/stripe-webhook` && h.livemode === true);
+let hook = null;
+if (clash && !REPLACE_WEBHOOK) {
+  die(
+    `A live webhook endpoint for ${SITE}/api/stripe-webhook already exists (${clash.id}).\n` +
+    `  Stripe only reveals a signing secret at creation, so this script cannot adopt it.\n` +
+    `  If STRIPE_WEBHOOK_SECRET in Netlify already matches that endpoint, you are done - skip this step.\n` +
+    `  Otherwise re-run with --replace-webhook to delete it and create a fresh one.`
+  );
+}
+if (!COMMIT) {
+  console.log(`  would ${clash ? "delete " + clash.id + " and " : ""}create an endpoint for ${SITE}/api/stripe-webhook`);
+  console.log(`  events: ${WEBHOOK_EVENTS.join(", ")}`);
+} else {
+  if (clash && REPLACE_WEBHOOK) {
+    await stripe(`webhook_endpoints/${clash.id}`, null, "DELETE");
+    console.log(`  deleted previous ${clash.id}`);
+  }
+  hook = await stripe("webhook_endpoints", {
+    url: `${SITE}/api/stripe-webhook`,
+    enabled_events: WEBHOOK_EVENTS,
+    description: "GOOOL production webhook (live)",
+  });
+  console.log(`  created ${hook.id} -> ${hook.url}`);
+  if (!hook.secret) die("Stripe did not return a signing secret; delete the endpoint and retry.");
+}
 
 // 5/6 ── Netlify
 console.log(`\n${COMMIT ? "Writing" : "Would write"} Netlify production env...`);
 netlify("STRIPE_SECRET_KEY", KEY, true);
-netlify("STRIPE_WEBHOOK_SECRET", hook.secret, true);
-netlify("STRIPE_SHIPPING_RATE_ID", rate.id);
+if (hook) netlify("STRIPE_WEBHOOK_SECRET", hook.secret, true);
+else if (!COMMIT) console.log("  would set STRIPE_WEBHOOK_SECRET (secret, from the new endpoint)");
+if (rate) netlify("STRIPE_SHIPPING_RATE_ID", rate.id);
+else if (!COMMIT) console.log("  would set STRIPE_SHIPPING_RATE_ID (from the new rate)");
+
 if (COMMIT) {
   try {
     execFileSync("npx", ["netlify", "env:unset", "CHECKOUT_TEST_MODE", "--context", "production"], {
@@ -145,14 +214,12 @@ if (COMMIT) {
 }
 
 console.log(`
-${COMMIT ? "Done." : "Dry run only - nothing was changed. Re-run with --commit."}
+${COMMIT ? "Done." : "Dry run complete. Nothing was created and nothing was written. Re-run with --commit."}
 
 Next, in order:
   1. npx netlify deploy --prod --build
-  2. Make one real purchase of the cheapest item and confirm: an order
-     row appears, the webhook shows 200 in the Stripe dashboard, and
-     /track-order finds it. Then refund yourself and confirm the order
-     flips to 'refunded'.
-  3. Only after that, open sales (availableForSale: true) in a separate
-     commit. Nothing before this point can take a customer's money.
+  2. Open sales (availableForSale: true) - a separate commit.
+  3. Buy the cheapest item with a real card. Confirm an order row appears,
+     the webhook shows 200 in the Stripe dashboard, and /track-order finds
+     it. Then refund yourself and confirm the order flips to 'refunded'.
 `);
