@@ -33,7 +33,7 @@ export default function CartPage() {
       });
       const data = await res.json();
       if (!res.ok || !data.url) {
-        throw new Error(data.error ?? "Checkout is not available yet.");
+        throw new Error(data.error ?? "Something went wrong starting checkout. Try again.");
       }
       window.location.href = data.url; // hand off to Stripe Checkout
     } catch (e) {
