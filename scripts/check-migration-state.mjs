@@ -43,3 +43,43 @@ await probe("orders?select=livemode&limit=1", "orders.livemode (0026)");
 await probe("orders?select=submission_attempt_id&limit=1", "orders.submission_attempt_id (0026)");
 await probe("orders?select=submission_status&limit=1", "orders.submission_status (0026)");
 await probe("orders?select=lookup_token&limit=1", "orders.lookup_token (0026)");
+
+// ── Catalog/FK parity ────────────────────────────────────────
+// order_items.product_id has a FOREIGN KEY to products(id), so every
+// product the checkout route can sell MUST have a products row or the
+// line-item insert fails AFTER the order row is already committed.
+// On 2026-09-21 the six GOOOL Athletics products were missing (their
+// migrations, 0027-0029, were written but never applied) and the first
+// end-to-end test payment hit exactly that. Migration 0031 closed it;
+// this check is what makes a recurrence visible before a customer does.
+//
+// The authoritative "can be sold" set is the fulfillment mapping: a
+// product with no Apliiq SKU cannot be fulfilled anyway.
+const { readFileSync } = await import("node:fs");
+const mappingSrc = readFileSync("src/lib/fulfillment.ts", "utf8");
+const sellable = [
+  ...new Set(
+    [...mappingSrc.matchAll(/^  "([0-9a-f]{8}-[0-9a-f-]{27})":/gm)].map((m) => m[1])
+  ),
+];
+console.log(`\n— Catalog/FK parity (${sellable.length} sellable products) —`);
+const inList = sellable.map((id) => `"${id}"`).join(",");
+const res = await fetch(
+  `${url}/rest/v1/products?select=id,slug,price_cents&id=in.(${inList})`,
+  { headers }
+);
+if (!res.ok) {
+  console.log(`products query failed: HTTP ${res.status}`);
+  process.exitCode = 1;
+} else {
+  const rows = await res.json();
+  const found = new Set(rows.map((r) => r.id));
+  const missing = sellable.filter((id) => !found.has(id));
+  if (missing.length === 0) {
+    console.log(`all ${sellable.length} sellable products have a products row  OK`);
+  } else {
+    console.log(`MISSING products rows (paid orders for these WILL fail):`);
+    for (const id of missing) console.log(`  - ${id}`);
+    process.exitCode = 1;
+  }
+}

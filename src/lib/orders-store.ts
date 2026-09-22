@@ -138,16 +138,46 @@ class SupabaseStore implements OrdersStore {
       .select("id")
       .single();
     if (!error && data) {
-      const rows = items.map((it) => ({ ...it, order_id: data.id }));
-      const { error: itemsErr } = await this.db.from("order_items").insert(rows);
-      if (itemsErr) throw new Error(`order_items insert failed: ${itemsErr.message}`);
+      await this.insertItems(data.id as string, items);
       return { orderId: data.id as string, created: true };
     }
     if (error && error.code === "23505") {
       const existing = await this.getOrderBySession(order.stripe_session_id);
-      if (existing) return { orderId: existing.id, created: false };
+      if (existing) {
+        // Repair path. The orders insert and the order_items insert are
+        // two statements, not one transaction, so a failure between them
+        // (2026-09-21: an order_items FK violation on a product missing
+        // from the products table) committed the order and lost the line
+        // items. Without this, every Stripe retry took the 23505 branch,
+        // returned created:false, and the order stayed itemless forever -
+        // which fulfillment then refuses as "no persisted line items".
+        // Retrying is the mechanism that is supposed to heal a partial
+        // write, so make it actually heal: if the order has no items,
+        // insert them now.
+        const existingItems = await this.listOrderItems(existing.id);
+        if (existingItems.length === 0 && items.length > 0) {
+          await this.insertItems(existing.id, items);
+        }
+        return { orderId: existing.id, created: false };
+      }
     }
     throw new Error(`orders insert failed: ${error?.message}`);
+  }
+
+  /**
+   * Insert an order's line items. Throws on failure so the webhook
+   * returns 500 and Stripe retries into the repair path above.
+   * Residual race: two deliveries of the same session arriving close
+   * enough together could both observe zero items and double-insert.
+   * Stripe retries with backoff rather than concurrently, and the
+   * quantities come from the same immutable metadata snapshot, so this
+   * stays a reconcile-and-correct case rather than a silent overcharge -
+   * no money moves off order_items.
+   */
+  private async insertItems(orderId: string, items: OrderItemRow[]) {
+    const rows = items.map((it) => ({ ...it, order_id: orderId }));
+    const { error } = await this.db.from("order_items").insert(rows);
+    if (error) throw new Error(`order_items insert failed: ${error.message}`);
   }
 
   private async getOne(column: string, value: string) {
