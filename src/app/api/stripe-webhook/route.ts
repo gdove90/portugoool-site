@@ -3,6 +3,8 @@ import Stripe from "stripe";
 import { Size } from "@/lib/types";
 import { getOrdersStore, OrderItemRow, OrderRow } from "@/lib/orders-store";
 import { submitPaidOrder } from "@/lib/fulfillment-submit";
+import { sendEmail } from "@/lib/email";
+import { buildOrderConfirmation } from "@/lib/emails/order-confirmation";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe webhook — the ONLY payment authority. Fulfillment never
@@ -305,11 +307,57 @@ export async function POST(req: NextRequest) {
         submission = "errored";
       }
     }
+
+    // Confirmation email. Customers should hear from GOOOL, not only
+    // from Stripe's receipt. Three rules, in this order of importance:
+    //   1. Never twice. claimConfirmationSend is a compare-and-set on
+    //      confirmation_sent_at, so a redelivered event loses the race
+    //      and mails nothing.
+    //   2. Never fatal. The payment is recorded; a mail provider having
+    //      a bad minute must not turn into a webhook 500 and a retry
+    //      storm on a captured payment.
+    //   3. Never a false positive. If the send fails we release the
+    //      claim, so the next delivery (or a manual replay) can still
+    //      get the receipt out.
+    let confirmation: string | undefined;
+    if (paid) {
+      try {
+        const claimed = await store.claimConfirmationSend(orderId);
+        if (!claimed) {
+          confirmation = "already_sent";
+        } else {
+          const fresh = await store.getOrderById(orderId);
+          const to = fresh?.customer_email ?? null;
+          if (!fresh || !to) {
+            await store.releaseConfirmationClaim(orderId);
+            confirmation = "no_recipient";
+          } else {
+            const items = await store.listOrderItems(orderId);
+            const mail = buildOrderConfirmation({ order: fresh, items });
+            const result = await sendEmail({ to, ...mail });
+            if (result.sent) {
+              confirmation = "sent";
+            } else {
+              await store.releaseConfirmationClaim(orderId);
+              confirmation = result.disabled ? "disabled" : "failed";
+            }
+          }
+        }
+      } catch (err) {
+        console.error("stripe-webhook: confirmation email threw for order", orderId, err);
+        try {
+          await store.releaseConfirmationClaim(orderId);
+        } catch {
+          /* best effort - the claim expiring unreleased only costs a receipt */
+        }
+        confirmation = "errored";
+      }
+    }
     await store.recordEvent(event.id, event.type);
     return NextResponse.json({
       received: true,
       order: orderId,
-      ...(paid ? { submission } : { awaiting: "async payment" }),
+      ...(paid ? { submission, confirmation } : { awaiting: "async payment" }),
     });
   } catch (err) {
     console.error("stripe-webhook error:", err);

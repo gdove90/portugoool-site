@@ -59,6 +59,12 @@ export interface OrderRow {
   /** Identity + start time of the submission attempt holding the lock. */
   submission_attempt_id: string | null;
   submission_started_at: string | null;
+  /**
+   * When the confirmation email was accepted by the provider. Optional
+   * on the insert shape (migration 0032 defaults it to null); it is the
+   * compare-and-set target for claimConfirmationSend().
+   */
+  confirmation_sent_at?: string | null;
 }
 
 export interface ShipmentRow {
@@ -105,6 +111,16 @@ export interface OrdersStore {
     guardAttemptId?: string
   ): Promise<boolean>;
   setOrderStatus(orderId: string, status: OrderRow["status"]): Promise<void>;
+  /**
+   * Claim the right to send this order's confirmation email. Returns
+   * true to exactly ONE caller: an UPDATE guarded on
+   * confirmation_sent_at being null, so Stripe redelivering the event
+   * cannot mail the customer twice. Release it with
+   * releaseConfirmationClaim() when the send then fails, so a later
+   * retry can still deliver.
+   */
+  claimConfirmationSend(orderId: string): Promise<boolean>;
+  releaseConfirmationClaim(orderId: string): Promise<void>;
   addShipment(shipment: ShipmentRow): Promise<void>;
   setFulfillmentStatus(orderId: string, status: string): Promise<void>;
 }
@@ -271,6 +287,25 @@ class SupabaseStore implements OrdersStore {
     return (data?.length ?? 0) > 0;
   }
 
+  async claimConfirmationSend(orderId: string) {
+    const { data, error } = await this.db
+      .from("orders")
+      .update({ confirmation_sent_at: new Date().toISOString() })
+      .eq("id", orderId)
+      .is("confirmation_sent_at", null)
+      .select("id");
+    if (error) throw new Error(`confirmation claim failed: ${error.message}`);
+    return (data?.length ?? 0) > 0;
+  }
+
+  async releaseConfirmationClaim(orderId: string) {
+    const { error } = await this.db
+      .from("orders")
+      .update({ confirmation_sent_at: null })
+      .eq("id", orderId);
+    if (error) throw new Error(`confirmation release failed: ${error.message}`);
+  }
+
   async setOrderStatus(orderId: string, status: OrderRow["status"]) {
     const { error } = await this.db.from("orders").update({ status }).eq("id", orderId);
     if (error) throw new Error(`order status update failed: ${error.message}`);
@@ -417,6 +452,23 @@ class FileStore implements OrdersStore {
       Object.assign(o, { submission_status: to }, fields);
       this.save(s);
       return true;
+    });
+  }
+  async claimConfirmationSend(orderId: string) {
+    return this.withLock(() => {
+      const s = this.load();
+      const o = s.orders[orderId];
+      if (!o || o.confirmation_sent_at) return false;
+      o.confirmation_sent_at = new Date().toISOString();
+      this.save(s);
+      return true;
+    });
+  }
+  async releaseConfirmationClaim(orderId: string) {
+    this.withLock(() => {
+      const s = this.load();
+      if (s.orders[orderId]) s.orders[orderId].confirmation_sent_at = null;
+      this.save(s);
     });
   }
   async setOrderStatus(orderId: string, status: OrderRow["status"]) {
