@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale, hasPrice } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
+import SizeGuide from "./SizeGuide";
 import { useCart } from "@/lib/cart";
 import SizeSelector from "./SizeSelector";
 import CustomizationSelector from "./CustomizationSelector";
@@ -397,44 +398,7 @@ export default function ProductDetail({ product }: { product: Product }) {
             <DetailRow label="Material" value={product.fabric} />
             <DetailRow label="Fit" value={product.fit} />
             <DetailRow label="Care" value={product.careInstructions} />
-            {product.sizeGuide && (
-              <div className="py-4">
-                <h2 className="text-sm font-semibold text-ink">Size guide</h2>
-                <div className="mt-2 overflow-x-auto">
-                  <table className="w-full min-w-[420px] text-left text-sm text-ink/70">
-                    <caption className="sr-only">
-                      Garment measurements in inches per size
-                    </caption>
-                    <thead>
-                      <tr className="border-b border-ink/10 text-xs uppercase tracking-wider text-ink/50">
-                        <th scope="col" className="py-2 pr-4 font-semibold">
-                          Measurement (in)
-                        </th>
-                        {product.sizes.map((s) => (
-                          <th key={s} scope="col" className="py-2 pr-3 font-semibold">
-                            {s === "XXL" ? "2XL" : s}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {product.sizeGuide.measurements.map((m) => (
-                        <tr key={m.label} className="border-b border-ink/5">
-                          <th scope="row" className="py-2 pr-4 font-medium text-ink">
-                            {m.label}
-                          </th>
-                          {product.sizes.map((s) => (
-                            <td key={s} className="py-2 pr-3">
-                              {m.values[s] ?? "–"}
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
+            <SizeGuide productId={product.id} />
           </div>
         </div>
       </div>
