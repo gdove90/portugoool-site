@@ -48,16 +48,6 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-semibold text-ink">Customization</h2>
-          <p className="mt-2">
-            Custom names and numbers are not offered on the current
-            collection. Every piece ships exactly as designed and shown.
-            If personalisation returns, these terms will be updated before
-            it is available to order.
-          </p>
-        </section>
-
-        <section>
           <h2 className="text-lg font-semibold text-ink">Shipping</h2>
           <p className="mt-2">
             Every piece is printed to order. Production takes about a week, then 3 to 7 business days in transit, so expect delivery within 7–12 business days in the US. Orders to Canada, Portugal and the UK take longer.

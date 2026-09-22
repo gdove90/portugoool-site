@@ -23,11 +23,6 @@ export const FAQ_ITEMS: FAQItem[] = [
       "All sales are final. If your order arrives defective, damaged, or wrong, we replace it free: contact us within 14 days of delivery with photos. Double-check the fit notes and your size before ordering.",
   },
   {
-    question: "How does customization work?",
-    answer:
-      "Every piece ships exactly as designed. Name and number printing is not offered on the current collection.",
-  },
-  {
     question: "How do drops work?",
     answer:
       "We release designs in drops: collections that land together. Designs can retire when the next drop lands.",

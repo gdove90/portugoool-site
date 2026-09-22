@@ -4,6 +4,11 @@ import { sizeChartFor, inches } from "@/lib/size-charts";
 // JavaScript, works before hydration, and is keyboard and screen-reader
 // accessible without any ARIA of our own.
 //
+// Say what we have and nothing about what we do not. A blank whose
+// maker publishes no sleeve length simply shows no sleeve column: the
+// absence is invisible unless we point at it, and pointing at it only
+// plants a doubt the shopper did not arrive with.
+//
 // The doubled "around" column exists because every figure a garment
 // manufacturer publishes is a HALF chest, measured flat pit to pit.
 // Shoppers measure themselves around. Showing only the flat figure is
@@ -84,7 +89,6 @@ export default function SizeGuide({ productId }: { productId: string }) {
           Measured flat in inches, so allow a little variation between
           garments. To find your size, measure a shirt you already like
           across the chest and match the flat figure.
-          {!hasSleeve && " The maker does not publish a sleeve length for this blank, so we do not list one."}
         </p>
       </div>
     </details>
