@@ -1672,7 +1672,7 @@ export const products: Product[] = [
     slug: "goool-performance-tee",
     description:
       "Lightweight training tee with the GOOOL crest printed at the visual center of the chest. Athletic fit, taped neck, blank back.",
-    priceCents: 3800,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -1771,7 +1771,7 @@ export const products: Product[] = [
     slug: "goool-heavyweight-hoodie",
     description:
       "Heavyweight pullover hoodie with the underlined GOOOL wordmark centered across the chest. Generous fit, kangaroo pocket, blank back.",
-    priceCents: 6800,
+    priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -1851,7 +1851,7 @@ export const products: Product[] = [
     slug: "goool-heavyweight-casual-tee",
     description:
       "Garment-dyed heavyweight cotton tee. Relaxed fit, semi-dropped shoulder, the underlined GOOOL wordmark centered across the chest. Blank back.",
-    priceCents: 3800,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#2E2E30",
@@ -1971,8 +1971,20 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
 
-  // == GOOOL Athletics (Coming Soon; owner-authorized 25% modeled margin) ==
-  // Pricing authority: designs/18_launch_operations/PRICING-25-PERCENT.json.
+  // == GOOOL Athletics (Coming Soon; owner-authorized 30% modeled margin) ==
+  // Cost model: designs/18_launch_operations/PRICING-25-PERCENT.json.
+  // The MODEL in that file is still the authority (2.9% + $0.30 card
+  // fee, 5% reprint reserve, $3 label budget, $1/item fulfillment, size
+  // surcharge on the worst size). Its PRICES are superseded: the owner
+  // raised the floor from 25% to 30% of the worst-size landed cost on
+  // 2026-09-22 and every product was recomputed against fresh Apliiq
+  // dropship quotes read that day. Price = lowest value ending in 8 at
+  // or above (landed + 0.30) / 0.621.
+  //
+  // The single biggest lever here is the $3 label budget, which that
+  // file itself flags as an unverified contingency. It is ~8 points on
+  // a $38 tee. Drop the label program and the floors fall roughly one
+  // step: crewneck $98, performance tee $48, badge tee $38.
   // Cotton Modern Sport is archived for a performance-only launch.
   // Saved-design garment/print costs are verified; labeling, shipping and
   // sample approval remain launch gates. Pricing does not authorize sales.
@@ -1984,19 +1996,13 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-tee",
     description:
       "Bold, forward-leaning GOOOL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOOOL Athletics mark at the upper back. Solid black crewneck.",
-    // $48, not $64. The $64 was never a considered price: this cotton
+    // Archived (isActive false), but priced on the same basis as the
+    // rest so it is correct if it is ever revived. The $64 it carried
+    // until 2026-09-22 was never a considered price: this cotton
     // version was archived in favour of the ST720 performance twin, so
     // PRICING-25-PERCENT.json skips it and nothing ever repriced it.
-    // It is still in the fulfillment mapping, so it is still sellable,
-    // so it still needs a defensible number.
-    // Apliiq dropship quote $24.48 (read from product 6112026 on
-    // 2026-09-22 - the same blank and the same quote as Minimal Club).
-    // Worst-size landed cost on the launch model: 24.48 + 2.00 XXL
-    // + 3.00 label + 1.00 fulfillment = $30.48. Holding 30% after the
-    // 2.9% + $0.30 card fee and the 5% reprint reserve needs $49.56,
-    // which rounds to $48 on the nearest-8 rule (50 rounds down to 48).
-    // $48 gives 28.0% worst-size, 38.4% on S-XL without the label.
-    priceCents: 4800,
+    // Quote $24.48, worst-size landed $30.48, floor $49.57 -> $58.
+    priceCents: 5800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -2122,7 +2128,7 @@ export const products: Product[] = [
     slug: "goool-athletics-minimal-club-tee",
     description:
       "Small black GOOOL Athletics mark at the left chest. Large black GOOOL and ATHLETICS across the upper back with a single red underline. Natural cream crewneck.",
-    priceCents: 4600,
+    priceCents: 5800,
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E5E5DD",
@@ -2172,7 +2178,7 @@ export const products: Product[] = [
     slug: "goool-athletics-circular-badge-tee",
     description:
       "Circular GOOOL Athletics mark in navy at the wearer's left chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Ivory crewneck tee.",
-    priceCents: 3500,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Ivory",
     colorHex: "#E9E1D7",
@@ -2212,7 +2218,7 @@ export const products: Product[] = [
     slug: "goool-athletics-circular-center-crewneck",
     description:
       "Circular GOOOL Athletics mark in forest green, small and centered on the upper chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Gray heather crewneck sweatshirt.",
-    priceCents: 8800,
+    priceCents: 10800,
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#B2B2B2",
@@ -2255,7 +2261,7 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
       "The Modern Sport graphic on a performance training tee: white GOOOL with a red underline and spaced ATHLETICS across the chest, small white GOOOL Athletics mark at the upper back. Athletic-fit crewneck in black or true royal.",
-    priceCents: 3800,
+    priceCents: 5800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
