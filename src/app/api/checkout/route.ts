@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
-import { Size, isSoldOut, isAvailableForSale, hasPrice } from "@/lib/types";
+import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from "@/lib/types";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe Checkout handoff.
@@ -103,7 +103,7 @@ export async function POST(req: NextRequest) {
       }
       color = variant.name;
     }
-    const quantity = Math.max(1, Math.min(10, Math.floor(item.quantity)));
+    const quantity = Math.max(1, Math.min(MAX_LINE_QUANTITY, Math.floor(item.quantity)));
 
     // Customization only counts when the product actually allows it.
     const customName = product.customNameAvailable
@@ -194,7 +194,7 @@ export async function POST(req: NextRequest) {
       p: item.productId,
       c: color,
       s: item.size,
-      q: Math.max(1, Math.min(10, Math.floor(item.quantity))),
+      q: Math.max(1, Math.min(MAX_LINE_QUANTITY, Math.floor(item.quantity))),
       u: unitCents,
       k: mapping.sku,
       a: mapping.apliiqProductId,

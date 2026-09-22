@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
+import { MAX_LINE_QUANTITY } from "@/lib/types";
 
 export default function CartPage() {
-  const { items, removeItem, updateQuantity, subtotalCents } = useCart();
+  const { items, notices, dismissNotices, removeItem, updateQuantity, subtotalCents } = useCart();
   const [checkingOut, setCheckingOut] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -64,6 +65,42 @@ export default function CartPage() {
         Cart
       </h1>
 
+      {notices.length > 0 && (
+        <div
+          role="status"
+          className="mt-6 rounded-lg border border-gold/40 bg-gold/10 px-4 py-3 text-sm text-ink"
+        >
+          <p className="font-semibold">Your saved cart was updated.</p>
+          <ul className="mt-1.5 space-y-1 text-ink/80">
+            {notices.map((n, i) => (
+              <li key={i}>
+                {n.removed ? (
+                  <>
+                    <span className="font-medium">{n.name}</span> is no longer available and was
+                    removed.
+                  </>
+                ) : (
+                  <>
+                    <span className="font-medium">{n.name}</span> is now{" "}
+                    {formatPrice(n.toCents ?? 0)}
+                    {n.fromCents != null && (
+                      <span className="text-ink/50"> · was {formatPrice(n.fromCents)}</span>
+                    )}
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+          <button
+            type="button"
+            onClick={dismissNotices}
+            className="mt-2 text-sm underline underline-offset-2 hover:text-red"
+          >
+            Got it
+          </button>
+        </div>
+      )}
+
       <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_360px]">
         {/* Line items */}
         <ul className="divide-y divide-ink/10">
@@ -115,8 +152,14 @@ export default function CartPage() {
                     <button
                       type="button"
                       onClick={() => updateQuantity(item.key, item.quantity + 1)}
-                      className="flex h-9 w-9 items-center justify-center text-ink/60 hover:text-ink"
+                      disabled={item.quantity >= MAX_LINE_QUANTITY}
+                      className="flex h-9 w-9 items-center justify-center text-ink/60 hover:text-ink disabled:cursor-not-allowed disabled:text-ink/20 disabled:hover:text-ink/20"
                       aria-label="Increase quantity"
+                      title={
+                        item.quantity >= MAX_LINE_QUANTITY
+                          ? `${MAX_LINE_QUANTITY} is the maximum per item`
+                          : undefined
+                      }
                     >
                       +
                     </button>

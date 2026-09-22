@@ -149,6 +149,14 @@ export function isSoldOut(p: Product): boolean {
 }
 
 /** A single line the customer is buying. */
+/**
+ * Maximum units of one line. The checkout route silently clamped to 10
+ * while the cart's + button was unbounded, so a customer could build a
+ * cart of 12, see 12, confirm 12, and be charged for 10 with no notice.
+ * Both sides import this now.
+ */
+export const MAX_LINE_QUANTITY = 10;
+
 export interface CartItem {
   key: string; // unique per product + size + customisation combo
   productId: string;
