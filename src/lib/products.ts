@@ -1984,7 +1984,19 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-tee",
     description:
       "Bold, forward-leaning GOOOL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOOOL Athletics mark at the upper back. Solid black crewneck.",
-    priceCents: 6400,
+    // $48, not $64. The $64 was never a considered price: this cotton
+    // version was archived in favour of the ST720 performance twin, so
+    // PRICING-25-PERCENT.json skips it and nothing ever repriced it.
+    // It is still in the fulfillment mapping, so it is still sellable,
+    // so it still needs a defensible number.
+    // Apliiq dropship quote $24.48 (read from product 6112026 on
+    // 2026-09-22 - the same blank and the same quote as Minimal Club).
+    // Worst-size landed cost on the launch model: 24.48 + 2.00 XXL
+    // + 3.00 label + 1.00 fulfillment = $30.48. Holding 30% after the
+    // 2.9% + $0.30 card fee and the 5% reprint reserve needs $49.56,
+    // which rounds to $48 on the nearest-8 rule (50 rounds down to 48).
+    // $48 gives 28.0% worst-size, 38.4% on S-XL without the label.
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
