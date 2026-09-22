@@ -3,14 +3,15 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// Pre-launch landing takeover — covers the viewport (fixed, above the
-// header/announcement chrome) while checkout is not yet live. Launch day:
-// delete this component and restore the store homepage (git revert).
+// Landing splash — covers the viewport (fixed, above the header and
+// announcement chrome) and is the first thing every visitor sees.
+//
+// Kept deliberately after opening the store: the owner wants its
+// imagery and tone as the entry to the brand. It no longer gates
+// anything and no longer captures email. One Enter button, straight
+// into the collection. The newsletter signup still lives on /about,
+// /drop and /world-cup, so nothing was lost by removing it here.
 export default function ComingSoon() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState("Something went wrong. Try again.");
-
   // Entry to the shop. Open to everyone: the splash is kept as the
   // landing experience, not as a lock. Clicking sets the gate cookie
   // and goes straight through.
@@ -37,27 +38,6 @@ export default function ComingSoon() {
       document.body.style.overflow = prev;
     };
   }, []);
-
-  async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email || status === "loading") return;
-    setStatus("loading");
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      if (!res.ok) {
-        const body = await res.json().catch(() => null);
-        setErrorMsg(body?.error ?? "Something went wrong. Try again.");
-        throw new Error();
-      }
-      setStatus("success");
-    } catch {
-      setStatus("error");
-    }
-  }
 
   return (
     <div className="fixed inset-0 z-[60] overflow-hidden bg-ink">
@@ -115,34 +95,6 @@ export default function ComingSoon() {
           GOOOL · Made for the Moment
         </p>
 
-        {status === "success" ? (
-          <p className="mt-8 text-lg font-semibold text-gold" role="status">
-            You&apos;re on the list. You&apos;ll hear it first. ⚽
-          </p>
-        ) : (
-          <form onSubmit={submit} className="mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row">
-            <label htmlFor="cs-email" className="sr-only">Email address</label>
-            <input
-              id="cs-email"
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@email.com"
-              className="w-full rounded-full border border-paper/25 bg-ink/40 px-5 py-3.5 text-paper placeholder:text-paper/40 backdrop-blur focus:border-gold focus:outline-none"
-            />
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="shrink-0 rounded-full bg-red px-8 py-3.5 font-semibold text-paper transition-colors hover:bg-red-dark disabled:opacity-60"
-            >
-              {status === "loading" ? "Joining…" : "Get first access"}
-            </button>
-          </form>
-        )}
-        {status === "error" && (
-          <p className="mt-3 text-sm text-red" role="alert">{errorMsg}</p>
-        )}
       </div>
 
       {/* Enter the shop — open to everyone */}
