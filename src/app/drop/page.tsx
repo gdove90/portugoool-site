@@ -7,7 +7,7 @@ import { Product } from "@/lib/types";
 export const metadata: Metadata = {
   title: "The First Capsule",
   description:
-    "The GOOOL First Capsule: performance tee, heavyweight hoodie, casual tee, and touchline cap. Coming soon.",
+    "The GOOOL First Capsule: performance and casual tees, heavyweight hoodie, crewneck, and the touchline cap. Now live.",
 };
 
 const CAPSULE_ORDER = [
@@ -46,10 +46,10 @@ export default function DropPage() {
       <section className="border-t border-ink/10 bg-smoke">
         <div className="mx-auto max-w-content px-4 py-12 sm:px-6">
           <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink">
-            Be first when it drops
+            Get the next drop first
           </h2>
           <p className="mb-5 mt-1 text-sm text-ink/60">
-            Join the list and hear the moment the capsule goes live.
+            Join the list for new releases and early access.
           </p>
           <EmailSignup />
         </div>

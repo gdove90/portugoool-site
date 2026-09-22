@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s · GOOOL",
   },
   description:
-    "The sound every stadium screams, made wearable. Premium fan apparel. Coming soon: The First Capsule. Independent brand, original designs only.",
+    "The sound every stadium screams, made wearable. Premium fan apparel. The First Capsule is live. Independent brand, original designs only.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),

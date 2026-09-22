@@ -10,22 +10,22 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "When will my order ship?",
     answer:
-      "Every piece is printed to order. Production takes about a week, then 3 to 7 business days in transit, so expect delivery within 7–12 business days in the US. You'll get tracking by email the moment your order ships.",
+      "Every piece is printed to order. Production takes about a week, then 3 to 7 business days in transit, so expect delivery within 7–12 business days in the US. Orders to Canada, Portugal and the UK take longer. You'll get tracking by email the moment your order ships.",
   },
   {
     question: "How does sizing run?",
     answer:
-      "Jersey-style shirts are an athletic fit and run true to size, so size up if you want a relaxed feel. Casual shirts are a relaxed streetwear fit. Every product page lists the fit.",
+      "Performance tees are an athletic fit and run true to size, so size up if you want a relaxed feel. The heavyweight and garment-dyed tees are a relaxed fit with a semi-dropped shoulder. Every product page lists the fit.",
   },
   {
     question: "Can I return or exchange?",
     answer:
-      "All sales are final. If your order arrives defective, damaged, or wrong, we replace it free: contact us within 14 days of delivery with photos. Double-check the fit notes and your customization spelling before ordering.",
+      "All sales are final. If your order arrives defective, damaged, or wrong, we replace it free: contact us within 14 days of delivery with photos. Double-check the fit notes and your size before ordering.",
   },
   {
     question: "How does customization work?",
     answer:
-      "Jerseys come clean, with no names and no numbers. On any jersey page you can add a name (up to 12 characters) and number (0–99) to the back for a flat $15. Casual shirts and accessories ship as designed.",
+      "Every piece ships exactly as designed. Name and number printing is not offered on the current collection.",
   },
   {
     question: "How do drops work?",

@@ -41,3 +41,13 @@
   to = "/shop"
   status = 301
   force = true
+
+# /customize advertised jersey name/number printing that was never
+# offered on any sellable product. Retired 2026-09-22. As with
+# /world-cup the live redirect is in src/middleware.ts, which runs
+# first; this is the fallback for when middleware is deleted.
+[[redirects]]
+  from = "/customize"
+  to = "/shop"
+  status = 301
+  force = true

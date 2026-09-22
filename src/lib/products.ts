@@ -1775,7 +1775,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "10 oz (330 gsm) 3-end fleece, 70/30 cotton-poly with 100% cotton face yarn.",
+    fabric: "10 oz (330 gsm) 3-end fleece with a 100% cotton face yarn. Black is 70/30 cotton-poly.",
     fit: "Generous, relaxed fit.",
     careInstructions: "Machine wash cold. Tumble dry low. Do not iron the print.",
     images: [
@@ -2039,12 +2039,12 @@ export const products: Product[] = [
     name: "GOOOL Athletics Varsity Tee",
     slug: "goool-athletics-varsity-tee",
     description:
-      "Garment-dyed washed black tee. Arched collegiate GOOOL in warm ivory with a dark red outline, ATHLETICS below between short rules, across the chest.",
+      "Garment-dyed heavyweight tee in washed black or washed navy. Arched collegiate GOOOL in warm ivory with a dark red outline, ATHLETICS below between short rules, across the chest.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#262626",
-    fabric: "Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar.",
+    fabric: "6.5 oz 100% ring-spun cotton, garment-dyed. Opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2216,7 +2216,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#B2B2B2",
-    fabric: "Premium heavyweight fleece crewneck, gray heather, rib collar, cuffs and hem.",
+    fabric: "100% cotton French terry crewneck, gray heather, rib collar, cuffs and hem.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [

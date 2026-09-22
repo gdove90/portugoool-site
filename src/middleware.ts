@@ -48,6 +48,18 @@ export function middleware(req: NextRequest) {
   // Retired routes. These must be handled HERE, not in netlify.toml:
   // middleware runs first, and the gate below would bounce an unknown
   // path to the splash before any Netlify redirect rule was consulted.
+  // /customize advertised name-and-number printing on jerseys for a flat
+  // $15. No jersey is sellable, no active product sets
+  // customNameAvailable, and the supplier record has no variable-text
+  // placement on any blank, so every claim on that page was false.
+  // Retired 2026-09-22; nothing linked to it.
+  if (pathname === "/customize") {
+    const url = req.nextUrl.clone();
+    url.pathname = "/shop";
+    url.search = "";
+    return NextResponse.redirect(url, 301);
+  }
+
   // /world-cup was a seasonal campaign page, retired 2026-09-22.
   if (pathname === "/world-cup") {
     const url = req.nextUrl.clone();

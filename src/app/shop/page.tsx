@@ -5,7 +5,7 @@ import { resolveCollections } from "@/lib/collections";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "The First Capsule: everyday staples with athletic purpose, grouped into Off the Pitch, Warm-Up Club, Match Ready and Touchline Essentials. Coming soon.",
+    "The First Capsule: everyday staples with athletic purpose, grouped into Off the Pitch, Warm-Up Club, Match Ready and Touchline Essentials. Now live.",
 };
 
 export default function ShopPage() {
