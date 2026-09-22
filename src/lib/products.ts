@@ -1671,7 +1671,7 @@ export const products: Product[] = [
     name: "GOOOL Performance Badge Tee",
     slug: "goool-performance-tee",
     description:
-      "Lightweight training tee with the GOOOL crest printed at the visual center of the chest. Athletic fit, taped neck, blank back.",
+      "Lightweight training tee. GOOOL crest centered on the chest, athletic fit, taped neck.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1770,7 +1770,7 @@ export const products: Product[] = [
     name: "GOOOL Core Hoodie",
     slug: "goool-heavyweight-hoodie",
     description:
-      "Heavyweight pullover hoodie with the underlined GOOOL wordmark centered across the chest. Generous fit, kangaroo pocket, blank back.",
+      "Heavyweight pullover hoodie. Underlined GOOOL wordmark across the chest, kangaroo pocket, generous fit.",
     priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1850,7 +1850,7 @@ export const products: Product[] = [
     name: "GOOOL Casual Wordmark Tee",
     slug: "goool-heavyweight-casual-tee",
     description:
-      "Garment-dyed heavyweight cotton tee. Relaxed fit, semi-dropped shoulder, the underlined GOOOL wordmark centered across the chest. Blank back.",
+      "Garment-dyed heavyweight cotton tee. Underlined GOOOL wordmark across the chest, relaxed fit, semi-dropped shoulder.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
@@ -1933,7 +1933,7 @@ export const products: Product[] = [
     name: "GOOOL Touchline Cap",
     slug: "goool-touchline-cap",
     description:
-      "Structured five-panel cap in black and natural. Flat-embroidered GOOOL wordmark centered on the front panel, curved visor, adjustable snap. Blank back.",
+      "Structured five-panel cap in black and natural. Flat-embroidered GOOOL wordmark on the front panel, curved visor, adjustable snap.",
     // $48, not $36: the embroidered cap costs $29.88/unit on Apliiq's dropship
     // rate (blank $14.06 + flat embroidery), the highest decoration cost in the
     // catalog. At $36 that was a 17% margin - the only product under the floor.
@@ -2041,7 +2041,7 @@ export const products: Product[] = [
     name: "GOOOL Athletics Varsity Tee",
     slug: "goool-athletics-varsity-tee",
     description:
-      "Arched collegiate GOOOL in warm ivory with a thin dark red outline, ATHLETICS below between short rules, centered across the chest. Blank back. Washed black crewneck.",
+      "Garment-dyed washed black tee. Arched collegiate GOOOL in warm ivory with a dark red outline, ATHLETICS below between short rules, across the chest.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
@@ -2127,7 +2127,7 @@ export const products: Product[] = [
     name: "GOOOL Athletics Minimal Club Tee",
     slug: "goool-athletics-minimal-club-tee",
     description:
-      "Small black GOOOL Athletics mark at the left chest. Large black GOOOL and ATHLETICS across the upper back with a single red underline. Natural cream crewneck.",
+      "Natural cream heavyweight tee. GOOOL Athletics badge at the left chest, full GOOOL ATHLETICS with a red underline across the upper back.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Natural",
@@ -2177,7 +2177,7 @@ export const products: Product[] = [
     name: "GOOOL Athletics Circular Badge Tee",
     slug: "goool-athletics-circular-badge-tee",
     description:
-      "Circular GOOOL Athletics mark in navy at the wearer's left chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Ivory crewneck tee.",
+      "Ivory heavyweight tee. Navy circular GOOOL Athletics badge at the left chest, the letters themselves forming the ring.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Ivory",
@@ -2217,8 +2217,8 @@ export const products: Product[] = [
     name: "GOOOL Athletics Circular Center Crewneck",
     slug: "goool-athletics-circular-center-crewneck",
     description:
-      "Circular GOOOL Athletics mark in forest green, small and centered on the upper chest: GOOOL arcs over the top, ATHLETICS around the bottom, the letters alone forming the circle. Gray heather crewneck sweatshirt.",
-    priceCents: 10800,
+      "Gray heather French terry crewneck. Forest green circular GOOOL Athletics mark centered on the upper chest, the letters themselves forming the ring.",
+    priceCents: 8800,
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#B2B2B2",
@@ -2260,8 +2260,8 @@ export const products: Product[] = [
     name: "GOOOL Athletics Modern Sport Performance Tee",
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
-      "The Modern Sport graphic on a performance training tee: white GOOOL with a red underline and spaced ATHLETICS across the chest, small white GOOOL Athletics mark at the upper back. Athletic-fit crewneck in black or true royal.",
-    priceCents: 5800,
+      "Performance training tee in black or true royal. White GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",

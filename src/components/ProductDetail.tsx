@@ -375,7 +375,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 <TrustIcon /> Secure checkout
               </li>
               <li className="flex items-center gap-1.5">
-                <TrustIcon /> Delivery within 5–7 business days
+                <TrustIcon /> Delivery within 7–12 business days
               </li>
               {product.isLimitedDrop && (
                 <li className="flex items-center gap-1.5">

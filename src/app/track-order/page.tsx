@@ -62,7 +62,7 @@ export default function TrackOrderPage() {
         {[
           ["Order confirmed", "Instant receipt from our secure checkout, with your GOOOL order reference."],
           ["Shipped", "Tracking number lands in your inbox."],
-          ["Delivered", "Within 5–7 business days in the US."],
+          ["Delivered", "Within 7–12 business days in the US."],
         ].map(([title, body], i) => (
           <li key={title} className="flex gap-4 rounded-xl bg-smoke p-4">
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink font-display font-bold text-gold">
