@@ -1672,7 +1672,7 @@ export const products: Product[] = [
     slug: "goool-performance-tee",
     description:
       "Lightweight training tee with the GOOOL crest printed at the visual center of the chest. Athletic fit, taped neck, blank back.",
-    priceCents: 3700,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -1771,7 +1771,7 @@ export const products: Product[] = [
     slug: "goool-heavyweight-hoodie",
     description:
       "Heavyweight pullover hoodie with the underlined GOOOL wordmark centered across the chest. Generous fit, kangaroo pocket, blank back.",
-    priceCents: 6500,
+    priceCents: 6800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -1851,7 +1851,7 @@ export const products: Product[] = [
     slug: "goool-heavyweight-casual-tee",
     description:
       "Garment-dyed heavyweight cotton tee. Relaxed fit, semi-dropped shoulder, the underlined GOOOL wordmark centered across the chest. Blank back.",
-    priceCents: 3900,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#2E2E30",
@@ -1870,7 +1870,10 @@ export const products: Product[] = [
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
-    // Colorways mirror the saved Apliiq designs (Washed Black 6098963, Washed Grey 6099060).
+    // Colorways mirror the saved Apliiq designs (Washed Black 6113934, Washed Grey
+    // 6113938) - front print at 10in wide, rebuilt from a native 3000px master
+    // 2026-09-21 (was 6.75in / 6098963 + 6099060, now superseded). Back stays
+    // blank on both colors; Apliiq never had a back print for this product.
     colorVariants: [
       {
         name: "Washed Black",
@@ -2016,8 +2019,8 @@ export const products: Product[] = [
     name: "GOOOL Athletics Varsity Tee",
     slug: "goool-athletics-varsity-tee",
     description:
-      "Arched collegiate GOOOL in warm ivory with a thin dark red outline, ATHLETICS below between short rules. Small ivory GOOOL Athletics mark at the upper back. Washed black crewneck.",
-    priceCents: 5000,
+      "Arched collegiate GOOOL in warm ivory with a thin dark red outline, ATHLETICS below between short rules, centered across the chest. Blank back. Washed black crewneck.",
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#262626",
@@ -2035,10 +2038,49 @@ export const products: Product[] = [
         alt: "GOOOL Athletics Varsity Tee in washed black, back view",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
+    ],
+    // Colorways mirror the saved Apliiq designs (Washed Black 6113914, Washed
+    // Navy 6113912) - front print only, 11in GA-02-F. The back mark (GA-02-B)
+    // was dropped 2026-09-21: on this blank, Back Box 1 starts too low to
+    // reach the site's concept placement, so the owner chose to cut the back
+    // print rather than ship a mismatched garment. 6112032 (front+back,
+    // Washed Black) is superseded and marked VOID in Apliiq.
+    colorVariants: [
       {
-        src: "/products/GOOOL_VARSITY_BACK_DETAIL_V1.png",
-        alt: "Close-up concept of the Varsity Tee's ivory upper-back GOOOL Athletics print",
-        caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
+        name: "Washed Black",
+        supplierColor: "Washed Black",
+        hex: "#262626",
+        skuFragment: "WBLACK",
+        images: [
+          {
+            src: "/products/GOOOL_STD_VARSITY_FRONT.webp",
+            alt: "GOOOL Athletics Varsity Tee in washed black, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_VARSITY_BACK.webp",
+            alt: "GOOOL Athletics Varsity Tee in washed black, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Washed Navy",
+        supplierColor: "Washed Navy",
+        hex: "#414C67",
+        skuFragment: "WNAVY",
+        images: [
+          {
+            src: "/products/GOOOL_STD_VARSITY_WASHED_NAVY_FRONT.webp",
+            alt: "GOOOL Athletics Varsity Tee in washed navy, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_VARSITY_WASHED_NAVY_BACK.webp",
+            alt: "GOOOL Athletics Varsity Tee in washed navy, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2195,7 +2237,7 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
       "The Modern Sport graphic on a performance training tee: white GOOOL with a red underline and spaced ATHLETICS across the chest, small white GOOOL Athletics mark at the upper back. Athletic-fit crewneck in black or true royal.",
-    priceCents: 4800,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",

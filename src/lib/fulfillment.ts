@@ -77,26 +77,31 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Casual Wordmark Tee (Bella+Canvas 4810GD)
+  // GOOOL Casual Wordmark Tee (Bella+Canvas 4810GD). Front print rebuilt at
+  // 10in (was 6.75in) on 2026-09-21; each color is a NEW saved design because
+  // Apliiq has no in-place artwork swap. Old designs 6098963/6099060 (and a
+  // misconfigured intermediate, 6113937 - Washed Black with the wrong ink -
+  // created while switching the grey colorway) are still live in the Apliiq
+  // account with no delete path there; do not resurrect their SKUs here.
   "70000000-0000-4000-8000-000000000003": {
     "Washed Black": {
-      apliiqProductId: 6098963,
+      apliiqProductId: 6113934,
       skus: {
-        S: "APQ-6098963S6A1",
-        M: "APQ-6098963S7A1",
-        L: "APQ-6098963S8A1",
-        XL: "APQ-6098963S1A1",
-        XXL: "APQ-6098963S2A1",
+        S: "APQ-6113934S6A1",
+        M: "APQ-6113934S7A1",
+        L: "APQ-6113934S8A1",
+        XL: "APQ-6113934S1A1",
+        XXL: "APQ-6113934S2A1",
       },
     },
     "Washed Grey": {
-      apliiqProductId: 6099060,
+      apliiqProductId: 6113938,
       skus: {
-        S: "APQ-6099060S6A1",
-        M: "APQ-6099060S7A1",
-        L: "APQ-6099060S8A1",
-        XL: "APQ-6099060S1A1",
-        XXL: "APQ-6099060S2A1",
+        S: "APQ-6113938S6A1",
+        M: "APQ-6113938S7A1",
+        L: "APQ-6113938S8A1",
+        XL: "APQ-6113938S1A1",
+        XXL: "APQ-6113938S2A1",
       },
     },
   },
@@ -128,15 +133,30 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     },
   },
   // GOOOL Athletics Varsity Tee (Bella+Canvas 4810GD, Washed Black)
+  // Front print only (11in, GA-02-F) - the back mark (GA-02-B) was dropped
+  // 2026-09-21 because it could not be placed to match the site's concept
+  // art within Back Box 1 (see products.ts). Washed Black rebuilt at
+  // 6113914 (was 6112032, front+back - now VOID in Apliiq); Washed Navy is
+  // a genuinely new colorway at 6113912.
   "80000000-0000-4000-8000-000000000002": {
     "Washed Black": {
-      apliiqProductId: 6112032,
+      apliiqProductId: 6113914,
       skus: {
-        S: "APQ-6112032S6A1",
-        M: "APQ-6112032S7A1",
-        L: "APQ-6112032S8A1",
-        XL: "APQ-6112032S1A1",
-        XXL: "APQ-6112032S2A1",
+        S: "APQ-6113914S6A1",
+        M: "APQ-6113914S7A1",
+        L: "APQ-6113914S8A1",
+        XL: "APQ-6113914S1A1",
+        XXL: "APQ-6113914S2A1",
+      },
+    },
+    "Washed Navy": {
+      apliiqProductId: 6113912,
+      skus: {
+        S: "APQ-6113912S6A1",
+        M: "APQ-6113912S7A1",
+        L: "APQ-6113912S8A1",
+        XL: "APQ-6113912S1A1",
+        XXL: "APQ-6113912S2A1",
       },
     },
   },

@@ -16,7 +16,13 @@ import { CartItem } from "./types";
 // No accounts, no server state — checkout hands off to Stripe.
 // ─────────────────────────────────────────────────────────────
 
-const STORAGE_KEY = "portugooool-cart-v1";
+// v2 (2026-09-21): makeKey now includes color. A v1 key was
+// productId+size+customName+customNumber only, so two colorways in the same
+// size collapsed onto one cart line (the second "add" just bumped quantity
+// on the first color instead of adding its own line). Bumping the storage
+// key so a v1 cart in a returning visitor's browser is dropped rather than
+// read back with colorless keys that would no longer match anything.
+const STORAGE_KEY = "portugooool-cart-v2";
 
 interface CartContextValue {
   items: CartItem[];
@@ -33,6 +39,7 @@ const CartContext = createContext<CartContextValue | null>(null);
 function makeKey(item: Omit<CartItem, "key">): string {
   return [
     item.productId,
+    item.color,
     item.size,
     item.customName ?? "",
     item.customNumber ?? "",
