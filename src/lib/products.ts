@@ -1665,7 +1665,7 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
 
-  // == First Capsule (Apliiq; Coming Soon - sample approval pending) ==
+  // == First Capsule (Apliiq) ==
   {
     id: "70000000-0000-4000-8000-000000000001",
     name: "GOOOL Performance Badge Tee",
@@ -2006,7 +2006,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "Premium cotton crewneck tee, opaque, rib collar. Fabric weight and construction are confirmed at sample approval.",
+    fabric: "Premium cotton crewneck tee, opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2033,8 +2033,6 @@ export const products: Product[] = [
     customNameAvailable: false,
     customNumberAvailable: false,
     customizationPriceCents: 0,
-    disclosure:
-      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   {
     id: "80000000-0000-4000-8000-000000000002",
@@ -2046,7 +2044,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#262626",
-    fabric: "Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar. Fabric weight and construction are confirmed at sample approval.",
+    fabric: "Premium cotton crewneck tee, garment-dyed washed black, opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2119,8 +2117,6 @@ export const products: Product[] = [
     customNameAvailable: false,
     customNumberAvailable: false,
     customizationPriceCents: 0,
-    disclosure:
-      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   {
     id: "80000000-0000-4000-8000-000000000003",
@@ -2132,7 +2128,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E5E5DD",
-    fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar. Fabric weight and construction are confirmed at sample approval.",
+    fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2159,8 +2155,6 @@ export const products: Product[] = [
     customNameAvailable: false,
     customNumberAvailable: false,
     customizationPriceCents: 0,
-    disclosure:
-      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   // Circular-logo family (designs/16_goool_athletics/circular_logo/,
   // 2026-09-20): twelve archived options; only GA-CIRCLE-08 and
@@ -2169,9 +2163,11 @@ export const products: Product[] = [
   // Colour 5150 Made Crew in Athletic Heather (that blank offers no
   // color literally named "gray heather"; Athletic Heather is its only
   // heather gray and the owner approved it on 2026-09-21, so the
-  // "Gray Heather" strings below stay as descriptive site copy). The
-  // priced, unpurchasable Coming Soon posture is unchanged: it waits
-  // on physical sample approval, not on supplier mapping.
+  // "Gray Heather" strings below stay as descriptive site copy).
+  // Sales opened 2026-09-22. Note that neither of these two has been
+  // printed physically: the only samples received were the Performance
+  // Badge Tee and the original Casual Wordmark. A customer order is
+  // now the first physical proof of these marks.
   {
     id: "80000000-0000-4000-8000-000000000004",
     name: "GOOOL Athletics Circular Badge Tee",
@@ -2182,7 +2178,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Ivory",
     colorHex: "#E9E1D7",
-    fabric: "Premium heavyweight cotton crewneck tee, ivory. Fabric weight and construction are confirmed at sample approval.",
+    fabric: "Premium heavyweight cotton crewneck tee, ivory.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2209,8 +2205,6 @@ export const products: Product[] = [
     customNameAvailable: false,
     customNumberAvailable: false,
     customizationPriceCents: 0,
-    disclosure:
-      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   {
     id: "80000000-0000-4000-8000-000000000005",
@@ -2222,7 +2216,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#B2B2B2",
-    fabric: "Premium heavyweight fleece crewneck, gray heather, rib collar, cuffs and hem. Fabric weight and construction are confirmed at sample approval.",
+    fabric: "Premium heavyweight fleece crewneck, gray heather, rib collar, cuffs and hem.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
@@ -2249,8 +2243,6 @@ export const products: Product[] = [
     customNameAvailable: false,
     customNumberAvailable: false,
     customizationPriceCents: 0,
-    disclosure:
-      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
   // Modern Sport is performance-only for launch; cotton remains archived.
   // ST720 supplier design exists. All images remain concepts and sales
@@ -2265,8 +2257,8 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "Performance polyester training tee. Fabric weight and construction are confirmed at sample approval.",
-    fit: "Athletic fit. Confirmed at sample approval.",
+    fabric: "Performance polyester training tee.",
+    fit: "Athletic fit.",
     careInstructions: "Care instructions follow the approved blank and print process.",
     images: [
       {
@@ -2339,8 +2331,6 @@ export const products: Product[] = [
     customNameAvailable: false,
     customNumberAvailable: false,
     customizationPriceCents: 0,
-    disclosure:
-      "In development. Final garment and print details are being checked with the production partner. Product photography follows sample approval.",
   },
 ];
 
