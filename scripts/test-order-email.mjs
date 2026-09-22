@@ -8,6 +8,12 @@
  *
  *   STORE_DIR=<dir> node scripts/test-order-email.mjs <baseUrl> <apliiqPort> <mailPort>
  *
+ * Point STORE_DIR (and the server's ORDERS_TEST_STORE) at a directory
+ * OUTSIDE any OneDrive-synced folder. The file store writes via
+ * write-temp-then-rename, and OneDrive holds a lock on the target long
+ * enough that the rename intermittently fails with EPERM on Windows.
+ * That, not the application, is what made these suites look flaky.
+ *
  * Writes the LAST captured email to tmp/order-confirmation-preview.html
  * so the rendered result can actually be looked at, not just asserted on.
  */
