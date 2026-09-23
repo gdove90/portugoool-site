@@ -22,6 +22,11 @@ That second series is a B2B line with different economics, different
 minimums and different legal exposure. It should not be planned as if it
 were twelve more retail SKUs.
 
+**Owner confirmed 2026-09-23 that team sponsoring is an intended
+expansion.** So 2a-2l are a real roadmap item, not a misfiled set - but
+they are a second business, and the notes below are what it will need that
+retail does not.
+
 **`lockups/` - 9 colourways.** all-gold, gold-standard, ink, ink-on-red,
 mono-white, red-word, signature, terrace-red, white. See
 `lockups-contact-sheet.png`. Note `signature` and `white` are close to
@@ -58,6 +63,34 @@ The format is genuinely good and worth keeping: blank, method, placement
 in inches from named datums (HPS, centre front, hem), and hex values for
 every ink. That is a real tech pack, not a mood board. The faults above
 are supplier-matching errors, not sloppiness.
+
+## What team sponsorship needs that retail does not
+
+Recorded now so it is not rediscovered later.
+
+**It is probably marketing spend, not revenue.** 2c reads "for sponsoring
+local and youth sides" - GOOOL paying to be on someone else's kit. That is
+a different line in the budget from selling shirts, and it should be
+measured on reach and goodwill, not margin. If instead the intent is to
+SELL kit to clubs, that is a third model again, with approvals, sizing
+runs and delivery dates attached.
+
+**Bulk is the one place Apliiq's pricing actually works.** Every retail
+product here is priced off the dropship rate - $17.04 a tee, $29.88 a cap.
+At 144 units the same items are $15.82 and $17.11. A team order is the
+only volume that reaches those tiers, so team work has economics the
+retail catalog never will. That is a genuine argument for the line.
+
+**Youth sizes do not exist in the catalog today.** Every product is S-XXL
+adult. Youth sides need youth blanks, which means new products, new size
+charts and new SKUs before a single kit ships.
+
+**Legal is heavier here, not lighter.** 2c carries its own warning -
+"check league rules on sponsor size before ordering" - and leagues do cap
+sponsor dimensions. Add to that: the club's crest is THEIR mark and needs
+their written permission, and photography of youth teams involves minors,
+which needs parental consent before anything reaches Instagram. None of
+that applies when selling a tee to an adult online.
 
 ## Next step
 
