@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 // Photo-led hero — Iteration 01 "Bold & Emotional"
 // (designs/02_homepage/handoff_drop01, website-bible §4.2).
@@ -110,14 +109,20 @@ export default function Hero() {
         <p className="mt-4 font-display text-xl uppercase tracking-[0.16em] text-paper sm:text-3xl lg:text-[34px]">
           Made for the Moment.
         </p>
-        <div className="mt-9">
-          <Link
-            href="/drop"
-            className="inline-block w-full rounded-full bg-paper px-10 py-4 text-[15px] font-semibold text-ink shadow-[0_4px_24px_rgba(0,0,0,0.35)] transition-transform duration-150 hover:scale-[1.03] motion-reduce:transition-none motion-reduce:hover:scale-100 sm:w-auto"
-          >
-            Shop the Drop
-          </Link>
-        </div>
+        {/* "Shop the Drop" stood here and pointed at /drop, a curated page
+            of four pieces, at a time when the catalog sells ten. The one
+            button in the hero sent people to under half the range.
+
+            It is not repointed at /shop, it is gone: the sticky category
+            bar sits directly below the fold with a pill and a count per
+            collection, which is a better answer to "where do I start" than
+            a single button, and a second call to action competing with it
+            would only split the choice.
+
+            This removes the last link to /drop anywhere on the site.
+            DropBanner, the only other thing that referenced it, has not
+            been rendered for some time. /drop still resolves by direct
+            URL. */}
       </div>
     </section>
   );
