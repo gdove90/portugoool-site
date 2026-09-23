@@ -16,7 +16,34 @@ export interface ShopCollection {
   slugs: string[];
 }
 
+// Display order, top to bottom on the homepage and on /shop. Changed
+// 2026-09-23 to lead with headwear and finish on casual tees. The
+// collections themselves are untouched: same keys, names, subtitles,
+// filter labels and slugs, moved verbatim. CategoryBar and the shop
+// filter both map over this array, so the pills reorder with it and the
+// alternating section background re-stripes itself.
 export const SHOP_COLLECTIONS: ShopCollection[] = [
+  {
+    key: "headwear",
+    name: "Touchline Essentials",
+    subtitle: "Headwear",
+    filterLabel: "Headwear",
+    slugs: ["goool-touchline-cap", "goool-athletics-badge-cap", "goool-athletics-stacked-cap"],
+  },
+  {
+    key: "performance",
+    name: "Match Ready",
+    subtitle: "Athletic Performance",
+    filterLabel: "Performance",
+    slugs: ["goool-performance-tee", "goool-athletics-modern-sport-performance-tee"],
+  },
+  {
+    key: "hoodies-layers",
+    name: "Warm-Up Club",
+    subtitle: "Hoodies & Layers",
+    filterLabel: "Hoodies & Layers",
+    slugs: ["goool-heavyweight-hoodie", "goool-athletics-circular-center-crewneck"],
+  },
   {
     key: "casual-tees",
     name: "Off the Pitch",
@@ -27,27 +54,6 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
       "goool-athletics-varsity-tee",
       "goool-athletics-circular-badge-tee",
     ],
-  },
-  {
-    key: "hoodies-layers",
-    name: "Warm-Up Club",
-    subtitle: "Hoodies & Layers",
-    filterLabel: "Hoodies & Layers",
-    slugs: ["goool-heavyweight-hoodie", "goool-athletics-circular-center-crewneck"],
-  },
-  {
-    key: "performance",
-    name: "Match Ready",
-    subtitle: "Athletic Performance",
-    filterLabel: "Performance",
-    slugs: ["goool-performance-tee", "goool-athletics-modern-sport-performance-tee"],
-  },
-  {
-    key: "headwear",
-    name: "Touchline Essentials",
-    subtitle: "Headwear",
-    filterLabel: "Headwear",
-    slugs: ["goool-touchline-cap", "goool-athletics-badge-cap", "goool-athletics-stacked-cap"],
   },
 ];
 
