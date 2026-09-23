@@ -36,11 +36,18 @@ export const dynamic = "force-dynamic";
 export async function POST(req: NextRequest) {
   const configured = process.env.FULFILLMENT_OPS_KEY;
   const provided = req.headers.get("x-ops-key") ?? "";
+  // Compare BYTE lengths, not string lengths. timingSafeEqual throws a
+  // RangeError on unequal buffer lengths, and String.length counts UTF-16
+  // code units — so a key containing any multi-byte character could pass
+  // the length guard and then throw, turning a failed auth into an
+  // unhandled 500 instead of a 401.
+  const a = Buffer.from(provided, "utf8");
+  const b = Buffer.from(configured ?? "", "utf8");
   if (
     !configured ||
-    configured.length < 16 ||
-    provided.length !== configured.length ||
-    !crypto.timingSafeEqual(Buffer.from(provided), Buffer.from(configured))
+    b.length < 16 ||
+    a.length !== b.length ||
+    !crypto.timingSafeEqual(a, b)
   ) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }

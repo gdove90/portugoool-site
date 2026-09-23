@@ -223,6 +223,25 @@ export async function POST(req: NextRequest) {
         allowed_countries: ["US", "CA", "PT", "GB"],
       },
       shipping_options: [{ shipping_rate: shippingRateId }],
+      // Stripe's hosted Checkout cannot vary a shipping rate by the
+      // destination the buyer types in — the hosted page integration
+      // does not support dynamically customizing shipping options — and
+      // the Shipping Rate object has no destination field, so one rate
+      // serves all four allowed countries and renders ONE delivery
+      // estimate to every buyer. That estimate is a US figure.
+      //
+      // Until the rate itself is replaced with one carrying no estimate,
+      // this puts the country-split truth in words on Stripe's own page,
+      // beside the address form where the buyer picks their country.
+      // Keep it in sync with cart/page.tsx, terms, faq.ts and
+      // track-order: those all say 7-12 business days US, 3-5 weeks
+      // for CA/GB/PT, duties paid by the recipient.
+      custom_text: {
+        shipping_address: {
+          message:
+            "Delivery is 7 to 12 business days in the US. Canada, the UK and Portugal take about 3 to 5 weeks, and your country may charge import duty or VAT on arrival.",
+        },
+      },
       metadata,
       success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/cart`,

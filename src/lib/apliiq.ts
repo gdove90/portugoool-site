@@ -101,10 +101,29 @@ export function isSimulatedDestination(): boolean {
  * destination (the default api.apliiq.com, an explicit override to it,
  * or anything unrecognizable) additionally requires ALL of:
  *   · a LIVE-mode payment (test events can never order garments)
- *   · Netlify production context (previews/branch deploys are refused;
- *     locally CONTEXT is unset, so local runs are refused too)
+ *   · an explicit production assertion (previews, branch deploys and
+ *     local runs are all refused)
  * Only loopback simulators are exempt, and apliiqFetch refuses
  * redirects, so a simulator can never bounce a request to the real API.
+ *
+ * WHY THIS IS NOT process.env.CONTEXT (measured 2026-09-23). CONTEXT is
+ * a BUILD variable. It does not survive into the Netlify Function
+ * runtime: a probe deployed to production read CONTEXT as null, and of
+ * Netlify's own variables only URL, SITE_NAME and SITE_ID were present.
+ * So the old check could never pass in production, and every real
+ * submission would have been refused with "Deploy context 'local' is
+ * not production" — which reads like broken Apliiq credentials rather
+ * than a gate, and would have sent someone hunting the wrong bug while
+ * paid orders piled up unsubmitted.
+ *
+ * URL cannot replace it either: Netlify sets URL to the site's main
+ * address in every context, so it is identical on a deploy preview.
+ * The only runtime signal that genuinely distinguishes production is a
+ * variable scoped to the production context, which is what
+ * APLIIQ_ALLOW_LIVE is. It asserts "this deploy is production"; it does
+ * NOT release production. Releasing is still APLIIQ_SUBMIT_ENABLED plus
+ * real credentials (see apliiqSubmitEnabled), so setting this alone
+ * cannot cause a single garment to be ordered.
  */
 export function submissionEnvironmentAllowed(livemode: boolean): {
   allowed: boolean;
@@ -114,10 +133,17 @@ export function submissionEnvironmentAllowed(livemode: boolean): {
   if (!livemode) {
     return { allowed: false, reason: "Stripe TEST-mode payment; real Apliiq submission refused." };
   }
-  if (process.env.CONTEXT !== "production") {
+  // CONTEXT is still honoured where it IS populated (netlify dev, and any
+  // future runtime that provides it), so this only ever widens the gate.
+  const isProduction =
+    process.env.CONTEXT === "production" || process.env.APLIIQ_ALLOW_LIVE === "true";
+  if (!isProduction) {
     return {
       allowed: false,
-      reason: `Deploy context '${process.env.CONTEXT ?? "local"}' is not production; real Apliiq submission refused.`,
+      reason:
+        "Not a production deploy (CONTEXT=" +
+        `'${process.env.CONTEXT ?? "unset"}', APLIIQ_ALLOW_LIVE unset); ` +
+        "real Apliiq submission refused.",
     };
   }
   return { allowed: true };
