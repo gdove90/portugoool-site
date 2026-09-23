@@ -63,3 +63,39 @@ letters in the same width. Check the letter-to-gap ratio before assuming
 something just needs to be bigger.
 
 Full cap spec: `../../23_cap-embroidery-2026-09-22/APLIIQ-OTTO-31069-SPEC.md`
+
+---
+
+## Producibility check — 2026-09-23
+
+Every placement in the 2026-09-23 handoff was measured against the real
+print areas, read off Apliiq's own product pages rather than assumed.
+
+| blank | Apliiq name | id | max artwork area | services offered |
+|---|---|---|---|---|
+| Bella+Canvas 4810GD | Heavyweight Garment Dyed Tee | 1922 | **13.5in x 15in** | transfer, embroidery |
+| Sport-Tek ST720 | Sustainable Athletic Tee | 782 | **13.5in x 15in** | transfer, embroidery, **screen print** |
+
+**All 41 placements fit.** Nothing is over on width or height.
+
+- widest: `2k-hem-band.png` at 12.00in, 89% of the 13.5in width
+- tallest: `1g-back.png` at 12.30in, 82% of the 15in height
+
+Methods across the set: 27 DTF, 13 embroidery, and one file the club
+supplies itself (the crest on 2c).
+
+Two things this check corrected:
+
+**ST720 offers screen print**, which the earlier note in this repo did not
+have. The method list is per blank, not global - do not assume transfer
+and embroidery are the only options without checking the specific product
+page.
+
+**A 12.5in wide print is already proven on the 4810GD**: the Varsity Tee
+on sale today prints at 12.5 x 6.0in on that exact blank. The largest new
+front is 11.10in, comfortably inside something already in production.
+
+Still open, and not answered by this check: the embroidered placements
+have never been stitched. The digitiser makes the final call on small
+lettering regardless of what a file measures, so one embroidered lockup
+should be sampled before any of the 13 embroidery placements is listed.
