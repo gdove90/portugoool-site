@@ -61,3 +61,41 @@ a brand colour.
   never masked or recoloured, so the dark colourways are shown as colour
   studies rather than as fabricated product photographs. A real second
   colourway render comes from Apliiq or a photograph.
+
+---
+
+# UPDATE, same day: disk rejected, font direction instead
+
+The owner reviewed the studies above and **declined the disk**. The mark
+stays letters-alone, which keeps `LAUNCH_SELECTION.md` intact and removes
+the print-cost increase entirely. The `badges/` and `studies/` files above
+are kept as the record of a direction considered and closed.
+
+The live request is now: **a second colourway carrying the same
+letters-only mark set in a different typeface.**
+
+## What is in `font-study/`
+
+`scripts/build-circular-mark.py` typesets the mark from an actual font
+file rather than redrawing it, so any face can be tried and the arc
+geometry stays identical between candidates.
+
+- `compare-fonts-v3.png` - current mark vs the two candidates, flat.
+- `garment-fonts-v2.png` - both composited on the real C1717 Ivory render
+  at the approved position and print width.
+- `study-colourway-fonts.png` - both in cream on Black, Pepper and
+  True Navy.
+
+| Candidate | Character | Rules position |
+|---|---|---|
+| **Anton** | Tall, condensed, narrow ovals | **In rules.** Already the brand display face per `typography.md`. |
+| **Rockwell Bold** | Slab serif, collegiate | **Needs a decision.** A new face; `typography.md` would have to be amended. |
+
+## Still unresolved
+
+- Garment colours remain screen approximations, not Comfort Colors'
+  values. Confirm against the supplier swatch.
+- A second colourway still needs its own Apliiq saved design, product id
+  and SKU set before it can be sold.
+- Marks here are screen exports. A chosen face must be rebuilt as a
+  300 dpi master at actual print size and proofed.
