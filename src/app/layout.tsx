@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Anton, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart";
-import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -58,7 +57,6 @@ export default function RootLayout({
     <html lang="en" className={`${anton.variable} ${marker.variable}`}>
       <body>
         <CartProvider>
-          <AnnouncementBar />
           <Header />
           <main>{children}</main>
           <Footer />

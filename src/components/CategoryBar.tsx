@@ -13,8 +13,12 @@ import { ResolvedCollection } from "@/lib/collections";
 // top-16 and at z-40: under the header rather than fighting it. The
 // header measures 65px, not 64, because h-16 plus its border-b, so the
 // header's own border covers this bar's first pixel and no strip of page
-// shows between them. AnnouncementBar is NOT sticky (it scrolls away) and
-// must not be counted.
+// shows between them. Nothing else sticky sits above the header, so 64 is
+// the whole offset. There used to be an announcement bar above it, and the
+// note here mattered because that bar was NOT sticky and must not have
+// been counted; it was removed on 2026-09-23. If anything sticky is ever
+// added above the header, this offset and the sections' scroll-mt both
+// have to grow by its height.
 //
 // The scroll-spy line is measured from the live header rather than
 // assumed, so a change to the header's height cannot silently desync it.
@@ -72,13 +76,24 @@ export default function CategoryBar({
       if (!frame) frame = requestAnimationFrame(measure);
     };
 
+    // requestAnimationFrame does not fire while the page is hidden, so a
+    // scroll that happens as someone switches away, or any drift while
+    // they are gone, leaves the pill stale until the next scroll. Re-read
+    // on the way back. Cheap, and it is the only path that runs measure()
+    // outside a frame.
+    const onVisible = () => {
+      if (document.visibilityState === "visible") measure();
+    };
+
     measure();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
+    document.addEventListener("visibilitychange", onVisible);
     return () => {
       if (frame) cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      document.removeEventListener("visibilitychange", onVisible);
     };
   }, [collections]);
 
