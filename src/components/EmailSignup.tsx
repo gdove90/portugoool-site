@@ -80,7 +80,19 @@ export default function EmailSignup() {
 
         {status !== "success" && (
           <p className="mx-auto mt-3 max-w-md text-xs text-paper/60">
-            By joining, you agree to receive GOOOL Athletics LLC marketing emails. Opt out anytime at hello@goool.shop.
+            {/* Names the mechanism that actually exists. Signups go to a
+                Mailchimp audience (api/newsletter), and Mailchimp puts a
+                hosted unsubscribe link in every campaign and honours it
+                automatically, which is one click for the reader and no
+                work for us.
+
+                This used to read "Opt out anytime at hello@goool.shop",
+                which hid the one-click route and pointed at a mailbox
+                instead. Anyone following that instruction creates a manual
+                task that has to be actioned within 10 business days to
+                stay CAN-SPAM compliant. The mailbox stays as a second
+                route, which is what /privacy already promises. */}
+            By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to hello@goool.shop.
           </p>
         )}
 
