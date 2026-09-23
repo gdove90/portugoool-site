@@ -2120,6 +2120,15 @@ export const products: Product[] = [
   },
   {
     id: "80000000-0000-4000-8000-000000000003",
+    // RETIRED 2026-09-22, print defect. Measured at the actual 3.5in
+    // print width, the narrow stroke of the "I" in ATHLETICS is about
+    // 1.19mm. Apliiq's transfer guidance asks for 2mm minimum, so the
+    // letter is liable to break up or close in on the press. That is a
+    // fault in the artwork, not the render, and no customer order
+    // should reach it: isActive false takes it out of every listing and
+    // availableForSale false refuses a purchase even by direct id.
+    // Revive only with corrected artwork that passes the 2mm check at
+    // actual size AND a physical proof.
     name: "GOOOL Athletics Minimal Club Tee",
     slug: "goool-athletics-minimal-club-tee",
     description:
@@ -2146,8 +2155,8 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "unassigned",
-    isActive: true,
-    availableForSale: true,
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

@@ -25,7 +25,6 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     slugs: [
       "goool-heavyweight-casual-tee",
       "goool-athletics-varsity-tee",
-      "goool-athletics-minimal-club-tee",
       "goool-athletics-circular-badge-tee",
     ],
   },

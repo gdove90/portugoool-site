@@ -87,12 +87,20 @@ export default function ComingSoon() {
         </p>
 
         {/* The CTA takes the slot the Coming Soon headline used to hold:
-            it is the one thing we want a visitor to do. */}
+            it is the one thing we want a visitor to do.
+
+            Sized to sit UNDER the wordmark, not compete with it. The
+            earlier version was font-display at text-5xl with 0.3em
+            tracking, which made the button physically wider than the
+            tagline above it and broke three of the rules in CLAUDE.md
+            at once: buttons are body stack, semibold and sentence case,
+            never all-caps. This matches the pill used everywhere else
+            on the site. */}
         <button
           type="button"
           onClick={enter}
           disabled={entering}
-          className="group mt-10 rounded-full border-2 border-gold px-12 py-4 font-display text-3xl uppercase tracking-[0.3em] text-gold transition-colors hover:bg-gold hover:text-ink disabled:opacity-60 sm:px-16 sm:py-5 sm:text-5xl"
+          className="group mt-10 rounded-full border border-gold px-10 py-3.5 text-base font-semibold tracking-[0.06em] text-gold transition-colors hover:bg-gold hover:text-ink disabled:opacity-60 sm:px-12 sm:py-4 sm:text-lg"
         >
           {entering ? "Entering" : "Enter"}
           <span aria-hidden className="ml-3 inline-block transition-transform group-hover:translate-x-1">

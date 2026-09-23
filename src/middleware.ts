@@ -60,6 +60,18 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
+  // The Minimal Club Tee was retired 2026-09-22 over a print defect
+  // (1.19mm letter stroke against Apliiq's 2mm minimum). Its URL was
+  // live and may be linked, so it redirects rather than 404s. This sits
+  // ABOVE the cookie check deliberately: a retired product must not be
+  // reachable by anyone, cookie or not.
+  if (pathname === "/shop/goool-athletics-minimal-club-tee") {
+    const url = req.nextUrl.clone();
+    url.pathname = "/shop";
+    url.search = "";
+    return NextResponse.redirect(url, 301);
+  }
+
   // /world-cup was a seasonal campaign page, retired 2026-09-22.
   if (pathname === "/world-cup") {
     const url = req.nextUrl.clone();
