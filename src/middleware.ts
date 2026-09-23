@@ -29,15 +29,28 @@ import { NextRequest, NextResponse } from "next/server";
 //   /api/apliiq-fulfillment  The supplier's shipment callback, same shape.
 //   /print/                  Supplier file URLs already point at these.
 //   /gate, /api/preview      The gate itself and the check behind it.
+//   /brand/, /hero-crowd     The gate page's own artwork. next/image does
+//                            not read these off disk: the optimizer at
+//                            /_next/image makes a fresh HTTP request back
+//                            to this origin for the source file, and that
+//                            request carries no cookie. Gated, it is
+//                            redirected to /gate and the optimizer is
+//                            handed an HTML page where it expected a PNG,
+//                            so the gate renders with its own logo and
+//                            background broken. Measured on the first
+//                            deploy of this gate, 2026-09-23.
 //
-// Everything else is closed.
+// Everything else is closed. Product imagery under /products/ stays gated
+// with the pages that show it.
 function isPublic(pathname: string): boolean {
   return (
     pathname === "/gate" ||
     pathname === "/api/preview" ||
     pathname === "/api/stripe-webhook" ||
     pathname === "/api/apliiq-fulfillment" ||
-    pathname.startsWith("/print/")
+    pathname.startsWith("/print/") ||
+    pathname.startsWith("/brand/") ||
+    pathname === "/hero-crowd.webp"
   );
 }
 
