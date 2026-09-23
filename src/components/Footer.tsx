@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink py-12 text-paper">
+    <footer className="bg-ink py-8 text-paper">
       {/* Gutters match Header.tsx exactly (px-4 sm:px-6 lg:px-12) so the
           footer content lines up with the nav at every breakpoint. The
           previous mx-auto max-w-content capped it at 1200px, which left
           the footer visibly inset from the full-width header on desktop. */}
       <div className="w-full px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-7 sm:flex-row sm:items-start sm:justify-between">
           <div>
             {/* The full GOOOL Athletics lockup, not the plain wordmark.
                 The footer is where the whole company name belongs, and at
@@ -27,8 +27,8 @@ export default function Footer() {
             <Image
               src="/brand/goool-athletics-lockup-white.png"
               alt="GOOOL Athletics"
-              width={200}
-              height={76}
+              width={156}
+              height={59}
             />
             <p className="mt-2 max-w-xs text-sm text-paper/50">
               The Sound of Victory.
@@ -41,8 +41,8 @@ export default function Footer() {
                 Explore
               </p>
               <ul className="mt-2 space-y-0.5 text-sm">
-                <li><Link href="/shop" className="inline-block py-2.5 text-paper/70 hover:text-paper">Collection</Link></li>
-                <li><Link href="/about" className="inline-block py-2.5 text-paper/70 hover:text-paper">About</Link></li>
+                <li><Link href="/shop" className="inline-block py-2.5 text-paper/70 hover:text-paper sm:py-1">Collection</Link></li>
+                <li><Link href="/about" className="inline-block py-2.5 text-paper/70 hover:text-paper sm:py-1">About</Link></li>
               </ul>
             </div>
             <div>
@@ -50,15 +50,15 @@ export default function Footer() {
                 Support
               </p>
               <ul className="mt-2 space-y-0.5 text-sm">
-                <li><Link href="/contact" className="inline-block py-2.5 text-paper/70 hover:text-paper">Contact</Link></li>
-                <li><Link href="/faq" className="inline-block py-2.5 text-paper/70 hover:text-paper">FAQ</Link></li>
+                <li><Link href="/contact" className="inline-block py-2.5 text-paper/70 hover:text-paper sm:py-1">Contact</Link></li>
+                <li><Link href="/faq" className="inline-block py-2.5 text-paper/70 hover:text-paper sm:py-1">FAQ</Link></li>
               </ul>
             </div>
           </nav>
         </div>
 
-        <div className="mt-10 border-t border-paper/10 pt-6">
-          <nav className="mb-4 flex flex-wrap gap-x-5 gap-y-1 text-xs" aria-label="Legal">
+        <div className="mt-7 border-t border-paper/10 pt-5">
+          <nav className="mb-3 flex flex-wrap gap-x-5 gap-y-1 text-xs" aria-label="Legal">
             <Link href="/refunds" className="text-paper/50 hover:text-paper">Refund Policy</Link>
             <Link href="/terms" className="text-paper/50 hover:text-paper">Terms of Service</Link>
             <Link href="/privacy" className="text-paper/50 hover:text-paper">Privacy Policy</Link>
