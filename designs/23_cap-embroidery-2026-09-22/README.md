@@ -54,3 +54,50 @@ embroidery renders - the raised-thread look is a lighting treatment, not
 simulated stitching. A real embroidery preview has to come from Apliiq
 after a design is saved, and how the small ATHLETICS letters actually
 resolve is decided by the digitiser, not by these files.
+
+---
+
+# UPDATE: black dropped, and both marks thickened for stitch
+
+The owner declined the black snapback renders and kept the cream OTTO. The
+8869 research stands as a record - it remains the only blank found with a
+solid black crown - but no black concepts are carried forward.
+
+## A correction, on the record
+
+An earlier note in this file claimed the Modern Sport lockup had "roughly
+double the margin" of the circular badge. **That was wrong.** It came from
+taking the median stroke width of the whole lockup file, a figure carried
+by the heavy GOOOL glyphs and the solid red rule. Measured by row band,
+the lockup's ATHLETICS is the THINNEST element in either mark:
+
+| element | size | p25 | median |
+|---|---|---|---|
+| lockup GOOOL | 3.5in | 2.94mm | 3.57mm |
+| lockup red rule | 3.5in | 2.77mm | 2.77mm |
+| **lockup ATHLETICS** | 3.5in | **0.57mm** | **0.57mm** |
+| badge GOOOL | 2.0in | 2.36mm | 2.56mm |
+| **badge ATHLETICS** | 2.0in | **1.27mm** | **1.41mm** |
+
+Every part of the lockup's ATHLETICS sat below the ~1.0mm satin minimum.
+It was not stitchable as drawn.
+
+## What was thickened, and by how much
+
+Dilation of the ATHLETICS glyphs only. GOOOL and the rule were already
+clear and are untouched. The radius in each case is the smallest that
+reaches target while keeping all nine letters separate - verified by
+connected-component count, not by eye.
+
+| file | dilation | p25 before | p25 after |
+|---|---|---|---|
+| `BADGE-*-THICK.png` | 4px | 1.27mm | **1.65mm** |
+| `LOCKUP-*-THICK.png` | 16px | 0.57mm | **1.32mm** |
+
+The lockup's ATHLETICS necessarily changes character: it was a light,
+wide-tracked sans and is now medium weight. That is the unavoidable cost
+of embroidering it at all, and it is a design change the owner should see
+rather than have slipped past them.
+
+`concepts/FINAL-*` are the two carried forward. Still composites, not
+Apliiq mockups, and the digitiser still has the final say.
