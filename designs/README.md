@@ -1,3 +1,6 @@
+> **Start here for anything design-related:** [`_LIBRARY/`](_LIBRARY/README.md)
+> - logos, tee designs, kit sponsorship, and the print files you upload to Apliiq.
+
 > **Artwork audit — 2026-09-21:** Current asset authority: [00_asset-library/START-HERE.md](00_asset-library/START-HERE.md). It covers all 64 catalog products plus unlaunched concepts and supersedes the blanket claim below that every artwork decision follows the old PORTUGOOOL guide.
 
 # PORTUGOOOL Design System

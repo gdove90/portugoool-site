@@ -1,3 +1,8 @@
+> **Looking for a file to upload to Apliiq, a logo, or a design?** Use
+> [`../_LIBRARY/`](../_LIBRARY/README.md). This page remains the artwork
+> *authority* - which file is correct and why - while the library is the
+> browsable front door organised by type.
+
 > **New owner placement decision:** [Casual Wordmark Tee](CASUAL-TEE-PLACEMENT-REVISION.md), both colorways: front artwork top **3.00in below collar**, width **6.75in**. Apply in Apliiq and website imagery; execution is pending.
 
 # GOOOL artwork — start here

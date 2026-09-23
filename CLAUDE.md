@@ -112,7 +112,7 @@ connector's project.
 | `src/lib/` | Types, data access, cart, Supabase clients, helpers |
 | `public/` | Production static assets; product images in `public/products/` |
 | `supabase/` | SQL migrations — the schema's source of truth |
-| `designs/` | **Visual documentation source of truth** — brand docs, mockups, tech packs. Never imported by app code. |
+| `designs/` | **Visual documentation source of truth** — brand docs, mockups, tech packs. Never imported by app code. Start at [`designs/_LIBRARY/`](designs/_LIBRARY/README.md): logos, designs by garment, kit sponsorship, and `1-PRINT-FILES/` (what you upload to Apliiq). |
 | `scripts/` | Build/ops scripts (create when first needed) |
 | `src/styles/` | Only `app/globals.css` today; add here if styles grow |
 | `src/lib/types.ts` | Domain types (split into `src/types/` if it outgrows one file) |
