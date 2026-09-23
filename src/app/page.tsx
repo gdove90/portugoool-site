@@ -45,6 +45,22 @@ export default function HomePage() {
       <Hero />
       <TrustBar />
 
+      {/* One line of materials storytelling. The active catalog is 10 items
+          (isActive, not availableForSale, is the gate): 5 cotton-led tees,
+          hoodie and crewneck; 2 performance tees, both the Sport-Tek ST720,
+          which really is "3.8 oz 100% recycled polyester with PosiCharge";
+          3 caps on 65/35 poly-cotton twill. Garment-dyeing is documented on
+          the Casual Wordmark and the Varsity, so the first sentence names a
+          material the range uses, not a process every piece receives. Do not
+          harden it into "every piece is garment-dyed". */}
+      <section className="bg-ink pb-9">
+        <p className="mx-auto max-w-2xl px-4 text-center text-sm leading-relaxed text-paper/55 sm:px-6">
+          Heavyweight cotton, garment-dyed. Recycled performance fabric where
+          the piece needs to move. Nothing chosen just because it was easy to
+          print on.
+        </p>
+      </section>
+
       {collections.map((collection, i) => (
         <section
           key={collection.key}

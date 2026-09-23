@@ -22,11 +22,22 @@ export default function SizeGuide({ productId }: { productId: string }) {
 
   return (
     <details className="group border-t border-ink/10 py-4">
-      <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-ink marker:hidden">
-        <span>Size guide</span>
+      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-ink marker:hidden">
+        {/* The prompt lives in the summary, not under it, so it is visible
+            while the guide is closed - which is the only moment it can
+            change anyone's mind. It also doubles the click target. */}
+        <span>
+          <span className="block text-sm font-semibold">
+            Between sizes?
+          </span>
+          <span className="mt-0.5 block text-xs font-normal leading-relaxed text-ink/55">
+            Measure a tee you already like across the chest, and match the
+            flat figure.
+          </span>
+        </span>
         <span
           aria-hidden
-          className="text-ink/40 transition-transform group-open:rotate-180"
+          className="mt-0.5 shrink-0 text-ink/40 transition-transform group-open:rotate-180"
         >
           ▾
         </span>
@@ -87,8 +98,7 @@ export default function SizeGuide({ productId }: { productId: string }) {
 
         <p className="mt-3 text-[11px] leading-relaxed text-ink/45">
           Measured flat in inches, so allow a little variation between
-          garments. To find your size, measure a shirt you already like
-          across the chest and match the flat figure.
+          garments.
         </p>
       </div>
     </details>

@@ -50,7 +50,8 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Shipping</h2>
           <p className="mt-2">
-            Every piece is printed to order. Production takes about a week, then 3 to 7 business days in transit, so expect delivery within 7–12 business days in the US. Orders to Canada, Portugal and the UK take longer.
+            Orders arrive within 7–12 business days in the US. Orders to
+            Canada, Portugal and the UK take longer.
             Dates are estimates, not guarantees; if
             we can&apos;t ship within 30 days we&apos;ll notify you and offer
             a refund. See <Link href="/track-order" className="font-medium text-ink underline underline-offset-2">Track Order</Link> for how delivery works.

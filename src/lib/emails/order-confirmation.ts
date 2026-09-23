@@ -122,7 +122,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
   textLines.push(
     "",
     "WHAT HAPPENS NOW",
-    "Every GOOOL piece is printed to order, so this takes a few days before it ships.",
+    "Your order takes a few days to prepare before it ships.",
     "We will email you the tracking number the moment the parcel is on its way.",
     "",
     `Check your order any time at ${site}/track-order`,
@@ -216,7 +216,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
           <tr><td style="padding:18px 20px;">
             <div style="font:700 11px/1 Helvetica,Arial,sans-serif;letter-spacing:.14em;color:${MUTED};text-transform:uppercase;">What happens now</div>
             <div style="font:400 14px/1.65 Helvetica,Arial,sans-serif;color:${INK};margin-top:9px;">
-              Every GOOOL piece is printed to order, so this takes a few days before it ships.
+              Your order takes a few days to prepare before it ships.
               We will email you the tracking number the moment the parcel is on its way.
             </div>
           </td></tr>

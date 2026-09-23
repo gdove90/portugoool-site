@@ -1850,13 +1850,18 @@ export const products: Product[] = [
     name: "GOOOL Casual Wordmark Tee",
     slug: "goool-heavyweight-casual-tee",
     description:
-      "Garment-dyed heavyweight cotton tee. Underlined GOOOL wordmark across the chest, relaxed fit, semi-dropped shoulder.",
+      "The wordmark, worn plainly. Heavyweight ring-spun cotton in washed black, garment-dyed so no two pieces settle quite the same. The one you pull on for the match and keep wearing long after it.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#2E2E30",
-    fabric: "6.5 oz 100% ring-spun cotton, garment-dyed.",
-    fit: "Relaxed heavyweight fit, semi-dropped shoulder.",
+    // "combed" was drafted here on 2026-09-23 and cut before it shipped.
+    // Ring-spun yarn is often combed, but carded ring-spun exists and the
+    // supplier states neither, so the claim was unsupported.
+    fabric:
+      "6.5 oz, 100% ring-spun cotton, garment-dyed. The tee is built first, then dyed, which is why the colour reads lived-in rather than flat, why each one comes out slightly its own, and why it deepens with wear instead of fading out of it. Heavier construction, so it holds its shape.",
+    fit:
+      "Relaxed heavyweight fit with a semi-dropped shoulder: the seam sits just off the shoulder point, so it hangs the way a tee looks worn rather than the way one looks folded. True to size for a roomy fit. Size down for something closer to the body.",
     careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
@@ -2266,7 +2271,10 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "Performance polyester training tee.",
+    // Same blank as the Performance Badge Tee - Sport-Tek ST720, see
+    // fulfillment.ts - so it carries the supplier's spec, not a vaguer
+    // paraphrase of it.
+    fabric: "3.8 oz 100% recycled polyester with PosiCharge.",
     fit: "Athletic fit.",
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [

@@ -10,7 +10,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "When will my order ship?",
     answer:
-      "Every piece is printed to order. Production takes about a week, then 3 to 7 business days in transit, so expect delivery within 7–12 business days in the US. Orders to Canada, Portugal and the UK take longer. You'll get tracking by email the moment your order ships.",
+      "Orders arrive within 7–12 business days in the US. Canada, Portugal and the UK take longer. You'll get tracking by email the moment yours ships.",
   },
   {
     question: "How does sizing run?",
