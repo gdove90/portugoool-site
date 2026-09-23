@@ -2381,11 +2381,8 @@ export const products: Product[] = [
     category: "hat",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: false, // see migration 0033 - no products row yet,
-    // and order_items.product_id has an FK to products(id). Selling
-    // before that row exists is the 0031 failure again: the payment
-    // captures, the line-item insert violates the FK, the webhook 500s
-    // and the order cannot be fulfilled. Flip to true once 0033 is run.
+    availableForSale: true, // migration 0033 applied 2026-09-23; the
+    // products row exists, so order_items.product_id satisfies its FK.
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2426,11 +2423,8 @@ export const products: Product[] = [
     category: "hat",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: false, // see migration 0033 - no products row yet,
-    // and order_items.product_id has an FK to products(id). Selling
-    // before that row exists is the 0031 failure again: the payment
-    // captures, the line-item insert violates the FK, the webhook 500s
-    // and the order cannot be fulfilled. Flip to true once 0033 is run.
+    availableForSale: true, // migration 0033 applied 2026-09-23; the
+    // products row exists, so order_items.product_id satisfies its FK.
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

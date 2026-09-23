@@ -11,8 +11,9 @@
 -- Apply via the Supabase dashboard SQL editor (the established workflow;
 -- the org-scoped MCP connector cannot see this project). Idempotent.
 --
--- AFTER APPLYING: set availableForSale: true on both caps in
--- src/lib/products.ts and redeploy. Nothing here opens sales on its own.
+-- APPLIED 2026-09-23 via the Supabase SQL editor. Both rows exist and
+-- carry available_for_sale = true; src/lib/products.ts was flipped to
+-- match in the same change.
 
 insert into public.products
   (id, name, slug, description, price_cents, color, color_hex,
@@ -20,10 +21,10 @@ insert into public.products
 values
   ('80000000-0000-4000-8000-000000000007', 'GOOOL Athletics Badge Cap',
    'goool-athletics-badge-cap', '', 4800, 'Black/Natural', '#E4DFC9',
-   array['OS'], 'hat', 'apliiq', true, false),
+   array['OS'], 'hat', 'apliiq', true, true),
   ('80000000-0000-4000-8000-000000000008', 'GOOOL Athletics Stacked Cap',
    'goool-athletics-stacked-cap', '', 4800, 'Black/Natural', '#E4DFC9',
-   array['OS'], 'hat', 'apliiq', true, false)
+   array['OS'], 'hat', 'apliiq', true, true)
 on conflict (id) do update
   set name              = excluded.name,
       slug              = excluded.slug,
@@ -33,7 +34,8 @@ on conflict (id) do update
       sizes             = excluded.sizes,
       product_category  = excluded.product_category,
       supplier_type     = excluded.supplier_type,
-      is_active         = excluded.is_active;
+      is_active         = excluded.is_active,
+      available_for_sale = excluded.available_for_sale;
 
 -- verify: expect two rows
 -- select id, name, slug, price_cents, available_for_sale
