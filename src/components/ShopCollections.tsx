@@ -51,7 +51,7 @@ export default function ShopCollections({
 
       <div className="space-y-16 sm:space-y-20">
         {visible.map((collection) => (
-          <section key={collection.key} aria-label={`${collection.name} — ${collection.subtitle}`}>
+          <section key={collection.key} aria-label={`${collection.name} · ${collection.subtitle}`}>
             <div className="mb-8">
               <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
                 {collection.name}

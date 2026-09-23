@@ -13,12 +13,14 @@ import EmailSignup from "@/components/EmailSignup";
 // page now counts or names stock; the shop is the one place that does,
 // and it reads the catalog.
 //
-// The quality section is the only place on the site that says HOW a
-// piece gets rejected, and the 1.19mm figure is real: the Minimal Club
-// Tee was retired on 2026-09-22 because the narrow stroke of the "I" in
-// ATHLETICS measured 1.19mm at actual print width, under the 2mm floor
-// its print method needs. See src/middleware.ts, which still redirects
-// its URL. Do not round, soften, or reuse that number for anything else.
+// The quality section states the principle only: marks are measured at
+// the size they will actually print. An earlier draft backed it with the
+// real incident behind it, the Minimal Club Tee retired on 2026-09-22
+// over a 1.19mm letter stroke, and the owner cut that on 2026-09-23. The
+// incident is not a secret and the record of it stays in the repo, in
+// src/middleware.ts where its URL is still redirected, but the storefront
+// does not tell customers about a product that failed. Do not put the
+// figure, the product name, or the story back on this page.
 //
 // CLAUDE.md:148 - no made-to-order or on-demand production language in
 // customer-facing copy (owner decision, 2026-07-23). The quality section
@@ -67,15 +69,9 @@ export default function AboutPage() {
           <p>
             A design is easy. A design that survives being printed is not.
             Every mark we put on a garment gets measured at the size it will
-            actually appear, not the size it looks good at on a screen.
-            Stroke widths, letter spacing, the gap between two characters
-            that decides whether a word reads or blurs.
-          </p>
-          <p>
-            We&apos;ve pulled a finished shirt from the range over a letter
-            stroke that measured 1.19 millimetres. It looked right. It would
-            not have printed right, and a shirt that reads as a smudge at
-            arm&apos;s length is not a shirt we want on anyone.
+            actually appear, not the size it looks good at on a screen:
+            stroke widths, letter spacing, the gaps that decide whether a
+            word reads cleanly or blurs.
           </p>
           <p>
             That is the standard. Fewer pieces, each one checked, and no
