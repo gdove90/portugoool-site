@@ -34,7 +34,7 @@ import { resolveCollections } from "@/lib/collections";
 export const metadata: Metadata = {
   title: "GOOOL · Made for the Moment.",
   description:
-    "The sound every stadium screams, made wearable. Premium fan apparel, original designs only.",
+    "The sound every stadium screams, made wearable. Original soccer sportswear, never licensed.",
 };
 
 export default function HomePage() {
@@ -45,19 +45,49 @@ export default function HomePage() {
       <Hero />
       <TrustBar />
 
-      {/* One line of materials storytelling. The active catalog is 10 items
-          (isActive, not availableForSale, is the gate): 5 cotton-led tees,
-          hoodie and crewneck; 2 performance tees, both the Sport-Tek ST720,
-          which really is "3.8 oz 100% recycled polyester with PosiCharge";
-          3 caps on 65/35 poly-cotton twill. Garment-dyeing is documented on
-          the Casual Wordmark and the Varsity, so the first sentence names a
-          material the range uses, not a process every piece receives. Do not
-          harden it into "every piece is garment-dyed". */}
+      {/* One line of materials storytelling, above the whole catalog, so
+          every attribute it names has to hold for every piece it covers.
+          Checked blank by blank on 2026-09-23 against the 10 active items
+          (isActive, not availableForSale, is the gate):
+
+            5 cotton garments, ALL documented heavyweight -
+              Casual Wordmark + Varsity  B+C 4810GD, 6.5 oz
+              Circular Badge             Comfort Colors C1717, supplier
+                                         calls it heavyweight, no oz published
+              Core Hoodie                Independent IND4000, 10 oz / 330 gsm
+              Circular Center Crewneck   AS Colour 5150, 14.7 oz
+            2 performance tees, BOTH the Sport-Tek ST720, "3.8 oz 100%
+              recycled polyester with PosiCharge" - so sentence two is true
+              of every piece it scopes itself to
+            3 caps on 65/35 poly-cotton twill, which neither sentence claims
+
+          "garment-dyed" was in this line and came out. It is documented on
+          only 3 of the 5 cotton garments (4810GD x2 and the C1717); the
+          hoodie and the crewneck are not garment-dyed, so stated flat above
+          the whole range it was the same shape of claim that got "Premium
+          Quality" removed from the bar itself.
+
+          "ring-spun" was proposed as the safer replacement and is NOT: it
+          covers the exact same 3 products as garment-dyed and no others.
+          Swapping one for the other changes nothing. Both belong on those
+          three product pages, where they now are, and neither belongs here.
+
+          The caps get their own clause rather than being left out. An
+          adversarial read on 2026-09-23 pointed out that a three-sentence
+          materials summary sitting above a catalog containing three caps
+          still reads as covering them, and "Heavyweight cotton" is flatly
+          wrong for 65/35 poly-cotton twill. Naming the twill is better than
+          hedging the cotton: now every one of the 10 active pieces is
+          described by exactly one clause, and no clause reaches past the
+          pieces it names.
+
+          If a fourth cotton piece is ever added, re-run the check before
+          adding any attribute back to this line. */}
       <section className="bg-ink pb-9">
         <p className="mx-auto max-w-2xl px-4 text-center text-sm leading-relaxed text-paper/55 sm:px-6">
-          Heavyweight cotton, garment-dyed. Recycled performance fabric where
-          the piece needs to move. Nothing chosen just because it was easy to
-          print on.
+          Heavyweight cotton. Recycled performance fabric where the piece
+          needs to move. Structured twill where a cap has to hold its shape.
+          Nothing chosen just because it was easy to print on.
         </p>
       </section>
 

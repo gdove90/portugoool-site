@@ -101,7 +101,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     ],
   },
   as5150: {
-    blank: "AS Colour 5150 Made Crew · cotton French terry",
+    blank: "AS Colour 5150 Made Crew · 14.7 oz heavyweight cotton French terry",
     source: "https://www.ascolour.com/",
     note: "Sits closer through the body than a typical fleece crew, and the chest grade is narrow between L and XL, so go by the measurement.",
     rows: [

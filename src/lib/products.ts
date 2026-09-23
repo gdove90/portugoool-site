@@ -2192,8 +2192,27 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Ivory",
     colorHex: "#E9E1D7",
-    fabric: "Premium heavyweight cotton crewneck tee, ivory.",
-    fit: "Relaxed body with a moderate dropped shoulder.",
+    // Comfort Colors C1717, from the supplier's own listing:
+    // apliiq.com/customize/mens/tshirts/Comfort-Colors-Heavyweight-T-Shirt,
+    // retrieved 2026-09-23. Material "100% cotton"; features list "soft
+    // ring-spun cotton", "garment-dyed finish", "heavyweight cotton build",
+    // "durable rib collar", "shoulder twill tape". No oz figure is
+    // published for this blank, so none is quoted - "heavyweight" is the
+    // supplier's own word, not ours.
+    //
+    // What stood here before was "Premium heavyweight cotton crewneck tee,
+    // ivory" - a human-written line with nothing behind it, on a product
+    // whose own care copy already warned that garment-dyed fabric releases
+    // colour. The care copy was ahead of the fabric copy.
+    fabric:
+      "100% ring-spun cotton, garment-dyed. Heavyweight build, with a rib collar and shoulder twill tape.",
+    // The supplier flags this blank as running big, with a wide boxy 90s
+    // cut, and recommends sizing down for a closer fit. All sales are
+    // final, so that belongs on the product page and not only in the
+    // size chart. Three other products share the old wording - this
+    // change is deliberately scoped to the C1717 alone.
+    fit:
+      "Relaxed body with a moderate dropped shoulder, cut wide and boxy in the throwback 90s way. It runs big: size down if you want it closer to the body.",
     careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
@@ -2230,8 +2249,23 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Gray Heather",
     colorHex: "#B2B2B2",
-    fabric: "100% cotton French terry crewneck, gray heather, rib collar, cuffs and hem.",
-    fit: "Relaxed crewneck fit. Ribbed collar, cuffs and hem.",
+    // AS Colour 5150 Made Crew. The weight here did NOT come from this
+    // repo, and that matters: 0028_goool_athletics_circular.sql:33 had
+    // deferred it ("Blank and fabric weight are confirmed at sample
+    // approval"), and package 13 contains two figures that look like
+    // answers but are not - an "approximately 200-240 GSM" RFQ target, and
+    // a "6.5 oz/yd2 ... ring-spun" boilerplate block copied byte-identical
+    // into all 14 package folders. Neither describes this blank.
+    //
+    // 14.7 oz is read off the supplier's own listing for the blank:
+    // apliiq.com/customize/mens/sweatshirts/Made-Crew, retrieved
+    // 2026-09-23, which states "heavyweight, 14.7 oz fabric", "100% cotton
+    // french terry", drop shoulder, inset sleeve, preshrunk. This is the
+    // heaviest piece in the range.
+    fabric:
+      "14.7 oz 100% cotton French terry, preshrunk. Rib collar, cuffs and hem.",
+    fit:
+      "Relaxed crewneck fit with a drop shoulder and inset sleeve. Ribbed collar, cuffs and hem.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low or lay flat to keep the shape. Do not bleach. Do not iron directly on the print.",
     images: [
       {
