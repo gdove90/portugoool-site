@@ -58,8 +58,19 @@ export const metadata: Metadata = {
   // 57 characters. Google truncates around 60, so nothing is cut on
   // desktop, and on mobile it wraps with the category on the first line.
   title: "GOOOL · Original Soccer Sportswear · Made for the Moment.",
+  // 153 characters. Google renders about 155 on desktop and cuts nearer
+  // 120 on mobile, so the order is deliberate: what is sold and what it
+  // costs comes first and survives the mobile cut, positioning second,
+  // shipping last where losing it costs least.
+  //
+  // Every claim checked against the catalog on 2026-09-23. "$48" is the
+  // real floor and sits on 8 of the 10 live products. "Heavyweight" holds
+  // for all five cotton garments. "Embroidered caps" is the three OTTO
+  // 31-069s. The four countries are exactly allowed_countries in
+  // api/checkout. An earlier draft opened with the brand line and ran to
+  // 190 characters, which would have been cut mid-phrase at "Ships to".
   description:
-    "The sound every stadium screams, made wearable. Original soccer sportswear, never licensed.",
+    "Heavyweight cotton tees, hoodies and embroidered caps from $48. Original soccer sportswear, never licensed. Ships to the US, Canada, the UK and Portugal.",
 };
 
 export default function HomePage() {
