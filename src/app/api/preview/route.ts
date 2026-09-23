@@ -1,29 +1,48 @@
-// NOT WIRED UP. This set the goool_preview cookie for the landing curtain,
-// which was removed on 2026-09-23. The middleware no longer reads that
-// cookie, so calling this endpoint has no effect on access. Kept alongside
-// ComingSoon.tsx in case the splash returns.
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-// Entry from the landing splash.
+// Password check for the site gate.
 //
-// This used to validate a password. It no longer does: the owner wants
-// the splash kept as the landing experience for its imagery, but nobody
-// turned away. The button below it sets the same cookie the middleware
-// checks, for anyone who clicks it.
+// This route used to be a curtain: it set the cookie for anyone who asked,
+// validated nothing, and said so in its own header comment. It is now the
+// only thing standing between the public and a storefront that is not open
+// yet, so it actually checks.
 //
-// So this is a CURTAIN, not a lock. Treat the site as fully public and
-// do not put anything behind the gate that actually needs protecting -
-// order data is protected by /api/track-order's own checks, and
-// purchasing is gated by availableForSale, neither of which rely on
-// this cookie.
+// The password never reaches the browser bundle. The client posts what was
+// typed, this compares it server-side against PREVIEW_KEY, and only a match
+// gets the cookie back.
+//
+// Case-insensitive on purpose. This is a preview password shared out loud
+// and typed on phone keyboards that capitalise the first letter for you —
+// "Gary" and "gary" are the same intent, and a curtain that rejects the
+// owner because their keyboard was helpful is a support problem, not
+// security. It guards an unreleased storefront, not customer data: order
+// lookups have their own checks in /api/track-order, and purchasing is
+// gated by the catalog's own isActive flag.
 
-export async function POST() {
+export const dynamic = "force-dynamic";
+
+export async function POST(req: NextRequest) {
   const secret = process.env.PREVIEW_KEY;
+
+  // No key configured means the gate is not holding anything back, so there
+  // is nothing to unlock and nothing to refuse. Middleware fails open in the
+  // same case, and the two must agree or the site locks everyone out.
   if (!secret) {
-    // No key configured means the middleware is not gating anything,
-    // so there is nothing to unlock. Let the client proceed.
     return NextResponse.json({ ok: true, gate: "disabled" });
   }
+
+  let password = "";
+  try {
+    const body = (await req.json()) as { password?: unknown };
+    password = typeof body.password === "string" ? body.password : "";
+  } catch {
+    return NextResponse.json({ error: "Invalid request." }, { status: 400 });
+  }
+
+  if (password.trim().toLowerCase() !== secret.trim().toLowerCase()) {
+    return NextResponse.json({ error: "Incorrect password." }, { status: 401 });
+  }
+
   const res = NextResponse.json({ ok: true });
   res.cookies.set("goool_preview", secret, {
     httpOnly: true,

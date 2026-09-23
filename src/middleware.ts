@@ -1,17 +1,45 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // ─────────────────────────────────────────────────────────────
-// REDIRECTS ONLY. The store is public.
+// REDIRECTS, then the password gate.
 //
-// The landing curtain was removed on 2026-09-23: checkout is live, the
-// catalog is purchasable, and there is nothing left to hold anyone back
-// from. What remains here is the set of redirects that MUST run in
-// middleware, because middleware executes before Netlify's redirect rules
-// and anything expressed only in netlify.toml would never be consulted.
+// The store is held back from the public while the owner launches ads
+// first (2026-09-23). Everything behind the gate stays live and fully
+// functional for anyone holding the password: storefront, cart, checkout,
+// order tracking. The public sees only /gate.
 //
-// Do not move these into netlify.toml. That was tried on 2026-09-22 for
-// the retired-route redirects and they silently never fired.
+// These redirects MUST run in middleware, because middleware executes
+// before Netlify's redirect rules and anything expressed only in
+// netlify.toml would never be consulted. Do not move them into
+// netlify.toml: that was tried on 2026-09-22 for the retired-route
+// redirects and they silently never fired.
+//
+// Redirects run BEFORE the gate on purpose. A retired URL should answer
+// with its 301 whether or not the visitor holds a password, so the
+// redirect map keeps working for anyone who saved an old link.
 // ─────────────────────────────────────────────────────────────
+
+// Paths that must answer without the cookie, or something breaks silently.
+//
+//   /api/stripe-webhook      Stripe posts machine-to-machine with no
+//                            cookie. Gated, every payment event would be
+//                            bounced to an HTML splash, retried for three
+//                            days and then abandoned - with the money
+//                            already captured and no order recorded.
+//   /api/apliiq-fulfillment  The supplier's shipment callback, same shape.
+//   /print/                  Supplier file URLs already point at these.
+//   /gate, /api/preview      The gate itself and the check behind it.
+//
+// Everything else is closed.
+function isPublic(pathname: string): boolean {
+  return (
+    pathname === "/gate" ||
+    pathname === "/api/preview" ||
+    pathname === "/api/stripe-webhook" ||
+    pathname === "/api/apliiq-fulfillment" ||
+    pathname.startsWith("/print/")
+  );
+}
 
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -69,6 +97,27 @@ export function middleware(req: NextRequest) {
     url.pathname = "/shop/goool-athletics-modern-sport-performance-tee";
     url.search = "";
     return NextResponse.redirect(url, 301);
+  }
+
+  // ── Password gate ──────────────────────────────────────────
+  // Fails OPEN when PREVIEW_KEY is absent, and deliberately so. Failing
+  // closed on a missing variable would lock the owner out of their own
+  // site with no way back in, which is worse than the store being visible
+  // a little early. /api/preview agrees: with no key it reports the gate
+  // disabled rather than refusing everyone.
+  const secret = process.env.PREVIEW_KEY;
+  if (secret && !isPublic(pathname)) {
+    if (req.cookies.get("goool_preview")?.value !== secret) {
+      const url = req.nextUrl.clone();
+      url.pathname = "/gate";
+      url.search = "";
+      // Send them back where they were aiming once they are through.
+      // Only the path and query, never a full URL, so this cannot be
+      // turned into an off-site redirect; /gate re-validates it anyway.
+      const wanted = pathname + req.nextUrl.search;
+      if (wanted !== "/") url.searchParams.set("next", wanted);
+      return NextResponse.redirect(url, 307);
+    }
   }
 
   return NextResponse.next();
