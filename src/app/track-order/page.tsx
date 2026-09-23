@@ -53,7 +53,7 @@ export default function TrackOrderPage() {
 
   return (
     <div className="mx-auto max-w-xl px-4 py-14 sm:px-6 sm:py-20">
-      <h1 className="font-display text-4xl font-bold uppercase tracking-tightest text-ink sm:text-5xl">
+      <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-5xl">
         Track Order
       </h1>
       <p className="mt-2 text-ink/60">Here&apos;s how the timeline works:</p>
@@ -65,7 +65,7 @@ export default function TrackOrderPage() {
           ["Delivered", "Within 7–12 business days in the US."],
         ].map(([title, body], i) => (
           <li key={title} className="flex gap-4 rounded-xl bg-smoke p-4">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink font-display font-bold text-gold">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink font-display text-gold">
               {i + 1}
             </span>
             <div>

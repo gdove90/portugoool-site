@@ -17,7 +17,7 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto max-w-xl px-4 py-14 sm:px-6 sm:py-20">
-      <h1 className="font-display text-4xl font-bold uppercase tracking-tightest text-ink sm:text-5xl">
+      <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-5xl">
         Contact
       </h1>
       <p className="mt-2 text-ink/60">

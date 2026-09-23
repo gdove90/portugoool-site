@@ -35,7 +35,7 @@ export default function ProductPage({ params }: Props) {
 
       {related.length > 0 && (
         <section className="mx-auto max-w-content px-4 pb-16 sm:px-6">
-          <h2 className="mb-6 font-display text-2xl font-bold uppercase tracking-tightest text-ink">
+          <h2 className="mb-6 font-display text-2xl uppercase tracking-tightest text-ink">
             You might also like
           </h2>
           <ProductGrid products={related} />

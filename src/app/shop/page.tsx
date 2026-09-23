@@ -14,7 +14,7 @@ export default function ShopPage() {
   return (
     <div className="mx-auto max-w-[1480px] px-4 py-10 sm:px-6 sm:py-14 xl:px-10">
       <div className="mb-10">
-        <h1 className="font-display text-4xl font-bold uppercase tracking-tightest text-ink sm:text-5xl">
+        <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-5xl">
           The First Capsule
         </h1>
         <p className="mt-2 max-w-lg text-ink/60">

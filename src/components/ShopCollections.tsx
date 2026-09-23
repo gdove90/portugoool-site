@@ -53,7 +53,7 @@ export default function ShopCollections({
         {visible.map((collection) => (
           <section key={collection.key} aria-label={`${collection.name} · ${collection.subtitle}`}>
             <div className="mb-8">
-              <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink sm:text-3xl">
+              <h2 className="font-display text-2xl uppercase tracking-tightest text-ink sm:text-3xl">
                 {collection.name}
               </h2>
               <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-ink/50">

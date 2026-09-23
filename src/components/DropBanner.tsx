@@ -8,7 +8,7 @@ export default function DropBanner() {
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">
             The First Capsule · GOOOL
           </p>
-          <h2 className="mt-2 font-display text-3xl font-bold uppercase tracking-tightest sm:text-4xl">
+          <h2 className="mt-2 font-display text-3xl uppercase tracking-tightest sm:text-4xl">
             When it&apos;s gone, it&apos;s gone.
           </h2>
           <p className="mt-3 max-w-lg text-paper/70">

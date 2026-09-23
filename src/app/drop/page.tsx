@@ -29,7 +29,7 @@ export default function DropPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">
             The First Capsule · GOOOL · Now Live
           </p>
-          <h1 className="mt-2 font-display text-4xl font-bold uppercase tracking-tightest sm:text-6xl">
+          <h1 className="mt-2 font-display text-4xl uppercase tracking-tightest sm:text-6xl">
             The First Capsule
           </h1>
           <p className="mt-4 max-w-lg text-paper/70">
@@ -45,7 +45,7 @@ export default function DropPage() {
 
       <section className="border-t border-ink/10 bg-smoke">
         <div className="mx-auto max-w-content px-4 py-12 sm:px-6">
-          <h2 className="font-display text-2xl font-bold uppercase tracking-tightest text-ink">
+          <h2 className="font-display text-2xl uppercase tracking-tightest text-ink">
             Get the next drop first
           </h2>
           <p className="mb-5 mt-1 text-sm text-ink/60">

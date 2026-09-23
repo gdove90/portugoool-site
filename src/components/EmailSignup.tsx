@@ -35,7 +35,7 @@ export default function EmailSignup() {
   return (
     <section className="bg-ink py-16 text-paper sm:py-20">
       <div className="mx-auto max-w-content px-4 text-center sm:px-6">
-        <h2 className="font-display text-3xl font-bold uppercase tracking-tightest sm:text-4xl">
+        <h2 className="font-display text-3xl uppercase tracking-tightest sm:text-4xl">
           Get the next drop first.
         </h2>
         <p className="mx-auto mt-2 max-w-md text-paper/60">
@@ -80,7 +80,7 @@ export default function EmailSignup() {
 
         {status !== "success" && (
           <p className="mx-auto mt-3 max-w-md text-xs text-paper/60">
-            By joining, you agree to receive GOOOL marketing emails. Opt out anytime at hello@goool.shop.
+            By joining, you agree to receive GOOOL Athletics LLC marketing emails. Opt out anytime at hello@goool.shop.
           </p>
         )}
 

@@ -117,7 +117,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-content px-4 sm:px-6">
             <div className="mb-8 flex items-end justify-between">
               <div>
-                <h2 className="font-display text-3xl font-bold uppercase tracking-tightest text-ink sm:text-4xl">
+                <h2 className="font-display text-3xl uppercase tracking-tightest text-ink sm:text-4xl">
                   {collection.name}
                 </h2>
                 <p className="mt-2 text-ink/60">{collection.subtitle}</p>
@@ -144,7 +144,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-content px-4 py-16 sm:px-6 sm:py-20">
-        <h2 className="font-display text-3xl font-bold uppercase tracking-tightest text-ink sm:text-4xl">
+        <h2 className="font-display text-3xl uppercase tracking-tightest text-ink sm:text-4xl">
           Questions
         </h2>
         <div className="mt-8">

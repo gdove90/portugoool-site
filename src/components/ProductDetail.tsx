@@ -178,7 +178,7 @@ export default function ProductDetail({ product }: { product: Product }) {
 
         {/* Purchase panel — price, size, customization, CTA stay tight for mobile */}
         <div>
-          <h1 className="font-display text-3xl font-bold uppercase tracking-tightest text-ink sm:text-4xl">
+          <h1 className="font-display text-3xl uppercase tracking-tightest text-ink sm:text-4xl">
             {product.name}
           </h1>
 
@@ -338,7 +338,7 @@ export default function ProductDetail({ product }: { product: Product }) {
               </button>
             ) : soldOut ? (
               <div className="rounded-xl border border-ink/15 p-5 text-center">
-                <p className="font-display text-xl font-bold uppercase tracking-tightest text-ink">
+                <p className="font-display text-xl uppercase tracking-tightest text-ink">
                   This drop is gone.
                 </p>
                 <p className="mt-1 text-sm text-ink/60">

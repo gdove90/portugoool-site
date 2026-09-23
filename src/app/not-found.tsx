@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="mx-auto max-w-content px-4 py-24 text-center sm:px-6">
-      <p className="font-display text-7xl font-bold uppercase tracking-tightest text-ink/20">
+      <p className="font-display text-7xl uppercase tracking-tightest text-ink/20">
         Offside
       </p>
       <h1 className="mt-4 text-2xl font-semibold text-ink">

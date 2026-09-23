@@ -45,7 +45,7 @@ export default function CartPage() {
   if (items.length === 0) {
     return (
       <div className="mx-auto max-w-content px-4 py-24 text-center sm:px-6">
-        <h1 className="font-display text-4xl font-bold uppercase tracking-tightest text-ink">
+        <h1 className="font-display text-4xl uppercase tracking-tightest text-ink">
           Your cart is empty
         </h1>
         <p className="mt-3 text-ink/60">The next goal deserves a shirt.</p>
@@ -61,7 +61,7 @@ export default function CartPage() {
 
   return (
     <div className="mx-auto max-w-content px-4 py-10 sm:px-6 sm:py-14">
-      <h1 className="font-display text-4xl font-bold uppercase tracking-tightest text-ink sm:text-5xl">
+      <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-5xl">
         Cart
       </h1>
 
@@ -180,7 +180,7 @@ export default function CartPage() {
 
         {/* Summary */}
         <div className="h-fit rounded-xl bg-smoke p-6 lg:sticky lg:top-24">
-          <h2 className="font-display text-xl font-bold uppercase tracking-tightest text-ink">
+          <h2 className="font-display text-xl uppercase tracking-tightest text-ink">
             Summary
           </h2>
 

@@ -11,11 +11,24 @@ export default function Footer() {
       <div className="w-full px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div>
+            {/* The full GOOOL Athletics lockup, not the plain wordmark.
+                The footer is where the whole company name belongs, and at
+                200px ATHLETICS is legible.
+
+                Sourced from designs/_LIBRARY/2-logo-designs/lockups/, which
+                is what lockups are for. A review suggested
+                export/print-files/retail/1a-front.png instead: that is a
+                PRINT file, the embroidery artwork for a 4.14 x 1.72in left
+                chest placement. Pointing the website at it would mean a
+                future thread or sizing revision silently changes the logo
+                on every page. Print files and web assets stay separate.
+
+                720x272 native, served at 200x76, same aspect. */}
             <Image
-              src="/brand/goool-wordmark-white.png"
-              alt="GOOOL"
-              width={130}
-              height={45}
+              src="/brand/goool-athletics-lockup-white.png"
+              alt="GOOOL Athletics"
+              width={200}
+              height={76}
             />
             <p className="mt-2 max-w-xs text-sm text-paper/50">
               The Sound of Victory.
@@ -51,14 +64,14 @@ export default function Footer() {
             <Link href="/privacy" className="text-paper/50 hover:text-paper">Privacy Policy</Link>
           </nav>
           <p className="text-xs leading-relaxed text-paper/40">
-            © {new Date().getFullYear()} GOOOL. All rights reserved.
-            Original soccer sportswear. Built for the love of the game.
-            Made for the Moment.
+            © {new Date().getFullYear()} GOOOL Athletics LLC. All rights
+            reserved. Original soccer sportswear. Built for the love of the
+            game. Made for the Moment.
           </p>
           <p className="mt-2 text-xs leading-relaxed text-paper/40">
-            GOOOL is an independent brand. Not affiliated with, endorsed by,
-            or connected to any football federation, club, league, or
-            governing body. All designs and marks are original.
+            GOOOL Athletics LLC is an independent brand. Not affiliated with,
+            endorsed by, or connected to any football federation, club, league,
+            or governing body. All designs and marks are original.
           </p>
         </div>
       </div>
