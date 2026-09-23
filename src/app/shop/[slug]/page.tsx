@@ -3,6 +3,12 @@ import { notFound } from "next/navigation";
 import ProductDetail from "@/components/ProductDetail";
 import ProductGrid from "@/components/ProductGrid";
 import { getProductBySlug, getProducts } from "@/lib/products";
+import {
+  productJsonLd,
+  breadcrumbJsonLd,
+  jsonLdScript,
+  absolute,
+} from "@/lib/seo";
 
 interface Props {
   params: { slug: string };
@@ -15,9 +21,28 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const product = getProductBySlug(params.slug);
   if (!product) return { title: "Not found" };
+
+  // The title template appends " · GOOOL", and every product name already
+  // starts with GOOOL, so the raw name rendered as "GOOOL Touchline Cap
+  // · GOOOL". The brand is stripped here and the template puts it back
+  // once, with the price, which is what a shopper scans for in a result.
+  const short = product.name.replace(/^GOOOL\s+/, "");
+  const price = `$${(product.priceCents / 100).toFixed(0)}`;
+
   return {
-    title: product.name,
+    title: `${short} · ${price}`,
     description: product.description,
+    alternates: { canonical: `/shop/${product.slug}` },
+    openGraph: {
+      title: `${product.name} · ${price}`,
+      description: product.description,
+      type: "website",
+      url: `/shop/${product.slug}`,
+      images: product.images.slice(0, 1).map((i) => ({
+        url: absolute(i.src),
+        alt: i.alt,
+      })),
+    },
   };
 }
 
@@ -31,6 +56,24 @@ export default function ProductPage({ params }: Props) {
 
   return (
     <>
+      {/* Product and BreadcrumbList. This is what lets a result carry a
+          price, an availability and a Shop > Product trail instead of a
+          bare URL. Every value is built in lib/seo.ts from the catalog
+          itself, so it cannot drift from what the page shows. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(productJsonLd(product))}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Shop", path: "/shop" },
+            { name: product.name, path: `/shop/${product.slug}` },
+          ])
+        )}
+      />
+
       <ProductDetail product={product} />
 
       {related.length > 0 && (

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Refund Policy",
   description:
     "All sales are final. Defective or damaged items are replaced free.",
+  alternates: { canonical: "/refunds" },
 };
 
 const CONTACT_EMAIL = "hello@goool.shop";

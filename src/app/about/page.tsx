@@ -28,9 +28,10 @@ import EmailSignup from "@/components/EmailSignup";
 // ─────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About the Brand",
   description:
-    "GOOOL is an original soccer sportswear brand born from the sound every stadium on earth screams the same.",
+    "Independent soccer sportswear built around the one word every stadium screams. Original crests and wordmarks, never licensed, and every print measured at the size it actually prints.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

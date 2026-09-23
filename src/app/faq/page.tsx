@@ -3,9 +3,10 @@ import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Shipping, Sizing & Returns",
   description:
-    "Shipping, sizing, returns, customization, and delivery timing for GOOOL orders.",
+    "How long delivery takes, how each blank fits, and what happens if an order arrives wrong. Ships to the US, Canada, the UK and Portugal in 7 to 12 business days in the US.",
+  alternates: { canonical: "/faq" },
 };
 
 export default function FAQPage() {

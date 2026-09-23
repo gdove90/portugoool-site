@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "The terms that govern purchases and use of goool.shop.",
+  alternates: { canonical: "/terms" },
 };
 
 const CONTACT_EMAIL = "hello@goool.shop";

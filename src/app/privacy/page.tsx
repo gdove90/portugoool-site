@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "What GOOOL collects, why, and what we never do with it.",
+  alternates: { canonical: "/privacy" },
 };
 
 const CONTACT_EMAIL = "hello@goool.shop";

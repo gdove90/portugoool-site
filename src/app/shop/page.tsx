@@ -3,9 +3,10 @@ import ShopCollections from "@/components/ShopCollections";
 import { resolveCollections } from "@/lib/collections";
 
 export const metadata: Metadata = {
-  title: "Shop",
+  title: "Shop All Ten Pieces",
   description:
-    "The First Capsule: everyday staples with athletic purpose, grouped into Off the Pitch, Warm-Up Club, Match Ready and Touchline Essentials. Now live.",
+    "The First Capsule: heavyweight cotton tees, a hoodie and crewneck, performance tees and embroidered caps. Grouped into Touchline Essentials, Match Ready, Warm-Up Club and Off the Pitch.",
+  alternates: { canonical: "/shop" },
 };
 
 export default function ShopPage() {

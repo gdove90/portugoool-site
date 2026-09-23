@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Permanent_Marker } from "next/font/google";
 import "./globals.css";
+import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -33,18 +34,47 @@ const marker = Permanent_Marker({
 // just because nobody sees it on the page.
 export const metadata: Metadata = {
   title: {
-    default: "GOOOL · Made for the Moment. Original soccer sportswear.",
+    default: "GOOOL · Original Soccer Sportswear · Made for the Moment.",
     template: "%s · GOOOL",
   },
+  // The default description is the FALLBACK, inherited by any page that
+  // does not set its own. It read "The First Capsule is live." until
+  // 2026-09-23, which meant /contact, /cart and /track-order each
+  // announced a four-piece capsule in their search snippet. The capsule
+  // framing belongs on /shop, which owns that language deliberately, and
+  // sets its own description to say so. This one has to work for any page.
   description:
-    "The sound every stadium screams, made wearable. Original soccer sportswear, never licensed. The First Capsule is live. Independent brand, our own designs and marks only.",
+    "Independent soccer sportswear. Original crests and wordmarks, never licensed. Heavyweight cotton tees, hoodies and embroidered caps, shipped to the US, Canada, the UK and Portugal.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "GOOOL",
-    description: "Made for the Moment. Original soccer sportswear.",
+    siteName: "GOOOL",
+    title: "GOOOL · Original Soccer Sportswear",
+    description:
+      "Independent soccer sportswear. Original crests and wordmarks, never licensed. Made for the Moment.",
     type: "website",
+    url: "/",
+    locale: "en_US",
+    // Existing hero art, not a purpose-built share card. One of those was
+    // built and pulled on 2026-09-23 by owner decision. This makes a link
+    // pasted into Instagram or Facebook, the two channels actually in use,
+    // render with the brand on it rather than blank. 1376x768 is close to
+    // the 1.91 ratio those previews crop to.
+    images: [
+      {
+        url: "/hero-crowd.webp",
+        width: 1376,
+        height: 768,
+        alt: "GOOOL",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
 };
 
@@ -56,6 +86,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${anton.variable} ${marker.variable}`}>
       <body>
+        {/* Organization and WebSite, emitted once for the whole site.
+            Product schema lives on the product pages. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(organizationJsonLd())}
+        />
         <CartProvider>
           <Header />
           <main>{children}</main>
