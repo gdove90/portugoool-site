@@ -1,3 +1,6 @@
+// NOT WIRED UP. The landing curtain was removed on 2026-09-23 and / now
+// renders the store homepage. Nothing imports this component. Kept so the
+// splash can be brought back for a future drop without rebuilding it.
 "use client";
 
 import Image from "next/image";

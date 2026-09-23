@@ -1,3 +1,7 @@
+// NOT WIRED UP. This set the goool_preview cookie for the landing curtain,
+// which was removed on 2026-09-23. The middleware no longer reads that
+// cookie, so calling this endpoint has no effect on access. Kept alongside
+// ComingSoon.tsx in case the splash returns.
 import { NextResponse } from "next/server";
 
 // Entry from the landing splash.
