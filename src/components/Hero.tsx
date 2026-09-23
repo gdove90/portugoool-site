@@ -36,8 +36,18 @@ export default function Hero() {
             width. So ATHLETICS is 0.537 of the GOOOL height and spans the
             mark edge to edge.
 
-            The wordmark PNG (720x250) already carries GOOOL and the rule,
-            with the GOOOL band at 137px. Rendered at 420 wide that is an
+            The mark is goool-wordmark-tight-white.png (720x177), which
+            carries GOOOL and the rule with the GOOOL band at 137px.
+
+            That file exists because the original wordmark floated its rule
+            85px below a 137px GOOOL, a ratio of 0.620, where the real
+            lockup sits at 26/136 = 0.191. The hero's rule was more than
+            three times too far from the word. The gap is baked into the
+            PNG, so it was recomposed rather than restyled: the GOOOL
+            artwork and the rule artwork are copied pixel for pixel from
+            the original, only the gap between them changed, and the empty
+            padding above and below trimmed. The old file is untouched and
+            still serves the header. Rendered at 420 wide that is an
             80px GOOOL height, so ATHLETICS wants 0.537 x 80 = 43px of cap.
             At lg, 560 wide gives 107px, so 57.5px of cap.
 
@@ -54,6 +64,9 @@ export default function Hero() {
             breakpoints: 65px at 560, 48px at 420, and correct at the
             in-between sizes a phone actually uses. The px value in front
             of it is the fallback for anything without cqw support.
+
+            Because the rule now ends at the image's bottom edge, the
+            whole gap below it is margin: 0.176 x the GOOOL height = 3.35cqw.
 
             The mark is fluid now, not a fixed 420px. It was fixed before,
             so on a 375px phone it overflowed and GOOOL was clipped at both
@@ -78,16 +91,16 @@ export default function Hero() {
           className="mx-auto w-[calc(100vw-2rem)] max-w-[420px] [container-type:inline-size] lg:max-w-[560px]"
         >
           <Image
-            src="/brand/goool-wordmark-white.png"
+            src="/brand/goool-wordmark-tight-white.png"
             alt=""
             width={420}
-            height={146}
+            height={103}
             priority
             className="h-auto w-full drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)]"
           />
           <span
             aria-hidden="true"
-            className="mt-[2cqw] flex w-full justify-between font-display text-[48px] leading-none text-paper drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)] [font-size:11.5cqw]"
+            className="mt-[3.35cqw] flex w-full justify-between font-display text-[48px] leading-none text-paper drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)] [font-size:11.5cqw]"
           >
             {"ATHLETICS".split("").map((c, i) => (
               <span key={i}>{c}</span>
