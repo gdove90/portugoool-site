@@ -49,7 +49,15 @@ import { resolveCollections } from "@/lib/collections";
 // ─────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "GOOOL · Made for the Moment.",
+  // The homepage title is the strongest single field on the site and it
+  // is the clickable headline in a search result. It read "GOOOL · Made
+  // for the Moment." until 2026-09-23, which is the brand line and
+  // contains no word anyone searches for. The tagline is kept in full and
+  // the category is added in front of it.
+  //
+  // 57 characters. Google truncates around 60, so nothing is cut on
+  // desktop, and on mobile it wraps with the category on the first line.
+  title: "GOOOL · Original Soccer Sportswear · Made for the Moment.",
   description:
     "The sound every stadium screams, made wearable. Original soccer sportswear, never licensed.",
 };
