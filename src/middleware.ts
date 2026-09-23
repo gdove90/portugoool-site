@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
 
 // ─────────────────────────────────────────────────────────────
 // REDIRECTS, then the password gate.
@@ -54,7 +55,7 @@ function isPublic(pathname: string): boolean {
   );
 }
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Canonical domain. /print/* stays reachable on both hosts because
@@ -118,9 +119,14 @@ export function middleware(req: NextRequest) {
   // site with no way back in, which is worse than the store being visible
   // a little early. /api/preview agrees: with no key it reports the gate
   // disabled rather than refusing everyone.
+  //
+  // Only goool_gate counts. The legacy goool_preview cookie was handed to
+  // anyone who tapped Enter on the old curtain and must never open this
+  // gate: see src/lib/gate.ts.
   const secret = process.env.PREVIEW_KEY;
   if (secret && !isPublic(pathname)) {
-    if (req.cookies.get("goool_preview")?.value !== secret) {
+    const expected = await gateToken(secret);
+    if (req.cookies.get(GATE_COOKIE)?.value !== expected) {
       const url = req.nextUrl.clone();
       url.pathname = "/gate";
       url.search = "";
@@ -129,7 +135,12 @@ export function middleware(req: NextRequest) {
       // turned into an off-site redirect; /gate re-validates it anyway.
       const wanted = pathname + req.nextUrl.search;
       if (wanted !== "/") url.searchParams.set("next", wanted);
-      return NextResponse.redirect(url, 307);
+      const res = NextResponse.redirect(url, 307);
+      // Clear the legacy cookie while we are here. It no longer opens
+      // anything, but it carries the password in plain text on every
+      // request, and there is no reason to leave that sitting in browsers.
+      if (req.cookies.has(LEGACY_COOKIE)) res.cookies.delete(LEGACY_COOKIE);
+      return res;
     }
   }
 

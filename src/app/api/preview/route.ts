@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
 
 // Password check for the site gate.
 //
@@ -43,8 +44,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Incorrect password." }, { status: 401 });
   }
 
+  // The cookie holds a versioned hash, never the password, and it is NOT
+  // the goool_preview cookie the old curtain handed to anyone who tapped
+  // Enter. Reusing that name let every past visitor straight through this
+  // gate. See src/lib/gate.ts.
   const res = NextResponse.json({ ok: true });
-  res.cookies.set("goool_preview", secret, {
+  res.cookies.delete(LEGACY_COOKIE);
+  res.cookies.set(GATE_COOKIE, await gateToken(secret), {
     httpOnly: true,
     secure: true,
     sameSite: "lax",
