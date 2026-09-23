@@ -40,6 +40,20 @@ export default function Hero() {
         <p className="mt-4 font-display text-xl uppercase tracking-[0.16em] text-paper sm:text-3xl lg:text-[34px]">
           Made for the Moment.
         </p>
+        {/* The full GOOOL Athletics lockup, the same asset the footer
+            serves. It sits under the statement as a signature rather than
+            above the wordmark, where a second GOOOL would read as the
+            same mark twice. */}
+        <div className="mt-7">
+          <Image
+            src="/brand/goool-athletics-lockup-white.png"
+            alt="GOOOL Athletics"
+            width={176}
+            height={66}
+            className="mx-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.55)]"
+          />
+        </div>
+
         <div className="mt-9">
           <Link
             href="/drop"

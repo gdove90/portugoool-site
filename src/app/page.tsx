@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import CategoryBar from "@/components/CategoryBar";
 import ProductGrid from "@/components/ProductGrid";
 import EmailSignup from "@/components/EmailSignup";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -105,13 +106,19 @@ export default function HomePage() {
         </p>
       </section>
 
+      <CategoryBar collections={collections} />
+
+      {/* id and scroll-mt are what CategoryBar jumps to. The offset clears
+          the sticky header (64px) plus the bar itself, so a jumped-to
+          heading lands below both instead of under them. */}
       {collections.map((collection, i) => (
         <section
           key={collection.key}
+          id={`c-${collection.key}`}
           className={
             i % 2 === 1
-              ? "bg-smoke py-16 sm:py-20"
-              : "py-16 sm:py-20"
+              ? "scroll-mt-[124px] bg-smoke py-16 sm:py-20"
+              : "scroll-mt-[124px] py-16 sm:py-20"
           }
         >
           <div className="mx-auto max-w-content px-4 sm:px-6">
