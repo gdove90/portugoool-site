@@ -36,3 +36,14 @@ vinyl and silicone all appear in this set and none of them are available.
 Verified against Apliiq's customizer and published artwork guide,
 2026-09-22. Limits that bind are in
 `../../23_cap-embroidery-2026-09-22/APLIIQ-OTTO-31069-SPEC.md`.
+
+## Print files
+
+The production artwork for these designs is in [`../1-PRINT-FILES/retail-1a-1l/`](../1-PRINT-FILES/retail-1a-1l/), with the measured
+spec in [`../1-PRINT-FILES/HANDOFF-2026-09-23-apliiq-print-files.md`](../1-PRINT-FILES/HANDOFF-2026-09-23-apliiq-print-files.md).
+
+Those files supersede the method and blank lines on the spec sheets above.
+The sheets were drawn before the supplier limits were known and call for
+DTG and sublimation, which Apliiq cannot run; the print files are DTF and
+embroidery only and name the blank correctly as Bella+Canvas 4810GD.
+**Where the two disagree, the print files are right.**

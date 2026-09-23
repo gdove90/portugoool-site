@@ -15,12 +15,19 @@ library. It is the artwork itself, sized to print.
 | `hoodies-and-crewnecks/` | same, for the hoodie and crewneck |
 | `caps/` | the two embroidery files for the OTTO 31-069 |
 | `labels/` | the sewn-label artwork, 1in and 2in |
+| `retail-1a-1l/` | print files for the 12 new retail designs, not yet listed |
+| `club-kit-2a-2l/` | print files for the club sponsorship line, incl. 25 squad numbers |
 
 Filenames are prefixed with the product they belong to, so
 `12-goool-athletics-circular-badge-tee-ivory__GA-CIRCLE-08-NAVY-PRINT.png`
 is the front print for the Circular Badge Tee in ivory.
 
-`PROVENANCE.json` records where each file was copied from. These are
+`HANDOFF-2026-09-23-apliiq-print-files.md` is the supplier handoff for the
+two new folders: every placement with its measured stroke, gap and letter
+height in mm, and a pass mark against the limits below. Those files were
+built to this spec, not retro-fitted to it.
+
+`PROVENANCE.json` records where each file in the older folders was copied from. These are
 **copies**. If you change a master in its original folder, copy it here
 again, or this folder goes stale.
 

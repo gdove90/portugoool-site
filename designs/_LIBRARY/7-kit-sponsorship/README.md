@@ -36,3 +36,14 @@ confirmed on 2026-09-23 that it is an intended expansion.
 - **Legal is heavier.** Leagues cap sponsor dimensions, a club's crest is
   the club's mark and needs written permission, and photographing youth
   teams means minors and parental consent.
+
+## Print files
+
+The production artwork for these designs is in [`../1-PRINT-FILES/club-kit-2a-2l/`](../1-PRINT-FILES/club-kit-2a-2l/), with the measured
+spec in [`../1-PRINT-FILES/HANDOFF-2026-09-23-apliiq-print-files.md`](../1-PRINT-FILES/HANDOFF-2026-09-23-apliiq-print-files.md).
+
+Those files supersede the method and blank lines on the spec sheets above.
+The sheets were drawn before the supplier limits were known and call for
+DTG and sublimation, which Apliiq cannot run; the print files are DTF and
+embroidery only and name the blank correctly as Bella+Canvas 4810GD.
+**Where the two disagree, the print files are right.**
