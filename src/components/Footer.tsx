@@ -9,7 +9,7 @@ export default function Footer() {
           previous mx-auto max-w-content capped it at 1200px, which left
           the footer visibly inset from the full-width header on desktop. */}
       <div className="w-full px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
+        <div className="grid gap-10 sm:grid-cols-[200px_1fr] sm:items-start lg:grid-cols-[1fr_auto_1fr]">
           <div>
             <Image
               src="/brand/goool-wordmark-white.png"
@@ -22,7 +22,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <nav className="flex gap-16 sm:gap-20" aria-label="Footer">
+          <nav className="flex gap-16 sm:gap-20 sm:justify-self-center" aria-label="Footer">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-paper/40">
                 Explore
