@@ -85,13 +85,24 @@ export default function Hero() {
             breakpoint and would still drift with the font's own metrics;
             space-between spans the width exactly, at any size, and does
             not leave a trailing gap that pushes the word off centre. */}
-        <h1
-          aria-label="GOOOL Athletics"
-          className="mx-auto w-[calc(100vw-2rem)] max-w-[420px] [container-type:inline-size] lg:max-w-[560px]"
-        >
+        {/* The heading carries real text, not just an aria-label.
+            aria-label satisfies a screen reader but is not text content,
+            so with the image alt empty and the letters aria-hidden this
+            h1 was <h1></h1> to a crawler: the most important heading on
+            the site, invisible to search. The alt now carries the name,
+            which both a screen reader and a crawler read, and the letters
+            below stay aria-hidden so the word is not spelled out one
+            character at a time.
+
+            The text says exactly what the mark says and no more. Padding
+            it with search terms the picture does not contain would be
+            hidden keyword stuffing, which is against Google's guidelines
+            and is how a site gets penalised rather than found. Keywords
+            belong in the title and the visible copy. */}
+        <h1 className="mx-auto w-[calc(100vw-2rem)] max-w-[420px] [container-type:inline-size] lg:max-w-[560px]">
           <Image
             src="/brand/goool-wordmark-tight-white.png"
-            alt=""
+            alt="GOOOL Athletics"
             width={420}
             height={103}
             priority
