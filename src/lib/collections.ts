@@ -47,7 +47,7 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     name: "Touchline Essentials",
     subtitle: "Headwear",
     filterLabel: "Headwear",
-    slugs: ["goool-touchline-cap"],
+    slugs: ["goool-touchline-cap", "goool-athletics-badge-cap", "goool-athletics-stacked-cap"],
   },
 ];
 

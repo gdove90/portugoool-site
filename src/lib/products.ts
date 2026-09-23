@@ -2341,6 +2341,104 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
   },
+  // ── Embroidered caps on the OTTO 31-069, added 2026-09-22 ──────────
+  // Same blank and the same decoration route as the Touchline Cap, so the
+  // cost structure is identical: Apliiq charges a flat $11 dropship fee on
+  // embroidery regardless of stitch count until 15,000.
+  //
+  // Both marks were rebuilt to clear Apliiq's PUBLISHED embroidery limits,
+  // not a guessed minimum: 2mm smallest detail, and 1/4in (6.35mm) letter
+  // height below which they call text "not acceptable" and will neither
+  // remake nor refund. See designs/23_cap-embroidery-2026-09-22/.
+  {
+    id: "80000000-0000-4000-8000-000000000007",
+    name: "GOOOL Athletics Badge Cap",
+    slug: "goool-athletics-badge-cap",
+    description:
+      "Structured five-panel cap in black and natural. The circular GOOOL Athletics badge embroidered on the front panel, curved visor, adjustable snap.",
+    // $48 matches the Touchline Cap and lands on the same economics:
+    // dropship $29.88 leaves 37.8% gross before payment fees and shipping.
+    priceCents: 4800,
+    compareAtPriceCents: null,
+    color: "Black/Natural",
+    colorHex: "#E4DFC9",
+    fabric: "65/35 polyester-cotton twill with firm buckram front.",
+    fit: "Adjustable - One Size. Structured mid-profile crown.",
+    careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
+    images: [
+      {
+        src: "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+        alt: "GOOOL Athletics Badge Cap in black and natural, front view",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/GOOOL_STD_BADGE_CAP_BACK.webp",
+        alt: "GOOOL Athletics Badge Cap in black and natural, back view",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    sizes: ["OS"],
+    category: "hat",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: false, // see migration 0033 - no products row yet,
+    // and order_items.product_id has an FK to products(id). Selling
+    // before that row exists is the 0031 failure again: the payment
+    // captures, the line-item insert violates the FK, the webhook 500s
+    // and the order cannot be fulfilled. Flip to true once 0033 is run.
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000008",
+    name: "GOOOL Athletics Stacked Cap",
+    slug: "goool-athletics-stacked-cap",
+    description:
+      "Structured five-panel cap in black and natural. GOOOL over a red rule with ATHLETICS beneath, embroidered across the front panel, curved visor, adjustable snap.",
+    // Also $48, to hold one price across the cap line. Be aware this one
+    // is the thinnest product in the catalog: at 22,313 stitches its
+    // dropship is $33.08, leaving 31.1% gross before fees and shipping.
+    priceCents: 4800,
+    compareAtPriceCents: null,
+    color: "Black/Natural",
+    colorHex: "#E4DFC9",
+    fabric: "65/35 polyester-cotton twill with firm buckram front.",
+    fit: "Adjustable - One Size. Structured mid-profile crown.",
+    careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
+    images: [
+      {
+        src: "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+        alt: "GOOOL Athletics Stacked Cap in black and natural, front view",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
+        alt: "GOOOL Athletics Stacked Cap in black and natural, back view",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    sizes: ["OS"],
+    category: "hat",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: false, // see migration 0033 - no products row yet,
+    // and order_items.product_id has an FK to products(id). Selling
+    // before that row exists is the 0031 failure again: the payment
+    // captures, the line-item insert violates the FK, the webhook 500s
+    // and the order cannot be fulfilled. Flip to true once 0033 is run.
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

@@ -114,6 +114,25 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     // The cap has no colorVariants on the site; its catalog color string
     // is "Black/Natural" and that is the only decorated colorway.
   },
+  // GOOOL Athletics Badge Cap (OTTO 31-069, Black/Natural, front embroidery
+  // 2.00 x 2.02in, 14,140 stitches). Apliiq caps the badge at 2in on this
+  // hat - it silently resizes anything larger, confirmed in both the legacy
+  // and v5 customizers.
+  "80000000-0000-4000-8000-000000000007": {
+    "Black/Natural": {
+      apliiqProductId: 6117349,
+      skus: { OS: "APQ-6117349S34A1" },
+    },
+  },
+  // GOOOL Athletics Stacked Cap (OTTO 31-069, Black/Natural, front
+  // embroidery 3.75 x 1.70in, 22,313 stitches - over Apliiq's 15,000
+  // included, and the overage is already inside the quoted price).
+  "80000000-0000-4000-8000-000000000008": {
+    "Black/Natural": {
+      apliiqProductId: 6117282,
+      skus: { OS: "APQ-6117282S34A1" },
+    },
+  },
   // ── GOOOL Athletics additions (saved designs created and SKUs read
   // from merchandise/detail on 2026-09-22). The catalog still gates all
   // of these behind priceCents 0 + availableForSale false +
