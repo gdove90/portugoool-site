@@ -119,10 +119,8 @@ export default function Hero() {
             a single button, and a second call to action competing with it
             would only split the choice.
 
-            This removes the last link to /drop anywhere on the site.
-            DropBanner, the only other thing that referenced it, has not
-            been rendered for some time. /drop still resolves by direct
-            URL. */}
+            /drop itself was retired on the same day and now 301s to
+            /shop from middleware.ts, next to the other retired routes. */}
       </div>
     </section>
   );

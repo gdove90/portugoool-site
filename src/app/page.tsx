@@ -26,8 +26,10 @@ import { resolveCollections } from "@/lib/collections";
 // hardcoded claim about stock that can drift out of date.
 //
 // Deliberately not included:
-//   DropBanner  "When it's gone, it's gone" is scarcity, and nothing here
-//               is stocked in a way that makes it true. CLAUDE.md forbids it.
+//   DropBanner  deleted 2026-09-23 along with /drop. It carried "When
+//               it's gone, it's gone", which is scarcity, and nothing here
+//               is stocked in a way that makes it true. It was also the
+//               last "Shop the Drop" button left in the codebase.
 //
 // FabricFeatureGrid used to be listed here too. It was a styled "The
 // fabric" section, six cards, written when the range was all performance

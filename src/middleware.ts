@@ -40,6 +40,14 @@ export function middleware(req: NextRequest) {
     return redirectToShop(req);
   }
 
+  // /drop was "The First Capsule", a curated page of four pieces, retired
+  // 2026-09-23. The catalog sells ten and the shop surfaces every one of
+  // them, so the page was both redundant and an understatement of the
+  // range. Its copy also still read "Four pieces, one mark".
+  if (pathname === "/drop") {
+    return redirectToShop(req);
+  }
+
   // The Minimal Club Tee was retired 2026-09-22 over a print defect: the
   // narrow stroke of the "I" in ATHLETICS measured 1.19mm at actual print
   // width, against Apliiq's 2mm minimum.
