@@ -27,33 +27,76 @@ export default function Hero() {
       />
 
       <div className="relative px-4 py-20 text-center">
-        <h1 aria-label="GOOOL">
+        {/* The footer lockup's arrangement, rebuilt at hero scale in the
+            hero's own typeface rather than pasted in as a shrunken image.
+
+            Proportions are measured off the real lockup
+            (public/brand/goool-athletics-lockup-white.png, 720x272):
+            GOOOL glyph band 136px, rule 12px, ATHLETICS 73px at full
+            width. So ATHLETICS is 0.537 of the GOOOL height and spans the
+            mark edge to edge.
+
+            The wordmark PNG (720x250) already carries GOOOL and the rule,
+            with the GOOOL band at 137px. Rendered at 420 wide that is an
+            80px GOOOL height, so ATHLETICS wants 0.537 x 80 = 43px of cap.
+            At lg, 560 wide gives 107px, so 57.5px of cap.
+
+            Anton's cap height was MEASURED, not assumed: rendering
+            "ATHLETICS" to a canvas and reading the ink gives cap = 0.8875em,
+            not the ~0.714em the nominal metrics imply. Sizing off the
+            nominal figure ran the word 24% oversized.
+
+            So the size is expressed against the mark's own width rather
+            than per breakpoint. Mark width W gives a GOOOL height of
+            0.1903W (137/720), a target cap of 0.537 x that = 0.1022W, and
+            a font size of 0.1022W / 0.8875 = 0.115W. As a container query
+            unit that is 11.5cqw, which holds at every width with no
+            breakpoints: 65px at 560, 48px at 420, and correct at the
+            in-between sizes a phone actually uses. The px value in front
+            of it is the fallback for anything without cqw support.
+
+            The mark is fluid now, not a fixed 420px. It was fixed before,
+            so on a 375px phone it overflowed and GOOOL was clipped at both
+            edges. That predates ATHLETICS; adding a second line only made
+            it visible.
+
+            The width is taken from the viewport, not from the parent. The
+            hero's inner div is a flex item and therefore shrink-to-fit, so
+            a plain w-full here resolved against whatever the widest
+            sibling line happened to be (it measured 415px at a 1280
+            viewport, where it should have been 560). calc(100vw - 2rem)
+            matches the section's px-4 gutters and is not at the mercy of
+            sibling text.
+
+            The letters are laid out with justify-between rather than a
+            tracking value. Tracking would have to be re-solved for every
+            breakpoint and would still drift with the font's own metrics;
+            space-between spans the width exactly, at any size, and does
+            not leave a trailing gap that pushes the word off centre. */}
+        <h1
+          aria-label="GOOOL Athletics"
+          className="mx-auto w-[calc(100vw-2rem)] max-w-[420px] [container-type:inline-size] lg:max-w-[560px]"
+        >
           <Image
             src="/brand/goool-wordmark-white.png"
-            alt="GOOOL"
+            alt=""
             width={420}
             height={146}
             priority
-            className="mx-auto drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)] lg:w-[560px]"
+            className="h-auto w-full drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)]"
           />
+          <span
+            aria-hidden="true"
+            className="mt-[2cqw] flex w-full justify-between font-display text-[48px] leading-none text-paper drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)] [font-size:11.5cqw]"
+          >
+            {"ATHLETICS".split("").map((c, i) => (
+              <span key={i}>{c}</span>
+            ))}
+          </span>
         </h1>
         <p className="mt-4 font-display text-xl uppercase tracking-[0.16em] text-paper sm:text-3xl lg:text-[34px]">
           Made for the Moment.
         </p>
-        {/* The full GOOOL Athletics lockup, the same asset the footer
-            serves. It sits under the statement as a signature rather than
-            above the wordmark, where a second GOOOL would read as the
-            same mark twice. */}
-        <div className="mt-7">
-          <Image
-            src="/brand/goool-athletics-lockup-white.png"
-            alt="GOOOL Athletics"
-            width={176}
-            height={66}
-            className="mx-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.55)]"
-          />
-        </div>
-
         <div className="mt-9">
           <Link
             href="/drop"
