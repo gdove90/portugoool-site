@@ -25,10 +25,24 @@ import { resolveCollections } from "@/lib/collections";
 // hardcoded claim about stock that can drift out of date.
 //
 // Deliberately not included:
-//   DropBanner        "When it's gone, it's gone" is scarcity, and every
-//                     product is made to order. CLAUDE.md forbids it.
-//   FabricFeatureGrid describes recycled performance polyester, which is
-//                     the ST720 only. Most of the catalog is cotton.
+//   DropBanner  "When it's gone, it's gone" is scarcity, and nothing here
+//               is stocked in a way that makes it true. CLAUDE.md forbids it.
+//
+// FabricFeatureGrid used to be listed here too. It was a styled "The
+// fabric" section, six cards, written when the range was all performance
+// polyester, and it was excluded from this page because its claims had
+// gone false. Leaving it in the repo was the mistake: it compiled, it
+// looked finished, and anyone wanting a fabric section would have found
+// it and dropped it in. Four of its six cards were wrong against the
+// current catalog - "No heavy cotton" (5 of 10 products are heavyweight
+// cotton, up to 14.7 oz), "100% recycled performance polyester" (2
+// products, both ST720), "Premium enough for match day" (the adjective
+// removed from the bar and all metadata on 2026-09-23), and
+// "Sublimation-friendly fabric" (the word appeared nowhere else in the
+// repo; the catalog prints by embroidery, DTF and transfer).
+//
+// Deleted 2026-09-23. If this page ever wants a fabric section, write it
+// from src/lib/products.ts, not from memory of what the range used to be.
 // ─────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
