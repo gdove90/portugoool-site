@@ -1676,7 +1676,16 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "3.8 oz 100% recycled polyester with PosiCharge.",
+    // Sport-Tek ST720. The supplier defines PosiCharge as "durable,
+    // eco-friendly fabric that resists fading and maintains color", so the
+    // claim is attributed and not upgraded: resists fading, not never fades.
+    //
+    // Shares a blank with the Modern Sport Performance Tee. This line owns
+    // weight and colour; that one owns the neck, the label and the sleeve.
+    // Lightness and wicking were drafted here and moved there to keep the
+    // split clean.
+    fabric:
+      "3.8 oz, 100% recycled polyester. PosiCharge is the supplier's word for a fabric that resists fading and holds its colour, which counts for most on the black.",
     fit: "Athletic fit. True to size.",
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
@@ -1775,7 +1784,21 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "10 oz (330 gsm) 3-end fleece with a 100% cotton face yarn. Black is 70/30 cotton-poly.",
+    // Independent IND4000, from the POD Sample Specification Packet:
+    // "10 oz (330 gsm) 3-end fleece; Black 70% cotton / 30% polyester;
+    // 100% cotton face yarn; generous fit".
+    //
+    // "Face yarn" is glossed rather than left as jargon, on the same rule
+    // that makes this file explain buckram and PosiCharge.
+    //
+    // Bone is sold and its exact blend is documented NOWHERE: not in the
+    // packet, not in supplier-record.json, and Apliiq no longer lists
+    // IND4000 publicly. So this line states Black's blend, which is
+    // documented, and claims nothing about Bone. Do not "tidy" it by
+    // dropping the Black clause, and do not extend it to Bone. If the
+    // supplier ever confirms Bone, add it here.
+    fabric:
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Cut generous, so all that weight has room to hang.",
     fit: "Generous, relaxed fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
@@ -1947,8 +1970,14 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",
-    fabric: "65/35 polyester-cotton twill with firm buckram front.",
-    fit: "Adjustable - One Size. Structured mid-profile crown.",
+    // OTTO 31-069. This cap owns the buckram explanation.
+    // "Collapse" is deliberate: the care line on this same product already
+    // warns that a machine wash "will collapse the structured front panel",
+    // so it is this brand's own word for the failure mode.
+    fabric:
+      "65% polyester, 35% cotton twill over a firm buckram front. Buckram is the stiffener behind the front panel, and it is what holds the crown up instead of letting it collapse.",
+    fit:
+      "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
     careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
       {
@@ -2011,7 +2040,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "Premium cotton crewneck tee, opaque, rib collar.",
+    fabric: "Cotton crewneck tee, opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
@@ -2049,8 +2078,27 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#262626",
-    fabric: "6.5 oz 100% ring-spun cotton, garment-dyed. Opaque, rib collar.",
-    fit: "Relaxed body with a moderate dropped shoulder.",
+    // Bella+Canvas 4810GD, the same blank as the Casual Wordmark Tee, so
+    // the two lines must not tell the same story. That one owns the
+    // garment-dye explanation; this one owns what the weight does.
+    //
+    // Two things were drafted and cut. "18 singles" is in the spec, but a
+    // yarn count means nothing to a customer and explaining it ("a thick
+    // yarn") is imported textile knowledge the packet does not state, and
+    // the count runs backwards from intuition. Same test that cut "combed".
+    // "Made in Nicaragua" is documented, but originLabel in types.ts is a
+    // typed field with two permitted values under the FTC all-or-virtually-
+    // all standard, and it says origin is never inferred. Country of origin
+    // does not go in free text. Side-seaming is real and lives in the fit
+    // row directly beneath this one, so it is not repeated here.
+    fabric:
+      "The same 6.5 oz garment-dyed ring-spun cotton as the Casual Wordmark Tee. Heavy enough that the cloth does the hanging, so the shirt keeps its own line rather than following whatever is underneath it.",
+    // Bella+Canvas 4810GD, same blank as the Casual Wordmark Tee. The
+    // spec says "relaxed fit; semi-dropped shoulder; side-seamed", so
+    // that is what this says. It read "moderate dropped shoulder"
+    // before, which was nobody's word for it.
+    fit:
+      "Relaxed body with a semi-dropped shoulder, side-seamed so it keeps its shape instead of hanging straight.",
     careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
@@ -2142,7 +2190,7 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E5E5DD",
-    fabric: "Premium cotton crewneck tee, natural cream, opaque, rib collar.",
+    fabric: "Cotton crewneck tee, natural cream, opaque, rib collar.",
     fit: "Relaxed body with a moderate dropped shoulder.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
@@ -2204,15 +2252,32 @@ export const products: Product[] = [
     // ivory" - a human-written line with nothing behind it, on a product
     // whose own care copy already warned that garment-dyed fabric releases
     // colour. The care copy was ahead of the fabric copy.
+    // Comfort Colors C1717, from the supplier listing retrieved 2026-09-23:
+    // 100% cotton, "soft ring-spun cotton", "garment-dyed finish",
+    // "heavyweight cotton build", "shoulder twill tape".
+    //
+    // No ounce figure appears here because the supplier publishes none for
+    // this blank. Rather than borrow the 4810GD's 6.5 oz or infer one from
+    // the word heavyweight, the line says whose word "heavyweight" is.
+    //
+    // "Durable rib collar" is in the spec and is deliberately not used: it
+    // is the supplier rating their own part, which is the shape of claim
+    // that got "Premium Quality" removed from the benefit bar. The tape
+    // claim is kept to what a shoulder tape actually does, stabilise the
+    // seam under load. It does not promise the collar will never slacken.
     fabric:
-      "100% ring-spun cotton, garment-dyed. Heavyweight build, with a rib collar and shoulder twill tape.",
+      "Ring-spun cotton, garment-dyed, and heavyweight by the supplier's own reckoning rather than ours. Twill tape runs along both shoulder seams and takes the weight the stitching would otherwise carry alone, so the shoulders do not pull out of line.",
     // The supplier flags this blank as running big, with a wide boxy 90s
     // cut, and recommends sizing down for a closer fit. All sales are
     // final, so that belongs on the product page and not only in the
     // size chart. Three other products share the old wording - this
     // change is deliberately scoped to the C1717 alone.
+    // Comfort Colors C1717. The supplier documents a relaxed everyday
+    // fit, a wide boxy cut and a recommendation to size down. It does
+    // NOT document a shoulder drop, and this line used to claim one,
+    // inherited from a string four products shared across three blanks.
     fit:
-      "Relaxed body with a moderate dropped shoulder, cut wide and boxy in the throwback 90s way. It runs big: size down if you want it closer to the body.",
+      "Relaxed everyday fit, cut wide and boxy in the throwback 90s way. It runs big: size down if you want it closer to the body.",
     careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
@@ -2262,8 +2327,15 @@ export const products: Product[] = [
     // 2026-09-23, which states "heavyweight, 14.7 oz fabric", "100% cotton
     // french terry", drop shoulder, inset sleeve, preshrunk. This is the
     // heaviest piece in the range.
+    // AS Colour 5150, supplier listing retrieved 2026-09-23: "heavyweight,
+    // 14.7 oz fabric", 100% cotton French terry, preshrunk.
+    //
+    // "The heaviest piece in the range" is arithmetic, not a boast: 14.7
+    // against 10 (IND4000), 6.5 (4810GD) and 3.8 (ST720). The C1717 has no
+    // published figure, but it is a tee and cannot outweigh a French terry
+    // crew. Re-check this sentence if a heavier piece is ever added.
     fabric:
-      "14.7 oz 100% cotton French terry, preshrunk. Rib collar, cuffs and hem.",
+      "14.7 oz 100% cotton French terry, the heaviest piece in the range. You feel the weight land on the shoulders going on. Preshrunk, so the fit you buy is the fit you keep.",
     fit:
       "Relaxed crewneck fit with a drop shoulder and inset sleeve. Ribbed collar, cuffs and hem.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low or lay flat to keep the shape. Do not bleach. Do not iron directly on the print.",
@@ -2308,7 +2380,13 @@ export const products: Product[] = [
     // Same blank as the Performance Badge Tee - Sport-Tek ST720, see
     // fulfillment.ts - so it carries the supplier's spec, not a vaguer
     // paraphrase of it.
-    fabric: "3.8 oz 100% recycled polyester with PosiCharge.",
+    // Sport-Tek ST720, the same blank as the Performance Badge Tee, so the
+    // subjects are split rather than the wording varied. Taped neck,
+    // tear-away removable label and set-in sleeves are all in the packet
+    // and the supplier listing; "full range of motion" is the supplier's
+    // own phrase for the lightweight construction.
+    fabric:
+      "3.8 oz is not much shirt, and that is the point. The same recycled polyester as the Performance Badge Tee, taped at the neck with a label that tears out, so nothing sits raw against your skin. Set-in sleeves follow the line of the shoulder and leave the arm its full range.",
     fit: "Athletic fit.",
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
@@ -2404,8 +2482,14 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",
-    fabric: "65/35 polyester-cotton twill with firm buckram front.",
-    fit: "Adjustable - One Size. Structured mid-profile crown.",
+    // OTTO 31-069, described by the packet as a "structured seamless
+    // five-panel mid-profile cap". This cap owns the seamless front,
+    // because of the three marks this is the one where a seam would show
+    // worst: it is a closed ring.
+    fabric:
+      "No seam runs through the front panel, which matters more here than on most caps: this badge is a ring, and a seam crossing a ring shows. The embroidery lands on one unbroken piece of 65/35 twill, which is the difference between a mark that sits flat and a mark that fights a seam.",
+    fit:
+      "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
     careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
       {
@@ -2446,8 +2530,14 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",
-    fabric: "65/35 polyester-cotton twill with firm buckram front.",
-    fit: "Adjustable - One Size. Structured mid-profile crown.",
+    // OTTO 31-069. Buckram belongs to the Touchline Cap and the seamless
+    // front to the Badge Cap, so this one owns the cloth itself. Defining
+    // the weave is the same move as defining buckram and face yarn.
+    // Everything else true of this blank is already in the fit row.
+    fabric:
+      "65% polyester, 35% cotton twill. Twill is the diagonal weave you can see close up in the cloth, and it is what gives a cap enough body to hold a stitched mark without the fabric going soft around it.",
+    fit:
+      "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
     careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
       {
