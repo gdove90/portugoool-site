@@ -215,6 +215,25 @@ export default function CartPage() {
             <li>✓ Est. delivery 7–12 business days in the US</li>
             <li>✓ Original design</li>
           </ul>
+
+          {/* The terms a buyer is agreeing to have to be readable BEFORE
+              they hand off to Stripe, not only in the footer. Two things
+              genuinely surprise people otherwise: all sales being final,
+              and a customs bill arriving after a parcel that already
+              looked paid for. Both are stated here, in the last block
+              before the Checkout button's destination. */}
+          <p className="mt-5 border-t border-ink/10 pt-4 text-xs leading-relaxed text-ink/50">
+            Shipping to Canada, the UK or Portugal takes about 3 to 5 weeks,
+            and your country may charge import duty or VAT on arrival, which
+            is paid by the recipient. All sales are final: see the{" "}
+            <Link
+              href="/refunds"
+              className="font-medium text-ink/70 underline underline-offset-2"
+            >
+              Refund Policy
+            </Link>{" "}
+            for defects, damage and wrong items, which we replace free.
+          </p>
         </div>
       </div>
     </div>

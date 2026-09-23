@@ -252,7 +252,14 @@ async function sendViaGmailServiceAccount(msg: EmailMessage): Promise<EmailResul
   const saEmail = process.env.GOOGLE_SA_EMAIL!;
   // Netlify env vars are single-line, so a PEM arrives with escaped
   // newlines. Restore them, and tolerate a key that already has real ones.
-  const privateKey = process.env.GOOGLE_SA_PRIVATE_KEY!.replace(/\n/g, "\n");
+  //
+  // The pattern is /\\n/ and not /\n/. The latter is a regex matching a
+  // REAL newline, so the old `.replace(/\n/g, "\n")` swapped newlines for
+  // newlines and left the two-character backslash-n sequences that a
+  // service-account JSON key is full of completely untouched. crypto then
+  // rejected the key with "not a readable PEM key" — and because no mail
+  // provider had ever been configured, nothing had exercised this line.
+  const privateKey = process.env.GOOGLE_SA_PRIVATE_KEY!.replace(/\\n/g, "\n");
   const impersonate = sendAs();
   const oauthBase = process.env.GOOGLE_OAUTH_BASE ?? "https://oauth2.googleapis.com";
   const gmailBase = process.env.GMAIL_API_BASE ?? "https://gmail.googleapis.com";

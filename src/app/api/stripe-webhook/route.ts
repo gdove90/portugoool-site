@@ -353,11 +353,44 @@ export async function POST(req: NextRequest) {
         confirmation = "errored";
       }
     }
+    // Stripe's own receipt, as a floor under our confirmation email.
+    //
+    // Checkout does not set receipt_email, so whether Stripe receipts a
+    // charge depends on a dashboard toggle nobody here can read. Setting
+    // receipt_email on the PaymentIntent removes that dependency: Stripe
+    // documents that a live-mode payment with receipt_email set is
+    // receipted regardless of the account's email settings.
+    //
+    // This is deliberately unconditional rather than a fallback for when
+    // sendEmail is disabled. The two messages are different artifacts —
+    // Stripe's is proof of the charge, ours carries the order reference,
+    // the line items and the Track Order link — and a buyer who is
+    // charged should never be left with neither because one provider had
+    // a bad minute. Best effort throughout: a receipt is not worth
+    // turning a captured payment into a webhook 500 and a retry storm.
+    let receipt: string | undefined;
+    if (paid) {
+      const pi =
+        typeof session.payment_intent === "string" ? session.payment_intent : null;
+      const to = session.customer_details?.email ?? null;
+      if (!pi || !to) {
+        receipt = pi ? "no_recipient" : "no_payment_intent";
+      } else {
+        try {
+          await stripe.paymentIntents.update(pi, { receipt_email: to });
+          receipt = "requested";
+        } catch (err) {
+          console.error("stripe-webhook: receipt_email failed for order", orderId, err);
+          receipt = "failed";
+        }
+      }
+    }
+
     await store.recordEvent(event.id, event.type);
     return NextResponse.json({
       received: true,
       order: orderId,
-      ...(paid ? { submission, confirmation } : { awaiting: "async payment" }),
+      ...(paid ? { submission, confirmation, receipt } : { awaiting: "async payment" }),
     });
   } catch (err) {
     console.error("stripe-webhook error:", err);

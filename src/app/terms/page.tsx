@@ -43,8 +43,11 @@ export default function TermsPage() {
           <h2 className="text-lg font-semibold text-ink">Pricing &amp; payment</h2>
           <p className="mt-2">
             Prices are in USD. Payment is processed securely by Stripe, and we
-            never see or store your card details. Applicable sales tax and
-            shipping are shown at checkout.
+            never see or store your card details. Shipping is shown at checkout.
+            We do not currently collect sales tax. Orders outside the US may
+            be charged import duty or VAT by the destination country on
+            arrival; that charge is set by your customs authority, is not
+            collected by us, and is paid by the recipient.
           </p>
         </section>
 
@@ -52,7 +55,9 @@ export default function TermsPage() {
           <h2 className="text-lg font-semibold text-ink">Shipping</h2>
           <p className="mt-2">
             Orders arrive within 7–12 business days in the US. Orders to
-            Canada, Portugal and the UK take longer.
+            Canada, the UK and Portugal typically take 3 to 5 weeks, since
+            every order is made and shipped from the United States and
+            customs clearance can add time.
             Dates are estimates, not guarantees; if
             we can&apos;t ship within 30 days we&apos;ll notify you and offer
             a refund. See <Link href="/track-order" className="font-medium text-ink underline underline-offset-2">Track Order</Link> for how delivery works.
@@ -102,7 +107,7 @@ export default function TermsPage() {
         </section>
       </div>
 
-      <p className="mt-12 text-xs text-ink/40">Last updated July 2026.</p>
+      <p className="mt-12 text-xs text-ink/40">Last updated September 2026.</p>
     </div>
   );
 }

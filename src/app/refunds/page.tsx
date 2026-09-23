@@ -67,8 +67,9 @@ export default function RefundsPage() {
       </div>
 
       <p className="mt-12 text-xs text-ink/40">
-        This policy is presented before purchase and applies to all orders.
-        Last updated July 2026.
+        This policy is linked from the cart before you pay, and from the
+        footer of every page. It applies to all orders.
+        Last updated September 2026.
       </p>
     </div>
   );

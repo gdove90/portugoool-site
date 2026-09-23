@@ -85,8 +85,8 @@ export default function SuccessPage() {
           ) : null}
           {status.email ? <>A receipt is on its way to {status.email}. </> : null}
           {status.productionConfirmed
-            ? "Your order is in production. Tracking follows as soon as it ships."
-            : "We're getting your order into production and will follow up with tracking once it ships."}
+            ? "Your order is in production. Tracking appears on your order page as soon as it ships."
+            : "We're getting your order into production. Tracking appears on your order page as soon as it ships."}
         </p>
         <Link
           href="/shop"

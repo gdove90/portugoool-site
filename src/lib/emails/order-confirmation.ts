@@ -14,8 +14,9 @@ import { getProductById } from "../products";
 //   - It confirms a PAYMENT, not a shipment. Nothing here says
 //     "on its way" - these are printed to order and genuinely take
 //     days before a parcel exists.
-//   - No tracking number is promised in this email, because at send
-//     time there is none. It points at /track-order instead.
+//   - No tracking number is promised in this email, and no tracking
+//     EMAIL is promised either: sendEmail has one caller and nothing
+//     sends a shipment notice. It points at /track-order, which works.
 //   - It gives the order reference, which is the only thing the
 //     customer needs to find the order again.
 //
@@ -123,7 +124,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
     "",
     "WHAT HAPPENS NOW",
     "Your order takes a few days to prepare before it ships.",
-    "We will email you the tracking number the moment the parcel is on its way.",
+    "Tracking appears on your order page as soon as the parcel is scanned.",
     "",
     `Check your order any time at ${site}/track-order`,
     `using reference ${ref} and this email address.`,
@@ -217,7 +218,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
             <div style="font:700 11px/1 Helvetica,Arial,sans-serif;letter-spacing:.14em;color:${MUTED};text-transform:uppercase;">What happens now</div>
             <div style="font:400 14px/1.65 Helvetica,Arial,sans-serif;color:${INK};margin-top:9px;">
               Your order takes a few days to prepare before it ships.
-              We will email you the tracking number the moment the parcel is on its way.
+              Tracking appears on your order page as soon as the parcel is scanned.
             </div>
           </td></tr>
         </table>

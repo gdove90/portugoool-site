@@ -83,9 +83,9 @@ export default function AboutPage() {
         <div className="mt-14 space-y-6 text-lg leading-relaxed text-ink/70">
           <p>
             We ship to the United States, Canada, the United Kingdom and
-            Portugal. Orders arrive within 7 to 12 business days in the US,
-            a little longer everywhere else, and tracking reaches you the
-            moment yours is on its way.
+            Portugal. Orders arrive within 7 to 12 business days in the US and
+            typically 3 to 5 weeks everywhere else, because every one is made
+            and shipped from the United States.
           </p>
           <p className="font-semibold text-ink">
             The Sound of Victory. Made for the Moment.

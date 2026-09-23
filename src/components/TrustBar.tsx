@@ -35,7 +35,7 @@ const ITEMS = [
   },
   {
     title: "US, Canada, UK & Portugal",
-    sub: "7 to 12 days in the US.",
+    sub: "7 to 12 business days in the US.",
     icon: (
       // Globe
       <path d="M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z" />

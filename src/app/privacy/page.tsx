@@ -42,7 +42,9 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-semibold text-ink">Who touches your data</h2>
           <p className="mt-2">
             Only service providers required to run the store: Stripe
-            (payments), Supabase (order and signup storage), Netlify
+            (payments), Supabase (order storage), Mailchimp (our email list,
+            which is where newsletter signups are stored and from which
+            newsletters are sent), Netlify
             (hosting), and our print partner (name and shipping address only,
             to make and deliver your order). We never sell or rent personal
             data to anyone.
@@ -67,7 +69,7 @@ export default function PrivacyPage() {
         </section>
       </div>
 
-      <p className="mt-12 text-xs text-ink/40">Last updated July 2026.</p>
+      <p className="mt-12 text-xs text-ink/40">Last updated September 2026.</p>
     </div>
   );
 }

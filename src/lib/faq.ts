@@ -10,7 +10,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "When will my order ship?",
     answer:
-      "Orders arrive within 7–12 business days in the US. Canada, Portugal and the UK take longer. You'll get tracking by email the moment yours ships.",
+      "Orders arrive within 7–12 business days in the US. Canada, the UK and Portugal typically take 3 to 5 weeks, because every order is made and shipped from the United States and customs can add time. Track yours anytime on the Track Order page with your order reference.",
+  },
+  {
+    question: "Do I pay customs or import tax?",
+    answer:
+      "Not in the US. Orders to Canada, the UK and Portugal ship from the United States, so your country may charge import duty or VAT when the parcel arrives. That charge is set by your customs authority, is not collected by us, and is paid by the person receiving the order.",
   },
   {
     question: "How does sizing run?",

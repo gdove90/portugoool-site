@@ -5,7 +5,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: "Shipping, Sizing & Returns",
   description:
-    "How long delivery takes, how each blank fits, and what happens if an order arrives wrong. Ships to the US, Canada, the UK and Portugal in 7 to 12 business days in the US.",
+    "How long delivery takes, how each blank fits, what customs costs outside the US, and what happens if an order arrives wrong. Ships to the US, Canada, the UK and Portugal.",
   alternates: { canonical: "/faq" },
 };
 
