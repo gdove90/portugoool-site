@@ -2036,10 +2036,27 @@ export const products: Product[] = [
           },
         ],
       },
-      // Black · Club Blue (4b black): the Apliiq design is being built to
-      // the handoff spec; add the variant here once its renders exist
-      // (GOOOL_STD_CASUAL_3010_BLACK_BLUE_{FRONT,BACK}.webp) and map its
-      // saved-design id in fulfillment.ts.
+      // Black · Club Blue (4b black): Apliiq design 6120898, built to the
+      // handoff spec on 2026-09-24 and mapped in fulfillment.ts; renders
+      // supplied by the owner the same night.
+      {
+        name: "Black",
+        supplierColor: "black",
+        hex: "#111111",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+            alt: "GOOOL Casual Wordmark Tee · Club Blue in black, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+            alt: "GOOOL Casual Wordmark Tee · Club Blue in black, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
     ],
     // Garment: Bella+Canvas 3010 (imported blank per the supplier's
     // records); decorated at Apliiq's US facilities - Printed in the USA,

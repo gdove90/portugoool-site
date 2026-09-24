@@ -16,7 +16,7 @@ print colours are separate products on the site since 2026-09-24
 | `casual-tee-3010-black-red-*.png` | 4a black, red band | `GOOOL_STD_CASUAL_3010_BLACK_RED_*.webp` |
 | `casual-tee-3010-natural-red-*.png` | 4a-N natural, red band | `GOOOL_STD_CASUAL_3010_NATURAL_RED_*.webp` |
 | `casual-tee-3010-natural-blue-*.png` | 4b natural, Club Blue band | `GOOOL_STD_CASUAL_3010_NATURAL_BLUE_*.webp` |
-| (pending) `casual-tee-3010-black-blue-*.png` | 4b black, Club Blue band | `GOOOL_STD_CASUAL_3010_BLACK_BLUE_*.webp` |
+| `casual-tee-3010-black-blue-*.png` | 4b black, Club Blue band | `GOOOL_STD_CASUAL_3010_BLACK_BLUE_*.webp` |
 
 Format: the renders are 1254 x 1254 squares, but the product gallery and
 the shop tiles are 4:5 frames (`aspect-[4/5]`, `object-contain`) and every

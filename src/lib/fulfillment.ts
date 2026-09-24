@@ -79,15 +79,17 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
   },
   // GOOOL Casual Wordmark Tee · Red (4a set), rebuilt on the Bella+Canvas
   // 3010 on 2026-09-24 (designs/00_asset-library/CASUAL-TEE-3010-DECISION.md).
-  // One saved design per colour. Keys are the supplierColor strings from
-  // products.ts, which are Apliiq's swatch names verbatim ("black" is
-  // lower-case on Apliiq; "Natural" is capitalised).
+  // One saved design per colour. Keys are the colorVariants[].name strings
+  // from products.ts ("Black", "Natural"), because that is the value
+  // checkout passes to resolveApliiqSku; the Apliiq swatch name lives in
+  // supplierColor and is NOT the key. (Until 2026-09-24 the black entry
+  // was keyed "black" and could never resolve.)
   //
   // The 4810GD designs this replaced (6098963, 6099060, then 6113934,
   // 6113938) were deleted on Apliiq by the owner on 2026-09-23; their
   // SKUs are gone with them and are not carried here.
   "70000000-0000-4000-8000-000000000003": {
-    "black": {
+    Black: {
       apliiqProductId: 6120860,
       skus: {
         S: "APQ-6120860S6A1",
@@ -126,7 +128,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     // (Apliiq's quarter-inch readout shows 11 x 4.55), back band 12 x 2.01,
     // both transfer, production notes carry the 3.00 in / 1.50 in collar
     // offsets. Not yet a variant in products.ts: renders pending.
-    "black": {
+    Black: {
       apliiqProductId: 6120898,
       skus: {
         S: "APQ-6120898S6A1",

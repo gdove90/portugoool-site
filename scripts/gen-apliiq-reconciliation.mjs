@@ -66,7 +66,12 @@ const productsSrc = fs.readFileSync(path.join(ROOT, "src/lib/products.ts"), "utf
 function catalogInfo(uuid) {
   const i = productsSrc.indexOf(`"${uuid}"`);
   if (i < 0) return { name: null, slug: null };
-  const blk = productsSrc.slice(i, i + 4000);
+  // Slice to the end of this product object (its closing "  },"), not a
+  // fixed 4000 chars: the casual-tee blocks carry long comments and two
+  // image sets, and a fixed window stopped short of isActive, so the
+  // registry recorded them as inactive.
+  const close = productsSrc.indexOf("\n  },", i);
+  const blk = productsSrc.slice(i, close < 0 ? i + 4000 : close);
   const name = (blk.match(/name:\s*"([^"]+)"/) || [])[1] ?? null;
   const slug = (blk.match(/slug:\s*"([^"]+)"/) || [])[1] ?? null;
   const active = (blk.match(/isActive:\s*(true|false)/) || [])[1] === "true";

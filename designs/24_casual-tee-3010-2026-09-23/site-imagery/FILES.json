@@ -58,5 +58,25 @@
   "site_px": "1137x1421",
   "site_fit": "scripts/fit-product-image-4x5.py --garment-bbox 115,107,1137,1185: own background extended to 4:5, garment 0.90 frame width, top margin 0.115 (2026-09-24)",
   "site_sha256": "6E17F86F7F3870EA4B32693BCF6E1F4C2ABC0B4E837084EE95DADC41CD16E436"
+ },
+ {
+  "file": "casual-tee-3010-black-blue-front.png",
+  "bytes": 1687797,
+  "sha256": "81B678F606FC1087C2D72C50C1CE7B4F948257468780E7E3C5773D8AEAFF5066",
+  "source": "owner download (ChatGPT render), 2026-09-24 02:31; 4b black, Club Blue band",
+  "site_copy": "public/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+  "site_px": "1137x1421",
+  "site_fit": "scripts/fit-product-image-4x5.py --garment-bbox 115,107,1137,1185: own background extended to 4:5, garment 0.90 frame width, top margin 0.115 (2026-09-24)",
+  "site_sha256": "67CB7BC9DC6A0021C45F23305197DA3F8F758A70F78DF89171D066D215359B10"
+ },
+ {
+  "file": "casual-tee-3010-black-blue-back.png",
+  "bytes": 1679665,
+  "sha256": "B4D7B4957A1D8A18735CD3AC1E1C28892B293D4AFC469E47AF311AD80DB8B967",
+  "source": "owner download (ChatGPT render), 2026-09-24 02:31; 4b black, Club Blue band",
+  "site_copy": "public/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+  "site_px": "1137x1421",
+  "site_fit": "scripts/fit-product-image-4x5.py --garment-bbox 115,107,1137,1185: own background extended to 4:5, garment 0.90 frame width, top margin 0.115 (2026-09-24)",
+  "site_sha256": "E7B752A3D3408F4A4E115CB596481CBEF28056A55A902FB1679BB51A347A13AE"
  }
 ]

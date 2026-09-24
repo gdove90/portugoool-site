@@ -152,3 +152,41 @@ Price re-run with the confirmed inputs:
   price still pending.
 
 **Price decided 2026-09-24: $48** (owner considered $42, then kept $48). Above the $46 model floor; modelled worst-size contribution ≈ 27%. Set in products.ts.
+
+## Colours as built (supersedes the three-colour list above)
+
+Athletic Heather was dropped by the owner on 2026-09-24 (Apliiq also
+showed no stock). Only Natural and Black were built, and each exists in
+two print sets: 4a (red centre dash, red band) and 4b (Club Blue lockup,
+Club Blue band). See
+`designs/24_casual-tee-3010-2026-09-23/CLAUDE-CASUAL-TEE-3010-HANDOFF-4a-4b.md`.
+
+## Split into two products (owner decision 2026-09-24)
+
+One shop row per print colour, instead of the "Back band: Red / Blue"
+selector the 4a-4b handoff offered as the default.
+
+- `70000000-0000-4000-8000-000000000003` **GOOOL Casual Wordmark Tee · Red**,
+  slug `goool-heavyweight-casual-tee` (unchanged): the 4a set. Black =
+  Apliiq 6120860 (above). Natural (4a-N) = renders live on the site; the
+  owner is saving the Apliiq design in their own customizer tab, id to be
+  mapped in `src/lib/fulfillment.ts` under `Natural`.
+- `70000000-0000-4000-8000-000000000005` **GOOOL Casual Wordmark Tee · Club Blue**,
+  slug `goool-heavyweight-casual-tee-blue`: the 4b set. Natural = Apliiq
+  6120887 (owner-saved 2026-09-24; 6120888 is an identical duplicate
+  renamed "DUPLICATE of 6120887 · do not use", never map it). Black =
+  Apliiq 6120898 "GOOOL Casual Wordmark Tee · Black · Blue Band", built
+  by Claude 2026-09-24 to the handoff spec (front 11.10 in wide, the
+  customizer's quarter-inch readout shows 11 × 4.55; back 12.00 × 2.00;
+  both production notes carry the 3.00 in / 1.50 in collar offsets).
+- Same blank, placements and price ($48) on both. Both stay
+  `availableForSale: false`; `supabase/migrations/0034_casual_tee_split.sql`
+  (renames the …0003 row, adds the …0005 row) must be applied before
+  either flag is flipped.
+- Fulfillment keys are the site colour names (`Black`, `Natural`), the
+  value checkout resolves by; until this date the black entry was keyed
+  `"black"` and could never resolve.
+- Imagery: `GOOOL_STD_CASUAL_3010_{BLACK|NATURAL}_{RED|BLUE}_{FRONT|BACK}.webp`,
+  owner-chosen ChatGPT renders fitted to the 4:5 frame with
+  `scripts/fit-product-image-4x5.py` (provenance in
+  `designs/24_casual-tee-3010-2026-09-23/site-imagery/FILES.json`).
