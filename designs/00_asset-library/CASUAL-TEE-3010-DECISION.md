@@ -179,10 +179,15 @@ selector the 4a-4b handoff offered as the default.
   by Claude 2026-09-24 to the handoff spec (front 11.10 in wide, the
   customizer's quarter-inch readout shows 11 × 4.55; back 12.00 × 2.00;
   both production notes carry the 3.00 in / 1.50 in collar offsets).
-- Same blank, placements and price ($48) on both. Both stay
-  `availableForSale: false`; `supabase/migrations/0034_casual_tee_split.sql`
-  (renames the …0003 row, adds the …0005 row) must be applied before
-  either flag is flipped.
+- Same blank, placements and price ($48) on both.
+- **Purchasing opened on both, 2026-09-24** (owner: "Open all four …
+  there should be no shirt not available for sale unless I say so").
+  Natural · Red is Apliiq 6120889 (owner-saved the same day). The …0005
+  products row did not exist and could not be created from the
+  workstation, so `SupabaseStore.ensureProductRows` (src/lib/orders-store.ts)
+  now upserts the catalog rows from products.ts before order items are
+  written; `supabase/migrations/0034_casual_tee_split.sql` remains to be
+  run in the SQL editor for the audit trail and name sync.
 - Fulfillment keys are the site colour names (`Black`, `Natural`), the
   value checkout resolves by; until this date the black entry was keyed
   `"black"` and could never resolve.

@@ -15,16 +15,18 @@
 -- Apply via the Supabase dashboard SQL editor (the established workflow;
 -- the org-scoped MCP connector cannot see this project). Idempotent.
 --
--- NOT YET APPLIED (2026-09-24). The ...0003 row already exists, so the
--- Red tee opened for purchase in products.ts the same day; its row is
--- renamed here and its flag set true to match. The ...0005 row does not
--- exist yet, so the Club Blue tee stays availableForSale: false in
--- products.ts until this has run; then flip it (and the flag below).
+-- NOT YET APPLIED from the workstation (2026-09-24): the Supabase MCP
+-- connector only sees the localchefri project, the Netlify CLI injects a
+-- masked placeholder for SUPABASE_SERVICE_ROLE_KEY, and there is no
+-- Supabase CLI login. Still worth running in the SQL editor so the rows
+-- exist before the first order.
 --
--- Tried from the workstation: the Supabase MCP connector only sees the
--- localchefri project, the Netlify CLI injects a masked placeholder for
--- SUPABASE_SERVICE_ROLE_KEY, and no Supabase CLI login exists, so the
--- SQL editor it is.
+-- The owner opened purchasing on both tees the same day, so the order
+-- store now guards this itself: SupabaseStore.ensureProductRows in
+-- src/lib/orders-store.ts upserts the catalog row(s) for the products in
+-- an order from products.ts before writing order_items. That makes the
+-- FK gap self-healing for every future product as well; this file keeps
+-- the audit trail and the name/flag sync.
 
 insert into public.products
   (id, name, slug, description, price_cents, color, color_hex,
@@ -35,7 +37,7 @@ values
    array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, true),
   ('70000000-0000-4000-8000-000000000005', 'GOOOL Casual Wordmark Tee · Club Blue',
    'goool-heavyweight-casual-tee-blue', '', 4800, 'Natural', '#E8E2D3',
-   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, false)
+   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, true)
 on conflict (id) do update
   set name              = excluded.name,
       slug              = excluded.slug,

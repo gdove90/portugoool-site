@@ -2,6 +2,7 @@ import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 import { getSupabaseAdmin } from "./supabase";
+import { getProducts } from "./products";
 
 // ─────────────────────────────────────────────────────────────
 // Order persistence used by the Stripe webhook and Apliiq callback.
@@ -149,7 +150,46 @@ class SupabaseStore implements OrdersStore {
     throw new Error(`stripe_events insert failed: ${error.message}`);
   }
 
+  /**
+   * order_items.product_id is a FOREIGN KEY to products(id), but the
+   * catalog lives in src/lib/products.ts and its rows were added by
+   * hand-run migrations (0031, 0033, 0034). Every time a product shipped
+   * in code before its row existed, the item insert failed the FK and the
+   * order lost its lines (2026-09-21). Upsert the catalog rows for the
+   * products in this order first, so the FK can never be the reason.
+   * Best effort: a failure here is logged and the order proceeds, which
+   * then fails and retries exactly as before.
+   */
+  private async ensureProductRows(items: OrderItemRow[]) {
+    const ids = [...new Set(items.map((it) => it.product_id))];
+    const catalog = getProducts();
+    const rows = ids.flatMap((id) => {
+      const p = catalog.find((c) => c.id === id);
+      if (!p) return [];
+      return [
+        {
+          id: p.id,
+          name: p.name,
+          slug: p.slug,
+          description: p.description ?? "",
+          price_cents: p.priceCents,
+          color: p.color,
+          color_hex: p.colorHex,
+          sizes: p.sizes,
+          product_category: p.category,
+          supplier_type: p.supplierType,
+          is_active: p.isActive,
+          available_for_sale: p.availableForSale !== false,
+        },
+      ];
+    });
+    if (rows.length === 0) return;
+    const { error } = await this.db.from("products").upsert(rows, { onConflict: "id" });
+    if (error) console.error(`products upsert (FK parity) failed: ${error.message}`);
+  }
+
   async createOrder(order: OrderRow, items: OrderItemRow[]) {
+    await this.ensureProductRows(items);
     const { data, error } = await this.db
       .from("orders")
       .insert(order)

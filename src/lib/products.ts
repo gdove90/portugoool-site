@@ -2066,9 +2066,13 @@ export const products: Product[] = [
     category: "tshirt",
     supplierType: "apliiq",
     isActive: true,
-    // Purchasing opens LAST (apliiq-product-mapping.md rollout order):
-    // stays false until the owner confirms the saved designs and price.
-    availableForSale: false,
+    // Purchasing opened by the owner on 2026-09-24 ("open all four ...
+    // there should be no shirt not available for sale unless I say so").
+    // Both colours map to saved Apliiq designs (Natural 6120887, Black
+    // 6120898). The Supabase products row for this id is created on
+    // demand by the order store (ensureProductRow) until migration 0034
+    // has been applied.
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
