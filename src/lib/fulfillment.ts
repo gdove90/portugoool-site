@@ -121,8 +121,21 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
         XXL: "APQ-6120887S2A1",
       },
     },
-    // "black" (4b black): design being built on Apliiq 2026-09-24; add it
-    // here with its saved id once it exists.
+    // Black (4b black) saved 2026-09-24 as design 6120898, "GOOOL Casual
+    // Wordmark Tee · Black · Blue Band": front lockup 222 px = 11.10 in
+    // (Apliiq's quarter-inch readout shows 11 x 4.55), back band 12 x 2.01,
+    // both transfer, production notes carry the 3.00 in / 1.50 in collar
+    // offsets. Not yet a variant in products.ts: renders pending.
+    "black": {
+      apliiqProductId: 6120898,
+      skus: {
+        S: "APQ-6120898S6A1",
+        M: "APQ-6120898S7A1",
+        L: "APQ-6120898S8A1",
+        XL: "APQ-6120898S1A1",
+        XXL: "APQ-6120898S2A1",
+      },
+    },
   },
   // GOOOL Touchline Cap (OTTO 31-069, Black/Natural, front-only embroidery)
   "70000000-0000-4000-8000-000000000004": {
