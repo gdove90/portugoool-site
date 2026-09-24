@@ -46,7 +46,8 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
       "goool-heavyweight-hoodie",
       // Second hoodie row: the Club Blue print set, its own product since 2026-09-24.
       "goool-heavyweight-hoodie-blue",
-      "goool-athletics-circular-center-crewneck",
+      // goool-athletics-circular-center-crewneck retired from the site 2026-09-24
+      // (Core Capsule launch); design stays on Apliiq.
     ],
   },
   {
@@ -63,8 +64,8 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
       "goool-heavyweight-casual-tee",
       // Second row: the Club Blue print set, its own product since 2026-09-24.
       "goool-heavyweight-casual-tee-blue",
-      "goool-athletics-varsity-tee",
-      "goool-athletics-circular-badge-tee",
+      // goool-athletics-varsity-tee and goool-athletics-circular-badge-tee retired
+      // from the site 2026-09-24 (Core Capsule launch); designs stay on Apliiq.
     ],
   },
 ];

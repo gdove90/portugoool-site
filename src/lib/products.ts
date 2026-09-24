@@ -2432,8 +2432,12 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "unassigned",
-    isActive: true,
-    availableForSale: true,
+    // Retired from the website on 2026-09-24 (owner): the Core Capsule
+    // launches on Friday 2026-09-25 with the new uploads only. The Apliiq
+    // saved designs stay on the account; the fulfillment mapping is kept
+    // for the record. Route 301s to /shop in src/middleware.ts.
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2565,8 +2569,12 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "unassigned",
-    isActive: true,
-    availableForSale: true,
+    // Retired from the website on 2026-09-24 (owner): the Core Capsule
+    // launches on Friday 2026-09-25 with the new uploads only. The Apliiq
+    // saved designs stay on the account; the fulfillment mapping is kept
+    // for the record. Route 301s to /shop in src/middleware.ts.
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2625,8 +2633,12 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
     supplierType: "unassigned",
-    isActive: true,
-    availableForSale: true,
+    // Retired from the website on 2026-09-24 (owner): the Core Capsule
+    // launches on Friday 2026-09-25 with the new uploads only. The Apliiq
+    // saved designs stay on the account; the fulfillment mapping is kept
+    // for the record. Route 301s to /shop in src/middleware.ts.
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

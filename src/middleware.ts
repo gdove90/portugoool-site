@@ -113,6 +113,18 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
+  // Retired from the website on 2026-09-24 for the Core Capsule launch
+  // (owner decision): the Athletics Varsity Tee, Circular Badge Tee and
+  // Circular Center Crewneck. Their Apliiq designs remain saved. Old links
+  // go to the shop rather than 404ing.
+  if (
+    pathname === "/shop/goool-athletics-varsity-tee" ||
+    pathname === "/shop/goool-athletics-circular-badge-tee" ||
+    pathname === "/shop/goool-athletics-circular-center-crewneck"
+  ) {
+    return redirectToShop(req);
+  }
+
   // ── Password gate ──────────────────────────────────────────
   // Fails OPEN when PREVIEW_KEY is absent, and deliberately so. Failing
   // closed on a missing variable would lock the owner out of their own

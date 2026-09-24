@@ -6,7 +6,7 @@
   "totals": {
     "colorways": 24,
     "distinct_products": 14,
-    "available_for_sale": 23,
+    "available_for_sale": 19,
     "note": "available_for_sale 0 is correct and deliberate: the storefront is pre-launch. Mapping a colourway here records a verified supplier identifier; it does not open purchasing."
   },
   "rows": [
@@ -122,8 +122,8 @@
         "XL": "APQ-6112033S1A1",
         "XXL": "APQ-6112033S2A1"
       },
-      "catalog_is_active": true,
-      "catalog_available_for_sale": true
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
     },
     {
       "product": "GOOOL Athletics Modern Sport Performance Tee",
@@ -156,8 +156,8 @@
         "XL": "APQ-6112046S1A1",
         "XXL": "APQ-6112046S2A1"
       },
-      "catalog_is_active": true,
-      "catalog_available_for_sale": true
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
     },
     {
       "product": "GOOOL Athletics Modern Sport Performance Tee",
@@ -190,8 +190,8 @@
         "XL": "APQ-6114178S1A1",
         "XXL": "APQ-6114178S2A1"
       },
-      "catalog_is_active": true,
-      "catalog_available_for_sale": true
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
     },
     {
       "product": "GOOOL Athletics Varsity Tee",
@@ -207,8 +207,8 @@
         "XL": "APQ-6114196S1A1",
         "XXL": "APQ-6114196S2A1"
       },
-      "catalog_is_active": true,
-      "catalog_available_for_sale": true
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
     },
     {
       "product": "GOOOL Athletics Stacked Cap",
