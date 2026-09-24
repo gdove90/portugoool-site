@@ -1873,7 +1873,7 @@ export const products: Product[] = [
     name: "GOOOL Casual Wordmark Tee",
     slug: "goool-heavyweight-casual-tee",
     description:
-      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the club band across the back. Heavyweight combed cotton in black. Built for off the pitch: the one you reach for every day, and keep reaching for.",
+      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1924,6 +1924,30 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
             alt: "GOOOL Casual Wordmark Tee in black, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      // Natural is the 4b version: Club Blue lockup with ink dashes on the
+      // front, Club Blue band with natural lettering on the back. Shown on
+      // the site from 2026-09-24; its Apliiq design is not saved yet, so
+      // fulfillment.ts has no mapping for it and the checkout route would
+      // refuse it with "can't be ordered right now". Purchasing is closed
+      // on the whole product (availableForSale: false) until both exist.
+      {
+        name: "Natural",
+        supplierColor: "Natural",
+        hex: "#E8E2D3",
+        skuFragment: "NATURAL",
+        images: [
+          {
+            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_FRONT.webp",
+            alt: "GOOOL Casual Wordmark Tee in natural, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BACK.webp",
+            alt: "GOOOL Casual Wordmark Tee in natural, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],

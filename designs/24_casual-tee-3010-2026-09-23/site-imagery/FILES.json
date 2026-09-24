@@ -14,5 +14,21 @@
   "source": "owner download (ChatGPT render), 2026-09-24",
   "site_copy": "public/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
   "site_px": "1254x1254"
+ },
+ {
+  "file": "casual-tee-3010-natural-front.png",
+  "bytes": 1708021,
+  "sha256": "A47C12FE7ABC320C08732ED5518F04FC6FC95F7C9F374748A3BA79B9E3885888",
+  "source": "owner download (ChatGPT render), 2026-09-24; 4b blue-band Natural",
+  "site_copy": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_FRONT.webp",
+  "site_px": "1254x1254"
+ },
+ {
+  "file": "casual-tee-3010-natural-back.png",
+  "bytes": 1590032,
+  "sha256": "E97DFDC9339068089EC41B6F2BED8DE8642C39FBB5EF0A3206D314FA4CC669B9",
+  "source": "owner download (ChatGPT render), 2026-09-24; 4b blue-band Natural",
+  "site_copy": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_BACK.webp",
+  "site_px": "1254x1254"
  }
 ]

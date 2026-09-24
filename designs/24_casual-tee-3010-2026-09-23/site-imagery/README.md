@@ -8,5 +8,5 @@ reason. Site copies are the `GOOOL_STD_CASUAL_3010_BLACK_*.webp` files in
 `public/products/`, 1254 x 1254, the same square format as the Circular
 Badge and Crewneck tiles. Checksums in `FILES.json`.
 
-Natural: not yet produced. Name its files `casual-tee-3010-natural-*.png`
-here and `GOOOL_STD_CASUAL_3010_NATURAL_*.webp` in `public/products/`.
+Natural (4b blue band): `casual-tee-3010-natural-*.png` here, served as
+`GOOOL_STD_CASUAL_3010_NATURAL_*.webp`. Added 2026-09-24, same provenance.
