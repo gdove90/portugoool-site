@@ -93,6 +93,11 @@ exactly.
 
 ## Log
 
+- 2026-09-24 ~05:00 — owner supplied ChatGPT renders for five designs
+  (all but Bone · Red); they replace Apliiq's renders as the site copies.
+  Site code, mappings, imagery and pricing committed. **Not deployed:**
+  Netlify shows the team on operational credits with production deploys
+  paused; the remake ships with the next deploy once credits return.
 - 2026-09-24 03:55 — handoff filed at
   `designs/25_core-hoodie-remake-2026-09-24/` (zip `goool (8).zip`,
   seven files, checksums in its FILES.json). This record written.

@@ -7,9 +7,10 @@
   "apliiq_design_id": 6121031,
   "view": "front",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
-  "site_px": "1137x1421",
+  "site_px": "1075x1344",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "40609E119CC9A248B620B6115F817893FC9445D620219FD951F6441A3B91C432"
+  "site_sha256": "2B95D02A2495004E26E87B4476338F26F8A48820B92E1497D067B8111CA9BACE",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121031-black-red-band-back.png",
@@ -19,9 +20,10 @@
   "apliiq_design_id": 6121031,
   "view": "back",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
-  "site_px": "1137x1421",
+  "site_px": "1099x1374",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "0509F3E50ECA0C20BD8919C336248E6E51944D0A940C17A89316BB4E936C5BEE"
+  "site_sha256": "F79778490AAA1850F8B6BB2C8226FFA24B94E27DB5099B179A16FC069A91E023",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6120990-bone-red-band-front.png",
@@ -33,7 +35,8 @@
   "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
   "site_px": "1137x1421",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "11BEEE2B15B64E24541F3E25448308CA4942E8BA6523F8E537FBEA884B42B9D0"
+  "site_sha256": "11BEEE2B15B64E24541F3E25448308CA4942E8BA6523F8E537FBEA884B42B9D0",
+  "site_copy_source": "this Apliiq render (owner render pending)"
  },
  {
   "file": "apliiq-render-6120990-bone-red-band-back.png",
@@ -45,7 +48,8 @@
   "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
   "site_px": "1137x1421",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "E57009B5B8752A53A3D5C1775409C627D9408E57518EF1059DFA9BE41A67CC94"
+  "site_sha256": "E57009B5B8752A53A3D5C1775409C627D9408E57518EF1059DFA9BE41A67CC94",
+  "site_copy_source": "this Apliiq render (owner render pending)"
  },
  {
   "file": "apliiq-render-6121043-grey-heather-red-band-front.png",
@@ -55,9 +59,10 @@
   "apliiq_design_id": 6121043,
   "view": "front",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
-  "site_px": "1137x1421",
+  "site_px": "841x1051",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "22DA11A5516DFEBE19556F2D564958E661C36F06F36E5C00B5478C0D5D38F80F"
+  "site_sha256": "52E47B149A465C13DCBF670F8C5DD27CD669B2A20D703D064E8938022ECD0A3C",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121043-grey-heather-red-band-back.png",
@@ -67,9 +72,10 @@
   "apliiq_design_id": 6121043,
   "view": "back",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
-  "site_px": "1137x1421",
+  "site_px": "851x1064",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "3C3013140C69FADE3C8BE279CA74D397C342E433D7C5A04A7DFA89C990B46E60"
+  "site_sha256": "591D88295C64AB16E0E1221FB91B201A3395DCA9D776F94CD66B57223902D417",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121042-black-blue-band-front.png",
@@ -79,9 +85,10 @@
   "apliiq_design_id": 6121042,
   "view": "front",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
-  "site_px": "1137x1421",
+  "site_px": "1104x1380",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "4207212D86339F6AE8067C64974DAB679BE0E7DFE9D6E6055F6519A56569FA53"
+  "site_sha256": "95E2AB8C08C3C7EC1F358B1C7029A3C518BEE79639ED9FB5EF8414B6D19CC1DD",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121042-black-blue-band-back.png",
@@ -91,9 +98,10 @@
   "apliiq_design_id": 6121042,
   "view": "back",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
-  "site_px": "1137x1421",
+  "site_px": "1106x1382",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "21CA81952C09FA2345E2F34B4952974F4CF07D0E274B31193F85D6CF0CE3A96A"
+  "site_sha256": "E61D5AB757F979CE0513365FFD91EE11D1531CE94008F17D04184BF1E66D0A96",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121021-bone-blue-band-front.png",
@@ -103,9 +111,10 @@
   "apliiq_design_id": 6121021,
   "view": "front",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
-  "site_px": "1137x1421",
+  "site_px": "1078x1348",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "8B44769961D31827772C17C22CF1FB889B88CC0AFF5060DB2907B1A0670977B6"
+  "site_sha256": "B114764E6AA3153BA4690895EF311BE29EEA0F98020F9E88AE3EAE80A1E722E0",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121021-bone-blue-band-back.png",
@@ -115,9 +124,10 @@
   "apliiq_design_id": 6121021,
   "view": "back",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
-  "site_px": "1137x1421",
+  "site_px": "1081x1351",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "2992EF39980533198C3B5D70F3F97DCEAC2571D618A17D217B6FB05CB4C5DA55"
+  "site_sha256": "09D38B8FD2A4DE5C0E7399B7538B62EC91B28DA90C67AB97DB5190AAAA36F91A",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121044-grey-heather-blue-band-front.png",
@@ -127,9 +137,10 @@
   "apliiq_design_id": 6121044,
   "view": "front",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
-  "site_px": "1137x1421",
+  "site_px": "1179x1474",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "C07B506E266BE7E45AAA95CB6070B2F8446FF547ED212A06D38EACF7A96CFFC2"
+  "site_sha256": "7A276AF0E01939D3510100299E3A7E93983FD57ADBF1EF77C94F13E249E2CD52",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
  },
  {
   "file": "apliiq-render-6121044-grey-heather-blue-band-back.png",
@@ -139,8 +150,119 @@
   "apliiq_design_id": 6121044,
   "view": "back",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
-  "site_px": "1137x1421",
+  "site_px": "1187x1484",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "B5775ADA70318EF7A89DD57C0E3D6BEAFFDF2C1B55710A6F47A47FC948B252A7"
+  "site_sha256": "29DA582CE4378C4F5AF043A5A90AFFF98277DD283147FC190D4DA332C394C7E6",
+  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
+ },
+ {
+  "file": "owner-render-bone-blue-band-front.png",
+  "bytes": 1779903,
+  "sha256": "0B5B4024E0BFF8C696A40DCAF3509F3D84758CC9832C1DDDF6A27B656F1B890F",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:29",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+  "site_px": "1078x1348",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "B114764E6AA3153BA4690895EF311BE29EEA0F98020F9E88AE3EAE80A1E722E0"
+ },
+ {
+  "file": "owner-render-bone-blue-band-back.png",
+  "bytes": 1781263,
+  "sha256": "CCE3B7BABDFEBD5D23E27E43CA3034A58A361D116287DE9196BA0761BDF6B3FE",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:29",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+  "site_px": "1081x1351",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "09D38B8FD2A4DE5C0E7399B7538B62EC91B28DA90C67AB97DB5190AAAA36F91A"
+ },
+ {
+  "file": "owner-render-black-red-band-front.png",
+  "bytes": 1684848,
+  "sha256": "A00BB007C569B226EE53BB93EC37D91E48D0318B375FAB83E4E6E0B54A5C764A",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:35",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+  "site_px": "1075x1344",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "2B95D02A2495004E26E87B4476338F26F8A48820B92E1497D067B8111CA9BACE"
+ },
+ {
+  "file": "owner-render-black-red-band-back.png",
+  "bytes": 1700286,
+  "sha256": "C2B4EBE1CC0B90B1BA04F72475963326B87E2E0B74F8074CE3B817F3F355A8F2",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:35",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+  "site_px": "1099x1374",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "F79778490AAA1850F8B6BB2C8226FFA24B94E27DB5099B179A16FC069A91E023"
+ },
+ {
+  "file": "owner-render-black-blue-band-front.png",
+  "bytes": 1625002,
+  "sha256": "B445C7E13AC9282CAABC1FECCC517FC15BB220A13698304EBDCF40624F24EA3F",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:42",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+  "site_px": "1104x1380",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "95E2AB8C08C3C7EC1F358B1C7029A3C518BEE79639ED9FB5EF8414B6D19CC1DD"
+ },
+ {
+  "file": "owner-render-black-blue-band-back.png",
+  "bytes": 1632669,
+  "sha256": "150AC815E32B06EA68CE641A75EF8EC85AA379B80EE09FBAC0DDB1A79583E173",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:42",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+  "site_px": "1106x1382",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "E61D5AB757F979CE0513365FFD91EE11D1531CE94008F17D04184BF1E66D0A96"
+ },
+ {
+  "file": "owner-render-grey-heather-blue-band-front.png",
+  "bytes": 2044905,
+  "sha256": "9047299FE53C3B99E06941834E4AB550758A6D91E9674DBC58CB53DDE4F2FDEC",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:53",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+  "site_px": "1179x1474",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "7A276AF0E01939D3510100299E3A7E93983FD57ADBF1EF77C94F13E249E2CD52"
+ },
+ {
+  "file": "owner-render-grey-heather-blue-band-back.png",
+  "bytes": 2134932,
+  "sha256": "97F7BB3D78A823C7972E24EA13359D505DB467873CFDD5DA2EBB287F32283F82",
+  "px": "1254x1254",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:53",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+  "site_px": "1187x1484",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "29DA582CE4378C4F5AF043A5A90AFFF98277DD283147FC190D4DA332C394C7E6"
+ },
+ {
+  "file": "owner-render-grey-heather-red-band-front.png",
+  "bytes": 837550,
+  "sha256": "A9D90D48D7A899E94C6FF8BE0C2F32D41087611B221F23CDBD8CCDE9ADC5C318",
+  "px": "1200x1200",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:54 (named GOOOL_Grey_Heather_Red_Band_Hoodie_*_Website.png, 1200x1200)",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+  "site_px": "841x1051",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "52E47B149A465C13DCBF670F8C5DD27CD669B2A20D703D064E8938022ECD0A3C"
+ },
+ {
+  "file": "owner-render-grey-heather-red-band-back.png",
+  "bytes": 846978,
+  "sha256": "64EC77040D4EF2400D40CADB338A4A937E50FBDB5CFF6BD355752D480F4FE31A",
+  "px": "1200x1200",
+  "source": "owner download (ChatGPT render), 2026-09-24 04:54 (named GOOOL_Grey_Heather_Red_Band_Hoodie_*_Website.png, 1200x1200)",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+  "site_px": "851x1064",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
+  "site_sha256": "591D88295C64AB16E0E1221FB91B201A3395DCA9D776F94CD66B57223902D417"
  }
 ]

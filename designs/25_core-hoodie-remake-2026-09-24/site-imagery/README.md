@@ -22,5 +22,15 @@ photographs of a produced hoodie.
 | GOOOL_STD_HOODIE_BONE_BLUE_* | 6121021 · Bone · Blue Band |
 | GOOOL_STD_HOODIE_GREYHEATHER_BLUE_* | 6121044 · Grey Heather · Blue Band |
 
+Owner renders (ChatGPT, downloaded 2026-09-24 04:29 to 04:54) replaced the
+Apliiq renders as the site copies for five of the six designs the same
+night: Bone · Blue, Black · Red, Black · Blue, Grey Heather · Blue and Grey
+Heather · Red (`owner-render-*.png` here, fitted with
+`scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80
+--top 0.10`, so every hoodie sits at 0.80 of the frame height). Bone · Red
+still shows the Apliiq render until the owner supplies that pair. The Grey
+Heather · Red renders are 1200 px squares, so their site copies are 841 x
+1051 / 851 x 1064 rather than the 1137 x 1421 of the rest.
+
 The previous wordmark-only site images are in
 `designs/_archive/hoodie-wordmark-imagery-2026-09-24/`.

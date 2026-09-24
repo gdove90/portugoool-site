@@ -33,8 +33,15 @@ ap.add_argument('--garment-width', type=float, default=0.90,
                 help='garment bounding-box width as a fraction of the frame width')
 ap.add_argument('--top', type=float, default=0.115,
                 help='space above the garment as a fraction of the frame height')
+ap.add_argument('--garment-height', type=float, default=None,
+                help='optional cap on garment height as a fraction of the frame; when the '
+                     'width-led frame would make a tall garment (a hoodie) exceed it, the frame '
+                     'grows so the garment sits at this height instead')
 ap.add_argument('--quality', type=int, default=90)
 ap.add_argument('--strip', type=int, default=8, help='rows averaged for the extension colour')
+ap.add_argument('--threshold', type=int, default=30,
+                help='summed RGB difference from the background model that counts as garment; '
+                     'raise to about 60 for a light garment on a vignetted ground')
 ap.add_argument('--garment-bbox', default=None,
                 help='x0,y0,x1,y1 of the garment in the source; skips detection. Use it when '
                      'the garment is close in tone to a vignetted background (natural tees), '
@@ -54,7 +61,7 @@ bg = (1 - t) * top_strip[None] + t * bot_strip[None]   # (H,W,3) linear top->bot
 
 # --- garment bounding box: pixels that differ from the background model
 resid = np.abs(px - bg).sum(axis=2)
-mask = resid > 30
+mask = resid > a.threshold
 # ignore a 2 px frame so encoder halos at the edge do not count as content
 mask[:2, :] = mask[-2:, :] = False
 mask[:, :2] = mask[:, -2:] = False
@@ -68,7 +75,11 @@ else:
 gw, gh = gx1 - gx0 + 1, gy1 - gy0 + 1
 
 # --- target frame
-frame_w = int(round(gw / a.garment_width))
+frame_w = gw / a.garment_width
+if a.garment_height:
+    # tall garment: let height decide when it needs more room than width does
+    frame_w = max(frame_w, (gh / a.garment_height) * 4 / 5)
+frame_w = int(round(frame_w))
 frame_w = min(frame_w, W)                 # never upscale the source
 frame_h = int(round(frame_w * 5 / 4))
 # horizontal crop centred on the garment
