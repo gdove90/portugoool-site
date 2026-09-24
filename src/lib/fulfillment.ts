@@ -99,10 +99,19 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
         XXL: "APQ-6120860S2A1",
       },
     },
-    // "Natural" (4a-N, red band): the owner is saving that design on
-    // Apliiq (2026-09-24). Add it here as
-    //   "Natural": { apliiqProductId: <id>, skus: APQ-<id>S{6,7,8,1,2}A1 }
-    // once the id is known. resolveApliiqSku returns null for it until then.
+    // Natural (4a-N, red band): saved by the owner on 2026-09-24 as design
+    // 6120889 (Apliiq name "GOOOL Casual Wordmark Tee"; colour natural,
+    // 4a-natural-front at 11 x 4.55, 4a-back-yoke at 12 x 2, transfer).
+    Natural: {
+      apliiqProductId: 6120889,
+      skus: {
+        S: "APQ-6120889S6A1",
+        M: "APQ-6120889S7A1",
+        L: "APQ-6120889S8A1",
+        XL: "APQ-6120889S1A1",
+        XXL: "APQ-6120889S2A1",
+      },
+    },
   },
   // GOOOL Casual Wordmark Tee · Club Blue (4b set). Its own product since
   // 2026-09-24 (owner decision); before that the Natural blue-band design

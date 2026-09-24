@@ -4,9 +4,9 @@
   "note": "GENERATED FILE. Do not hand-edit: it is a projection of the fulfillment mapping, which is what the site actually executes. Regenerate after any mapping change and commit the result. `--check` fails if the two disagree. Previously maintained by hand, which let it keep listing three saved designs that had been deleted from Apliiq.",
   "verification": "Every saved_design_id below was confirmed present in the live Apliiq account on 2026-09-22, and the account contained no saved design outside this list. Per-size SKUs were read from Apliiq's own records; the scheme is APQ-{designId}S{sizeCode}A1.",
   "totals": {
-    "colorways": 19,
+    "colorways": 20,
     "distinct_products": 13,
-    "available_for_sale": 15,
+    "available_for_sale": 17,
     "note": "available_for_sale 0 is correct and deliberate: the storefront is pre-launch. Mapping a colourway here records a verified supplier identifier; it does not open purchasing."
   },
   "rows": [
@@ -285,7 +285,7 @@
         "XXL": "APQ-6120860S2A1"
       },
       "catalog_is_active": true,
-      "catalog_available_for_sale": false
+      "catalog_available_for_sale": true
     },
     {
       "product": "GOOOL Casual Wordmark Tee · Club Blue",
@@ -303,6 +303,23 @@
       },
       "catalog_is_active": true,
       "catalog_available_for_sale": false
+    },
+    {
+      "product": "GOOOL Casual Wordmark Tee · Red",
+      "color": "Natural",
+      "slug": "goool-heavyweight-casual-tee",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000003",
+      "blank": null,
+      "saved_design_id": 6120889,
+      "per_size_skus": {
+        "S": "APQ-6120889S6A1",
+        "M": "APQ-6120889S7A1",
+        "L": "APQ-6120889S8A1",
+        "XL": "APQ-6120889S1A1",
+        "XXL": "APQ-6120889S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
     },
     {
       "product": "GOOOL Casual Wordmark Tee · Club Blue",

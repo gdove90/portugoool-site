@@ -1932,10 +1932,8 @@ export const products: Product[] = [
           },
         ],
       },
-      // Natural · red band (4a-N): renders added 2026-09-24. The Apliiq
-      // design is being saved by the owner; until its id is mapped in
-      // fulfillment.ts this variant cannot be fulfilled (purchasing is
-      // closed on the whole product anyway).
+      // Natural · red band (4a-N): renders added 2026-09-24; Apliiq design
+      // 6120889 (owner-saved the same day), mapped in fulfillment.ts.
       {
         name: "Natural",
         supplierColor: "Natural",
@@ -1963,9 +1961,11 @@ export const products: Product[] = [
     category: "tshirt",
     supplierType: "apliiq",
     isActive: true,
-    // Purchasing opens LAST (apliiq-product-mapping.md rollout order):
-    // stays false until the owner confirms the saved designs and price.
-    availableForSale: false,
+    // Purchasing opened by the owner on 2026-09-24 ("ensure all new
+    // products are able to be purchased"): both colours map to saved
+    // Apliiq designs (Black 6120860, Natural 6120889) and the products
+    // row for this id exists in Supabase.
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

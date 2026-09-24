@@ -15,9 +15,16 @@
 -- Apply via the Supabase dashboard SQL editor (the established workflow;
 -- the org-scoped MCP connector cannot see this project). Idempotent.
 --
--- NOT YET APPLIED. Both products stay available_for_sale = false in
--- products.ts and here until the owner opens purchasing; apply this
--- before that flag is ever flipped.
+-- NOT YET APPLIED (2026-09-24). The ...0003 row already exists, so the
+-- Red tee opened for purchase in products.ts the same day; its row is
+-- renamed here and its flag set true to match. The ...0005 row does not
+-- exist yet, so the Club Blue tee stays availableForSale: false in
+-- products.ts until this has run; then flip it (and the flag below).
+--
+-- Tried from the workstation: the Supabase MCP connector only sees the
+-- localchefri project, the Netlify CLI injects a masked placeholder for
+-- SUPABASE_SERVICE_ROLE_KEY, and no Supabase CLI login exists, so the
+-- SQL editor it is.
 
 insert into public.products
   (id, name, slug, description, price_cents, color, color_hex,
@@ -25,7 +32,7 @@ insert into public.products
 values
   ('70000000-0000-4000-8000-000000000003', 'GOOOL Casual Wordmark Tee · Red',
    'goool-heavyweight-casual-tee', '', 4800, 'Black', '#111111',
-   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, false),
+   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, true),
   ('70000000-0000-4000-8000-000000000005', 'GOOOL Casual Wordmark Tee · Club Blue',
    'goool-heavyweight-casual-tee-blue', '', 4800, 'Natural', '#E8E2D3',
    array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, false)
