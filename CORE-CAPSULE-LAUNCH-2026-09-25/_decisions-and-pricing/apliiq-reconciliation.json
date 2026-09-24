@@ -1,0 +1,475 @@
+{
+  "generated_by": "scripts/gen-apliiq-reconciliation.mjs",
+  "source_of_truth": "src/lib/fulfillment.ts",
+  "note": "GENERATED FILE. Do not hand-edit: it is a projection of the fulfillment mapping, which is what the site actually executes. Regenerate after any mapping change and commit the result. `--check` fails if the two disagree. Previously maintained by hand, which let it keep listing three saved designs that had been deleted from Apliiq.",
+  "verification": "Every saved_design_id below was confirmed present in the live Apliiq account on 2026-09-22, and the account contained no saved design outside this list. Per-size SKUs were read from Apliiq's own records; the scheme is APQ-{designId}S{sizeCode}A1.",
+  "totals": {
+    "colorways": 24,
+    "distinct_products": 14,
+    "available_for_sale": 19,
+    "note": "available_for_sale 0 is correct and deliberate: the storefront is pre-launch. Mapping a colourway here records a verified supplier identifier; it does not open purchasing."
+  },
+  "rows": [
+    {
+      "product": "GOOOL Performance Badge Tee",
+      "color": "Black",
+      "slug": "goool-performance-tee",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000001",
+      "blank": "Sport-Tek ST720 (Sustainable Athletic Tee)",
+      "saved_design_id": 6098962,
+      "per_size_skus": {
+        "S": "APQ-6098962S6A1",
+        "M": "APQ-6098962S7A1",
+        "L": "APQ-6098962S8A1",
+        "XL": "APQ-6098962S1A1",
+        "XXL": "APQ-6098962S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Touchline Cap",
+      "color": "Black/Natural",
+      "slug": "goool-touchline-cap",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000004",
+      "blank": "OTTO 31-069",
+      "saved_design_id": 6098980,
+      "per_size_skus": {
+        "OS": "APQ-6098980S34A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Performance Badge Tee",
+      "color": "White",
+      "slug": "goool-performance-tee",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000001",
+      "blank": "Sport-Tek ST720",
+      "saved_design_id": 6099046,
+      "per_size_skus": {
+        "S": "APQ-6099046S6A1",
+        "M": "APQ-6099046S7A1",
+        "L": "APQ-6099046S8A1",
+        "XL": "APQ-6099046S1A1",
+        "XXL": "APQ-6099046S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Performance Badge Tee",
+      "color": "True Royal",
+      "slug": "goool-performance-tee",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000001",
+      "blank": "Sport-Tek ST720",
+      "saved_design_id": 6099129,
+      "per_size_skus": {
+        "S": "APQ-6099129S6A1",
+        "M": "APQ-6099129S7A1",
+        "L": "APQ-6099129S8A1",
+        "XL": "APQ-6099129S1A1",
+        "XXL": "APQ-6099129S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Athletics Minimal Club Tee",
+      "color": "Natural",
+      "slug": "goool-athletics-minimal-club-tee",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000003",
+      "blank": "Bella+Canvas 3010 Heavyweight Tee",
+      "saved_design_id": 6112018,
+      "per_size_skus": {
+        "S": "APQ-6112018S6A1",
+        "M": "APQ-6112018S7A1",
+        "L": "APQ-6112018S8A1",
+        "XL": "APQ-6112018S1A1",
+        "XXL": "APQ-6112018S2A1"
+      },
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
+    },
+    {
+      "product": "GOOOL Athletics Modern Sport Tee",
+      "color": "Black",
+      "slug": "goool-athletics-modern-sport-tee",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000001",
+      "blank": "Bella+Canvas 3010 Heavyweight Tee",
+      "saved_design_id": 6112026,
+      "per_size_skus": {
+        "S": "APQ-6112026S6A1",
+        "M": "APQ-6112026S7A1",
+        "L": "APQ-6112026S8A1",
+        "XL": "APQ-6112026S1A1",
+        "XXL": "APQ-6112026S2A1"
+      },
+      "catalog_is_active": false,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Athletics Circular Badge Tee",
+      "color": "Ivory",
+      "slug": "goool-athletics-circular-badge-tee",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000004",
+      "blank": "Comfort Colors C1717",
+      "saved_design_id": 6112033,
+      "per_size_skus": {
+        "S": "APQ-6112033S6A1",
+        "M": "APQ-6112033S7A1",
+        "L": "APQ-6112033S8A1",
+        "XL": "APQ-6112033S1A1",
+        "XXL": "APQ-6112033S2A1"
+      },
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
+    },
+    {
+      "product": "GOOOL Athletics Modern Sport Performance Tee",
+      "color": "Black",
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000006",
+      "blank": "Sport-Tek ST720",
+      "saved_design_id": 6112037,
+      "per_size_skus": {
+        "S": "APQ-6112037S6A1",
+        "M": "APQ-6112037S7A1",
+        "L": "APQ-6112037S8A1",
+        "XL": "APQ-6112037S1A1",
+        "XXL": "APQ-6112037S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Athletics Circular Center Crewneck",
+      "color": "Gray Heather",
+      "slug": "goool-athletics-circular-center-crewneck",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000005",
+      "blank": "AS Colour 5150 Made Crew",
+      "saved_design_id": 6112046,
+      "per_size_skus": {
+        "S": "APQ-6112046S6A1",
+        "M": "APQ-6112046S7A1",
+        "L": "APQ-6112046S8A1",
+        "XL": "APQ-6112046S1A1",
+        "XXL": "APQ-6112046S2A1"
+      },
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
+    },
+    {
+      "product": "GOOOL Athletics Modern Sport Performance Tee",
+      "color": "True Royal",
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000006",
+      "blank": "Sport-Tek ST720",
+      "saved_design_id": 6113361,
+      "per_size_skus": {
+        "S": "APQ-6113361S6A1",
+        "M": "APQ-6113361S7A1",
+        "L": "APQ-6113361S8A1",
+        "XL": "APQ-6113361S1A1",
+        "XXL": "APQ-6113361S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Athletics Varsity Tee",
+      "color": "Washed Black",
+      "slug": "goool-athletics-varsity-tee",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000002",
+      "blank": "Bella+Canvas 4810GD",
+      "saved_design_id": 6114178,
+      "per_size_skus": {
+        "S": "APQ-6114178S6A1",
+        "M": "APQ-6114178S7A1",
+        "L": "APQ-6114178S8A1",
+        "XL": "APQ-6114178S1A1",
+        "XXL": "APQ-6114178S2A1"
+      },
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
+    },
+    {
+      "product": "GOOOL Athletics Varsity Tee",
+      "color": "Washed Navy",
+      "slug": "goool-athletics-varsity-tee",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000002",
+      "blank": "Bella+Canvas 4810GD",
+      "saved_design_id": 6114196,
+      "per_size_skus": {
+        "S": "APQ-6114196S6A1",
+        "M": "APQ-6114196S7A1",
+        "L": "APQ-6114196S8A1",
+        "XL": "APQ-6114196S1A1",
+        "XXL": "APQ-6114196S2A1"
+      },
+      "catalog_is_active": false,
+      "catalog_available_for_sale": false
+    },
+    {
+      "product": "GOOOL Athletics Stacked Cap",
+      "color": "Black/Natural",
+      "slug": "goool-athletics-stacked-cap",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000008",
+      "blank": null,
+      "saved_design_id": 6117282,
+      "per_size_skus": {
+        "OS": "APQ-6117282S34A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Athletics Badge Cap",
+      "color": "Black/Natural",
+      "slug": "goool-athletics-badge-cap",
+      "catalog_product_id": "80000000-0000-4000-8000-000000000007",
+      "blank": null,
+      "saved_design_id": 6117349,
+      "per_size_skus": {
+        "OS": "APQ-6117349S34A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Casual Wordmark Tee · Red",
+      "color": "Black",
+      "slug": "goool-heavyweight-casual-tee",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000003",
+      "blank": null,
+      "saved_design_id": 6120860,
+      "per_size_skus": {
+        "S": "APQ-6120860S6A1",
+        "M": "APQ-6120860S7A1",
+        "L": "APQ-6120860S8A1",
+        "XL": "APQ-6120860S1A1",
+        "XXL": "APQ-6120860S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Casual Wordmark Tee · Club Blue",
+      "color": "Natural",
+      "slug": "goool-heavyweight-casual-tee-blue",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000005",
+      "blank": null,
+      "saved_design_id": 6120887,
+      "per_size_skus": {
+        "S": "APQ-6120887S6A1",
+        "M": "APQ-6120887S7A1",
+        "L": "APQ-6120887S8A1",
+        "XL": "APQ-6120887S1A1",
+        "XXL": "APQ-6120887S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Casual Wordmark Tee · Red",
+      "color": "Natural",
+      "slug": "goool-heavyweight-casual-tee",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000003",
+      "blank": null,
+      "saved_design_id": 6120889,
+      "per_size_skus": {
+        "S": "APQ-6120889S6A1",
+        "M": "APQ-6120889S7A1",
+        "L": "APQ-6120889S8A1",
+        "XL": "APQ-6120889S1A1",
+        "XXL": "APQ-6120889S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Casual Wordmark Tee · Club Blue",
+      "color": "Black",
+      "slug": "goool-heavyweight-casual-tee-blue",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000005",
+      "blank": null,
+      "saved_design_id": 6120898,
+      "per_size_skus": {
+        "S": "APQ-6120898S6A1",
+        "M": "APQ-6120898S7A1",
+        "L": "APQ-6120898S8A1",
+        "XL": "APQ-6120898S1A1",
+        "XXL": "APQ-6120898S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Core Hoodie · Red",
+      "color": "Bone",
+      "slug": "goool-heavyweight-hoodie",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000002",
+      "blank": null,
+      "saved_design_id": 6120990,
+      "per_size_skus": {
+        "S": "APQ-6120990S6A1",
+        "M": "APQ-6120990S7A1",
+        "L": "APQ-6120990S8A1",
+        "XL": "APQ-6120990S1A1",
+        "XXL": "APQ-6120990S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Core Hoodie · Club Blue",
+      "color": "Bone",
+      "slug": "goool-heavyweight-hoodie-blue",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000006",
+      "blank": null,
+      "saved_design_id": 6121021,
+      "per_size_skus": {
+        "S": "APQ-6121021S6A1",
+        "M": "APQ-6121021S7A1",
+        "L": "APQ-6121021S8A1",
+        "XL": "APQ-6121021S1A1",
+        "XXL": "APQ-6121021S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Core Hoodie · Red",
+      "color": "Black",
+      "slug": "goool-heavyweight-hoodie",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000002",
+      "blank": null,
+      "saved_design_id": 6121031,
+      "per_size_skus": {
+        "S": "APQ-6121031S6A1",
+        "M": "APQ-6121031S7A1",
+        "L": "APQ-6121031S8A1",
+        "XL": "APQ-6121031S1A1",
+        "XXL": "APQ-6121031S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Core Hoodie · Club Blue",
+      "color": "Black",
+      "slug": "goool-heavyweight-hoodie-blue",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000006",
+      "blank": null,
+      "saved_design_id": 6121042,
+      "per_size_skus": {
+        "S": "APQ-6121042S6A1",
+        "M": "APQ-6121042S7A1",
+        "L": "APQ-6121042S8A1",
+        "XL": "APQ-6121042S1A1",
+        "XXL": "APQ-6121042S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Core Hoodie · Red",
+      "color": "Grey Heather",
+      "slug": "goool-heavyweight-hoodie",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000002",
+      "blank": null,
+      "saved_design_id": 6121043,
+      "per_size_skus": {
+        "S": "APQ-6121043S6A1",
+        "M": "APQ-6121043S7A1",
+        "L": "APQ-6121043S8A1",
+        "XL": "APQ-6121043S1A1",
+        "XXL": "APQ-6121043S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    },
+    {
+      "product": "GOOOL Core Hoodie · Club Blue",
+      "color": "Grey Heather",
+      "slug": "goool-heavyweight-hoodie-blue",
+      "catalog_product_id": "70000000-0000-4000-8000-000000000006",
+      "blank": null,
+      "saved_design_id": 6121044,
+      "per_size_skus": {
+        "S": "APQ-6121044S6A1",
+        "M": "APQ-6121044S7A1",
+        "L": "APQ-6121044S8A1",
+        "XL": "APQ-6121044S1A1",
+        "XXL": "APQ-6121044S2A1"
+      },
+      "catalog_is_active": true,
+      "catalog_available_for_sale": true
+    }
+  ],
+  "retired_designs": [
+    {
+      "id": 6098963,
+      "was": "GOOOL Casual Wordmark Tee - Washed Black",
+      "replaced_by": 6113934,
+      "reason": "6.75in front print; rebuilt at 10in",
+      "deleted": "2026-09-22"
+    },
+    {
+      "id": 6099060,
+      "was": "GOOOL Casual Wordmark Tee - Washed Grey",
+      "replaced_by": 6113938,
+      "reason": "6.75in front print; rebuilt at 10in",
+      "deleted": "2026-09-22"
+    },
+    {
+      "id": 6112032,
+      "was": "GOOOL Athletics Varsity Tee - Washed Black",
+      "replaced_by": 6114178,
+      "reason": "carried a back print that could not be placed inside Back Box 1; back print dropped, front rescaled to 12.5in",
+      "deleted": "before 2026-09-22"
+    },
+    {
+      "id": 6113912,
+      "was": "GOOOL Athletics Varsity Tee (11in)",
+      "replaced_by": 6114178,
+      "reason": "11in front print, superseded by 12.5in",
+      "deleted": "before 2026-09-22"
+    },
+    {
+      "id": 6113914,
+      "was": "GOOOL Athletics Varsity Tee (11in)",
+      "replaced_by": 6114196,
+      "reason": "11in front print, superseded by 12.5in",
+      "deleted": "before 2026-09-22"
+    },
+    {
+      "id": 6113937,
+      "was": "GOOOL Casual Wordmark Tee - Washed Black (wrong ink)",
+      "replaced_by": 6113934,
+      "reason": "created in error by multiselectColor while switching colourways",
+      "deleted": "before 2026-09-22"
+    },
+    {
+      "id": 6114195,
+      "was": "GOOOL Athletics Varsity Tee - Washed Navy",
+      "replaced_by": 6114196,
+      "reason": "duplicate navy varsity, never wired to the site",
+      "deleted": "2026-09-22"
+    },
+    {
+      "id": 6113886,
+      "was": "GOOOL Athletics Varsity Tee - Washed Navy",
+      "replaced_by": 6114196,
+      "reason": "duplicate navy varsity, never wired to the site",
+      "deleted": "2026-09-22"
+    },
+    {
+      "id": 6113885,
+      "was": "GOOOL Athletics Varsity Tee - Washed Navy",
+      "replaced_by": 6114196,
+      "reason": "duplicate navy varsity, never wired to the site",
+      "deleted": "2026-09-22"
+    }
+  ]
+}

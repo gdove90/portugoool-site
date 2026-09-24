@@ -43,3 +43,12 @@ GOOOL_FILES_FOR_PORTUGOOOL.zip
 
 # Campaign asset pack archive (contents committed uncompressed alongside)
 designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack.zip
+
+# Private account recovery codes
+/passkey/
+
+# Core Capsule launch folder: a curated copy of assets that live elsewhere
+# in the repo (scripts/assemble-core-capsule.py rebuilds it). The large
+# renders are not committed twice; the print files, site images, docs and
+# manifest are.
+/CORE-CAPSULE-LAUNCH-*/*/renders/

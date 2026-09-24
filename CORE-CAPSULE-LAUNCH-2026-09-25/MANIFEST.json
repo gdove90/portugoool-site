@@ -1,0 +1,1328 @@
+[
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/artwork/GOOOL_SAMPLE_01_ST720_BADGE_FRONT_5IN.png",
+  "bytes": 526119,
+  "sha256": "CA2F9BBCAC8E9D0C902B4141F0B7B36428B34F2015F345B0250D85ADA424218B"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/ARTWORK-AUDIT.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/ARTWORK-AUDIT.md",
+  "bytes": 2320,
+  "sha256": "3F3C74DB2067A106B9C65AF3BE791E463120E0289DA1D327F535F61040BA4A3F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/OWNER-DECISIONS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/OWNER-DECISIONS.md",
+  "bytes": 1961,
+  "sha256": "EC6E646B6AC17D07C7EE9EE90A494D09E7FD77F6899706992A182A5A88F3F8E0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/REVISION-2.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/REVISION-2.md",
+  "bytes": 2911,
+  "sha256": "D1D59F4193BF32BAFD58E330C0F8A6D1744004A1194011248A17F0370066C5F5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/SAVED-DESIGN-UPDATES.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SAVED-DESIGN-UPDATES.md",
+  "bytes": 2046,
+  "sha256": "8A50C31D6EF8FE4F6B530BE902DB0222D285315766DB4689CAE145EDACDD9B2C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/SOURCE-CONFLICTS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SOURCE-CONFLICTS.md",
+  "bytes": 3191,
+  "sha256": "A4E374678BEACE86795A4CEF665C41A61036E51F291C3C617445173BC923BC0D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/SPEC.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SPEC.md",
+  "bytes": 2756,
+  "sha256": "2E8C40FD26AD68F3EC26EEB25D78637AA4325CC43DB85023886257565329BBE0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/SUPPLIER-RESEARCH.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SUPPLIER-RESEARCH.md",
+  "bytes": 1649,
+  "sha256": "B7B78A979B4F41198DB6713363223FB70A0E5AC402C5D83B2F23AE8F6FD64B6F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/SAMPLE-ACCEPTANCE.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SAMPLE-ACCEPTANCE.json",
+  "bytes": 701,
+  "sha256": "2D73FCC18D15CD53D68C71FE46BEE252983D141B61E1B7E4EE60F173075572FF"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/SHA256SUMS.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/SHA256SUMS.json",
+  "bytes": 2878,
+  "sha256": "CC0E5E36102AD5FCF0A1C79F90222BF0F434B9782DC4CB9D31FA6AA0C8E1B747"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/import-plan.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/import-plan.json",
+  "bytes": 1883,
+  "sha256": "71A438B7A9E7880C015B489EE227A10AEA661DA74E849D9B779D49242867C56B"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/spec.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/spec.json",
+  "bytes": 6913,
+  "sha256": "FA6624CCEFA780206A5809D5E246D61803E21EC70DA6A46975D38573603457D2"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/verification-record.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/verification-record.json",
+  "bytes": 2401,
+  "sha256": "613EEBF4128015B46F7E6A619FE35D14B5750804B540627765A3FB89FB844666"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/black/PLACEMENT-PROOF.html",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/PLACEMENT-PROOF.html",
+  "bytes": 6223,
+  "sha256": "98501D24BE7BD74380F3E45E5662B4B38E7506810C166FB986A0424D4BB95BEA"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/ARTWORK-AUDIT.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/ARTWORK-AUDIT.md",
+  "bytes": 2320,
+  "sha256": "3F3C74DB2067A106B9C65AF3BE791E463120E0289DA1D327F535F61040BA4A3F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/OWNER-DECISIONS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/OWNER-DECISIONS.md",
+  "bytes": 1961,
+  "sha256": "EC6E646B6AC17D07C7EE9EE90A494D09E7FD77F6899706992A182A5A88F3F8E0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/REVISION-2.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/REVISION-2.md",
+  "bytes": 2911,
+  "sha256": "D1D59F4193BF32BAFD58E330C0F8A6D1744004A1194011248A17F0370066C5F5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/SAVED-DESIGN-UPDATES.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SAVED-DESIGN-UPDATES.md",
+  "bytes": 2046,
+  "sha256": "8A50C31D6EF8FE4F6B530BE902DB0222D285315766DB4689CAE145EDACDD9B2C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/SOURCE-CONFLICTS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SOURCE-CONFLICTS.md",
+  "bytes": 3191,
+  "sha256": "A4E374678BEACE86795A4CEF665C41A61036E51F291C3C617445173BC923BC0D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/SPEC.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SPEC.md",
+  "bytes": 2778,
+  "sha256": "D075E6C52DF2DDF6489697F5D2140442798C368F7F5C90374ED344A597504B4D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/SUPPLIER-RESEARCH.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SUPPLIER-RESEARCH.md",
+  "bytes": 1649,
+  "sha256": "B7B78A979B4F41198DB6713363223FB70A0E5AC402C5D83B2F23AE8F6FD64B6F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/SAMPLE-ACCEPTANCE.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SAMPLE-ACCEPTANCE.json",
+  "bytes": 701,
+  "sha256": "10C7FD8A7525A5F035E0D2A617FB911E40242922682EFB4560C5D63D0194FA68"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/SHA256SUMS.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/SHA256SUMS.json",
+  "bytes": 2889,
+  "sha256": "C9B6F3352B4F85F3FCA17F6E95B980C5BC3EE0C69913267391041B5E0D50C4DC"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/import-plan.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/import-plan.json",
+  "bytes": 1883,
+  "sha256": "D76B59D2437FF66E9DD0730BB483D371961547761E5D1B60696AEED0CA1DEB94"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/spec.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/spec.json",
+  "bytes": 6901,
+  "sha256": "1EE499824DC610F0A0A327E75E66FBA60206FB2CF0940D4283BC327794E6A426"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/verification-record.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/verification-record.json",
+  "bytes": 2401,
+  "sha256": "33BA938E32DB3C86118AD40F5748742D4CED4A19876EBBE9DC0DFE9BB0471984"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/white/PLACEMENT-PROOF.html",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/02-goool-performance-tee-white/PLACEMENT-PROOF.html",
+  "bytes": 6234,
+  "sha256": "55F719D89D15BD77E99149F17FF26DCFF49FAA019ADB00EEFB391CC8C62820A5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/ARTWORK-AUDIT.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/ARTWORK-AUDIT.md",
+  "bytes": 2320,
+  "sha256": "3F3C74DB2067A106B9C65AF3BE791E463120E0289DA1D327F535F61040BA4A3F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/OWNER-DECISIONS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/OWNER-DECISIONS.md",
+  "bytes": 1961,
+  "sha256": "EC6E646B6AC17D07C7EE9EE90A494D09E7FD77F6899706992A182A5A88F3F8E0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/REVISION-2.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/REVISION-2.md",
+  "bytes": 2911,
+  "sha256": "D1D59F4193BF32BAFD58E330C0F8A6D1744004A1194011248A17F0370066C5F5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/SAVED-DESIGN-UPDATES.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SAVED-DESIGN-UPDATES.md",
+  "bytes": 2046,
+  "sha256": "8A50C31D6EF8FE4F6B530BE902DB0222D285315766DB4689CAE145EDACDD9B2C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/SOURCE-CONFLICTS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SOURCE-CONFLICTS.md",
+  "bytes": 3191,
+  "sha256": "A4E374678BEACE86795A4CEF665C41A61036E51F291C3C617445173BC923BC0D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/SPEC.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SPEC.md",
+  "bytes": 2790,
+  "sha256": "9CE5EF570CA60B54DF4F44EC61590504B60D13AE2603DC46B183885E54BCF146"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/SUPPLIER-RESEARCH.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SUPPLIER-RESEARCH.md",
+  "bytes": 1649,
+  "sha256": "B7B78A979B4F41198DB6713363223FB70A0E5AC402C5D83B2F23AE8F6FD64B6F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/SAMPLE-ACCEPTANCE.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SAMPLE-ACCEPTANCE.json",
+  "bytes": 706,
+  "sha256": "651E7166BFD7B9AA27E6F246B6EAD86F3775F2D248FF9730EA074875A7F5BC37"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/SHA256SUMS.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/SHA256SUMS.json",
+  "bytes": 2890,
+  "sha256": "EE56192340613A791AD664FAE5891CF1234A578CF55474524716204D9908809E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/import-plan.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/import-plan.json",
+  "bytes": 1888,
+  "sha256": "DB34AB4EFEC72137D7D402B2F68C866BB2FA8B1BB2804459C39E7CC58EDE99D3"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/spec.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/spec.json",
+  "bytes": 6958,
+  "sha256": "1FC3CAA7BDD77D0A25B048E7C7E699C32C25CECB9CBA129AB8E2D78593917A45"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/verification-record.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/verification-record.json",
+  "bytes": 2406,
+  "sha256": "F66DEEC092B913E17CDC589DE6A83C749D5787A86D9A9A9F9C7B6BDCA018438E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/package-docs/true-royal/PLACEMENT-PROOF.html",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/03-goool-performance-tee-true-royal/PLACEMENT-PROOF.html",
+  "bytes": 6250,
+  "sha256": "032228B5C0553499446F286E59DAFDCB0101B7DD93CFC4DA98383FE3634DBBB2"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/label/README.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/README.md",
+  "bytes": 2011,
+  "sha256": "59D81301309756DACBE6041F25D5B64D4C8AECEBDF6C866A5C356E7F0EC988E7"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/label/ARTWORK-PROVENANCE.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/ARTWORK-PROVENANCE.json",
+  "bytes": 5523,
+  "sha256": "369C0FD4B7F6D03A961EC290B0156199973969567D31180A91CAFB836FD8282C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/label/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.png",
+  "bytes": 17331,
+  "sha256": "4BC5DE6C77B9A20FC30AE809A5307E9B6C170D79E4919CEF9E57803E98555E81"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/label/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-1IN-FLAT.svg",
+  "bytes": 32020,
+  "sha256": "E67E80EBADC436F25DE7F508884E8EE1671024A7563B4D6776DB1A1552716917"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/label/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.png",
+  "bytes": 43903,
+  "sha256": "A633EC57863AFC6EB8C538ECA3EA52F9D20D06DFC018D75105B20EEE840FB9FF"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/label/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/01-goool-performance-tee-black/label/artwork/GOOOL-ATHLETICS-LABEL-2IN-FLAT.svg",
+  "bytes": 32020,
+  "sha256": "FE8AD4FB0876E5901446535883C02DB3EB4E04D2AE1C9B605A13C79498F882FB"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/site-images/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+  "source": "public/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+  "bytes": 28868,
+  "sha256": "F18A4E53F4D3CA3DB71B0539B62075F5C98F773541DA9F9F1C4D1C937F9970DA"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/site-images/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+  "source": "public/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+  "bytes": 39758,
+  "sha256": "936FCFCC774CE48B7E8500CF89762467200AECE06C2F6B0EEEA8389D041A7EE7"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/site-images/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+  "source": "public/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+  "bytes": 40094,
+  "sha256": "637C7F2D84550CC2F8427F47F49024FC37616F6F498E1954C32B17CD2CF0A1BD"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/site-images/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+  "source": "public/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+  "bytes": 64984,
+  "sha256": "179DCDAF256B55D404D265C0B5611B770ED9536D55A6449129BC8A8BCF6F10D8"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/site-images/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+  "source": "public/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+  "bytes": 21222,
+  "sha256": "DE61D1C95C28263B8C03F9189BE4790907BEEF58AA711004606E6E3DDCBFD8C1"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/01_performance-badge-tee/site-images/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+  "source": "public/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+  "bytes": 34546,
+  "sha256": "228EEEF8EC53001CD7C9D24C26D0EF5A27E81E006DAFF8BBB2A03959361218DE"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/artwork/GA-01-B_975px_CLEAN.png",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-B_975px_CLEAN.png",
+  "bytes": 24965,
+  "sha256": "07199D54EDE15BCF25AAC3A2C9EDE9212AE25F38CF7FFC456353042FF3C96AE4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/artwork/GA-01-F_3300px_CLEAN.png",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/artwork/GA-01-F_3300px_CLEAN.png",
+  "bytes": 115619,
+  "sha256": "8BED7C19280100E7D25F610DBD8DE9E8463C1E4299A6AA9FA4BF875A45812C7E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/ARTWORK-AUDIT.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/ARTWORK-AUDIT.md",
+  "bytes": 2320,
+  "sha256": "3F3C74DB2067A106B9C65AF3BE791E463120E0289DA1D327F535F61040BA4A3F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/OWNER-DECISIONS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/OWNER-DECISIONS.md",
+  "bytes": 1961,
+  "sha256": "EC6E646B6AC17D07C7EE9EE90A494D09E7FD77F6899706992A182A5A88F3F8E0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/REVISION-2.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/REVISION-2.md",
+  "bytes": 2911,
+  "sha256": "D1D59F4193BF32BAFD58E330C0F8A6D1744004A1194011248A17F0370066C5F5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/SAVED-DESIGN-UPDATES.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SAVED-DESIGN-UPDATES.md",
+  "bytes": 2046,
+  "sha256": "8A50C31D6EF8FE4F6B530BE902DB0222D285315766DB4689CAE145EDACDD9B2C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/SOURCE-CONFLICTS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SOURCE-CONFLICTS.md",
+  "bytes": 3191,
+  "sha256": "A4E374678BEACE86795A4CEF665C41A61036E51F291C3C617445173BC923BC0D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/SPEC.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SPEC.md",
+  "bytes": 3066,
+  "sha256": "EC021E26EF102A7F5F90E79C151194E12956CBF1BB710423EEF5680326A7AAAF"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/SUPPLIER-RESEARCH.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SUPPLIER-RESEARCH.md",
+  "bytes": 1649,
+  "sha256": "B7B78A979B4F41198DB6713363223FB70A0E5AC402C5D83B2F23AE8F6FD64B6F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/SAMPLE-ACCEPTANCE.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SAMPLE-ACCEPTANCE.json",
+  "bytes": 724,
+  "sha256": "B239053F1B27C4CB1896E3BB14C3A1E32FAB8180FAFED2C9218B1BC0380D45E0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/SHA256SUMS.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/SHA256SUMS.json",
+  "bytes": 3095,
+  "sha256": "BC3A2CFA810F88B199DC32C612580A3F48FA1EE8AA4B49BF12BE898F6EC88AB6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/import-plan.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/import-plan.json",
+  "bytes": 1906,
+  "sha256": "040385FE9FD0C1E23B13B0AAF55E1CE93B2F4A83EEA1A4B3421F9BF92962644B"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/spec.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/spec.json",
+  "bytes": 8828,
+  "sha256": "934C330BEF28A502B8F1E03B2F23A9C6CB8256EFC47F2773C6DBB6AEB015CC97"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/verification-record.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/verification-record.json",
+  "bytes": 2424,
+  "sha256": "749B1FCB86DB45D4036A84F50E25859CC3B0A94BF7FCE1ED5B837CF08D4CE2A0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/PLACEMENT-PROOF.html",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/14-goool-athletics-modern-sport-performance-tee-black/PLACEMENT-PROOF.html",
+  "bytes": 6899,
+  "sha256": "1B8D1C0617B52063AFE09336151F6C395A0780D6468E7108B203E508DFB22780"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/site-images/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+  "source": "public/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+  "bytes": 1881751,
+  "sha256": "BAE849061FA612F1E2128D9E4FA761C6E4C2BAF7BD3AD3688BDE915CFC70E088"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/site-images/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+  "source": "public/products/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+  "bytes": 1276572,
+  "sha256": "2147D65AE385378AFF3BE8BDBE4FFC50A1C9F250855C25FAD1402613E77F405A"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/site-images/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL.png",
+  "source": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL.png",
+  "bytes": 1596971,
+  "sha256": "EC5CFFBA740BF5086AE7DC7513D7A11A0B6E6969A97196DD42D9F31A6F05CABD"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/site-images/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT.png",
+  "source": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT.png",
+  "bytes": 1250444,
+  "sha256": "8C51D73766D1D2D44040E5A15E4055FAF186B250F2CF7198723610F1DC20CBFC"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/print-files/4a-black-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4a-black-front.png",
+  "bytes": 268780,
+  "sha256": "E80C9CDFED84CBA37E37A8DDB9C99F9543AADCCEB764669517F3CD4323BC669E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/print-files/4a-natural-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4a-natural-front.png",
+  "bytes": 257541,
+  "sha256": "96D5F922C105108000C5C959C6F6C8599BEB7059E8F9468FE4D694E4D7BCE6E6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/print-files/4a-athletic-heather-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4a-athletic-heather-front.png",
+  "bytes": 257541,
+  "sha256": "C341EE001B47A03B3462DE7E5D6E58D662BFECBC3F1536FB6E9F96A338AAEFC6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/print-files/4a-back-yoke.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4a-back-yoke.png",
+  "bytes": 110086,
+  "sha256": "C1B3269C12B3BB50A0CE0FCBE389919A05FE48E0F5E6CA5ED669528E4B450D6E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/handoff/CLAUDE-CORE-HOODIE-HANDOFF.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/CLAUDE-CORE-HOODIE-HANDOFF.md",
+  "bytes": 16007,
+  "sha256": "1BFD9E24E2C7A16D2CD380397B689BE227F9CCA8E8EE4EBAD3895178AD1D58BA"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/handoff/PRINT-CHECK.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/PRINT-CHECK.md",
+  "bytes": 2427,
+  "sha256": "A35E5E442391A429EE65F1316A1EC0E903FD48DB39505274822FB8028A34CC82"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/handoff/PRODUCTION-NOTES.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/PRODUCTION-NOTES.md",
+  "bytes": 875,
+  "sha256": "4B364C62071B32DA05B6CB05D10DB94C6C0F8F1C75AE8A5DE5D3E4596421A57B"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/handoff/WEBSITE-COPY-DRAFT.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/WEBSITE-COPY-DRAFT.md",
+  "bytes": 4512,
+  "sha256": "15D08F1056266CC7A183EAA9D467A956FC01E1F0E9E2678BB0BABA89CA64D256"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/handoff/placement-back-size-S.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/placement-back-size-S.png",
+  "bytes": 167064,
+  "sha256": "9E4B0C6EC51B2040F8C84EC084BCBAD17526DE03E669E04585ECF4F4528678F7"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/handoff/placement-front-size-S.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/placement-front-size-S.png",
+  "bytes": 183778,
+  "sha256": "CE9B5E6DE13C581DC31357FD81836D189F7F0A9D76B25E381566027BBD36818E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/handoff/FILES.json",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/FILES.json",
+  "bytes": 5067,
+  "sha256": "C6332DD4EFA898C4C8A835455AB38936B122198F682446CD49FFB0E224196970"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/apliiq-render-6120990-bone-red-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6120990-bone-red-band-back.png",
+  "bytes": 691991,
+  "sha256": "FAA37786FCB86EA6D912A8658D781D62343F3160836140A5CE044CFFF6BBFB1D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/apliiq-render-6120990-bone-red-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6120990-bone-red-band-front.png",
+  "bytes": 971488,
+  "sha256": "2A8EC569E7B2A6A037D12537D50D2F727C0338D5EFF6F126516884951B501383"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/apliiq-render-6121031-black-red-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121031-black-red-band-back.png",
+  "bytes": 539488,
+  "sha256": "07E1CDCA51A5F3C7C657E4E4D788F602BD69D2B65D41E1B984DACDD434810DB0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/apliiq-render-6121031-black-red-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121031-black-red-band-front.png",
+  "bytes": 593536,
+  "sha256": "AF3F3D6E7F12E688D921D1B09D83B99A7A36F56389C9E0178084490E9926795C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/apliiq-render-6121043-grey-heather-red-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121043-grey-heather-red-band-back.png",
+  "bytes": 876209,
+  "sha256": "72F703725F7AC43B9E34528E5280E6E352FCAF349755D2B2B0016CD4B9544BF4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/apliiq-render-6121043-grey-heather-red-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121043-grey-heather-red-band-front.png",
+  "bytes": 1002385,
+  "sha256": "935C05FFE6D669B091354454D79AA2A87AB850AA2A7257231C2B48B9FF35DC9A"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/owner-render-black-red-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-black-red-band-back.png",
+  "bytes": 1700286,
+  "sha256": "C2B4EBE1CC0B90B1BA04F72475963326B87E2E0B74F8074CE3B817F3F355A8F2"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/owner-render-black-red-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-black-red-band-front.png",
+  "bytes": 1684848,
+  "sha256": "A00BB007C569B226EE53BB93EC37D91E48D0318B375FAB83E4E6E0B54A5C764A"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/owner-render-grey-heather-red-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-grey-heather-red-band-back.png",
+  "bytes": 846978,
+  "sha256": "64EC77040D4EF2400D40CADB338A4A937E50FBDB5CFF6BD355752D480F4FE31A"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/owner-render-grey-heather-red-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-grey-heather-red-band-front.png",
+  "bytes": 837550,
+  "sha256": "A9D90D48D7A899E94C6FF8BE0C2F32D41087611B221F23CDBD8CCDE9ADC5C318"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/README.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/README.md",
+  "bytes": 2061,
+  "sha256": "AEA07C8229DDB5099AEE5E01ECDB0C808B3416FFD299EA74412028A68903A97F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/FILES.json",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/FILES.json",
+  "bytes": 16373,
+  "sha256": "A2BCFF3AA472263A7311FF84C0E48B0913C44691686E34BC6AD3914B4157E6FD"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+  "bytes": 81736,
+  "sha256": "F79778490AAA1850F8B6BB2C8226FFA24B94E27DB5099B179A16FC069A91E023"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+  "bytes": 76122,
+  "sha256": "2B95D02A2495004E26E87B4476338F26F8A48820B92E1497D067B8111CA9BACE"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+  "bytes": 89122,
+  "sha256": "E57009B5B8752A53A3D5C1775409C627D9408E57518EF1059DFA9BE41A67CC94"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+  "bytes": 66610,
+  "sha256": "11BEEE2B15B64E24541F3E25448308CA4942E8BA6523F8E537FBEA884B42B9D0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+  "bytes": 77300,
+  "sha256": "591D88295C64AB16E0E1221FB91B201A3395DCA9D776F94CD66B57223902D417"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+  "bytes": 75574,
+  "sha256": "52E47B149A465C13DCBF670F8C5DD27CD669B2A20D703D064E8938022ECD0A3C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/print-files/4b-black-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4b-black-front.png",
+  "bytes": 272217,
+  "sha256": "621C32AEE55237C6CE81D2EEDB1AF2691529E320536EB55424DAECCC5209D710"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/print-files/4b-natural-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4b-natural-front.png",
+  "bytes": 272284,
+  "sha256": "95A0FC9130607E226953614C28D37B3914D58BDE5BF5800821A796E5CE06C4D5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/print-files/4b-athletic-heather-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4b-athletic-heather-front.png",
+  "bytes": 271847,
+  "sha256": "536F9BE01AA415E63053759A2E9668D37AE7AF15E0B4BC6B214C538AD8C93860"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/print-files/4b-back-yoke-blue.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4b-back-yoke-blue.png",
+  "bytes": 107702,
+  "sha256": "DD8AF2548444659ED5BF9C0170A74C8BBAB702477DCF66A0D9A24D7FB8022D42"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/handoff/CLAUDE-CORE-HOODIE-HANDOFF.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/CLAUDE-CORE-HOODIE-HANDOFF.md",
+  "bytes": 16007,
+  "sha256": "1BFD9E24E2C7A16D2CD380397B689BE227F9CCA8E8EE4EBAD3895178AD1D58BA"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/handoff/PRINT-CHECK.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/PRINT-CHECK.md",
+  "bytes": 2427,
+  "sha256": "A35E5E442391A429EE65F1316A1EC0E903FD48DB39505274822FB8028A34CC82"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/handoff/PRODUCTION-NOTES.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/PRODUCTION-NOTES.md",
+  "bytes": 875,
+  "sha256": "4B364C62071B32DA05B6CB05D10DB94C6C0F8F1C75AE8A5DE5D3E4596421A57B"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/handoff/WEBSITE-COPY-DRAFT.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/WEBSITE-COPY-DRAFT.md",
+  "bytes": 4512,
+  "sha256": "15D08F1056266CC7A183EAA9D467A956FC01E1F0E9E2678BB0BABA89CA64D256"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/handoff/placement-back-size-S.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/placement-back-size-S.png",
+  "bytes": 167064,
+  "sha256": "9E4B0C6EC51B2040F8C84EC084BCBAD17526DE03E669E04585ECF4F4528678F7"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/handoff/placement-front-size-S.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/placement-front-size-S.png",
+  "bytes": 183778,
+  "sha256": "CE9B5E6DE13C581DC31357FD81836D189F7F0A9D76B25E381566027BBD36818E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/handoff/FILES.json",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/FILES.json",
+  "bytes": 5067,
+  "sha256": "C6332DD4EFA898C4C8A835455AB38936B122198F682446CD49FFB0E224196970"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/apliiq-render-6121021-bone-blue-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121021-bone-blue-band-back.png",
+  "bytes": 694710,
+  "sha256": "A7AD61688F13FE86F4D27CF676B2425149B492C96B34E62689B583CD2BFF91A0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/apliiq-render-6121021-bone-blue-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121021-bone-blue-band-front.png",
+  "bytes": 985020,
+  "sha256": "8734957195C22A1DD5199196334253465D19B16D2B0A74E9A136862ABB90579E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/apliiq-render-6121042-black-blue-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121042-black-blue-band-back.png",
+  "bytes": 542678,
+  "sha256": "E680876D9E753528083D8750006EAA80261D71FEF5C09D2C490FBD38A398F9C3"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/apliiq-render-6121042-black-blue-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121042-black-blue-band-front.png",
+  "bytes": 595902,
+  "sha256": "A34D3384EA4BF33C64881DC31277712E85F532688DFA9FFAC9F48C41136CE912"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/apliiq-render-6121044-grey-heather-blue-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121044-grey-heather-blue-band-back.png",
+  "bytes": 878714,
+  "sha256": "7330C34F32421AE77B46923756D3E8932408559053798C99FB33893A4385B01C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/apliiq-render-6121044-grey-heather-blue-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/apliiq-render-6121044-grey-heather-blue-band-front.png",
+  "bytes": 1023572,
+  "sha256": "D175B3AE87D98003373E8068388D563ACEFE815519301AD72B2A04555E81F5C4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/owner-render-black-blue-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-black-blue-band-back.png",
+  "bytes": 1632669,
+  "sha256": "150AC815E32B06EA68CE641A75EF8EC85AA379B80EE09FBAC0DDB1A79583E173"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/owner-render-black-blue-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-black-blue-band-front.png",
+  "bytes": 1625002,
+  "sha256": "B445C7E13AC9282CAABC1FECCC517FC15BB220A13698304EBDCF40624F24EA3F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/owner-render-bone-blue-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-bone-blue-band-back.png",
+  "bytes": 1781263,
+  "sha256": "CCE3B7BABDFEBD5D23E27E43CA3034A58A361D116287DE9196BA0761BDF6B3FE"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/owner-render-bone-blue-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-bone-blue-band-front.png",
+  "bytes": 1779903,
+  "sha256": "0B5B4024E0BFF8C696A40DCAF3509F3D84758CC9832C1DDDF6A27B656F1B890F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/owner-render-grey-heather-blue-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-grey-heather-blue-band-back.png",
+  "bytes": 2134932,
+  "sha256": "97F7BB3D78A823C7972E24EA13359D505DB467873CFDD5DA2EBB287F32283F82"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/owner-render-grey-heather-blue-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-grey-heather-blue-band-front.png",
+  "bytes": 2044905,
+  "sha256": "9047299FE53C3B99E06941834E4AB550758A6D91E9674DBC58CB53DDE4F2FDEC"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/README.md",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/README.md",
+  "bytes": 2061,
+  "sha256": "AEA07C8229DDB5099AEE5E01ECDB0C808B3416FFD299EA74412028A68903A97F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/FILES.json",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/FILES.json",
+  "bytes": 16373,
+  "sha256": "A2BCFF3AA472263A7311FF84C0E48B0913C44691686E34BC6AD3914B4157E6FD"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/site-images/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+  "bytes": 65336,
+  "sha256": "E61D5AB757F979CE0513365FFD91EE11D1531CE94008F17D04184BF1E66D0A96"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/site-images/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+  "bytes": 67352,
+  "sha256": "95E2AB8C08C3C7EC1F358B1C7029A3C518BEE79639ED9FB5EF8414B6D19CC1DD"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/site-images/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+  "bytes": 106194,
+  "sha256": "09D38B8FD2A4DE5C0E7399B7538B62EC91B28DA90C67AB97DB5190AAAA36F91A"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/site-images/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+  "bytes": 99744,
+  "sha256": "B114764E6AA3153BA4690895EF311BE29EEA0F98020F9E88AE3EAE80A1E722E0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/site-images/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+  "bytes": 187018,
+  "sha256": "29DA582CE4378C4F5AF043A5A90AFFF98277DD283147FC190D4DA332C394C7E6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/site-images/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+  "source": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+  "bytes": 217230,
+  "sha256": "7A276AF0E01939D3510100299E3A7E93983FD57ADBF1EF77C94F13E249E2CD52"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/print-files/4a-black-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4a-black-front.png",
+  "bytes": 268780,
+  "sha256": "E80C9CDFED84CBA37E37A8DDB9C99F9543AADCCEB764669517F3CD4323BC669E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/print-files/4a-natural-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4a-natural-front.png",
+  "bytes": 257541,
+  "sha256": "96D5F922C105108000C5C959C6F6C8599BEB7059E8F9468FE4D694E4D7BCE6E6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/print-files/4a-back-yoke.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4a-back-yoke.png",
+  "bytes": 110086,
+  "sha256": "C1B3269C12B3BB50A0CE0FCBE389919A05FE48E0F5E6CA5ED669528E4B450D6E"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/handoff/CLAUDE-CASUAL-TEE-3010-HANDOFF-4a-4b.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/CLAUDE-CASUAL-TEE-3010-HANDOFF-4a-4b.md",
+  "bytes": 6608,
+  "sha256": "6EF106072ACF26B70A629048D2B43438E38C06C179D1082FF5D1389455C1A9FE"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/handoff/CLAUDE-CASUAL-TEE-3010-HANDOFF.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/CLAUDE-CASUAL-TEE-3010-HANDOFF.md",
+  "bytes": 5350,
+  "sha256": "56985D35563D63EC2EA303551840EA882ED13F521A8AC12BC87B7E9EECF8EC44"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/handoff/WEBSITE-COPY-DRAFT.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/WEBSITE-COPY-DRAFT.md",
+  "bytes": 2483,
+  "sha256": "A235D22DF1769D641D919BB0C75E4CCBAD019BC84E5E65831A69ACFB1894BDE7"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/handoff/FILES.json",
+  "source": "designs/24_casual-tee-3010-2026-09-23/FILES.json",
+  "bytes": 1620,
+  "sha256": "E368F759635A2774065809A9D1F3BD4965212A1FDD77076C7D3CC5C890478445"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/renders/casual-tee-3010-black-red-back.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-black-red-back.png",
+  "bytes": 1554895,
+  "sha256": "CD1F86267D9824D62B38173947EFB6B12458B8B206647B211067A3401869BFEF"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/renders/casual-tee-3010-black-red-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-black-red-front.png",
+  "bytes": 1409952,
+  "sha256": "64E33AEFD69215BA5ED95E65003E1FAD87C3C97D1AAEABCB1B03F587465E1E8D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/renders/casual-tee-3010-natural-red-back.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-natural-red-back.png",
+  "bytes": 1701913,
+  "sha256": "02C80306A1018251DF60BC74A2F25405F0280F4ECEED01775595DBCECB9D6370"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/renders/casual-tee-3010-natural-red-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-natural-red-front.png",
+  "bytes": 1701222,
+  "sha256": "54A53B5A07EFBDF0648A991CDEFCF271258829A4289E5DAD818B1B031A68DCC8"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/renders/README.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/README.md",
+  "bytes": 1788,
+  "sha256": "06081812C454DAC1376DB619CA7CDA581ED7A1824A4A21FEC47AB61D826FD378"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/renders/FILES.json",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/FILES.json",
+  "bytes": 4923,
+  "sha256": "08D831DD334AD88DF1B1B4391FCA7059F9893696CA1D52898D07A8ADEA929D8D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/site-images/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+  "bytes": 56136,
+  "sha256": "066E3C35319D12646C439A2687823DA16981F3C8143CA623828047B5EB73AF72"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/site-images/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+  "bytes": 59552,
+  "sha256": "B4C248868E0667FFB947EAFCA8F31A582EF3098067191353222226C48E24993D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/site-images/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+  "bytes": 83796,
+  "sha256": "8823D1BD9D50EFFCEB5785487DB70C51647A3F3E076DC383C27E83567AB6BAB7"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/05_casual-wordmark-tee-red/site-images/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+  "bytes": 79504,
+  "sha256": "92B5C0A2214791737422A7A413FB3566A4F87AE10573D910F5BF1FDC5B9A2E91"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/print-files/4b-black-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4b-black-front.png",
+  "bytes": 272217,
+  "sha256": "621C32AEE55237C6CE81D2EEDB1AF2691529E320536EB55424DAECCC5209D710"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/print-files/4b-natural-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4b-natural-front.png",
+  "bytes": 272284,
+  "sha256": "95A0FC9130607E226953614C28D37B3914D58BDE5BF5800821A796E5CE06C4D5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/print-files/4b-back-yoke-blue.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/print-files/4b-back-yoke-blue.png",
+  "bytes": 107702,
+  "sha256": "DD8AF2548444659ED5BF9C0170A74C8BBAB702477DCF66A0D9A24D7FB8022D42"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/handoff/CLAUDE-CASUAL-TEE-3010-HANDOFF-4a-4b.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/CLAUDE-CASUAL-TEE-3010-HANDOFF-4a-4b.md",
+  "bytes": 6608,
+  "sha256": "6EF106072ACF26B70A629048D2B43438E38C06C179D1082FF5D1389455C1A9FE"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/handoff/CLAUDE-CASUAL-TEE-3010-HANDOFF.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/CLAUDE-CASUAL-TEE-3010-HANDOFF.md",
+  "bytes": 5350,
+  "sha256": "56985D35563D63EC2EA303551840EA882ED13F521A8AC12BC87B7E9EECF8EC44"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/handoff/WEBSITE-COPY-DRAFT.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/WEBSITE-COPY-DRAFT.md",
+  "bytes": 2483,
+  "sha256": "A235D22DF1769D641D919BB0C75E4CCBAD019BC84E5E65831A69ACFB1894BDE7"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/handoff/FILES.json",
+  "source": "designs/24_casual-tee-3010-2026-09-23/FILES.json",
+  "bytes": 1620,
+  "sha256": "E368F759635A2774065809A9D1F3BD4965212A1FDD77076C7D3CC5C890478445"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/renders/casual-tee-3010-black-blue-back.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-black-blue-back.png",
+  "bytes": 1679665,
+  "sha256": "B4D7B4957A1D8A18735CD3AC1E1C28892B293D4AFC469E47AF311AD80DB8B967"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/renders/casual-tee-3010-black-blue-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-black-blue-front.png",
+  "bytes": 1687797,
+  "sha256": "81B678F606FC1087C2D72C50C1CE7B4F948257468780E7E3C5773D8AEAFF5066"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/renders/casual-tee-3010-natural-blue-back.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-natural-blue-back.png",
+  "bytes": 1590032,
+  "sha256": "E97DFDC9339068089EC41B6F2BED8DE8642C39FBB5EF0A3206D314FA4CC669B9"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/renders/casual-tee-3010-natural-blue-front.png",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/casual-tee-3010-natural-blue-front.png",
+  "bytes": 1708021,
+  "sha256": "A47C12FE7ABC320C08732ED5518F04FC6FC95F7C9F374748A3BA79B9E3885888"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/renders/README.md",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/README.md",
+  "bytes": 1788,
+  "sha256": "06081812C454DAC1376DB619CA7CDA581ED7A1824A4A21FEC47AB61D826FD378"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/renders/FILES.json",
+  "source": "designs/24_casual-tee-3010-2026-09-23/site-imagery/FILES.json",
+  "bytes": 4923,
+  "sha256": "08D831DD334AD88DF1B1B4391FCA7059F9893696CA1D52898D07A8ADEA929D8D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/site-images/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+  "bytes": 81382,
+  "sha256": "E7B752A3D3408F4A4E115CB596481CBEF28056A55A902FB1679BB51A347A13AE"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/site-images/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+  "bytes": 81800,
+  "sha256": "67CB7BC9DC6A0021C45F23305197DA3F8F758A70F78DF89171D066D215359B10"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/site-images/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+  "bytes": 70756,
+  "sha256": "6E17F86F7F3870EA4B32693BCF6E1F4C2ABC0B4E837084EE95DADC41CD16E436"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/06_casual-wordmark-tee-club-blue/site-images/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+  "source": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+  "bytes": 85004,
+  "sha256": "CD288CF243DEAB6C367D10D5A4C7FD406653D310623AD175D291AB696982C14F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/ARTWORK-AUDIT.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/ARTWORK-AUDIT.md",
+  "bytes": 2320,
+  "sha256": "3F3C74DB2067A106B9C65AF3BE791E463120E0289DA1D327F535F61040BA4A3F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/OWNER-DECISIONS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/OWNER-DECISIONS.md",
+  "bytes": 1961,
+  "sha256": "EC6E646B6AC17D07C7EE9EE90A494D09E7FD77F6899706992A182A5A88F3F8E0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/REVISION-2.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/REVISION-2.md",
+  "bytes": 2911,
+  "sha256": "D1D59F4193BF32BAFD58E330C0F8A6D1744004A1194011248A17F0370066C5F5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/SAVED-DESIGN-UPDATES.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SAVED-DESIGN-UPDATES.md",
+  "bytes": 2046,
+  "sha256": "8A50C31D6EF8FE4F6B530BE902DB0222D285315766DB4689CAE145EDACDD9B2C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/SOURCE-CONFLICTS.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SOURCE-CONFLICTS.md",
+  "bytes": 3191,
+  "sha256": "A4E374678BEACE86795A4CEF665C41A61036E51F291C3C617445173BC923BC0D"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/SPEC.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SPEC.md",
+  "bytes": 2921,
+  "sha256": "268D9673B74CD5BB2FD476071100929F45FED292DA00D3925C94B4D99D259AF2"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/SUPPLIER-RESEARCH.md",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SUPPLIER-RESEARCH.md",
+  "bytes": 1649,
+  "sha256": "B7B78A979B4F41198DB6713363223FB70A0E5AC402C5D83B2F23AE8F6FD64B6F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/SAMPLE-ACCEPTANCE.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SAMPLE-ACCEPTANCE.json",
+  "bytes": 707,
+  "sha256": "25CE8E0243E43FADAB5DD7ED9F4CBD0428F01403F128DE90B112F6AB1BB09968"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/SHA256SUMS.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/SHA256SUMS.json",
+  "bytes": 3031,
+  "sha256": "F877485E25FDB23CC21A7939E54984E82C7D84BF5487E5C8106A1E9B34CAF194"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/import-plan.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/import-plan.json",
+  "bytes": 1889,
+  "sha256": "B6144E15171121D7FFE6D90BC968DFDD36E6258E05433B0E814F478515BCDAE5"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/spec.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/spec.json",
+  "bytes": 6913,
+  "sha256": "A60CB41A31330569B2D4B60BFA8DC46CB8F75418858F59F40B642D8906FA7D89"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/verification-record.json",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/verification-record.json",
+  "bytes": 1083,
+  "sha256": "F2FFF4F4476CB2F52D31BB22E977943C0470146152AE9851B6B5C5709E0A8937"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/package-docs/PLACEMENT-PROOF.html",
+  "source": "designs/apliiq-upload-packages-2026-09-21-v2/packages/08-goool-touchline-cap-black-natural/PLACEMENT-PROOF.html",
+  "bytes": 6218,
+  "sha256": "412A52D199F6CAE4F109BE5B0C5533DDBABB45E162D0C88612ABF24EE57F851C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/site-images/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+  "source": "public/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+  "bytes": 131550,
+  "sha256": "25047AAC1F7EC7A737D5F3718692C4B5BD240E368F8A43DB649F8F6A8EFD2789"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/07_touchline-cap/site-images/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+  "source": "public/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+  "bytes": 167510,
+  "sha256": "8440AD001CC40A4A4DE06990B25CC4AC661318668AFC3983BB83B0547CB05346"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/BADGE-CREAM-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-CREAM-THICK.png",
+  "bytes": 16950,
+  "sha256": "D6839542074FC249FEA73D2FCF357819921984AD6CCB0920A22F46902A37D67C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/BADGE-CREAM.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-CREAM.png",
+  "bytes": 16695,
+  "sha256": "B8AC47AFB046710EBCE67358C19D823F7F4D8D4A5101CF28626728D8FB8B4987"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/BADGE-INK-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-INK-THICK.png",
+  "bytes": 16933,
+  "sha256": "D226AB8E4C78EDDC4868F165772E8EEF74ED74382D4882B4C7CD7C0E0C2F5229"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/BADGE-INK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-INK.png",
+  "bytes": 16678,
+  "sha256": "81E8ADEF01DA4ACA9D47199B01CE8D2919299A09616990F27ADDC446C238EBB4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/HAT-BADGE-INK-2IN.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/HAT-BADGE-INK-2IN.png",
+  "bytes": 59563,
+  "sha256": "0D62B94B8EF7F48CC1E465FFEF7272DB6E593E4065FE85A94C7DC7BE9314B142"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/HAT-LOCKUP-ATHLETICS-INK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/HAT-LOCKUP-ATHLETICS-INK.png",
+  "bytes": 59693,
+  "sha256": "82D62033A6CF19B942B6BEE0B242812527FAE816F7B56DA8F019997679116DE3"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/HAT-LOCKUP-INK-3_5IN.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/HAT-LOCKUP-INK-3_5IN.png",
+  "bytes": 52282,
+  "sha256": "5B8936691712C2A7F99ACCBD442563017DFC2A6752818B3D29B281AEBC4AEFB0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/LOCKUP-CREAM-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-CREAM-THICK.png",
+  "bytes": 34374,
+  "sha256": "0A916B398D073EB0FB436D88EAD795DD8A8AD4C48883B7A8DA3441186937DFAF"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/LOCKUP-CREAM.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-CREAM.png",
+  "bytes": 125298,
+  "sha256": "C3534F40BFA16E8D7968732A8B383835072C2695A2A112E1E6639965BF93E477"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/LOCKUP-INK-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-INK-THICK.png",
+  "bytes": 34350,
+  "sha256": "512FDA413CA4A9D8DD62B75CFD52B8829E92D3C68D90D673464854135AA1DDC6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/LOCKUP-INK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-INK.png",
+  "bytes": 128337,
+  "sha256": "45C7D488F7A0B3D0A2BB83D648F6E56E902984A6F87F4E544C9CB4457D4F57F4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/APLIIQ-OTTO-31069-SPEC.md",
+  "source": "designs/23_cap-embroidery-2026-09-22/APLIIQ-OTTO-31069-SPEC.md",
+  "bytes": 2305,
+  "sha256": "1E9B1087AE6712CCCF346BF88B5C341A38E6D3CD3C587511C4F6795DB411EEF4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/embroidery/README.md",
+  "source": "designs/23_cap-embroidery-2026-09-22/README.md",
+  "bytes": 4109,
+  "sha256": "63F8ECA417B41C99F1DA5D5D82955FE8FECD214DB30F05387F9C078829467CA2"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/concepts/FINAL-cap-badge-ink.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/concepts/FINAL-cap-badge-ink.png",
+  "bytes": 853911,
+  "sha256": "78BFB683A394AF14750B79CEA8992AA736624B64356A2EF95F97F157C2CFBF41"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/concepts/FINAL-two-caps.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/concepts/FINAL-two-caps.png",
+  "bytes": 276539,
+  "sha256": "4281798FEC3AFFA8694A181F968B4FE83D08EAB9B028338F8D394ACA75B0D404"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/site-images/GOOOL_STD_BADGE_CAP_BACK.webp",
+  "source": "public/products/GOOOL_STD_BADGE_CAP_BACK.webp",
+  "bytes": 131550,
+  "sha256": "25047AAC1F7EC7A737D5F3718692C4B5BD240E368F8A43DB649F8F6A8EFD2789"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/08_athletics-badge-cap/site-images/GOOOL_STD_BADGE_CAP_FRONT.webp",
+  "source": "public/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+  "bytes": 139890,
+  "sha256": "6ABA002A54F19262AC87106AEFBD03497BEDC786D9BF513C9F72E81C464AFC93"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/BADGE-CREAM-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-CREAM-THICK.png",
+  "bytes": 16950,
+  "sha256": "D6839542074FC249FEA73D2FCF357819921984AD6CCB0920A22F46902A37D67C"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/BADGE-CREAM.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-CREAM.png",
+  "bytes": 16695,
+  "sha256": "B8AC47AFB046710EBCE67358C19D823F7F4D8D4A5101CF28626728D8FB8B4987"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/BADGE-INK-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-INK-THICK.png",
+  "bytes": 16933,
+  "sha256": "D226AB8E4C78EDDC4868F165772E8EEF74ED74382D4882B4C7CD7C0E0C2F5229"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/BADGE-INK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/BADGE-INK.png",
+  "bytes": 16678,
+  "sha256": "81E8ADEF01DA4ACA9D47199B01CE8D2919299A09616990F27ADDC446C238EBB4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/HAT-BADGE-INK-2IN.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/HAT-BADGE-INK-2IN.png",
+  "bytes": 59563,
+  "sha256": "0D62B94B8EF7F48CC1E465FFEF7272DB6E593E4065FE85A94C7DC7BE9314B142"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/HAT-LOCKUP-ATHLETICS-INK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/HAT-LOCKUP-ATHLETICS-INK.png",
+  "bytes": 59693,
+  "sha256": "82D62033A6CF19B942B6BEE0B242812527FAE816F7B56DA8F019997679116DE3"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/HAT-LOCKUP-INK-3_5IN.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/HAT-LOCKUP-INK-3_5IN.png",
+  "bytes": 52282,
+  "sha256": "5B8936691712C2A7F99ACCBD442563017DFC2A6752818B3D29B281AEBC4AEFB0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/LOCKUP-CREAM-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-CREAM-THICK.png",
+  "bytes": 34374,
+  "sha256": "0A916B398D073EB0FB436D88EAD795DD8A8AD4C48883B7A8DA3441186937DFAF"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/LOCKUP-CREAM.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-CREAM.png",
+  "bytes": 125298,
+  "sha256": "C3534F40BFA16E8D7968732A8B383835072C2695A2A112E1E6639965BF93E477"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/LOCKUP-INK-THICK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-INK-THICK.png",
+  "bytes": 34350,
+  "sha256": "512FDA413CA4A9D8DD62B75CFD52B8829E92D3C68D90D673464854135AA1DDC6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/LOCKUP-INK.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/artwork/LOCKUP-INK.png",
+  "bytes": 128337,
+  "sha256": "45C7D488F7A0B3D0A2BB83D648F6E56E902984A6F87F4E544C9CB4457D4F57F4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/APLIIQ-OTTO-31069-SPEC.md",
+  "source": "designs/23_cap-embroidery-2026-09-22/APLIIQ-OTTO-31069-SPEC.md",
+  "bytes": 2305,
+  "sha256": "1E9B1087AE6712CCCF346BF88B5C341A38E6D3CD3C587511C4F6795DB411EEF4"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/embroidery/README.md",
+  "source": "designs/23_cap-embroidery-2026-09-22/README.md",
+  "bytes": 4109,
+  "sha256": "63F8ECA417B41C99F1DA5D5D82955FE8FECD214DB30F05387F9C078829467CA2"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/concepts/FINAL-cap-lockup-ink.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/concepts/FINAL-cap-lockup-ink.png",
+  "bytes": 860776,
+  "sha256": "B45D66014AB4A41917B9C657C979C8F94D249959F8152E34578B6C19883F31F6"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/concepts/FINAL-two-caps.png",
+  "source": "designs/23_cap-embroidery-2026-09-22/concepts/FINAL-two-caps.png",
+  "bytes": 276539,
+  "sha256": "4281798FEC3AFFA8694A181F968B4FE83D08EAB9B028338F8D394ACA75B0D404"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/site-images/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
+  "source": "public/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
+  "bytes": 131550,
+  "sha256": "25047AAC1F7EC7A737D5F3718692C4B5BD240E368F8A43DB649F8F6A8EFD2789"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/09_athletics-stacked-cap/site-images/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+  "source": "public/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+  "bytes": 139322,
+  "sha256": "699DEA478DD3F9BBF2DF9E64D64B4F25393914E02E375E4060A346AC414E8398"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/CORE-CAPSULE-LAUNCH-DECISION.md",
+  "source": "designs/00_asset-library/CORE-CAPSULE-LAUNCH-DECISION.md",
+  "bytes": 2882,
+  "sha256": "59986CBE47222F0109728920D4EF5843C4A14982FFD0008E5F0A61042F001BA0"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/CORE-HOODIE-REMAKE-DECISION.md",
+  "source": "designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md",
+  "bytes": 5629,
+  "sha256": "FB5C001BF6DE25FA300D119579EBB88DA334AE14E73CE0B6D0BB3D0376B754C3"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/CASUAL-TEE-3010-DECISION.md",
+  "source": "designs/00_asset-library/CASUAL-TEE-3010-DECISION.md",
+  "bytes": 10627,
+  "sha256": "03BB3E1ACAD13378856C944F8C9DA4C227106E7484E06726B66E1F6DED06A360"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/PRICING-25-PERCENT.md",
+  "source": "designs/18_launch_operations/PRICING-25-PERCENT.md",
+  "bytes": 3844,
+  "sha256": "90FA30D9EA0229CCE620D514A001495816DF4DD3A37F24ABE47666898ADE456B"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/apliiq-reconciliation.json",
+  "source": "designs/11_fulfillment/apliiq-reconciliation.json",
+  "bytes": 15697,
+  "sha256": "1609A53F1A07D3A4F3855CEE5F27E08893ACE1E02146594846B1C64670F9DC6F"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/apliiq-product-mapping.md",
+  "source": "designs/11_fulfillment/apliiq-product-mapping.md",
+  "bytes": 15639,
+  "sha256": "681A8B79C7A652BDD11C78A1A3C4A60AEDB11F956320A74A9BEABE984E492189"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/LAUNCH-TASK-LIST.md",
+  "source": "LAUNCH-TASK-LIST.md",
+  "bytes": 2283,
+  "sha256": "C433005B5F3BC791356979FAFD67EC555FADE5F23EDDBE90806E4F595831B139"
+ }
+]

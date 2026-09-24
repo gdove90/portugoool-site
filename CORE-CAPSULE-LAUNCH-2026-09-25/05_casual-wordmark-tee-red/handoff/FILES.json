@@ -1,0 +1,58 @@
+[
+ {
+  "file": "4a-athletic-heather-front.png",
+  "bytes": 257541,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "C341EE001B47A03B3462DE7E5D6E58D662BFECBC3F1536FB6E9F96A338AAEFC6"
+ },
+ {
+  "file": "4a-back-yoke.png",
+  "bytes": 110086,
+  "px": "3600x600",
+  "in_at_300dpi": "12.00 x 2.00",
+  "sha256": "C1B3269C12B3BB50A0CE0FCBE389919A05FE48E0F5E6CA5ED669528E4B450D6E"
+ },
+ {
+  "file": "4a-black-front.png",
+  "bytes": 268780,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "E80C9CDFED84CBA37E37A8DDB9C99F9543AADCCEB764669517F3CD4323BC669E"
+ },
+ {
+  "file": "4a-natural-front.png",
+  "bytes": 257541,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "96D5F922C105108000C5C959C6F6C8599BEB7059E8F9468FE4D694E4D7BCE6E6"
+ },
+ {
+  "file": "4b-athletic-heather-front.png",
+  "bytes": 271847,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "536F9BE01AA415E63053759A2E9668D37AE7AF15E0B4BC6B214C538AD8C93860"
+ },
+ {
+  "file": "4b-back-yoke-blue.png",
+  "bytes": 107702,
+  "px": "3600x600",
+  "in_at_300dpi": "12.00 x 2.00",
+  "sha256": "DD8AF2548444659ED5BF9C0170A74C8BBAB702477DCF66A0D9A24D7FB8022D42"
+ },
+ {
+  "file": "4b-black-front.png",
+  "bytes": 272217,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "621C32AEE55237C6CE81D2EEDB1AF2691529E320536EB55424DAECCC5209D710"
+ },
+ {
+  "file": "4b-natural-front.png",
+  "bytes": 272284,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "95A0FC9130607E226953614C28D37B3914D58BDE5BF5800821A796E5CE06C4D5"
+ }
+]
