@@ -54,26 +54,76 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Core Hoodie (Independent IND4000)
+  // GOOOL Core Hoodie · Red (Independent IND4000), remade 2026-09-24 with
+  // the 3010 tee print sets (designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md).
+  // One saved design per colour; keys are the colorVariants[].name strings
+  // checkout resolves by. Dropship quote read from the saved designs the
+  // same day: $44.43 per unit with both transfers, XXL +$2.00.
+  // The wordmark-only designs 6098974 (Black) and 6099064 (Bone) are no
+  // longer mapped; they still exist on Apliiq and are not deleted.
   "70000000-0000-4000-8000-000000000002": {
     Black: {
-      apliiqProductId: 6098974,
+      apliiqProductId: 6121031,
       skus: {
-        S: "APQ-6098974S6A1",
-        M: "APQ-6098974S7A1",
-        L: "APQ-6098974S8A1",
-        XL: "APQ-6098974S1A1",
-        XXL: "APQ-6098974S2A1",
+        S: "APQ-6121031S6A1",
+        M: "APQ-6121031S7A1",
+        L: "APQ-6121031S8A1",
+        XL: "APQ-6121031S1A1",
+        XXL: "APQ-6121031S2A1",
       },
     },
     Bone: {
-      apliiqProductId: 6099064,
+      apliiqProductId: 6120990,
       skus: {
-        S: "APQ-6099064S6A1",
-        M: "APQ-6099064S7A1",
-        L: "APQ-6099064S8A1",
-        XL: "APQ-6099064S1A1",
-        XXL: "APQ-6099064S2A1",
+        S: "APQ-6120990S6A1",
+        M: "APQ-6120990S7A1",
+        L: "APQ-6120990S8A1",
+        XL: "APQ-6120990S1A1",
+        XXL: "APQ-6120990S2A1",
+      },
+    },
+    "Grey Heather": {
+      apliiqProductId: 6121043,
+      skus: {
+        S: "APQ-6121043S6A1",
+        M: "APQ-6121043S7A1",
+        L: "APQ-6121043S8A1",
+        XL: "APQ-6121043S1A1",
+        XXL: "APQ-6121043S2A1",
+      },
+    },
+  },
+  // GOOOL Core Hoodie · Club Blue (Independent IND4000), the 4b set, its
+  // own product since 2026-09-24.
+  "70000000-0000-4000-8000-000000000006": {
+    Black: {
+      apliiqProductId: 6121042,
+      skus: {
+        S: "APQ-6121042S6A1",
+        M: "APQ-6121042S7A1",
+        L: "APQ-6121042S8A1",
+        XL: "APQ-6121042S1A1",
+        XXL: "APQ-6121042S2A1",
+      },
+    },
+    Bone: {
+      apliiqProductId: 6121021,
+      skus: {
+        S: "APQ-6121021S6A1",
+        M: "APQ-6121021S7A1",
+        L: "APQ-6121021S8A1",
+        XL: "APQ-6121021S1A1",
+        XXL: "APQ-6121021S2A1",
+      },
+    },
+    "Grey Heather": {
+      apliiqProductId: 6121044,
+      skus: {
+        S: "APQ-6121044S6A1",
+        M: "APQ-6121044S7A1",
+        L: "APQ-6121044S8A1",
+        XL: "APQ-6121044S1A1",
+        XXL: "APQ-6121044S2A1",
       },
     },
   },

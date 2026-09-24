@@ -1,0 +1,133 @@
+[
+ {
+  "file": "CLAUDE-CORE-HOODIE-HANDOFF.md",
+  "role": "document",
+  "bytes": 16007,
+  "sha256": "1BFD9E24E2C7A16D2CD380397B689BE227F9CCA8E8EE4EBAD3895178AD1D58BA"
+ },
+ {
+  "file": "PRODUCTION-NOTES.md",
+  "role": "document",
+  "bytes": 875,
+  "sha256": "4B364C62071B32DA05B6CB05D10DB94C6C0F8F1C75AE8A5DE5D3E4596421A57B"
+ },
+ {
+  "file": "PRINT-CHECK.md",
+  "role": "document",
+  "bytes": 2427,
+  "sha256": "A35E5E442391A429EE65F1316A1EC0E903FD48DB39505274822FB8028A34CC82"
+ },
+ {
+  "file": "WEBSITE-COPY-DRAFT.md",
+  "role": "document",
+  "bytes": 4512,
+  "sha256": "15D08F1056266CC7A183EAA9D467A956FC01E1F0E9E2678BB0BABA89CA64D256"
+ },
+ {
+  "file": "placement-front-size-S.png",
+  "role": "placement diagram",
+  "bytes": 183778,
+  "sha256": "CE9B5E6DE13C581DC31357FD81836D189F7F0A9D76B25E381566027BBD36818E"
+ },
+ {
+  "file": "placement-back-size-S.png",
+  "role": "placement diagram",
+  "bytes": 167064,
+  "sha256": "9E4B0C6EC51B2040F8C84EC084BCBAD17526DE03E669E04585ECF4F4528678F7"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4a-black-front.png",
+  "role": "reused print file (not copied)",
+  "use": "front · Black · Red Band",
+  "bytes": 268780,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "E80C9CDFED84CBA37E37A8DDB9C99F9543AADCCEB764669517F3CD4323BC669E"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4a-natural-front.png",
+  "role": "reused print file (not copied)",
+  "use": "front · Bone · Red Band",
+  "bytes": 257541,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "96D5F922C105108000C5C959C6F6C8599BEB7059E8F9468FE4D694E4D7BCE6E6"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4a-athletic-heather-front.png",
+  "role": "reused print file (not copied)",
+  "use": "front · Grey Heather · Red Band",
+  "bytes": 257541,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "C341EE001B47A03B3462DE7E5D6E58D662BFECBC3F1536FB6E9F96A338AAEFC6"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4b-black-front.png",
+  "role": "reused print file (not copied)",
+  "use": "front · Black · Blue Band",
+  "bytes": 272217,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "621C32AEE55237C6CE81D2EEDB1AF2691529E320536EB55424DAECCC5209D710"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4b-natural-front.png",
+  "role": "reused print file (not copied)",
+  "use": "front · Bone · Blue Band",
+  "bytes": 272284,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "95A0FC9130607E226953614C28D37B3914D58BDE5BF5800821A796E5CE06C4D5"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4b-athletic-heather-front.png",
+  "role": "reused print file (not copied)",
+  "use": "front · Grey Heather · Blue Band",
+  "bytes": 271847,
+  "px": "3330x1377",
+  "in_at_300dpi": "11.10 x 4.59",
+  "sha256": "536F9BE01AA415E63053759A2E9668D37AE7AF15E0B4BC6B214C538AD8C93860"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4a-back-yoke.png",
+  "role": "reused print file (not copied)",
+  "use": "back hem band · Red Band",
+  "bytes": 110086,
+  "px": "3600x600",
+  "in_at_300dpi": "12.00 x 2.00",
+  "sha256": "C1B3269C12B3BB50A0CE0FCBE389919A05FE48E0F5E6CA5ED669528E4B450D6E"
+ },
+ {
+  "file": "../24_casual-tee-3010-2026-09-23/print-files/4b-back-yoke-blue.png",
+  "role": "reused print file (not copied)",
+  "use": "back hem band · Blue Band",
+  "bytes": 107702,
+  "px": "3600x600",
+  "in_at_300dpi": "12.00 x 2.00",
+  "sha256": "DD8AF2548444659ED5BF9C0170A74C8BBAB702477DCF66A0D9A24D7FB8022D42"
+ },
+ {
+  "file": "(measurements)",
+  "role": "template measurements taken by Claude 2026-09-24 before placing art, as the handoff requires",
+  "front_cf_hood_seam_to_pocket_top_in": 15.8,
+  "front_area_top_below_seam_in": 3.33,
+  "back_cb_hood_seam_to_area_top_in": 8.0,
+  "back_area_bottom_below_seam_in": 27.0,
+  "back_area_bottom_above_rib_in": 2.75,
+  "grey_heather_apliiq_hex": "#F4F4F4",
+  "grey_heather_swatch_image_avg": "#F0F0F0",
+  "website_swatch_used": "#D9D9D9",
+  "source": "Apliiq v5 customizer templates blob.apliiq.com/sitestorage/base/6399_590_900.png (front, 24 px/in) and 4559_590_900.png (back, 20 px/in); scales read from the customizer's own inch readouts",
+  "note": "Template garment is about size L/XL (25 in flat chest). Front lockup placed at the top of the front area (3.33 in below the seam on the template); back band on the bottom edge of the back area. Back note uses 27.00 in (685.8 mm) per the handoff's substitution rule; on a size S that absolute figure would fall in the rib, so the 'bottom edge of the back print area' clause governs.",
+  "saved_designs": {
+   "Bone · Red Band": 6120990,
+   "Bone · Blue Band": 6121021,
+   "Black · Red Band": 6121031,
+   "Black · Blue Band": 6121042,
+   "Grey Heather · Red Band": 6121043,
+   "Grey Heather · Blue Band": 6121044
+  },
+  "dropship_quote_usd": 44.43
+ }
+]

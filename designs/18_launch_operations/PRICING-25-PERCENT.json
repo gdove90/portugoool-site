@@ -1,238 +1,250 @@
 {
-  "updated_at_utc": "2026-09-21T11:32:46.254654+00:00",
-  "owner_direction": "Implement 25 percent margin on each garment; cotton Modern Sport archived with explicit approval.",
-  "status": "authorized_display_prices_modeled_not_guaranteed_net_profit",
-  "model": {
-    "target_contribution_fraction": 0.25,
-    "domestic_card_fee_fraction": 0.029,
-    "fixed_card_fee_usd": 0.3,
-    "return_reprint_reserve_fraction": 0.05,
-    "label_budget_usd": 3,
-    "fulfillment_per_item_usd": 1,
-    "rounding": "up to next whole dollar",
-    "shipping": "separately charged; shipping/tax card fees and subsidy not included; reconcile before sales",
-    "label": "Unverified $3 total label contingency, not a quote for the approved sewn label and not permission to substitute printed labels",
-    "cap_digitization": "Dialog shows $18.88 repeat unit cost plus $11 once; website headline $29.88 includes that first-order fee. Model amortizes $11 over an assumed 25 cap sales ($0.44/item); actual first-order contribution is lower.",
-    "full_landed_cost_verified": false
+ "updated_at_utc": "2026-09-24T08:49:38.549438+00:00",
+ "owner_direction": "Implement 25 percent margin on each garment; cotton Modern Sport archived with explicit approval.",
+ "status": "authorized_display_prices_modeled_not_guaranteed_net_profit",
+ "model": {
+  "target_contribution_fraction": 0.25,
+  "domestic_card_fee_fraction": 0.029,
+  "fixed_card_fee_usd": 0.3,
+  "return_reprint_reserve_fraction": 0.05,
+  "label_budget_usd": 3,
+  "fulfillment_per_item_usd": 1,
+  "rounding": "up to next whole dollar",
+  "shipping": "separately charged; shipping/tax card fees and subsidy not included; reconcile before sales",
+  "label": "Unverified $3 total label contingency, not a quote for the approved sewn label and not permission to substitute printed labels",
+  "cap_digitization": "Dialog shows $18.88 repeat unit cost plus $11 once; website headline $29.88 includes that first-order fee. Model amortizes $11 over an assumed 25 cap sales ($0.44/item); actual first-order contribution is lower.",
+  "full_landed_cost_verified": false
+ },
+ "products": [
+  {
+   "slug": "goool-athletics-varsity-tee",
+   "name": "Varsity",
+   "saved_design_id": 6112032,
+   "blank": "Bella+Canvas 4810GD",
+   "supplier_color": "Washed Black",
+   "source_url": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee",
+   "base_dropship_quote_usd": 27.6,
+   "xxl_surcharge_usd": 1.5,
+   "sizes_without_surcharge": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
+   "price_usd": 50,
+   "price_cents": 5000,
+   "unrounded_price_floor_usd": 49.77645305514158,
+   "modeled_worst_size_cost_usd": 33.1,
+   "modeled_worst_size_contribution_usd": 12.65,
+   "modeled_worst_size_contribution_percent": 25.3,
+   "full_landed_cost_verified": false
   },
-  "products": [
-    {
-      "slug": "goool-athletics-varsity-tee",
-      "name": "Varsity",
-      "saved_design_id": 6112032,
-      "blank": "Bella+Canvas 4810GD",
-      "supplier_color": "Washed Black",
-      "source_url": "https://www.apliiq.com/product/6112032/GOOOL-Athletics-Varsity-Tee",
-      "base_dropship_quote_usd": 27.6,
-      "xxl_surcharge_usd": 1.5,
-      "sizes_without_surcharge": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
-      "price_usd": 50,
-      "price_cents": 5000,
-      "unrounded_price_floor_usd": 49.77645305514158,
-      "modeled_worst_size_cost_usd": 33.1,
-      "modeled_worst_size_contribution_usd": 12.65,
-      "modeled_worst_size_contribution_percent": 25.3,
-      "full_landed_cost_verified": false
-    },
-    {
-      "slug": "goool-athletics-minimal-club-tee",
-      "name": "Minimal Club",
-      "saved_design_id": 6112018,
-      "blank": "Bella+Canvas 3010",
-      "supplier_color": "Natural",
-      "source_url": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee",
-      "base_dropship_quote_usd": 24.48,
-      "xxl_surcharge_usd": 2,
-      "sizes_without_surcharge": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
-      "price_usd": 46,
-      "price_cents": 4600,
-      "unrounded_price_floor_usd": 45.87183308494784,
-      "modeled_worst_size_cost_usd": 30.48,
-      "modeled_worst_size_contribution_usd": 11.59,
-      "modeled_worst_size_contribution_percent": 25.19,
-      "full_landed_cost_verified": false
-    },
-    {
-      "slug": "goool-athletics-circular-badge-tee",
-      "name": "Circular Badge",
-      "saved_design_id": 6112033,
-      "blank": "Comfort Colors C1717",
-      "supplier_color": "Ivory",
-      "source_url": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee",
-      "base_dropship_quote_usd": 17.04,
-      "xxl_surcharge_usd": 2,
-      "sizes_without_surcharge": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
-      "price_usd": 35,
-      "price_cents": 3500,
-      "unrounded_price_floor_usd": 34.783904619970194,
-      "modeled_worst_size_cost_usd": 23.04,
-      "modeled_worst_size_contribution_usd": 8.9,
-      "modeled_worst_size_contribution_percent": 25.41,
-      "full_landed_cost_verified": false
-    },
-    {
-      "slug": "goool-athletics-circular-center-crewneck",
-      "name": "Circular Center Crewneck",
-      "saved_design_id": 6112046,
-      "blank": "AS Colour 5150",
-      "supplier_color": "Athletic Heather",
-      "source_url": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck",
-      "base_dropship_quote_usd": 55.29,
-      "xxl_surcharge_usd": 2.5,
-      "sizes_without_surcharge": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
-      "price_usd": 93,
-      "price_cents": 9300,
-      "unrounded_price_floor_usd": 92.53353204172876,
-      "modeled_worst_size_cost_usd": 61.79,
-      "modeled_worst_size_contribution_usd": 23.56,
-      "modeled_worst_size_contribution_percent": 25.34,
-      "full_landed_cost_verified": false
-    },
-    {
-      "slug": "goool-athletics-modern-sport-performance-tee",
-      "name": "Modern Sport Performance",
-      "saved_design_id": 6112037,
-      "blank": "Sport-Tek ST720",
-      "supplier_color": "Black",
-      "source_url": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee",
-      "base_dropship_quote_usd": 25.58,
-      "xxl_surcharge_usd": 2,
-      "sizes_without_surcharge": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
-      "price_usd": 48,
-      "price_cents": 4800,
-      "unrounded_price_floor_usd": 47.51117734724292,
-      "modeled_worst_size_cost_usd": 31.58,
-      "modeled_worst_size_contribution_usd": 12.33,
-      "modeled_worst_size_contribution_percent": 25.68,
-      "full_landed_cost_verified": false
-    },
-    {
-      "slug": "goool-performance-tee",
-      "name": "Performance Badge Tee",
-      "base_dropship_quote_usd": 18.09,
-      "xxl_surcharge_usd": 2,
-      "saved_design_ids": [
-        6098962,
-        6099046,
-        6099129
-      ],
-      "source_urls": [
-        "https://www.apliiq.com/product/6098962",
-        "https://www.apliiq.com/product/6099046",
-        "https://www.apliiq.com/product/6099129"
-      ],
-      "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-21; unit price and size fee read without cart/purchase.",
-      "quote_captured_at_utc": "2026-09-21T11:32:46.254654+00:00",
-      "price_usd": 37,
-      "price_cents": 3700,
-      "unrounded_price_floor_usd": 36.34873323397913,
-      "modeled_worst_size_cost_usd": 24.09,
-      "modeled_worst_size_contribution_usd": 9.69,
-      "modeled_worst_size_contribution_percent": 26.18,
-      "full_landed_cost_verified": false
-    },
-    {
-      "slug": "goool-heavyweight-hoodie",
-      "name": "Core Hoodie",
-      "base_dropship_quote_usd": 36.94,
-      "xxl_surcharge_usd": 2,
-      "saved_design_ids": [
-        6098974,
-        6099064
-      ],
-      "source_urls": [
-        "https://www.apliiq.com/product/6098974",
-        "https://www.apliiq.com/product/6099064"
-      ],
-      "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-21; unit price and size fee read without cart/purchase.",
-      "quote_captured_at_utc": "2026-09-21T11:32:46.254654+00:00",
-      "price_usd": 65,
-      "price_cents": 6500,
-      "unrounded_price_floor_usd": 64.44113263785395,
-      "modeled_worst_size_cost_usd": 42.94,
-      "modeled_worst_size_contribution_usd": 16.62,
-      "modeled_worst_size_contribution_percent": 25.58,
-      "full_landed_cost_verified": false
-    },
-    {
-      "slug": "goool-heavyweight-casual-tee",
-      "name": "Casual Wordmark Tee",
-      "base_dropship_quote_usd": 24.48,
-      "xxl_surcharge_usd": 2.0,
-      "saved_design_ids": [
-        6120860
-      ],
-      "source_urls": [
-        "https://www.apliiq.com/product/6120860"
-      ],
-      "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-24 for the Bella+Canvas 3010 rebuild; unit price and size fee read without cart/purchase.",
-      "quote_captured_at_utc": "2026-09-24T04:46:08Z",
-      "price_usd": 48,
-      "price_cents": 4800,
-      "unrounded_price_floor_usd": 45.8718,
-      "modeled_worst_size_cost_usd": 30.78,
-      "modeled_worst_size_contribution_usd": 13.43,
-      "modeled_worst_size_contribution_percent": 27.97,
-      "full_landed_cost_verified": false,
-      "owner_override": "Owner considered $42 on 2026-09-24 and kept $48."
-    },
-    {
-      "slug": "goool-touchline-cap",
-      "name": "Touchline Cap",
-      "base_dropship_quote_usd": 18.88,
-      "xxl_surcharge_usd": 0,
-      "saved_design_ids": [
-        6098980
-      ],
-      "source_urls": [
-        "https://www.apliiq.com/product/6098980"
-      ],
-      "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-21; unit price and size fee read without cart/purchase.",
-      "quote_captured_at_utc": "2026-09-21T11:32:46.254654+00:00",
-      "price_usd": 36,
-      "price_cents": 3600,
-      "unrounded_price_floor_usd": 35.20119225037258,
-      "modeled_worst_size_cost_usd": 23.32,
-      "modeled_worst_size_contribution_usd": 9.54,
-      "modeled_worst_size_contribution_percent": 26.49,
-      "full_landed_cost_verified": false
-    }
-  ],
-  "future_crewneck_back_print": {
-    "published": false,
-    "additional_print_estimate_usd": 7.49,
-    "estimated_retail_usd": 104,
-    "source": "https://help.apliiq.com/portal/en/kb/articles/understanding-apliiq-dropship-product-pricing",
-    "note": "Current $93 covers existing blank-back saved design. Curved back artwork must be approved and requoted before changing the design/price; $7.49 is published standard print fee, not a finished saved-design quote."
+  {
+   "slug": "goool-athletics-minimal-club-tee",
+   "name": "Minimal Club",
+   "saved_design_id": 6112018,
+   "blank": "Bella+Canvas 3010",
+   "supplier_color": "Natural",
+   "source_url": "https://www.apliiq.com/product/6112018/GOOOL-Athletics-Minimal-Club-Tee",
+   "base_dropship_quote_usd": 24.48,
+   "xxl_surcharge_usd": 2,
+   "sizes_without_surcharge": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
+   "price_usd": 46,
+   "price_cents": 4600,
+   "unrounded_price_floor_usd": 45.87183308494784,
+   "modeled_worst_size_cost_usd": 30.48,
+   "modeled_worst_size_contribution_usd": 11.59,
+   "modeled_worst_size_contribution_percent": 25.19,
+   "full_landed_cost_verified": false
+  },
+  {
+   "slug": "goool-athletics-circular-badge-tee",
+   "name": "Circular Badge",
+   "saved_design_id": 6112033,
+   "blank": "Comfort Colors C1717",
+   "supplier_color": "Ivory",
+   "source_url": "https://www.apliiq.com/product/6112033/GOOOL-Athletics-Circular-Badge-Tee",
+   "base_dropship_quote_usd": 17.04,
+   "xxl_surcharge_usd": 2,
+   "sizes_without_surcharge": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
+   "price_usd": 35,
+   "price_cents": 3500,
+   "unrounded_price_floor_usd": 34.783904619970194,
+   "modeled_worst_size_cost_usd": 23.04,
+   "modeled_worst_size_contribution_usd": 8.9,
+   "modeled_worst_size_contribution_percent": 25.41,
+   "full_landed_cost_verified": false
+  },
+  {
+   "slug": "goool-athletics-circular-center-crewneck",
+   "name": "Circular Center Crewneck",
+   "saved_design_id": 6112046,
+   "blank": "AS Colour 5150",
+   "supplier_color": "Athletic Heather",
+   "source_url": "https://www.apliiq.com/product/6112046/GOOOL-Athletics-Circular-Center-Crewneck",
+   "base_dropship_quote_usd": 55.29,
+   "xxl_surcharge_usd": 2.5,
+   "sizes_without_surcharge": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
+   "price_usd": 93,
+   "price_cents": 9300,
+   "unrounded_price_floor_usd": 92.53353204172876,
+   "modeled_worst_size_cost_usd": 61.79,
+   "modeled_worst_size_contribution_usd": 23.56,
+   "modeled_worst_size_contribution_percent": 25.34,
+   "full_landed_cost_verified": false
+  },
+  {
+   "slug": "goool-athletics-modern-sport-performance-tee",
+   "name": "Modern Sport Performance",
+   "saved_design_id": 6112037,
+   "blank": "Sport-Tek ST720",
+   "supplier_color": "Black",
+   "source_url": "https://www.apliiq.com/product/6112037/GOOOL-Athletics-Modern-Sport-Performance-Tee",
+   "base_dropship_quote_usd": 25.58,
+   "xxl_surcharge_usd": 2,
+   "sizes_without_surcharge": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "quote_captured_at_utc": "2026-09-21T10:26:01.497594+00:00",
+   "price_usd": 48,
+   "price_cents": 4800,
+   "unrounded_price_floor_usd": 47.51117734724292,
+   "modeled_worst_size_cost_usd": 31.58,
+   "modeled_worst_size_contribution_usd": 12.33,
+   "modeled_worst_size_contribution_percent": 25.68,
+   "full_landed_cost_verified": false
+  },
+  {
+   "slug": "goool-performance-tee",
+   "name": "Performance Badge Tee",
+   "base_dropship_quote_usd": 18.09,
+   "xxl_surcharge_usd": 2,
+   "saved_design_ids": [
+    6098962,
+    6099046,
+    6099129
+   ],
+   "source_urls": [
+    "https://www.apliiq.com/product/6098962",
+    "https://www.apliiq.com/product/6099046",
+    "https://www.apliiq.com/product/6099129"
+   ],
+   "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-21; unit price and size fee read without cart/purchase.",
+   "quote_captured_at_utc": "2026-09-21T11:32:46.254654+00:00",
+   "price_usd": 37,
+   "price_cents": 3700,
+   "unrounded_price_floor_usd": 36.34873323397913,
+   "modeled_worst_size_cost_usd": 24.09,
+   "modeled_worst_size_contribution_usd": 9.69,
+   "modeled_worst_size_contribution_percent": 26.18,
+   "full_landed_cost_verified": false
+  },
+  {
+   "slug": "goool-heavyweight-hoodie",
+   "name": "Core Hoodie · Red (and · Club Blue, same blank and quote)",
+   "base_dropship_quote_usd": 44.43,
+   "xxl_surcharge_usd": 2.0,
+   "saved_design_ids": [
+    6121031,
+    6120990,
+    6121043,
+    6121042,
+    6121021,
+    6121044
+   ],
+   "source_urls": [
+    "https://www.apliiq.com/Product/6121031/GOOOL-Core-Hoodie-Black-Red-Band",
+    "https://www.apliiq.com/Product/6121043/GOOOL-Core-Hoodie-Grey-Heather-Red-Band"
+   ],
+   "evidence": "Authenticated saved-design product page 'dropship this product' and customizer 'starting at' on 2026-09-24, read without cart/purchase; both transfers included. Black and Grey Heather quote the same $44.43. XXL surcharge carried from the 2026-09-21 quote (+$2.00).",
+   "quote_captured_at_utc": "2026-09-24T08:49:38.549438+00:00",
+   "price_usd": 78,
+   "price_cents": 7800,
+   "unrounded_price_floor_usd": 75.6036,
+   "modeled_worst_size_cost_usd": 50.43,
+   "modeled_worst_size_contribution_usd": 21.11,
+   "modeled_worst_size_contribution_percent": 27.06,
+   "full_landed_cost_verified": false,
+   "superseded": {
+    "note": "Pre-remake entry kept for the audit trail: front-only wordmark designs 6098974/6099064 quoted $36.94 on 2026-09-21; modelled floor $64.44, display $65 at that time (site later showed $78).",
+    "base_dropship_quote_usd": 36.94,
+    "saved_design_ids": [
+     6098974,
+     6099064
+    ]
+   }
+  },
+  {
+   "slug": "goool-heavyweight-casual-tee",
+   "name": "Casual Wordmark Tee",
+   "base_dropship_quote_usd": 24.48,
+   "xxl_surcharge_usd": 2.0,
+   "saved_design_ids": [
+    6120860
+   ],
+   "source_urls": [
+    "https://www.apliiq.com/product/6120860"
+   ],
+   "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-24 for the Bella+Canvas 3010 rebuild; unit price and size fee read without cart/purchase.",
+   "quote_captured_at_utc": "2026-09-24T04:46:08Z",
+   "price_usd": 48,
+   "price_cents": 4800,
+   "unrounded_price_floor_usd": 45.8718,
+   "modeled_worst_size_cost_usd": 30.78,
+   "modeled_worst_size_contribution_usd": 13.43,
+   "modeled_worst_size_contribution_percent": 27.97,
+   "full_landed_cost_verified": false,
+   "owner_override": "Owner considered $42 on 2026-09-24 and kept $48."
+  },
+  {
+   "slug": "goool-touchline-cap",
+   "name": "Touchline Cap",
+   "base_dropship_quote_usd": 18.88,
+   "xxl_surcharge_usd": 0,
+   "saved_design_ids": [
+    6098980
+   ],
+   "source_urls": [
+    "https://www.apliiq.com/product/6098980"
+   ],
+   "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-21; unit price and size fee read without cart/purchase.",
+   "quote_captured_at_utc": "2026-09-21T11:32:46.254654+00:00",
+   "price_usd": 36,
+   "price_cents": 3600,
+   "unrounded_price_floor_usd": 35.20119225037258,
+   "modeled_worst_size_cost_usd": 23.32,
+   "modeled_worst_size_contribution_usd": 9.54,
+   "modeled_worst_size_contribution_percent": 26.49,
+   "full_landed_cost_verified": false
   }
+ ],
+ "future_crewneck_back_print": {
+  "published": false,
+  "additional_print_estimate_usd": 7.49,
+  "estimated_retail_usd": 104,
+  "source": "https://help.apliiq.com/portal/en/kb/articles/understanding-apliiq-dropship-product-pricing",
+  "note": "Current $93 covers existing blank-back saved design. Curved back artwork must be approved and requoted before changing the design/price; $7.49 is published standard print fee, not a finished saved-design quote."
+ }
 }

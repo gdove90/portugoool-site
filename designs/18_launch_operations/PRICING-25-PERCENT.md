@@ -12,7 +12,7 @@ Formula: ceil((highest current size garment/decoration quote + $3 label continge
 | Circular Center Crewneck | $93 | 25.34% |
 | Modern Sport Performance | $48 | 25.68% |
 | Performance Badge Tee | $37 | 26.18% |
-| Core Hoodie | $65 | 25.58% |
+| Core Hoodie · Red and · Club Blue (remake 2026-09-24, both transfers, $44.43 quote) | $78 | 27.06% |
 | Casual Wordmark Tee | $39 | 25.66% |
 | Touchline Cap | $36 | 26.49% |
 
@@ -33,3 +33,10 @@ XXL +$2.00. The model floor at the 25% target is $46. The owner briefly
 set $42, then kept the displayed price at **$48** (above the floor;
 modelled worst-size contribution ≈ 27%). Recorded so the table above is
 not read as the current price.
+
+## Core Hoodie re-run (2026-09-24, remake with the 3010 print sets)
+
+Inputs read from the saved designs 6121031 (Black · Red Band) and 6121043 (Grey Heather · Red Band): **$44.43 per unit** with both transfers, XXL +$2.00 (carried from the 2026-09-21 quote). Six designs, all quoting the same base.
+
+  (44.43 + 2.00 XXL + 3 label + 1 fulfilment + 0.30) / (1 − .029 − .05 − .25)
+  = 75.60  →  modelled floor **$76**. Display **$78** stays (owner has not changed it); worst-size contribution $21.11, **27.06%**.

@@ -1776,44 +1776,48 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000002",
-    name: "GOOOL Core Hoodie",
+    name: "GOOOL Core Hoodie · Red",
     slug: "goool-heavyweight-hoodie",
+    // Two rows on the shop, one per print colour (owner, 2026-09-24): this
+    // one is the 4a set (red centre dash on the front lockup, red club band
+    // low on the back); ...0006 below is the 4b Club Blue set. Same blank,
+    // same placements, same price. The slug keeps the original hoodie URL.
+    // The wordmark-only version (Apliiq 6098974 / 6099064) came off the
+    // site the same day; those designs are not deleted.
     description:
-      "Heavyweight pullover hoodie. Underlined GOOOL wordmark across the chest, kangaroo pocket, generous fit.",
+      "The full GOOOL Athletics lockup across the chest and the red club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
     priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
-    colorHex: "#0A0A0A",
+    colorHex: "#1E1E1E",
     // Independent IND4000, from the POD Sample Specification Packet:
     // "10 oz (330 gsm) 3-end fleece; Black 70% cotton / 30% polyester;
-    // 100% cotton face yarn; generous fit".
-    //
-    // "Face yarn" is glossed rather than left as jargon, on the same rule
-    // that makes this file explain buckram and PosiCharge.
-    //
-    // Bone is sold and its exact blend is documented NOWHERE: not in the
-    // packet, not in supplier-record.json, and Apliiq no longer lists
-    // IND4000 publicly. So this line states Black's blend, which is
-    // documented, and claims nothing about Bone. Do not "tidy" it by
-    // dropping the Black clause, and do not extend it to Bone. If the
-    // supplier ever confirms Bone, add it here.
+    // 100% cotton face yarn; generous fit"; hood/drawcord/eyelet line from
+    // Apliiq's IND4000 features list read 2026-09-24. Bone's and Grey
+    // Heather's blends are documented nowhere, so the fabric line states
+    // Black's blend only. Do not extend it to the other colours.
     fabric:
-      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Cut generous, so all that weight has room to hang.",
-    fit: "Generous, relaxed fit.",
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for something closer to the body.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/GOOOL_STD_HOODIE_BLACK_FRONT.webp",
-        alt: "GOOOL Core Hoodie in black, front view",
+        src: "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+        alt: "GOOOL Core Hoodie · Red in black, front view",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
-        src: "/products/GOOOL_STD_HOODIE_BLACK_BACK.webp",
-        alt: "GOOOL Core Hoodie in black, back view",
+        src: "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+        alt: "GOOOL Core Hoodie · Red in black, back view",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
-    // Colorways mirror the saved Apliiq designs (Black 6098974, Bone 6099064).
+    // Remade 2026-09-24 with the 3010 tee print sets (owner decision,
+    // designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md). Front: the
+    // GOOOL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the hood
+    // seam. Back: the club band 12.00 x 2.00 in on the back hem, bottom
+    // edge on the bottom of Apliiq's back print area. Both DTF. One saved
+    // Apliiq design per colour; ids and per-size SKUs live in fulfillment.ts.
     colorVariants: [
       {
         name: "Black",
@@ -1822,13 +1826,13 @@ export const products: Product[] = [
         skuFragment: "BLACK",
         images: [
           {
-            src: "/products/GOOOL_STD_HOODIE_BLACK_FRONT.webp",
-            alt: "GOOOL Core Hoodie in black, front view",
+            src: "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+            alt: "GOOOL Core Hoodie · Red in black, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_STD_HOODIE_BLACK_BACK.webp",
-            alt: "GOOOL Core Hoodie in black, back view",
+            src: "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+            alt: "GOOOL Core Hoodie · Red in black, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -1840,13 +1844,153 @@ export const products: Product[] = [
         skuFragment: "BONE",
         images: [
           {
-            src: "/products/GOOOL_STD_HOODIE_BONE_FRONT.webp",
-            alt: "GOOOL Core Hoodie in bone, front view",
+            src: "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+            alt: "GOOOL Core Hoodie · Red in bone, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_STD_HOODIE_BONE_BACK.webp",
-            alt: "GOOOL Core Hoodie in bone, back view",
+            src: "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+            alt: "GOOOL Core Hoodie · Red in bone, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      // Grey Heather: Apliiq stores #F4F4F4 for this swatch and renders the
+      // garment near-white; the blank photographs as a light heather. The
+      // site hex is a compromise the owner may adjust. Club Blue set uses
+      // the True Royal #1F4FB5 front on heather (handoff).
+      {
+        name: "Grey Heather",
+        supplierColor: "Grey Heather",
+        hex: "#D9D9D9",
+        skuFragment: "GREYHEATHER",
+        images: [
+          {
+            src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+            alt: "GOOOL Core Hoodie · Red in grey heather, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+            alt: "GOOOL Core Hoodie · Red in grey heather, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    // Garment made in China (Apliiq record); decorated at Apliiq's US
+    // facilities (LA/Philadelphia) - so Printed in the USA, never Made in.
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "70000000-0000-4000-8000-000000000006",
+    name: "GOOOL Core Hoodie · Club Blue",
+    slug: "goool-heavyweight-hoodie-blue",
+    // The 4b set: GOOOL and ATHLETICS in Club Blue #3D6CC4 on the front
+    // (Natural dashes on black, ink dashes on bone and heather; True Royal
+    // #1F4FB5 lockup on heather so it reads), Club Blue band with natural
+    // lettering low on the back. Its own row by owner decision 2026-09-24.
+    description:
+      "The full GOOOL Athletics lockup in club blue across the chest and the blue club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
+    priceCents: 7800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#1E1E1E",
+    // Independent IND4000, from the POD Sample Specification Packet:
+    // "10 oz (330 gsm) 3-end fleece; Black 70% cotton / 30% polyester;
+    // 100% cotton face yarn; generous fit"; hood/drawcord/eyelet line from
+    // Apliiq's IND4000 features list read 2026-09-24. Bone's and Grey
+    // Heather's blends are documented nowhere, so the fabric line states
+    // Black's blend only. Do not extend it to the other colours.
+    fabric:
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for something closer to the body.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+        alt: "GOOOL Core Hoodie · Club Blue in black, front view",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+        alt: "GOOOL Core Hoodie · Club Blue in black, back view",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    // Remade 2026-09-24 with the 3010 tee print sets (owner decision,
+    // designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md). Front: the
+    // GOOOL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the hood
+    // seam. Back: the club band 12.00 x 2.00 in on the back hem, bottom
+    // edge on the bottom of Apliiq's back print area. Both DTF. One saved
+    // Apliiq design per colour; ids and per-size SKUs live in fulfillment.ts.
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#1E1E1E",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+            alt: "GOOOL Core Hoodie · Club Blue in black, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+            alt: "GOOOL Core Hoodie · Club Blue in black, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Bone",
+        supplierColor: "Bone",
+        hex: "#CFCAC7",
+        skuFragment: "BONE",
+        images: [
+          {
+            src: "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+            alt: "GOOOL Core Hoodie · Club Blue in bone, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+            alt: "GOOOL Core Hoodie · Club Blue in bone, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      // Grey Heather: Apliiq stores #F4F4F4 for this swatch and renders the
+      // garment near-white; the blank photographs as a light heather. The
+      // site hex is a compromise the owner may adjust. Club Blue set uses
+      // the True Royal #1F4FB5 front on heather (handoff).
+      {
+        name: "Grey Heather",
+        supplierColor: "Grey Heather",
+        hex: "#D9D9D9",
+        skuFragment: "GREYHEATHER",
+        images: [
+          {
+            src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+            alt: "GOOOL Core Hoodie · Club Blue in grey heather, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+            alt: "GOOOL Core Hoodie · Club Blue in grey heather, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],

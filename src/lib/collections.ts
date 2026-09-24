@@ -42,7 +42,12 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     name: "Warm-Up Club",
     subtitle: "Hoodies & Layers",
     filterLabel: "Hoodies & Layers",
-    slugs: ["goool-heavyweight-hoodie", "goool-athletics-circular-center-crewneck"],
+    slugs: [
+      "goool-heavyweight-hoodie",
+      // Second hoodie row: the Club Blue print set, its own product since 2026-09-24.
+      "goool-heavyweight-hoodie-blue",
+      "goool-athletics-circular-center-crewneck",
+    ],
   },
   {
     key: "casual-tees",
