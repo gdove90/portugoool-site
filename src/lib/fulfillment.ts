@@ -77,37 +77,24 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // RETIRED 2026-09-23. The owner deleted both saved designs below on
-  // Apliiq, so these SKUs point at products that no longer exist. The
-  // product is isActive:false, so checkout refuses it before payment and
-  // nothing can reach this mapping; it is kept only as the record of what
-  // was sold. Do not reactivate the product against these ids.
+  // GOOOL Casual Wordmark Tee, rebuilt on the Bella+Canvas 3010 on
+  // 2026-09-24 (designs/00_asset-library/CASUAL-TEE-3010-DECISION.md).
+  // One saved design per colour. Keys are the supplierColor strings from
+  // products.ts, which are Apliiq's swatch names verbatim ("black" is
+  // lower-case on Apliiq; "Natural" is capitalised).
   //
-  // GOOOL Casual Wordmark Tee (Bella+Canvas 4810GD). Front print rebuilt at
-  // 10in (was 6.75in) on 2026-09-21; each color is a NEW saved design because
-  // Apliiq has no in-place artwork swap. Old designs 6098963/6099060 (and a
-  // misconfigured intermediate, 6113937 - Washed Black with the wrong ink -
-  // created while switching the grey colorway) are still live in the Apliiq
-  // account with no delete path there; do not resurrect their SKUs here.
+  // The 4810GD designs this replaced (6098963, 6099060, then 6113934,
+  // 6113938) were deleted on Apliiq by the owner on 2026-09-23; their
+  // SKUs are gone with them and are not carried here.
   "70000000-0000-4000-8000-000000000003": {
-    "Washed Black": {
-      apliiqProductId: 6113934,
+    "black": {
+      apliiqProductId: 6120860,
       skus: {
-        S: "APQ-6113934S6A1",
-        M: "APQ-6113934S7A1",
-        L: "APQ-6113934S8A1",
-        XL: "APQ-6113934S1A1",
-        XXL: "APQ-6113934S2A1",
-      },
-    },
-    "Washed Grey": {
-      apliiqProductId: 6113938,
-      skus: {
-        S: "APQ-6113938S6A1",
-        M: "APQ-6113938S7A1",
-        L: "APQ-6113938S8A1",
-        XL: "APQ-6113938S1A1",
-        XXL: "APQ-6113938S2A1",
+        S: "APQ-6120860S6A1",
+        M: "APQ-6120860S7A1",
+        L: "APQ-6120860S8A1",
+        XL: "APQ-6120860S1A1",
+        XXL: "APQ-6120860S2A1",
       },
     },
   },

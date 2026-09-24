@@ -125,3 +125,28 @@ The current displayed price is **$48**, above the floor: modelled
 worst-size contribution ≈ 29%. So the price does not need to rise. Whether
 it stays at $48 or drops to $46 is the owner's call; nothing on the site
 changes until they say.
+
+## Saved Apliiq design — Black (read from the design record 2026-09-24)
+
+- **Apliiq product id 6120860**, product "Heavyweight Tee" (Bella+Canvas
+  3010), colour **black**. Built by the owner in the v5 customizer;
+  renamed "GOOOL Casual Wordmark Tee · Black" and given the brand
+  description by Claude on 2026-09-24.
+- Front: `goool-athletics-lockup-white` (the library lockup, white with
+  the red dash), transfer print, **11 in × 4.16 in** as saved.
+- Back: `4a-back-yoke.png`, transfer print, **12.25 in × 2.05 in** as
+  saved.
+- Owner decision 2026-09-24: these saved sizes are accepted as close
+  enough to the spec (11.10 × 4.59 and 12.00 × 2.00). No rebuild.
+- Per-size SKUs (from the record): XS `APQ-6120860S5A1` (not sold),
+  S `S6A1`, M `S7A1`, L `S8A1`, XL `S1A1`, XXL `S2A1`, XXXL `S21A1` (not
+  sold). Wired into `src/lib/fulfillment.ts` for S–XXL.
+- Dropship quote, read from the design's bulk dropship dialog:
+  **$24.48 per unit, XXL +$2.00, XXXL +$4.00.**
+
+Price re-run with the confirmed inputs:
+
+  (24.48 + 2.00 XXL + 3 label + 1 fulfilment + 0.30) / (1 − .029 − .05 − .25)
+  = 45.87  →  modelled floor **$46**. Current display $48 stays above it
+  (worst-size contribution ≈ 28.0%). Owner approval of the displayed
+  price still pending.

@@ -1873,84 +1873,72 @@ export const products: Product[] = [
     name: "GOOOL Casual Wordmark Tee",
     slug: "goool-heavyweight-casual-tee",
     description:
-      "The wordmark, worn plainly. Heavyweight ring-spun cotton in washed black, garment-dyed so no two pieces settle quite the same. The one you pull on for the match and keep wearing long after it.",
+      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the club band across the back. Heavyweight combed cotton in black. The one you pull on for the match and keep wearing long after it.",
     priceCents: 4800,
     compareAtPriceCents: null,
-    color: "Washed Black",
-    colorHex: "#2E2E30",
-    // "combed" was drafted here on 2026-09-23 and cut before it shipped.
-    // Ring-spun yarn is often combed, but carded ring-spun exists and the
-    // supplier states neither, so the claim was unsupported.
+    color: "Black",
+    colorHex: "#111111",
+    // Bella+Canvas 3010, from Apliiq's own listing read 2026-09-23: "6 oz
+    // heavyweight fabric, Airlume combed cotton, Relaxed modern fit, Drop
+    // shoulder design, Double-needle neck stitching, Side seamed
+    // construction, Pre-shrunk for consistency, Tear away label". "Combed"
+    // is stated by the supplier for this blank, which is why it can be
+    // said here when it was cut from the 4810GD copy as unsupported.
     fabric:
-      "6.5 oz, 100% ring-spun cotton, garment-dyed. The tee is built first, then dyed, which is why the colour reads lived-in rather than flat, why each one comes out slightly its own, and why it deepens with wear instead of fading out of it. Heavier construction, so it holds its shape.",
+      "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
     fit:
-      "Relaxed heavyweight fit with a semi-dropped shoulder: the seam sits just off the shoulder point, so it hangs the way a tee looks worn rather than the way one looks folded. True to size for a roomy fit. Size down for something closer to the body.",
-    careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
+      "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for something closer to the body.",
+    // No garment-dye warning: the 3010 is not garment-dyed, so the 4810GD's
+    // "releases a little colour at first" line would have been false here.
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
-        alt: "GOOOL Casual Wordmark Tee in washed black, front view",
+        src: "/products/GOOOL_STD_CASUAL_3010_BLACK_FRONT.webp",
+        alt: "GOOOL Casual Wordmark Tee in black, front view",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
-        src: "/products/GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp",
-        alt: "GOOOL Casual Wordmark Tee in washed black, back view",
+        src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
+        alt: "GOOOL Casual Wordmark Tee in black, back view",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
-    // Colorways mirror the saved Apliiq designs (Washed Black 6113934, Washed Grey
-    // 6113938) - front print at 10in wide, rebuilt from a native 3000px master
-    // 2026-09-21 (was 6.75in / 6098963 + 6099060, now superseded). Back stays
-    // blank on both colors; Apliiq never had a back print for this product.
+    // Rebuilt on the Bella+Canvas 3010 on 2026-09-23/24 (owner decision,
+    // designs/00_asset-library/CASUAL-TEE-3010-DECISION.md). Front: the
+    // full GOOOL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the
+    // collar seam. Back: the 2l yoke band 12.00 x 2.00 in, top 1.50 in
+    // below the back collar seam. Both DTF. Each colour is its own Apliiq
+    // saved design; ids and per-size SKUs live in fulfillment.ts.
     colorVariants: [
       {
-        name: "Washed Black",
-        supplierColor: "Washed Black",
-        hex: "#262626",
-        skuFragment: "WBLACK",
+        name: "Black",
+        supplierColor: "black",
+        hex: "#111111",
+        skuFragment: "BLACK",
         images: [
           {
-            src: "/products/GOOOL_STD_CASUAL_WASHED_BLACK_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee in washed black, front view",
+            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_FRONT.webp",
+            alt: "GOOOL Casual Wordmark Tee in black, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_STD_CASUAL_WASHED_BLACK_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee in washed black, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
-        ],
-      },
-      {
-        name: "Washed Grey",
-        supplierColor: "Washed Grey",
-        hex: "#7D7D7B",
-        skuFragment: "WGREY",
-        images: [
-          {
-            src: "/products/GOOOL_STD_CASUAL_WASHED_GREY_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee in washed grey, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
-          {
-            src: "/products/GOOOL_STD_CASUAL_WASHED_GREY_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee in washed grey, back view",
+            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
+            alt: "GOOOL Casual Wordmark Tee in black, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
     ],
-    // Garment made in Nicaragua (Apliiq record); decorated at Apliiq's US
-    // facilities (LA/Philadelphia) - so Printed in the USA, never Made in.
+    // Garment: Bella+Canvas 3010 (imported blank per the supplier's
+    // records); decorated at Apliiq's US facilities - Printed in the USA,
+    // never Made in.
     originLabel: "Printed in the USA",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "apliiq",
-    // Retired 2026-09-23: the owner deleted both saved designs (Washed
-    // Black, Washed Grey) on Apliiq, so there is nothing left for the
-    // supplier to print. Selling it would take payment for an order that
-    // cannot be fulfilled. Its URL 301s to /shop from middleware.ts.
-    isActive: false,
+    isActive: true,
+    // Purchasing opens LAST (apliiq-product-mapping.md rollout order):
+    // stays false until the owner confirms the saved design and price.
     availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
