@@ -150,3 +150,5 @@ Price re-run with the confirmed inputs:
   = 45.87  →  modelled floor **$46**. Current display $48 stays above it
   (worst-size contribution ≈ 28.0%). Owner approval of the displayed
   price still pending.
+
+**Price decided 2026-09-24: $42** (owner: "a smidgen cheaper"), below the $46 model floor; modelled contribution S–XL ≈ 23.6%, XXL ≈ 18.8%. Set in products.ts.

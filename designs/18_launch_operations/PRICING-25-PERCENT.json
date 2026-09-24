@@ -187,25 +187,24 @@
     {
       "slug": "goool-heavyweight-casual-tee",
       "name": "Casual Wordmark Tee",
-      "base_dropship_quote_usd": 20.11,
-      "xxl_surcharge_usd": 1.5,
+      "base_dropship_quote_usd": 24.48,
+      "xxl_surcharge_usd": 2.0,
       "saved_design_ids": [
-        6098963,
-        6099060
+        6120860
       ],
       "source_urls": [
-        "https://www.apliiq.com/product/6098963",
-        "https://www.apliiq.com/product/6099060"
+        "https://www.apliiq.com/product/6120860"
       ],
-      "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-21; unit price and size fee read without cart/purchase.",
-      "quote_captured_at_utc": "2026-09-21T11:32:46.254654+00:00",
-      "price_usd": 39,
-      "price_cents": 3900,
-      "unrounded_price_floor_usd": 38.61400894187779,
-      "modeled_worst_size_cost_usd": 25.61,
-      "modeled_worst_size_contribution_usd": 10.01,
-      "modeled_worst_size_contribution_percent": 25.66,
-      "full_landed_cost_verified": false
+      "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-24 for the Bella+Canvas 3010 rebuild; unit price and size fee read without cart/purchase.",
+      "quote_captured_at_utc": "2026-09-24T04:46:08Z",
+      "price_usd": 42,
+      "price_cents": 4200,
+      "unrounded_price_floor_usd": 45.8718,
+      "modeled_worst_size_cost_usd": 30.78,
+      "modeled_worst_size_contribution_usd": 7.9,
+      "modeled_worst_size_contribution_percent": 18.81,
+      "full_landed_cost_verified": false,
+      "owner_override": "Owner set $42 on 2026-09-24, below the $46 model floor."
     },
     {
       "slug": "goool-touchline-cap",
