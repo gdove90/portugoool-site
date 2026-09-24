@@ -1929,11 +1929,10 @@ export const products: Product[] = [
         ],
       },
       // Natural is the 4b version: Club Blue lockup with ink dashes on the
-      // front, Club Blue band with natural lettering on the back. Shown on
-      // the site from 2026-09-24; its Apliiq design is not saved yet, so
-      // fulfillment.ts has no mapping for it and the checkout route would
-      // refuse it with "can't be ordered right now". Purchasing is closed
-      // on the whole product (availableForSale: false) until both exist.
+      // front, Club Blue band with natural lettering on the back. Apliiq
+      // design 6120887 (saved by the owner 2026-09-24), mapped in
+      // fulfillment.ts. Purchasing on the whole product stays closed
+      // (availableForSale: false) until the owner opens it.
       {
         name: "Natural",
         supplierColor: "Natural",

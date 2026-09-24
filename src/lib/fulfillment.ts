@@ -97,6 +97,21 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
         XXL: "APQ-6120860S2A1",
       },
     },
+    // Natural is the 4b blue-band version (Club Blue lockup, blue band).
+    // Saved by the owner on 2026-09-24 as design 6120887; an identical
+    // second save, 6120888, exists on the account renamed "DUPLICATE of
+    // 6120887 · do not use" and must never be mapped. Design record read
+    // the same day: front 11 x 4.55 in, back 12 x 2 in, both transfer.
+    "Natural": {
+      apliiqProductId: 6120887,
+      skus: {
+        S: "APQ-6120887S6A1",
+        M: "APQ-6120887S7A1",
+        L: "APQ-6120887S8A1",
+        XL: "APQ-6120887S1A1",
+        XXL: "APQ-6120887S2A1",
+      },
+    },
   },
   // GOOOL Touchline Cap (OTTO 31-069, Black/Natural, front-only embroidery)
   "70000000-0000-4000-8000-000000000004": {
