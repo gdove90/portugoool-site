@@ -151,4 +151,4 @@ Price re-run with the confirmed inputs:
   (worst-size contribution ≈ 28.0%). Owner approval of the displayed
   price still pending.
 
-**Price decided 2026-09-24: $42** (owner: "a smidgen cheaper"), below the $46 model floor; modelled contribution S–XL ≈ 23.6%, XXL ≈ 18.8%. Set in products.ts.
+**Price decided 2026-09-24: $48** (owner considered $42, then kept $48). Above the $46 model floor; modelled worst-size contribution ≈ 27%. Set in products.ts.

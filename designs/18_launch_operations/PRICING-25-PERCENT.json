@@ -197,14 +197,14 @@
       ],
       "evidence": "Authenticated saved-design bulk dropship dialog on 2026-09-24 for the Bella+Canvas 3010 rebuild; unit price and size fee read without cart/purchase.",
       "quote_captured_at_utc": "2026-09-24T04:46:08Z",
-      "price_usd": 42,
-      "price_cents": 4200,
+      "price_usd": 48,
+      "price_cents": 4800,
       "unrounded_price_floor_usd": 45.8718,
       "modeled_worst_size_cost_usd": 30.78,
-      "modeled_worst_size_contribution_usd": 7.9,
-      "modeled_worst_size_contribution_percent": 18.81,
+      "modeled_worst_size_contribution_usd": 13.43,
+      "modeled_worst_size_contribution_percent": 27.97,
       "full_landed_cost_verified": false,
-      "owner_override": "Owner set $42 on 2026-09-24, below the $46 model floor."
+      "owner_override": "Owner considered $42 on 2026-09-24 and kept $48."
     },
     {
       "slug": "goool-touchline-cap",

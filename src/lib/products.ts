@@ -1874,7 +1874,7 @@ export const products: Product[] = [
     slug: "goool-heavyweight-casual-tee",
     description:
       "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the club band across the back. Heavyweight combed cotton in black. The one you pull on for the match and keep wearing long after it.",
-    priceCents: 4200,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#111111",

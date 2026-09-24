@@ -26,10 +26,10 @@ All unknown fields in COST-INPUTS.json stay null and quote_verified stays false.
 
 Sources: [Apliiq item/fulfillment charges](https://help.apliiq.com/portal/en/kb/articles/understanding-apliiq-dropship-product-pricing), [Stripe domestic-card pricing](https://stripe.com/pricing), authenticated saved-design quote links in PRICING-25-PERCENT.json.
 
-## Owner override, 2026-09-24: Casual Wordmark Tee (3010) at $42
+## Casual Wordmark Tee (3010): $48, decided 2026-09-24
 
 Inputs read from Apliiq design 6120860's dropship dialog: $24.48 per unit,
-XXL +$2.00. The model floor at the 25% target is $46. The owner set the
-displayed price to **$42** ("a smidgen cheaper"). Modelled contribution at
-$42: S–XL ≈ 23.6%, XXL ≈ 18.8%. This is an owner decision below the model
-floor, recorded here so the table above is not read as the current price.
+XXL +$2.00. The model floor at the 25% target is $46. The owner briefly
+set $42, then kept the displayed price at **$48** (above the floor;
+modelled worst-size contribution ≈ 27%). Recorded so the table above is
+not read as the current price.
