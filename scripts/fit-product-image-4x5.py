@@ -35,6 +35,10 @@ ap.add_argument('--top', type=float, default=0.115,
                 help='space above the garment as a fraction of the frame height')
 ap.add_argument('--quality', type=int, default=90)
 ap.add_argument('--strip', type=int, default=8, help='rows averaged for the extension colour')
+ap.add_argument('--garment-bbox', default=None,
+                help='x0,y0,x1,y1 of the garment in the source; skips detection. Use it when '
+                     'the garment is close in tone to a vignetted background (natural tees), '
+                     'and use the same box for every render of one template so the framing matches')
 ap.add_argument('--report', action='store_true')
 a = ap.parse_args()
 
@@ -54,10 +58,13 @@ mask = resid > 30
 # ignore a 2 px frame so encoder halos at the edge do not count as content
 mask[:2, :] = mask[-2:, :] = False
 mask[:, :2] = mask[:, -2:] = False
-ys, xs = np.where(mask)
-if len(xs) == 0:
-    sys.exit('no garment found')
-gx0, gy0, gx1, gy1 = xs.min(), ys.min(), xs.max(), ys.max()
+if a.garment_bbox:
+    gx0, gy0, gx1, gy1 = [int(v) for v in a.garment_bbox.split(',')]
+else:
+    ys, xs = np.where(mask)
+    if len(xs) == 0:
+        sys.exit('no garment found')
+    gx0, gy0, gx1, gy1 = xs.min(), ys.min(), xs.max(), ys.max()
 gw, gh = gx1 - gx0 + 1, gy1 - gy0 + 1
 
 # --- target frame

@@ -1,14 +1,22 @@
 # Casual Wordmark Tee (3010) — website imagery
 
-Owner-chosen product images for goool.shop, 2026-09-24. Both are
-AI-generated concept renders (ChatGPT) of the black Bella+Canvas 3010 with
-the front lockup and the 2l back band, not photographs of a manufactured
+Owner-chosen product images for goool.shop, 2026-09-24. All are
+AI-generated concept renders (ChatGPT) of the Bella+Canvas 3010 with the
+front lockup and the 2l back band, not photographs of a manufactured
 sample; the product page carries the "Concept render" caption for that
-reason. Site copies are the `GOOOL_STD_CASUAL_3010_BLACK_*.webp` files in
-`public/products/`. Checksums in `FILES.json`.
+reason. Checksums in `FILES.json`.
 
-Natural (4b blue band): `casual-tee-3010-natural-*.png` here, served as
-`GOOOL_STD_CASUAL_3010_NATURAL_*.webp`. Added 2026-09-24, same provenance.
+File names carry the shirt colour and the print colour, because the two
+print colours are separate products on the site since 2026-09-24
+(`goool-heavyweight-casual-tee` = Red set, `goool-heavyweight-casual-tee-blue`
+= Club Blue set):
+
+| here | print set | served as |
+|---|---|---|
+| `casual-tee-3010-black-red-*.png` | 4a black, red band | `GOOOL_STD_CASUAL_3010_BLACK_RED_*.webp` |
+| `casual-tee-3010-natural-red-*.png` | 4a-N natural, red band | `GOOOL_STD_CASUAL_3010_NATURAL_RED_*.webp` |
+| `casual-tee-3010-natural-blue-*.png` | 4b natural, Club Blue band | `GOOOL_STD_CASUAL_3010_NATURAL_BLUE_*.webp` |
+| (pending) `casual-tee-3010-black-blue-*.png` | 4b black, Club Blue band | `GOOOL_STD_CASUAL_3010_BLACK_BLUE_*.webp` |
 
 Format: the renders are 1254 x 1254 squares, but the product gallery and
 the shop tiles are 4:5 frames (`aspect-[4/5]`, `object-contain`) and every

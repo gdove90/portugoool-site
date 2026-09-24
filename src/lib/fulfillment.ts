@@ -77,8 +77,8 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Casual Wordmark Tee, rebuilt on the Bella+Canvas 3010 on
-  // 2026-09-24 (designs/00_asset-library/CASUAL-TEE-3010-DECISION.md).
+  // GOOOL Casual Wordmark Tee · Red (4a set), rebuilt on the Bella+Canvas
+  // 3010 on 2026-09-24 (designs/00_asset-library/CASUAL-TEE-3010-DECISION.md).
   // One saved design per colour. Keys are the supplierColor strings from
   // products.ts, which are Apliiq's swatch names verbatim ("black" is
   // lower-case on Apliiq; "Natural" is capitalised).
@@ -97,11 +97,20 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
         XXL: "APQ-6120860S2A1",
       },
     },
-    // Natural is the 4b blue-band version (Club Blue lockup, blue band).
-    // Saved by the owner on 2026-09-24 as design 6120887; an identical
-    // second save, 6120888, exists on the account renamed "DUPLICATE of
-    // 6120887 · do not use" and must never be mapped. Design record read
-    // the same day: front 11 x 4.55 in, back 12 x 2 in, both transfer.
+    // "Natural" (4a-N, red band): the owner is saving that design on
+    // Apliiq (2026-09-24). Add it here as
+    //   "Natural": { apliiqProductId: <id>, skus: APQ-<id>S{6,7,8,1,2}A1 }
+    // once the id is known. resolveApliiqSku returns null for it until then.
+  },
+  // GOOOL Casual Wordmark Tee · Club Blue (4b set). Its own product since
+  // 2026-09-24 (owner decision); before that the Natural blue-band design
+  // was the Natural variant of ...0003.
+  // Natural was saved by the owner on 2026-09-24 as design 6120887; an
+  // identical second save, 6120888, exists on the account renamed
+  // "DUPLICATE of 6120887 · do not use" and must never be mapped. Design
+  // record read the same day: front 11 x 4.55 in, back 12 x 2 in, both
+  // transfer.
+  "70000000-0000-4000-8000-000000000005": {
     "Natural": {
       apliiqProductId: 6120887,
       skus: {
@@ -112,6 +121,8 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
         XXL: "APQ-6120887S2A1",
       },
     },
+    // "black" (4b black): design being built on Apliiq 2026-09-24; add it
+    // here with its saved id once it exists.
   },
   // GOOOL Touchline Cap (OTTO 31-069, Black/Natural, front-only embroidery)
   "70000000-0000-4000-8000-000000000004": {

@@ -56,6 +56,8 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
       // the product did not put it back: resolveCollections only ever
       // shows what is listed here AND isActive.
       "goool-heavyweight-casual-tee",
+      // Second row: the Club Blue print set, its own product since 2026-09-24.
+      "goool-heavyweight-casual-tee-blue",
       "goool-athletics-varsity-tee",
       "goool-athletics-circular-badge-tee",
     ],

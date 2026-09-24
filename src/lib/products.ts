@@ -1870,10 +1870,14 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000003",
-    name: "GOOOL Casual Wordmark Tee",
+    name: "GOOOL Casual Wordmark Tee · Red",
     slug: "goool-heavyweight-casual-tee",
+    // Two rows on the shop, one per print colour (owner, 2026-09-24): this
+    // one is the 4a set (red centre dash on the front lockup, red club band
+    // on the back); ...0005 below is the 4b Club Blue set. Same blank, same
+    // placements, same price. The slug keeps the original casual-tee URL.
     description:
-      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
+      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the red club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1892,17 +1896,17 @@ export const products: Product[] = [
     // "releases a little colour at first" line would have been false here.
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not iron directly on the print.",
     images: [
-      {
-        src: "/products/GOOOL_STD_CASUAL_3010_BLACK_FRONT.webp",
-        alt: "GOOOL Casual Wordmark Tee in black, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
-      },
-      {
-        src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
-        alt: "GOOOL Casual Wordmark Tee in black, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
-      },
-    ],
+        {
+          src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+          alt: "GOOOL Casual Wordmark Tee · Red in black, front view",
+          caption: "Concept render. Not a photograph of a manufactured sample.",
+        },
+        {
+          src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+          alt: "GOOOL Casual Wordmark Tee · Red in black, back view",
+          caption: "Concept render. Not a photograph of a manufactured sample.",
+        },
+      ],
     // Rebuilt on the Bella+Canvas 3010 on 2026-09-23/24 (owner decision,
     // designs/00_asset-library/CASUAL-TEE-3010-DECISION.md). Front: the
     // full GOOOL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the
@@ -1917,22 +1921,21 @@ export const products: Product[] = [
         skuFragment: "BLACK",
         images: [
           {
-            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee in black, front view",
+            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+            alt: "GOOOL Casual Wordmark Tee · Red in black, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee in black, back view",
+            src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+            alt: "GOOOL Casual Wordmark Tee · Red in black, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
-      // Natural is the 4b version: Club Blue lockup with ink dashes on the
-      // front, Club Blue band with natural lettering on the back. Apliiq
-      // design 6120887 (saved by the owner 2026-09-24), mapped in
-      // fulfillment.ts. Purchasing on the whole product stays closed
-      // (availableForSale: false) until the owner opens it.
+      // Natural · red band (4a-N): renders added 2026-09-24. The Apliiq
+      // design is being saved by the owner; until its id is mapped in
+      // fulfillment.ts this variant cannot be fulfilled (purchasing is
+      // closed on the whole product anyway).
       {
         name: "Natural",
         supplierColor: "Natural",
@@ -1940,13 +1943,13 @@ export const products: Product[] = [
         skuFragment: "NATURAL",
         images: [
           {
-            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee in natural, front view",
+            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+            alt: "GOOOL Casual Wordmark Tee · Red in natural, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee in natural, back view",
+            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+            alt: "GOOOL Casual Wordmark Tee · Red in natural, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -1961,7 +1964,93 @@ export const products: Product[] = [
     supplierType: "apliiq",
     isActive: true,
     // Purchasing opens LAST (apliiq-product-mapping.md rollout order):
-    // stays false until the owner confirms the saved design and price.
+    // stays false until the owner confirms the saved designs and price.
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "70000000-0000-4000-8000-000000000005",
+    name: "GOOOL Casual Wordmark Tee · Club Blue",
+    slug: "goool-heavyweight-casual-tee-blue",
+    // The 4b set: GOOOL and ATHLETICS in Club Blue #3D6CC4 on the front
+    // (ink dashes on natural, natural dashes on black), Club Blue band with
+    // natural lettering on the back. Its own row on the shop by owner
+    // decision 2026-09-24 (the handoff's "band selector on one product"
+    // alternative was not taken).
+    description:
+      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup in club blue across the chest and the blue club band across the back. Heavyweight combed cotton in natural or black. Built for off the pitch: the one you reach for every day, and keep reaching for.",
+    priceCents: 4800,
+    compareAtPriceCents: null,
+    color: "Natural",
+    colorHex: "#E8E2D3",
+    // Bella+Canvas 3010, from Apliiq's own listing read 2026-09-23: "6 oz
+    // heavyweight fabric, Airlume combed cotton, Relaxed modern fit, Drop
+    // shoulder design, Double-needle neck stitching, Side seamed
+    // construction, Pre-shrunk for consistency, Tear away label". "Combed"
+    // is stated by the supplier for this blank, which is why it can be
+    // said here when it was cut from the 4810GD copy as unsupported.
+    fabric:
+      "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
+    fit:
+      "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for something closer to the body.",
+    // No garment-dye warning: the 3010 is not garment-dyed, so the 4810GD's
+    // "releases a little colour at first" line would have been false here.
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not iron directly on the print.",
+    images: [
+        {
+          src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+          alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, front view",
+          caption: "Concept render. Not a photograph of a manufactured sample.",
+        },
+        {
+          src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+          alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, back view",
+          caption: "Concept render. Not a photograph of a manufactured sample.",
+        },
+      ],
+    // Same placements as the red set: front lockup 11.10 x 4.59 in, top
+    // 3.00 in below the collar seam; back band 12.00 x 2.00 in, top 1.50 in
+    // below the back collar seam. Both DTF.
+    colorVariants: [
+      {
+        name: "Natural",
+        supplierColor: "Natural",
+        hex: "#E8E2D3",
+        skuFragment: "NATURAL",
+        images: [
+          {
+            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+            alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, front view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+            alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, back view",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      // Black · Club Blue (4b black): the Apliiq design is being built to
+      // the handoff spec; add the variant here once its renders exist
+      // (GOOOL_STD_CASUAL_3010_BLACK_BLUE_{FRONT,BACK}.webp) and map its
+      // saved-design id in fulfillment.ts.
+    ],
+    // Garment: Bella+Canvas 3010 (imported blank per the supplier's
+    // records); decorated at Apliiq's US facilities - Printed in the USA,
+    // never Made in.
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "apliiq",
+    isActive: true,
+    // Purchasing opens LAST (apliiq-product-mapping.md rollout order):
+    // stays false until the owner confirms the saved designs and price.
     availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
