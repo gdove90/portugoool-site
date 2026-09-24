@@ -83,11 +83,12 @@ export default function HomePage() {
 
       {/* One line of materials storytelling, above the whole catalog, so
           every attribute it names has to hold for every piece it covers.
-          Checked blank by blank on 2026-09-23 against the 10 active items
+          Checked blank by blank on 2026-09-23 against the active items (10 at the time; 9 since the Casual
+          Wordmark Tee was retired the same day)
           (isActive, not availableForSale, is the gate):
 
-            5 cotton garments, ALL documented heavyweight -
-              Casual Wordmark + Varsity  B+C 4810GD, 6.5 oz
+            4 cotton garments, ALL documented heavyweight -
+              Varsity                    B+C 4810GD, 6.5 oz
               Circular Badge             Comfort Colors C1717, supplier
                                          calls it heavyweight, no oz published
               Core Hoodie                Independent IND4000, 10 oz / 330 gsm

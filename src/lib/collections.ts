@@ -50,7 +50,9 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     subtitle: "Casual Tees",
     filterLabel: "Casual Tees",
     slugs: [
-      "goool-heavyweight-casual-tee",
+      // goool-heavyweight-casual-tee retired 2026-09-23 (designs deleted
+      // on Apliiq). resolveCollections filters on isActive anyway; it is
+      // removed here too so the list says what the shop shows.
       "goool-athletics-varsity-tee",
       "goool-athletics-circular-badge-tee",
     ],

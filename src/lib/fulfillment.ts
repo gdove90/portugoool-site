@@ -77,6 +77,12 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
+  // RETIRED 2026-09-23. The owner deleted both saved designs below on
+  // Apliiq, so these SKUs point at products that no longer exist. The
+  // product is isActive:false, so checkout refuses it before payment and
+  // nothing can reach this mapping; it is kept only as the record of what
+  // was sold. Do not reactivate the product against these ids.
+  //
   // GOOOL Casual Wordmark Tee (Bella+Canvas 4810GD). Front print rebuilt at
   // 10in (was 6.75in) on 2026-09-21; each color is a NEW saved design because
   // Apliiq has no in-place artwork swap. Old designs 6098963/6099060 (and a

@@ -1946,8 +1946,12 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "apliiq",
-    isActive: true,
-    availableForSale: true,
+    // Retired 2026-09-23: the owner deleted both saved designs (Washed
+    // Black, Washed Grey) on Apliiq, so there is nothing left for the
+    // supplier to print. Selling it would take payment for an order that
+    // cannot be fulfilled. Its URL 301s to /shop from middleware.ts.
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2078,9 +2082,11 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Washed Black",
     colorHex: "#262626",
-    // Bella+Canvas 4810GD, the same blank as the Casual Wordmark Tee, so
-    // the two lines must not tell the same story. That one owns the
-    // garment-dye explanation; this one owns what the weight does.
+    // Bella+Canvas 4810GD. This line used to defer to the Casual Wordmark
+    // Tee ("the same ... as the Casual Wordmark Tee"), which shared the
+    // blank and owned the garment-dye explanation. That tee was retired on
+    // 2026-09-23, so the reference would have sent customers looking for a
+    // product that no longer exists; the line now stands on its own.
     //
     // Two things were drafted and cut. "18 singles" is in the spec, but a
     // yarn count means nothing to a customer and explaining it ("a thick
@@ -2092,8 +2098,8 @@ export const products: Product[] = [
     // does not go in free text. Side-seaming is real and lives in the fit
     // row directly beneath this one, so it is not repeated here.
     fabric:
-      "The same 6.5 oz garment-dyed ring-spun cotton as the Casual Wordmark Tee. Heavy enough that the cloth does the hanging, so the shirt keeps its own line rather than following whatever is underneath it.",
-    // Bella+Canvas 4810GD, same blank as the Casual Wordmark Tee. The
+      "6.5 oz garment-dyed ring-spun cotton. Heavy enough that the cloth does the hanging, so the shirt keeps its own line rather than following whatever is underneath it.",
+    // Bella+Canvas 4810GD. The
     // spec says "relaxed fit; semi-dropped shoulder; side-seamed", so
     // that is what this says. It read "moderate dropped shoulder"
     // before, which was nobody's word for it.

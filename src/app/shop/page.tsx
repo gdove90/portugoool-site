@@ -1,13 +1,29 @@
 import type { Metadata } from "next";
 import ShopCollections from "@/components/ShopCollections";
 import { resolveCollections } from "@/lib/collections";
+import { getProducts } from "@/lib/products";
 
-export const metadata: Metadata = {
-  title: "Shop All Ten Pieces",
-  description:
-    "The First Capsule: heavyweight cotton tees, a hoodie and crewneck, performance tees and embroidered caps. Grouped into Touchline Essentials, Match Ready, Warm-Up Club and Off the Pitch.",
-  alternates: { canonical: "/shop" },
-};
+// The title counts the live catalog instead of hard-coding it. It read
+// "Shop All Ten Pieces" until 2026-09-23, when the Casual Wordmark Tee was
+// retired and the store sold nine - a number in a title goes stale the
+// moment the catalog changes, and a search result promising ten pieces to
+// someone who finds nine is a small lie told at the front door.
+const NUMBER_WORDS = [
+  "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
+  "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen",
+  "Seventeen", "Eighteen", "Nineteen", "Twenty",
+];
+
+export function generateMetadata(): Metadata {
+  const count = getProducts().length;
+  const word = NUMBER_WORDS[count];
+  return {
+    title: word ? `Shop All ${word} Pieces` : "Shop the Collection",
+    description:
+      "The First Capsule: heavyweight cotton tees, a hoodie and crewneck, performance tees and embroidered caps. Grouped into Touchline Essentials, Match Ready, Warm-Up Club and Off the Pitch.",
+    alternates: { canonical: "/shop" },
+  };
+}
 
 export default function ShopPage() {
   const collections = resolveCollections();

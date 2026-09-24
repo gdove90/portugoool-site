@@ -97,6 +97,13 @@ export async function middleware(req: NextRequest) {
     return redirectToShop(req);
   }
 
+  // The Casual Wordmark Tee was retired 2026-09-23 when the owner deleted
+  // both of its saved designs on Apliiq. Its URL was live and indexed, so it
+  // answers with a 301 rather than a 404.
+  if (pathname === "/shop/goool-heavyweight-casual-tee") {
+    return redirectToShop(req);
+  }
+
   // /world-cup was a seasonal campaign page, retired 2026-09-22.
   if (pathname === "/world-cup") {
     return redirectToShop(req);
