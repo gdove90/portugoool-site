@@ -1,0 +1,18 @@
+[
+ {
+  "file": "casual-tee-3010-black-front.png",
+  "bytes": 1409952,
+  "sha256": "64E33AEFD69215BA5ED95E65003E1FAD87C3C97D1AAEABCB1B03F587465E1E8D",
+  "source": "owner download (ChatGPT render), 2026-09-24",
+  "site_copy": "public/products/GOOOL_STD_CASUAL_3010_BLACK_FRONT.webp",
+  "site_px": "1254x1254"
+ },
+ {
+  "file": "casual-tee-3010-black-back.png",
+  "bytes": 1554895,
+  "sha256": "CD1F86267D9824D62B38173947EFB6B12458B8B206647B211067A3401869BFEF",
+  "source": "owner download (ChatGPT render), 2026-09-24",
+  "site_copy": "public/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
+  "site_px": "1254x1254"
+ }
+]
