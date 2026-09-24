@@ -15,8 +15,11 @@ true.
 
 The wordmark, worn plainly, now with the full GOOOL Athletics lockup across
 the chest and the club band across the back. Heavyweight combed cotton in
-natural, black or athletic heather. The one you pull on for the match and
-keep wearing long after it.
+natural or black. Built for off the pitch: the one you reach for every day,
+and keep reaching for.
+
+(owner correction 2026-09-24: this is the off-the-pitch tee, never "the
+match" tee; that framing belongs to the performance line.)
 
 ## fabric
 
