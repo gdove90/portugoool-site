@@ -5,7 +5,9 @@
   "sha256": "64E33AEFD69215BA5ED95E65003E1FAD87C3C97D1AAEABCB1B03F587465E1E8D",
   "source": "owner download (ChatGPT render), 2026-09-24",
   "site_copy": "public/products/GOOOL_STD_CASUAL_3010_BLACK_FRONT.webp",
-  "site_px": "1254x1254"
+  "site_px": "1153x1441",
+  "site_fit": "scripts/fit-product-image-4x5.py: own background extended to 4:5, garment 0.90 frame width, top margin 0.115 (2026-09-24)",
+  "site_sha256": "9177E34BD171B291E3C014DC2B1E7BD5FCE0373FC3A81FEDA9A367D5D0FCB102"
  },
  {
   "file": "casual-tee-3010-black-back.png",
@@ -13,7 +15,9 @@
   "sha256": "CD1F86267D9824D62B38173947EFB6B12458B8B206647B211067A3401869BFEF",
   "source": "owner download (ChatGPT render), 2026-09-24",
   "site_copy": "public/products/GOOOL_STD_CASUAL_3010_BLACK_BACK.webp",
-  "site_px": "1254x1254"
+  "site_px": "1158x1448",
+  "site_fit": "scripts/fit-product-image-4x5.py: own background extended to 4:5, garment 0.90 frame width, top margin 0.115 (2026-09-24)",
+  "site_sha256": "33AC81BB04F3F6178E65AAAB2E3255BA7F58673B1B1D37B753F6CD95CCF40CC0"
  },
  {
   "file": "casual-tee-3010-natural-front.png",
@@ -21,7 +25,9 @@
   "sha256": "A47C12FE7ABC320C08732ED5518F04FC6FC95F7C9F374748A3BA79B9E3885888",
   "source": "owner download (ChatGPT render), 2026-09-24; 4b blue-band Natural",
   "site_copy": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_FRONT.webp",
-  "site_px": "1254x1254"
+  "site_px": "1167x1459",
+  "site_fit": "scripts/fit-product-image-4x5.py: own background extended to 4:5, garment 0.90 frame width, top margin 0.115 (2026-09-24)",
+  "site_sha256": "CF85BEB349F6088BB839B4F085429BAF27E80C92B9E0C9C49B86206C83D2A936"
  },
  {
   "file": "casual-tee-3010-natural-back.png",
@@ -29,6 +35,8 @@
   "sha256": "E97DFDC9339068089EC41B6F2BED8DE8642C39FBB5EF0A3206D314FA4CC669B9",
   "source": "owner download (ChatGPT render), 2026-09-24; 4b blue-band Natural",
   "site_copy": "public/products/GOOOL_STD_CASUAL_3010_NATURAL_BACK.webp",
-  "site_px": "1254x1254"
+  "site_px": "1158x1448",
+  "site_fit": "scripts/fit-product-image-4x5.py: own background extended to 4:5, garment 0.90 frame width, top margin 0.115 (2026-09-24)",
+  "site_sha256": "563668DBFAD59B186AC85E3796C63D7865A910B69B625686B08C8FB4865D1985"
  }
 ]
