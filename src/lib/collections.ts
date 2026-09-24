@@ -50,9 +50,12 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     subtitle: "Casual Tees",
     filterLabel: "Casual Tees",
     slugs: [
-      // goool-heavyweight-casual-tee retired 2026-09-23 (designs deleted
-      // on Apliiq). resolveCollections filters on isActive anyway; it is
-      // removed here too so the list says what the shop shows.
+      // Rebuilt on the Bella+Canvas 3010 and back on sale 2026-09-24
+      // (black; natural to follow). It was pulled from this list on
+      // 2026-09-23 when the 4810GD version was retired, and re-activating
+      // the product did not put it back: resolveCollections only ever
+      // shows what is listed here AND isActive.
+      "goool-heavyweight-casual-tee",
       "goool-athletics-varsity-tee",
       "goool-athletics-circular-badge-tee",
     ],
