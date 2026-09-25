@@ -127,3 +127,7 @@ stay saved; their files stay in `designs/`.
 2. Supabase migrations 0034 and 0035 in the SQL editor (audit trail).
 3. Bone · Red hoodie renders from the owner: supplied and shipped 2026-09-25.
 4. Owner's call on the preview gate.
+
+
+## Catalog-wide backdrop update — 2026-09-25
+All 36 active catalog images now follow the same #F2F2F2 sRGB flat-background standard. The complete source archive, masters, masks, verification and contact sheet are in `designs/28_catalog-backdrop-standard-2026-09-25`. Product shapes, artwork and canvas dimensions are preserved.

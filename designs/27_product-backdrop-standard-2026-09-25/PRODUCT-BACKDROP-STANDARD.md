@@ -59,3 +59,7 @@ Six current Club Blue source images were located in `C:/Users/gdove/OneDrive/Des
 Built-in imagegen created silhouette guides only. Those guides were cleaned and refined against the original source edges; Bone masks also use source chroma to distinguish pale fabric from the neutral ground. Final image pixels come from the original images, with edge compositing confined to the silhouette. All six protected garment interiors have zero changed pixels. Canvas dimensions and image position are retained. Exterior background pixels are RGB 242/242/242, and WebP lossless round trips were verified.
 
 The correction scope is these six Club Blue hoodie views. Other existing product photos have not been retroactively corrected. Website deployment is not included in this package's verification.
+
+
+## Catalog-wide backdrop update — 2026-09-25
+All 36 active catalog images now follow the same #F2F2F2 sRGB flat-background standard. The complete source archive, masters, masks, verification and contact sheet are in `designs/28_catalog-backdrop-standard-2026-09-25`. Product shapes, artwork and canvas dimensions are preserved.

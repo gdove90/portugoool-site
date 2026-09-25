@@ -1,0 +1,1092 @@
+{
+  "base": "https://goool.shop",
+  "checkedAt": "2026-09-25T08:31:49.454Z",
+  "publicGate": {
+    "status": 200,
+    "location": null
+  },
+  "images": [
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_BADGE_CAP_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+      "status": 200,
+      "byteMatch": true
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "status": 200,
+      "byteMatch": true
+    }
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/cart",
+      "status": 200,
+      "versionedCatalogImages": false
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "versionedCatalogImages": false
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "versionedCatalogImages": false
+    },
+    {
+      "path": "/shop/goool-performance-tee",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie-blue",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee-blue",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-touchline-cap",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-athletics-modern-sport-performance-tee",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-athletics-badge-cap",
+      "status": 200,
+      "versionedCatalogImages": true
+    },
+    {
+      "path": "/shop/goool-athletics-stacked-cap",
+      "status": 200,
+      "versionedCatalogImages": true
+    }
+  ],
+  "optimizer": [
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 24812,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 17386,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 19526,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 9088,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 34116,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 21210,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 21820,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 20174,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 30326,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 26598,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 50518,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 51410,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 23022,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 17310,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 31536,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 26818,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 66572,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 56594,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 18658,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 15032,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 21188,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 19234,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 22972,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 17676,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 22024,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 20522,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 44602,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 37300,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 19868,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 35282,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 23088,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 29116,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 41458,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_BADGE_CAP_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 37300,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 41432,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "src": "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 37300,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+[
+  {
+    "slug": "goool-performance-tee",
+    "name": "GOOOL Performance Badge Tee",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+        "alt": "GOOOL Performance Badge Tee in black, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+        "alt": "GOOOL Performance Badge Tee in black, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ],
+    "variants": [
+      {
+        "name": "Black",
+        "supplierColor": "Black",
+        "hex": "#373737",
+        "skuFragment": "BLACK",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+            "alt": "GOOOL Performance Badge Tee in black, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+            "alt": "GOOOL Performance Badge Tee in black, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "White",
+        "supplierColor": "White",
+        "hex": "#F4F4F4",
+        "skuFragment": "WHITE",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+            "alt": "GOOOL Performance Badge Tee in white, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+            "alt": "GOOOL Performance Badge Tee in white, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "True Royal",
+        "supplierColor": "true royal",
+        "hex": "#3249A6",
+        "skuFragment": "TRUE_ROYAL",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+            "alt": "GOOOL Performance Badge Tee in true royal, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+            "alt": "GOOOL Performance Badge Tee in true royal, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "goool-heavyweight-hoodie",
+    "name": "GOOOL Core Hoodie · Red",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+        "alt": "GOOOL Core Hoodie · Red in black, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+        "alt": "GOOOL Core Hoodie · Red in black, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ],
+    "variants": [
+      {
+        "name": "Black",
+        "supplierColor": "Black",
+        "hex": "#1E1E1E",
+        "skuFragment": "BLACK",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+            "alt": "GOOOL Core Hoodie · Red in black, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+            "alt": "GOOOL Core Hoodie · Red in black, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "Bone",
+        "supplierColor": "Bone",
+        "hex": "#CFCAC7",
+        "skuFragment": "BONE",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+            "alt": "GOOOL Core Hoodie · Red in bone, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+            "alt": "GOOOL Core Hoodie · Red in bone, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "Grey Heather",
+        "supplierColor": "Grey Heather",
+        "hex": "#D9D9D9",
+        "skuFragment": "GREYHEATHER",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+            "alt": "GOOOL Core Hoodie · Red in grey heather, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+            "alt": "GOOOL Core Hoodie · Red in grey heather, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "goool-heavyweight-hoodie-blue",
+    "name": "GOOOL Core Hoodie · Club Blue",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+        "alt": "GOOOL Core Hoodie · Club Blue in black, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+        "alt": "GOOOL Core Hoodie · Club Blue in black, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ],
+    "variants": [
+      {
+        "name": "Black",
+        "supplierColor": "Black",
+        "hex": "#1E1E1E",
+        "skuFragment": "BLACK",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+            "alt": "GOOOL Core Hoodie · Club Blue in black, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+            "alt": "GOOOL Core Hoodie · Club Blue in black, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "Bone",
+        "supplierColor": "Bone",
+        "hex": "#CFCAC7",
+        "skuFragment": "BONE",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+            "alt": "GOOOL Core Hoodie · Club Blue in bone, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+            "alt": "GOOOL Core Hoodie · Club Blue in bone, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "Grey Heather",
+        "supplierColor": "Grey Heather",
+        "hex": "#D9D9D9",
+        "skuFragment": "GREYHEATHER",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+            "alt": "GOOOL Core Hoodie · Club Blue in grey heather, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+            "alt": "GOOOL Core Hoodie · Club Blue in grey heather, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "goool-heavyweight-casual-tee",
+    "name": "GOOOL Casual Wordmark Tee · Red",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+        "alt": "GOOOL Casual Wordmark Tee · Red in black, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+        "alt": "GOOOL Casual Wordmark Tee · Red in black, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ],
+    "variants": [
+      {
+        "name": "Black",
+        "supplierColor": "black",
+        "hex": "#111111",
+        "skuFragment": "BLACK",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Red in black, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Red in black, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "Natural",
+        "supplierColor": "Natural",
+        "hex": "#E8E2D3",
+        "skuFragment": "NATURAL",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Red in natural, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Red in natural, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "goool-heavyweight-casual-tee-blue",
+    "name": "GOOOL Casual Wordmark Tee · Club Blue",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+        "alt": "GOOOL Casual Wordmark Tee · Club Blue in natural, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+        "alt": "GOOOL Casual Wordmark Tee · Club Blue in natural, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ],
+    "variants": [
+      {
+        "name": "Natural",
+        "supplierColor": "Natural",
+        "hex": "#E8E2D3",
+        "skuFragment": "NATURAL",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Club Blue in natural, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Club Blue in natural, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "Black",
+        "supplierColor": "black",
+        "hex": "#111111",
+        "skuFragment": "BLACK",
+        "images": [
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Club Blue in black, front view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+            "alt": "GOOOL Casual Wordmark Tee · Club Blue in black, back view",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "goool-touchline-cap",
+    "name": "GOOOL Touchline Cap",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+        "alt": "GOOOL Touchline Cap in black and natural, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+        "alt": "GOOOL Touchline Cap in black and natural, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ]
+  },
+  {
+    "slug": "goool-athletics-modern-sport-performance-tee",
+    "name": "GOOOL Athletics Modern Sport Performance Tee",
+    "images": [
+      {
+        "src": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+        "alt": "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+        "alt": "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print",
+        "caption": "Back print detail - concept render. Not a photograph of a manufactured sample."
+      }
+    ],
+    "variants": [
+      {
+        "name": "Black",
+        "supplierColor": "Black",
+        "hex": "#373737",
+        "skuFragment": "BLACK",
+        "images": [
+          {
+            "src": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+            "alt": "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+            "alt": "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, black garment",
+            "caption": "Back print detail - concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      },
+      {
+        "name": "True Royal",
+        "supplierColor": "true royal",
+        "hex": "#354CAA",
+        "skuFragment": "ROYAL",
+        "images": [
+          {
+            "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+            "alt": "GOOOL Athletics Modern Sport Performance Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            "caption": "Concept render. Not a photograph of a manufactured sample."
+          },
+          {
+            "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+            "alt": "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, true royal blue garment",
+            "caption": "Back print detail - concept render. Not a photograph of a manufactured sample."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "goool-athletics-badge-cap",
+    "name": "GOOOL Athletics Badge Cap",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+        "alt": "GOOOL Athletics Badge Cap in black and natural, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_BADGE_CAP_BACK.webp",
+        "alt": "GOOOL Athletics Badge Cap in black and natural, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ]
+  },
+  {
+    "slug": "goool-athletics-stacked-cap",
+    "name": "GOOOL Athletics Stacked Cap",
+    "images": [
+      {
+        "src": "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+        "alt": "GOOOL Athletics Stacked Cap in black and natural, front view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      },
+      {
+        "src": "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
+        "alt": "GOOOL Athletics Stacked Cap in black and natural, back view",
+        "caption": "Concept render. Not a photograph of a manufactured sample."
+      }
+    ]
+  }
+]

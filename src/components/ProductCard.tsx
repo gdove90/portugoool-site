@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { catalogImageSrc } from "@/lib/product-image";
 import { useState } from "react";
 import { Product, isSoldOut, isAvailableForSale, remainingUnits, hasPrice } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
@@ -50,7 +51,7 @@ export default function ProductCard({ product }: { product: Product }) {
             return (
               <Image
                 key={img.src}
-                src={img.src}
+                src={catalogImageSrc(img.src)}
                 alt={active ? img.alt : ""}
                 fill
                 sizes="(min-width: 1480px) 326px, (min-width: 1280px) 25vw, (min-width: 1024px) 33vw, 50vw"

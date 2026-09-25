@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-25",
+  "updatedAssets": 30,
+  "alreadyStandard": 6,
+  "launchCopies": 36,
+  "sourceFiles": [
+    "src\\components\\ProductCard.tsx",
+    "src\\components\\ProductDetail.tsx",
+    "src\\app\\cart\\page.tsx",
+    "src\\lib\\product-image.ts"
+  ],
+  "deployed": true,
+  "deployId": "6ab6303c01d7acc5da6d5954",
+  "url": "https://goool.shop",
+  "publicLaunch": true,
+  "productionPreviewKeyRemoved": true,
+  "middlewareGateRemoved": true,
+  "verifiedAt": "2026-09-25T08:31:49.454Z",
+  "verifiedPublicPages": 14,
+  "verifiedPublicImages": 36
+}

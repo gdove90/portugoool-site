@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { catalogImageSrc } from "@/lib/product-image";
 import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
@@ -108,9 +109,9 @@ export default function CartPage() {
             <li key={item.key} className="flex gap-4 py-5">
               <Link
                 href={`/shop/${item.slug}`}
-                className="relative h-28 w-24 shrink-0 overflow-hidden rounded-lg bg-smoke"
+                className="product-media relative h-28 w-24 shrink-0 overflow-hidden rounded-lg"
               >
-                <Image src={item.image} alt={item.name} fill sizes="96px" className="object-cover" />
+                <Image src={catalogImageSrc(item.image)} alt={item.name} fill sizes="96px" className="object-contain" />
               </Link>
 
               <div className="flex flex-1 flex-col">

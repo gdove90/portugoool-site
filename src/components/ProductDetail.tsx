@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { catalogImageSrc } from "@/lib/product-image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale, hasPrice } from "@/lib/types";
@@ -105,7 +106,7 @@ export default function ProductDetail({ product }: { product: Product }) {
             }}
           >
             <Image
-              src={images[activeImage].src}
+              src={catalogImageSrc(images[activeImage].src)}
               alt={images[activeImage].alt}
               fill
               priority
@@ -169,7 +170,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                   aria-label={`View image ${i + 1}: ${img.alt}`}
                   aria-pressed={i === activeImage}
                 >
-                  <Image src={img.src} alt="" fill sizes="64px" quality={90} className="object-contain" />
+                  <Image src={catalogImageSrc(img.src)} alt="" fill sizes="64px" quality={90} className="object-contain" />
                 </button>
               ))}
             </div>
