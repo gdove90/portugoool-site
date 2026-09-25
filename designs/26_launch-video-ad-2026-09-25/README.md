@@ -123,3 +123,34 @@ consistency notes now describe him: late twenties, light skin, short
 dark-brown hair slicked back, full ginger-brown beard, hazel eyes, broad
 muscular build. He is shirtless in the reference; Clip 0 puts him in the
 tee and the bedroom before any other clip is generated.
+
+## Higgsfield run attempt (2026-09-25 ~04:45 ET)
+
+Blocked at the account: free plan, 0 credits, no unlimited allowance.
+Even the Clip 0 still (0.25 credits) is refused with "Requires basic plan
+or higher". Nothing was generated. Owner action: upgrade the Higgsfield
+plan / add credits, then re-run.
+
+Already done and reusable (uploads are in the account's media store):
+
+| Reference | Higgsfield media_id |
+|---|---|
+| Actor, head and shoulders (`references/model-reference-head-2026-09-25.png`) | `c4fbbd87-0c7c-4a78-920d-7f07c8f14aaa` |
+| Tee, front render (`public/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png`) | `65a7a2c0-ef14-4a89-85da-074d16ab14fd` |
+| Print file (`designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-F_v3_3300px.png`) | `8f45e335-b347-4de6-b8ae-bb2998935ae6` |
+
+Measured costs (credits per generation, 9:16):
+
+| Step | Model | Cost |
+|---|---|---|
+| Clip 0 anchor still | gpt_image_2_5, role `image_references` | 0.25 |
+| 5 s video clip, 1080p std, silent | seedance_2_0 | 45 |
+| 5 s video clip, 720p fast, silent | seedance_2_0 | 12.5 |
+| 5 s video clip, 720p, silent | seedance_2_0_mini | 5 |
+
+Model choice: seedance_2_0 is the fit (start frame + end frame, identity
+consistency, 9:16, 4 to 15 s). Recommended first run, the short 15 s
+version: Clip 0 (4 takes, 1 credit) then Clips 1, 2, 4a+4b, 4c, 5 at 720p
+fast, 2 takes each (10 clips, 125 credits); re-render the two best
+clips at 1080p std for the final (90 credits). About 220 credits for a
+finished 15 s cut; roughly double for the full 30 s with 3 to 4 takes.
