@@ -55,3 +55,7 @@ designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack.zip
 
 # Preserved generated cache from framework upgrade
 /.next-cache-*/
+
+# Campaign assets and Higgsfield character packs (large media, owner-managed; canonical files stay in designs/)
+/goool advertising/
+/goool higgsfield/

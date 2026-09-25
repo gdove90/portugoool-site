@@ -243,6 +243,11 @@ export async function POST(req: NextRequest) {
         },
       },
       metadata,
+      // Shows the promo-code field on Stripe's page. GOOOL20 (20% off a
+      // customer's first order) is a promotion code on the Stripe account,
+      // created by scripts/create-goool20-promo.mjs; Stripe validates it
+      // and applies the discount, nothing here trusts the client.
+      allow_promotion_codes: true,
       success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/cart`,
       // Customer email is collected by Stripe Checkout itself.

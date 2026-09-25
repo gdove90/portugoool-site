@@ -38,3 +38,9 @@ body {
 .product-media {
   background-color: var(--product-backdrop);
 }
+
+/* GOOOL20 popup: bottom sheet slides up on mobile. */
+@keyframes goool20-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

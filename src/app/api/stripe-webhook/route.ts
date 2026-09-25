@@ -5,6 +5,7 @@ import { getOrdersStore, OrderItemRow, OrderRow } from "@/lib/orders-store";
 import { submitPaidOrder } from "@/lib/fulfillment-submit";
 import { sendEmail } from "@/lib/email";
 import { buildOrderConfirmation } from "@/lib/emails/order-confirmation";
+import { markRedeemed } from "@/lib/discount";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe webhook — the ONLY payment authority. Fulfillment never
@@ -140,6 +141,41 @@ function buildOrderRows(
   };
 
   return { order, items, unmapped };
+}
+
+
+// GOOOL20 ledger: when a paid session carried a promotion code, record who
+// used it (name + address key) so one-per-person can be checked after
+// the fact. Best effort, never blocks the order. The webhook payload
+// carries `discounts` with the promotion code id on recent API versions;
+// if it is missing but a discount was applied, the session is fetched.
+async function recordDiscountRedemption(stripe: Stripe, session: Stripe.Checkout.Session) {
+  try {
+    if (!session.total_details?.amount_discount) return;
+    type Disc = { promotion_code?: string | { id: string } | null };
+    let discounts = (session as unknown as { discounts?: Disc[] }).discounts;
+    if (!discounts?.length) {
+      const full = await stripe.checkout.sessions.retrieve(session.id);
+      discounts = (full as unknown as { discounts?: Disc[] }).discounts;
+    }
+    const raw = discounts?.[0]?.promotion_code;
+    const promotionCodeId = typeof raw === "string" ? raw : raw?.id ?? null;
+    if (!promotionCodeId) return;
+    const s = session as unknown as {
+      shipping_details?: { name?: string; address?: Record<string, unknown> };
+      collected_information?: { shipping_details?: { name?: string; address?: Record<string, unknown> } };
+    };
+    const ship = s.collected_information?.shipping_details ?? s.shipping_details ?? null;
+    await markRedeemed({
+      promotionCodeId,
+      sessionId: session.id,
+      email: session.customer_details?.email ?? null,
+      name: ship?.name ?? session.customer_details?.name ?? null,
+      address: ship?.address ?? null,
+    });
+  } catch (err) {
+    console.error("[discount] redemption record error:", err instanceof Error ? err.message : err);
+  }
 }
 
 export async function POST(req: NextRequest) {
@@ -299,6 +335,9 @@ export async function POST(req: NextRequest) {
     // through /api/fulfillment-ops (reconcile / retry / release).
     let submission: string | undefined;
     if (paid) {
+      // GOOOL20 ledger, before submission so a supplier error never
+      // hides who used a code. Best effort inside.
+      await recordDiscountRedemption(stripe, session);
       try {
         const outcome = await submitPaidOrder(store, orderId, { livemode: event.livemode });
         submission = outcome.action;

@@ -67,6 +67,16 @@ export default function MobileNav({ open, onClose, links }: MobileNavProps) {
               {link.label}
             </Link>
           ))}
+          <button
+            type="button"
+            onClick={() => {
+              onClose();
+              window.dispatchEvent(new Event("goool20:open"));
+            }}
+            className="mt-2 rounded-lg px-3 py-3 text-left text-sm font-semibold uppercase tracking-[0.1em] text-gold hover:bg-paper/10"
+          >
+            20% off your first order
+          </button>
         </nav>
 
         <div className="mt-auto p-4">

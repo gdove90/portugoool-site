@@ -5,6 +5,7 @@ import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DiscountPopup from "@/components/DiscountPopup";
 
 // Display font (site-wide headings) — the planned upgrade recorded in
 // designs/00_brand/typography.md. Single weight; loaded subsetted.
@@ -96,6 +97,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <DiscountPopup />
         </CartProvider>
       </body>
     </html>

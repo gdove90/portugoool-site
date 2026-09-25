@@ -57,6 +57,16 @@ export default function Header() {
         </nav>
 
         <div className="col-start-3 flex items-center gap-3 justify-self-end">
+          {/* Reopens the GOOOL20 popup for anyone who closed it. A link,
+              not a "Sign up" button: the store has no accounts and the
+              word would promise one. */}
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event("goool20:open"))}
+            className="hidden text-xs font-semibold uppercase tracking-[0.1em] text-gold transition-colors hover:text-gold-light md:inline-block"
+          >
+            20% off
+          </button>
           <Link
             href="/contact"
             aria-current={pathname.startsWith("/contact") ? "page" : undefined}
