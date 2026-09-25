@@ -193,7 +193,7 @@ Two delivery masters were built from the rough cut and probed with ffprobe:
 | File | Use | Spec |
 |---|---|---|
 | `output/WEAR-THE-FEELING-short-v1-REELS-STORIES-1080x1920.mp4` | Reels, Stories, Reels ads | 1080 x 1920 (9:16), H.264 High 4.1, yuv420p, 30 fps, ~8.6 Mbps, AAC-LC 48 kHz stereo (silent placeholder track), moov faststart, 19.6 s, 21 MB |
-| `output/WEAR-THE-FEELING-short-v1-FEED-1080x1350.mp4` | Feed post / grid preview (4:5) | 1080 x 1350 centre crop of the same cut, same encode, 22 MB |
+| `output/WEAR-THE-FEELING-short-v1-FEED-1080x1350.mp4` | Feed post / grid preview (4:5) | 1080 x 1350, same encode; cropped per clip (bedroom and cards centred, stadium reveal and dribble top-weighted, net mid) so heads and the goal stay in frame. A plain centre crop cut the dribble heads off. |
 
 Against Instagram's published limits: MP4/MOV with H.264 + AAC, 9:16 for
 Reels and Stories, 4:5 for feed, 30 fps (23 to 60 accepted), minimum
