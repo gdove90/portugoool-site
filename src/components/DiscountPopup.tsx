@@ -152,15 +152,35 @@ export default function DiscountPopup() {
       onClick={close}
       aria-hidden={false}
     >
+      {/* 1e: on phones the crowd fills the whole screen behind the sheet,
+          dark and soft. Hidden on desktop, where the image is the panel's
+          left half instead (1a). */}
+      <div className="absolute inset-0 sm:hidden" aria-hidden="true">
+        <Image
+          src="/hero-crowd.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-[50%_30%] blur-[2px]"
+          priority
+        />
+        <div className="absolute inset-0 bg-red/50 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-ink/45" />
+      </div>
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="goool20-title"
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full overflow-hidden rounded-t-3xl border-t-2 border-red bg-ink text-paper shadow-2xl motion-safe:animate-[goool20-up_.35s_ease-out] sm:grid sm:max-w-4xl sm:grid-cols-2 sm:rounded-none sm:border-t-0 sm:animate-none"
+        className="relative w-full overflow-hidden rounded-t-[28px] border-t-2 border-red bg-ink text-paper shadow-2xl motion-safe:animate-[goool20-up_.35s_ease-out] sm:grid sm:max-w-4xl sm:grid-cols-2 sm:rounded-none sm:border-t-0 sm:animate-none"
       >
-        {/* Crowd image: a band above the sheet on mobile, the left half on desktop. */}
-        <div className="relative h-40 w-full sm:h-full sm:min-h-[560px]">
+        {/* 1e drag handle, phones only. */}
+        <div className="flex justify-center pt-3 sm:hidden" aria-hidden="true">
+          <div className="h-1.5 w-12 rounded-full bg-paper/30" />
+        </div>
+
+        {/* Crowd image: the left half of the panel on desktop (1a). */}
+        <div className="relative hidden sm:block sm:h-full sm:min-h-[560px]">
           <Image
             src="/hero-crowd.webp"
             alt=""
@@ -170,10 +190,10 @@ export default function DiscountPopup() {
             priority
           />
           <div className="absolute inset-0 bg-red/60 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:to-ink/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ink/40" />
         </div>
 
-        <div className="px-6 pb-8 pt-4 sm:px-12 sm:py-12">
+        <div className="px-6 pb-8 pt-3 sm:px-12 sm:py-12">
           <div className="flex items-start justify-between">
             <Image
               src="/brand/goool-athletics-lockup-white.png"
@@ -241,7 +261,8 @@ export default function DiscountPopup() {
                 <span className="text-red">your first order</span>
               </h2>
               <p className="mt-4 text-paper/70">
-                Join the list for early access to every drop.
+                <span className="sm:hidden">Join the list. Code lands in your inbox.</span>
+                <span className="hidden sm:inline">Join the list for early access to every drop.</span>
               </p>
 
               <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3">
@@ -264,7 +285,14 @@ export default function DiscountPopup() {
                   disabled={status === "loading"}
                   className="w-full bg-red py-4 font-display text-lg uppercase tracking-[0.18em] text-paper transition-colors hover:bg-red-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:opacity-60"
                 >
-                  {status === "loading" ? "One moment…" : "Unlock 20% off"}
+                  {status === "loading" ? (
+                    "One moment…"
+                  ) : (
+                    <>
+                      <span className="sm:hidden">Unlock 20%</span>
+                      <span className="hidden sm:inline">Unlock 20% off</span>
+                    </>
+                  )}
                 </button>
               </form>
 
@@ -274,16 +302,16 @@ export default function DiscountPopup() {
                 </p>
               )}
 
-              <p className="mt-4 text-xs text-paper/50">
-                One code per customer. By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email.
-              </p>
               <button
                 type="button"
                 onClick={close}
-                className="mt-3 text-sm text-paper/50 underline underline-offset-4 hover:text-paper sm:hidden"
+                className="mx-auto mt-4 block text-sm text-paper/60 underline underline-offset-4 hover:text-paper sm:hidden"
               >
                 No thanks, I&apos;ll pay full price
               </button>
+              <p className="mt-4 text-[11px] leading-snug text-paper/45 sm:text-xs sm:text-paper/50">
+                One code per customer. By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email.
+              </p>
             </>
           )}
         </div>
