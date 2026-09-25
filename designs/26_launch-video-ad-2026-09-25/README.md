@@ -154,3 +154,34 @@ version: Clip 0 (4 takes, 1 credit) then Clips 1, 2, 4a+4b, 4c, 5 at 720p
 fast, 2 takes each (10 clips, 125 credits); re-render the two best
 clips at 1080p std for the final (90 credits). About 220 credits for a
 finished 15 s cut; roughly double for the full 30 s with 3 to 4 takes.
+
+## Higgsfield run 1 — short version (2026-09-25 04:40–05:05 ET)
+
+Plan Plus, 1200 credits at start, 909.75 at end: **290.25 credits spent**.
+Result: `output/WEAR-THE-FEELING-short-roughcut-v1-silent.mp4` (19.6 s,
+1080 x 1920, 24 fps, no audio) and its storyboard PNG. Every take is in
+`output/<clip>/` with a frame strip beside it.
+
+| Clip | Takes | Chosen | Notes |
+|---|---|---|---|
+| 0 anchor still | 8 (gpt_image_2_5) | take 6 `ce971694…` | Takes 1–4 read as a hotel (owner: "I'm in a hotel"); takes 5–8 re-run as an ordinary bedroom. Take 7 rejected: American football on the floor. |
+| 1 shirt to lens | 2 flagged NSFW + 2 re-run | v2 take 1 `31934b58…` | "Pull the shirt over his head" trips Higgsfield's content filter (both takes returned `nsfw`). Re-prompted fully clothed: he pulls the shirt front to the lens. Works. |
+| 2 stadium reveal | 2 | take 2 `668047ca…` | Take 1 ends on a boot with a three-stripe-style mark. Take 2 clean, print exact. Identity ref was hotel take 3; bedroom not visible, fine. |
+| 4ab dribble + strike | 2 + 2 re-run | v2 take 1 `08d3e937…` | First pair: UEFA-style star ball and a numbered, striped defender kit, rejected. Re-run with "plain all-white ball, plain kits, blank boards". v2 take 1 clean; a defender number still flashes in one shot (not a mark, but re-run if it bothers). |
+| 4c net | 2 + 2 re-run | v2 take 2 `92d4e135…` | Star ball in three of four takes; v2 take 2 has a plain hexagon ball, real-looking keeper in plain grey. |
+| 5 snap back | 2 | take 1 `dde71f6c…` | Both good; take 1 holds the wider frame longer. |
+| Cards, logo, TV off | built locally | `output/cards/`, `output/seg/07-tvoff.mp4` | Anton (Google Fonts OFL, `output/cards/Anton-Regular.ttf`), lockup `public/brand/goool-athletics-lockup-white.png`, goool.shop under the logo. |
+
+Model: seedance_2_0, 720p, std (fast is not offered on this model), silent.
+Uploaded references: actor head `c4fbbd87…`, tee `65a7a2c0…`, print
+`8f45e335…`, black-fabric end frame `89ab32b6…`.
+
+**Lessons for the 30 s run:** always say "plain all-white ball, no
+pattern" and "plain kits, no numbers, blank boards" (the model defaults to
+a Champions League ball and club kits); never describe removing the shirt;
+generate the anchor in an ordinary room.
+
+**Still to do:** sound (stadium bed, boot and net hits, the sustained
+GOOOOOL call peaking on the net, hard silence on the cut back, static and
+CRT click), a 1080p re-render of the chosen takes, the 30 s version with
+Clip 3 and a reaction close-up, and the owner's sign-off on the cut.
