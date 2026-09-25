@@ -195,7 +195,7 @@ stay saved; their files stay in `designs/`.
 
 1. Netlify credits, then `rm -rf .next && npx netlify deploy --prod --build`.
 2. Supabase migrations 0034 and 0035 in the SQL editor (audit trail).
-3. Bone · Red hoodie renders from the owner (Apliiq's render stands in).
+3. Bone · Red hoodie renders from the owner: supplied and shipped 2026-09-25.
 4. Owner's call on the preview gate.
 '''
 io.open(os.path.join(DEST, 'README.md'), 'w', encoding='utf-8', newline='').write(readme)

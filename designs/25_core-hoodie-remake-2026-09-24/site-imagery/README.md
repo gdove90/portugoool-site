@@ -27,8 +27,11 @@ Apliiq renders as the site copies for five of the six designs the same
 night: Bone · Blue, Black · Red, Black · Blue, Grey Heather · Blue and Grey
 Heather · Red (`owner-render-*.png` here, fitted with
 `scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80
---top 0.10`, so every hoodie sits at 0.80 of the frame height). Bone · Red
-still shows the Apliiq render until the owner supplies that pair. The Grey
+--top 0.10`, so every hoodie sits at 0.80 of the frame height). The owner
+supplied the Bone · Red pair on 2026-09-25 01:47 (already 1122 x 1402,
+drawstrings visible; fitted at `--threshold 90` because the vignette on
+that render otherwise read as garment), so all six site copies are now
+owner renders. The Apliiq renders stay here as the supplier originals. The Grey
 Heather · Red renders are 1200 px squares, so their site copies are 841 x
 1051 / 851 x 1064 rather than the 1137 x 1421 of the rest.
 

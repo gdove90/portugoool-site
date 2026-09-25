@@ -540,6 +540,18 @@
   "sha256": "A00BB007C569B226EE53BB93EC37D91E48D0318B375FAB83E4E6E0B54A5C764A"
  },
  {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/owner-render-bone-red-band-back.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-bone-red-band-back.png",
+  "bytes": 1766189,
+  "sha256": "27347CF603E3A48EBBFDD5B254A9C94CFD74A0C182DA8D98669854E382DB16B9"
+ },
+ {
+  "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/owner-render-bone-red-band-front.png",
+  "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-bone-red-band-front.png",
+  "bytes": 1869847,
+  "sha256": "D993D60C488884577D7C2341CB56194FDD0984B82C210F2CBD3FDEE856982D46"
+ },
+ {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/owner-render-grey-heather-red-band-back.png",
   "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/owner-render-grey-heather-red-band-back.png",
   "bytes": 846978,
@@ -554,14 +566,14 @@
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/README.md",
   "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/README.md",
-  "bytes": 2061,
-  "sha256": "AEA07C8229DDB5099AEE5E01ECDB0C808B3416FFD299EA74412028A68903A97F"
+  "bytes": 2279,
+  "sha256": "DC81B7FC4141F9EA0EA9249C64143A150EF49C72FC052E9B477C9745723C06D2"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/renders/FILES.json",
   "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/FILES.json",
-  "bytes": 16373,
-  "sha256": "A2BCFF3AA472263A7311FF84C0E48B0913C44691686E34BC6AD3914B4157E6FD"
+  "bytes": 17851,
+  "sha256": "30219CAC6265831CE3ECD7323F34A515F65B31A0E89E23EFC7A482B1842CFF30"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
@@ -578,14 +590,14 @@
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
   "source": "public/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
-  "bytes": 89122,
-  "sha256": "E57009B5B8752A53A3D5C1775409C627D9408E57518EF1059DFA9BE41A67CC94"
+  "bytes": 97384,
+  "sha256": "512E82B569AE3143878FE6E9F62F82913F2CF2F5DFBE72F49F3402CBD6722061"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
   "source": "public/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
-  "bytes": 66610,
-  "sha256": "11BEEE2B15B64E24541F3E25448308CA4942E8BA6523F8E537FBEA884B42B9D0"
+  "bytes": 113024,
+  "sha256": "BFA798509C75D55FD515D93C6CC933476ABEB17451FD954D2B9ED9A0AC000239"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/03_core-hoodie-red/site-images/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
@@ -740,14 +752,14 @@
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/README.md",
   "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/README.md",
-  "bytes": 2061,
-  "sha256": "AEA07C8229DDB5099AEE5E01ECDB0C808B3416FFD299EA74412028A68903A97F"
+  "bytes": 2279,
+  "sha256": "DC81B7FC4141F9EA0EA9249C64143A150EF49C72FC052E9B477C9745723C06D2"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/renders/FILES.json",
   "source": "designs/25_core-hoodie-remake-2026-09-24/site-imagery/FILES.json",
-  "bytes": 16373,
-  "sha256": "A2BCFF3AA472263A7311FF84C0E48B0913C44691686E34BC6AD3914B4157E6FD"
+  "bytes": 17851,
+  "sha256": "30219CAC6265831CE3ECD7323F34A515F65B31A0E89E23EFC7A482B1842CFF30"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/04_core-hoodie-club-blue/site-images/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
@@ -1292,8 +1304,8 @@
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/CORE-HOODIE-REMAKE-DECISION.md",
   "source": "designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md",
-  "bytes": 5629,
-  "sha256": "FB5C001BF6DE25FA300D119579EBB88DA334AE14E73CE0B6D0BB3D0376B754C3"
+  "bytes": 5885,
+  "sha256": "F52AB797F434C7C1B53242F08728D6748B65B5AD6FD13C4ED27A1D0C5BE420C2"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/CASUAL-TEE-3010-DECISION.md",

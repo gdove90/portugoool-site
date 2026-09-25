@@ -33,10 +33,10 @@
   "apliiq_design_id": 6120990,
   "view": "front",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
-  "site_px": "1137x1421",
+  "site_px": "1122x1402",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "11BEEE2B15B64E24541F3E25448308CA4942E8BA6523F8E537FBEA884B42B9D0",
-  "site_copy_source": "this Apliiq render (owner render pending)"
+  "site_sha256": "BFA798509C75D55FD515D93C6CC933476ABEB17451FD954D2B9ED9A0AC000239",
+  "site_copy_source": "owner ChatGPT render (see owner-render-bone-red-band-* rows) since 2026-09-25"
  },
  {
   "file": "apliiq-render-6120990-bone-red-band-back.png",
@@ -46,10 +46,10 @@
   "apliiq_design_id": 6120990,
   "view": "back",
   "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
-  "site_px": "1137x1421",
+  "site_px": "1112x1390",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "E57009B5B8752A53A3D5C1775409C627D9408E57518EF1059DFA9BE41A67CC94",
-  "site_copy_source": "this Apliiq render (owner render pending)"
+  "site_sha256": "512E82B569AE3143878FE6E9F62F82913F2CF2F5DFBE72F49F3402CBD6722061",
+  "site_copy_source": "owner ChatGPT render (see owner-render-bone-red-band-* rows) since 2026-09-25"
  },
  {
   "file": "apliiq-render-6121043-grey-heather-red-band-front.png",
@@ -264,5 +264,27 @@
   "site_px": "851x1064",
   "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
   "site_sha256": "591D88295C64AB16E0E1221FB91B201A3395DCA9D776F94CD66B57223902D417"
+ },
+ {
+  "file": "owner-render-bone-red-band-front.png",
+  "bytes": 1869847,
+  "sha256": "D993D60C488884577D7C2341CB56194FDD0984B82C210F2CBD3FDEE856982D46",
+  "px": "1122x1402",
+  "source": "owner download (ChatGPT render), 2026-09-25 01:47",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+  "site_px": "1122x1402",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 90 --garment-height 0.80 --top 0.10: own background kept (render is already 4:5), garment framed per render; threshold raised from 60 to 90 because the vignette on this Bone render otherwise read as garment",
+  "site_sha256": "BFA798509C75D55FD515D93C6CC933476ABEB17451FD954D2B9ED9A0AC000239"
+ },
+ {
+  "file": "owner-render-bone-red-band-back.png",
+  "bytes": 1766189,
+  "sha256": "27347CF603E3A48EBBFDD5B254A9C94CFD74A0C182DA8D98669854E382DB16B9",
+  "px": "1122x1402",
+  "source": "owner download (ChatGPT render), 2026-09-25 01:47",
+  "site_copy": "public/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+  "site_px": "1112x1390",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 90 --garment-height 0.80 --top 0.10: own background kept (render is already 4:5), garment framed per render; threshold raised from 60 to 90 because the vignette on this Bone render otherwise read as garment",
+  "site_sha256": "512E82B569AE3143878FE6E9F62F82913F2CF2F5DFBE72F49F3402CBD6722061"
  }
 ]
