@@ -1,0 +1,167 @@
+[
+ {
+  "file": "exports/GA-01-F_v3_3300px.png",
+  "bytes": 27701,
+  "sha256": "53e444de0a4cdffdee6b81439c914ef6b9e044e5349e21ea87e79149f467343a",
+  "role": "production export - front",
+  "note": "RGB PNG, binary alpha. 11 in wide = 300 ppi (the saved-design size on 6112037 and 6113361); 9 in wide = 366.7 ppi. Linked as the hi-res production file on both saved designs 2026-09-25.",
+  "px": "3300x1116"
+ },
+ {
+  "file": "exports/GA-01-B_v3_1950px_600ppi.png",
+  "bytes": 14001,
+  "sha256": "6af09cae576ea5a6cbd8b8c18b578910bff5973755290662ba9c12e1841f1ad4",
+  "role": "production export - back (master resolution)",
+  "note": "RGB PNG, binary alpha, 600 ppi at 3.25 in. Linked as the hi-res production file on both saved designs 2026-09-25.",
+  "px": "1950x683"
+ },
+ {
+  "file": "exports/GA-01-B_v3_975px_300ppi.png",
+  "bytes": 5791,
+  "sha256": "5cdd2b96b0540cdf370cd937093c1367e4f4e7ca6b95ce1624961959f45f54e0",
+  "role": "production export - back (300 ppi)",
+  "note": "Same artwork resampled to 300 ppi at 3.25 in, for tools that expect the original 975 px canvas.",
+  "px": "975x342"
+ },
+ {
+  "file": "proofs/PROOF-front-9in.png",
+  "bytes": 259948,
+  "sha256": "284eddde4b4f82f1fb07a33427b442132e3622df4948938ae7cfb31e47222ec6",
+  "role": "dimensioned proof, print at 100%",
+  "note": "300 ppi sheet; white ink drawn black on paper",
+  "px": "3300x2550"
+ },
+ {
+  "file": "proofs/PROOF-front-11in.png",
+  "bytes": 172443,
+  "sha256": "94911a8e9daf8a24e04102f1cc89f501873d0500922b526d69bff948dde39ec1",
+  "role": "dimensioned proof, print at 100%",
+  "note": "300 ppi sheet; white ink drawn black on paper",
+  "px": "5100x3300"
+ },
+ {
+  "file": "proofs/PROOF-back-3.25in.png",
+  "bytes": 170311,
+  "sha256": "eba201a66a271d5c607649dcf5e6878fc86410aa6b1a1d5225a4df1d5eb8def4",
+  "role": "dimensioned proof, print at 100%",
+  "note": "300 ppi sheet; white ink drawn black on paper",
+  "px": "2550x3300"
+ },
+ {
+  "file": "proofs/opening-test-2mm-front_9in.png",
+  "bytes": 33193,
+  "sha256": "cd8170aa9acb4477204a324f607632eb6ba10c07542efd05e573c92b4b0f5dcc",
+  "role": "prepress check",
+  "note": "red = pixels a 2.0 mm round opening removes (thinner than 2 mm)",
+  "px": "3300x1116"
+ },
+ {
+  "file": "proofs/opening-test-2mm-front_11in.png",
+  "bytes": 32654,
+  "sha256": "8a3de5c94ca38c93304d31dffb44ba690481ec309de5c9491de99c5b97d54a4a",
+  "role": "prepress check",
+  "note": "red = pixels a 2.0 mm round opening removes (thinner than 2 mm)",
+  "px": "3300x1116"
+ },
+ {
+  "file": "proofs/opening-test-2mm-back_3.25in.png",
+  "bytes": 20395,
+  "sha256": "0be47c36066bee5f96944d5bdb89759fb655979719870393c7d98f2bbfbfdb03",
+  "role": "prepress check",
+  "note": "red = pixels a 2.0 mm round opening removes (thinner than 2 mm)",
+  "px": "1950x683"
+ },
+ {
+  "file": "proofs/preview-front-on-dark.png",
+  "bytes": 31095,
+  "sha256": "3e68965b0013718180c4bacbd895ed47513ed94d695223a8a20bd55929485c8c",
+  "role": "preview",
+  "note": "",
+  "px": "3300x1116"
+ },
+ {
+  "file": "proofs/preview-back-on-dark.png",
+  "bytes": 17345,
+  "sha256": "9043b366273f8ba7ef2a965b6de598998b40163fbd40087e38ae7208fb217fdc",
+  "role": "preview",
+  "note": "",
+  "px": "1950x683"
+ },
+ {
+  "file": "proofs/site-imagery-v2-vs-v3.png",
+  "bytes": 709940,
+  "sha256": "352e09495751fdca7e1c195160a879396664aeb30f3270f5768b961b16976abb",
+  "role": "website imagery comparison",
+  "note": "",
+  "px": "3130x525"
+ },
+ {
+  "file": "MEASUREMENTS.json",
+  "bytes": 5587,
+  "sha256": "47e2a5d0e62575b686b78ed4e22cef9a96eca76dbbc935297175c8df6aa3564d",
+  "role": "record",
+  "note": ""
+ },
+ {
+  "file": "OPENING-TEST.json",
+  "bytes": 906,
+  "sha256": "baff674877cf5e3c09483e12cd45a498af99ccf843b0f17ea25b571702badc97",
+  "role": "record",
+  "note": ""
+ },
+ {
+  "file": "SITE-IMAGERY-V3.json",
+  "bytes": 1982,
+  "sha256": "59ded3b8edf8a89990d8ce62cfbaf4d6b49ed43c92e362084a0061b8cd197488",
+  "role": "record",
+  "note": ""
+ },
+ {
+  "file": "designs/16_goool_athletics/print_masters/upload/GA-01-F_3300px_CLEAN.png",
+  "bytes": 115619,
+  "sha256": "8bed7c19280100e7d25f610dbd8de9e8463c1e4299a6aa9fa4bf875a45812c7e",
+  "role": "superseded upload master - front (kept in place, unchanged)",
+  "note": "The v3 exports were built from the front file; the wordmark and underline pixels are unchanged.",
+  "px": "3300x1118"
+ },
+ {
+  "file": "designs/16_goool_athletics/print_masters/upload/GA-01-B_975px_CLEAN.png",
+  "bytes": 24965,
+  "sha256": "07199d54ede15bcf25aac3a2c9ede9212ae25f38cf7ffc456353042ff3c96ae4",
+  "role": "superseded upload master - back (kept in place, unchanged)",
+  "note": "The v3 exports were built from the front file; the wordmark and underline pixels are unchanged.",
+  "px": "975x333"
+ },
+ {
+  "file": "public/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+  "bytes": 1236559,
+  "sha256": "114b05aee9982144197906032a9a1165c2fa675d260c89ecf10405649382c127",
+  "role": "website image (concept render with the v3 artwork composited)",
+  "note": "",
+  "px": "1122x1402"
+ },
+ {
+  "file": "public/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+  "bytes": 1807160,
+  "sha256": "fe8fb1154e27482421946b33c0d79b2350434213244b0176629726dd4b5789c0",
+  "role": "website image (concept render with the v3 artwork composited)",
+  "note": "",
+  "px": "1122x1402"
+ },
+ {
+  "file": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+  "bytes": 1182438,
+  "sha256": "26e55fc323d6c4f9ae8e32656625df25ee915e624006f85b50467c5097b21a97",
+  "role": "website image (concept render with the v3 artwork composited)",
+  "note": "",
+  "px": "1122x1402"
+ },
+ {
+  "file": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+  "bytes": 1482209,
+  "sha256": "c88c147667807c84bcd29116231dd6328003b70b65697f3d2d5182807b02aed8",
+  "role": "website image (concept render with the v3 artwork composited)",
+  "note": "",
+  "px": "1122x1402"
+ }
+]

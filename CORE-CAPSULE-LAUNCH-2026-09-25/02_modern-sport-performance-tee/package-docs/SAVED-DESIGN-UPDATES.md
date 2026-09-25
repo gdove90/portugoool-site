@@ -8,3 +8,7 @@ The reconciliation refreshed during this audit reports all 14 saved colorway des
 - Crewneck: saved design 6112046, AS Colour 5150 Athletic Heather (supplier color2873), is now source-reported created and verified. The report records the new forest PNG at2.5x2.53in, centered front, blank back, with S-2XL SKUs. Do not recreate it. The owner color policy is satisfied in the source report; physical sample approval and label application remain separate.
 
 Every saved design still needs the new label service/attachment and v2 proof review. Verify old placement calibration against actual collar measurements; the reported print-box convention is not a physical sample measurement. Record exact size-specific IDs from the account; source-reported IDs remain non-executable in this package until verified.
+
+## Update 2026-09-25 — verified in the account and corrected
+
+Saved design 6112037 (Black) and 6113361 (True Royal) were reopened on 2026-09-25. Both are the Sport-Tek ST720, decoration "transfer print", front `ga-01-f_3300px_clean` at **11 x 3.73 in**, back `ga-01-b_975px_clean` at **3.25 x 1.11 in**, 7 sizes offered (XS-XXXL; the site sells S-XXL). The 11 in front is therefore the live supplier setting; this package's 9 in was a proposal that was never applied. Both placements on both designs now carry a linked hi-res production file with the rebuilt ATHLETICS lettering (`GA-01-F_v3_3300px.png`, `GA-01-B_v3_1950px_600ppi.png`); the placement art and sizes were left as saved. Details: `designs/26_modern-sport-print-rebuild-2026-09-25/README.md`.

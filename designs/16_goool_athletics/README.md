@@ -68,3 +68,5 @@ no player likenesses. Varsity arch is a generic lettering style.
 
 These are AI-generated concept boards: per CLAUDE.md image policy they
 live in designs/ and are never shipped as product listing photos.
+
+> **2026-09-25 — GA-01 production artwork superseded.** `print_masters/upload/GA-01-F_3300px_CLEAN.png` and `GA-01-B_975px_CLEAN.png` stay here unchanged as the originals, but they are no longer the files linked for production on the Modern Sport Performance Tee: the ATHLETICS lettering was rebuilt to clear Apliiq's 2 mm DTF minimum. Current production exports and records: `designs/26_modern-sport-print-rebuild-2026-09-25/`.

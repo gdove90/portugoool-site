@@ -1,0 +1,44 @@
+{
+ "front_9in": {
+  "opening_2.0mm": {
+   "disk_px": 29,
+   "removed_pct": 0.163,
+   "blobs_over_quarter_mm2": 14,
+   "largest_removed_mm2": 0.432
+  },
+  "opening_1.8mm": {
+   "disk_px": 25,
+   "removed_pct": 0.097,
+   "blobs_over_quarter_mm2": 0,
+   "largest_removed_mm2": 0.235
+  }
+ },
+ "front_11in": {
+  "opening_2.0mm": {
+   "disk_px": 23,
+   "removed_pct": 0.075,
+   "blobs_over_quarter_mm2": 5,
+   "largest_removed_mm2": 0.272
+  },
+  "opening_1.8mm": {
+   "disk_px": 21,
+   "removed_pct": 0.058,
+   "blobs_over_quarter_mm2": 0,
+   "largest_removed_mm2": 0.222
+  }
+ },
+ "back_3.25in": {
+  "opening_2.0mm": {
+   "disk_px": 47,
+   "removed_pct": 1.513,
+   "blobs_over_quarter_mm2": 17,
+   "largest_removed_mm2": 0.918
+  },
+  "opening_1.8mm": {
+   "disk_px": 43,
+   "removed_pct": 1.184,
+   "blobs_over_quarter_mm2": 17,
+   "largest_removed_mm2": 0.731
+  }
+ }
+}

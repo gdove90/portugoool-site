@@ -1,0 +1,86 @@
+[
+ {
+  "src": "public/products/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+  "dst": "public/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+  "art": "designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-F_v3_3300px.png",
+  "old_wordmark_box_px": [
+   412,
+   414,
+   711,
+   471
+  ],
+  "scale": 0.09061,
+  "placed_at": [
+   412,
+   414
+  ],
+  "size": [
+   299,
+   101
+  ],
+  "sha256": "114b05aee9982144197906032a9a1165c2fa675d260c89ecf10405649382c127"
+ },
+ {
+  "src": "public/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+  "dst": "public/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+  "art": "designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-B_v3_1950px_600ppi.png",
+  "old_wordmark_box_px": [
+   430,
+   537,
+   689,
+   587
+  ],
+  "scale": 0.13282,
+  "placed_at": [
+   430,
+   537
+  ],
+  "size": [
+   259,
+   91
+  ],
+  "sha256": "fe8fb1154e27482421946b33c0d79b2350434213244b0176629726dd4b5789c0"
+ },
+ {
+  "src": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT.png",
+  "dst": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+  "art": "designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-F_v3_3300px.png",
+  "old_wordmark_box_px": [
+   413,
+   414,
+   710,
+   471
+  ],
+  "scale": 0.09,
+  "placed_at": [
+   413,
+   414
+  ],
+  "size": [
+   297,
+   100
+  ],
+  "sha256": "26e55fc323d6c4f9ae8e32656625df25ee915e624006f85b50467c5097b21a97"
+ },
+ {
+  "src": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL.png",
+  "dst": "public/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+  "art": "designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-B_v3_1950px_600ppi.png",
+  "old_wordmark_box_px": [
+   430,
+   538,
+   689,
+   586
+  ],
+  "scale": 0.13282,
+  "placed_at": [
+   430,
+   538
+  ],
+  "size": [
+   259,
+   91
+  ],
+  "sha256": "c88c147667807c84bcd29116231dd6328003b70b65697f3d2d5182807b02aed8"
+ }
+]

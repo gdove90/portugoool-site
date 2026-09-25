@@ -1,0 +1,279 @@
+{
+ "front_9in": {
+  "name": "front at 9 in (366.7 ppi)",
+  "mm_per_px": 0.06927272727272728,
+  "athletics_stroke_min_mm": 1.93,
+  "athletics_stroke_median_mm": 2.63,
+  "athletics_cap_mm": 11.98,
+  "athletics_block_w_mm": 167.29,
+  "letter_gap_mm": 11.86,
+  "smallest_open_gap_mm": 0.14,
+  "wordmark_min_feature_mm": 1.0,
+  "artwork_px": [
+   3300,
+   1116
+  ],
+  "artwork_mm": [
+   228.6,
+   77.31
+  ],
+  "letters": [
+   {
+    "letter": "A",
+    "stroke_min_mm": 1.93,
+    "stroke_median_mm": 2.63,
+    "w_mm": 10.11,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "T",
+    "stroke_min_mm": 2.49,
+    "stroke_median_mm": 2.63,
+    "w_mm": 8.8,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "H",
+    "stroke_min_mm": 2.49,
+    "stroke_median_mm": 2.63,
+    "w_mm": 8.8,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "L",
+    "stroke_min_mm": 2.49,
+    "stroke_median_mm": 2.63,
+    "w_mm": 8.04,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "E",
+    "stroke_min_mm": 2.49,
+    "stroke_median_mm": 2.63,
+    "w_mm": 8.1,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "T",
+    "stroke_min_mm": 2.49,
+    "stroke_median_mm": 2.63,
+    "w_mm": 8.73,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "I",
+    "stroke_min_mm": 2.63,
+    "stroke_median_mm": 2.63,
+    "w_mm": 2.56,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "C",
+    "stroke_min_mm": 2.08,
+    "stroke_median_mm": 2.61,
+    "w_mm": 8.45,
+    "h_mm": 11.98
+   },
+   {
+    "letter": "S",
+    "stroke_min_mm": 2.36,
+    "stroke_median_mm": 2.55,
+    "w_mm": 8.8,
+    "h_mm": 11.98
+   }
+  ]
+ },
+ "front_11in": {
+  "name": "front at 11 in (300 ppi)",
+  "mm_per_px": 0.08466666666666665,
+  "athletics_stroke_min_mm": 2.36,
+  "athletics_stroke_median_mm": 3.22,
+  "athletics_cap_mm": 14.65,
+  "athletics_block_w_mm": 204.47,
+  "letter_gap_mm": 14.5,
+  "smallest_open_gap_mm": 0.17,
+  "wordmark_min_feature_mm": 1.22,
+  "artwork_px": [
+   3300,
+   1116
+  ],
+  "artwork_mm": [
+   279.4,
+   94.49
+  ],
+  "letters": [
+   {
+    "letter": "A",
+    "stroke_min_mm": 2.36,
+    "stroke_median_mm": 3.21,
+    "w_mm": 12.36,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "T",
+    "stroke_min_mm": 3.05,
+    "stroke_median_mm": 3.22,
+    "w_mm": 10.75,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "H",
+    "stroke_min_mm": 3.05,
+    "stroke_median_mm": 3.22,
+    "w_mm": 10.75,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "L",
+    "stroke_min_mm": 3.05,
+    "stroke_median_mm": 3.22,
+    "w_mm": 9.82,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "E",
+    "stroke_min_mm": 3.05,
+    "stroke_median_mm": 3.22,
+    "w_mm": 9.91,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "T",
+    "stroke_min_mm": 3.05,
+    "stroke_median_mm": 3.22,
+    "w_mm": 10.67,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "I",
+    "stroke_min_mm": 3.22,
+    "stroke_median_mm": 3.22,
+    "w_mm": 3.13,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "C",
+    "stroke_min_mm": 2.54,
+    "stroke_median_mm": 3.19,
+    "w_mm": 10.33,
+    "h_mm": 14.65
+   },
+   {
+    "letter": "S",
+    "stroke_min_mm": 2.88,
+    "stroke_median_mm": 3.12,
+    "w_mm": 10.75,
+    "h_mm": 14.65
+   }
+  ]
+ },
+ "front_file": {
+  "path": "designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-F_v3_3300px.png",
+  "px": [
+   3300,
+   1116
+  ],
+  "sha256": "53e444de0a4cdffdee6b81439c914ef6b9e044e5349e21ea87e79149f467343a"
+ },
+ "back_3.25in": {
+  "name": "back at 3.25 in (600 ppi master)",
+  "mm_per_px": 0.042333333333333334,
+  "athletics_stroke_min_mm": 2.04,
+  "athletics_stroke_median_mm": 2.37,
+  "athletics_cap_mm": 8.34,
+  "athletics_block_w_mm": 74.3,
+  "letter_gap_mm": 2.73,
+  "smallest_open_gap_mm": 0.08,
+  "wordmark_min_feature_mm": 0.38,
+  "artwork_px": [
+   1950,
+   683
+  ],
+  "artwork_mm": [
+   82.55,
+   28.91
+  ],
+  "letters": [
+   {
+    "letter": "A",
+    "stroke_min_mm": 2.12,
+    "stroke_median_mm": 2.87,
+    "w_mm": 7.15,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "T",
+    "stroke_min_mm": 2.29,
+    "stroke_median_mm": 2.37,
+    "w_mm": 6.31,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "H",
+    "stroke_min_mm": 2.29,
+    "stroke_median_mm": 2.37,
+    "w_mm": 6.31,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "L",
+    "stroke_min_mm": 2.35,
+    "stroke_median_mm": 2.37,
+    "w_mm": 5.84,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "E",
+    "stroke_min_mm": 2.29,
+    "stroke_median_mm": 2.37,
+    "w_mm": 5.88,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "T",
+    "stroke_min_mm": 2.29,
+    "stroke_median_mm": 2.37,
+    "w_mm": 6.27,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "I",
+    "stroke_min_mm": 2.37,
+    "stroke_median_mm": 2.37,
+    "w_mm": 2.33,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "C",
+    "stroke_min_mm": 2.06,
+    "stroke_median_mm": 2.27,
+    "w_mm": 6.1,
+    "h_mm": 8.34
+   },
+   {
+    "letter": "S",
+    "stroke_min_mm": 2.04,
+    "stroke_median_mm": 2.22,
+    "w_mm": 6.31,
+    "h_mm": 8.34
+   }
+  ]
+ },
+ "back_file": {
+  "path": "designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-B_v3_1950px_600ppi.png",
+  "px": [
+   1950,
+   683
+  ],
+  "sha256": "6af09cae576ea5a6cbd8b8c18b578910bff5973755290662ba9c12e1841f1ad4"
+ },
+ "back_file_300": {
+  "path": "designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-B_v3_975px_300ppi.png",
+  "px": [
+   975,
+   342
+  ],
+  "sha256": "5cdd2b96b0540cdf370cd937093c1367e4f4e7ca6b95ce1624961959f45f54e0",
+  "athletics_stroke_min_mm": 1.7
+ }
+}

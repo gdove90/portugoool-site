@@ -2650,6 +2650,12 @@ export const products: Product[] = [
   // Modern Sport is performance-only for launch; cotton remains archived.
   // ST720 supplier design exists. All images remain concepts and sales
   // await actual-size print proof, sample and fulfillment readiness.
+  //
+  // Imagery V3 (2026-09-25): the same concept renders with the corrected
+  // GA-01 v3 print composited in place of the old one. ATHLETICS was
+  // re-set heavier so every stroke clears Apliiq's 2 mm DTF minimum at
+  // final size (the old back lettering was ~0.7 mm). See
+  // designs/26_modern-sport-print-rebuild-2026-09-25/README.md.
   {
     id: "80000000-0000-4000-8000-000000000006",
     name: "GOOOL Athletics Modern Sport Performance Tee",
@@ -2674,12 +2680,12 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+        src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
         alt: "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
-        src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+        src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
         alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print",
         caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
       },
@@ -2696,12 +2702,12 @@ export const products: Product[] = [
         skuFragment: "BLACK",
         images: [
           {
-            src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V2.png",
+            src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
             alt: "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V2.png",
+            src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
             alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, black garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
@@ -2719,12 +2725,12 @@ export const products: Product[] = [
         skuFragment: "ROYAL",
         images: [
           {
-            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT.png",
+            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
             alt: "GOOOL Athletics Modern Sport Performance Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL.png",
+            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
             alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, true royal blue garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
