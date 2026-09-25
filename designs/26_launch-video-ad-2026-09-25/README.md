@@ -1,7 +1,12 @@
 # 26 · Launch video ad · "Wear the Feeling" (filed 2026-09-24)
 
-**Status:** owner-supplied production brief for the first video ad of the
-GOOOL launch campaign. Filed verbatim in
+**Status (2026-09-25):** the owner's 30-second brief was reviewed and
+corrected; **execute
+[HIGGSFIELD-BRIEF-v2-2026-09-25.md](HIGGSFIELD-BRIEF-v2-2026-09-25.md)**.
+It fixes the O count (three, not four), names the shirt (Modern Sport
+Performance Tee · Black), aligns the card to "THE CORE CAPSULE", splits
+generator prompts from editor work, and writes the legal guardrails into
+the prompts. The owner's original 15-second build is filed verbatim in
 [HIGGSFIELD-BRIEF-WEAR-THE-FEELING.md](HIGGSFIELD-BRIEF-WEAR-THE-FEELING.md).
 Nothing has been generated yet. This folder is the brief plus the brand
 pass; finished clips, takes and the edit go in `output/` here when they

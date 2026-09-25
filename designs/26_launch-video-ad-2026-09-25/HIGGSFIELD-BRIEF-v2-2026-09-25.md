@@ -1,0 +1,253 @@
+# GOOOL Athletics · "Wear the Feeling" · Higgsfield production brief v2
+
+**Filed 2026-09-25.** Owner-supplied 30-second brief, reviewed and
+corrected before sending to Higgsfield. The owner's original text is
+kept verbatim in the session record and in v1 beside this file; this v2
+is the version to execute. Changes from the owner's draft are listed at
+the end of this file.
+
+---
+
+## Part A · What goes into Higgsfield (generation)
+
+Higgsfield generates short, silent clips from a reference image plus a
+prompt. It does not render reliable typography, it does not generate the
+commentary, and it will not keep a garment or a face consistent across
+clips unless every clip starts from the same reference frame. So this
+brief is split: Part A is what the generator gets, Part B is what the
+editor does. Do not paste Part B into the generator.
+
+### A0 · Fixed references (upload once, reuse in every clip)
+
+| Reference | File |
+|---|---|
+| The shirt, front and back | `public/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png`, `GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png` (GOOOL Athletics Modern Sport Performance Tee · Black) |
+| The print itself, for the generator's logo reference | `designs/26_modern-sport-print-rebuild-2026-09-25/exports/GA-01-F_v3_3300px.png` |
+| Character reference frame | Generate first (Clip 0 below), then reuse |
+| Bedroom reference frame | Same Clip 0 frame |
+| Logo for the end card (edit only, never generated) | `public/brand/goool-athletics-lockup-white.png` |
+
+Brand facts the generator must hold in every clip:
+
+- The word is **GOOOL**: G, then **three** O's, then L. Never four O's,
+  never two. Below it, ATHLETICS. White lettering, one red underline
+  between the two words, on a black tee.
+- No other logos anywhere: no crests, no sponsor text on boards, no marks
+  on boots, shorts, socks, the ball or the goalkeeper's kit. Opponents
+  wear plain white; the goalkeeper wears plain grey. Stadium boards are
+  blank or show only abstract light. No real stadium, no real club, no
+  recognisable real person.
+- Same actor in every clip: same face, hair, build, black tee, plain
+  black shorts, black socks, black boots with no visible branding.
+- Same bedroom in the opening and closing clips.
+
+Common settings for every clip: 9:16 vertical, 24 fps, photoreal,
+image-to-video from the reference frame, 3 to 4 takes per clip, keep the
+best. Where Higgsfield offers a start frame and an end frame, use both
+where noted; that is how the shirt-over-the-lens cut is made to work.
+
+### A1 · Global style line (prefix every clip prompt with this)
+
+Photorealistic cinematic sportswear commercial, 9:16 vertical, shot on a
+full-frame cinema camera with a 35 mm lens, shallow depth of field,
+natural skin, real fabric texture, motivated lighting, no stylisation, no
+cartoon motion, no text in frame.
+
+### A2 · Global negative prompt (attach to every clip)
+
+Extra limbs, warped hands, morphing face, changing hairstyle, changing
+shirt, wrong logo, misspelled GOOOL, four O's, two O's, any other logo
+or brand mark, sponsor boards with text, club crests, national-team
+colours on the opponents, readable text anywhere, cartoonish motion,
+floaty or rubbery ball physics, ball passing through a body or the net,
+duplicate ball, slow-motion drift, lens flares that hide the shirt,
+particles, portals, sci-fi effects, watermark, low detail crowd, empty
+stadium, daylight.
+
+### Clip 0 · Character and room reference (a still, not a clip)
+
+Generate one still to be the anchor for everything else:
+
+> A young adult man, athletic build, early twenties, standing beside his
+> bed in a real contemporary bedroom at night, wearing the black GOOOL
+> Athletics tee from the reference image exactly as printed: white GOOOL
+> with three O's, red underline, ATHLETICS beneath, centred on the chest.
+> Plain black shorts. One warm bedside lamp, cool blue window light from
+> the left, lived-in details, nothing staged. Medium shot, eye level, 35
+> mm. Calm expression.
+
+Pick the take where the print is exact and the face is clean. This frame
+is the character reference and the bedroom reference for Clips 1, 2 and 5.
+
+### Clip 1 · The ordinary moment · 0:00–0:04
+
+Start frame: Clip 0. End frame: a full-frame close-up of black jersey
+fabric filling the lens (generate that still separately: "black
+performance-knit fabric filling the entire frame, soft focus, dark").
+
+> Same man, same bedroom, holding the black GOOOL Athletics tee in both
+> hands, looking at it. Close-up on the shirt in his hands, the GOOOL
+> print readable; the camera pushes in slowly and tilts up to his face;
+> he lifts the shirt and pulls it over his head toward the camera until
+> the black fabric covers the entire lens and the frame goes dark. Slow
+> controlled push-in, slight handheld, warm lamp key, cool window fill.
+
+### Clip 2 · The transformation · 0:04–0:08
+
+Start frame: the same black-fabric close-up that ended Clip 1. End
+frame: none.
+
+> Black jersey fabric fills the frame, then clears the lens as the same
+> man finishes pulling the GOOOL Athletics tee down over his chest, and
+> he is standing on the pitch of an enormous football stadium at night,
+> floodlit, stands full of thousands of spectators, grass under his
+> boots. The print on his chest is fully visible and exact. He looks up
+> and around, stunned. Camera pulls back from medium close-up into a slow
+> orbit revealing the stadium bowl behind him. Floodlight key from high
+> behind, cool rim light, crowd as a moving blur. No portal, no particles,
+> no flash: the reveal is simply the fabric clearing the lens.
+
+### Clip 3 · The moment of possibility · 0:08–0:11
+
+Start frame: a still pulled from the best Clip 2 take (him on the pitch).
+
+> Same man on the floodlit pitch. A football rolls toward him from frame
+> left; he looks down, takes a first touch with his right foot and looks
+> up; a defender in a plain white kit approaches from twenty metres. Low
+> tracking shot at ball height that rises into a three-quarter medium
+> shot moving alongside him. Real grass, real boot contact, the ball
+> stays on the ground.
+
+### Clip 4 · The goal · 0:11–0:19, four short clips
+
+Generate as four separate clips from stills of each other; do not ask for
+the whole sequence in one clip.
+
+4a · Dribble, low tracking, 3 s:
+> Same man dribbles forward at pace, ball close to his right foot,
+> defender in plain white closing from the right; he drops his shoulder,
+> cuts inside past the defender and pushes the ball into space. Low
+> tracking shot alongside at knee height, floodlights behind.
+
+4b · The strike, side angle, 2 s:
+> Same man at the edge of the penalty area plants his left foot and
+> strikes the ball with his right instep; the ball leaves his boot hard
+> and low. Side-on medium shot, slight track with the ball, no slow
+> motion.
+
+4c · The net, goal-side, 2 s:
+> A football flies past a diving goalkeeper in a plain grey kit and hits
+> the back of the net, the net ripples once, the ball drops inside the
+> goal. Camera behind and beside the goal, wide enough to see keeper,
+> post and net, stadium lights beyond.
+
+4d · The reaction, close-up, 1–2 s:
+> Same man, close-up, eyes widening, then a roar of celebration, arms
+> starting to rise, GOOOL print on his chest sharp in frame, crowd
+> exploding out of focus behind him. Handheld push-in.
+
+### Clip 5 · Back to reality · 0:19–0:24
+
+Start frame: Clip 0.
+
+> Hard cut: the same man in the same bedroom as Clip 0, same position,
+> same lamp, wearing the GOOOL Athletics tee, breathing hard. He stands
+> still, then slowly looks down at the shirt and touches the print with
+> one hand, disbelief on his face, no words. Medium shot holds two
+> seconds, then a slow push-in toward his face and down to the print.
+> Quiet, natural, no effects.
+
+Clips 6 and 7 (cards, logo, TV shut-off) are not generated. See Part B.
+
+---
+
+## Part B · What the editor does (not for the generator)
+
+### B1 · Sound
+
+- Clip 1: quiet room tone, fabric, a faint musical build.
+- Clip 2: room tone cuts to a rising wall of stadium noise as the fabric
+  clears the lens; music crescendo begins.
+- Clips 3 to 4: boot on ball, grass, crowd anticipation rising.
+- Clip 4b to 4c: strike, a beat of held breath, the net, then the crowd
+  detonates and the commentator's sustained **"GOOOOOOOOOL!"** peaks
+  exactly on the net and carries into 4d. No names, no club, no country:
+  the word only.
+- Clip 5: everything cuts to silence on the hard cut. Room tone and a
+  faint residual ring only.
+- Cards and logo: a single low atmospheric note, then a short burst of
+  analog static, a crisp CRT shut-off click, silence to black.
+- Music: original or fully licensed only. No recognisable track.
+
+### B2 · Cards, composited in the editor (never generated)
+
+All type white on pure black, house typography, centred, inside the
+Instagram Reels safe area (keep clear of the top 250 px and bottom 350 px
+of a 1080 x 1920 frame). Restrained fades, no animated text effects.
+
+| Time | Card |
+|---|---|
+| 0:24–0:26 | EVERYBODY KNOWS THE FEELING. |
+| 0:26–0:27 | WEAR THE FEELING. |
+| 0:27–0:28 | FIRST CAPSULE · NOW LIVE (small, above) / THE CORE CAPSULE (large) |
+| 0:28–0:30 | GOOOL Athletics lockup (`goool-athletics-lockup-white.png`), goool.shop in small type beneath. Hold, then horizontal analog distortion, a static burst, collapse to a horizontal line and a point of light, black. Final frame fully black. |
+
+The collection name on the card is **THE CORE CAPSULE**: it matches the
+launch decision record and the launch folder, and "First Capsule" is the
+wording already on the shop page. Do not use "Collection" unless the
+shop page is renamed first. Middle dot, not an em dash, in the launch
+line.
+
+### B3 · Assembly and delivery
+
+1. Best take of each clip; trim to the timings above; total about 30 s.
+2. Check every frame of the shirt for the print: three O's, red
+   underline, ATHLETICS. Replace any take where the generator drifted.
+3. Colour: match Clip 5 to Clip 0/1 so the bedroom reads as the same room.
+4. Export 1080 x 1920, 24 fps (or 30 fps if the platform preset demands),
+   H.264, stereo, loudness to Instagram's target. Also export a 15 s paid
+   cut: Clip 1 (2 s), Clip 2 (2 s), 4a (2 s), 4b+4c (3 s), 4d (1 s), Clip 5
+   (2 s), cards and logo (3 s).
+5. File everything in `designs/26_launch-video-ad-2026-09-25/output/`:
+   reference stills, all takes, the edit, both exports.
+
+---
+
+## Changes from the owner's draft, and why
+
+1. **"Four consecutive O's" corrected to three.** GOOOL is G-O-O-O-L.
+   The draft's instruction would have produced a misspelled wordmark in
+   every frame. This was the one error that would have wrecked the ad.
+2. **The shirt is now named.** The draft said "a black GOOOL Athletics
+   shirt". This brief uses the Modern Sport Performance Tee in Black: its
+   chest lockup is the same GOOOL ATHLETICS mark as the site hero, it is
+   readable in a phone-sized frame, and it is the match tee. The earlier
+   README suggested the Performance Badge Tee; its small badge would not
+   read at Reels size. Swap the reference images if you prefer the
+   badge tee, but pick one and use it in every clip.
+3. **Collection name aligned with the site.** "THE CORE COLLECTION"
+   became "THE CORE CAPSULE" with "FIRST CAPSULE · NOW LIVE" above it,
+   matching the launch decision and the shop page. Em dash replaced by
+   the house middle dot.
+4. **Split into generator prompts and editor instructions.** Audio,
+   commentary, typography, the logo and the TV shut-off cannot come from
+   Higgsfield; the draft mixed them into the scene prompts, which
+   degrades generation. They now live in Part B.
+5. **The lens match cut is specified as start and end frames**, with the
+   black-fabric still shared between Clip 1 and Clip 2. That is the only
+   reliable way to get the transition the owner rightly called the most
+   important shot.
+6. **The goal is four short clips, not one eight-second ask.** Dribble,
+   strike, net, reaction, each seeded from the previous clip's best frame.
+7. **Legal guardrails written into the prompts**: plain white opponents,
+   plain grey keeper, blank boards, unbranded boots, no real stadium or
+   person. The "Nike- or Adidas-style" reference is removed from anything
+   that reaches the generator.
+8. **Added**: a Clip 0 reference still, a global style line and negative
+   prompt, lens and frame-rate settings, safe-area margins for the cards,
+   goool.shop on the final card, a licensed-music rule, and the 15 s cut
+   list.
+9. **Kept**: the story, the seven-scene structure and timings, the
+   campaign copy "Everybody knows the feeling. / Wear the feeling.", and
+   "Made for the Moment." as the site line. The new copy is campaign
+   copy, not a replacement for "The Sound of Victory."
