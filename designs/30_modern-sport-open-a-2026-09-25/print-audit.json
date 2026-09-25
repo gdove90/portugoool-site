@@ -1,0 +1,68 @@
+{
+  "file": "GA-01-B_v5_OPEN-A_1950px_600ppi.png",
+  "widthIn": 3.25,
+  "heightIn": 1.235,
+  "dpi": 600,
+  "alphaValues": [
+    0,
+    255
+  ],
+  "athleticsMinMeasuredStrokeMm": 2.198074510919854,
+  "letters": [
+    {
+      "letter": "A",
+      "min_skeleton_stroke_mm": 2.198074510919854,
+      "median_stroke_mm": 2.54,
+      "enclosed_counter_count": 1,
+      "counter_width_mm": 1.7356666666666667,
+      "counter_height_mm": 1.905,
+      "counter_area_mm2": 1.7078818888888887,
+      "counter_max_inscribed_diameter_mm": 1.1359225325698932
+    },
+    {
+      "letter": "T",
+      "min_skeleton_stroke_mm": 2.794,
+      "median_stroke_mm": 2.8786666666666667
+    },
+    {
+      "letter": "H",
+      "min_skeleton_stroke_mm": 2.794,
+      "median_stroke_mm": 2.794
+    },
+    {
+      "letter": "L",
+      "min_skeleton_stroke_mm": 2.794,
+      "median_stroke_mm": 2.794
+    },
+    {
+      "letter": "E",
+      "min_skeleton_stroke_mm": 2.794,
+      "median_stroke_mm": 2.794
+    },
+    {
+      "letter": "T",
+      "min_skeleton_stroke_mm": 2.794,
+      "median_stroke_mm": 2.8786666666666667
+    },
+    {
+      "letter": "I",
+      "min_skeleton_stroke_mm": 3.022018898389324,
+      "median_stroke_mm": 3.048
+    },
+    {
+      "letter": "C",
+      "min_skeleton_stroke_mm": 2.525849472069853,
+      "median_stroke_mm": 2.6907487598973057
+    },
+    {
+      "letter": "S",
+      "min_skeleton_stroke_mm": 2.424484366714796,
+      "median_stroke_mm": 2.689416376176148
+    }
+  ],
+  "nativeAspectOnly": true,
+  "apliiqUploaded": false,
+  "method": "Independent raster distance-transform measurements on padded glyph medial skeletons. ATHLETICS uses clean vector centerlines with round joins/caps: A 2.5 mm, most glyphs 2.8 mm, I 3.0 mm. Existing overall lettering proportions guide the new layout. These are nominal artwork checks, not physical proof.",
+  "guidelineUrl": "https://help.apliiq.com/portal/en/kb/articles/how-to-prepare-artwork-for-transfer-printing",
+  "note": "Keep 3.25 x 1.235 inches. Do not squash to old 1.11-inch height. GOOOL wordmark pointed tips remain unchanged and require supplier proof."
+}

@@ -1,0 +1,87 @@
+{
+  "source": "C:\\Users\\gdove\\OneDrive\\Desktop\\GOOOL\\designs\\26_modern-sport-print-rebuild-2026-09-25\\exports\\GA-01-B_v3_1950px_600ppi.png",
+  "sourceSha256": "6af09cae576ea5a6cbd8b8c18b578910bff5973755290662ba9c12e1841f1ad4",
+  "file": "GA-01-B_v5_OPEN-A_1950px_600ppi.png",
+  "widthIn": 3.25,
+  "widthMm": 82.55,
+  "heightIn": 1.235,
+  "heightMm": 31.369,
+  "pixels": [
+    1950,
+    741
+  ],
+  "dpi": 600,
+  "athleticsCapHeightMm": 10.795,
+  "previousCapHeightMm": 8.339666666666666,
+  "capIncreasePercent": 29.441624365482234,
+  "athleticsWidthMm": 80.00999999999999,
+  "letterGapMm": 1.381125,
+  "aNominalStrokeMm": 2.5,
+  "boxes": [
+    {
+      "letter": "A",
+      "left": 30,
+      "top": 486,
+      "width": 241,
+      "height": 255
+    },
+    {
+      "letter": "T",
+      "left": 304,
+      "top": 486,
+      "width": 193,
+      "height": 255
+    },
+    {
+      "letter": "H",
+      "left": 529,
+      "top": 486,
+      "width": 193,
+      "height": 255
+    },
+    {
+      "letter": "L",
+      "left": 755,
+      "top": 486,
+      "width": 179,
+      "height": 255
+    },
+    {
+      "letter": "E",
+      "left": 967,
+      "top": 486,
+      "width": 180,
+      "height": 255
+    },
+    {
+      "letter": "T",
+      "left": 1179,
+      "top": 486,
+      "width": 193,
+      "height": 255
+    },
+    {
+      "letter": "I",
+      "left": 1405,
+      "top": 486,
+      "width": 71,
+      "height": 255
+    },
+    {
+      "letter": "C",
+      "left": 1508,
+      "top": 486,
+      "width": 186,
+      "height": 255
+    },
+    {
+      "letter": "S",
+      "left": 1727,
+      "top": 486,
+      "width": 193,
+      "height": 255
+    }
+  ],
+  "sha256": "b8243604f576535322acb6c1bd67f684cd92c8f7d69ba42bc80dc432bd1a0aef",
+  "supplierStatus": "Prepared revision; not uploaded to Apliiq. Preserve native aspect ratio."
+}

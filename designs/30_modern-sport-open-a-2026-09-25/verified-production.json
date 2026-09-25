@@ -1,0 +1,104 @@
+{
+  "checkedAt": "2026-09-25T11:22:52.262Z",
+  "base": "https://goool.shop",
+  "usesCookies": false,
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/shop",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/shop/goool-athletics-modern-sport-performance-tee",
+      "status": 200,
+      "location": null,
+      "newRevision": true
+    },
+    {
+      "route": "/shop/goool-athletics-modern-sport-performance-tee?color=True+Royal",
+      "status": 200,
+      "location": null,
+      "newRevision": true
+    }
+  ],
+  "images": [
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "status": 200,
+      "sha256": "547e4ca43cbb10e021f03d2ba2e60f9c7096aaf072ca5838c41ac7a707e0e22d",
+      "byteMatch": true
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "status": 200,
+      "sha256": "fb51c6f2bb5c39d5a978f4913581a5ee2a0bec7955447c45225e14a339f2d3b3",
+      "byteMatch": true
+    }
+  ],
+  "optimizer": [
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 799,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 799,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    }
+  ],
+  "allPassed": true
+}

@@ -1,0 +1,18 @@
+Act as GOOOL's senior apparel production and storefront quality lead.
+
+The owner rejected the filled-in A in the back ATHLETICS lettering and approved a slightly larger font. Codex restored a real triangular opening and made the lettering 29.44% taller, with a modest width increase and balanced spacing. Both Black and True Royal back website renders now depict the revised artwork. GOOOL, the garment framing, the fronts and the flat #F2F2F2 backdrop remain unchanged. Keep the public gate removed.
+
+Use this new package in the GOOOL Desktop project:
+designs/30_modern-sport-open-a-2026-09-25/
+
+The replacement back master is:
+exports/GA-01-B_v5_OPEN-A_1950px_600ppi.png
+1950 x 741 px at 600 ppi; final physical size 3.25 x 1.235 inches (82.55 x 31.369 mm). Preserve its aspect ratio. The measured narrowest ATHLETICS stroke is approximately 2.20 mm; the A has a visible triangular counter. Exact measurements and SHA-256 are in print-audit.json and master-spec.json. The individual letters have native SVG sources. The upper GOOOL wordmark is unchanged.
+
+IMPORTANT: This v5 print file is prepared but has NOT been uploaded to Apliiq. The supplier is still recorded as having the older v3 back artwork with the filled A. Updating the website did not change the supplier's file.
+
+Apply this back replacement to saved Apliiq designs 6112037 (Black) and 6113361 (True Royal), preserving their existing design IDs, SKUs, garment blank, colors and front print. Verify that the production upload and placement use the new file and locked proportions at 3.25 x 1.235 inches. Do not force it into the former 1.11-inch height or shrink it. Verify the A's counter and fine GOOOL cut tips on the supplier proof. Record the linked filename, dimensions and activity log evidence. The copies in the launch folder artwork/pending-v5 are awaiting this action.
+
+Use the package deployment record to confirm the website update is live before redeploying. Do not regenerate the shirts or change their #F2F2F2 background. Do not place paid orders or send supplier messages without the owner's instruction. Report the completed production-file linkage and any remaining proof concern.
+
+WEBSITE COMPLETE: Production deploy 6ab657e46cce8061fd574772, verified 2026-09-25T11:22:52.262Z. Both back renders match the local final files byte for byte and retain the #F2F2F2 background. Six public URLs returned 200 without cookies. The next action is the Apliiq v5 back artwork replacement above; it is not yet completed.

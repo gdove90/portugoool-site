@@ -2648,12 +2648,11 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // Modern Sport is performance-only for launch; cotton remains archived.
-  // Imagery cleanup V4 (2026-09-25): old print remnants removed and the
-  // exact v3 production artwork reapplied; filenames retained for compatibility.
-  // ATHLETICS measurements clear 2 mm at native proportions and recorded
-  // widths. Back placement scaling and pointed wordmark tips still require
-  // supplier proof review. These images remain concept renders. See
-  // designs/29_modern-sport-render-cleanup-2026-09-25/README.md.
+  // Back lettering V5 (2026-09-25): open A counter and larger ATHLETICS.
+  // The revised back master is prepared; its Apliiq upload is pending.
+  // Render filenames stay V3 for compatibility. Front artwork is unchanged.
+  // These images remain concept renders; supplier sizing and proof records:
+  // designs/30_modern-sport-open-a-2026-09-25/README.md.
   {
     id: "80000000-0000-4000-8000-000000000006",
     name: "GOOOL Athletics Modern Sport Performance Tee",

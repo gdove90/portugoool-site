@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-25",
+  "background": "#F2F2F2",
+  "method": "ImageGen blank fabric cleanup restricted to print rectangles; original pixels outside rectangles retained exactly; revised prepared typography master applied with alpha-aware Lanczos resizing.",
+  "records": [
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "originalSha256": "23504d8960079bd7ae1c05eee7fcaa0e8d2cd95892e743d24d6a1eaec1b9bbf1",
+      "finalSha256": "547e4ca43cbb10e021f03d2ba2e60f9c7096aaf072ca5838c41ac7a707e0e22d",
+      "preparedPrintArt": "GA-01-B_v5_OPEN-A_1950px_600ppi.png",
+      "productionArtSha256": "b8243604f576535322acb6c1bd67f684cd92c8f7d69ba42bc80dc432bd1a0aef",
+      "patch": {
+        "left": 418,
+        "top": 590,
+        "width": 282,
+        "height": 66
+      },
+      "placement": {
+        "left": 430,
+        "top": 602,
+        "width": 259,
+        "height": 34
+      },
+      "plateColorOffset": [
+        1.0903614457831325,
+        1.4698795180722892,
+        1.535140562248996
+      ],
+      "outsidePatchChangedPixels": 0,
+      "preservedExactF2F2F2Pixels": 360036
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "originalSha256": "b90365c0ff7748090b47aea7388706bfb809bc8fc0064fd587c9243f17f67819",
+      "finalSha256": "fb51c6f2bb5c39d5a978f4913581a5ee2a0bec7955447c45225e14a339f2d3b3",
+      "preparedPrintArt": "GA-01-B_v5_OPEN-A_1950px_600ppi.png",
+      "productionArtSha256": "b8243604f576535322acb6c1bd67f684cd92c8f7d69ba42bc80dc432bd1a0aef",
+      "patch": {
+        "left": 418,
+        "top": 590,
+        "width": 282,
+        "height": 66
+      },
+      "placement": {
+        "left": 430,
+        "top": 603,
+        "width": 259,
+        "height": 34
+      },
+      "plateColorOffset": [
+        1.7725903614457832,
+        1.7346887550200802,
+        -0.9151606425702812
+      ],
+      "outsidePatchChangedPixels": 0,
+      "preservedExactF2F2F2Pixels": 363562
+    }
+  ]
+}
