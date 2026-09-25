@@ -23,7 +23,7 @@ Supersedes LAUNCH-AUDIT-2026-09-24.md.
 | 3 | **Sewn tag not implemented** | Owner requires the approved sewn tag; no label service, supply id or proof exists. | Owner decision: launch without the tag for the first orders, or hold. |
 | 4 | **Confirmation email disabled** | `sendEmail` reports disabled in production. | Configure the Gmail service account (`scripts/test-order-email-gmail-sa.mjs`), redeploy. Survivable for launch; Stripe receipts cover proof of charge. |
 | 5 | **Supabase migrations 0034 and 0035 unapplied** (audit trail only) | Files exist; not run in the SQL editor. The order store upserts catalogue rows itself, so orders still record. | Run both in the SQL editor when convenient. |
-| 6 | **Gate** | Up, by design. | `npx netlify env:unset PREVIEW_KEY --context production` + redeploy, after #1. Then Search Console (see 2026-09-25 SEO note in the session record). |
+| 6 | ~~Gate~~ | **Opened by owner decision 2026-09-25 ~03:20 ET**, before #1 was resolved (owner informed). `PREVIEW_KEY` unset in the production context; deploy `6ab6284e`. `/`, `/shop`, all product pages, `robots.txt` and `sitemap.xml` return 200 publicly; portugoool.com and www 301 to goool.shop. | Next: add goool.shop to Google Search Console (Domain property, DNS TXT in Netlify DNS), submit the sitemap, request indexing for `/` and `/shop`. |
 
 ## What passed today
 
