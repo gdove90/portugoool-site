@@ -10,7 +10,8 @@ import { usePathname } from "next/navigation";
 // One component, two layouts from the approved designs in
 // goool advertising/goool20 discount/goool-advertising/email-popup:
 //   desktop  → 1a "split stadium": crowd image left, dark panel right
-//   mobile   → 1e "bottom sheet": crowd image behind, dark sheet below
+//   mobile   → 1e "bottom sheet": the dark sheet alone over the dimmed
+//              page; no crowd image on phones (owner, 2026-09-25)
 //
 // The visitor's email goes to the same Mailchimp audience as the footer
 // signup with the extra tag "goool20", then api/discount hands back that
@@ -152,21 +153,6 @@ export default function DiscountPopup() {
       onClick={close}
       aria-hidden={false}
     >
-      {/* 1e: on phones the crowd fills the whole screen behind the sheet,
-          dark and soft. Hidden on desktop, where the image is the panel's
-          left half instead (1a). */}
-      <div className="absolute inset-0 sm:hidden" aria-hidden="true">
-        <Image
-          src="/hero-crowd.webp"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover object-[50%_30%] blur-[2px]"
-          priority
-        />
-        <div className="absolute inset-0 bg-red/50 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-ink/45" />
-      </div>
       <div
         role="dialog"
         aria-modal="true"
