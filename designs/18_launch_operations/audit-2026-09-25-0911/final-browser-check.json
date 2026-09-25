@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-25T21:05:08.457Z",
+  "deployId": "6ab6e0327189d8dfa84df697",
+  "publicSite": "https://goool.shop",
+  "checkout": {
+    "provider": "Stripe live hosted checkout",
+    "product": "GOOOL Casual Wordmark Tee · Red",
+    "color": "Black",
+    "size": "M",
+    "quantity": 1,
+    "subtotalUSD": 48,
+    "shippingUSD": 9.5,
+    "totalUSD": 57.5,
+    "paymentSubmitted": false,
+    "personalOrPaymentDataEntered": false
+  },
+  "cartRestoredEmpty": true,
+  "browserErrorsObserved": []
+}

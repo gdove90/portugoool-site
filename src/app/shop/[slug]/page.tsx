@@ -11,15 +11,15 @@ import {
 } from "@/lib/seo";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return getProducts().map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const product = getProductBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const product = getProductBySlug((await params).slug);
   if (!product) return { title: "Not found" };
 
   // The title template appends " · GOOOL", and every product name already
@@ -46,8 +46,8 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ProductPage({ params }: Props) {
-  const product = getProductBySlug(params.slug);
+export default async function ProductPage({ params }: Props) {
+  const product = getProductBySlug((await params).slug);
   if (!product) notFound();
 
   const related = getProducts()

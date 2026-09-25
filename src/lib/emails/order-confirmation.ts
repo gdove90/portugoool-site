@@ -1,5 +1,5 @@
 import { OrderItemRow, OrderRow } from "../orders-store";
-import { getProductById } from "../products";
+import { products } from "../products";
 
 // ─────────────────────────────────────────────────────────────
 // The GOOOL order confirmation.
@@ -49,10 +49,10 @@ export function orderNumberFor(orderId: string): string {
 }
 
 function itemName(it: OrderItemRow): string {
-  const p = getProductById(it.product_id);
+  // Receipts also need names for products retired after purchase.
+  const p = products.find((product) => product.id === it.product_id);
   if (p?.name) return p.name;
-  // Archived/retired products are not in the active catalogue. Never
-  // guess a name - show the supplier SKU, which is at least true.
+  // Unknown/deleted product: use its recorded supplier SKU instead of guessing.
   return it.apliiq_sku ?? "Item";
 }
 

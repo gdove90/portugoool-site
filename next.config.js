@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Keep dependency tracing inside this site despite unrelated parent lockfiles.
+  outputFileTracingRoot: __dirname,
   reactStrictMode: true,
   images: {
     // Product images are local SVG placeholders for now — allow next/image

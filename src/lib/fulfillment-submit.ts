@@ -81,7 +81,7 @@ export function buildApliiqPayload(
     zip: addr.postal_code,
     province: addr.state || "",
     province_code: addr.country === "US" ? addr.state || undefined : undefined,
-    country: addr.country,
+    country: ({ US: "United States", CA: "Canada", GB: "United Kingdom", PT: "Portugal" } as Record<string, string>)[addr.country] ?? addr.country,
     country_code: addr.country,
   };
 

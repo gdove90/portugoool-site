@@ -78,6 +78,19 @@ export function apliiqSubmitEnabled(): boolean {
   return process.env.APLIIQ_SUBMIT_ENABLED === "true" && apliiqConfigured();
 }
 
+/** Read-only authentication probe. Never returns supplier order data. */
+export async function checkApliiqConnection(): Promise<{ configured: boolean; authenticated: boolean; status?: number }> {
+  if (!apliiqConfigured()) return { configured: false, authenticated: false };
+  try {
+    const now = new Date();
+    const response = await apliiqFetch(`/v1/Order?month=${now.getUTCMonth() + 1}&year=${now.getUTCFullYear()}`, { method: "GET" });
+    await response.body?.cancel();
+    return { configured: true, authenticated: response.ok, status: response.status };
+  } catch {
+    return { configured: true, authenticated: false };
+  }
+}
+
 /**
  * A destination only counts as a simulator when it is a loopback URL.
  * Setting APLIIQ_API_BASE to anything else — including, explicitly,

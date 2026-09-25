@@ -431,6 +431,22 @@ async function main() {
       tracking_urls: ["https://tools.usps.com/go/TrackConfirmAction?tLabels=9400100000000000000001"],
       line_items: [{ sku: "APQ-6098980S34A1", quantity: 2 }],
     });
+    const postSignedCallback = async (value) => {
+      const body = JSON.stringify(value);
+      const sig = crypto.createHmac("sha256", APLIIQ_SECRET).update(Buffer.from(body).toString("base64")).digest("base64");
+      return fetch(`${BASE}/api/apliiq-fulfillment`, { method: "POST", headers: { "x-apliiq-hmac": sig }, body });
+    };
+    const outgoing = mock.posts.at(-1);
+    check("supplier payload has full country name and ISO code", outgoing.shipping_address.country === "United States" && outgoing.shipping_address.country_code === "US");
+    const official = { fulfillment: { ...JSON.parse(callback), order_id: String(outgoing.id) } };
+    const failedShipment = await postSignedCallback({ fulfillment: { ...official.fulfillment, status: "failure", tracking_numbers: [] } });
+    check("failed shipment callback preserves existing fulfillment status", failedShipment.status === 200 && orderBySession(sessK.id).fulfillment_status === o.fulfillment_status);
+    const officialRes = await postSignedCallback(official);
+    const officialBody = await officialRes.json();
+    check("official wrapped callback matches original outbound order id", officialRes.status === 200 && officialBody.matched === true);
+    check("official callback marks the correct order shipped", orderBySession(sessK.id).fulfillment_status === "shipped");
+    const malformed = await postSignedCallback(null);
+    check("signed null callback rejected cleanly", malformed.status === 400);
     const badRes = await fetch(`${BASE}/api/apliiq-fulfillment`, { method: "POST", headers: { "x-apliiq-hmac": "not-a-signature" }, body: callback });
     check("fulfillment callback with bad signature → 401", badRes.status === 401);
 
@@ -443,11 +459,15 @@ async function main() {
     const ref = orderNumberOf(o.id);
     const t1 = await fetch(`${BASE}/api/track-order`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ reference: ref, email: "capfan@example.com" }) });
     const t1b = await t1.json();
-    check("track-order finds shipped order with tracking", t1.status === 200 && t1b.status === "Shipped." && t1b.shipments?.[0]?.trackingNumbers?.[0]?.startsWith("94001"), JSON.stringify(t1b));
+    check("track-order finds shipped order with tracking", t1.status === 200 && t1b.status === "Shipped." && t1b.shipments?.some(s => s.trackingNumbers?.[0]?.startsWith("94001")), JSON.stringify(t1b));
     const t2 = await fetch(`${BASE}/api/track-order`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ reference: ref, email: "wrong@example.com" }) });
     check("track-order wrong email → 404 (no info leak)", t2.status === 404);
     const t3 = await fetch(`${BASE}/api/track-order`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ reference: "GOOOL-00000000", email: "capfan@example.com" }) });
     check("track-order unknown reference → 404", t3.status === 404);
+    await postSignedCallback({ fulfillment: { ...official.fulfillment, status: "delivered" } });
+    check("delivery callback marks delivered", orderBySession(sessK.id).fulfillment_status === "delivered");
+    await postSignedCallback(official);
+    check("late shipped callback does not downgrade delivered", orderBySession(sessK.id).fulfillment_status === "delivered");
   }
 
   // M. mixed cart: exact SKUs + safe, unique line ids

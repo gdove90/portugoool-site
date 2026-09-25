@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
+import { apliiqSubmitEnabled, checkApliiqConnection, submissionEnvironmentAllowed } from "@/lib/apliiq";
+import { emailProvider } from "@/lib/email";
 import { getOrdersStore } from "@/lib/orders-store";
 import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "@/lib/fulfillment-submit";
 
@@ -57,6 +59,27 @@ export async function POST(req: NextRequest) {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Invalid body." }, { status: 400 });
+  }
+
+  // Read-only diagnostics reuse the existing operator authentication.
+  // No order submissions, emails, credentials, or customer records are returned.
+  if (body.action === "status") {
+    const store = getOrdersStore();
+    let orderStorageConnected = false;
+    if (store) {
+      try {
+        await store.getOrderById("00000000-0000-4000-8000-000000000000");
+        await store.getOrderByExternalId("0");
+        orderStorageConnected = true;
+      } catch { /* report unavailable without exposing database details */ }
+    }
+    return NextResponse.json({
+      supplier: await checkApliiqConnection(),
+      submissionEnabled: apliiqSubmitEnabled(),
+      liveEnvironmentAllowed: submissionEnvironmentAllowed(true).allowed,
+      emailProvider: emailProvider(),
+      orderStorageConnected,
+    }, { headers: { "Cache-Control": "no-store" } });
   }
 
   const store = getOrdersStore();

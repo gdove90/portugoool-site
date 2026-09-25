@@ -86,6 +86,8 @@ export interface OrdersStore {
   createOrder(order: OrderRow, items: OrderItemRow[]): Promise<{ orderId: string; created: boolean }>;
   getOrderBySession(sessionId: string): Promise<(OrderRow & { id: string }) | null>;
   getOrderByApliiqId(apliiqOrderId: string): Promise<(OrderRow & { id: string }) | null>;
+  /** Apliiq callbacks use our outbound numeric order id (first 48 UUID bits). */
+  getOrderByExternalId(externalId: string): Promise<(OrderRow & { id: string }) | null>;
   /** Refund/dispute events identify the order by payment intent, not session. */
   getOrderByPaymentIntent(pi: string): Promise<(OrderRow & { id: string }) | null>;
   getOrderById(orderId: string): Promise<(OrderRow & { id: string }) | null>;
@@ -252,6 +254,19 @@ class SupabaseStore implements OrdersStore {
   }
   getOrderByApliiqId(apliiqOrderId: string) {
     return this.getOne("apliiq_order_id", apliiqOrderId);
+  }
+  async getOrderByExternalId(externalId: string) {
+    if (!/^\d+$/.test(externalId)) return null;
+    const n = Number(externalId);
+    if (!Number.isSafeInteger(n) || n < 0 || n > 0xffffffffffff) return null;
+    const hex = n.toString(16).padStart(12, "0");
+    const prefix = `${hex.slice(0, 8)}-${hex.slice(8)}-`;
+    const { data, error } = await this.db.from("orders").select("*")
+      .gte("id", `${prefix}0000-0000-000000000000`)
+      .lte("id", `${prefix}ffff-ffff-ffffffffffff`).limit(2);
+    if (error) throw new Error("External order lookup failed.");
+    if (data && data.length > 1) throw new Error("Ambiguous external order identifier.");
+    return (data?.[0] as (OrderRow & { id: string }) | undefined) ?? null;
   }
   getOrderById(orderId: string) {
     return this.getOne("id", orderId);
@@ -450,6 +465,15 @@ class FileStore implements OrdersStore {
   async getOrderByApliiqId(apliiqOrderId: string) {
     const s = this.load();
     return Object.values(s.orders).find((o) => o.apliiq_order_id === apliiqOrderId) ?? null;
+  }
+  async getOrderByExternalId(externalId: string) {
+    if (!/^\d+$/.test(externalId)) return null;
+    const n = Number(externalId);
+    if (!Number.isSafeInteger(n) || n < 0 || n > 0xffffffffffff) return null;
+    const matches = Object.values(this.load().orders).filter((o) =>
+      parseInt(o.id.replace(/-/g, "").slice(0, 12), 16) === n);
+    if (matches.length > 1) throw new Error("Ambiguous external order identifier.");
+    return matches[0] ?? null;
   }
   async getOrderById(orderId: string) {
     const s = this.load();

@@ -1,0 +1,3443 @@
+{
+  "checkedAt": "2026-09-25T21:00:37.946Z",
+  "base": "https://goool.shop",
+  "catalog": [
+    {
+      "id": "70000000-0000-4000-8000-000000000001",
+      "slug": "goool-performance-tee",
+      "name": "GOOOL Performance Badge Tee",
+      "priceCents": 4800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6098962,
+          "sku": "APQ-6098962S6A1"
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6098962,
+          "sku": "APQ-6098962S7A1"
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6098962,
+          "sku": "APQ-6098962S8A1"
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6098962,
+          "sku": "APQ-6098962S1A1"
+        },
+        {
+          "color": "Black",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6098962,
+          "sku": "APQ-6098962S2A1"
+        },
+        {
+          "color": "White",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6099046,
+          "sku": "APQ-6099046S6A1"
+        },
+        {
+          "color": "White",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6099046,
+          "sku": "APQ-6099046S7A1"
+        },
+        {
+          "color": "White",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6099046,
+          "sku": "APQ-6099046S8A1"
+        },
+        {
+          "color": "White",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6099046,
+          "sku": "APQ-6099046S1A1"
+        },
+        {
+          "color": "White",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6099046,
+          "sku": "APQ-6099046S2A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6099129,
+          "sku": "APQ-6099129S6A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6099129,
+          "sku": "APQ-6099129S7A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6099129,
+          "sku": "APQ-6099129S8A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6099129,
+          "sku": "APQ-6099129S1A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6099129,
+          "sku": "APQ-6099129S2A1"
+        }
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000002",
+      "slug": "goool-heavyweight-hoodie",
+      "name": "GOOOL Core Hoodie · Red",
+      "priceCents": 7800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6121031,
+          "sku": "APQ-6121031S6A1"
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6121031,
+          "sku": "APQ-6121031S7A1"
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6121031,
+          "sku": "APQ-6121031S8A1"
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6121031,
+          "sku": "APQ-6121031S1A1"
+        },
+        {
+          "color": "Black",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6121031,
+          "sku": "APQ-6121031S2A1"
+        },
+        {
+          "color": "Bone",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6120990,
+          "sku": "APQ-6120990S6A1"
+        },
+        {
+          "color": "Bone",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6120990,
+          "sku": "APQ-6120990S7A1"
+        },
+        {
+          "color": "Bone",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6120990,
+          "sku": "APQ-6120990S8A1"
+        },
+        {
+          "color": "Bone",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6120990,
+          "sku": "APQ-6120990S1A1"
+        },
+        {
+          "color": "Bone",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6120990,
+          "sku": "APQ-6120990S2A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6121043,
+          "sku": "APQ-6121043S6A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6121043,
+          "sku": "APQ-6121043S7A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6121043,
+          "sku": "APQ-6121043S8A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6121043,
+          "sku": "APQ-6121043S1A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6121043,
+          "sku": "APQ-6121043S2A1"
+        }
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000006",
+      "slug": "goool-heavyweight-hoodie-blue",
+      "name": "GOOOL Core Hoodie · Club Blue",
+      "priceCents": 7800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6121042,
+          "sku": "APQ-6121042S6A1"
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6121042,
+          "sku": "APQ-6121042S7A1"
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6121042,
+          "sku": "APQ-6121042S8A1"
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6121042,
+          "sku": "APQ-6121042S1A1"
+        },
+        {
+          "color": "Black",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6121042,
+          "sku": "APQ-6121042S2A1"
+        },
+        {
+          "color": "Bone",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6121021,
+          "sku": "APQ-6121021S6A1"
+        },
+        {
+          "color": "Bone",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6121021,
+          "sku": "APQ-6121021S7A1"
+        },
+        {
+          "color": "Bone",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6121021,
+          "sku": "APQ-6121021S8A1"
+        },
+        {
+          "color": "Bone",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6121021,
+          "sku": "APQ-6121021S1A1"
+        },
+        {
+          "color": "Bone",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6121021,
+          "sku": "APQ-6121021S2A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6121044,
+          "sku": "APQ-6121044S6A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6121044,
+          "sku": "APQ-6121044S7A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6121044,
+          "sku": "APQ-6121044S8A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6121044,
+          "sku": "APQ-6121044S1A1"
+        },
+        {
+          "color": "Grey Heather",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6121044,
+          "sku": "APQ-6121044S2A1"
+        }
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000003",
+      "slug": "goool-heavyweight-casual-tee",
+      "name": "GOOOL Casual Wordmark Tee · Red",
+      "priceCents": 4800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6120860,
+          "sku": "APQ-6120860S6A1"
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6120860,
+          "sku": "APQ-6120860S7A1"
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6120860,
+          "sku": "APQ-6120860S8A1"
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6120860,
+          "sku": "APQ-6120860S1A1"
+        },
+        {
+          "color": "Black",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6120860,
+          "sku": "APQ-6120860S2A1"
+        },
+        {
+          "color": "Natural",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6120889,
+          "sku": "APQ-6120889S6A1"
+        },
+        {
+          "color": "Natural",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6120889,
+          "sku": "APQ-6120889S7A1"
+        },
+        {
+          "color": "Natural",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6120889,
+          "sku": "APQ-6120889S8A1"
+        },
+        {
+          "color": "Natural",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6120889,
+          "sku": "APQ-6120889S1A1"
+        },
+        {
+          "color": "Natural",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6120889,
+          "sku": "APQ-6120889S2A1"
+        }
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000005",
+      "slug": "goool-heavyweight-casual-tee-blue",
+      "name": "GOOOL Casual Wordmark Tee · Club Blue",
+      "priceCents": 4800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Natural",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6120887,
+          "sku": "APQ-6120887S6A1"
+        },
+        {
+          "color": "Natural",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6120887,
+          "sku": "APQ-6120887S7A1"
+        },
+        {
+          "color": "Natural",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6120887,
+          "sku": "APQ-6120887S8A1"
+        },
+        {
+          "color": "Natural",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6120887,
+          "sku": "APQ-6120887S1A1"
+        },
+        {
+          "color": "Natural",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6120887,
+          "sku": "APQ-6120887S2A1"
+        },
+        {
+          "color": "Black",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6120898,
+          "sku": "APQ-6120898S6A1"
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6120898,
+          "sku": "APQ-6120898S7A1"
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6120898,
+          "sku": "APQ-6120898S8A1"
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6120898,
+          "sku": "APQ-6120898S1A1"
+        },
+        {
+          "color": "Black",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6120898,
+          "sku": "APQ-6120898S2A1"
+        }
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000004",
+      "slug": "goool-touchline-cap",
+      "name": "GOOOL Touchline Cap",
+      "priceCents": 4800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black/Natural",
+          "size": "OS",
+          "mapped": true,
+          "apliiqProductId": 6098980,
+          "sku": "APQ-6098980S34A1"
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000006",
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "name": "GOOOL Athletics Modern Sport Performance Tee",
+      "priceCents": 4800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6112037,
+          "sku": "APQ-6112037S6A1"
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6112037,
+          "sku": "APQ-6112037S7A1"
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6112037,
+          "sku": "APQ-6112037S8A1"
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6112037,
+          "sku": "APQ-6112037S1A1"
+        },
+        {
+          "color": "Black",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6112037,
+          "sku": "APQ-6112037S2A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "S",
+          "mapped": true,
+          "apliiqProductId": 6113361,
+          "sku": "APQ-6113361S6A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "M",
+          "mapped": true,
+          "apliiqProductId": 6113361,
+          "sku": "APQ-6113361S7A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "L",
+          "mapped": true,
+          "apliiqProductId": 6113361,
+          "sku": "APQ-6113361S8A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "XL",
+          "mapped": true,
+          "apliiqProductId": 6113361,
+          "sku": "APQ-6113361S1A1"
+        },
+        {
+          "color": "True Royal",
+          "size": "XXL",
+          "mapped": true,
+          "apliiqProductId": 6113361,
+          "sku": "APQ-6113361S2A1"
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000007",
+      "slug": "goool-athletics-badge-cap",
+      "name": "GOOOL Athletics Badge Cap",
+      "priceCents": 4800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black/Natural",
+          "size": "OS",
+          "mapped": true,
+          "apliiqProductId": 6117349,
+          "sku": "APQ-6117349S34A1"
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000008",
+      "slug": "goool-athletics-stacked-cap",
+      "name": "GOOOL Athletics Stacked Cap",
+      "priceCents": 4800,
+      "availableForSale": true,
+      "variants": [
+        {
+          "color": "Black/Natural",
+          "size": "OS",
+          "mapped": true,
+          "apliiqProductId": 6117282,
+          "sku": "APQ-6117282S34A1"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 240,
+      "bytes": 112214,
+      "title": "GOOOL · Original Soccer Sportswear · Made for the Moment.",
+      "canonical": "https://goool.shop",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop",
+      "status": 200,
+      "ms": 484,
+      "bytes": 90459,
+      "title": "Shop All Nine Pieces · GOOOL",
+      "canonical": "https://goool.shop/shop",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "ms": 292,
+      "bytes": 20724,
+      "title": "Contact Us · GOOOL",
+      "canonical": "https://goool.shop/contact",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "ms": 522,
+      "bytes": 25361,
+      "title": "About the Brand · GOOOL",
+      "canonical": "https://goool.shop/about",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/cart",
+      "status": 200,
+      "ms": 577,
+      "bytes": 19731,
+      "title": "GOOOL · Original Soccer Sportswear · Made for the Moment.",
+      "canonical": "https://goool.shop",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/faq",
+      "status": 200,
+      "ms": 635,
+      "bytes": 23457,
+      "title": "Shipping, Sizing &amp; Returns · GOOOL",
+      "canonical": "https://goool.shop/faq",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/track-order",
+      "status": 200,
+      "ms": 253,
+      "bytes": 21489,
+      "title": "Track Your Order · GOOOL",
+      "canonical": "https://goool.shop/track-order",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "ms": 296,
+      "bytes": 26443,
+      "title": "Terms of Service · GOOOL",
+      "canonical": "https://goool.shop/terms",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "ms": 283,
+      "bytes": 24066,
+      "title": "Privacy Policy · GOOOL",
+      "canonical": "https://goool.shop/privacy",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/success",
+      "status": 200,
+      "ms": 235,
+      "bytes": 19538,
+      "title": "GOOOL · Original Soccer Sportswear · Made for the Moment.",
+      "canonical": "https://goool.shop",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "ms": 213,
+      "bytes": 158,
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "ms": 255,
+      "bytes": 3064,
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/refunds",
+      "status": 200,
+      "ms": 489,
+      "bytes": 24244,
+      "title": "Refund Policy · GOOOL",
+      "canonical": "https://goool.shop/refunds",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-performance-tee",
+      "status": 200,
+      "ms": 287,
+      "bytes": 80927,
+      "title": "Performance Badge Tee · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-performance-tee",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-performance-tee#product",
+          "name": "GOOOL Performance Badge Tee",
+          "description": "Lightweight training tee. GOOOL crest centered on the chest, athletic fit, taped neck.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp"
+          ],
+          "sku": "goool-performance-tee",
+          "material": "3.8 oz, 100% recycled polyester. PosiCharge is the supplier's word for a fabric that resists fading and holds its colour, which counts for most on the black.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-performance-tee",
+            "priceCurrency": "USD",
+            "price": "48.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Performance Badge Tee",
+              "item": "https://goool.shop/shop/goool-performance-tee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie",
+      "status": 200,
+      "ms": 287,
+      "bytes": 83152,
+      "title": "Core Hoodie · Red · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-heavyweight-hoodie#product",
+          "name": "GOOOL Core Hoodie · Red",
+          "description": "The full GOOOL Athletics lockup across the chest and the red club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp"
+          ],
+          "sku": "goool-heavyweight-hoodie",
+          "material": "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-heavyweight-hoodie",
+            "priceCurrency": "USD",
+            "price": "78.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Core Hoodie · Red",
+              "item": "https://goool.shop/shop/goool-heavyweight-hoodie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie-blue",
+      "status": 200,
+      "ms": 245,
+      "bytes": 83450,
+      "title": "Core Hoodie · Club Blue · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie-blue",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-heavyweight-hoodie-blue#product",
+          "name": "GOOOL Core Hoodie · Club Blue",
+          "description": "The full GOOOL Athletics lockup in club blue across the chest and the blue club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp"
+          ],
+          "sku": "goool-heavyweight-hoodie-blue",
+          "material": "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-heavyweight-hoodie-blue",
+            "priceCurrency": "USD",
+            "price": "78.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Core Hoodie · Club Blue",
+              "item": "https://goool.shop/shop/goool-heavyweight-hoodie-blue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee",
+      "status": 200,
+      "ms": 204,
+      "bytes": 84783,
+      "title": "Casual Wordmark Tee · Red · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-casual-tee",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-heavyweight-casual-tee#product",
+          "name": "GOOOL Casual Wordmark Tee · Red",
+          "description": "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the red club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp"
+          ],
+          "sku": "goool-heavyweight-casual-tee",
+          "material": "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-heavyweight-casual-tee",
+            "priceCurrency": "USD",
+            "price": "48.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Casual Wordmark Tee · Red",
+              "item": "https://goool.shop/shop/goool-heavyweight-casual-tee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-touchline-cap",
+      "status": 200,
+      "ms": 308,
+      "bytes": 76084,
+      "title": "Touchline Cap · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-touchline-cap",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-touchline-cap#product",
+          "name": "GOOOL Touchline Cap",
+          "description": "Structured five-panel cap in black and natural. Flat-embroidered GOOOL wordmark on the front panel, curved visor, adjustable snap.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp"
+          ],
+          "sku": "goool-touchline-cap",
+          "material": "65% polyester, 35% cotton twill over a firm buckram front. Buckram is the stiffener behind the front panel, and it is what holds the crown up instead of letting it collapse.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black/Natural",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-touchline-cap",
+            "priceCurrency": "USD",
+            "price": "48.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Touchline Cap",
+              "item": "https://goool.shop/shop/goool-touchline-cap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee-blue",
+      "status": 200,
+      "ms": 337,
+      "bytes": 85232,
+      "title": "Casual Wordmark Tee · Club Blue · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-casual-tee-blue",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-heavyweight-casual-tee-blue#product",
+          "name": "GOOOL Casual Wordmark Tee · Club Blue",
+          "description": "The wordmark, worn plainly, now with the full GOOOL Athletics lockup in club blue across the chest and the blue club band across the back. Heavyweight combed cotton in natural or black. Built for off the pitch: the one you reach for every day, and keep reaching for.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp"
+          ],
+          "sku": "goool-heavyweight-casual-tee-blue",
+          "material": "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Natural",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-heavyweight-casual-tee-blue",
+            "priceCurrency": "USD",
+            "price": "48.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Casual Wordmark Tee · Club Blue",
+              "item": "https://goool.shop/shop/goool-heavyweight-casual-tee-blue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-athletics-modern-sport-performance-tee",
+      "status": 200,
+      "ms": 284,
+      "bytes": 85079,
+      "title": "Athletics Modern Sport Performance Tee · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee#product",
+          "name": "GOOOL Athletics Modern Sport Performance Tee",
+          "description": "Performance training tee in black or true royal. White GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
+          "image": [
+            "https://goool.shop/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+            "https://goool.shop/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png"
+          ],
+          "sku": "goool-athletics-modern-sport-performance-tee",
+          "material": "3.8 oz is not much shirt, and that is the point. The same recycled polyester as the Performance Badge Tee, taped at the neck with a label that tears out, so nothing sits raw against your skin. Set-in sleeves follow the line of the shoulder and leave the arm its full range.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee",
+            "priceCurrency": "USD",
+            "price": "48.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Athletics Modern Sport Performance Tee",
+              "item": "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-performance-tee?color=Black",
+      "status": 200,
+      "ms": 63,
+      "bytes": 80927,
+      "title": "Performance Badge Tee · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-performance-tee",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-athletics-stacked-cap",
+      "status": 200,
+      "ms": 255,
+      "bytes": 76784,
+      "title": "Athletics Stacked Cap · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-athletics-stacked-cap",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-athletics-stacked-cap#product",
+          "name": "GOOOL Athletics Stacked Cap",
+          "description": "Structured five-panel cap in black and natural. GOOOL over a red rule with ATHLETICS beneath, embroidered across the front panel, curved visor, adjustable snap.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp"
+          ],
+          "sku": "goool-athletics-stacked-cap",
+          "material": "65% polyester, 35% cotton twill. Twill is the diagonal weave you can see close up in the cloth, and it is what gives a cap enough body to hold a stitched mark without the fabric going soft around it.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black/Natural",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-athletics-stacked-cap",
+            "priceCurrency": "USD",
+            "price": "48.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Athletics Stacked Cap",
+              "item": "https://goool.shop/shop/goool-athletics-stacked-cap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-athletics-badge-cap",
+      "status": 200,
+      "ms": 326,
+      "bytes": 76632,
+      "title": "Athletics Badge Cap · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-athletics-badge-cap",
+      "noindex": false,
+      "location": null,
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://goool.shop/#organization",
+              "name": "GOOOL",
+              "legalName": "GOOOL Athletics LLC",
+              "url": "https://goool.shop",
+              "logo": "https://goool.shop/brand/goool-athletics-lockup-white.png",
+              "email": "hello@goool.shop",
+              "description": "Independent soccer sportswear. Original crests and wordmarks, never licensed."
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://goool.shop/#website",
+              "url": "https://goool.shop",
+              "name": "GOOOL",
+              "publisher": {
+                "@id": "https://goool.shop/#organization"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://goool.shop/shop/goool-athletics-badge-cap#product",
+          "name": "GOOOL Athletics Badge Cap",
+          "description": "Structured five-panel cap in black and natural. The circular GOOOL Athletics badge embroidered on the front panel, curved visor, adjustable snap.",
+          "image": [
+            "https://goool.shop/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+            "https://goool.shop/products/GOOOL_STD_BADGE_CAP_BACK.webp"
+          ],
+          "sku": "goool-athletics-badge-cap",
+          "material": "No seam runs through the front panel, which matters more here than on most caps: this badge is a ring, and a seam crossing a ring shows. The embroidery lands on one unbroken piece of 65/35 twill, which is the difference between a mark that sits flat and a mark that fights a seam.",
+          "brand": {
+            "@type": "Brand",
+            "name": "GOOOL"
+          },
+          "color": "Black/Natural",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://goool.shop/shop/goool-athletics-badge-cap",
+            "priceCurrency": "USD",
+            "price": "48.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@id": "https://goool.shop/#organization"
+            },
+            "shippingDetails": [
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "GB"
+                }
+              },
+              {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "PT"
+                }
+              }
+            ],
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": [
+                "US",
+                "CA",
+                "GB",
+                "PT"
+              ],
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Shop",
+              "item": "https://goool.shop/shop"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "GOOOL Athletics Badge Cap",
+              "item": "https://goool.shop/shop/goool-athletics-badge-cap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/shop/goool-performance-tee?color=White",
+      "status": 200,
+      "ms": 124,
+      "bytes": 80927,
+      "title": "Performance Badge Tee · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-performance-tee",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-performance-tee?color=True%20Royal",
+      "status": 200,
+      "ms": 134,
+      "bytes": 80927,
+      "title": "Performance Badge Tee · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-performance-tee",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie?color=Black",
+      "status": 200,
+      "ms": 130,
+      "bytes": 83152,
+      "title": "Core Hoodie · Red · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie?color=Grey%20Heather",
+      "status": 200,
+      "ms": 128,
+      "bytes": 83152,
+      "title": "Core Hoodie · Red · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie-blue?color=Black",
+      "status": 200,
+      "ms": 131,
+      "bytes": 83450,
+      "title": "Core Hoodie · Club Blue · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie-blue",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie?color=Bone",
+      "status": 200,
+      "ms": 167,
+      "bytes": 83152,
+      "title": "Core Hoodie · Red · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie-blue?color=Bone",
+      "status": 200,
+      "ms": 103,
+      "bytes": 83450,
+      "title": "Core Hoodie · Club Blue · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie-blue",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-hoodie-blue?color=Grey%20Heather",
+      "status": 200,
+      "ms": 104,
+      "bytes": 83450,
+      "title": "Core Hoodie · Club Blue · $78 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-hoodie-blue",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee?color=Natural",
+      "status": 200,
+      "ms": 96,
+      "bytes": 84783,
+      "title": "Casual Wordmark Tee · Red · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-casual-tee",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee?color=Black",
+      "status": 200,
+      "ms": 110,
+      "bytes": 84783,
+      "title": "Casual Wordmark Tee · Red · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-casual-tee",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-touchline-cap?color=Black%2FNatural",
+      "status": 200,
+      "ms": 75,
+      "bytes": 76084,
+      "title": "Touchline Cap · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-touchline-cap",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee-blue?color=Natural",
+      "status": 200,
+      "ms": 124,
+      "bytes": 85232,
+      "title": "Casual Wordmark Tee · Club Blue · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-casual-tee-blue",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-heavyweight-casual-tee-blue?color=Black",
+      "status": 200,
+      "ms": 133,
+      "bytes": 85232,
+      "title": "Casual Wordmark Tee · Club Blue · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-heavyweight-casual-tee-blue",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-athletics-stacked-cap?color=Black%2FNatural",
+      "status": 200,
+      "ms": 69,
+      "bytes": 76784,
+      "title": "Athletics Stacked Cap · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-athletics-stacked-cap",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-athletics-modern-sport-performance-tee?color=True%20Royal",
+      "status": 200,
+      "ms": 126,
+      "bytes": 85079,
+      "title": "Athletics Modern Sport Performance Tee · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-athletics-modern-sport-performance-tee?color=Black",
+      "status": 200,
+      "ms": 155,
+      "bytes": 85079,
+      "title": "Athletics Modern Sport Performance Tee · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee",
+      "noindex": false,
+      "location": null
+    },
+    {
+      "path": "/shop/goool-athletics-badge-cap?color=Black%2FNatural",
+      "status": 200,
+      "ms": 152,
+      "bytes": 76632,
+      "title": "Athletics Badge Cap · $48 · GOOOL",
+      "canonical": "https://goool.shop/shop/goool-athletics-badge-cap",
+      "noindex": false,
+      "location": null
+    }
+  ],
+  "images": [
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+      "url": "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 181,
+      "bytes": 192392,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+      "url": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 207,
+      "bytes": 223636,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+      "url": "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 348,
+      "bytes": 186744,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+      "url": "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 350,
+      "bytes": 509618,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 161,
+      "bytes": 263156,
+      "matchesLocal": true,
+      "width": 1075,
+      "height": 1344,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+      "url": "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 456,
+      "bytes": 139180,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+      "url": "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 250,
+      "bytes": 349886,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 187,
+      "bytes": 556876,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 280,
+      "bytes": 273244,
+      "matchesLocal": true,
+      "width": 1099,
+      "height": 1374,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+      "url": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 162,
+      "bytes": 650736,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 302,
+      "bytes": 488980,
+      "matchesLocal": true,
+      "width": 1112,
+      "height": 1390,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 109,
+      "bytes": 264314,
+      "matchesLocal": true,
+      "width": 1104,
+      "height": 1380,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 147,
+      "bytes": 487186,
+      "matchesLocal": true,
+      "width": 1078,
+      "height": 1348,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+      "url": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 101,
+      "bytes": 615796,
+      "matchesLocal": true,
+      "width": 1179,
+      "height": 1474,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+      "url": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 456,
+      "bytes": 634672,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 266,
+      "bytes": 240546,
+      "matchesLocal": true,
+      "width": 1106,
+      "height": 1382,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+      "url": "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 310,
+      "bytes": 536866,
+      "matchesLocal": true,
+      "width": 1081,
+      "height": 1351,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 141,
+      "bytes": 221074,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+      "url": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 282,
+      "bytes": 551112,
+      "matchesLocal": true,
+      "width": 1187,
+      "height": 1484,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 173,
+      "bytes": 210092,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 262,
+      "bytes": 384296,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 309,
+      "bytes": 411006,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 290,
+      "bytes": 400148,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 275,
+      "bytes": 371812,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 299,
+      "bytes": 292522,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+      "url": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 286,
+      "bytes": 273816,
+      "matchesLocal": true,
+      "width": 1137,
+      "height": 1421,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+      "url": "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 123,
+      "bytes": 572976,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+      "url": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png?v=modern-print-20260925-v4",
+      "status": 200,
+      "ms": 145,
+      "bytes": 768828,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "png",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+      "url": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png?v=modern-print-20260925-v4",
+      "status": 200,
+      "ms": 188,
+      "bytes": 706239,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "png",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+      "url": "/products/GOOOL_STD_BADGE_CAP_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 145,
+      "bytes": 545466,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+      "url": "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 411,
+      "bytes": 489778,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "url": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png?v=modern-open-a-20260925-v5",
+      "status": 200,
+      "ms": 367,
+      "bytes": 1261600,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "png",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          56,
+          80,
+          180
+        ],
+        [
+          41,
+          60,
+          134
+        ]
+      ],
+      "backgroundPass": true,
+      "backgroundReview": "Bottom corners contain garment; top corners are background."
+    },
+    {
+      "src": "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "url": "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png?v=modern-open-a-20260925-v5",
+      "status": 200,
+      "ms": 448,
+      "bytes": 1415383,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "png",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          55,
+          56,
+          55
+        ],
+        [
+          26,
+          26,
+          24
+        ]
+      ],
+      "backgroundPass": true,
+      "backgroundReview": "Bottom corners contain garment; top corners are background."
+    },
+    {
+      "src": "/products/GOOOL_STD_BADGE_CAP_BACK.webp",
+      "url": "/products/GOOOL_STD_BADGE_CAP_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 208,
+      "bytes": 489778,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+      "url": "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 135,
+      "bytes": 545380,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    },
+    {
+      "src": "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
+      "url": "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp?v=backdrop-20260925",
+      "status": 200,
+      "ms": 163,
+      "bytes": 489778,
+      "matchesLocal": true,
+      "width": 1122,
+      "height": 1402,
+      "format": "webp",
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ],
+      "backgroundPass": true
+    }
+  ],
+  "redirects": [
+    {
+      "url": "https://goool.shop/drop",
+      "status": 301,
+      "location": "/shop"
+    },
+    {
+      "url": "https://goool.shop/world-cup",
+      "status": 301,
+      "location": "/shop"
+    },
+    {
+      "url": "https://goool.shop/customize",
+      "status": 301,
+      "location": "/shop"
+    },
+    {
+      "url": "https://goool.shop/shop/goool-athletics-modern-sport-tee",
+      "status": 301,
+      "location": "/shop/goool-athletics-modern-sport-performance-tee"
+    },
+    {
+      "url": "https://goool.shop/shop/goool-athletics-varsity-tee",
+      "status": 301,
+      "location": "/shop"
+    },
+    {
+      "url": "https://goool.shop/shop/goool-athletics-minimal-club-tee",
+      "status": 301,
+      "location": "/shop"
+    },
+    {
+      "url": "https://goool.shop/shop/goool-athletics-circular-badge-tee",
+      "status": 301,
+      "location": "/shop"
+    },
+    {
+      "url": "https://goool.shop/shop/goool-athletics-circular-center-crewneck",
+      "status": 301,
+      "location": "/shop"
+    },
+    {
+      "url": "https://www.goool.shop/shop",
+      "status": 301,
+      "location": "https://goool.shop/shop"
+    },
+    {
+      "url": "https://portugoool.com/shop",
+      "status": 301,
+      "location": "https://goool.shop/shop"
+    }
+  ],
+  "api": [
+    {
+      "label": "Empty checkout",
+      "path": "/api/checkout",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "response": "{\"error\":\"Invalid cart.\"}"
+    },
+    {
+      "label": "Unsigned Stripe webhook",
+      "path": "/api/stripe-webhook",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "response": "{\"error\":\"Missing signature.\"}"
+    },
+    {
+      "label": "Invalid variant rejected",
+      "path": "/api/checkout",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "response": "{\"error\":\"Invalid color.\"}"
+    },
+    {
+      "label": "Unsigned Apliiq callback",
+      "path": "/api/apliiq-fulfillment",
+      "status": 401,
+      "expected": 401,
+      "pass": true,
+      "response": "{\"error\":\"Invalid signature.\"}"
+    },
+    {
+      "label": "Tracking validation",
+      "path": "/api/track-order",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "response": "{\"error\":\"Enter your order reference (GOOOL-XXXXXXXX) and the email you ordered with.\"}"
+    },
+    {
+      "label": "Unauthenticated fulfillment operations",
+      "path": "/api/fulfillment-ops",
+      "status": 401,
+      "expected": 401,
+      "pass": true,
+      "response": "{\"error\":\"Unauthorized.\"}"
+    },
+    {
+      "label": "Order-status validation",
+      "path": "/api/order-status",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "response": "{\"error\":\"Invalid session.\"}"
+    },
+    {
+      "label": "Newsletter validation; no subscription created",
+      "path": "/api/newsletter",
+      "status": 400,
+      "expected": 400,
+      "pass": true,
+      "response": "{\"error\":\"Enter a valid email.\"}"
+    },
+    {
+      "label": "Nonexistent order lookup",
+      "path": "/api/track-order",
+      "status": 404,
+      "expected": 404,
+      "pass": true,
+      "response": "{\"error\":\"No order matches that reference and email.\"}"
+    }
+  ],
+  "seo": {
+    "googleVerificationMeta": false,
+    "homeMetaDescription": "Heavyweight cotton tees, hoodies and embroidered caps from $48. Original soccer sportswear, never licensed. Ships to the US, Canada, the UK and Portugal.",
+    "ogImage": "https://goool.shop/hero-crowd.webp",
+    "robots": "User-Agent: *\nAllow: /\nDisallow: /api/\nDisallow: /success\nDisallow: /cart\nDisallow: /print/\n\nHost: https://goool.shop\nSitemap: https://goool.shop/sitemap.xml\n",
+    "sitemapUrls": [
+      "https://goool.shop/",
+      "https://goool.shop/shop",
+      "https://goool.shop/about",
+      "https://goool.shop/faq",
+      "https://goool.shop/contact",
+      "https://goool.shop/track-order",
+      "https://goool.shop/terms",
+      "https://goool.shop/privacy",
+      "https://goool.shop/refunds",
+      "https://goool.shop/shop/goool-performance-tee",
+      "https://goool.shop/shop/goool-heavyweight-hoodie",
+      "https://goool.shop/shop/goool-heavyweight-hoodie-blue",
+      "https://goool.shop/shop/goool-heavyweight-casual-tee",
+      "https://goool.shop/shop/goool-heavyweight-casual-tee-blue",
+      "https://goool.shop/shop/goool-touchline-cap",
+      "https://goool.shop/shop/goool-athletics-modern-sport-performance-tee",
+      "https://goool.shop/shop/goool-athletics-badge-cap",
+      "https://goool.shop/shop/goool-athletics-stacked-cap"
+    ]
+  },
+  "errors": [],
+  "notFoundStatus": 404,
+  "summary": {
+    "activeProducts": 9,
+    "variantMappings": 78,
+    "unmapped": 0,
+    "pagesChecked": 40,
+    "pageFailures": 0,
+    "imagesChecked": 36,
+    "imageFailures": 0,
+    "backgroundFailures": 0,
+    "redirectsChecked": 10,
+    "apiFailures": 0,
+    "errors": 0
+  }
+}

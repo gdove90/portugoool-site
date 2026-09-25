@@ -52,3 +52,6 @@ designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack.zip
 # renders are not committed twice; the print files, site images, docs and
 # manifest are.
 /CORE-CAPSULE-LAUNCH-*/*/renders/
+
+# Preserved generated cache from framework upgrade
+/.next-cache-*/

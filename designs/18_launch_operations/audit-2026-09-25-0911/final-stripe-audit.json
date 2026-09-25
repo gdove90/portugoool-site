@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-09-25T21:05:16.552Z",
+  "account": {
+    "chargesEnabled": true,
+    "payoutsEnabled": true,
+    "detailsSubmitted": true,
+    "country": "US",
+    "currentlyDue": [],
+    "pastDue": [],
+    "businessName": "GOOOL ATHLETICS",
+    "website": "https://goool.shop"
+  },
+  "webhooks": [
+    {
+      "url": "https://goool.shop/api/stripe-webhook",
+      "status": "enabled",
+      "livemode": true,
+      "events": [
+        "checkout.session.completed",
+        "checkout.session.async_payment_succeeded",
+        "checkout.session.async_payment_failed",
+        "charge.refunded",
+        "charge.dispute.created"
+      ]
+    }
+  ],
+  "shippingRates": [
+    {
+      "displayName": "Standard shipping",
+      "livemode": true,
+      "active": true,
+      "fixedAmount": {
+        "amount": 950,
+        "currency": "usd"
+      },
+      "deliveryEstimate": {
+        "maximum": {
+          "unit": "business_day",
+          "value": 12
+        },
+        "minimum": {
+          "unit": "business_day",
+          "value": 7
+        }
+      }
+    }
+  ],
+  "recentCheckouts": {
+    "sampleSize": 13,
+    "hasMore": false,
+    "statusCounts": {
+      "open/unpaid": 4,
+      "expired/unpaid": 9
+    },
+    "shippingCountries": [
+      "US",
+      "CA",
+      "PT",
+      "GB"
+    ],
+    "automaticTaxEnabled": 0,
+    "latestLiveMode": true,
+    "latestTotal": 5750,
+    "latestCurrency": "usd"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-09-25T21:05:08.472Z",
+  "environment": "isolated copy; fake keys, local supplier/email mocks, non-loopback HTTP blocked",
+  "results": [
+    {
+      "name": "email-gmail",
+      "passed": 29,
+      "failed": 0
+    },
+    {
+      "name": "email-http",
+      "passed": 36,
+      "failed": 0
+    },
+    {
+      "name": "email-smtp",
+      "passed": 23,
+      "failed": 0
+    },
+    {
+      "name": "fulfillment-gaps",
+      "passed": 34,
+      "failed": 0
+    },
+    {
+      "name": "integration",
+      "passed": 60,
+      "failed": 0
+    },
+    {
+      "name": "isolate-nonproduction",
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "name": "isolate-test-payment",
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "name": "launch-status",
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "name": "recovery",
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "totalPassed": 205,
+  "totalFailed": 0
+}
