@@ -1,0 +1,160 @@
+{
+  "date": "2026-09-25",
+  "scope": "Read-only audit of existing v3 production PNG masters, not a supplier proof or physical sample. Distance-transform thickness on medial skeleton of each ATHLETICS glyph. Finite raster measurement, not exact vector stroke metrology. Pointed GOOOL wordmark terminals are outside these ATHLETICS measurements and remain a production-proof concern.",
+  "source": "https://help.apliiq.com/portal/en/kb/articles/how-to-prepare-artwork-for-transfer-printing",
+  "official_guideline": "All font parts at least 2 mm thick; 300 dpi at actual print size; opaque printed pixels; sharp points and fine details can fail.",
+  "records": [
+    {
+      "file": "GA-01-F_v3_3300px.png",
+      "sha256": "53e444de0a4cdffdee6b81439c914ef6b9e044e5349e21ea87e79149f467343a",
+      "pixels": [
+        3300,
+        1116
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "recorded_print_width_in": 11,
+      "native_aspect_height_in": 3.72,
+      "effective_ppi": 300.0,
+      "letter_count": 9,
+      "athletics_min_skeleton_thickness_mm": 2.2013,
+      "athletics_cap_height_mm": 14.6473,
+      "letters": [
+        {
+          "x": 441,
+          "min_mm": 2.2013,
+          "median_mm": 3.2129,
+          "letter": "A"
+        },
+        {
+          "x": 758,
+          "min_mm": 3.048,
+          "median_mm": 3.2173,
+          "letter": "T"
+        },
+        {
+          "x": 1057,
+          "min_mm": 3.048,
+          "median_mm": 3.2173,
+          "letter": "H"
+        },
+        {
+          "x": 1355,
+          "min_mm": 2.8787,
+          "median_mm": 3.2173,
+          "letter": "L"
+        },
+        {
+          "x": 1642,
+          "min_mm": 2.8787,
+          "median_mm": 3.2173,
+          "letter": "E"
+        },
+        {
+          "x": 1930,
+          "min_mm": 3.048,
+          "median_mm": 3.2173,
+          "letter": "T"
+        },
+        {
+          "x": 2227,
+          "min_mm": 3.2173,
+          "median_mm": 3.2173,
+          "letter": "I"
+        },
+        {
+          "x": 2436,
+          "min_mm": 2.54,
+          "median_mm": 3.1815,
+          "letter": "C"
+        },
+        {
+          "x": 2729,
+          "min_mm": 2.8787,
+          "median_mm": 3.1132,
+          "letter": "S"
+        }
+      ],
+      "recorded_old_placement_height_in": 3.73,
+      "if_forced_to_old_height_conservative_thickness_lower_bound_mm": 2.2013
+    },
+    {
+      "file": "GA-01-B_v3_1950px_600ppi.png",
+      "sha256": "6af09cae576ea5a6cbd8b8c18b578910bff5973755290662ba9c12e1841f1ad4",
+      "pixels": [
+        1950,
+        683
+      ],
+      "alpha_values": [
+        0,
+        255
+      ],
+      "recorded_print_width_in": 3.25,
+      "native_aspect_height_in": 1.138333,
+      "effective_ppi": 600.0,
+      "letter_count": 9,
+      "athletics_min_skeleton_thickness_mm": 2.032,
+      "athletics_cap_height_mm": 8.3397,
+      "letters": [
+        {
+          "x": 96,
+          "min_mm": 2.032,
+          "median_mm": 2.8724,
+          "letter": "A"
+        },
+        {
+          "x": 329,
+          "min_mm": 2.286,
+          "median_mm": 2.3707,
+          "letter": "T"
+        },
+        {
+          "x": 543,
+          "min_mm": 2.286,
+          "median_mm": 2.3707,
+          "letter": "H"
+        },
+        {
+          "x": 756,
+          "min_mm": 2.2013,
+          "median_mm": 2.3707,
+          "letter": "L"
+        },
+        {
+          "x": 958,
+          "min_mm": 2.2013,
+          "median_mm": 2.3707,
+          "letter": "E"
+        },
+        {
+          "x": 1162,
+          "min_mm": 2.286,
+          "median_mm": 2.3707,
+          "letter": "T"
+        },
+        {
+          "x": 1374,
+          "min_mm": 2.3707,
+          "median_mm": 2.3707,
+          "letter": "I"
+        },
+        {
+          "x": 1494,
+          "min_mm": 2.06,
+          "median_mm": 2.2718,
+          "letter": "C"
+        },
+        {
+          "x": 1702,
+          "min_mm": 2.0355,
+          "median_mm": 2.2224,
+          "letter": "S"
+        }
+      ],
+      "recorded_old_placement_height_in": 1.11,
+      "if_forced_to_old_height_conservative_thickness_lower_bound_mm": 1.9814
+    }
+  ]
+}

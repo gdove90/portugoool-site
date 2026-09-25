@@ -1,0 +1,10 @@
+{
+  "site_id": "047c082c-2bc2-42d5-889f-57876fa55b78",
+  "site_name": "goool-shop",
+  "deploy_id": "6ab64e0088bb582781fc241f",
+  "deploy_url": "https://6ab64e0088bb582781fc241f--goool-shop.netlify.app",
+  "logs": "https://app.netlify.com/projects/goool-shop/deploys/6ab64e0088bb582781fc241f",
+  "function_logs": "https://app.netlify.com/projects/goool-shop/logs/functions",
+  "edge_function_logs": "https://app.netlify.com/projects/goool-shop/logs/edge-functions",
+  "url": "https://goool.shop"
+}

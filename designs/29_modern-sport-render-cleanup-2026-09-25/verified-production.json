@@ -1,0 +1,164 @@
+{
+  "checkedAt": "2026-09-25T10:38:43.891Z",
+  "base": "https://goool.shop",
+  "usesCookies": false,
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/shop",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/shop/goool-athletics-modern-sport-performance-tee",
+      "status": 200,
+      "location": null,
+      "newRevision": true
+    },
+    {
+      "route": "/shop/goool-athletics-modern-sport-performance-tee?color=True+Royal",
+      "status": 200,
+      "location": null,
+      "newRevision": true
+    }
+  ],
+  "images": [
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+      "status": 200,
+      "sha256": "06979f1e90611ca4a5c194d2a817ce0a09588bcff590d025aea67c944824d484",
+      "byteMatch": true
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+      "status": 200,
+      "sha256": "4f2f294397673bcd10dd06248c89b982fb4426a595b9cd717e4562f4c4972878",
+      "byteMatch": true
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "status": 200,
+      "sha256": "23504d8960079bd7ae1c05eee7fcaa0e8d2cd95892e743d24d6a1eaec1b9bbf1",
+      "byteMatch": true
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "status": 200,
+      "sha256": "b90365c0ff7748090b47aea7388706bfb809bc8fc0064fd587c9243f17f67819",
+      "byteMatch": true
+    }
+  ],
+  "optimizer": [
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 799,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 799,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 799,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "status": 200,
+      "type": "image/webp",
+      "width": 640,
+      "height": 799,
+      "backgroundSamples": [
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ],
+        [
+          242,
+          242,
+          242
+        ]
+      ]
+    }
+  ],
+  "allPassed": true
+}

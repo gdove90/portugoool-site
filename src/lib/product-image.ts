@@ -3,6 +3,9 @@
 export function catalogImageSrc(src: string): string {
   if (!src.startsWith("/products/")) return src;
   const url = new URL(src, "https://goool.shop");
-  url.searchParams.set("v", "backdrop-20260925");
+  const revision = /^\/products\/GOOOL_MODERN_PERFORMANCE_(?:ROYAL_)?(?:FRONT|BACK_DETAIL)_V3\.png$/.test(url.pathname)
+    ? "modern-print-20260925-v4"
+    : "backdrop-20260925";
+  url.searchParams.set("v", revision);
   return url.pathname + url.search + url.hash;
 }

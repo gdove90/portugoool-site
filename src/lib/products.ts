@@ -2648,14 +2648,12 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // Modern Sport is performance-only for launch; cotton remains archived.
-  // ST720 supplier design exists. All images remain concepts and sales
-  // await actual-size print proof, sample and fulfillment readiness.
-  //
-  // Imagery V3 (2026-09-25): the same concept renders with the corrected
-  // GA-01 v3 print composited in place of the old one. ATHLETICS was
-  // re-set heavier so every stroke clears Apliiq's 2 mm DTF minimum at
-  // final size (the old back lettering was ~0.7 mm). See
-  // designs/26_modern-sport-print-rebuild-2026-09-25/README.md.
+  // Imagery cleanup V4 (2026-09-25): old print remnants removed and the
+  // exact v3 production artwork reapplied; filenames retained for compatibility.
+  // ATHLETICS measurements clear 2 mm at native proportions and recorded
+  // widths. Back placement scaling and pointed wordmark tips still require
+  // supplier proof review. These images remain concept renders. See
+  // designs/29_modern-sport-render-cleanup-2026-09-25/README.md.
   {
     id: "80000000-0000-4000-8000-000000000006",
     name: "GOOOL Athletics Modern Sport Performance Tee",

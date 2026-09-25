@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-25",
+  "background": "#F2F2F2",
+  "method": "ImageGen blank fabric cleanup restricted to print rectangles; original pixels outside rectangles retained exactly; existing production masters reapplied with alpha-aware Lanczos resizing.",
+  "records": [
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "originalSha256": "38532ee8133610522bca9cb52c2b25fd6e14b9aaf5c12729773ae6c81db6abeb",
+      "finalSha256": "06979f1e90611ca4a5c194d2a817ce0a09588bcff590d025aea67c944824d484",
+      "productionArt": "GA-01-F_v3_3300px.png",
+      "productionArtSha256": "53e444de0a4cdffdee6b81439c914ef6b9e044e5349e21ea87e79149f467343a",
+      "patch": {
+        "left": 380,
+        "top": 382,
+        "width": 364,
+        "height": 166
+      },
+      "placement": {
+        "left": 412,
+        "top": 414,
+        "width": 299,
+        "height": 101
+      },
+      "plateColorOffset": [
+        3.3837044534412954,
+        3.4029352226720646,
+        3.1628542510121456
+      ],
+      "outsidePatchChangedPixels": 0,
+      "preservedExactF2F2F2Pixels": 871140
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "originalSha256": "b1503fa62517d3fdecf6b3e12e95a4962732625945820e3a99b69ca11a3df950",
+      "finalSha256": "23504d8960079bd7ae1c05eee7fcaa0e8d2cd95892e743d24d6a1eaec1b9bbf1",
+      "productionArt": "GA-01-B_v3_1950px_600ppi.png",
+      "productionArtSha256": "6af09cae576ea5a6cbd8b8c18b578910bff5973755290662ba9c12e1841f1ad4",
+      "patch": {
+        "left": 398,
+        "top": 507,
+        "width": 324,
+        "height": 155
+      },
+      "placement": {
+        "left": 430,
+        "top": 537,
+        "width": 259,
+        "height": 91
+      },
+      "plateColorOffset": [
+        1.8010158013544018,
+        2.1121896162528215,
+        2.417945823927765
+      ],
+      "outsidePatchChangedPixels": 0,
+      "preservedExactF2F2F2Pixels": 360031
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "originalSha256": "2bb3414950ab59fd8b05b9ec55bcbfb256600d48cc3182160a8d489e5e380dc9",
+      "finalSha256": "4f2f294397673bcd10dd06248c89b982fb4426a595b9cd717e4562f4c4972878",
+      "productionArt": "GA-01-F_v3_3300px.png",
+      "productionArtSha256": "53e444de0a4cdffdee6b81439c914ef6b9e044e5349e21ea87e79149f467343a",
+      "patch": {
+        "left": 380,
+        "top": 382,
+        "width": 364,
+        "height": 166
+      },
+      "placement": {
+        "left": 413,
+        "top": 414,
+        "width": 297,
+        "height": 100
+      },
+      "plateColorOffset": [
+        5.472773279352227,
+        1.2866396761133603,
+        -6.283400809716599
+      ],
+      "outsidePatchChangedPixels": 0,
+      "preservedExactF2F2F2Pixels": 870521
+    },
+    {
+      "file": "GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "originalSha256": "93d3146c0a1fdaadfd434e82ec31d3c87365a12743c43c2b5feca79b7ee38745",
+      "finalSha256": "b90365c0ff7748090b47aea7388706bfb809bc8fc0064fd587c9243f17f67819",
+      "productionArt": "GA-01-B_v3_1950px_600ppi.png",
+      "productionArtSha256": "6af09cae576ea5a6cbd8b8c18b578910bff5973755290662ba9c12e1841f1ad4",
+      "patch": {
+        "left": 398,
+        "top": 507,
+        "width": 324,
+        "height": 155
+      },
+      "placement": {
+        "left": 430,
+        "top": 538,
+        "width": 259,
+        "height": 91
+      },
+      "plateColorOffset": [
+        3.7406320541760723,
+        3.7688487584650114,
+        -2.3169300225733633
+      ],
+      "outsidePatchChangedPixels": 0,
+      "preservedExactF2F2F2Pixels": 363562
+    }
+  ]
+}
