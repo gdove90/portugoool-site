@@ -185,3 +185,26 @@ generate the anchor in an ordinary room.
 GOOOOOL call peaking on the net, hard silence on the cut back, static and
 CRT click), a 1080p re-render of the chosen takes, the 30 s version with
 Clip 3 and a reaction close-up, and the owner's sign-off on the cut.
+
+## Instagram delivery check (2026-09-25)
+
+Two delivery masters were built from the rough cut and probed with ffprobe:
+
+| File | Use | Spec |
+|---|---|---|
+| `output/WEAR-THE-FEELING-short-v1-REELS-STORIES-1080x1920.mp4` | Reels, Stories, Reels ads | 1080 x 1920 (9:16), H.264 High 4.1, yuv420p, 30 fps, ~8.6 Mbps, AAC-LC 48 kHz stereo (silent placeholder track), moov faststart, 19.6 s, 21 MB |
+| `output/WEAR-THE-FEELING-short-v1-FEED-1080x1350.mp4` | Feed post / grid preview (4:5) | 1080 x 1350 centre crop of the same cut, same encode, 22 MB |
+
+Against Instagram's published limits: MP4/MOV with H.264 + AAC, 9:16 for
+Reels and Stories, 4:5 for feed, 30 fps (23 to 60 accepted), minimum
+1080 px wide, under 4 GB, Reels up to 90 s (this is 19.6 s), Stories up to
+60 s per story. All pass.
+
+Safe zones: every card's content sits inside the Reels UI-free area (rows
+250 to 1580 of 1920, left of the right-hand icon column) and inside the
+4:5 feed crop (rows 285 to 1635). The actor and ball are centred in every
+clip, so the 4:5 crop keeps heads and the goal.
+
+Not yet: the audio track is silence. Replace it with the sound pass before
+posting; Instagram accepts silent video, but Reels without sound
+underperform and the GOOOOOL call is the point of the ad.
