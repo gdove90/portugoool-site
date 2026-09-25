@@ -59,10 +59,10 @@
   "apliiq_design_id": 6121043,
   "view": "front",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
-  "site_px": "841x1051",
+  "site_px": "1122x1402",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "52E47B149A465C13DCBF670F8C5DD27CD669B2A20D703D064E8938022ECD0A3C",
-  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
+  "site_sha256": "1F2D5FE2549AA37442121ED4DFF24CE729396097E44FABDD2839D13E00383385",
+  "site_copy_source": "owner ChatGPT render (see owner-render-grey-heather-red-band-* rows), re-supplied 2026-09-25"
  },
  {
   "file": "apliiq-render-6121043-grey-heather-red-band-back.png",
@@ -72,10 +72,10 @@
   "apliiq_design_id": 6121043,
   "view": "back",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
-  "site_px": "851x1064",
+  "site_px": "1122x1402",
   "site_fit": "scripts/fit-apliiq-render-4x5.py: garment 0.80 of frame height, top 0.10, white background flood-filled to #F4F4F2, sides padded, resized to 1137x1421",
-  "site_sha256": "591D88295C64AB16E0E1221FB91B201A3395DCA9D776F94CD66B57223902D417",
-  "site_copy_source": "owner ChatGPT render (see owner-render-* rows) since 2026-09-24 04:xx"
+  "site_sha256": "14B5C920A095662FA2B7FDECD97706A3337B4505AE76D50AC4D92AF08C6DA853",
+  "site_copy_source": "owner ChatGPT render (see owner-render-grey-heather-red-band-* rows), re-supplied 2026-09-25"
  },
  {
   "file": "apliiq-render-6121042-black-blue-band-front.png",
@@ -245,25 +245,25 @@
  },
  {
   "file": "owner-render-grey-heather-red-band-front.png",
-  "bytes": 837550,
-  "sha256": "A9D90D48D7A899E94C6FF8BE0C2F32D41087611B221F23CDBD8CCDE9ADC5C318",
-  "px": "1200x1200",
-  "source": "owner download (ChatGPT render), 2026-09-24 04:54 (named GOOOL_Grey_Heather_Red_Band_Hoodie_*_Website.png, 1200x1200)",
+  "bytes": 1957130,
+  "sha256": "C013280B1F04DCDE0AFB66E754BE1C9A527BA412871E9CC03E29DD43F89F9CE4",
+  "px": "1122x1402",
+  "source": "owner download (ChatGPT render), 2026-09-25 02:03; replaces the 1200 px square render of 2026-09-24 04:54, now in designs/_archive/hoodie-grey-heather-red-owner-renders-2026-09-24/",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
-  "site_px": "841x1051",
-  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
-  "site_sha256": "52E47B149A465C13DCBF670F8C5DD27CD669B2A20D703D064E8938022ECD0A3C"
+  "site_px": "1122x1402",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 90 --garment-height 0.80 --top 0.10: own background kept (render is already 4:5), garment framed per render; threshold 90 because the vignette otherwise read as garment",
+  "site_sha256": "1F2D5FE2549AA37442121ED4DFF24CE729396097E44FABDD2839D13E00383385"
  },
  {
   "file": "owner-render-grey-heather-red-band-back.png",
-  "bytes": 846978,
-  "sha256": "64EC77040D4EF2400D40CADB338A4A937E50FBDB5CFF6BD355752D480F4FE31A",
-  "px": "1200x1200",
-  "source": "owner download (ChatGPT render), 2026-09-24 04:54 (named GOOOL_Grey_Heather_Red_Band_Hoodie_*_Website.png, 1200x1200)",
+  "bytes": 1901728,
+  "sha256": "ABEF11DE3239CECCA731CDA681F5BF52EF5730B64437FE976DE388DFEF593728",
+  "px": "1122x1402",
+  "source": "owner download (ChatGPT render), 2026-09-25 02:03; replaces the 1200 px square render of 2026-09-24 04:54, now in designs/_archive/hoodie-grey-heather-red-owner-renders-2026-09-24/",
   "site_copy": "public/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
-  "site_px": "851x1064",
-  "site_fit": "scripts/fit-product-image-4x5.py --threshold 60 --garment-height 0.80 --top 0.10: own background extended, garment 0.80 of frame height, framed per render",
-  "site_sha256": "591D88295C64AB16E0E1221FB91B201A3395DCA9D776F94CD66B57223902D417"
+  "site_px": "1122x1402",
+  "site_fit": "scripts/fit-product-image-4x5.py --threshold 90 --garment-height 0.80 --top 0.10: own background kept (render is already 4:5), garment framed per render; threshold 90 because the vignette otherwise read as garment",
+  "site_sha256": "14B5C920A095662FA2B7FDECD97706A3337B4505AE76D50AC4D92AF08C6DA853"
  },
  {
   "file": "owner-render-bone-red-band-front.png",

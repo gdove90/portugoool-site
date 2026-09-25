@@ -102,6 +102,10 @@ exactly.
   back, drawstrings now visible). They replace Apliiq's render as the site
   copies; all six hoodie designs now show owner renders. Deployed the same
   morning with the launch build.
+- 2026-09-25 02:03 — owner re-supplied the Grey Heather · Red renders at
+  full 4:5 size (the first pair were 1200 px squares and sat smaller than
+  the rest of the row). Replaced on the site and in site-imagery; the
+  squares moved to designs/_archive/.
 - 2026-09-24 03:55 — handoff filed at
   `designs/25_core-hoodie-remake-2026-09-24/` (zip `goool (8).zip`,
   seven files, checksums in its FILES.json). This record written.

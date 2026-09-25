@@ -31,9 +31,12 @@ Heather · Red (`owner-render-*.png` here, fitted with
 supplied the Bone · Red pair on 2026-09-25 01:47 (already 1122 x 1402,
 drawstrings visible; fitted at `--threshold 90` because the vignette on
 that render otherwise read as garment), so all six site copies are now
-owner renders. The Apliiq renders stay here as the supplier originals. The Grey
-Heather · Red renders are 1200 px squares, so their site copies are 841 x
-1051 / 851 x 1064 rather than the 1137 x 1421 of the rest.
+owner renders. The Apliiq renders stay here as the supplier originals. The
+owner re-supplied the Grey Heather · Red pair on 2026-09-25 02:03 at 1122 x
+1402 (drawstrings visible), replacing the 1200 px square renders of the
+night before, whose site copies had been only 841 x 1051 / 851 x 1064;
+the squares are in `designs/_archive/hoodie-grey-heather-red-owner-renders-2026-09-24/`.
+Fitted at `--threshold 90` like the Bone · Red pair.
 
 The previous wordmark-only site images are in
 `designs/_archive/hoodie-wordmark-imagery-2026-09-24/`.
