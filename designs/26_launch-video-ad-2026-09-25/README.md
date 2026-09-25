@@ -110,3 +110,16 @@ as the brief itself insists. Do not let the generator draw the wordmark.
 - Instagram plan and copy: `designs/18_launch_operations/INSTAGRAM-LAUNCH-PLAN.md`,
   `designs/18_launch_operations/INSTAGRAM-COPY-READY.md`
 - Voice and taglines: `designs/00_brand/voice.md`
+
+## Character reference (2026-09-25)
+
+The owner supplied the actor: an AI-generated studio portrait (ChatGPT,
+downloaded 2026-09-25 04:36), filed as
+`references/model-reference-full-2026-09-25.png` with a head-and-shoulders
+crop `references/model-reference-head-2026-09-25.png` for Higgsfield's
+character reference. Synthetic person, no real likeness, which is what
+the AI-imagery policy requires for ad talent. The v2 brief's Clip 0 and
+consistency notes now describe him: late twenties, light skin, short
+dark-brown hair slicked back, full ginger-brown beard, hazel eyes, broad
+muscular build. He is shirtless in the reference; Clip 0 puts him in the
+tee and the bedroom before any other clip is generated.
