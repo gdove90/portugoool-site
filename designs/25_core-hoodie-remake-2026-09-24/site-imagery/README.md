@@ -40,3 +40,8 @@ Fitted at `--threshold 90` like the Bone · Red pair.
 
 The previous wordmark-only site images are in
 `designs/_archive/hoodie-wordmark-imagery-2026-09-24/`.
+
+
+## Club Blue backdrop correction — 2026-09-25
+
+The six Club Blue public images and their launch-package copies now use a uniform sRGB #F2F2F2 backdrop. Original garment pixels and framing are retained; source originals remain archived. The source imagery and masks for this background correction, lossless PNG/WebP outputs, pixel verification and future-upload specification are in `designs/27_product-backdrop-standard-2026-09-25/`. The FILES.json below this folder records the earlier imagery import; use the new correction package verification.json for the backdrop change. Red-band images have not been modified in this correction.

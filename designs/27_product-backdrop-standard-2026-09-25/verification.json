@@ -1,0 +1,92 @@
+[
+  {
+    "file": "GOOOL_STD_HOODIE_BLACK_BLUE_FRONT",
+    "width": 1104,
+    "height": 1380,
+    "sourceSha256": "95e2ab8c08c3c7ec1f358b1c7029a3c518bee79639ed9fb5ef8414b6d19cc1dd",
+    "protectedInteriorPixels": 776679,
+    "changedProtectedInteriorPixels": 0,
+    "flatBackgroundPixels": 704884,
+    "backgroundRGB": [
+      242,
+      242,
+      242
+    ],
+    "losslessWebpVerified": true
+  },
+  {
+    "file": "GOOOL_STD_HOODIE_BLACK_BLUE_BACK",
+    "width": 1106,
+    "height": 1382,
+    "sourceSha256": "e61d5ab757f979ce0513365ffd91ee11d1531ce94008f17d04184bf1e66d0a96",
+    "protectedInteriorPixels": 709152,
+    "changedProtectedInteriorPixels": 0,
+    "flatBackgroundPixels": 780230,
+    "backgroundRGB": [
+      242,
+      242,
+      242
+    ],
+    "losslessWebpVerified": true
+  },
+  {
+    "file": "GOOOL_STD_HOODIE_BONE_BLUE_FRONT",
+    "width": 1078,
+    "height": 1348,
+    "sourceSha256": "b114764e6aa3153ba4690895ef311be29eea0f98020f9e88ae3eae80a1e722e0",
+    "protectedInteriorPixels": 708007,
+    "changedProtectedInteriorPixels": 0,
+    "flatBackgroundPixels": 699957,
+    "backgroundRGB": [
+      242,
+      242,
+      242
+    ],
+    "losslessWebpVerified": true
+  },
+  {
+    "file": "GOOOL_STD_HOODIE_BONE_BLUE_BACK",
+    "width": 1081,
+    "height": 1351,
+    "sourceSha256": "09d38b8fd2a4de5c0e7399b7538b62ec91b28da90c67ab97db5190aaaa36f91a",
+    "protectedInteriorPixels": 711567,
+    "changedProtectedInteriorPixels": 0,
+    "flatBackgroundPixels": 703584,
+    "backgroundRGB": [
+      242,
+      242,
+      242
+    ],
+    "losslessWebpVerified": true
+  },
+  {
+    "file": "GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT",
+    "width": 1179,
+    "height": 1474,
+    "sourceSha256": "7a276af0e01939d3510100299e3a7e93983fd57adbf1ef77c94f13e249e2cd52",
+    "protectedInteriorPixels": 915904,
+    "changedProtectedInteriorPixels": 0,
+    "flatBackgroundPixels": 768867,
+    "backgroundRGB": [
+      242,
+      242,
+      242
+    ],
+    "losslessWebpVerified": true
+  },
+  {
+    "file": "GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK",
+    "width": 1187,
+    "height": 1484,
+    "sourceSha256": "29da582ce4378c4f5af043a5a90afff98277dd283147fc190d4da332c394c7e6",
+    "protectedInteriorPixels": 913052,
+    "changedProtectedInteriorPixels": 0,
+    "flatBackgroundPixels": 797878,
+    "backgroundRGB": [
+      242,
+      242,
+      242
+    ],
+    "losslessWebpVerified": true
+  }
+]

@@ -28,3 +28,13 @@ body {
     pointer-events: none;
   }
 }
+
+/* Shared catalog backdrop. Master specification: designs/27_product-backdrop-standard-2026-09-25. */
+:root {
+  --product-backdrop: #f2f2f2;
+}
+
+/* Outside Tailwind layers so legacy bg-studio/bg-smoke utilities cannot vary product tiles. */
+.product-media {
+  background-color: var(--product-backdrop);
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "GOOOL Neutral Light Gray",
+  "colorSpace": "sRGB",
+  "hex": "#F2F2F2",
+  "rgb": [242, 242, 242],
+  "opacity": 1,
+  "fill": "solid",
+  "gradient": false,
+  "vignette": false,
+  "backgroundTexture": false,
+  "exteriorShadow": false,
+  "preserveGarmentLighting": true,
+  "cssVariable": "--product-backdrop",
+  "newMasterSize": {"width": 1600, "height": 2000},
+  "existingBackgroundOnlyEdits": "preserve original dimensions, framing and garment pixels",
+  "masterFormat": "PNG",
+  "webFormat": "lossless WebP"
+}
