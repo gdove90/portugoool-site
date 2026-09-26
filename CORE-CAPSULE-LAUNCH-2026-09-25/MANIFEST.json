@@ -362,8 +362,8 @@
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/artwork/v6-2026-09-25/README.md",
   "source": "designs/31_matchday-tee-v6-all-colours-2026-09-25/README.md",
-  "bytes": 3133,
-  "sha256": "1877AA4C030BAA0C63077F712C1E1183E26BDE5810DA4E2D46460F52FC5F24CC"
+  "bytes": 4992,
+  "sha256": "D1899F27F3935659AABF3B8FFEBA70771A37FBA9F4B4421968A8E5157EC323C0"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/02_modern-sport-performance-tee/package-docs/ARTWORK-AUDIT.md",
@@ -1382,8 +1382,8 @@
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/apliiq-product-mapping.md",
   "source": "designs/11_fulfillment/apliiq-product-mapping.md",
-  "bytes": 15639,
-  "sha256": "681A8B79C7A652BDD11C78A1A3C4A60AEDB11F956320A74A9BEABE984E492189"
+  "bytes": 16538,
+  "sha256": "BD2B6EBF54E72CDB335C562137753576CBDDFB4B58CAD6985D16AF8D5A970A07"
  },
  {
   "file": "CORE-CAPSULE-LAUNCH-2026-09-25/_decisions-and-pricing/LAUNCH-TASK-LIST.md",

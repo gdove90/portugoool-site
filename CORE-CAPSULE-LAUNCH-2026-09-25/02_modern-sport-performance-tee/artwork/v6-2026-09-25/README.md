@@ -35,19 +35,48 @@ Name: the handoff proposes "GOOOL Core Matchday Tee". The owner locked
 - Description now says black, true royal or white.
 - Image cache revision bumped for the V6 backs.
 
-## Apliiq (supplier) — still to do
+## Apliiq (supplier) — done 2026-09-25
 
-Follow section 3 of `HANDOFF-AS-RECEIVED.md`:
+Apliiq cannot change a placement's size on a saved design, so all three
+colourways were rebuilt as NEW saved designs in the v5 customizer (owner's
+instruction: reupload and mark the old ones "delete"). Every placement was
+set numerically through the customizer's own resize handler, then verified
+on each design page.
 
-1. 6112037 (Black) and 6113361 (True Royal): replace the back art with the
-   v6 WHITE-PRINT file at exactly 5.00 × 1.812 in, top 2.00 in below the
-   back collar seam. Never let Apliiq auto-fit. Front stays as saved.
-2. Create the White design from the ink files, same sizes and positions,
-   read its id and five SKUs from the account, then add a White entry to
-   `fulfillment.ts` and remove `comingSoon` from the variant.
-3. Proof-check all three (A opening, E arms, S openings, cut tips, solid rule).
-4. No physical sample exists for any of them. Order one before selling on
-   the new back.
+| Colour | Saved design | Front | Back | SKUs (S, M, L, XL, XXL) |
+|---|---|---|---|---|
+| Black | **6136475** | `GA-01-F_v3_WHITE-PRINT_3300px_300ppi.png`, 11 in x 3.72 in, ideal quality | `GA-01-B_v6_5IN_WHITE-PRINT_3000px_600ppi.png`, 5 in x 1.81 in, ideal quality | `APQ-6136475S6A1 S7A1 S8A1 S1A1 S2A1` |
+| True Royal | **6136494** | same file, same size | same file, same size | `APQ-6136494S6A1 S7A1 S8A1 S1A1 S2A1` |
+| White | **6136511** | `GA-01-F_v3_INK-PRINT_3300px_300ppi.png`, 11 in x 3.72 in | `GA-01-B_v6_5IN_INK-PRINT_3000px_600ppi.png`, 5 in x 1.81 in | `APQ-6136511S6A1 S7A1 S8A1 S1A1 S2A1` |
+
+Common to all three: Sport-Tek ST720, one colour offered per design,
+transfer print (DTF, Apliiq service id 17) on both placements, the
+production file linked as the hi-res version of each placement (Apliiq
+reads "ideal quality"), no branding service (matches the old 6112037),
+7 sizes offered XS–XXXL (the site sells S–XXL; XS is `S5A1`, XXXL `S21A1`).
+Apliiq displays the back height rounded to 1.81 in; the stored size is
+100 x 36.24 px at 20 px/in = 5.00 x 1.812 in.
+
+Placement offsets, measured on Apliiq's base mockups (590 x 900 px,
+20 px/in, front base 4902, back base 4903): front collar seam at y 252,
+front art top at y 312 = **3.00 in below the front seam**, centred;
+back collar seam at y 203, back art top at y 243 = **2.00 in below the
+back seam**, centred. The front print box starts 2.4 in below the front
+seam, the back box 0.15 in below the back seam, so both targets sit inside
+Apliiq's allowed area.
+
+The earlier designs **6112037** (Black) and **6113361** (True Royal),
+which carry the failed 3.25 in back, were renamed **"delete"** on Apliiq
+(not deleted; Apliiq offers no delete). `fulfillment.ts` no longer maps
+them. Any open order placed against them before this change still prints
+from them; check Apliiq orders before deleting for good.
+
+Activity-log lines: 6136475 "9/25/2026, 10:34:48 pm - product name
+updated", 6136494 "10:43:31 pm", 6136511 "10:48:05 pm" (the customizer
+logs the save as a name update).
+
+Still unverified: no physical sample of any colourway exists. Order one
+before treating the v6 back as production-approved.
 
 ## Owner note
 

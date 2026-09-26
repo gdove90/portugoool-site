@@ -70,3 +70,11 @@ No existing products, supplier designs, images or customer records removed. Sati
 - https://help.apliiq.com/portal/en/kb/articles/fulfillment-url
 - https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4
 - https://support.google.com/accounts/answer/185833?hl=en
+
+## Re-verification — 2026-09-25, late evening (Claude)
+
+- Netlify production env re-listed: `APLIIQ_APP_ID`, `APLIIQ_SHARED_SECRET`, `APLIIQ_SUBMIT_ENABLED=true`, `APLIIQ_ALLOW_LIVE=true`, `FULFILLMENT_OPS_KEY`, Stripe live keys, shipping rate id and Supabase keys all present (values secret-masked). Nothing was added or changed; the keys above were already set in the pass recorded here.
+- Live `POST /api/fulfillment-ops {"action":"status"}` on goool.shop returned HTTP 200: supplier configured + authenticated (Apliiq 200), submissionEnabled true, liveEnvironmentAllowed true, orderStorageConnected true, emailProvider **disabled** (unchanged: the branded order email still has no sending credentials).
+- Code audit of the order pipeline (checkout -> Stripe -> webhook -> orders store -> Apliiq submit -> email -> success page) found every product for sale resolves a SKU for every colour and size (78 mapped variants incl. the three new Matchday designs). Checkout now also refuses a colourway flagged `comingSoon` server-side (commit b321f4c).
+- "Modern Sport Black/True Royal supplier designs still have earlier artwork" is superseded: the product is now Apliiq designs 6136475 Black, 6136494 True Royal, 6136511 White with the v6 back at 5.00 x 1.812 in and the v3 front at 11 x 3.72 in; 6112037 and 6113361 were renamed "delete". See `designs/31_matchday-tee-v6-all-colours-2026-09-25/README.md`.
+- Still open, unchanged: order email provider; a controlled paid test order; physical samples.
