@@ -90,3 +90,15 @@ No existing products, supplier designs, images or customer records removed. Sati
 
 - Stripe Dashboard → Settings → Business → Customer emails: "Successful payments" and "Refunds" switched ON in the owner's Chrome; both read ON again after a full page reload. Stripe's note: the setting is ignored when a payment is created with `receipt_email`; the webhook also sets `receipt_email` on the payment intent, so a receipt is sent either way.
 - Effect: every paid order now gets at least Stripe's receipt, independent of the site's own email provider (still `disabled` until the Google service-account variables exist in Netlify).
+
+## Test-order investigation — 2026-09-26, ~01:00 EDT (Claude)
+
+The owner reported buying Matchday Tee White/M on goool.shop and paying on the Stripe page. Every system was checked:
+
+- Stripe live (acct GOOOL ATHLETICS): no payment on the Payments page; the Events list ends with the GOOOL20 promotion-code creation at 8:27 PM Sep 25 and four expired Checkout Sessions; the API log has no checkout-session creation after Claude's smoke test at 11:56 PM. Stripe test mode: no payments.
+- Supabase: still one order (the 09-22 test-mode rehearsal) and the same two old webhook events.
+- Netlify Next.js server handler log, last 2 hours: a single invocation at 12:56 AM, which was Claude's reproduction.
+- Apliiq: only order 765292 (Stacked Cap, one size, ship-to Newport RI, billed to goool apparel llc, store name GOOOL, StoreOrderId empty) placed 9/25 directly on Apliiq, and 761201 from 9/12. No Matchday Tee order.
+- Reproduction in a clean browser: PDP White -> M -> Buy Now -> /cart -> Checkout -> live Stripe Checkout `cs_live_b15j...`, $48 + $9.50 shipping = $57.50, card / Cash App Pay / Affirm / Klarna / Bank offered. No console errors. The site pipeline up to payment works.
+
+Conclusion: no purchase was made on goool.shop. Nothing in the site, Stripe account or Netlify broke; the payment the owner made was not on this Stripe account (most likely the Apliiq order 765292 placed on Apliiq's own checkout). The controlled test order is still outstanding.
