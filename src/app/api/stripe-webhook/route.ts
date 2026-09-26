@@ -3,8 +3,7 @@ import Stripe from "stripe";
 import { Size } from "@/lib/types";
 import { getOrdersStore, OrderItemRow, OrderRow } from "@/lib/orders-store";
 import { submitPaidOrder } from "@/lib/fulfillment-submit";
-import { sendEmail } from "@/lib/email";
-import { buildOrderConfirmation } from "@/lib/emails/order-confirmation";
+import { queueOrderConfirmation } from "@/lib/email-delivery";
 import { markRedeemed } from "@/lib/discount";
 
 // ─────────────────────────────────────────────────────────────
@@ -126,6 +125,7 @@ function buildOrderRows(
     amount_subtotal_cents: session.amount_subtotal ?? null,
     amount_shipping_cents: session.total_details?.amount_shipping ?? null,
     amount_tax_cents: session.total_details?.amount_tax ?? null,
+      amount_discount_cents: session.total_details?.amount_discount ?? null,
     currency: session.currency ?? "usd",
     shipping_name: ship?.name ?? null,
     shipping_address: ship?.address ?? null,
@@ -229,6 +229,10 @@ export async function POST(req: NextRequest) {
     // concurrent first deliveries fall through to the session-unique
     // and CAS layers, which make double processing harmless.
     if (await store.hasEvent(event.id)) {
+      if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
+        const existing = await store.getOrderBySession(session.id);
+        if (existing?.status === "paid") await queueOrderConfirmation(store, existing.id);
+      }
       return NextResponse.json({ received: true, duplicate: true });
     }
 
@@ -347,51 +351,9 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Confirmation email. Customers should hear from GOOOL, not only
-    // from Stripe's receipt. Three rules, in this order of importance:
-    //   1. Never twice. claimConfirmationSend is a compare-and-set on
-    //      confirmation_sent_at, so a redelivered event loses the race
-    //      and mails nothing.
-    //   2. Never fatal. The payment is recorded; a mail provider having
-    //      a bad minute must not turn into a webhook 500 and a retry
-    //      storm on a captured payment.
-    //   3. Never a false positive. If the send fails we release the
-    //      claim, so the next delivery (or a manual replay) can still
-    //      get the receipt out.
-    let confirmation: string | undefined;
-    if (paid) {
-      try {
-        const claimed = await store.claimConfirmationSend(orderId);
-        if (!claimed) {
-          confirmation = "already_sent";
-        } else {
-          const fresh = await store.getOrderById(orderId);
-          const to = fresh?.customer_email ?? null;
-          if (!fresh || !to) {
-            await store.releaseConfirmationClaim(orderId);
-            confirmation = "no_recipient";
-          } else {
-            const items = await store.listOrderItems(orderId);
-            const mail = buildOrderConfirmation({ order: fresh, items });
-            const result = await sendEmail({ to, ...mail });
-            if (result.sent) {
-              confirmation = "sent";
-            } else {
-              await store.releaseConfirmationClaim(orderId);
-              confirmation = result.disabled ? "disabled" : "failed";
-            }
-          }
-        }
-      } catch (err) {
-        console.error("stripe-webhook: confirmation email threw for order", orderId, err);
-        try {
-          await store.releaseConfirmationClaim(orderId);
-        } catch {
-          /* best effort - the claim expiring unreleased only costs a receipt */
-        }
-        confirmation = "errored";
-      }
-    }
+    // Persist delivery before recording this event. A queue failure remains retryable;
+    // provider failures are handled independently by the delivery worker.
+    const confirmation = paid ? await queueOrderConfirmation(store, orderId) : undefined;
     // Stripe's own receipt, as a floor under our confirmation email.
     //
     // Checkout does not set receipt_email, so whether Stripe receipts a
@@ -416,7 +378,7 @@ export async function POST(req: NextRequest) {
         receipt = pi ? "no_recipient" : "no_payment_intent";
       } else {
         try {
-          await stripe.paymentIntents.update(pi, { receipt_email: to });
+          await stripe.paymentIntents.update(pi, { receipt_email: to }, { idempotencyKey: `receipt/${pi}` });
           receipt = "requested";
         } catch (err) {
           console.error("stripe-webhook: receipt_email failed for order", orderId, err);

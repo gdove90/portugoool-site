@@ -81,7 +81,7 @@ export async function ensureCoupon(stripe: Stripe, secretKey: string): Promise<s
       percent_off: 20,
       duration: "once",
       metadata: { source: COUPON_SOURCE },
-    });
+    }, { idempotencyKey: "goool20-coupon-v1" });
   }
   couponCache = { key: secretKey, id: coupon.id };
   return coupon.id;
@@ -96,22 +96,30 @@ export async function issueDiscountCode(email: string): Promise<IssueResult> {
   if (!db) return { status: "unavailable", reason: "database" };
 
   const hash = emailHash(email);
+  const livemode = /^(sk|rk)_live_/.test(secretKey);
   const { data: existing, error: readErr } = await db
     .from("discount_codes")
-    .select("code, redeemed_at, expires_at, livemode")
+    .select("code, stripe_promotion_code_id, redeemed_at, expires_at, livemode")
     .eq("email_hash", hash)
+    .eq("livemode", livemode)
     .maybeSingle();
   if (readErr) {
     console.error("[discount] ledger read failed:", readErr.message);
     return { status: "unavailable", reason: "database" };
   }
-  const livemode = secretKey.startsWith("sk_live_");
+
   if (existing && existing.livemode === livemode) {
     if (existing.redeemed_at) return { status: "redeemed" };
-    return { status: "existing", code: existing.code };
+    if (!existing.expires_at || Date.parse(existing.expires_at) > Date.now())
+      return { status: "existing", code: existing.code };
   }
 
   const stripe = new Stripe(secretKey);
+  // Expiry never creates a second first-order benefit if Stripe already recorded use.
+  if (existing) {
+    const previous = await stripe.promotionCodes.retrieve(existing.stripe_promotion_code_id);
+    if (previous.times_redeemed > 0) return { status: "redeemed" };
+  }
   const couponId = await ensureCoupon(stripe, secretKey);
   const expiresAt = Math.floor(Date.now() / 1000) + CODE_DAYS * 86400;
 
@@ -136,14 +144,20 @@ export async function issueDiscountCode(email: string): Promise<IssueResult> {
       console.error("[discount] stripe promotion code failed:", msg);
       return { status: "unavailable", reason: "stripe" };
     }
-    const { error: insErr } = await db.from("discount_codes").insert({
+    const values = {
       email_hash: hash,
       code,
       stripe_promotion_code_id: promo.id,
       stripe_coupon_id: couponId,
       livemode,
       expires_at: new Date(expiresAt * 1000).toISOString(),
-    });
+      issued_at: new Date().toISOString(),
+    };
+    const write = existing
+      ? await db.from("discount_codes").update(values).eq("email_hash", hash).eq("livemode", livemode)
+          .eq("stripe_promotion_code_id", existing.stripe_promotion_code_id).is("redeemed_at", null).select("code")
+      : await db.from("discount_codes").insert(values).select("code");
+    const insErr = write.error ?? (!write.data?.length ? { code: "23505", message: "Concurrent renewal" } : null);
     if (!insErr) return { status: "issued", code };
     // Lost a race with a concurrent signup for the same email: hand back
     // the row that won and retire the code we just made.
@@ -151,11 +165,14 @@ export async function issueDiscountCode(email: string): Promise<IssueResult> {
     if (insErr.code === "23505") {
       const { data: winner } = await db
         .from("discount_codes")
-        .select("code, redeemed_at")
+        .select("code, redeemed_at, expires_at, livemode")
         .eq("email_hash", hash)
+    .eq("livemode", livemode)
         .maybeSingle();
       if (winner?.redeemed_at) return { status: "redeemed" };
-      if (winner?.code) return { status: "existing", code: winner.code };
+      if (winner?.code && winner.livemode === livemode &&
+          (!winner.expires_at || Date.parse(winner.expires_at) > Date.now()))
+        return { status: "existing", code: winner.code };
     }
     console.error("[discount] ledger insert failed:", insErr.message);
     return { status: "unavailable", reason: "database" };

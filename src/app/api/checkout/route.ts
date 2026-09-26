@@ -7,15 +7,7 @@ import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from
 // ─────────────────────────────────────────────────────────────
 // Stripe Checkout handoff.
 //
-// TODO before launch:
-//   1. Create a Stripe account for GOOOL (separate from any other
-//      business) and put STRIPE_SECRET_KEY in .env.local / Netlify env.
-//   2. Add a webhook endpoint (checkout.session.completed) that writes
-//      the order + order_items rows to Supabase using the service role
-//      key, then triggers the Resend confirmation email.
-//   3. Replace mock catalog lookups with Supabase product queries so
-//      prices can never be spoofed from the client.
-//
+// Catalog prices are the server-side source of truth.
 // Security note: prices are ALWAYS looked up server-side by productId.
 // The client only sends ids, sizes, quantities, and customization text.
 // ─────────────────────────────────────────────────────────────
@@ -47,16 +39,25 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     items = body.items;
-    if (!Array.isArray(items) || items.length === 0) throw new Error();
+    if (!Array.isArray(items) || items.length === 0 || items.length > 50) throw new Error();
+    for (const item of items) {
+      if (!item || typeof item !== "object" || Array.isArray(item) ||
+          typeof item.productId !== "string" || typeof item.size !== "string" ||
+          typeof item.color !== "string" || !Number.isInteger(item.quantity) ||
+          item.quantity < 1 || item.quantity > MAX_LINE_QUANTITY ||
+          (item.customName != null && typeof item.customName !== "string") ||
+          (item.customNumber != null && typeof item.customNumber !== "string")) throw new Error();
+    }
   } catch {
     return NextResponse.json({ error: "Invalid cart." }, { status: 400 });
   }
 
   // Build line items with server-side prices only.
   const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
+  const compactItems = [];
   for (const item of items) {
     const product = getProductById(item.productId);
-    if (!product) {
+    if (!product || !product.isActive) {
       return NextResponse.json(
         { error: "A product in your cart is no longer available." },
         { status: 400 }
@@ -111,7 +112,7 @@ export async function POST(req: NextRequest) {
       }
       color = variant.name;
     }
-    const quantity = Math.max(1, Math.min(MAX_LINE_QUANTITY, Math.floor(item.quantity)));
+    const quantity = item.quantity;
 
     // Customization only counts when the product actually allows it.
     const customName = product.customNameAvailable
@@ -122,6 +123,14 @@ export async function POST(req: NextRequest) {
       : null;
     const hasCustomization = Boolean(customName || customNumber);
 
+    const mapping = resolveApliiqSku(product.id, color, item.size);
+    if (!mapping) return NextResponse.json(
+      { error: "This product variant cannot be ordered right now." }, { status: 400 });
+    const unitCents = product.priceCents + (hasCustomization ? product.customizationPriceCents : 0);
+    compactItems.push({ p: product.id, c: color, s: item.size, q: quantity,
+      u: unitCents, k: mapping.sku, a: mapping.apliiqProductId,
+      ...(customName ? { n: customName } : {}), ...(customNumber ? { m: customNumber } : {}) });
+
     const descriptionParts = [`Size ${item.size}`, color];
     if (customName) descriptionParts.push(`Name: ${customName}`);
     if (customNumber) descriptionParts.push(`Number: ${customNumber}`);
@@ -130,9 +139,7 @@ export async function POST(req: NextRequest) {
       quantity,
       price_data: {
         currency: "usd",
-        unit_amount:
-          product.priceCents +
-          (hasCustomization ? product.customizationPriceCents : 0),
+        unit_amount: unitCents,
         product_data: {
           name: hasCustomization
             ? `${product.name} (customized)`
@@ -173,43 +180,6 @@ export async function POST(req: NextRequest) {
   // completed payment fulfills — including delayed payments and
   // webhook retries. Metadata is set server-side, so it is not
   // client-tamperable.
-  const compactItems = [];
-  for (const item of items) {
-    const product = getProductById(item.productId)!;
-    const color = product.colorVariants
-      ? product.colorVariants.find((v) => v.name === item.color)!.name
-      : product.color;
-    const customName = product.customNameAvailable
-      ? item.customName?.trim().slice(0, 12) || undefined
-      : undefined;
-    const customNumber = product.customNumberAvailable
-      ? item.customNumber?.trim().slice(0, 2) || undefined
-      : undefined;
-    const hasCustomization = Boolean(customName || customNumber);
-    const unitCents =
-      product.priceCents + (hasCustomization ? product.customizationPriceCents : 0);
-
-    // A variant we cannot fulfill must never be sold: fail before payment.
-    const mapping = resolveApliiqSku(item.productId, color, item.size);
-    if (!mapping) {
-      return NextResponse.json(
-        { error: `${product.name} in ${color} (${item.size}) can't be ordered right now.` },
-        { status: 400 }
-      );
-    }
-
-    compactItems.push({
-      p: item.productId,
-      c: color,
-      s: item.size,
-      q: Math.max(1, Math.min(MAX_LINE_QUANTITY, Math.floor(item.quantity))),
-      u: unitCents,
-      k: mapping.sku,
-      a: mapping.apliiqProductId,
-      ...(customName ? { n: customName } : {}),
-      ...(customNumber ? { m: customNumber } : {}),
-    });
-  }
   const itemsJson = JSON.stringify(compactItems);
   const metadata: Record<string, string> = {};
   for (let i = 0; i * 450 < itemsJson.length; i++) {
@@ -231,19 +201,7 @@ export async function POST(req: NextRequest) {
         allowed_countries: ["US", "CA", "PT", "GB"],
       },
       shipping_options: [{ shipping_rate: shippingRateId }],
-      // Stripe's hosted Checkout cannot vary a shipping rate by the
-      // destination the buyer types in — the hosted page integration
-      // does not support dynamically customizing shipping options — and
-      // the Shipping Rate object has no destination field, so one rate
-      // serves all four allowed countries and renders ONE delivery
-      // estimate to every buyer. That estimate is a US figure.
-      //
-      // Until the rate itself is replaced with one carrying no estimate,
-      // this puts the country-split truth in words on Stripe's own page,
-      // beside the address form where the buyer picks their country.
-      // Keep it in sync with cart/page.tsx, terms, faq.ts and
-      // track-order: those all say 7-12 business days US, 3-5 weeks
-      // for CA/GB/PT, duties paid by the recipient.
+      // One approved rate; country-specific delivery estimates are stated below.
       custom_text: {
         shipping_address: {
           message:
@@ -251,10 +209,7 @@ export async function POST(req: NextRequest) {
         },
       },
       metadata,
-      // Shows the promo-code field on Stripe's page. GOOOL20 (20% off a
-      // customer's first order) is a promotion code on the Stripe account,
-      // created by scripts/create-goool20-promo.mjs; Stripe validates it
-      // and applies the discount, nothing here trusts the client.
+      // Stripe validates the individual first-order codes issued by lib/discount.
       allow_promotion_codes: true,
       success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/cart`,

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { apliiqSubmitEnabled, checkApliiqConnection, submissionEnvironmentAllowed } from "@/lib/apliiq";
+import { drainEmailQueue, queueOrderConfirmation } from "@/lib/email-delivery";
 import { emailProvider } from "@/lib/email";
 import { getOrdersStore } from "@/lib/orders-store";
 import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "@/lib/fulfillment-submit";
@@ -61,6 +62,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid body." }, { status: 400 });
   }
 
+  if (!body || typeof body !== "object") return NextResponse.json({ error: "Invalid body." }, { status: 400 });
+  if (body.action === "deliver-emails") {
+    try { return NextResponse.json(await drainEmailQueue(/^(sk|rk)_live_/.test(process.env.STRIPE_SECRET_KEY ?? ""))); }
+    catch { return NextResponse.json({ error: "Email queue unavailable." }, { status: 503 }); }
+  }
   // Read-only diagnostics reuse the existing operator authentication.
   // No order submissions, emails, credentials, or customer records are returned.
   if (body.action === "status") {
@@ -85,6 +91,11 @@ export async function POST(req: NextRequest) {
   const store = getOrdersStore();
   if (!store) {
     return NextResponse.json({ error: "Order storage unavailable." }, { status: 500 });
+  }
+
+  if (body.action === "retry-confirmation" && body.orderId) {
+    try { return NextResponse.json({ confirmation: await queueOrderConfirmation(store, body.orderId) }); }
+    catch { return NextResponse.json({ error: "Confirmation could not be queued." }, { status: 503 }); }
   }
 
   if (body.action === "reconcile" && body.orderId) {

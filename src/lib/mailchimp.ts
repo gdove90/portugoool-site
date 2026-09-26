@@ -36,11 +36,13 @@ export async function subscribeToAudience(
   // PUT by MD5(email) is Mailchimp's idempotent upsert: new visitors are
   // subscribed, repeat signups are a no-op, and anyone who unsubscribed
   // stays unsubscribed (status_if_new only applies to new members).
+  email = email.trim().toLowerCase();
   const memberHash = createHash("md5").update(email).digest("hex");
   const res = await fetch(
     `https://${datacenter}.api.mailchimp.com/3.0/lists/${audienceId}/members/${memberHash}`,
     {
       method: "PUT",
+      signal: AbortSignal.timeout(8000),
       headers: {
         Authorization: `Basic ${Buffer.from(`anystring:${apiKey}`).toString("base64")}`,
         "Content-Type": "application/json",
@@ -62,5 +64,8 @@ export async function subscribeToAudience(
     console.error("[mailchimp] error:", res.status, detail?.title ?? "");
     return { ok: false, status: 500, error: "Could not save your email. Try again." };
   }
+  const member = await res.json().catch(() => null);
+  if (member?.status !== "subscribed") return { ok: false, status: 400,
+    error: "This address is not subscribed. Please contact hello@goool.shop to rejoin." };
   return { ok: true };
 }

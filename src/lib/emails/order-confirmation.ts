@@ -94,6 +94,9 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
   const subtotal = order.amount_subtotal_cents;
   const shipping = order.amount_shipping_cents;
   const tax = order.amount_tax_cents;
+  const discount = order.amount_discount_cents ??
+    (subtotal != null && shipping != null && tax != null
+      ? Math.max(0, subtotal + shipping + tax - order.total_cents) : 0);
 
   // ── plain text ──────────────────────────────────────────────
   const textLines: string[] = [
@@ -113,6 +116,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
   }
   textLines.push("");
   if (subtotal != null) textLines.push(`  Subtotal: ${money(subtotal, cur)}`);
+  if (discount > 0) textLines.push(`  Discount: -${money(discount, cur)}`);
   if (shipping != null) textLines.push(`  Shipping: ${money(shipping, cur)}`);
   if (tax != null && tax > 0) textLines.push(`  Tax: ${money(tax, cur)}`);
   textLines.push(`  Total paid: ${money(order.total_cents, cur)}`);
@@ -202,6 +206,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${itemRows}</table>
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;">
           ${subtotal != null ? totalRow("Subtotal", money(subtotal, cur)) : ""}
+          ${discount > 0 ? totalRow("Discount", `-${money(discount, cur)}`) : ""}
           ${shipping != null ? totalRow("Shipping", money(shipping, cur)) : ""}
           ${tax != null && tax > 0 ? totalRow("Tax", money(tax, cur)) : ""}
           ${totalRow("Total paid", money(order.total_cents, cur), true)}
