@@ -27,4 +27,4 @@ Shipping remains USD 9.50. The replacement Stripe rate removes a misleading univ
 
 Validation so far: production build/type checks passed; 24 regression cases passed, covering all 83 sellable variants. Live database migration applied; anonymous queue/report/function access denied. Real atomic claim and duplicate-claim checks passed inside a rolled-back transaction. No paid order or real test email has yet been sent in this repair session.
 
-Deployment and delivery verification remain pending until separately recorded. This file is an implementation record, not an unconditional launch approval.
+Deployed as 2b2a307 on 2026-09-26 (Netlify 6ab8202360b9dc00085bb6f9). Both official Resend simulator deliveries passed, once each, via the scheduled worker. All nine live checkout tests passed and were expired. Real inbox placement and a paid-order rehearsal remain unverified; Free capacity is 100 emails/day. See LAUNCH-REPAIR-VERDICT-2026-09-26.md for the release boundary.

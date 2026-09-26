@@ -1,3 +1,5 @@
+> **Backend release 2026-09-26:** [Verified repair verdict](LAUNCH-REPAIR-VERDICT-2026-09-26.md) and [source of truth](LAUNCH-SOURCE-OF-TRUTH-2026-09-26.md) supersede older payment/email configuration statuses below. Resend is the only transactional sender; Google Workspace receives support replies. Real inbox and paid-order rehearsals remain separate from passed simulator and unpaid checkout tests.
+
 > **Current direction:** Read [25% pricing](PRICING-25-PERCENT.md) and [current design review](../19_colorway-and-back-print-review/README.md). These supersede historical prices, straight crewneck placement and cotton launch plans below. TASKS.json contains latest statuses.
 
 # GOOOL launch task list
@@ -7,30 +9,30 @@ Current execution authority: [Claude launch prompt](../../CLAUDE-LAUNCH-PRIORITY
 | ID | Priority | Task | Status | Owner |
 |---|---|---|---|---|
 | PAY-01 | P0 | Verify deployed Stripe test connection | complete | Codex |
-| PAY-02 | P0 | Complete Stripe business activation and bank onboarding | owner_action_required | Owner with Claude guidance |
-| DB-01 | P0 | Restore GOOOL Supabase query access and inspect migrations | sql_editor_access_reported_connector_separate | Owner/Claude |
+| PAY-02 | P0 | Complete Stripe business activation and bank onboarding | complete | Owner with Claude guidance |
+| DB-01 | P0 | Restore GOOOL Supabase query access and inspect migrations | complete | Owner/Claude |
 | DB-02 | P0 | Apply only missing order/catalog migrations | 0026_reported_applied_remaining_catalog_reconciliation_pending | Claude |
 | PAY-03 | P0 | Complete test purchase through webhook, order and tracking | unpaid_test_sessions_rehearsal_pending | Claude |
 | COST-01 | P1 | Verify supplier costs for every offered variant | 30_new_variant_item_quotes_verified_landed_costs_pending | Claude in authenticated Apliiq session |
 | PRICE-01 | P1 | Calculate and review six new retail prices | six_display_prices_owner_authorized | Claude/Owner |
 | PRICE-02 | P1 | Publish owner-authorized prices consistently | deployed_verified_all_10_products | Claude |
-| SHIP-01 | P1 | Finalize actual shipping charge and delivery wording | waiting_supplier_quote | Claude/Owner |
+| SHIP-01 | P1 | Finalize actual shipping charge and delivery wording | live_charge_and_wording_verified_supplier_cost_separate | Claude/Owner |
 | TAG-01 | P1 | Choose compatible label with actual-size proof | not_implemented_sewn_service_and_proof_pending | Claude/Owner |
 | ART-01 | P1 | Apply casual tee3in placement in supplier and website | prompt_ready_execution_pending | Claude |
 | ART-02 | P1 | Close circular scale and Modern Sport performance width issues | pending_proof | Claude/Owner |
 | SAMPLE-01 | P1 | Approve physical samples for the first release subset | owner_confirmed_none_approved | Owner |
-| PAY-04 | P0 | Configure live Stripe credentials/webhook/shipping and validate mode separation | waiting_activation_and_rehearsal | Claude |
+| PAY-04 | P0 | Configure live Stripe credentials/webhook/shipping and validate mode separation | configured_and_verified_paid_rehearsal_pending | Claude |
 | IG-01 | P2 | Prepare Instagram-only teaser and reveal drafts | drafts_prepared | Codex/Claude |
 | IG-02 | P2 | Verify Instagram profile, link and measurement | account_action_pending | Owner/Claude |
 | IG-03 | P2 | Review and publish brand-only Instagram teasers | awaiting_content_review | Owner/Claude |
 | IG-04 | P2 | Capture real garment launch content | waiting_samples | Owner/Claude |
-| LAUNCH-01 | P0 | Launch the first fully ready subset | gated | Owner/Claude |
+| LAUNCH-01 | P0 | Launch the first fully ready subset | store_public_backend_repaired_final_rehearsal_pending | Owner/Claude |
 | IG-05 | P2 | Publish launch-day Instagram sequence | waiting_launch | Owner/Claude |
 | IMG-01 | P1 | Remove generated model views from active galleries | deployed_verified | Claude |
 | IMG-02 | P1 | Standardize sharp garment imagery and seamless 4:5 frames | reference_tiles_deployed_placement_work_separate | Claude |
 | COPY-01 | P1 | Remove Printed in the USA price-area marketing badges | deployed_verified | Claude |
 | WEB-QA | P1 | Verify imagery cleanup and release preview | deployed_tiles_and_prices_verified | Claude |
-| FUL-01 | P0 | Configure and verify existing Apliiq store integration | production_app_credentials_absent | Claude |
+| FUL-01 | P0 | Configure and verify existing Apliiq store integration | authenticated_enabled_paid_rehearsal_pending | Claude |
 
 ## Completion requirements and evidence
 

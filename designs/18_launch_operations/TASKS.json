@@ -1,7 +1,7 @@
 {
-  "updated_at_utc": "2026-09-21T11:32:46.254654+00:00",
+  "updated_at_utc": "2026-09-26T19:52:34.032Z",
   "owner_priorities": [
-    "Stripe first; live status requires confirmation",
+    "Live Stripe verified; finish controlled paid-order rehearsal.",
     "Implement owner-authorized 25% contribution model; preserve explicit unknown landed costs and approved sewn-tag direction.",
     "Approved sewn tag; show any required alternative mockup before substitution",
     "No physical samples approved; release earliest fully ready subset",
@@ -22,20 +22,21 @@
       "id": "PAY-02",
       "priority": 0,
       "title": "Complete Stripe business activation and bank onboarding",
-      "status": "owner_action_required",
+      "status": "complete",
       "owner": "Owner with Claude guidance",
       "definition_of_done": "Business details submitted, activation requirements cleared, charges and payouts enabled. Enter sensitive details directly in Stripe, never chat.",
-      "depends_on": []
+      "depends_on": [],
+      "latest_evidence": "Live Stripe charges and payouts enabled; card payments active; no currently due requirements. Verified 2026-09-26. See LAUNCH-REPAIR-VERDICT-2026-09-26.md."
     },
     {
       "id": "DB-01",
       "priority": 0,
       "title": "Restore GOOOL Supabase query access and inspect migrations",
-      "status": "sql_editor_access_reported_connector_separate",
+      "status": "complete",
       "owner": "Owner/Claude",
       "definition_of_done": "Correct project oexibflpshttgzmdvhpr query succeeds; run LAUNCH-DB-CHECK.sql. Connector currently returns password authentication failure. Do not touch the other listed project.",
       "depends_on": [],
-      "latest_evidence": "SESSION-EVIDENCE-2026-09-21.md reports SQL editor access and 0026 applied; connector failure must not be interpreted as missing database. Recheck the working access path before migration work."
+      "latest_evidence": "Authenticated GOOOL SQL editor verified on oexibflpshttgzmdvhpr. Email migration and rolled-back claim tests passed; unrelated connector remains unused. See LAUNCH-REPAIR-VERDICT-2026-09-26.md."
     },
     {
       "id": "DB-02",
@@ -100,12 +101,13 @@
       "id": "SHIP-01",
       "priority": 1,
       "title": "Finalize actual shipping charge and delivery wording",
-      "status": "waiting_supplier_quote",
+      "status": "live_charge_and_wording_verified_supplier_cost_separate",
       "owner": "Claude/Owner",
       "definition_of_done": "Quote single and multi-item US orders including size/fulfillment split effects. $9.50 is a TEST placeholder, not an approved live policy. Record shipping handling and realistic production/transit windows.",
       "depends_on": [
         "COST-01"
-      ]
+      ],
+      "latest_evidence": "One active USD 9.50 rate, no universal US-only estimate. All nine new checkout tests used it. Supplier landed-cost verification remains COST-01. See LAUNCH-REPAIR-VERDICT-2026-09-26.md."
     },
     {
       "id": "TAG-01",
@@ -151,14 +153,15 @@
       "id": "PAY-04",
       "priority": 0,
       "title": "Configure live Stripe credentials/webhook/shipping and validate mode separation",
-      "status": "waiting_activation_and_rehearsal",
+      "status": "configured_and_verified_paid_rehearsal_pending",
       "owner": "Claude",
       "definition_of_done": "Use matching LIVE key, LIVE webhook secret and LIVE shipping rate in correct Netlify function contexts; remove test bypass, verify signature and event modes, redeploy safely. Keep product gates until launch review.",
       "depends_on": [
         "PAY-02",
         "PAY-03",
         "SHIP-01"
-      ]
+      ],
+      "latest_evidence": "One enabled live webhook; nine live unpaid checkout tests passed. Live/test discount separation fixed. Real paid rehearsal remains PAY-03. See LAUNCH-REPAIR-VERDICT-2026-09-26.md."
     },
     {
       "id": "IG-01",
@@ -205,7 +208,7 @@
       "id": "LAUNCH-01",
       "priority": 0,
       "title": "Launch the first fully ready subset",
-      "status": "gated",
+      "status": "store_public_backend_repaired_final_rehearsal_pending",
       "owner": "Owner/Claude",
       "definition_of_done": "Finalize product subset, verified costs/prices for each included variant (unready pieces stay closed), shipping/returns/support, payment/order/confirmation/track test, sample approval, accurate imagery and homepage routing. Then open only approved products and verify mobile purchase flow.",
       "depends_on": [
@@ -213,7 +216,8 @@
         "SAMPLE-01",
         "IG-04",
         "WEB-QA"
-      ]
+      ],
+      "latest_evidence": "Public store is live. Backend repair deployed 2b2a307; final real-inbox and paid-order checks remain. Email capacity is Free 100/day until owner approves an upgrade. See LAUNCH-REPAIR-VERDICT-2026-09-26.md."
     },
     {
       "id": "IG-05",
@@ -275,11 +279,11 @@
       "id": "FUL-01",
       "priority": 0,
       "title": "Configure and verify existing Apliiq store integration",
-      "status": "production_app_credentials_absent",
+      "status": "authenticated_enabled_paid_rehearsal_pending",
       "owner": "Claude",
       "definition_of_done": "Use existing GOOOL custom store 199130; configure credentials securely, verify integration and callbacks, exact SKU mappings and disabled submission during rehearsal. Activate only after product/launch gates pass.",
       "depends_on": [],
-      "latest_evidence": "LAUNCH-CONFIG-AUDIT-2026-09-21.json"
+      "latest_evidence": "Production Apliiq authentication passes, submission enabled, live environment allowed, 83 sellable variants mapped. No real paid-order supplier acceptance claimed. See LAUNCH-REPAIR-VERDICT-2026-09-26.md."
     },
     {
       "id": "COLOR-01",
@@ -337,6 +341,15 @@
       "definition_of_done": "Rework Modern Sport performance front/back, Varsity back and Minimal Club front fine text; inspect all other artwork. Preserve font families; measure supplier requirements at actual sizes and verify physical prints before sale. Never mark concept images as production proof.",
       "depends_on": [],
       "latest_evidence": "designs/19_colorway-and-back-print-review/LETTERING-PREFLIGHT.json"
+    },
+    {
+      "id": "EMAIL-01",
+      "priority": 0,
+      "title": "Consolidate and verify transactional email delivery",
+      "status": "deployed_simulator_verified_owner_inbox_pending",
+      "owner": "Codex/Owner",
+      "definition_of_done": "Resend domain and production sender active; durable deduplication and retries; actual subscriber and paid-order delivery verified.",
+      "latest_evidence": "Two official Resend simulator messages delivered; one attempt each. Real owner-inbox permission pending. Free limit 100/day; $20/month upgrade awaiting approval."
     }
   ]
 }
