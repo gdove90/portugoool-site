@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
+import { createHash } from "crypto";
 import { getOrdersStore } from "@/lib/orders-store";
 import { orderNumber } from "@/lib/fulfillment-submit";
 
@@ -42,6 +43,7 @@ export async function GET(req: NextRequest) {
   // Fulfillment truthfulness: only claim production once our order row
   // shows Apliiq actually accepted the submission.
   let recorded = false;
+  let purchaseEligible = false;
   let productionConfirmed = false;
   let reference: string | null = null;
   const store = getOrdersStore();
@@ -50,6 +52,7 @@ export async function GET(req: NextRequest) {
       const order = await store.getOrderBySession(sessionId);
       if (order) {
         recorded = true;
+        purchaseEligible = order.status === "paid" && order.livemode === true;
         reference = orderNumber(order.id);
         productionConfirmed =
           order.submission_status === "accepted" ||
@@ -70,5 +73,10 @@ export async function GET(req: NextRequest) {
     email: session.customer_details?.email ?? null,
     totalCents: session.amount_total ?? null,
     currency: session.currency ?? "usd",
-  });
+    purchaseEvent: paid && session.livemode && purchaseEligible && session.amount_total != null ? {
+      id: `purchase_${createHash("sha256").update(session.id).digest("hex").slice(0,32)}`,
+      value: session.amount_total / 100,
+      currency: (session.currency ?? "usd").toUpperCase(),
+    } : null,
+  }, { headers: { "Cache-Control": "no-store" } });
 }

@@ -1,7 +1,9 @@
 import { randomUUID } from "crypto";
 import { getSupabaseAdmin } from "./supabase";
 import { emailEnabled, EmailMessage, sendEmail } from "./email";
-import { OrdersStore } from "./orders-store";
+import { OrdersStore, OrderRow, ShipmentRow } from "./orders-store";
+import { hasShipped, shipmentIdentity } from "./shipment";
+import { buildShipmentNotification } from "./emails/shipment-notification";
 import { buildOrderConfirmation } from "./emails/order-confirmation";
 
 interface Delivery {
@@ -37,7 +39,7 @@ export async function deliverEmail(key: string): Promise<string> {
   const { error: saveError } = await db.from("email_deliveries").update(fields)
     .eq("key", key).eq("claim_token", token);
   if (saveError) throw new Error("Email delivery result could not be persisted.");
-  if (result.sent && row.order_id) {
+  if (result.sent && row.order_id && /^order\/(live|test)\/[^/]+$/.test(row.key)) {
     const { error: orderError } = await db.from("orders")
       .update({ confirmation_sent_at: new Date().toISOString() }).eq("id", row.order_id);
     if (orderError) console.error("[email] order marker update failed; delivery ledger remains authoritative");
@@ -56,6 +58,18 @@ export async function queueOrderConfirmation(store: OrdersStore, orderId: string
   // never make payment/fulfillment processing repeat.
   return "queued";
 }
+// "order" is the existing transactional-order category; the key separates receipts
+// from shipment notices. No new database kind or parallel sender is required.
+export async function queueShipmentNotification(order: OrderRow & { id: string }, shipment: ShipmentRow): Promise<string> {
+  if (!hasShipped(shipment)) return "not_shipped_or_no_tracking";
+  if (order.status !== "paid") return "not_paid";
+  if (order.fulfillment_status === "delivered") return "already_delivered";
+  if (!order.customer_email) throw new Error("Order has no shipment email address.");
+  const key = `shipment/${order.livemode ? "live" : "test"}/${order.id}/${shipmentIdentity(shipment)}`;
+  await queueEmail(key, "order", { to: order.customer_email, ...buildShipmentNotification(order, shipment) }, order.livemode, order.id);
+  return "queued";
+}
+
 export async function drainEmailQueue(livemode: boolean): Promise<Record<string, number>> {
   const db = database();
   if (!emailEnabled()) return { disabled: 1 };

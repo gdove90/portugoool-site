@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { getSupabaseAdmin } from "./supabase";
 import { getProducts } from "./products";
+import { shipmentRowId } from "./shipment";
 
 // ─────────────────────────────────────────────────────────────
 // Order persistence used by the Stripe webhook and Apliiq callback.
@@ -335,7 +336,8 @@ class SupabaseStore implements OrdersStore {
   }
 
   async addShipment(shipment: ShipmentRow) {
-    const { error } = await this.db.from("order_shipments").insert(shipment);
+    const { error } = await this.db.from("order_shipments").upsert(
+      { ...shipment, id: shipmentRowId(shipment) }, { onConflict: "id", ignoreDuplicates: true });
     if (error) throw new Error(`shipment insert failed: ${error.message}`);
   }
 
@@ -496,7 +498,9 @@ class FileStore implements OrdersStore {
   async addShipment(shipment: ShipmentRow) {
     this.withLock(() => {
       const s = this.load();
-      s.shipments.push(shipment);
+      if (!s.shipments.some(existing => shipmentRowId(existing) === shipmentRowId(shipment))) {
+        s.shipments.push(shipment);
+      }
       this.save(s);
     });
   }

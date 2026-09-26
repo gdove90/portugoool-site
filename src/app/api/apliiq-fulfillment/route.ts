@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyFulfillmentSignature } from "@/lib/apliiq";
-import { getOrdersStore } from "@/lib/orders-store";
+import { getOrdersStore, ShipmentRow } from "@/lib/orders-store";
+import { queueShipmentNotification } from "@/lib/email-delivery";
+import { trackingNumbers } from "@/lib/shipment";
 
 // ─────────────────────────────────────────────────────────────
 // Apliiq fulfillment callback (configured as the custom store's
@@ -66,19 +68,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ received: true, matched: false });
   }
 
-  await store.addShipment({
+  const shipment: ShipmentRow = {
     order_id: order.id,
     status: typeof payload.status === "string" ? payload.status : "",
     tracking_company:
       typeof payload.tracking_company === "string" ? payload.tracking_company : null,
-    tracking_numbers: Array.isArray(payload.tracking_numbers)
-      ? payload.tracking_numbers.map(String)
-      : [],
+    tracking_numbers: trackingNumbers(payload.tracking_numbers),
     tracking_urls: Array.isArray(payload.tracking_urls)
       ? payload.tracking_urls.map(String)
       : [],
     line_items: Array.isArray(payload.line_items) ? payload.line_items : [],
-  });
+  };
+  await store.addShipment(shipment);
+  // Persist intent before acknowledging the callback. On failure Apliiq can
+  // retry; the shipment row and email key both deduplicate that retry.
+  await queueShipmentNotification(order, shipment);
   const status = typeof payload.status === "string" ? payload.status.toLowerCase() : "";
   if (status === "delivered") {
     await store.setFulfillmentStatus(order.id, "delivered");

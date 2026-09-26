@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import MarketingConsent from "@/components/MarketingConsent";
 import { Anton, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
@@ -98,6 +99,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <DiscountPopup />
+          <MarketingConsent />
         </CartProvider>
       </body>
     </html>

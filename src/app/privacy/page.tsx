@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <ul className="mt-2 space-y-1.5">
             <li>· <strong className="text-ink">Orders:</strong> your email, shipping address, and items ordered, collected at checkout by Stripe. We never see or store card numbers.</li>
             <li>· <strong className="text-ink">Newsletter:</strong> your email, only if you join the list.</li>
-            <li>· <strong className="text-ink">On your device:</strong> your cart lives in your browser&apos;s local storage, not on our servers. No advertising cookies, no trackers.</li>
+            <li>· <strong className="text-ink">On your device:</strong> your cart lives in your browser&apos;s local storage, not on our servers. Optional advertising cookies are used only with your permission when our Meta advertising integration is enabled. You can decline or change your choice through Cookie settings. We respect Global Privacy Control.</li>
           </ul>
         </section>
 
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
           <p className="mt-2">
             To produce and ship your order, send order updates, respond to
             support requests, and announce new drops if you opted in.
-            That&apos;s it.
+            If you allow advertising cookies, we also measure visits and purchases to understand our Instagram and Facebook ads.
           </p>
         </section>
 
@@ -42,12 +42,12 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-semibold text-ink">Who touches your data</h2>
           <p className="mt-2">
             Only service providers required to run the store: Stripe
-            (payments), Supabase (order storage), Mailchimp (our email list,
+            (payments), Supabase (order storage), Resend (transactional order and shipping emails), Mailchimp (our email list,
             which is where newsletter signups are stored and from which
             newsletters are sent), Netlify
             (hosting), and our print partner (name and shipping address only,
             to make and deliver your order). We never sell or rent personal
-            data to anyone.
+            data to anyone. With your permission, Meta may also receive browser/device information, pages visited, and purchase value/currency for ad measurement. We do not intentionally send your email, shipping address, payment details or Stripe Checkout session ID to Meta.
           </p>
         </section>
 

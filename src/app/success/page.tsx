@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
+import { metaPixelId, trackVerifiedPurchase } from "@/lib/meta-pixel";
 
 // ─────────────────────────────────────────────────────────────
 // Post-checkout landing. The redirect alone proves nothing: this page
@@ -23,7 +24,15 @@ export default function SuccessPage() {
   const [status, setStatus] = useState<Status>({ kind: "loading" });
 
   useEffect(() => {
-    const sessionId = new URLSearchParams(window.location.search).get("session_id");
+    let sessionId = new URLSearchParams(window.location.search).get("session_id");
+    if (metaPixelId) {
+      // Keep Checkout credentials out of the URL before loading any advertising code.
+      try {
+        if (sessionId) sessionStorage.setItem("goool_checkout_session", sessionId);
+        else sessionId = sessionStorage.getItem("goool_checkout_session");
+      } catch { /* payment verification still works without storage */ }
+      if (sessionId) history.replaceState(history.state, "", window.location.pathname);
+    }
     if (!sessionId) {
       setStatus({ kind: "unknown" });
       return;
@@ -40,6 +49,7 @@ export default function SuccessPage() {
         }
         if (data.state === "paid") {
           clear(); // only a verified payment empties the cart
+          if (data.purchaseEvent) trackVerifiedPurchase(data.purchaseEvent);
           setStatus({
             kind: "paid",
             reference: data.reference ?? null,

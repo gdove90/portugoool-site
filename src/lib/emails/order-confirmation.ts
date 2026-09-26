@@ -14,9 +14,8 @@ import { products } from "../products";
 //   - It confirms a PAYMENT, not a shipment. Nothing here says
 //     "on its way" - these are printed to order and genuinely take
 //     days before a parcel exists.
-//   - No tracking number is promised in this email, and no tracking
-//     EMAIL is promised either: sendEmail has one caller and nothing
-//     sends a shipment notice. It points at /track-order, which works.
+//   - This receipt links to /track-order. A separate queued shipment
+//     notification is triggered by a signed supplier callback with tracking.
 //   - It gives the order reference, which is the only thing the
 //     customer needs to find the order again.
 //

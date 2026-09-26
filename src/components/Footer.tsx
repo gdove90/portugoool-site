@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CookieSettingsButton } from "./MarketingConsent";
 import Image from "next/image";
 
 export default function Footer() {
@@ -62,6 +63,7 @@ export default function Footer() {
             <Link href="/refunds" className="text-paper/50 hover:text-paper">Refund Policy</Link>
             <Link href="/terms" className="text-paper/50 hover:text-paper">Terms of Service</Link>
             <Link href="/privacy" className="text-paper/50 hover:text-paper">Privacy Policy</Link>
+            <CookieSettingsButton />
           </nav>
           <p className="text-xs leading-relaxed text-paper/40">
             © {new Date().getFullYear()} GOOOL Athletics LLC. All rights

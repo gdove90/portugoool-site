@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { apliiqSubmitEnabled, checkApliiqConnection, submissionEnvironmentAllowed } from "@/lib/apliiq";
-import { drainEmailQueue, queueOrderConfirmation } from "@/lib/email-delivery";
+import { drainEmailQueue, queueOrderConfirmation, queueShipmentNotification } from "@/lib/email-delivery";
 import { emailProvider } from "@/lib/email";
 import { getOrdersStore } from "@/lib/orders-store";
 import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "@/lib/fulfillment-submit";
@@ -76,6 +76,7 @@ export async function POST(req: NextRequest) {
       try {
         await store.getOrderById("00000000-0000-4000-8000-000000000000");
         await store.getOrderByExternalId("0");
+        await store.listShipments("00000000-0000-4000-8000-000000000000");
         orderStorageConnected = true;
       } catch { /* report unavailable without exposing database details */ }
     }
@@ -84,6 +85,8 @@ export async function POST(req: NextRequest) {
       submissionEnabled: apliiqSubmitEnabled(),
       liveEnvironmentAllowed: submissionEnvironmentAllowed(true).allowed,
       emailProvider: emailProvider(),
+      shipmentEmailsImplemented: true,
+      metaPixelConfigured: /^\d{5,25}$/.test(process.env.NEXT_PUBLIC_META_PIXEL_ID ?? ""),
       orderStorageConnected,
     }, { headers: { "Cache-Control": "no-store" } });
   }
@@ -91,6 +94,15 @@ export async function POST(req: NextRequest) {
   const store = getOrdersStore();
   if (!store) {
     return NextResponse.json({ error: "Order storage unavailable." }, { status: 500 });
+  }
+
+  if (body.action === "retry-shipment-notices" && body.orderId) {
+    const order = await store.getOrderById(body.orderId);
+    if (!order) return NextResponse.json({ error: "Order not found." }, { status: 404 });
+    const shipments = await store.listShipments(order.id);
+    const outcomes = [];
+    for (const shipment of shipments) outcomes.push(await queueShipmentNotification(order, shipment));
+    return NextResponse.json({ outcomes });
   }
 
   if (body.action === "retry-confirmation" && body.orderId) {
