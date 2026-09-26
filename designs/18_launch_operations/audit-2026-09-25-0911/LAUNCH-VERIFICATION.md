@@ -86,3 +86,7 @@ No existing products, supplier designs, images or customer records removed. Sati
 - **Stripe customer emails: "Successful payments" OFF, "Refunds" OFF.** Combined with `emailProvider: disabled`, a paying customer receives no email. Owner to enable both toggles (account setting) and set the Google service-account variables in Netlify.
 - Netlify production env re-checked in the UI and CLI: no `GOOGLE_SA_EMAIL` / `GOOGLE_SA_PRIVATE_KEY` in any context yet.
 
+## Stripe receipt emails enabled — 2026-09-26 (Claude, on the owner's instruction "turn them on")
+
+- Stripe Dashboard → Settings → Business → Customer emails: "Successful payments" and "Refunds" switched ON in the owner's Chrome; both read ON again after a full page reload. Stripe's note: the setting is ignored when a payment is created with `receipt_email`; the webhook also sets `receipt_email` on the payment intent, so a receipt is sent either way.
+- Effect: every paid order now gets at least Stripe's receipt, independent of the site's own email provider (still `disabled` until the Google service-account variables exist in Netlify).
