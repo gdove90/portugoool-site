@@ -301,34 +301,44 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     },
   },
   // GOOOL Matchday Tee (Sport-Tek ST720).
-  // Colourways on the SAME blank (garment 782) with the SAME artwork files
-  // at the same sizes - front GA-01-F v3 11 x 3.72 in, back GA-01-B v6
-  // 5.00 x 1.812 in, transfer print (designs/31_matchday-tee-v6-all-colours-2026-09-25).
-  // The White colourway uses ink versions of the same files. Apliiq keeps
-  // one saved design per colour, so each colour resolves to its own
-  // product id and SKU set. White has NO entry yet: its saved design does
-  // not exist, so resolveApliiqSku refuses it and the catalog marks the
-  // variant comingSoon. Add it here with the real id and SKUs read from
-  // the account, never inferred.
+  // Three saved designs built fresh on 2026-09-25 in Apliiq's customizer
+  // (designs/31_matchday-tee-v6-all-colours-2026-09-25): front GA-01-F v3
+  // 11.00 x 3.72 in, top 3.00 in below the front collar seam; back GA-01-B
+  // v6 5.00 x 1.812 in, top 2.00 in below the back collar seam; transfer
+  // print, hi-res production files linked, no branding service. White uses
+  // the ink versions of the same two files. Ids and SKUs read off each
+  // design's page the same day. The earlier designs 6112037 (Black) and
+  // 6113361 (True Royal), which carried the failed 3.25 in back, were
+  // renamed "delete" on Apliiq and are no longer mapped.
   "80000000-0000-4000-8000-000000000006": {
     Black: {
-      apliiqProductId: 6112037,
+      apliiqProductId: 6136475,
       skus: {
-        S: "APQ-6112037S6A1",
-        M: "APQ-6112037S7A1",
-        L: "APQ-6112037S8A1",
-        XL: "APQ-6112037S1A1",
-        XXL: "APQ-6112037S2A1",
+        S: "APQ-6136475S6A1",
+        M: "APQ-6136475S7A1",
+        L: "APQ-6136475S8A1",
+        XL: "APQ-6136475S1A1",
+        XXL: "APQ-6136475S2A1",
       },
     },
     "True Royal": {
-      apliiqProductId: 6113361,
+      apliiqProductId: 6136494,
       skus: {
-        S: "APQ-6113361S6A1",
-        M: "APQ-6113361S7A1",
-        L: "APQ-6113361S8A1",
-        XL: "APQ-6113361S1A1",
-        XXL: "APQ-6113361S2A1",
+        S: "APQ-6136494S6A1",
+        M: "APQ-6136494S7A1",
+        L: "APQ-6136494S8A1",
+        XL: "APQ-6136494S1A1",
+        XXL: "APQ-6136494S2A1",
+      },
+    },
+    White: {
+      apliiqProductId: 6136511,
+      skus: {
+        S: "APQ-6136511S6A1",
+        M: "APQ-6136511S7A1",
+        L: "APQ-6136511S8A1",
+        XL: "APQ-6136511S1A1",
+        XXL: "APQ-6136511S2A1",
       },
     },
   },

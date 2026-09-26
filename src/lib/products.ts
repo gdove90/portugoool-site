@@ -2736,16 +2736,16 @@ export const products: Product[] = [
         ],
       },
       // Third colourway from the 2026-09-25 package: ink versions of the
-      // same two files on the white ST720. comingSoon until the Apliiq
-      // saved design exists and fulfillment.ts carries its real id and
-      // SKUs; the hex is the render's garment body, to be re-sampled from
-      // Apliiq's own mockup once that design is saved.
+      // same two files on the white ST720. Apliiq saved design 6136511
+      // (fulfillment.ts) since 2026-09-25, so it sells like the others.
+      // Hex sampled from the lit body of Apliiq's own mockup render for
+      // that design (their swatch is a flat #FFFFFF; the garment reads
+      // #E7E7E7), so the swatch matches what ships.
       {
         name: "White",
         supplierColor: "white",
-        hex: "#F4F4F2",
+        hex: "#E7E7E7",
         skuFragment: "WHITE",
-        comingSoon: true,
         images: [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_WHITE_FRONT_V3.png",
