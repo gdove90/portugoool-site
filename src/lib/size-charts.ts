@@ -122,17 +122,17 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
  * meaningless.
  */
 const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
-  "70000000-0000-4000-8000-000000000001": "st720", // Performance Badge Tee
+  "70000000-0000-4000-8000-000000000001": "st720", // Core Badge Tee
   "70000000-0000-4000-8000-000000000002": "ind4000", // Core Hoodie · Red
   "70000000-0000-4000-8000-000000000006": "ind4000", // Core Hoodie · Club Blue (own product from 2026-09-24)
-  "70000000-0000-4000-8000-000000000003": "bc3010", // Casual Wordmark Tee · Red (3010 from 2026-09-23; was 4810GD)
-  "70000000-0000-4000-8000-000000000005": "bc3010", // Casual Wordmark Tee · Club Blue (own product from 2026-09-24)
+  "70000000-0000-4000-8000-000000000003": "bc3010", // Terrace Tee · Red (3010 from 2026-09-23; was 4810GD)
+  "70000000-0000-4000-8000-000000000005": "bc3010", // Terrace Tee · Club Blue (own product from 2026-09-24)
   "80000000-0000-4000-8000-000000000001": "bc3010", // Modern Sport Tee (archived)
   "80000000-0000-4000-8000-000000000002": "bc4810", // Athletics Varsity Tee
   "80000000-0000-4000-8000-000000000003": "bc3010", // Minimal Club Tee
   "80000000-0000-4000-8000-000000000004": "cc1717", // Circular Badge Tee
   "80000000-0000-4000-8000-000000000005": "as5150", // Circular Center Crewneck
-  "80000000-0000-4000-8000-000000000006": "st720", // Modern Sport Performance Tee
+  "80000000-0000-4000-8000-000000000006": "st720", // Matchday Tee
 };
 
 export function sizeChartFor(productId: string): SizeChart | null {

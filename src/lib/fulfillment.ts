@@ -21,7 +21,7 @@ interface ApliiqVariant {
 
 /** productId (catalog UUID) → color name → Apliiq variant. */
 const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
-  // GOOOL Performance Badge Tee (Sport-Tek ST720)
+  // GOOOL Core Badge Tee (Sport-Tek ST720)
   "70000000-0000-4000-8000-000000000001": {
     Black: {
       apliiqProductId: 6098962,
@@ -127,7 +127,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Casual Wordmark Tee · Red (4a set), rebuilt on the Bella+Canvas
+  // GOOOL Terrace Tee · Red (4a set), rebuilt on the Bella+Canvas
   // 3010 on 2026-09-24 (designs/00_asset-library/CASUAL-TEE-3010-DECISION.md).
   // One saved design per colour. Keys are the colorVariants[].name strings
   // from products.ts ("Black", "Natural"), because that is the value
@@ -163,7 +163,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Casual Wordmark Tee · Club Blue (4b set). Its own product since
+  // GOOOL Terrace Tee · Club Blue (4b set). Its own product since
   // 2026-09-24 (owner decision); before that the Natural blue-band design
   // was the Natural variant of ...0003.
   // Natural was saved by the owner on 2026-09-24 as design 6120887; an
@@ -300,7 +300,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Athletics Modern Sport Performance Tee (Sport-Tek ST720).
+  // GOOOL Matchday Tee (Sport-Tek ST720).
   // Two colourways on the SAME blank (garment 782) with the SAME artwork
   // files at the same sizes - front GA-01-F 11 x 3.73 in, back GA-01-B
   // 3.25 x 1.11 in, transfer print. Apliiq keeps one saved design per

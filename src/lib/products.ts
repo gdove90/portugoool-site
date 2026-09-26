@@ -1668,7 +1668,7 @@ export const products: Product[] = [
   // == First Capsule (Apliiq) ==
   {
     id: "70000000-0000-4000-8000-000000000001",
-    name: "GOOOL Performance Badge Tee",
+    name: "GOOOL Core Badge Tee",
     slug: "goool-performance-tee",
     description:
       "Lightweight training tee. GOOOL crest centered on the chest, athletic fit, taped neck.",
@@ -1680,7 +1680,7 @@ export const products: Product[] = [
     // eco-friendly fabric that resists fading and maintains color", so the
     // claim is attributed and not upgraded: resists fading, not never fades.
     //
-    // Shares a blank with the Modern Sport Performance Tee. This line owns
+    // Shares a blank with the Matchday Tee. This line owns
     // weight and colour; that one owns the neck, the label and the sleeve.
     // Lightness and wicking were drafted here and moved there to keep the
     // split clean.
@@ -1691,12 +1691,12 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
-        alt: "GOOOL Performance Badge Tee in black, front view",
+        alt: "GOOOL Core Badge Tee in black, front view",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
-        alt: "GOOOL Performance Badge Tee in black, back view",
+        alt: "GOOOL Core Badge Tee in black, back view",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
@@ -1711,12 +1711,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
-            alt: "GOOOL Performance Badge Tee in black, front view",
+            alt: "GOOOL Core Badge Tee in black, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
-            alt: "GOOOL Performance Badge Tee in black, back view",
+            alt: "GOOOL Core Badge Tee in black, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -1729,12 +1729,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
-            alt: "GOOOL Performance Badge Tee in white, front view",
+            alt: "GOOOL Core Badge Tee in white, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
-            alt: "GOOOL Performance Badge Tee in white, back view",
+            alt: "GOOOL Core Badge Tee in white, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -1747,12 +1747,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
-            alt: "GOOOL Performance Badge Tee in true royal, front view",
+            alt: "GOOOL Core Badge Tee in true royal, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
-            alt: "GOOOL Performance Badge Tee in true royal, back view",
+            alt: "GOOOL Core Badge Tee in true royal, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2014,7 +2014,7 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000003",
-    name: "GOOOL Casual Wordmark Tee · Red",
+    name: "GOOOL Terrace Tee · Red",
     slug: "goool-heavyweight-casual-tee",
     // Two rows on the shop, one per print colour (owner, 2026-09-24): this
     // one is the 4a set (red centre dash on the front lockup, red club band
@@ -2042,12 +2042,12 @@ export const products: Product[] = [
     images: [
         {
           src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
-          alt: "GOOOL Casual Wordmark Tee · Red in black, front view",
+          alt: "GOOOL Terrace Tee · Red in black, front view",
           caption: "Concept render. Not a photograph of a manufactured sample.",
         },
         {
           src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
-          alt: "GOOOL Casual Wordmark Tee · Red in black, back view",
+          alt: "GOOOL Terrace Tee · Red in black, back view",
           caption: "Concept render. Not a photograph of a manufactured sample.",
         },
       ],
@@ -2066,12 +2066,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee · Red in black, front view",
+            alt: "GOOOL Terrace Tee · Red in black, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee · Red in black, back view",
+            alt: "GOOOL Terrace Tee · Red in black, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2086,12 +2086,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee · Red in natural, front view",
+            alt: "GOOOL Terrace Tee · Red in natural, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee · Red in natural, back view",
+            alt: "GOOOL Terrace Tee · Red in natural, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2120,7 +2120,7 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000005",
-    name: "GOOOL Casual Wordmark Tee · Club Blue",
+    name: "GOOOL Terrace Tee · Club Blue",
     slug: "goool-heavyweight-casual-tee-blue",
     // The 4b set: GOOOL and ATHLETICS in Club Blue #3D6CC4 on the front
     // (ink dashes on natural, natural dashes on black), Club Blue band with
@@ -2149,12 +2149,12 @@ export const products: Product[] = [
     images: [
         {
           src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
-          alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, front view",
+          alt: "GOOOL Terrace Tee · Club Blue in natural, front view",
           caption: "Concept render. Not a photograph of a manufactured sample.",
         },
         {
           src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
-          alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, back view",
+          alt: "GOOOL Terrace Tee · Club Blue in natural, back view",
           caption: "Concept render. Not a photograph of a manufactured sample.",
         },
       ],
@@ -2170,12 +2170,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, front view",
+            alt: "GOOOL Terrace Tee · Club Blue in natural, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee · Club Blue in natural, back view",
+            alt: "GOOOL Terrace Tee · Club Blue in natural, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2191,12 +2191,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
-            alt: "GOOOL Casual Wordmark Tee · Club Blue in black, front view",
+            alt: "GOOOL Terrace Tee · Club Blue in black, front view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
-            alt: "GOOOL Casual Wordmark Tee · Club Blue in black, back view",
+            alt: "GOOOL Terrace Tee · Club Blue in black, back view",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2655,7 +2655,7 @@ export const products: Product[] = [
   // designs/30_modern-sport-open-a-2026-09-25/README.md.
   {
     id: "80000000-0000-4000-8000-000000000006",
-    name: "GOOOL Athletics Modern Sport Performance Tee",
+    name: "GOOOL Matchday Tee",
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
       "Performance training tee in black or true royal. White GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
@@ -2663,27 +2663,27 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    // Same blank as the Performance Badge Tee - Sport-Tek ST720, see
+    // Same blank as the Core Badge Tee - Sport-Tek ST720, see
     // fulfillment.ts - so it carries the supplier's spec, not a vaguer
     // paraphrase of it.
-    // Sport-Tek ST720, the same blank as the Performance Badge Tee, so the
+    // Sport-Tek ST720, the same blank as the Core Badge Tee, so the
     // subjects are split rather than the wording varied. Taped neck,
     // tear-away removable label and set-in sleeves are all in the packet
     // and the supplier listing; "full range of motion" is the supplier's
     // own phrase for the lightweight construction.
     fabric:
-      "3.8 oz is not much shirt, and that is the point. The same recycled polyester as the Performance Badge Tee, taped at the neck with a label that tears out, so nothing sits raw against your skin. Set-in sleeves follow the line of the shoulder and leave the arm its full range.",
+      "3.8 oz is not much shirt, and that is the point. The same recycled polyester as the Core Badge Tee, taped at the neck with a label that tears out, so nothing sits raw against your skin. Set-in sleeves follow the line of the shoulder and leave the arm its full range.",
     fit: "Athletic fit.",
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
         src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
-        alt: "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+        alt: "GOOOL Matchday Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
-        alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print",
+        alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print",
         caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
       },
     ],
@@ -2700,12 +2700,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
-            alt: "GOOOL Athletics Modern Sport Performance Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            alt: "GOOOL Matchday Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
-            alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, black garment",
+            alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, black garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2723,12 +2723,12 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
-            alt: "GOOOL Athletics Modern Sport Performance Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            alt: "GOOOL Matchday Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
-            alt: "Close-up concept of the Modern Sport Performance Tee's white upper-back GOOOL Athletics print, true royal blue garment",
+            alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, true royal blue garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
         ],
