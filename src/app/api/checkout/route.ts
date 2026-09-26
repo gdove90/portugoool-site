@@ -101,6 +101,14 @@ export async function POST(req: NextRequest) {
       if (!variant) {
         return NextResponse.json({ error: "Invalid color." }, { status: 400 });
       }
+      // A colourway the product page shows as coming soon must not be
+      // orderable through a crafted request either.
+      if (variant.comingSoon) {
+        return NextResponse.json(
+          { error: `${variant.name} is coming soon and can't be ordered yet.` },
+          { status: 400 },
+        );
+      }
       color = variant.name;
     }
     const quantity = Math.max(1, Math.min(MAX_LINE_QUANTITY, Math.floor(item.quantity)));

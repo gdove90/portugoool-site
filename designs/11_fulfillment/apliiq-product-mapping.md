@@ -233,6 +233,22 @@ order parked and ask.
   Bone on IND4000) alongside Black; remove extras in the product's
   "color offered" menu before ordering.
 
+## GOOOL Matchday Tee (ST720) — rebuilt 2026-09-25
+
+Catalog id `80000000-0000-4000-8000-000000000006`. Three saved designs,
+one per colour, read from each design page on 2026-09-25 (evening):
+
+| Colour (catalog string) | Apliiq design | S | M | L | XL | XXL |
+|---|---|---|---|---|---|---|
+| Black | 6136475 | APQ-6136475S6A1 | APQ-6136475S7A1 | APQ-6136475S8A1 | APQ-6136475S1A1 | APQ-6136475S2A1 |
+| True Royal | 6136494 | APQ-6136494S6A1 | APQ-6136494S7A1 | APQ-6136494S8A1 | APQ-6136494S1A1 | APQ-6136494S2A1 |
+| White | 6136511 | APQ-6136511S6A1 | APQ-6136511S7A1 | APQ-6136511S8A1 | APQ-6136511S1A1 | APQ-6136511S2A1 |
+
+Print: front GA-01-F v3 11 x 3.72 in, back GA-01-B v6 5.00 x 1.812 in,
+transfer print, hi-res files linked, no branding. Replaces 6112037 and
+6113361 (renamed "delete" on Apliiq, back was 3.25 in). Details:
+`designs/31_matchday-tee-v6-all-colours-2026-09-25/README.md`.
+
 ## Superseded log entries
 - 2026-09-14: Apliiq draft of the 4810GD casual tee found using
   `goool-wordmark-v2-shoulder-dark-7.png` at 8 × 2.75 in. Both wrong

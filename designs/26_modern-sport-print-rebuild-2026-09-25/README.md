@@ -1,3 +1,10 @@
+> **Superseded 2026-09-25 (later the same day):** the 3.25 in back on
+> 6112037 / 6113361 failed the 2 mm minimum on re-measurement. Both
+> designs were renamed "delete" on Apliiq and replaced by 6136475 (Black),
+> 6136494 (True Royal) and 6136511 (White) with the v6 back at
+> 5.00 x 1.812 in. See
+> [designs/31_matchday-tee-v6-all-colours-2026-09-25/README.md](../31_matchday-tee-v6-all-colours-2026-09-25/README.md).
+
 # Modern Sport Performance Tee — GA-01 print rebuild (2026-09-25)
 
 Correction of the GOOOL Athletics Modern Sport Performance Tee print

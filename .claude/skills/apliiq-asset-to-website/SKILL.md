@@ -88,11 +88,76 @@ browser_batch, find, computer, get_page_text, javascript_tool`).
   without changing its size or the design id. Use it when the art is
   redrawn at the SAME size. Confirm in the design's activity log.
 - **There is no way to change a placement's size on a saved design.** A
-  size change or a new colourway means building a new design in the
-  customizer (products → blank → customize), which yields a new design id
-  and new SKUs. That changes what live orders print: stop and get the
-  owner's go-ahead, then create it, read the id and SKUs off the account,
-  update `fulfillment.ts`, and only then remove `comingSoon`.
+  size change or a new colourway means building a NEW design in the
+  customizer, which yields a new design id and new SKUs. That changes what
+  live orders print: get the owner's go-ahead, build it, read the id and
+  SKUs off the design page, update `fulfillment.ts`, then remove
+  `comingSoon`. Rename the superseded design "delete" (owner convention;
+  Apliiq has no delete), never map it again.
+
+### Building a design in the v5 customizer (proven 2026-09-25)
+
+URL: `https://www.apliiq.com/customize/v5/mens/tshirts/<Blank-Slug>/design`
+(ST720 = `Sustainable-Athletic-Tee`). Wait ~10 s. Coordinates below are the
+1568x653 screenshot frame at a 1707-wide viewport.
+
+1. **Colour:** click the "colors" nav icon (60,265); tiles: white (180,242),
+   silver (273,242, selected by default: click it to deselect), true royal
+   (368,242), black (180,353). Confirm with the product summary text
+   (`colors | <name>`); one colour per design.
+2. **Upload:** `find "input type=file (all file inputs)"` and `file_upload`
+   the print PNG to the ref named **"upload artwork"** (`#v5ArtworkFileInput`;
+   the other refs are the wrong inputs and silently do nothing). Wait 20 s.
+   If a "loading artwork" overlay (`.toWait.waitingMsg`) sticks, remove it
+   with JS: `document.querySelectorAll('.toWait, .waitingMsg').forEach(w=>w.remove())`.
+3. **Select** the art with a REAL click (computer left_click on it; the
+   default drop is at frame (855,386) front, (850,300) back). Synthetic JS
+   clicks do not activate it. Check `$('#c-svgContainer .activeArtwork').length`.
+4. **Size and position numerically.** The customizer is jQuery UI
+   resizable at **20 px per inch** (front print box 280 x 380 px at
+   container (160,300); back box at (154,206)). The drag handle is hidden,
+   so call the widget's own stop handler:
+   ```js
+   const el=$('#c-svgContainer .activeArtwork');
+   const W=in*20, H=in*20, L=boxLeft+boxWidth/2-W/2, T=seamY+offset*20;
+   el.css({width:W+'px',height:H+'px',left:L+'px',top:T+'px'});
+   el.resizable('option','stop').call(el[0], $.Event('resizestop',{target:el[0]}),
+     {size:{width:W,height:H},position:{top:T,left:L},originalSize:{width:75,height:25},originalPosition:{top:300,left:263}});
+   const c=customizer.activeArtwork.current; [c.Value.Width_Inch,c.Value.Height_Inch,c.Value.position]
+   ```
+   Collar seams on Apliiq's ST720 base mockups: front y 252, back y 203
+   (container px). Front 3.00 in below seam = top 312; back 2.00 in below
+   = top 243. Verify the readout (`.artwork-dim` text, e.g. `11" X 3.72"`).
+   The Value.size stays in px; Apliiq stores inches from px/20.
+5. **Hi-res:** the size readout says `low (NaN dpi)` until the production
+   file is linked. `find "input type=file for linking high resolution
+   artwork"` (`#hires_ufileinp`, bound to the active artwork), `file_upload`
+   the same PNG, then click the **Yes** in the "continue uploading" dialog
+   (find it). Readout becomes `ideal quality` and
+   `c.Value.userItem.hiResPath()` is set. Do this per placement while it is
+   the active artwork.
+6. Production method select (`combobox "transfer print"`, value 17) is the
+   default; "enable recoloring" stays unchecked (white art stays white).
+7. **Back view:** `find "Back view tab"` (listitem) and click its ref; the
+   back base is 4903 with its own bounding box. Repeat 2 to 5.
+8. Branding: none for the Matchday Tee (the old design had none). Check
+   the old design's page before assuming.
+9. **Save:** `find "save design button"`, click; then `find` the name
+   textbox ("get creative with a name."), triple-click, type the name
+   (`GOOOL <Product> - <Colour>`), dispatch `change` on `#designedname`,
+   click the form's **save**. Wait 10 s. The new id is on
+   `https://www.apliiq.com/design` (row image `/Image/Product/<id>/…`).
+10. **Verify** on `/product/<id>`: scroll down once (the right column
+    renders lazily), read `document.body.innerText` from "color offered":
+    files, sizes, hi-res names, SKUs `APQ-<id>S6A1…`, activity log.
+11. **Rename the old design "delete":** on its page
+    `productView.Name('delete'); productView.savetd({currentTarget: <the save button>})`
+    (the plain click did not persist); reload to confirm the `h1`.
+
+Screenshots of the customizer time out while an artwork is selected; use
+JS readouts instead. `get_page_text` on design pages returns only the
+branding article; use `document.body.innerText`.
+
 - After any change: proof-check every placement on the mockup (open
   counters, letter gaps, solid rules, no auto-fit), record the activity
   log entry, and note that no physical sample exists until one is ordered.
@@ -107,5 +172,7 @@ deploy id, and the PDP URL returning 200. What is still unverified
 ## Records
 
 - 2026-09-25 Matchday Tee: back v6 5.00 x 1.812 in, White colourway.
-  `designs/31_matchday-tee-v6-all-colours-2026-09-25/`. Site done; Apliiq
-  blocked on the size-change limitation above.
+  `designs/31_matchday-tee-v6-all-colours-2026-09-25/`. Three new designs
+  built with the procedure above (6136475 Black, 6136494 True Royal,
+  6136511 White); 6112037 and 6113361 renamed "delete"; all three
+  colourways live on the site.
