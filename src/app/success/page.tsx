@@ -72,10 +72,7 @@ export default function SuccessPage() {
   if (status.kind === "paid") {
     return (
       <div className="mx-auto max-w-content px-4 py-24 text-center sm:px-6">
-        <p className="font-display text-6xl uppercase tracking-tightest text-red sm:text-8xl">
-          GOOOOOL!
-        </p>
-        <h1 className="mt-4 text-2xl font-semibold text-ink">Payment confirmed.</h1>
+        <h1 className="text-2xl font-semibold text-ink">Payment confirmed.</h1>
         <p className="mx-auto mt-3 max-w-md text-ink/60">
           {status.reference ? (
             <>
