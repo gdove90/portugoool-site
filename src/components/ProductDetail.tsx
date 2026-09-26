@@ -305,11 +305,13 @@ export default function ProductDetail({ product }: { product: Product }) {
                     setSizeError(false);
                   }}
                 />
-                {product.fitNote && (
-                  <p className="mt-2 text-xs leading-relaxed text-ink/60">
-                    {product.fitNote}
-                  </p>
-                )}
+                <div className="mt-3 text-sm leading-relaxed text-ink/70">
+                  <p className="font-semibold text-ink">Fit &amp; sizing</p>
+                  <p className="mt-1">{product.fitNote ?? product.fit}</p>
+                </div>
+                <div className="mt-3">
+                  <SizeGuide productId={product.id} />
+                </div>
                 {sizeError && (
                   <p className="mt-2 text-sm font-medium text-red" role="alert">
                     Select a size to continue.
@@ -401,9 +403,9 @@ export default function ProductDetail({ product }: { product: Product }) {
           {/* Details */}
           <div className="mt-8 divide-y divide-ink/10 border-t border-ink/10">
             <DetailRow label="Material" value={product.fabric} />
-            <DetailRow label="Fit" value={product.fit} />
+            {(comingSoon || singleSize) && <DetailRow label="Fit" value={product.fit} />}
             <DetailRow label="Care" value={product.careInstructions} />
-            <SizeGuide productId={product.id} />
+            {(comingSoon || singleSize) && <SizeGuide productId={product.id} />}
           </div>
         </div>
       </div>

@@ -30,6 +30,8 @@ const OVERSIZED_FIT = "Oversized fit. Drops loose on purpose. Size down for a st
 const PERF_FABRIC =
   "Moisture-wicking 100% polyester performance knit (Gildan Performance). Lightweight, breathable, DTF printed.";
 const PERF_FIT = "Athletic cut. True to size.";
+// Shared guidance for both launch tees made on the Sport-Tek ST720.
+const ST720_FIT = "Athletic fit. True to size for a close-to-body feel. Prefer a snugger fit? Compare the next size down in the size guide with a tee you already own before ordering.";
 const PERF_CARE = "Machine wash cold. Tumble dry low. Do not iron the print.";
 
 const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
@@ -1686,7 +1688,7 @@ export const products: Product[] = [
     // split clean.
     fabric:
       "3.8 oz, 100% recycled polyester. PosiCharge is the supplier's word for a fabric that resists fading and holds its colour, which counts for most on the black.",
-    fit: "Athletic fit. True to size.",
+    fit: ST720_FIT,
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
@@ -2675,7 +2677,7 @@ export const products: Product[] = [
     // own phrase for the lightweight construction.
     fabric:
       "3.8 oz is not much shirt, and that is the point. The same recycled polyester as the Core Badge Tee, taped at the neck with a label that tears out, so nothing sits raw against your skin. Set-in sleeves follow the line of the shoulder and leave the arm its full range.",
-    fit: "Athletic fit.",
+    fit: ST720_FIT,
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
