@@ -31,7 +31,8 @@ const PERF_FABRIC =
   "Moisture-wicking 100% polyester performance knit (Gildan Performance). Lightweight, breathable, DTF printed.";
 const PERF_FIT = "Athletic cut. True to size.";
 // Shared guidance for both launch tees made on the Sport-Tek ST720.
-const ST720_FIT = "Athletic fit. True to size for a close-to-body feel. Prefer a snugger fit? Compare the next size down in the size guide with a tee you already own before ordering.";
+// Owner fit feedback: XL is comfortable; L would give a snugger fit (2026-09-26).
+const ST720_FIT = "True to size for a comfortable athletic fit. Prefer a snugger, leaner fit? Consider one size down and check the size guide before ordering.";
 const PERF_CARE = "Machine wash cold. Tumble dry low. Do not iron the print.";
 
 const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
