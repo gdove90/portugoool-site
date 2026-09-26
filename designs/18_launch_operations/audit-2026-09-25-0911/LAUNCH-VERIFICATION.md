@@ -78,3 +78,11 @@ No existing products, supplier designs, images or customer records removed. Sati
 - Code audit of the order pipeline (checkout -> Stripe -> webhook -> orders store -> Apliiq submit -> email -> success page) found every product for sale resolves a SKU for every colour and size (78 mapped variants incl. the three new Matchday designs). Checkout now also refuses a colourway flagged `comingSoon` server-side (commit b321f4c).
 - "Modern Sport Black/True Royal supplier designs still have earlier artwork" is superseded: the product is now Apliiq designs 6136475 Black, 6136494 True Royal, 6136511 White with the v6 back at 5.00 x 1.812 in and the v3 front at 11 x 3.72 in; 6112037 and 6113361 were renamed "delete". See `designs/31_matchday-tee-v6-all-colours-2026-09-25/README.md`.
 - Still open, unchanged: order email provider; a controlled paid test order; physical samples.
+
+## Launch smoke test — 2026-09-25, late evening (Claude)
+
+- Nine products for sale: every colour page 200; one live Checkout session created per product (Core Badge Tee Black/S, both Core Hoodies Black/S, Terrace Tee Red Black/S, Terrace Tee Club Blue Natural/S, Touchline Cap OS, Matchday Tee Black/S, Badge Cap OS, Stacked Cap OS). Home, /shop, /cart, /faq, robots.txt and sitemap.xml 200.
+- Stripe live dashboard (read only, owner's Chrome): webhook destination `https://goool.shop/api/stripe-webhook` active, listening to 5 events, 0 % error rate; shipping rates: `shr_1UIQOSBG7q8OBDEmfuiMNMwb` Standard shipping $9.50 active (an earlier duplicate archived).
+- **Stripe customer emails: "Successful payments" OFF, "Refunds" OFF.** Combined with `emailProvider: disabled`, a paying customer receives no email. Owner to enable both toggles (account setting) and set the Google service-account variables in Netlify.
+- Netlify production env re-checked in the UI and CLI: no `GOOGLE_SA_EMAIL` / `GOOGLE_SA_PRIVATE_KEY` in any context yet.
+
