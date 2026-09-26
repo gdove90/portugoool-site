@@ -22,6 +22,7 @@ PKG = 'designs/apliiq-upload-packages-2026-09-21-v2/packages'
 TEE = 'designs/24_casual-tee-3010-2026-09-23'
 HOOD = 'designs/25_core-hoodie-remake-2026-09-24'
 CAPS = 'designs/23_cap-embroidery-2026-09-22'
+V6 = 'designs/31_matchday-tee-v6-all-colours-2026-09-25'
 
 products_src = io.open('src/lib/products.ts', encoding='utf-8').read()
 recon = json.load(open('designs/11_fulfillment/apliiq-reconciliation.json', encoding='utf-8'))
@@ -78,8 +79,11 @@ PLAN = [
     ], 'Sport-Tek ST720. One front badge file for all three colours.'),
     ('02_modern-sport-performance-tee', 'goool-athletics-modern-sport-performance-tee', [
         ('artwork', [f'{PKG}/14-goool-athletics-modern-sport-performance-tee-black/artwork/*']),
+        ('artwork/v6-2026-09-25/front', [f'{V6}/exports/front/*']),
+        ('artwork/v6-2026-09-25/back', [f'{V6}/exports/back/*']),
+        ('artwork/v6-2026-09-25', [f'{V6}/MEASUREMENTS.json', f'{V6}/HANDOFF-AS-RECEIVED.md', f'{V6}/README.md']),
         ('package-docs', [f'{PKG}/14-goool-athletics-modern-sport-performance-tee-black/*.md', f'{PKG}/14-goool-athletics-modern-sport-performance-tee-black/*.json', f'{PKG}/14-goool-athletics-modern-sport-performance-tee-black/*.html']),
-    ], 'Sport-Tek ST720. The True Royal design (6113361) uses the same files as Black.'),
+    ], 'Sport-Tek ST720, sold as GOOOL Matchday Tee. Black, True Royal and White share the files: front GA-01-F v3 11 x 3.72 in, back GA-01-B v6 5.00 x 1.812 in (the 3.25 in back failed the 2 mm check; v5 superseded). White uses ink versions; its Apliiq design is not created yet, so it is comingSoon on the site.'),
     ('03_core-hoodie-red', 'goool-heavyweight-hoodie', [
         ('print-files', [f'{TEE}/print-files/4a-black-front.png', f'{TEE}/print-files/4a-natural-front.png', f'{TEE}/print-files/4a-athletic-heather-front.png', f'{TEE}/print-files/4a-back-yoke.png']),
         ('handoff', [f'{HOOD}/*.md', f'{HOOD}/*.png', f'{HOOD}/FILES.json']),

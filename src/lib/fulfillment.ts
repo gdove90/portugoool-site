@@ -301,10 +301,15 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     },
   },
   // GOOOL Matchday Tee (Sport-Tek ST720).
-  // Two colourways on the SAME blank (garment 782) with the SAME artwork
-  // files at the same sizes - front GA-01-F 11 x 3.73 in, back GA-01-B
-  // 3.25 x 1.11 in, transfer print. Apliiq keeps one saved design per
-  // colour, so each colour resolves to its own product id and SKU set.
+  // Colourways on the SAME blank (garment 782) with the SAME artwork files
+  // at the same sizes - front GA-01-F v3 11 x 3.72 in, back GA-01-B v6
+  // 5.00 x 1.812 in, transfer print (designs/31_matchday-tee-v6-all-colours-2026-09-25).
+  // The White colourway uses ink versions of the same files. Apliiq keeps
+  // one saved design per colour, so each colour resolves to its own
+  // product id and SKU set. White has NO entry yet: its saved design does
+  // not exist, so resolveApliiqSku refuses it and the catalog marks the
+  // variant comingSoon. Add it here with the real id and SKUs read from
+  // the account, never inferred.
   "80000000-0000-4000-8000-000000000006": {
     Black: {
       apliiqProductId: 6112037,

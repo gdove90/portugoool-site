@@ -2648,17 +2648,19 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // Modern Sport is performance-only for launch; cotton remains archived.
-  // Back lettering V5 (2026-09-25): open A counter and larger ATHLETICS.
-  // The revised back master is prepared; its Apliiq upload is pending.
-  // Render filenames stay V3 for compatibility. Front artwork is unchanged.
-  // These images remain concept renders; supplier sizing and proof records:
-  // designs/30_modern-sport-open-a-2026-09-25/README.md.
+  // Back print V6 (2026-09-25): the 3.25 in back failed Apliiq's 2 mm
+  // minimum when measured (ATHLETICS gaps 1.45 mm), so the back is now
+  // 5.00 x 1.812 in with wider spacing; smallest stroke 3.03 mm, smallest
+  // gap 2.58 mm. Front GA-01-F v3 at 11 x 3.72 in is unchanged. White
+  // colourway added with ink versions of the same files. Package,
+  // measurements and Apliiq steps: designs/31_matchday-tee-v6-all-colours-2026-09-25/.
+  // Back renders are V6; fronts stay V3. All images remain concept renders.
   {
     id: "80000000-0000-4000-8000-000000000006",
     name: "GOOOL Matchday Tee",
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
-      "Performance training tee in black or true royal. White GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
+      "Performance training tee in black, true royal or white. GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
@@ -2682,7 +2684,7 @@ export const products: Product[] = [
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
-        src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+        src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V6.png",
         alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print",
         caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
       },
@@ -2704,7 +2706,7 @@ export const products: Product[] = [
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V3.png",
+            src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V6.png",
             alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, black garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
@@ -2727,8 +2729,32 @@ export const products: Product[] = [
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V3.png",
+            src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V6.png",
             alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, true royal blue garment",
+            caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      // Third colourway from the 2026-09-25 package: ink versions of the
+      // same two files on the white ST720. comingSoon until the Apliiq
+      // saved design exists and fulfillment.ts carries its real id and
+      // SKUs; the hex is the render's garment body, to be re-sampled from
+      // Apliiq's own mockup once that design is saved.
+      {
+        name: "White",
+        supplierColor: "white",
+        hex: "#F4F4F2",
+        skuFragment: "WHITE",
+        comingSoon: true,
+        images: [
+          {
+            src: "/products/GOOOL_MODERN_PERFORMANCE_WHITE_FRONT_V3.png",
+            alt: "GOOOL Matchday Tee in white, front view with the black GOOOL wordmark, red underline and ATHLETICS",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/GOOOL_MODERN_PERFORMANCE_WHITE_BACK_DETAIL_V6.png",
+            alt: "Close-up concept of the Matchday Tee's black upper-back GOOOL Athletics print, white garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
         ],

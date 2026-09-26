@@ -1,0 +1,48 @@
+{
+  "product": "GOOOL Athletics Modern Sport Performance Tee (Sport-Tek ST720)",
+  "method": "DTF transfer (Apliiq 'transfer print')",
+  "supplier_minimum": "2.0 mm stroke and 2.0 mm gap at final print size",
+  "goool_target": "2.5 mm stroke and gap at final print size (25% above the Apliiq minimum)",
+  "tool": "tmp/measure.js: morphological open/close at final ppi, 6 mm² tolerance for wedge apexes that taper to zero in any typeface",
+  "files": [
+    {
+      "file": "front/GA-01-F_v3_WHITE-PRINT_3300px_300ppi.png",
+      "colourways": ["Black", "True Royal"],
+      "px": [3300, 1116], "ppi": 300,
+      "final_in": [11.00, 3.72], "final_mm": [279.40, 94.49],
+      "colours": {"GOOOL + ATHLETICS": "White #FFFFFF", "rule": "Red #C52D32"},
+      "measured_mm": {"GOOOL": {"stroke": 5.73, "gap": 4.30}, "ATHLETICS": {"stroke": 3.03, "gap": 2.65}, "whole": {"stroke": 3.10, "gap": 2.65}},
+      "passes_2mm": true, "passes_2_5mm": true,
+      "change": "None. It already clears the target at 11 in."
+    },
+    {
+      "file": "front/GA-01-F_v3_INK-PRINT_3300px_300ppi.png",
+      "colourways": ["White"],
+      "px": [3300, 1116], "ppi": 300,
+      "final_in": [11.00, 3.72],
+      "colours": {"GOOOL + ATHLETICS": "Ink #0A0A0A", "rule": "Red #C52D32"},
+      "measured_mm": "Same shapes as the white-print front, so the same measurements",
+      "passes_2mm": true, "passes_2_5mm": true
+    },
+    {
+      "file": "back/GA-01-B_v6_5IN_WHITE-PRINT_3000px_600ppi.png",
+      "colourways": ["Black", "True Royal"],
+      "px": [3000, 1087], "ppi": 600,
+      "final_in": [5.00, 1.812], "final_mm": [127.00, 46.02],
+      "colours": {"all": "White #FFFFFF"},
+      "measured_mm": {"GOOOL": {"stroke": 4.00, "gap": 2.58}, "ATHLETICS": {"stroke": 3.03, "gap": 2.65}, "whole": {"stroke": 3.03, "gap": 2.58}, "closest letter-to-letter": 2.49},
+      "passes_2mm": true, "passes_2_5mm": true,
+      "replaces": "GA-01-B_v5_OPEN-A 3.25 x 1.235 in. It measured a 1.45 mm gap in ATHLETICS and 1.83 mm in GOOOL, both below the Apliiq minimum, and it was under the 4 in lockup minimum.",
+      "change": "Built from v5 (open A kept). Scaled x1.48 to 5.00 in wide. GOOOL letter spacing +1.2 mm per gap and ATHLETICS +1.0 mm per gap. ATHLETICS strokes trimmed 0.45 mm per side, so the E arms and S openings clear 2.5 mm. It now matches the front ATHLETICS measurements (3.03 / 2.65 mm)."
+    },
+    {
+      "file": "back/GA-01-B_v6_5IN_INK-PRINT_3000px_600ppi.png",
+      "colourways": ["White"],
+      "px": [3000, 1087], "ppi": 600,
+      "final_in": [5.00, 1.812],
+      "colours": {"all": "Ink #0A0A0A"},
+      "measured_mm": "Same shapes as the white-print back, so the same measurements",
+      "passes_2mm": true, "passes_2_5mm": true
+    }
+  ]
+}

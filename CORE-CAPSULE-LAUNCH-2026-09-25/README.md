@@ -10,7 +10,7 @@ site images); if you edit something, edit it there and re-run
 Nine rows, all open for sale. Apliiq design ids and per-size SKUs below
 are what checkout and fulfilment use (`src/lib/fulfillment.ts`).
 
-## 01_performance-badge-tee: GOOOL Performance Badge Tee
+## 01_performance-badge-tee: GOOOL Core Badge Tee
 
 Sport-Tek ST720. One front badge file for all three colours.
 
@@ -18,20 +18,15 @@ Price on the site: **$48.00**. Site copies in `01_performance-badge-tee/site-ima
 
 | Colour | Apliiq design | Per-size SKUs |
 |---|---|---|
-| Black | 6098962 | S APQ-6098962S6A1, M APQ-6098962S7A1, L APQ-6098962S8A1, XL APQ-6098962S1A1, XXL APQ-6098962S2A1 |
-| White | 6099046 | S APQ-6099046S6A1, M APQ-6099046S7A1, L APQ-6099046S8A1, XL APQ-6099046S1A1, XXL APQ-6099046S2A1 |
-| True Royal | 6099129 | S APQ-6099129S6A1, M APQ-6099129S7A1, L APQ-6099129S8A1, XL APQ-6099129S1A1, XXL APQ-6099129S2A1 |
 
-## 02_modern-sport-performance-tee: GOOOL Athletics Modern Sport Performance Tee
+## 02_modern-sport-performance-tee: GOOOL Matchday Tee
 
-Sport-Tek ST720. The True Royal design (6113361) uses the same files as Black.
+Sport-Tek ST720, sold as GOOOL Matchday Tee. Black, True Royal and White share the files: front GA-01-F v3 11 x 3.72 in, back GA-01-B v6 5.00 x 1.812 in (the 3.25 in back failed the 2 mm check; v5 superseded). White uses ink versions; its Apliiq design is not created yet, so it is comingSoon on the site.
 
 Price on the site: **$48.00**. Site copies in `02_modern-sport-performance-tee/site-images/` (served from `public/products/`).
 
 | Colour | Apliiq design | Per-size SKUs |
 |---|---|---|
-| Black | 6112037 | S APQ-6112037S6A1, M APQ-6112037S7A1, L APQ-6112037S8A1, XL APQ-6112037S1A1, XXL APQ-6112037S2A1 |
-| True Royal | 6113361 | S APQ-6113361S6A1, M APQ-6113361S7A1, L APQ-6113361S8A1, XL APQ-6113361S1A1, XXL APQ-6113361S2A1 |
 
 ## 03_core-hoodie-red: GOOOL Core Hoodie · Red
 
@@ -57,7 +52,7 @@ Price on the site: **$78.00**. Site copies in `04_core-hoodie-club-blue/site-ima
 | Black | 6121042 | S APQ-6121042S6A1, M APQ-6121042S7A1, L APQ-6121042S8A1, XL APQ-6121042S1A1, XXL APQ-6121042S2A1 |
 | Grey Heather | 6121044 | S APQ-6121044S6A1, M APQ-6121044S7A1, L APQ-6121044S8A1, XL APQ-6121044S1A1, XXL APQ-6121044S2A1 |
 
-## 05_casual-wordmark-tee-red: GOOOL Casual Wordmark Tee · Red
+## 05_casual-wordmark-tee-red: GOOOL Terrace Tee · Red
 
 Bella+Canvas 3010. Front lockup 11.10 x 4.59 in (top 3.00 in below the collar seam by production note); red band 12.00 x 2.00 in on the back yoke.
 
@@ -65,10 +60,8 @@ Price on the site: **$48.00**. Site copies in `05_casual-wordmark-tee-red/site-i
 
 | Colour | Apliiq design | Per-size SKUs |
 |---|---|---|
-| Black | 6120860 | S APQ-6120860S6A1, M APQ-6120860S7A1, L APQ-6120860S8A1, XL APQ-6120860S1A1, XXL APQ-6120860S2A1 |
-| Natural | 6120889 | S APQ-6120889S6A1, M APQ-6120889S7A1, L APQ-6120889S8A1, XL APQ-6120889S1A1, XXL APQ-6120889S2A1 |
 
-## 06_casual-wordmark-tee-club-blue: GOOOL Casual Wordmark Tee · Club Blue
+## 06_casual-wordmark-tee-club-blue: GOOOL Terrace Tee · Club Blue
 
 Bella+Canvas 3010. Same placements as the red set; Club Blue lockup and band.
 
@@ -76,8 +69,6 @@ Price on the site: **$48.00**. Site copies in `06_casual-wordmark-tee-club-blue/
 
 | Colour | Apliiq design | Per-size SKUs |
 |---|---|---|
-| Natural | 6120887 | S APQ-6120887S6A1, M APQ-6120887S7A1, L APQ-6120887S8A1, XL APQ-6120887S1A1, XXL APQ-6120887S2A1 |
-| Black | 6120898 | S APQ-6120898S6A1, M APQ-6120898S7A1, L APQ-6120898S8A1, XL APQ-6120898S1A1, XXL APQ-6120898S2A1 |
 
 ## 07_touchline-cap: GOOOL Touchline Cap
 
@@ -127,7 +118,3 @@ stay saved; their files stay in `designs/`.
 2. Supabase migrations 0034 and 0035 in the SQL editor (audit trail).
 3. Bone · Red hoodie renders from the owner: supplied and shipped 2026-09-25.
 4. Owner's call on the preview gate.
-
-
-## Catalog-wide backdrop update — 2026-09-25
-All 36 active catalog images now follow the same #F2F2F2 sRGB flat-background standard. The complete source archive, masters, masks, verification and contact sheet are in `designs/28_catalog-backdrop-standard-2026-09-25`. Product shapes, artwork and canvas dimensions are preserved.

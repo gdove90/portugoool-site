@@ -47,7 +47,11 @@ export default function ProductDetail({ product }: { product: Product }) {
   const [added, setAdded] = useState(false);
 
   const soldOut = isSoldOut(product);
-  const comingSoon = !isAvailableForSale(product);
+  // A whole product can be Coming Soon, and so can one colourway whose
+  // supplier design does not exist yet (ColorVariant.comingSoon). Either
+  // way the buy buttons are replaced, so checkout never has to refuse it.
+  const variantComingSoon = Boolean(activeVariant?.comingSoon);
+  const comingSoon = !isAvailableForSale(product) || variantComingSoon;
   const priced = hasPrice(product);
   const remaining = remainingUnits(product);
   const customizable =
@@ -369,7 +373,7 @@ export default function ProductDetail({ product }: { product: Product }) {
             {/* Trust copy */}
             {comingSoon ? (
               <p className="flex items-center gap-1.5 text-xs text-ink/60">
-                <TrustIcon /> Release details coming soon.
+                <TrustIcon /> {variantComingSoon ? `${colorName} is coming soon. The other colours are available now.` : "Release details coming soon."}
               </p>
             ) : (
             <ul className="grid grid-cols-2 gap-2 text-xs text-ink/60">

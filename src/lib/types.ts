@@ -46,6 +46,13 @@ export interface ColorVariant {
   skuFragment: string;
   /** Gallery for this colorway (front first — used as the card image). */
   images: ProductImage[];
+  /**
+   * Shown on the page but not sellable yet: the supplier design and SKUs
+   * for this colour do not exist, so checkout would refuse it. The page
+   * disables the buy buttons for the variant instead of letting the
+   * customer find out at checkout.
+   */
+  comingSoon?: boolean;
 }
 
 /** Structured size guide sourced from the supplier's size chart. */
