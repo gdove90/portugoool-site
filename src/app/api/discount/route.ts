@@ -3,6 +3,7 @@ import { EMAIL_RE, subscribeToAudience } from "@/lib/mailchimp";
 import { issueDiscountCode } from "@/lib/discount";
 import { emailEnabled } from "@/lib/email";
 import { queueEmail } from "@/lib/email-delivery";
+import { buildDiscountCodeEmail } from "@/lib/emails/discount-code";
 
 // GOOOL20 popup: subscribe the address (tag "goool20"), then hand back
 // that person's single-use code. The signup is saved before the code is
@@ -40,9 +41,7 @@ export async function POST(req: NextRequest) {
     }
     const live = /^(sk|rk)_live_/.test(process.env.STRIPE_SECRET_KEY ?? "");
     await queueEmail(`discount/${live ? "live" : "test"}/${issued.code}`, "discount", {
-      to: email, subject: "Your GOOOL first-order code",
-      text: `Your 20% first-order code is ${issued.code}. Use it at https://goool.shop. One use; valid for 30 days from issue. Questions? Reply to hello@goool.shop.`,
-      html: `<h1>Your GOOOL code</h1><p>Your 20% first-order code: <strong>${issued.code}</strong></p><p><a href="https://goool.shop">Shop GOOOL</a></p><p>One use; valid for 30 days from issue. Questions? Reply to hello@goool.shop.</p>`,
+      to: email, ...buildDiscountCodeEmail(issued.code),
     }, live);
     return NextResponse.json({ ok: true, subscribed: true, code: issued.code });
   } catch {
