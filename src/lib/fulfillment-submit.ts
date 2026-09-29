@@ -9,6 +9,7 @@ import {
   ApliiqShippingAddress,
 } from "./apliiq";
 import { OrdersStore, OrderRow, OrderItemRow } from "./orders-store";
+import { queueFulfillmentAlert } from "./email-delivery";
 
 // ─────────────────────────────────────────────────────────────
 // Paid order → Apliiq submission, with the invariants that matter:
@@ -159,6 +160,7 @@ export async function submitPaidOrder(
     await store.transitionSubmission(orderId, "pending_submission", "failed", {
       submission_last_error: payload.error,
     });
+    await alertOwner(store, orderId, opts.livemode, "failed", payload.error);
     return { action: "failed", detail: payload.error };
   }
 
@@ -214,9 +216,9 @@ export async function submitPaidOrder(
         attemptId
       );
       if (!won) return { action: "stale_result_discarded", detail: "202 (attempt superseded)" };
-      return knownId
-        ? { action: "submitted_pending", detail: result.message }
-        : { action: "needs_reconcile", detail: "accepted without a usable Apliiq order id" };
+      if (knownId) return { action: "submitted_pending", detail: result.message };
+      await alertOwner(store, orderId, opts.livemode, "needs_reconcile", result.message ?? "");
+      return { action: "needs_reconcile", detail: "accepted without a usable Apliiq order id" };
     }
     case "rejected": {
       const won = await store.transitionSubmission(
@@ -227,6 +229,7 @@ export async function submitPaidOrder(
         attemptId
       );
       if (!won) return { action: "stale_result_discarded", detail: "rejection (attempt superseded)" };
+      await alertOwner(store, orderId, opts.livemode, "failed", `HTTP ${result.status}: ${result.message}`);
       return { action: "failed", detail: result.message };
     }
     case "unknown": {
@@ -238,8 +241,27 @@ export async function submitPaidOrder(
         attemptId
       );
       if (!won) return { action: "stale_result_discarded", detail: "timeout (attempt superseded)" };
+      await alertOwner(store, orderId, opts.livemode, "needs_reconcile", result.message ?? "");
       return { action: "needs_reconcile", detail: result.message };
     }
+  }
+}
+
+// Tell the owner a paid order has parked. Never allowed to change the
+// submission outcome: the order state above is already recorded, and an
+// email failure must not turn a clean park into a thrown error that
+// Stripe would retry.
+async function alertOwner(
+  store: OrdersStore,
+  orderId: string,
+  livemode: boolean,
+  parkedAs: string,
+  reason: string
+): Promise<void> {
+  try {
+    await queueFulfillmentAlert(store, orderId, livemode, parkedAs, reason);
+  } catch (err) {
+    console.error("fulfillment-submit: owner alert could not be queued", err);
   }
 }
 

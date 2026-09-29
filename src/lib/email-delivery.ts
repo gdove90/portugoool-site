@@ -5,6 +5,7 @@ import { OrdersStore, OrderRow, ShipmentRow } from "./orders-store";
 import { hasShipped, shipmentIdentity } from "./shipment";
 import { buildShipmentNotification } from "./emails/shipment-notification";
 import { buildOrderConfirmation } from "./emails/order-confirmation";
+import { buildFulfillmentAlert, OWNER_ALERT_TO } from "./emails/fulfillment-alert";
 
 interface Delivery {
   key: string; kind: "order" | "discount"; order_id: string | null;
@@ -68,6 +69,32 @@ export async function queueShipmentNotification(order: OrderRow & { id: string }
   const key = `shipment/${order.livemode ? "live" : "test"}/${order.id}/${shipmentIdentity(shipment)}`;
   await queueEmail(key, "order", { to: order.customer_email, ...buildShipmentNotification(order, shipment) }, order.livemode, order.id);
   return "queued";
+}
+
+// Owner alert for a paid order Apliiq did not accept. Keyed on the order
+// AND the parked state so one failure produces exactly one email, while a
+// later failure of a re-submitted order (a different state or a repeat
+// after release) produces a fresh one. Queued through the same ledger as
+// customer mail, then delivered immediately on a best-effort basis; the
+// scheduled drain picks it up if that first attempt does not go through.
+export async function queueFulfillmentAlert(
+  store: OrdersStore,
+  orderId: string,
+  livemode: boolean,
+  parkedAs: string,
+  reason: string
+): Promise<string> {
+  const order = await store.getOrderById(orderId);
+  if (!order || order.status !== "paid") return "not_paid";
+  const items = await store.listOrderItems(orderId);
+  const attempt = order.submission_attempt_id ?? "first";
+  const key = `alert/${livemode ? "live" : "test"}/${orderId}/${parkedAs}/${attempt}`;
+  await queueEmail(key, "order", { to: OWNER_ALERT_TO, ...buildFulfillmentAlert({ order, items, parkedAs, reason }) }, livemode, orderId);
+  try {
+    return await deliverEmail(key);
+  } catch {
+    return "queued";
+  }
 }
 
 export async function drainEmailQueue(livemode: boolean): Promise<Record<string, number>> {
