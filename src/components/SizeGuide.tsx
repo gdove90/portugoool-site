@@ -1,4 +1,6 @@
-import { sizeChartFor, inches } from "@/lib/size-charts";
+import Link from "next/link";
+import { SIZE_CHARTS, sizeChartFor, inches } from "@/lib/size-charts";
+import { GUIDE } from "@/components/SizeGuideTabs";
 
 // Collapsed by default and built on <details>/<summary> so it costs no
 // JavaScript, works before hydration, and is keyboard and screen-reader
@@ -19,6 +21,16 @@ export default function SizeGuide({ productId }: { productId: string }) {
   if (!chart) return null;
 
   const hasSleeve = chart.rows.some((r) => r.sleeveIn != null);
+
+  // Deep-link to the matching tab on /size-guide. The chart object is the
+  // one registered in SIZE_CHARTS, so its key is found by identity, and
+  // GUIDE maps that blank key to a tab (st720 -> performance, bc3010 ->
+  // casual, ind4000 -> hoodies). A blank without a tab links to the top.
+  const blankKey = (Object.keys(SIZE_CHARTS) as (keyof typeof SIZE_CHARTS)[]).find(
+    (k) => SIZE_CHARTS[k] === chart
+  );
+  const tabId = GUIDE.find((g) => g.chart === blankKey)?.id;
+  const guideHref = tabId ? `/size-guide#${tabId}` : "/size-guide";
 
   return (
     <details className="group border-t border-ink/10 py-4">
@@ -70,7 +82,12 @@ export default function SizeGuide({ productId }: { productId: string }) {
                   </span>
                 </th>
                 {hasSleeve && (
-                  <th className="py-2 font-semibold text-ink">Sleeve</th>
+                  <th className="py-2 font-semibold text-ink">
+                    Sleeve
+                    <span className="block text-[11px] font-normal text-ink/45">
+                      from centre back
+                    </span>
+                  </th>
                 )}
               </tr>
             </thead>
@@ -91,6 +108,13 @@ export default function SizeGuide({ productId }: { productId: string }) {
             </tbody>
           </table>
         </div>
+
+        <Link
+          href={guideHref}
+          className="mt-3 inline-block text-sm font-semibold text-ink underline underline-offset-4"
+        >
+          Full size guide →
+        </Link>
 
         {chart.note && (
           <p className="mt-3 text-xs leading-relaxed text-ink/60">{chart.note}</p>

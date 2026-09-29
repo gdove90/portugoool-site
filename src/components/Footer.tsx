@@ -8,8 +8,8 @@ import FooterSignup from "./FooterSignup";
 // Refunds listed once, no gold.
 
 const INSTAGRAM_URL = "https://www.instagram.com/gooolathletics/";
-// Flip to true once /size-guide ships.
-const SIZE_GUIDE_LIVE = false;
+// /size-guide shipped 2026-09-29 (design 3b).
+const SIZE_GUIDE_LIVE = true;
 
 type FooterLink = { href: string; label: string };
 
