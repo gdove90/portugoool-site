@@ -1801,7 +1801,7 @@ export const products: Product[] = [
     // Black's blend only. Do not extend it to the other colours.
     fabric:
       "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
-    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for something closer to the body.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
@@ -1919,7 +1919,7 @@ export const products: Product[] = [
     // Black's blend only. Do not extend it to the other colours.
     fabric:
       "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
-    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for something closer to the body.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
@@ -2038,7 +2038,7 @@ export const products: Product[] = [
     fabric:
       "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
     fit:
-      "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for something closer to the body.",
+      "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for a more snug fit.",
     // No garment-dye warning: the 3010 is not garment-dyed, so the 4810GD's
     // "releases a little colour at first" line would have been false here.
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not iron directly on the print.",
@@ -2145,7 +2145,7 @@ export const products: Product[] = [
     fabric:
       "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
     fit:
-      "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for something closer to the body.",
+      "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for a more snug fit.",
     // No garment-dye warning: the 3010 is not garment-dyed, so the 4810GD's
     // "releases a little colour at first" line would have been false here.
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not iron directly on the print.",
@@ -2555,7 +2555,7 @@ export const products: Product[] = [
     // NOT document a shoulder drop, and this line used to claim one,
     // inherited from a string four products shared across three blanks.
     fit:
-      "Relaxed everyday fit, cut wide and boxy in the throwback 90s way. It runs big: size down if you want it closer to the body.",
+      "Relaxed everyday fit, cut wide and boxy in the throwback 90s way. It runs big: size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Garment-dyed fabric releases a little colour at first, so wash separately for the first few washes. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
