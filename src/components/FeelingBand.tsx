@@ -13,13 +13,19 @@ import Image from "next/image";
 // Replace at the same path if real photography lands.
 export default function FeelingBand() {
   return (
-    <section className="relative flex min-h-[420px] items-end overflow-hidden bg-ink sm:min-h-[560px] lg:min-h-[640px]">
+    <section className="relative flex min-h-[420px] items-end overflow-hidden bg-ink sm:min-h-[560px] lg:min-h-[680px] xl:min-h-[800px] 2xl:min-h-[880px]">
+      {/* The image is 1122x1006 and the celebrating player's face sits in
+          its top fifth. object-cover scales it to the viewport width, so
+          on wide screens most of the height is cropped: anchor the crop
+          to the top so the face is always the part that survives, and
+          let the band grow on xl/2xl so the chest logo stays in frame
+          above the headline. A 25% anchor cut the head off at 1920. */}
       <Image
         src="/feeling-band.webp"
         alt="Player celebrating a goal in the GOOOL Athletics Matchday Tee"
         fill
         sizes="100vw"
-        className="object-cover object-[50%_25%]"
+        className="object-cover object-top"
       />
       {/* Legibility gradient: open top, dark foot for the headline */}
       <div
