@@ -78,7 +78,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Intellectual property</h2>
           <p className="mt-2">
-            The GOOOL and PORTUGOOOL names, wordmarks, designs, and site content are our
+            The GOOOL and GOOOL ATHLETICS names, wordmarks, designs, and site content are our
             property. Don&apos;t reproduce them commercially without written
             permission.
           </p>

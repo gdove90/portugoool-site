@@ -25,7 +25,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Can I return or exchange?",
     answer:
-      "All sales are final. If your order arrives defective, damaged, or wrong, we replace it free: contact us within 14 days of delivery with photos. Double-check the fit notes and your size before ordering.",
+      "All sales are final. If your order arrives damaged, defective, or wrong, we'll replace it free. Contact support within 14 days of delivery with your order number and a photo of the damage or defect, and make sure the tag is still attached. Double-check the fit notes and your size before ordering.",
   },
   {
     question: "How do drops work?",

@@ -23,20 +23,21 @@ export default function Header() {
       {/* Full-width bar: logo | viewport-centered nav | actions. The 1fr
           side columns keep the nav centered even though the logo and
           action group widths differ. */}
-      <div className="grid h-16 w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-4 sm:px-6 lg:px-12">
-        {/* Wordmark — the approved underlined GOOOL mark */}
-        <Link href="/" aria-label="GOOOL home" className="flex items-center justify-self-start">
+      <div className="grid h-16 w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-4 sm:px-6 md:h-20 lg:px-12">
+        {/* GOOOL ATHLETICS lockup: wordmark, white-red-white dashes, ATHLETICS */}
+        <Link href="/" aria-label="GOOOL Athletics home" className="flex items-center justify-self-start">
           <Image
-            src="/brand/goool-wordmark-white.png"
-            alt="GOOOL"
-            width={130}
-            height={45}
+            src="/brand/goool-athletics-lockup-white.png"
+            alt="GOOOL Athletics"
+            width={720}
+            height={272}
             priority
+            className="h-9 w-auto md:h-12"
           />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-10 md:flex" aria-label="Main">
           {NAV_LINKS.map((link) => {
             const active = pathname.startsWith(link.href);
             return (
@@ -44,10 +45,10 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`text-xs font-semibold uppercase tracking-[0.1em] transition-colors hover:text-paper ${
+                className={`font-display text-base uppercase tracking-widest transition-colors hover:text-paper ${
                   active
                     ? "text-paper underline decoration-red decoration-2 underline-offset-8"
-                    : "text-paper/75"
+                    : "text-paper/85"
                 }`}
               >
                 {link.label}
@@ -56,24 +57,24 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="col-start-3 flex items-center gap-3 justify-self-end">
+        <div className="col-start-3 flex items-center gap-3 justify-self-end md:gap-5">
           {/* Reopens the GOOOL20 popup for anyone who closed it. A link,
               not a "Sign up" button: the store has no accounts and the
               word would promise one. */}
           <button
             type="button"
             onClick={() => window.dispatchEvent(new Event("goool20:open"))}
-            className="hidden text-xs font-semibold uppercase tracking-[0.1em] text-gold transition-colors hover:text-gold-light md:inline-block"
+            className="hidden font-display text-base uppercase tracking-widest text-red transition-colors hover:text-paper md:inline-block"
           >
             20% off
           </button>
           <Link
             href="/contact"
             aria-current={pathname.startsWith("/contact") ? "page" : undefined}
-            className={`hidden rounded-full border px-5 py-2 text-xs font-semibold uppercase tracking-[0.1em] transition-colors md:inline-block ${
+            className={`hidden rounded-full border px-6 py-2.5 font-display text-base uppercase tracking-widest transition-colors md:inline-block ${
               pathname.startsWith("/contact")
                 ? "border-paper text-ink bg-paper"
-                : "border-paper/40 text-paper hover:border-paper hover:bg-paper/10"
+                : "border-paper/70 text-paper hover:border-paper hover:bg-paper/10"
             }`}
           >
             Contact
@@ -81,11 +82,11 @@ export default function Header() {
 
           <Link
             href="/cart"
-            className="relative flex h-10 w-10 items-center justify-center rounded-full text-paper transition-colors hover:bg-paper/10"
+            className="relative flex h-11 w-11 items-center justify-center rounded-full text-paper transition-colors hover:bg-paper/10"
             aria-label={`Cart, ${count} item${count === 1 ? "" : "s"}`}
           >
             {/* Bag icon */}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M6 7h12l1 13H5L6 7z" />
               <path d="M9 7V5a3 3 0 0 1 6 0v2" />
             </svg>

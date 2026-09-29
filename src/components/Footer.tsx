@@ -53,6 +53,7 @@ export default function Footer() {
               <ul className="mt-2 space-y-0.5 text-sm">
                 <li><Link href="/contact" className="inline-block py-2.5 text-paper/70 hover:text-paper sm:py-1">Contact</Link></li>
                 <li><Link href="/faq" className="inline-block py-2.5 text-paper/70 hover:text-paper sm:py-1">FAQ</Link></li>
+                <li><Link href="/refunds" className="inline-block py-2.5 text-paper/70 hover:text-paper sm:py-1">Refunds</Link></li>
               </ul>
             </div>
           </nav>

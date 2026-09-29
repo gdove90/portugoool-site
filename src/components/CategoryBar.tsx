@@ -102,7 +102,7 @@ export default function CategoryBar({
   return (
     <div
       ref={barRef}
-      className="sticky top-16 z-40 border-b border-ink/10 bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/80"
+      className="sticky top-16 z-40 md:top-20 border-b border-ink/10 bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/80"
     >
       {/* Horizontally scrollable on narrow screens so four pills never
           wrap into a second row and change the bar's height under a
