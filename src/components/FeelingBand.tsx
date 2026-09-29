@@ -8,8 +8,9 @@
 // gradient: ink background, the line set big in Anton on one line (42px
 // on phones, 128px from md; thinned 2026-09-29 from the 84/220px two-line
 // version), the question under it with the skewed red rule, and the same
-// Back to top link.
-// The words are fixed: WEAR THE FEELING. / What's your GOOOL? / Back to top.
+// Back to top link. The "What's your GOOOL?" line and its red rule were
+// removed by the owner on 2026-09-29.
+// The words are fixed: WEAR THE FEELING. / Back to top.
 export default function FeelingBand() {
   return (
     <section
@@ -19,11 +20,7 @@ export default function FeelingBand() {
       <h2 className="whitespace-nowrap font-display text-[42px] uppercase leading-[0.95] tracking-[-0.01em] md:text-[128px]">
         Wear the Feeling.
       </h2>
-      <div className="mt-4 flex flex-col items-start gap-3.5 md:mt-5 md:flex-row md:items-center md:justify-between md:gap-4">
-        <p className="flex items-center gap-3.5 whitespace-nowrap font-display text-xl tracking-[0.02em] md:text-[32px]">
-          <span aria-hidden className="block h-1.5 w-14 -skew-x-[30deg] bg-red" />
-          What&apos;s your GOOOL?
-        </p>
+      <div className="mt-4 flex md:mt-5 md:justify-end">
         <a
           href="#top"
           className="inline-flex h-11 items-center gap-2 whitespace-nowrap border border-paper/40 px-4 font-display text-sm uppercase tracking-[0.1em] text-paper transition-colors hover:border-paper hover:bg-paper/10"
