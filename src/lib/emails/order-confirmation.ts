@@ -140,7 +140,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
     "Wear the Feeling.",
     "",
     "GOOOL is an independent brand. Not affiliated with, endorsed by, or",
-    "connected to any football federation, club, league, or governing body.",
+    "connected to any futbol federation, club, league, or governing body.",
     `${site}`
   );
   const text = textLines.join("\n");

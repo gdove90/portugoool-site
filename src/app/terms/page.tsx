@@ -24,7 +24,7 @@ export default function TermsPage() {
           <h2 className="text-lg font-semibold text-ink">Who we are</h2>
           <p className="mt-2">
             GOOOL is an independent brand. We are not
-            affiliated with, endorsed by, or connected to any football
+            affiliated with, endorsed by, or connected to any soccer
             federation, club, league, tournament, or governing body. All
             designs and marks are original.
           </p>

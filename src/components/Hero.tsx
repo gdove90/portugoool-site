@@ -4,9 +4,14 @@ import Image from "next/image";
 // (designs/02_homepage/handoff_drop01, website-bible §4.2).
 // hero-crowd.webp is an AI-generated placeholder matching the approved art
 // direction — replace with licensed photography before launch (same path).
-export default function Hero() {
+// shopHref is where the "Shop" cue at the foot of the hero points: the
+// first collection on the page, so the cue scrolls rather than navigates.
+export default function Hero({ shopHref = "/shop" }: { shopHref?: string }) {
   return (
-    <section className="relative flex min-h-[560px] items-center justify-center overflow-hidden sm:min-h-[680px]">
+    <section
+      id="top"
+      className="relative flex scroll-mt-16 md:scroll-mt-20 min-h-[560px] items-center justify-center overflow-hidden sm:min-h-[680px] lg:min-h-[760px]"
+    >
       <Image
         src="/hero-crowd.webp"
         alt="Fan with raised fist in a red-lit stadium crowd"
@@ -131,8 +136,23 @@ export default function Hero() {
             would only split the choice.
 
             /drop itself was retired on the same day and now 301s to
-            /shop from middleware.ts, next to the other retired routes. */}
+            /shop from middleware.ts, next to the other retired routes.
+
+            Homepage v2 (2026-09-29) adds a scroll cue instead: "Shop" and a
+            chevron at the foot of the hero, pointing at the first
+            collection section. It is a cue to scroll, not a competing
+            destination. */}
       </div>
+
+      <a
+        href={shopHref}
+        className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 font-display text-sm uppercase tracking-widest text-paper drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] transition-opacity hover:opacity-70 sm:bottom-8"
+      >
+        Shop
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M5 9l7 7 7-7" />
+        </svg>
+      </a>
     </section>
   );
 }

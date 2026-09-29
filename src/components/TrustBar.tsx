@@ -15,6 +15,12 @@
 //   stroke. A fabric claim was considered and rejected: only 2 of 10
 //   active products are 6.5oz garment-dyed cotton, so it belongs on those
 //   product pages, not here.
+//
+// Homepage v2 (2026-09-29): "Made for the Moment" moved into the hero,
+// where it already sat as the tagline, and its slot became "Secure
+// Checkout / Card and wallet payments." Stripe Checkout takes cards plus
+// Apple Pay, Google Pay and Link, so both halves hold. Icons went from
+// gold to white to match the approved layout.
 
 const ITEMS = [
   {
@@ -26,11 +32,11 @@ const ITEMS = [
     ),
   },
   {
-    title: "Measured, Not Eyeballed",
-    sub: "Every print checked at actual size.",
+    title: "Secure Checkout",
+    sub: "Card and wallet payments.",
     icon: (
-      // Shield-check
-      <path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3zM9 12l2 2 4-4" />
+      // Lock
+      <path d="M7 11V8a5 5 0 0110 0v3M5 11h14v10H5zM12 15v2" />
     ),
   },
   {
@@ -42,40 +48,40 @@ const ITEMS = [
     ),
   },
   {
-    title: "Made for the Moment",
-    sub: "One word. Every stadium.",
+    title: "Measured, Not Eyeballed",
+    sub: "Every print checked at actual size.",
     icon: (
-      // Star
-      <path d="M12 3l2.7 5.8 6.3.8-4.6 4.4 1.2 6.3L12 17.3 6.4 20.3l1.2-6.3L3 9.6l6.3-.8L12 3z" />
+      // Shield-check
+      <path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3zM9 12l2 2 4-4" />
     ),
   },
 ];
 
 export default function TrustBar() {
   return (
-    <section className="border-t border-paper/10 bg-ink py-7">
-      <div className="mx-auto grid max-w-content grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4">
+    <section className="border-t border-paper/10 bg-ink py-7 text-paper">
+      <div className="mx-auto grid max-w-content grid-cols-2 gap-x-6 gap-y-6 px-4 sm:px-6 lg:grid-cols-4 lg:gap-x-10">
         {ITEMS.map((item) => (
-          <div key={item.title} className="flex items-center justify-center gap-3.5">
+          <div key={item.title} className="flex items-start gap-3.5">
             <svg
               width="26"
               height="26"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#C9A227"
+              stroke="currentColor"
               strokeWidth="1.6"
               strokeLinejoin="round"
               strokeLinecap="round"
-              className="shrink-0"
+              className="mt-0.5 shrink-0"
               aria-hidden="true"
             >
               {item.icon}
             </svg>
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.1em] text-paper">
+              <p className="font-display text-sm uppercase tracking-widest">
                 {item.title}
               </p>
-              <p className="text-[11px] text-paper/50">{item.sub}</p>
+              <p className="mt-1 text-sm text-paper/60">{item.sub}</p>
             </div>
           </div>
         ))}

@@ -88,7 +88,7 @@ export default function AboutPage() {
             and shipped from the United States.
           </p>
           <p className="font-semibold text-ink">
-            The Sound of Victory. Made for the Moment.
+            Wear the Feeling. Made for the Moment.
           </p>
           <p className="text-base text-ink/50">
             GOOOL is an independent brand. We are not affiliated with any

@@ -13,6 +13,9 @@ export interface ShopCollection {
   subtitle: string;
   /** Short label for the filter control. */
   filterLabel: string;
+  /** One line under the name on the homepage (Homepage v2, 2026-09-29).
+      Every claim must hold for every product in the collection. */
+  tagline: string;
   slugs: string[];
 }
 
@@ -28,6 +31,8 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     name: "Touchline Essentials",
     subtitle: "Headwear",
     filterLabel: "Headwear",
+    // Three OTTO 31-069 caps: structured 65/35 twill, embroidered.
+    tagline: "Structured twill caps, embroidered.",
     slugs: ["goool-touchline-cap", "goool-athletics-badge-cap", "goool-athletics-stacked-cap"],
   },
   {
@@ -35,6 +40,8 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     name: "Match Ready",
     subtitle: "Athletic Performance",
     filterLabel: "Performance",
+    // Both tees are the Sport-Tek ST720: 100% recycled polyester.
+    tagline: "Recycled performance fabric, built to move.",
     slugs: ["goool-performance-tee", "goool-athletics-modern-sport-performance-tee"],
   },
   {
@@ -42,6 +49,8 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     name: "Warm-Up Club",
     subtitle: "Hoodies & Layers",
     filterLabel: "Hoodies & Layers",
+    // Both rows are the Independent IND4000, 10 oz fleece.
+    tagline: "Heavyweight hoodies for the cold end of the season.",
     slugs: [
       "goool-heavyweight-hoodie",
       // Second hoodie row: the Club Blue print set, its own product since 2026-09-24.
@@ -55,6 +64,8 @@ export const SHOP_COLLECTIONS: ShopCollection[] = [
     name: "Off the Pitch",
     subtitle: "Casual Tees",
     filterLabel: "Casual Tees",
+    // Both rows are the Bella+Canvas 3010 heavyweight cotton tee.
+    tagline: "Heavyweight cotton for everyday wear.",
     slugs: [
       // Rebuilt on the Bella+Canvas 3010 and back on sale 2026-09-24
       // (black; natural to follow). It was pulled from this list on
