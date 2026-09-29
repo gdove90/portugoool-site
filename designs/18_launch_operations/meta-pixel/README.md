@@ -12,6 +12,8 @@ that reads the ID from the `NEXT_PUBLIC_META_PIXEL_ID` environment variable,
 set in the Netlify production context on 2026-09-29. Because the variable is
 baked into the client bundle at build time, changing it needs a deploy.
 
-What the site sends once a visitor allows advertising cookies: PageView,
-ViewContent, AddToCart, InitiateCheckout and Purchase (from the success
-page, consent-gated). Events Manager → Test events shows them arriving.
+What the site sends once a visitor allows advertising cookies: PageView on
+every page and Purchase from the success page (verified against the order,
+so refreshes never double-count). Nothing else is instrumented yet; ViewContent
+and AddToCart would be additions. Events Manager → Test events shows them
+arriving.
