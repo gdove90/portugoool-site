@@ -50,7 +50,7 @@ export default function AboutPage() {
           <p>
             Every stadium on earth screams the same word, in every language,
             whether it is a final or a Sunday league pitch with two jackets
-            for a goal. That is the whole idea. GOOOL is an original soccer
+            for a goal. That is the whole idea. GOOOL Athletics is an original soccer
             sportswear brand built around the passion, the belonging, and
             the moments you carry long after the final whistle.
           </p>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             Wear the Feeling. Made for the Moment.
           </p>
           <p className="text-base text-ink/50">
-            GOOOL is an independent brand. We are not affiliated with any
+            GOOOL Athletics LLC is an independent brand. We are not affiliated with any
             federation, club, league, or governing body. All designs and
             marks are original.
           </p>

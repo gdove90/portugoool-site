@@ -139,7 +139,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
     "",
     "Wear the Feeling.",
     "",
-    "GOOOL is an independent brand. Not affiliated with, endorsed by, or",
+    "GOOOL Athletics LLC is an independent brand. Not affiliated with, endorsed by, or",
     "connected to any futbol federation, club, league, or governing body.",
     `${site}`
   );
