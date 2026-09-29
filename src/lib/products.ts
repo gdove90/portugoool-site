@@ -1695,12 +1695,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
         alt: "GOOOL Core Badge Tee in black, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
         alt: "GOOOL Core Badge Tee in black, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     // Colorways mirror the saved Apliiq designs
@@ -1715,12 +1713,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
             alt: "GOOOL Core Badge Tee in black, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
             alt: "GOOOL Core Badge Tee in black, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1733,12 +1729,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
             alt: "GOOOL Core Badge Tee in white, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
             alt: "GOOOL Core Badge Tee in white, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1751,12 +1745,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
             alt: "GOOOL Core Badge Tee in true royal, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
             alt: "GOOOL Core Badge Tee in true royal, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1807,12 +1799,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
         alt: "GOOOL Core Hoodie · Red in black, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
         alt: "GOOOL Core Hoodie · Red in black, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     // Remade 2026-09-24 with the 3010 tee print sets (owner decision,
@@ -1831,12 +1821,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
             alt: "GOOOL Core Hoodie · Red in black, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
             alt: "GOOOL Core Hoodie · Red in black, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1849,12 +1837,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
             alt: "GOOOL Core Hoodie · Red in bone, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
             alt: "GOOOL Core Hoodie · Red in bone, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1871,12 +1857,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
             alt: "GOOOL Core Hoodie · Red in grey heather, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
             alt: "GOOOL Core Hoodie · Red in grey heather, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1925,12 +1909,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
         alt: "GOOOL Core Hoodie · Club Blue in black, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
         alt: "GOOOL Core Hoodie · Club Blue in black, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     // Remade 2026-09-24 with the 3010 tee print sets (owner decision,
@@ -1949,12 +1931,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
             alt: "GOOOL Core Hoodie · Club Blue in black, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
             alt: "GOOOL Core Hoodie · Club Blue in black, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1967,12 +1947,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
             alt: "GOOOL Core Hoodie · Club Blue in bone, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
             alt: "GOOOL Core Hoodie · Club Blue in bone, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -1989,12 +1967,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
             alt: "GOOOL Core Hoodie · Club Blue in grey heather, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
             alt: "GOOOL Core Hoodie · Club Blue in grey heather, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2046,12 +2022,10 @@ export const products: Product[] = [
         {
           src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
           alt: "GOOOL Terrace Tee · Red in black, front view",
-          caption: "Concept render. Not a photograph of a manufactured sample.",
         },
         {
           src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
           alt: "GOOOL Terrace Tee · Red in black, back view",
-          caption: "Concept render. Not a photograph of a manufactured sample.",
         },
       ],
     // Rebuilt on the Bella+Canvas 3010 on 2026-09-23/24 (owner decision,
@@ -2070,12 +2044,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
             alt: "GOOOL Terrace Tee · Red in black, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
             alt: "GOOOL Terrace Tee · Red in black, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2090,12 +2062,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
             alt: "GOOOL Terrace Tee · Red in natural, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
             alt: "GOOOL Terrace Tee · Red in natural, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2153,12 +2123,10 @@ export const products: Product[] = [
         {
           src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
           alt: "GOOOL Terrace Tee · Club Blue in natural, front view",
-          caption: "Concept render. Not a photograph of a manufactured sample.",
         },
         {
           src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
           alt: "GOOOL Terrace Tee · Club Blue in natural, back view",
-          caption: "Concept render. Not a photograph of a manufactured sample.",
         },
       ],
     // Same placements as the red set: front lockup 11.10 x 4.59 in, top
@@ -2174,12 +2142,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
             alt: "GOOOL Terrace Tee · Club Blue in natural, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
             alt: "GOOOL Terrace Tee · Club Blue in natural, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2195,12 +2161,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
             alt: "GOOOL Terrace Tee · Club Blue in black, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
             alt: "GOOOL Terrace Tee · Club Blue in black, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2255,12 +2219,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
         alt: "GOOOL Touchline Cap in black and natural, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
         alt: "GOOOL Touchline Cap in black and natural, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     sizes: ["OS"],
@@ -2319,12 +2281,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_MODERN_SPORT_FRONT.webp",
         alt: "GOOOL Athletics Modern Sport Tee in black, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_MODERN_SPORT_BACK.webp",
         alt: "GOOOL Athletics Modern Sport Tee in black, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2378,12 +2338,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_VARSITY_FRONT.webp",
         alt: "GOOOL Athletics Varsity Tee in washed black, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_VARSITY_BACK.webp",
         alt: "GOOOL Athletics Varsity Tee in washed black, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     // Colorways mirror the saved Apliiq designs (Washed Black 6114178, Washed
@@ -2404,12 +2362,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_VARSITY_FRONT.webp",
             alt: "GOOOL Athletics Varsity Tee in washed black, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_VARSITY_BACK.webp",
             alt: "GOOOL Athletics Varsity Tee in washed black, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2422,12 +2378,10 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_STD_VARSITY_WASHED_NAVY_FRONT.webp",
             alt: "GOOOL Athletics Varsity Tee in washed navy, front view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_STD_VARSITY_WASHED_NAVY_BACK.webp",
             alt: "GOOOL Athletics Varsity Tee in washed navy, back view",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2475,12 +2429,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
         alt: "GOOOL Athletics Minimal Club Tee in natural cream, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_MINIMAL_CLUB_BACK.webp",
         alt: "GOOOL Athletics Minimal Club Tee in natural cream, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2561,12 +2513,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
         alt: "GOOOL Athletics Circular Badge Tee in ivory, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
         alt: "GOOOL Athletics Circular Badge Tee in ivory, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2625,12 +2575,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
         alt: "GOOOL Athletics Circular Center Crewneck in gray heather, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp",
         alt: "GOOOL Athletics Circular Center Crewneck in gray heather, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2684,7 +2632,6 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
         alt: "GOOOL Matchday Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V6.png",
@@ -2706,7 +2653,6 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
             alt: "GOOOL Matchday Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V6.png",
@@ -2729,7 +2675,6 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
             alt: "GOOOL Matchday Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V6.png",
@@ -2753,7 +2698,6 @@ export const products: Product[] = [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_WHITE_FRONT_V3.png",
             alt: "GOOOL Matchday Tee in white, front view with the black GOOOL wordmark, red underline and ATHLETICS",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_WHITE_BACK_DETAIL_V6.png",
@@ -2810,12 +2754,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
         alt: "GOOOL Athletics Badge Cap in black and natural, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_BADGE_CAP_BACK.webp",
         alt: "GOOOL Athletics Badge Cap in black and natural, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     sizes: ["OS"],
@@ -2858,12 +2800,10 @@ export const products: Product[] = [
       {
         src: "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
         alt: "GOOOL Athletics Stacked Cap in black and natural, front view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
         alt: "GOOOL Athletics Stacked Cap in black and natural, back view",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
       },
     ],
     sizes: ["OS"],
