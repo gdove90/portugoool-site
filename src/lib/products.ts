@@ -1675,7 +1675,7 @@ export const products: Product[] = [
     slug: "goool-performance-tee",
     description:
       "Lightweight training tee. GOOOL crest centered on the chest, athletic fit, taped neck.",
-    priceCents: 4000,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -2001,7 +2001,7 @@ export const products: Product[] = [
     // placements, same price. The slug keeps the original casual-tee URL.
     description:
       "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the red club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
-    priceCents: 4000,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#111111",
@@ -2102,7 +2102,7 @@ export const products: Product[] = [
     // alternative was not taken).
     description:
       "The wordmark, worn plainly, now with the full GOOOL Athletics lockup in club blue across the chest and the blue club band across the back. Heavyweight combed cotton in natural or black. Built for off the pitch: the one you reach for every day, and keep reaching for.",
-    priceCents: 4000,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E8E2D3",
@@ -2612,7 +2612,7 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
       "Performance training tee in black, true royal or white. GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
-    priceCents: 4000,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",

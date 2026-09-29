@@ -1,6 +1,6 @@
 # Pricing and shipping change, 2026-09-29 (built, NOT deployed)
 
-Owner decisions (final): tees $40, caps $32 (permanent, owner 2026-09-29), hoodie $78; flat $6.95 shipping per
+Owner decisions (final): tees $38, caps $32 (permanent, owner 2026-09-29), hoodie $78; flat $6.95 shipping per
 order, free at $70; no compare-at prices; no new discount codes.
 
 ## Where things live

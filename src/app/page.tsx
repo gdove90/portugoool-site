@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   // shipping last where losing it costs least.
   //
   // Every claim checked against the catalog on 2026-09-29. "$32" is the
-  // real floor (the three caps); tees are $40 and hoodies $78. "Heavyweight" holds
+  // real floor (the three caps); tees are $38 and hoodies $78. "Heavyweight" holds
   // for all five cotton garments. "Embroidered caps" is the three OTTO
   // 31-069s. The four countries are exactly allowed_countries in
   // api/checkout. An earlier draft opened with the brand line and ran to
