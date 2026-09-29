@@ -9,7 +9,7 @@ import {
   ApliiqShippingAddress,
 } from "./apliiq";
 import { OrdersStore, OrderRow, OrderItemRow } from "./orders-store";
-import { queueFulfillmentAlert } from "./email-delivery";
+import { queueFulfillmentAlert, queueOrderDelayNotice } from "./email-delivery";
 
 // ─────────────────────────────────────────────────────────────
 // Paid order → Apliiq submission, with the invariants that matter:
@@ -247,10 +247,10 @@ export async function submitPaidOrder(
   }
 }
 
-// Tell the owner a paid order has parked. Never allowed to change the
-// submission outcome: the order state above is already recorded, and an
-// email failure must not turn a clean park into a thrown error that
-// Stripe would retry.
+// Tell the owner a paid order has parked, and tell the customer it is
+// taking longer. Never allowed to change the submission outcome: the
+// order state above is already recorded, and an email failure must not
+// turn a clean park into a thrown error that Stripe would retry.
 async function alertOwner(
   store: OrdersStore,
   orderId: string,
@@ -262,6 +262,11 @@ async function alertOwner(
     await queueFulfillmentAlert(store, orderId, livemode, parkedAs, reason);
   } catch (err) {
     console.error("fulfillment-submit: owner alert could not be queued", err);
+  }
+  try {
+    await queueOrderDelayNotice(store, orderId, livemode);
+  } catch (err) {
+    console.error("fulfillment-submit: customer delay notice could not be queued", err);
   }
 }
 

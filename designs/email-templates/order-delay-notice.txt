@@ -1,0 +1,22 @@
+Subject: Your GOOOL order {{reference}} is taking a little longer
+
+ORDER UPDATE
+{{reference}}
+
+Hi {{first_name}},
+
+Your order is confirmed and paid, but it is taking longer than usual to prepare. Nothing is needed from you. The moment it ships we will email your tracking number, and you can check it any time at goool.shop/track-order.
+
+If you would rather not wait, reply to this email and we will refund you in full.
+
+GOOOL Athletics
+
+Track your order: https://goool.shop/track-order
+
+Customer Service
+Questions about your order? Contact us at hello@goool.shop
+
+Wear the Feeling.
+GOOOL ATHLETICS LLC · goool.shop
+
+GOOOL Athletics LLC is an independent brand. Not affiliated with, endorsed by, or connected to any futbol federation, club, league, or governing body.

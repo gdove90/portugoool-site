@@ -6,6 +6,7 @@ import { hasShipped, shipmentIdentity } from "./shipment";
 import { buildShipmentNotification } from "./emails/shipment-notification";
 import { buildOrderConfirmation } from "./emails/order-confirmation";
 import { buildFulfillmentAlert, OWNER_ALERT_TO } from "./emails/fulfillment-alert";
+import { buildOrderDelayNotice } from "./emails/order-delay-notice";
 
 interface Delivery {
   key: string; kind: "order" | "discount"; order_id: string | null;
@@ -90,6 +91,34 @@ export async function queueFulfillmentAlert(
   const attempt = order.submission_attempt_id ?? "first";
   const key = `alert/${livemode ? "live" : "test"}/${orderId}/${parkedAs}/${attempt}`;
   await queueEmail(key, "order", { to: OWNER_ALERT_TO, ...buildFulfillmentAlert({ order, items, parkedAs, reason }) }, livemode, orderId);
+  try {
+    return await deliverEmail(key);
+  } catch {
+    return "queued";
+  }
+}
+
+// Customer delay notice for the same event. Keyed on the order alone, so
+// a customer hears about a delay once no matter how many times the order
+// parks before it goes through; the owner alert carries the per-attempt
+// detail. Replies go to hello@goool.shop, which is where the refund
+// offer in the email is honoured.
+export async function queueOrderDelayNotice(
+  store: OrdersStore,
+  orderId: string,
+  livemode: boolean
+): Promise<string> {
+  const order = await store.getOrderById(orderId);
+  if (!order || order.status !== "paid") return "not_paid";
+  if (!order.customer_email) return "no_email";
+  const key = `delay/${livemode ? "live" : "test"}/${orderId}`;
+  await queueEmail(
+    key,
+    "order",
+    { to: order.customer_email, replyTo: "hello@goool.shop", ...buildOrderDelayNotice(order) },
+    livemode,
+    orderId
+  );
   try {
     return await deliverEmail(key);
   } catch {
