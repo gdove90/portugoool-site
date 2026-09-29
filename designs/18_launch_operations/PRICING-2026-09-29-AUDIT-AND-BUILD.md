@@ -1,7 +1,7 @@
 # Pricing and shipping change, 2026-09-29 (built, NOT deployed)
 
 Owner decisions (final): tees $40, caps $34, hoodie $78; flat $6.95 shipping per
-order, free at $75; no compare-at prices; no new discount codes.
+order, free at $70; no compare-at prices; no new discount codes.
 
 ## Where things live
 - Retail prices: `src/lib/products.ts` (`priceCents`). Cards, product pages and the
@@ -13,7 +13,7 @@ order, free at $75; no compare-at prices; no new discount codes.
 - Shipping (before): one Stripe dashboard rate, shr_1UK1I2BG7q8OBDEmCg1LC3OB ($9.50),
   attached via `STRIPE_SHIPPING_RATE_ID` for all four countries; no free-shipping rule;
   cart said "Calculated at checkout".
-- Shipping (after): `src/lib/shipping.ts` (695 cents flat, free at 7500), passed to
+- Shipping (after): `src/lib/shipping.ts` (695 cents flat, free at 7000), passed to
   Stripe inline as `shipping_rate_data`; the cart reads the same constants. The old
   rate object and env var are unused (leave or delete in Stripe/Netlify).
 - Compare-at: `compareAtPriceCents` is null on every live SKU before and after.

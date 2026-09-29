@@ -8,7 +8,7 @@
 // rate object: the previous fixed $9.50 rate (STRIPE_SHIPPING_RATE_ID)
 // is no longer used.
 export const SHIPPING_FLAT_CENTS = 695;
-export const FREE_SHIPPING_THRESHOLD_CENTS = 7500;
+export const FREE_SHIPPING_THRESHOLD_CENTS = 7000;
 
 /** Shipping charged for a merchandise subtotal, before any discount code. */
 export function shippingCentsFor(subtotalCents: number): number {
