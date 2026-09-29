@@ -151,7 +151,7 @@ export default function TrackOrderPage() {
             {[
               ["Order confirmed", "Instant receipt from our secure checkout, with your GOOOL order reference."],
               ["Shipped", "Tracking number lands in your inbox."],
-              ["Delivered", "Within 7–12 business days in the US. Canada, the UK and Portugal typically take 3 to 5 weeks."],
+              ["Delivered", "Within 7–12 business days in the US. Canada, the UK and Portugal typically take 2 to 3 weeks."],
             ].map(([title, body], i) => (
               <li key={title} className="flex items-start gap-4 border-t border-ink/10 py-[18px]">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-ink font-display text-lg text-paper">

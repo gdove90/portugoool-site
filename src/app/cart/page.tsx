@@ -224,7 +224,7 @@ export default function CartPage() {
               looked paid for. Both are stated here, in the last block
               before the Checkout button's destination. */}
           <p className="mt-5 border-t border-ink/10 pt-4 text-xs leading-relaxed text-ink/50">
-            Shipping to Canada, the UK or Portugal takes about 3 to 5 weeks,
+            Shipping to Canada, the UK or Portugal takes about 2 to 3 weeks,
             and your country may charge import duty or VAT on arrival, which
             is paid by the recipient. All sales are final: see the{" "}
             <Link

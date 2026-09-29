@@ -55,7 +55,7 @@ export default function TermsPage() {
           <h2 className="text-lg font-semibold text-ink">Shipping</h2>
           <p className="mt-2">
             Orders arrive within 7–12 business days in the US. Orders to
-            Canada, the UK and Portugal typically take 3 to 5 weeks, since
+            Canada, the UK and Portugal typically take 2 to 3 weeks, since
             every order ships from the United States and
             customs clearance can add time.
             Dates are estimates, not guarantees; if

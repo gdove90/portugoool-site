@@ -43,7 +43,7 @@ const SECTIONS = [
     "That is the standard. Fewer pieces, each one checked, and no piece chosen just because it was easy to put a print on.",
   ]},
   { num: "03", title: "Where we ship", paras: [
-    "We ship to the United States, Canada, the United Kingdom and Portugal. Orders arrive within 7 to 12 business days in the US and typically 3 to 5 weeks everywhere else, because every order ships from the United States.",
+    "We ship to the United States, Canada, the United Kingdom and Portugal. Orders arrive within 7 to 12 business days in the US and typically 2 to 3 weeks everywhere else, because every order ships from the United States.",
   ]},
 ] as const;
 
@@ -79,7 +79,7 @@ export default function AboutPage() {
 
       <section className="flex flex-col gap-6 bg-smoke px-5 py-[52px] sm:px-6 md:gap-9 md:py-[88px] lg:px-12">
         <p className="max-w-[1000px] font-display text-[40px] uppercase leading-[0.95] md:text-[84px]">
-          Wear the Feeling. Made for the Moment.
+          Apparel made for the moment. Wear the feeling.
         </p>
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10">
           <Link

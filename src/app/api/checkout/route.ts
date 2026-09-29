@@ -205,7 +205,7 @@ export async function POST(req: NextRequest) {
       custom_text: {
         shipping_address: {
           message:
-            "Delivery is 7 to 12 business days in the US. Canada, the UK and Portugal take about 3 to 5 weeks, and your country may charge import duty or VAT on arrival.",
+            "Delivery is 7 to 12 business days in the US. Canada, the UK and Portugal take about 2 to 3 weeks, and your country may charge import duty or VAT on arrival.",
         },
       },
       metadata,
