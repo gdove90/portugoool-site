@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { catalogImageSrc } from "@/lib/product-image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
 import { FREE_SHIPPING_THRESHOLD_CENTS, shippingCentsFor } from "@/lib/shipping";
@@ -11,27 +11,107 @@ import { MAX_LINE_QUANTITY } from "@/lib/types";
 
 export default function CartPage() {
   const { items, notices, dismissNotices, removeItem, updateQuantity, subtotalCents } = useCart();
-  const shippingCents = shippingCentsFor(subtotalCents);
   const [checkingOut, setCheckingOut] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // GOOOL20 lives here now, not in Stripe's checkout page. The code is
+  // checked by /api/checkout (preview mode) and the discount it returns
+  // is what shipping is decided on, so the total shown is the total
+  // Stripe will charge. The same call re-runs whenever the cart changes
+  // while a code is applied, so the numbers never go stale.
+  type Applied = { code: string; discountCents: number };
+  const [email, setEmail] = useState("");
+  const [codeInput, setCodeInput] = useState("");
+  const [applied, setApplied] = useState<Applied | null>(null);
+  const [applying, setApplying] = useState(false);
+  const [codeError, setCodeError] = useState<string | null>(null);
+  const discountCents = applied?.discountCents ?? 0;
+  const shippingCents = shippingCentsFor(subtotalCents - discountCents);
+  const totalCents = subtotalCents - discountCents + shippingCents;
+
+  function cartPayload() {
+    return items.map((i) => ({
+      productId: i.productId,
+      size: i.size,
+      color: i.color,
+      quantity: i.quantity,
+      customName: i.customName ?? null,
+      customNumber: i.customNumber ?? null,
+    }));
+  }
+
+  async function applyCode(codeToApply = codeInput): Promise<Applied | null> {
+    const code = codeToApply.trim();
+    if (!code) return null;
+    if (!email.trim()) {
+      setCodeError("Enter the email your code was sent to.");
+      return null;
+    }
+    setApplying(true);
+    setCodeError(null);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: cartPayload(), email: email.trim(), code, preview: true }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setApplied(null);
+        setCodeError(data.error ?? "That code could not be applied.");
+        return null;
+      }
+      const next: Applied = { code: data.code, discountCents: data.discountCents };
+      setApplied(next);
+      return next;
+    } catch {
+      setApplied(null);
+      setCodeError("We could not check that code right now. Try again in a moment.");
+      return null;
+    } finally {
+      setApplying(false);
+    }
+  }
+
+  function removeCode() {
+    setApplied(null);
+    setCodeInput("");
+    setCodeError(null);
+  }
+
+  // Cart changed while a code is applied: re-price it.
+  useEffect(() => {
+    if (!applied) return;
+    if (items.length === 0) {
+      setApplied(null);
+      return;
+    }
+    void applyCode(applied.code);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [subtotalCents]);
 
   async function handleCheckout() {
     if (items.length === 0 || checkingOut) return;
     setCheckingOut(true);
     setError(null);
+    // A code typed but never applied is applied now, so the discount is
+    // not silently dropped; if it is rejected, checkout does not start.
+    let promo = applied;
+    if (!promo && codeInput.trim()) {
+      promo = await applyCode();
+      if (!promo) {
+        setCheckingOut(false);
+        return;
+      }
+    }
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          items: items.map((i) => ({
-            productId: i.productId,
-            size: i.size,
-            color: i.color,
-            quantity: i.quantity,
-            customName: i.customName ?? null,
-            customNumber: i.customNumber ?? null,
-          })),
+          items: cartPayload(),
+          ...(email.trim() ? { email: email.trim() } : {}),
+          ...(promo ? { code: promo.code } : {}),
         }),
       });
       const data = await res.json();
@@ -192,6 +272,12 @@ export default function CartPage() {
               <dt className="text-ink/60">Subtotal</dt>
               <dd className="font-semibold text-ink">{formatPrice(subtotalCents)}</dd>
             </div>
+            {applied && (
+              <div className="flex justify-between">
+                <dt className="text-ink/60">Discount ({applied.code})</dt>
+                <dd className="font-semibold text-red">-{formatPrice(discountCents)}</dd>
+              </div>
+            )}
             <div className="flex justify-between">
               <dt className="text-ink/60">Shipping</dt>
               <dd className={shippingCents === 0 ? "font-semibold text-ink" : "text-ink"}>
@@ -200,14 +286,76 @@ export default function CartPage() {
             </div>
             <div className="flex justify-between border-t border-ink/10 pt-2">
               <dt className="font-semibold text-ink">Total</dt>
-              <dd className="font-semibold text-ink">{formatPrice(subtotalCents + shippingCents)}</dd>
+              <dd className="font-semibold text-ink">{formatPrice(totalCents)}</dd>
             </div>
           </dl>
           <p className="mt-2 text-xs text-ink/50">
             {shippingCents === 0
               ? "Free shipping applied."
-              : `Free shipping on orders of ${formatPrice(FREE_SHIPPING_THRESHOLD_CENTS)} or more.`}
+              : `Free shipping on orders of ${formatPrice(FREE_SHIPPING_THRESHOLD_CENTS)} or more${applied ? " after your discount" : ""}.`}
           </p>
+
+          {/* Email first: a code is tied to the address it was sent to. */}
+          <div className="mt-5 border-t border-ink/10 pt-4">
+            <label htmlFor="cart-email" className="block text-xs font-semibold text-ink">
+              Email
+            </label>
+            <input
+              id="cart-email"
+              type="email"
+              autoComplete="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@email.com"
+              className="mt-1 w-full rounded-lg border border-ink/20 bg-paper px-3 py-2.5 text-base focus:border-ink focus:outline-none"
+            />
+            <label htmlFor="cart-code" className="mt-3 block text-xs font-semibold text-ink">
+              Promotion code
+            </label>
+            {applied ? (
+              <div className="mt-1 flex items-center justify-between rounded-lg border border-ink/20 bg-paper px-3 py-2.5 text-sm">
+                <span className="font-semibold text-ink">{applied.code} applied</span>
+                <button
+                  type="button"
+                  onClick={removeCode}
+                  className="text-ink/60 underline underline-offset-2 hover:text-ink"
+                >
+                  Remove
+                </button>
+              </div>
+            ) : (
+              <div className="mt-1 flex gap-2">
+                <input
+                  id="cart-code"
+                  type="text"
+                  autoComplete="off"
+                  value={codeInput}
+                  onChange={(e) => setCodeInput(e.target.value.toUpperCase())}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      void applyCode();
+                    }
+                  }}
+                  placeholder="GOOOL20-XXXX"
+                  className="min-w-0 flex-1 rounded-lg border border-ink/20 bg-paper px-3 py-2.5 text-base uppercase focus:border-ink focus:outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={() => void applyCode()}
+                  disabled={applying || !codeInput.trim()}
+                  className="shrink-0 rounded-lg border border-ink px-4 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-paper disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {applying ? "Checking" : "Apply"}
+                </button>
+              </div>
+            )}
+            {codeError && (
+              <p className="mt-2 text-xs text-red" role="alert">
+                {codeError}
+              </p>
+            )}
+          </div>
 
           <button
             type="button"

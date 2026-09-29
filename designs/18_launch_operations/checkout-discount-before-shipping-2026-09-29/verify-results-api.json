@@ -1,0 +1,477 @@
+[
+  {
+    "name": "1 tee + cap, no code",
+    "request": {
+      "items": [
+        "1",
+        "4"
+      ],
+      "email": null,
+      "code": null
+    },
+    "preview": {
+      "status": 200,
+      "json": {
+        "subtotalCents": 7000,
+        "discountCents": 0,
+        "shippingCents": 0,
+        "totalCents": 7000,
+        "code": null,
+        "percentOff": null
+      }
+    },
+    "create": {
+      "status": 200,
+      "json": {
+        "url": "(session created)"
+      }
+    },
+    "session": {
+      "id": "cs_test_b1iTJrxbSGFhZfi79i2X46x8QDa2u9p84uF94PNDgxnogbUaIGy2iKilpM",
+      "subtotal": 7000,
+      "discount": 0,
+      "shipping": 0,
+      "total": 7000,
+      "allow_promotion_codes": null,
+      "discounts": [],
+      "shipping_rate": "Free shipping",
+      "customer_email": null,
+      "livemode": false
+    },
+    "expect": {
+      "subtotal": 7000,
+      "discount": 0,
+      "shipping": 0,
+      "total": 7000
+    },
+    "pass": true
+  },
+  {
+    "name": "2 tee + cap + GOOOL20",
+    "request": {
+      "items": [
+        "1",
+        "4"
+      ],
+      "email": "checkout-test-a@example.com",
+      "code": "GOOOL20-TLCQ"
+    },
+    "preview": {
+      "status": 200,
+      "json": {
+        "subtotalCents": 7000,
+        "discountCents": 1400,
+        "shippingCents": 695,
+        "totalCents": 6295,
+        "code": "GOOOL20-TLCQ",
+        "percentOff": 20
+      }
+    },
+    "create": {
+      "status": 200,
+      "json": {
+        "url": "(session created)"
+      }
+    },
+    "session": {
+      "id": "cs_test_b16Z07PzS4XWwHTUe2vpAeu8dNa9gDFuaab7eHEq7sNiEWZPKl6k4Hm8cV",
+      "subtotal": 7000,
+      "discount": 1400,
+      "shipping": 695,
+      "total": 6295,
+      "allow_promotion_codes": null,
+      "discounts": [
+        "promo_1UL14XBtaM9tSdZuh0LwJiX3"
+      ],
+      "shipping_rate": "Standard shipping",
+      "customer_email": "checkout-test-a@example.com",
+      "livemode": false
+    },
+    "expect": {
+      "subtotal": 7000,
+      "discount": 1400,
+      "shipping": 695,
+      "total": 6295
+    },
+    "pass": true
+  },
+  {
+    "name": "3 hoodie + tee + GOOOL20",
+    "request": {
+      "items": [
+        "2",
+        "1"
+      ],
+      "email": "checkout-test-a@example.com",
+      "code": "GOOOL20-TLCQ"
+    },
+    "preview": {
+      "status": 200,
+      "json": {
+        "subtotalCents": 11600,
+        "discountCents": 2320,
+        "shippingCents": 0,
+        "totalCents": 9280,
+        "code": "GOOOL20-TLCQ",
+        "percentOff": 20
+      }
+    },
+    "create": {
+      "status": 200,
+      "json": {
+        "url": "(session created)"
+      }
+    },
+    "session": {
+      "id": "cs_test_b1pGDZuQ1WK1aFpaG3dLj73UrzqGC04feqcC5SnLtojTLnIynW9A53eC9V",
+      "subtotal": 11600,
+      "discount": 2320,
+      "shipping": 0,
+      "total": 9280,
+      "allow_promotion_codes": null,
+      "discounts": [
+        "promo_1UL14XBtaM9tSdZuh0LwJiX3"
+      ],
+      "shipping_rate": "Free shipping",
+      "customer_email": "checkout-test-a@example.com",
+      "livemode": false
+    },
+    "expect": {
+      "subtotal": 11600,
+      "discount": 2320,
+      "shipping": 0,
+      "total": 9280
+    },
+    "pass": true
+  },
+  {
+    "name": "4 tee + GOOOL20",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": "checkout-test-a@example.com",
+      "code": "GOOOL20-TLCQ"
+    },
+    "preview": {
+      "status": 200,
+      "json": {
+        "subtotalCents": 3800,
+        "discountCents": 760,
+        "shippingCents": 695,
+        "totalCents": 3735,
+        "code": "GOOOL20-TLCQ",
+        "percentOff": 20
+      }
+    },
+    "create": {
+      "status": 200,
+      "json": {
+        "url": "(session created)"
+      }
+    },
+    "session": {
+      "id": "cs_test_a1HtOQy7533CmlQnPgxoJw6pGu2d4GxcjIfGXpUFgLGQqbY4pZLwtHdJcn",
+      "subtotal": 3800,
+      "discount": 760,
+      "shipping": 695,
+      "total": 3735,
+      "allow_promotion_codes": null,
+      "discounts": [
+        "promo_1UL14XBtaM9tSdZuh0LwJiX3"
+      ],
+      "shipping_rate": "Standard shipping",
+      "customer_email": "checkout-test-a@example.com",
+      "livemode": false
+    },
+    "expect": {
+      "subtotal": 3800,
+      "discount": 760,
+      "shipping": 695,
+      "total": 3735
+    },
+    "pass": true
+  },
+  {
+    "name": "5a expired code",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": "checkout-test-a@example.com",
+      "code": "GOOOL20-ELCQ"
+    },
+    "preview": {
+      "status": 400,
+      "json": {
+        "error": "That code has expired.",
+        "reason": "expired"
+      }
+    },
+    "create": null,
+    "session": null,
+    "expect": {
+      "status": 400,
+      "reason": "expired"
+    },
+    "pass": true
+  },
+  {
+    "name": "5b used code",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": "checkout-test-a@example.com",
+      "code": "GOOOL20-TNGF"
+    },
+    "preview": {
+      "status": 400,
+      "json": {
+        "error": "That code has already been used.",
+        "reason": "used"
+      }
+    },
+    "create": null,
+    "session": null,
+    "expect": {
+      "status": 400,
+      "reason": "used"
+    },
+    "pass": true
+  },
+  {
+    "name": "5c wrong email",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": "someone-else@example.com",
+      "code": "GOOOL20-TLCQ"
+    },
+    "preview": {
+      "status": 400,
+      "json": {
+        "error": "That code was issued to a different email address.",
+        "reason": "email"
+      }
+    },
+    "create": null,
+    "session": null,
+    "expect": {
+      "status": 400,
+      "reason": "email"
+    },
+    "pass": true
+  },
+  {
+    "name": "5d unknown code",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": "checkout-test-a@example.com",
+      "code": "GOOOL20-ZZZZ"
+    },
+    "preview": {
+      "status": 400,
+      "json": {
+        "error": "We don't recognise that code.",
+        "reason": "unknown"
+      }
+    },
+    "create": null,
+    "session": null,
+    "expect": {
+      "status": 400,
+      "reason": "unknown"
+    },
+    "pass": true
+  },
+  {
+    "name": "5e bad format",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": "checkout-test-a@example.com",
+      "code": "GOOOL20"
+    },
+    "preview": {
+      "status": 400,
+      "json": {
+        "error": "That code doesn't look right. Codes look like GOOOL20-XXXX.",
+        "reason": "format"
+      }
+    },
+    "create": null,
+    "session": null,
+    "expect": {
+      "status": 400,
+      "reason": "format"
+    },
+    "pass": true
+  },
+  {
+    "name": "5f code without email",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": null,
+      "code": "GOOOL20-TLCQ"
+    },
+    "preview": {
+      "status": 400,
+      "json": {
+        "error": "Enter the email your code was sent to.",
+        "reason": "email"
+      }
+    },
+    "create": null,
+    "session": null,
+    "expect": {
+      "status": 400,
+      "reason": "email"
+    },
+    "pass": true
+  },
+  {
+    "name": "7a tee, no code",
+    "request": {
+      "items": [
+        "1"
+      ],
+      "email": null,
+      "code": null
+    },
+    "preview": {
+      "status": 200,
+      "json": {
+        "subtotalCents": 3800,
+        "discountCents": 0,
+        "shippingCents": 695,
+        "totalCents": 4495,
+        "code": null,
+        "percentOff": null
+      }
+    },
+    "create": {
+      "status": 200,
+      "json": {
+        "url": "(session created)"
+      }
+    },
+    "session": {
+      "id": "cs_test_a1OQBBcn8Tv7YXTouGgWPDYsDCNdVeCPITiC6CuqLUp5pFaqtzUXA5mES7",
+      "subtotal": 3800,
+      "discount": 0,
+      "shipping": 695,
+      "total": 4495,
+      "allow_promotion_codes": null,
+      "discounts": [],
+      "shipping_rate": "Standard shipping",
+      "customer_email": null,
+      "livemode": false
+    },
+    "expect": {
+      "subtotal": 3800,
+      "discount": 0,
+      "shipping": 695,
+      "total": 4495
+    },
+    "pass": true
+  },
+  {
+    "name": "7b hoodie, no code",
+    "request": {
+      "items": [
+        "2"
+      ],
+      "email": null,
+      "code": null
+    },
+    "preview": {
+      "status": 200,
+      "json": {
+        "subtotalCents": 7800,
+        "discountCents": 0,
+        "shippingCents": 0,
+        "totalCents": 7800,
+        "code": null,
+        "percentOff": null
+      }
+    },
+    "create": {
+      "status": 200,
+      "json": {
+        "url": "(session created)"
+      }
+    },
+    "session": {
+      "id": "cs_test_a15V3HkJRxs8abySi89K6HmNwExH37o9bfRINmDu9of3hx8a7ny8inmQAs",
+      "subtotal": 7800,
+      "discount": 0,
+      "shipping": 0,
+      "total": 7800,
+      "allow_promotion_codes": null,
+      "discounts": [],
+      "shipping_rate": "Free shipping",
+      "customer_email": null,
+      "livemode": false
+    },
+    "expect": {
+      "subtotal": 7800,
+      "discount": 0,
+      "shipping": 0,
+      "total": 7800
+    },
+    "pass": true
+  },
+  {
+    "name": "7c cap, no code",
+    "request": {
+      "items": [
+        "4"
+      ],
+      "email": null,
+      "code": null
+    },
+    "preview": {
+      "status": 200,
+      "json": {
+        "subtotalCents": 3200,
+        "discountCents": 0,
+        "shippingCents": 695,
+        "totalCents": 3895,
+        "code": null,
+        "percentOff": null
+      }
+    },
+    "create": {
+      "status": 200,
+      "json": {
+        "url": "(session created)"
+      }
+    },
+    "session": {
+      "id": "cs_test_a1MmWnx960gTiu8TKGwQQNPrfiCrhccdCQfJ1A7HQ8BLDiRlvv68Y8c9QA",
+      "subtotal": 3200,
+      "discount": 0,
+      "shipping": 695,
+      "total": 3895,
+      "allow_promotion_codes": null,
+      "discounts": [],
+      "shipping_rate": "Standard shipping",
+      "customer_email": null,
+      "livemode": false
+    },
+    "expect": {
+      "subtotal": 3200,
+      "discount": 0,
+      "shipping": 695,
+      "total": 3895
+    },
+    "pass": true
+  }
+]

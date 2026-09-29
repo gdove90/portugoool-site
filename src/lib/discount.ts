@@ -207,3 +207,71 @@ export async function markRedeemed(args: {
     .is("redeemed_at", null);
   if (error) console.error("[discount] redemption record failed:", error.message);
 }
+
+// ─────────────────────────────────────────────────────────────
+// Validation at checkout (2026-09-29). The cart applies the code BEFORE
+// the Stripe session exists, so shipping can be decided on the
+// post-discount subtotal. This is the only place a code is checked; the
+// checkout route calls it for the cart preview and again when it creates
+// the session. Stripe is the authority (active, expiry, redemptions,
+// coupon validity); the code's own metadata ties it to the email it was
+// issued to; the ledger is a second opinion on redemption when reachable.
+// ─────────────────────────────────────────────────────────────
+
+export type CodeValidation =
+  | { ok: true; promotionCodeId: string; code: string; percentOff: number }
+  | { ok: false; reason: "format" | "unknown" | "expired" | "used" | "email" | "coupon" };
+
+export const CODE_REJECTION_MESSAGE: Record<Extract<CodeValidation, { ok: false }>["reason"], string> = {
+  format: "That code doesn't look right. Codes look like GOOOL20-XXXX.",
+  unknown: "We don't recognise that code.",
+  expired: "That code has expired.",
+  used: "That code has already been used.",
+  email: "That code was issued to a different email address.",
+  coupon: "That code is no longer valid.",
+};
+
+export function normalizeCode(raw: string): string {
+  return raw.trim().toUpperCase().replace(/\s+/g, "");
+}
+
+export function discountCentsFor(subtotalCents: number, percentOff: number): number {
+  return Math.round((subtotalCents * percentOff) / 100);
+}
+
+export async function validatePromotionCode(
+  stripe: Stripe,
+  rawCode: string,
+  email: string
+): Promise<CodeValidation> {
+  const code = normalizeCode(rawCode);
+  if (!/^GOOOL20-[A-Z2-9]{4}$/.test(code)) return { ok: false, reason: "format" };
+
+  const list = await stripe.promotionCodes.list({ code, limit: 1, expand: ["data.coupon"] });
+  const promo = list.data[0];
+  if (!promo) return { ok: false, reason: "unknown" };
+  if (promo.metadata?.email_hash && promo.metadata.email_hash !== emailHash(email)) {
+    return { ok: false, reason: "email" };
+  }
+  if (promo.expires_at && promo.expires_at * 1000 <= Date.now()) return { ok: false, reason: "expired" };
+  if (promo.max_redemptions != null && promo.times_redeemed >= promo.max_redemptions) {
+    return { ok: false, reason: "used" };
+  }
+  if (!promo.active) return { ok: false, reason: "expired" };
+  const coupon = promo.coupon;
+  if (!coupon.valid || coupon.percent_off == null) return { ok: false, reason: "coupon" };
+
+  // Ledger: a row already marked redeemed means the code was spent even if
+  // Stripe's counter has not caught up. Skipped when the database is not
+  // reachable; Stripe's checks above stand on their own.
+  const db = getSupabaseAdmin();
+  if (db) {
+    const { data } = await db
+      .from("discount_codes")
+      .select("redeemed_at")
+      .eq("stripe_promotion_code_id", promo.id)
+      .maybeSingle();
+    if (data?.redeemed_at) return { ok: false, reason: "used" };
+  }
+  return { ok: true, promotionCodeId: promo.id, code, percentOff: coupon.percent_off };
+}

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { shippingCentsFor } from "@/lib/shipping";
+import { CODE_REJECTION_MESSAGE, discountCentsFor, validatePromotionCode, type CodeValidation } from "@/lib/discount";
+import { EMAIL_RE } from "@/lib/mailchimp";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
 import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from "@/lib/types";
@@ -11,6 +13,14 @@ import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from
 // Catalog prices are the server-side source of truth.
 // Security note: prices are ALWAYS looked up server-side by productId.
 // The client only sends ids, sizes, quantities, and customization text.
+//
+// Promotion codes (2026-09-29): a GOOOL20 code is entered in the cart,
+// validated here (validatePromotionCode, the one check), and attached to
+// the session at creation. Stripe's own code box is off. That ordering
+// is the point: shipping is decided on the POST-discount subtotal, so a
+// $70 cart that the code takes to $56 pays shipping. With `preview: true`
+// this route returns the totals without creating a session; the cart
+// shows exactly what Stripe will charge because both come from here.
 // ─────────────────────────────────────────────────────────────
 
 interface CheckoutItemPayload {
@@ -37,9 +47,16 @@ export async function POST(req: NextRequest) {
   }
 
   let items: CheckoutItemPayload[];
+  let email = "";
+  let code = "";
+  let preview = false;
   try {
     const body = await req.json();
     items = body.items;
+    email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    code = typeof body.code === "string" ? body.code : "";
+    preview = body.preview === true;
+    if (email && (!EMAIL_RE.test(email) || email.length > 254)) throw new Error();
     if (!Array.isArray(items) || items.length === 0 || items.length > 50) throw new Error();
     for (const item of items) {
       if (!item || typeof item !== "object" || Array.isArray(item) ||
@@ -164,11 +181,44 @@ export async function POST(req: NextRequest) {
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ?? req.nextUrl.origin;
 
+  const stripe = new Stripe(secretKey);
+
+  // A code needs the email it was issued to. Validation is the single
+  // function in lib/discount; a rejected code stops here, no session.
+  let promo: Extract<CodeValidation, { ok: true }> | null = null;
+  if (code.trim()) {
+    if (!email) {
+      return NextResponse.json({ error: "Enter the email your code was sent to.", reason: "email" }, { status: 400 });
+    }
+    let result: CodeValidation;
+    try {
+      result = await validatePromotionCode(stripe, code, email);
+    } catch {
+      return NextResponse.json({ error: "We couldn't check that code right now. Try again in a moment." }, { status: 503 });
+    }
+    if (!result.ok) {
+      return NextResponse.json({ error: CODE_REJECTION_MESSAGE[result.reason], reason: result.reason }, { status: 400 });
+    }
+    promo = result;
+  }
+  const discountCents = promo ? discountCentsFor(subtotalCents, promo.percentOff) : 0;
+
   // Shipping is decided here, from src/lib/shipping.ts: a flat rate per
   // order, free at the threshold, computed on the merchandise subtotal
-  // before any discount code. It is passed to Stripe inline, so there is
-  // no dashboard rate object to drift out of step with the site.
-  const shippingCents = shippingCentsFor(subtotalCents);
+  // AFTER the discount. It is passed to Stripe inline, so there is no
+  // dashboard rate object to drift out of step with the site.
+  const shippingCents = shippingCentsFor(subtotalCents - discountCents);
+
+  if (preview) {
+    return NextResponse.json({
+      subtotalCents,
+      discountCents,
+      shippingCents,
+      totalCents: subtotalCents - discountCents + shippingCents,
+      code: promo?.code ?? null,
+      percentOff: promo?.percentOff ?? null,
+    });
+  }
 
   // Immutable purchase snapshot for the payment webhook, chunked to
   // respect Stripe's 500-char metadata value limit. Prices AND Apliiq
@@ -190,10 +240,16 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const stripe = new Stripe(secretKey);
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: lineItems,
+      ...(email ? { customer_email: email } : {}),
+      // The discount is attached NOW, on the same numbers the shipping
+      // line was computed from. Stripe's own promotion-code box stays
+      // off (allow_promotion_codes defaults to false and cannot be
+      // combined with `discounts`), so nothing can change the subtotal
+      // after the shipping decision.
+      ...(promo ? { discounts: [{ promotion_code: promo.promotionCodeId }] } : {}),
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "PT", "GB"],
       },
@@ -214,8 +270,6 @@ export async function POST(req: NextRequest) {
         },
       },
       metadata,
-      // Stripe validates the individual first-order codes issued by lib/discount.
-      allow_promotion_codes: true,
       success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/cart`,
       // Customer email is collected by Stripe Checkout itself.
