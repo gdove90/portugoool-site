@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import EmailSignup from "@/components/EmailSignup";
 
 // ─────────────────────────────────────────────────────────────
 // About. Rewritten 2026-09-23.
@@ -105,7 +104,6 @@ export default function AboutPage() {
         </Link>
       </section>
 
-      <EmailSignup />
     </>
   );
 }
