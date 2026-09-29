@@ -1675,7 +1675,7 @@ export const products: Product[] = [
     slug: "goool-performance-tee",
     description:
       "Lightweight training tee. GOOOL crest centered on the chest, athletic fit, taped neck.",
-    priceCents: 4800,
+    priceCents: 4000,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -2001,7 +2001,7 @@ export const products: Product[] = [
     // placements, same price. The slug keeps the original casual-tee URL.
     description:
       "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the red club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
-    priceCents: 4800,
+    priceCents: 4000,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#111111",
@@ -2102,7 +2102,7 @@ export const products: Product[] = [
     // alternative was not taken).
     description:
       "The wordmark, worn plainly, now with the full GOOOL Athletics lockup in club blue across the chest and the blue club band across the back. Heavyweight combed cotton in natural or black. Built for off the pitch: the one you reach for every day, and keep reaching for.",
-    priceCents: 4800,
+    priceCents: 4000,
     compareAtPriceCents: null,
     color: "Natural",
     colorHex: "#E8E2D3",
@@ -2202,7 +2202,7 @@ export const products: Product[] = [
     // rate (blank $14.06 + flat embroidery), the highest decoration cost in the
     // catalog. At $36 that was a 17% margin - the only product under the floor.
     // $48 puts it at 38% without depending on the VIP subscription.
-    priceCents: 4800,
+    priceCents: 3400,
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",
@@ -2612,7 +2612,7 @@ export const products: Product[] = [
     slug: "goool-athletics-modern-sport-performance-tee",
     description:
       "Performance training tee in black, true royal or white. GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
-    priceCents: 4800,
+    priceCents: 4000,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
@@ -2737,7 +2737,7 @@ export const products: Product[] = [
       "Structured five-panel cap in black and natural. The circular GOOOL Athletics badge embroidered on the front panel, curved visor, adjustable snap.",
     // $48 matches the Touchline Cap and lands on the same economics:
     // dropship $29.88 leaves 37.8% gross before payment fees and shipping.
-    priceCents: 4800,
+    priceCents: 3400,
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",
@@ -2783,7 +2783,7 @@ export const products: Product[] = [
     // Also $48, to hold one price across the cap line. Be aware this one
     // is the thinnest product in the catalog: at 22,313 stitches its
     // dropship is $33.08, leaving 31.1% gross before fees and shipping.
-    priceCents: 4800,
+    priceCents: 3400,
     compareAtPriceCents: null,
     color: "Black/Natural",
     colorHex: "#E4DFC9",

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
+import { shippingCentsFor } from "@/lib/shipping";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
 import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from "@/lib/types";
@@ -54,6 +55,7 @@ export async function POST(req: NextRequest) {
 
   // Build line items with server-side prices only.
   const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
+  let subtotalCents = 0;
   const compactItems = [];
   for (const item of items) {
     const product = getProductById(item.productId);
@@ -127,6 +129,7 @@ export async function POST(req: NextRequest) {
     if (!mapping) return NextResponse.json(
       { error: "This product variant cannot be ordered right now." }, { status: 400 });
     const unitCents = product.priceCents + (hasCustomization ? product.customizationPriceCents : 0);
+    subtotalCents += unitCents * quantity;
     compactItems.push({ p: product.id, c: color, s: item.size, q: quantity,
       u: unitCents, k: mapping.sku, a: mapping.apliiqProductId,
       ...(customName ? { n: customName } : {}), ...(customNumber ? { m: customNumber } : {}) });
@@ -161,17 +164,11 @@ export async function POST(req: NextRequest) {
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ?? req.nextUrl.origin;
 
-  // Shipping is a deliberate business decision, never an accident:
-  // without a configured Stripe shipping rate we refuse checkout
-  // instead of quietly giving free shipping. Set STRIPE_SHIPPING_RATE_ID
-  // (a shr_… rate created in the Stripe dashboard) to open this path.
-  const shippingRateId = process.env.STRIPE_SHIPPING_RATE_ID;
-  if (!shippingRateId) {
-    return NextResponse.json(
-      { error: "Checkout isn't live yet: shipping rates are still being configured." },
-      { status: 503 }
-    );
-  }
+  // Shipping is decided here, from src/lib/shipping.ts: a flat rate per
+  // order, free at the threshold, computed on the merchandise subtotal
+  // before any discount code. It is passed to Stripe inline, so there is
+  // no dashboard rate object to drift out of step with the site.
+  const shippingCents = shippingCentsFor(subtotalCents);
 
   // Immutable purchase snapshot for the payment webhook, chunked to
   // respect Stripe's 500-char metadata value limit. Prices AND Apliiq
@@ -200,8 +197,16 @@ export async function POST(req: NextRequest) {
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "PT", "GB"],
       },
-      shipping_options: [{ shipping_rate: shippingRateId }],
-      // One approved rate; country-specific delivery estimates are stated below.
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            display_name: shippingCents === 0 ? "Free shipping" : "Standard shipping",
+            fixed_amount: { amount: shippingCents, currency: "usd" },
+          },
+        },
+      ],
+      // One rule for every country; country-specific delivery estimates are stated below.
       custom_text: {
         shipping_address: {
           message:

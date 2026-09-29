@@ -81,14 +81,14 @@ export const metadata: Metadata = {
   // costs comes first and survives the mobile cut, positioning second,
   // shipping last where losing it costs least.
   //
-  // Every claim checked against the catalog on 2026-09-23. "$48" is the
-  // real floor and sits on 8 of the 10 live products. "Heavyweight" holds
+  // Every claim checked against the catalog on 2026-09-29. "$34" is the
+  // real floor (the three caps); tees are $40 and hoodies $78. "Heavyweight" holds
   // for all five cotton garments. "Embroidered caps" is the three OTTO
   // 31-069s. The four countries are exactly allowed_countries in
   // api/checkout. An earlier draft opened with the brand line and ran to
   // 190 characters, which would have been cut mid-phrase at "Ships to".
   description:
-    "Heavyweight cotton tees, hoodies and embroidered caps from $48. Original soccer sportswear, never licensed. Ships to the US, Canada, the UK and Portugal.",
+    "Heavyweight cotton tees, hoodies and embroidered caps from $34. Original soccer sportswear, never licensed. Ships to the US, Canada, the UK and Portugal.",
 };
 
 // The band sits after this many collections (0-based index of the

@@ -6,10 +6,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
+import { FREE_SHIPPING_THRESHOLD_CENTS, shippingCentsFor } from "@/lib/shipping";
 import { MAX_LINE_QUANTITY } from "@/lib/types";
 
 export default function CartPage() {
   const { items, notices, dismissNotices, removeItem, updateQuantity, subtotalCents } = useCart();
+  const shippingCents = shippingCentsFor(subtotalCents);
   const [checkingOut, setCheckingOut] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -192,9 +194,20 @@ export default function CartPage() {
             </div>
             <div className="flex justify-between">
               <dt className="text-ink/60">Shipping</dt>
-              <dd className="text-ink/60">Calculated at checkout</dd>
+              <dd className={shippingCents === 0 ? "font-semibold text-ink" : "text-ink"}>
+                {shippingCents === 0 ? "Free" : formatPrice(shippingCents)}
+              </dd>
+            </div>
+            <div className="flex justify-between border-t border-ink/10 pt-2">
+              <dt className="font-semibold text-ink">Total</dt>
+              <dd className="font-semibold text-ink">{formatPrice(subtotalCents + shippingCents)}</dd>
             </div>
           </dl>
+          <p className="mt-2 text-xs text-ink/50">
+            {shippingCents === 0
+              ? "Free shipping applied."
+              : `Free shipping on orders of ${formatPrice(FREE_SHIPPING_THRESHOLD_CENTS)} or more.`}
+          </p>
 
           <button
             type="button"
