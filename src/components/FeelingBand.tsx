@@ -18,15 +18,20 @@ export default function FeelingBand() {
       aria-label="Wear the Feeling"
       className="overflow-hidden bg-ink px-5 pb-8 pt-9 text-paper sm:px-6 md:pb-12 md:pt-14 lg:px-12"
     >
-      <h2 className="whitespace-nowrap text-center font-display text-[42px] uppercase leading-[0.95] tracking-[-0.01em] md:text-[128px]">
-        Wear the Feeling.
-      </h2>
-      {/* The brand rule from the lockup: three slanted segments, white,
-          red, white, centred under the line. */}
-      <div aria-hidden className="mt-4 flex justify-center gap-2 md:mt-6 md:gap-3">
-        <span className="block h-1.5 w-12 -skew-x-[30deg] bg-paper md:h-2 md:w-20" />
-        <span className="block h-1.5 w-12 -skew-x-[30deg] bg-red md:h-2 md:w-20" />
-        <span className="block h-1.5 w-12 -skew-x-[30deg] bg-paper md:h-2 md:w-20" />
+      {/* The headline and the rule share one shrink-to-fit column, so the
+          three slanted segments (white, red, white, the lockup's rule)
+          together run the full width of the words at every size. */}
+      <div className="flex justify-center">
+        <div className="inline-flex flex-col">
+          <h2 className="whitespace-nowrap text-center font-display text-[42px] uppercase leading-[0.95] tracking-[-0.01em] md:text-[128px]">
+            Wear the Feeling.
+          </h2>
+          <div aria-hidden className="mt-2 flex gap-2 md:mt-4 md:gap-3">
+            <span className="block h-1.5 flex-1 -skew-x-[30deg] bg-paper md:h-2" />
+            <span className="block h-1.5 flex-1 -skew-x-[30deg] bg-red md:h-2" />
+            <span className="block h-1.5 flex-1 -skew-x-[30deg] bg-paper md:h-2" />
+          </div>
+        </div>
       </div>
       <div className="mt-6 flex justify-center md:mt-8">
         <a
