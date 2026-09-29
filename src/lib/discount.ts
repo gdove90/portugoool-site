@@ -22,7 +22,10 @@ const COUPON_NAME = "GOOOL20 · 20% off first order";
 const COUPON_SOURCE = "goool20-popup";
 const CODE_PREFIX = "GOOOL20-";
 const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O/1/I
-const CODE_DAYS = 30;
+// Owner decision 2026-09-29: 14 days from sign-up (was 30). Stripe
+// expires_at and the ledger mirror are written from the same value
+// below; codes issued earlier keep the expiry they were given.
+const CODE_DAYS = 14;
 
 export type IssueResult =
   | { status: "issued" | "existing"; code: string }

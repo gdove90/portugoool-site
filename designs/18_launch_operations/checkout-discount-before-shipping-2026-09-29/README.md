@@ -96,6 +96,18 @@ branch (83 sellable variants, malformed carts, discount reconciliation).
 - Local `NEXT_PUBLIC_SITE_URL` points at :3000, so the test success
   redirect went to a dead port. Production env is untouched.
 
+## Expiry change (same day, before deploy)
+
+Owner decision: GOOOL20 codes expire 14 days from sign-up, not 30.
+`CODE_DAYS` in `src/lib/discount.ts` is the one place; Stripe
+`expires_at` and the ledger `expires_at` are written from that same value.
+Existing codes keep their expiry. Copy updated: the code email
+(`src/lib/emails/discount-code.ts`, text and HTML footer) now says
+"Valid for 14 days from issue". The popup and cart state no window.
+New suite test: a code issued today carries now + 14 d in both Stripe and
+the ledger, is rejected at day 15 and accepted at day 13 (mocked clock).
+Suite 25/25, API verification 13/13 after the change.
+
 ## Rollback
 
 `git checkout main` and redeploy main (the branch is not merged); or, if

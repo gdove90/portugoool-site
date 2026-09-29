@@ -12,7 +12,7 @@ export function buildDiscountCodeEmail(code: string): { subject: string; html: s
       "Your first-order code is ready. Find your favorites and make them yours.", "",
       "Your code: " + code, "Enter this code at checkout.",
       "Shop the collection: https://goool.shop/shop", "",
-      "20% off your first order. Single use. Valid for 30 days from issue.", "",
+      "20% off your first order. Single use. Valid for 14 days from issue.", "",
       "Customer Service", "Questions or need support? Contact us at hello@goool.shop.", "",
       "Wear the Feeling.", "GOOOL ATHLETICS LLC", "https://goool.shop",
     ].join("\n"),
@@ -54,7 +54,7 @@ export function buildDiscountCodeEmail(code: string): { subject: string; html: s
  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;"><tr><td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
   <a href="https://goool.shop/shop" target="_blank" style="display:block;padding:15px 16px;font:700 14px/1.4 Helvetica,Arial,sans-serif;color:#090909;background-color:#FFFFFF;text-decoration:none;">Shop the collection</a>
  </td></tr></table>
- <div style="margin-top:15px;text-align:center;font:400 12px/1.65 Helvetica,Arial,sans-serif;color:#D6D6D6;">20% off your first order. Single use.<br>Valid for 30 days from issue.</div>
+ <div style="margin-top:15px;text-align:center;font:400 12px/1.65 Helvetica,Arial,sans-serif;color:#D6D6D6;">20% off your first order. Single use.<br>Valid for 14 days from issue.</div>
 </td></tr><tr><td align="center" style="border-top:1px solid #393939;padding:20px 0 18px;">
             <div style="font:700 16px/1.5 Helvetica,Arial,sans-serif;color:#FFFFFF;">Customer Service</div>
             <div style="margin-top:9px;font:400 13px/1.65 Helvetica,Arial,sans-serif;color:#D6D6D6;">Questions or need support?<br>Contact us at</div>
