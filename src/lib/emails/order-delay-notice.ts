@@ -54,6 +54,7 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
     "",
     "If you would rather not wait, reply to this email and we will refund you in full.",
     "",
+    "Support Team",
     "GOOOL Athletics",
     "",
     `Track your order: ${site}/track-order`,
@@ -100,7 +101,8 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
             <div style="font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};">${esc(greeting)}</div>
             <div style="margin-top:14px;font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">Your order is confirmed and paid, but it is taking longer than usual to prepare. Nothing is needed from you. The moment it ships we will email your tracking number, and you can check it any time at <a href="${esc(site)}/track-order" target="_blank" style="color:${PAPER};text-decoration:underline;white-space:nowrap;">goool.shop/track-order</a>.</div>
             <div style="margin-top:14px;font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">If you would rather not wait, reply to this email and we will refund you in full.</div>
-            <div style="margin-top:14px;font:700 15px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};">GOOOL Athletics</div>
+            <div style="margin-top:14px;font:700 15px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};">Support Team</div>
+            <div style="font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">GOOOL Athletics</div>
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;"><tr><td align="center" bgcolor="${RED}" style="background-color:${RED};">
               <a href="${esc(site)}/track-order" target="_blank" style="display:block;padding:15px 16px;font:700 14px/1.4 Helvetica,Arial,sans-serif;color:${PAPER};background-color:${RED};text-decoration:none;">Track your order</a>
             </td></tr></table>
