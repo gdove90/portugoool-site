@@ -1,0 +1,16 @@
+Owner selected Blue Spruce / ivory on September 22, 2026. This supersedes the Pepper colorway handoff. Use the existing ivory artwork unchanged; the new mockup is a color/placement reference, not print artwork or an exact supplier swatch.
+
+Add the owner-approved Blue Spruce second colorway of the GOOOL Athletics Circular Badge Tee to Apliiq. Use this attached folder/ZIP.
+
+Blank: Comfort Colors C1717, exact supplier color Blue Spruce; verify S, M, L, XL, XXL availability. Keep the existing Ivory design unchanged. Check for an existing Blue Spruce saved design before creating one; the recorded Ivory design ID is 6112033, for reference only.
+
+Upload GOOOL-CIRCULAR-IVORY-3IN-PROOF.png as the front DTF artwork. It is transparent RGBA, 924 x 934 px at 308 ppi, fully opaque ivory ink #E9E4DA; visible print size 3.000 x 3.0325 inches. Preserve proportions and original rounded letter geometry, including three Os in GOOOL. No font substitution, disk, ring, back or sleeve print. The SVG is the matching source-derived outline, not additional resolution.
+
+Place at wearer-left chest (viewer right). Starting placement from the existing package: artwork top 3 inches below bottom front collar seam; artwork center 3.5 inches wearer-left of body centerline. Verify against Apliiq's actual garment template and obtain a dimensioned proof; these offsets are targets, not measured sample approval. Preserve the approved sewn-label setup; flag any unavailable label mapping.
+
+REFERENCE-ONLY-Blue-Spruce-Ivory.png shows the intended look; do not upload the shirt photo as print artwork. Use actual supplier imagery for the new garment.
+
+Before treating this as production-ready, have Apliiq check the small ATHLETICS lettering at actual size against its 2 mm detail recommendation, plus ivory ink/color and transfer suitability. The file passes format/opacity/size checks, but print durability, tiny strokes, stock and physical sample approval are not certified. Do not silently thicken letters, change font, enlarge the mark or add a background. If correction is needed, return the specific failed detail and a proposed proof.
+
+Save the separate Blue Spruce design and return its design/product ID, exact color ID, every size SKU, front/back preview, saved print dimensions/placement, label status and costs. Do not place a paid order or enable the website variant as part of this upload task. Stripe is already connected; leave it alone.
+

@@ -59,3 +59,12 @@ designs/09_social-media/instagram/GOOOL_Instagram_Campaign_Asset_Pack.zip
 # Campaign assets and Higgsfield character packs (large media, owner-managed; canonical files stay in designs/)
 /goool advertising/
 /goool higgsfield/
+
+# Private and scratch (2026-09-29): financials never enter the repo; renders,
+# review videos and test output are regenerable and too large for git.
+Finance/
+output/
+tmp/
+.recolour_*.json
+.verify_manifest.json
+designs/26_launch-video-ad-2026-09-25/output/

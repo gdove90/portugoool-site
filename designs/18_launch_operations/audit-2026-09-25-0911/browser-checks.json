@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-25T13:10:43Z",
+  "desktop": {
+    "missingSizeRejected": true,
+    "color": "Natural",
+    "size": "M",
+    "galleryAndSizeGuide": true,
+    "quantityPrices": [
+      4800,
+      9600,
+      4800
+    ],
+    "reloadRetainedCart": true,
+    "liveCheckoutTotalCents": 5750,
+    "checkoutPaid": false
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "cartOverflow": false,
+    "hoodieOverflow": false,
+    "menu": true,
+    "categoryFilter": true,
+    "boneBackImageLoaded": true,
+    "finalPageWarningsErrors": []
+  },
+  "international": {
+    "countrySelected": "Portugal",
+    "rateLabel": "Standard shipping 7-12 business days $9.50",
+    "customText": "Canada, the UK and Portugal take about 3 to 5 weeks",
+    "conflictingEstimate": true
+  },
+  "supplier": {
+    "authenticated": false,
+    "v5UploadStatus": "Not verified; local handoff still pending"
+  },
+  "cleanup": {
+    "cartEmpty": true,
+    "temporaryTabsClosed": true,
+    "viewportReset": true
+  },
+  "siteMutated": false
+}

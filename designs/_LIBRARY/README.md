@@ -6,7 +6,7 @@ print files in a folder of their own.
 | folder | what it is | when you want it |
 |---|---|---|
 | **`1-PRINT-FILES/`** | the transparent PNGs you upload to Apliiq | adding a product to the supplier |
-| `2-logo-designs/` | lockups and marks, all colourways | putting the logo on anything |
+| `2-logo-designs/` | lockups and marks, all colourways; `logo-v2/` is the secondary merch logo (Logo V2) | putting the logo on anything |
 | `3-tee-designs/` | the 12 retail tee spec sheets, 1a-1l | planning shirts |
 | `4-hoodie-designs/` | *(empty)* | |
 | `5-crewneck-designs/` | *(empty)* | |

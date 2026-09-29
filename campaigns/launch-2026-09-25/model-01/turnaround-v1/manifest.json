@@ -1,0 +1,105 @@
+{
+  "model": "GOOOL Model 01",
+  "method": "Built-in image_gen",
+  "images": [
+    {
+      "file": "full-body/000-front.png",
+      "label": "Front",
+      "source": "C:/Users/gdove/OneDrive/Desktop/GOOOL/campaigns/launch-2026-09-25/model-01/GOOOL-MODEL-01-FULL-BODY.png",
+      "original": true,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "48363f7764455b3f7e9a91f17a0b8ca84c9bd2b58d1db9c427ec3ccafc9c06e3"
+    },
+    {
+      "file": "full-body/045-front-left-facing.png",
+      "label": "Front three-quarter, facing image left",
+      "generationId": "045-front-right",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-e545c572-202c-4b9f-9f6c-b706dd84a857.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "fdf862068d59a9a95198c0563e17bff7a1a2b508902274771f1a09483b507553"
+    },
+    {
+      "file": "full-body/090-left-facing-profile.png",
+      "label": "Side profile, nose pointing image left",
+      "generationId": "090-right-profile",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-9d927b8a-5730-4942-8ebb-4085c390fd74.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "ec10c6ee77f0b21857638426b98b60af6c0d8e7e97a7a73ea35d0d5254c66594"
+    },
+    {
+      "file": "full-body/135-rear-left-facing.png",
+      "label": "Rear three-quarter, facing image left",
+      "generationId": "135-rear-right-corrected",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-c1c5b5e9-8f79-437d-88f8-7754173a30eb.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "d92915c5c229673403abe5d291be19416305f96eff0bd0a716cf80bc95f115d8"
+    },
+    {
+      "file": "full-body/180-back.png",
+      "label": "Straight back",
+      "generationId": "180-back",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-f152630c-d77a-40f6-9ce9-76e5af775430.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "a7d6fa5054e7dcfb9bb81b92dd504db327c7edce84252535bf7ab898e3326d32"
+    },
+    {
+      "file": "full-body/225-rear-right-facing.png",
+      "label": "Rear three-quarter, facing image right",
+      "generationId": "225-rear-left-corrected",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-28741a1e-4983-487a-a14f-47eb3b23954f.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "78e6d5caaea77d00d341f47606d6175f6545639dd1c9340ee51866a3df36fedf"
+    },
+    {
+      "file": "full-body/270-right-facing-profile.png",
+      "label": "Side profile, nose pointing image right",
+      "generationId": "270-left-profile",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-2578be8e-a4b0-479d-9b53-213178d15b46.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "d4b44c3e31ea63c7d10cc110e1e213aae4d7be5023f7ba3dc05739098d3fa32e"
+    },
+    {
+      "file": "full-body/315-front-right-facing.png",
+      "label": "Front three-quarter, facing image right",
+      "generationId": "315-front-left",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-b9e988ad-7b50-491f-8128-fd1d0d6182de.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "688b9d4ec1bf459f0d98d5a5e30de396cdf4d133d1561647cbc1fa23941ded2d"
+    },
+    {
+      "file": "portraits/090-left-facing-portrait.png",
+      "label": "Close side portrait, nose pointing image left",
+      "generationId": "090-right-portrait",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-83c67724-45d8-4502-b0fa-e9592744e975.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "5fb2515e8bf0ae97cd15b12eb986254ae64d98a2becb9fea02c78c68dc6b67f3"
+    },
+    {
+      "file": "portraits/270-right-facing-portrait.png",
+      "label": "Close side portrait, nose pointing image right",
+      "generationId": "270-left-portrait",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a0d722-b2ac-7053-b86a-cddd9fc55dea\\exec-bc3647c3-f7fe-4082-a202-551ba5e742ad.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "e8a034d6ce7fe3ae8f264d2905133f671f3686b67aff0411715122576a17e302"
+    },
+    {
+      "file": "portraits/000-front-portrait.png",
+      "label": "Original primary identity portrait",
+      "source": "C:/Users/gdove/OneDrive/Desktop/GOOOL/campaigns/launch-2026-09-25/model-01/GOOOL-MODEL-01-PORTRAIT.png",
+      "original": true,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "540033db08384c0e0b731d5ebff918091868e144cde0f584a254ed1e9cc122a1"
+    }
+  ]
+}

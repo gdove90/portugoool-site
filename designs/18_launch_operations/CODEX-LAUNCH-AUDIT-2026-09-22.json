@@ -1,0 +1,131 @@
+{
+  "checked_at": "2026-09-22T08:37:57.770Z",
+  "operations": "read-only",
+  "stripe": {
+    "mode": "test",
+    "account_id": "acct_1UHzc3BtaM9tSdZu",
+    "sessions_returned": 4,
+    "paid_sessions": [],
+    "webhooks": [
+      {
+        "id": "we_1UIKJYBtaM9tSdZu4EZ10b1W",
+        "url": "https://goool.shop/api/stripe-webhook",
+        "status": "enabled",
+        "events": [
+          "checkout.session.completed",
+          "checkout.session.async_payment_succeeded",
+          "checkout.session.async_payment_failed"
+        ]
+      },
+      {
+        "id": "we_1UHzlPBtaM9tSdZuyGt4Zvat",
+        "url": "https://goool.shop/api/stripe-webhook",
+        "status": "enabled",
+        "events": [
+          "checkout.session.completed",
+          "checkout.session.async_payment_succeeded",
+          "checkout.session.async_payment_failed"
+        ]
+      }
+    ],
+    "shipping_rates": [
+      {
+        "id": "shr_1UHzkjBtaM9tSdZuO7f4GTcA",
+        "name": "GOOOL TEST shipping",
+        "active": true,
+        "livemode": false,
+        "amount": 950
+      }
+    ]
+  },
+  "database": {
+    "access": "anonymous-schema-check",
+    "orders": {
+      "http_status": 200,
+      "columns_available": true
+    },
+    "order_items": {
+      "http_status": 200,
+      "columns_available": true
+    },
+    "stripe_events": {
+      "http_status": 200,
+      "columns_available": true
+    },
+    "order_shipments": {
+      "http_status": 200,
+      "columns_available": true
+    },
+    "public_catalog": {
+      "http_status": 200,
+      "rows": [
+        {
+          "id": "70000000-0000-4000-8000-000000000001",
+          "slug": "goool-performance-tee",
+          "price_cents": 3800,
+          "available_for_sale": false
+        },
+        {
+          "id": "70000000-0000-4000-8000-000000000002",
+          "slug": "goool-heavyweight-hoodie",
+          "price_cents": 6800,
+          "available_for_sale": false
+        },
+        {
+          "id": "70000000-0000-4000-8000-000000000003",
+          "slug": "goool-heavyweight-casual-tee",
+          "price_cents": 3800,
+          "available_for_sale": false
+        },
+        {
+          "id": "70000000-0000-4000-8000-000000000004",
+          "slug": "goool-touchline-cap",
+          "price_cents": 4800,
+          "available_for_sale": false
+        },
+        {
+          "id": "80000000-0000-4000-8000-000000000001",
+          "slug": "goool-athletics-modern-sport-tee",
+          "price_cents": 6400,
+          "available_for_sale": false
+        },
+        {
+          "id": "80000000-0000-4000-8000-000000000002",
+          "slug": "goool-athletics-varsity-tee",
+          "price_cents": 4800,
+          "available_for_sale": false
+        },
+        {
+          "id": "80000000-0000-4000-8000-000000000003",
+          "slug": "goool-athletics-minimal-club-tee",
+          "price_cents": 4600,
+          "available_for_sale": false
+        },
+        {
+          "id": "80000000-0000-4000-8000-000000000004",
+          "slug": "goool-athletics-circular-badge-tee",
+          "price_cents": 3500,
+          "available_for_sale": false
+        },
+        {
+          "id": "80000000-0000-4000-8000-000000000005",
+          "slug": "goool-athletics-circular-center-crewneck",
+          "price_cents": 8800,
+          "available_for_sale": false
+        },
+        {
+          "id": "80000000-0000-4000-8000-000000000006",
+          "slug": "goool-athletics-modern-sport-performance-tee",
+          "price_cents": 3800,
+          "available_for_sale": false
+        }
+      ]
+    }
+  },
+  "gates": {
+    "checkout_test_mode": true,
+    "supplier_submission_enabled": false,
+    "supplier_credentials_present": false,
+    "custom_email_configured": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-09-25T12:52:32.871Z",
+  "operations": "Read-only production environment/deploy inspection; no secret values recorded.",
+  "envShape": "object",
+  "presentKeys": [
+    "APLIIQ_ALLOW_LIVE",
+    "MAILCHIMP_API_KEY",
+    "MAILCHIMP_AUDIENCE_ID",
+    "NEXT_PUBLIC_SITE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NODE_VERSION",
+    "PRINTFUL_API_KEY",
+    "PRINTIFY_API_KEY",
+    "STRIPE_SECRET_KEY",
+    "STRIPE_SHIPPING_RATE_ID",
+    "STRIPE_WEBHOOK_SECRET",
+    "SUPABASE_SERVICE_ROLE_KEY"
+  ],
+  "present": {
+    "APLIIQ_APP_ID": false,
+    "APLIIQ_SHARED_SECRET": false,
+    "APLIIQ_SUBMIT_ENABLED": false,
+    "APLIIQ_ALLOW_LIVE": true,
+    "FULFILLMENT_OPS_KEY": false,
+    "STRIPE_SECRET_KEY": true,
+    "STRIPE_WEBHOOK_SECRET": true,
+    "STRIPE_SHIPPING_RATE_ID": true,
+    "SUPABASE_SERVICE_ROLE_KEY": true,
+    "NEXT_PUBLIC_SUPABASE_URL": true,
+    "GOOGLE_SA_EMAIL": false,
+    "GOOGLE_SA_PRIVATE_KEY": false,
+    "SMTP_USER": false,
+    "SMTP_PASS": false,
+    "RESEND_API_KEY": false,
+    "MAILCHIMP_API_KEY": true,
+    "PREVIEW_KEY": false,
+    "CHECKOUT_TEST_MODE": false,
+    "MAILCHIMP_AUDIENCE_ID": true
+  },
+  "flags": {
+    "APLIIQ_SUBMIT_ENABLED": "absent",
+    "APLIIQ_ALLOW_LIVE": "true",
+    "CHECKOUT_TEST_MODE": "absent"
+  },
+  "site": {
+    "name": "goool-shop",
+    "url": "https://goool.shop",
+    "customDomain": "goool.shop",
+    "ssl": true,
+    "deployId": "6ab657e46cce8061fd574772",
+    "deployState": "ready",
+    "publishedAt": "2026-09-25T11:21:03.082Z",
+    "deployTitle": "Restore back ATHLETICS A counter and enlarge lettering on both tee colors",
+    "commit": null
+  }
+}

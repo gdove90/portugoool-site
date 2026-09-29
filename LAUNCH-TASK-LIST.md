@@ -1,3 +1,13 @@
+> **Current state — 2026-09-28 (owner):**
+> - **Launched.** The site is live and fully functioning; Codex verified it, and Claude confirmed goool.shop returns 200 with www.goool.shop redirecting to it.
+> - **Stripe is live.** The paid-order rehearsal is done: live Klarna and debit-card test orders both succeeded and were cancelled in Apliiq.
+> - **Next phase: ads.** None are running yet.
+> - **Commercial:** held until the Higgsfield video meets the standard.
+> - **Meta Pixel:** the tracking code is built but switched off, because `NEXT_PUBLIC_META_PIXEL_ID` isn't set in production. It must be set, and the site rebuilt, before ads can report purchases.
+> - **Still open:** verifying every product; a GOOOL ATHLETICS hat sample is on its way.
+>
+> This supersedes "Stripe live activation unconfirmed" below.
+
 > **Current backend state — 2026-09-26:** Checkout and email repairs are live, production build and 24 regression tests pass, and nine unpaid LIVE checkout tests pass. Resend is verified and configured as the sole transactional sender; two official simulator deliveries passed once each. Incoming support stays with Google Workspace. The old Google service-account setup instructions are superseded. See [launch verdict](designs/18_launch_operations/LAUNCH-REPAIR-VERDICT-2026-09-26.md) and [source of truth](designs/18_launch_operations/LAUNCH-SOURCE-OF-TRUTH-2026-09-26.md). Remaining: real-inbox test permission, controlled paid-order rehearsal, and email-volume decision (Free: 100/day; Pro: $20/month). Stripe automatic tax remains off. Product/sample approvals are separate and have not been newly verified.
 
 > **Latest owner decisions (2026-09-21):** Modern Sport is performance-only; cotton is archived with files retained. Pricing now targets 25% modeled contribution: [current price model](designs/18_launch_operations/PRICING-25-PERCENT.md). [Current design review](designs/19_colorway-and-back-print-review/README.md) supersedes the straight crewneck back layout and seven-active-product color plan: six color proposals remain, crew lettering follows the collar curve, and detail views apply only to small back prints. Keep sewn-tag/sample/payment requirements.

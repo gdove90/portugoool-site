@@ -6,7 +6,7 @@
 
 > **Latest owner decisions (2026-09-21):** Modern Sport is performance-only; cotton is archived with files retained. Pricing now targets 25% modeled contribution: [current price model](designs/18_launch_operations/PRICING-25-PERCENT.md). [Current design review](designs/19_colorway-and-back-print-review/README.md) supersedes the straight crewneck back layout and seven-active-product color plan: six color proposals remain, crew lettering follows the collar curve, and detail views apply only to small back prints. Keep sewn-tag/sample/payment requirements.
 
-> **Latest launch/tag decision:** Read [CLAUDE-LAUNCH-PRIORITY-PROMPT.md](CLAUDE-LAUNCH-PRIORITY-PROMPT.md). Owner requires the approved sewn tag; any necessary alternative needs a mockup and approval first. No physical samples are approved. Stripe live activation remains unconfirmed. A 24-hour target does not waive product or payment checks.
+> **Latest launch/tag decision:** Read [CLAUDE-LAUNCH-PRIORITY-PROMPT.md](CLAUDE-LAUNCH-PRIORITY-PROMPT.md). Owner requires the approved sewn tag; any necessary alternative needs a mockup and approval first. No physical samples are approved. Stripe is live: the owner confirmed it on 2026-09-28 after live Klarna and debit-card test orders succeeded (both cancelled in Apliiq). The site is launched; the next phase is ads. A 24-hour target does not waive product or payment checks.
 
 > **Current price publication:** The owner authorized publishing all six Athletics retail prices on 2026-09-21. Read [PRICING-RELEASE-2026-09-21.md](designs/18_launch_operations/PRICING-RELEASE-2026-09-21.md). This supersedes the earlier publication hold for these six prices; full landed-cost and product-readiness checks remain open. Casual Wordmark Tee rebuilt on the Bella+Canvas 3010 and split into two shop rows by owner decision 2026-09-24: …0003 "GOOOL Casual Wordmark Tee · Red" (slug unchanged; Black live, Apliiq 6120860; Natural live, Apliiq id pending the owner's save) and …0005 "GOOOL Casual Wordmark Tee · Club Blue" (slug goool-heavyweight-casual-tee-blue; Natural live, Apliiq 6120887; Black live, Apliiq 6120898). Both are availableForSale: true since 2026-09-24 (owner: no casual tee sits behind Coming Soon unless they say so); the order store upserts the catalog row before writing order items (ensureProductRows), and migration 0034 remains to run in the SQL editor for the audit trail. See designs/00_asset-library/CASUAL-TEE-3010-DECISION.md (split section) and designs/24_casual-tee-3010-2026-09-23/site-imagery/README.md. The Core Hoodie was remade the same day with the same print sets on the IND4000: two rows, …0002 "GOOOL Core Hoodie · Red" and …0006 "GOOOL Core Hoodie · Club Blue", Black/Bone/Grey Heather, six Apliiq designs, imagery from Apliiq's saved-design renders; see designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md and designs/25_core-hoodie-remake-2026-09-24/. The **Core Capsule** is the first collection to launch (Friday 2026-09-25): nine rows, all for sale; the Athletics Varsity Tee, Circular Badge Tee and Circular Center Crewneck were retired from the site on 2026-09-24 (designs kept on Apliiq); see designs/00_asset-library/CORE-CAPSULE-LAUNCH-DECISION.md. Every launch piece is gathered per product in CORE-CAPSULE-LAUNCH-2026-09-25/ at the repo root (a curated copy; rebuild with `python scripts/assemble-core-capsule.py`, canonical files stay in designs/ and public/products/).
 
@@ -25,16 +25,12 @@ marketers, manufacturers, and AI agents. Read this before changing anything.
 
 # Project Overview
 
-**GOOOL** (house brand, launched from the PORTUGOOOL pivot 2026-07-08)
-does not sell shirts. It sells the emotion of hearing **"GOOOOOOOOL"** —
-the one word every stadium on earth screams the same.
+**GOOOL ATHLETICS** does not sell shirts. It sells the emotion of hearing
+**"GOOOOOOOOL"** — the one word every stadium on earth screams the same.
 
-Brand architecture: **GOOOL is the house brand** (domain: goool.shop).
-**PORTUGOOOL is The Portugal Collection** — chapter one, the name lives on
-the apparel and collection pages, not as the store brand. Future chapters
-follow the same pattern: nation-inspired colorways + the sound, never
-federation symbolism. Collection portmanteaus (PORTUGOOOL, ENGOOOLAND) are
-optional — only when natural; otherwise the GOOOL house mark carries it.
+Brand architecture: **GOOOL ATHLETICS is the brand** (domain: goool.shop).
+Collections are chapters within it: nation-inspired colorways plus the
+sound, never federation symbolism. The GOOOL mark carries every collection.
 
 Every design decision reinforces excitement, celebration, pride, passion,
 and premium quality. The apparel is timeless, not trendy. The website feels
@@ -42,8 +38,8 @@ like **Apple meets Nike** — never a typical Shopify template.
 
 Brand line: **"The Sound of Victory."**
 
-- Live site: **https://portugoool.com** → becomes **https://goool.shop** once its nameservers land (phase 2 of the pivot; both domains stay, loser 301s to winner)
-- Repo: `gdove90/portugoool-site` (main branch auto-deploys)
+- Live site: **https://goool.shop**
+- Repo: the GitHub repo in this folder's git remote (`git remote -v`); `main` is production
 - Extended brand documentation: [designs/00_brand/](designs/00_brand/README.md)
 
 ---
@@ -73,7 +69,7 @@ Every page has **one primary conversion goal**. On most pages that goal is
 | Hosting | Netlify (project `goool-shop`, `@netlify/plugin-nextjs`) |
 | Database | Supabase (project ref `oexibflpshttgzmdvhpr`, dedicated free org) |
 | Payments | Stripe Checkout (server-side pricing only) |
-| Source | GitHub (`gdove90/portugoool-site`) |
+| Source | GitHub (see `git remote -v`) |
 | Fulfillment | Printful / Printify / Apliiq / Gelato — later (`supplier_type` field ready) |
 | Email | Resend — later |
 
@@ -91,8 +87,8 @@ or reference anything from **HireOnTheFly** or **LocalChef RI**.
 Kept separate, always: repositories · Supabase projects · Stripe accounts ·
 Netlify sites · environment variables · GitHub Actions · assets · databases.
 
-The Supabase project lives in its own free org, renamed 2026-09-21 from
-"portugoool" to "GOOOL"; the project itself is now "GOOOL" too. Only the
+The Supabase project lives in its own free org, named "GOOOL" (renamed
+2026-09-21); the project itself is "GOOOL" too. Only the
 display names changed — project ref `oexibflpshttgzmdvhpr` and every key
 and connection string are unaffected.
 
