@@ -78,8 +78,8 @@ export default function AboutPage() {
       ))}
 
       <section className="flex flex-col gap-6 bg-smoke px-5 py-[52px] sm:px-6 md:gap-9 md:py-[88px] lg:px-12">
-        <p className="max-w-[1000px] font-display text-[40px] uppercase leading-[0.95] md:text-[84px]">
-          Apparel made for the moment. Wear the feeling.
+        <p className="max-w-[1100px] font-display text-[36px] uppercase leading-[0.95] md:text-[72px]">
+          Apparel made for the moment the ball hits the net. Wear the feeling long after the final whistle.
         </p>
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10">
           <Link
