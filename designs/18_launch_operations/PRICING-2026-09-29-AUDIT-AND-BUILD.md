@@ -1,4 +1,4 @@
-# Pricing and shipping change, 2026-09-29 (built, NOT deployed)
+# Pricing and shipping change, 2026-09-29 (deployed 2026-09-29, deploy 6abbae78)
 
 Owner decisions (final): tees $38, caps $32 (permanent, owner 2026-09-29), hoodie $78; flat $6.95 shipping per
 order, free at $70; no compare-at prices; no new discount codes.
@@ -41,3 +41,9 @@ tees 44-60%, caps ~51%. Old prices: hoodie 47%, tees 58-71%, caps 70%.
 - Stripe sessions: one tee -> $6.95 "Standard shipping"; one hoodie -> $0 "Free
   shipping"; tee + cap ($74) -> $6.95. The owner's expected "tee + hat = free" does
   not hold at $75: the pair is $74. Not adjusted; owner to decide.
+
+## Final numbers, live since 2026-09-29 (deploy 6abbae78)
+Tees $38 (all four), caps $32 (all three, permanent), hoodies $78. Shipping $6.95
+flat, free at $70 or more. Live Stripe sessions verified: one tee -> $6.95, tee + hat
+($70) -> Free, hoodie -> Free. Margins at final prices (single item, US): Core Badge
+Tee 58%, Matchday 42%, Terrace 42%, hoodie 35%, caps 48%.
