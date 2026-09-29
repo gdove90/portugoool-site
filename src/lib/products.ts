@@ -28,7 +28,7 @@ const CASUAL_FIT = "Relaxed fit. Between sizes? Stay true.";
 const OVERSIZED_FIT = "Oversized fit. Drops loose on purpose. Size down for a standard fit.";
 
 const PERF_FABRIC =
-  "Moisture-wicking 100% polyester performance knit (Gildan Performance). Lightweight, breathable, DTF printed.";
+  "Moisture-wicking 100% polyester performance knit. Lightweight, breathable, DTF printed.";
 const PERF_FIT = "Athletic cut. True to size.";
 // Shared guidance for both launch tees made on the Sport-Tek ST720.
 // Owner fit feedback: XL is comfortable; L would give a snugger fit (2026-09-26).
@@ -785,7 +785,7 @@ export const products: Product[] = [
     name: "GOOOL Oval Mark Oversized Tee",
     slug: "goool-oval-tee",
     description:
-      "The GOOOL Oval Mark Oversized Tee brings professional football identity into a heavyweight streetwear silhouette. Made from garment dyed cotton with a structured boxy fit, dropped shoulders, and wide neck ribbing, it is designed to feel substantial while maintaining an easy everyday drape. The front carries the GOOOL oval wordmark, while a smaller G mark sits beneath the back collar like the finishing detail on a professional training kit.",
+      "The GOOOL Oval Mark Oversized Tee brings professional soccer identity into a heavyweight streetwear silhouette. Made from garment dyed cotton with a structured boxy fit, dropped shoulders, and wide neck ribbing, it is designed to feel substantial while maintaining an easy everyday drape. The front carries the GOOOL oval wordmark, while a smaller G mark sits beneath the back collar like the finishing detail on a professional training kit.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Faded Cream",
@@ -1688,7 +1688,7 @@ export const products: Product[] = [
     // Lightness and wicking were drafted here and moved there to keep the
     // split clean.
     fabric:
-      "3.8 oz, 100% recycled polyester. PosiCharge is the supplier's word for a fabric that resists fading and holds its colour, which counts for most on the black.",
+      "3.8 oz, 100% recycled polyester performance knit. Light, quick-drying and cool against the skin, with colour locked into the fibre so it resists fading and holds its depth, which counts for most on the black.",
     fit: ST720_FIT,
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
@@ -2012,7 +2012,7 @@ export const products: Product[] = [
     // is stated by the supplier for this blank, which is why it can be
     // said here when it was cut from the 4810GD copy as unsupported.
     fabric:
-      "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
+      "6 oz, 100% combed ring-spun cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
     fit:
       "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for a more snug fit.",
     // No garment-dye warning: the 3010 is not garment-dyed, so the 4810GD's
@@ -2113,7 +2113,7 @@ export const products: Product[] = [
     // is stated by the supplier for this blank, which is why it can be
     // said here when it was cut from the 4810GD copy as unsupported.
     fabric:
-      "6 oz, 100% Airlume combed cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
+      "6 oz, 100% combed ring-spun cotton, pre-shrunk. Combed means the short fibres are carded out before spinning, which is why the surface reads smooth rather than fuzzy and why the print sits flat on it. Heavy enough that the cloth does the hanging, so the shirt keeps its own line.",
     fit:
       "Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting. True to size for a roomy fit. Size down for a more snug fit.",
     // No garment-dye warning: the 3010 is not garment-dyed, so the 4810GD's
@@ -2496,7 +2496,7 @@ export const products: Product[] = [
     // claim is kept to what a shoulder tape actually does, stabilise the
     // seam under load. It does not promise the collar will never slacken.
     fabric:
-      "Ring-spun cotton, garment-dyed, and heavyweight by the supplier's own reckoning rather than ours. Twill tape runs along both shoulder seams and takes the weight the stitching would otherwise carry alone, so the shoulders do not pull out of line.",
+      "Ring-spun cotton, garment-dyed and heavyweight. Twill tape runs along both shoulder seams and takes the weight the stitching would otherwise carry alone, so the shoulders do not pull out of line.",
     // The supplier flags this blank as running big, with a wide boxy 90s
     // cut, and recommends sizing down for a closer fit. All sales are
     // final, so that belongs on the product page and not only in the

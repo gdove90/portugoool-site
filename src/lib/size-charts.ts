@@ -29,7 +29,9 @@ export interface SizeRow {
 
 export interface SizeChart {
   blank: string;
-  /** Manufacturer spec URL the numbers came from. */
+  /** Manufacturer spec URL the numbers came from (internal; never rendered).
+      The blank label above is customer-facing and names the fabric only:
+      no supplier or garment brand appears on the site (owner, 2026-09-29). */
   source: string;
   /** Anything a customer needs to know to size correctly on this blank. */
   note?: string;
@@ -38,7 +40,7 @@ export interface SizeChart {
 
 export const SIZE_CHARTS: Record<string, SizeChart> = {
   bc3010: {
-    blank: "Bella+Canvas 3010 · heavyweight, boxy, drop shoulder",
+    blank: "Heavyweight cotton tee · boxy, drop shoulder",
     source: "https://www.bellacanvas.com/spec/3010_specs.pdf",
     // The published grade really is irregular: 1in per size up to M,
     // then 2in per size above it. Worth saying, because someone between
@@ -53,7 +55,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     ],
   },
   bc4810: {
-    blank: "Bella+Canvas 4810GD · heavyweight garment dyed",
+    blank: "Heavyweight garment-dyed cotton tee",
     source: "https://www.bellacanvas.com/",
     note: "Garment dyed after making up, so a small amount of shrinkage and colour variation between pieces is normal and intended.",
     rows: [
@@ -65,7 +67,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     ],
   },
   st720: {
-    blank: "Sport-Tek ST720 · recycled polyester performance",
+    blank: "Recycled polyester performance tee",
     source: "https://www.sanmar.com/",
     note: "Athletic cut, closer through the body than the cotton tees. True to size.",
     rows: [
@@ -77,7 +79,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     ],
   },
   ind4000: {
-    blank: "Independent Trading Co. IND4000 · heavyweight fleece",
+    blank: "Heavyweight fleece hoodie",
     source: "https://www.independenttradingco.com/",
     note: "Generous through the body. Sleeve is measured from centre back to cuff.",
     rows: [
@@ -89,9 +91,9 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     ],
   },
   cc1717: {
-    blank: "Comfort Colors C1717 · garment dyed heavyweight",
+    blank: "Garment-dyed heavyweight cotton tee",
     source: "https://www.comfortcolors.com/",
-    note: "Garment dyed, so expect slight colour variation piece to piece. Runs a little shorter in the body than the Bella+Canvas tees at the same letter.",
+    note: "Garment dyed, so expect slight colour variation piece to piece. Runs a little shorter in the body than our other cotton tees at the same letter.",
     rows: [
       { size: "S", chestIn: 18.25, lengthIn: 26.625, sleeveIn: null },
       { size: "M", chestIn: 20.25, lengthIn: 28, sleeveIn: null },
@@ -101,7 +103,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     ],
   },
   as5150: {
-    blank: "AS Colour 5150 Made Crew · 14.7 oz heavyweight cotton French terry",
+    blank: "14.7 oz heavyweight cotton French terry crew",
     source: "https://www.ascolour.com/",
     note: "Sits closer through the body than a typical fleece crew, and the chest grade is narrow between L and XL, so go by the measurement.",
     rows: [

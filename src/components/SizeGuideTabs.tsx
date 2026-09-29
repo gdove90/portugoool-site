@@ -24,7 +24,7 @@ export const GUIDE = [
     label: "Caps",
     title: "Caps",
     chart: null,
-    blank: "OTTO 31-069 · structured twill",
+    blank: "Structured cotton-blend twill cap",
     note: "One adjustable size.",
   },
 ] as const;
