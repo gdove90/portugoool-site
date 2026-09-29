@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { apliiqSubmitEnabled, checkApliiqConnection, submissionEnvironmentAllowed } from "@/lib/apliiq";
-import { drainEmailQueue, queueOrderConfirmation, queueShipmentNotification } from "@/lib/email-delivery";
+import { drainEmailQueue, queueOrderConfirmation, queueOrderDelayNotice, queueShipmentNotification } from "@/lib/email-delivery";
 import { emailProvider } from "@/lib/email";
 import { getOrdersStore } from "@/lib/orders-store";
 import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "@/lib/fulfillment-submit";
@@ -103,6 +103,17 @@ export async function POST(req: NextRequest) {
     const outcomes = [];
     for (const shipment of shipments) outcomes.push(await queueShipmentNotification(order, shipment));
     return NextResponse.json({ outcomes });
+  }
+
+  if (body.action === "delay-notice" && body.orderId) {
+    // Operator-triggered copy of the automatic customer delay notice, for
+    // orders that parked before the notice existed or that the owner
+    // wants nudged again. Same template, same once-per-order key, so a
+    // repeat call after the automatic send is a no-op.
+    const order = await store.getOrderById(body.orderId);
+    if (!order) return NextResponse.json({ error: "Order not found." }, { status: 404 });
+    try { return NextResponse.json({ delayNotice: await queueOrderDelayNotice(store, order.id, order.livemode) }); }
+    catch { return NextResponse.json({ error: "Delay notice could not be queued." }, { status: 503 }); }
   }
 
   if (body.action === "retry-confirmation" && body.orderId) {
