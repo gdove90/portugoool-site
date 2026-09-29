@@ -43,7 +43,7 @@ const SECTIONS = [
     "That is the standard. Fewer pieces, each one checked, and no piece chosen just because it was easy to put a print on.",
   ]},
   { num: "03", title: "Where we ship", paras: [
-    "We ship to the United States, Canada, the United Kingdom and Portugal. Orders arrive within 7 to 12 business days in the US and typically 3 to 5 weeks everywhere else, because every one is made and shipped from the United States.",
+    "We ship to the United States, Canada, the United Kingdom and Portugal. Orders arrive within 7 to 12 business days in the US and typically 3 to 5 weeks everywhere else, because every order ships from the United States.",
   ]},
 ] as const;
 

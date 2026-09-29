@@ -10,7 +10,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "When will my order ship?",
     answer:
-      "Orders arrive within 7–12 business days in the US. Canada, the UK and Portugal typically take 3 to 5 weeks, because every order is made and shipped from the United States and customs can add time. Track yours anytime on the Track Order page with your order reference.",
+      "Orders arrive within 7–12 business days in the US. Canada, the UK and Portugal typically take 3 to 5 weeks, because every order ships from the United States and customs can add time. Track yours anytime on the Track Order page with your order reference.",
   },
   {
     question: "Do I pay customs or import tax?",
