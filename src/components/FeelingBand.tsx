@@ -1,51 +1,33 @@
-import Image from "next/image";
-
-// Full-bleed "Wear the Feeling." band, Homepage v2 (2026-09-29). Sits
-// between the second and third collections so the catalog is broken by
-// one emotional beat and a way back to the top.
+// "Wear the Feeling." big-type block, Homepage design 4a (2026-09-29).
+// Sits between the second and third collections so the catalog is broken
+// by one brand beat and a way back to the top.
 //
-// feeling-band.webp is the Running Celebration render from the launch
-// campaign (goool advertising/Matchday Ad Options 2026-09-27/
-// A-Running-celebration.png) with the baked-in headline and lockup bar
-// cropped off; the headline is set here as live text instead. It is an
-// AI-generated atmosphere image, the same one running in the Meta ads:
-// no real person, no crests, and the only print is our own lockup.
-// Replace at the same path if real photography lands.
+// It replaced the full-bleed photo band from v2: the AI celebration render
+// cropped unpredictably across viewport widths (the player's face was cut
+// at 1920), and the owner chose type over a picture. No image, no
+// gradient: ink background, the line set huge in Anton, the question
+// under it with the skewed red rule, and the same Back to top link.
+// The words are fixed: WEAR THE FEELING. / What's your GOOOL? / Back to top.
 export default function FeelingBand() {
   return (
-    <section className="relative flex min-h-[420px] items-end overflow-hidden bg-ink sm:min-h-[560px] lg:min-h-[680px] xl:min-h-[800px] 2xl:min-h-[880px]">
-      {/* The image is 1122x1006 and the celebrating player's face sits in
-          its top fifth. object-cover scales it to the viewport width, so
-          on wide screens most of the height is cropped: anchor the crop
-          to the top so the face is always the part that survives, and
-          let the band grow on xl/2xl so the chest logo stays in frame
-          above the headline. A 25% anchor cut the head off at 1920. */}
-      <Image
-        src="/feeling-band.webp"
-        alt="Player celebrating a goal in the GOOOL Athletics Matchday Tee"
-        fill
-        sizes="100vw"
-        className="object-cover object-top"
-      />
-      {/* Legibility gradient: open top, dark foot for the headline */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(10,10,10,0) 40%, rgba(10,10,10,0.7) 100%)",
-        }}
-      />
-      <div className="relative mx-auto w-full max-w-content px-4 pb-12 sm:px-6 sm:pb-16">
-        <p className="font-display text-5xl uppercase leading-none tracking-tightest text-paper drop-shadow-[0_6px_40px_rgba(0,0,0,0.6)] sm:text-7xl lg:text-8xl">
-          Wear the Feeling.
+    <section
+      aria-label="Wear the Feeling"
+      className="overflow-hidden bg-ink px-5 pb-12 pt-14 text-paper sm:px-6 md:pb-20 md:pt-24 lg:px-12"
+    >
+      <h2 className="font-display text-[84px] uppercase leading-[0.88] tracking-[-0.01em] md:text-[220px]">
+        Wear the<br />Feeling.
+      </h2>
+      <div className="mt-7 flex flex-col items-start gap-5 md:mt-10 md:flex-row md:items-center md:justify-between">
+        <p className="flex items-center gap-3.5 font-display text-2xl tracking-[0.02em] md:text-4xl">
+          <span aria-hidden className="block h-1.5 w-14 -skew-x-[30deg] bg-red" />
+          What&apos;s your GOOOL?
         </p>
         <a
           href="#top"
-          className="mt-6 inline-flex min-h-11 items-center gap-2 border border-paper/70 px-5 font-display text-sm uppercase tracking-widest text-paper transition-colors hover:bg-paper/10"
+          className="inline-flex h-11 items-center gap-2 whitespace-nowrap border border-paper/40 px-4 font-display text-sm uppercase tracking-[0.1em] text-paper transition-colors hover:border-paper hover:bg-paper/10"
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M5 15l7-7 7 7" />
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M2 9l5-5 5 5" />
           </svg>
           Back to top
         </a>

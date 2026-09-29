@@ -25,8 +25,9 @@ import { resolveCollections } from "@/lib/collections";
 // Homepage v2 (2026-09-29): layout rebuilt to the approved Claude Design
 // file "Homepage v2.dc.html". Hero, trust bar, then each collection as a
 // numbered two-column section (label + name + tagline on the left, cards
-// on the right), a full-bleed "Wear the Feeling." band after the second
-// collection. The email sign-up moved into the footer (Footer 2a, same
+// on the right), a "Wear the Feeling." block after the second collection
+// (big type since design 4a, 2026-09-29; it began as a full-bleed photo
+// band). The email sign-up moved into the footer (Footer 2a, same
 // day), so it is no longer a section here. Products, prices, cart and
 // checkout are untouched: this file only arranges what the catalog
 // resolves.
