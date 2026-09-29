@@ -5,20 +5,22 @@
 // It replaced the full-bleed photo band from v2: the AI celebration render
 // cropped unpredictably across viewport widths (the player's face was cut
 // at 1920), and the owner chose type over a picture. No image, no
-// gradient: ink background, the line set huge in Anton, the question
-// under it with the skewed red rule, and the same Back to top link.
+// gradient: ink background, the line set big in Anton on one line (42px
+// on phones, 128px from md; thinned 2026-09-29 from the 84/220px two-line
+// version), the question under it with the skewed red rule, and the same
+// Back to top link.
 // The words are fixed: WEAR THE FEELING. / What's your GOOOL? / Back to top.
 export default function FeelingBand() {
   return (
     <section
       aria-label="Wear the Feeling"
-      className="overflow-hidden bg-ink px-5 pb-12 pt-14 text-paper sm:px-6 md:pb-20 md:pt-24 lg:px-12"
+      className="overflow-hidden bg-ink px-5 pb-8 pt-9 text-paper sm:px-6 md:pb-12 md:pt-14 lg:px-12"
     >
-      <h2 className="font-display text-[84px] uppercase leading-[0.88] tracking-[-0.01em] md:text-[220px]">
-        Wear the<br />Feeling.
+      <h2 className="whitespace-nowrap font-display text-[42px] uppercase leading-[0.95] tracking-[-0.01em] md:text-[128px]">
+        Wear the Feeling.
       </h2>
-      <div className="mt-7 flex flex-col items-start gap-5 md:mt-10 md:flex-row md:items-center md:justify-between">
-        <p className="flex items-center gap-3.5 font-display text-2xl tracking-[0.02em] md:text-4xl">
+      <div className="mt-4 flex flex-col items-start gap-3.5 md:mt-5 md:flex-row md:items-center md:justify-between md:gap-4">
+        <p className="flex items-center gap-3.5 whitespace-nowrap font-display text-xl tracking-[0.02em] md:text-[32px]">
           <span aria-hidden className="block h-1.5 w-14 -skew-x-[30deg] bg-red" />
           What&apos;s your GOOOL?
         </p>
