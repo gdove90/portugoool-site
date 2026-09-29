@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import ShopCollections from "@/components/ShopCollections";
 import { resolveCollections } from "@/lib/collections";
 import { getProducts } from "@/lib/products";
+import { formatPrice } from "@/lib/format";
+import { hasPrice } from "@/lib/types";
 
 // The title counts the live catalog instead of hard-coding it. It read
 // "Shop All Ten Pieces" until 2026-09-23, when the Casual Wordmark Tee was
@@ -25,21 +27,33 @@ export function generateMetadata(): Metadata {
   };
 }
 
+// Design 6a (2026-09-29): a full-width black hero band with the live
+// piece count and floor price, then the sticky pill bar and the
+// collection rows from ShopCollections. Both figures are computed from
+// the catalog on every build, the same way the title is.
 export default function ShopPage() {
   const collections = resolveCollections();
+  const products = getProducts();
+  const count = products.length;
+  const priced = products.filter(hasPrice).map((p) => p.priceCents);
+  const fromPrice = priced.length ? formatPrice(Math.min(...priced)) : null;
 
   return (
-    <div className="mx-auto max-w-[1480px] px-4 py-10 sm:px-6 sm:py-14 xl:px-10">
-      <div className="mb-10">
-        <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-5xl">
-          The First Capsule
+    <>
+      <section className="border-t border-paper/10 bg-ink px-5 pb-8 pt-10 text-paper sm:px-6 md:pb-12 md:pt-[72px] lg:px-12">
+        <h1 className="font-display text-[52px] uppercase leading-[0.92] tracking-[-0.01em] md:text-[112px]">
+          The <span className="text-red">First</span> Capsule
         </h1>
-        <p className="mt-2 max-w-lg text-ink/60">
-          Everyday staples. Athletic purpose. The first GOOOL capsule.
-        </p>
-      </div>
-
+        <div className="mt-3.5 flex flex-col items-start gap-2.5 md:mt-5 md:flex-row md:items-end md:justify-between md:gap-6">
+          <p className="text-lg leading-snug text-paper/80">
+            Everyday staples. Athletic purpose. The Core Collection.
+          </p>
+          <p className="whitespace-nowrap font-display text-[15px] uppercase tracking-[0.14em] text-paper/60">
+            {count} pieces{fromPrice ? ` · from ${fromPrice}` : ""}
+          </p>
+        </div>
+      </section>
       <ShopCollections collections={collections} />
-    </div>
+    </>
   );
 }

@@ -7,6 +7,12 @@ import { useState } from "react";
 import { Product, isSoldOut, isAvailableForSale, remainingUnits, hasPrice } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 
+// Catalog card (design 6a, 2026-09-29). The display name drops the
+// "GOOOL " prefix, owner decision 2026-09-29: every product carries it
+// and the brand is already on the page. The full name stays in the
+// image alt, the link label and the product page.
+const displayName = (name: string) => name.replace(/^GOOOL\s+/, "");
+
 export default function ProductCard({ product }: { product: Product }) {
   const onSale =
     product.compareAtPriceCents != null &&
@@ -17,6 +23,8 @@ export default function ProductCard({ product }: { product: Product }) {
   const remaining = remainingUnits(product);
   // Only surface the countdown when it's actually getting scarce — honest urgency.
   const lowStock = !soldOut && remaining != null && remaining <= 150;
+  const oneSize =
+    product.sizes.length === 1 && /^(os|one size)$/i.test(String(product.sizes[0]));
 
   // Each card keeps its own colorway selection; the image swaps in place and
   // the selection rides along to the product page as ?color=.
@@ -54,7 +62,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 src={catalogImageSrc(img.src)}
                 alt={active ? img.alt : ""}
                 fill
-                sizes="(min-width: 1480px) 326px, (min-width: 1280px) 25vw, (min-width: 1024px) 33vw, 50vw"
+                sizes="(min-width: 1280px) 40vw, (min-width: 768px) 45vw, 72vw"
                 quality={90}
                 className={`object-contain ${
                   active ? "opacity-100" : "opacity-0"
@@ -69,7 +77,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </span>
           )}
           {product.isLimitedDrop && !soldOut && (
-            <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold">
+            <span className="absolute left-3 top-3 rounded-full bg-ink px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-paper">
               Limited Drop
             </span>
           )}
@@ -88,54 +96,15 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
       </Link>
 
-      <div className="mt-3 flex items-start justify-between gap-2">
-        <div>
-          <Link href={href} className="block">
-            <h3 className="text-sm font-semibold text-ink">{product.name}</h3>
-          </Link>
-          {variants ? (
-            <div
-              className="mt-1.5 flex items-center gap-1"
-              role="radiogroup"
-              aria-label={`${product.name} color`}
-            >
-              {variants.map((v, i) => (
-                <button
-                  key={v.name}
-                  type="button"
-                  role="radio"
-                  aria-checked={i === variantIdx}
-                  aria-label={v.name}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    setVariantIdx(i);
-                  }}
-                  className="flex h-7 w-7 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-ink"
-                >
-                  <span
-                    className={`block h-3.5 w-3.5 rounded-full border border-ink/25 transition-shadow ${
-                      i === variantIdx ? "ring-2 ring-ink ring-offset-1" : ""
-                    }`}
-                    style={{ backgroundColor: v.hex }}
-                  />
-                </button>
-              ))}
-            </div>
-          ) : (
-            <p className="mt-1.5 flex h-7 items-center">
-              <span
-                className="inline-block h-3.5 w-3.5 rounded-full border border-ink/25"
-                style={{ backgroundColor: product.colorHex }}
-                aria-hidden="true"
-              />
-              <span className="sr-only">{product.color}</span>
-            </p>
-          )}
-        </div>
-        <Link href={href} className="block text-right">
+      <div className="mt-3 flex flex-col gap-0.5 md:flex-row md:items-baseline md:justify-between md:gap-3">
+        <Link href={href} className="block">
+          <h3 className="text-base font-semibold leading-tight text-ink md:text-lg">
+            {displayName(product.name)}
+          </h3>
+        </Link>
+        <Link href={href} className="block">
           {priced ? (
-            <p className="text-sm font-semibold text-ink">
+            <p className="text-base font-bold text-ink md:text-lg">
               {onSale && (
                 <span className="mr-1.5 font-normal text-ink/40 line-through">
                   {formatPrice(product.compareAtPriceCents!)}
@@ -150,6 +119,39 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
         </Link>
       </div>
+
+      {variants ? (
+        <div
+          className="mt-3 -ml-1.5 flex gap-1"
+          role="radiogroup"
+          aria-label={`${product.name} color`}
+        >
+          {variants.map((v, i) => (
+            <button
+              key={v.name}
+              type="button"
+              role="radio"
+              aria-checked={i === variantIdx}
+              aria-label={v.name}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setVariantIdx(i);
+              }}
+              className="flex h-8 w-8 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-ink"
+            >
+              <span
+                className={`block h-[22px] w-[22px] rounded-full border border-ink/20 transition-shadow ${
+                  i === variantIdx ? "shadow-[0_0_0_2px_#fff,0_0_0_4px_#0A0A0A]" : ""
+                }`}
+                style={{ backgroundColor: v.hex }}
+              />
+            </button>
+          ))}
+        </div>
+      ) : oneSize ? (
+        <p className="mt-3 flex h-8 items-center text-sm text-ink/60">One adjustable size</p>
+      ) : null}
     </div>
   );
 }
