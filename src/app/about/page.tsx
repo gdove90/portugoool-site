@@ -33,77 +33,67 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
+const SECTIONS = [
+  { num: "01", title: "The whole idea", paras: [
+    "Every stadium on earth screams the same word, in every language, whether it is a final or a Sunday league pitch. That is the whole idea. GOOOL Athletics is an original soccer sportswear brand built around the passion, the belonging, and the moments you carry long after the final whistle.",
+    "Everything here is drawn from scratch. Our own crests, our own wordmarks, our own colors. No club badge, no federation, nothing borrowed from anyone who earned it on the pitch. If you have seen it somewhere else, it is not ours.",
+  ]},
+  { num: "02", title: "What gets made, and what doesn't", paras: [
+    "A design is easy. A design that survives being printed is not. Every mark we put on a garment gets measured at the size it will actually appear, not the size it looks good at on a screen: stroke widths, letter spacing, the gaps that decide whether a word reads cleanly or blurs.",
+    "That is the standard. Fewer pieces, each one checked, and no piece chosen just because it was easy to put a print on.",
+  ]},
+  { num: "03", title: "Where we ship", paras: [
+    "We ship to the United States, Canada, the United Kingdom and Portugal. Orders arrive within 7 to 12 business days in the US and typically 3 to 5 weeks everywhere else, because every one is made and shipped from the United States.",
+  ]},
+] as const;
+
 export default function AboutPage() {
   return (
     <>
-      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
-        <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-6xl">
-          Born from<br />the <span className="text-red">sound</span>.
+      <section className="border-t border-paper/10 bg-ink px-5 pb-[52px] pt-14 text-paper sm:px-6 md:pb-24 md:pt-28 lg:px-12">
+        <p className="font-display text-sm uppercase tracking-[0.2em] text-paper/60">About the brand</p>
+        <h1 className="mt-[18px] max-w-[1000px] font-display text-[58px] uppercase leading-[0.9] tracking-[-0.01em] md:mt-7 md:text-[150px]">
+          Born from the <span className="text-red">sound</span>.
         </h1>
-
-        <div className="mt-8 space-y-6 text-lg leading-relaxed text-ink/70">
-          <p>
-            The ball hits the net. The crowd erupts. For a moment, nothing
-            else matters.
-          </p>
-          <p>
-            Every stadium on earth screams the same word, in every language,
-            whether it is a final or a Sunday league pitch with two jackets
-            for a goal. That is the whole idea. GOOOL Athletics is an original soccer
-            sportswear brand built around the passion, the belonging, and
-            the moments you carry long after the final whistle.
-          </p>
-          <p>
-            Everything here is drawn from scratch. Our own crests, our own
-            wordmarks, our own colors. No club badge, no federation, nothing
-            borrowed from anyone who earned it on the pitch. If you have
-            seen it somewhere else, it is not ours.
-          </p>
-        </div>
-
-        <h2 className="mt-14 font-display text-2xl uppercase tracking-tightest text-ink sm:text-3xl">
-          What gets made,<br />and what doesn&apos;t
-        </h2>
-
-        <div className="mt-6 space-y-6 text-lg leading-relaxed text-ink/70">
-          <p>
-            A design is easy. A design that survives being printed is not.
-            Every mark we put on a garment gets measured at the size it will
-            actually appear, not the size it looks good at on a screen:
-            stroke widths, letter spacing, the gaps that decide whether a
-            word reads cleanly or blurs.
-          </p>
-          <p>
-            That is the standard. Fewer pieces, each one checked, and no
-            piece chosen just because it was easy to put a print on.
-          </p>
-        </div>
-
-        <div className="mt-14 space-y-6 text-lg leading-relaxed text-ink/70">
-          <p>
-            We ship to the United States, Canada, the United Kingdom and
-            Portugal. Orders arrive within 7 to 12 business days in the US and
-            typically 3 to 5 weeks everywhere else, because every one is made
-            and shipped from the United States.
-          </p>
-          <p className="font-semibold text-ink">
-            Wear the Feeling. Made for the Moment.
-          </p>
-          <p className="text-base text-ink/50">
-            GOOOL Athletics LLC is an independent brand. We are not affiliated with any
-            federation, club, league, or governing body. All designs and
-            marks are original.
-          </p>
-        </div>
-
-        <Link
-          href="/shop"
-          className="mt-10 inline-block rounded-full bg-red px-8 py-4 text-base font-semibold text-paper transition-colors hover:bg-red-dark"
-        >
-          Explore the Collection
-        </Link>
+        <p className="mt-[18px] max-w-[720px] text-xl leading-snug text-paper/85 md:mt-7 md:text-[28px]">
+          The ball hits the net. The crowd erupts. For a moment, nothing else matters.
+        </p>
       </section>
 
+      {SECTIONS.map(({ num, title, paras }) => (
+        <section
+          key={num}
+          className="flex flex-col gap-[18px] border-t border-ink/10 px-5 py-11 sm:px-6 md:flex-row md:gap-16 md:py-20 lg:px-12"
+        >
+          <div className="flex flex-col gap-3 md:w-[380px] md:shrink-0">
+            <p className="font-display text-[15px] tracking-[0.16em] text-red">{num}</p>
+            <h2 className="font-display text-[34px] uppercase leading-none md:text-5xl">{title}</h2>
+          </div>
+          <div className="flex min-w-0 max-w-[680px] flex-1 flex-col gap-5 text-[17px] leading-[1.65] text-ink/75 md:text-[19px]">
+            {paras.map((para) => (
+              <p key={para.slice(0, 24)} className="text-pretty">{para}</p>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <section className="flex flex-col gap-6 bg-smoke px-5 py-[52px] sm:px-6 md:gap-9 md:py-[88px] lg:px-12">
+        <p className="max-w-[1000px] font-display text-[40px] uppercase leading-[0.95] md:text-[84px]">
+          Wear the Feeling. Made for the Moment.
+        </p>
+        <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10">
+          <Link
+            href="/shop"
+            className="inline-flex min-h-[52px] items-center justify-center whitespace-nowrap bg-red px-[30px] font-display text-[17px] uppercase tracking-[0.1em] text-paper transition-colors hover:bg-red-dark"
+          >
+            Explore the Collection
+          </Link>
+          <p className="max-w-[520px] text-sm leading-relaxed text-ink/60">
+            GOOOL Athletics LLC is an independent brand. We are not affiliated with any
+            federation, club, league, or governing body. All designs and marks are original.
+          </p>
+        </div>
+      </section>
     </>
   );
 }
