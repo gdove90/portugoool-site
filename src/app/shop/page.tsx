@@ -40,7 +40,8 @@ export default function ShopPage() {
 
   return (
     <>
-      <section className="border-t border-paper/10 bg-ink px-5 pb-8 pt-10 text-paper sm:px-6 md:pb-12 md:pt-[72px] lg:px-12">
+      <section className="border-t border-paper/10 bg-ink pb-8 pt-10 text-paper md:pb-12 md:pt-[72px]">
+        <div className="mx-auto max-w-content px-4 sm:px-6">
         <h1 className="font-display text-[52px] uppercase leading-[0.92] tracking-[-0.01em] md:text-[112px]">
           The <span className="text-red">First</span> Capsule
         </h1>
@@ -51,6 +52,7 @@ export default function ShopPage() {
           <p className="whitespace-nowrap font-display text-[15px] uppercase tracking-[0.14em] text-paper/60">
             {count} pieces{fromPrice ? ` · from ${fromPrice}` : ""}
           </p>
+        </div>
         </div>
       </section>
       <ShopCollections collections={collections} />

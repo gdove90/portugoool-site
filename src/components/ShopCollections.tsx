@@ -8,10 +8,10 @@ import { ResolvedCollection } from "@/lib/collections";
 // "All" shows every collection in order; a category pill shows just that
 // one. The pill bar sticks under the header (64px on phones, 80px from
 // md, matching Header.tsx). Each collection is a numbered row: the name
-// and count on the left, the cards on the right in a grid with exactly as
-// many columns as the collection has products, so a row never carries an
-// empty slot. On phones the cards become a swipe row showing about 1.4
-// cards. The filter is local state only; nothing about stock is written
+// and count on the left, the cards on the right in the homepage's card
+// grid (owner, 2026-09-29: garment images must be the same size on both
+// pages, so the container, columns and gaps mirror src/app/page.tsx).
+// On phones the cards become a swipe row showing about 1.4 cards. The filter is local state only; nothing about stock is written
 // here, every card reads the catalog.
 export default function ShopCollections({
   collections,
@@ -34,8 +34,9 @@ export default function ShopCollections({
       <div
         role="group"
         aria-label="Filter by category"
-        className="sticky top-[64px] z-20 flex gap-2 overflow-x-auto whitespace-nowrap border-b border-ink/10 bg-paper px-5 py-3.5 [scrollbar-width:none] sm:px-6 md:top-[80px] lg:px-12"
+        className="sticky top-[64px] z-20 border-b border-ink/10 bg-paper md:top-[80px]"
       >
+        <div className="mx-auto flex max-w-content gap-2 overflow-x-auto whitespace-nowrap px-4 py-3.5 [scrollbar-width:none] sm:px-6">
         {filters.map((f) => {
           const active = selected === f.key;
           return (
@@ -54,6 +55,7 @@ export default function ShopCollections({
             </button>
           );
         })}
+        </div>
       </div>
 
       {visible.map((collection) => {
@@ -65,9 +67,10 @@ export default function ShopCollections({
             key={collection.key}
             id={collection.key}
             aria-label={`${collection.name} · ${collection.subtitle}`}
-            className="flex flex-col gap-[18px] border-t border-ink/10 py-9 pl-5 sm:pl-6 md:flex-row md:gap-12 md:px-12 md:py-14 md:pb-16"
+            className="border-t border-ink/10 py-9 md:py-14"
           >
-            <div className="flex flex-col gap-2.5 pr-5 md:w-[260px] md:shrink-0 md:pr-0">
+            <div className="mx-auto flex max-w-content flex-col gap-[18px] pl-4 sm:pl-6 lg:grid lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-16 lg:px-6">
+            <div className="flex flex-col gap-2.5 pr-4 sm:pr-6 lg:pr-0">
               <p className="font-display text-sm uppercase tracking-[0.16em] text-red">
                 {String(index + 1).padStart(2, "0")} · {collection.subtitle}
               </p>
@@ -78,15 +81,16 @@ export default function ShopCollections({
                 {products.length} {products.length === 1 ? "piece" : "pieces"}
               </p>
             </div>
-            <div
-              className="flex w-full snap-x snap-mandatory gap-3.5 overflow-x-auto pr-5 [scrollbar-width:none] md:grid md:min-w-0 md:flex-1 md:snap-none md:gap-6 md:overflow-visible md:pr-0"
-              style={{ gridTemplateColumns: `repeat(${products.length}, minmax(0, 1fr))` }}
-            >
+            {/* Same card grid as the homepage (2 across from md, 3 from lg,
+                same gaps, same 1200px container), so a garment reads at
+                the same size on both pages. Phones keep the swipe row. */}
+            <div className="flex w-full snap-x snap-mandatory gap-3.5 overflow-x-auto pr-4 [scrollbar-width:none] sm:pr-6 md:grid md:min-w-0 md:grid-cols-2 md:gap-x-6 md:gap-y-10 md:snap-none md:overflow-visible lg:grid-cols-3 lg:gap-x-8 lg:pr-0">
               {products.map((product) => (
                 <div key={product.id} className="w-[72%] shrink-0 snap-start md:w-auto">
                   <ProductCard product={product} />
                 </div>
               ))}
+            </div>
             </div>
           </section>
         );
