@@ -9,7 +9,7 @@ the contract. Owner decision 2026-09-29.
 ```
 brand-assets/avatars/
   jeff/    jeff_front.png  jeff_back.png  jeff_left.png  jeff_right.png
-  greg/    greg_front.png  greg_back.png  greg_left.png  greg_right.png     (pending)
+  greg/    greg_front.png  greg_back.png  greg_left.png  greg_right.png
   alex/    alex_front.png  alex_back.png  alex_left.png  alex_right.png     (pending)
   andrew/  andrew_front.png andrew_back.png andrew_left.png andrew_right.png (pending)
   AVATARS.md
@@ -25,14 +25,14 @@ by adding a folder with the same four files and a row to the roster.
 | Avatar | Status | Added | Source files |
 |---|---|---|---|
 | jeff | in use, low-res placeholders (see note) | 2026-09-29 | Desktop: `Model Jeff Front.webp`, `Model Jeff Back.webp`, `Model jeff left and right profile.webp` |
-| greg | pending | | |
+| greg | in use, low-res placeholders (see note) | 2026-09-29 | Desktop: `Model Greg Front Back.webp`, `Model Greg Left Right Profile.webp` |
 | alex | pending | | |
 | andrew | pending | | |
 
-**Jeff resolution note.** The three saved files are 256 x 256 px; the
-front view crops at the neck and the left/right views were one
-side-by-side composite, split here into two 128 x 256 px files. That is
-thumbnail size. Re-export the originals at full resolution (2000 px on the
+**Resolution note (Jeff and Greg).** The saved files are 256 x 256 px
+composites; Jeff's front crops at the neck, Greg's views crop at the chin,
+and every side-by-side pair was split here into two 128 x 256 px files.
+That is thumbnail size. Re-export the originals at full resolution (2000 px on the
 long side or better, head included) and overwrite the four files with the
 same names; nothing else has to change.
 
