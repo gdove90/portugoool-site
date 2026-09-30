@@ -10,6 +10,7 @@ Instagram posts/            (at the top of the GOOOL folder)
   feed/     4:5, 1080 x 1350 (the 2:3 source is kept next to the crop)
   stories/  9:16, 1080 x 1920, safe zone 250 px top and bottom
   reels/    9:16, 1080 x 1920 video, plus its cover frame
+  posting times/  the weekly grid (Eastern Time) every asset is scheduled against
   README.md
 ```
 
