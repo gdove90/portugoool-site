@@ -59,7 +59,7 @@ Use the attached garment image as the exact clothing reference and the attached 
 ## GOOOL Core Hoodie · Red
 
 - **Type:** pullover hoodie, $78 (reference only)
-- **Front:** full GOOOL Athletics lockup in red across the chest, kangaroo pocket
+- **Front:** full GOOOL Athletics lockup in black across the chest, the rule carrying a short red segment, kangaroo pocket
 - **Back:** red club band low across the back, below the hood
 - **Fabric:** 10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds.
 - **Fit:** Generous unisex fit with 1x1 ribbed cuffs.
@@ -77,7 +77,7 @@ Use the attached garment image as the exact clothing reference and the attached 
 Product shot:
 
 ```
-Use the attached image as the exact garment reference. GOOOL Athletics pullover hoodie in Black, full GOOOL Athletics lockup in red across the chest, kangaroo pocket, red club band low across the back, below the hood, shown on a ghost mannequin front view, then back view. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
+Use the attached image as the exact garment reference. GOOOL Athletics pullover hoodie in Black, full GOOOL Athletics lockup in black across the chest, the rule carrying a short red segment, kangaroo pocket, red club band low across the back, below the hood, shown on a ghost mannequin front view, then back view. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
 ```
 
 Reel, on body (Alex as the example, any of the four works):
@@ -119,7 +119,7 @@ Use the attached garment image as the exact clothing reference and the attached 
 ## GOOOL Terrace Tee · Red
 
 - **Type:** t-shirt, $38 (reference only)
-- **Front:** full GOOOL Athletics lockup in red across the chest
+- **Front:** full GOOOL Athletics lockup in black across the chest, the rule carrying a short red segment
 - **Back:** red club band across the back
 - **Fabric:** 6 oz, 100% combed ring-spun cotton, pre-shrunk.
 - **Fit:** Relaxed modern fit with a drop shoulder, side-seamed so it keeps its shape instead of twisting.
@@ -136,7 +136,7 @@ Use the attached garment image as the exact clothing reference and the attached 
 Product shot:
 
 ```
-Use the attached image as the exact garment reference. GOOOL Athletics t-shirt in Black, full GOOOL Athletics lockup in red across the chest, red club band across the back, shown on a ghost mannequin front view, then back view. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
+Use the attached image as the exact garment reference. GOOOL Athletics t-shirt in Black, full GOOOL Athletics lockup in black across the chest, the rule carrying a short red segment, red club band across the back, shown on a ghost mannequin front view, then back view. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
 ```
 
 Reel, on body (Andrew as the example, any of the four works):
