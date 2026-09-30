@@ -51,6 +51,7 @@ export async function GET(req: NextRequest) {
 
   // Fulfillment truthfulness: only claim production once our order row
   // shows Apliiq actually accepted the submission.
+  const trackingMode = session.livemode || Boolean(process.env.META_TEST_EVENT_CODE);
   let recorded = false;
   let purchaseEligible = false;
   let productionConfirmed = false;
@@ -61,7 +62,7 @@ export async function GET(req: NextRequest) {
       const order = await store.getOrderBySession(sessionId);
       if (order) {
         recorded = true;
-        purchaseEligible = order.status === "paid" && order.livemode === true;
+        purchaseEligible = order.status === "paid" && order.livemode === session.livemode && trackingMode;
         reference = orderNumber(order.id);
         productionConfirmed =
           order.submission_status === "accepted" ||
@@ -74,6 +75,19 @@ export async function GET(req: NextRequest) {
     }
   }
 
+  let purchaseEvent = null;
+  try {
+    purchaseEvent = paid && trackingMode && purchaseEligible && session.metadata?.consent !== "denied" && req.headers?.get?.("sec-gpc") !== "1" && session.amount_total != null ? {
+      // Same id scheme as the server-side Purchase in the webhook.
+      id: await metaEventId("Purchase", session.id),
+      value: session.amount_total / 100,
+      currency: (session.currency ?? "usd").toUpperCase(),
+      content_ids: purchaseItems(session).map((i) => getProductById(i.p)?.slug ?? i.p),
+      num_items: purchaseItems(session).reduce((n, i) => n + (i.q ?? 0), 0),
+      order_id: reference ?? session.id,
+    } : null;
+  } catch { console.error("[meta] Purchase tracking unavailable; payment status remains available"); }
+
   return NextResponse.json({
     state: paid ? "paid" : failedOrOpen ? "failed" : "pending",
     recorded,
@@ -82,14 +96,6 @@ export async function GET(req: NextRequest) {
     email: session.customer_details?.email ?? null,
     totalCents: session.amount_total ?? null,
     currency: session.currency ?? "usd",
-    purchaseEvent: paid && session.livemode && purchaseEligible && session.amount_total != null ? {
-      // Same id scheme as the server-side Purchase in the webhook.
-      id: await metaEventId("Purchase", session.id),
-      value: session.amount_total / 100,
-      currency: (session.currency ?? "usd").toUpperCase(),
-      content_ids: purchaseItems(session).map((i) => getProductById(i.p)?.slug ?? i.p),
-      num_items: purchaseItems(session).reduce((n, i) => n + (i.q ?? 0), 0),
-      order_id: reference ?? session.id,
-    } : null,
+    purchaseEvent,
   }, { headers: { "Cache-Control": "no-store" } });
 }

@@ -14,7 +14,7 @@ import { usePathname } from "next/navigation";
 //   mobile   → 1e "bottom sheet": the dark sheet alone over the dimmed
 //              page; no crowd image on phones (owner, 2026-09-25)
 //
-// The visitor's email goes to the same Mailchimp audience as the footer
+// The visitor's email goes to the Resend signup flow used by the footer
 // signup with the extra tag "goool20", then api/discount hands back that
 // person's OWN single-use code (GOOOL20-XXXX, one per email, one
 // redemption, src/lib/discount.ts) and it is shown on screen so the offer

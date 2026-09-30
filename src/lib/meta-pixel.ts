@@ -20,6 +20,8 @@
 // verified purchase) the pixel is re-initialised with it; Meta hashes it
 // client-side before it leaves the page.
 
+import { CONSENT_KEY, resolveConsent, type ConsentChoice } from "./marketing-consent";
+export type { ConsentChoice } from "./marketing-consent";
 import { metaEventId, leadStableId, type MetaEventName } from "./meta-events";
 
 export type PurchaseEvent = {
@@ -33,9 +35,7 @@ export type PurchaseEvent = {
 type Pixel = ((...args: unknown[]) => void) & { queue?: unknown[][]; callMethod?: (...args: unknown[]) => void; loaded?: boolean; version?: string; push?: Pixel };
 declare global { interface Window { fbq?: Pixel; _fbq?: Pixel } }
 
-const CONSENT_KEY = "goool_marketing_consent_v1";
 const KNOWN_EMAIL_KEY = "goool_meta_em";
-const GEO_COOKIE = "goool_geo";
 const rawId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "";
 export const metaPixelId = /^\d{5,25}$/.test(rawId) ? rawId : "";
 
@@ -43,7 +43,8 @@ let initialized = false;
 let pendingPurchase: PurchaseEvent | null = null;
 const sent = new Set<string>();
 
-export type ConsentChoice = "granted" | "denied";
+let memoryConsent: ConsentChoice | null = null;
+let pendingView: { stableId: string; params: Record<string, unknown>; path: string } | null = null;
 
 export function globalPrivacyControl(): boolean {
   return typeof navigator !== "undefined" && Boolean((navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl);
@@ -64,9 +65,11 @@ export function isUsVisitor(): boolean {
 export function storedConsent(): ConsentChoice | null {
   if (typeof window === "undefined") return null;
   try {
-    const stored = JSON.parse(localStorage.getItem(CONSENT_KEY) ?? "null");
-    return stored && Date.now() - stored.at < 180 * 86400000 && ["granted", "denied"].includes(stored.choice) ? stored.choice : null;
-  } catch { return null; }
+    const raw = localStorage.getItem(CONSENT_KEY);
+    if (raw === null && memoryConsent) return memoryConsent;
+    const state = resolveConsent(false, raw, null, Date.now());
+    return state.prompt ? null : state.consent as ConsentChoice;
+  } catch { return memoryConsent; }
 }
 
 /** What applies right now: GPC, then the stored choice, then the regional default. */
@@ -89,10 +92,11 @@ function knownEmail(): string | null {
 
 function matchData(): Record<string, string> {
   const em = knownEmail();
-  return em ? { em } : {};
+  return em ? { em, external_id: em } : {};
 }
 
 function ready(): boolean {
+  try {
   if (!metaPixelId || marketingConsent() !== "granted") return false;
   // Never load on pages containing order lookup/contact details or a Checkout token.
   if (/^\/(track-order|contact)(\/|$)/.test(location.pathname) || new URLSearchParams(location.search).has("session_id")) return false;
@@ -110,22 +114,28 @@ function ready(): boolean {
     initialized = true;
   }
   return true;
+  } catch { return false; }
 }
 
 async function fire(name: MetaEventName, stableId: string, params: Record<string, unknown>): Promise<void> {
-  if (!ready()) return;
-  const eventID = await metaEventId(name, stableId);
-  window.fbq?.("trackSingle", metaPixelId, name, params, { eventID });
+  try {
+    if (!ready()) return;
+    const eventID = await metaEventId(name, stableId);
+    if (!ready() || sent.has(eventID)) return;
+    window.fbq?.("trackSingle", metaPixelId, name, params, { eventID });
+    sent.add(eventID);
+  } catch { /* Advertising must never break shopping. */ }
 }
 
 export function trackPageView(): void {
-  if (!/^\/(success|track-order|contact)(\/|$)/.test(location.pathname) && ready()) window.fbq?.("trackSingle", metaPixelId, "PageView");
+  if (!/^\/(success|track-order|contact)(\/|$)/.test(location.pathname)) void fire("PageView", `${location.pathname}:${Date.now()}`, {});
 }
 
 export function trackViewContent(p: { slug: string; name: string; value: number; currency: string }): void {
-  void fire("ViewContent", `${p.slug}:${Date.now()}`, {
+  pendingView = { stableId: `${p.slug}:${Date.now()}`, path: location.pathname, params: {
     content_ids: [p.slug], content_type: "product", content_name: p.name, value: p.value, currency: p.currency,
-  });
+  } };
+  void fire("ViewContent", pendingView.stableId, pendingView.params);
 }
 
 export function trackAddToCart(p: { slug: string; name: string; value: number; currency: string; quantity: number; lineKey: string }): void {
@@ -147,6 +157,7 @@ export function trackLead(p: { email: string; code: string }): void {
 }
 
 export function trackVerifiedPurchase(event: PurchaseEvent): void {
+  try {
   if (!event || typeof event.id !== "string" || !/^purchase_[a-f0-9]{32}$/.test(event.id) || !Number.isFinite(event.value) || event.value < 0 || !/^[A-Z]{3}$/.test(event.currency)) return;
   pendingPurchase = event;
   if (!ready() || sent.has(event.id)) return;
@@ -160,14 +171,18 @@ export function trackVerifiedPurchase(event: PurchaseEvent): void {
   }, { eventID: event.id });
   sent.add(event.id);
   try { sessionStorage.setItem(event.id, "1"); } catch { /* optional storage */ }
+  } catch { /* Payment confirmation is independent of advertising. */ }
 }
 
 /** Advanced matching: keep the address for this tab and re-init the pixel with it. */
 export function setKnownEmail(email: string): void {
+  if (marketingConsent() !== "granted") return;
   const em = email.trim().toLowerCase();
   if (!em) return;
   try { sessionStorage.setItem(KNOWN_EMAIL_KEY, em); } catch { /* optional storage */ }
-  if (initialized && marketingConsent() === "granted") window.fbq?.("init", metaPixelId, { em });
+  try {
+    if (initialized) window.fbq?.("init", metaPixelId, { em, external_id: em });
+  } catch { /* Matching is optional. */ }
 }
 
 /** The value the cart and the sign-up post to the server, so server events honour the same choice. */
@@ -176,9 +191,13 @@ export function consentForServer(): ConsentChoice {
 }
 
 export function setMarketingConsent(choice: ConsentChoice): void {
-  try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ choice, at: Date.now() })); } catch { return; }
+  memoryConsent = choice;
+  try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ choice, at: Date.now() })); } catch { /* Honour the choice even when storage is blocked. */ }
+  if (document.documentElement) document.documentElement.dataset.gooolPrompt = "false";
+  try {
   if (marketingConsent() !== "granted") {
     window.fbq?.("consent", "revoke");
+    try { sessionStorage.removeItem(KNOWN_EMAIL_KEY); } catch { /* optional storage */ }
     for (const name of ["_fbp", "_fbc"]) {
       document.cookie = `${name}=; Max-Age=0; path=/`;
       document.cookie = `${name}=; Max-Age=0; path=/; domain=.goool.shop`;
@@ -186,7 +205,9 @@ export function setMarketingConsent(choice: ConsentChoice): void {
   } else {
     window.fbq?.("consent", "grant");
     trackPageView();
+    if (pendingView?.path === location.pathname) void fire("ViewContent", pendingView.stableId, pendingView.params);
     if (pendingPurchase) trackVerifiedPurchase(pendingPurchase);
   }
+  } catch { /* A blocked pixel cannot prevent changing consent. */ }
   window.dispatchEvent(new Event("goool:marketing-consent"));
 }

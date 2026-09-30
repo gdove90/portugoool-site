@@ -57,6 +57,22 @@ export default function SuccessPage() {
             productionConfirmed: Boolean(data.productionConfirmed),
             email: data.email ?? null,
           });
+          // Stripe can redirect before its webhook records the order. Retry only
+          // optional tracking; payment confirmation and the cleared cart stay put.
+          if (!data.recorded && !data.purchaseEvent) {
+            void (async () => {
+              for (let attempt = 0; attempt < 6 && !cancelled; attempt++) {
+                await new Promise((resolve) => setTimeout(resolve, 1500));
+                if (cancelled) return;
+                const followup = await fetch(`/api/order-status?session_id=${encodeURIComponent(sessionId!)}`);
+                if (!followup.ok) continue;
+                const verified = await followup.json();
+                if (cancelled) return;
+                if (verified.purchaseEvent) { trackVerifiedPurchase(verified.purchaseEvent); return; }
+                if (verified.recorded) return;
+              }
+            })().catch(() => { /* Optional advertising cannot change payment status. */ });
+          }
         } else if (data.state === "pending") {
           setStatus({ kind: "pending" });
         } else {

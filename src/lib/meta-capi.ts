@@ -29,7 +29,7 @@ export interface MetaServerEvent {
   customData?: Record<string, unknown>;
   /** "granted" | "denied" | null as captured with the action. */
   consent?: string | null;
-  /** Stripe livemode for purchases; leads are always live. */
+  /** Stripe mode for purchases and discount-code signups. */
   livemode?: boolean;
 }
 
@@ -43,29 +43,33 @@ export async function sendMetaServerEvent(ev: MetaServerEvent): Promise<MetaSend
   if (!metaCapiConfigured()) return "skipped";
   if (ev.consent === "denied") return "skipped";
   if (ev.livemode === false && !process.env.META_TEST_EVENT_CODE) return "skipped";
-  const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
-  const userData: Record<string, unknown> = {};
-  if (ev.email) userData.em = [await sha256Hex(ev.email.trim().toLowerCase())];
-  if (ev.clientIp) userData.client_ip_address = ev.clientIp;
-  if (ev.userAgent) userData.client_user_agent = ev.userAgent;
-  if (ev.fbp) userData.fbp = ev.fbp;
-  if (ev.fbc) userData.fbc = ev.fbc;
-  const body: Record<string, unknown> = {
-    data: [{
-      event_name: ev.name,
-      event_time: ev.eventTime ?? Math.floor(Date.now() / 1000),
-      event_id: ev.eventId,
-      event_source_url: ev.sourceUrl ?? "https://goool.shop/",
-      action_source: "website",
-      user_data: userData,
-      ...(ev.customData ? { custom_data: ev.customData } : {}),
-    }],
-  };
-  if (process.env.META_TEST_EVENT_CODE) body.test_event_code = process.env.META_TEST_EVENT_CODE;
   try {
-    const res = await fetch(`${GRAPH}/${pixelId}/events?access_token=${encodeURIComponent(process.env.META_CAPI_ACCESS_TOKEN!)}`, {
+    const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+    const userData: Record<string, unknown> = {};
+    if (ev.email) {
+      const hash = await sha256Hex(ev.email.trim().toLowerCase());
+      userData.em = [hash];
+      userData.external_id = [hash];
+    }
+    if (ev.clientIp) userData.client_ip_address = ev.clientIp;
+    if (ev.userAgent) userData.client_user_agent = ev.userAgent;
+    if (ev.fbp) userData.fbp = ev.fbp;
+    if (ev.fbc) userData.fbc = ev.fbc;
+    const body: Record<string, unknown> = {
+      data: [{
+        event_name: ev.name,
+        event_time: ev.eventTime ?? Math.floor(Date.now() / 1000),
+        event_id: ev.eventId,
+        event_source_url: ev.sourceUrl ?? "https://goool.shop/",
+        action_source: "website",
+        user_data: userData,
+        ...(ev.customData ? { custom_data: ev.customData } : {}),
+      }],
+    };
+    if (process.env.META_TEST_EVENT_CODE) body.test_event_code = process.env.META_TEST_EVENT_CODE;
+    const res = await fetch(`${GRAPH}/${pixelId}/events`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${process.env.META_CAPI_ACCESS_TOKEN}` },
       body: JSON.stringify(body),
       signal: AbortSignal.timeout(5000),
     });

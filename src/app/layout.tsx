@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { consentBootstrap } from "@/lib/marketing-consent";
 import MarketingConsent from "@/components/MarketingConsent";
 import { Anton, Permanent_Marker } from "next/font/google";
 import "./globals.css";
@@ -37,8 +38,8 @@ const marker = Permanent_Marker({
 export const metadata: Metadata = {
   // Meta Business domain verification (owner decision 2026-09-30): the
   // value lives in Netlify as META_DOMAIN_VERIFICATION; no tag when unset.
-  ...(process.env.META_DOMAIN_VERIFICATION
-    ? { other: { "facebook-domain-verification": process.env.META_DOMAIN_VERIFICATION } }
+  ...(/^[a-zA-Z0-9]{20,100}$/.test(process.env.META_DOMAIN_VERIFICATION ?? "")
+    ? { other: { "facebook-domain-verification": process.env.META_DOMAIN_VERIFICATION! } }
     : {}),
   title: {
     default: "GOOOL · Original Soccer Sportswear · Made for the Moment.",
@@ -91,7 +92,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${anton.variable} ${marker.variable}`}>
+    <html lang="en" className={`${anton.variable} ${marker.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: consentBootstrap }} />
+        <style>{'[data-goool-consent]{display:none}html[data-goool-prompt="true"] [data-goool-consent]{display:block}[data-goool-us]{display:none}html[data-goool-region="US"] [data-goool-us]{display:block}html[data-goool-region="US"] [data-goool-nonus]{display:none}'}</style>
+      </head>
       <body>
         {/* Organization and WebSite, emitted once for the whole site.
             Product schema lives on the product pages. */}

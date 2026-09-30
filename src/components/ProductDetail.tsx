@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { catalogImageSrc } from "@/lib/product-image";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale, hasPrice } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import SizeGuide from "./SizeGuide";
@@ -67,7 +67,10 @@ export default function ProductDetail({ product }: { product: Product }) {
     product.compareAtPriceCents != null &&
     product.compareAtPriceCents > product.priceCents;
 
+  const viewedSlug = useRef<string | null>(null);
   useEffect(() => {
+    if (viewedSlug.current === product.slug) return;
+    viewedSlug.current = product.slug;
     if (hasPrice(product)) trackViewContent({ slug: product.slug, name: product.name, value: product.priceCents / 100, currency: "USD" });
   }, [product.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 

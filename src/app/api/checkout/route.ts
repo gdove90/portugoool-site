@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { shippingCentsFor } from "@/lib/shipping";
 import { CODE_REJECTION_MESSAGE, discountCentsFor, validatePromotionCode, type CodeValidation } from "@/lib/discount";
-import { EMAIL_RE } from "@/lib/mailchimp";
+import { EMAIL_RE } from "@/lib/signups";
 import { clientIpFrom } from "@/lib/meta-capi";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
   let consent = "unknown";
   try {
     const body = await req.json();
-    consent = body.consent === "denied" ? "denied" : body.consent === "granted" ? "granted" : "unknown";
+    consent = req.headers?.get?.("sec-gpc") === "1" || body.consent !== "granted" ? "denied" : "granted";
     items = body.items;
     email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
     code = typeof body.code === "string" ? body.code : "";
@@ -235,18 +235,19 @@ export async function POST(req: NextRequest) {
   for (let i = 0; i * 450 < itemsJson.length; i++) {
     metadata[`items_${i}`] = itemsJson.slice(i * 450, (i + 1) * 450);
   }
+  const itemMetadataCount = Object.keys(metadata).length;
   // Advertising consent and matching data, captured with the purchase so
   // the webhook can send (or not send) the server-side Purchase event.
   metadata.consent = consent;
   const ip = clientIpFrom({ get: (n) => req.headers?.get?.(n) ?? null });
-  if (ip) metadata.ip = ip;
+  if (ip && consent === "granted") metadata.ip = ip.slice(0, 100);
   const ua = req.headers?.get?.("user-agent");
-  if (ua) metadata.ua = ua.slice(0, 400);
+  if (ua && consent === "granted") metadata.ua = ua.slice(0, 400);
   const fbp = req.cookies?.get?.("_fbp")?.value;
-  if (fbp) metadata.fbp = fbp;
+  if (fbp && consent === "granted") metadata.fbp = fbp.slice(0, 400);
   const fbc = req.cookies?.get?.("_fbc")?.value;
-  if (fbc) metadata.fbc = fbc;
-  if (Object.keys(metadata).length > 45) {
+  if (fbc && consent === "granted") metadata.fbc = fbc.slice(0, 400);
+  if (itemMetadataCount > 40) {
     return NextResponse.json(
       { error: "Cart is too large for a single checkout. Please split it up." },
       { status: 400 }

@@ -1,17 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { EMAIL_RE, subscribeToAudience } from "@/lib/mailchimp";
 import { clientIpFrom, sendMetaServerEvent } from "@/lib/meta-capi";
 import { leadStableId, metaEventId } from "@/lib/meta-events";
 import { issueDiscountCode } from "@/lib/discount";
 import { emailEnabled } from "@/lib/email";
-import { queueEmail } from "@/lib/email-delivery";
-import { buildDiscountCodeEmail } from "@/lib/emails/discount-code";
+import { deliverEmail, queueEmail } from "@/lib/email-delivery";
+import { buildWelcome1 } from "@/lib/emails/welcome-1";
+import { EMAIL_RE, addToResendAudience, markEmailSent, recordSignup, unsubscribeUrl } from "@/lib/signups";
 
-// GOOOL20 popup: subscribe the address (tag "goool20"), then hand back
-// that person's single-use code. The signup is saved before the code is
-// issued, so a Stripe or ledger hiccup never loses the subscriber; the
-// visitor is told plainly that the code is delayed rather than shown a
-// code that does not exist.
+// Popup sign-up (owner decision 2026-09-29): the address is written to
+// newsletter_signups (source popup) and mirrored to the Resend Audience,
+// the GOOOL20 code is issued exactly as before, and Email 1 of the
+// welcome sequence is queued in the durable store and pushed once right
+// away. A provider failure never fails the sign-up: the row and the
+// queued delivery stay, and the minute worker retries. Mailchimp is no
+// longer called.
 
 export const dynamic = "force-dynamic";
 
@@ -20,8 +22,8 @@ export async function POST(req: NextRequest) {
   let consent: string | null = null;
   try {
     const body = await req.json();
+    consent = req.headers?.get?.("sec-gpc") === "1" || body.consent !== "granted" ? "denied" : "granted";
     email = String(body.email ?? "").trim().toLowerCase();
-    consent = body.consent === "denied" ? "denied" : body.consent === "granted" ? "granted" : null;
   } catch {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
@@ -31,8 +33,15 @@ export async function POST(req: NextRequest) {
 
   if (!emailEnabled()) return NextResponse.json(
     { error: "Code delivery is temporarily unavailable. Please try again shortly." }, { status: 503 });
-  const sub = await subscribeToAudience(email, ["waitlist", "goool20"]);
-  if (!sub.ok) return NextResponse.json({ error: sub.error }, { status: sub.status });
+
+  let signup;
+  try {
+    signup = await recordSignup(email, "popup");
+  } catch {
+    console.error("[discount] sign-up storage unavailable");
+    return NextResponse.json({ error: "Sign-up is temporarily unavailable. Please try again shortly." }, { status: 503 });
+  }
+  await addToResendAudience(email);
 
   try {
     const issued = await issueDiscountCode(email);
@@ -44,11 +53,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: true, subscribed: true, code: null, redeemed: true });
     }
     const live = /^(sk|rk)_live_/.test(process.env.STRIPE_SECRET_KEY ?? "");
-    await queueEmail(`discount/${live ? "live" : "test"}/${issued.code}`, "discount", {
-      to: email, ...buildDiscountCodeEmail(issued.code),
+    const key = `discount/${live ? "live" : "test"}/${issued.code}`;
+    await queueEmail(key, "discount", {
+      to: email, ...buildWelcome1({ code: issued.code, unsubscribeUrl: unsubscribeUrl(signup.unsubscribe_token) }),
     }, live);
+    if (!signup.sent_at_email1) {
+      try { await markEmailSent(signup.id, 1); } catch { console.error("[discount] sent_at_email1 marker failed; queue key is authoritative"); }
+    }
+    try { await deliverEmail(key); } catch { console.error("[discount] immediate send failed for", email, "; queued for retry"); }
     // Server-side Lead, same event_id the popup fires in the browser, so
     // Meta keeps one. Never blocks the sign-up.
+    try {
     await sendMetaServerEvent({
       name: "Lead",
       eventId: await metaEventId("Lead", leadStableId(email, issued.code)),
@@ -59,11 +74,13 @@ export async function POST(req: NextRequest) {
       fbc: req.cookies?.get?.("_fbc")?.value ?? null,
       sourceUrl: "https://goool.shop/",
       consent,
+      livemode: live,
       customData: { content_name: "GOOOL20 sign-up" },
     });
+    } catch { console.error("[meta] Lead tracking failed; signup remains successful"); }
     return NextResponse.json({ ok: true, subscribed: true, code: issued.code });
   } catch {
-    console.error("[discount] issue or durable delivery unavailable");
+    console.error("[discount] issue or durable delivery unavailable for", email);
     return NextResponse.json({ error: "Your signup is saved. Please try again to finish getting your code." }, { status: 503 });
   }
 }

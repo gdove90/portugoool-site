@@ -50,14 +50,14 @@ interface MetaItem {
 // consent captured at checkout is not denied; failures are logged and
 // never touch the order. content_ids are product slugs, order_id is the
 // customer-facing order number.
-async function sendPurchaseToMeta(session: Stripe.Checkout.Session, orderId: string, items: OrderItemRow[], livemode: boolean): Promise<void> {
+async function sendPurchaseToMeta(session: Stripe.Checkout.Session, orderId: string, items: OrderItemRow[], livemode: boolean, eventTime: number): Promise<void> {
   if (!metaCapiConfigured()) return;
   try {
     const md = session.metadata ?? {};
     await sendMetaServerEvent({
       name: "Purchase",
       eventId: await metaEventId("Purchase", session.id),
-      eventTime: session.created,
+      eventTime,
       sourceUrl: "https://goool.shop/success",
       email: session.customer_details?.email ?? session.customer_email ?? null,
       clientIp: md.ip ?? null,
@@ -380,8 +380,6 @@ export async function POST(req: NextRequest) {
       // GOOOL20 ledger, before submission so a supplier error never
       // hides who used a code. Best effort inside.
       await recordDiscountRedemption(stripe, session);
-      // Meta Conversions API Purchase, same event_id as the browser's.
-      await sendPurchaseToMeta(session, orderId, built.items, event.livemode);
       try {
         const outcome = await submitPaidOrder(store, orderId, { livemode: event.livemode });
         submission = outcome.action;
@@ -427,6 +425,8 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // Complete payment, fulfillment and receipt work before optional advertising.
+    if (paid) await sendPurchaseToMeta(session, orderId, built.items, event.livemode, event.created);
     await store.recordEvent(event.id, event.type);
     return NextResponse.json({
       received: true,

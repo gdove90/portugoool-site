@@ -1,30 +1,30 @@
 import { NextRequest, NextResponse } from "next/server";
-import { EMAIL_RE, subscribeToAudience } from "@/lib/mailchimp";
+import { EMAIL_RE, addToResendAudience, recordSignup } from "@/lib/signups";
 
-// Footer newsletter signup → Mailchimp audience (owner decision,
-// 2026-09-14). The upsert itself lives in src/lib/mailchimp.ts, shared
-// with the GOOOL20 popup (api/discount). Storage is required: if the
-// integration is not configured the request fails with an honest 503 so
-// the visitor is never told they joined when nothing was saved.
+// Footer sign-up (owner decision 2026-09-29): the address is written to
+// newsletter_signups (source footer) and mirrored to the Resend
+// Audience. No code, no welcome sequence, no email. Mailchimp is no
+// longer called.
+
+export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
   let email: string;
-  let source = "";
   try {
     const body = await req.json();
     email = String(body.email ?? "").trim().toLowerCase();
-    // Only a known value becomes a Mailchimp tag; the client cannot
-    // invent tags.
-    source = body.source === "goool20" ? "goool20" : "";
   } catch {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
-
   if (!EMAIL_RE.test(email) || email.length > 254) {
     return NextResponse.json({ error: "Enter a valid email." }, { status: 400 });
   }
-
-  const result = await subscribeToAudience(email, source ? ["waitlist", source] : ["waitlist"]);
-  if (!result.ok) return NextResponse.json({ error: result.error }, { status: result.status });
+  try {
+    await recordSignup(email, "footer");
+  } catch {
+    console.error("[newsletter] sign-up storage unavailable");
+    return NextResponse.json({ error: "Sign-up is temporarily unavailable. Please try again shortly." }, { status: 503 });
+  }
+  await addToResendAudience(email);
   return NextResponse.json({ ok: true });
 }
