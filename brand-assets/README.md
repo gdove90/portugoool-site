@@ -19,8 +19,6 @@ brand-assets/
   reels/
     reel-01-wear-the-feeling/  BRIEF.md (shot-by-shot remake plan), reference.mp4,
                                contact-sheet.png, the product images and lockups Grok needs
-  instagram-posts/
-    feed/  stories/  reels/   every picture and clip made for Instagram, by placement; README has sizes, rules and the status table
   README.md                    this index
 ```
 
@@ -33,3 +31,7 @@ planned (three tri-blend colorways, the 3413 performance tee, quarter zip,
 fleece short). What exists today is whatever goool.shop sells; the live
 catalog in `src/lib/products.ts` is the source of truth for products,
 colorways and prices, and the guide does not change it.
+
+Instagram output does not live here: it is in `Instagram posts/` at the
+top of the GOOOL folder (feed, stories, reels), so it is one click from
+the desktop.
