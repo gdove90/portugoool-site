@@ -14,6 +14,9 @@ brand-assets/
   prompts/
     claude-design-tasks.md     Prompt 0 brand brief, the 12 Claude Design tasks,
                                and the Grok Imagine product and lifestyle appendix
+  reels/
+    reel-01-wear-the-feeling/  BRIEF.md (shot-by-shot remake plan), reference.mp4,
+                               contact-sheet.png, the product images and lockups Grok needs
   README.md                    this index
 ```
 
