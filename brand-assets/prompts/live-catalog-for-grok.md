@@ -177,7 +177,7 @@ Use the attached garment image as the exact clothing reference and the attached 
 ## GOOOL Touchline Cap
 
 - **Type:** cap, $32 (reference only)
-- **Front:** flat-embroidered GOOOL wordmark on the front panel, black crown with natural accents
+- **Front:** flat-embroidered GOOOL wordmark on the front panel, natural cream crown with a black curved visor, black button and eyelets
 - **Back:** plain back, plastic snap
 - **Fabric:** 65% polyester, 35% cotton twill over a firm buckram front.
 - **Fit:** Adjustable · One Size.
@@ -193,13 +193,13 @@ Use the attached garment image as the exact clothing reference and the attached 
 Product shot:
 
 ```
-Use the attached image as the exact cap reference. GOOOL Athletics structured five-panel cap, black crown with natural accents, curved visor, flat-embroidered GOOOL wordmark on the front panel, three-quarter view on a near-white surface. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
+Use the attached image as the exact cap reference. GOOOL Athletics structured five-panel cap, natural cream crown with a black curved visor, black button and eyelets, curved visor, flat-embroidered GOOOL wordmark on the front panel, three-quarter view on a near-white surface. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
 ```
 
 Reel, on body (Alex as the example, any of the four works):
 
 ```
-Use the attached cap image as the exact garment reference and the attached avatar image as the person. Alex [paste card] wearing the GOOOL Athletics Touchline Cap in black and natural with a plain black tee, close three-quarter portrait at the touchline, floodlights behind, cap brim casting a soft shadow, the embroidered mark on the front panel reading as a small clean shape. cinematic, shallow depth of field, editorial athleisure, natural movement, 9:16 vertical
+Use the attached cap image as the exact garment reference and the attached avatar image as the person. Alex [paste card] wearing the GOOOL Athletics Touchline Cap natural crown and black visor, with a plain black tee, close three-quarter portrait at the touchline, floodlights behind, cap brim casting a soft shadow, the embroidered mark on the front panel reading as a small clean shape. cinematic, shallow depth of field, editorial athleisure, natural movement, 9:16 vertical
 ```
 
 ## GOOOL Matchday Tee
@@ -235,7 +235,7 @@ Use the attached garment image as the exact clothing reference and the attached 
 ## GOOOL Athletics Badge Cap
 
 - **Type:** cap, $32 (reference only)
-- **Front:** circular GOOOL Athletics badge embroidered on the front panel, black crown with natural accents
+- **Front:** circular GOOOL Athletics badge embroidered on the front panel, natural cream crown with a black curved visor, black button and eyelets
 - **Back:** plain back, plastic snap
 - **Fabric:** No seam runs through the front panel, which matters more here than on most caps: this badge is a ring, and a seam crossing a ring shows.
 - **Fit:** Adjustable · One Size.
@@ -251,19 +251,19 @@ Use the attached garment image as the exact clothing reference and the attached 
 Product shot:
 
 ```
-Use the attached image as the exact cap reference. GOOOL Athletics structured five-panel cap, black crown with natural accents, curved visor, circular GOOOL Athletics badge embroidered on the front panel, three-quarter view on a near-white surface. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
+Use the attached image as the exact cap reference. GOOOL Athletics structured five-panel cap, natural cream crown with a black curved visor, black button and eyelets, curved visor, circular GOOOL Athletics badge embroidered on the front panel, three-quarter view on a near-white surface. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
 ```
 
 Reel, on body (Andrew as the example, any of the four works):
 
 ```
-Use the attached cap image as the exact garment reference and the attached avatar image as the person. Andrew [paste card] wearing the GOOOL Athletics Athletics Badge Cap in black and natural with a plain black tee, close three-quarter portrait at the touchline, floodlights behind, cap brim casting a soft shadow, the embroidered mark on the front panel reading as a small clean shape. cinematic, shallow depth of field, editorial athleisure, natural movement, 9:16 vertical
+Use the attached cap image as the exact garment reference and the attached avatar image as the person. Andrew [paste card] wearing the GOOOL Athletics Athletics Badge Cap natural crown and black visor, with a plain black tee, close three-quarter portrait at the touchline, floodlights behind, cap brim casting a soft shadow, the embroidered mark on the front panel reading as a small clean shape. cinematic, shallow depth of field, editorial athleisure, natural movement, 9:16 vertical
 ```
 
 ## GOOOL Athletics Stacked Cap
 
 - **Type:** cap, $32 (reference only)
-- **Front:** GOOOL over a red rule with ATHLETICS beneath, embroidered across the front panel, black crown with natural accents
+- **Front:** GOOOL over a red rule with ATHLETICS beneath, embroidered across the front panel, natural cream crown with a black curved visor, black button and eyelets
 - **Back:** plain back, plastic snap
 - **Fabric:** 65% polyester, 35% cotton twill.
 - **Fit:** Adjustable · One Size.
@@ -279,13 +279,13 @@ Use the attached cap image as the exact garment reference and the attached avata
 Product shot:
 
 ```
-Use the attached image as the exact cap reference. GOOOL Athletics structured five-panel cap, black crown with natural accents, curved visor, GOOOL over a red rule with ATHLETICS beneath, three-quarter view on a near-white surface. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
+Use the attached image as the exact cap reference. GOOOL Athletics structured five-panel cap, natural cream crown with a black curved visor, black button and eyelets, curved visor, GOOOL over a red rule with ATHLETICS beneath, three-quarter view on a near-white surface. clean athleisure product photography, soft natural light, near-white seamless background, true-to-life fabric texture, no text, no logos other than described, no watermark, 2:3
 ```
 
 Reel, on body (Jeff as the example, any of the four works):
 
 ```
-Use the attached cap image as the exact garment reference and the attached avatar image as the person. Jeff [paste card] wearing the GOOOL Athletics Athletics Stacked Cap in black and natural with a plain black tee, close three-quarter portrait at the touchline, floodlights behind, cap brim casting a soft shadow, the embroidered mark on the front panel reading as a small clean shape. cinematic, shallow depth of field, editorial athleisure, natural movement, 9:16 vertical
+Use the attached cap image as the exact garment reference and the attached avatar image as the person. Jeff [paste card] wearing the GOOOL Athletics Athletics Stacked Cap natural crown and black visor, with a plain black tee, close three-quarter portrait at the touchline, floodlights behind, cap brim casting a soft shadow, the embroidered mark on the front panel reading as a small clean shape. cinematic, shallow depth of field, editorial athleisure, natural movement, 9:16 vertical
 ```
 
 ## Reel ideas that use the whole line
