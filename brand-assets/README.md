@@ -14,6 +14,8 @@ brand-assets/
   prompts/
     claude-design-tasks.md     Prompt 0 brand brief, the 12 Claude Design tasks,
                                and the Grok Imagine product and lifestyle appendix
+    live-catalog-for-grok.md   everything for sale today, per product, with Grok prompts
+    grok-scene-prompts.md      the ledge scene: every prompt run on 2026-09-30, what landed, the ball and mark descriptions
   reels/
     reel-01-wear-the-feeling/  BRIEF.md (shot-by-shot remake plan), reference.mp4,
                                contact-sheet.png, the product images and lockups Grok needs
