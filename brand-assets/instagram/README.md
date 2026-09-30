@@ -31,3 +31,4 @@ Before anything posts:
 | Date | File | Where | Status |
 |---|---|---|---|
 | 2026-09-30 | `feed/2026-09-30_stacked-cap-ledge_1080x1350.jpg` | feed | draft, marks not yet overlaid |
+| 2026-09-30 | `feed/2026-09-30_matchday-tee-white-jeff_1080x1350.jpg` | feed | draft, marks not yet overlaid; feed crop ends at the ankle so the sneaker swoosh is out of frame, paint it out before any full-length use |
