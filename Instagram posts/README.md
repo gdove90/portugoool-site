@@ -33,7 +33,7 @@ Before anything posts:
 
 | Date | File | Where | Status |
 |---|---|---|---|
-| 2026-09-30 | `feed/2026-09-30_stacked-cap-ledge_1080x1350.jpg` | feed | draft, marks not yet overlaid |
+| 2026-09-30 | `feed/2026-09-30_stacked-cap-ledge_1080x1350.jpg` | feed | SCHEDULED 12:15 PM ET, first feed post. Posted with Grok's lettering (owner's call), AI label on. Caption: "The cap. Cream and black, GOOOL ATHLETICS across the front. / Wear it to the pitch, the bar, the morning after. It'll look the same at all three. / Sign up at goool.shop for 20% off your first order." Tags in first comment: #gooolathletics #wearthefeeling #soccer #futbol #soccerstyle #matchday #soccerapparel #dadhat #athleisure #rhodeisland #providence #newengland |
 | 2026-09-30 | `feed/2026-09-30_matchday-tee-white-jeff_1080x1350.jpg` | feed | draft, marks not yet overlaid; feed crop ends at the ankle so the sneaker swoosh is out of frame, paint it out before any full-length use |
 | 2026-09-30 | `feed/2026-09-30_terrace-tee-natural-alex_1080x1350.jpg` | feed | draft, marks not yet overlaid; garment and print colours match the product |
 | 2026-09-30 | `feed/2026-09-30_core-hoodie-black-greg-volley-REJECTED_source-2x3.jpg` | feed | rejected: kicks away from the wall; garments and ball are right |
