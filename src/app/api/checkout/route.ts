@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { shippingCentsFor } from "@/lib/shipping";
 import { CODE_REJECTION_MESSAGE, discountCentsFor, validatePromotionCode, type CodeValidation } from "@/lib/discount";
-import { EMAIL_RE } from "@/lib/mailchimp";
+import { EMAIL_RE } from "@/lib/signups";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
 import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from "@/lib/types";

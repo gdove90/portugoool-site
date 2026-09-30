@@ -18,6 +18,18 @@
         "PREVIEW_KEY= npx next dev -p 3001"
       ],
       "port": 3001
+    },
+    {
+      "name": "email-renders",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "3011",
+        "--directory",
+        "tmp/renders"
+      ],
+      "port": 3011
     }
   ]
 }

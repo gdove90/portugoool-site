@@ -6,13 +6,16 @@ export interface EmailMessage {
   html: string;
   text: string;
   replyTo?: string;
+  /** Extra SMTP headers, e.g. List-Unsubscribe on marketing sends. */
+  headers?: Record<string, string>;
 }
 export type EmailResult =
   | { sent: true; id: string | null; provider: string }
   | { sent: false; reason: string; disabled?: boolean };
 export function emailEnabled(): boolean { return Boolean(process.env.RESEND_API_KEY); }
 export function emailProvider(): "resend" | "disabled" { return emailEnabled() ? "resend" : "disabled"; }
-export function emailFrom(): string { return "GOOOL <hello@goool.shop>"; }
+// Sender name is the company (owner decision 2026-09-29).
+export function emailFrom(): string { return "Goool Athletics <hello@goool.shop>"; }
 
 export async function sendEmail(msg: EmailMessage, idempotencyKey: string): Promise<EmailResult> {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(msg.to) || msg.to.length > 254)
@@ -28,7 +31,8 @@ export async function sendEmail(msg: EmailMessage, idempotencyKey: string): Prom
       headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
         "Content-Type": "application/json", "Idempotency-Key": idempotencyKey },
       body: JSON.stringify({ from: emailFrom(), to: [msg.to], subject: msg.subject,
-        html: msg.html, text: msg.text, reply_to: msg.replyTo ?? "hello@goool.shop" }),
+        html: msg.html, text: msg.text, reply_to: msg.replyTo ?? "hello@goool.shop",
+        ...(msg.headers ? { headers: msg.headers } : {}) }),
       signal: AbortSignal.timeout(8000),
     });
     const body = await res.json().catch(() => ({}));

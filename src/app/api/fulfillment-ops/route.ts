@@ -3,6 +3,7 @@ import crypto from "crypto";
 import { apliiqSubmitEnabled, checkApliiqConnection, submissionEnvironmentAllowed } from "@/lib/apliiq";
 import { drainEmailQueue, queueOrderConfirmation, queueOrderDelayNotice, queueShipmentNotification } from "@/lib/email-delivery";
 import { emailProvider } from "@/lib/email";
+import { runWelcomePass } from "@/lib/welcome";
 import { getOrdersStore } from "@/lib/orders-store";
 import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "@/lib/fulfillment-submit";
 
@@ -55,7 +56,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
-  let body: { action?: string; orderId?: string };
+  let body: { action?: string; orderId?: string; welcome?: boolean };
   try {
     body = await req.json();
   } catch {
@@ -63,9 +64,21 @@ export async function POST(req: NextRequest) {
   }
 
   if (!body || typeof body !== "object") return NextResponse.json({ error: "Invalid body." }, { status: 400 });
+  // The minute worker drains the queue every call and, when it sets
+  // `welcome: true` (top of each hour), also runs the welcome-sequence
+  // pass. `welcome-pass` runs that pass alone, for operators and tests.
+  const liveKey = /^(sk|rk)_live_/.test(process.env.STRIPE_SECRET_KEY ?? "");
   if (body.action === "deliver-emails") {
-    try { return NextResponse.json(await drainEmailQueue(/^(sk|rk)_live_/.test(process.env.STRIPE_SECRET_KEY ?? ""))); }
+    let drained: Record<string, number>;
+    try { drained = await drainEmailQueue(liveKey); }
     catch { return NextResponse.json({ error: "Email queue unavailable." }, { status: 503 }); }
+    if (body.welcome !== true) return NextResponse.json(drained);
+    try { return NextResponse.json({ ...drained, welcome: await runWelcomePass(liveKey) }); }
+    catch { return NextResponse.json({ ...drained, welcome: { error: 1 } }); }
+  }
+  if (body.action === "welcome-pass") {
+    try { return NextResponse.json({ welcome: await runWelcomePass(liveKey) }); }
+    catch { return NextResponse.json({ error: "Welcome pass unavailable." }, { status: 503 }); }
   }
   // Read-only diagnostics reuse the existing operator authentication.
   // No order submissions, emails, credentials, or customer records are returned.
