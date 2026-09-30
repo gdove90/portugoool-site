@@ -11,9 +11,11 @@
 // sent_at column is written as soon as the send is queued, so a re-run
 // never sends twice even if one of the two writes is lost.
 //
-// Email 2 talks about the performance tee, so it only goes out while
-// that product is live in the catalog; otherwise the pass skips the step
-// and writes nothing.
+// Email 2 describes the Matchday performance tee as a tri-blend, so it
+// only goes out while that product is live AND its blank is the Bella +
+// Canvas 3413 (one boolean read from the product record). Until the
+// blank swap ships the gate is closed: the pass skips the step and
+// writes nothing.
 
 import { getSupabaseAdmin } from "./supabase";
 import { getProductBySlug } from "./products";
@@ -24,16 +26,23 @@ import { buildWelcome3 } from "./emails/welcome-3";
 import { SITE_URL, SUPPORT_EMAIL } from "./emails/footer";
 import { markEmailSent, unsubscribeUrl, type SignupRow } from "./signups";
 
-export const PERFORMANCE_TEE_SLUG = "goool-performance-tee";
+export const PERFORMANCE_TEE_SLUG = "goool-athletics-modern-sport-performance-tee";
+export const TRIBLEND_BLANK = "BC3413";
 export const EMAIL2_HOURS = 120;
 export const EMAIL3_HOURS = 288;
 const LOOKBACK_DAYS = 30;
 const BATCH = 50;
 
+/** The Email 2 gate: the Matchday tee, live and on the 3413 blank, else null. */
 export function performanceTee(): Product | null {
   const product = getProductBySlug(PERFORMANCE_TEE_SLUG);
   if (!product || !product.isActive || !isAvailableForSale(product) || !hasPrice(product)) return null;
+  if (product.blank !== TRIBLEND_BLANK) return null;
   return product;
+}
+
+export function email2GateOpen(): boolean {
+  return performanceTee() !== null;
 }
 
 /** RFC 8058 one-click headers for marketing sends. */
@@ -60,7 +69,7 @@ export async function runWelcomePass(livemode: boolean, now: number = Date.now()
   const tee = performanceTee();
 
   for (const step of [2, 3] as const) {
-    if (step === 2 && !tee) { bump("email2_skipped_tee_not_live"); continue; }
+    if (step === 2 && !tee) { bump("email2_gate_closed"); continue; }
     const hours = step === 2 ? EMAIL2_HOURS : EMAIL3_HOURS;
     const column = `sent_at_email${step}` as const;
     const { data, error } = await db

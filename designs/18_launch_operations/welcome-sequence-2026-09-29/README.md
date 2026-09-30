@@ -37,8 +37,14 @@ Design decisions inside the brief's limits:
 - A popup sign-up from an address that was only a footer or import row
   turns it into a popup row with a fresh clock; a repeat popup sign-up
   keeps its clock. Any fresh sign-up clears an earlier unsubscribe.
-- Email 2 goes only while `goool-performance-tee` is active, for sale and
-  priced; the image and button come from that product.
+- Email 2 links to the Matchday performance tee
+  (`goool-athletics-modern-sport-performance-tee`), never the Core Badge
+  Tee. Its gate is one boolean read from that product record:
+  `blank === "BC3413"` (Bella + Canvas 3413) and live. The Matchday tee
+  carries `blank: "ST720"` today, so the gate reads false against the live
+  catalog and the pass writes nothing for Email 2 (`email2_gate_closed`).
+  It flips in the same commit that swaps the blank. (Owner decision
+  2026-09-29, second pass.)
 - The cart has no code query parameter, so Email 1 and Email 3 buttons go
   to /shop.
 - `MAILING_STREET` in footer.ts was filled with 242 Earle Dr from the
@@ -71,6 +77,20 @@ done (see blocked items).
   sendEmail forwards the headers and the new sender name.
 - 375 px renders of all three (`renders-375px-top.jpg`,
   `renders-375px-bottom.jpg`), HTML and text alternatives in this folder.
+
+## Verify pass, second attempt (same day)
+
+The two follow-up changes were made and pass the suite (33/33): Email 2
+link moved to the Matchday tee; the 3413 gate added (`src/lib/types.ts`
+`blank?`, `src/lib/products.ts` Matchday `blank: "ST720"`,
+`src/lib/welcome.ts` `TRIBLEND_BLANK` / `email2GateOpen()`). Gate against
+the live catalog: `live true | blank ST720 | gate open: false`
+(`tmp/gate-check.cjs`). The real-send run (Audience import, Email 1 in
+60 s, forced Emails 2 and 3, unsubscribe round trip, mail-tester) did not
+run: `.env.local` still has none of `RESEND_API_KEY`,
+`NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` (Netlify has all
+three). Renders in this folder were regenerated with the Matchday image
+and link.
 
 ## Blocked on this machine
 

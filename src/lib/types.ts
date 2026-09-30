@@ -72,6 +72,10 @@ export interface Product {
   /** Hex used for the colour swatch dot in the UI. */
   colorHex: string;
   fabric: string;
+  /** Supplier style code of the blank (e.g. "ST720", "BC3413"). Set
+   *  where a decision reads it; the welcome Email 2 gate opens only when
+   *  the Matchday tee's blank is the Bella + Canvas 3413. */
+  blank?: string;
   fit: string;
   careInstructions: string;
   images: ProductImage[];

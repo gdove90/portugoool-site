@@ -2610,6 +2610,9 @@ export const products: Product[] = [
     id: "80000000-0000-4000-8000-000000000006",
     name: "GOOOL Matchday Tee",
     slug: "goool-athletics-modern-sport-performance-tee",
+    // Welcome Email 2 describes a tri-blend and is gated on this value:
+    // it flips to "BC3413" in the same commit that swaps the blank.
+    blank: "ST720",
     description:
       "Performance training tee in black, true royal or white. GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
     priceCents: 3800,
