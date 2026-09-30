@@ -40,10 +40,13 @@ async function handle(token: string) {
   );
 }
 
-export async function GET(_req: NextRequest, { params }: { params: { token: string } }) {
-  return handle(params.token);
+// Next 15 route handlers receive params as a promise.
+type Ctx = { params: Promise<{ token: string }> };
+
+export async function GET(_req: NextRequest, { params }: Ctx) {
+  return handle((await params).token);
 }
 
-export async function POST(_req: NextRequest, { params }: { params: { token: string } }) {
-  return handle(params.token);
+export async function POST(_req: NextRequest, { params }: Ctx) {
+  return handle((await params).token);
 }
