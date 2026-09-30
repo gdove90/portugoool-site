@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import { shippingCentsFor } from "@/lib/shipping";
 import { CODE_REJECTION_MESSAGE, discountCentsFor, validatePromotionCode, type CodeValidation } from "@/lib/discount";
 import { EMAIL_RE } from "@/lib/mailchimp";
+import { clientIpFrom } from "@/lib/meta-capi";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
 import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from "@/lib/types";
@@ -50,8 +51,10 @@ export async function POST(req: NextRequest) {
   let email = "";
   let code = "";
   let preview = false;
+  let consent = "unknown";
   try {
     const body = await req.json();
+    consent = body.consent === "denied" ? "denied" : body.consent === "granted" ? "granted" : "unknown";
     items = body.items;
     email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
     code = typeof body.code === "string" ? body.code : "";
@@ -232,7 +235,18 @@ export async function POST(req: NextRequest) {
   for (let i = 0; i * 450 < itemsJson.length; i++) {
     metadata[`items_${i}`] = itemsJson.slice(i * 450, (i + 1) * 450);
   }
-  if (Object.keys(metadata).length > 40) {
+  // Advertising consent and matching data, captured with the purchase so
+  // the webhook can send (or not send) the server-side Purchase event.
+  metadata.consent = consent;
+  const ip = clientIpFrom({ get: (n) => req.headers?.get?.(n) ?? null });
+  if (ip) metadata.ip = ip;
+  const ua = req.headers?.get?.("user-agent");
+  if (ua) metadata.ua = ua.slice(0, 400);
+  const fbp = req.cookies?.get?.("_fbp")?.value;
+  if (fbp) metadata.fbp = fbp;
+  const fbc = req.cookies?.get?.("_fbc")?.value;
+  if (fbc) metadata.fbc = fbc;
+  if (Object.keys(metadata).length > 45) {
     return NextResponse.json(
       { error: "Cart is too large for a single checkout. Please split it up." },
       { status: 400 }

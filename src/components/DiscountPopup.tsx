@@ -1,5 +1,6 @@
 "use client";
 
+import { consentForServer, setKnownEmail, trackLead } from "@/lib/meta-pixel";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -113,7 +114,7 @@ export default function DiscountPopup() {
       const res = await fetch("/api/discount", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, consent: consentForServer() }),
       });
       const body = await res.json().catch(() => null);
       if (!res.ok) {
@@ -128,6 +129,7 @@ export default function DiscountPopup() {
       );
       setStatus("done");
       writeState({ claimed: true });
+      if (body?.code) trackLead({ email, code: body.code }); else setKnownEmail(email);
       window.setTimeout(() => closeRef.current?.focus(), 50);
     } catch {
       setStatus("error");

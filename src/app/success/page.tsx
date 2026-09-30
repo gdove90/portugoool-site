@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
-import { metaPixelId, trackVerifiedPurchase } from "@/lib/meta-pixel";
+import { metaPixelId, setKnownEmail, trackVerifiedPurchase } from "@/lib/meta-pixel";
 
 // ─────────────────────────────────────────────────────────────
 // Post-checkout landing. The redirect alone proves nothing: this page
@@ -49,6 +49,7 @@ export default function SuccessPage() {
         }
         if (data.state === "paid") {
           clear(); // only a verified payment empties the cart
+          if (data.email) setKnownEmail(data.email);
           if (data.purchaseEvent) trackVerifiedPurchase(data.purchaseEvent);
           setStatus({
             kind: "paid",

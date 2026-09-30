@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import { createHash } from "crypto";
+import { metaEventId } from "@/lib/meta-events";
+import { getProductById } from "@/lib/products";
 import { getOrdersStore } from "@/lib/orders-store";
 import { orderNumber } from "@/lib/fulfillment-submit";
 
@@ -15,6 +16,14 @@ import { orderNumber } from "@/lib/fulfillment-submit";
 // ─────────────────────────────────────────────────────────────
 
 export const dynamic = "force-dynamic";
+
+// The purchase snapshot the checkout route chunked into session metadata.
+function purchaseItems(session: Stripe.Checkout.Session): { p: string; q: number }[] {
+  const md = session.metadata ?? {};
+  let joined = "";
+  for (let i = 0; md[`items_${i}`] != null; i++) joined += md[`items_${i}`];
+  try { const parsed = JSON.parse(joined); return Array.isArray(parsed) ? parsed : []; } catch { return []; }
+}
 
 export async function GET(req: NextRequest) {
   const sessionId = req.nextUrl.searchParams.get("session_id");
@@ -74,9 +83,13 @@ export async function GET(req: NextRequest) {
     totalCents: session.amount_total ?? null,
     currency: session.currency ?? "usd",
     purchaseEvent: paid && session.livemode && purchaseEligible && session.amount_total != null ? {
-      id: `purchase_${createHash("sha256").update(session.id).digest("hex").slice(0,32)}`,
+      // Same id scheme as the server-side Purchase in the webhook.
+      id: await metaEventId("Purchase", session.id),
       value: session.amount_total / 100,
       currency: (session.currency ?? "usd").toUpperCase(),
+      content_ids: purchaseItems(session).map((i) => getProductById(i.p)?.slug ?? i.p),
+      num_items: purchaseItems(session).reduce((n, i) => n + (i.q ?? 0), 0),
+      order_id: reference ?? session.id,
     } : null,
   }, { headers: { "Cache-Control": "no-store" } });
 }

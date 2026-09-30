@@ -75,7 +75,31 @@ export async function middleware(req: NextRequest) {
     return redirectToShop(req);
   }
 
-  return NextResponse.next();
+  // Region cookie for the advertising-consent default (owner decision
+  // 2026-09-30): US visitors are allowed by default, everyone else is
+  // denied until they click Allow. Netlify supplies the country at the
+  // edge; anything unreadable is XX, which the client treats as non-US.
+  const res = NextResponse.next();
+  const country = countryOf(req);
+  if (req.cookies.get("goool_geo")?.value !== country) {
+    res.cookies.set("goool_geo", country, { path: "/", maxAge: 30 * 86400, sameSite: "lax" });
+  }
+  return res;
+}
+
+function countryOf(req: NextRequest): string {
+  const geo = (req as unknown as { geo?: { country?: { code?: string } | string } }).geo;
+  const fromGeo = typeof geo?.country === "string" ? geo.country : geo?.country?.code;
+  let fromNf: string | undefined;
+  const nfGeo = req.headers.get("x-nf-geo");
+  if (nfGeo) {
+    try {
+      const parsed = JSON.parse(nfGeo.trim().startsWith("{") ? nfGeo : atob(nfGeo));
+      fromNf = parsed?.country?.code;
+    } catch { /* unreadable header */ }
+  }
+  const c = (fromGeo || fromNf || req.headers.get("x-country") || req.headers.get("x-vercel-ip-country") || req.headers.get("cf-ipcountry") || "").toUpperCase();
+  return /^[A-Z]{2}$/.test(c) ? c : "XX";
 }
 
 function redirectToShop(req: NextRequest) {

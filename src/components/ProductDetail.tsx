@@ -8,6 +8,7 @@ import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale, hasPrice 
 import { formatPrice } from "@/lib/format";
 import SizeGuide from "./SizeGuide";
 import { useCart } from "@/lib/cart";
+import { trackAddToCart, trackViewContent } from "@/lib/meta-pixel";
 import SizeSelector from "./SizeSelector";
 import CustomizationSelector from "./CustomizationSelector";
 
@@ -66,6 +67,10 @@ export default function ProductDetail({ product }: { product: Product }) {
     product.compareAtPriceCents != null &&
     product.compareAtPriceCents > product.priceCents;
 
+  useEffect(() => {
+    if (hasPrice(product)) trackViewContent({ slug: product.slug, name: product.name, value: product.priceCents / 100, currency: "USD" });
+  }, [product.slug]); // eslint-disable-line react-hooks/exhaustive-deps
+
   function handleAddToCart(goToCart: boolean) {
     if (soldOut || comingSoon) return;
     if (!selectedSize) {
@@ -84,6 +89,7 @@ export default function ProductDetail({ product }: { product: Product }) {
       customName: hasCustomization ? customName.trim() : undefined,
       customNumber: hasCustomization ? customNumber.trim() : undefined,
     });
+    trackAddToCart({ slug: product.slug, name: product.name, value: unitPriceCents / 100, currency: "USD", quantity: 1, lineKey: `${product.id}:${colorName}:${selectedSize}` });
     if (goToCart) {
       router.push("/cart");
     } else {

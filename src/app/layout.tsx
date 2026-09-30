@@ -35,6 +35,11 @@ const marker = Permanent_Marker({
 // them. Do not put an unearned adjective back in a title or description
 // just because nobody sees it on the page.
 export const metadata: Metadata = {
+  // Meta Business domain verification (owner decision 2026-09-30): the
+  // value lives in Netlify as META_DOMAIN_VERIFICATION; no tag when unset.
+  ...(process.env.META_DOMAIN_VERIFICATION
+    ? { other: { "facebook-domain-verification": process.env.META_DOMAIN_VERIFICATION } }
+    : {}),
   title: {
     default: "GOOOL · Original Soccer Sportswear · Made for the Moment.",
     template: "%s · GOOOL",

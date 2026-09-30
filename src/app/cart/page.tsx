@@ -4,6 +4,7 @@ import Image from "next/image";
 import { catalogImageSrc } from "@/lib/product-image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { consentForServer, trackInitiateCheckout } from "@/lib/meta-pixel";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
 import { FREE_SHIPPING_THRESHOLD_CENTS, shippingCentsFor } from "@/lib/shipping";
@@ -104,12 +105,19 @@ export default function CartPage() {
         return;
       }
     }
+    trackInitiateCheckout({
+      slugs: Array.from(new Set(items.map((i) => i.slug))),
+      value: totalCents / 100,
+      currency: "USD",
+      numItems: items.reduce((n, i) => n + i.quantity, 0),
+    });
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           items: cartPayload(),
+          consent: consentForServer(),
           ...(email.trim() ? { email: email.trim() } : {}),
           ...(promo ? { code: promo.code } : {}),
         }),

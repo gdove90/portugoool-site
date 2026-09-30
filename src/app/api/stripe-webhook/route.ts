@@ -5,6 +5,10 @@ import { getOrdersStore, OrderItemRow, OrderRow } from "@/lib/orders-store";
 import { submitPaidOrder } from "@/lib/fulfillment-submit";
 import { queueOrderConfirmation } from "@/lib/email-delivery";
 import { markRedeemed } from "@/lib/discount";
+import { metaCapiConfigured, sendMetaServerEvent } from "@/lib/meta-capi";
+import { metaEventId } from "@/lib/meta-events";
+import { getProductById } from "@/lib/products";
+import { orderNumber } from "@/lib/fulfillment-submit";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe webhook — the ONLY payment authority. Fulfillment never
@@ -40,6 +44,40 @@ interface MetaItem {
   a?: number; // Apliiq saved-product id, fixed at checkout creation
   n?: string; // custom name
   m?: string; // custom number
+}
+
+// Server-side Purchase (owner decision 2026-09-30). Sent only when the
+// consent captured at checkout is not denied; failures are logged and
+// never touch the order. content_ids are product slugs, order_id is the
+// customer-facing order number.
+async function sendPurchaseToMeta(session: Stripe.Checkout.Session, orderId: string, items: OrderItemRow[], livemode: boolean): Promise<void> {
+  if (!metaCapiConfigured()) return;
+  try {
+    const md = session.metadata ?? {};
+    await sendMetaServerEvent({
+      name: "Purchase",
+      eventId: await metaEventId("Purchase", session.id),
+      eventTime: session.created,
+      sourceUrl: "https://goool.shop/success",
+      email: session.customer_details?.email ?? session.customer_email ?? null,
+      clientIp: md.ip ?? null,
+      userAgent: md.ua ?? null,
+      fbp: md.fbp ?? null,
+      fbc: md.fbc ?? null,
+      consent: md.consent ?? null,
+      livemode,
+      customData: {
+        value: (session.amount_total ?? 0) / 100,
+        currency: (session.currency ?? "usd").toUpperCase(),
+        content_ids: items.map((i) => getProductById(i.product_id)?.slug ?? i.product_id),
+        content_type: "product",
+        num_items: items.reduce((n, i) => n + (i.quantity ?? 0), 0),
+        order_id: orderNumber(orderId),
+      },
+    });
+  } catch (err) {
+    console.error("stripe-webhook: meta purchase not sent for order", orderId, err);
+  }
 }
 
 function readItemsMetadata(md: Record<string, string> | null): MetaItem[] | null {
@@ -342,6 +380,8 @@ export async function POST(req: NextRequest) {
       // GOOOL20 ledger, before submission so a supplier error never
       // hides who used a code. Best effort inside.
       await recordDiscountRedemption(stripe, session);
+      // Meta Conversions API Purchase, same event_id as the browser's.
+      await sendPurchaseToMeta(session, orderId, built.items, event.livemode);
       try {
         const outcome = await submitPaidOrder(store, orderId, { livemode: event.livemode });
         submission = outcome.action;

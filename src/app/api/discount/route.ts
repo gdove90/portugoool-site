@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { EMAIL_RE, subscribeToAudience } from "@/lib/mailchimp";
+import { clientIpFrom, sendMetaServerEvent } from "@/lib/meta-capi";
+import { leadStableId, metaEventId } from "@/lib/meta-events";
 import { issueDiscountCode } from "@/lib/discount";
 import { emailEnabled } from "@/lib/email";
 import { queueEmail } from "@/lib/email-delivery";
@@ -15,9 +17,11 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
   let email: string;
+  let consent: string | null = null;
   try {
     const body = await req.json();
     email = String(body.email ?? "").trim().toLowerCase();
+    consent = body.consent === "denied" ? "denied" : body.consent === "granted" ? "granted" : null;
   } catch {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
@@ -43,6 +47,20 @@ export async function POST(req: NextRequest) {
     await queueEmail(`discount/${live ? "live" : "test"}/${issued.code}`, "discount", {
       to: email, ...buildDiscountCodeEmail(issued.code),
     }, live);
+    // Server-side Lead, same event_id the popup fires in the browser, so
+    // Meta keeps one. Never blocks the sign-up.
+    await sendMetaServerEvent({
+      name: "Lead",
+      eventId: await metaEventId("Lead", leadStableId(email, issued.code)),
+      email,
+      clientIp: clientIpFrom({ get: (n) => req.headers?.get?.(n) ?? null }),
+      userAgent: req.headers?.get?.("user-agent") ?? null,
+      fbp: req.cookies?.get?.("_fbp")?.value ?? null,
+      fbc: req.cookies?.get?.("_fbc")?.value ?? null,
+      sourceUrl: "https://goool.shop/",
+      consent,
+      customData: { content_name: "GOOOL20 sign-up" },
+    });
     return NextResponse.json({ ok: true, subscribed: true, code: issued.code });
   } catch {
     console.error("[discount] issue or durable delivery unavailable");
