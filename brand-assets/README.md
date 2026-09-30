@@ -19,8 +19,8 @@ brand-assets/
   reels/
     reel-01-wear-the-feeling/  BRIEF.md (shot-by-shot remake plan), reference.mp4,
                                contact-sheet.png, the product images and lockups Grok needs
-  instagram/
-    feed/  story/  reel/       everything we are thinking of posting, by placement; README has sizes and rules
+  instagram-posts/
+    feed/  stories/  reels/   every picture and clip made for Instagram, by placement; README has sizes, rules and the status table
   README.md                    this index
 ```
 

@@ -1,13 +1,15 @@
-# Instagram
+# Instagram posts
 
-Everything we are thinking about posting lives here, sorted by where it
-runs. Nothing goes live from anywhere else.
+Every picture and clip we make for Instagram lives here, sorted by
+where it runs. The models stay in `brand-assets/avatars/`. Nothing goes
+live from anywhere else. Rejected Grok outputs are kept too, with
+REJECTED in the name, so nothing from a session is lost.
 
 ```
-brand-assets/instagram/
-  feed/    4:5, 1080 x 1350 (the 2:3 source is kept next to the crop)
-  story/   9:16, 1080 x 1920, safe zone 250 px top and bottom
-  reel/    9:16, 1080 x 1920 video, plus its cover frame
+brand-assets/instagram-posts/
+  feed/     4:5, 1080 x 1350 (the 2:3 source is kept next to the crop)
+  stories/  9:16, 1080 x 1920, safe zone 250 px top and bottom
+  reels/    9:16, 1080 x 1920 video, plus its cover frame
   README.md
 ```
 
@@ -33,3 +35,5 @@ Before anything posts:
 | 2026-09-30 | `feed/2026-09-30_stacked-cap-ledge_1080x1350.jpg` | feed | draft, marks not yet overlaid |
 | 2026-09-30 | `feed/2026-09-30_matchday-tee-white-jeff_1080x1350.jpg` | feed | draft, marks not yet overlaid; feed crop ends at the ankle so the sneaker swoosh is out of frame, paint it out before any full-length use |
 | 2026-09-30 | `feed/2026-09-30_terrace-tee-natural-alex_1080x1350.jpg` | feed | draft, marks not yet overlaid; garment and print colours match the product |
+| 2026-09-30 | `feed/2026-09-30_core-hoodie-black-greg-volley-REJECTED_source-2x3.jpg` | feed | rejected: kicks away from the wall; garments and ball are right |
+| 2026-09-30 | `feed/2026-09-30_alex-grey-tee-REJECTED_source-2x3.jpg` | feed | rejected: grey tee we do not sell |
