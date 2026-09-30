@@ -115,8 +115,23 @@ field; tee + cap $70 free; single tee $44.95; live code GOOOL20-PXAH
 (issued to the owner, expires Oct 13 = 14 days) gave $70 - $14 + $6.95 =
 $62.95 in the cart and on the live Stripe Checkout page with no promotion
 code box (`live-stripe-checkout-62.95-no-code-box.jpg`). The payment was
-not made (no card available); the staged live session was expired and
-GOOOL20-PXAH stays unredeemed until it lapses on Oct 13.
+not made (no card available). The staged live session
+cs_live_b1hxgn9I... could not be expired from this machine: the live
+secret key exists only in Netlify (masked, `netlify dev:exec` injects
+"********" for secrets) and Stripe's dashboard Shell is read-only in live
+mode. It lapses on its own 24 hours after creation, about 00:05 UTC on
+2026-10-01. GOOOL20-PXAH reads 0/1 redemptions in Stripe and
+redeemed_at NULL in the ledger; it expires Oct 13.
+
+Production proof from real orders (read-only SQL, 2026-09-29): the two
+live codes redeemed on the Sep 28 test orders, GOOOL20-3L55 and
+GOOOL20-AFYG, carry `redeemed_at` 2026-09-29 02:58 and 03:00 UTC in
+`discount_codes`, so the production webhook does mark the ledger. The
+matching `orders` rows store `amount_shipping_cents` 950 and
+`amount_discount_cents` 1560 / 960 with totals 7190 / 4790 that reconcile
+(subtotal - discount + shipping), so both columns are populated by the
+live handler. The session shape the new flow produces (`discounts[0]
+.promotion_code`, `total_details`) is identical to what those orders had.
 
 Webhook proof without money: `scripts/test-launch-backend.cjs` replays
 the exact shape of the paid TEST session cs_test_b1D0wV... (discounts[0]
