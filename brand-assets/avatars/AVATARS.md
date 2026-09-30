@@ -1,5 +1,8 @@
 # Ad avatars
 
+Roster only. The character cards and the exact Grok Imagine prompts live
+in [PROMPTS.md](PROMPTS.md); the rules of the set are in [README.md](README.md).
+
 Reference models for GOOOL Athletics ads and social imagery. Claude Design
 and Higgsfield both point at these files, so the paths and names below are
 the contract. Owner decision 2026-09-29.
