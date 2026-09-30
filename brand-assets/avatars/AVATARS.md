@@ -11,7 +11,7 @@ brand-assets/avatars/
   jeff/    jeff_front.png  jeff_back.png  jeff_left.png  jeff_right.png
   greg/    greg_front.png  greg_back.png  greg_left.png  greg_right.png
   alex/    alex_front.png  alex_back.png  alex_left.png  alex_right.png  alex_movement.mp4
-  andrew/  andrew_front.png andrew_back.png andrew_left.png andrew_right.png (pending)
+  andrew/  andrew_front.png andrew_back.png andrew_left.png andrew_right.png
   AVATARS.md
 ```
 
@@ -29,14 +29,15 @@ roster.
 | jeff | in use, low-res placeholders (see note) | 2026-09-29 | Desktop: `Model Jeff Front.webp`, `Model Jeff Back.webp`, `Model jeff left and right profile.webp` |
 | greg | in use, low-res placeholders (see note) | 2026-09-29 | Desktop: `Model Greg Front Back.webp`, `Model Greg Left Right Profile.webp` |
 | alex | in use, low-res placeholders (see note) | 2026-09-29 | Downloads: `image (1).jpg` (front), `generated_video.mp4` (movement); Desktop: `model alex back and side profile.webp` (3-panel: back, side, side), `Model Alex right side profile.webp` |
-| andrew | pending | | |
+| andrew | in use, low-res placeholders (see note) | 2026-09-29 | Desktop: `Model andrew front.webp`, `Model Andrew Back and left side.webp` (3-panel: back, side, side), `Model Andrew right side.webp` |
 
-**Resolution note (Jeff, Greg, Alex).** The saved stills are 256 x 256 px
-composites; Jeff's front crops at the neck, Greg's views crop at the chin,
-every side-by-side pair was split here into 128 x 256 px files and Alex's
-three-panel image into 85 x 256 px slices. Alex's `alex_left.png` is the
-middle panel of that composite; confirm it is his left side. That is
-thumbnail size. Re-export the originals at full resolution (2000 px on the
+**Resolution note (all four).** Apart from `alex_front.png` (1152 x 1728),
+the saved stills are 256 x 256 px, several of them composites: Jeff's and
+Andrew's fronts crop at the neck, Greg's views crop at the chin, every
+side-by-side pair was split here into 128 x 256 px files and the Alex and
+Andrew three-panel images into 85 x 256 px slices. `alex_left.png` and
+`andrew_left.png` are the middle panels of those composites; confirm they
+show the left side. That is thumbnail size. Re-export the originals at full resolution (2000 px on the
 long side or better, head included) and overwrite the four files with the
 same names; nothing else has to change.
 
