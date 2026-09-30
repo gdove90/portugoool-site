@@ -1,4 +1,4 @@
-# Grok Imagine scene prompts, "the ledge" set (2026-09-30)
+# Picture prompts for clothing, Campaign 1 (Grok Imagine, "the ledge", 2026-09-30)
 
 One scene, many pictures: a weathered concrete wall with the GOOOL over
 red bar over ATHLETICS mural, a concrete ledge with a dark metal rail, a
