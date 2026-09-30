@@ -72,9 +72,9 @@ def write_md(rows):
         f"Gate: long edge at least {GATE} px. Files under the gate: **{under}**.\n\n"
         + table(rows) + "\n<!-- gate:end -->"
     )
-    new = re.sub(r"<!-- gate:start.*?<!-- gate:end -->", lambda _: block, md, flags=re.S)
-    if new == md:
+    if not re.search(r"<!-- gate:start.*?<!-- gate:end -->", md, flags=re.S):
         raise SystemExit("AVATARS.md has no gate markers; add them once, then rerun.")
+    new = re.sub(r"<!-- gate:start.*?<!-- gate:end -->", lambda _: block, md, flags=re.S)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(new)
 
