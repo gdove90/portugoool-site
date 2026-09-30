@@ -108,6 +108,33 @@ New suite test: a code issued today carries now + 14 d in both Stripe and
 the ledger, is rejected at day 15 and accepted at day 13 (mocked clock).
 Suite 25/25, API verification 13/13 after the change.
 
+## Deployed 2026-09-29 (Netlify deploy 6abc4fd0), close-out without a live payment
+
+Live checks done: production cart shows the code field below the email
+field; tee + cap $70 free; single tee $44.95; live code GOOOL20-PXAH
+(issued to the owner, expires Oct 13 = 14 days) gave $70 - $14 + $6.95 =
+$62.95 in the cart and on the live Stripe Checkout page with no promotion
+code box (`live-stripe-checkout-62.95-no-code-box.jpg`). The payment was
+not made (no card available); the staged live session was expired and
+GOOOL20-PXAH stays unredeemed until it lapses on Oct 13.
+
+Webhook proof without money: `scripts/test-launch-backend.cjs` replays
+the exact shape of the paid TEST session cs_test_b1D0wV... (discounts[0]
+.promotion_code string, total_details discount 1400 / shipping 695)
+through the production handler: the order row stores total 6295, subtotal
+7000, shipping 695, discount 1400, and the real markRedeemed sets
+redeemed_at and redeemed_session_id on the ledger row. The real database
+write could not run on this machine: it needs SUPABASE_SERVICE_ROLE_KEY
+and NEXT_PUBLIC_SUPABASE_URL, which live only in Netlify.
+
+**Check on the first real production order that uses a GOOOL20 code:**
+1. `discount_codes` row for that code has `redeemed_at` and
+   `redeemed_session_id` set (webhook marked the ledger).
+2. `orders` row for that session has `amount_shipping_cents` and
+   `amount_discount_cents` matching the Stripe session (695 and the 20%
+   of the subtotal when the discounted subtotal is under $70; 0 shipping
+   at $70 or more after the discount).
+
 ## Rollback
 
 `git checkout main` and redeploy main (the branch is not merged); or, if
