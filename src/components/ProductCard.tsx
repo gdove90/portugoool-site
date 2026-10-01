@@ -25,6 +25,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const lowStock = !soldOut && remaining != null && remaining <= 150;
   const oneSize =
     product.sizes.length === 1 && /^(os|one size)$/i.test(String(product.sizes[0]));
+  const hasBrandTag = ["jersey", "casual", "tshirt", "hoodie"].includes(product.category);
 
   // Each card keeps its own colorway selection; the image swaps in place and
   // the selection rides along to the product page as ?color=.
@@ -119,6 +120,12 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
         </Link>
       </div>
+
+      {hasBrandTag && (
+        <p className="mt-1 text-xs leading-relaxed text-ink/50">
+          Branded interior neck tag included.
+        </p>
+      )}
 
       {variants ? (
         <div
