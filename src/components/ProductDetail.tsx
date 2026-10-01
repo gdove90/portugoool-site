@@ -57,6 +57,7 @@ export default function ProductDetail({ product }: { product: Product }) {
   const remaining = remainingUnits(product);
   const customizable =
     product.customNameAvailable || product.customNumberAvailable;
+  const hasBrandTag = ["jersey", "casual", "tshirt", "hoodie"].includes(product.category);
 
   const hasCustomization =
     customize && (customName.trim() !== "" || customNumber.trim() !== "");
@@ -412,6 +413,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           {/* Details */}
           <div className="mt-8 divide-y divide-ink/10 border-t border-ink/10">
             <DetailRow label="Material" value={product.fabric} />
+            {hasBrandTag && <DetailRow label="Brand tag" value="Branded interior neck tag included." />}
             {(comingSoon || singleSize) && <DetailRow label="Fit" value={product.fit} />}
             <DetailRow label="Care" value={product.careInstructions} />
             {(comingSoon || singleSize) && <SizeGuide productId={product.id} />}
