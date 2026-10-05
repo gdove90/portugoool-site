@@ -33,9 +33,9 @@ export default function MarketingConsent() {
 
   useEffect(() => {
     if (!metaPixelId) return;
-    const checkDialog = () => setAnotherDialog(Boolean(document.querySelector('[aria-modal="true"]')));
+    const checkDialog = () => setAnotherDialog(Boolean(document.querySelector('[aria-modal="true"],dialog[open]')));
     const observer = new MutationObserver(checkDialog);
-    observer.observe(document.body, { subtree: true, childList: true });
+    observer.observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ["open"] });
     checkDialog();
     const openSettings = () => { if (!globalPrivacyControl()) { document.documentElement.dataset.gooolPrompt = "true"; setOpen(true); } };
     window.addEventListener("goool:cookie-settings", openSettings);

@@ -5,6 +5,8 @@
 
 # next.js
 /.next/
+/.npm-cache/
+/.staging-data/
 /out/
 next-env.d.ts
 

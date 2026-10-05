@@ -17,16 +17,19 @@ export default function ContactPage() {
   )}&body=${encodeURIComponent(message)}`;
 
   return (
-    <div className="mx-auto max-w-xl px-4 py-14 sm:px-6 sm:py-20">
+    <div className="support">
       <h1 className="font-display text-4xl uppercase tracking-tightest text-ink sm:text-5xl">
-        Contact
+        Here to help.
       </h1>
       <p className="mt-2 text-ink/60">
         Questions about an order, sizing, or a drop? Send it over and we reply
         within one business day.
       </p>
 
-      <div className="mt-10 space-y-4">
+      <p><a className="text-link nav-underline contact-email" href="mailto:hello@goool.shop">hello@goool.shop</a></p>
+      <p><Link className="text-link nav-underline" href="/shipping-returns">Shipping &amp; returns</Link></p>
+      <p><Link className="text-link nav-underline" href="/size-guide">Fit guide</Link></p>
+      <div className="contact-fields">
         <div>
           <label htmlFor="contact-name" className="mb-1 block text-sm font-medium text-ink">
             Name

@@ -6,17 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test:v84": "node scripts/test-v84.cjs",
+    "test:v84:http": "node scripts/smoke-v84.cjs"
   },
   "dependencies": {
+    "@fontsource/barlow-condensed": "5.3.0",
+    "@fontsource/inter": "5.3.0",
     "@supabase/supabase-js": "2.50.0",
     "next": "15.5.24",
     "nodemailer": "^10.0.10",
+    "parse5": "7.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "stripe": "16.5.0"
+    "saxes": "6.0.0",
+    "stripe": "16.5.0",
+    "tus-js-client": "4.3.1"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
     "@types/node": "20.14.12",
     "@types/nodemailer": "^8.0.2",
     "@types/react": "18.3.3",

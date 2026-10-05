@@ -4,6 +4,7 @@ import { consentForServer, setKnownEmail, trackLead } from "@/lib/meta-pixel";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Brand } from "@/v84/Brand";
 
 // ─────────────────────────────────────────────────────────────
 // GOOOL20 signup popup (owner decision, 2026-09-25).
@@ -65,6 +66,7 @@ export default function DiscountPopup() {
   const [doneMessage, setDoneMessage] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const quiet = QUIET_PATHS.some((p) => pathname?.startsWith(p));
 
@@ -92,6 +94,7 @@ export default function DiscountPopup() {
   // Escape closes; body scroll locks while open; focus lands on the field.
   useEffect(() => {
     if (!open) return;
+    dialogRef.current?.showModal();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
     };
@@ -150,15 +153,14 @@ export default function DiscountPopup() {
   if (!open) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-[100] flex items-end justify-center bg-ink/70 sm:items-center sm:p-6"
+    <dialog
+      ref={dialogRef}
+      className="v84-discount fixed inset-0 z-[100] flex items-end justify-center bg-ink/70 sm:items-center sm:p-6"
       onClick={close}
-      aria-hidden={false}
+      onCancel={(event) => { event.preventDefault(); close(); }}
+      aria-labelledby="goool20-title"
     >
       <div
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="goool20-title"
         onClick={(e) => e.stopPropagation()}
         className="relative w-full overflow-hidden rounded-t-[28px] border-t-2 border-red bg-ink text-paper shadow-2xl motion-safe:animate-[goool20-up_.35s_ease-out] sm:grid sm:max-w-4xl sm:grid-cols-2 sm:rounded-none sm:border-t-0 sm:animate-none"
       >
@@ -170,26 +172,18 @@ export default function DiscountPopup() {
         {/* Crowd image: the left half of the panel on desktop (1a). */}
         <div className="relative hidden sm:block sm:h-full sm:min-h-[560px]">
           <Image
-            src="/hero-crowd.webp"
+            src="/v84/assets/hero.png"
             alt=""
             fill
             sizes="(min-width: 640px) 448px, 100vw"
             className="object-cover object-[50%_35%]"
             priority
           />
-          <div className="absolute inset-0 bg-red/60 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-ink/40" />
         </div>
 
         <div className="px-6 pb-8 pt-3 sm:px-12 sm:py-12">
           <div className="flex items-start justify-between">
-            <Image
-              src="/brand/goool-athletics-lockup-white.png"
-              alt="GOOOL Athletics"
-              width={140}
-              height={44}
-              className="h-auto w-32 sm:w-40"
-            />
+            <Brand footer />
             <button
               ref={closeRef}
               type="button"
@@ -304,6 +298,6 @@ export default function DiscountPopup() {
           )}
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }

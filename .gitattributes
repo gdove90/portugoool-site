@@ -1,0 +1,5 @@
+# Keep the approved package assets byte-identical across Windows and deployment checkouts.
+public/v84/** -text
+public/participation-agreement.html -text
+public/story-participation-agreement.html -text
+public/intake-privacy.html -text
