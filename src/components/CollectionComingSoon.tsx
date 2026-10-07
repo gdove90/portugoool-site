@@ -22,7 +22,7 @@ export default function CollectionComingSoon({ collection, audience, image, imag
           <span className={styles.name}>{collection}</span>
           <span className={styles.collection}>Collection.</span>
         </h1>
-        <p className={styles.copy}>A new rhythm. The same feeling.</p>
+        <p className={styles.copy}>A new rhythm.</p>
         <div className={styles.actions}>
           <a href="#footer-signup" className="btn white">Join the list <span aria-hidden="true">↗</span></a>
           <Link href="/men" className="btn outline">Explore men <span aria-hidden="true">↗</span></Link>
