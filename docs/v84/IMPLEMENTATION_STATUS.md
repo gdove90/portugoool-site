@@ -1,4 +1,30 @@
-# V84 implementation checkpoint - 2026-10-06
+# V84 implementation checkpoint - 2026-10-07
+
+## Current release status (supersedes historical checkpoints below)
+
+IN PROGRESS. Complete production deployment is authorized, but not yet performed. Production remains on `11b1a2f8182b71785205f2ff6bd2ba537ce52081`, deploy `6abeb64d0b1957000816ba19`. Isolated branch `codex/v84-facelift` is pushed to draft PR https://github.com/gdove90/portugoool-site/pull/4. Ready staging: https://deploy-preview-4--goool-shop.netlify.app, commit `37553279c9d19cd28f03b15544e9a7aad68a6f2a`, deploy `6ac5bfc684f8ea00084af0b7`. Subsequent local security/test documentation changes are not yet pushed.
+
+- Homepage approval is resolved: Core Hoodie Red ($78), Terrace Tee Red ($38), Matchday Tee ($38), Touchline Cap ($32), in that order. Men contains the nine existing approved adult-fit products; Women remains unassigned. No supplier records were deleted.
+- GOOOL organization `lhinkmqrxofihbokgjfo` is Pro; project `oexibflpshttgzmdvhpr` is ACTIVE_HEALTHY. Intake schema, private storage and exact 100 MiB capacity are provisioned and provider-tested. No additional purchase occurred.
+- Owner privately created a confirmed `hello@goool.shop` account. Verified UUID `5ad08879-2849-406f-af62-549c8635bec3` is the exact owner allowlist. Nine INTAKE variables are configured functions-only for production and deploy previews, with scoped secrets and exact origins. Existing commerce values remain unchanged. No owner password was requested in chat or stored.
+- Actual provider tests pass for all three submission routes, atomic receipts/retries, private media, owner/non-owner/anonymous authorization, notes/status/deletion, refresh/sign-out and search/filter/50+5 pagination. All disposable fixtures/accounts were cleaned. New authenticated maintenance tests verify expired-draft removal, fresh-draft and received-record preservation and unauthorized rejection; cleanup completed.
+- An inherited SECURITY DEFINER sold-counter exposure was fixed in migration `20261007034613_restrict_legacy_sold_counter`: fixed search path, service_role-only execution. Cloud privilege read-back and local SQL regression pass. No invocation or customer/product row mutation occurred. The advisor warning is cleared; leaked-password protection remains disabled.
+- Latest clean production build, lint and type validation pass, with 42 pages generated. OneDrive's generated-cache readlink error was resolved by removing only the verified `.next` directory and rebuilding. Current local suites pass: 27 v84, nine dashboard, five upload, six maintenance and 44 network-disabled commerce checks. 89 commerce baseline files and 32 approved assets remain unchanged. Final rebuilt preview also passes 123 route/link/asset checks across 32 pages and six fail-closed HTTP checks.
+- Production dependency audit reports zero vulnerabilities. Full audit has seven high/two moderate development-tool findings: braces/glob pattern matching and PostCSS selector parsing used by Tailwind/ESLint on repository-controlled inputs. No customer patterns/CSS reach those tools. Residual risk is build-time denial of service from untrusted source contributions. No unrelated major upgrade or framework downgrade was applied.
+- Existing live Stripe totals and an unpaid checkout.stripe.com handoff passed without customer email, payment or fulfillment. Production Stripe is unchanged; preview lacks a test key. Paid webhook/provider email acceptance is not verified.
+- Latest desktop staging homepage screenshot shows the four approved products and complete footer. Prior responsive geometry and local interaction checks are spot checks, not full browser acceptance.
+
+Exact remaining actions:
+
+1. Restore site permission for `deploy-preview-4--goool-shop.netlify.app` in Codex browser settings. The latest request was explicitly denied; do not bypass through another URL/browser/protocol. Chrome also showed a safety warning requiring user handling.
+2. Owner signs in privately at https://deploy-preview-4--goool-shop.netlify.app/admin/sign-in with the already-created account and confirms the inbox opens. No password is needed in chat.
+3. Receive pending action-time approval for three disposable participation-form browser fixtures, then verify playable previews, review/edit retention, uploads/receipts and private dashboard behavior; clean only the exact fixtures.
+4. Finish desktop/mobile/reference/accessibility acceptance, final local HTTP/crawl checks and full diff review. Commit/push remaining changes and verify the new staging build.
+5. Merge and deploy through existing Git continuous deployment; verify actual live commit/deploy, pages, unpaid checkout, intake and owner access, and capture desktop/mobile evidence. Deployment authorization is already recorded and does not need another approval.
+
+## Historical checkpoint log
+
+The following sections preserve earlier progress reports. Statements about missing approvals, absent provider configuration, unpushed code, test counts or unmodified legacy grants describe earlier checkpoints only; the current status above is authoritative.
 
 ## Release state
 

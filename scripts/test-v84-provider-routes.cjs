@@ -13,6 +13,7 @@ async function main() {
   const checked = result => { if (result.error) throw new Error('Provider fixture operation failed'); return result.data; };
   const origin = 'http://127.0.0.1:3185', bucket = 'goool-intake', fixtures = [], users = [];
   const rateSecret = randomBytes(32).toString('hex'), password = randomBytes(32).toString('hex');
+  const maintenanceSecret = randomBytes(32).toString('hex');
   let child;
   try {
     for (const role of ['owner', 'nonowner']) {
@@ -22,7 +23,7 @@ async function main() {
     }
     child = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '-p', '3185'], {
       cwd: path.resolve(__dirname, '..'), windowsHide: true, stdio: 'ignore',
-      env: { ...process.env, INTAKE_ENABLED: 'true', INTAKE_SUPABASE_URL: 'https://oexibflpshttgzmdvhpr.supabase.co', INTAKE_SERVICE_ROLE_KEY: service, INTAKE_ANON_KEY: anon, INTAKE_BUCKET: bucket, INTAKE_OWNER_IDS: users[0].id, INTAKE_RATE_SECRET: rateSecret, INTAKE_SITE_ORIGINS: origin }
+      env: { ...process.env, INTAKE_ENABLED: 'true', INTAKE_SUPABASE_URL: 'https://oexibflpshttgzmdvhpr.supabase.co', INTAKE_SERVICE_ROLE_KEY: service, INTAKE_ANON_KEY: anon, INTAKE_BUCKET: bucket, INTAKE_OWNER_IDS: users[0].id, INTAKE_RATE_SECRET: rateSecret, INTAKE_MAINTENANCE_SECRET: maintenanceSecret, INTAKE_SITE_ORIGINS: origin }
     });
     for (let i = 0; i < 60; i++) {
       try { if ((await fetch(origin)).ok) break; } catch {}
@@ -63,6 +64,16 @@ async function main() {
     assert.equal((await request('/api/admin/submissions?status=invalid', undefined, cookie, 'GET')).status, 400);
     assert.equal((await request(`/api/admin/submissions?q=${batchTag}`, undefined, '', 'GET')).status, 403);
     console.log('PASS real owner inbox search, status/kind filters, stable 50+5 pagination, invalid filter and anonymous rejection');
+    const drafts = [3, -1].map(days => ({ ...batch[0], id: randomUUID(), state: 'draft', submitted_at: null,
+      upload_expires_at: new Date(Date.now() - days * 86400000).toISOString() }));
+    fixtures.push(...drafts.map(row => ({ id: row.id, files: [] })));
+    checked(await client.from('intake_submissions').insert(drafts));
+    assert.equal((await request('/api/intake/maintenance', {}, '', 'POST')).status, 403);
+    assert.equal((await request('/api/intake/maintenance', {}, '', 'POST', { Authorization: `Bearer ${maintenanceSecret}` })).status, 200);
+    assert.equal(checked(await client.from('intake_submissions').select('id').eq('id', drafts[0].id).maybeSingle()), null);
+    assert(checked(await client.from('intake_submissions').select('id').eq('id', drafts[1].id).maybeSingle()));
+    assert.equal(checked(await client.from('intake_submissions').select('id').in('id', batch.map(row => row.id))).length, 55);
+    console.log('PASS real authenticated expired-draft cleanup preserves fresh drafts and all received fixture records');
     const base = { name: 'Release Fixture', email: 'release-fixture@example.test', adult: true, rights: true, permission: true };
     const cases = [
       { kind: 'story', payload: { ...base, goal: 'Provider verification', story: 'Disposable release fixture', termsVersion: 'WYG-2026-10-04-live-1' }, files: [] },

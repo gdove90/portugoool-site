@@ -185,6 +185,14 @@ async function main() {
       assert.equal((await db.query("select public.intake_rate('fixture') as count")).rows[0].count, 1);
       assert.equal((await db.query("select public.intake_rate('fixture') as count")).rows[0].count, 2);
     });
+    await check('legacy sold counter is callable only by the internal service role with a fixed search path', async () => {
+      await db.exec('reset role');
+      await db.exec('create function public.increment_drop_sold(uuid,integer) returns void language plpgsql security definer as $$ begin return; end $$;');
+      await db.exec(fs.readFileSync('supabase/migrations/20261007034613_restrict_legacy_sold_counter.sql', 'utf8'));
+      const row = (await db.query("select has_function_privilege('anon','public.increment_drop_sold(uuid,integer)','execute') as anon, has_function_privilege('authenticated','public.increment_drop_sold(uuid,integer)','execute') as authenticated, has_function_privilege('service_role','public.increment_drop_sold(uuid,integer)','execute') as service")).rows[0];
+      assert.deepEqual(row, { anon: false, authenticated: false, service: true });
+      assert.deepEqual((await db.query("select proconfig from pg_proc where oid = 'public.increment_drop_sold(uuid,integer)'::regprocedure")).rows[0].proconfig, ['search_path=""']);
+    });
   } finally { await db.close(); }
 
   await check('catalog, cart, checkout, payment, fulfillment and email baseline files are unchanged', () => {

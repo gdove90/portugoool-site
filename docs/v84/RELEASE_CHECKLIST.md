@@ -21,7 +21,7 @@ The latest owner direction identifies the existing GOOOL organization `lhinkmqrx
 - [x] Verify production commit and baseline before modifying production.
 - [x] Recheck package manifests: 194 hashes and all 44 manifest assets match.
 - [x] Check protected baseline: 89 commerce files and 32 approved public assets unchanged.
-- [x] Run local v84, admin, upload and network-disabled backend tests; v84 now includes 26 checks and the bounded-cancellation regression.
+- [x] Run local v84, admin, upload and network-disabled backend tests; v84 now includes 27 checks, including bounded cancellation and restricted legacy sold-counter privileges.
 - [x] Run six maintenance transport tests without contacting providers.
 - [x] Crawl 32 local public pages: 123 route, link and asset checks pass, including all nine product headings and canonical paths.
 - [x] Decode and resize the approved hero and ten original print-number assets through patched Sharp 0.35.5.
@@ -31,16 +31,19 @@ The latest owner direction identifies the existing GOOOL organization `lhinkmqrx
 - [x] Directly verify the exact GOOOL organization/project IDs supplied by the owner; confirm normal CLI management access.
 - [x] Apply only the new additive intake migration; verify service-only privileges, RLS and a private bucket capped at 100 MiB.
 - [x] Verify real 100 MiB signed resumable upload, exact size, private download, atomic receipt, wrong-token rejection, idempotency, deletion scrub and fixture cleanup. This is a provider transport/RPC test, not complete browser end-to-end acceptance.
-- [ ] Provision hello@goool.shop securely; verify the actual owner UUID, non-owner rejection, refresh and sign-out. Email alone must never confer access.
+- [x] Provision hello@goool.shop securely and verify its confirmed UUID; provider tests verify non-owner rejection, refresh and sign-out. Actual owner browser sign-in remains pending separately. Email alone never confers access.
 - [ ] Test actual story, match and kit submissions, durable private uploads, retries, receipts, review/edit retention and all required permissions using isolated data.
 - [x] Test actual application API routes against Supabase: all three form kinds, owner/non-owner authorization, HttpOnly/Strict cookies, review/status/notes, signed media, deletion, refresh and sign-out. Disposable fixtures cleaned. Browser-to-provider acceptance, pagination and scheduled maintenance remain separate gates.
 - [x] Provider-test owner inbox search, status/kind filters, 50+5 pagination, detail, notes/status, private media and deletion with cleaned disposable fixtures.
-- [ ] Verify abandoned-draft cleanup against the provider and the configured schedule.
-- [ ] Configure deployment-scoped intake keys, exact origins and maintenance secret. Keep secrets out of Git, browser bundles and reports.
+- [x] Provider-test authorized expired-draft cleanup, unauthorized rejection, fresh-draft and received-record preservation; verify hourly schedule in the ready preview build. Scheduled execution after production publication remains to verify.
+- [x] Configure deployment-scoped intake keys, exact origins, verified owner UUID and maintenance secret. Keep secrets out of Git, browser bundles and reports.
 - [ ] Verify checkout/email provider behavior in test mode without live charges, fulfillment or customer emails.
 - [x] Verify existing live checkout totals and an unpaid Stripe handoff without customer email, charge or fulfillment; preserve production Stripe configuration. This does not verify a paid webhook or redesigned live checkout.
-- [ ] Run final build, types, lint, local fail-closed HTTP checks and regression suites after the last code change.
-- [ ] Review full diff and inherited development dependency findings; exclude unrelated changes.
+- [x] Run final build, types, lint, 123 local route/link/asset checks, six fail-closed HTTP checks and regression suites after the last code change.
+- [x] Review inherited development dependency findings: seven high/two moderate build-time pattern/CSS denial-of-service findings; zero production vulnerabilities. No customer inputs reach this tooling; no unrelated major upgrade applied.
+- [ ] Review final full diff; exclude unrelated changes.
+
+Current browser blocker: site access was explicitly denied. Restore permission for `deploy-preview-4--goool-shop.netlify.app` in Codex browser settings. Actual owner browser sign-in and action-time approval for disposable participation-form fixtures also remain pending. No further production deployment approval is requested.
 
 ## Deployment and live evidence
 
