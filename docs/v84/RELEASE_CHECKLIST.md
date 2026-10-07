@@ -23,7 +23,8 @@ Separate approval permits a dedicated GOOOL intake Supabase Pro organization wit
 - [x] Check protected baseline: 89 commerce files and 32 approved public assets unchanged.
 - [x] Run 25 local v84, nine admin, five upload and 44 network-disabled backend tests.
 - [x] Run six maintenance transport tests without contacting providers.
-- [x] Crawl 23 local public pages: 114 route, link and asset assertions pass.
+- [x] Crawl 32 local public pages: 123 route, link and asset checks pass, including all nine product headings and canonical paths.
+- [x] Decode and resize the approved hero and ten original print-number assets through patched Sharp 0.35.5.
 - [x] Compare nine principal route heading/hero geometry at 390, 768 and 1440 widths without overflow or loaded-image failures. This is not a full pixel or footer comparison.
 - [ ] Finish full visual/interaction/accessibility acceptance, including section spacing, footer, narrow mobile, keyboard, touch and reduced motion.
 - [ ] Resolve homepage feature assignment. Men has nine approved existing products; do not invent unavailable concept products for Women.

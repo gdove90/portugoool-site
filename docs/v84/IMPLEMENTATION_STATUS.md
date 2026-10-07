@@ -51,6 +51,8 @@ These are local tests. They do not demonstrate a live payment, real email delive
 
 ## Blocking decisions and configuration
 
+Browser-blocked continuation: the release crawler now checks 32 pages with 123 route/link/asset checks, including each of the nine product headings and canonical paths. Nine dashboard, five upload-client, 44 network-blocked backend and six fail-closed HTTP checks passed again after the dependency patches. Sharp 0.35.5 decoded and resized the approved hero and all ten original print-number assets successfully. These checks make no provider writes and do not establish cloud integration readiness.
+
 October 6 release continuation: six local HTTP security checks and six maintenance checks passed again. The local release crawler passed 114 route/link/asset checks across 23 pages without submission or provider writes. Nine principal pages were compared with the approved reference at actual 390, 768 and 1440 widths; heading and hero geometry matched apart from an unused Kitwear font fallback. Vertical offsets and complete section/footer screenshots are not covered by that geometry comparison.
 
 A fresh dependency audit identified newly published Sharp and source-map-js advisories. Compatible patch updates to Sharp 0.35.5 and source-map-js 1.2.2 were applied in commit b0131f4; no framework or design-tool major upgrade was made. The refreshed production-only npm audit reports zero vulnerabilities. The full audit still reports seven high and two moderate development-tooling findings, requiring impact review before release. Previous audit counts are historical, not current clearance.
