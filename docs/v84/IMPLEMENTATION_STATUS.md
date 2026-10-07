@@ -1,4 +1,4 @@
-# V84 implementation checkpoint - 2026-10-05
+# V84 implementation checkpoint - 2026-10-06
 
 ## Release state
 
@@ -8,7 +8,7 @@ Branch: `codex/v84-facelift`, based on deployed `11b1a2f8182b71785205f2ff6bd2ba5
 Checkout: `C:/Users/gdove/OneDrive/Desktop/Portugoool/v84-implementation`.
 This is a separate shared clone. Its Git object store references the original checkout; do not delete or prune the original repository while this clone depends on it.
 
-No production files, deployments, database schema, storage settings, account billing or credentials were changed. No code has been pushed. The original dirty checkout is excluded.
+No production UI files, deployments, database schema, storage settings, account billing or credentials were changed. No code has been pushed. The original dirty checkout is excluded. Separately, the owner's explicit order-recovery request resulted in one agent-submitted cap order and one owner-submitted hoodie order; both verified supplier IDs were linked in the existing production order ledger. This is not UI deployment approval.
 
 ## Implemented locally
 
@@ -25,7 +25,7 @@ No production files, deployments, database schema, storage settings, account bil
 ## Verified
 
 - Final complete Next production build, lint and types passed, including all 42 generated pages and the nine product pages.
-- 23 local v84 checks passed: form rules, 20/100 MiB boundaries, media count, all three acknowledgments, optional tagging, SVG safety, disabled service, SQL roles/RLS, atomic creation, idempotency, expiry and deletion.
+- 24 local v84 checks passed: original-art number markup for 1..99, form rules, 20/100 MiB boundaries, media count, all three acknowledgments, optional tagging, SVG safety, disabled service, SQL roles/RLS, atomic creation, idempotency, expiry and deletion.
 - 89 protected baseline files compared unchanged: catalog, cart, checkout, payment, fulfillment, email, existing API handlers and existing migrations.
 - 32 approved visual assets compared byte-identical.
 - Existing launch-backend regression suite: 44 passed, with external network disabled. Includes all 83 sellable variants, discounts, fulfillment snapshots, webhook retries, email delivery and tracking consent.
@@ -33,15 +33,30 @@ No production files, deployments, database schema, storage settings, account bil
 - Browser spot checks at 1440x900 and 390x844: desktop home; kit number/back rendering; story suggestion/sample/edit; mobile Save sample; real product size gating; cart addition, totals and free-shipping threshold; mobile navigation.
 - Browser testing found and fixed template fragment nesting, shared-header access, scoped CSS link selectors, font loading, mobile cart minimum widths and local origin normalization.
 - Production-mode mobile cart rechecked: content width equals viewport width, no overflowing child elements, all prices/actions visible.
+- Updated build/lint/types, 24 v84 checks, 44 existing backend regressions and six production-mode HTTP checks passed again on October 6.
+- Catalog keyboard sorting verified: ArrowDown focus, Enter selection, correct ascending prices, Escape closure and focus restoration. Product gallery ArrowRight/Home navigation verified.
+- 390x844 production-mode collection and product screenshots inspected: no horizontal overflow or broken product images. Keyboard link navigation verified. Complete gestures and route-width matrix still pending.
+- Original high-resolution print numerals found and integrated without a font substitute. Original 90 checked on desktop; mobile 99 canvases confirmed loaded at 512-pixel height. See NUMBER_ARTWORK.md.
+- Dependency audit: zero production vulnerabilities (`npm audit --omit=dev`), seven high findings in inherited development tooling. No major upgrade applied.
+- Production-mode DOM route checks: 16 routes at 390px, 19 at 1440px, ten at 320px and ten at 768px, all with headings and without horizontal overflow. No loaded source-backed image failures were found; an empty kit-upload placeholder is not an asset failure. These automated geometry checks are not the full reference screenshot comparison.
+- October 6 continuation: Men now contains the nine owner-approved existing products; Women remains unassigned. Browser verified nine products and the two-hoodie filter. Homepage selection awaits separate confirmation. Supplier product deletion has not been performed.
+- Dashboard request revisions and abort signals prevent stale detail responses/errors, review-save feedback or deletion replies from changing another submission. Nine local controller regression checks pass, including unmount, late session/refresh replies and retry behavior.
+- Five upload-client transport checks pass: interrupted retry renews scoped tokens and reuses the upload URL, completed files are not uploaded again after receipt failure, changed payload starts a fresh draft, concurrent requests are rejected, and success clears the session. These tests do not contact storage providers.
+- Latest production build generated 42 pages and passed lint/types. Current local checks: 25 v84, nine admin, five upload, 44 commerce/backend and six HTTP checks (89 total). Provider integration remains unverified.
+- Header geometry checked at actual widths 1099, 1100, 1102, 1240, 1250 and 1440 without navigation/action overlap. A requested 1101 was rounded to 1102 by the browser viewport backend; exact 1101 remains to verify.
+- Approved-reference hero typography and bounding geometry matched at actual 390 and 1440 for About, personal stories, match submissions and Kitwear. Mobile kit screenshot inspected. This is not the full archived visual matrix.
+- Local story form browser-tested with disposable fixture data: review, unconfigured-service failure, retry availability and edit retention; optional marketing remained off. No real submission or provider call occurred.
 
 These are local tests. They do not demonstrate a live payment, real email delivery, durable cloud uploads or authenticated owner access. The native browser sandbox did not expose canvas pixel reads; kit number rendering was checked visually.
 
 ## Blocking decisions and configuration
 
-1. Confirm Men/Women assignments for the nine real products and the four homepage feature selections. They are deliberately unset in `src/v84/catalog-data.ts`; those grids remain empty. No active leggings/tanks/shorts were invented.
+1. Men assignments are approved and implemented for nine real products. Women remains unassigned; the four homepage feature selections still await approval. Identify exact women-only Apliiq products and confirm deletion before removing supplier records; never delete shared adult garments. No active leggings/tanks/shorts were invented.
 2. Approve a private staging storage/auth destination that supports 100 MiB per clip. The inspected GOOOL Supabase Free project was limited to 50 MB. No upgrade or new paid resource has been authorized. The installed Supabase connector targets an unrelated project and must not be used for GOOOL changes.
-3. Supply original number font/vector/high-resolution artwork, or approve a separately reviewed reconstruction. The supplied 94-pixel number strip remains visibly soft when enlarged.
-4. Confirm the actual kit garment and material before publishing the reference's recycled-polyester statement or a sizing table. Real product galleries currently have fewer than the six requested production views.
+3. Original number artwork is now found and implemented; review the sharp preview and composition before final staging acceptance. No reconstruction or font substitution is needed.
+4. Owner selected ST720. Manufacturer confirms 100% recycled polyester, and its current body-chest sizing chart exactly matches the reference. Supplier lists DTF/embroidery/bulk screen printing. Method-specific quotes and 4XL supplier availability remain unverified. See KIT_MATERIAL_VERIFICATION.md. Real product galleries currently have fewer than the six requested production views.
+
+Exact owner-review proposals are in CATALOG_PROPOSAL.md and STAGING_PROPOSAL.md. The staging proposal isolates one Pro/Micro project in a separate organization at a published baseline US $25/month plus tax, subject to actual checkout verification. No purchase or provisioning has occurred.
 
 ## Still required before finished staging
 
@@ -61,6 +76,8 @@ These are local tests. They do not demonstrate a live payment, real email delive
 npm ci --ignore-scripts
 npm run typecheck
 npm run test:v84
+npm run test:v84:admin
+npm run test:v84:upload
 node -e "global.fetch=async()=>{throw new Error('Network disabled for regression tests')};require('./scripts/test-launch-backend.cjs')"
 npm run build
 npm run start -- --hostname 127.0.0.1 --port 3184
@@ -70,6 +87,6 @@ npm run test:v84:http
 
 `scripts/import-v84.cjs` regenerates trusted reference templates, styles, media, validation and dashboard code from the audited package copy. Keep changes to generated code in that importer. The source package path can be passed as its first argument.
 
-Local production-mode preview: `http://127.0.0.1:3184`, started as hidden detached Node process 24608. This is localhost only, not a deployed staging URL. Intake and owner sign-in remain unconfigured and fail closed.
+Local production-mode preview: `http://127.0.0.1:3184`, restarted as hidden detached Node process 3396 after the latest October 6 build. A OneDrive reparse-point error in generated `.next` output was resolved by clearing that cache and rebuilding successfully. This is localhost only, not a deployed staging URL. Intake and owner sign-in remain unconfigured and fail closed. Owner email is confirmed as hello@goool.shop; no access has been provisioned and the paid staging decision remains pending.
 
 The discovery plan, product inventory, asset map and 331-row requirement ledger remain in `../output/v84-discovery-2026-10-05/`. The ledger is an acceptance checklist, not a blanket completion claim.

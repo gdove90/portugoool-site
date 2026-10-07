@@ -1,11 +1,11 @@
-# Acceptance progress - 2026-10-05
+# Acceptance progress - 2026-10-06
 
 This is an evidence overlay on the 331-row discovery ledger. Unlisted IDs retain their discovery state. `Implemented` means local code exists, not that the finished staging acceptance gate passed. No scope is deferred.
 
 | Requirement ID | Current state | Evidence / remaining gate |
 |---|---|---|
 | S01-04 | Verified | Isolated branch starts at production 11b1a2f; excludes unreleased primary-checkout changes. |
-| S01-09 | Verified | No provider actions, billing edits or fulfillment retries; backend regression network disabled. |
+| S01-09 | Verified | UI tests cannot submit live fulfillment; backend regression network disabled. Separately authorized October 6 recovery submitted one cap order, verified an owner-submitted hoodie, and reconciled both supplier IDs, without deploying UI changes. |
 | S01-10 | Verified | Reference stays local; no deployment or upload. |
 | S02-05 | Verified | Owner's explicit complete-v84 implementation approval in this chat. |
 | S02-06 | Verified | No code push or production deployment. |
@@ -39,7 +39,7 @@ This is an evidence overlay on the 331-row discovery ledger. Unlisted IDs retain
 | S20-11 | Pending | No finished staged release exists yet; no request for production approval made. |
 | S20-12 | Pending | Production deployment is explicitly prohibited until later approval. |
 | S21-01 | Implemented | /collection redirects to /shop; Next App Router retained. |
-| S21-02 | Blocked | Awaiting owner audience assignments and homepage feature selection. |
+| S21-02 | Implemented / Pending | Nine real products assigned to Men after owner approval; Women unassigned. Homepage feature selection awaits separate confirmation. |
 | S21-03 | Blocked | Inspected private provider ceiling 50 MB vs required 100 MiB; no upgrade authorized. |
 | S21-04 | Implemented | Dedicated intake credentials/tables; no commerce/newsletter fallback or schema edits. |
 | S21-05 | Implemented | Owner-gated private media, 60-second signed reads, per-object upload tokens; live storage test pending. |
@@ -47,5 +47,7 @@ This is an evidence overlay on the 331-row discovery ledger. Unlisted IDs retain
 | S21-07 | Blocked | Applied order_export restriction is not in deployed migration files; no production migration replay attempted. |
 | S21-08 | Blocked | Local credentials intentionally unset; isolated cloud storage/auth/payment setup not yet provisioned. |
 
-Tests: `scripts/test-v84.cjs`, `scripts/smoke-v84.cjs`, original `scripts/test-launch-backend.cjs`.
+October 6 continuation: dashboard stale-request protection passes nine local controller checks; upload retries/concurrency pass five local transport checks. Men count/filter and story review/failure/edit retention verified in the rebuilt browser preview. Header breakpoint geometry and four hero comparisons at actual 390/1440 pass; complete screenshot matrix and live integrations remain pending. Owner email confirmed; access not provisioned.
+
+Tests: `scripts/test-v84.cjs`, `scripts/test-v84-admin.cjs`, `scripts/test-v84-upload.cjs`, `scripts/smoke-v84.cjs`, original `scripts/test-launch-backend.cjs`.
 See `IMPLEMENTATION_STATUS.md` for test limitations, implementation coverage and remaining requirements.
