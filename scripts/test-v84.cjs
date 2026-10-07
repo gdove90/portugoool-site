@@ -98,12 +98,20 @@ async function main() {
   const exports = {};
   const module = { exports };
   const serverCode = ts.transpileModule(fs.readFileSync('src/lib/intake/server.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true } }).outputText;
-  vm.runInNewContext(serverCode, { exports, module, Buffer, URL, Request, Response, process: { env: {} }, require: id => {
+  vm.runInNewContext(serverCode + '\nexports.readBoundedForTest = readBounded;', { exports, module, Buffer, URL, Request, Response, process: { env: {} }, require: id => {
     if (id === 'server-only') return {};
     if (id === './validation.mjs') return { cleanPayload, filesMeta, checkMagic };
     if (id === './agreements.json') return require('../src/lib/intake/agreements.json');
     return require(id);
   } });
+  await check('bounded provider reads return without waiting on an unread Next fetch clone', async () => {
+    let cancelled = false, released = false, timer;
+    const result = { body: { getReader: () => ({ read: async () => ({ done: false, value: Buffer.alloc(32) }), cancel: () => { cancelled = true; return new Promise(() => {}); }, releaseLock: () => { released = true; } }) } };
+    try {
+      const bytes = await Promise.race([exports.readBoundedForTest(result, 16), new Promise((_, reject) => { timer = setTimeout(() => reject(new Error('Provider read hung')), 1000); })]);
+      assert.equal(bytes.length, 16); assert(cancelled && released);
+    } finally { clearTimeout(timer); }
+  });
   await check('SVG sanitizer rejects active and external content', () => {
     const svg = inner => `<svg xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
     assert.equal(exports.safeSvg(svg('<path d="M0 0h10v10z"/>')), true);

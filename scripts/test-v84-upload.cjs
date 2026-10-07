@@ -24,7 +24,7 @@ function harness() {
     requests.push({ url, options });
     if (url.endsWith('/start')) return { ok: true, json: async () => ({
       id: 'fixture', token: 'scoped-token', expiresAt: Date.now() + 86400000,
-      bucket: 'private-fixture', uploadEndpoint: 'https://storage.example.test/resumable',
+      bucket: 'private-fixture', uploadEndpoint: 'https://storage.example.test/resumable/sign', uploadApiKey: 'public-fixture-key',
       files: JSON.parse(options.body).files.map((file, i) => ({ ...file, id: String(i), objectKey: `fixture/${i}`, signature: 'first-signature' })),
     }) };
     if (url.endsWith('/refresh')) return { ok: true, json: async () => ({ files: [{ id: '0', signature: 'renewed-signature' }] }) };
@@ -53,6 +53,9 @@ async function main() {
     assert.equal(h.requests.filter(r => r.url.endsWith('/refresh')).length, 1);
     assert.equal(h.uploads[1].options.uploadUrl, h.uploads[0].url);
     assert.equal(h.uploads[1].options.headers['x-signature'], 'renewed-signature');
+    assert.equal(h.uploads[1].options.headers.apikey, 'public-fixture-key');
+    assert.equal(h.uploads[1].options.endpoint, 'https://storage.example.test/resumable/sign');
+    assert.equal(h.uploads[1].options.headers.authorization, undefined);
     assert.equal(h.uploads[1].options.chunkSize, 6 * 1024 * 1024);
     assert.equal(h.uploads[1].options.storeFingerprintForResuming, false);
     assert.equal(h.listeners.size, 0);

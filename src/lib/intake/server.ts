@@ -65,6 +65,8 @@ export async function startIntake(request: Request) {
   if (process.env.INTAKE_ENABLED !== "true") return fail(503, "Private submissions are not ready yet. Your details have not been sent.");
   await rateLimit(request);
   const client = intakeClient(), bucket = process.env.INTAKE_BUCKET;
+  const uploadApiKey = process.env.INTAKE_ANON_KEY;
+  if (!uploadApiKey) return fail(503, "Private upload authorization is not configured.");
   if (!bucket) return fail(503, "Private upload storage is not configured.");
   const storage = checked(await client.storage.getBucket(bucket));
   if (!storage || storage.public || Number(storage.file_size_limit) < 104857600) return fail(503, "Private storage does not yet support the required file sizes.");
@@ -86,8 +88,8 @@ export async function startIntake(request: Request) {
   }
   const endpoint = new URL(process.env.INTAKE_SUPABASE_URL!);
   if (endpoint.hostname.endsWith(".supabase.co")) endpoint.hostname = endpoint.hostname.replace(".supabase.co", ".storage.supabase.co");
-  endpoint.pathname = "/storage/v1/upload/resumable";
-  return response({ id, token, files: uploads, bucket, uploadEndpoint: endpoint.href, expiresAt }, 201);
+  endpoint.pathname = "/storage/v1/upload/resumable/sign";
+  return response({ id, token, files: uploads, bucket, uploadEndpoint: endpoint.href, uploadApiKey, expiresAt }, 201);
 }
 export async function authorizeUpload(request: Request, id: string) {
   const row = checked(await intakeClient().from("intake_submissions").select("*").eq("id",id).maybeSingle());
@@ -114,7 +116,8 @@ export async function refreshUpload(request: Request, id: string) {
 async function readBounded(result: Response, max: number) {
   if (!result.body) return fail(409,"File is incomplete.");
   const reader = result.body.getReader(); let length = 0; const parts: Uint8Array[] = [];
-  try { while (true) { const item = await reader.read(); if(item.done) break; const needed = max-length; parts.push(item.value.slice(0,needed)); length += Math.min(needed,item.value.length); if(length>=max) { await reader.cancel(); break; } } } finally { reader.releaseLock(); }
+  // Next may tee fetch responses; awaiting cancellation can wait forever on its unread clone.
+  try { while (true) { const item = await reader.read(); if(item.done) break; const needed = max-length; parts.push(item.value.slice(0,needed)); length += Math.min(needed,item.value.length); if(length>=max) { void reader.cancel().catch(()=>{}); break; } } } finally { reader.releaseLock(); }
   return Buffer.concat(parts);
 }
 export function safeSvg(text: string) {
@@ -142,12 +145,15 @@ export async function finishIntake(request: Request, id: string) {
   for(const file of files) {
     const signed=checked(await client.storage.from(bucket).createSignedUrl(file.object_key,60));
     if(!signed) return fail(409,"File is not available yet.");
-    const head=await fetch(signed.signedUrl,{method:"HEAD",cache:"no-store"});
-    if(!head.ok || Number(head.headers.get("content-length"))!==file.size || head.headers.get("content-type")?.split(";")[0]!==file.mime) return fail(409,"Upload every file completely before submitting.");
-    const limit=file.mime === "image/svg+xml" ? file.size : Math.min(file.size,16384);
-    const object=await fetch(signed.signedUrl,{headers:{Range:`bytes=0-${limit-1}`},cache:"no-store"});
+    const head=await fetch(signed.signedUrl,{method:"HEAD",cache:"no-store",signal:AbortSignal.timeout(20000)});
+    const svg=file.mime === "image/svg+xml";
+    if(!head.ok || (!svg && Number(head.headers.get("content-length"))!==file.size) || head.headers.get("content-type")?.split(";")[0]!==file.mime) return fail(409,"Upload every file completely before submitting.");
+    // SVG may be compressed and omit Content-Length. Verify the complete decoded body instead.
+    const limit=svg ? file.size+1 : Math.min(file.size,16384);
+    const object=await fetch(signed.signedUrl,{headers:svg ? {} : {Range:`bytes=0-${limit-1}`},cache:"no-store",signal:AbortSignal.timeout(20000)});
     if(!object.ok) return fail(409,"Could not verify your file. Please retry.");
     const bytes=await readBounded(object,limit);
+    if(svg && bytes.length!==file.size) return fail(409,"Upload every file completely before submitting.");
     if(!checkMagic(bytes,file.mime) || (file.mime === "image/svg+xml" && !safeSvg(bytes.toString("utf8")))) return fail(400,"File contents do not match a supported safe file. Export it again.");
   }
   // The transaction rechecks token, expiry and deletion state under a row lock.

@@ -33,7 +33,7 @@ export async function sendIntake(kind, payload, files, progress) {
         const upload = new Upload(file, {
           endpoint: session.uploadEndpoint,
           uploadUrl: remote.uploadUrl || undefined,
-          headers: { 'x-signature': remote.signature },
+          headers: { 'x-signature': remote.signature, apikey: session.uploadApiKey },
           chunkSize: 6 * 1024 * 1024,
           retryDelays: [0, 1000, 3000, 5000],
           storeFingerprintForResuming: false,

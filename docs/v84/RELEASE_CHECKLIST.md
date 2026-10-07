@@ -4,7 +4,7 @@
 
 The owner's October 6 release request authorizes completing the verified full facelift, merging into main and deploying through the existing repository-to-Netlify workflow. Do not ask for another deployment approval. Do not publish a partial redesign. Do not modify customer or supplier orders, DNS, existing commerce identities, email triggers or consent behavior.
 
-Separate approval permits a dedicated GOOOL intake Supabase Pro organization with one Micro project at $25/month plus tax. Verify actual checkout, keep spend cap enabled and add no paid extras. Do not use the connected Hireonthefly organization.
+The latest owner direction identifies the existing GOOOL organization `lhinkmqrxofihbokgjfo` and project `oexibflpshttgzmdvhpr` for intake integration. Direct verification confirms Pro and ACTIVE_HEALTHY. Use additive intake objects only, retain the spend cap, make no additional purchase and do not use Hireonthefly.
 
 ## Known-good production
 
@@ -21,17 +21,19 @@ Separate approval permits a dedicated GOOOL intake Supabase Pro organization wit
 - [x] Verify production commit and baseline before modifying production.
 - [x] Recheck package manifests: 194 hashes and all 44 manifest assets match.
 - [x] Check protected baseline: 89 commerce files and 32 approved public assets unchanged.
-- [x] Run 25 local v84, nine admin, five upload and 44 network-disabled backend tests.
+- [x] Run local v84, admin, upload and network-disabled backend tests; v84 now includes 26 checks and the bounded-cancellation regression.
 - [x] Run six maintenance transport tests without contacting providers.
 - [x] Crawl 32 local public pages: 123 route, link and asset checks pass, including all nine product headings and canonical paths.
 - [x] Decode and resize the approved hero and ten original print-number assets through patched Sharp 0.35.5.
 - [x] Compare nine principal route heading/hero geometry at 390, 768 and 1440 widths without overflow or loaded-image failures. This is not a full pixel or footer comparison.
 - [ ] Finish full visual/interaction/accessibility acceptance, including section spacing, footer, narrow mobile, keyboard, touch and reduced motion.
 - [ ] Resolve homepage feature assignment. Men has nine approved existing products; do not invent unavailable concept products for Women.
-- [ ] Identify and connect the dedicated intake project. The owner reports the approved upgrade is completed; do not request purchase proof or make another purchase. Its project URL and authorized management access are not yet available to this checkout.
-- [ ] Apply only new intake migrations to the dedicated project; verify service-only privileges, RLS and private bucket with 100 MiB support.
+- [x] Directly verify the exact GOOOL organization/project IDs supplied by the owner; confirm normal CLI management access.
+- [x] Apply only the new additive intake migration; verify service-only privileges, RLS and a private bucket capped at 100 MiB.
+- [x] Verify real 100 MiB signed resumable upload, exact size, private download, atomic receipt, wrong-token rejection, idempotency, deletion scrub and fixture cleanup. This is a provider transport/RPC test, not complete browser end-to-end acceptance.
 - [ ] Provision hello@goool.shop securely; verify the actual owner UUID, non-owner rejection, refresh and sign-out. Email alone must never confer access.
 - [ ] Test actual story, match and kit submissions, durable private uploads, retries, receipts, review/edit retention and all required permissions using isolated data.
+- [x] Test actual application API routes against Supabase: all three form kinds, owner/non-owner authorization, HttpOnly/Strict cookies, review/status/notes, signed media, deletion, refresh and sign-out. Disposable fixtures cleaned. Browser-to-provider acceptance, pagination and scheduled maintenance remain separate gates.
 - [ ] Test owner lists, filters, pagination, detail, notes/status, authorized media, deletion and abandoned-draft cleanup.
 - [ ] Configure deployment-scoped intake keys, exact origins and maintenance secret. Keep secrets out of Git, browser bundles and reports.
 - [ ] Verify checkout/email provider behavior in test mode without live charges, fulfillment or customer emails.
@@ -52,4 +54,4 @@ Separate approval permits a dedicated GOOOL intake Supabase Pro organization wit
 
 Before merging, record the final release commit and whether main advances through a merge commit or a single commit. On a material live regression, stop further writes and create a corrective Git revert of that release on main, then push through the same Netlify production workflow. Use `git revert -m 1 <merge-commit>` only when the recorded release is a merge commit; otherwise revert the actual release commit(s). Do not reset or force-push main, restore an old deploy through dashboard tooling, roll back database data, delete uploads or replay commerce migrations. Confirm the corrective deploy is ready, matches its commit and restores the known-good interface. Preserve additive intake data for investigation and disable intake through scoped configuration only when needed to contain the regression.
 
-No deployment or provider provisioning has occurred at this checkpoint.
+Intake schema/bucket provisioning and global upload-capacity configuration have occurred; the production storefront has not been deployed. Existing commerce objects remain unchanged.

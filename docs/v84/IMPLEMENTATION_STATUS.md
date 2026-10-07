@@ -8,7 +8,23 @@ Branch: `codex/v84-facelift`, based on deployed `11b1a2f8182b71785205f2ff6bd2ba5
 Checkout: `C:/Users/gdove/OneDrive/Desktop/Portugoool/v84-implementation`.
 This is a separate shared clone. Its Git object store references the original checkout; do not delete or prune the original repository while this clone depends on it.
 
-No production UI files, deployments, database schema, storage settings, account billing or credentials were changed. No code has been pushed. The original dirty checkout is excluded. Separately, the owner's explicit order-recovery request resulted in one agent-submitted cap order and one owner-submitted hoodie order; both verified supplier IDs were linked in the existing production order ledger. This is not UI deployment approval.
+The storefront remains on its existing production deployment; no code has been pushed. Under the owner's latest direction, the additive intake schema and private bucket have now been provisioned in the existing GOOOL Pro project. The global upload limit was raised from 50 MB to 105 MB; the intake bucket remains capped at exactly 100 MiB and the spend cap remains enabled. No commerce tables, orders, billing plan or existing credentials were changed. The original dirty checkout is excluded. Separately, the owner's explicit order-recovery request resulted in one agent-submitted cap order and one owner-submitted hoodie order; both verified supplier IDs were linked in the existing production order ledger.
+
+### Direct provider verification
+
+- Direct organization query: `lhinkmqrxofihbokgjfo`, GOOOL, `plan: pro`.
+- Direct project query: `oexibflpshttgzmdvhpr`, GOOOL, `ACTIVE_HEALTHY`. Project-list omission was not an access failure; the normal Supabase CLI also has access.
+- Applied only `v84_private_intake`: three new tables with RLS, five service-only functions, and private `goool-intake` storage. Read-back confirms anonymous/authenticated roles cannot read these tables or execute these functions.
+- Actual signed resumable 100 MiB upload succeeded. HEAD reported exactly 104857600 bytes; public download failed. Synthetic fixture was removed afterward.
+- Actual atomic receipt, wrong-token rejection, idempotent completion and deletion scrub passed against the provider. No customer records or emails were used.
+- Real testing exposed a missing publishable API key and incorrect signed resumable endpoint. Updated the application to use `/storage/v1/upload/resumable/sign` with `apikey` plus the scoped signature; service credentials remain server-only. Five upload-controller regressions and typecheck pass.
+- Real application routes tested against Supabase using two disposable Auth accounts: owner login and HttpOnly/Strict cookies; anonymous and non-owner rejection; story, match video and SVG kit start/upload/receipt/idempotency; owner detail, notes/status, signed media and deletion; refresh and sign-out. All fixture accounts, submissions and storage objects were removed. Synthetic video files verify transport/signature handling, not playback.
+- Real route testing found and fixed two additional issues: awaiting cancellation of Next's unread fetch clone stalled bounded content checks; SVG responses omitted Content-Length. Bounded cancellation now returns without awaiting the clone, storage fetches have 20-second timeouts, and SVG size is verified against its complete bounded decoded body before sanitization. A local cancellation regression was added.
+- Latest complete build/lint/types passes; 26 v84 checks and five upload-controller checks pass. The 123 public route/link/asset checks and six fail-closed HTTP checks also pass on the latest preview build.
+- These are actual application API/provider tests, not the final browser-to-provider or deployed acceptance matrix. The real hello@goool.shop account/UUID and Netlify intake variables remain to configure; no owner password was generated, requested or stored. Netlify CLI is authenticated to the existing team.
+- Existing advisor finding, not introduced by intake: `public.increment_drop_sold(uuid,integer)` is SECURITY DEFINER, executable by public/anon/authenticated, and lacks a fixed search path. It mutates product sold counts. No invocation or grant change was made; include it in the commerce security review before release.
+- Post-change advisor also reports disabled leaked-password protection. Intake's three service-only tables intentionally have RLS and no browser policies, matching the service-only design; do not add public policies to silence this informational result.
+- Remote migration history assigned `20261007023050` to `v84_private_intake`; the CLI-generated local migration was aligned with this provider-generated version. Do not bulk-push or replay the existing commerce migrations.
 
 ## Implemented locally
 
@@ -18,7 +34,7 @@ No production UI files, deployments, database schema, storage settings, account 
 - Approved story/match/kit controllers, retained previews and edits, mandatory acknowledgments, separate optional marketing/tag choices and server validation.
 - Server-side owner authentication with verified Supabase user IDs and HttpOnly cookies. Private inbox/list/detail/review/download/delete API and approved dashboard UI.
 - Direct resumable private uploads, scoped upload authorization, signature/content checks, request limits, immutable consent snapshots, atomic completion and retry handling.
-- Unapplied SQL proposal with RLS, service-only privileges, transactional intake functions and deletion protection.
+- Applied additive intake migration with RLS, service-only privileges, transactional functions, deletion protection and private storage. The original proposal remains historical.
 - Existing discount workflow kept, with v84 visual treatment and a native modal. Tracking opt-out remains available; original cookie decisions are preserved.
 - Existing cart, receipt, tracking and policy screens receive shared typography and restrained controls without changing their commerce handlers or legal text.
 
