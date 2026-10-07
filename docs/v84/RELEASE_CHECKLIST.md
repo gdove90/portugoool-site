@@ -1,5 +1,7 @@
 # V84 release checklist
 
+October 7 release override: the owner now explicitly authorizes deployment with blocked browser-only checks deferred. Unchecked browser gates below are deferred, not passing and not pre-merge blockers. See PRODUCTION_RELEASE.md for the superseding authority, fresh automated evidence and recovery target. Do not bypass permissions.
+
 ## Authority and scope
 
 The owner's October 6 release request authorizes completing the verified full facelift, merging into main and deploying through the existing repository-to-Netlify workflow. Do not ask for another deployment approval. Do not publish a partial redesign. Do not modify customer or supplier orders, DNS, existing commerce identities, email triggers or consent behavior.
