@@ -3,7 +3,17 @@ import type { Product } from "@/lib/types";
 
 export type Audience = "men" | "women";
 // Owner assignment is deliberately separate from fulfillment and product identity.
-export const audienceAssignments: Record<string, Audience[]> = {};
+export const audienceAssignments: Record<string, Audience[]> = {
+  "70000000-0000-4000-8000-000000000001": ["men"],
+  "70000000-0000-4000-8000-000000000002": ["men"],
+  "70000000-0000-4000-8000-000000000006": ["men"],
+  "70000000-0000-4000-8000-000000000003": ["men"],
+  "70000000-0000-4000-8000-000000000005": ["men"],
+  "70000000-0000-4000-8000-000000000004": ["men"],
+  "80000000-0000-4000-8000-000000000006": ["men"],
+  "80000000-0000-4000-8000-000000000007": ["men"],
+  "80000000-0000-4000-8000-000000000008": ["men"],
+};
 export const featuredProductIds: string[] = [];
 export function productType(product: Product) {
   return product.category === "hoodie" ? "hoodies" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";

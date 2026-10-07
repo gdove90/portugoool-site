@@ -16,6 +16,36 @@ const kit = () => ({ kind: 'kit', payload: { name: 'Local test', email: 'fixture
 const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-04-live-1' } });
 
 async function main() {
+  const catalogExports = {};
+  const approvedMenIds = [
+    '70000000-0000-4000-8000-000000000001', '70000000-0000-4000-8000-000000000002',
+    '70000000-0000-4000-8000-000000000006', '70000000-0000-4000-8000-000000000003',
+    '70000000-0000-4000-8000-000000000005', '70000000-0000-4000-8000-000000000004',
+    '80000000-0000-4000-8000-000000000006', '80000000-0000-4000-8000-000000000007',
+    '80000000-0000-4000-8000-000000000008',
+  ];
+  const catalogCode = ts.transpileModule(fs.readFileSync('src/v84/catalog-data.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
+  vm.runInNewContext(catalogCode, { exports: catalogExports, require: name => {
+    assert.equal(name, '@/lib/products');
+    return { getProducts: () => [...approvedMenIds, 'unapproved-product'].map(id => ({ id })) };
+  } });
+  await check('only approved existing products appear in Men; Women remains unassigned', () => {
+    assert.deepEqual(Array.from(catalogExports.forAudience('men'), p => p.id), approvedMenIds);
+    assert.equal(catalogExports.forAudience('women').length, 0);
+    assert.equal(catalogExports.featuredProductIds.length, 0);
+  });
+  const numeralExports = {};
+  const numeralCode = ts.transpileModule(fs.readFileSync('src/v84/number-art.js', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
+  vm.runInNewContext(numeralCode, { exports: numeralExports, Map });
+  await check('original number markup supports 1..99 without font fallback', () => {
+    for (let n = 1; n <= 99; n++) {
+      const markup = numeralExports.originalNumberMarkup(n);
+      assert.equal((markup.match(/<canvas /g) || []).length, String(n).length);
+      assert.ok(markup.includes(`aria-label="${n}"`));
+      assert.ok(markup.includes('height="512"'));
+    }
+    for (const n of [0, 100, -1, 1.5, '01', '<script>']) assert.equal(numeralExports.originalNumberMarkup(n), '');
+  });
   const { cleanPayload, filesMeta, checkMagic } = await import(pathToFileURL(path.resolve('src/lib/intake/validation.mjs')));
   await check('story requires each of the three acknowledgments', () => {
     for (const field of ['adult', 'rights', 'permission']) { const data = story(); data.payload[field] = false; rejects(() => cleanPayload(data)); }

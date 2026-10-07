@@ -30,6 +30,9 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
   const types = ["tees", "tanks", "leggings", "shorts", "hoodies", "hats"].filter(t => list.some(p => productType(p) === t));
   const options = [["featured", "Featured"], ["low", "Price: low to high"], ["high", "Price: high to low"]];
   useEffect(() => {
+    if (open) sortRef.current?.querySelector<HTMLButtonElement>(`[data-sort="${sort}"]`)?.focus();
+  }, [open, sort]);
+  useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     const category = query.get("category");
     if (category) setType(category === "hoodie" ? "hoodies" : category === "hat" || category === "accessory" ? "hats" : "tees");
@@ -46,8 +49,22 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
     const next = event.key === "Home" ? 0 : event.key === "End" ? keys.length - 1 : (current + (event.key === "ArrowRight" ? 1 : -1) + keys.length) % keys.length;
     setType(keys[next]); document.getElementById(`type-${keys[next]}`)?.focus();
   }
+  function sortKey(event: React.KeyboardEvent<HTMLDivElement>) {
+    if (event.key === "Escape") { event.preventDefault(); setOpen(false); sortRef.current?.querySelector("button")?.focus(); return; }
+    if (event.key === "Tab") { setOpen(false); return; }
+    if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    if (!open) { setOpen(true); return; }
+    const buttons = Array.from(sortRef.current?.querySelectorAll<HTMLButtonElement>("[data-sort]") || []);
+    const index = buttons.indexOf(document.activeElement as HTMLButtonElement);
+    const next = event.key === "Home" ? 0 : event.key === "End" ? buttons.length - 1 : (index + (event.key === "ArrowDown" ? 1 : -1) + buttons.length) % buttons.length;
+    buttons[next]?.focus();
+  }
+  function typeTab(key: string) {
+    return <button id={`type-${key}`} key={key} className={`activity-tab${type === key ? " active" : ""}`} role="tab" aria-selected={type === key} aria-controls="collection-products" tabIndex={type === key ? 0 : -1} onKeyDown={tabKey} onClick={() => setType(key)}><span className="activity-tab-label">{key === "all" ? "All pieces" : key[0].toUpperCase() + key.slice(1)}</span></button>;
+  }
   return <section className={audience ? "landing-shop" : "section catalog"} id="next-section">
-    {audience ? <div className="landing-collection-bar"><h2 className="landing-collection-name">The {audience === "men" ? "Core" : "Tempo"} Collection</h2><div className="landing-tab-bar" role="tablist" aria-label="Shop by clothing type">{["all", ...types].map(key => <button id={`type-${key}`} key={key} className={`activity-tab${type === key ? " active" : ""}`} role="tab" aria-selected={type === key} aria-controls="collection-products" tabIndex={type === key ? 0 : -1} onKeyDown={tabKey} onClick={() => setType(key)}><span className="activity-tab-label">{key === "all" ? "All pieces" : key[0].toUpperCase() + key.slice(1)}</span></button>)}</div></div> : <div className="collection-toolbar"><div className="filter-list" aria-label="Collection">{[["all", "All pieces"], ["women", "Women"], ["men", "Men"]].map(([key, label]) => <button key={key} className={`filter${filter === key ? " active" : ""}`} aria-pressed={filter === key} onClick={() => setFilter(key)}>{label}</button>)}</div><div className="sort-control" ref={sortRef} onKeyDown={event => { if (event.key === "Escape") { setOpen(false); sortRef.current?.querySelector("button")?.focus(); } }}><button id="sort-trigger" className="sort-trigger" aria-expanded={open} aria-controls="sort-options" onClick={() => setOpen(!open)}>{options.find(o => o[0] === sort)?.[1]}<Strike /></button>{open && <div id="sort-options" className="sort-options">{options.map(([key, label]) => <button key={key} aria-pressed={sort === key} onClick={() => { setSort(key); setOpen(false); sortRef.current?.querySelector("button")?.focus(); }}>{label}</button>)}</div>}</div></div>}
+    {audience ? <div className="landing-collection-bar"><h2 className="landing-collection-name">The {audience === "men" ? "Core" : "Tempo"} Collection</h2><div className="landing-tab-bar" role="tablist" aria-label="Shop by clothing type">{typeTab("all")}<div className="clothing-type-tabs" role="presentation">{types.map(typeTab)}</div></div></div> : <div className="collection-toolbar"><div className="filter-list" aria-label="Collection">{[["all", "All pieces"], ["women", "Women"], ["men", "Men"]].map(([key, label]) => <button key={key} className={`filter${filter === key ? " active" : ""}`} aria-pressed={filter === key} onClick={() => setFilter(key)}>{label}</button>)}</div><div className="sort-control" ref={sortRef} onKeyDown={sortKey} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setOpen(false); }}><button id="sort-trigger" className="sort-trigger" aria-haspopup="menu" aria-expanded={open} aria-controls="sort-options" onClick={() => setOpen(!open)}>{options.find(o => o[0] === sort)?.[1]}<Strike /></button>{open && <div id="sort-options" className="sort-options" role="menu" aria-label="Sort products">{options.map(([key, label]) => <button key={key} data-sort={key} role="menuitemradio" aria-checked={sort === key} aria-pressed={sort === key} tabIndex={-1} onClick={() => { setSort(key); setOpen(false); sortRef.current?.querySelector("button")?.focus(); }}>{label}</button>)}</div>}</div></div>}
     <div id="collection-products" role={audience ? "tabpanel" : undefined} aria-labelledby={audience ? `type-${type}` : undefined}><div className="activity-summary"><span>{type === "all" ? "All pieces" : type}</span><span>{visible.length} pieces</span></div><ProductGrid products={visible} />{!visible.length && <p className="note">No pieces in this selection.</p>}</div>
   </section>;
 }
