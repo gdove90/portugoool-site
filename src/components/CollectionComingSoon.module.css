@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 760px;
+  min-height: max(760px, 100svh);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: #181918;
+}
+
+.photo { object-fit: cover; object-position: 70% center; z-index: -3; }
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.4) 48%, rgba(0,0,0,.12)), linear-gradient(180deg, rgba(0,0,0,.35), transparent 30%, rgba(0,0,0,.35));
+}
+
+.content { width: 100%; padding: 170px 7% 125px; }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.content .status { margin-top: 34px; display: inline-block; border: 1px solid #ffffff90; border-radius: 30px; padding: 7px 16px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+.hero .content h1 { margin: 24px 0; font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif; font-weight: 600; letter-spacing: -.02em; text-transform: uppercase; line-height: .9; }
+.content h1 span { display: block; }
+.intro { font-size: clamp(24px, 3vw, 40px); margin-bottom: 10px; }
+.name { font-size: clamp(92px, 12vw, 170px); }
+.collection { font-size: clamp(40px, 5vw, 70px); margin-top: 8px; }
+.copy { font-size: 17px; max-width: 32ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.signature { position: absolute; bottom: 32px; left: 7%; right: 7%; font-size: 10px; letter-spacing: .15em; }
+
+@media (max-width: 600px) {
+  .hero { min-height: max(740px, 100svh); }
+  .photo { object-position: 65% center; }
+  .shade { background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.4)), linear-gradient(180deg, rgba(0,0,0,.3), transparent 45%, rgba(0,0,0,.35)); }
+  .content { padding: 145px 6% 105px; }
+  .eyebrow { font-size: 10px; letter-spacing: .15em; }
+  .content .status { margin-top: 28px; }
+  .actions { gap: 10px; }
+  .actions a { padding: 15px 18px; gap: 20px; }
+  .signature { left: 6%; right: 6%; bottom: 26px; font-size: 9px; }
+}
