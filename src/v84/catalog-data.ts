@@ -17,6 +17,8 @@ export const audienceAssignments: Record<string, Audience[]> = {
 export const featuredProductIds: string[] = [
   "70000000-0000-4000-8000-000000000002",
   "70000000-0000-4000-8000-000000000003",
+  "80000000-0000-4000-8000-000000000006",
+  "70000000-0000-4000-8000-000000000004",
 ];
 export function featuredProducts() {
   const products = getProducts();

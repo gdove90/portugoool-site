@@ -34,6 +34,7 @@ async function main() {
     assert.equal(catalogExports.forAudience('women').length, 0);
     assert.deepEqual(Array.from(catalogExports.featuredProducts(), p => p.id), [
       '70000000-0000-4000-8000-000000000002', '70000000-0000-4000-8000-000000000003',
+      '80000000-0000-4000-8000-000000000006', '70000000-0000-4000-8000-000000000004',
     ]);
   });
   const numeralExports = {};

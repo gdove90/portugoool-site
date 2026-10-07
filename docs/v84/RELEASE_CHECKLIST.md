@@ -27,7 +27,7 @@ The latest owner direction identifies the existing GOOOL organization `lhinkmqrx
 - [x] Decode and resize the approved hero and ten original print-number assets through patched Sharp 0.35.5.
 - [x] Compare nine principal route heading/hero geometry at 390, 768 and 1440 widths without overflow or loaded-image failures. This is not a full pixel or footer comparison.
 - [ ] Finish full visual/interaction/accessibility acceptance, including section spacing, footer, narrow mobile, keyboard, touch and reduced motion.
-- [ ] Resolve homepage feature assignment. Men has nine approved existing products; do not invent unavailable concept products for Women.
+- [x] Owner approved reference-order exact matches Core Hoodie Red and Terrace Tee Red, followed by Matchday Tee and Touchline Cap instead of unavailable leggings/crop tank. Men has nine approved existing products; Women remains unassigned.
 - [x] Directly verify the exact GOOOL organization/project IDs supplied by the owner; confirm normal CLI management access.
 - [x] Apply only the new additive intake migration; verify service-only privileges, RLS and a private bucket capped at 100 MiB.
 - [x] Verify real 100 MiB signed resumable upload, exact size, private download, atomic receipt, wrong-token rejection, idempotency, deletion scrub and fixture cleanup. This is a provider transport/RPC test, not complete browser end-to-end acceptance.
