@@ -50,3 +50,7 @@
 .v84 .v84-discount .brand-lockup { max-width:200px; }
 .v84 [data-goool-consent],.v84 [data-goool-consent] button { border-radius:0; }
 @media(max-width:700px) { .v84 .product-meta { flex-wrap:wrap; } .v84 .brand { flex-shrink:0; } .v84 .story-brand { white-space:normal; } }
+@media(max-width:600px) {
+  .v84 .kit-review dl { grid-template-columns:minmax(0,1fr); gap:6px; }
+  .v84 .kit-review dd { margin:0 0 16px; }
+}

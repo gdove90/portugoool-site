@@ -28,7 +28,7 @@ Separate approval permits a dedicated GOOOL intake Supabase Pro organization wit
 - [x] Compare nine principal route heading/hero geometry at 390, 768 and 1440 widths without overflow or loaded-image failures. This is not a full pixel or footer comparison.
 - [ ] Finish full visual/interaction/accessibility acceptance, including section spacing, footer, narrow mobile, keyboard, touch and reduced motion.
 - [ ] Resolve homepage feature assignment. Men has nine approved existing products; do not invent unavailable concept products for Women.
-- [ ] Provision the approved dedicated intake project after the owner completes sign-in; verify billing total before purchase.
+- [ ] Identify and connect the dedicated intake project. The owner reports the approved upgrade is completed; do not request purchase proof or make another purchase. Its project URL and authorized management access are not yet available to this checkout.
 - [ ] Apply only new intake migrations to the dedicated project; verify service-only privileges, RLS and private bucket with 100 MiB support.
 - [ ] Provision hello@goool.shop securely; verify the actual owner UUID, non-owner rejection, refresh and sign-out. Email alone must never confer access.
 - [ ] Test actual story, match and kit submissions, durable private uploads, retries, receipts, review/edit retention and all required permissions using isolated data.
