@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/shop`, changeFrequency: "weekly", priority: 0.9 },
+    ...["men", "women", "kit-wear", "whats-your-goool", "share-your-goals", "shipping-returns", "references"].map(path => ({ url: `${SITE_URL}/${path}`, changeFrequency: "monthly" as const, priority: 0.6 })),
     { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/faq`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/contact`, changeFrequency: "yearly", priority: 0.4 },

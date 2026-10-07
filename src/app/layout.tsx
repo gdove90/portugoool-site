@@ -1,30 +1,22 @@
 import type { Metadata } from "next";
 import { consentBootstrap } from "@/lib/marketing-consent";
-import MarketingConsent from "@/components/MarketingConsent";
-import { Anton, Permanent_Marker } from "next/font/google";
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-500.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/inter/latin-700.css";
+import "@fontsource/barlow-condensed/latin-400.css";
+import "@fontsource/barlow-condensed/latin-500.css";
+import "@fontsource/barlow-condensed/latin-600.css";
+import "@fontsource/barlow-condensed/latin-700.css";
 import "./globals.css";
+import "@/v84/style.css";
+import "@/v84/kit-wear.css";
+import "@/v84/integration.css";
 import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import DiscountPopup from "@/components/DiscountPopup";
+import Shell from "@/v84/Shell";
 
-// Display font (site-wide headings) — the planned upgrade recorded in
-// designs/00_brand/typography.md. Single weight; loaded subsetted.
-const anton = Anton({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-anton",
-  display: "swap",
-});
-
-// Brush-script accent — used in exactly one place (hero wordmark).
-const marker = Permanent_Marker({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-marker",
-  display: "swap",
-});
+// Approved v84 families are self-hosted, including local/offline staging.
 
 // "Premium futbol fan apparel" stood in all three of these strings until
 // 2026-09-23. "Premium Quality" was removed from the visible benefit bar
@@ -92,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${anton.variable} ${marker.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: consentBootstrap }} />
         <style>{'[data-goool-consent]{display:none}html[data-goool-prompt="true"] [data-goool-consent]{display:block}[data-goool-us]{display:none}html[data-goool-region="US"] [data-goool-us]{display:block}html[data-goool-region="US"] [data-goool-nonus]{display:none}'}</style>
@@ -105,11 +97,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={jsonLdScript(organizationJsonLd())}
         />
         <CartProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <DiscountPopup />
-          <MarketingConsent />
+          <Shell>{children}</Shell>
         </CartProvider>
       </body>
     </html>

@@ -5,6 +5,8 @@
 
 # next.js
 /.next/
+/.npm-cache/
+/.staging-data/
 /out/
 next-env.d.ts
 
@@ -31,6 +33,7 @@ yarn-error.log*
 # vercel / netlify
 .vercel
 .netlify
+/supabase/.temp/
 
 # typescript
 *.tsbuildinfo

@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { FAQ_ITEMS } from "@/lib/faq";
+import { SHIPPING_FLAT_CENTS, FREE_SHIPPING_THRESHOLD_CENTS } from "@/lib/shipping";
+import { formatPrice } from "@/lib/format";
+export const metadata: Metadata = { title: "Shipping & Returns", alternates: { canonical: "/shipping-returns" } };
+export default function Shipping() { return <article className="support"><h1>Shipping &amp; returns.</h1><nav className="policy-index" aria-label="On this page"><a className="nav-underline" href="#shipping">Shipping</a><a className="nav-underline" href="#returns">Returns</a><a className="nav-underline" href="#tracking">Tracking &amp; help</a></nav><section id="shipping"><h2>Shipping</h2><p>{formatPrice(SHIPPING_FLAT_CENTS)} per order. Free shipping from {formatPrice(FREE_SHIPPING_THRESHOLD_CENTS)} after discounts.</p><p>{FAQ_ITEMS[0].answer}</p><p>{FAQ_ITEMS[1].answer}</p></section><section id="returns"><h2>Returns</h2><p>{FAQ_ITEMS[3].answer}</p><p><Link className="nav-underline" href="/refunds">Read the full refund policy</Link>, including cancellations and lost orders.</p></section><section id="tracking"><h2>Tracking &amp; help</h2><p><Link className="text-link nav-underline" href="/track-order">Track your order</Link></p><p><a className="text-link nav-underline" href="mailto:hello@goool.shop">hello@goool.shop</a></p></section></article>; }

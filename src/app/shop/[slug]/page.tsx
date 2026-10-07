@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ProductDetail from "@/components/ProductDetail";
-import ProductGrid from "@/components/ProductGrid";
+import ProductDetail from "@/v84/ProductDetail";
 import { getProductBySlug, getProducts } from "@/lib/products";
 import {
   productJsonLd,
@@ -50,9 +49,6 @@ export default async function ProductPage({ params }: Props) {
   const product = getProductBySlug((await params).slug);
   if (!product) notFound();
 
-  const related = getProducts()
-    .filter((p) => p.id !== product.id)
-    .slice(0, 4);
 
   return (
     <>
@@ -74,16 +70,8 @@ export default async function ProductPage({ params }: Props) {
         )}
       />
 
-      <ProductDetail product={product} />
+      <ProductDetail key={product.id} product={product} />
 
-      {related.length > 0 && (
-        <section className="mx-auto max-w-content px-4 pb-16 sm:px-6">
-          <h2 className="mb-6 font-display text-2xl uppercase tracking-tightest text-ink">
-            You might also like
-          </h2>
-          <ProductGrid products={related} />
-        </section>
-      )}
     </>
   );
 }
