@@ -2,7 +2,7 @@
 
 ## Release state
 
-IN PROGRESS. Not a finished staging release, and not approved for production.
+IN PROGRESS. The owner authorized completing, verifying, merging and deploying the full release to the existing goool-shop Netlify site. Release remains gated on real provider verification and the outstanding acceptance checks below. A partial redesign is not authorized.
 
 Branch: `codex/v84-facelift`, based on deployed `11b1a2f8182b71785205f2ff6bd2ba537ce52081`.
 Checkout: `C:/Users/gdove/OneDrive/Desktop/Portugoool/v84-implementation`.
@@ -51,12 +51,16 @@ These are local tests. They do not demonstrate a live payment, real email delive
 
 ## Blocking decisions and configuration
 
+October 6 release continuation: six local HTTP security checks and six maintenance checks passed again. The local release crawler passed 114 route/link/asset checks across 23 pages without submission or provider writes. Nine principal pages were compared with the approved reference at actual 390, 768 and 1440 widths; heading and hero geometry matched apart from an unused Kitwear font fallback. Vertical offsets and complete section/footer screenshots are not covered by that geometry comparison.
+
+A fresh dependency audit identified newly published Sharp and source-map-js advisories. Compatible patch updates to Sharp 0.35.5 and source-map-js 1.2.2 were applied in commit b0131f4; no framework or design-tool major upgrade was made. The refreshed production-only npm audit reports zero vulnerabilities. The full audit still reports seven high and two moderate development-tooling findings, requiring impact review before release. Previous audit counts are historical, not current clearance.
+
 1. Men assignments are approved and implemented for nine real products. Women remains unassigned; the four homepage feature selections still await approval. Identify exact women-only Apliiq products and confirm deletion before removing supplier records; never delete shared adult garments. No active leggings/tanks/shorts were invented.
-2. Approve a private staging storage/auth destination that supports 100 MiB per clip. The inspected GOOOL Supabase Free project was limited to 50 MB. No upgrade or new paid resource has been authorized. The installed Supabase connector targets an unrelated project and must not be used for GOOOL changes.
+2. The owner approved a dedicated GOOOL intake Supabase Pro organization with one Micro project at $25/month plus tax, subject to actual checkout verification, spend cap enabled and no paid extras. Provisioning awaits GOOOL account sign-in. The installed connector targets Hireonthefly and must not be used for GOOOL changes. No purchase has occurred.
 3. Original number artwork is now found and implemented; review the sharp preview and composition before final staging acceptance. No reconstruction or font substitution is needed.
 4. Owner selected ST720. Manufacturer confirms 100% recycled polyester, and its current body-chest sizing chart exactly matches the reference. Supplier lists DTF/embroidery/bulk screen printing. Method-specific quotes and 4XL supplier availability remain unverified. See KIT_MATERIAL_VERIFICATION.md. Real product galleries currently have fewer than the six requested production views.
 
-Exact owner-review proposals are in CATALOG_PROPOSAL.md and STAGING_PROPOSAL.md. The staging proposal isolates one Pro/Micro project in a separate organization at a published baseline US $25/month plus tax, subject to actual checkout verification. No purchase or provisioning has occurred.
+Exact owner-review proposals are in CATALOG_PROPOSAL.md and STAGING_PROPOSAL.md. The approved intake destination isolates one Pro/Micro project in a separate organization at a published baseline US $25/month plus tax, subject to actual checkout verification. It will support the existing production Netlify site, not a preview-only backend. No purchase or provisioning has occurred.
 
 ## Still required before finished staging
 
@@ -64,11 +68,11 @@ Exact owner-review proposals are in CATALOG_PROPOSAL.md and STAGING_PROPOSAL.md.
 - Review the SQL proposal against that project's schema, generate a real migration using the Supabase CLI, apply only to staging, and verify bucket privacy and permissions.
 - Test actual resumable uploads, token renewal, each supported file type, 100 MiB footage, persistence, interrupted retry, double submission, deletion and cleanup. Never substitute mock success screens.
 - Authenticate the owner and test the complete inbox workflow and non-owner rejection, refresh/sign-out, status/notes, filtering, pagination and private media access.
-- Configure an authenticated schedule for `/api/intake/maintenance`; it deletes expired abandoned drafts/tombstones after a safety window. Tokens expire after 24 hours; cleanup starts after a further day. Deletion immediately scrubs submission personal fields and removes available objects; opaque identifiers remain only for late-upload cleanup.
+- The hourly authenticated maintenance function is implemented with six passing transport checks. Configure its deployment-scoped secret and verify the real provider schedule before release. It deletes expired abandoned drafts/tombstones after a safety window. Tokens expire after 24 hours; cleanup starts after a further day. Deletion immediately scrubs submission personal fields and removes available objects; opaque identifiers remain only for late-upload cleanup.
 - Finish the full visual/accessibility/interaction matrix, including all widths, gallery gestures, upload previews, keyboard sorting, popup and dialogs, validation/failure states, metadata and analytics.
 - Perform payment/email/fulfillment staging verification using test-only services and blocked live fulfillment. Do not copy production secrets into local previews.
 - Address or explicitly accept the seven inherited npm high-severity findings after reviewing their impact. No unrelated major dependency upgrades were made.
-- Create the complete deploy preview, collect owner review, then obtain separate explicit approval before any production replacement. Keep the previous production deployment available for rollback.
+- Complete the provider and design acceptance checks in RELEASE_CHECKLIST.md, then merge and deploy under the existing explicit release authorization. Preserve the known-good commit and use a corrective Git revert and redeploy if a material regression appears.
 
 ## Local commands
 
@@ -87,6 +91,6 @@ npm run test:v84:http
 
 `scripts/import-v84.cjs` regenerates trusted reference templates, styles, media, validation and dashboard code from the audited package copy. Keep changes to generated code in that importer. The source package path can be passed as its first argument.
 
-Local production-mode preview: `http://127.0.0.1:3184`, restarted as hidden detached Node process 3396 after the latest October 6 build. A OneDrive reparse-point error in generated `.next` output was resolved by clearing that cache and rebuilding successfully. This is localhost only, not a deployed staging URL. Intake and owner sign-in remain unconfigured and fail closed. Owner email is confirmed as hello@goool.shop; no access has been provisioned and the paid staging decision remains pending.
+Local production-mode preview: `http://127.0.0.1:3184`. A OneDrive reparse-point error in generated `.next` output was resolved by clearing that cache and rebuilding successfully. This is localhost only, not a deployed staging URL. Intake and owner sign-in remain unconfigured and fail closed. Owner email is confirmed as hello@goool.shop; no access has been provisioned. Paid intake provisioning is approved but not yet performed.
 
 The discovery plan, product inventory, asset map and 331-row requirement ledger remain in `../output/v84-discovery-2026-10-05/`. The ledger is an acceptance checklist, not a blanket completion claim.

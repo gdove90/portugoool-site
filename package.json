@@ -11,6 +11,8 @@
     "test:v84": "node scripts/test-v84.cjs",
     "test:v84:admin": "node scripts/test-v84-admin.cjs",
     "test:v84:upload": "node scripts/test-v84-upload.cjs",
+    "test:v84:maintenance": "node scripts/test-v84-maintenance.cjs",
+    "test:v84:release": "node scripts/test-v84-release.cjs",
     "test:v84:http": "node scripts/smoke-v84.cjs"
   },
   "dependencies": {
