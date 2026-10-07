@@ -14,7 +14,14 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000007": ["men"],
   "80000000-0000-4000-8000-000000000008": ["men"],
 };
-export const featuredProductIds: string[] = [];
+export const featuredProductIds: string[] = [
+  "70000000-0000-4000-8000-000000000002",
+  "70000000-0000-4000-8000-000000000003",
+];
+export function featuredProducts() {
+  const products = getProducts();
+  return featuredProductIds.flatMap(id => products.filter(product => product.id === id));
+}
 export function productType(product: Product) {
   return product.category === "hoodie" ? "hoodies" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
 }

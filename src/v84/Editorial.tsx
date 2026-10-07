@@ -1,9 +1,8 @@
 import { createElement, type ReactNode } from "react";
 import { parseFragment, serializeOuter, type DefaultTreeAdapterMap } from "parse5";
-import { getProducts } from "@/lib/products";
 import { referenceExperience } from "./reference-experience";
 import { CollectionGrid, ProductGrid } from "./Catalog";
-import { featuredProductIds } from "./catalog-data";
+import { featuredProducts } from "./catalog-data";
 
 export default function Editorial({ route }: { route: "home" | "men" | "women" | "about" | "references" }) {
   type Node = DefaultTreeAdapterMap["childNode"];
@@ -12,7 +11,7 @@ export default function Editorial({ route }: { route: "home" | "men" | "women" |
   // Parse the complete approved document so React's live catalog stays inside its original section.
   function render(node: Node, key: number): ReactNode {
     if (slot(node)) return route === "home"
-      ? <ProductGrid key={key} products={getProducts().filter(p => featuredProductIds.includes(p.id))} />
+      ? <ProductGrid key={key} products={featuredProducts()} />
       : <CollectionGrid key={key} audience={route === "men" ? "men" : "women"} />;
     if (containsSlot(node) && "tagName" in node) {
       const props = Object.fromEntries(node.attrs.map(a => [a.name === "class" ? "className" : a.name, a.value]));

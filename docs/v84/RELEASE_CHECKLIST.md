@@ -34,9 +34,11 @@ The latest owner direction identifies the existing GOOOL organization `lhinkmqrx
 - [ ] Provision hello@goool.shop securely; verify the actual owner UUID, non-owner rejection, refresh and sign-out. Email alone must never confer access.
 - [ ] Test actual story, match and kit submissions, durable private uploads, retries, receipts, review/edit retention and all required permissions using isolated data.
 - [x] Test actual application API routes against Supabase: all three form kinds, owner/non-owner authorization, HttpOnly/Strict cookies, review/status/notes, signed media, deletion, refresh and sign-out. Disposable fixtures cleaned. Browser-to-provider acceptance, pagination and scheduled maintenance remain separate gates.
-- [ ] Test owner lists, filters, pagination, detail, notes/status, authorized media, deletion and abandoned-draft cleanup.
+- [x] Provider-test owner inbox search, status/kind filters, 50+5 pagination, detail, notes/status, private media and deletion with cleaned disposable fixtures.
+- [ ] Verify abandoned-draft cleanup against the provider and the configured schedule.
 - [ ] Configure deployment-scoped intake keys, exact origins and maintenance secret. Keep secrets out of Git, browser bundles and reports.
 - [ ] Verify checkout/email provider behavior in test mode without live charges, fulfillment or customer emails.
+- [x] Verify existing live checkout totals and an unpaid Stripe handoff without customer email, charge or fulfillment; preserve production Stripe configuration. This does not verify a paid webhook or redesigned live checkout.
 - [ ] Run final build, types, lint, local fail-closed HTTP checks and regression suites after the last code change.
 - [ ] Review full diff and inherited development dependency findings; exclude unrelated changes.
 

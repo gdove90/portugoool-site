@@ -32,7 +32,9 @@ async function main() {
   await check('only approved existing products appear in Men; Women remains unassigned', () => {
     assert.deepEqual(Array.from(catalogExports.forAudience('men'), p => p.id), approvedMenIds);
     assert.equal(catalogExports.forAudience('women').length, 0);
-    assert.equal(catalogExports.featuredProductIds.length, 0);
+    assert.deepEqual(Array.from(catalogExports.featuredProducts(), p => p.id), [
+      '70000000-0000-4000-8000-000000000002', '70000000-0000-4000-8000-000000000003',
+    ]);
   });
   const numeralExports = {};
   const numeralCode = ts.transpileModule(fs.readFileSync('src/v84/number-art.js', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;

@@ -42,6 +42,27 @@ async function main() {
     assert.equal((await request('/api/admin/session', undefined, '', 'GET')).status, 403);
     assert.equal((await request('/api/admin/session', undefined, cookie, 'GET')).status, 200);
     console.log('PASS actual owner login, HttpOnly cookies, non-owner and anonymous rejection');
+    const batchTag = `release-pagination-${randomUUID()}`;
+    const batch = Array.from({ length: 55 }, (_, index) => ({
+      id: randomUUID(), kind: 'story', category: 'story', status: index < 5 ? 'reviewing' : 'new',
+      state: 'received', name: batchTag, email: 'release-fixture@example.test', team: '',
+      payload: {}, consent: {}, upload_token_hash: randomBytes(32).toString('hex'),
+      upload_expires_at: new Date(Date.now() + 86400000).toISOString(),
+      submitted_at: new Date(Date.now() - index * 1000).toISOString(),
+    }));
+    fixtures.push(...batch.map(row => ({ id: row.id, files: [] })));
+    checked(await client.from('intake_submissions').insert(batch));
+    const first = await (await request(`/api/admin/submissions?q=${batchTag}&kind=story`, undefined, cookie, 'GET')).json();
+    assert.equal(first.items.length, 50); assert.equal(first.hasMore, true);
+    const second = await (await request(`/api/admin/submissions?q=${batchTag}&kind=story&offset=50`, undefined, cookie, 'GET')).json();
+    assert.equal(second.items.length, 5); assert.equal(second.hasMore, false);
+    assert.equal(new Set([...first.items, ...second.items].map(row => row.id)).size, 55);
+    assert.deepEqual([...first.items, ...second.items].map(row => row.id), batch.map(row => row.id));
+    const filtered = await (await request(`/api/admin/submissions?q=${batchTag}&status=reviewing`, undefined, cookie, 'GET')).json();
+    assert.equal(filtered.items.length, 5);
+    assert.equal((await request('/api/admin/submissions?status=invalid', undefined, cookie, 'GET')).status, 400);
+    assert.equal((await request(`/api/admin/submissions?q=${batchTag}`, undefined, '', 'GET')).status, 403);
+    console.log('PASS real owner inbox search, status/kind filters, stable 50+5 pagination, invalid filter and anonymous rejection');
     const base = { name: 'Release Fixture', email: 'release-fixture@example.test', adult: true, rights: true, permission: true };
     const cases = [
       { kind: 'story', payload: { ...base, goal: 'Provider verification', story: 'Disposable release fixture', termsVersion: 'WYG-2026-10-04-live-1' }, files: [] },
