@@ -1,4 +1,4 @@
-# Acceptance progress - 2026-10-06
+# Acceptance progress - 2026-10-07
 
 This is an evidence overlay on the 331-row discovery ledger. Unlisted IDs retain their discovery state. `Implemented` means local code exists, not that the finished staging acceptance gate passed. No scope is deferred.
 
@@ -8,7 +8,7 @@ This is an evidence overlay on the 331-row discovery ledger. Unlisted IDs retain
 | S01-09 | Verified | UI tests cannot submit live fulfillment; backend regression network disabled. Separately authorized October 6 recovery submitted one cap order, verified an owner-submitted hoodie, and reconciled both supplier IDs, without deploying UI changes. |
 | S01-10 | Verified | Reference stays local; no deployment or upload. |
 | S02-05 | Verified | Owner's explicit complete-v84 implementation approval in this chat. |
-| S02-06 | Verified | No code push or production deployment. |
+| S02-06 | Verified | Isolated branch is pushed to draft PR #4 and deploy preview; no production merge/deployment. |
 | S03-01 | Verified | Catalog unchanged in 89-file baseline comparison. |
 | S03-02 | Implemented | Existing slug pages and redirects retained; full URL/SEO audit pending. |
 | S03-03 | Verified | Baseline comparison plus 83-variant server-price regression. |
@@ -33,21 +33,23 @@ This is an evidence overlay on the 331-row discovery ledger. Unlisted IDs retain
 | S04-09 | Verified | All 32 packaged visual assets are byte-identical; no generated replacements. |
 | S20-04 | Pending | This is a checkpoint overlay, not the completed acceptance ledger. |
 | S20-05 | Pending | Browser screenshots inspected; full archived before/after matrix still required. |
-| S20-06 | Implemented | Discovery PRODUCT_INVENTORY.json and ASSET_MAPPING.csv retained; owner assignments pending. |
+| S20-06 | Implemented | Inventory/asset mapping retained; Men and four homepage products now approved and mapped to real existing IDs. Women remains unassigned. |
 | S20-07 | Implemented | .env.v84.example and implementation status list names only, no secret values. |
-| S20-08 | Implemented | Unapplied additive SQL proposal and staging-only procedure; migration generation/application pending. |
+| S20-08 | Verified | New CLI-generated additive intake migration applied and provider history aligned; roles/RLS/private bucket read-back and provider tests pass. No commerce migrations replayed. |
 | S20-11 | Pending | No finished staged release exists yet; no request for production approval made. |
-| S20-12 | Pending | Production deployment is explicitly prohibited until later approval. |
+| S20-12 | Pending | Production deployment is authorized, but full visual/browser-to-provider acceptance is not complete. No merge/deployment merely to escape a browser block. |
 | S21-01 | Implemented | /collection redirects to /shop; Next App Router retained. |
-| S21-02 | Implemented / Pending | Nine real products assigned to Men after owner approval; Women unassigned. Homepage feature selection awaits separate confirmation. |
-| S21-03 | Blocked | Inspected private provider ceiling 50 MB vs required 100 MiB; no upgrade authorized. |
+| S21-02 | Implemented | Nine approved Men products; Women unassigned. Homepage: Core Hoodie Red, Terrace Tee Red, Matchday Tee, Touchline Cap in approved order. |
+| S21-03 | Verified | Existing GOOOL organization is Pro; private bucket exactly 100 MiB, global capacity 105 MB, exact 100 MiB provider upload verified and fixture removed. |
 | S21-04 | Implemented | Dedicated intake credentials/tables; no commerce/newsletter fallback or schema edits. |
-| S21-05 | Implemented | Owner-gated private media, 60-second signed reads, per-object upload tokens; live storage test pending. |
+| S21-05 | Verified | Actual provider private media, scoped uploads, anonymous rejection and signed owner reads pass; browser acceptance remains separately pending. |
 | S21-06 | Pending | Local transaction/idempotency/deletion tests pass; real concurrent network/storage test pending. |
 | S21-07 | Blocked | Applied order_export restriction is not in deployed migration files; no production migration replay attempted. |
-| S21-08 | Blocked | Local credentials intentionally unset; isolated cloud storage/auth/payment setup not yet provisioned. |
+| S21-08 | Implemented / Pending | Storage/Auth provisioned and nine scoped INTAKE variables configured; verified real owner UUID allowlisted. Preview Stripe test key absent. Browser-to-provider and real-owner UI acceptance remain unverified. |
 
 October 6 continuation: dashboard stale-request protection passes nine local controller checks; upload retries/concurrency pass five local transport checks. Men count/filter and story review/failure/edit retention verified in the rebuilt browser preview. Header breakpoint geometry and four hero comparisons at actual 390/1440 pass; complete screenshot matrix and live integrations remain pending. Owner email confirmed; access not provisioned.
 
 Tests: `scripts/test-v84.cjs`, `scripts/test-v84-admin.cjs`, `scripts/test-v84-upload.cjs`, `scripts/smoke-v84.cjs`, original `scripts/test-launch-backend.cjs`.
 See `IMPLEMENTATION_STATUS.md` for test limitations, implementation coverage and remaining requirements.
+
+October 7 current overlay: the latest ready preview is application commit b21a534 and deploy 6ac5c49cc8f15a0008bf4b99. The historical October 6 note about unprovisioned access is superseded by verified confirmed Auth UUID and functions-scoped Netlify configuration. Browser access to the preview remains denied by a saved preference, and the independent localhost browser request was also denied. See RELEASE_ACCESS_AUDIT.md for permitted alternatives, exact unavailable acceptance and recovery target. No new browser evidence or production release is claimed.
