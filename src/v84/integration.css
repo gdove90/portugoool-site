@@ -22,6 +22,7 @@
 .v84 details.product-detail[open]>summary .moving { transform:translateX(98.906846413px); }
 .v84 .gallery-main>img { object-fit:contain; width:100%; height:100%; }
 .v84 .gallery-main { touch-action:pan-y pinch-zoom; }
+.v84 .gallery-main, .v84 .thumbnail { aspect-ratio:1/1; }
 .v84 .gallery-main:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
 .v84 .thumbnail>img { object-fit:contain; width:100%; height:100%; }
 .v84 .policy-index { display:flex; gap:24px; flex-wrap:wrap; padding:24px 0; }
