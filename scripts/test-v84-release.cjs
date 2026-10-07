@@ -16,6 +16,13 @@ async function main() {
     assert.ok(tree.some(n => n.tagName === 'h1'), route + ' needs a heading');
     const canonical = tree.find(n => n.tagName === 'link' && n.attrs.some(a => a.name === 'rel' && a.value === 'canonical'));
     assert.ok(canonical, route + ' needs a canonical');
+    if (route === '/') {
+      const footer = tree.find(node => node.tagName === 'footer');
+      assert.ok(footer, 'Homepage needs the shared footer');
+      const collection = nodes(footer).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === '/shop'));
+      assert.ok(collection, 'Footer needs its collection link');
+      assert.equal(nodes(collection).filter(node => node.nodeName === '#text').map(node => node.value).join('').trim(), 'The collection', 'Match the approved footer label');
+    }
     for (const node of tree) {
       for (const attr of node.attrs || []) {
         if (!['href', 'src'].includes(attr.name) || !attr.value.startsWith('/') || attr.value.startsWith('//')) continue;
