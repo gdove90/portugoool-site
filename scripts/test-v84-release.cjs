@@ -14,6 +14,8 @@ async function main() {
     const response = await fetch(base + route); assert.equal(response.status, 200, route);
     const tree = nodes(parse(await response.text()));
     assert.ok(tree.some(n => n.tagName === 'h1'), route + ' needs a heading');
+    const campaignHeading = { '/whats-your-goool': 'What\u2019s yourGOOOL?', '/share-your-goals': 'Share yourGOOOLS!' }[route];
+    if (campaignHeading) assert.equal(nodes(tree.find(n => n.tagName === 'h1')).filter(n => n.nodeName === '#text').map(n => n.value).join(''), campaignHeading, 'Keep the original campaign headline');
     const canonical = tree.find(n => n.tagName === 'link' && n.attrs.some(a => a.name === 'rel' && a.value === 'canonical'));
     assert.ok(canonical, route + ' needs a canonical');
     if (route === '/') {
@@ -22,6 +24,14 @@ async function main() {
       const collection = nodes(footer).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === '/shop'));
       assert.ok(collection, 'Footer needs its collection link');
       assert.equal(nodes(collection).filter(node => node.nodeName === '#text').map(node => node.value).join('').trim(), 'The collection', 'Match the approved footer label');
+      for (const scope of [...tree.filter(node => node.tagName === 'nav'), footer]) {
+        for (const [href, label] of [['/whats-your-goool', 'Your Story'], ['/share-your-goals', 'Match Highlights']]) {
+          const link = nodes(scope).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === href));
+          assert.ok(link, 'Shared navigation retains ' + href);
+          const text = nodes(link).filter(node => node.nodeName === '#text').map(node => node.value).join('').trim();
+          assert.ok(text.startsWith(label), 'Desktop, mobile and footer use ' + label);
+        }
+      }
     }
     for (const node of tree) {
       for (const attr of node.attrs || []) {
