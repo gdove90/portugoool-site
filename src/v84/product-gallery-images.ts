@@ -1,5 +1,6 @@
 import type { Product } from "@/lib/types";
 import manifest from "./mens-on-body-v2.json";
+import studioManifest from "./mens-studio-v3.json";
 
 const directory = "/products/editorial/men-v2/";
 
@@ -7,6 +8,13 @@ export function productGalleryImages(product: Product, variantIndex: number): Pr
   const variant = product.colorVariants?.[variantIndex];
   const images = variant?.images || product.images;
   const color = variant?.name || product.color;
+  const studio = studioManifest.find(entry => entry.productId === product.id
+    && entry.slug === product.slug && entry.color === color);
+  if (studio && images.length >= 2) {
+    // Preserve the supplier cover and color-specific rear artwork. Matchday's
+    // previous rear image was a detail crop, so use its complete rear view.
+    return [images[0], studio.back || images[1], ...studio.images];
+  }
   const entry = manifest.find(image => image.productId === product.id && image.slug === product.slug);
   // These two caps use Black/Natural for the supplied natural crown / black visor.
   const intendedColor = entry?.color === "Natural / Black" ? "Black/Natural" : entry?.color;
