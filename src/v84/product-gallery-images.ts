@@ -2,6 +2,7 @@ import type { Product } from "@/lib/types";
 import manifest from "./mens-on-body-v2.json";
 import studioManifest from "./mens-studio-v3.json";
 import latestStudioManifest from "./mens-studio-v4.json";
+import backgroundManifest from "./studio-backgrounds-v5.json";
 
 const directory = "/products/editorial/men-v2/";
 type StudioGallery = {
@@ -14,7 +15,7 @@ type StudioGallery = {
 };
 const latestGalleries: StudioGallery[] = latestStudioManifest;
 
-export function productGalleryImages(product: Product, variantIndex: number): Product["images"] {
+function sourceGalleryImages(product: Product, variantIndex: number): Product["images"] {
   const variant = product.colorVariants?.[variantIndex];
   const images = variant?.images || product.images;
   const color = variant?.name || product.color;
@@ -47,4 +48,13 @@ export function productGalleryImages(product: Product, variantIndex: number): Pr
     caption: "AI-generated on-body visualization. Not a photograph of a manufactured sample.",
   };
   return [...remaining.slice(0, 2), onBody, ...remaining.slice(2)];
+}
+
+// Presentation replacements are separate from supplier and fulfillment data.
+const backgrounds = new Map(backgroundManifest.map(image => [image.originalSrc, image]));
+export function productGalleryImages(product: Product, variantIndex: number): Product["images"] {
+  return sourceGalleryImages(product, variantIndex).map(image => {
+    const replacement = backgrounds.get(image.src);
+    return replacement ? { src: replacement.src, alt: image.alt, caption: replacement.caption } : image;
+  });
 }

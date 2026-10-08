@@ -55,3 +55,7 @@
   .v84 .kit-review dl { grid-template-columns:minmax(0,1fr); gap:6px; }
   .v84 .kit-review dd { margin:0 0 16px; }
 }
+
+/* All catalog and gallery assets use a square, full-bleed studio canvas. */
+.v84 .product-image,.v84 .category .product-image,.v84 .gallery-main,.v84 .thumbnail{aspect-ratio:1;background:#c5c5c5}
+.v84 .product-image .asset,.v84 .gallery-main>img,.v84 .thumbnail>img{object-fit:cover}
