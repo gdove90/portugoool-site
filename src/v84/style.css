@@ -506,3 +506,5 @@
 /* v77: alternate story sections using the existing white and cream surfaces. */
 :where(.v84) #goal-campaign-content .goal-share{background:var(--paper)}
 :where(.v84) #goal-campaign-content .goal-intake{background:var(--bone)}
+
+:where(.v84) .goal-definition-story .story-moments small{display:block;margin-top:10px;font-size:16px;line-height:1.5;color:var(--muted)}

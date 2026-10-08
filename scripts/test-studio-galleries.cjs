@@ -15,7 +15,7 @@ function load(file) {
   const code = ts.transpileModule(fs.readFileSync(file, 'utf8'), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true },
   }).outputText;
-  vm.runInNewContext(code, { exports, require: name => {
+  vm.runInNewContext(code, { exports, URL, require: name => {
     const base = name.startsWith('@/') ? path.join(process.cwd(), 'src', name.slice(2)) : path.resolve(path.dirname(file), name);
     return load(base.endsWith('.json') ? base : base + '.ts');
   } }, { filename: file });
@@ -24,7 +24,18 @@ function load(file) {
 
 const { products } = load('src/lib/products.ts');
 const { productGalleryImages } = load('src/v84/product-gallery-images.ts');
+const { catalogImageSrc } = load('src/lib/product-image.ts');
 const manifest = load('src/v84/mens-studio-v4.json');
+const backgrounds = load('src/v84/studio-backgrounds-v5.json');
+const replacement = src => backgrounds.find(image => image.originalSrc === src)?.src || src;
+assert.equal(backgrounds.length, 51, 'every standalone and detail view has a replacement');
+assert.equal(new Set(backgrounds.map(image => image.originalSrc)).size, 51);
+for (const image of backgrounds) {
+  assert.equal(image.dimensions[0], image.dimensions[1], 'all assets must be square');
+  assert.ok(image.dimensions[0] >= 1024);
+  assert.ok(image.caption.includes('AI-edited'));
+  assert.equal(new URL(catalogImageSrc(image.originalSrc), 'https://goool.shop').pathname, image.src, 'supplier references resolve to studio assets everywhere');
+}
 assert.equal(manifest.length, 18, 'all 18 approved color variants need a gallery');
 assert.equal(new Set(manifest.map(entry => entry.slug)).size, 8);
 assert.equal(new Set(manifest.map(entry => entry.productId + ':' + entry.color)).size, 18);
@@ -41,15 +52,15 @@ for (const entry of manifest) {
   const gallery = productGalleryImages(product, index);
   const expectedLength = entry.hasBackArtwork ? 6 : 5;
   assert.equal(gallery.length, expectedLength, 'correct gallery sequence for ' + entry.slug + ': ' + entry.color);
-  assert.equal(gallery[0].src, supplier[0].src, 'catalog cover remains exact');
+  assert.equal(gallery[0].src, replacement(supplier[0].src), 'catalog cover uses approved studio replacement');
   const modelStart = entry.hasBackArtwork ? 2 : 1;
-  if (entry.hasBackArtwork) assert.equal(gallery[1].src, entry.back?.src || supplier[1].src, 'correct color rear view');
+  if (entry.hasBackArtwork) assert.equal(gallery[1].src, replacement(entry.back?.src || supplier[1].src), 'correct color rear view');
   assert.equal(entry.images.length, 4, 'exactly three model views and one detail');
   for (let view = 0; view < 3; view++) {
     assert.equal(gallery[modelStart + view].src, entry.images[view].src, 'model views remain ordered');
     assert.ok(gallery[modelStart + view].alt.includes(entry.model), 'assigned model is documented');
   }
-  assert.equal(gallery.at(-1).src, entry.images[3].src, 'detail is last');
+  assert.equal(gallery.at(-1).src, replacement(entry.images[3].src), 'detail is last');
   assert.equal(new Set(gallery.map(image => image.src)).size, expectedLength, 'no repeated thumbnails');
   assert.equal(JSON.stringify(product), snapshot, 'gallery resolution cannot mutate commerce/catalog fields');
   for (const image of gallery) {
@@ -68,7 +79,7 @@ for (const entry of manifest) {
 }
 for (const product of products.filter(product => product.isActive && !manifest.some(entry => entry.productId === product.id))) {
   const supplier = product.colorVariants?.[0]?.images || product.images;
-  assert.deepEqual(Array.from(productGalleryImages(product, 0), image => image.src), Array.from(supplier, image => image.src));
+  assert.deepEqual(Array.from(productGalleryImages(product, 0), image => image.src), Array.from(supplier, image => replacement(image.src)));
 }
 const fixture = { id: 'unknown', slug: manifest[0].slug, color: manifest[0].color, images: [{ src: '/a', alt: 'a' }, { src: '/b', alt: 'b' }] };
 assert.deepEqual(Array.from(productGalleryImages(fixture, 0), image => image.src), ['/a', '/b'], 'slug alone cannot attach another product gallery');
@@ -79,7 +90,7 @@ const unknownColor = { id: manifest[0].productId, slug: manifest[0].slug, color:
 assert.deepEqual(Array.from(productGalleryImages(unknownColor, 0), image => image.src), ['/a', '/b'], 'unlisted colors cannot inherit a different color gallery');
 assert.equal(galleryViews, 103, 'blank rear products have five views; decorated rear products have six');
 assert.equal(files.size, 54, 'all new studio assets are linked');
-console.log('PASS: 8 products, 18 colors, ' + galleryViews + ' studio gallery views, ' + files.size + ' new assets; covers and commerce data preserved.');
+console.log('PASS: 8 products, 18 colors, ' + galleryViews + ' studio gallery views, ' + files.size + ' new assets; square covers and details matched; commerce data preserved.');
 
 if (process.env.PHOTO_BASE_URL) (async () => {
   const { parse } = await import('parse5');
@@ -88,7 +99,7 @@ if (process.env.PHOTO_BASE_URL) (async () => {
   const nodes = node => [node, ...(node.childNodes || []).flatMap(nodes)];
   const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value;
   const hasClass = (node, name) => (attr(node, 'class') || '').split(/\s+/).includes(name);
-  await Promise.all([...new Set(manifest.map(entry => entry.slug))].map(async slug => {
+  await Promise.all([...new Set([...manifest.map(entry => entry.slug), 'goool-touchline-cap'])].map(async slug => {
     const product = products.find(product => product.slug === slug);
     const gallery = productGalleryImages(product, defaultVariant(product)?.index || 0);
     const response = await fetch(new URL('/shop/' + slug, base), { signal: AbortSignal.timeout(30000) });
@@ -104,11 +115,11 @@ if (process.env.PHOTO_BASE_URL) (async () => {
     const main = page.find(node => hasClass(node, 'gallery-main'));
     assert.equal(attr(nodes(main).find(node => node.tagName === 'img'), 'alt'), gallery[0].alt);
   }));
-  await Promise.all(manifest.flatMap(entry => entry.images.slice(0, 3)).map(async image => {
+  await Promise.all([...manifest.flatMap(entry => entry.images.slice(0, 3)), ...backgrounds].map(async image => {
     const response = await fetch(new URL(image.src, base), { signal: AbortSignal.timeout(30000) });
     assert.equal(response.status, 200, image.src);
     const bytes = Buffer.from(await response.arrayBuffer());
     assert.equal(bytes.toString('ascii', 8, 12), 'WEBP', image.src);
   }));
-  console.log('PASS: rendered galleries for all eight product pages and all 54 served model images.');
+  console.log('PASS: rendered galleries for all nine product pages, 54 model images, and 51 studio replacements.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

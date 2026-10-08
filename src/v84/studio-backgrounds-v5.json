@@ -1,0 +1,563 @@
+[
+  {
+    "originalSrc": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-performance-tee-black-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-performance-tee-black-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-performance-tee-black-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-performance-tee-white-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "White",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-performance-tee-white-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-performance-tee-white-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "White",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-performance-tee-true-royal-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "True Royal",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-performance-tee-true-royal-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-performance-tee-true-royal-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "True Royal",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-black-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-black-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-hoodie-black-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-black-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-bone-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Bone",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-bone-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Bone",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-hoodie-bone-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-bone-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Bone",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-grey-heather-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Grey Heather",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-grey-heather-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Grey Heather",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-hoodie-grey-heather-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-grey-heather-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Grey Heather",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-black-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-black-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-hoodie-blue-black-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-black-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-bone-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Bone",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-bone-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Bone",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-hoodie-blue-bone-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-bone-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Bone",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-grey-heather-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Grey Heather",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-grey-heather-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Grey Heather",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-hoodie-blue-grey-heather-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-hoodie-blue-grey-heather-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Grey Heather",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-black-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-black-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-casual-tee-black-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-black-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-natural-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-natural-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-casual-tee-natural-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-natural-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-blue-natural-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-blue-natural-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-casual-tee-blue-natural-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-blue-natural-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-blue-black-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-blue-black-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-heavyweight-casual-tee-blue-black-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-heavyweight-casual-tee-blue-black-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-black-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-modern-sport-performance-tee-black-02-back-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-black-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-modern-sport-performance-tee-black-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-black-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-true-royal-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "True Royal",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-modern-sport-performance-tee-true-royal-02-back-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-true-royal-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "True Royal",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-modern-sport-performance-tee-true-royal-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-true-royal-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "True Royal",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_MODERN_PERFORMANCE_WHITE_FRONT_V3.png",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-white-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "White",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-modern-sport-performance-tee-white-02-back-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-white-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "White",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-modern-sport-performance-tee-white-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-modern-sport-performance-tee-white-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "White",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-badge-cap-black-natural-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black/Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-badge-cap-black-natural-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-badge-cap-black-natural-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black/Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-stacked-cap-black-natural-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black/Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/editorial/men-studio-v3/goool-athletics-stacked-cap-black-natural-04-logo-detail-studio-v3.webp",
+    "src": "/products/editorial/studio-v5/goool-athletics-stacked-cap-black-natural-detail-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "detail",
+    "color": "Black/Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
+    "src": "/products/editorial/studio-v5/goool-touchline-cap-black-natural-front-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "front",
+    "color": "Black/Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "originalSrc": "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
+    "src": "/products/editorial/studio-v5/goool-touchline-cap-black-natural-back-v5.webp",
+    "caption": "AI-edited studio visualization. Not a photograph of a manufactured sample.",
+    "view": "back",
+    "color": "Black/Natural",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  }
+]
