@@ -1,13 +1,31 @@
 import type { Product } from "@/lib/types";
 import manifest from "./mens-on-body-v2.json";
 import studioManifest from "./mens-studio-v3.json";
+import latestStudioManifest from "./mens-studio-v4.json";
 
 const directory = "/products/editorial/men-v2/";
+type StudioGallery = {
+  productId: string;
+  slug: string;
+  color: string;
+  hasBackArtwork: boolean;
+  back?: Product["images"][number];
+  images: Product["images"];
+};
+const latestGalleries: StudioGallery[] = latestStudioManifest;
 
 export function productGalleryImages(product: Product, variantIndex: number): Product["images"] {
   const variant = product.colorVariants?.[variantIndex];
   const images = variant?.images || product.images;
   const color = variant?.name || product.color;
+  const latest = latestGalleries.find(entry => entry.productId === product.id
+    && entry.slug === product.slug && entry.color === color);
+  if (latest && images.length >= 1) {
+    // Only decorated backs receive an isolated rear product view. All colors
+    // then use three views of their assigned model and one decoration detail.
+    const rear = latest.hasBackArtwork ? [latest.back || images[1]].filter(Boolean) : [];
+    return [images[0], ...rear, ...latest.images];
+  }
   const studio = studioManifest.find(entry => entry.productId === product.id
     && entry.slug === product.slug && entry.color === color);
   if (studio && images.length >= 2) {
