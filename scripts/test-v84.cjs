@@ -206,7 +206,7 @@ async function main() {
       const current = fs.readFileSync(file);
       assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline.toString().replace(/\r\n/g, '\n'), file);
     }
-    console.log(`  Compared ${files.length} protected baseline files.`);
+    console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; SEO-only files have separate checks.`);
   });
   await check('all approved visual assets are byte-identical', () => {
     const source = path.resolve('../output/v84-discovery-2026-10-05/reference-audit/public/assets');
