@@ -16,6 +16,7 @@ import "@/v84/mobile.css";
 import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Shell from "@/v84/Shell";
+import { BRAND_SEARCH_TITLE, BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 
 // Approved v84 families are self-hosted, including local/offline staging.
 
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     ? { other: { "facebook-domain-verification": process.env.META_DOMAIN_VERIFICATION! } }
     : {}),
   title: {
-    default: "GOOOL · Original Soccer Sportswear · Made for the Moment.",
+    default: BRAND_SEARCH_TITLE,
     template: "%s · GOOOL",
   },
   // The default description is the FALLBACK, inherited by any page that
@@ -44,17 +45,15 @@ export const metadata: Metadata = {
   // announced a four-piece capsule in their search snippet. The capsule
   // framing belongs on /shop, which owns that language deliberately, and
   // sets its own description to say so. This one has to work for any page.
-  description:
-    "Independent soccer sportswear. Original crests and wordmarks, never licensed. Heavyweight cotton tees, hoodies and embroidered caps, shipped to the US, Canada, the UK and Portugal.",
+  description: BRAND_SEARCH_DESCRIPTION,
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
   alternates: { canonical: "/" },
   openGraph: {
-    siteName: "GOOOL",
-    title: "GOOOL · Original Soccer Sportswear",
-    description:
-      "Independent soccer sportswear. Original crests and wordmarks, never licensed. Made for the Moment.",
+    siteName: "GOOOL Athletics",
+    title: BRAND_SEARCH_TITLE,
+    description: BRAND_SEARCH_DESCRIPTION,
     type: "website",
     url: "/",
     locale: "en_US",
