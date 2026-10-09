@@ -1,5 +1,8 @@
 "use client";
 
+import { InterfaceIcon } from "@/v84/InterfaceIcon";
+import Link from "next/link";
+
 import { consentForServer, setKnownEmail, trackLead } from "@/lib/meta-pixel";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -227,13 +230,13 @@ export default function DiscountPopup() {
                   </button>
                 </div>
               )}
-              <a
+              <Link
                 href="/shop"
                 onClick={() => setOpen(false)}
                 className="mt-6 inline-block font-semibold underline underline-offset-4"
               >
-                Shop the Core Capsule →
-              </a>
+                Shop the Core Capsule <InterfaceIcon name="arrow-right" />
+              </Link>
             </div>
           ) : (
             <>

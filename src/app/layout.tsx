@@ -12,6 +12,7 @@ import "./globals.css";
 import "@/v84/style.css";
 import "@/v84/kit-wear.css";
 import "@/v84/integration.css";
+import "@/v84/mobile.css";
 import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Shell from "@/v84/Shell";

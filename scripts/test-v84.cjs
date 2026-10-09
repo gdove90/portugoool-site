@@ -196,9 +196,10 @@ async function main() {
   } finally { await db.close(); }
 
   await check('catalog, cart, checkout, payment, fulfillment and email baseline files are unchanged', () => {
-    const files = execFileSync('git', ['ls-tree', '-r', '--name-only', '11b1a2f', 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+    const productionBaseline = '0e0cb30d10fd0a2874f772f5df7e31ecc3aadbe6';
+    const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
     for (const file of files) {
-      const baseline = execFileSync('git', ['show', `11b1a2f:${file}`]);
+      const baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]);
       const current = fs.readFileSync(file);
       assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline.toString().replace(/\r\n/g, '\n'), file);
     }

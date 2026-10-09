@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRef } from "react";
+import { InterfaceIcon } from "./InterfaceIcon";
 import { catalogImageSrc } from "@/lib/product-image";
 import type { Product } from "@/lib/types";
 
@@ -30,6 +31,7 @@ export function ProductGallery({ images, index, onChange }: { images: Product["i
           if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) move(dx < 0 ? 1 : -1);
         }}>
         <Image src={catalogImageSrc(image.src)} alt={image.alt} fill priority={selectedIndex === 0} sizes="(max-width:700px) 90vw, 52vw" quality={90} />
+        <div className="gallery-controls"><button type="button" aria-label="Previous product image" onClick={() => move(-1)}><InterfaceIcon name="chevron-left" /></button><button type="button" aria-label="Next product image" onClick={() => move(1)}><InterfaceIcon name="chevron-right" /></button></div>
         <span className="gallery-counter" aria-live="polite" aria-atomic="true">{selectedIndex + 1} / {images.length}</span>
       </div>
     </div>
