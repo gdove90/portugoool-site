@@ -1,5 +1,7 @@
 "use client";
 
+import { InterfaceIcon } from "@/v84/InterfaceIcon";
+
 import { useState } from "react";
 import Link from "next/link";
 
@@ -111,7 +113,7 @@ export default function ContactPage() {
 
       <div className="mt-12 text-center">
         <Link href="/faq" className="text-sm font-semibold text-ink underline-offset-4 hover:underline">
-          Check the FAQ first →
+          Check the FAQ first <InterfaceIcon name="arrow-right" />
         </Link>
       </div>
     </div>
