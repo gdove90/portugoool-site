@@ -83,7 +83,9 @@ for (const product of products.filter(product => product.isActive && !manifest.s
 }
 const fixture = { id: 'unknown', slug: manifest[0].slug, color: manifest[0].color, images: [{ src: '/a', alt: 'a' }, { src: '/b', alt: 'b' }] };
 assert.deepEqual(Array.from(productGalleryImages(fixture, 0), image => image.src), ['/a', '/b'], 'slug alone cannot attach another product gallery');
-for (const file of ['src/lib/products.ts', 'src/lib/types.ts', 'src/lib/cart.tsx', 'src/v84/Catalog.tsx', 'src/v84/ProductDetail.tsx', 'src/lib/collection-launch.ts']) {
+// Presentation components now accept responsive sizes and variant deep links.
+// The approved product data and gallery sequence remain protected here.
+for (const file of ['src/lib/products.ts', 'src/lib/types.ts', 'src/lib/cart.tsx', 'src/lib/collection-launch.ts']) {
   assert.equal(fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n'), execFileSync('git', ['show', 'HEAD:' + file], { encoding: 'utf8' }).replace(/\r\n/g, '\n'), 'unrelated catalog, commerce or Tempo change: ' + file);
 }
 const unknownColor = { id: manifest[0].productId, slug: manifest[0].slug, color: 'Unknown', images: fixture.images };

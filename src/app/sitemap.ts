@@ -13,11 +13,9 @@ import { SITE_URL } from "@/lib/seo";
 // and a mixed signal about which page is canonical.
 //
 // /cart and /success are absent too. /success carries a Stripe session id
-// in its query string and must never be indexed; robots.ts disallows both.
+// in its query string. Both have noindex metadata; confirmation remains crawl-restricted.
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   const pages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/shop`, changeFrequency: "weekly", priority: 0.9 },
@@ -38,8 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...pages, ...products].map((entry) => ({
-    ...entry,
-    lastModified: now,
-  }));
+  // A build timestamp is not a content edit date. Omit lastmod until real
+  // page/catalog update timestamps are maintained rather than claiming
+  // every unchanged page was revised on each deployment.
+  return [...pages, ...products];
 }

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import SizeGuideTabs from "@/components/SizeGuideTabs";
 
 // ─────────────────────────────────────────────────────────────
@@ -9,11 +9,7 @@ import SizeGuideTabs from "@/components/SizeGuideTabs";
 // the product page and on this page at once.
 // ─────────────────────────────────────────────────────────────
 
-export const metadata: Metadata = {
-  title: "Size Guide",
-  description: "Garment measurements for every GOOOL piece, S–XXL.",
-  alternates: { canonical: "/size-guide" },
-};
+export const metadata = pageMetadata("/size-guide", "Size Guide", "Garment measurements for every GOOOL piece, S–XXL.");
 
 const HOW_TO_MEASURE: ReadonlyArray<readonly [string, string, string]> = [
   ["01", "Lay a tee flat", "Pick one you already like the fit of and smooth it out on a table."],

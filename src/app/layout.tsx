@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import { consentBootstrap } from "@/lib/marketing-consent";
-import "@fontsource/inter/latin-400.css";
+import "./critical-fonts.css";
 import "@fontsource/inter/latin-500.css";
 import "@fontsource/inter/latin-600.css";
 import "@fontsource/inter/latin-700.css";
 import "@fontsource/barlow-condensed/latin-400.css";
 import "@fontsource/barlow-condensed/latin-500.css";
-import "@fontsource/barlow-condensed/latin-600.css";
 import "@fontsource/barlow-condensed/latin-700.css";
 import "./globals.css";
 import "@/v84/style.css";
 import "@/v84/kit-wear.css";
 import "@/v84/integration.css";
 import "@/v84/mobile.css";
-import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
+import { organizationJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Shell from "@/v84/Shell";
 import { BRAND_SEARCH_TITLE, BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
@@ -46,9 +45,7 @@ export const metadata: Metadata = {
   // framing belongs on /shop, which owns that language deliberately, and
   // sets its own description to say so. This one has to work for any page.
   description: BRAND_SEARCH_DESCRIPTION,
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
-  ),
+  metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   openGraph: {
     siteName: "GOOOL Athletics",
@@ -86,6 +83,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: consentBootstrap }} />
         <style>{'[data-goool-consent]{display:none}html[data-goool-prompt="true"] [data-goool-consent]{display:block}[data-goool-us]{display:none}html[data-goool-region="US"] [data-goool-us]{display:block}html[data-goool-region="US"] [data-goool-nonus]{display:none}'}</style>
       </head>

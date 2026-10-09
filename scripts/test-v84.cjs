@@ -198,7 +198,10 @@ async function main() {
   await check('catalog, cart, checkout, payment, fulfillment and email baseline files are unchanged', () => {
     const productionBaseline = '0e0cb30d10fd0a2874f772f5df7e31ecc3aadbe6';
     const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-    for (const file of files) {
+    // SEO output and the tracking page's metadata are covered by test-seo.cjs.
+    // Product data, tracking UI/API, payment and all other business files remain locked.
+    const seoOnly = new Set(['src/lib/seo.ts', 'src/app/track-order/layout.tsx']);
+    for (const file of files.filter(file => !seoOnly.has(file))) {
       const baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]);
       const current = fs.readFileSync(file);
       assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline.toString().replace(/\r\n/g, '\n'), file);
