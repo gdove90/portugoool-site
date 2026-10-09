@@ -13,7 +13,7 @@ export function ProductGallery({ images, index, onChange }: { images: Product["i
   if (!image) return null;
   return <div>
     <div className="gallery">
-      <div className="thumbnails" role="group" aria-label="Product images">{images.map((img, i) => <button key={img.src} className={`thumbnail${selectedIndex === i ? " active" : ""}`} aria-pressed={selectedIndex === i} aria-label={`View image ${i + 1}: ${img.alt}`} onClick={() => onChange(i)}><img src={catalogImageSrc(img.src)} alt="" loading="lazy" /></button>)}</div>
+      <div className="thumbnails" role="group" aria-label="Product images">{images.map((img, i) => <button key={img.src} className={`thumbnail${selectedIndex === i ? " active" : ""}`} aria-pressed={selectedIndex === i} aria-label={`View image ${i + 1}: ${img.alt}`} onClick={() => onChange(i)}><Image src={catalogImageSrc(img.src)} alt="" width={80} height={80} sizes="80px" quality={90} /></button>)}</div>
       <div className="gallery-main" tabIndex={0} role="region" aria-label="Product gallery" aria-roledescription="carousel"
         onKeyDown={event => {
           if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;

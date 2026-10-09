@@ -112,7 +112,9 @@ if (process.env.PHOTO_BASE_URL) (async () => {
     gallery.forEach((image, index) => {
       assert.equal(attr(thumbs[index], 'aria-label'), `View image ${index + 1}: ${image.alt}`);
       const thumbnail = nodes(thumbs[index]).find(node => node.tagName === 'img');
-      assert.equal(new URL(attr(thumbnail, 'src'), base).pathname, image.src);
+      const thumbUrl = new URL(attr(thumbnail, 'src'), base);
+      const sourceUrl = thumbUrl.searchParams.get('url') || thumbUrl.pathname;
+      assert.equal(new URL(sourceUrl, base).pathname, image.src);
     });
     const main = page.find(node => hasClass(node, 'gallery-main'));
     assert.equal(attr(nodes(main).find(node => node.tagName === 'img'), 'alt'), gallery[0].alt);
