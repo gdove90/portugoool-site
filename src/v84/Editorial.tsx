@@ -3,6 +3,8 @@ import { parseFragment, serializeOuter, type DefaultTreeAdapterMap } from "parse
 import { referenceExperience } from "./reference-experience";
 import { CollectionGrid, ProductGrid } from "./Catalog";
 import { featuredProducts } from "./catalog-data";
+import { normalizeInterfaceMarkup } from "./InterfaceIcon";
+import { mobileImageMarkup } from "./MobileImage";
 
 export default function Editorial({ route }: { route: "home" | "men" | "women" | "about" | "references" }) {
   type Node = DefaultTreeAdapterMap["childNode"];
@@ -19,5 +21,5 @@ export default function Editorial({ route }: { route: "home" | "men" | "women" |
     }
     return <div key={key} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: serializeOuter(node) }} />;
   }
-  return <>{parseFragment(referenceExperience().markup(route)).childNodes.map(render)}</>;
+  return <>{parseFragment(mobileImageMarkup(normalizeInterfaceMarkup(referenceExperience().markup(route)))).childNodes.map(render)}</>;
 }

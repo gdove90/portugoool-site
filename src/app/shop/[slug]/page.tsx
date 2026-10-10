@@ -7,6 +7,7 @@ import {
   breadcrumbJsonLd,
   jsonLdScript,
   absolute,
+  productSearchImages,
 } from "@/lib/seo";
 
 interface Props {
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: product.description,
       type: "website",
       url: `/shop/${product.slug}`,
-      images: product.images.slice(0, 1).map((i) => ({
+      images: productSearchImages(product).slice(0, 1).map((i) => ({
         url: absolute(i.src),
         alt: i.alt,
       })),
@@ -64,6 +65,7 @@ export default async function ProductPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLdScript(
           breadcrumbJsonLd([
+            { name: "Home", path: "/" },
             { name: "Shop", path: "/shop" },
             { name: product.name, path: `/shop/${product.slug}` },
           ])

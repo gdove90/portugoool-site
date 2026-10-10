@@ -1,5 +1,8 @@
 "use client";
 
+import { InterfaceIcon } from "@/v84/InterfaceIcon";
+import Link from "next/link";
+
 import { consentForServer, setKnownEmail, trackLead } from "@/lib/meta-pixel";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -67,43 +70,82 @@ export default function DiscountPopup() {
   const inputRef = useRef<HTMLInputElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const pendingOpenRef = useRef<MutationObserver | null>(null);
+  const automaticOpenRef = useRef(false);
+  const pendingTimerRef = useRef<number | null>(null);
+
+  const cancelPendingOpen = useCallback(() => {
+    pendingOpenRef.current?.disconnect();
+    pendingOpenRef.current = null;
+    if (pendingTimerRef.current !== null) window.clearTimeout(pendingTimerRef.current);
+    pendingTimerRef.current = null;
+  }, []);
+
+  const requestOpen = useCallback((automatic = false) => {
+    cancelPendingOpen();
+    if (dialogRef.current?.open) return;
+    const tryOpen = () => {
+      // Never interrupt navigation, search, the bag or another active dialog.
+      if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]')) return;
+      cancelPendingOpen();
+      if (automatic && QUIET_PATHS.some(p => window.location.pathname.startsWith(p))) return;
+      automaticOpenRef.current = automatic;
+      setOpen(true);
+    };
+    const observer = new MutationObserver(() => {
+      if (pendingTimerRef.current !== null) return;
+      // Let destination navigation settle before showing a deferred offer.
+      pendingTimerRef.current = window.setTimeout(() => {
+        pendingTimerRef.current = null;
+        tryOpen();
+      }, 150);
+    });
+    pendingOpenRef.current = observer;
+    observer.observe(document.body, {
+      childList: true, subtree: true, attributes: true,
+      attributeFilter: ["open", "aria-modal"],
+    });
+    tryOpen();
+  }, [cancelPendingOpen]);
 
   const quiet = QUIET_PATHS.some((p) => pathname?.startsWith(p));
 
   useEffect(() => {
-    if (quiet) return;
+    if (quiet) {
+      cancelPendingOpen();
+      if (automaticOpenRef.current) setOpen(false);
+      return;
+    }
     const state = readState();
     if (state?.claimed) return;
     if (state?.dismissedAt && Date.now() - state.dismissedAt < DISMISS_DAYS * 86400000) return;
-    const t = window.setTimeout(() => setOpen(true), SHOW_DELAY_MS);
-    return () => window.clearTimeout(t);
-  }, [quiet]);
+    const t = window.setTimeout(() => requestOpen(true), SHOW_DELAY_MS);
+    return () => { window.clearTimeout(t); cancelPendingOpen(); };
+  }, [quiet, requestOpen, cancelPendingOpen]);
+
+  useEffect(() => () => cancelPendingOpen(), [cancelPendingOpen]);
 
   useEffect(() => {
-    const onOpen = () => setOpen(true);
+    const onOpen = () => requestOpen();
     window.addEventListener("goool20:open", onOpen);
     return () => window.removeEventListener("goool20:open", onOpen);
-  }, []);
+  }, [requestOpen]);
 
   const close = useCallback(() => {
+    cancelPendingOpen();
     setOpen(false);
     const state = readState() ?? {};
     writeState({ ...state, dismissedAt: Date.now() });
-  }, []);
+  }, [cancelPendingOpen]);
 
   // Escape closes; body scroll locks while open; focus lands on the field.
   useEffect(() => {
     if (!open) return;
     dialogRef.current?.showModal();
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-    };
-    document.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const focusTimer = window.setTimeout(() => inputRef.current?.focus(), 50);
     return () => {
-      document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
       window.clearTimeout(focusTimer);
     };
@@ -227,13 +269,13 @@ export default function DiscountPopup() {
                   </button>
                 </div>
               )}
-              <a
+              <Link
                 href="/shop"
                 onClick={() => setOpen(false)}
                 className="mt-6 inline-block font-semibold underline underline-offset-4"
               >
-                Shop the Core Capsule →
-              </a>
+                Shop the Core Capsule <InterfaceIcon name="arrow-right" />
+              </Link>
             </div>
           ) : (
             <>

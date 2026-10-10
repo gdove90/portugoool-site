@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import type { ReactNode } from "react";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Refund Policy",
-  description:
-    "All sales are final. Defective or damaged items are replaced free.",
-  alternates: { canonical: "/refunds" },
-};
+export const metadata = pageMetadata("/refunds", "Refund Policy", "All sales are final. Defective or damaged items are replaced free.");
 
 const CONTACT_EMAIL = "hello@goool.shop";
 

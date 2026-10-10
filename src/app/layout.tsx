@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import { consentBootstrap } from "@/lib/marketing-consent";
-import "@fontsource/inter/latin-400.css";
+import "./critical-fonts.css";
 import "@fontsource/inter/latin-500.css";
 import "@fontsource/inter/latin-600.css";
 import "@fontsource/inter/latin-700.css";
 import "@fontsource/barlow-condensed/latin-400.css";
 import "@fontsource/barlow-condensed/latin-500.css";
-import "@fontsource/barlow-condensed/latin-600.css";
 import "@fontsource/barlow-condensed/latin-700.css";
 import "./globals.css";
 import "@/v84/style.css";
 import "@/v84/kit-wear.css";
 import "@/v84/integration.css";
-import { organizationJsonLd, jsonLdScript } from "@/lib/seo";
+import "@/v84/mobile.css";
+import { organizationJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Shell from "@/v84/Shell";
+import { BRAND_SEARCH_TITLE, BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 
 // Approved v84 families are self-hosted, including local/offline staging.
 
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     ? { other: { "facebook-domain-verification": process.env.META_DOMAIN_VERIFICATION! } }
     : {}),
   title: {
-    default: "GOOOL · Original Soccer Sportswear · Made for the Moment.",
+    default: BRAND_SEARCH_TITLE,
     template: "%s · GOOOL",
   },
   // The default description is the FALLBACK, inherited by any page that
@@ -43,17 +44,13 @@ export const metadata: Metadata = {
   // announced a four-piece capsule in their search snippet. The capsule
   // framing belongs on /shop, which owns that language deliberately, and
   // sets its own description to say so. This one has to work for any page.
-  description:
-    "Independent soccer sportswear. Original crests and wordmarks, never licensed. Heavyweight cotton tees, hoodies and embroidered caps, shipped to the US, Canada, the UK and Portugal.",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
-  ),
+  description: BRAND_SEARCH_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   openGraph: {
-    siteName: "GOOOL",
-    title: "GOOOL · Original Soccer Sportswear",
-    description:
-      "Independent soccer sportswear. Original crests and wordmarks, never licensed. Made for the Moment.",
+    siteName: "GOOOL Athletics",
+    title: BRAND_SEARCH_TITLE,
+    description: BRAND_SEARCH_DESCRIPTION,
     type: "website",
     url: "/",
     locale: "en_US",
@@ -86,6 +83,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: consentBootstrap }} />
         <style>{'[data-goool-consent]{display:none}html[data-goool-prompt="true"] [data-goool-consent]{display:block}[data-goool-us]{display:none}html[data-goool-region="US"] [data-goool-us]{display:block}html[data-goool-region="US"] [data-goool-nonus]{display:none}'}</style>
       </head>

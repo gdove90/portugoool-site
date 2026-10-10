@@ -1,3 +1,5 @@
+
+import { InterfaceIcon } from "@/v84/InterfaceIcon";
 import Link from "next/link";
 import { SIZE_CHARTS, sizeChartFor, inches } from "@/lib/size-charts";
 import { GUIDE } from "@/components/SizeGuideTabs";
@@ -51,7 +53,7 @@ export default function SizeGuide({ productId }: { productId: string }) {
           aria-hidden
           className="mt-0.5 shrink-0 text-ink/40 transition-transform group-open:rotate-180"
         >
-          ▾
+          <InterfaceIcon name="chevron-down" />
         </span>
       </summary>
 
@@ -113,7 +115,7 @@ export default function SizeGuide({ productId }: { productId: string }) {
           href={guideHref}
           className="mt-3 inline-block text-sm font-semibold text-ink underline underline-offset-4"
         >
-          Full size guide →
+          Full size guide <InterfaceIcon name="arrow-right" />
         </Link>
 
         {chart.note && (
