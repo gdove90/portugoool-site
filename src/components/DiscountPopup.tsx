@@ -70,6 +70,30 @@ export default function DiscountPopup() {
   const inputRef = useRef<HTMLInputElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const pendingOpenRef = useRef<MutationObserver | null>(null);
+
+  const cancelPendingOpen = useCallback(() => {
+    pendingOpenRef.current?.disconnect();
+    pendingOpenRef.current = null;
+  }, []);
+
+  const requestOpen = useCallback(() => {
+    cancelPendingOpen();
+    if (dialogRef.current?.open) return;
+    const tryOpen = () => {
+      // Never interrupt navigation, search, the bag or another active dialog.
+      if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]')) return;
+      cancelPendingOpen();
+      setOpen(true);
+    };
+    const observer = new MutationObserver(tryOpen);
+    pendingOpenRef.current = observer;
+    observer.observe(document.body, {
+      childList: true, subtree: true, attributes: true,
+      attributeFilter: ["open", "aria-modal"],
+    });
+    tryOpen();
+  }, [cancelPendingOpen]);
 
   const quiet = QUIET_PATHS.some((p) => pathname?.startsWith(p));
 
@@ -78,35 +102,33 @@ export default function DiscountPopup() {
     const state = readState();
     if (state?.claimed) return;
     if (state?.dismissedAt && Date.now() - state.dismissedAt < DISMISS_DAYS * 86400000) return;
-    const t = window.setTimeout(() => setOpen(true), SHOW_DELAY_MS);
-    return () => window.clearTimeout(t);
-  }, [quiet]);
+    const t = window.setTimeout(requestOpen, SHOW_DELAY_MS);
+    return () => { window.clearTimeout(t); cancelPendingOpen(); };
+  }, [quiet, requestOpen, cancelPendingOpen]);
+
+  useEffect(() => () => cancelPendingOpen(), [cancelPendingOpen]);
 
   useEffect(() => {
-    const onOpen = () => setOpen(true);
+    const onOpen = requestOpen;
     window.addEventListener("goool20:open", onOpen);
     return () => window.removeEventListener("goool20:open", onOpen);
-  }, []);
+  }, [requestOpen]);
 
   const close = useCallback(() => {
+    cancelPendingOpen();
     setOpen(false);
     const state = readState() ?? {};
     writeState({ ...state, dismissedAt: Date.now() });
-  }, []);
+  }, [cancelPendingOpen]);
 
   // Escape closes; body scroll locks while open; focus lands on the field.
   useEffect(() => {
     if (!open) return;
     dialogRef.current?.showModal();
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-    };
-    document.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const focusTimer = window.setTimeout(() => inputRef.current?.focus(), 50);
     return () => {
-      document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
       window.clearTimeout(focusTimer);
     };
