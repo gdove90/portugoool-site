@@ -71,22 +71,35 @@ export default function DiscountPopup() {
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const pendingOpenRef = useRef<MutationObserver | null>(null);
+  const automaticOpenRef = useRef(false);
+  const pendingTimerRef = useRef<number | null>(null);
 
   const cancelPendingOpen = useCallback(() => {
     pendingOpenRef.current?.disconnect();
     pendingOpenRef.current = null;
+    if (pendingTimerRef.current !== null) window.clearTimeout(pendingTimerRef.current);
+    pendingTimerRef.current = null;
   }, []);
 
-  const requestOpen = useCallback(() => {
+  const requestOpen = useCallback((automatic = false) => {
     cancelPendingOpen();
     if (dialogRef.current?.open) return;
     const tryOpen = () => {
       // Never interrupt navigation, search, the bag or another active dialog.
       if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]')) return;
       cancelPendingOpen();
+      if (automatic && QUIET_PATHS.some(p => window.location.pathname.startsWith(p))) return;
+      automaticOpenRef.current = automatic;
       setOpen(true);
     };
-    const observer = new MutationObserver(tryOpen);
+    const observer = new MutationObserver(() => {
+      if (pendingTimerRef.current !== null) return;
+      // Let destination navigation settle before showing a deferred offer.
+      pendingTimerRef.current = window.setTimeout(() => {
+        pendingTimerRef.current = null;
+        tryOpen();
+      }, 150);
+    });
     pendingOpenRef.current = observer;
     observer.observe(document.body, {
       childList: true, subtree: true, attributes: true,
@@ -98,18 +111,22 @@ export default function DiscountPopup() {
   const quiet = QUIET_PATHS.some((p) => pathname?.startsWith(p));
 
   useEffect(() => {
-    if (quiet) return;
+    if (quiet) {
+      cancelPendingOpen();
+      if (automaticOpenRef.current) setOpen(false);
+      return;
+    }
     const state = readState();
     if (state?.claimed) return;
     if (state?.dismissedAt && Date.now() - state.dismissedAt < DISMISS_DAYS * 86400000) return;
-    const t = window.setTimeout(requestOpen, SHOW_DELAY_MS);
+    const t = window.setTimeout(() => requestOpen(true), SHOW_DELAY_MS);
     return () => { window.clearTimeout(t); cancelPendingOpen(); };
   }, [quiet, requestOpen, cancelPendingOpen]);
 
   useEffect(() => () => cancelPendingOpen(), [cancelPendingOpen]);
 
   useEffect(() => {
-    const onOpen = requestOpen;
+    const onOpen = () => requestOpen();
     window.addEventListener("goool20:open", onOpen);
     return () => window.removeEventListener("goool20:open", onOpen);
   }, [requestOpen]);
