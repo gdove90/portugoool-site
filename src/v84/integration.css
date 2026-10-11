@@ -59,3 +59,23 @@
 /* All catalog and gallery assets use a square, full-bleed studio canvas. */
 .v84 .product-image,.v84 .category .product-image,.v84 .gallery-main,.v84 .thumbnail{aspect-ratio:1;background:#c5c5c5}
 .v84 .product-image .asset,.v84 .gallery-main>img,.v84 .thumbnail>img{object-fit:cover}
+
+/* Mobile menu: one typography scale for primary destinations and Support. */
+@media (max-width: 700px) {
+  .v84 .menu-dialog nav > a:not(.menu-reference),
+  .v84 .menu-dialog nav > a.menu-reference[href="/contact"] {
+    font-size: clamp(32px, 9.65vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    column-gap: 14px;
+    white-space: normal;
+  }
+
+  .v84 .menu-dialog nav > a.menu-reference[href="/contact"] {
+    margin-top: 0;
+  }
+
+  .v84 .menu-dialog nav > a > span {
+    flex-shrink: 0;
+  }
+}
