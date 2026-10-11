@@ -17,7 +17,6 @@ export default function CollectionComingSoon({ collection, audience, image, imag
       <Image src={image} alt={imageAlt} fill priority sizes="100vw" className={styles.photo} />
       <div className={styles.shade} aria-hidden="true" />
       <div className={styles.content}>
-        <p className={styles.eyebrow}>GOOOL ATHLETICS / {audience}</p>
         <p className={styles.status}>Coming soon</p>
         <h1 id="collection-title">
           <span className={styles.intro}>The</span>
