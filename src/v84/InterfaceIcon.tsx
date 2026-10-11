@@ -20,5 +20,6 @@ export function interfaceIconMarkup(symbol: string) {
 }
 // Only trusted template icon spans; keep copy and user-entered text intact.
 export function normalizeInterfaceMarkup(markup: string) {
-  return markup.replace(/<span(?: aria-hidden="true")?>\s*([↗→←↓▾])\s*<\/span>/g, (_, symbol: string) => interfaceIconMarkup(symbol));
+  return markup.replace(/<span class="mobile-hide-emoji-arrow" aria-hidden="true">\s*([↗→←↓▾])\s*<\/span>/g, (_, symbol: string) => `<span class="mobile-hide-emoji-arrow" aria-hidden="true">${interfaceIconMarkup(symbol)}</span>`)
+    .replace(/<span(?: aria-hidden="true")?>\s*([↗→←↓▾])\s*<\/span>/g, (_, symbol: string) => interfaceIconMarkup(symbol));
 }
