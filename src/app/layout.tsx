@@ -54,19 +54,22 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     locale: "en_US",
-    // Existing hero art, not a purpose-built share card. One of those was
-    // built and pulled on 2026-09-23 by owner decision. This makes a link
-    // pasted into Instagram or Facebook, the two channels actually in use,
-    // render with the brand on it rather than blank. 1376x768 is close to
-    // the 1.91 ratio those previews crop to.
+    // Approved GOOOL Athletics lockup on ink, built at 1200x630 for sharing.
+    // The site's campaign photography remains unchanged.
     images: [
       {
-        url: "/hero-crowd.webp",
-        width: 1376,
-        height: 768,
-        alt: "GOOOL",
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "GOOOL Athletics. Wear the Feeling.",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: BRAND_SEARCH_TITLE,
+    description: BRAND_SEARCH_DESCRIPTION,
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
