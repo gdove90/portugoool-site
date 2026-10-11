@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "What GOOOL collects, why, and what we never do with it.",
-  alternates: { canonical: "/privacy" },
-};
+export const metadata = pageMetadata("/privacy", "Privacy Policy", "What GOOOL collects, why, and what we never do with it.");
 
 const CONTACT_EMAIL = "hello@goool.shop";
 

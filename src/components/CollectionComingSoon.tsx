@@ -1,3 +1,5 @@
+
+import { InterfaceIcon } from "@/v84/InterfaceIcon";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./CollectionComingSoon.module.css";
@@ -24,8 +26,8 @@ export default function CollectionComingSoon({ collection, audience, image, imag
         </h1>
         <p className={styles.copy}>A new rhythm.</p>
         <div className={styles.actions}>
-          <a href="#footer-signup" className="btn white">Join the list <span aria-hidden="true">↗</span></a>
-          <Link href="/men" className="btn outline">Explore men <span aria-hidden="true">↗</span></Link>
+          <a href="#footer-signup" className="btn white">Join the list <InterfaceIcon name="arrow-up-right" /></a>
+          <Link href="/men" className="btn outline">Explore men <InterfaceIcon name="arrow-up-right" /></Link>
         </div>
       </div>
       <p className={styles.signature}>ROOTED IN FUTBOL. MADE FOR YOUR EVERYDAY.</p>

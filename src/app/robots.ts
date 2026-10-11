@@ -15,7 +15,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/admin", "/share-your-goals/preview/", "/success", "/cart", "/print/"],
+        // Cart must be crawlable for its explicit noindex tag to be read.
+        // The confirmation/API exclusions remain; robots is not access control.
+        disallow: ["/api/", "/admin", "/share-your-goals/preview/", "/success", "/print/"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

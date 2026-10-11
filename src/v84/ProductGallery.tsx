@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRef } from "react";
+import { InterfaceIcon } from "./InterfaceIcon";
 import { catalogImageSrc } from "@/lib/product-image";
 import type { Product } from "@/lib/types";
 
@@ -12,7 +13,7 @@ export function ProductGallery({ images, index, onChange }: { images: Product["i
   if (!image) return null;
   return <div>
     <div className="gallery">
-      <div className="thumbnails" role="group" aria-label="Product images">{images.map((img, i) => <button key={img.src} className={`thumbnail${selectedIndex === i ? " active" : ""}`} aria-pressed={selectedIndex === i} aria-label={`View image ${i + 1}: ${img.alt}`} onClick={() => onChange(i)}><img src={catalogImageSrc(img.src)} alt="" loading="lazy" /></button>)}</div>
+      <div className="thumbnails" role="group" aria-label="Product images">{images.map((img, i) => <button key={img.src} className={`thumbnail${selectedIndex === i ? " active" : ""}`} aria-pressed={selectedIndex === i} aria-label={`View image ${i + 1}: ${img.alt}`} onClick={() => onChange(i)}><Image src={catalogImageSrc(img.src)} alt="" width={80} height={80} sizes="80px" quality={90} /></button>)}</div>
       <div className="gallery-main" tabIndex={0} role="region" aria-label="Product gallery" aria-roledescription="carousel"
         onKeyDown={event => {
           if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
@@ -29,7 +30,8 @@ export function ProductGallery({ images, index, onChange }: { images: Product["i
           const dx = end.clientX - point.x, dy = end.clientY - point.y;
           if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) move(dx < 0 ? 1 : -1);
         }}>
-        <Image src={catalogImageSrc(image.src)} alt={image.alt} fill priority={selectedIndex === 0} sizes="(max-width:700px) 90vw, 52vw" quality={90} />
+        <Image src={catalogImageSrc(image.src)} alt={image.alt} fill priority={selectedIndex === 0} sizes="(max-width:1023px) 92vw, 52vw" quality={90} />
+        <div className="gallery-controls"><button type="button" aria-label="Previous product image" onClick={() => move(-1)}><InterfaceIcon name="chevron-left" /></button><button type="button" aria-label="Next product image" onClick={() => move(1)}><InterfaceIcon name="chevron-right" /></button></div>
         <span className="gallery-counter" aria-live="polite" aria-atomic="true">{selectedIndex + 1} / {images.length}</span>
       </div>
     </div>

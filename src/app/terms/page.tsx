@@ -1,11 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "The terms that govern purchases and use of goool.shop.",
-  alternates: { canonical: "/terms" },
-};
+export const metadata = pageMetadata("/terms", "Terms of Service", "The terms that govern purchases and use of goool.shop.");
 
 const CONTACT_EMAIL = "hello@goool.shop";
 

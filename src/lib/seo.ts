@@ -1,37 +1,18 @@
-import { Product } from "./types";
+import { hasPrice, isAvailableForSale, isSoldOut, type Product, type Size } from "./types";
+import { resolveApliiqSku } from "./fulfillment";
+import { shippingCentsFor } from "./shipping";
+import { defaultVariant } from "@/v84/catalog-data";
+import { productGalleryImages } from "@/v84/product-gallery-images";
+import { BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 
-// ─────────────────────────────────────────────────────────────
-// Search metadata. Added 2026-09-23 after an audit found the store had
-// no robots.txt, no sitemap, no canonical tags and no structured data,
-// which meant Google could not render a price, an availability or a
-// product card for any of the ten products on sale.
-//
-// EVERY value emitted from here has to be true, on the same standard the
-// visible copy is held to. Structured data is a claim to a search engine
-// rather than to a reader, and a wrong one is worse than none: it is the
-// thing that gets a merchant delisted.
-//
-// Specifically checked when this was written:
-//   price          products.ts priceCents / 100
-//   currency       "usd", from the Stripe session in api/checkout
-//   availability   InStock, meaning orderable. NOT MadeToOrder, which is
-//                  accurate but which search engines surface as text, and
-//                  CLAUDE.md line 148 forbids that language in front of a
-//                  customer (owner decision, 2026-07-23).
-//   returns        MerchantReturnNotPermitted. The FAQ and /terms both say
-//                  all sales are final, with a 14 day replacement only for
-//                  a defective, damaged or wrong item. A return window
-//                  would be a nicer claim and a false one.
-//   shipping       US, CA, GB, PT. Exactly the allowed_countries list in
-//                  api/checkout/route.ts. This is the claim that was live
-//                  and false as "Worldwide Shipping" until this morning.
-// ─────────────────────────────────────────────────────────────
-
+// Search claims are derived from the approved catalog, displayed galleries,
+// fulfillment mapping and checkout policies. Missing identifiers or delivery
+// estimates must stay absent. Availability follows the existing sale gates.
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://goool.shop";
 
 export const LEGAL_NAME = "GOOOL Athletics LLC";
-export const BRAND_NAME = "GOOOL";
+export const BRAND_NAME = "GOOOL Athletics";
 export const CONTACT_EMAIL = "hello@goool.shop";
 
 /** Exactly the countries Stripe Checkout will accept an address in. */
@@ -52,10 +33,10 @@ export function organizationJsonLd() {
         name: BRAND_NAME,
         legalName: LEGAL_NAME,
         url: SITE_URL,
-        logo: absolute("/brand/goool-athletics-lockup-white.png"),
+        // Existing approved dark wordmark stays legible on Google's light background.
+        logo: absolute("/brand/goool-wordmark-ink.png"),
         email: CONTACT_EMAIL,
-        description:
-          "Independent soccer sportswear. Original crests and wordmarks, never licensed.",
+        description: BRAND_SEARCH_DESCRIPTION,
         // No sameAs. The brand has no account it actually posts from yet,
         // and pointing at a profile that does not exist is the kind of
         // claim this file exists to avoid.
@@ -65,50 +46,92 @@ export function organizationJsonLd() {
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
         name: BRAND_NAME,
+        alternateName: "GOOOL",
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
     ],
   };
 }
 
-/** One product, with its real price, availability and terms. */
-export function productJsonLd(product: Product) {
-  const url = `${SITE_URL}/shop/${product.slug}`;
-  const images = product.images.map((i) => absolute(i.src));
+/** Use the same selectable gallery and default color as the storefront. */
+export function productSearchImages(product: Product) {
+  return productGalleryImages(product, defaultVariant(product)?.index ?? 0);
+}
 
+function offer(product: Product, url: string, comingSoon: boolean) {
+  if (!hasPrice(product)) return undefined;
   return {
-    "@context": "https://schema.org",
+    "@type": "Offer",
+    url,
+    priceCurrency: "USD",
+    price: (product.priceCents / 100).toFixed(2),
+    availability: `https://schema.org/${product.isActive && isAvailableForSale(product) && !comingSoon && !isSoldOut(product) ? "InStock" : "OutOfStock"}`,
+    itemCondition: "https://schema.org/NewCondition",
+    seller: { "@id": `${SITE_URL}/#organization` },
+    shippingDetails: SHIPPING_COUNTRIES.map(country => ({
+      "@type": "OfferShippingDetails",
+      shippingDestination: { "@type": "DefinedRegion", addressCountry: country },
+      // The advertised shipping cost for one undiscounted item. Basket
+      // combinations and discounts are still priced only by checkout.
+      shippingRate: { "@type": "MonetaryAmount", value: (shippingCentsFor(product.priceCents) / 100).toFixed(2), currency: "USD" },
+    })),
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: [...SHIPPING_COUNTRIES],
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+      merchantReturnLink: absolute("/refunds"),
+    },
+  };
+}
+
+function variantJsonLd(product: Product, index: number, size: Size, canonical: string, grouped: boolean) {
+  const color = product.colorVariants?.[index]?.name || product.color;
+  const url = new URL(canonical);
+  if (grouped) {
+    url.searchParams.set("color", color);
+    url.searchParams.set("size", size);
+  }
+  const sku = resolveApliiqSku(product.id, color, size)?.sku;
+  const offers = offer(product, url.toString(), Boolean(product.colorVariants?.[index]?.comingSoon));
+  return {
     "@type": "Product",
     "@id": `${url}#product`,
+    url: url.toString(),
     name: product.name,
     description: product.description,
-    image: images,
-    sku: product.slug,
+    image: productGalleryImages(product, index).map(image => absolute(image.src)),
+    ...(sku ? { sku } : {}),
     material: product.fabric,
     brand: { "@type": "Brand", name: BRAND_NAME },
-    ...(product.color ? { color: product.color } : {}),
-    offers: {
-      "@type": "Offer",
-      url,
-      priceCurrency: "USD",
-      price: (product.priceCents / 100).toFixed(2),
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@id": `${SITE_URL}/#organization` },
-      shippingDetails: SHIPPING_COUNTRIES.map((country) => ({
-        "@type": "OfferShippingDetails",
-        shippingDestination: {
-          "@type": "DefinedRegion",
-          addressCountry: country,
-        },
-      })),
-      hasMerchantReturnPolicy: {
-        "@type": "MerchantReturnPolicy",
-        applicableCountry: [...SHIPPING_COUNTRIES],
-        returnPolicyCategory:
-          "https://schema.org/MerchantReturnNotPermitted",
-      },
-    },
+    ...(color ? { color } : {}),
+    size: size === "OS" ? "One size" : size,
+    ...(offers ? { offers } : {}),
+  };
+}
+
+/** Exact existing fulfillment SKUs, selectable sizes/colors and approved imagery.
+ * No GTIN, review, preorder or delivery-time claims are inferred. */
+export function productJsonLd(product: Product) {
+  const url = `${SITE_URL}/shop/${product.slug}`;
+  const colors = product.colorVariants?.length || 1;
+  const grouped = colors > 1 || product.sizes.length > 1;
+  if (!grouped) return {
+    "@context": "https://schema.org",
+    ...variantJsonLd(product, defaultVariant(product)?.index ?? 0, product.sizes[0], url, false),
+  };
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    "@id": `${url}#product-group`,
+    url,
+    name: product.name,
+    description: product.description,
+    image: productSearchImages(product).map(image => absolute(image.src)),
+    material: product.fabric,
+    brand: { "@type": "Brand", name: BRAND_NAME },
+    productGroupID: product.id,
+    variesBy: [ ...(colors > 1 ? ["https://schema.org/color"] : []), ...(product.sizes.length > 1 ? ["https://schema.org/size"] : []) ],
+    hasVariant: Array.from({ length: colors }, (_, index) => product.sizes.map(size => variantJsonLd(product, index, size, url, true))).flat(),
   };
 }
 

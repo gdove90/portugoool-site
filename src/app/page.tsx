@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
 import Editorial from "@/v84/Editorial";
-export const metadata: Metadata = { title: "GOOOL Athletics | Wear the Feeling", description: "Heavyweight cotton tees, hoodies and embroidered caps from $32. Original soccer sportswear, never licensed. Ships to the US, Canada, the UK and Portugal.", alternates: { canonical: "/" } };
+import { BRAND_SEARCH_TITLE, BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
+export const metadata: Metadata = { title: { absolute: BRAND_SEARCH_TITLE }, description: BRAND_SEARCH_DESCRIPTION, alternates: { canonical: "/" } };
 export default function Home() { return <Editorial route="home" />; }
