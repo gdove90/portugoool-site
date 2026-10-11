@@ -7,6 +7,8 @@
 .v84 [hidden] { display:none!important; }
 .v84 .sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 .v84 :is(button,a,input,select,textarea,summary):focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+/* The outline variant shares its name with Tailwind's outline utility. */
+.v84 .btn.outline:not(:focus-visible) { outline-style:none; }
 .v84 .asset { object-fit:contain; }
 .v84 .cart-line>img { width:80px; height:100px; object-fit:contain; }
 .v84 .search-result>img { width:70px; height:85px; object-fit:contain; }
