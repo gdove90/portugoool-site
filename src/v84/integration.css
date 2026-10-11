@@ -7,6 +7,8 @@
 .v84 [hidden] { display:none!important; }
 .v84 .sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 .v84 :is(button,a,input,select,textarea,summary):focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+/* The outline variant shares its name with Tailwind's outline utility. */
+.v84 .btn.outline:not(:focus-visible) { outline-style:none; }
 .v84 .asset { object-fit:contain; }
 .v84 .cart-line>img { width:80px; height:100px; object-fit:contain; }
 .v84 .search-result>img { width:70px; height:85px; object-fit:contain; }
@@ -61,13 +63,13 @@
 .v84 .product-image .asset,.v84 .gallery-main>img,.v84 .thumbnail>img{object-fit:cover}
 
 /* Mobile menu: one typography scale for primary destinations and Support. */
-@media (max-width: 700px) {
+@media (max-width: 1023px) {
   .v84 .menu-dialog nav > a:not(.menu-reference),
   .v84 .menu-dialog nav > a.menu-reference[href="/contact"] {
-    font-size: clamp(32px, 9.65vw, 40px);
-    line-height: 1.12;
-    letter-spacing: -0.04em;
-    column-gap: 14px;
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: 0;
+    column-gap: 16px;
     white-space: normal;
   }
 
