@@ -6,5 +6,5 @@ export function Strike() {
 }
 
 export function Brand({ footer = false }: { footer?: boolean }) {
-  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOAL Athletics home"><span className="brand-strike"><Strike /></span><Image src="/brand-goal/goal-athletics-wordmark-reference-white.svg" alt="GOAL Athletics" width={427} height={104} unoptimized className="goal-athletics-wordmark" /></Link>;
+  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOAL Athletics home"><span className="brand-strike"><Strike /></span><span className="goal-lockup-divider" aria-hidden="true" /><Image src="/brand-goal/goal-athletics-wordmark-reference-white.svg" alt="GOAL Athletics" width={427} height={104} unoptimized className="goal-athletics-wordmark" /></Link>;
 }
