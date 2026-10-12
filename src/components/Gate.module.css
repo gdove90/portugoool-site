@@ -79,6 +79,7 @@
 }
 .brand {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 17px;
   font-size: 11px;
@@ -92,6 +93,8 @@
 
 .access {
   display: inline-flex;
+  flex-shrink: 0;
+  white-space: nowrap;
   align-items: center;
   gap: 10px;
   min-height: 44px;
@@ -294,8 +297,8 @@
   .access { padding: 0 4px; }
 }
 
-/* Owner-approved compact label keeps both SVGs at 34px even at 320px. */
-@media (max-width: 359.98px) {
+/* Keep the compact label clear of the artwork on narrow phones and at zoom. */
+@media (max-width: 430px) {
   .top { padding-inline: 12px; }
   .access { min-width: 44px; justify-content: center; gap: 0; }
   .access > svg { display: none; }
