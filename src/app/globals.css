@@ -66,3 +66,21 @@ body {
 @media (max-width: 400px) {
   :where(.v84) #header .brand .goal-athletics-wordmark { width: 106px; max-width: 35vw; }
 }
+
+/* REQUIRED: preserve the vertical divider between V1.2 strike and GOAL ATHLETICS wordmark.
+   The divider is part of the approved horizontal lockup, never optional. */
+:where(.v84) .brand .goal-lockup-divider {
+  align-self: center;
+  width: 1px;
+  height: 30px;
+  flex: 0 0 1px;
+  background-color: currentColor;
+  opacity: .67;
+}
+@media (max-width: 400px) {
+  :where(.v84) #header .brand { gap: 7px; }
+  :where(.v84) #header .brand-strike,
+  :where(.v84) #header .brand-strike .strike { width: 24px; }
+  :where(.v84) #header .brand .goal-athletics-wordmark { width: clamp(84px, 28vw, 100px); max-width: 30vw; }
+  :where(.v84) #header .brand .goal-lockup-divider { height: 23px; }
+}
