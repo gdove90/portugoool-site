@@ -24,11 +24,11 @@ export default function Header() {
           side columns keep the nav centered even though the logo and
           action group widths differ. */}
       <div className="grid h-16 w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-4 sm:px-6 md:h-20 lg:px-12">
-        {/* GOOOL ATHLETICS lockup: wordmark, white-red-white dashes, ATHLETICS */}
-        <Link href="/" aria-label="GOOOL Athletics home" className="flex items-center justify-self-start">
+        {/* GOAL ATHLETICS lockup: wordmark, white-red-white dashes, ATHLETICS */}
+        <Link href="/" aria-label="GOAL Athletics home" className="flex items-center justify-self-start">
           <Image
-            src="/brand/goool-athletics-lockup-white.png"
-            alt="GOOOL Athletics"
+            src="/brand/goal-athletics-lockup-white.png"
+            alt="GOAL Athletics"
             width={720}
             height={272}
             priority
@@ -58,7 +58,7 @@ export default function Header() {
         </nav>
 
         <div className="col-start-3 flex items-center gap-3 justify-self-end md:gap-5">
-          {/* Reopens the GOOOL20 popup for anyone who closed it. A link,
+          {/* Reopens the GOAL20 popup for anyone who closed it. A link,
               not a "Sign up" button: the store has no accounts and the
               word would promise one. */}
           <button

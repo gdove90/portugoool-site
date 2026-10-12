@@ -138,7 +138,7 @@
 @media(max-width:700px){:where(.v84) .editorial-brand .brand-lockup b{display:inline;font-size:inherit;letter-spacing:inherit;margin:0}:where(.v84) .copyright-lockup .brand b{display:inline;font-size:inherit;letter-spacing:inherit;margin:0}:where(.v84) .copyright-lockup .brand{font-size:7px}}
 @media(max-width:700px){:where(.v84) .footer-bottom .copyright-lockup span{width:auto}:where(.v84) .footer-bottom .copyright-lockup .brand-strike{width:20px}}
 
-/* Revision 12: What's your GOOOL? Community campaign / coming-soon concept. */
+/* Revision 12: What's your GOAL? Community campaign / coming-soon concept. */
 :where(.v84) #header nav{gap:clamp(18px,2.4vw,34px);white-space:nowrap}
 :where(.v84) .goal-hero{height:min(800px,88svh);min-height:650px}
 :where(.v84) .goal-hero .hero-photo{object-position:70% center}

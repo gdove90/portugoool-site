@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { pageMetadata } from "@/lib/page-metadata";
 
 export const metadata: Metadata = {
-  ...pageMetadata("/success", "Order Confirmation", "Your GOOOL Athletics checkout confirmation."),
+  ...pageMetadata("/success", "Order Confirmation", "Your GOAL Athletics checkout confirmation."),
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 };
 

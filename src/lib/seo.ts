@@ -11,8 +11,8 @@ import { BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://goool.shop";
 
-export const LEGAL_NAME = "GOOOL Athletics LLC";
-export const BRAND_NAME = "GOOOL Athletics";
+export const LEGAL_NAME = "GOAL Athletics LLC";
+export const BRAND_NAME = "GOAL Athletics";
 export const CONTACT_EMAIL = "hello@goool.shop";
 
 /** Exactly the countries Stripe Checkout will accept an address in. */
@@ -34,7 +34,7 @@ export function organizationJsonLd() {
         legalName: LEGAL_NAME,
         url: SITE_URL,
         // Existing approved dark wordmark stays legible on Google's light background.
-        logo: absolute("/brand/goool-wordmark-ink.png"),
+        logo: absolute("/brand/goal-wordmark-ink.png"),
         email: CONTACT_EMAIL,
         description: BRAND_SEARCH_DESCRIPTION,
         // No sameAs. The brand has no account it actually posts from yet,
@@ -46,7 +46,7 @@ export function organizationJsonLd() {
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
         name: BRAND_NAME,
-        alternateName: "GOOOL",
+        alternateName: "GOAL",
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
     ],

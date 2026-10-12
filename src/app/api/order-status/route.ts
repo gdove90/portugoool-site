@@ -3,7 +3,7 @@ import Stripe from "stripe";
 import { metaEventId } from "@/lib/meta-events";
 import { getProductById } from "@/lib/products";
 import { getOrdersStore } from "@/lib/orders-store";
-import { orderNumber } from "@/lib/fulfillment-submit";
+import { orderReference } from "@/lib/order-reference";
 
 // ─────────────────────────────────────────────────────────────
 // Server-side verification for /success. The browser only supplies the
@@ -63,7 +63,7 @@ export async function GET(req: NextRequest) {
       if (order) {
         recorded = true;
         purchaseEligible = order.status === "paid" && order.livemode === session.livemode && trackingMode;
-        reference = orderNumber(order.id);
+        reference = orderReference(order.id);
         productionConfirmed =
           order.submission_status === "accepted" ||
           order.fulfillment_status === "in_production" ||

@@ -9,7 +9,7 @@ import { EMAIL_RE, addToResendAudience, markEmailSent, recordSignup, unsubscribe
 
 // Popup sign-up (owner decision 2026-09-29): the address is written to
 // newsletter_signups (source popup) and mirrored to the Resend Audience,
-// the GOOOL20 code is issued exactly as before, and Email 1 of the
+// the GOAL20 code is issued exactly as before, and Email 1 of the
 // welcome sequence is queued in the durable store and pushed once right
 // away. A provider failure never fails the sign-up: the row and the
 // queued delivery stay, and the minute worker retries. Mailchimp is no
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
       sourceUrl: "https://goool.shop/",
       consent,
       livemode: live,
-      customData: { content_name: "GOOOL20 sign-up" },
+      customData: { content_name: "GOAL20 sign-up" },
     });
     } catch { console.error("[meta] Lead tracking failed; signup remains successful"); }
     return NextResponse.json({ ok: true, subscribed: true, code: issued.code });

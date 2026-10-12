@@ -57,6 +57,7 @@ export function numericLineId(orderId: string, index: number): number {
 
 /** Customer-facing / reconciliation order number, stable per order. */
 export function orderNumber(orderId: string): string {
+  // Stable supplier identifier: changing it would break reconciliation of prior orders.
   return `GOOOL-${orderId.replace(/-/g, "").slice(0, 8).toUpperCase()}`;
 }
 
@@ -70,7 +71,7 @@ export function buildApliiqPayload(
     return { error: "Order has no complete shipping address." };
   }
   const fullName = (order.shipping_name ?? "").trim();
-  const firstName = fullName.split(/\s+/)[0] || "GOOOL";
+  const firstName = fullName.split(/\s+/)[0] || "GOAL";
   const lastName = fullName.split(/\s+/).slice(1).join(" ") || "Customer";
 
   const shipping: ApliiqShippingAddress = {

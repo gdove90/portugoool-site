@@ -182,7 +182,7 @@ function buildOrderRows(
 }
 
 
-// GOOOL20 ledger: when a paid session carried a promotion code, record who
+// GOAL20 ledger: when a paid session carried a promotion code, record who
 // used it (name + address key) so one-per-person can be checked after
 // the fact. Best effort, never blocks the order. The webhook payload
 // carries `discounts` with the promotion code id on recent API versions;
@@ -377,7 +377,7 @@ export async function POST(req: NextRequest) {
     // through /api/fulfillment-ops (reconcile / retry / release).
     let submission: string | undefined;
     if (paid) {
-      // GOOOL20 ledger, before submission so a supplier error never
+      // GOAL20 ledger, before submission so a supplier error never
       // hides who used a code. Best effort inside.
       await recordDiscountRedemption(stripe, session);
       try {

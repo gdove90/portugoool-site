@@ -12,7 +12,7 @@ async function main() {
   assert.equal(admin.status, 307); assert.equal(admin.headers.get('location'), '/admin/sign-in'); passed++;
   const crossOrigin = await fetch(base + '/api/intake/start', { method: 'POST', headers: { Origin: 'https://other.example.test', 'Content-Type': 'application/json' }, body: '{}' });
   assert.equal(crossOrigin.status, 403); passed++;
-  const data = { kind: 'story', files: [], payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Test safely', story: 'A local test fixture, never sent to a live service.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-04-live-1' } };
+  const data = { kind: 'story', files: [], payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Test safely', story: 'A local test fixture, never sent to a live service.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-12-brand-2' } };
   const disabled = await fetch(base + '/api/intake/start', { method: 'POST', headers: { Origin: base, 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
   assert.equal(disabled.status, 503); assert.match((await disabled.json()).error, /not ready/); passed++;
   console.log(`${passed} local HTTP checks passed: owner-only endpoints reject forged headers, admin redirects, cross-origin writes fail, and unconfigured intake fails closed.`);

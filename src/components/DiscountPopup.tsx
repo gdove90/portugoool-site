@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 import { Brand } from "@/v84/Brand";
 
 // ─────────────────────────────────────────────────────────────
-// GOOOL20 signup popup (owner decision, 2026-09-25).
+// GOAL20 signup popup (owner decision, 2026-09-25).
 //
 // One component, two layouts from the approved designs in
 // goool advertising/goool20 discount/goool-advertising/email-popup:
@@ -20,7 +20,7 @@ import { Brand } from "@/v84/Brand";
 //
 // The visitor's email goes to the Resend signup flow used by the footer
 // signup with the extra tag "goool20", then api/discount hands back that
-// person's OWN single-use code (GOOOL20-XXXX, one per email, one
+// person's OWN single-use code (GOAL20-XXXX, one per email, one
 // redemption, src/lib/discount.ts) and it is shown on screen so the offer
 // works before any welcome email lands. Stripe enforces the discount at
 // checkout; Checkout has allow_promotion_codes on so the field is there.
@@ -334,7 +334,7 @@ export default function DiscountPopup() {
                 No thanks, I&apos;ll pay full price
               </button>
               <p className="mt-4 text-[11px] leading-snug text-paper/45 sm:text-xs sm:text-paper/50">
-                One code per customer. By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email.
+                One code per customer. By joining, you agree to receive GOAL Athletics LLC marketing emails. Unsubscribe with one click from any email.
               </p>
             </>
           )}

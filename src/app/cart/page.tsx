@@ -15,7 +15,7 @@ export default function CartPage() {
   const [checkingOut, setCheckingOut] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // GOOOL20 lives here now, not in Stripe's checkout page. The code is
+  // GOAL20 lives here now, not in Stripe's checkout page. The code is
   // checked by /api/checkout (preview mode) and the discount it returns
   // is what shipping is decided on, so the total shown is the total
   // Stripe will charge. The same call re-runs whenever the cart changes
@@ -345,7 +345,7 @@ export default function CartPage() {
                       void applyCode();
                     }
                   }}
-                  placeholder="GOOOL20-XXXX"
+                  placeholder="GOAL20-XXXX"
                   className="min-w-0 flex-1 rounded-lg border border-ink/20 bg-paper px-3 py-2.5 text-base uppercase focus:border-ink focus:outline-none"
                 />
                 <button

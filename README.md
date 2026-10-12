@@ -1,11 +1,11 @@
-# PORTUGOOOL
+# GOAL Athletics
 
 **The sound of the goal. The shirt for the moment.**
 
-Ecommerce storefront for PORTUGOOOL — a Portuguese-inspired soccer fan
+Ecommerce storefront for GOAL Athletics — a Portuguese-inspired soccer fan
 apparel brand. Premium game-day shirts released in limited drops.
 
-> **Independence note:** PORTUGOOOL is an independent fan brand. All designs
+> **Independence note:** GOAL Athletics is an independent fan brand. All designs
 > and marks are original. Nothing here uses or references official federation,
 > club, league, player, or sportswear-company intellectual property.
 
@@ -67,7 +67,7 @@ RLS is on everywhere; only active products are publicly readable.
 
 **TODO before launch** (marked in the route file):
 
-1. Create a dedicated Stripe account/keys for PORTUGOOOL.
+1. Create a dedicated Stripe account/keys for GOAL Athletics.
 2. Add a `checkout.session.completed` webhook that inserts `orders` +
    `order_items` rows and triggers the Resend confirmation email.
 3. Point product reads at Supabase instead of the mock catalog.

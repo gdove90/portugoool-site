@@ -46,8 +46,8 @@ check('public sitemap excludes private, retired and gated internal routes withou
 });
 check('canonical and social metadata are page-specific and JSON-LD escapes embedded markup',()=>{
  const m=load(root+'/src/lib/page-metadata.ts').pageMetadata('/about','Our World','Approved description');
- assert.equal(m.alternates.canonical,'/about');assert.equal(m.openGraph.url,'/about');assert.equal(m.twitter.description,'Approved description');assert.equal(m.openGraph.title,'Our World · GOOOL');
+ assert.equal(m.alternates.canonical,'/about');assert.equal(m.openGraph.url,'/about');assert.equal(m.twitter.description,'Approved description');assert.equal(m.openGraph.title,'Our World · GOAL');
  assert.ok(!seo.jsonLdScript({name:'</script>'}).__html.includes('<'));
- const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOOOL Athletics');assert.equal(org[0].logo,'https://goool.shop/brand/goool-wordmark-ink.png');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
+ const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOAL Athletics');assert.equal(org[0].logo,'https://goool.shop/brand/goal-wordmark-ink.png');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
 });
 console.log(`${passed} SEO checks passed; ${products.length} products, ${count} exact fulfillment variants.`);

@@ -15,7 +15,7 @@ export type EmailResult =
 export function emailEnabled(): boolean { return Boolean(process.env.RESEND_API_KEY); }
 export function emailProvider(): "resend" | "disabled" { return emailEnabled() ? "resend" : "disabled"; }
 // Sender name is the company (owner decision 2026-09-29).
-export function emailFrom(): string { return "Goool Athletics <hello@goool.shop>"; }
+export function emailFrom(): string { return "GOAL Athletics <hello@goool.shop>"; }
 
 export async function sendEmail(msg: EmailMessage, idempotencyKey: string): Promise<EmailResult> {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(msg.to) || msg.to.length > 254)

@@ -11,9 +11,9 @@ const vm = require('node:vm');
 let passed = 0;
 async function check(name, run) { await run(); passed++; console.log(`PASS ${name}`); }
 const rejects = fn => assert.throws(fn, e => e.status === 400);
-const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-04-live-1' } });
+const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-12-brand-2' } });
 const kit = () => ({ kind: 'kit', payload: { name: 'Local test', email: 'fixture@example.test', design: 'original', color: 'Black', quantity: 10, number: 10, numberStyle: 'goool', rights: true } });
-const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-04-live-1' } });
+const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-12-brand-2' } });
 
 async function main() {
   const catalogExports = {};
@@ -195,18 +195,30 @@ async function main() {
     });
   } finally { await db.close(); }
 
-  await check('catalog, cart, checkout, payment, fulfillment and email baseline files are unchanged', () => {
-    const productionBaseline = '0e0cb30d10fd0a2874f772f5df7e31ecc3aadbe6';
+  await check('business files retain their production behavior through the brand wording change', () => {
+    const productionBaseline = '4355c4e';
     const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-    // SEO output and the tracking page's metadata are covered by test-seo.cjs.
-    // Product data, tracking UI/API, payment and all other business files remain locked.
-    const seoOnly = new Set(['src/lib/seo.ts', 'src/app/track-order/layout.tsx']);
+    // Metadata is covered by test-seo; reference/code compatibility by
+    // test-goal-rebrand and test-launch-backend. Everything else permits only
+    // the explicit wording, wordmark-path and agreement-version substitutions.
+    const seoOnly = new Set(['src/lib/seo.ts', 'src/app/track-order/layout.tsx',
+      'src/app/api/track-order/route.ts', 'src/app/api/order-status/route.ts',
+      'src/lib/discount.ts', 'src/lib/emails/order-confirmation.ts']);
+    const normalizeBrand = text => text.replace(/\r\n/g, '\n')
+      .replace(/\bGOOOL(S|20)?\b/g, (_, suffix) => 'GOAL' + (suffix || ''))
+      .replace(/\bGoool\b/g, 'GOAL')
+      .replaceAll('/brand/goool-athletics-lockup-white.png', '/brand/goal-athletics-lockup-white.png')
+      .replaceAll('/brand/goool-wordmark-tight-white.png', '/brand/goal-wordmark-white.png')
+      .replaceAll('/brand/goool-wordmark-white.png', '/brand/goal-wordmark-white.png')
+      .replace(/(SYG|WYG)-2026-10-04-live-1/g, '$1-2026-10-12-brand-2')
+      .replaceAll('KIT-2026-10-04-1', 'KIT-2026-10-12-brand-2')
+      .replace('  // Stable supplier identifier: changing it would break reconciliation of prior orders.\n', '');
     for (const file of files.filter(file => !seoOnly.has(file))) {
       const baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]);
       const current = fs.readFileSync(file);
-      assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline.toString().replace(/\r\n/g, '\n'), file);
+      assert.equal(normalizeBrand(current.toString()), normalizeBrand(baseline.toString()), file);
     }
-    console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; SEO-only files have separate checks.`);
+    console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; metadata and reference compatibility have separate checks.`);
   });
   await check('all approved visual assets are byte-identical', () => {
     const source = path.resolve('../output/v84-discovery-2026-10-05/reference-audit/public/assets');

@@ -1,4 +1,4 @@
-// Shared domain types for GOOOL.
+// Shared domain types for GOAL.
 // These mirror the Supabase `products` schema so the mock data in
 // `products.ts` can be swapped for a real DB fetch with no shape changes.
 
@@ -42,7 +42,7 @@ export interface ColorVariant {
   supplierColor: string;
   /** Website swatch hex — presentation only, never sent to the supplier. */
   hex: string;
-  /** SKU fragment, e.g. "CREAM" → GOOOL-OVAL-TEE-CREAM-M. */
+  /** SKU fragment, e.g. "CREAM" → GOAL-OVAL-TEE-CREAM-M. */
   skuFragment: string;
   /** Gallery for this colorway (front first — used as the card image). */
   images: ProductImage[];

@@ -56,8 +56,8 @@ export default function Footer() {
         <div className="flex flex-col gap-11 md:flex-row md:justify-between md:gap-16">
           <div className="flex flex-col gap-3 md:max-w-[460px]">
             <Image
-              src="/brand/goool-athletics-lockup-white.png"
-              alt="GOOOL Athletics"
+              src="/brand/goal-athletics-lockup-white.png"
+              alt="GOAL Athletics"
               width={159}
               height={60}
               className="h-[60px] w-auto self-start"
@@ -124,10 +124,10 @@ export default function Footer() {
 
         <div className="flex flex-col gap-1.5 text-[13px] leading-relaxed text-paper/65">
           <p className="whitespace-nowrap">
-            © {new Date().getFullYear()} GOOOL Athletics LLC. All rights reserved.
+            © {new Date().getFullYear()} GOAL Athletics LLC. All rights reserved.
           </p>
           <p>
-            GOOOL Athletics LLC is an independent brand. Not affiliated with,
+            GOAL Athletics LLC is an independent brand. Not affiliated with,
             endorsed by, or connected to any soccer federation, club, league,
             or governing body. All designs and marks are original.
           </p>
