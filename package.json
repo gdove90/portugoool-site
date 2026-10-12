@@ -13,7 +13,9 @@
     "test:v84:upload": "node scripts/test-v84-upload.cjs",
     "test:v84:maintenance": "node scripts/test-v84-maintenance.cjs",
     "test:v84:release": "node scripts/test-v84-release.cjs",
-    "test:v84:http": "node scripts/smoke-v84.cjs"
+    "test:v84:http": "node scripts/smoke-v84.cjs",
+    "prebuild": "node scripts/test-goal-brand-assets.cjs",
+    "test:brand": "node scripts/test-goal-brand-assets.cjs"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "5.3.0",
