@@ -2,6 +2,8 @@
 
 import { InterfaceIcon } from "@/v84/InterfaceIcon";
 
+import { MAILING_STREET, MAILING_CITY_LINE } from "@/lib/business-address";
+
 import { useState } from "react";
 import Link from "next/link";
 
@@ -31,6 +33,7 @@ export default function ContactPage() {
       <p><a className="text-link nav-underline contact-email" href="mailto:hello@goool.shop">hello@goool.shop</a></p>
       <p><Link className="text-link nav-underline" href="/shipping-returns">Shipping &amp; returns</Link></p>
       <p><Link className="text-link nav-underline" href="/size-guide">Fit guide</Link></p>
+      <address className="not-italic">Mailing address<br />{MAILING_STREET}<br />{MAILING_CITY_LINE}</address>
       <div className="contact-fields">
         <div>
           <label htmlFor="contact-name" className="mb-1 block text-sm font-medium text-ink">
