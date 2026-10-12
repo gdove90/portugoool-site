@@ -1,6 +1,8 @@
+import buildContext from "../generated/build-context.json";
 // Scheduled functions run only on published deploys. The authenticated API owns delivery.
 declare const Netlify: { env: { get(name: string): string | undefined } };
 export default async () => {
+  if (!buildContext.operational) return;
   const key = Netlify.env.get("FULFILLMENT_OPS_KEY");
   if (!key) throw new Error("Email worker ops key is missing.");
   const response = await fetch("https://goool.shop/api/fulfillment-ops", {

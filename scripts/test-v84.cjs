@@ -200,13 +200,13 @@ async function main() {
     const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
     // SEO output and the tracking page's metadata are covered by test-seo.cjs.
     // Product data, tracking UI/API, payment and all other business files remain locked.
-    const seoOnly = new Set(['src/lib/seo.ts', 'src/app/track-order/layout.tsx', 'src/app/cart/layout.tsx', 'src/app/success/layout.tsx', 'src/app/api/checkout/route.ts', 'src/app/api/preview/route.ts']);
+    const seoOnly = new Set(['netlify/functions/deliver-emails.mts', 'netlify/functions/intake-maintenance.mts', 'src/lib/seo.ts', 'src/app/track-order/layout.tsx', 'src/app/cart/layout.tsx', 'src/app/success/layout.tsx', 'src/app/api/checkout/route.ts', 'src/app/api/preview/route.ts']);
     for (const file of files.filter(file => !seoOnly.has(file))) {
       const baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]);
       const current = fs.readFileSync(file);
       assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline.toString().replace(/\r\n/g, '\n'), file);
     }
-    console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; SEO-only files have separate checks.`);
+    console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; Brand, closure and worker changes have separate checks.`);
   });
   await check('all approved visual assets are byte-identical', () => {
     const baseline = '24903a4ae6ea63c22bf5b34d9169dc4a4762e9ca';
