@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import BrandWordmark from "./BrandWordmark";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useCart } from "@/lib/cart";
@@ -25,15 +25,8 @@ export default function Header() {
           action group widths differ. */}
       <div className="grid h-16 w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-4 sm:px-6 md:h-20 lg:px-12">
         {/* GOOOL ATHLETICS lockup: wordmark, white-red-white dashes, ATHLETICS */}
-        <Link href="/" aria-label="GOOOL Athletics home" className="flex items-center justify-self-start">
-          <Image
-            src="/brand/goool-athletics-lockup-white.png"
-            alt="GOOOL Athletics"
-            width={720}
-            height={272}
-            priority
-            className="h-9 w-auto md:h-12"
-          />
+        <Link href="/" aria-label="GOAL Athletics home" className="flex items-center justify-self-start">
+          <BrandWordmark className="h-9 w-auto md:h-12" />
         </Link>
 
         {/* Desktop nav */}
