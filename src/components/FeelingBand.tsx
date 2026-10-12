@@ -9,7 +9,7 @@
 // on phones, 128px from md; thinned 2026-09-29 from the 84/220px two-line
 // version), the question under it with the skewed red rule, and the same
 // Back to top link. Centred, with the three-segment white-red-white
-// brand rule under the line (owner, 2026-09-29; the "What's your GOOOL?"
+// brand rule under the line (owner, 2026-09-29; the "What's your GOAL?"
 // line was removed the same day).
 // The words are fixed: WEAR THE FEELING. / Back to top.
 export default function FeelingBand() {

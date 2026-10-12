@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getOrdersStore } from "@/lib/orders-store";
-import { orderNumber } from "@/lib/fulfillment-submit";
+import { orderReference, normalizeOrderReference } from "@/lib/order-reference";
 
 // ─────────────────────────────────────────────────────────────
 // Real order-status lookup for /track-order. Privacy model: the
-// customer must present BOTH the order reference (GOOOL-XXXXXXXX,
+// customer must present BOTH the order reference (GOAL-XXXXXXXX,
 // shown on the confirmation page and receipts) AND the email used at
 // checkout. References derive from order UUIDs, so they are not
 // guessable or sequential, and a reference alone reveals nothing.
@@ -30,11 +30,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 
-  const reference = (body.reference ?? "").trim().toUpperCase();
+  const reference = normalizeOrderReference(body.reference ?? "");
   const email = (body.email ?? "").trim();
-  if (!/^GOOOL-[0-9A-F]{8}$/.test(reference) || !email.includes("@")) {
+  if (!/^GOAL-[0-9A-F]{8}$/.test(reference) || !email.includes("@")) {
     return NextResponse.json(
-      { error: "Enter your order reference (GOOOL-XXXXXXXX) and the email you ordered with." },
+      { error: "Enter your order reference (GOAL-XXXXXXXX) and the email you ordered with." },
       { status: 400 }
     );
   }
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const orders = await store.listOrdersByEmail(email);
-    const order = orders.find((o) => orderNumber(o.id) === reference);
+    const order = orders.find((o) => orderReference(o.id) === reference);
     if (!order || order.status === "pending") {
       // Deliberately indistinguishable from a wrong email.
       return NextResponse.json(

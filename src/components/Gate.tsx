@@ -83,8 +83,8 @@ export default function Gate({ next }: { next: string }) {
       <div className="relative px-4 py-20 text-center">
         <h1 className="mx-auto w-[calc(100vw-2rem)] max-w-[420px] [container-type:inline-size] lg:max-w-[560px]">
           <Image
-            src="/brand/goool-wordmark-tight-white.png"
-            alt="GOOOL Athletics"
+            src="/brand/goal-wordmark-white.png"
+            alt="GOAL Athletics"
             width={420}
             height={103}
             priority

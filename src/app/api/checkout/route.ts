@@ -15,7 +15,7 @@ import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from
 // Security note: prices are ALWAYS looked up server-side by productId.
 // The client only sends ids, sizes, quantities, and customization text.
 //
-// Promotion codes (2026-09-29): a GOOOL20 code is entered in the cart,
+// Promotion codes (2026-09-29): a GOAL20 code is entered in the cart,
 // validated here (validatePromotionCode, the one check), and attached to
 // the session at creation. Stripe's own code box is off. That ordering
 // is the point: shipping is decided on the POST-discount subtotal, so a

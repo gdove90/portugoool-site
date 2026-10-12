@@ -35,24 +35,24 @@ export default function Hero({ shopHref = "/shop" }: { shopHref?: string }) {
             hero's own typeface rather than pasted in as a shrunken image.
 
             Proportions are measured off the real lockup
-            (public/brand/goool-athletics-lockup-white.png, 720x272):
-            GOOOL glyph band 136px, rule 12px, ATHLETICS 73px at full
-            width. So ATHLETICS is 0.537 of the GOOOL height and spans the
+            (public/brand/goal-athletics-lockup-white.png, 720x272):
+            GOAL glyph band 136px, rule 12px, ATHLETICS 73px at full
+            width. So ATHLETICS is 0.537 of the GOAL height and spans the
             mark edge to edge.
 
             The mark is goool-wordmark-tight-white.png (720x177), which
-            carries GOOOL and the rule with the GOOOL band at 137px.
+            carries GOAL and the rule with the GOAL band at 137px.
 
             That file exists because the original wordmark floated its rule
-            85px below a 137px GOOOL, a ratio of 0.620, where the real
+            85px below a 137px GOAL, a ratio of 0.620, where the real
             lockup sits at 26/136 = 0.191. The hero's rule was more than
             three times too far from the word. The gap is baked into the
-            PNG, so it was recomposed rather than restyled: the GOOOL
+            PNG, so it was recomposed rather than restyled: the GOAL
             artwork and the rule artwork are copied pixel for pixel from
             the original, only the gap between them changed, and the empty
             padding above and below trimmed. The old file is untouched and
             still serves the header. Rendered at 420 wide that is an
-            80px GOOOL height, so ATHLETICS wants 0.537 x 80 = 43px of cap.
+            80px GOAL height, so ATHLETICS wants 0.537 x 80 = 43px of cap.
             At lg, 560 wide gives 107px, so 57.5px of cap.
 
             Anton's cap height was MEASURED, not assumed: rendering
@@ -61,7 +61,7 @@ export default function Hero({ shopHref = "/shop" }: { shopHref?: string }) {
             nominal figure ran the word 24% oversized.
 
             So the size is expressed against the mark's own width rather
-            than per breakpoint. Mark width W gives a GOOOL height of
+            than per breakpoint. Mark width W gives a GOAL height of
             0.1903W (137/720), a target cap of 0.537 x that = 0.1022W, and
             a font size of 0.1022W / 0.8875 = 0.115W. As a container query
             unit that is 11.5cqw, which holds at every width with no
@@ -70,10 +70,10 @@ export default function Hero({ shopHref = "/shop" }: { shopHref?: string }) {
             of it is the fallback for anything without cqw support.
 
             Because the rule now ends at the image's bottom edge, the
-            whole gap below it is margin: 0.176 x the GOOOL height = 3.35cqw.
+            whole gap below it is margin: 0.176 x the GOAL height = 3.35cqw.
 
             The mark is fluid now, not a fixed 420px. It was fixed before,
-            so on a 375px phone it overflowed and GOOOL was clipped at both
+            so on a 375px phone it overflowed and GOAL was clipped at both
             edges. That predates ATHLETICS; adding a second line only made
             it visible.
 
@@ -106,8 +106,8 @@ export default function Hero({ shopHref = "/shop" }: { shopHref?: string }) {
             belong in the title and the visible copy. */}
         <h1 className="mx-auto w-[calc(100vw-2rem)] max-w-[420px] [container-type:inline-size] lg:max-w-[560px]">
           <Image
-            src="/brand/goool-wordmark-tight-white.png"
-            alt="GOOOL Athletics"
+            src="/brand/goal-wordmark-white.png"
+            alt="GOAL Athletics"
             width={420}
             height={103}
             priority

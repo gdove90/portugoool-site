@@ -19,7 +19,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Who we are</h2>
           <p className="mt-2">
-            GOOOL Athletics LLC is an independent brand. We are not
+            GOAL Athletics LLC is an independent brand. We are not
             affiliated with, endorsed by, or connected to any soccer
             federation, club, league, tournament, or governing body. All
             designs and marks are original.
@@ -74,7 +74,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Intellectual property</h2>
           <p className="mt-2">
-            The GOOOL and GOOOL ATHLETICS names, wordmarks, designs, and site content are our
+            The GOAL and GOAL ATHLETICS names, wordmarks, designs, and site content are our
             property. Don&apos;t reproduce them commercially without written
             permission.
           </p>

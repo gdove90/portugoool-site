@@ -21,7 +21,7 @@ interface ApliiqVariant {
 
 /** productId (catalog UUID) → color name → Apliiq variant. */
 const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
-  // GOOOL Core Badge Tee (Sport-Tek ST720)
+  // GOAL Core Badge Tee (Sport-Tek ST720)
   "70000000-0000-4000-8000-000000000001": {
     Black: {
       apliiqProductId: 6098962,
@@ -54,7 +54,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Core Hoodie · Red (Independent IND4000), remade 2026-09-24 with
+  // GOAL Core Hoodie · Red (Independent IND4000), remade 2026-09-24 with
   // the 3010 tee print sets (designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md).
   // One saved design per colour; keys are the colorVariants[].name strings
   // checkout resolves by. Dropship quote read from the saved designs the
@@ -93,7 +93,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Core Hoodie · Club Blue (Independent IND4000), the 4b set, its
+  // GOAL Core Hoodie · Club Blue (Independent IND4000), the 4b set, its
   // own product since 2026-09-24.
   "70000000-0000-4000-8000-000000000006": {
     Black: {
@@ -127,7 +127,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Terrace Tee · Red (4a set), rebuilt on the Bella+Canvas
+  // GOAL Terrace Tee · Red (4a set), rebuilt on the Bella+Canvas
   // 3010 on 2026-09-24 (designs/00_asset-library/CASUAL-TEE-3010-DECISION.md).
   // One saved design per colour. Keys are the colorVariants[].name strings
   // from products.ts ("Black", "Natural"), because that is the value
@@ -150,7 +150,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
     // Natural (4a-N, red band): saved by the owner on 2026-09-24 as design
-    // 6120889 (Apliiq name "GOOOL Casual Wordmark Tee"; colour natural,
+    // 6120889 (Apliiq name "GOAL Casual Wordmark Tee"; colour natural,
     // 4a-natural-front at 11 x 4.55, 4a-back-yoke at 12 x 2, transfer).
     Natural: {
       apliiqProductId: 6120889,
@@ -163,7 +163,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Terrace Tee · Club Blue (4b set). Its own product since
+  // GOAL Terrace Tee · Club Blue (4b set). Its own product since
   // 2026-09-24 (owner decision); before that the Natural blue-band design
   // was the Natural variant of ...0003.
   // Natural was saved by the owner on 2026-09-24 as design 6120887; an
@@ -182,7 +182,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
         XXL: "APQ-6120887S2A1",
       },
     },
-    // Black (4b black) saved 2026-09-24 as design 6120898, "GOOOL Casual
+    // Black (4b black) saved 2026-09-24 as design 6120898, "GOAL Casual
     // Wordmark Tee · Black · Blue Band": front lockup 222 px = 11.10 in
     // (Apliiq's quarter-inch readout shows 11 x 4.55), back band 12 x 2.01,
     // both transfer, production notes carry the 3.00 in / 1.50 in collar
@@ -198,7 +198,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Touchline Cap (OTTO 31-069, Black/Natural, front-only embroidery)
+  // GOAL Touchline Cap (OTTO 31-069, Black/Natural, front-only embroidery)
   "70000000-0000-4000-8000-000000000004": {
     "Black/Natural": {
       apliiqProductId: 6098980,
@@ -207,7 +207,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     // The cap has no colorVariants on the site; its catalog color string
     // is "Black/Natural" and that is the only decorated colorway.
   },
-  // GOOOL Athletics Badge Cap (OTTO 31-069, Black/Natural, front embroidery
+  // GOAL Athletics Badge Cap (OTTO 31-069, Black/Natural, front embroidery
   // 2.00 x 2.02in, 14,140 stitches). Apliiq caps the badge at 2in on this
   // hat - it silently resizes anything larger, confirmed in both the legacy
   // and v5 customizers.
@@ -217,7 +217,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       skus: { OS: "APQ-6117349S34A1" },
     },
   },
-  // GOOOL Athletics Stacked Cap (OTTO 31-069, Black/Natural, front
+  // GOAL Athletics Stacked Cap (OTTO 31-069, Black/Natural, front
   // embroidery 3.75 x 1.70in, 22,313 stitches - over Apliiq's 15,000
   // included, and the overage is already inside the quoted price).
   "80000000-0000-4000-8000-000000000008": {
@@ -226,12 +226,12 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       skus: { OS: "APQ-6117282S34A1" },
     },
   },
-  // ── GOOOL Athletics additions (saved designs created and SKUs read
+  // ── GOAL Athletics additions (saved designs created and SKUs read
   // from merchandise/detail on 2026-09-22). The catalog still gates all
   // of these behind priceCents 0 + availableForSale false +
   // supplierType "unassigned"; mapping them here does NOT open
   // purchasing, it records the verified supplier identifiers.
-  // GOOOL Athletics Modern Sport Tee (Bella+Canvas 3010, black)
+  // GOAL Athletics Modern Sport Tee (Bella+Canvas 3010, black)
   "80000000-0000-4000-8000-000000000001": {
     Black: {
       apliiqProductId: 6112026,
@@ -244,7 +244,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Athletics Varsity Tee (Bella+Canvas 4810GD, Washed Black)
+  // GOAL Athletics Varsity Tee (Bella+Canvas 4810GD, Washed Black)
   // Front print only (12.5in, GA-02-F) - the back mark (GA-02-B) was dropped
   // 2026-09-21 because it could not be placed to match the site's concept
   // art within Back Box 1 (see products.ts). Scaled from 11in to 12.5in
@@ -274,7 +274,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Athletics Minimal Club Tee (Bella+Canvas 3010, Natural)
+  // GOAL Athletics Minimal Club Tee (Bella+Canvas 3010, Natural)
   "80000000-0000-4000-8000-000000000003": {
     Natural: {
       apliiqProductId: 6112018,
@@ -287,7 +287,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Athletics Circular Badge Tee (Comfort Colors C1717, Ivory)
+  // GOAL Athletics Circular Badge Tee (Comfort Colors C1717, Ivory)
   "80000000-0000-4000-8000-000000000004": {
     Ivory: {
       apliiqProductId: 6112033,
@@ -300,7 +300,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Matchday Tee (Sport-Tek ST720).
+  // GOAL Matchday Tee (Sport-Tek ST720).
   // Three saved designs built fresh on 2026-09-25 in Apliiq's customizer
   // (designs/31_matchday-tee-v6-all-colours-2026-09-25): front GA-01-F v3
   // 11.00 x 3.72 in, top 3.00 in below the front collar seam; back GA-01-B
@@ -342,7 +342,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
-  // GOOOL Athletics Circular Center Crewneck (AS Colour 5150 Made Crew).
+  // GOAL Athletics Circular Center Crewneck (AS Colour 5150 Made Crew).
   // The catalog color string is "Gray Heather"; the supplier's only
   // heather gray on this blank is "Athletic Heather" (color id 2873),
   // confirmed by the owner on 2026-09-21. The site copy keeps the

@@ -693,7 +693,7 @@ export const products: Product[] = [
   // ── Crest V2 T-Shirt Line (AA 1301GD, Printful DTF) ─────────
   {
     id: "60000000-0000-4000-8000-000000000003",
-    name: "GOOOL Crest Statement Tee · Cream",
+    name: "GOAL Crest Statement Tee · Cream",
     slug: "crest-statement-tee-cream",
     description:
       "The crest at full volume. One design, worn loud on cream.",
@@ -705,8 +705,8 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/crest-statement-tee-cream.webp", alt: "GOOOL Crest Statement Tee · Cream · front" },
-      { src: "/products/crest-statement-tee-cream-back.webp", alt: "GOOOL Crest Statement Tee · Cream · back" },
+      { src: "/products/crest-statement-tee-cream.webp", alt: "GOAL Crest Statement Tee · Cream · front" },
+      { src: "/products/crest-statement-tee-cream-back.webp", alt: "GOAL Crest Statement Tee · Cream · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "tshirt",
@@ -722,7 +722,7 @@ export const products: Product[] = [
   },
   {
     id: "60000000-0000-4000-8000-000000000004",
-    name: "GOOOL Crest Statement Tee · Faded Black",
+    name: "GOAL Crest Statement Tee · Faded Black",
     slug: "crest-statement-tee-faded-black",
     description:
       "The crest at full volume, reversed in white on faded black.",
@@ -734,8 +734,8 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/crest-statement-tee-faded-black.webp", alt: "GOOOL Crest Statement Tee · Faded Black · front" },
-      { src: "/products/crest-statement-tee-faded-black-back.webp", alt: "GOOOL Crest Statement Tee · Faded Black · back" },
+      { src: "/products/crest-statement-tee-faded-black.webp", alt: "GOAL Crest Statement Tee · Faded Black · front" },
+      { src: "/products/crest-statement-tee-faded-black-back.webp", alt: "GOAL Crest Statement Tee · Faded Black · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "tshirt",
@@ -751,7 +751,7 @@ export const products: Product[] = [
   },
   {
     id: "60000000-0000-4000-8000-000000000005",
-    name: "GOOOL Crest Statement Tee · Faded Navy",
+    name: "GOAL Crest Statement Tee · Faded Navy",
     slug: "crest-statement-tee-faded-navy",
     description:
       "The crest at full volume on dusty navy. The quiet-loud one.",
@@ -763,8 +763,8 @@ export const products: Product[] = [
     fit: OVERSIZED_FIT,
     careInstructions: CASUAL_CARE,
     images: [
-      { src: "/products/crest-statement-tee-faded-navy.webp", alt: "GOOOL Crest Statement Tee · Faded Navy · front" },
-      { src: "/products/crest-statement-tee-faded-navy-back.webp", alt: "GOOOL Crest Statement Tee · Faded Navy · back" },
+      { src: "/products/crest-statement-tee-faded-navy.webp", alt: "GOAL Crest Statement Tee · Faded Navy · front" },
+      { src: "/products/crest-statement-tee-faded-navy-back.webp", alt: "GOAL Crest Statement Tee · Faded Navy · back" },
     ],
     sizes: SHIRT_SIZES,
     category: "tshirt",
@@ -779,13 +779,13 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
 
-  // ── GOOOL Oval Mark Oversized Tee (AS Colour 5082, Printful DTF) ──
+  // ── GOAL Oval Mark Oversized Tee (AS Colour 5082, Printful DTF) ──
   {
     id: "60000000-0000-4000-8000-000000000007",
-    name: "GOOOL Oval Mark Oversized Tee",
+    name: "GOAL Oval Mark Oversized Tee",
     slug: "goool-oval-tee",
     description:
-      "The GOOOL Oval Mark Oversized Tee brings professional soccer identity into a heavyweight streetwear silhouette. Made from garment dyed cotton with a structured boxy fit, dropped shoulders, and wide neck ribbing, it is designed to feel substantial while maintaining an easy everyday drape. The front carries the GOOOL oval wordmark, while a smaller G mark sits beneath the back collar like the finishing detail on a professional training kit.",
+      "The GOAL Oval Mark Oversized Tee brings professional soccer identity into a heavyweight streetwear silhouette. Made from garment dyed cotton with a structured boxy fit, dropped shoulders, and wide neck ribbing, it is designed to feel substantial while maintaining an easy everyday drape. The front carries the GOAL oval wordmark, while a smaller G mark sits beneath the back collar like the finishing detail on a professional training kit.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Faded Cream",
@@ -796,8 +796,8 @@ export const products: Product[] = [
     careInstructions:
       "Machine wash cold and inside out on a gentle cycle with mild detergent, with similar colors. Non-chlorine bleach only when necessary. No fabric softener. Tumble dry low or hang dry. Cool iron inside out when necessary · never directly over the decoration. Do not dry clean.",
     images: [
-      { src: "/products/goool-oval-tee-cream.webp", alt: "GOOOL faded cream oversized t-shirt front view" },
-      { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOOOL faded cream oversized t-shirt back view" },
+      { src: "/products/goool-oval-tee-cream.webp", alt: "GOAL faded cream oversized t-shirt front view" },
+      { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOAL faded cream oversized t-shirt back view" },
     ],
     sizes: OVERSIZED_TEE_SIZES,
     category: "tshirt",
@@ -817,8 +817,8 @@ export const products: Product[] = [
         hex: "#FFF9E9",
         skuFragment: "CREAM",
         images: [
-          { src: "/products/goool-oval-tee-cream.webp", alt: "GOOOL faded cream oversized t-shirt front view" },
-          { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOOOL faded cream oversized t-shirt back view" },
+          { src: "/products/goool-oval-tee-cream.webp", alt: "GOAL faded cream oversized t-shirt front view" },
+          { src: "/products/goool-oval-tee-cream-back.webp", alt: "GOAL faded cream oversized t-shirt back view" },
           { src: "/products/goool-oval-tee-cream-detail-fit.webp", alt: "Oversized boxy fit detail, faded cream tee" },
           { src: "/products/goool-oval-tee-cream-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, faded cream tee" },
         ],
@@ -829,8 +829,8 @@ export const products: Product[] = [
         hex: "#55565A",
         skuFragment: "CHARCOAL",
         images: [
-          { src: "/products/goool-oval-tee-charcoal.webp", alt: "GOOOL washed charcoal oversized t-shirt front view" },
-          { src: "/products/goool-oval-tee-charcoal-back.webp", alt: "GOOOL washed charcoal oversized t-shirt back view" },
+          { src: "/products/goool-oval-tee-charcoal.webp", alt: "GOAL washed charcoal oversized t-shirt front view" },
+          { src: "/products/goool-oval-tee-charcoal-back.webp", alt: "GOAL washed charcoal oversized t-shirt back view" },
           { src: "/products/goool-oval-tee-charcoal-detail-fit.webp", alt: "Oversized boxy fit detail, washed charcoal tee" },
           { src: "/products/goool-oval-tee-charcoal-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, washed charcoal tee" },
         ],
@@ -841,8 +841,8 @@ export const products: Product[] = [
         hex: "#4F5C71",
         skuFragment: "NAVY",
         images: [
-          { src: "/products/goool-oval-tee-navy.webp", alt: "GOOOL dusty navy oversized t-shirt front view" },
-          { src: "/products/goool-oval-tee-navy-back.webp", alt: "GOOOL dusty navy oversized t-shirt back view" },
+          { src: "/products/goool-oval-tee-navy.webp", alt: "GOAL dusty navy oversized t-shirt front view" },
+          { src: "/products/goool-oval-tee-navy-back.webp", alt: "GOAL dusty navy oversized t-shirt back view" },
           { src: "/products/goool-oval-tee-navy-detail-fit.webp", alt: "Oversized boxy fit detail, dusty navy tee" },
           { src: "/products/goool-oval-tee-navy-detail-collar.webp", alt: "Wide neck ribbing and fabric detail, dusty navy tee" },
         ],
@@ -1029,7 +1029,7 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000003",
-    name: "GOOOL Cap Black",
+    name: "GOAL Cap Black",
     slug: "goool-cap-black",
     description:
       "The house wordmark in gold thread. The Sound of Victory. on the side.",
@@ -1037,12 +1037,12 @@ export const products: Product[] = [
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#0A0A0A",
-    fabric: "Brushed cotton twill, embroidered GOOOL wordmark, adjustable strap.",
+    fabric: "Brushed cotton twill, embroidered GOAL wordmark, adjustable strap.",
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-cap-black.webp", alt: "GOOOL Cap Black · front angle" },
-      { src: "/products/goool-cap-black-alt.webp", alt: "GOOOL Cap Black · front" },
+      { src: "/products/goool-cap-black.webp", alt: "GOAL Cap Black · front angle" },
+      { src: "/products/goool-cap-black-alt.webp", alt: "GOAL Cap Black · front" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1058,20 +1058,20 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000004",
-    name: "GOOOL Cap White",
+    name: "GOAL Cap White",
     slug: "goool-cap-white",
     description:
-      "GOOOL stitched in ink on white. The Sound of Victory. on the side.",
+      "GOAL stitched in ink on white. The Sound of Victory. on the side.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#FFFFFF",
-    fabric: "Brushed cotton twill, embroidered GOOOL wordmark, adjustable strap.",
+    fabric: "Brushed cotton twill, embroidered GOAL wordmark, adjustable strap.",
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-cap-white.webp", alt: "GOOOL Cap White · front angle" },
-      { src: "/products/goool-cap-white-alt.webp", alt: "GOOOL Cap White · front" },
+      { src: "/products/goool-cap-white.webp", alt: "GOAL Cap White · front angle" },
+      { src: "/products/goool-cap-white-alt.webp", alt: "GOAL Cap White · front" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1087,10 +1087,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000005",
-    name: "GOOOL England Cap",
+    name: "GOAL England Cap",
     slug: "goool-england-cap",
     description:
-      "Red, white, and navy. GOOOL in navy thread, England in red, the cross on the shield. Part of The England Drop.",
+      "Red, white, and navy. GOAL in navy thread, England in red, the cross on the shield. Part of The England Drop.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Red / White",
@@ -1099,8 +1099,8 @@ export const products: Product[] = [
     fit: "One size · snapback.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap.webp", alt: "GOOOL England Cap · front" },
-      { src: "/products/goool-england-cap-alt.webp", alt: "GOOOL England Cap · angle" },
+      { src: "/products/goool-england-cap.webp", alt: "GOAL England Cap · front" },
+      { src: "/products/goool-england-cap-alt.webp", alt: "GOAL England Cap · angle" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1116,10 +1116,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000006",
-    name: "GOOOL England Cap White",
+    name: "GOAL England Cap White",
     slug: "goool-england-cap-white",
     description:
-      "White crown, navy GOOOL, England red. The cross on the side, GOOOL on the back.",
+      "White crown, navy GOAL, England red. The cross on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
@@ -1128,8 +1128,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap-white.webp", alt: "GOOOL England Cap White · front" },
-      { src: "/products/goool-england-cap-white-alt.webp", alt: "GOOOL England Cap White · side crest" },
+      { src: "/products/goool-england-cap-white.webp", alt: "GOAL England Cap White · front" },
+      { src: "/products/goool-england-cap-white-alt.webp", alt: "GOAL England Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1145,10 +1145,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000007",
-    name: "GOOOL England Cap Navy",
+    name: "GOAL England Cap Navy",
     slug: "goool-england-cap-navy",
     description:
-      "England navy, white GOOOL, red England. The cross on the side, GOOOL on the back.",
+      "England navy, white GOAL, red England. The cross on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Navy",
@@ -1157,8 +1157,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap-navy.webp", alt: "GOOOL England Cap Navy · front" },
-      { src: "/products/goool-england-cap-navy-alt.webp", alt: "GOOOL England Cap Navy · side crest" },
+      { src: "/products/goool-england-cap-navy.webp", alt: "GOAL England Cap Navy · front" },
+      { src: "/products/goool-england-cap-navy-alt.webp", alt: "GOAL England Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1174,10 +1174,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000008",
-    name: "GOOOL England Cap Red",
+    name: "GOAL England Cap Red",
     slug: "goool-england-cap-red",
     description:
-      "Deep red, white GOOOL. The cross on the side, GOOOL on the back.",
+      "Deep red, white GOAL. The cross on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Red",
@@ -1186,8 +1186,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-england-cap-red.webp", alt: "GOOOL England Cap Red · front" },
-      { src: "/products/goool-england-cap-red-alt.webp", alt: "GOOOL England Cap Red · side crest" },
+      { src: "/products/goool-england-cap-red.webp", alt: "GOAL England Cap Red · front" },
+      { src: "/products/goool-england-cap-red-alt.webp", alt: "GOAL England Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1203,10 +1203,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000009",
-    name: "GOOOL Argentina Cap White",
+    name: "GOAL Argentina Cap White",
     slug: "goool-argentina-cap-white",
     description:
-      "White crown, navy GOOOL, celeste Argentina. The flag shield on the side, GOOOL on the back.",
+      "White crown, navy GOAL, celeste Argentina. The flag shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
@@ -1215,8 +1215,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-argentina-cap-white.webp", alt: "GOOOL Argentina Cap White · front" },
-      { src: "/products/goool-argentina-cap-white-alt.webp", alt: "GOOOL Argentina Cap White · side crest" },
+      { src: "/products/goool-argentina-cap-white.webp", alt: "GOAL Argentina Cap White · front" },
+      { src: "/products/goool-argentina-cap-white-alt.webp", alt: "GOAL Argentina Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1232,10 +1232,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000010",
-    name: "GOOOL Argentina Cap Sky Blue",
+    name: "GOAL Argentina Cap Sky Blue",
     slug: "goool-argentina-cap-sky",
     description:
-      "Celeste, white GOOOL. The flag shield on the side, GOOOL on the back.",
+      "Celeste, white GOAL. The flag shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Sky Blue",
@@ -1244,8 +1244,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-argentina-cap-sky.webp", alt: "GOOOL Argentina Cap Sky Blue · front" },
-      { src: "/products/goool-argentina-cap-sky-alt.webp", alt: "GOOOL Argentina Cap Sky Blue · side crest" },
+      { src: "/products/goool-argentina-cap-sky.webp", alt: "GOAL Argentina Cap Sky Blue · front" },
+      { src: "/products/goool-argentina-cap-sky-alt.webp", alt: "GOAL Argentina Cap Sky Blue · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1263,10 +1263,10 @@ export const products: Product[] = [
   // == Country caps wave 2 (Yupoong 6245CM via Printful) ======
   {
     id: "50000000-0000-4000-8000-000000000011",
-    name: "GOOOL Italy Cap Navy",
+    name: "GOAL Italy Cap Navy",
     slug: "goool-italy-cap-navy",
     description:
-      "Azzurri navy, white GOOOL, green Italy. The tricolore shield on the side, GOOOL on the back.",
+      "Azzurri navy, white GOAL, green Italy. The tricolore shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Navy",
@@ -1275,8 +1275,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-italy-cap-navy.webp", alt: "GOOOL Italy Cap Navy · front" },
-      { src: "/products/goool-italy-cap-navy-alt.webp", alt: "GOOOL Italy Cap Navy · side crest" },
+      { src: "/products/goool-italy-cap-navy.webp", alt: "GOAL Italy Cap Navy · front" },
+      { src: "/products/goool-italy-cap-navy-alt.webp", alt: "GOAL Italy Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1292,10 +1292,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000012",
-    name: "GOOOL Italy Cap White",
+    name: "GOAL Italy Cap White",
     slug: "goool-italy-cap-white",
     description:
-      "White crown, navy GOOOL, green Italy. The tricolore shield on the side, GOOOL on the back.",
+      "White crown, navy GOAL, green Italy. The tricolore shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
@@ -1304,8 +1304,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-italy-cap-white.webp", alt: "GOOOL Italy Cap White · front" },
-      { src: "/products/goool-italy-cap-white-alt.webp", alt: "GOOOL Italy Cap White · side crest" },
+      { src: "/products/goool-italy-cap-white.webp", alt: "GOAL Italy Cap White · front" },
+      { src: "/products/goool-italy-cap-white-alt.webp", alt: "GOAL Italy Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1321,10 +1321,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000013",
-    name: "GOOOL Netherlands Cap Navy",
+    name: "GOAL Netherlands Cap Navy",
     slug: "goool-netherlands-cap-navy",
     description:
-      "Navy crown, white GOOOL, Oranje accent. The flag shield on the side, GOOOL on the back.",
+      "Navy crown, white GOAL, Oranje accent. The flag shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Navy",
@@ -1333,8 +1333,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-netherlands-cap-navy.webp", alt: "GOOOL Netherlands Cap Navy · front" },
-      { src: "/products/goool-netherlands-cap-navy-alt.webp", alt: "GOOOL Netherlands Cap Navy · side crest" },
+      { src: "/products/goool-netherlands-cap-navy.webp", alt: "GOAL Netherlands Cap Navy · front" },
+      { src: "/products/goool-netherlands-cap-navy-alt.webp", alt: "GOAL Netherlands Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1350,10 +1350,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000024",
-    name: "GOOOL Netherlands Cap White",
+    name: "GOAL Netherlands Cap White",
     slug: "goool-netherlands-cap-white",
     description:
-      "White crown, navy GOOOL, Oranje accent. The flag shield on the side, GOOOL on the back.",
+      "White crown, navy GOAL, Oranje accent. The flag shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
@@ -1362,8 +1362,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-netherlands-cap-white.webp", alt: "GOOOL Netherlands Cap White · front" },
-      { src: "/products/goool-netherlands-cap-white-alt.webp", alt: "GOOOL Netherlands Cap White · side crest" },
+      { src: "/products/goool-netherlands-cap-white.webp", alt: "GOAL Netherlands Cap White · front" },
+      { src: "/products/goool-netherlands-cap-white-alt.webp", alt: "GOAL Netherlands Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1379,10 +1379,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000014",
-    name: "GOOOL Germany Cap Black",
+    name: "GOAL Germany Cap Black",
     slug: "goool-germany-cap-black",
     description:
-      "Black crown, white GOOOL, red Germany. The flag shield on the side, GOOOL on the back.",
+      "Black crown, white GOAL, red Germany. The flag shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Black",
@@ -1391,8 +1391,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-germany-cap-black.webp", alt: "GOOOL Germany Cap Black · front" },
-      { src: "/products/goool-germany-cap-black-alt.webp", alt: "GOOOL Germany Cap Black · side crest" },
+      { src: "/products/goool-germany-cap-black.webp", alt: "GOAL Germany Cap Black · front" },
+      { src: "/products/goool-germany-cap-black-alt.webp", alt: "GOAL Germany Cap Black · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1408,10 +1408,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000015",
-    name: "GOOOL Germany Cap White",
+    name: "GOAL Germany Cap White",
     slug: "goool-germany-cap-white",
     description:
-      "White crown, black GOOOL, red Germany. The flag shield on the side, GOOOL on the back.",
+      "White crown, black GOAL, red Germany. The flag shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
@@ -1420,8 +1420,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-germany-cap-white.webp", alt: "GOOOL Germany Cap White · front" },
-      { src: "/products/goool-germany-cap-white-alt.webp", alt: "GOOOL Germany Cap White · side crest" },
+      { src: "/products/goool-germany-cap-white.webp", alt: "GOAL Germany Cap White · front" },
+      { src: "/products/goool-germany-cap-white-alt.webp", alt: "GOAL Germany Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1437,10 +1437,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000016",
-    name: "GOOOL Belgium Cap Red",
+    name: "GOAL Belgium Cap Red",
     slug: "goool-belgium-cap-red",
     description:
-      "Deep red, gold GOOOL, black Belgium. The flag shield on the side, gold GOOOL on the back.",
+      "Deep red, gold GOAL, black Belgium. The flag shield on the side, gold GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Red",
@@ -1449,8 +1449,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-belgium-cap-red.webp", alt: "GOOOL Belgium Cap Red · front" },
-      { src: "/products/goool-belgium-cap-red-alt.webp", alt: "GOOOL Belgium Cap Red · side crest" },
+      { src: "/products/goool-belgium-cap-red.webp", alt: "GOAL Belgium Cap Red · front" },
+      { src: "/products/goool-belgium-cap-red-alt.webp", alt: "GOAL Belgium Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1466,10 +1466,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000017",
-    name: "GOOOL Belgium Cap Black",
+    name: "GOAL Belgium Cap Black",
     slug: "goool-belgium-cap-black",
     description:
-      "Black crown, gold GOOOL, red Belgium. The flag shield on the side, gold GOOOL on the back.",
+      "Black crown, gold GOAL, red Belgium. The flag shield on the side, gold GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Black",
@@ -1478,8 +1478,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-belgium-cap-black.webp", alt: "GOOOL Belgium Cap Black · front" },
-      { src: "/products/goool-belgium-cap-black-alt.webp", alt: "GOOOL Belgium Cap Black · side crest" },
+      { src: "/products/goool-belgium-cap-black.webp", alt: "GOAL Belgium Cap Black · front" },
+      { src: "/products/goool-belgium-cap-black-alt.webp", alt: "GOAL Belgium Cap Black · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1495,10 +1495,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000018",
-    name: "GOOOL Norway Cap Navy",
+    name: "GOAL Norway Cap Navy",
     slug: "goool-norway-cap-navy",
     description:
-      "Navy crown, white GOOOL, red Norway. The Nordic cross shield on the side, GOOOL on the back.",
+      "Navy crown, white GOAL, red Norway. The Nordic cross shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Navy",
@@ -1507,8 +1507,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-norway-cap-navy.webp", alt: "GOOOL Norway Cap Navy · front" },
-      { src: "/products/goool-norway-cap-navy-alt.webp", alt: "GOOOL Norway Cap Navy · side crest" },
+      { src: "/products/goool-norway-cap-navy.webp", alt: "GOAL Norway Cap Navy · front" },
+      { src: "/products/goool-norway-cap-navy-alt.webp", alt: "GOAL Norway Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1524,10 +1524,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000019",
-    name: "GOOOL Norway Cap Red",
+    name: "GOAL Norway Cap Red",
     slug: "goool-norway-cap-red",
     description:
-      "Deep red, white GOOOL. The Nordic cross shield on the side, GOOOL on the back.",
+      "Deep red, white GOAL. The Nordic cross shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Red",
@@ -1536,8 +1536,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-norway-cap-red.webp", alt: "GOOOL Norway Cap Red · front" },
-      { src: "/products/goool-norway-cap-red-alt.webp", alt: "GOOOL Norway Cap Red · side crest" },
+      { src: "/products/goool-norway-cap-red.webp", alt: "GOAL Norway Cap Red · front" },
+      { src: "/products/goool-norway-cap-red-alt.webp", alt: "GOAL Norway Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1553,10 +1553,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000020",
-    name: "GOOOL Spain Cap Black",
+    name: "GOAL Spain Cap Black",
     slug: "goool-spain-cap-black",
     description:
-      "Black crown, gold GOOOL, red Spain. The rojigualda shield on the side, gold GOOOL on the back.",
+      "Black crown, gold GOAL, red Spain. The rojigualda shield on the side, gold GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Black",
@@ -1565,8 +1565,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-spain-cap-black.webp", alt: "GOOOL Spain Cap Black · front" },
-      { src: "/products/goool-spain-cap-black-alt.webp", alt: "GOOOL Spain Cap Black · side crest" },
+      { src: "/products/goool-spain-cap-black.webp", alt: "GOAL Spain Cap Black · front" },
+      { src: "/products/goool-spain-cap-black-alt.webp", alt: "GOAL Spain Cap Black · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1582,10 +1582,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000021",
-    name: "GOOOL Spain Cap Red",
+    name: "GOAL Spain Cap Red",
     slug: "goool-spain-cap-red",
     description:
-      "Deep red, gold GOOOL. The rojigualda shield on the side, gold GOOOL on the back.",
+      "Deep red, gold GOAL. The rojigualda shield on the side, gold GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Red",
@@ -1594,8 +1594,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-spain-cap-red.webp", alt: "GOOOL Spain Cap Red · front" },
-      { src: "/products/goool-spain-cap-red-alt.webp", alt: "GOOOL Spain Cap Red · side crest" },
+      { src: "/products/goool-spain-cap-red.webp", alt: "GOAL Spain Cap Red · front" },
+      { src: "/products/goool-spain-cap-red-alt.webp", alt: "GOAL Spain Cap Red · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1611,10 +1611,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000022",
-    name: "GOOOL France Cap Navy",
+    name: "GOAL France Cap Navy",
     slug: "goool-france-cap-navy",
     description:
-      "Navy crown, white GOOOL, red France. The tricolore shield on the side, GOOOL on the back.",
+      "Navy crown, white GOAL, red France. The tricolore shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "Navy",
@@ -1623,8 +1623,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-france-cap-navy.webp", alt: "GOOOL France Cap Navy · front" },
-      { src: "/products/goool-france-cap-navy-alt.webp", alt: "GOOOL France Cap Navy · side crest" },
+      { src: "/products/goool-france-cap-navy.webp", alt: "GOAL France Cap Navy · front" },
+      { src: "/products/goool-france-cap-navy-alt.webp", alt: "GOAL France Cap Navy · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1640,10 +1640,10 @@ export const products: Product[] = [
   },
   {
     id: "50000000-0000-4000-8000-000000000023",
-    name: "GOOOL France Cap White",
+    name: "GOAL France Cap White",
     slug: "goool-france-cap-white",
     description:
-      "White crown, navy GOOOL, red France. The tricolore shield on the side, GOOOL on the back.",
+      "White crown, navy GOAL, red France. The tricolore shield on the side, GOAL on the back.",
     priceCents: 3500,
     compareAtPriceCents: null,
     color: "White",
@@ -1652,8 +1652,8 @@ export const products: Product[] = [
     fit: "One size · adjustable.",
     careInstructions: "Spot clean or hand wash cold. Lay flat to dry.",
     images: [
-      { src: "/products/goool-france-cap-white.webp", alt: "GOOOL France Cap White · front" },
-      { src: "/products/goool-france-cap-white-alt.webp", alt: "GOOOL France Cap White · side crest" },
+      { src: "/products/goool-france-cap-white.webp", alt: "GOAL France Cap White · front" },
+      { src: "/products/goool-france-cap-white-alt.webp", alt: "GOAL France Cap White · side crest" },
     ],
     sizes: ONE_SIZE,
     category: "hat",
@@ -1671,10 +1671,10 @@ export const products: Product[] = [
   // == First Capsule (Apliiq) ==
   {
     id: "70000000-0000-4000-8000-000000000001",
-    name: "GOOOL Core Badge Tee",
+    name: "GOAL Core Badge Tee",
     slug: "goool-performance-tee",
     description:
-      "Lightweight training tee. GOOOL crest centered on the chest, athletic fit, taped neck.",
+      "Lightweight training tee. GOAL crest centered on the chest, athletic fit, taped neck.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1694,11 +1694,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
-        alt: "GOOOL Core Badge Tee in black, front view",
+        alt: "GOAL Core Badge Tee in black, front view",
       },
       {
         src: "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
-        alt: "GOOOL Core Badge Tee in black, back view",
+        alt: "GOAL Core Badge Tee in black, back view",
       },
     ],
     // Colorways mirror the saved Apliiq designs
@@ -1712,11 +1712,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
-            alt: "GOOOL Core Badge Tee in black, front view",
+            alt: "GOAL Core Badge Tee in black, front view",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
-            alt: "GOOOL Core Badge Tee in black, back view",
+            alt: "GOAL Core Badge Tee in black, back view",
           },
         ],
       },
@@ -1728,11 +1728,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
-            alt: "GOOOL Core Badge Tee in white, front view",
+            alt: "GOAL Core Badge Tee in white, front view",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
-            alt: "GOOOL Core Badge Tee in white, back view",
+            alt: "GOAL Core Badge Tee in white, back view",
           },
         ],
       },
@@ -1744,11 +1744,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
-            alt: "GOOOL Core Badge Tee in true royal, front view",
+            alt: "GOAL Core Badge Tee in true royal, front view",
           },
           {
             src: "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
-            alt: "GOOOL Core Badge Tee in true royal, back view",
+            alt: "GOAL Core Badge Tee in true royal, back view",
           },
         ],
       },
@@ -1771,7 +1771,7 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000002",
-    name: "GOOOL Core Hoodie · Red",
+    name: "GOAL Core Hoodie · Red",
     slug: "goool-heavyweight-hoodie",
     // Two rows on the shop, one per print colour (owner, 2026-09-24): this
     // one is the 4a set (red centre dash on the front lockup, red club band
@@ -1780,7 +1780,7 @@ export const products: Product[] = [
     // The wordmark-only version (Apliiq 6098974 / 6099064) came off the
     // site the same day; those designs are not deleted.
     description:
-      "The full GOOOL Athletics lockup across the chest and the red club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
+      "The full GOAL Athletics lockup across the chest and the red club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
     priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1798,16 +1798,16 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
-        alt: "GOOOL Core Hoodie · Red in black, front view",
+        alt: "GOAL Core Hoodie · Red in black, front view",
       },
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
-        alt: "GOOOL Core Hoodie · Red in black, back view",
+        alt: "GOAL Core Hoodie · Red in black, back view",
       },
     ],
     // Remade 2026-09-24 with the 3010 tee print sets (owner decision,
     // designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md). Front: the
-    // GOOOL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the hood
+    // GOAL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the hood
     // seam. Back: the club band 12.00 x 2.00 in on the back hem, bottom
     // edge on the bottom of Apliiq's back print area. Both DTF. One saved
     // Apliiq design per colour; ids and per-size SKUs live in fulfillment.ts.
@@ -1820,11 +1820,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
-            alt: "GOOOL Core Hoodie · Red in black, front view",
+            alt: "GOAL Core Hoodie · Red in black, front view",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
-            alt: "GOOOL Core Hoodie · Red in black, back view",
+            alt: "GOAL Core Hoodie · Red in black, back view",
           },
         ],
       },
@@ -1836,11 +1836,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
-            alt: "GOOOL Core Hoodie · Red in bone, front view",
+            alt: "GOAL Core Hoodie · Red in bone, front view",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
-            alt: "GOOOL Core Hoodie · Red in bone, back view",
+            alt: "GOAL Core Hoodie · Red in bone, back view",
           },
         ],
       },
@@ -1856,11 +1856,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
-            alt: "GOOOL Core Hoodie · Red in grey heather, front view",
+            alt: "GOAL Core Hoodie · Red in grey heather, front view",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
-            alt: "GOOOL Core Hoodie · Red in grey heather, back view",
+            alt: "GOAL Core Hoodie · Red in grey heather, back view",
           },
         ],
       },
@@ -1883,14 +1883,14 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000006",
-    name: "GOOOL Core Hoodie · Club Blue",
+    name: "GOAL Core Hoodie · Club Blue",
     slug: "goool-heavyweight-hoodie-blue",
-    // The 4b set: GOOOL and ATHLETICS in Club Blue #3D6CC4 on the front
+    // The 4b set: GOAL and ATHLETICS in Club Blue #3D6CC4 on the front
     // (Natural dashes on black, ink dashes on bone and heather; True Royal
     // #1F4FB5 lockup on heather so it reads), Club Blue band with natural
     // lettering low on the back. Its own row by owner decision 2026-09-24.
     description:
-      "The full GOOOL Athletics lockup in club blue across the chest and the blue club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
+      "The full GOAL Athletics lockup in club blue across the chest and the blue club band low across the back, where the hood can't cover it. Heavyweight fleece in black, bone or grey heather, with a kangaroo pocket and a generous cut. Built for off the pitch: the layer you pull on after, and keep on.",
     priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
@@ -1908,16 +1908,16 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
-        alt: "GOOOL Core Hoodie · Club Blue in black, front view",
+        alt: "GOAL Core Hoodie · Club Blue in black, front view",
       },
       {
         src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
-        alt: "GOOOL Core Hoodie · Club Blue in black, back view",
+        alt: "GOAL Core Hoodie · Club Blue in black, back view",
       },
     ],
     // Remade 2026-09-24 with the 3010 tee print sets (owner decision,
     // designs/00_asset-library/CORE-HOODIE-REMAKE-DECISION.md). Front: the
-    // GOOOL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the hood
+    // GOAL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the hood
     // seam. Back: the club band 12.00 x 2.00 in on the back hem, bottom
     // edge on the bottom of Apliiq's back print area. Both DTF. One saved
     // Apliiq design per colour; ids and per-size SKUs live in fulfillment.ts.
@@ -1930,11 +1930,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
-            alt: "GOOOL Core Hoodie · Club Blue in black, front view",
+            alt: "GOAL Core Hoodie · Club Blue in black, front view",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
-            alt: "GOOOL Core Hoodie · Club Blue in black, back view",
+            alt: "GOAL Core Hoodie · Club Blue in black, back view",
           },
         ],
       },
@@ -1946,11 +1946,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
-            alt: "GOOOL Core Hoodie · Club Blue in bone, front view",
+            alt: "GOAL Core Hoodie · Club Blue in bone, front view",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
-            alt: "GOOOL Core Hoodie · Club Blue in bone, back view",
+            alt: "GOAL Core Hoodie · Club Blue in bone, back view",
           },
         ],
       },
@@ -1966,11 +1966,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
-            alt: "GOOOL Core Hoodie · Club Blue in grey heather, front view",
+            alt: "GOAL Core Hoodie · Club Blue in grey heather, front view",
           },
           {
             src: "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
-            alt: "GOOOL Core Hoodie · Club Blue in grey heather, back view",
+            alt: "GOAL Core Hoodie · Club Blue in grey heather, back view",
           },
         ],
       },
@@ -1993,14 +1993,14 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000003",
-    name: "GOOOL Terrace Tee · Red",
+    name: "GOAL Terrace Tee · Red",
     slug: "goool-heavyweight-casual-tee",
     // Two rows on the shop, one per print colour (owner, 2026-09-24): this
     // one is the 4a set (red centre dash on the front lockup, red club band
     // on the back); ...0005 below is the 4b Club Blue set. Same blank, same
     // placements, same price. The slug keeps the original casual-tee URL.
     description:
-      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup across the chest and the red club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
+      "The wordmark, worn plainly, now with the full GOAL Athletics lockup across the chest and the red club band across the back. Heavyweight combed cotton in black or natural. Built for off the pitch: the one you reach for every day, and keep reaching for.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
@@ -2021,16 +2021,16 @@ export const products: Product[] = [
     images: [
         {
           src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
-          alt: "GOOOL Terrace Tee · Red in black, front view",
+          alt: "GOAL Terrace Tee · Red in black, front view",
         },
         {
           src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
-          alt: "GOOOL Terrace Tee · Red in black, back view",
+          alt: "GOAL Terrace Tee · Red in black, back view",
         },
       ],
     // Rebuilt on the Bella+Canvas 3010 on 2026-09-23/24 (owner decision,
     // designs/00_asset-library/CASUAL-TEE-3010-DECISION.md). Front: the
-    // full GOOOL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the
+    // full GOAL Athletics lockup 11.10 x 4.59 in, top 3.00 in below the
     // collar seam. Back: the 2l yoke band 12.00 x 2.00 in, top 1.50 in
     // below the back collar seam. Both DTF. Each colour is its own Apliiq
     // saved design; ids and per-size SKUs live in fulfillment.ts.
@@ -2043,11 +2043,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
-            alt: "GOOOL Terrace Tee · Red in black, front view",
+            alt: "GOAL Terrace Tee · Red in black, front view",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
-            alt: "GOOOL Terrace Tee · Red in black, back view",
+            alt: "GOAL Terrace Tee · Red in black, back view",
           },
         ],
       },
@@ -2061,11 +2061,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
-            alt: "GOOOL Terrace Tee · Red in natural, front view",
+            alt: "GOAL Terrace Tee · Red in natural, front view",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
-            alt: "GOOOL Terrace Tee · Red in natural, back view",
+            alt: "GOAL Terrace Tee · Red in natural, back view",
           },
         ],
       },
@@ -2093,15 +2093,15 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000005",
-    name: "GOOOL Terrace Tee · Club Blue",
+    name: "GOAL Terrace Tee · Club Blue",
     slug: "goool-heavyweight-casual-tee-blue",
-    // The 4b set: GOOOL and ATHLETICS in Club Blue #3D6CC4 on the front
+    // The 4b set: GOAL and ATHLETICS in Club Blue #3D6CC4 on the front
     // (ink dashes on natural, natural dashes on black), Club Blue band with
     // natural lettering on the back. Its own row on the shop by owner
     // decision 2026-09-24 (the handoff's "band selector on one product"
     // alternative was not taken).
     description:
-      "The wordmark, worn plainly, now with the full GOOOL Athletics lockup in club blue across the chest and the blue club band across the back. Heavyweight combed cotton in natural or black. Built for off the pitch: the one you reach for every day, and keep reaching for.",
+      "The wordmark, worn plainly, now with the full GOAL Athletics lockup in club blue across the chest and the blue club band across the back. Heavyweight combed cotton in natural or black. Built for off the pitch: the one you reach for every day, and keep reaching for.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Natural",
@@ -2122,11 +2122,11 @@ export const products: Product[] = [
     images: [
         {
           src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
-          alt: "GOOOL Terrace Tee · Club Blue in natural, front view",
+          alt: "GOAL Terrace Tee · Club Blue in natural, front view",
         },
         {
           src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
-          alt: "GOOOL Terrace Tee · Club Blue in natural, back view",
+          alt: "GOAL Terrace Tee · Club Blue in natural, back view",
         },
       ],
     // Same placements as the red set: front lockup 11.10 x 4.59 in, top
@@ -2141,11 +2141,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
-            alt: "GOOOL Terrace Tee · Club Blue in natural, front view",
+            alt: "GOAL Terrace Tee · Club Blue in natural, front view",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
-            alt: "GOOOL Terrace Tee · Club Blue in natural, back view",
+            alt: "GOAL Terrace Tee · Club Blue in natural, back view",
           },
         ],
       },
@@ -2160,11 +2160,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
-            alt: "GOOOL Terrace Tee · Club Blue in black, front view",
+            alt: "GOAL Terrace Tee · Club Blue in black, front view",
           },
           {
             src: "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
-            alt: "GOOOL Terrace Tee · Club Blue in black, back view",
+            alt: "GOAL Terrace Tee · Club Blue in black, back view",
           },
         ],
       },
@@ -2194,10 +2194,10 @@ export const products: Product[] = [
   },
   {
     id: "70000000-0000-4000-8000-000000000004",
-    name: "GOOOL Touchline Cap",
+    name: "GOAL Touchline Cap",
     slug: "goool-touchline-cap",
     description:
-      "Structured five-panel cap in black and natural. Flat-embroidered GOOOL wordmark on the front panel, curved visor, adjustable snap.",
+      "Structured five-panel cap in black and natural. Flat-embroidered GOAL wordmark on the front panel, curved visor, adjustable snap.",
     // $48, not $36: the embroidered cap costs $29.88/unit on Apliiq's dropship
     // rate (blank $14.06 + flat embroidery), the highest decoration cost in the
     // catalog. At $36 that was a 17% margin - the only product under the floor.
@@ -2218,11 +2218,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_TOUCHLINE_CAP_FRONT.webp",
-        alt: "GOOOL Touchline Cap in black and natural, front view",
+        alt: "GOAL Touchline Cap in black and natural, front view",
       },
       {
         src: "/products/GOOOL_STD_TOUCHLINE_CAP_BACK.webp",
-        alt: "GOOOL Touchline Cap in black and natural, back view",
+        alt: "GOAL Touchline Cap in black and natural, back view",
       },
     ],
     sizes: ["OS"],
@@ -2239,7 +2239,7 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
 
-  // == GOOOL Athletics (Coming Soon; owner-authorized 30% modeled margin) ==
+  // == GOAL Athletics (Coming Soon; owner-authorized 30% modeled margin) ==
   // Cost model: designs/18_launch_operations/PRICING-25-PERCENT.json.
   // The MODEL in that file is still the authority (2.9% + $0.30 card
   // fee, 5% reprint reserve, $3 label budget, $1/item fulfillment, size
@@ -2260,10 +2260,10 @@ export const products: Product[] = [
   // is verified. Gallery images remain disclosed concept renders.
   {
     id: "80000000-0000-4000-8000-000000000001",
-    name: "GOOOL Athletics Modern Sport Tee",
+    name: "GOAL Athletics Modern Sport Tee",
     slug: "goool-athletics-modern-sport-tee",
     description:
-      "Bold, forward-leaning GOOOL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOOOL Athletics mark at the upper back. Solid black crewneck.",
+      "Bold, forward-leaning GOAL in white across the chest, a red underline, and widely spaced ATHLETICS beneath. Small white GOAL Athletics mark at the upper back. Solid black crewneck.",
     // Archived (isActive false), but priced on the same basis as the
     // rest so it is correct if it is ever revived. The $64 it carried
     // until 2026-09-22 was never a considered price: this cotton
@@ -2280,11 +2280,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_MODERN_SPORT_FRONT.webp",
-        alt: "GOOOL Athletics Modern Sport Tee in black, front view",
+        alt: "GOAL Athletics Modern Sport Tee in black, front view",
       },
       {
         src: "/products/GOOOL_STD_MODERN_SPORT_BACK.webp",
-        alt: "GOOOL Athletics Modern Sport Tee in black, back view",
+        alt: "GOAL Athletics Modern Sport Tee in black, back view",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2302,10 +2302,10 @@ export const products: Product[] = [
   },
   {
     id: "80000000-0000-4000-8000-000000000002",
-    name: "GOOOL Athletics Varsity Tee",
+    name: "GOAL Athletics Varsity Tee",
     slug: "goool-athletics-varsity-tee",
     description:
-      "Garment-dyed heavyweight tee in washed black or washed navy. Arched collegiate GOOOL in warm ivory with a dark red outline, ATHLETICS below between short rules, across the chest.",
+      "Garment-dyed heavyweight tee in washed black or washed navy. Arched collegiate GOAL in warm ivory with a dark red outline, ATHLETICS below between short rules, across the chest.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Washed Black",
@@ -2337,11 +2337,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_VARSITY_FRONT.webp",
-        alt: "GOOOL Athletics Varsity Tee in washed black, front view",
+        alt: "GOAL Athletics Varsity Tee in washed black, front view",
       },
       {
         src: "/products/GOOOL_STD_VARSITY_BACK.webp",
-        alt: "GOOOL Athletics Varsity Tee in washed black, back view",
+        alt: "GOAL Athletics Varsity Tee in washed black, back view",
       },
     ],
     // Colorways mirror the saved Apliiq designs (Washed Black 6114178, Washed
@@ -2361,11 +2361,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_VARSITY_FRONT.webp",
-            alt: "GOOOL Athletics Varsity Tee in washed black, front view",
+            alt: "GOAL Athletics Varsity Tee in washed black, front view",
           },
           {
             src: "/products/GOOOL_STD_VARSITY_BACK.webp",
-            alt: "GOOOL Athletics Varsity Tee in washed black, back view",
+            alt: "GOAL Athletics Varsity Tee in washed black, back view",
           },
         ],
       },
@@ -2377,11 +2377,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_STD_VARSITY_WASHED_NAVY_FRONT.webp",
-            alt: "GOOOL Athletics Varsity Tee in washed navy, front view",
+            alt: "GOAL Athletics Varsity Tee in washed navy, front view",
           },
           {
             src: "/products/GOOOL_STD_VARSITY_WASHED_NAVY_BACK.webp",
-            alt: "GOOOL Athletics Varsity Tee in washed navy, back view",
+            alt: "GOAL Athletics Varsity Tee in washed navy, back view",
           },
         ],
       },
@@ -2414,10 +2414,10 @@ export const products: Product[] = [
     // availableForSale false refuses a purchase even by direct id.
     // Revive only with corrected artwork that passes the 2mm check at
     // actual size AND a physical proof.
-    name: "GOOOL Athletics Minimal Club Tee",
+    name: "GOAL Athletics Minimal Club Tee",
     slug: "goool-athletics-minimal-club-tee",
     description:
-      "Natural cream heavyweight tee. GOOOL Athletics badge at the left chest, full GOOOL ATHLETICS with a red underline across the upper back.",
+      "Natural cream heavyweight tee. GOAL Athletics badge at the left chest, full GOAL ATHLETICS with a red underline across the upper back.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Natural",
@@ -2428,11 +2428,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_MINIMAL_CLUB_FRONT.webp",
-        alt: "GOOOL Athletics Minimal Club Tee in natural cream, front view",
+        alt: "GOAL Athletics Minimal Club Tee in natural cream, front view",
       },
       {
         src: "/products/GOOOL_STD_MINIMAL_CLUB_BACK.webp",
-        alt: "GOOOL Athletics Minimal Club Tee in natural cream, back view",
+        alt: "GOAL Athletics Minimal Club Tee in natural cream, back view",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2462,10 +2462,10 @@ export const products: Product[] = [
   // now the first physical proof of these marks.
   {
     id: "80000000-0000-4000-8000-000000000004",
-    name: "GOOOL Athletics Circular Badge Tee",
+    name: "GOAL Athletics Circular Badge Tee",
     slug: "goool-athletics-circular-badge-tee",
     description:
-      "Ivory heavyweight tee. Navy circular GOOOL Athletics badge at the left chest, the letters themselves forming the ring.",
+      "Ivory heavyweight tee. Navy circular GOAL Athletics badge at the left chest, the letters themselves forming the ring.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Ivory",
@@ -2512,11 +2512,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_CIRCULAR_BADGE_FRONT.webp",
-        alt: "GOOOL Athletics Circular Badge Tee in ivory, front view",
+        alt: "GOAL Athletics Circular Badge Tee in ivory, front view",
       },
       {
         src: "/products/GOOOL_STD_CIRCULAR_BADGE_BACK.webp",
-        alt: "GOOOL Athletics Circular Badge Tee in ivory, back view",
+        alt: "GOAL Athletics Circular Badge Tee in ivory, back view",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2538,10 +2538,10 @@ export const products: Product[] = [
   },
   {
     id: "80000000-0000-4000-8000-000000000005",
-    name: "GOOOL Athletics Circular Center Crewneck",
+    name: "GOAL Athletics Circular Center Crewneck",
     slug: "goool-athletics-circular-center-crewneck",
     description:
-      "Gray heather French terry crewneck. Forest green circular GOOOL Athletics mark centered on the upper chest, the letters themselves forming the ring.",
+      "Gray heather French terry crewneck. Forest green circular GOAL Athletics mark centered on the upper chest, the letters themselves forming the ring.",
     priceCents: 8800,
     compareAtPriceCents: null,
     color: "Gray Heather",
@@ -2574,11 +2574,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_CIRCULAR_CREWNECK_FRONT.webp",
-        alt: "GOOOL Athletics Circular Center Crewneck in gray heather, front view",
+        alt: "GOAL Athletics Circular Center Crewneck in gray heather, front view",
       },
       {
         src: "/products/GOOOL_STD_CIRCULAR_CREWNECK_BACK.webp",
-        alt: "GOOOL Athletics Circular Center Crewneck in gray heather, back view",
+        alt: "GOAL Athletics Circular Center Crewneck in gray heather, back view",
       },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -2608,13 +2608,13 @@ export const products: Product[] = [
   // Back renders are V6; fronts stay V3. All images remain concept renders.
   {
     id: "80000000-0000-4000-8000-000000000006",
-    name: "GOOOL Matchday Tee",
+    name: "GOAL Matchday Tee",
     slug: "goool-athletics-modern-sport-performance-tee",
     // Welcome Email 2 describes a tri-blend and is gated on this value:
     // it flips to "BC3413" in the same commit that swaps the blank.
     blank: "ST720",
     description:
-      "Performance training tee in black, true royal or white. GOOOL with a red underline and spaced ATHLETICS across the chest, GOOOL Athletics mark at the upper back.",
+      "Performance training tee in black, true royal or white. GOAL with a red underline and spaced ATHLETICS across the chest, GOAL Athletics mark at the upper back.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
@@ -2634,11 +2634,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
-        alt: "GOOOL Matchday Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+        alt: "GOAL Matchday Tee in black, front view with the white GOAL wordmark, red underline and ATHLETICS",
       },
       {
         src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V6.png",
-        alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print",
+        alt: "Close-up concept of the Matchday Tee's white upper-back GOAL Athletics print",
         caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
       },
     ],
@@ -2655,11 +2655,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
-            alt: "GOOOL Matchday Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            alt: "GOAL Matchday Tee in black, front view with the white GOAL wordmark, red underline and ATHLETICS",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V6.png",
-            alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, black garment",
+            alt: "Close-up concept of the Matchday Tee's white upper-back GOAL Athletics print, black garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2677,11 +2677,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
-            alt: "GOOOL Matchday Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS",
+            alt: "GOAL Matchday Tee in true royal blue, front view with the white GOAL wordmark, red underline and ATHLETICS",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V6.png",
-            alt: "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, true royal blue garment",
+            alt: "Close-up concept of the Matchday Tee's white upper-back GOAL Athletics print, true royal blue garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2700,11 +2700,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_WHITE_FRONT_V3.png",
-            alt: "GOOOL Matchday Tee in white, front view with the black GOOOL wordmark, red underline and ATHLETICS",
+            alt: "GOAL Matchday Tee in white, front view with the black GOAL wordmark, red underline and ATHLETICS",
           },
           {
             src: "/products/GOOOL_MODERN_PERFORMANCE_WHITE_BACK_DETAIL_V6.png",
-            alt: "Close-up concept of the Matchday Tee's black upper-back GOOOL Athletics print, white garment",
+            alt: "Close-up concept of the Matchday Tee's black upper-back GOAL Athletics print, white garment",
             caption: "Back print detail - concept render. Not a photograph of a manufactured sample.",
           },
         ],
@@ -2734,10 +2734,10 @@ export const products: Product[] = [
   // remake nor refund. See designs/23_cap-embroidery-2026-09-22/.
   {
     id: "80000000-0000-4000-8000-000000000007",
-    name: "GOOOL Athletics Badge Cap",
+    name: "GOAL Athletics Badge Cap",
     slug: "goool-athletics-badge-cap",
     description:
-      "Structured five-panel cap in black and natural. The circular GOOOL Athletics badge embroidered on the front panel, curved visor, adjustable snap.",
+      "Structured five-panel cap in black and natural. The circular GOAL Athletics badge embroidered on the front panel, curved visor, adjustable snap.",
     // $48 matches the Touchline Cap and lands on the same economics:
     // dropship $29.88 leaves 37.8% gross before payment fees and shipping.
     priceCents: 3200,
@@ -2756,11 +2756,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_BADGE_CAP_FRONT.webp",
-        alt: "GOOOL Athletics Badge Cap in black and natural, front view",
+        alt: "GOAL Athletics Badge Cap in black and natural, front view",
       },
       {
         src: "/products/GOOOL_STD_BADGE_CAP_BACK.webp",
-        alt: "GOOOL Athletics Badge Cap in black and natural, back view",
+        alt: "GOAL Athletics Badge Cap in black and natural, back view",
       },
     ],
     sizes: ["OS"],
@@ -2779,10 +2779,10 @@ export const products: Product[] = [
   },
   {
     id: "80000000-0000-4000-8000-000000000008",
-    name: "GOOOL Athletics Stacked Cap",
+    name: "GOAL Athletics Stacked Cap",
     slug: "goool-athletics-stacked-cap",
     description:
-      "Structured five-panel cap in black and natural. GOOOL over a red rule with ATHLETICS beneath, embroidered across the front panel, curved visor, adjustable snap.",
+      "Structured five-panel cap in black and natural. GOAL over a red rule with ATHLETICS beneath, embroidered across the front panel, curved visor, adjustable snap.",
     // Also $48, to hold one price across the cap line. Be aware this one
     // is the thinnest product in the catalog: at 22,313 stitches its
     // dropship is $33.08, leaving 31.1% gross before fees and shipping.
@@ -2802,11 +2802,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/GOOOL_STD_ATHLETICS_CAP_FRONT.webp",
-        alt: "GOOOL Athletics Stacked Cap in black and natural, front view",
+        alt: "GOAL Athletics Stacked Cap in black and natural, front view",
       },
       {
         src: "/products/GOOOL_STD_ATHLETICS_CAP_BACK.webp",
-        alt: "GOOOL Athletics Stacked Cap in black and natural, back view",
+        alt: "GOAL Athletics Stacked Cap in black and natural, back view",
       },
     ],
     sizes: ["OS"],

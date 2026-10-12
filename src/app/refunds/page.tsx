@@ -47,7 +47,7 @@ export default function RefundsPage() {
       <section className="bg-ink text-paper">
         <div className="mx-auto max-w-content px-4 py-16 sm:px-6 sm:py-20">
           <p className="font-display text-sm uppercase tracking-widest text-paper/60">
-            GOOOL Athletics
+            GOAL Athletics
           </p>
           <h1 className="mt-3 font-display text-6xl uppercase leading-none tracking-tightest sm:text-7xl lg:text-8xl">
             Refund Policy

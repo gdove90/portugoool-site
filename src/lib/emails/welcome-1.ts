@@ -1,5 +1,5 @@
 // Welcome sequence, Email 1: sent from /api/discount right after the
-// GOOOL20 code is issued. Transactional (the code the customer asked
+// GOAL20 code is issued. Transactional (the code the customer asked
 // for), so it carries no List-Unsubscribe headers; the footer still
 // shows the address and the unsubscribe link. Copy is final (owner brief
 // 2026-09-29). The cart has no code query parameter, so the button goes

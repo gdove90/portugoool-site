@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductBySlug((await params).slug);
   if (!product) return { title: "Not found" };
 
-  // The title template appends " · GOOOL", and every product name already
-  // starts with GOOOL, so the raw name rendered as "GOOOL Touchline Cap
-  // · GOOOL". The brand is stripped here and the template puts it back
+  // The title template appends " · GOAL", and every product name already
+  // starts with GOAL, so the raw name rendered as "GOAL Touchline Cap
+  // · GOAL". The brand is stripped here and the template puts it back
   // once, with the price, which is what a shopper scans for in a result.
-  const short = product.name.replace(/^GOOOL\s+/, "");
+  const short = product.name.replace(/^GOAL\s+/, "");
   const price = `$${(product.priceCents / 100).toFixed(0)}`;
 
   return {

@@ -153,7 +153,7 @@ export function trackInitiateCheckout(p: { slugs: string[]; value: number; curre
 /** After a successful sign-up: remember the address for matching, then Lead with the shared id. */
 export function trackLead(p: { email: string; code: string }): void {
   setKnownEmail(p.email);
-  void fire("Lead", leadStableId(p.email, p.code), { content_name: "GOOOL20 sign-up" });
+  void fire("Lead", leadStableId(p.email, p.code), { content_name: "GOAL20 sign-up" });
 }
 
 export function trackVerifiedPurchase(event: PurchaseEvent): void {

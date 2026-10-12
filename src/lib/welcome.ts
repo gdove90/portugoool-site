@@ -4,7 +4,7 @@
 // the top of every hour (and on demand through the ops endpoint). It
 // selects popup sign-ups whose clock has reached 120 h (Email 2) or
 // 288 h (Email 3), that have not had that email, are not unsubscribed,
-// and whose GOOOL20 code is neither redeemed nor expired. The code comes
+// and whose GOAL20 code is neither redeemed nor expired. The code comes
 // from the ledger by email_hash; the redeemed check reads the same
 // `redeemed_at` the checkout webhook writes. Each send goes through the
 // durable queue under a key unique to the row and step, and the row's

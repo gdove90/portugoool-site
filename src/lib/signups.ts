@@ -1,5 +1,5 @@
 // The list of record for email sign-ups: Supabase `newsletter_signups`,
-// one row per address, keyed by the same email hash the GOOOL20 ledger
+// one row per address, keyed by the same email hash the GOAL20 ledger
 // uses (owner decision 2026-09-29). `discount_codes` stays hash-only;
 // this table holds the address, the source, the sequence markers and
 // the unsubscribe token. Every sign-up is also added to the Resend

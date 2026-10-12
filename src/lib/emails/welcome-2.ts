@@ -17,7 +17,7 @@ export function buildWelcome2(input: Welcome2Input): { subject: string; html: st
   const subject = "Why the shirt weighs nothing";
   const fabric =
     "It's a tri-blend: 50% poly, 25% ring-spun cotton, 25% rayon. The poly wicks and holds shape, the cotton keeps it from smelling like a gym bag, the rayon is why it drapes instead of hanging. 3.8 ounces. It gets softer every wash.";
-  const colors = "Three colors: Charcoal, Grey, Navy. GA on the chest, GOOOL ATHLETICS on the back.";
+  const colors = "Three colors: Charcoal, Grey, Navy. GA on the chest, GOAL ATHLETICS on the back.";
   const text = [
     "Quick one about the performance tee.",
     fabric,

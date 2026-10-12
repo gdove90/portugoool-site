@@ -5,5 +5,5 @@ export function Strike() {
 }
 
 export function Brand({ footer = false }: { footer?: boolean }) {
-  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOOOL Athletics home"><span className="brand-strike"><Strike /></span><span>GOOOL <b>ATHLETICS</b></span></Link>;
+  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOAL Athletics home"><span className="brand-strike"><Strike /></span><span>GOAL <b>ATHLETICS</b></span></Link>;
 }

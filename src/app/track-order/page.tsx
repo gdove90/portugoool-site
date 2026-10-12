@@ -5,7 +5,7 @@ import { useState } from "react";
 
 // ─────────────────────────────────────────────────────────────
 // Real order tracking. The lookup calls /api/track-order with the
-// order reference (GOOOL-XXXXXXXX, from the confirmation page) plus
+// order reference (GOAL-XXXXXXXX, from the confirmation page) plus
 // the checkout email; the server verifies both together. No fake
 // "status is on its way" promises — every message reflects what the
 // backend actually did.
@@ -71,7 +71,7 @@ export default function TrackOrderPage() {
         <div className="relative flex w-full flex-col gap-4 border border-ink/15 bg-paper p-[22px] md:-mt-[110px] md:w-[480px] md:shrink-0 md:p-8">
           <h2 className="font-display text-[26px] uppercase leading-tight">Check your order status</h2>
           <p className="text-base text-ink/70">
-            Enter your order reference (it looks like GOOOL-1A2B3C4D) and the
+            Enter your order reference (it looks like GOAL-1A2B3C4D) and the
             email you ordered with.
           </p>
 
@@ -86,7 +86,7 @@ export default function TrackOrderPage() {
                 required
                 value={reference}
                 onChange={(e) => setReference(e.target.value)}
-                placeholder="GOOOL-1A2B3C4D"
+                placeholder="GOAL-1A2B3C4D"
                 className="w-full rounded-full border border-ink/25 px-5 py-4 text-base focus:border-ink focus:outline-none"
               />
             </div>
@@ -149,7 +149,7 @@ export default function TrackOrderPage() {
 
           <ol>
             {[
-              ["Order confirmed", "Instant receipt from our secure checkout, with your GOOOL order reference."],
+              ["Order confirmed", "Instant receipt from our secure checkout, with your GOAL order reference."],
               ["Shipped", "Tracking number lands in your inbox."],
               ["Delivered", "Within 7–12 business days in the US. Canada, the UK and Portugal typically take 2 to 3 weeks."],
             ].map(([title, body], i) => (

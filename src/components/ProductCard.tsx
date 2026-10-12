@@ -8,10 +8,10 @@ import { Product, isSoldOut, isAvailableForSale, remainingUnits, hasPrice } from
 import { formatPrice } from "@/lib/format";
 
 // Catalog card (design 6a, 2026-09-29). The display name drops the
-// "GOOOL " prefix, owner decision 2026-09-29: every product carries it
+// "GOAL " prefix, owner decision 2026-09-29: every product carries it
 // and the brand is already on the page. The full name stays in the
 // image alt, the link label and the product page.
-const displayName = (name: string) => name.replace(/^GOOOL\s+/, "");
+const displayName = (name: string) => name.replace(/^GOAL\s+/, "");
 
 export default function ProductCard({ product }: { product: Product }) {
   const onSale =
