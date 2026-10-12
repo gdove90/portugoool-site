@@ -87,8 +87,9 @@
   white-space: nowrap;
 }
 .brand b { font-weight: 500; }
-.mark { display: block; width: 39px; }
+.mark { display: block; width: 39px; flex: none; }
 .mark svg { display: block; width: 39px; height: auto; fill: currentColor; }
+.overlay .stage .wordmark { display: block; width: auto; height: 44px; flex: none; }
 
 .access {
   display: inline-flex;
@@ -108,6 +109,7 @@
 }
 .access:hover, .access[aria-expanded="true"] { border-color: var(--line-strong); background: rgba(247, 245, 240, .04); }
 .access svg { width: 12px; height: 12px; }
+.accessLabelCompact { display: none; }
 
 .panel {
   position: absolute;
@@ -271,6 +273,7 @@
   .top { height: 72px; }
   .brand { font-size: 9px; gap: 11px; letter-spacing: .24em; }
   .mark, .mark svg { width: 30px; }
+  .overlay .stage .wordmark { height: 34px; }
   .access { padding: 0 12px; font-size: 9px; letter-spacing: .16em; }
   .content { align-self: end; padding: 56px var(--gutter) 44px; }
   .status { font-size: 10px; letter-spacing: .2em; }
@@ -284,4 +287,11 @@
   .bgStrike { width: 150vw; right: -62vw; bottom: auto; top: 14vh; opacity: .07; }
   .foot { flex-direction: column; align-items: flex-start; gap: 6px; }
   .foot nav span { padding: 6px 9px; }
+}
+
+/* Owner-approved compact control keeps the 34px wordmark readable at 320px. */
+@media (max-width: 359.98px) {
+  .access { padding: 0 4px; }
+  .accessLabelFull { display: none; }
+  .accessLabelCompact { display: inline; }
 }
