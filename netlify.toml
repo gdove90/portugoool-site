@@ -11,23 +11,8 @@
 
 # goool.shop is the primary domain (phase-2 flip, 2026-07-09).
 # portugoool.com stays owned forever and 301s here.
-[[redirects]]
-  from = "https://portugoool.com/*"
-  to = "https://goool.shop/:splat"
-  status = 301
-  force = true
 
-[[redirects]]
-  from = "https://www.portugoool.com/*"
-  to = "https://goool.shop/:splat"
-  status = 301
-  force = true
 
-[[redirects]]
-  from = "https://www.goool.shop/*"
-  to = "https://goool.shop/:splat"
-  status = 301
-  force = true
 
 # /world-cup was a seasonal campaign page, retired 2026-09-22: the
 # tournament is over and GOOOL is an everyday brand.

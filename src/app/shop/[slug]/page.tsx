@@ -1,3 +1,4 @@
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProductDetail from "@/v84/ProductDetail";
@@ -19,12 +20,13 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (MIGRATION_PREVIEW) return { title: "Collection in development", robots: { index: false, follow: false } };
   const product = getProductBySlug((await params).slug);
   if (!product) return { title: "Not found" };
 
-  // The title template appends " · GOOOL", and every product name already
+  // The title template appends " · GOAL", and every product name already
   // starts with GOOOL, so the raw name rendered as "GOOOL Touchline Cap
-  // · GOOOL". The brand is stripped here and the template puts it back
+  // · GOAL". The brand is stripped here and the template puts it back
   // once, with the price, which is what a shopper scans for in a result.
   const short = product.name.replace(/^GOOOL\s+/, "");
   const price = `$${(product.priceCents / 100).toFixed(0)}`;
@@ -49,6 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProductPage({ params }: Props) {
   const product = getProductBySlug((await params).slug);
   if (!product) notFound();
+  if (MIGRATION_PREVIEW) return <><h1 className="sr-only">Collection in development</h1><ProductDetail product={product} /></>;
 
 
   return (

@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import CollectionComingSoon from "@/components/CollectionComingSoon";
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import { MobileImage } from "./MobileImage";
 import { ProductGallery } from "./ProductGallery";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -66,5 +68,6 @@ function ProductView({ product }: {
 }
 
 export default function ProductDetail({ product }: { product: Product }) {
+    if (MIGRATION_PREVIEW) return <CollectionComingSoon />;
     return <ProductView key={product.id} product={product} />;
 }

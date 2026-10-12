@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { storeClosed } from "@/lib/store-status";
 import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
 
 // Password check for the site gate.
@@ -25,11 +26,11 @@ export const dynamic = "force-dynamic";
 export async function POST(req: NextRequest) {
   const secret = process.env.PREVIEW_KEY;
 
-  // No key configured means the gate is not holding anything back, so there
-  // is nothing to unlock and nothing to refuse. Middleware fails open in the
-  // same case, and the two must agree or the site locks everyone out.
+  // Missing credentials never reopen a closed storefront.
   if (!secret) {
-    return NextResponse.json({ ok: true, gate: "disabled" });
+    return storeClosed()
+      ? NextResponse.json({ error: "Team access is unavailable. Please contact support." }, { status: 503 })
+      : NextResponse.json({ ok: true, gate: "disabled" });
   }
 
   let password = "";

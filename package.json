@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "test:migration": "node scripts/test-goal-migration.cjs && node scripts/test-goal-brand-assets.cjs",
     "test:v84": "node scripts/test-v84.cjs",
     "test:v84:admin": "node scripts/test-v84-admin.cjs",
     "test:v84:upload": "node scripts/test-v84-upload.cjs",

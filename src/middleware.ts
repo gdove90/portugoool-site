@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
+import { storeClosed, SERVICE_PATHS } from "@/lib/store-status";
 import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
 
 // Public launch: 2026-09-25. Keep canonical and retired-route redirects here.
@@ -6,8 +8,7 @@ import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
 // Renovation gate (owner decision 2026-10-12): every piece is being
 // redesigned, so the public sees only /gate ("Closed for renovation")
 // while the owner's team keeps the full store behind a password.
-// The gate is ON exactly when PREVIEW_KEY is set in Netlify's production
-// environment. To reopen the store, delete PREVIEW_KEY there and redeploy.
+// Reopening requires STORE_OPEN=true and removing PREVIEW_KEY after release approval.
 // Never put PREVIEW_KEY in a local .env file used for a production build.
 
 // Paths that must answer without the gate cookie, or something breaks
@@ -47,14 +48,18 @@ const PUBLIC_PATHS = new Set([
   "/icon.png",
   "/apple-icon.png",
 ]);
-const PUBLIC_PREFIXES = ["/print/", "/fonts/", "/unsubscribe/", "/opengraph-image", "/.well-known/", "/.netlify/"];
+const PUBLIC_PREFIXES = ["/print/", "/fonts/", "/brand/", "/unsubscribe/", "/opengraph-image", "/.well-known/", "/.netlify/"];
 
 function isPublic(pathname: string): boolean {
-  return PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
+  return SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
+  // A review build may inherit credentials: deny every operational endpoint.
+  if (MIGRATION_PREVIEW && (pathname.startsWith("/api/") || pathname.startsWith("/.netlify/") || pathname.startsWith("/unsubscribe/"))) {
+    return NextResponse.json({ error: "Design preview: live operations are disabled." }, { status: 503 });
+  }
 
   // Canonical domain. /print/* stays reachable on both hosts because
   // supplier file URLs reference the old domain.
@@ -63,7 +68,9 @@ export async function middleware(req: NextRequest) {
     (host === "portugoool.com" ||
       host === "www.portugoool.com" ||
       host === "www.goool.shop") &&
-    !pathname.startsWith("/print/")
+    !pathname.startsWith("/print/") && !pathname.startsWith("/api/") &&
+    !pathname.startsWith("/.netlify/") && !pathname.startsWith("/unsubscribe/") &&
+    !SERVICE_PATHS.has(pathname) && ["GET", "HEAD"].includes(req.method)
   ) {
     const url = req.nextUrl.clone();
     url.protocol = "https";
@@ -123,15 +130,13 @@ export async function middleware(req: NextRequest) {
     return redirectToShop(req);
   }
 
-  // Renovation gate. Fails OPEN when PREVIEW_KEY is absent: failing closed
-  // on a missing variable would lock the owner out of their own site.
-  // /api/preview agrees, reporting the gate disabled rather than refusing.
+  // Closure defaults ON. An absent password disables team access, never the closure.
   // Only goool_gate counts; see src/lib/gate.ts for why the legacy
   // goool_preview cookie never opens it.
   const secret = process.env.PREVIEW_KEY;
-  if (secret && !isPublic(pathname)) {
-    const expected = await gateToken(secret);
-    if (req.cookies.get(GATE_COOKIE)?.value !== expected) {
+  if (!MIGRATION_PREVIEW && storeClosed() && !isPublic(pathname)) {
+    const expected = secret ? await gateToken(secret) : null;
+    if (!expected || req.cookies.get(GATE_COOKIE)?.value !== expected) {
       // An API caller cannot follow a redirect to an HTML page, so it gets
       // a plain refusal instead of a 307 it would replay against /gate.
       if (pathname.startsWith("/api/")) {

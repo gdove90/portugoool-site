@@ -1,3 +1,4 @@
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import type { Metadata } from "next";
 import { consentBootstrap } from "@/lib/marketing-consent";
 import "./critical-fonts.css";
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     : {}),
   title: {
     default: BRAND_SEARCH_TITLE,
-    template: "%s · GOOOL",
+    template: "%s · GOAL",
   },
   // The default description is the FALLBACK, inherited by any page that
   // does not set its own. It read "The First Capsule is live." until
@@ -48,20 +49,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   openGraph: {
-    siteName: "GOOOL Athletics",
+    siteName: "GOAL Athletics",
     title: BRAND_SEARCH_TITLE,
     description: BRAND_SEARCH_DESCRIPTION,
     type: "website",
     url: "/",
     locale: "en_US",
-    // Approved GOOOL Athletics lockup on ink, built at 1200x630 for sharing.
+    // Approved GOAL Athletics lockup on ink, built at 1200x630 for sharing.
     // The site's campaign photography remains unchanged.
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "GOOOL Athletics. Wear the Feeling.",
+        alt: "GOAL Athletics. Wear the Feeling.",
       },
     ],
   },
@@ -72,9 +73,9 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    index: !MIGRATION_PREVIEW,
+    follow: !MIGRATION_PREVIEW,
+    googleBot: { index: !MIGRATION_PREVIEW, follow: !MIGRATION_PREVIEW, "max-image-preview": "large" },
   },
 };
 
