@@ -1,3 +1,4 @@
+import { MAILING_STREET, MAILING_CITY_LINE } from "@/lib/business-address";
 import Link from "next/link";
 import Image from "next/image";
 import { CookieSettingsButton } from "./MarketingConsent";
@@ -123,6 +124,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-1.5 text-[13px] leading-relaxed text-paper/65">
+          <address className="not-italic">Mailing address<br />{MAILING_STREET}<br />{MAILING_CITY_LINE}</address>
           <p className="whitespace-nowrap">
             © {new Date().getFullYear()} GOOOL Athletics LLC. All rights reserved.
           </p>
