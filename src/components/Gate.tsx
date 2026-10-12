@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Gate.module.css";
+import BrandWordmark from "./BrandWordmark";
 
 // "Closed for renovation" (owner decision 2026-10-12): every piece is being
 // redesigned, so the public sees this page while the team keeps the full
@@ -118,26 +119,7 @@ export default function Gate({ next }: { next: string }) {
               <polygon points="0,400 360.161617719,0 550.161617719,0 190,400" />
               <polygon points="340,400 700.161617719,0 890.161617719,0 530,400" />
             </svg>
-            {/* Smooth vector lettering; the subtitle has full-pixel stems at phone size. */}
-            <svg className={styles.wordmark} data-wordmark-version="smooth-2" viewBox="0 0 427 103" role="img" aria-label="GOAL Athletics" focusable="false">
-              <g fill="#FFFFFF" fillRule="evenodd">
-                <path d="M125 1H44Q29 1 19 18L1 53Q-5 66 14 66H88Q95 66 98 59L112 29H56L77 46L76 48H37Q30 48 33 41L41 25Q45 18 51 18H117Z" />
-                <path d="M158 1H216Q239 1 231 18L216 49Q208 65 190 65H126Q110 65 117 49L132 19Q141 1 158 1ZM163 18Q157 18 153 26L145 42Q142 48 150 48H184Q191 48 195 40L201 27Q205 18 197 18Z" />
-                <path d="M297 1H349L320 65H290L281 50H299L313 18L251 65H215Z" />
-                <path d="M366 1H394L375 40Q371 48 380 48H427V65H354Q337 65 345 47Z" />
-              </g>
-              <g transform="translate(58 83) skewX(-20)" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="butt" strokeLinejoin="round">
-                <path d="M0 19L10 1H14L24 19M5 12H19" />
-                <path d="M38 1H62M50 1V19" />
-                <path d="M76 0V19M98 0V19M76 10H98" />
-                <path d="M114 0V18H136" />
-                <path d="M174 1H152V18H174M152 10H172" />
-                <path d="M190 1H214M202 1V19" />
-                <path d="M239 0V19" />
-                <path d="M286 3Q284 1 281 1H270Q264 1 264 7V12Q264 18 270 18H281Q284 18 286 16" />
-                <path d="M324 3Q322 1 319 1H309Q304 1 304 5Q304 9.5 309 9.5H319Q324 9.5 324 14Q324 18 319 18H309Q305 18 303 16" />
-              </g>
-            </svg>
+            <BrandWordmark className={styles.wordmark} />
           </span>
 
           <button
