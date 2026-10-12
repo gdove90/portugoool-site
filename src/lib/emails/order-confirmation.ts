@@ -1,3 +1,4 @@
+import { MAILING_STREET, MAILING_CITY_LINE, MAILING_ADDRESS } from "../business-address";
 import { OrderItemRow, OrderRow } from "../orders-store";
 import { products } from "../products";
 import { orderReference as orderNumberFor } from "../order-reference";
@@ -139,7 +140,8 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
     "",
     "GOAL Athletics LLC is an independent brand. Not affiliated with, endorsed by, or",
     "connected to any futbol federation, club, league, or governing body.",
-    `${site}`
+    `${site}`,
+    MAILING_ADDRESS
   );
   const text = textLines.join("\n");
 
@@ -238,6 +240,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
           <tr><td align="center" style="border-top:1px solid ${BORDER};padding:18px 0 24px;">
             <div style="font:700 19px/1.35 Helvetica,Arial,sans-serif;color:${PAPER};">Wear the Feeling.</div>
             <div style="margin-top:13px;font:400 11px/1.65 Helvetica,Arial,sans-serif;letter-spacing:.6px;color:${MUTED};">GOAL ATHLETICS LLC · <a href="${esc(site)}" target="_blank" style="color:${PAPER};text-decoration:underline;">goool.shop</a></div>
+            <div style="margin-top:10px;font:400 12px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">${esc(MAILING_STREET)}<br>${esc(MAILING_CITY_LINE)}</div>
           </td></tr>
         </table>
       </td></tr>

@@ -4,13 +4,9 @@
 // requires on marketing mail: a physical mailing address and an
 // unsubscribe link. Black background, white type, one accent colour.
 //
-// MAILING_STREET was taken from the business address on the owner's own
-// Mailchimp account record (242 Earle Dr, North Kingstown, RI 02852) on
-// 2026-09-29; the owner confirms it before deploy. The suite asserts it
-// is not a placeholder.
-
-export const MAILING_STREET = "242 Earle Dr";
-export const MAILING_CITY_LINE = "North Kingstown, RI 02852";
+// Shared mailing address approved by the owner on 2026-10-12.
+import { MAILING_STREET, MAILING_CITY_LINE } from "../business-address";
+export { MAILING_STREET, MAILING_CITY_LINE };
 export const BRAND_RED = "#C1121F";
 export const SITE_URL = "https://goool.shop";
 export const SUPPORT_EMAIL = "hello@goool.shop";
