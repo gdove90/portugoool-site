@@ -1,0 +1,287 @@
+/* "Closed for renovation" page. Matches the approved mock-up in
+   designs/renovation-page-2026-10-12/ and the live v84 type and colour. */
+
+.overlay {
+  --ink: #0a0a0a;
+  --paper: #f7f5f0;
+  --soft: #cfcbc4;
+  --muted: #a8a49d;
+  --line: rgba(247, 245, 240, 0.16);
+  --line-strong: rgba(247, 245, 240, 0.38);
+  --red: #c1121f;
+  --coral: #ff9aa2;
+  --ease: cubic-bezier(.22, .7, .3, 1);
+  --gutter: 7%;
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  overflow-y: auto;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.overlay :focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
+/* Text fields show focus through their frame (:focus-within below); the
+   site's ink-coloured input outline would be invisible on this ground. */
+.overlay .stage input:focus-visible { outline: none; }
+
+.stage {
+  position: relative;
+  isolation: isolate;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  overflow: clip; /* hidden still lets focus() scroll the oversized strike into view */
+  background: radial-gradient(110% 85% at 80% 78%, #1b1b1a 0%, #111110 42%, var(--ink) 100%);
+}
+
+/* The V1.2 strike, oversized and quiet. The two bars arrive apart and close
+   together once, per the brand standard's interaction rule. */
+.bgStrike {
+  position: absolute;
+  z-index: -1;
+  right: -9vw;
+  bottom: -4vh;
+  width: min(80vw, 1200px);
+  height: auto;
+  fill: var(--paper);
+  opacity: 0.06;
+  pointer-events: none;
+}
+.barA, .barB { transform-box: fill-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .barA { animation: closeA 1.6s var(--ease) both; }
+  .barB { animation: closeB 1.6s var(--ease) both; }
+  .reveal { animation: rise 0.9s var(--ease) both; }
+  .d2 { animation-delay: .08s; }
+  .d3 { animation-delay: .16s; }
+  .d4 { animation-delay: .24s; }
+}
+@keyframes closeA { from { transform: translateX(-14%); } to { transform: none; } }
+@keyframes closeB { from { transform: translateX(14%); } to { transform: none; } }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* ---------- header ---------- */
+.top {
+  position: relative;
+  z-index: 3;
+  height: 90px;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .32em;
+  white-space: nowrap;
+}
+.brand b { font-weight: 500; }
+.mark { display: block; width: 39px; }
+.mark svg { display: block; width: 39px; height: auto; fill: currentColor; }
+
+.access {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 16px;
+  background: transparent;
+  color: var(--paper);
+  border: 1px solid var(--line);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.access:hover, .access[aria-expanded="true"] { border-color: var(--line-strong); background: rgba(247, 245, 240, .04); }
+.access svg { width: 12px; height: 12px; }
+
+.panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: var(--gutter);
+  width: min(360px, calc(100vw - 32px));
+  padding: 22px;
+  background: #121211;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .55);
+}
+.panel[hidden] { display: none; }
+.panelTitle { margin: 0; font-size: 11px; font-weight: 600; letter-spacing: .23em; text-transform: uppercase; }
+.panelCopy { margin: 6px 0 0; font-size: 13px; line-height: 1.55; color: var(--muted); }
+.panelRow { margin-top: 16px; display: flex; border: 1px solid var(--line-strong); }
+.panelRow:focus-within { border-color: var(--paper); }
+.rowRejected { border-color: #e8505c; }
+.panelRow input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 14px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--paper);
+  font: inherit;
+  font-size: 16px;
+}
+.panelRow input::placeholder { color: #8d8983; }
+.panelRow .btn { min-height: 48px; padding: 0 20px; }
+.panelError { margin: 12px 0 0; font-size: 13px; line-height: 1.55; color: var(--coral); }
+
+/* ---------- content ---------- */
+.content {
+  align-self: center;
+  max-width: 1240px;
+  padding: 52px var(--gutter) 44px;
+}
+.status {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .23em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(193, 18, 31, .18);
+}
+/* Three classes deep on purpose: the site's global ".v84 :is(h1, ...)"
+   (Inter) and ".v84 .v84-existing-page :is(h1,h2,h3)" (no uppercase, no
+   tracking) both outrank a single class, and /gate renders inside both. */
+.overlay .stage .title {
+  margin: 22px 0 0;
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(60px, 9.2vw, 144px);
+  line-height: .86;
+  letter-spacing: -.018em;
+  color: var(--paper);
+}
+.lead {
+  margin: 28px 0 0;
+  max-width: 50ch;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--soft);
+}
+
+.notify { margin-top: 44px; max-width: 540px; }
+.notifyLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .23em;
+  text-transform: uppercase;
+}
+.field {
+  margin-top: 14px;
+  display: flex;
+  border: 1px solid var(--line-strong);
+  transition: border-color .2s;
+}
+.field:focus-within { border-color: var(--paper); }
+.field input {
+  flex: 1;
+  min-width: 0;
+  min-height: 56px;
+  padding: 0 18px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--paper);
+  font: inherit;
+  font-size: 16px;
+}
+.field input::placeholder { color: #8d8983; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 26px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn:hover { background: #ffffff; }
+.btn:disabled { opacity: .6; cursor: progress; }
+.btn svg { width: 14px; height: 14px; }
+
+.notifyMsg { margin: 12px 0 0; font-size: 14px; color: var(--paper); }
+.notifyMsg:empty { display: none; }
+.notifyErr { color: var(--coral); }
+.fine { margin: 12px 0 0; font-size: 12px; line-height: 1.6; color: var(--muted); }
+
+.order { margin: 30px 0 0; font-size: 14px; color: var(--soft); }
+.order a { color: var(--paper); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* ---------- footer ---------- */
+.foot {
+  padding: 22px var(--gutter);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.foot nav { display: flex; flex-wrap: wrap; gap: 6px 0; }
+.foot nav a { padding: 6px 0; color: var(--muted); text-decoration: none; }
+.foot nav a:hover { color: var(--paper); }
+.foot nav span { padding: 6px 12px; opacity: .6; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 700px) {
+  .overlay { --gutter: 20px; }
+  .top { height: 72px; }
+  .brand { font-size: 9px; gap: 11px; letter-spacing: .24em; }
+  .mark, .mark svg { width: 30px; }
+  .access { padding: 0 12px; font-size: 9px; letter-spacing: .16em; }
+  .content { align-self: end; padding: 56px var(--gutter) 44px; }
+  .status { font-size: 10px; letter-spacing: .2em; }
+  .overlay .stage .title { font-size: clamp(56px, 18vw, 92px); line-height: .86; }
+  .lead { font-size: 16px; margin-top: 22px; }
+  .notify { margin-top: 36px; }
+  .field { flex-direction: column; border: 0; gap: 10px; }
+  .field input { border: 1px solid var(--line-strong); }
+  .field input:focus { border-color: var(--paper); }
+  .field .btn { width: 100%; }
+  .bgStrike { width: 150vw; right: -62vw; bottom: auto; top: 14vh; opacity: .07; }
+  .foot { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .foot nav span { padding: 6px 9px; }
+}

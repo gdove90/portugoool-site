@@ -5,12 +5,12 @@ import Gate from "@/components/Gate";
 // the path they wanted in ?next=, so unlocking returns them where they were
 // aiming rather than dumping everyone on the homepage.
 //
-// noindex/nofollow: while the store is held back, the only page a crawler
-// can reach is this one, and a "Private preview" splash is not what should
-// be sitting in results under goool.shop when the store does open.
+// noindex/nofollow: while the store is closed for renovation, the only page
+// a crawler can reach is this one, and a holding page is not what should be
+// sitting in results under goool.shop when the store reopens.
 export const metadata: Metadata = {
-  title: "Private Preview",
-  description: "goool.shop is opening soon.",
+  title: "Closed for renovation",
+  description: "GOOOL Athletics is redesigning every piece. The store reopens soon.",
   robots: { index: false, follow: false },
 };
 

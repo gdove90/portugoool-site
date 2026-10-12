@@ -1,9 +1,57 @@
 import { NextRequest, NextResponse } from "next/server";
-
+import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
 
 // Public launch: 2026-09-25. Keep canonical and retired-route redirects here.
-// The owner removed the preview gate; local preview credentials must not
-// close the production storefront on a later build.
+//
+// Renovation gate (owner decision 2026-10-12): every piece is being
+// redesigned, so the public sees only /gate ("Closed for renovation")
+// while the owner's team keeps the full store behind a password.
+// The gate is ON exactly when PREVIEW_KEY is set in Netlify's production
+// environment. To reopen the store, delete PREVIEW_KEY there and redeploy.
+// Never put PREVIEW_KEY in a local .env file used for a production build.
+
+// Paths that must answer without the gate cookie, or something breaks
+// silently. Machine callers carry no cookie, so a gated callback is
+// bounced to an HTML page and the work it carried is lost.
+//
+//   /api/stripe-webhook        Stripe payment events.
+//   /api/apliiq-fulfillment    Supplier shipment callbacks.
+//   /api/fulfillment-ops       Called every minute by the deliver-emails
+//                              scheduled function (order emails, supplier
+//                              submission).
+//   /api/intake/maintenance    Hourly intake-maintenance scheduled function.
+//   /print/                    Supplier print-file URLs.
+//   /gate, /api/preview        The gate itself and its password check.
+//   /api/newsletter            The gate page's "notify me" signup.
+//   /track-order, /success     Customers with an order in flight, and the
+//   and their APIs             Stripe return page for a checkout that
+//                              straddles the switch.
+//   legal + unsubscribe        Linked from the gate page and from emails.
+//   /fonts/, icons, OG image   Assets the gate page and link previews use.
+const PUBLIC_PATHS = new Set([
+  "/gate",
+  "/api/preview",
+  "/api/stripe-webhook",
+  "/api/apliiq-fulfillment",
+  "/api/fulfillment-ops",
+  "/api/intake/maintenance",
+  "/api/newsletter",
+  "/track-order",
+  "/api/track-order",
+  "/success",
+  "/api/order-status",
+  "/privacy",
+  "/terms",
+  "/refunds",
+  "/robots.txt",
+  "/icon.png",
+  "/apple-icon.png",
+]);
+const PUBLIC_PREFIXES = ["/print/", "/fonts/", "/unsubscribe/", "/opengraph-image", "/.well-known/", "/.netlify/"];
+
+function isPublic(pathname: string): boolean {
+  return PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
+}
 
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -73,6 +121,33 @@ export async function middleware(req: NextRequest) {
     pathname === "/shop/goool-athletics-circular-center-crewneck"
   ) {
     return redirectToShop(req);
+  }
+
+  // Renovation gate. Fails OPEN when PREVIEW_KEY is absent: failing closed
+  // on a missing variable would lock the owner out of their own site.
+  // /api/preview agrees, reporting the gate disabled rather than refusing.
+  // Only goool_gate counts; see src/lib/gate.ts for why the legacy
+  // goool_preview cookie never opens it.
+  const secret = process.env.PREVIEW_KEY;
+  if (secret && !isPublic(pathname)) {
+    const expected = await gateToken(secret);
+    if (req.cookies.get(GATE_COOKIE)?.value !== expected) {
+      // An API caller cannot follow a redirect to an HTML page, so it gets
+      // a plain refusal instead of a 307 it would replay against /gate.
+      if (pathname.startsWith("/api/")) {
+        return NextResponse.json({ error: "The store is closed for renovation." }, { status: 401 });
+      }
+      const url = req.nextUrl.clone();
+      url.pathname = "/gate";
+      url.search = "";
+      // Only the path and query, never a full URL, so this cannot become an
+      // off-site redirect; /gate re-validates it anyway.
+      const wanted = pathname + req.nextUrl.search;
+      if (wanted !== "/") url.searchParams.set("next", wanted);
+      const res = NextResponse.redirect(url, 307);
+      if (req.cookies.has(LEGACY_COOKIE)) res.cookies.delete(LEGACY_COOKIE);
+      return res;
+    }
   }
 
   // Region cookie for the advertising-consent default (owner decision

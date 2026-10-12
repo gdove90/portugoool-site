@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GOOOL Athletics · Back soon</title>
+<!--
+  MOCK-UP ONLY (2026-10-12). Renovation holding page for the store while
+  every piece is redesigned. Visual language follows the live v84 site:
+  Barlow Condensed display, Inter body, ink/paper, the V1.2 strike mark
+  (owner locked 2026-10-04). No old wordmark artwork is used.
+
+  Nothing here is wired. In production the password is checked server-side
+  by /api/preview against an env var and never appears in client code; the
+  email form posts to the existing /api/newsletter (Mailchimp).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --paper: #f7f5f0;
+    --soft: #cfcbc4;
+    --muted: #a8a49d;
+    --line: rgba(247, 245, 240, 0.16);
+    --line-strong: rgba(247, 245, 240, 0.38);
+    --red: #c1121f;
+    --coral: #ff9aa2;
+    --ease: cubic-bezier(.22, .7, .3, 1);
+    --gutter: 7%;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: Inter, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  button, input { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
+  h1, p { margin: 0; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- stage ---------- */
+  .stage {
+    position: relative;
+    isolation: isolate;
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    overflow: clip; /* hidden still lets focus() scroll the oversized strike into view */
+    background:
+      radial-gradient(110% 85% at 80% 78%, #1b1b1a 0%, #111110 42%, var(--ink) 100%);
+  }
+
+  /* The V1.2 strike, oversized and quiet. The two bars arrive apart and
+     close together once, per the brand standard's interaction rule. */
+  .bg-strike {
+    position: absolute;
+    z-index: -1;
+    right: -9vw;
+    bottom: -4vh;
+    width: min(80vw, 1200px);
+    height: auto;
+    color: var(--paper);
+    opacity: 0.06;
+    pointer-events: none;
+  }
+  .bg-strike polygon { transform-box: fill-box; }
+  @media (prefers-reduced-motion: no-preference) {
+    .bg-strike .bar-a { animation: closeA 1.6s var(--ease) both; }
+    .bg-strike .bar-b { animation: closeB 1.6s var(--ease) both; }
+    .reveal { animation: rise 0.9s var(--ease) both; }
+    .reveal.d2 { animation-delay: .08s; }
+    .reveal.d3 { animation-delay: .16s; }
+    .reveal.d4 { animation-delay: .24s; }
+  }
+  @keyframes closeA { from { transform: translateX(-14%); } to { transform: none; } }
+  @keyframes closeB { from { transform: translateX(14%); } to { transform: none; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- header ---------- */
+  .top {
+    position: relative;
+    z-index: 3;
+    height: 90px;
+    padding: 0 var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .32em;
+    white-space: nowrap;
+  }
+  .brand svg { width: 39px; height: auto; display: block; }
+  .brand b { font-weight: 500; }
+
+  .access {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 0 16px;
+    background: transparent;
+    border: 1px solid var(--line);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color .2s, background .2s;
+  }
+  .access:hover, .access[aria-expanded="true"] { border-color: var(--line-strong); background: rgba(247,245,240,.04); }
+  .access svg { width: 12px; height: 12px; }
+
+  .access-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: var(--gutter);
+    width: min(360px, calc(100vw - 32px));
+    padding: 22px;
+    background: #121211;
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 24px 60px rgba(0,0,0,.55);
+  }
+  .access-panel[hidden] { display: none; }
+  .panel-title { font-size: 11px; font-weight: 600; letter-spacing: .23em; text-transform: uppercase; }
+  .panel-copy { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.55; }
+  .panel-row { margin-top: 16px; display: flex; border: 1px solid var(--line-strong); }
+  .panel-row input {
+    flex: 1; min-width: 0;
+    padding: 0 14px; min-height: 48px;
+    background: transparent; border: 0; outline: none;
+    font-size: 15px;
+  }
+  .panel-row input::placeholder { color: #8d8983; }
+  .panel-row:focus-within { border-color: var(--paper); }
+  .panel-msg { margin-top: 12px; font-size: 12px; line-height: 1.55; color: var(--muted); min-height: 0; }
+
+  /* ---------- content ---------- */
+  .content {
+    align-self: center;
+    padding: 52px var(--gutter) 44px;
+    max-width: 1240px;
+  }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .23em;
+    text-transform: uppercase;
+    color: var(--soft);
+  }
+  .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 0 0 4px rgba(193,18,31,.18);
+  }
+  h1 {
+    margin-top: 22px;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(60px, 9.2vw, 144px);
+    line-height: .86;
+    letter-spacing: -.005em;
+  }
+  .lead {
+    margin-top: 28px;
+    max-width: 50ch;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--soft);
+  }
+
+  .notify { margin-top: 44px; max-width: 540px; }
+  .notify-label { font-size: 11px; font-weight: 600; letter-spacing: .23em; text-transform: uppercase; }
+  .field {
+    margin-top: 14px;
+    display: flex;
+    border: 1px solid var(--line-strong);
+    transition: border-color .2s;
+  }
+  .field:focus-within { border-color: var(--paper); }
+  .field input {
+    flex: 1; min-width: 0;
+    padding: 0 18px; min-height: 56px;
+    background: transparent; border: 0; outline: none;
+    font-size: 16px;
+  }
+  .field input::placeholder { color: #8d8983; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 56px;
+    padding: 0 26px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .btn:hover { background: #ffffff; }
+  .btn svg { width: 14px; height: 14px; }
+  .panel-row .btn { min-height: 48px; padding: 0 20px; }
+  .fine { margin-top: 12px; font-size: 12px; line-height: 1.6; color: var(--muted); }
+  .notify-msg { margin-top: 12px; font-size: 14px; color: var(--paper); }
+  .notify-msg.err { color: var(--coral); }
+
+  .order { margin-top: 30px; font-size: 14px; color: var(--soft); }
+  .order a { color: var(--paper); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+  /* ---------- footer ---------- */
+  .foot {
+    padding: 22px var(--gutter);
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .foot nav { display: flex; flex-wrap: wrap; gap: 6px 0; }
+  .foot nav a { text-decoration: none; padding: 6px 0; }
+  .foot nav a:hover { color: var(--paper); }
+  .foot nav span { padding: 6px 12px; opacity: .6; }
+
+  /* ---------- small screens ---------- */
+  @media (max-width: 700px) {
+    :root { --gutter: 20px; }
+    .top { height: 72px; }
+    .brand { font-size: 9px; gap: 11px; letter-spacing: .24em; }
+    .brand svg { width: 30px; }
+    .access { padding: 0 12px; font-size: 9px; letter-spacing: .16em; }
+    .content { align-self: end; padding: 56px var(--gutter) 44px; }
+    .status { font-size: 10px; letter-spacing: .2em; }
+    h1 { font-size: clamp(56px, 18vw, 92px); }
+    .lead { font-size: 16px; margin-top: 22px; }
+    .notify { margin-top: 36px; }
+    .field { flex-direction: column; border: 0; gap: 10px; }
+    .field input { border: 1px solid var(--line-strong); }
+    .field input:focus { border-color: var(--paper); }
+    .field .btn { width: 100%; }
+    .bg-strike { width: 150vw; right: -62vw; bottom: auto; top: 14vh; opacity: .07; }
+    .foot { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .foot nav span { padding: 6px 9px; }
+  }
+</style>
+</head>
+<body>
+<main class="stage">
+  <svg class="bg-strike" viewBox="0 0 890.161617719 400" aria-hidden="true" focusable="false">
+    <polygon class="bar-a" fill="currentColor" points="0,400 360.161617719,0 550.161617719,0 190,400"/>
+    <polygon class="bar-b" fill="currentColor" points="340,400 700.161617719,0 890.161617719,0 530,400"/>
+  </svg>
+
+  <header class="top">
+    <a class="brand" href="/" aria-label="GOOOL Athletics">
+      <svg viewBox="0 0 890.161617719 400" aria-hidden="true" focusable="false">
+        <polygon fill="currentColor" points="0,400 360.161617719,0 550.161617719,0 190,400"/>
+        <polygon fill="currentColor" points="340,400 700.161617719,0 890.161617719,0 530,400"/>
+      </svg>
+      <span>GOOOL <b>ATHLETICS</b></span>
+    </a>
+
+    <button class="access" type="button" aria-expanded="false" aria-controls="access-panel">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.75" y="7" width="10.5" height="7.25" rx="1"/><path d="M5.25 7V5a2.75 2.75 0 0 1 5.5 0v2"/></svg>
+      Team access
+    </button>
+
+    <div class="access-panel" id="access-panel" hidden>
+      <form id="access-form" novalidate>
+        <p class="panel-title">Team access</p>
+        <p class="panel-copy">The full store stays open to the GOOOL team while the redesign is underway.</p>
+        <div class="panel-row">
+          <label for="access-password" class="sr-only">Password</label>
+          <input id="access-password" type="password" autocomplete="current-password" placeholder="Password" aria-describedby="access-msg">
+          <button class="btn" type="submit">Enter</button>
+        </div>
+        <p class="panel-msg" id="access-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </header>
+
+  <section class="content" aria-labelledby="headline">
+    <p class="status reveal"><span class="dot" aria-hidden="true"></span>Closed for renovation</p>
+    <h1 id="headline" class="reveal d2">Rebuilding<br>every piece.</h1>
+    <p class="lead reveal d3">We are redesigning the full collection from the ground up. New artwork, cleaner lines, the same feeling on and off the pitch. The store reopens soon.</p>
+
+    <form class="notify reveal d4" id="notify-form" novalidate>
+      <label class="notify-label" for="notify-email">Be first through the doors</label>
+      <div class="field">
+        <input id="notify-email" type="email" autocomplete="email" inputmode="email" placeholder="Email address" aria-describedby="notify-msg notify-fine">
+        <button class="btn" type="submit">
+          Notify me
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </button>
+      </div>
+      <p class="notify-msg" id="notify-msg" aria-live="polite"></p>
+      <p class="fine" id="notify-fine">By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to hello@goool.shop.</p>
+    </form>
+
+    <p class="order reveal d4">Placed an order? <a href="/track-order">Track it here</a>.</p>
+  </section>
+
+  <footer class="foot">
+    <span>© 2026 GOOOL Athletics LLC</span>
+    <nav aria-label="Footer">
+      <a href="https://www.instagram.com/gooolathletics/" rel="noopener">Instagram</a><span aria-hidden="true">·</span>
+      <a href="/track-order">Track an order</a><span aria-hidden="true">·</span>
+      <a href="/privacy">Privacy</a><span aria-hidden="true">·</span>
+      <a href="/terms">Terms</a>
+    </nav>
+  </footer>
+</main>
+
+<script>
+  // Mock-up behaviour only: no network calls, no password in this file.
+  (function () {
+    var toggle = document.querySelector(".access");
+    var panel = document.getElementById("access-panel");
+    var pw = document.getElementById("access-password");
+
+    function setOpen(open) {
+      panel.hidden = !open;
+      toggle.setAttribute("aria-expanded", String(open));
+      if (open) pw.focus({ preventScroll: true });
+    }
+    toggle.addEventListener("click", function () { setOpen(panel.hidden); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !panel.hidden) { setOpen(false); toggle.focus(); }
+    });
+    document.addEventListener("click", function (e) {
+      if (!panel.hidden && !panel.contains(e.target) && !toggle.contains(e.target)) setOpen(false);
+    });
+
+    document.getElementById("access-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var msg = document.getElementById("access-msg");
+      msg.textContent = pw.value
+        ? "Mock-up: on the live page this is checked on the server and opens the full store."
+        : "Enter the team password.";
+    });
+
+    document.getElementById("notify-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = document.getElementById("notify-email");
+      var msg = document.getElementById("notify-msg");
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+      msg.className = "notify-msg" + (ok ? "" : " err");
+      msg.textContent = ok
+        ? "You are on the list. We will email you when the doors reopen."
+        : "Enter a valid email address.";
+    });
+  })();
+</script>
+</body>
+</html>
