@@ -3,6 +3,7 @@
 import { MAILING_STREET, MAILING_CITY_LINE } from "@/lib/business-address";
 
 import Link from "next/link";
+import CustomerServiceShell from "./CustomerServiceShell";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useCart } from "@/lib/cart";
@@ -20,6 +21,17 @@ import MarketingConsent, { CookieSettingsButton } from "@/components/MarketingCo
 
 const navigation = [["/men", "Men"], ["/women", "Women"], ["/shop", "Collection"], ["/about", "Our world"], ["/whats-your-goool", "Your Story"], ["/share-your-goals", "Match Highlights"], ["/kit-wear", "Customize Kitwear"]];
 export default function Shell({ children }: { children: ReactNode }) {
+  const path = usePathname();
+  // Public service pages must not mount the store's searchable catalog,
+  // shopping dialogs, or discount popup behind the renovation gate.
+  if (path === "/gate") return <main id="main">{children}</main>;
+  if (["/contact", "/support", "/faq", "/shipping-returns", "/track-order", "/success", "/privacy", "/terms", "/refunds"].includes(path)) {
+    return <CustomerServiceShell>{children}</CustomerServiceShell>;
+  }
+  return <StoreShell>{children}</StoreShell>;
+}
+
+function StoreShell({ children }: { children: ReactNode }) {
   const path = usePathname();
   const menuOpen = useMobileDialogs();
   const shell = useRef<HTMLDivElement>(null);
