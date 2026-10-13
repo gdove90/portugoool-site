@@ -24,7 +24,7 @@ export default function CustomerServiceShell({ children }: { children: ReactNode
         <Link href="/privacy">Privacy</Link>
         <Link href="/terms">Terms</Link>
       </nav>
-      <p>GOOOL Athletics LLC · {MAILING_STREET}, {MAILING_CITY_LINE}</p>
+      <p>The Goal Brand Group LLC · {MAILING_STREET}, {MAILING_CITY_LINE}</p>
     </footer>
   </div>;
 }
