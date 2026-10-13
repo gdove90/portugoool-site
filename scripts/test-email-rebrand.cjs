@@ -22,13 +22,17 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
   };
   assert.equal(orderNumberFor(order.id),'GOOOL-12345678');
   const sender=fs.readFileSync('src/lib/email.ts','utf8');
-  assert(sender.includes('return "Goool Athletics <hello@goool.shop>";'));
+  assert(sender.includes('return "GOAL Athletics <hello@goalathletics.shop>";'));
+  assert(sender.includes('reply_to: "support@goalathletics.shop"'));
   for(const [name,m] of Object.entries(previews)) {
     assert(m.html.includes('goal-athletics-email-wordmark-white.png'),name);
     assert(m.html.includes('alt="GOAL Athletics"'),name);
     assert(/<body[^>]*background(?:-color)?:#(?:FFFFFF|fff)/.test(m.html),name+' white outer canvas');
     if(name==='welcome-1') {assert(!m.html.includes('Tees $38'));assert(!m.html.includes('Shop the drop'));}
     assert(m.text.includes('goalathletics.shop'),name);
+    assert(m.text.includes('support@goalathletics.shop'),name);
+    assert(!m.html.includes('hello@goool.shop'),name);
+    assert(!m.html.includes('mailto:hello@goalathletics.shop'),name);
     assert(!m.html.includes('/brand/goool-athletics-lockup'),name);
     assert(!m.html.includes('javascript:'),name);
     if(name.startsWith('welcome')) {assert(m.text.includes('PREVIEW-CODE'));assert(m.html.includes(unsubscribeUrl));assert(m.html.includes('GOOOL Athletics LLC'));}
@@ -42,6 +46,20 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
   assert.deepEqual(await require('../src/lib/welcome.ts').runWelcomePass(true),{promotional_followups_disabled:1});
   for(const mode of ['live','test'])for(const step of [2,3]) assert.equal(await require('../src/lib/email-delivery.ts').deliverEmail(`welcome/${mode}/${step}/preview-only`),'promotional_followups_disabled');
   console.log('PASS promotional passes and pre-existing follow-up deliveries cannot send or access the database');
+  const previousKey=process.env.RESEND_API_KEY;
+  let captured;
+  global.fetch=async (_url,options)=>{captured=JSON.parse(options.body);return {ok:true,json:async()=>({id:'synthetic-local-only'})};};
+  process.env.RESEND_API_KEY='synthetic-local-only';
+  try {
+    await require('../src/lib/email.ts').sendEmail({to:'preview@example.invalid',subject:'local fixture',html:'fixture',text:'fixture',replyTo:'hello@goool.shop'},'synthetic-local-only');
+    assert.equal(captured.from,'GOAL Athletics <hello@goalathletics.shop>');
+    assert.equal(captured.reply_to,'support@goalathletics.shop');
+  } finally {
+    if(previousKey===undefined) delete process.env.RESEND_API_KEY; else process.env.RESEND_API_KEY=previousKey;
+    global.fetch=async()=>{throw Error('Network forbidden');};
+  }
+  console.log('PASS local mock payload uses approved From and support Reply-To, including a legacy override');
+
   const meta=await sharp('public/brand/goal-athletics-email-wordmark-white.png').metadata();
   assert.equal(meta.width,1734);assert.equal(meta.height,544);assert(meta.hasAlpha);
   if(process.env.EMAIL_PREVIEW_DIR) {
@@ -52,5 +70,5 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
       fs.writeFileSync(path.join(dir,name+'.txt'),'Subject: '+m.subject+'\n\n'+m.text);
     }
   }
-  console.log('PASS sender unchanged, legacy reference format, transparent V1.3 PNG. No messages sent.');
+  console.log('PASS approved sender, support-only Reply-To, legacy reference format and transparent V1.3 PNG. No messages sent.');
 })().catch(e=>{console.error(e);process.exitCode=1});

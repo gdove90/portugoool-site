@@ -1,6 +1,7 @@
 // Explicit approved presentation exceptions for the locked business-file comparisons.
 module.exports = function emailBrandingBaseline(file, content) {
-  if (file === 'src/lib/email-delivery.ts') return content.replace('export async function deliverEmail(key: string): Promise<string> {', 'export async function deliverEmail(key: string): Promise<string> {\n  // Preserve any existing follow-up rows, but never claim or send them.\n  if (/^welcome\\/(live|test)\\/[23]\\//.test(key)) return "promotional_followups_disabled";');
+  if (file === 'src/lib/email.ts') return content.replace('Goool Athletics <hello@goool.shop>', 'GOAL Athletics <hello@goalathletics.shop>').replace('reply_to: msg.replyTo ?? "hello@goool.shop"', 'reply_to: "support@goalathletics.shop"');
+  if (file === 'src/lib/email-delivery.ts') return content.replaceAll('hello@goool.shop', 'support@goalathletics.shop').replace('export async function deliverEmail(key: string): Promise<string> {', 'export async function deliverEmail(key: string): Promise<string> {\n  // Preserve any existing follow-up rows, but never claim or send them.\n  if (/^welcome\\/(live|test)\\/[23]\\//.test(key)) return "promotional_followups_disabled";');
   if (file === 'src/lib/welcome.ts') return content.slice(0, content.indexOf('export async function runWelcomePass(')) + '// Retain the callable interface for existing workers; promotional follow-ups are retired.\nexport async function runWelcomePass(_livemode: boolean, _now: number = Date.now()): Promise<Record<string, number>> {\n  return { promotional_followups_disabled: 1 };\n}\n';
   if (!file.startsWith('src/lib/emails/')) return content;
   const name = file.split('/').pop();
@@ -34,5 +35,7 @@ module.exports = function emailBrandingBaseline(file, content) {
     .replace('<body style="margin:0;background:#090909;color:#fff;font-family:Arial,Helvetica,sans-serif">','<body style="margin:0;padding:24px 16px;background:#fff;color:#fff;font-family:Arial,Helvetica,sans-serif">')
     .replace('cellpadding="0" style="background:#090909"><tr>','cellpadding="0" style="background:#fff"><tr>')
     .replace('style="max-width:600px"','style="max-width:600px;background:#090909"');
+  content = content.replaceAll('hello@goool.shop', 'support@goalathletics.shop');
+  if (name === 'fulfillment-alert.ts') content = content.replaceAll('email the customer from support@goalathletics.shop.', 'send from hello@goalathletics.shop with replies to support@goalathletics.shop.');
   return content;
 };

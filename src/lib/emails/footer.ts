@@ -1,5 +1,5 @@
 // Shared shell and footer for the welcome sequence (owner decision
-// 2026-09-29). The footer mirrors the hello@goool.shop Gmail signature,
+// 2026-09-29). The footer mirrors the support@goalathletics.shop Gmail signature,
 // same lockup, same order, same tagline, then the two lines the law
 // requires on marketing mail: a physical mailing address and an
 // unsubscribe link. Black background, white type, one accent colour.
@@ -9,7 +9,7 @@ import { MAILING_STREET, MAILING_CITY_LINE } from "../business-address";
 export { MAILING_STREET, MAILING_CITY_LINE };
 export const BRAND_RED = "#C1121F";
 export const SITE_URL = "https://goalathletics.shop";
-export const SUPPORT_EMAIL = "hello@goool.shop";
+export const SUPPORT_EMAIL = "support@goalathletics.shop";
 export const INSTAGRAM_HANDLE = "@gooolathletics";
 export const LOCKUP_URL = `${SITE_URL}/brand/goal-athletics-email-wordmark-white.png`;
 

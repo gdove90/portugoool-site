@@ -3,17 +3,17 @@ import { orderNumberFor } from "./order-confirmation";
 import { getProductById } from "../products";
 
 // ─────────────────────────────────────────────────────────────
-// Owner alert: sent to hello@goool.shop the moment a PAID order is not
+// Owner alert: sent to support@goalathletics.shop the moment a PAID order is not
 // accepted by Apliiq (parked as failed or needs_reconcile). Until
 // 2026-09-29 nothing told the owner; the first two real orders sat
 // unfulfilled behind a declined supplier card and were only noticed
 // through Apliiq's own email. This is internal mail, so it is plain
 // and complete rather than designed: everything needed to act is in
 // the body, including the customer's contact so a delay note can go
-// out from hello@goool.shop.
+// out from support@goalathletics.shop.
 // ─────────────────────────────────────────────────────────────
 
-export const OWNER_ALERT_TO = "hello@goool.shop";
+export const OWNER_ALERT_TO = "support@goalathletics.shop";
 
 export interface FulfillmentAlertInput {
   order: OrderRow & { id: string };
@@ -60,7 +60,7 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
     "1. Fix the cause (a declined card on Apliiq → pay methods is the usual one).",
     `2. Re-submit the order: tell Claude Code "resubmit order ${ref}", or run the release/submit`,
     "   actions on /api/fulfillment-ops (runbook: designs/11_fulfillment/apliiq-product-mapping.md).",
-    "3. If it will be late, email the customer from hello@goool.shop.",
+    "3. If it will be late, send from hello@goalathletics.shop with replies to support@goalathletics.shop.",
     "",
     "The customer has only received the payment receipt; they have not been told anything is wrong.",
   ].join("\n");
@@ -78,7 +78,7 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
 <ol style="margin:0;padding-left:20px;">
 <li>Fix the cause (a declined card on Apliiq → pay methods is the usual one).</li>
 <li>Re-submit the order: tell Claude Code &ldquo;resubmit order ${esc(ref)}&rdquo;, or run the release/submit actions on /api/fulfillment-ops.</li>
-<li>If it will be late, email the customer from hello@goool.shop.</li>
+<li>If it will be late, send from hello@goalathletics.shop with replies to support@goalathletics.shop.</li>
 </ol>
 <p style="margin:20px 0 0;color:#666;">The customer has only received the payment receipt; they have not been told anything is wrong.</p>
 </body></html>`;
