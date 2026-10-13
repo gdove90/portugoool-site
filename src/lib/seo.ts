@@ -9,10 +9,10 @@ import { BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 // fulfillment mapping and checkout policies. Missing identifiers or delivery
 // estimates must stay absent. Availability follows the existing sale gates.
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://goool.shop";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://goalathletics.shop";
 
 export const LEGAL_NAME = "GOOOL Athletics LLC";
-export const BRAND_NAME = "GOOOL Athletics";
+export const BRAND_NAME = "GOAL Athletics";
 export const CONTACT_EMAIL = "hello@goool.shop";
 
 /** Exactly the countries Stripe Checkout will accept an address in. */
@@ -46,7 +46,7 @@ export function organizationJsonLd() {
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
         name: BRAND_NAME,
-        alternateName: "GOOOL",
+        alternateName: "GOAL",
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
     ],
