@@ -18,7 +18,8 @@
     "test:v84:release": "node scripts/test-v84-release.cjs",
     "test:v84:http": "node scripts/smoke-v84.cjs",
     "prebuild": "node scripts/write-build-context.cjs",
-    "test:migration": "node scripts/test-goal-migration.cjs && node scripts/test-goal-brand-assets.cjs"
+    "test:migration": "node scripts/test-goal-migration.cjs && node scripts/test-goal-brand-assets.cjs",
+    "test:discount-popup": "node scripts/test-discount-popup.cjs"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "5.3.0",

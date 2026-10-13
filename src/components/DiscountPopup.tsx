@@ -7,37 +7,15 @@ import { consentForServer, setKnownEmail, trackLead } from "@/lib/meta-pixel";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Brand } from "@/v84/Brand";
+import "./discount-popup.css";
 
-// ─────────────────────────────────────────────────────────────
-// GOOOL20 signup popup (owner decision, 2026-09-25).
-//
-// One component, two layouts from the approved designs in
-// goool advertising/goool20 discount/goool-advertising/email-popup:
-//   desktop  → 1a "split stadium": crowd image left, dark panel right
-//   mobile   → 1e "bottom sheet": the dark sheet alone over the dimmed
-//              page; no crowd image on phones (owner, 2026-09-25)
-//
-// The visitor's email goes to the Resend signup flow used by the footer
-// signup with the extra tag "goool20", then api/discount hands back that
-// person's OWN single-use code (GOOOL20-XXXX, one per email, one
-// redemption, src/lib/discount.ts) and it is shown on screen so the offer
-// works before any welcome email lands. Stripe enforces the discount at
-// checkout; Checkout has allow_promotion_codes on so the field is there.
-// The header's "20% off" link reopens this popup via the goool20:open
-// event, dismissal state notwithstanding.
-//
-// Show rules: once per visitor, after a short delay, never on the pages
-// where it would get in the way of finishing an order. Dismissed →
-// quiet for 30 days. Claimed → never again. Both live in localStorage,
-// which can be blocked or cleared, so every read/write is guarded and
-// the worst case is the popup appearing again.
-// ─────────────────────────────────────────────────────────────
+// Retain the existing signup API, legacy persistence key and opener event.
+// The preview prop displays the real component only in isolated design previews.
 
 const STORAGE_KEY = "goool20_popup";
 const SHOW_DELAY_MS = 6000;
 const DISMISS_DAYS = 30;
-const QUIET_PATHS = ["/cart", "/success", "/gate", "/track-order", "/checkout"];
+const QUIET_PATHS = ["/cart", "/success", "/gate", "/track-order", "/checkout", "/admin"];
 
 type Status = "idle" | "loading" | "done" | "error";
 
@@ -58,9 +36,15 @@ function writeState(state: { dismissedAt?: number; claimed?: boolean }) {
   }
 }
 
-export default function DiscountPopup() {
+export default function DiscountPopup({ review = false }: { review?: boolean }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const closingRef = useRef(false);
+  const swipeMoved = useRef(false);
+  const closeTimer = useRef<number | null>(null);
+  const swipe = useRef<{ id: number; x: number; y: number; at: number } | null>(null);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("Something went wrong. Try again.");
@@ -90,6 +74,9 @@ export default function DiscountPopup() {
       cancelPendingOpen();
       if (automatic && QUIET_PATHS.some(p => window.location.pathname.startsWith(p))) return;
       automaticOpenRef.current = automatic;
+      closingRef.current = false;
+      setClosing(false);
+      setDragOffset(0);
       setOpen(true);
     };
     const observer = new MutationObserver(() => {
@@ -116,12 +103,13 @@ export default function DiscountPopup() {
       if (automaticOpenRef.current) setOpen(false);
       return;
     }
+    if (review) { requestOpen(); return cancelPendingOpen; }
     const state = readState();
     if (state?.claimed) return;
     if (state?.dismissedAt && Date.now() - state.dismissedAt < DISMISS_DAYS * 86400000) return;
     const t = window.setTimeout(() => requestOpen(true), SHOW_DELAY_MS);
     return () => { window.clearTimeout(t); cancelPendingOpen(); };
-  }, [quiet, requestOpen, cancelPendingOpen]);
+  }, [quiet, requestOpen, cancelPendingOpen, review]);
 
   useEffect(() => () => cancelPendingOpen(), [cancelPendingOpen]);
 
@@ -133,23 +121,70 @@ export default function DiscountPopup() {
 
   const close = useCallback(() => {
     cancelPendingOpen();
-    setOpen(false);
+    if (closingRef.current) return;
+    closingRef.current = true;
+    setClosing(true);
+    closeTimer.current = window.setTimeout(() => setOpen(false), window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 180);
     const state = readState() ?? {};
     writeState({ ...state, dismissedAt: Date.now() });
   }, [cancelPendingOpen]);
 
-  // Escape closes; body scroll locks while open; focus lands on the field.
+  // Native modal makes the page inert; restore focus and scroll on every close.
   useEffect(() => {
     if (!open) return;
-    dialogRef.current?.showModal();
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const dialog = dialogRef.current;
+    dialog?.showModal();
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const focusTimer = window.setTimeout(() => inputRef.current?.focus(), 50);
-    return () => {
-      document.body.style.overflow = prev;
-      window.clearTimeout(focusTimer);
+    const focusTimer = window.setTimeout(() => {
+      (window.matchMedia("(max-width: 639px)").matches ? closeRef : inputRef).current?.focus({ preventScroll: true });
+    }, 50);
+    const viewport = window.visualViewport;
+    const size = () => {
+      dialog?.style.setProperty("--goal-viewport-height", viewport ? viewport.height + "px" : "100dvh");
+      dialog?.style.setProperty("--goal-viewport-top", viewport ? viewport.offsetTop + "px" : "0px");
     };
-  }, [open, close]);
+    size(); viewport?.addEventListener("resize", size); viewport?.addEventListener("scroll", size);
+    return () => {
+      window.clearTimeout(focusTimer);
+      if (closeTimer.current !== null) window.clearTimeout(closeTimer.current);
+      viewport?.removeEventListener("resize", size); viewport?.removeEventListener("scroll", size);
+      dialog?.close(); document.body.style.overflow = prev;
+      previousFocus?.isConnected && previousFocus.focus({ preventScroll: true });
+    };
+  }, [open]);
+
+  function startSwipe(event: React.PointerEvent<HTMLElement>) {
+    if (!window.matchMedia("(max-width: 639px)").matches || !event.isPrimary || event.button !== 0) return;
+    swipeMoved.current = false;
+    swipe.current = { id: event.pointerId, x: event.clientX, y: event.clientY, at: performance.now() };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+  function moveSwipe(event: React.PointerEvent<HTMLElement>) {
+    const start = swipe.current;
+    if (!start || start.id !== event.pointerId) return;
+    if (Math.abs(event.clientY - start.y) + Math.abs(event.clientX - start.x) > 6) swipeMoved.current = true;
+    const down = Math.max(0, event.clientY - start.y);
+    if (down > Math.abs(event.clientX - start.x)) setDragOffset(down);
+  }
+  function endSwipe(event: React.PointerEvent<HTMLElement>) {
+    const start = swipe.current; swipe.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+    if (!start) return;
+    const down = event.clientY - start.y;
+    const horizontal = Math.abs(event.clientX - start.x);
+    const velocity = down / Math.max(1, performance.now() - start.at);
+    if (down > horizontal && (down >= 72 || (down >= 24 && velocity > 0.5))) close();
+    else setDragOffset(0);
+  }
+  function trapFocus(event: React.KeyboardEvent<HTMLDialogElement>) {
+    if (event.key !== "Tab") return;
+    const controls = [...event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled), input:not(:disabled), a[href]')].filter(element => element.getClientRects().length > 0);
+    const first = controls[0], last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -162,7 +197,7 @@ export default function DiscountPopup() {
         body: JSON.stringify({ email, consent: consentForServer() }),
       });
       const body = await res.json().catch(() => null);
-      if (!res.ok) {
+      if (!res.ok || body?.ok !== true) {
         setErrorMsg(body?.error ?? "Something went wrong. Try again.");
         throw new Error("signup failed");
       }
@@ -195,150 +230,43 @@ export default function DiscountPopup() {
   if (!open) return null;
 
   return (
-    <dialog
-      ref={dialogRef}
-      className="v84-discount fixed inset-0 z-[100] flex items-end justify-center bg-ink/70 sm:items-center sm:p-6"
-      onClick={close}
-      onCancel={(event) => { event.preventDefault(); close(); }}
-      aria-labelledby="goool20-title"
-    >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className="relative w-full overflow-hidden rounded-t-[28px] border-t-2 border-red bg-ink text-paper shadow-2xl motion-safe:animate-[goool20-up_.35s_ease-out] sm:grid sm:max-w-4xl sm:grid-cols-2 sm:rounded-none sm:border-t-0 sm:animate-none"
-      >
-        {/* 1e drag handle, phones only. */}
-        <div className="flex justify-center pt-3 sm:hidden" aria-hidden="true">
-          <div className="h-1.5 w-12 rounded-full bg-paper/30" />
+    <dialog ref={dialogRef} className={"goal-discount" + (closing ? " is-closing" : "")}
+      aria-modal="true" aria-labelledby="goal-discount-title" aria-describedby="goal-discount-description"
+      onKeyDown={trapFocus} onCancel={event => { event.preventDefault(); close(); }}
+      onClick={event => { if (event.target === event.currentTarget) close(); }}>
+      <div className={"goal-discount-surface" + (dragOffset > 0 ? " is-dragging" : "")}
+        style={{ transform: dragOffset > 0 ? "translateY(" + dragOffset + "px)" : undefined }}>
+        <button ref={closeRef} type="button" onClick={close} className="goal-discount-close" aria-label="Close discount offer">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+        </button>
+      <section className="goal-discount-card">
+        <button type="button" className="goal-discount-handle" aria-label="Dismiss offer"
+          onClick={() => { if (!swipeMoved.current) close(); }} onPointerDown={startSwipe} onPointerMove={moveSwipe} onPointerUp={endSwipe}
+          onPointerCancel={() => { swipe.current = null; setDragOffset(0); }}><span /></button>
+        <div className="goal-discount-logo">
+          <Image src="/brand/goal-athletics-popup-white.png" alt="GOAL Athletics" width={4800} height={1314} sizes="(max-width:639px) 190px, 320px" priority />
         </div>
-
-        {/* Crowd image: the left half of the panel on desktop (1a). */}
-        <div className="relative hidden sm:block sm:h-full sm:min-h-[560px]">
-          <Image
-            src="/v84/assets/hero.png"
-            alt=""
-            fill
-            sizes="(min-width: 640px) 448px, 100vw"
-            className="object-cover object-[50%_35%]"
-            priority
-          />
-        </div>
-
-        <div className="px-6 pb-8 pt-3 sm:px-12 sm:py-12">
-          <div className="flex items-start justify-between">
-            <Brand footer />
-            <button
-              ref={closeRef}
-              type="button"
-              onClick={close}
-              aria-label="Close"
-              className="-mr-2 -mt-1 flex h-11 w-11 items-center justify-center rounded-full text-paper/70 transition-colors hover:bg-paper/10 hover:text-paper focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-
-          {status === "done" ? (
-            <div role="status" className="mt-6">
-              <h2 id="goool20-title" className="font-display text-4xl uppercase leading-none tracking-tightest sm:text-5xl">
-                You&apos;re in.
-                {code && (
-                  <>
-                    <br />
-                    <span className="text-red">Here&apos;s your code.</span>
-                  </>
-                )}
-              </h2>
-              <p className="mt-4 text-paper/70">
-                {code
-                  ? "Yours alone, one use. Enter it in the promo code field at checkout for 20% off your first order."
-                  : doneMessage ?? "You're on the list."}
-              </p>
-              {code && (
-                <div className="mt-6 flex items-stretch gap-2">
-                  <div className="flex flex-1 items-center justify-center border-2 border-dashed border-paper/40 px-4 py-3.5 font-display text-2xl tracking-[0.12em]">
-                    {code}
-                  </div>
-                  <button
-                    type="button"
-                    onClick={copyCode}
-                    className="shrink-0 bg-red px-6 font-semibold text-paper transition-colors hover:bg-red-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                  >
-                    {copied ? "Copied" : "Copy"}
-                  </button>
-                </div>
-              )}
-              <Link
-                href="/shop"
-                onClick={() => setOpen(false)}
-                className="mt-6 inline-block font-semibold underline underline-offset-4"
-              >
-                Shop the Core Capsule <InterfaceIcon name="arrow-right" />
-              </Link>
-            </div>
-          ) : (
-            <>
-              <h2 id="goool20-title" className="mt-6 font-display text-4xl uppercase leading-none tracking-tightest sm:text-6xl">
-                20% off
-                <br />
-                <span className="text-red">your first order</span>
-              </h2>
-              <p className="mt-4 text-paper/70">
-                <span className="sm:hidden">Join the list. Code lands in your inbox.</span>
-                <span className="hidden sm:inline">Join the list for early access to every drop.</span>
-              </p>
-
-              <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3">
-                <label htmlFor="goool20-email" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  ref={inputRef}
-                  id="goool20-email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email address"
-                  className="w-full border border-paper/30 bg-paper/5 px-5 py-4 text-paper placeholder:text-paper/40 focus:border-gold focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="w-full bg-red py-4 font-display text-lg uppercase tracking-[0.18em] text-paper transition-colors hover:bg-red-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:opacity-60"
-                >
-                  {status === "loading" ? (
-                    "One moment…"
-                  ) : (
-                    <>
-                      <span className="sm:hidden">Unlock 20%</span>
-                      <span className="hidden sm:inline">Unlock 20% off</span>
-                    </>
-                  )}
-                </button>
-              </form>
-
-              {status === "error" && (
-                <p className="mt-3 text-sm text-red" role="alert">
-                  {errorMsg}
-                </p>
-              )}
-
-              <button
-                type="button"
-                onClick={close}
-                className="mx-auto mt-4 block text-sm text-paper/60 underline underline-offset-4 hover:text-paper sm:hidden"
-              >
-                No thanks, I&apos;ll pay full price
-              </button>
-              <p className="mt-4 text-[11px] leading-snug text-paper/45 sm:text-xs sm:text-paper/50">
-                One code per customer. By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email.
-              </p>
-            </>
-          )}
-        </div>
+        {status === "done" ? <div className="goal-discount-success" role="status">
+          <h2 id="goal-discount-title" className="goal-discount-tone">YOU’RE IN.</h2>
+          <p id="goal-discount-description" className="goal-discount-tone">{code ? "Your first-order code is ready. Enter it at checkout for 20% off." : doneMessage ?? "You're on the list."}</p>
+          {code && <div className="goal-discount-code"><output aria-label="Your discount code">{code}</output><button type="button" onClick={copyCode}>{copied ? "Copied" : "Copy"}</button></div>}
+          <Link href="/shop" onClick={close} className="goal-discount-shop">Explore the collection</Link>
+        </div> : <>
+          <h2 id="goal-discount-title"><span className="goal-discount-get">GET </span><span className="goal-discount-accent">20%</span><span className="goal-discount-off"> OFF</span><br /><span className="goal-discount-tone goal-discount-title-second">YOUR FIRST ORDER</span></h2>
+          <p id="goal-discount-description" className="goal-discount-tone goal-discount-description">Join the GOAL Athletics list for early access, product drops, and your first-order code.</p>
+          <form onSubmit={handleSubmit} className="goal-discount-form" aria-busy={status === "loading"}>
+            <label htmlFor="goal-discount-email" className="sr-only">Email address</label>
+            <input ref={inputRef} id="goal-discount-email" type="email" required autoComplete="email" inputMode="email"
+              aria-invalid={status === "error"} aria-describedby={status === "error" ? "goal-discount-error" : undefined}
+              value={email} onChange={event => setEmail(event.target.value)} placeholder="Email address" disabled={status === "loading"} />
+            <button type="submit" className="goal-discount-submit" disabled={status === "loading"}>{status === "loading" ? "One moment…" : "UNLOCK 20%"}</button>
+            {status === "error" && <p id="goal-discount-error" className="goal-discount-error" role="alert">{errorMsg}</p>}
+          </form>
+          <p className="goal-discount-tone goal-discount-consent">By signing up, you agree to receive marketing emails. Unsubscribe anytime.</p>
+          <button type="button" onClick={close} className="goal-discount-dismiss">No thanks</button>
+          <Link href="/privacy" className="goal-discount-privacy">Privacy policy</Link>
+        </>}
+      </section>
       </div>
     </dialog>
   );
