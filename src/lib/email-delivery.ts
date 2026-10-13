@@ -1,4 +1,5 @@
 import { randomUUID } from "crypto";
+import { SUPPORT_EMAIL } from "./email-identity";
 import { getSupabaseAdmin } from "./supabase";
 import { emailEnabled, EmailMessage, sendEmail } from "./email";
 import { OrdersStore, OrderRow, ShipmentRow } from "./orders-store";
@@ -115,7 +116,7 @@ export async function queueOrderDelayNotice(
   await queueEmail(
     key,
     "order",
-    { to: order.customer_email, replyTo: "hello@goool.shop", ...buildOrderDelayNotice(order) },
+    { to: order.customer_email, replyTo: SUPPORT_EMAIL, ...buildOrderDelayNotice(order) },
     livemode,
     orderId
   );
