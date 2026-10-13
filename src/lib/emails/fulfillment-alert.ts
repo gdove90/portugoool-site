@@ -80,7 +80,7 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
 <ol style="margin:0;padding-left:20px;">
 <li>Fix the cause (a declined card on Apliiq → pay methods is the usual one).</li>
 <li>Re-submit the order: tell Claude Code &ldquo;resubmit order ${esc(ref)}&rdquo;, or run the release/submit actions on /api/fulfillment-ops.</li>
-<li>If it will be late, email the customer from hello@goool.shop.</li>
+<li>If it will be late, contact the customer through support@goalathletics.com.</li>
 </ol>
 <p style="margin:20px 0 0;color:#666;">The customer has only received the payment receipt; they have not been told anything is wrong.</p>
 </body></html>`;
