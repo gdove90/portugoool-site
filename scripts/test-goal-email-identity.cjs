@@ -6,7 +6,7 @@ const path = require("node:path");
 const read = (p) => fs.readFileSync(path.join(__dirname, "..", p), "utf8");
 const identity = read("src/lib/email-identity.ts");
 assert.match(identity, /hello@goalathletics\.shop/);
-assert.match(identity, /support@goalathletics\.com/);
+assert.match(identity, /support@goalathletics\.shop/);
 assert.match(identity, /https:\/\/goalathletics\.shop/);
 assert.match(identity, /goal-athletics-email-lockup-white\.png/);
 const email = read("src/lib/email.ts");
@@ -25,8 +25,8 @@ for (const file of templates) {
   assert.doesNotMatch(source, /goool-athletics-lockup-white\.png/, `${file} must use the new logo`);
   assert.doesNotMatch(source, /mailto:hello@goool\.shop/, `${file} must not route support to the retired address`);
 }
-assert.match(read("src/app/contact/page.tsx"), /support@goalathletics\.com/);
-assert.doesNotMatch(read("src/app/contact/page.tsx"), /support@goalathletics\.shop/);
+assert.match(read("src/app/contact/page.tsx"), /support@goalathletics\.shop/);
+assert.doesNotMatch(read("src/app/contact/page.tsx"), /mailto:hello@/);
 assert.match(read("src/lib/emails/order-confirmation.ts"), /GOOOL-\$\{orderId/, "Historic references are immutable");
 assert.match(read("src/lib/business-address.ts"), /PO Box 19/);
 assert.match(read("src/lib/business-address.ts"), /Saunderstown, RI 02874/);

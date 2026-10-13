@@ -1,7 +1,5 @@
 // Single transactional transport. Mailchimp alone owns marketing subscriptions.
 // No provider fallback: switching senders after an uncertain response can duplicate mail.
-import { EMAIL_FROM, SUPPORT_EMAIL } from "./email-identity";
-
 export interface EmailMessage {
   to: string;
   subject: string;
@@ -17,7 +15,7 @@ export type EmailResult =
 export function emailEnabled(): boolean { return Boolean(process.env.RESEND_API_KEY); }
 export function emailProvider(): "resend" | "disabled" { return emailEnabled() ? "resend" : "disabled"; }
 // Sender name is the company (owner decision 2026-09-29).
-export function emailFrom(): string { return EMAIL_FROM; }
+export function emailFrom(): string { return "GOAL Athletics <hello@goalathletics.shop>"; }
 
 export async function sendEmail(msg: EmailMessage, idempotencyKey: string): Promise<EmailResult> {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(msg.to) || msg.to.length > 254)
@@ -33,7 +31,7 @@ export async function sendEmail(msg: EmailMessage, idempotencyKey: string): Prom
       headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
         "Content-Type": "application/json", "Idempotency-Key": idempotencyKey },
       body: JSON.stringify({ from: emailFrom(), to: [msg.to], subject: msg.subject,
-        html: msg.html, text: msg.text, reply_to: msg.replyTo ?? SUPPORT_EMAIL,
+        html: msg.html, text: msg.text, reply_to: "support@goalathletics.shop",
         ...(msg.headers ? { headers: msg.headers } : {}) }),
       signal: AbortSignal.timeout(8000),
     });

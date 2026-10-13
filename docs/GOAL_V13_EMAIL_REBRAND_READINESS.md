@@ -12,7 +12,7 @@ The existing Next.js application generates order, shipment, delay and welcome em
 ## Approved customer email identity
 - Display name: **GOAL Athletics**
 - Outbound only: `hello@goalathletics.shop`
-- Customer support and Reply-To: `support@goalathletics.com`
+- Customer support and Reply-To: `support@goalathletics.shop`
 - Canonical website: `https://goalathletics.shop`
 - Mailing address: **PO Box 19, Saunderstown, RI 02874** (mailing only, not a returns address)
 - Registered seller display: retain **GOOOL Athletics LLC** until independently confirmed changed.
@@ -20,7 +20,7 @@ The existing Next.js application generates order, shipment, delay and welcome em
 - Approved V1.3 artwork: rasterized from `public/brand/goal-athletics-horizontal-lockup-white.svg`, and staged as email-safe `public/brand/goal-athletics-email-lockup-white.png`.
 
 ## Safety and go-live checklist
-- [ ] Confirm `support@goalathletics.com` is provisioned as a real receiving mailbox or alias on its email host and can send a human response.
+- [ ] Confirm `support@goalathletics.shop` is provisioned as a real receiving mailbox or alias on its email host and can send a human response.
 - [ ] Send a controlled test from the verified sending domain **to the support inbox** and confirm an actual reply lands there, without using `hello@goalathletics.shop` as a reply destination.
 - [ ] Test real Resend deliverability and DKIM/SPF/DMARC alignment for the new From identity. Existing domain verification alone does not prove inbox placement.
 - [ ] Validate the PNG file is accessible as `https://goalathletics.shop/brand/goal-athletics-email-lockup-white.png` after staging deployment.

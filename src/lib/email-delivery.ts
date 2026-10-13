@@ -1,5 +1,4 @@
 import { randomUUID } from "crypto";
-import { SUPPORT_EMAIL } from "./email-identity";
 import { getSupabaseAdmin } from "./supabase";
 import { emailEnabled, EmailMessage, sendEmail } from "./email";
 import { OrdersStore, OrderRow, ShipmentRow } from "./orders-store";
@@ -26,6 +25,8 @@ export async function queueEmail(key: string, kind: Delivery["kind"], message: E
   if (error) throw new Error("Could not persist email delivery.");
 }
 export async function deliverEmail(key: string): Promise<string> {
+  // Preserve any existing follow-up rows, but never claim or send them.
+  if (/^welcome\/(live|test)\/[23]\//.test(key)) return "promotional_followups_disabled";
   if (!emailEnabled()) return "disabled";
   const db = database();
   const token = randomUUID();
@@ -102,7 +103,8 @@ export async function queueFulfillmentAlert(
 // Customer delay notice for the same event. Keyed on the order alone, so
 // a customer hears about a delay once no matter how many times the order
 // parks before it goes through; the owner alert carries the per-attempt
-// detail. Customer replies must reach the dedicated support inbox.
+// detail. Replies go to support@goalathletics.shop, which is where the refund
+// offer in the email is honoured.
 export async function queueOrderDelayNotice(
   store: OrdersStore,
   orderId: string,
@@ -115,7 +117,7 @@ export async function queueOrderDelayNotice(
   await queueEmail(
     key,
     "order",
-    { to: order.customer_email, replyTo: SUPPORT_EMAIL, ...buildOrderDelayNotice(order) },
+    { to: order.customer_email, replyTo: "support@goalathletics.shop", ...buildOrderDelayNotice(order) },
     livemode,
     orderId
   );

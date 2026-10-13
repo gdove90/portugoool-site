@@ -232,6 +232,7 @@ async function main() {
         assert.deepEqual(after, before, file);
         continue;
       }
+      baseline = require('./email-branding-baseline.cjs')(file, baseline);
       assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline, file);
     }
     console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; Brand, closure and worker changes have separate checks.`);

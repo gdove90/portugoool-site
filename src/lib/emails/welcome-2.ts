@@ -17,7 +17,7 @@ export function buildWelcome2(input: Welcome2Input): { subject: string; html: st
   const subject = "Why the shirt weighs nothing";
   const fabric =
     "It's a tri-blend: 50% poly, 25% ring-spun cotton, 25% rayon. The poly wicks and holds shape, the cotton keeps it from smelling like a gym bag, the rayon is why it drapes instead of hanging. 3.8 ounces. It gets softer every wash.";
-  const colors = "Three colors: Charcoal, Grey, Navy. GA on the chest, signature lettering on the back.";
+  const colors = "Three colors: Charcoal, Grey, Navy.";
   const text = [
     "Quick one about the performance tee.",
     fabric,
@@ -30,7 +30,6 @@ export function buildWelcome2(input: Welcome2Input): { subject: string; html: st
   ].join("\n");
   const bodyHtml = [
     paragraphHtml("Quick one about the performance tee.", { strong: true }),
-    `<a href="${input.productUrl}" target="_blank" style="text-decoration:none;"><img src="${input.imageUrl}" width="464" alt="${escapeHtml(input.imageAlt)}" border="0" style="display:block;width:100%;max-width:464px;height:auto;border:0;margin:0 0 22px;"></a>`,
     paragraphHtml(escapeHtml(fabric)),
     paragraphHtml(colors),
     paragraphHtml(`Your code <strong style="color:#FFFFFF;">${escapeHtml(input.code)}</strong> is good for 9 more days.`),

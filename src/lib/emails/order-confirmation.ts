@@ -1,5 +1,4 @@
 import { MAILING_STREET, MAILING_CITY_LINE, MAILING_ADDRESS } from "../business-address";
-import { SITE_URL, SUPPORT_EMAIL, LOCKUP_URL } from "../email-identity";
 import { OrderItemRow, OrderRow } from "../orders-store";
 import { products } from "../products";
 
@@ -87,7 +86,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
   html: string;
   text: string;
 } {
-  const site = (siteUrl ?? process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL).replace(/\/$/, "");
+  const site = (siteUrl ?? process.env.NEXT_PUBLIC_SITE_URL ?? "https://goalathletics.shop").replace(/\/$/, "");
   const ref = orderNumberFor(order.id);
   const cur = order.currency ?? "usd";
   const subject = `Order ${ref} confirmed`;
@@ -137,14 +136,13 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
     `using reference ${ref} and this email address.`,
     "",
     "CUSTOMER SERVICE",
-    `Questions about your order? Contact us at ${SUPPORT_EMAIL}.`,
+    "Questions about your order? Contact us at support@goalathletics.shop.",
     "",
     "Wear the Feeling.",
     "",
-    "GOAL Athletics is an independent brand. Not affiliated with, endorsed by, or",
+    "GOOOL Athletics LLC is an independent brand. Not affiliated with, endorsed by, or",
     "connected to any futbol federation, club, league, or governing body.",
     `${site}`,
-    "GOOOL Athletics LLC", // Current registered seller remains unchanged.
     MAILING_ADDRESS
   );
   const text = textLines.join("\n");
@@ -197,14 +195,14 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
   @media only screen and (max-width:380px) { .receipt-padding { padding-left:22px!important; padding-right:22px!important; } }
 </style>
 </head>
-<body bgcolor="${INK}" style="margin:0;padding:0;background-color:${INK};color:${PAPER};">
+<body bgcolor="#FFFFFF" style="margin:0;padding:24px 16px;background-color:#FFFFFF;color:${PAPER};">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Your payment is confirmed. Order ${esc(ref)}. Thank you for choosing GOAL Athletics.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="background-color:${INK};">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
   <tr><td align="center">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="max-width:520px;background-color:${INK};color:${PAPER};">
       <tr><td align="center" class="receipt-padding" style="padding:32px 28px 24px;">
         <a href="${esc(site)}" target="_blank" style="color:${PAPER};text-decoration:none;">
-          <img src="${esc(LOCKUP_URL)}" width="218" height="55" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:${PAPER};font:700 24px/1.3 Helvetica,Arial,sans-serif;">
+          <img src="${esc(site)}/brand/goal-athletics-email-wordmark-white.png" width="218" height="68" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:${PAPER};font:700 24px/1.3 Helvetica,Arial,sans-serif;">
         </a>
       </td></tr>
       <tr><td class="receipt-padding" style="padding:0 28px;">
@@ -239,7 +237,7 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
           <tr><td align="center" style="border-top:1px solid ${BORDER};padding:20px 0 18px;">
             <div style="font:700 16px/1.5 Helvetica,Arial,sans-serif;color:${PAPER};">Customer Service</div>
             <div style="margin-top:9px;font:400 13px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">Questions about your order?<br>Contact us at</div>
-            <a href="mailto:${SUPPORT_EMAIL}" style="display:inline-block;padding:9px 0;font:700 16px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};text-decoration:underline;">${SUPPORT_EMAIL}</a>
+            <a href="mailto:support@goalathletics.shop" style="display:inline-block;padding:9px 0;font:700 16px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};text-decoration:underline;">support@goalathletics.shop</a>
           </td></tr>
           <tr><td align="center" style="border-top:1px solid ${BORDER};padding:18px 0 24px;">
             <div style="font:700 19px/1.35 Helvetica,Arial,sans-serif;color:${PAPER};">Wear the Feeling.</div>
