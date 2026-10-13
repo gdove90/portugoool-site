@@ -8,7 +8,7 @@ import FooterSignup from "./FooterSignup";
 // Copy rules: no "The Sound of Victory" (retired), never "football",
 // Refunds listed once, no gold.
 
-const INSTAGRAM_URL = "https://www.instagram.com/gooolathletics/";
+const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "";
 // /size-guide shipped 2026-09-29 (design 3b).
 const SIZE_GUIDE_LIVE = true;
 
@@ -57,8 +57,8 @@ export default function Footer() {
         <div className="flex flex-col gap-11 md:flex-row md:justify-between md:gap-16">
           <div className="flex flex-col gap-3 md:max-w-[460px]">
             <Image
-              src="/brand/goool-athletics-lockup-white.png"
-              alt="GOOOL Athletics"
+              src="/brand/goal-athletics-horizontal-lockup-white.svg"
+              alt="GOAL Athletics"
               width={159}
               height={60}
               className="h-[60px] w-auto self-start"
@@ -118,7 +118,7 @@ export default function Footer() {
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
               </svg>
-              @gooolathletics
+              Instagram
             </a>
           )}
         </div>

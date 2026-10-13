@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import CollectionComingSoon from "@/components/CollectionComingSoon";
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { getProducts } from "@/lib/products";
@@ -17,6 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
 }
 
 export function ProductGrid({ products }: { products: Product[] }) {
+  if (MIGRATION_PREVIEW) return <CollectionComingSoon />;
   return <div className="product-grid">{products.map(p => <ProductCard key={p.id} product={p} />)}</div>;
 }
 

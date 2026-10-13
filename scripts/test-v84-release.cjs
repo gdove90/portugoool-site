@@ -14,8 +14,8 @@ async function main() {
     const response = await fetch(base + route); assert.equal(response.status, 200, route);
     const tree = nodes(parse(await response.text()));
     assert.ok(tree.some(n => n.tagName === 'h1'), route + ' needs a heading');
-    const campaignHeading = { '/whats-your-goool': 'What\u2019s yourGOOOL?', '/share-your-goals': 'Share yourGOOOLS!' }[route];
-    if (campaignHeading) assert.equal(nodes(tree.find(n => n.tagName === 'h1')).filter(n => n.nodeName === '#text').map(n => n.value).join(''), campaignHeading, 'Keep the original campaign headline');
+    const campaignHeading = { '/whats-your-goool': 'What\u2019s yourGOAL?', '/share-your-goals': 'Share yourGOALS!' }[route];
+    if (campaignHeading) assert.equal(nodes(tree.find(n => n.tagName === 'h1')).filter(n => n.nodeName === '#text').map(n => n.value).join(''), campaignHeading, 'Match the rebranded campaign headline');
     const canonical = tree.find(n => n.tagName === 'link' && n.attrs.some(a => a.name === 'rel' && a.value === 'canonical'));
     assert.ok(canonical, route + ' needs a canonical');
     if (route === '/') {
@@ -48,8 +48,17 @@ async function main() {
     const response = await fetch(base + url, { method: 'HEAD' });
     assert.ok(response.ok, `${url}: ${response.status}`); checked++;
   }
-  const productRoutes = [...links].filter(path => path.startsWith('/shop/'));
-  assert.equal(productRoutes.length, 9, 'All nine existing product pages must be linked.');
+  const designPreview = process.env.V84_DESIGN_PREVIEW === 'true';
+  let productRoutes = [...links].filter(path => path.startsWith('/shop/'));
+  if (designPreview) {
+    assert.equal(productRoutes.length, 0, 'Unapproved products must remain absent from design-preview navigation.');
+    const manifest = JSON.parse(require('node:fs').readFileSync(require('node:path').join(__dirname, '..', process.env.NEXT_DIST_DIR || '.next', 'prerender-manifest.json'), 'utf8'));
+    productRoutes = Object.keys(manifest.routes).filter(route => route.startsWith('/shop/'));
+    for (const endpoint of ['/api/checkout','/api/stripe-webhook','/api/apliiq-fulfillment','/.netlify/functions/deliver-emails']) {
+      assert.equal((await fetch(base+endpoint)).status, 503, endpoint+' must be non-operational in design preview'); checked++;
+    }
+  }
+  assert.equal(productRoutes.length, 9, 'All nine existing product routes must remain available.');
   for (const route of productRoutes) {
     const response = await fetch(base + route); assert.equal(response.status, 200, route);
     const tree = nodes(parse(await response.text()));

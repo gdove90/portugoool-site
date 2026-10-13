@@ -9,11 +9,11 @@ import { BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 // fulfillment mapping and checkout policies. Missing identifiers or delivery
 // estimates must stay absent. Availability follows the existing sale gates.
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://goool.shop";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? (process.env.DOMAIN_CUTOVER_ENABLED === "true" ? "https://goalathletics.shop" : "https://goool.shop");
 
 export const LEGAL_NAME = "GOOOL Athletics LLC";
-export const BRAND_NAME = "GOOOL Athletics";
-export const CONTACT_EMAIL = "hello@goool.shop";
+export const BRAND_NAME = "GOAL Athletics";
+export const CONTACT_EMAIL = "support@goalathletics.shop";
 
 /** Exactly the countries Stripe Checkout will accept an address in. */
 export const SHIPPING_COUNTRIES = ["US", "CA", "GB", "PT"] as const;
@@ -34,7 +34,7 @@ export function organizationJsonLd() {
         legalName: LEGAL_NAME,
         url: SITE_URL,
         // Existing approved dark wordmark stays legible on Google's light background.
-        logo: absolute("/brand/goool-wordmark-ink.png"),
+        logo: absolute("/brand/goal-athletics-horizontal-lockup-ink.svg"),
         email: CONTACT_EMAIL,
         description: BRAND_SEARCH_DESCRIPTION,
         // No sameAs. The brand has no account it actually posts from yet,
@@ -46,7 +46,7 @@ export function organizationJsonLd() {
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
         name: BRAND_NAME,
-        alternateName: "GOOOL",
+        alternateName: "GOAL",
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
     ],

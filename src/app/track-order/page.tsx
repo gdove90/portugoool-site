@@ -51,7 +51,7 @@ export default function TrackOrderPage() {
     } catch {
       setResult({
         kind: "error",
-        message: "Order lookup isn't available right now. Email hello@goool.shop and we'll check for you.",
+        message: "Order lookup isn't available right now. Email support@goalathletics.shop and we'll check for you.",
       });
     }
   }
@@ -149,7 +149,7 @@ export default function TrackOrderPage() {
 
           <ol>
             {[
-              ["Order confirmed", "Instant receipt from our secure checkout, with your GOOOL order reference."],
+              ["Order confirmed", "Instant receipt from our secure checkout, with your order reference."],
               ["Shipped", "Tracking number lands in your inbox."],
               ["Delivered", "Within 7–12 business days in the US. Canada, the UK and Portugal typically take 2 to 3 weeks."],
             ].map(([title, body], i) => (

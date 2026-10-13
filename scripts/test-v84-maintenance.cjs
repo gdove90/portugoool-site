@@ -7,7 +7,7 @@ const code = ts.transpileModule(fs.readFileSync('netlify/functions/intake-mainte
 }).outputText;
 function harness(env, status = 200) {
   const exports = {}, requests = [];
-  vm.runInNewContext(code, { exports, AbortSignal, Netlify: { env: { get: name => env[name] } },
+  vm.runInNewContext(code, { exports, AbortSignal, require: () => ({ default: { operational: true } }), Netlify: { env: { get: name => env[name] } },
     fetch: async (url, options) => { requests.push({ url, options }); return { ok: status < 400, status }; },
   });
   return { run: exports.default, schedule: exports.config.schedule, requests };

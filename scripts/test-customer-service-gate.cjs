@@ -49,15 +49,15 @@ async function check(name, fn) { await fn(); passed++; console.log('PASS ' + nam
     const cookie = `${GATE_COOKIE}=${await gateToken(process.env.PREVIEW_KEY)}`;
     for (const route of ['/shop', '/cart']) assert.equal((await middleware(request(route, 'GET', cookie))).headers.get('x-middleware-next'), '1');
   });
-  await check('existing canonical redirect preserves support paths and query strings', async () => {
+  await check('legacy customer support remains reachable without redirect', async () => {
     for (const host of ['portugoool.com', 'www.portugoool.com', 'www.goool.shop']) {
       const response = await middleware(request('/contact?from=order', 'GET', '', host));
-      assert.equal(response.status, 301);
-      assert.equal(response.headers.get('location'), 'https://goool.shop/contact?from=order');
+      assert.equal(response.headers.get('x-middleware-next'), '1');
     }
   });
-  await check('existing reopening behavior is unchanged', async () => {
+  await check('explicit reopening works after removing the password', async () => {
     delete process.env.PREVIEW_KEY;
+    process.env.STORE_OPEN = 'true';
     assert.equal((await middleware(request('/shop'))).headers.get('x-middleware-next'), '1');
   });
   console.log(`${passed} customer-service gate suites passed. No provider requests made.`);

@@ -1,13 +1,14 @@
 // Pure catalog/metadata regression checks. No network, credentials or orders.
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),ts=require('typescript');
 const root=path.resolve(__dirname,'..'),cache=new Map();
+const env={STORE_OPEN:'true',NEXT_PUBLIC_SITE_URL:'https://goalathletics.shop'};
 function load(file){
  if(!path.extname(file))file+=fs.existsSync(file+'.ts')?'.ts':'.js';
  if(file.endsWith('.json'))return JSON.parse(fs.readFileSync(file,'utf8'));
  if(cache.has(file))return cache.get(file);
  const exports={};cache.set(file,exports);
  const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
- vm.runInNewContext(code,{exports,URL,Map,process:{env:{}},require:name=>load(name.startsWith('@/')?root+'/src/'+name.slice(2):path.resolve(path.dirname(file),name))});return exports;
+ vm.runInNewContext(code,{exports,URL,Map,process:{env},require:name=>load(name.startsWith('@/')?root+'/src/'+name.slice(2):path.resolve(path.dirname(file),name))});return exports;
 }
 let passed=0;function check(name,run){run();passed++;console.log('PASS '+name);}
 const products=load(root+'/src/lib/products.ts').getProducts(),seo=load(root+'/src/lib/seo.ts'),catalog=load(root+'/src/v84/catalog-data.ts'),gallery=load(root+'/src/v84/product-gallery-images.ts'),fulfillment=load(root+'/src/lib/fulfillment.ts');
@@ -39,15 +40,20 @@ check('sale, sold-out, inactive and coming-soon states never emit purchasable of
 });
 check('public sitemap excludes private, retired and gated internal routes without invented dates',()=>{
  const rows=load(root+'/src/app/sitemap.ts').default();assert.equal(rows.length,26);assert.equal(new Set(rows.map(r=>r.url)).size,26);
- for(const row of rows){assert.ok(row.url.startsWith('https://goool.shop/'));assert.equal(row.lastModified,undefined);assert.ok(!/\/(cart|success|gate|admin|api|print)(\/|$)/.test(new URL(row.url).pathname));}
+ for(const row of rows){assert.ok(row.url.startsWith('https://goalathletics.shop/'));assert.equal(row.lastModified,undefined);assert.ok(!/\/(cart|success|track-order|gate|admin|api|print)(\/|$)/.test(new URL(row.url).pathname));}
+ assert.ok(rows.some(r=>r.url.endsWith('/the-goal-collective')));
+ env.STORE_OPEN='false';
+ const closedRows=load(root+'/src/app/sitemap.ts').default();
+ assert.deepEqual(Array.from(closedRows,r=>new URL(r.url).pathname),['/contact','/faq','/shipping-returns','/size-guide','/terms','/privacy','/refunds']);
+ env.STORE_OPEN='true';
  assert.equal(load(root+'/src/lib/collection-launch.ts').TEMPO_COLLECTION_COMING_SOON,true);
  const robots=load(root+'/src/app/robots.ts').default();assert.ok(!robots.rules[0].disallow.includes('/cart'));assert.ok(robots.rules[0].disallow.includes('/success'));
  for(const name of ['cart','success'])assert.match(fs.readFileSync(root+'/src/app/'+name+'/layout.tsx','utf8'),/index: false/);
 });
 check('canonical and social metadata are page-specific and JSON-LD escapes embedded markup',()=>{
  const m=load(root+'/src/lib/page-metadata.ts').pageMetadata('/about','Our World','Approved description');
- assert.equal(m.alternates.canonical,'/about');assert.equal(m.openGraph.url,'/about');assert.equal(m.twitter.description,'Approved description');assert.equal(m.openGraph.title,'Our World · GOOOL');
+ assert.equal(m.alternates.canonical,'/about');assert.equal(m.openGraph.url,'/about');assert.equal(m.twitter.description,'Approved description');assert.equal(m.openGraph.title,'Our World · GOAL Athletics');
  assert.ok(!seo.jsonLdScript({name:'</script>'}).__html.includes('<'));
- const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOOOL Athletics');assert.equal(org[0].logo,'https://goool.shop/brand/goool-wordmark-ink.png');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
+ const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOAL Athletics');assert.equal(org[0].legalName,'GOOOL Athletics LLC');assert.equal(org[0].logo,'https://goalathletics.shop/brand/goal-athletics-horizontal-lockup-ink.svg');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
 });
 console.log(`${passed} SEO checks passed; ${products.length} products, ${count} exact fulfillment variants.`);

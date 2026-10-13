@@ -10,7 +10,7 @@ import Gate from "@/components/Gate";
 // sitting in results under goool.shop when the store reopens.
 export const metadata: Metadata = {
   title: "Closed for renovation",
-  description: "GOOOL Athletics is redesigning every piece. The store reopens soon.",
+  description: "GOAL Athletics is redesigning every piece. The store reopens soon.",
   robots: { index: false, follow: false },
 };
 

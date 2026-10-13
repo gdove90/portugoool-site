@@ -1,8 +1,8 @@
 import { pageMetadata } from "@/lib/page-metadata";
 
-export const metadata = pageMetadata("/privacy", "Privacy Policy", "What GOOOL collects, why, and what we never do with it.");
+export const metadata = pageMetadata("/privacy", "Privacy Policy", "What GOAL Athletics collects, why, and what we never do with it.");
 
-const CONTACT_EMAIL = "hello@goool.shop";
+const CONTACT_EMAIL = "support@goalathletics.shop";
 
 export default function PrivacyPage() {
   return (

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 // Simple mailto-based contact for launch — no backend needed.
 // TODO: swap for a Resend-powered /api/contact route when email is wired up.
-const CONTACT_EMAIL = "hello@goool.shop"; // matches the primary domain
+const CONTACT_EMAIL = "support@goalathletics.shop"; // Receiving alias in the existing Workspace inbox
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -30,7 +30,7 @@ export default function ContactPage() {
         within one business day.
       </p>
 
-      <p><a className="text-link nav-underline contact-email" href="mailto:hello@goool.shop">hello@goool.shop</a></p>
+      <p><a className="text-link nav-underline contact-email" href="mailto:support@goalathletics.shop">support@goalathletics.shop</a></p>
       <p><Link className="text-link nav-underline" href="/shipping-returns">Shipping &amp; returns</Link></p>
       <p><Link className="text-link nav-underline" href="/size-guide">Fit guide</Link></p>
       <address className="not-italic">Mailing address<br />{MAILING_STREET}<br />{MAILING_CITY_LINE}</address>

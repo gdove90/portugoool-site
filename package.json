@@ -9,13 +9,16 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test:customer-service": "node scripts/test-customer-service-gate.cjs",
+    "test:payment-preservation": "node scripts/test-payment-preservation.cjs",
     "test:customer-service:http": "node scripts/smoke-customer-service.cjs",
     "test:v84": "node scripts/test-v84.cjs",
     "test:v84:admin": "node scripts/test-v84-admin.cjs",
     "test:v84:upload": "node scripts/test-v84-upload.cjs",
     "test:v84:maintenance": "node scripts/test-v84-maintenance.cjs",
     "test:v84:release": "node scripts/test-v84-release.cjs",
-    "test:v84:http": "node scripts/smoke-v84.cjs"
+    "test:v84:http": "node scripts/smoke-v84.cjs",
+    "prebuild": "node scripts/write-build-context.cjs",
+    "test:migration": "node scripts/test-goal-migration.cjs && node scripts/test-goal-brand-assets.cjs"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "5.3.0",

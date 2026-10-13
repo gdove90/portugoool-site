@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = pageMetadata("/refunds", "Refund Policy", "All sales are final. Defective or damaged items are replaced free.");
 
-const CONTACT_EMAIL = "hello@goool.shop";
+const CONTACT_EMAIL = "support@goalathletics.shop";
 
 const STATS = [
   { value: "14 days", label: "to report a defect or damage, from delivery" },
@@ -47,7 +47,7 @@ export default function RefundsPage() {
       <section className="bg-ink text-paper">
         <div className="mx-auto max-w-content px-4 py-16 sm:px-6 sm:py-20">
           <p className="font-display text-sm uppercase tracking-widest text-paper/60">
-            GOOOL Athletics
+            GOAL Athletics
           </p>
           <h1 className="mt-3 font-display text-6xl uppercase leading-none tracking-tightest sm:text-7xl lg:text-8xl">
             Refund Policy

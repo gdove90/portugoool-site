@@ -1,3 +1,4 @@
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 
@@ -10,6 +11,7 @@ import { SITE_URL } from "@/lib/seo";
 // entry here that is about privacy rather than crawl budget.
 
 export default function robots(): MetadataRoute.Robots {
+  if (MIGRATION_PREVIEW) return { rules: { userAgent: "*", disallow: "/" } };
   return {
     rules: [
       {

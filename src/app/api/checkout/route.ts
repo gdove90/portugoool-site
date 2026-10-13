@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
+import { storeClosed } from "@/lib/store-status";
 import { shippingCentsFor } from "@/lib/shipping";
 import { CODE_REJECTION_MESSAGE, discountCentsFor, validatePromotionCode, type CodeValidation } from "@/lib/discount";
 import { EMAIL_RE } from "@/lib/signups";
@@ -34,6 +36,7 @@ interface CheckoutItemPayload {
 }
 
 export async function POST(req: NextRequest) {
+  if (MIGRATION_PREVIEW || storeClosed()) return NextResponse.json({ error: "The store is closed for renovation. Existing orders remain supported." }, { status: 503 });
   const secretKey = process.env.STRIPE_SECRET_KEY;
 
   // Placeholder mode: no Stripe key configured yet.

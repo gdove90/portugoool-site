@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Gate.module.css";
-import BrandWordmark from "./BrandWordmark";
+import BrandLockup from "./WebBrandLockup";
 
 // "Closed for renovation" (owner decision 2026-10-12): every piece is being
 // redesigned, so the public sees this page while the team keeps the full
@@ -114,12 +114,7 @@ export default function Gate({ next }: { next: string }) {
 
         <header className={styles.top}>
           <span className={styles.brand}>
-            {/* Exact V1.2 polygons, with a tight viewport so visible height matches both words. */}
-            <svg className={styles.mark} data-strike-version="1.2" viewBox="0 0 890.161617719 400" aria-hidden="true" focusable="false">
-              <polygon points="0,400 360.161617719,0 550.161617719,0 190,400" />
-              <polygon points="340,400 700.161617719,0 890.161617719,0 530,400" />
-            </svg>
-            <BrandWordmark className={styles.wordmark} />
+            <BrandLockup />
           </span>
 
           <button
@@ -142,7 +137,7 @@ export default function Gate({ next }: { next: string }) {
           <div ref={panelRef} id="team-access-panel" className={styles.panel} hidden={!panelOpen}>
             <form onSubmit={unlock} noValidate>
               <p className={styles.panelTitle}>Team access</p>
-              <p className={styles.panelCopy}>The full store stays open to the GOOOL team while the redesign is underway.</p>
+              <p className={styles.panelCopy}>The full store stays open to the GOAL team while the redesign is underway.</p>
               <div className={`${styles.panelRow} ${rejected ? styles.rowRejected : ""}`}>
                 <label htmlFor="gate-password" className="sr-only">Password</label>
                 <input
@@ -210,7 +205,7 @@ export default function Gate({ next }: { next: string }) {
               {notifyMessage}
             </p>
             <p id="gate-notify-fine" className={styles.fine}>
-              By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to hello@goool.shop.
+              By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to support@goalathletics.shop.
             </p>
           </form>
 
@@ -222,8 +217,6 @@ export default function Gate({ next }: { next: string }) {
         <footer className={styles.foot}>
           <span>&copy; 2026 GOOOL Athletics LLC</span>
           <nav aria-label="Renovation page links">
-            <a href="https://www.instagram.com/gooolathletics/" rel="noopener">Instagram</a>
-            <span aria-hidden="true">·</span>
             <Link href="/track-order">Track an order</Link>
             <span aria-hidden="true">·</span>
             <Link href="/contact">Contact &amp; support</Link>
