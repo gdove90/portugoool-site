@@ -9,11 +9,9 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# goool.shop is the primary domain (phase-2 flip, 2026-07-09).
-# portugoool.com stays owned forever and 301s here.
-
-
-
+# Keep legacy domains as aliases. Do not add blanket host redirects here:
+# existing POST callbacks and supplier artwork URLs must retain their hosts.
+# Middleware canonicalizes consumer GET/HEAD requests after the approved flip.
 # /world-cup was a seasonal campaign page, retired 2026-09-22: the
 # tournament is over and GOOOL is an everyday brand.
 #

@@ -50,12 +50,16 @@ const PUBLIC_PATHS = new Set([
   "/faq",
   "/shipping-returns",
   "/robots.txt",
+  "/sitemap.xml",
   "/icon.png",
   "/icon.svg",
   "/manifest.webmanifest",
   "/apple-icon.png",
 ]);
 const PUBLIC_PREFIXES = ["/icons/", "/print/", "/fonts/", "/brand/", "/unsubscribe/", "/opengraph-image", "/.well-known/", "/.netlify/"];
+// Preserve existing payment returns and order links on their original host.
+// Public support and legal pages instead canonicalize after the cutover.
+const LEGACY_RETURN_PATHS = new Set(["/success", "/track-order"]);
 
 function isPublic(pathname: string): boolean {
   return SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
@@ -78,7 +82,8 @@ export async function middleware(req: NextRequest) {
       host === "www.goool.shop") &&
     !pathname.startsWith("/print/") && !pathname.startsWith("/api/") &&
     !pathname.startsWith("/.netlify/") && !pathname.startsWith("/unsubscribe/") &&
-    !SERVICE_PATHS.has(pathname) && ["GET", "HEAD"].includes(req.method)
+    !(cutover ? LEGACY_RETURN_PATHS.has(pathname) : SERVICE_PATHS.has(pathname)) &&
+    ["GET", "HEAD"].includes(req.method)
   ) {
     const url = req.nextUrl.clone();
     url.protocol = "https";

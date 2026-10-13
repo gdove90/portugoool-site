@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getProducts } from "@/lib/products";
 import { SITE_URL } from "@/lib/seo";
+import { storeClosed } from "@/lib/store-status";
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 
 // The sitemap is generated from the live catalog, not hand-listed, so a
 // product added or retired in products.ts appears or disappears here on
@@ -16,14 +18,20 @@ import { SITE_URL } from "@/lib/seo";
 // in its query string. Both have noindex metadata; confirmation remains crawl-restricted.
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // The gated production release advertises only accessible support pages.
+  // Preview can inspect the full planned sitemap while robots denies crawling.
+  if (storeClosed() && !MIGRATION_PREVIEW) {
+    return ["contact", "faq", "shipping-returns", "size-guide", "terms", "privacy", "refunds"].map(path => ({
+      url: `${SITE_URL}/${path}`, changeFrequency: "monthly", priority: 0.4,
+    }));
+  }
   const pages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/shop`, changeFrequency: "weekly", priority: 0.9 },
-    ...["men", "women", "kit-wear", "whats-your-goool", "share-your-goals", "shipping-returns", "references"].map(path => ({ url: `${SITE_URL}/${path}`, changeFrequency: "monthly" as const, priority: 0.6 })),
+    ...["men", "women", "kit-wear", "the-goal-collective", "whats-your-goool", "share-your-goals", "shipping-returns", "references"].map(path => ({ url: `${SITE_URL}/${path}`, changeFrequency: "monthly" as const, priority: 0.6 })),
     { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/faq`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/contact`, changeFrequency: "yearly", priority: 0.4 },
-    { url: `${SITE_URL}/track-order`, changeFrequency: "yearly", priority: 0.4 },
     { url: `${SITE_URL}/size-guide`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/terms`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE_URL}/privacy`, changeFrequency: "yearly", priority: 0.2 },
