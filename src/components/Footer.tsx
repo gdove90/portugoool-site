@@ -58,7 +58,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3 md:max-w-[460px]">
             <Image
               src="/brand/goool-athletics-lockup-white.png"
-              alt="GOOOL Athletics"
+              alt="GOAL Athletics"
               width={159}
               height={60}
               className="h-[60px] w-auto self-start"

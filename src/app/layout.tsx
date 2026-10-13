@@ -1,3 +1,4 @@
+import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import type { Metadata } from "next";
 import { consentBootstrap } from "@/lib/marketing-consent";
 import "./critical-fonts.css";
@@ -30,6 +31,7 @@ import { BRAND_SEARCH_TITLE, BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metada
 // them. Do not put an unearned adjective back in a title or description
 // just because nobody sees it on the page.
 export const metadata: Metadata = {
+  manifest: "/manifest.webmanifest",
   // Meta Business domain verification (owner decision 2026-09-30): the
   // value lives in Netlify as META_DOMAIN_VERIFICATION; no tag when unset.
   ...(/^[a-zA-Z0-9]{20,100}$/.test(process.env.META_DOMAIN_VERIFICATION ?? "")
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
     : {}),
   title: {
     default: BRAND_SEARCH_TITLE,
-    template: "%s · GOAL Athletics",
+    template: "%s · GOAL",
   },
   // The default description is the FALLBACK, inherited by any page that
   // does not set its own. It read "The First Capsule is live." until
@@ -55,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     locale: "en_US",
-    // Approved GOOOL Athletics lockup on ink, built at 1200x630 for sharing.
+    // Approved GOAL Athletics lockup on ink, built at 1200x630 for sharing.
     // The site's campaign photography remains unchanged.
     images: [
       {
@@ -73,9 +75,9 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    index: !MIGRATION_PREVIEW,
+    follow: !MIGRATION_PREVIEW,
+    googleBot: { index: !MIGRATION_PREVIEW, follow: !MIGRATION_PREVIEW, "max-image-preview": "large" },
   },
 };
 

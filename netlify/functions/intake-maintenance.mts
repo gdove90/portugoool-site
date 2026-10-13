@@ -1,6 +1,8 @@
+import buildContext from "../generated/build-context.json";
 declare const Netlify: { env: { get(name: string): string | undefined } };
 
 export default async () => {
+  if (!buildContext.operational) return;
   if (Netlify.env.get("INTAKE_ENABLED") !== "true") return;
   const secret = Netlify.env.get("INTAKE_MAINTENANCE_SECRET");
   if (!secret || secret.length < 32) throw new Error("Intake maintenance is not configured.");

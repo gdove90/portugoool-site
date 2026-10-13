@@ -5,6 +5,7 @@
 
 # next.js
 /.next/
+/.next-qa/
 /.npm-cache/
 /.staging-data/
 /out/
@@ -71,3 +72,7 @@ tmp/
 .recolour_*.json
 .verify_manifest.json
 designs/26_launch-video-ad-2026-09-25/output/
+.next-integration/
+
+.next-review/
+netlify/generated/

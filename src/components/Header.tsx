@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import BrandWordmark from "./BrandWordmark";
+import BrandLockup from "./WebBrandLockup";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useCart } from "@/lib/cart";
@@ -24,9 +24,9 @@ export default function Header() {
           side columns keep the nav centered even though the logo and
           action group widths differ. */}
       <div className="grid h-16 w-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-4 sm:px-6 md:h-20 lg:px-12">
-        {/* GOOOL ATHLETICS lockup: wordmark, white-red-white dashes, ATHLETICS */}
+        {/* GOAL ATHLETICS lockup: wordmark, white-red-white dashes, ATHLETICS */}
         <Link href="/" aria-label="GOAL Athletics home" className="flex items-center justify-self-start">
-          <BrandWordmark className="h-9 w-auto md:h-12" />
+          <BrandLockup className="h-9 w-auto md:h-12" />
         </Link>
 
         {/* Desktop nav */}

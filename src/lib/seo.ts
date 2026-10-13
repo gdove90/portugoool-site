@@ -34,7 +34,7 @@ export function organizationJsonLd() {
         legalName: LEGAL_NAME,
         url: SITE_URL,
         // Existing approved dark wordmark stays legible on Google's light background.
-        logo: absolute("/brand/goool-wordmark-ink.png"),
+        logo: absolute("/brand/goal-athletics-horizontal-lockup-ink.svg"),
         email: CONTACT_EMAIL,
         description: BRAND_SEARCH_DESCRIPTION,
         // No sameAs. The brand has no account it actually posts from yet,

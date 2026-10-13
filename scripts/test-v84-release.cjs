@@ -14,8 +14,8 @@ async function main() {
     const response = await fetch(base + route); assert.equal(response.status, 200, route);
     const tree = nodes(parse(await response.text()));
     assert.ok(tree.some(n => n.tagName === 'h1'), route + ' needs a heading');
-    const campaignHeading = { '/whats-your-goool': 'What\u2019s yourGOOOL?', '/share-your-goals': 'Share yourGOOOLS!' }[route];
-    if (campaignHeading) assert.equal(nodes(tree.find(n => n.tagName === 'h1')).filter(n => n.nodeName === '#text').map(n => n.value).join(''), campaignHeading, 'Keep the original campaign headline');
+    const campaignHeading = { '/whats-your-goool': 'What\u2019s yourGOAL?', '/share-your-goals': 'Share yourGOALS!' }[route];
+    if (campaignHeading) assert.equal(nodes(tree.find(n => n.tagName === 'h1')).filter(n => n.nodeName === '#text').map(n => n.value).join(''), campaignHeading, 'Match the rebranded campaign headline');
     const canonical = tree.find(n => n.tagName === 'link' && n.attrs.some(a => a.name === 'rel' && a.value === 'canonical'));
     assert.ok(canonical, route + ' needs a canonical');
     if (route === '/') {

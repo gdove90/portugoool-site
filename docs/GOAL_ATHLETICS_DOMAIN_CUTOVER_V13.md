@@ -47,3 +47,25 @@
 This staged release prioritizes the main navbar, favicon, top-level SEO and domain. The original logo raster in `src/app/opengraph-image.tsx`, legacy `favicon.ico`, broader historical GOOOL naming throughout product names, policy copy, photos and outbound communications require asset-by-asset QA. Do not automatically alter existing product IDs, historical transaction records, legal-name copy, or SKU mapping.
 
 **Source artwork caveat:** V1.3 logo geometry was recreated from a low-resolution GoDaddy preview. Confirm the original GoDaddy export and commercial rights before final mass-production/paid-media use.
+
+## Verified continuation — 13 October 2026
+
+- [x] Inspect all 17 original PR #31 commits and current main (24903a4).
+- [x] Reconcile prior migration PR #27, customer-service fix #29 and approved brand copy into this existing branch, retaining V1.3 GA/wordmark geometry and Style 3 action placement.
+- [x] Remove forced host-level TOML redirects. Middleware retains callbacks, print files, receipts, tracking and customer-service exceptions on legacy hosts.
+- [x] Make domain cutover explicit: DOMAIN_CUTOVER_ENABLED=true only after approved DNS/SSL verification. Before that, canonical fallback and normal legacy redirects retain goool.shop. NEXT_PUBLIC_SITE_URL must be changed deliberately at release.
+- [x] Preserve fail-closed renovation gate and non-operational previews/workers. STORE_OPEN is a separate reopening approval; leave false during migration.
+- [x] Install matching GA SVG, 16/32/48/180/192/512 PNGs, multi-resolution ICO and app manifest; retain the exact V1.2 strike separately.
+- [x] Attach goalathletics.shop and www.goalathletics.shop as aliases on the existing Netlify project. Browser read-back verified goool.shop remains primary. No DNS or primary-domain change performed.
+- [ ] GoDaddy web DNS changes and HTTPS verification.
+- [ ] Final nine-width visual QA, provider integration tests and manufacturing masters.
+- [ ] Owner approval, production merge/deploy and post-release verification.
+
+### Exact DNS evidence
+Netlify's domain verification dialogs specify apex ALIAS/ANAME/flattened CNAME target `apex-loadbalancer.netlify.com`, or fallback A record `75.2.60.5`. For www: CNAME `goool-shop.netlify.app`. Authoritative nameservers currently `ns09.domaincontrol.com` / `ns10.domaincontrol.com`; apex currently resolves to parked addresses `15.197.148.33` and `3.33.130.190`. Reconcile conflicting web records only after zone export and owner DNS approval; preserve MX/TXT/SPF/DKIM/DMARC and nameservers. Existing certificate currently covers goool.shop/portugoool.com, not the new domain.
+
+### Source and release caveats
+V1.3 paths remain the PR #31 reconstruction, not a verified original GoDaddy export. Original Style 3 mockup and precise nine-colorway source specifications must be located before manufacturing certification. No generic font substitution, new supplier order, price change, database reset or new sender activation is permitted. The verified existing sender and legal name remain unchanged. Prior provider/email fixture blockers and outstanding order reconciliation remain open.
+
+### Recovery correction
+Use a source revert or targeted fix through the existing CI release after owner approval; do not republish an old Netlify snapshot. A failed build leaves the published production release in place. If an approved domain cutover must be reversed, retain all aliases, restore the approved prior web records/primary/canonical environment together, and reverify callbacks and receipts. No database restore or supplier-record rollback is part of this code-only change.
