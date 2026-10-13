@@ -22,9 +22,10 @@ async function check(name, fn) { await fn(); passed++; console.log('PASS ' + nam
   await check('Tempo announcement is public only while coming soon; nested shopping stays closed', async () => {
     const launch = require('../src/lib/collection-launch.ts');
     assert.equal((await middleware(request('/women'))).headers.get('x-middleware-next'), '1');
+    assert.equal((await middleware(request('/v84/assets/women.png'))).headers.get('x-middleware-next'), '1');
     assert.equal((await middleware(request('/women/products'))).status, 307);
     launch.TEMPO_COLLECTION_COMING_SOON = false;
-    try { assert.equal((await middleware(request('/women'))).status, 307); }
+    try { for (const path of ['/women','/v84/assets/women.png']) assert.equal((await middleware(request(path))).status, 307); }
     finally { launch.TEMPO_COLLECTION_COMING_SOON = true; }
   });
   await check('four exact customer-service routes bypass the gate without cookies', async () => {
