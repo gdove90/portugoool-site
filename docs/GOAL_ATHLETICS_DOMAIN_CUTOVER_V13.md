@@ -57,9 +57,10 @@ Two paid/unfulfilled orders remain operational blockers: one needs supplier reco
 62 isolated HTTP integration checks passed with synthetic orders, loopback fixtures and fake provider signatures: duplicate/concurrent payment callbacks, pending supplier responses, timeout handling, reconciliation parking, explicit operator release, shipment/delivery updates, tracking privacy, stable identifiers and historical SKU/price snapshots. Empty reconciliation results do not trigger resubmission. These fixtures do not certify live Supabase, Stripe, APLIIQ or Resend delivery. Final fixture run blocked outbound provider networking; an earlier dummy Stripe call returned 401 and performed no real checkout.
 
 Email checklist:
-- [x] Sign in to existing Resend account; goool.shop remains verified. Prepare pending goalathletics.shop entry with exact account-issued DNS records. No sender address activated.
-- [ ] Approve and install the three prepared Resend records: TXT resend._domainkey (exact public key captured in the private local DNS handoff), CNAME rsend to rsend.forge.rmta.net, CNAME send to send.forge.rmta.net. Existing web, DMARC and nameserver records remain unchanged. Receiving is not enabled in Resend; Google Workspace mailbox routing must be preserved separately.
-- [ ] In existing Google Workspace, verify secondary-domain/domain-alias choice, ownership and hello mailbox/alias routing. Preserve old mailbox and history.
+- [x] Sign in to existing Resend account; goool.shop remains verified. No new sender address activated in application configuration.
+- [x] Obtain separate owner approval and save exactly three Resend records: TXT resend._domainkey (exact dashboard public key), CNAME rsend to rsend.forge.rmta.net, CNAME send to send.forge.rmta.net. Authoritative DNS and GoDaddy read-back match. All seven prior records remain intact. Resend now marks domain, DKIM and both sending CNAMEs Verified. Receiving is not enabled in Resend.
+- [x] Sign in to existing Google Workspace administrator hello@goool.shop; goool.shop primary is Verified/All ok. Prepare goalathletics.shop as a no-cost user alias domain, preserving the existing inbox, login, history and license.
+- [ ] Approve and add the prepared Google ownership TXT at @, MX @ smtp.google.com priority 1, and Google SPF TXT at @. Exact ownership token is captured in the private local Workspace handoff. New alias remains unverified and Gmail reception is not configured; no existing MX changed. Primary-mail-domain promotion is not part of this work.
 - [ ] Obtain exact Google MX/DKIM and Resend verification/SPF/DKIM records from those accounts; reconcile SPF rather than publishing conflicting records.
 - [ ] Test incoming mail, authenticated outgoing mail, replies, receipts, returns and shipment delivery with owner-controlled test recipients.
 - [ ] Activate hello@goalathletics.shop only after authentication and delivery tests pass, through an approved separate release.
@@ -83,7 +84,7 @@ Nine responsive widths (320,360,375,390,430,768,1024,1440,1920) show no horizont
 - [ ] Obtain original GoDaddy export if the handoff only contains reconstruction; confirm ownership and approved manufacturing geometry.
 - [ ] Complete 36 verified primary artwork variants, physical placement specs, supplier proofs and samples; retain authentic V1.2 for apparel.
 - [ ] Reconcile outstanding paid supplier order and five unmatched legacy variants; never automatically resubmit.
-- [ ] Complete existing-account Google Workspace administrator sign-in, domain/mailbox setup, Resend DNS approval/authentication and delivery tests. Resend sign-in itself is complete; its new domain remains pending verification.
+- [ ] Complete Google ownership/MX/SPF approval, alias verification and DKIM preparation; perform approved delivery tests. Both account sign-ins and Resend domain authentication are complete. New sender activation remains forbidden until tests and separate approval.
 - [ ] Run provider sandbox checkout/fulfillment/email tests and actual platform redirect compatibility checks.
 - [ ] Obtain explicit approval for production source merge/deploy, primary-domain promotion and any reopening. DNS approval alone does not authorize these actions.
 
