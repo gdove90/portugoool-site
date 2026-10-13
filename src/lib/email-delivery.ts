@@ -102,8 +102,7 @@ export async function queueFulfillmentAlert(
 // Customer delay notice for the same event. Keyed on the order alone, so
 // a customer hears about a delay once no matter how many times the order
 // parks before it goes through; the owner alert carries the per-attempt
-// detail. Replies go to hello@goool.shop, which is where the refund
-// offer in the email is honoured.
+// detail. Customer replies must reach the dedicated support inbox.
 export async function queueOrderDelayNotice(
   store: OrdersStore,
   orderId: string,
