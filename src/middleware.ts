@@ -62,7 +62,7 @@ export async function middleware(req: NextRequest) {
   // checkout receipts: integrations may POST without following redirects and
   // customers may still return to a pre-cutover payment session.
   // Netlify must keep goool.shop attached as an alias after the switch.
-  const host = (req.headers.get("host") ?? "").toLowerCase().replace(/:\\d+$/, "");
+  const host = (req.headers.get("host") ?? "").toLowerCase().split(":")[0];
   const oldHosts = new Set(["goool.shop", "www.goool.shop", "portugoool.com", "www.portugoool.com"]);
   const callbackOrReceipt = pathname.startsWith("/api/") || pathname.startsWith("/print/") ||
     pathname === "/success" || pathname === "/track-order" || pathname.startsWith("/unsubscribe/");
