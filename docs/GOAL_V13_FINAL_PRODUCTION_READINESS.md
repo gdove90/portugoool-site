@@ -1,14 +1,14 @@
 # GOAL ATHLETICS V1.3 — final production readiness
 
-Reviewed 13 October 2026. Recommendation: ready for owner approval of a **gated website release and primary-domain cutover**. This does not approve shopping reopening, a new email sender, supplier submissions, or customer announcements. No remaining known pre-release code/DNS blocker was found. Post-cutover routing must be checked before declaring the release successful.
+Reviewed 13 October 2026. Final reviewed application head `d4fb91ae8ee48dbdcfb53320cd4e34e377167855` has ready preview deploy `6ace372d85380149292445b0`; [latest release read-back](final-release-state.json) confirms production remains unchanged. Recommendation: ready for owner approval of a **gated website release and primary-domain cutover**. This does not approve shopping reopening, a new email sender, supplier submissions, or customer announcements. No remaining known pre-release code/DNS blocker was found. Post-cutover routing must be checked before declaring the release successful.
 
 ## Current deployment state
 
 | Area | Status | Evidence |
 | --- | --- | --- |
 | Existing production | PASSED | Netlify `047c082c-2bc2-42d5-889f-57876fa55b78`, published deploy `6ace2311512fd0a82cb43927`, main `e5f900866117d5e792638e1cff8e02ff076dc407`. Only the separately approved PR #29 support fix is live. |
-| Staged migration | PASSED | [PR #31](https://github.com/gdove90/portugoool-site/pull/31), branch `codex/goalathletics-domain-cutover-v13-20261013`, reviewed application/test head `a2717e11e6cc14e7a9a255a18758ddb87e93ef63` (subsequent readiness-document commit has no application changes). Current main is an ancestor; no merge conflict. PR remains draft/open/unmerged. |
-| Final preview | PASSED | Deploy `6ace343e761c6347f68474c8` ready at that head; [preview](https://deploy-preview-31--goool-shop.netlify.app). Application code is unchanged from tested code `5ce3bb9`; the final commit fixes only an isolated test fixture. |
+| Staged migration | PASSED | [PR #31](https://github.com/gdove90/portugoool-site/pull/31), branch `codex/goalathletics-domain-cutover-v13-20261013`, reviewed application/test head `d4fb91ae8ee48dbdcfb53320cd4e34e377167855` (subsequent readiness-document commit has no application changes). Current main is an ancestor; no merge conflict. PR remains draft/open/unmerged. |
+| Final preview | PASSED | Deploy `6ace372d85380149292445b0` ready at that head; [preview](https://deploy-preview-31--goool-shop.netlify.app). Includes cutover/sitemap fixes, the isolated Meta test fixture repair and the final holding-header inline lettering correction. Latest build/type/migration/vector/payment and hosted checks pass. |
 | Production V1.3 launch | BLOCKED | Requires the owner's explicit merge/deploy and primary-domain approval. No production migration performed. |
 
 ## Domain, SSL and integration continuity
@@ -36,7 +36,7 @@ Twelve migration suites cover callback POST pass-through, public GET/HEAD canoni
 | Area | Status | Evidence |
 | --- | --- | --- |
 | V1.3 geometry and Style 3 header | PASSED | [Source integrity](source-handoff-integrity.json): all 13 handoff manifest hashes/sizes; all 3 GA and 13 wordmark paths match. Single-line header preserves outlines. V1.2 authentic strike/divider remains unchanged for apparel. |
-| Responsive layout | PASSED | [Eight widths](final-responsive.json): 320/375/390/768/1024/1280/1440/1920, no horizontal overflow or brand/action overlap. Desktop/mobile screenshots reviewed. Mobile navigation, search and bag open/close; no transaction performed. |
+| Responsive layout | PASSED | [Eight widths](final-responsive.json): 320/375/390/768/1024/1280/1440/1920, no horizontal overflow or brand/action overlap. Desktop/mobile screenshots reviewed. The public holding header also passes [all eight widths](final-gate-responsive.json) after its single-line correction. Mobile navigation, search and bag open/close; no transaction performed. |
 | Photography/sections/copy | PASSED | 32 protected assets unchanged; original sections retained. Approved performance copy appears on homepage; ambition/futbol culture copy on About; WEAR THE FEELING and The Goal Collective retained. |
 | Favicon and touch icons | PASSED | [Hosted checks](final-hosted-readiness.json): served ICO, main PNG, Apple PNG and 192/512 manifest PNGs match updated local bytes. Browser DOM references updated icons; no obsolete public favicon. |
 | Canonicals, sharing and organization | PASSED | Preview canonical is https://goalathletics.shop/; organization URL/logo use new host and GOAL identity. Registered legalName remains accurate. Page-specific canonical/OG checks and JSON-LD escaping pass. |
@@ -45,7 +45,7 @@ Twelve migration suites cover callback POST pass-through, public GET/HEAD canoni
 | Renovation/service access | PASSED | Seven service suites plus twelve migration suites: public shopping/private checkout stay refused; Contact, Support, FAQ, Shipping & Returns, tracking, receipts and legal routes bypass closure. Missing password cannot reopen catalog. |
 | Legal entity | PASSED | GOOOL Athletics LLC retained in seller disclosures; Goal Brand Group LLC remains planned. No claim that amendment is effective. Historical IDs/slugs/documents retained. |
 
-[Desktop proof](final-preview-1440.png) · [Mobile proof](final-preview-390.png). The full shopping design is visible in the safe preview. Public production will retain the renovation gate and service navigation; this release does not expose the staged shopping catalog.
+[Proposed gated release appearance](final-gated-release.png) � [Desktop proof](final-preview-1440.png) · [Mobile proof](final-preview-390.png). The full shopping design is visible in the safe preview. Public production will retain the renovation gate and service navigation; this release does not expose the staged shopping catalog.
 
 ## Email readiness
 
