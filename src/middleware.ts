@@ -28,7 +28,15 @@ import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
 //                              straddles the switch.
 //   legal + unsubscribe        Linked from the gate page and from emails.
 //   /fonts/, icons, OG image   Assets the gate page and link previews use.
+// The renovation gate must never block existing customers seeking help.
+// /support redirects to /contact, and /contact links to FAQ/shipping/size guide.
+// Keep this deliberately narrow: catalog, shopping cart, and checkout remain gated.
 const PUBLIC_PATHS = new Set([
+  "/contact",
+  "/support",
+  "/faq",
+  "/shipping-returns",
+  "/size-guide",
   "/gate",
   "/api/preview",
   "/api/stripe-webhook",
