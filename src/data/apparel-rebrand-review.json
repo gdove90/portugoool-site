@@ -1,0 +1,1062 @@
+{
+  "generatedAt": "2026-10-13T20:40:08.793Z",
+  "baseline": "34586c6fd8a05924b051bb72be3c570e75946478",
+  "sourceZip": "GOAL_ATHLETICS_V1.3_APPROVED_PALETTES_NO_ORANGE.zip",
+  "sourceReconstruction": true,
+  "sourcePathsUnchanged": true,
+  "addedBar": {
+    "x": 354,
+    "y": 669,
+    "width": 856,
+    "height": 40,
+    "athleticsTranslateY": 24,
+    "status": "NEW COMPOSITION; thickness/layout proof required"
+  },
+  "notForProduction": true,
+  "assets": [
+    {
+      "name": "Matchday-Front-White-Red-11IN-REVIEW",
+      "widthIn": 11,
+      "pixels": [
+        3300,
+        1101
+      ],
+      "density": 300,
+      "sha256": "1ff7587553e395c91a8b03179b7208198bd8337c46f247929828d9fb7cb265e4",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    },
+    {
+      "name": "Matchday-Back-GA-White-2.5IN-REVIEW",
+      "widthIn": 2.5,
+      "pixels": [
+        750,
+        676
+      ],
+      "density": 300,
+      "sha256": "4755b16dad7427682b5656568c3b637fa6848511bece13b02ff8cb43afd759a4",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    },
+    {
+      "name": "Front-Black-Red-11IN-REVIEW",
+      "widthIn": 11,
+      "pixels": [
+        3300,
+        1101
+      ],
+      "density": 300,
+      "sha256": "17b942384510f20f81637b22ce626a7860a78b2e0628ac100ab38570f016e999",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    },
+    {
+      "name": "Front-White-Red-11IN-REVIEW",
+      "widthIn": 11,
+      "pixels": [
+        3300,
+        1101
+      ],
+      "density": 300,
+      "sha256": "1ff7587553e395c91a8b03179b7208198bd8337c46f247929828d9fb7cb265e4",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    },
+    {
+      "name": "Front-ClubBlue-Cream-11IN-REVIEW",
+      "widthIn": 11,
+      "pixels": [
+        3300,
+        1101
+      ],
+      "density": 300,
+      "sha256": "789878ae935a7cce619c16503df3a5c96662e695bb058510292fcd707ed1a4c0",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    },
+    {
+      "name": "Front-ClubBlue-Black-11IN-REVIEW",
+      "widthIn": 11,
+      "pixels": [
+        3300,
+        1101
+      ],
+      "density": 300,
+      "sha256": "b67e28cf6fcb4908c705092c5f535bee93f2b6486047665e3fc2ad355cbd4a27",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    },
+    {
+      "name": "Back-Stacked-White-NoBar-SOURCE-SCALE",
+      "widthIn": 11,
+      "pixels": [
+        3300,
+        1006
+      ],
+      "density": 300,
+      "sha256": "a1b4c165664152eca681070084da1c47706a96ba8bfb872422ed6edd462574ee",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    },
+    {
+      "name": "GA-Black-SOURCE-SCALE",
+      "widthIn": 2.5,
+      "pixels": [
+        750,
+        676
+      ],
+      "density": 300,
+      "sha256": "a66f4118134730a50a127eb14d2f0c9820bfa939ec8ef3a02b6ae3da51e06e22",
+      "sourceWordmarkSha": "c76b47a7e48797c86d19842626ef0f42c076c49e49e8a715af082c2336178254",
+      "sourceGaSha": "b05fdc129550647f7e29afca0cdb5e9bd0ad418448ec63b1fa3b1bdba15a4018",
+      "status": "REVIEW CANDIDATE — NOT MANUFACTURER APPROVED"
+    }
+  ],
+  "products": [
+    {
+      "id": "70000000-0000-4000-8000-000000000001",
+      "name": "GOAL Core Badge Tee",
+      "slug": "goool-performance-tee",
+      "priceCents": 3800,
+      "blank": "Sport-Tek ST720",
+      "concept": "Performance-Tee",
+      "placementStatus": "New small GA placement dimensions awaiting approved specification.",
+      "variants": [
+        {
+          "color": "Black",
+          "supplierColor": "Black",
+          "legacyDesignIds": [
+            6098962
+          ],
+          "supplierReadback": [
+            {
+              "id": "6098962",
+              "description": "\t\tgoool performance badge tee\tst720 / sport-tek\t\n\t7 sizes (xs-xxxl)\t1\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_FRONT.webp",
+              "alt": "GOOOL Core Badge Tee in black, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_PERFORMANCE_BLACK_BACK.webp",
+              "alt": "GOOOL Core Badge Tee in black, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6098962,
+              "sku": "APQ-6098962S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6098962,
+              "sku": "APQ-6098962S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6098962,
+              "sku": "APQ-6098962S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6098962,
+              "sku": "APQ-6098962S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6098962,
+              "sku": "APQ-6098962S2A1"
+            }
+          ]
+        },
+        {
+          "color": "White",
+          "supplierColor": "White",
+          "legacyDesignIds": [
+            6099046
+          ],
+          "supplierReadback": [
+            {
+              "id": "6099046",
+              "description": "\t\tgoool performance badge tee white\tst720 / sport-tek\t\n\t7 sizes (xs-xxxl)\t1\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_FRONT.webp",
+              "alt": "GOOOL Core Badge Tee in white, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_PERFORMANCE_WHITE_BACK.webp",
+              "alt": "GOOOL Core Badge Tee in white, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6099046,
+              "sku": "APQ-6099046S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6099046,
+              "sku": "APQ-6099046S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6099046,
+              "sku": "APQ-6099046S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6099046,
+              "sku": "APQ-6099046S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6099046,
+              "sku": "APQ-6099046S2A1"
+            }
+          ]
+        },
+        {
+          "color": "True Royal",
+          "supplierColor": "true royal",
+          "legacyDesignIds": [
+            6099129
+          ],
+          "supplierReadback": [
+            {
+              "id": "6099129",
+              "description": "\t\tgoool performance badge tee true royal\tst720 / sport-tek\t\n\t7 sizes (xs-xxxl)\t1\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_FRONT.webp",
+              "alt": "GOOOL Core Badge Tee in true royal, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_PERFORMANCE_ROYAL_BACK.webp",
+              "alt": "GOOOL Core Badge Tee in true royal, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6099129,
+              "sku": "APQ-6099129S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6099129,
+              "sku": "APQ-6099129S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6099129,
+              "sku": "APQ-6099129S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6099129,
+              "sku": "APQ-6099129S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6099129,
+              "sku": "APQ-6099129S2A1"
+            }
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000002",
+      "name": "GOAL Core Hoodie · Red",
+      "slug": "goool-heavyweight-hoodie",
+      "priceCents": 7800,
+      "blank": "Independent Trading Co IND4000",
+      "concept": "Hoodie",
+      "placementStatus": "Front only, full separator bar. Exact new print height and offset proof pending.",
+      "variants": [
+        {
+          "color": "Black",
+          "supplierColor": "Black",
+          "legacyDesignIds": [
+            6121031
+          ],
+          "supplierReadback": [
+            {
+              "id": "6121031",
+              "description": "\t\tgoool core hoodie · black · red band\tind4000 / independent trading co\t\n\t9 sizes (xs-5xl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_FRONT.webp",
+              "alt": "GOOOL Core Hoodie · Red in black, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BLACK_RED_BACK.webp",
+              "alt": "GOOOL Core Hoodie · Red in black, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6121031,
+              "sku": "APQ-6121031S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6121031,
+              "sku": "APQ-6121031S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6121031,
+              "sku": "APQ-6121031S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6121031,
+              "sku": "APQ-6121031S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6121031,
+              "sku": "APQ-6121031S2A1"
+            }
+          ]
+        },
+        {
+          "color": "Bone",
+          "supplierColor": "Bone",
+          "legacyDesignIds": [
+            6120990
+          ],
+          "supplierReadback": [
+            {
+              "id": "6120990",
+              "description": "\t\tgoool core hoodie · bone · red band\tind4000 / independent trading co\t\n\t9 sizes (xs-5xl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BONE_RED_FRONT.webp",
+              "alt": "GOOOL Core Hoodie · Red in bone, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BONE_RED_BACK.webp",
+              "alt": "GOOOL Core Hoodie · Red in bone, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6120990,
+              "sku": "APQ-6120990S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6120990,
+              "sku": "APQ-6120990S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6120990,
+              "sku": "APQ-6120990S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6120990,
+              "sku": "APQ-6120990S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6120990,
+              "sku": "APQ-6120990S2A1"
+            }
+          ]
+        },
+        {
+          "color": "Grey Heather",
+          "supplierColor": "Grey Heather",
+          "legacyDesignIds": [
+            6121043
+          ],
+          "supplierReadback": [
+            {
+              "id": "6121043",
+              "description": "\t\tgoool core hoodie · grey heather · red band\tind4000 / independent trading co\t\n\t9 sizes (xs-5xl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_FRONT.webp",
+              "alt": "GOOOL Core Hoodie · Red in grey heather, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_RED_BACK.webp",
+              "alt": "GOOOL Core Hoodie · Red in grey heather, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6121043,
+              "sku": "APQ-6121043S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6121043,
+              "sku": "APQ-6121043S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6121043,
+              "sku": "APQ-6121043S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6121043,
+              "sku": "APQ-6121043S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6121043,
+              "sku": "APQ-6121043S2A1"
+            }
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000006",
+      "name": "GOAL Core Hoodie · Club Blue",
+      "slug": "goool-heavyweight-hoodie-blue",
+      "priceCents": 7800,
+      "blank": "Independent Trading Co IND4000",
+      "concept": "Hoodie",
+      "placementStatus": "Front only, full separator bar. Exact new print height and offset proof pending.",
+      "variants": [
+        {
+          "color": "Black",
+          "supplierColor": "Black",
+          "legacyDesignIds": [
+            6121042
+          ],
+          "supplierReadback": [
+            {
+              "id": "6121042",
+              "description": "\t\tgoool core hoodie · black · blue band\tind4000 / independent trading co\t\n\t9 sizes (xs-5xl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_FRONT.webp",
+              "alt": "GOOOL Core Hoodie · Club Blue in black, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BLACK_BLUE_BACK.webp",
+              "alt": "GOOOL Core Hoodie · Club Blue in black, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6121042,
+              "sku": "APQ-6121042S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6121042,
+              "sku": "APQ-6121042S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6121042,
+              "sku": "APQ-6121042S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6121042,
+              "sku": "APQ-6121042S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6121042,
+              "sku": "APQ-6121042S2A1"
+            }
+          ]
+        },
+        {
+          "color": "Bone",
+          "supplierColor": "Bone",
+          "legacyDesignIds": [
+            6121021
+          ],
+          "supplierReadback": [
+            {
+              "id": "6121021",
+              "description": "\t\tgoool core hoodie · bone · blue band\tind4000 / independent trading co\t\n\t9 sizes (xs-5xl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_FRONT.webp",
+              "alt": "GOOOL Core Hoodie · Club Blue in bone, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_HOODIE_BONE_BLUE_BACK.webp",
+              "alt": "GOOOL Core Hoodie · Club Blue in bone, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6121021,
+              "sku": "APQ-6121021S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6121021,
+              "sku": "APQ-6121021S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6121021,
+              "sku": "APQ-6121021S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6121021,
+              "sku": "APQ-6121021S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6121021,
+              "sku": "APQ-6121021S2A1"
+            }
+          ]
+        },
+        {
+          "color": "Grey Heather",
+          "supplierColor": "Grey Heather",
+          "legacyDesignIds": [
+            6121044
+          ],
+          "supplierReadback": [
+            {
+              "id": "6121044",
+              "description": "\t\tgoool core hoodie · grey heather · blue band\tind4000 / independent trading co\t\n\t9 sizes (xs-5xl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_FRONT.webp",
+              "alt": "GOOOL Core Hoodie · Club Blue in grey heather, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_HOODIE_GREYHEATHER_BLUE_BACK.webp",
+              "alt": "GOOOL Core Hoodie · Club Blue in grey heather, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6121044,
+              "sku": "APQ-6121044S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6121044,
+              "sku": "APQ-6121044S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6121044,
+              "sku": "APQ-6121044S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6121044,
+              "sku": "APQ-6121044S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6121044,
+              "sku": "APQ-6121044S2A1"
+            }
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000003",
+      "name": "GOAL Terrace Tee · Red",
+      "slug": "goool-heavyweight-casual-tee",
+      "priceCents": 3800,
+      "blank": "Bella+Canvas 3010",
+      "concept": "Cotton-Tee",
+      "placementStatus": "New small GA placement dimensions awaiting approved specification.",
+      "variants": [
+        {
+          "color": "Black",
+          "supplierColor": "black",
+          "legacyDesignIds": [
+            6120860
+          ],
+          "supplierReadback": [
+            {
+              "id": "6120860",
+              "description": "\t\tgoool athletics core wordmark tee · black\t3010 / bella canvas\t\n\t7 sizes (xs-xxxl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_FRONT.webp",
+              "alt": "GOOOL Terrace Tee · Red in black, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_RED_BACK.webp",
+              "alt": "GOOOL Terrace Tee · Red in black, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6120860,
+              "sku": "APQ-6120860S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6120860,
+              "sku": "APQ-6120860S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6120860,
+              "sku": "APQ-6120860S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6120860,
+              "sku": "APQ-6120860S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6120860,
+              "sku": "APQ-6120860S2A1"
+            }
+          ]
+        },
+        {
+          "color": "Natural",
+          "supplierColor": "Natural",
+          "legacyDesignIds": [
+            6120889
+          ],
+          "supplierReadback": [
+            {
+              "id": "6120889",
+              "description": "\t\tgoool casual wordmark tee\t3010 / bella canvas\t\n\t7 sizes (xs-xxxl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_FRONT.webp",
+              "alt": "GOOOL Terrace Tee · Red in natural, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_RED_BACK.webp",
+              "alt": "GOOOL Terrace Tee · Red in natural, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6120889,
+              "sku": "APQ-6120889S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6120889,
+              "sku": "APQ-6120889S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6120889,
+              "sku": "APQ-6120889S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6120889,
+              "sku": "APQ-6120889S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6120889,
+              "sku": "APQ-6120889S2A1"
+            }
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "id": "70000000-0000-4000-8000-000000000005",
+      "name": "GOAL Terrace Tee · Club Blue",
+      "slug": "goool-heavyweight-casual-tee-blue",
+      "priceCents": 3800,
+      "blank": "Bella+Canvas 3010",
+      "concept": "Cotton-Tee",
+      "placementStatus": "New small GA placement dimensions awaiting approved specification.",
+      "variants": [
+        {
+          "color": "Natural",
+          "supplierColor": "Natural",
+          "legacyDesignIds": [
+            6120887
+          ],
+          "supplierReadback": [],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_FRONT.webp",
+              "alt": "GOOOL Terrace Tee · Club Blue in natural, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_NATURAL_BLUE_BACK.webp",
+              "alt": "GOOOL Terrace Tee · Club Blue in natural, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6120887,
+              "sku": "APQ-6120887S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6120887,
+              "sku": "APQ-6120887S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6120887,
+              "sku": "APQ-6120887S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6120887,
+              "sku": "APQ-6120887S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6120887,
+              "sku": "APQ-6120887S2A1"
+            }
+          ]
+        },
+        {
+          "color": "Black",
+          "supplierColor": "black",
+          "legacyDesignIds": [
+            6120898
+          ],
+          "supplierReadback": [
+            {
+              "id": "6120898",
+              "description": "\t\tgoool casual wordmark tee · black · blue band\t3010 / bella canvas\t\n\t7 sizes (xs-xxxl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_FRONT.webp",
+              "alt": "GOOOL Terrace Tee · Club Blue in black, front view"
+            },
+            {
+              "src": "/products/GOOOL_STD_CASUAL_3010_BLACK_BLUE_BACK.webp",
+              "alt": "GOOOL Terrace Tee · Club Blue in black, back view"
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6120898,
+              "sku": "APQ-6120898S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6120898,
+              "sku": "APQ-6120898S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6120898,
+              "sku": "APQ-6120898S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6120898,
+              "sku": "APQ-6120898S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6120898,
+              "sku": "APQ-6120898S2A1"
+            }
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000006",
+      "name": "GOAL Matchday Tee",
+      "slug": "goool-athletics-modern-sport-performance-tee",
+      "priceCents": 3800,
+      "blank": "Sport-Tek ST720",
+      "concept": "Matchday-Tee",
+      "placementStatus": "Owner board: front 11in / top 3.5in; back GA 2.5in / top 1in. Supplier proof pending.",
+      "variants": [
+        {
+          "color": "Black",
+          "supplierColor": "Black",
+          "legacyDesignIds": [
+            6136475
+          ],
+          "supplierReadback": [
+            {
+              "id": "6136475",
+              "description": "\t\tgoool matchday tee - black\tst720 / sport-tek\t\n\t7 sizes (xs-xxxl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_MODERN_PERFORMANCE_FRONT_V3.png",
+              "alt": "GOOOL Matchday Tee in black, front view with the white GOOOL wordmark, red underline and ATHLETICS"
+            },
+            {
+              "src": "/products/GOOOL_MODERN_PERFORMANCE_BACK_DETAIL_V6.png",
+              "alt": "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, black garment",
+              "caption": "Back print detail - concept render. Not a photograph of a manufactured sample."
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6136475,
+              "sku": "APQ-6136475S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6136475,
+              "sku": "APQ-6136475S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6136475,
+              "sku": "APQ-6136475S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6136475,
+              "sku": "APQ-6136475S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6136475,
+              "sku": "APQ-6136475S2A1"
+            }
+          ]
+        },
+        {
+          "color": "True Royal",
+          "supplierColor": "true royal",
+          "legacyDesignIds": [
+            6136494
+          ],
+          "supplierReadback": [
+            {
+              "id": "6136494",
+              "description": "\t\tgoool matchday tee - true royal\tst720 / sport-tek\t\n\t7 sizes (xs-xxxl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_FRONT_V3.png",
+              "alt": "GOOOL Matchday Tee in true royal blue, front view with the white GOOOL wordmark, red underline and ATHLETICS"
+            },
+            {
+              "src": "/products/GOOOL_MODERN_PERFORMANCE_ROYAL_BACK_DETAIL_V6.png",
+              "alt": "Close-up concept of the Matchday Tee's white upper-back GOOOL Athletics print, true royal blue garment",
+              "caption": "Back print detail - concept render. Not a photograph of a manufactured sample."
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6136494,
+              "sku": "APQ-6136494S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6136494,
+              "sku": "APQ-6136494S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6136494,
+              "sku": "APQ-6136494S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6136494,
+              "sku": "APQ-6136494S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6136494,
+              "sku": "APQ-6136494S2A1"
+            }
+          ]
+        },
+        {
+          "color": "White",
+          "supplierColor": "white",
+          "legacyDesignIds": [
+            6136511
+          ],
+          "supplierReadback": [
+            {
+              "id": "6136511",
+              "description": "\t\tgoool matchday tee - white\tst720 / sport-tek\t\n\t7 sizes (xs-xxxl)\t2\t\n edit"
+            }
+          ],
+          "newDesignId": null,
+          "manufacturerApproval": false,
+          "legacyImages": [
+            {
+              "src": "/products/GOOOL_MODERN_PERFORMANCE_WHITE_FRONT_V3.png",
+              "alt": "GOOOL Matchday Tee in white, front view with the black GOOOL wordmark, red underline and ATHLETICS"
+            },
+            {
+              "src": "/products/GOOOL_MODERN_PERFORMANCE_WHITE_BACK_DETAIL_V6.png",
+              "alt": "Close-up concept of the Matchday Tee's black upper-back GOOOL Athletics print, white garment",
+              "caption": "Back print detail - concept render. Not a photograph of a manufactured sample."
+            }
+          ],
+          "legacyFulfillment": [
+            {
+              "size": "S",
+              "apliiqProductId": 6136511,
+              "sku": "APQ-6136511S6A1"
+            },
+            {
+              "size": "M",
+              "apliiqProductId": 6136511,
+              "sku": "APQ-6136511S7A1"
+            },
+            {
+              "size": "L",
+              "apliiqProductId": 6136511,
+              "sku": "APQ-6136511S8A1"
+            },
+            {
+              "size": "XL",
+              "apliiqProductId": 6136511,
+              "sku": "APQ-6136511S1A1"
+            },
+            {
+              "size": "XXL",
+              "apliiqProductId": 6136511,
+              "sku": "APQ-6136511S2A1"
+            }
+          ]
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    }
+  ]
+}
