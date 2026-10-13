@@ -16,26 +16,26 @@ function page(title: string, body: string, status: number) {
   const html = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${title}</title></head>
 <body style="margin:0;padding:48px 20px;background:#090909;color:#fff;font:16px/1.6 Helvetica,Arial,sans-serif;">
 <div style="max-width:520px;margin:0 auto;">
-<img src="https://goool.shop/brand/goool-athletics-lockup-white.png" width="160" alt="GOOOL Athletics" style="display:block;width:160px;height:auto;margin-bottom:28px;">
+<img src="https://goalathletics.shop/brand/goal-athletics-horizontal-lockup-white.svg" width="160" alt="GOAL Athletics" style="display:block;width:160px;height:auto;margin-bottom:28px;">
 <h1 style="margin:0 0 12px;font-size:24px;line-height:1.2;">${title}</h1>
 <p style="margin:0 0 24px;color:#d6d6d6;">${body}</p>
-<p style="margin:0;color:#d6d6d6;">GOOOL Athletics LLC · <a href="https://goool.shop" style="color:#fff;">goool.shop</a> · <a href="mailto:hello@goool.shop" style="color:#fff;">hello@goool.shop</a></p>
+<p style="margin:0;color:#d6d6d6;">GOOOL Athletics LLC · <a href="https://goalathletics.shop" style="color:#fff;">goalathletics.shop</a> · <a href="mailto:support@goalathletics.shop" style="color:#fff;">support@goalathletics.shop</a></p>
 </div></body></html>`;
   return new NextResponse(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }
 
 async function handle(token: string) {
-  if (!TOKEN_RE.test(token)) return page("That link is not valid.", "Write to hello@goool.shop and we will take you off the list by hand.", 404);
+  if (!TOKEN_RE.test(token)) return page("That link is not valid.", "Write to support@goalathletics.shop and we will take you off the list by hand.", 404);
   let result;
   try {
     result = await unsubscribeByToken(token);
   } catch {
-    return page("Please try again in a moment.", "We could not save that just now. Write to hello@goool.shop if it keeps happening.", 503);
+    return page("Please try again in a moment.", "We could not save that just now. Write to support@goalathletics.shop if it keeps happening.", 503);
   }
-  if (!result) return page("That link is not valid.", "Write to hello@goool.shop and we will take you off the list by hand.", 404);
+  if (!result) return page("That link is not valid.", "Write to support@goalathletics.shop and we will take you off the list by hand.", 404);
   return page(
     result.already ? "You were already unsubscribed." : "You're unsubscribed.",
-    "No more marketing email from GOOOL Athletics. Order and shipping emails still arrive if you buy something.",
+    "No more marketing email from GOAL Athletics. Order and shipping emails still arrive if you buy something.",
     200,
   );
 }

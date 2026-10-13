@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = pageMetadata("/refunds", "Refund Policy", "All sales are final. Defective or damaged items are replaced free.");
 
-const CONTACT_EMAIL = "hello@goool.shop";
+const CONTACT_EMAIL = "support@goalathletics.shop";
 
 const STATS = [
   { value: "14 days", label: "to report a defect or damage, from delivery" },

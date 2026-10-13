@@ -35,7 +35,7 @@ export default function Hero({ shopHref = "/shop" }: { shopHref?: string }) {
             hero's own typeface rather than pasted in as a shrunken image.
 
             Proportions are measured off the real lockup
-            (public/brand/goool-athletics-lockup-white.png, 720x272):
+            (public/brand/goal-athletics-horizontal-lockup-white.svg, 720x272):
             GOOOL glyph band 136px, rule 12px, ATHLETICS 73px at full
             width. So ATHLETICS is 0.537 of the GOOOL height and spans the
             mark edge to edge.
@@ -106,7 +106,7 @@ export default function Hero({ shopHref = "/shop" }: { shopHref?: string }) {
             belong in the title and the visible copy. */}
         <h1 className="mx-auto w-[calc(100vw-2rem)] max-w-[420px] [container-type:inline-size] lg:max-w-[560px]">
           <Image
-            src="/brand/goool-wordmark-tight-white.png"
+            src="/brand/goal-athletics-horizontal-lockup-white.svg"
             alt="GOAL Athletics"
             width={420}
             height={103}

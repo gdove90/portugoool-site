@@ -199,12 +199,17 @@ async function main() {
     const productionBaseline = '24903a4ae6ea63c22bf5b34d9169dc4a4762e9ca';
     const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
     // SEO output and the tracking page's metadata are covered by test-seo.cjs.
-    // Product data, tracking UI/API, payment and all other business files remain locked.
-    const seoOnly = new Set(['netlify/functions/deliver-emails.mts', 'netlify/functions/intake-maintenance.mts', 'src/lib/seo.ts', 'src/app/track-order/layout.tsx', 'src/app/cart/layout.tsx', 'src/app/success/layout.tsx', 'src/app/api/checkout/route.ts', 'src/app/api/preview/route.ts']);
+    // Product data, tracking behavior/API, payment and all other business files remain locked.
+    const seoOnly = new Set(['netlify/functions/deliver-emails.mts', 'netlify/functions/intake-maintenance.mts', 'src/lib/seo.ts', 'src/lib/page-metadata.ts', 'src/app/track-order/layout.tsx', 'src/app/cart/layout.tsx', 'src/app/success/layout.tsx', 'src/app/api/checkout/route.ts', 'src/app/api/preview/route.ts']);
     for (const file of files.filter(file => !seoOnly.has(file))) {
-      const baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]);
+      let baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]).toString().replace(/\r\n/g, '\n');
       const current = fs.readFileSync(file);
-      assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline.toString().replace(/\r\n/g, '\n'), file);
+      // Owner-approved public wording only; every tracking request, reference,
+      // validation, state transition and UI control still matches the baseline.
+      if (file === 'src/app/track-order/page.tsx') baseline = baseline
+        .replace('hello@goool.shop', 'support@goalathletics.shop')
+        .replace('with your GOOOL order reference', 'with your order reference');
+      assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline, file);
     }
     console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; Brand, closure and worker changes have separate checks.`);
   });

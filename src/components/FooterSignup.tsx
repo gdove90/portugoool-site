@@ -76,7 +76,7 @@ export default function FooterSignup() {
 
       {status !== "success" && (
         <p className="text-[13px] leading-relaxed text-paper/60">
-          By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to hello@goool.shop.
+          By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to support@goalathletics.shop.
         </p>
       )}
     </div>

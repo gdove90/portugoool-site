@@ -32,7 +32,7 @@ New-domain MX now points to smtp.google.com with priority 1 after separate owner
 
 V1.3 GA and custom outlined GOAL ATHLETICS wordmark are retained from original PR #31 reconstruction. Style 3 white/black navbar, right-side search/bag/mobile menu, footer and customer-service lockups are staged. The navbar uses GA; authentic V1.2 strike paths remain available for apparel, with divider lockups preserved separately.
 
-Owner's performance statement appears below the homepage hero; the intersection of athletic performance, personal ambition and futbol statement appears on About. The Goal Collective has its own page and navigation entry. Registered GOOOL Athletics LLC legal identity and hello@goool.shop remain accurate.
+Owner's performance statement appears below the homepage hero; the intersection of athletic performance, personal ambition and futbol statement appears on About. The Goal Collective has its own page and navigation entry. Public support links now use support@goalathletics.shop. The owner identifies Goal Brand Group LLC as the planned seller name; the current registered GOOOL Athletics LLC disclosure remains until the amendment takes effect. Historical order IDs and supplier artwork paths remain functional. Production sender activation remains a separate release gate.
 
 GA SVG, six PNG sizes (16/32/48/180/192/512), ICO and manifest are staged. Favicon translation is corrected so 512px artwork center equals (255.5,255.5), retaining every SVG path. This is placement correction, not original-export certification.
 
@@ -69,6 +69,10 @@ Email checklist:
 - [ ] Inventory and approve Search Console/Meta/analytics/QR/social/mail-campaign link changes before announcements.
 
 ## H. SEO
+
+Later owner-directed cleanup replaces remaining public support addresses, service-page metadata, community/kit confirmation wording and legacy component logo references in PR #31. Old Instagram branding is removed from the gate; optional footer social link is shown only when a verified NEXT_PUBLIC_INSTAGRAM_URL is configured. No replacement social handle is invented. Domain fallbacks, legacy endpoints, internal cookies/events and paid-order identifiers remain compatibility records rather than new consumer branding. Existing email transport/templates still require a coordinated sender/delivery release; this cleanup does not certify every historical record or account has been renamed.
+
+Workspace support address: saved support@goool.shop on the existing user; automatically generated support@goalathletics.shop under the verified alias domain, confirmed visually after read-back. No added mailbox/license. Owner approved exactly one Gmail receiving test, sent to support@goalathletics.shop; Gmail confirms sent, recipient verified. Incoming Inbox placement is not yet independently certified by this self-addressed test.
 
 GOAL metadata, SVG-based social image, manifest, canonicals, sitemap and structured data are staged. Product previews now use each preserved product canonical path rather than inheriting the homepage canonical. Track-order and success are noindex. Before cutover, default canonical host remains goool.shop; explicit preview configuration uses the new host. At approved release set NEXT_PUBLIC_SITE_URL=https://goalathletics.shop and DOMAIN_CUTOVER_ENABLED=true together for the appropriate build/runtime scopes. Verify generated sitemap, robots, schema and image URLs on production. Preview is noindex and non-operational.
 

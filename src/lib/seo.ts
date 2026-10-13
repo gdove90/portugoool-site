@@ -13,7 +13,7 @@ export const SITE_URL =
 
 export const LEGAL_NAME = "GOOOL Athletics LLC";
 export const BRAND_NAME = "GOAL Athletics";
-export const CONTACT_EMAIL = "hello@goool.shop";
+export const CONTACT_EMAIL = "support@goalathletics.shop";
 
 /** Exactly the countries Stripe Checkout will accept an address in. */
 export const SHIPPING_COUNTRIES = ["US", "CA", "GB", "PT"] as const;

@@ -38,8 +38,8 @@ export default function MobileNav({ open, onClose, links }: MobileNavProps) {
       <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-ink shadow-xl">
         <div className="flex h-16 items-center justify-between border-b border-paper/10 px-4">
           <Image
-            src="/brand/goool-wordmark-white.png"
-            alt="GOOOL"
+            src="/brand/goal-athletics-horizontal-lockup-white.svg"
+            alt="GOAL Athletics"
             width={130}
             height={45}
             className="h-auto w-24"

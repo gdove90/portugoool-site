@@ -1,9 +1,9 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 
-export const metadata = pageMetadata("/terms", "Terms of Service", "The terms that govern purchases and use of goool.shop.");
+export const metadata = pageMetadata("/terms", "Terms of Service", "The terms that govern purchases and use of goalathletics.shop.");
 
-const CONTACT_EMAIL = "hello@goool.shop";
+const CONTACT_EMAIL = "support@goalathletics.shop";
 
 export default function TermsPage() {
   return (
@@ -12,7 +12,7 @@ export default function TermsPage() {
         Terms of Service
       </h1>
       <p className="mt-2 max-w-lg text-ink/60">
-        By using goool.shop or placing an order, you agree to these terms.
+        By using goalathletics.shop or placing an order, you agree to these terms.
       </p>
 
       <div className="mt-10 space-y-8 text-sm leading-relaxed text-ink/60">
