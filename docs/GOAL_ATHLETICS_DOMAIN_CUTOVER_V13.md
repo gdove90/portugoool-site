@@ -26,7 +26,7 @@ Same project goool-shop, site 047c082c-2bc2-42d5-889f-57876fa55b78. Published pr
 - [ ] Promote goalathletics.shop to primary only after provider checks and explicit production approval.
 - [ ] Verify platform-level legacy endpoint continuity after the approved release and promotion. Current portugoool.com and www.goool.shop blanket redirects are a known pre-existing concern.
 
-No new-domain MX record exists. Existing goool.shop MX points to smtp.google.com. This confirms Google mail routing; mailbox/admin configuration still requires verification.
+New-domain MX now points to smtp.google.com with priority 1 after separate owner approval. Google ownership TXT, Google SPF and the account-issued 2048-bit DKIM record are saved and authoritatively verified. Existing goool.shop mail routing is unchanged. The alias is Verified/All ok in the same Workspace account; message delivery tests remain outstanding.
 
 ## E. Branding
 
@@ -52,7 +52,7 @@ Customer-service gate exceptions are staged, not deployed. Production Contact, S
 
 The prior private catalog audit covers 68 repository products, 288 variants, 113 mapped variants and 25 design IDs. Of 113 mappings, 108 match the live APLIIQ census; five legacy variants for design 6112026 remain unmatched. Decoration/art IDs, physical sizes and supplier approvals are incomplete. No supplier design or paid order was overwritten or resubmitted.
 
-Two paid/unfulfilled orders remain operational blockers: one needs supplier reconciliation without automatic resubmission; the other has a supplier production reference. Sensitive order details and data backups stay in the private local audit. Re-check live status with authorized supplier access before any new product migration.
+Two paid/unfulfilled orders remain operational blockers: one needs supplier reconciliation without automatic resubmission; the other has a supplier production reference. Authenticated APLIIQ read-only follow-up checked all seven 2026 orders on one page plus Pending Orders (no unprocessed jobs). No matching store reference appears for the unreconciled cap. The unmatched open supplier job contains two hoodies, not that cap, so it must not be assigned to the cap order. The known submitted order remains In Production. Dashboard absence does not certify no unlisted job exists; supplier confirmation remains necessary. Sensitive detail and a prepared, unsent inquiry stay in the private local output.
 
 62 isolated HTTP integration checks passed with synthetic orders, loopback fixtures and fake provider signatures: duplicate/concurrent payment callbacks, pending supplier responses, timeout handling, reconciliation parking, explicit operator release, shipment/delivery updates, tracking privacy, stable identifiers and historical SKU/price snapshots. Empty reconciliation results do not trigger resubmission. These fixtures do not certify live Supabase, Stripe, APLIIQ or Resend delivery. Final fixture run blocked outbound provider networking; an earlier dummy Stripe call returned 401 and performed no real checkout.
 
@@ -60,8 +60,8 @@ Email checklist:
 - [x] Sign in to existing Resend account; goool.shop remains verified. No new sender address activated in application configuration.
 - [x] Obtain separate owner approval and save exactly three Resend records: TXT resend._domainkey (exact dashboard public key), CNAME rsend to rsend.forge.rmta.net, CNAME send to send.forge.rmta.net. Authoritative DNS and GoDaddy read-back match. All seven prior records remain intact. Resend now marks domain, DKIM and both sending CNAMEs Verified. Receiving is not enabled in Resend.
 - [x] Sign in to existing Google Workspace administrator hello@goool.shop; goool.shop primary is Verified/All ok. Prepare goalathletics.shop as a no-cost user alias domain, preserving the existing inbox, login, history and license.
-- [ ] Approve and add the prepared Google ownership TXT at @, MX @ smtp.google.com priority 1, and Google SPF TXT at @. Exact ownership token is captured in the private local Workspace handoff. New alias remains unverified and Gmail reception is not configured; no existing MX changed. Primary-mail-domain promotion is not part of this work.
-- [ ] Obtain exact Google MX/DKIM and Resend verification/SPF/DKIM records from those accounts; reconcile SPF rather than publishing conflicting records.
+- [x] Separately approve, save and authoritatively verify Google ownership TXT at @, MX @ smtp.google.com priority 1 and Google SPF TXT at @. Add the separately approved exact 2048-bit Google DKIM TXT at google._domainkey and confirm authentication in Workspace. Google reports Gmail ready; Manage Domains shows new alias Verified/All ok and old primary Verified/All ok. No existing old-domain MX changed. Primary-mail-domain promotion is not part of this work.
+- [x] Obtain exact account-issued ownership/DKIM and Resend records; Google MX/SPF also verified against official administrator documentation. Preserve existing DMARC. One SPF record is published at apex; Resend uses separate authenticated return-path CNAMEs.
 - [ ] Test incoming mail, authenticated outgoing mail, replies, receipts, returns and shipment delivery with owner-controlled test recipients.
 - [ ] Activate hello@goalathletics.shop only after authentication and delivery tests pass, through an approved separate release.
 - [ ] Inventory and approve Search Console/Meta/analytics/QR/social/mail-campaign link changes before announcements.
@@ -84,7 +84,7 @@ Nine responsive widths (320,360,375,390,430,768,1024,1440,1920) show no horizont
 - [ ] Obtain original GoDaddy export if the handoff only contains reconstruction; confirm ownership and approved manufacturing geometry.
 - [ ] Complete 36 verified primary artwork variants, physical placement specs, supplier proofs and samples; retain authentic V1.2 for apparel.
 - [ ] Reconcile outstanding paid supplier order and five unmatched legacy variants; never automatically resubmit.
-- [ ] Complete Google ownership/MX/SPF approval, alias verification and DKIM preparation; perform approved delivery tests. Both account sign-ins and Resend domain authentication are complete. New sender activation remains forbidden until tests and separate approval.
+- [ ] Perform approved owner-only delivery/message-header tests and transactional receipt/return/shipment validation. Account sign-ins, Resend domain authentication, Workspace alias verification and Google DNS authentication setup are complete. Test drafts and supplier inquiry are prepared, not sent. New production sender activation remains forbidden until tests and separate approval.
 - [ ] Run provider sandbox checkout/fulfillment/email tests and actual platform redirect compatibility checks.
 - [ ] Obtain explicit approval for production source merge/deploy, primary-domain promotion and any reopening. DNS approval alone does not authorize these actions.
 
