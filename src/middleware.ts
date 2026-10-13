@@ -43,6 +43,11 @@ const PUBLIC_PATHS = new Set([
   "/privacy",
   "/terms",
   "/refunds",
+  // Existing customers still need help while shopping is closed.
+  "/contact",
+  "/support",
+  "/faq",
+  "/shipping-returns",
   "/robots.txt",
   "/icon.png",
   "/apple-icon.png",

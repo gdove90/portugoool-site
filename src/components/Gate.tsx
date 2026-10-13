@@ -226,6 +226,8 @@ export default function Gate({ next }: { next: string }) {
             <span aria-hidden="true">·</span>
             <Link href="/track-order">Track an order</Link>
             <span aria-hidden="true">·</span>
+            <Link href="/contact">Contact &amp; support</Link>
+            <span aria-hidden="true">·</span>
             <Link href="/privacy">Privacy</Link>
             <span aria-hidden="true">·</span>
             <Link href="/terms">Terms</Link>
