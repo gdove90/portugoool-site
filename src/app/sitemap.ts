@@ -3,6 +3,7 @@ import { getProducts } from "@/lib/products";
 import { SITE_URL } from "@/lib/seo";
 import { storeClosed } from "@/lib/store-status";
 import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
+import { TEMPO_COLLECTION_COMING_SOON } from "@/lib/collection-launch";
 
 // The sitemap is generated from the live catalog, not hand-listed, so a
 // product added or retired in products.ts appears or disappears here on
@@ -21,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // The gated production release advertises only accessible support pages.
   // Preview can inspect the full planned sitemap while robots denies crawling.
   if (storeClosed() && !MIGRATION_PREVIEW) {
-    return ["contact", "faq", "shipping-returns", "size-guide", "terms", "privacy", "refunds"].map(path => ({
+    return ["contact", "faq", "shipping-returns", "size-guide", "terms", "privacy", "refunds", ...(TEMPO_COLLECTION_COMING_SOON ? ["women"] : [])].map(path => ({
       url: `${SITE_URL}/${path}`, changeFrequency: "monthly", priority: 0.4,
     }));
   }

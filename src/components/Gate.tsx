@@ -217,6 +217,8 @@ export default function Gate({ next }: { next: string }) {
         <footer className={styles.foot}>
           <span>&copy; 2026 GOOOL Athletics LLC</span>
           <nav aria-label="Renovation page links">
+            <Link href="/women">Tempo / Women</Link>
+            <span aria-hidden="true">·</span>
             <Link href="/track-order">Track an order</Link>
             <span aria-hidden="true">·</span>
             <Link href="/contact">Contact &amp; support</Link>

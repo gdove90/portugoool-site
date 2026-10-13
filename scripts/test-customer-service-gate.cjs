@@ -19,13 +19,22 @@ let passed = 0;
 async function check(name, fn) { await fn(); passed++; console.log('PASS ' + name); }
 (async () => {
   process.env.PREVIEW_KEY = 'test-only-customer-service';
+  await check('Tempo announcement is public only while coming soon; nested shopping stays closed', async () => {
+    const launch = require('../src/lib/collection-launch.ts');
+    assert.equal((await middleware(request('/women'))).headers.get('x-middleware-next'), '1');
+    assert.equal((await middleware(request('/v84/assets/women.png'))).headers.get('x-middleware-next'), '1');
+    assert.equal((await middleware(request('/women/products'))).status, 307);
+    launch.TEMPO_COLLECTION_COMING_SOON = false;
+    try { for (const path of ['/women','/v84/assets/women.png']) assert.equal((await middleware(request(path))).status, 307); }
+    finally { launch.TEMPO_COLLECTION_COMING_SOON = true; }
+  });
   await check('four exact customer-service routes bypass the gate without cookies', async () => {
     for (const route of ['/contact', '/support', '/faq', '/shipping-returns']) {
       for (const method of ['GET', 'HEAD']) assert.equal((await middleware(request(route, method))).headers.get('x-middleware-next'), '1', route);
     }
   });
   await check('catalog, product, cart and adjacent service-like paths stay gated', async () => {
-    for (const route of ['/', '/shop', '/men', '/women', '/cart', '/shop/goool-athletics-badge-cap', '/contact/catalog', '/faq-private', '/support/shop', '/shipping-returns-extra']) {
+    for (const route of ['/', '/shop', '/men', '/cart', '/shop/goool-athletics-badge-cap', '/contact/catalog', '/faq-private', '/support/shop', '/shipping-returns-extra']) {
       for (const cookie of ['', 'goool_preview=test-only-customer-service', 'goool_gate=invalid']) {
         const response = await middleware(request(route, 'GET', cookie));
         assert.equal(response.status, 307, route);

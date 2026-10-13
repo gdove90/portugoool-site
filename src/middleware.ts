@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { TEMPO_COLLECTION_COMING_SOON } from "@/lib/collection-launch";
 import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import { storeClosed, SERVICE_PATHS } from "@/lib/store-status";
 import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
@@ -62,7 +63,7 @@ const PUBLIC_PREFIXES = ["/icons/", "/print/", "/fonts/", "/brand/", "/unsubscri
 const LEGACY_RETURN_PATHS = new Set(["/success", "/track-order"]);
 
 function isPublic(pathname: string): boolean {
-  return SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
+  return (TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
 export async function middleware(req: NextRequest) {

@@ -1,5 +1,5 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import CollectionComingSoon from "@/components/CollectionComingSoon";
+import TempoComingSoon from "@/components/TempoComingSoon";
 import { TEMPO_COLLECTION_COMING_SOON } from "@/lib/collection-launch";
 import Editorial from "@/v84/Editorial";
 
@@ -9,7 +9,7 @@ export const metadata = TEMPO_COLLECTION_COMING_SOON
 
 export default function Page() {
   if (TEMPO_COLLECTION_COMING_SOON) {
-    return <><h1 className="sr-only">Tempo — Women’s collection</h1><CollectionComingSoon /></>;
+    return <TempoComingSoon collection="Tempo" audience="Women" image="/v84/assets/women.png" imageAlt="Woman in black athleticwear against warm stone" />;
   }
   return <Editorial route="women" />;
 }

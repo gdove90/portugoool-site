@@ -19,7 +19,7 @@ async function check(name, fn){await fn();count++;console.log('PASS '+name)}
 const request=(p,host='goool.shop',cookie='',method='GET')=>new NextRequest(`https://${host}${p}`,{method,headers:{host,cookie}});
 (async()=>{
 delete process.env.STORE_OPEN;delete process.env.PREVIEW_KEY;
-await check('default closure survives missing password',async()=>{for(const p of ['/','/shop','/men','/women','/cart','/shop/a-product'])assert.equal((await middleware(request(p))).status,307);assert.equal((await preview(request('/api/preview','goool.shop','','POST'))).status,503)});
+await check('default closure survives missing password',async()=>{for(const p of ['/','/shop','/men','/cart','/shop/a-product'])assert.equal((await middleware(request(p))).status,307);assert.equal((await preview(request('/api/preview','goool.shop','','POST'))).status,503)});
 await check('all customer operations bypass closure on every legacy host',async()=>{for(const host of ['goool.shop','portugoool.com','www.portugoool.com','www.goool.shop'])for(const p of ['/contact','/support','/faq','/shipping-returns','/size-guide','/privacy','/terms','/refunds','/track-order','/success','/api/stripe-webhook','/api/apliiq-fulfillment','/api/fulfillment-ops','/api/intake/maintenance','/api/newsletter','/api/track-order','/api/order-status','/print/legacy.png','/unsubscribe/token']){const r=await middleware(request(p,host,'',p.startsWith('/api/')?'POST':'GET'));assert.equal(r.headers.get('x-middleware-next'),'1',host+p)}});
 await check('direct checkout is refused while closed before credentials or input',async()=>assert.equal((await checkout(request('/api/checkout','goool.shop','','POST'))).status,503));
 process.env.PREVIEW_KEY='local-test-only';
