@@ -62,4 +62,7 @@ body {
 @media(max-width:350px){.goal-horizontal-lockup{gap:5px}.goal-lockup-strike{width:30px}.goal-lockup-wordmark{width:85px}.goal-lockup-divider{height:21px}}
 
 .goal-web-ga { width:38px; height:auto; flex:none; }
+.goal-horizontal-lockup[data-brand-lockup="v1.3"] .goal-lockup-wordmark { width:250px; }
 @media(max-width:430px) { .goal-web-ga { width:30px; } }
+@media(max-width:430px) { .goal-horizontal-lockup[data-brand-lockup="v1.3"] .goal-lockup-wordmark { width:165px; } }
+@media(max-width:350px) { .goal-horizontal-lockup[data-brand-lockup="v1.3"] .goal-lockup-wordmark { width:130px; } }
