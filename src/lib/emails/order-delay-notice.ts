@@ -62,7 +62,7 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
     `Track your order: ${site}/track-order`,
     "",
     "Customer Service",
-    "Questions about your order? Contact us at support@goalathletics.com",
+    `Questions about your order? Contact us at ${SUPPORT_EMAIL}`,
     "",
     "Wear the Feeling.",
     "GOOOL ATHLETICS LLC · goalathletics.shop",
@@ -113,7 +113,7 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
           <tr><td align="center" style="border-top:1px solid ${BORDER};padding:20px 0 18px;">
             <div style="font:700 16px/1.5 Helvetica,Arial,sans-serif;color:${PAPER};">Customer Service</div>
             <div style="margin-top:9px;font:400 13px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">Questions about your order?<br>Contact us at</div>
-            <a href="mailto:support@goalathletics.com" style="display:inline-block;padding:9px 0;font:700 16px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};text-decoration:underline;">support@goalathletics.com</a>
+            <a href="mailto:${SUPPORT_EMAIL}" style="display:inline-block;padding:9px 0;font:700 16px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};text-decoration:underline;">${SUPPORT_EMAIL}</a>
           </td></tr>
           <tr><td align="center" style="border-top:1px solid ${BORDER};padding:18px 0 24px;">
             <div style="font:700 19px/1.35 Helvetica,Arial,sans-serif;color:${PAPER};">Wear the Feeling.</div>
