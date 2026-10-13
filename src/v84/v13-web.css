@@ -1,7 +1,7 @@
-/* V1.3 approved Style 3: black-on-white header, GA + GOAL ATHLETICS.
+/* V1.3 letterforms retained: white navigation overlays photo heroes.
    Strike remains available for apparel and other brand expressions, never nav. */
-.v84 #header,
-.v84 #header.light { background:#fff; color:#0a0a0a; border-bottom:1px solid #dfdfdf; }
+.v84 #header { position:absolute; top:0; left:0; right:0; background:transparent; color:#fff; border-bottom:1px solid #ffffff28; }
+.v84 #header.light { position:relative; top:auto; background:#fff; color:#0a0a0a; border-bottom:1px solid #dfdfdf; }
 .v84 #header > .brand { display:flex; align-items:center; gap:8px; color:inherit; }
 .v84 #header > .brand .brand-ga { width:38px; height:36px; flex:none; }
 .v84 #header > .brand .brand-wordmark { width:250px; height:auto; flex:none; }
