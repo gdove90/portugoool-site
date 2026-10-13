@@ -244,8 +244,8 @@ export default function DiscountPopup({ review = false }: { review?: boolean }) 
           onClick={() => { if (!swipeMoved.current) close(); }} onPointerDown={startSwipe} onPointerMove={moveSwipe} onPointerUp={endSwipe}
           onPointerCancel={() => { swipe.current = null; setDragOffset(0); }}><span /></button>
         <div className="goal-discount-logo">
-          <Image src="/brand/goal-athletics-popup-white.png" alt="GOAL Athletics" width={4800} height={1314} priority />
-          <Image className="goal-discount-logo-dark" src="/brand/goal-athletics-popup-black.png" alt="" aria-hidden="true" width={4800} height={1314} priority />
+          <Image src="/brand/goal-athletics-popup-white.png" alt="GOAL Athletics" width={4800} height={1314} sizes="(max-width:639px) 190px, 320px" priority />
+          <Image className="goal-discount-logo-dark" src="/brand/goal-athletics-popup-black.png" alt="" aria-hidden="true" width={4800} height={1314} sizes="(max-width:639px) 190px, 320px" priority />
         </div>
         {status === "done" ? <div className="goal-discount-success" role="status">
           <h2 id="goal-discount-title" className="goal-discount-tone">YOU’RE IN.</h2>
