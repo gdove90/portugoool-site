@@ -126,7 +126,7 @@ export default function Footer() {
         <div className="flex flex-col gap-1.5 text-[13px] leading-relaxed text-paper/65">
           <address className="not-italic">Mailing address<br />{MAILING_STREET}<br />{MAILING_CITY_LINE}</address>
           <p className="whitespace-nowrap">
-            © {new Date().getFullYear()} GOOOL Athletics LLC. All rights reserved.
+            © {new Date().getFullYear()} The Goal Brand Group LLC. All rights reserved.
           </p>
           <p>
             GOOOL Athletics LLC is an independent brand. Not affiliated with,
