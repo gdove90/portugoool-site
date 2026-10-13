@@ -1,8 +1,6 @@
-// Shared shell and footer for the welcome sequence (owner decision
-// 2026-09-29). The footer mirrors the hello@goool.shop Gmail signature,
-// same lockup, same order, same tagline, then the two lines the law
-// requires on marketing mail: a physical mailing address and an
-// unsubscribe link. Black background, white type, one accent colour.
+// Shared shell and footer for the welcome sequence. Uses the approved
+// GOAL V1.3 artwork and customer support channel. Includes the current
+// registered seller, mailing address and unsubscribe link.
 //
 // Shared mailing address approved by the owner on 2026-10-12.
 import { MAILING_STREET, MAILING_CITY_LINE } from "../business-address";
