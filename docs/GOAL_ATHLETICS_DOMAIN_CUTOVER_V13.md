@@ -57,7 +57,8 @@ Two paid/unfulfilled orders remain operational blockers: one needs supplier reco
 62 isolated HTTP integration checks passed with synthetic orders, loopback fixtures and fake provider signatures: duplicate/concurrent payment callbacks, pending supplier responses, timeout handling, reconciliation parking, explicit operator release, shipment/delivery updates, tracking privacy, stable identifiers and historical SKU/price snapshots. Empty reconciliation results do not trigger resubmission. These fixtures do not certify live Supabase, Stripe, APLIIQ or Resend delivery. Final fixture run blocked outbound provider networking; an earlier dummy Stripe call returned 401 and performed no real checkout.
 
 Email checklist:
-- [ ] Sign in to existing Resend account (handoff tab opened); do not create a replacement account.
+- [x] Sign in to existing Resend account; goool.shop remains verified. Prepare pending goalathletics.shop entry with exact account-issued DNS records. No sender address activated.
+- [ ] Approve and install the three prepared Resend records: TXT resend._domainkey (exact public key captured in the private local DNS handoff), CNAME rsend to rsend.forge.rmta.net, CNAME send to send.forge.rmta.net. Existing web, DMARC and nameserver records remain unchanged. Receiving is not enabled in Resend; Google Workspace mailbox routing must be preserved separately.
 - [ ] In existing Google Workspace, verify secondary-domain/domain-alias choice, ownership and hello mailbox/alias routing. Preserve old mailbox and history.
 - [ ] Obtain exact Google MX/DKIM and Resend verification/SPF/DKIM records from those accounts; reconcile SPF rather than publishing conflicting records.
 - [ ] Test incoming mail, authenticated outgoing mail, replies, receipts, returns and shipment delivery with owner-controlled test recipients.
@@ -82,7 +83,7 @@ Nine responsive widths (320,360,375,390,430,768,1024,1440,1920) show no horizont
 - [ ] Obtain original GoDaddy export if the handoff only contains reconstruction; confirm ownership and approved manufacturing geometry.
 - [ ] Complete 36 verified primary artwork variants, physical placement specs, supplier proofs and samples; retain authentic V1.2 for apparel.
 - [ ] Reconcile outstanding paid supplier order and five unmatched legacy variants; never automatically resubmit.
-- [ ] Complete existing-account Google Workspace/Resend authentication and delivery tests.
+- [ ] Complete existing-account Google Workspace administrator sign-in, domain/mailbox setup, Resend DNS approval/authentication and delivery tests. Resend sign-in itself is complete; its new domain remains pending verification.
 - [ ] Run provider sandbox checkout/fulfillment/email tests and actual platform redirect compatibility checks.
 - [ ] Obtain explicit approval for production source merge/deploy, primary-domain promotion and any reopening. DNS approval alone does not authorize these actions.
 
