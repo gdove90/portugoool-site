@@ -1,3 +1,4 @@
+import { storeClosed } from "./store-status";
 // Welcome sequence, Emails 2 and 3 (owner decision 2026-09-29).
 //
 // One pass, run from the existing deliver-emails scheduled function at
@@ -60,7 +61,64 @@ interface LedgerCode {
   expires_at: string | null;
 }
 
-// Retain the callable interface for existing workers; promotional follow-ups are retired.
-export async function runWelcomePass(_livemode: boolean, _now: number = Date.now()): Promise<Record<string, number>> {
-  return { promotional_followups_disabled: 1 };
+export async function runWelcomePass(livemode: boolean, now: number = Date.now()): Promise<Record<string, number>> {
+  if (storeClosed()) return { store_closed: 1 };
+  const db = getSupabaseAdmin();
+  if (!db) throw new Error("Sign-up storage unavailable.");
+  const counts: Record<string, number> = {};
+  const bump = (k: string) => { counts[k] = (counts[k] ?? 0) + 1; };
+  const mode = livemode ? "live" : "test";
+  const tee = performanceTee();
+
+  for (const step of [2, 3] as const) {
+    if (step === 2 && !tee) { bump("email2_gate_closed"); continue; }
+    const hours = step === 2 ? EMAIL2_HOURS : EMAIL3_HOURS;
+    const column = `sent_at_email${step}` as const;
+    const { data, error } = await db
+      .from("newsletter_signups")
+      .select("id, email, email_hash, source, subscribed_at, unsubscribed_at, sent_at_email1, sent_at_email2, sent_at_email3, imported, unsubscribe_token")
+      .eq("source", "popup")
+      .is("unsubscribed_at", null)
+      .is(column, null)
+      .lte("subscribed_at", new Date(now - hours * 3600_000).toISOString())
+      .gte("subscribed_at", new Date(now - LOOKBACK_DAYS * 86400_000).toISOString())
+      .order("subscribed_at")
+      .limit(BATCH);
+    if (error) throw new Error("Welcome pass read failed.");
+    const rows = (data ?? []) as SignupRow[];
+    if (rows.length === 0) continue;
+
+    const { data: codeRows, error: codeError } = await db
+      .from("discount_codes")
+      .select("email_hash, code, redeemed_at, expires_at")
+      .in("email_hash", rows.map((r) => r.email_hash))
+      .eq("livemode", livemode);
+    if (codeError) throw new Error("Welcome pass ledger read failed.");
+    const byHash = new Map<string, LedgerCode>();
+    for (const c of (codeRows ?? []) as LedgerCode[]) byHash.set(c.email_hash, c);
+
+    for (const row of rows) {
+      const ledger = byHash.get(row.email_hash);
+      if (!ledger) { bump(`email${step}_skipped_no_code`); continue; }
+      if (ledger.redeemed_at) { bump(`email${step}_skipped_redeemed`); continue; }
+      if (ledger.expires_at && Date.parse(ledger.expires_at) <= now) { bump(`email${step}_skipped_expired`); continue; }
+
+      const url = unsubscribeUrl(row.unsubscribe_token);
+      const built = step === 2
+        ? buildWelcome2({
+            code: ledger.code,
+            productUrl: `${SITE_URL}/shop/${tee!.slug}`,
+            imageUrl: `${SITE_URL}${tee!.images[0]?.src ?? ""}`,
+            imageAlt: tee!.images[0]?.alt ?? tee!.name,
+            unsubscribeUrl: url,
+          })
+        : buildWelcome3({ code: ledger.code, unsubscribeUrl: url });
+      const key = `welcome/${mode}/${step}/${row.id}`;
+      await queueEmail(key, "discount", { to: row.email, ...built, headers: listUnsubscribeHeaders(url) }, livemode);
+      await markEmailSent(row.id, step, new Date(now).toISOString());
+      try { await deliverEmail(key); } catch { /* the minute worker retries the queued row */ }
+      bump(`email${step}`);
+    }
+  }
+  return counts;
 }

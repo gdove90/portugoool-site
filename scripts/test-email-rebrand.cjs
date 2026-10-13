@@ -19,6 +19,8 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
     'order-delay':buildOrderDelayNotice(order),
     'shipment':buildShipmentNotification(order,{tracking_company:'Example Carrier',tracking_numbers:['PREVIEW-TRACKING'],tracking_urls:['javascript:alert(1)']}),
     'welcome-1':buildWelcome1(welcome),
+    'welcome-2':buildWelcome2({...welcome,productUrl:'https://goalathletics.shop/shop/goool-athletics-modern-sport-performance-tee',imageUrl:'https://goalathletics.shop/products/legacy-reference.png',imageAlt:'GOAL Athletics'}),
+    'welcome-3':buildWelcome3(welcome),
   };
   assert.equal(orderNumberFor(order.id),'GOOOL-12345678');
   const sender=fs.readFileSync('src/lib/email.ts','utf8');
@@ -42,13 +44,18 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
     else {assert(m.text.includes('GOOOL-12345678'));assert(m.html.includes('GOOOL-12345678'));}
     if(name==='order-confirmation') {assert(m.text.includes('LEGACY-SKU-UNCHANGED'));assert(m.text.includes('$48.00'));assert(m.text.includes('GOOOL Athletics LLC'));}
     if(name==='order-delay') {assert(m.subject.includes('GOAL Athletics'));assert(m.text.includes('GOOOL Athletics LLC'));}
-    if(name==='welcome-2') assert(!m.html.includes('old-logo.png'));
+    if(name==='welcome-2') {assert(!/tri-blend|3\.8 ounces|GA on the chest|Three colors/i.test(m.html+m.text));assert(m.html.includes('https://goalathletics.shop/shop/goool-athletics-modern-sport-performance-tee'));assert(m.text.includes('See the tee:'));}
+    if(name.startsWith('welcome')) {assert(m.text.includes('Unsubscribe: '+unsubscribeUrl));assert(m.html.includes('PO Box 19'));assert(m.text.includes('Saunderstown, RI 02874'));}
+    if(name==='welcome-3') {assert(m.text.includes('https://goalathletics.shop/shop'));assert(m.html.includes('https://goalathletics.shop/shop'));}
     console.log('PASS '+name+' branding, links and preserved identifiers');
   }
+  const {listUnsubscribeHeaders}=require('../src/lib/welcome.ts');
+  assert.deepEqual(listUnsubscribeHeaders(unsubscribeUrl),{'List-Unsubscribe':'<'+unsubscribeUrl+'>, <mailto:support@goalathletics.shop?subject=unsubscribe>','List-Unsubscribe-Post':'List-Unsubscribe=One-Click'});
+  console.log('PASS welcome 1–3 HTML/plain text links, unsubscribe footer and RFC 8058 headers');
   global.fetch = async()=>{throw new Error('Network forbidden during template tests');};
-  assert.deepEqual(await require('../src/lib/welcome.ts').runWelcomePass(true),{promotional_followups_disabled:1});
-  for(const mode of ['live','test'])for(const step of [2,3]) assert.equal(await require('../src/lib/email-delivery.ts').deliverEmail(`welcome/${mode}/${step}/preview-only`),'promotional_followups_disabled');
-  console.log('PASS promotional passes and pre-existing follow-up deliveries cannot send or access the database');
+  assert.deepEqual(await require('../src/lib/welcome.ts').runWelcomePass(true),{store_closed:1});
+  for(const mode of ['live','test'])for(const step of [2,3]) assert.equal(await require('../src/lib/email-delivery.ts').deliverEmail(`welcome/${mode}/${step}/preview-only`),'store_closed');
+  console.log('PASS existing closure gate defers follow-ups without database claims or sends');
   const previousKey=process.env.RESEND_API_KEY;
   let captured;
   global.fetch=async (_url,options)=>{captured=JSON.parse(options.body);return {ok:true,json:async()=>({id:'synthetic-local-only'})};};

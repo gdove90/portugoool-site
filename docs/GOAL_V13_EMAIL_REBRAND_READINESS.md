@@ -1,31 +1,27 @@
-# GOAL Athletics email readiness — corrected staged release
-Reviewed October 13, 2026. Consolidated draft PR #39 includes PR #36 without discarding either history. Production sender remains unchanged until approval.
+# PR #39 revised email readiness
+Reviewed October 13, 2026 (America/New_York). Draft only; no merge, production deployment, sender activation or live messages.
 
-## Official configuration
-From: GOAL Athletics <hello@goalathletics.shop> (outbound only).
-Reply-To and every customer support link: support@goalathletics.shop.
-Website: https://goalathletics.shop.
-Mailing address: PO Box 19, Saunderstown, RI 02874 (not a returns address).
-Registered seller: GOOOL Athletics LLC while the amendment is pending.
+## Corrected workflow
+The original welcome pass is restored. Timing remains 120 hours and 288 hours, popup source only, not unsubscribed, unsent step, 30-day lookback and 50-row batch, same mode-specific discount ledger, no redeemed/expired/missing code. Email 2 retains the active/available/priced BC3413 product gate. Original mark/queue order, idempotency keys, subscriber eligibility and unsubscribe handling remain intact.
+The existing storeClosed() gate temporarily returns store_closed before follow-up database access or claims. It also excludes welcome steps 2/3 from the due-row selection while closed so they do not occupy the three transactional worker slots. Reopening restores the original path; no permanent retirement flag remains. The provider retry/ambiguous-delivery window is unchanged. No live queue was executed or customer rows modified during this work. Existing queued message bodies are not rewritten, so legacy queued content may retain historical wording; no silent history migration occurs.
 
-## Verified
-- Entire tracked staging tree scanned for the unowned domain; regression blocks recurrence.
-- Transport forces the shared support Reply-To even when callers supply an obsolete override.
-- External owner test already received in the existing Workspace inbox at support@goalathletics.shop, October 13 at 8:52 AM; recipient details and Inbox placement inspected. No new email sent.
-- Public DNS: Google MX smtp.google.com priority 1, Workspace SPF, Google DKIM key, Resend DKIM key and Forge CNAME, DMARC quarantine published.
-- Existing Resend account: both current and legacy domains verified; no hosted templates, broadcasts or automations; existing audience preserved. Receiving in Resend is disabled because Workspace receives mail.
-- Existing approved V1.3 combined SolidWhite and SolidBlack PNGs copied byte-for-byte from the owner Desktop source handoff (4800 by 1314). No redraw or regeneration. SHA256 assertions protect both original files; no orange or navy/orange assets used. Apparel V1.2 and supplier artwork preserved.
-- White outer email canvas, black central writing panel. Four active previews: requested discount code, receipt, shipment and delay. No product upsells or automatic day-five/day-twelve promotion. Existing queue records are retained; promotional entries refused before send.
-- Typecheck, identity and routing tests, 27 v84 checks, 9 shipment checks and six non-transactional payment preservation checks passed. Mock backend suite passed after updating isolated closure fixtures and replacing obsolete promotional expectations; no real Checkout Sessions, provider requests or fulfillment were created.
-- Idempotency identities, queue schema, discount redemption codes, legacy order IDs, operational inboxes and supplier integrations preserved.
+## Templates and assets
+Six HTML/plain-text fixtures cover receipt, delay, shipment and all three welcome emails. Checks cover .shop links, support-only Reply-To, unsubscribe footer and RFC 8058 headers, physical address, source PNG hashes and preserved order/code IDs. Welcome 2 replaces old tri-blend composition/weight/colors/legacy garment-brand claims with owner-approved performance language. Its product link and original eligibility gates remain; legacy garment artwork is not reintroduced. Welcome 3's existing code-expiry workflow and shop link are preserved. White canvas/black content panel and the original approved V1.3 PNGs remain.
+From: GOAL Athletics <hello@goalathletics.shop>. Reply-To/customer contact: support@goalathletics.shop. Legal seller remains GOOOL Athletics LLC while amendment is pending. Gmail visible umbrella name is The Goal Brand Group LLC.
 
-## Outstanding before production approval
-- Gmail signature text is prepared for manual completion. Original approved black PNG must be uploaded manually in Gmail; do not enable broader Chrome file permissions. Old defaults remain unchanged until the complete signature is saved.
-- Deploy-preview build passed at 9623f55; both hosted PNGs returned HTTP 200 with bytes matching local V1.3 exports. The domain regression now runs before every build. Receipt desktop/mobile browser previews verified; real mail-client tests remain unverified.
-- Canonical email PNG becomes available on production only after approved release; preview availability alone is not production publication.
-- New-template real Gmail/Outlook/Apple Mail delivery and rendering are unverified. Previous approved Resend owner test authenticated SPF/DKIM/DMARC but had spam placement; do not mark inbox delivery passed. No new send authorized.
-- Human outbound response from support alias is not newly tested. Existing external inbound test is verified.
-- Owner approval required before merge, production sender activation, deployment or any live test send.
+## Gmail signature: outstanding manual step
+An independent fresh settings tab shows only the old saved signatures, with GOOOL Support Team selected for both new messages and replies/forwards. The prepared GOAL signature is still unsaved in the original tab, its image picker open and no new image installed. The standalone preview is not proof of a saved Gmail signature. Upload the unchanged approved black PNG, select Small, verify lettering/support contact, select GOAL Athletics Support Team for both defaults, then Save Changes. No broader Chrome permissions or send required.
 
-## Rollback
-Before approved release record production SHA and deploy ID. Revert the email PR and redeploy that known good version; do not edit database or replay queues. Old operational mailbox, domain authentication, audience, legal identity, order references and supplier URLs remain available. Gmail old signatures are retained so defaults can be restored without losing their original content. No credentials, DNS, Resend configuration, payments or records are changed by this draft.
+## Non-sending deliverability diagnosis
+The previously authorized owner test of October 13, 8:17 AM remains in Spam. Resend reports Delivered, which confirms receiving-server acceptance, not Inbox placement. Gmail's actual original-message summary and Authentication-Results were inspected:
+- SPF pass for the envelope sender at rsend.goalathletics.shop; relaxed alignment with the From domain succeeds.
+- DKIM pass for goalathletics.shop, selector resend; exact domain alignment succeeds. The provider's additional signature also passes.
+- DMARC pass, header.from goalathletics.shop; quarantine policy, disposition none. This message was not quarantined due to failed DMARC.
+- Encrypted TLS delivery present. Gmail's explanation: similar to previously identified spam messages.
+Fresh public DNS confirms Workspace MX smtp.google.com, its root SPF include, Google and Resend DKIM keys, Resend Forge CNAMEs and DMARC p=quarantine/adkim=r/aspf=r. Resend domain is verified with sending enabled and open/click tracking disabled. Resend receiving disabled is expected because Workspace handles inbound mail.
+No missing-authentication correction is established. Do not add a second SPF TXT, replace Google's root SPF, remove Forge records or weaken DMARC solely to address this spam result. Low/new sender reputation or content-based classification are possible explanations, not a proven root cause. Before any approved test campaign, review existing DMARC aggregate reports and Postmaster reputation/complaint data if accessible, preserve subscription/unsubscribe gates and investigate shared-provider reputation with Resend if repeated failures occur. No reputation dashboards or account changes were created. Future controlled Gmail/Outlook/Apple Mail delivery and rendering tests require separate authorization and remain unverified.
+Primary guidance: [Google sender guidelines](https://support.google.com/mail/answer/81126?hl=en), [Resend spam diagnostics](https://resend.com/blog/why-your-emails-are-going-to-spam), [Resend DMARC reporting](https://resend.com/blog/how-to-read-a-dmarc-report). These support the diagnostic approach, not a definitive cause for this particular message.
+
+## Verification and rollback
+Typecheck, six-template/routing checks, 46 isolated backend checks including restored day-five/day-twelve sends and closure/reopen behavior, 27 v84 checks, nine shipment checks, four preview-worker checks, six payment-preservation checks, eight customer-service suites, twelve migration suites/six asset constructions, nine admin-controller checks, five upload-client checks and six maintenance checks pass. All backend sends/Checkout Sessions use in-memory providers only. The installed Supabase client serialized both exclusion filters correctly using a synthetic local fetch. No live database query or mutation is required for this revision. Local preview build/HTTP release checks and latest Netlify preview status are recorded in the delivered verification report.
+Rollback: restore the prior production SHA/deploy rather than replaying queues. Existing Resend account, secrets, authentication, audience, Supabase schema and history, supplier records and production sender remain unchanged. Original Gmail signatures remain available. Owner approval is required before production release or a new send.

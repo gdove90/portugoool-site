@@ -1,3 +1,4 @@
+import { storeClosed } from "./store-status";
 import { randomUUID } from "crypto";
 import { getSupabaseAdmin } from "./supabase";
 import { emailEnabled, EmailMessage, sendEmail } from "./email";
@@ -25,8 +26,8 @@ export async function queueEmail(key: string, kind: Delivery["kind"], message: E
   if (error) throw new Error("Could not persist email delivery.");
 }
 export async function deliverEmail(key: string): Promise<string> {
-  // Preserve any existing follow-up rows, but never claim or send them.
-  if (/^welcome\/(live|test)\/[23]\//.test(key)) return "promotional_followups_disabled";
+  // Temporarily defer follow-ups while the existing renovation gate is closed.
+  if (storeClosed() && /^welcome\/(live|test)\/[23]\//.test(key)) return "store_closed";
   if (!emailEnabled()) return "disabled";
   const db = database();
   const token = randomUUID();
@@ -136,9 +137,11 @@ export async function drainEmailQueue(livemode: boolean): Promise<Record<string,
     .update({ status: "needs_review", last_error: "Retry window elapsed; reconcile provider before resending." })
     .eq("livemode", livemode).in("status", ["pending", "sending"]).lt("first_attempt_at", cutoff);
   if (parkError) throw new Error("Email retry-window check failed.");
-  const { data, error } = await db.from("email_deliveries").select("key")
+  let due = db.from("email_deliveries").select("key")
     .eq("livemode", livemode).in("status", ["pending", "sending"])
-    .lte("next_attempt_at", new Date().toISOString()).order("next_attempt_at").limit(3);
+    .lte("next_attempt_at", new Date().toISOString());
+  if (storeClosed()) due = due.not("key", "like", "welcome/%/2/%").not("key", "like", "welcome/%/3/%");
+  const { data, error } = await due.order("next_attempt_at").limit(3);
   if (error) throw new Error("Email queue read failed.");
   const counts: Record<string, number> = {};
   for (const row of data ?? []) {
