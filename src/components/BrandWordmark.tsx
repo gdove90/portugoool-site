@@ -18,8 +18,11 @@ const paths = [
   "M 1111,757 L 1154,757 L 1163,753 L 1170,743 L 1174,731 L 1174,721 L 1165,715 L 1145,713 L 1144,708 L 1147,704 L 1179,704 L 1184,688 L 1145,688 L 1133,693 L 1127,702 L 1123,721 L 1129,728 L 1153,731 L 1153,738 L 1150,741 L 1117,741 L 1115,743 Z"
 ];
 
-export default function BrandWordmark(props: SVGProps<SVGSVGElement>) {
-  return <svg viewBox="349 491 867 272" role="img" aria-label="GOAL Athletics" focusable="false" {...props}>
-    <g fill="currentColor" fillRule="evenodd">{paths.map((d, i) => <path key={i} d={d} />)}</g>
+export default function BrandWordmark({ inline = false, ...props }: SVGProps<SVGSVGElement> & { inline?: boolean }) {
+  return <svg viewBox={inline ? "375 490 2142 176" : "349 491 867 272"} role="img" aria-label="GOAL Athletics" focusable="false" data-wordmark-layout={inline ? "inline" : "stacked"} {...props}>
+    <g fill="currentColor" fillRule="evenodd">{inline ? <>
+      {paths.slice(0, 4).map((d, i) => <path key={i} d={d} />)}
+      <g transform="translate(734 -475.5) scale(1.5)">{paths.slice(4).map((d, i) => <path key={i} d={d} />)}</g>
+    </> : paths.map((d, i) => <path key={i} d={d} />)}</g>
   </svg>;
 }

@@ -7,5 +7,5 @@ export function Strike() {
 }
 
 export function Brand({ footer = false }: { footer?: boolean }) {
-  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOAL Athletics home"><span className="brand-ga"><GAMonogram /></span><BrandWordmark className="brand-wordmark" /></Link>;
+  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOAL Athletics home"><span className="brand-ga"><GAMonogram /></span><BrandWordmark inline={!footer} className="brand-wordmark" /></Link>;
 }
