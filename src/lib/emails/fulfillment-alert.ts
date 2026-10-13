@@ -3,14 +3,16 @@ import { orderNumberFor } from "./order-confirmation";
 import { getProductById } from "../products";
 
 // ─────────────────────────────────────────────────────────────
-// Owner alert: sent to hello@goool.shop the moment a PAID order is not
+// Owner alert: legacy internal operational recipient until the new support inbox
+// has been independently verified. This is NOT a customer-facing reply address.
+// Triggered the moment a PAID order is not
 // accepted by Apliiq (parked as failed or needs_reconcile). Until
 // 2026-09-29 nothing told the owner; the first two real orders sat
 // unfulfilled behind a declined supplier card and were only noticed
 // through Apliiq's own email. This is internal mail, so it is plain
 // and complete rather than designed: everything needed to act is in
 // the body, including the customer's contact so a delay note can go
-// out from hello@goool.shop.
+// out from the designated support address.
 // ─────────────────────────────────────────────────────────────
 
 export const OWNER_ALERT_TO = "hello@goool.shop";
@@ -60,7 +62,7 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
     "1. Fix the cause (a declined card on Apliiq → pay methods is the usual one).",
     `2. Re-submit the order: tell Claude Code "resubmit order ${ref}", or run the release/submit`,
     "   actions on /api/fulfillment-ops (runbook: designs/11_fulfillment/apliiq-product-mapping.md).",
-    "3. If it will be late, email the customer from hello@goool.shop.",
+    "3. If it will be late, contact the customer through support@goalathletics.com.",
     "",
     "The customer has only received the payment receipt; they have not been told anything is wrong.",
   ].join("\n");
