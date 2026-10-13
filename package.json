@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "test:customer-service": "node scripts/test-customer-service-gate.cjs",
+    "test:customer-service:http": "node scripts/smoke-customer-service.cjs",
     "test:v84": "node scripts/test-v84.cjs",
     "test:v84:admin": "node scripts/test-v84-admin.cjs",
     "test:v84:upload": "node scripts/test-v84-upload.cjs",
