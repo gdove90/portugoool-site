@@ -9,23 +9,25 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# goool.shop is the primary domain (phase-2 flip, 2026-07-09).
-# portugoool.com stays owned forever and 301s here.
+# GOAL Athletics domain cutover: goalathletics.shop is the intended primary domain.
+# Activate only after Netlify custom-domain verification, HTTPS, and DNS checks.
+# Existing supplier /print/ and API callbacks must remain reachable on goool.shop.
+# Old and historic public links redirect permanently after activation.
 [[redirects]]
   from = "https://portugoool.com/*"
-  to = "https://goool.shop/:splat"
+  to = "https://goalathletics.shop/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.portugoool.com/*"
-  to = "https://goool.shop/:splat"
+  to = "https://goalathletics.shop/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.goool.shop/*"
-  to = "https://goool.shop/:splat"
+  to = "https://goalathletics.shop/:splat"
   status = 301
   force = true
 
