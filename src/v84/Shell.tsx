@@ -46,6 +46,10 @@ function StoreShell({ children, comingSoonOnly = false }: { children: ReactNode;
   const [signup, setSignup] = useState("");
   const [signupState, setSignupState] = useState("");
   const [joining, setJoining] = useState(false);
+  const [popupReview, setPopupReview] = useState(false);
+  useEffect(() => {
+    setPopupReview(MIGRATION_PREVIEW && new URLSearchParams(window.location.search).get("discount-preview") === "1");
+  }, []);
   const immersive = ["/", "/men", "/women", "/shop", "/about", "/whats-your-goool"].includes(path);
   useEffect(() => {
     if (!shell.current) return;
@@ -90,7 +94,7 @@ function StoreShell({ children, comingSoonOnly = false }: { children: ReactNode;
     <dialog id="search-dialog" className="search-dialog" aria-label="Search collection" ref={search} onClick={backdrop}><div className="dialog-head"><h2>Find your next move.</h2><button className="close-button" onClick={() => search.current?.close()} aria-label="Close search">Close <span>&times;</span></button></div><label className="sr-only" htmlFor="search-input">Search products</label><input id="search-input" type="search" placeholder="Try tee, hoodie, cap..." value={query} onChange={e => setQuery(e.target.value)} /><div id="search-results" aria-live="polite">{results.map(p => { const image = (defaultVariant(p)?.variant.images || p.images)[0]; return <Link key={p.id} className="search-result" href={`/shop/${p.slug}`} onClick={() => search.current?.close()}><img src={catalogImageSrc(image.src)} alt={image.alt} loading="lazy" /><span>{p.name}<br /><small className="fine">{p.color}</small></span><span>{formatPrice(p.priceCents)}</span></Link>; })}{!results.length && <p className="no-results">No pieces match that search.</p>}</div></dialog>
     <dialog id="bag-dialog" className="side-dialog" aria-label="Shopping bag" ref={bag} onClick={backdrop}><div className="dialog-head"><h2>Your bag <span className="bag-count">{count}</span></h2><button className="close-button" onClick={() => bag.current?.close()} aria-label="Close bag">Close <span>&times;</span></button></div><div id="bag-body">{notices.length > 0 && <p role="status" className="note">Your saved cart has updates. <Link href="/cart">Review changes</Link>.</p>}{!items.length ? <div className="empty-bag"><h3>Your next move<br />starts here.</h3><Link href="/shop" className="btn" onClick={() => bag.current?.close()}>Explore collection <Strike /></Link></div> : <>{items.map(item => <div className="cart-line" key={item.key}><img src={catalogImageSrc(item.image)} alt={item.name} loading="lazy" /><div><div className="cart-row"><Link href={`/shop/${item.slug}`}><h3>{item.name}</h3></Link><span className="fine">{formatPrice(item.unitPriceCents * item.quantity)}</span></div><p>{item.color} / {item.size}</p>{(item.customName || item.customNumber) && <p>{item.customName} {item.customNumber}</p>}<div className="cart-row"><div className="qty"><button onClick={() => updateQuantity(item.key,item.quantity-1)} aria-label={`Decrease ${item.name} quantity`}>-</button><span>{item.quantity}</span><button disabled={item.quantity >= MAX_LINE_QUANTITY} onClick={() => updateQuantity(item.key,item.quantity+1)} aria-label={`Increase ${item.name} quantity`}>+</button></div><button className="remove-item" onClick={() => removeItem(item.key)}>Remove</button></div></div></div>)}<div className="cart-total"><span>Subtotal</span><span>{formatPrice(subtotalCents)}</span></div><Link href="/cart" className="btn" onClick={() => bag.current?.close()}>Review bag &amp; checkout <Strike /></Link><p className="cart-note">Shipping and any applicable discounts are shown before checkout.</p></>}</div></dialog>
     <div className="privacy-settings"><CookieSettingsButton /></div>
-    {!MIGRATION_PREVIEW && !comingSoonOnly && <DiscountPopup />}
+    {(!MIGRATION_PREVIEW || popupReview) && !comingSoonOnly && <DiscountPopup review={popupReview} />}
     {!MIGRATION_PREVIEW && <MarketingConsent />}
   </div>;
 }
