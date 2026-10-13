@@ -203,6 +203,7 @@ async function main() {
     const seoOnly = new Set(['netlify/functions/deliver-emails.mts', 'netlify/functions/intake-maintenance.mts', 'src/lib/seo.ts', 'src/lib/page-metadata.ts', 'src/app/track-order/layout.tsx', 'src/app/cart/layout.tsx', 'src/app/success/layout.tsx', 'src/app/api/checkout/route.ts', 'src/app/api/preview/route.ts']);
     for (const file of files.filter(file => !seoOnly.has(file))) {
       let baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]).toString().replace(/\r\n/g, '\n');
+      if (file === 'src/lib/products.ts') baseline = require('./retirement-baseline.cjs').retireCoreBadgeBaseline(baseline);
       const current = fs.readFileSync(file);
       // Owner-approved public wording only; every tracking request, reference,
       // validation, state transition and UI control still matches the baseline.

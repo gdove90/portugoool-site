@@ -26,6 +26,7 @@ check('payment, webhook authentication/handling, pricing, orders and fulfillment
   for (const file of files) {
     const content = text(file);
     let expected = original(file);
+    if (file === 'src/lib/products.ts') expected = require('./retirement-baseline.cjs').retireCoreBadgeBaseline(expected);
     if (file === 'src/app/api/track-order/route.ts') expected = expected.replaceAll('Email hello@goool.shop and', 'Email support@goalathletics.shop and');
     assert.equal(content, expected, file);
     evidence.files.push({file, normalizedSha256:createHash('sha256').update(content).digest('hex')});
