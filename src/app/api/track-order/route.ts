@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
   const store = getOrdersStore();
   if (!store) {
     return NextResponse.json(
-      { error: "Order lookup isn't available right now. Email hello@goool.shop and we'll check for you." },
+      { error: "Order lookup isn't available right now. Email support@goalathletics.shop and we'll check for you." },
       { status: 503 }
     );
   }
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
     });
   } catch {
     return NextResponse.json(
-      { error: "Order lookup isn't available right now. Email hello@goool.shop and we'll check for you." },
+      { error: "Order lookup isn't available right now. Email support@goalathletics.shop and we'll check for you." },
       { status: 503 }
     );
   }

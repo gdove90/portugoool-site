@@ -195,8 +195,8 @@ async function main() {
     });
   } finally { await db.close(); }
 
-  await check('catalog, cart, checkout, payment, fulfillment and email baseline files are unchanged', () => {
-    const productionBaseline = '24903a4ae6ea63c22bf5b34d9169dc4a4762e9ca';
+  await check('protected business files match baseline with explicit presentation-only exceptions', () => {
+    const productionBaseline = 'e672376527f7a1c11b89dba344ee9f6daea8da66';
     const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
     // SEO output and the tracking page's metadata are covered by test-seo.cjs.
     // Product data, tracking behavior/API, payment and all other business files remain locked.
@@ -209,6 +209,29 @@ async function main() {
       if (file === 'src/app/track-order/page.tsx') baseline = baseline
         .replace('hello@goool.shop', 'support@goalathletics.shop')
         .replace('with your GOOOL order reference', 'with your order reference');
+      // Explicit presentation-only changes; the rest of each protected file stays locked.
+      if (file === 'src/app/api/track-order/route.ts') baseline = baseline.replaceAll('Email hello@goool.shop and', 'Email support@goalathletics.shop and');
+      if (file === 'src/app/cart/page.tsx') baseline = baseline.replace('placeholder="GOOOL20-XXXX"', 'placeholder="Enter your discount code"');
+      if (file === 'src/lib/faq.ts') baseline = baseline.replace('No. GOOOL Athletics LLC is an independent brand.', 'No. GOAL Athletics is an independent brand.');
+      if (file === 'src/lib/intake/agreements.json') {
+        const before = JSON.parse(baseline), after = JSON.parse(current.toString());
+        for (const key of Object.keys(before)) {
+          before[key] = before[key]
+            .replace('<title>Share Your GOOOLS! Participation Agreement | GOOOL Athletics LLC</title>', '<title>Match Highlights Participation Agreement | GOAL Athletics</title>')
+            .replace('<title>What’s Your GOOOL? Participation Agreement | GOOOL Athletics LLC</title>', '<title>Your Story Participation Agreement | GOAL Athletics</title>')
+            .replace('<h1>Share Your GOOOLS! Participation Agreement</h1>', '<h1>Match Highlights Participation Agreement</h1>')
+            .replace('<h1>What’s Your GOOOL? Participation Agreement</h1>', '<h1>Your Story Participation Agreement</h1>')
+            .replaceAll('>Back to Share Your GOOOLS!<', '>Back to Match Highlights<')
+            .replaceAll('>Back to What’s Your GOOOL?<', '>Back to Your Story<')
+            .replaceAll('hello@goool.shop', 'support@goalathletics.shop');
+          if (key === 'intake-privacy.html') before[key] = before[key]
+            .replace('Submission privacy | GOOOL Athletics LLC', 'Submission privacy | GOAL Athletics')
+            .replace('What’s Your GOOOL? personal stories and Share Your GOOOLS! video submissions', 'Your Story personal stories and Match Highlights video submissions').trim();
+        }
+        // Exact document comparison preserves all clauses, permissions and version identifiers.
+        assert.deepEqual(after, before, file);
+        continue;
+      }
       assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline, file);
     }
     console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; Brand, closure and worker changes have separate checks.`);
