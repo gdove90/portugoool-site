@@ -1,3 +1,5 @@
+> **Current release scope, 13 October:** gated V1.3 website/domain only. [Final readiness report](GOAL_V13_FINAL_PRODUCTION_READINESS.md) supersedes earlier combined manufacturing/email/commerce launch gates in this document. Production merge and primary promotion still require owner approval.
+
 # GOAL Athletics V1.3 implementation and release runbook
 
 Verified 13 October 2026. Migration remains staged in draft PR #31. Separate owner approval authorized only customer-service PR #29, which is now merged and deployed. DNS and email-test approvals do not authorize the full migration deployment, primary-domain promotion, reopening, supplier submission or customer announcements.
