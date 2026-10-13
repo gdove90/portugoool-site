@@ -44,7 +44,7 @@ check('public sitemap excludes private, retired and gated internal routes withou
  assert.ok(rows.some(r=>r.url.endsWith('/the-goal-collective')));
  env.STORE_OPEN='false';
  const closedRows=load(root+'/src/app/sitemap.ts').default();
- assert.deepEqual(Array.from(closedRows,r=>new URL(r.url).pathname),['/contact','/faq','/shipping-returns','/size-guide','/terms','/privacy','/refunds']);
+ assert.deepEqual(Array.from(closedRows,r=>new URL(r.url).pathname),['/contact','/faq','/shipping-returns','/size-guide','/terms','/privacy','/refunds','/women']);
  env.STORE_OPEN='true';
  assert.equal(load(root+'/src/lib/collection-launch.ts').TEMPO_COLLECTION_COMING_SOON,true);
  const robots=load(root+'/src/app/robots.ts').default();assert.ok(!robots.rules[0].disallow.includes('/cart'));assert.ok(robots.rules[0].disallow.includes('/success'));

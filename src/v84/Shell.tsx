@@ -4,6 +4,7 @@ import { MAILING_STREET, MAILING_CITY_LINE } from "@/lib/business-address";
 
 import Link from "next/link";
 import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
+import { TEMPO_COLLECTION_COMING_SOON } from "@/lib/collection-launch";
 import CustomerServiceShell from "./CustomerServiceShell";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -29,10 +30,10 @@ export default function Shell({ children }: { children: ReactNode }) {
   if (["/contact", "/support", "/faq", "/shipping-returns", "/track-order", "/success", "/privacy", "/terms", "/refunds"].includes(path)) {
     return <CustomerServiceShell>{children}</CustomerServiceShell>;
   }
-  return <StoreShell>{children}</StoreShell>;
+  return <StoreShell comingSoonOnly={path === "/women" && TEMPO_COLLECTION_COMING_SOON}>{children}</StoreShell>;
 }
 
-function StoreShell({ children }: { children: ReactNode }) {
+function StoreShell({ children, comingSoonOnly = false }: { children: ReactNode; comingSoonOnly?: boolean }) {
   const path = usePathname();
   const menuOpen = useMobileDialogs();
   const shell = useRef<HTMLDivElement>(null);
@@ -40,8 +41,8 @@ function StoreShell({ children }: { children: ReactNode }) {
   const [query, setQuery] = useState("");
   const cart = useCart();
   const { subtotalCents, removeItem, updateQuantity, notices } = cart;
-  const items = MIGRATION_PREVIEW ? [] : cart.items;
-  const count = MIGRATION_PREVIEW ? 0 : cart.count;
+  const items = (MIGRATION_PREVIEW || comingSoonOnly) ? [] : cart.items;
+  const count = (MIGRATION_PREVIEW || comingSoonOnly) ? 0 : cart.count;
   const [signup, setSignup] = useState("");
   const [signupState, setSignupState] = useState("");
   const [joining, setJoining] = useState(false);
@@ -64,7 +65,7 @@ function StoreShell({ children }: { children: ReactNode }) {
     document.addEventListener("click", click);
     return () => { document.removeEventListener("goool:open-bag", showBag); document.removeEventListener("click", click); };
   }, []);
-  const results = (MIGRATION_PREVIEW ? [] : getProducts()).filter(p => `${p.name} ${p.category} ${p.description}`.toLowerCase().includes(query.toLowerCase().trim()));
+  const results = ((MIGRATION_PREVIEW || comingSoonOnly) ? [] : getProducts()).filter(p => `${p.name} ${p.category} ${p.description}`.toLowerCase().includes(query.toLowerCase().trim()));
   async function join(event: React.FormEvent) {
     event.preventDefault(); if (joining) return; setJoining(true); setSignupState("");
     try {
@@ -89,7 +90,7 @@ function StoreShell({ children }: { children: ReactNode }) {
     <dialog id="search-dialog" className="search-dialog" aria-label="Search collection" ref={search} onClick={backdrop}><div className="dialog-head"><h2>Find your next move.</h2><button className="close-button" onClick={() => search.current?.close()} aria-label="Close search">Close <span>&times;</span></button></div><label className="sr-only" htmlFor="search-input">Search products</label><input id="search-input" type="search" placeholder="Try tee, hoodie, cap..." value={query} onChange={e => setQuery(e.target.value)} /><div id="search-results" aria-live="polite">{results.map(p => { const image = (defaultVariant(p)?.variant.images || p.images)[0]; return <Link key={p.id} className="search-result" href={`/shop/${p.slug}`} onClick={() => search.current?.close()}><img src={catalogImageSrc(image.src)} alt={image.alt} loading="lazy" /><span>{p.name}<br /><small className="fine">{p.color}</small></span><span>{formatPrice(p.priceCents)}</span></Link>; })}{!results.length && <p className="no-results">No pieces match that search.</p>}</div></dialog>
     <dialog id="bag-dialog" className="side-dialog" aria-label="Shopping bag" ref={bag} onClick={backdrop}><div className="dialog-head"><h2>Your bag <span className="bag-count">{count}</span></h2><button className="close-button" onClick={() => bag.current?.close()} aria-label="Close bag">Close <span>&times;</span></button></div><div id="bag-body">{notices.length > 0 && <p role="status" className="note">Your saved cart has updates. <Link href="/cart">Review changes</Link>.</p>}{!items.length ? <div className="empty-bag"><h3>Your next move<br />starts here.</h3><Link href="/shop" className="btn" onClick={() => bag.current?.close()}>Explore collection <Strike /></Link></div> : <>{items.map(item => <div className="cart-line" key={item.key}><img src={catalogImageSrc(item.image)} alt={item.name} loading="lazy" /><div><div className="cart-row"><Link href={`/shop/${item.slug}`}><h3>{item.name}</h3></Link><span className="fine">{formatPrice(item.unitPriceCents * item.quantity)}</span></div><p>{item.color} / {item.size}</p>{(item.customName || item.customNumber) && <p>{item.customName} {item.customNumber}</p>}<div className="cart-row"><div className="qty"><button onClick={() => updateQuantity(item.key,item.quantity-1)} aria-label={`Decrease ${item.name} quantity`}>-</button><span>{item.quantity}</span><button disabled={item.quantity >= MAX_LINE_QUANTITY} onClick={() => updateQuantity(item.key,item.quantity+1)} aria-label={`Increase ${item.name} quantity`}>+</button></div><button className="remove-item" onClick={() => removeItem(item.key)}>Remove</button></div></div></div>)}<div className="cart-total"><span>Subtotal</span><span>{formatPrice(subtotalCents)}</span></div><Link href="/cart" className="btn" onClick={() => bag.current?.close()}>Review bag &amp; checkout <Strike /></Link><p className="cart-note">Shipping and any applicable discounts are shown before checkout.</p></>}</div></dialog>
     <div className="privacy-settings"><CookieSettingsButton /></div>
-    {!MIGRATION_PREVIEW && <DiscountPopup />}
+    {!MIGRATION_PREVIEW && !comingSoonOnly && <DiscountPopup />}
     {!MIGRATION_PREVIEW && <MarketingConsent />}
   </div>;
 }
