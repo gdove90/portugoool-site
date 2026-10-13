@@ -12,7 +12,8 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
   const order={id:'12345678-1111-4444-8888-999999999999',shipping_name:'Preview Athlete',customer_email:'preview@example.invalid',currency:'usd',total_cents:4800,amount_subtotal_cents:4800,amount_shipping_cents:0,amount_tax_cents:0,shipping_address:{line1:'Synthetic preview address',city:'Example',country:'US'},created_at:'2026-10-13T12:00:00Z'};
   const items=[{product_id:'preview-only',apliiq_sku:'LEGACY-SKU-UNCHANGED',quantity:1,unit_price_cents:4800,size:'M',color:'Black'}];
   const unsubscribeUrl='https://goalathletics.shop/unsubscribe/preview-only';
-  const welcome={code:'GOOOL20-DEMO',unsubscribeUrl};
+  const welcome={code:'PREVIEW-CODE',unsubscribeUrl};
+  assert(buildWelcome1({code:'GOOOL20-DEMO',unsubscribeUrl}).text.includes('GOOOL20-DEMO'));
   const previews={
     'order-confirmation':buildOrderConfirmation({order,items}),
     'order-delay':buildOrderDelayNotice(order),
@@ -30,7 +31,7 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
     assert(m.text.includes('goalathletics.shop'),name);
     assert(!m.html.includes('/brand/goool-athletics-lockup'),name);
     assert(!m.html.includes('javascript:'),name);
-    if(name.startsWith('welcome')) {assert(m.text.includes('GOOOL20-DEMO'));assert(m.html.includes(unsubscribeUrl));assert(m.html.includes('GOOOL Athletics LLC'));}
+    if(name.startsWith('welcome')) {assert(m.text.includes('PREVIEW-CODE'));assert(m.html.includes(unsubscribeUrl));assert(m.html.includes('GOOOL Athletics LLC'));}
     else {assert(m.text.includes('GOOOL-12345678'));assert(m.html.includes('GOOOL-12345678'));}
     if(name==='order-confirmation') {assert(m.text.includes('LEGACY-SKU-UNCHANGED'));assert(m.text.includes('$48.00'));assert(m.text.includes('GOOOL Athletics LLC'));}
     if(name==='order-delay') {assert(m.subject.includes('GOAL Athletics'));assert(m.text.includes('GOOOL Athletics LLC'));}
