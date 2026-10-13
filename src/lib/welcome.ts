@@ -1,3 +1,4 @@
+import { storeClosed } from "./store-status";
 // Welcome sequence, Emails 2 and 3 (owner decision 2026-09-29).
 //
 // One pass, run from the existing deliver-emails scheduled function at
@@ -61,6 +62,7 @@ interface LedgerCode {
 }
 
 export async function runWelcomePass(livemode: boolean, now: number = Date.now()): Promise<Record<string, number>> {
+  if (storeClosed()) return { store_closed: 1 };
   const db = getSupabaseAdmin();
   if (!db) throw new Error("Sign-up storage unavailable.");
   const counts: Record<string, number> = {};

@@ -18,9 +18,7 @@ export function buildWelcome1(input: Welcome1Input): { subject: string; html: st
   const text = [
     `You're in. Here's your code: ${input.code}`,
     "20% off your first order, good for 14 days. One use, first order only.",
-    "Tees $38. Hats $32. Hoodie $78. Free shipping at $70.",
     "",
-    `Shop the drop: ${shopUrl}`,
     "",
     ...footerText(input.unsubscribeUrl),
   ].join("\n");
@@ -28,8 +26,6 @@ export function buildWelcome1(input: Welcome1Input): { subject: string; html: st
     paragraphHtml("You're in. Here's your code:", { strong: true }),
     codeBlockHtml(input.code),
     paragraphHtml("20% off your first order, good for 14 days. One use, first order only."),
-    paragraphHtml("Tees $38. Hats $32. Hoodie $78. Free shipping at $70."),
-    buttonHtml("Shop the drop", shopUrl),
   ].join("\n");
   return {
     subject,

@@ -1,3 +1,4 @@
+import { LOCKUP_URL } from "../email-identity";
 import { MAILING_STREET, MAILING_CITY_LINE, MAILING_ADDRESS } from "../business-address";
 import { OrderRow } from "../orders-store";
 import { orderNumberFor } from "./order-confirmation";
@@ -39,11 +40,11 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
   html: string;
   text: string;
 } {
-  const site = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://goool.shop").replace(/\/$/, "");
+  const site = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://goalathletics.shop").replace(/\/$/, "");
   const ref = orderNumberFor(order.id);
   const firstName = order.shipping_name?.trim().split(/\s+/)[0];
   const greeting = firstName ? `Hi ${firstName},` : "Hi,";
-  const subject = `Your GOOOL order ${ref} is taking a little longer`;
+  const subject = `Your GOAL Athletics order ${ref} is taking a little longer`;
 
   const text = [
     "ORDER UPDATE",
@@ -51,20 +52,20 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
     "",
     greeting,
     "",
-    "Your order is confirmed and paid, but it is taking longer than usual to prepare. Nothing is needed from you. The moment it ships we will email your tracking number, and you can check it any time at goool.shop/track-order.",
+    "Your order is confirmed and paid, but it is taking longer than usual to prepare. Nothing is needed from you. The moment it ships we will email your tracking number, and you can check it any time at goalathletics.shop/track-order.",
     "",
-    "If you would rather not wait, reply to this email and we will refund you in full.",
+    "If you would rather not wait, contact support@goalathletics.shop and we will refund you in full.",
     "",
     "Support Team",
-    "GOOOL Athletics",
+    "GOAL Athletics",
     "",
     `Track your order: ${site}/track-order`,
     "",
     "Customer Service",
-    "Questions about your order? Contact us at hello@goool.shop",
+    "Questions about your order? Contact us at support@goalathletics.shop",
     "",
     "Wear the Feeling.",
-    "GOOOL ATHLETICS LLC · goool.shop",
+    "GOOOL ATHLETICS LLC · goalathletics.shop",
     MAILING_ADDRESS,
     "",
     "GOOOL Athletics LLC is an independent brand. Not affiliated with, endorsed by, or connected to any futbol federation, club, league, or governing body.",
@@ -84,13 +85,13 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
   @media only screen and (max-width:380px) { .receipt-padding { padding-left:22px!important; padding-right:22px!important; } }
 </style>
 </head>
-<body bgcolor="${INK}" style="margin:0;padding:0;background-color:${INK};color:${PAPER};">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="background-color:${INK};">
+<body bgcolor="#FFFFFF" style="margin:0;padding:24px 16px;background-color:#FFFFFF;color:${PAPER};">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
   <tr><td align="center">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="max-width:520px;background-color:${INK};color:${PAPER};">
       <tr><td align="center" class="receipt-padding" style="padding:32px 28px 24px;">
         <a href="${esc(site)}" target="_blank" style="color:${PAPER};text-decoration:none;">
-          <img src="${esc(site)}/brand/goool-athletics-lockup-white.png" width="218" height="82" alt="GOOOL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:${PAPER};font:700 24px/1.3 Helvetica,Arial,sans-serif;">
+          <img src="${LOCKUP_URL}" width="218" height="60" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:${PAPER};font:700 24px/1.3 Helvetica,Arial,sans-serif;">
         </a>
       </td></tr>
       <tr><td class="receipt-padding" style="padding:0 28px;">
@@ -101,10 +102,10 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
           </td></tr>
           <tr><td style="border-top:1px solid ${BORDER};padding:20px 0 18px;">
             <div style="font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};">${esc(greeting)}</div>
-            <div style="margin-top:14px;font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">Your order is confirmed and paid, but it is taking longer than usual to prepare. Nothing is needed from you. The moment it ships we will email your tracking number, and you can check it any time at <a href="${esc(site)}/track-order" target="_blank" style="color:${PAPER};text-decoration:underline;white-space:nowrap;">goool.shop/track-order</a>.</div>
-            <div style="margin-top:14px;font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">If you would rather not wait, reply to this email and we will refund you in full.</div>
+            <div style="margin-top:14px;font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">Your order is confirmed and paid, but it is taking longer than usual to prepare. Nothing is needed from you. The moment it ships we will email your tracking number, and you can check it any time at <a href="${esc(site)}/track-order" target="_blank" style="color:${PAPER};text-decoration:underline;white-space:nowrap;">goalathletics.shop/track-order</a>.</div>
+            <div style="margin-top:14px;font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">If you would rather not wait, contact support@goalathletics.shop and we will refund you in full.</div>
             <div style="margin-top:14px;font:700 15px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};">Support Team</div>
-            <div style="font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">GOOOL Athletics</div>
+            <div style="font:400 15px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">GOAL Athletics</div>
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;"><tr><td align="center" bgcolor="${RED}" style="background-color:${RED};">
               <a href="${esc(site)}/track-order" target="_blank" style="display:block;padding:15px 16px;font:700 14px/1.4 Helvetica,Arial,sans-serif;color:${PAPER};background-color:${RED};text-decoration:none;">Track your order</a>
             </td></tr></table>
@@ -112,11 +113,11 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
           <tr><td align="center" style="border-top:1px solid ${BORDER};padding:20px 0 18px;">
             <div style="font:700 16px/1.5 Helvetica,Arial,sans-serif;color:${PAPER};">Customer Service</div>
             <div style="margin-top:9px;font:400 13px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">Questions about your order?<br>Contact us at</div>
-            <a href="mailto:hello@goool.shop" style="display:inline-block;padding:9px 0;font:700 16px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};text-decoration:underline;">hello@goool.shop</a>
+            <a href="mailto:support@goalathletics.shop" style="display:inline-block;padding:9px 0;font:700 16px/1.65 Helvetica,Arial,sans-serif;color:${PAPER};text-decoration:underline;">support@goalathletics.shop</a>
           </td></tr>
           <tr><td align="center" style="border-top:1px solid ${BORDER};padding:18px 0 24px;">
             <div style="font:700 19px/1.35 Helvetica,Arial,sans-serif;color:${PAPER};">Wear the Feeling.</div>
-            <div style="margin-top:13px;font:400 11px/1.65 Helvetica,Arial,sans-serif;letter-spacing:.6px;color:${MUTED};">GOOOL ATHLETICS LLC · <a href="${esc(site)}" target="_blank" style="color:${PAPER};text-decoration:underline;">goool.shop</a></div>
+            <div style="margin-top:13px;font:400 11px/1.65 Helvetica,Arial,sans-serif;letter-spacing:.6px;color:${MUTED};">GOOOL ATHLETICS LLC · <a href="${esc(site)}" target="_blank" style="color:${PAPER};text-decoration:underline;">goalathletics.shop</a></div>
             <div style="margin-top:10px;font:400 12px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">${esc(MAILING_STREET)}<br>${esc(MAILING_CITY_LINE)}</div>
             <div style="margin-top:13px;font:400 11px/1.65 Helvetica,Arial,sans-serif;color:${FAINT};">GOOOL Athletics LLC is an independent brand. Not affiliated with, endorsed by, or connected to any futbol federation, club, league, or governing body.</div>
           </td></tr>

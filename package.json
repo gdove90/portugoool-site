@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/test-goal-email-identity.cjs && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
@@ -18,7 +18,8 @@
     "test:v84:release": "node scripts/test-v84-release.cjs",
     "test:v84:http": "node scripts/smoke-v84.cjs",
     "prebuild": "node scripts/write-build-context.cjs",
-    "test:migration": "node scripts/test-goal-migration.cjs && node scripts/test-goal-brand-assets.cjs"
+    "test:migration": "node scripts/test-goal-migration.cjs && node scripts/test-goal-brand-assets.cjs",
+    "test:email-branding": "node scripts/test-goal-email-identity.cjs && node scripts/test-email-rebrand.cjs"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "5.3.0",

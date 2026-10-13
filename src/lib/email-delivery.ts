@@ -1,3 +1,4 @@
+import { storeClosed } from "./store-status";
 import { randomUUID } from "crypto";
 import { getSupabaseAdmin } from "./supabase";
 import { emailEnabled, EmailMessage, sendEmail } from "./email";
@@ -25,6 +26,8 @@ export async function queueEmail(key: string, kind: Delivery["kind"], message: E
   if (error) throw new Error("Could not persist email delivery.");
 }
 export async function deliverEmail(key: string): Promise<string> {
+  // Temporarily defer follow-ups while the existing renovation gate is closed.
+  if (storeClosed() && /^welcome\/(live|test)\/[23]\//.test(key)) return "store_closed";
   if (!emailEnabled()) return "disabled";
   const db = database();
   const token = randomUUID();
@@ -101,7 +104,7 @@ export async function queueFulfillmentAlert(
 // Customer delay notice for the same event. Keyed on the order alone, so
 // a customer hears about a delay once no matter how many times the order
 // parks before it goes through; the owner alert carries the per-attempt
-// detail. Replies go to hello@goool.shop, which is where the refund
+// detail. Replies go to support@goalathletics.shop, which is where the refund
 // offer in the email is honoured.
 export async function queueOrderDelayNotice(
   store: OrdersStore,
@@ -115,7 +118,7 @@ export async function queueOrderDelayNotice(
   await queueEmail(
     key,
     "order",
-    { to: order.customer_email, replyTo: "hello@goool.shop", ...buildOrderDelayNotice(order) },
+    { to: order.customer_email, replyTo: "support@goalathletics.shop", ...buildOrderDelayNotice(order) },
     livemode,
     orderId
   );
@@ -134,9 +137,11 @@ export async function drainEmailQueue(livemode: boolean): Promise<Record<string,
     .update({ status: "needs_review", last_error: "Retry window elapsed; reconcile provider before resending." })
     .eq("livemode", livemode).in("status", ["pending", "sending"]).lt("first_attempt_at", cutoff);
   if (parkError) throw new Error("Email retry-window check failed.");
-  const { data, error } = await db.from("email_deliveries").select("key")
+  let due = db.from("email_deliveries").select("key")
     .eq("livemode", livemode).in("status", ["pending", "sending"])
-    .lte("next_attempt_at", new Date().toISOString()).order("next_attempt_at").limit(3);
+    .lte("next_attempt_at", new Date().toISOString());
+  if (storeClosed()) due = due.not("key", "like", "welcome/%/2/%").not("key", "like", "welcome/%/3/%");
+  const { data, error } = await due.order("next_attempt_at").limit(3);
   if (error) throw new Error("Email queue read failed.");
   const counts: Record<string, number> = {};
   for (const row of data ?? []) {

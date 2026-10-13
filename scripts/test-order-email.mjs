@@ -144,8 +144,8 @@ async function main() {
     const o = orderBySession(sess.id);
     const ref = refOf(o.id);
     check("addressed to the buyer", Array.isArray(m.to) && m.to[0] === "buyer@example.com", JSON.stringify(m.to));
-    check("from GOOOL, not a bare address", /GOOOL/.test(m.from ?? ""), m.from);
-    check("reply_to is a real inbox", /@goool\.shop/.test(m.reply_to ?? ""), m.reply_to);
+    check("from verified GOAL sender", m.from === "GOAL Athletics <hello@goalathletics.shop>", m.from);
+    check("reply_to is support", m.reply_to === "support@goalathletics.shop", m.reply_to);
     check("subject carries the order reference", (m.subject ?? "").includes(ref), m.subject);
 
     const html = m.html ?? "";
