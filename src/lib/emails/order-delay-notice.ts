@@ -1,3 +1,4 @@
+import { LOCKUP_URL } from "../email-identity";
 import { MAILING_STREET, MAILING_CITY_LINE, MAILING_ADDRESS } from "../business-address";
 import { OrderRow } from "../orders-store";
 import { orderNumberFor } from "./order-confirmation";
@@ -90,7 +91,7 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="max-width:520px;background-color:${INK};color:${PAPER};">
       <tr><td align="center" class="receipt-padding" style="padding:32px 28px 24px;">
         <a href="${esc(site)}" target="_blank" style="color:${PAPER};text-decoration:none;">
-          <img src="${esc(site)}/brand/goal-athletics-email-wordmark-white.png" width="218" height="68" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:${PAPER};font:700 24px/1.3 Helvetica,Arial,sans-serif;">
+          <img src="${LOCKUP_URL}" width="218" height="53" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:${PAPER};font:700 24px/1.3 Helvetica,Arial,sans-serif;">
         </a>
       </td></tr>
       <tr><td class="receipt-padding" style="padding:0 28px;">

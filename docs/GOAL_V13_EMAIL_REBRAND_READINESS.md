@@ -1,35 +1,31 @@
-# GOAL Athletics V1.3 customer-email rebrand — staged release
-Last reviewed: October 13, 2026.
+# GOAL Athletics email readiness — corrected staged release
+Reviewed October 13, 2026. Consolidated draft PR #39 includes PR #36 without discarding either history. Production sender remains unchanged until approval.
 
-## Scope
-The existing Next.js application generates order, shipment, delay and welcome emails directly and uses one Resend transport with the same Supabase delivery ledger. The connected Resend account has **zero hosted templates**, **zero broadcasts**, **zero automations**, and **one existing audience segment**. Do not create parallel live email flows or migrate historical recipients.
+## Official configuration
+From: GOAL Athletics <hello@goalathletics.shop> (outbound only).
+Reply-To and every customer support link: support@goalathletics.shop.
+Website: https://goalathletics.shop.
+Mailing address: PO Box 19, Saunderstown, RI 02874 (not a returns address).
+Registered seller: GOOOL Athletics LLC while the amendment is pending.
 
-### Verified current Resend state (read-only)
-- `goalathletics.shop`: verified, sending enabled, receiving disabled
-- `goool.shop`: verified, sending enabled, receiving disabled
-- Existing Netlify `RESEND_API_KEY` in Functions context; never rotate it for rebranding.
+## Verified
+- Entire tracked staging tree scanned for the unowned domain; regression blocks recurrence.
+- Transport forces the shared support Reply-To even when callers supply an obsolete override.
+- External owner test already received in the existing Workspace inbox at support@goalathletics.shop, October 13 at 8:52 AM; recipient details and Inbox placement inspected. No new email sent.
+- Public DNS: Google MX smtp.google.com priority 1, Workspace SPF, Google DKIM key, Resend DKIM key and Forge CNAME, DMARC quarantine published.
+- Existing Resend account: both current and legacy domains verified; no hosted templates, broadcasts or automations; existing audience preserved. Receiving in Resend is disabled because Workspace receives mail.
+- V1.3 email PNG exported directly from GAMonogram and BrandWordmark component paths (three GA paths and thirteen outlined letters), 2254 by 544. Apparel V1.2 and supplier artwork preserved.
+- White outer email canvas, black central writing panel. Four active previews: requested discount code, receipt, shipment and delay. No product upsells or automatic day-five/day-twelve promotion. Existing queue records are retained; promotional entries refused before send.
+- Typecheck, identity and routing tests, 27 v84 checks, 9 shipment checks and six non-transactional payment preservation checks passed. Mock backend suite passed after updating isolated closure fixtures and replacing obsolete promotional expectations; no real Checkout Sessions, provider requests or fulfillment were created.
+- Idempotency identities, queue schema, discount redemption codes, legacy order IDs, operational inboxes and supplier integrations preserved.
 
-## Approved customer email identity
-- Display name: **GOAL Athletics**
-- Outbound only: `hello@goalathletics.shop`
-- Customer support and Reply-To: `support@goalathletics.shop`
-- Canonical website: `https://goalathletics.shop`
-- Mailing address: **PO Box 19, Saunderstown, RI 02874** (mailing only, not a returns address)
-- Registered seller display: retain **GOOOL Athletics LLC** until independently confirmed changed.
-- Preserve pre-rebrand `GOOOL-` order-reference prefix and all historical order records.
-- Approved V1.3 artwork: rasterized from `public/brand/goal-athletics-horizontal-lockup-white.svg`, and staged as email-safe `public/brand/goal-athletics-email-lockup-white.png`.
+## Outstanding before production approval
+- Gmail signature artwork upload requires Chrome extension file URL permission. New signature draft is being prepared; defaults have not been switched until artwork is installed and verified.
+- Deploy-preview build and hosted image verification pending latest push.
+- Canonical email PNG becomes available on production only after approved release; preview availability alone is not production publication.
+- New-template real Gmail/Outlook/Apple Mail delivery and rendering are unverified. Previous approved Resend owner test authenticated SPF/DKIM/DMARC but had spam placement; do not mark inbox delivery passed. No new send authorized.
+- Human outbound response from support alias is not newly tested. Existing external inbound test is verified.
+- Owner approval required before merge, production sender activation, deployment or any live test send.
 
-## Safety and go-live checklist
-- [ ] Confirm `support@goalathletics.shop` is provisioned as a real receiving mailbox or alias on its email host and can send a human response.
-- [ ] Send a controlled test from the verified sending domain **to the support inbox** and confirm an actual reply lands there, without using `hello@goalathletics.shop` as a reply destination.
-- [ ] Test real Resend deliverability and DKIM/SPF/DMARC alignment for the new From identity. Existing domain verification alone does not prove inbox placement.
-- [ ] Validate the PNG file is accessible as `https://goalathletics.shop/brand/goal-athletics-email-lockup-white.png` after staging deployment.
-- [ ] Run `node scripts/test-goal-email-identity.cjs`, `npm run typecheck`, `npm run build`, and existing email regression tests.
-- [ ] Preview HTML and plain-text order, shipment, delay, welcome 1–3 and owner-alert messages on mobile and in Gmail/Outlook/Apple Mail.
-- [ ] Verify correct site links, physical mailing address, refund directions, unsubscribe URLs and one-click unsubscribe handling.
-- [ ] Confirm scheduled retry worker and Supabase idempotency keys remain untouched; do not requeue previously sent emails.
-- [ ] Verify the historic internal fulfillment alert inbox is still monitored; its recipient remains `hello@goool.shop` until support routing is independently validated.
-- [ ] Obtain owner approval before merging and publishing the production change.
-
-## Intentionally preserved
-No Stripe/checkout/order/product/SKU/fulfillment provider changes. No email API key/Netlify environment changes. No Resend domain removals, no new audience, no blast sends, no scheduled automation, no artificial order recreation. Historic promos, `GOOOL20` redemption IDs and existing unsubscribe records remain valid.
+## Rollback
+Before approved release record production SHA and deploy ID. Revert the email PR and redeploy that known good version; do not edit database or replay queues. Old operational mailbox, domain authentication, audience, legal identity, order references and supplier URLs remain available. Gmail old signatures are retained so defaults can be restored without losing their original content. No credentials, DNS, Resend configuration, payments or records are changed by this draft.

@@ -22,10 +22,13 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
   };
   assert.equal(orderNumberFor(order.id),'GOOOL-12345678');
   const sender=fs.readFileSync('src/lib/email.ts','utf8');
-  assert(sender.includes('return "GOAL Athletics <hello@goalathletics.shop>";'));
-  assert(sender.includes('reply_to: "support@goalathletics.shop"'));
+  assert(sender.includes('return EMAIL_FROM;'));
+  const identity=fs.readFileSync('src/lib/email-identity.ts','utf8');
+  assert(identity.includes('hello@goalathletics.shop'));
+  assert(identity.includes('support@goalathletics.shop'));
+  assert(sender.includes('reply_to: SUPPORT_EMAIL'));
   for(const [name,m] of Object.entries(previews)) {
-    assert(m.html.includes('goal-athletics-email-wordmark-white.png'),name);
+    assert(m.html.includes('goal-athletics-email-lockup-white.png'),name);
     assert(m.html.includes('alt="GOAL Athletics"'),name);
     assert(/<body[^>]*background(?:-color)?:#(?:FFFFFF|fff)/.test(m.html),name+' white outer canvas');
     if(name==='welcome-1') {assert(!m.html.includes('Tees $38'));assert(!m.html.includes('Shop the drop'));}
@@ -60,13 +63,13 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
   }
   console.log('PASS local mock payload uses approved From and support Reply-To, including a legacy override');
 
-  const meta=await sharp('public/brand/goal-athletics-email-wordmark-white.png').metadata();
-  assert.equal(meta.width,1734);assert.equal(meta.height,544);assert(meta.hasAlpha);
+  const meta=await sharp('public/brand/goal-athletics-email-lockup-white.png').metadata();
+  assert.equal(meta.width,2254);assert.equal(meta.height,544);assert(meta.hasAlpha);
   if(process.env.EMAIL_PREVIEW_DIR) {
     const dir=path.resolve(process.env.EMAIL_PREVIEW_DIR);fs.mkdirSync(dir,{recursive:true});
-    fs.copyFileSync('public/brand/goal-athletics-email-wordmark-white.png',path.join(dir,'goal-athletics-email-wordmark-white.png'));
+    fs.copyFileSync('public/brand/goal-athletics-email-lockup-white.png',path.join(dir,'goal-athletics-email-lockup-white.png'));
     for(const [name,m] of Object.entries(previews)) {
-      fs.writeFileSync(path.join(dir,name+'.html'),m.html.replace(/https:\/\/[^"\s]+\/brand\/goal-athletics-email-wordmark-white\.png/g,'goal-athletics-email-wordmark-white.png'));
+      fs.writeFileSync(path.join(dir,name+'.html'),m.html.replace(/https:\/\/[^"\s]+\/brand\/goal-athletics-email-lockup-white\.png/g,'goal-athletics-email-lockup-white.png'));
       fs.writeFileSync(path.join(dir,name+'.txt'),'Subject: '+m.subject+'\n\n'+m.text);
     }
   }

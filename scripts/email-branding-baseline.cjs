@@ -1,6 +1,7 @@
 // Explicit approved presentation exceptions for the locked business-file comparisons.
 module.exports = function emailBrandingBaseline(file, content) {
-  if (file === 'src/lib/email.ts') return content.replace('Goool Athletics <hello@goool.shop>', 'GOAL Athletics <hello@goalathletics.shop>').replace('reply_to: msg.replyTo ?? "hello@goool.shop"', 'reply_to: "support@goalathletics.shop"');
+  if (file === 'src/lib/signups.ts') return content.replace('https://goool.shop/unsubscribe/', 'https://goalathletics.shop/unsubscribe/');
+  if (file === 'src/lib/email.ts') return 'import { EMAIL_FROM, SUPPORT_EMAIL } from "./email-identity";\n' + content.replace('Goool Athletics <hello@goool.shop>', 'GOAL Athletics <hello@goalathletics.shop>').replace('reply_to: msg.replyTo ?? "hello@goool.shop"', 'reply_to: SUPPORT_EMAIL').replace('return "GOAL Athletics <hello@goalathletics.shop>";', 'return EMAIL_FROM;');
   if (file === 'src/lib/email-delivery.ts') return content.replaceAll('hello@goool.shop', 'support@goalathletics.shop').replace('export async function deliverEmail(key: string): Promise<string> {', 'export async function deliverEmail(key: string): Promise<string> {\n  // Preserve any existing follow-up rows, but never claim or send them.\n  if (/^welcome\\/(live|test)\\/[23]\\//.test(key)) return "promotional_followups_disabled";');
   if (file === 'src/lib/welcome.ts') return content.slice(0, content.indexOf('export async function runWelcomePass(')) + '// Retain the callable interface for existing workers; promotional follow-ups are retired.\nexport async function runWelcomePass(_livemode: boolean, _now: number = Date.now()): Promise<Record<string, number>> {\n  return { promotional_followups_disabled: 1 };\n}\n';
   if (!file.startsWith('src/lib/emails/')) return content;
@@ -37,5 +38,8 @@ module.exports = function emailBrandingBaseline(file, content) {
     .replace('style="max-width:600px"','style="max-width:600px;background:#090909"');
   content = content.replaceAll('hello@goool.shop', 'support@goalathletics.shop');
   if (name === 'fulfillment-alert.ts') content = content.replaceAll('email the customer from support@goalathletics.shop.', 'send from hello@goalathletics.shop with replies to support@goalathletics.shop.');
+  if (name === 'footer.ts') content = 'import { SITE_URL, SUPPORT_EMAIL, LOCKUP_URL } from "../email-identity";\nexport { SITE_URL, SUPPORT_EMAIL, LOCKUP_URL };\n' + content
+    .replace('export const SITE_URL = "https://goalathletics.shop";\n','').replace('export const SUPPORT_EMAIL = "support@goalathletics.shop";\n','').replace('export const LOCKUP_URL = `${SITE_URL}/brand/goal-athletics-email-wordmark-white.png`;\n','').replaceAll('height="68"','height="53"').replaceAll('height="38"','height="29"');
+  if (['order-confirmation.ts','order-delay-notice.ts','shipment-notification.ts'].includes(name)) content = 'import { LOCKUP_URL } from "../email-identity";\n' + content.replaceAll('${esc(site)}/brand/goal-athletics-email-wordmark-white.png','${LOCKUP_URL}').replaceAll('https://goalathletics.shop/brand/goal-athletics-email-wordmark-white.png','${LOCKUP_URL}').replaceAll('height="68"','height="53"');
   return content;
 };

@@ -1,3 +1,5 @@
+import { SITE_URL, SUPPORT_EMAIL, LOCKUP_URL } from "../email-identity";
+export { SITE_URL, SUPPORT_EMAIL, LOCKUP_URL };
 // Shared shell and footer for the welcome sequence (owner decision
 // 2026-09-29). The footer mirrors the support@goalathletics.shop Gmail signature,
 // same lockup, same order, same tagline, then the two lines the law
@@ -8,10 +10,7 @@
 import { MAILING_STREET, MAILING_CITY_LINE } from "../business-address";
 export { MAILING_STREET, MAILING_CITY_LINE };
 export const BRAND_RED = "#C1121F";
-export const SITE_URL = "https://goalathletics.shop";
-export const SUPPORT_EMAIL = "support@goalathletics.shop";
 export const INSTAGRAM_HANDLE = "@gooolathletics";
-export const LOCKUP_URL = `${SITE_URL}/brand/goal-athletics-email-wordmark-white.png`;
 
 const FONT = "Helvetica,Arial,sans-serif";
 
@@ -45,7 +44,7 @@ export function footerHtml(unsubscribeUrl: string): string {
         <tr>
           <td valign="top" style="padding-right:16px;">
             <a href="${SITE_URL}" target="_blank" style="text-decoration:none;">
-              <img src="${LOCKUP_URL}" width="120" height="38" alt="GOAL Athletics" border="0" style="display:block;width:120px;height:auto;border:0;color:#FFFFFF;font:700 16px/1.3 ${FONT};">
+              <img src="${LOCKUP_URL}" width="120" height="29" alt="GOAL Athletics" border="0" style="display:block;width:120px;height:auto;border:0;color:#FFFFFF;font:700 16px/1.3 ${FONT};">
             </a>
           </td>
           <td valign="top">
@@ -117,7 +116,7 @@ export function emailShell(input: ShellInput): string {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#090909" style="max-width:520px;background-color:#090909;color:#FFFFFF;">
       <tr><td align="center" class="pad" style="padding:32px 28px 20px;">
         <a href="${SITE_URL}" target="_blank" style="color:#FFFFFF;text-decoration:none;">
-          <img src="${LOCKUP_URL}" width="218" height="68" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:#FFFFFF;font:700 24px/1.3 ${FONT};">
+          <img src="${LOCKUP_URL}" width="218" height="53" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:#FFFFFF;font:700 24px/1.3 ${FONT};">
         </a>
       </td></tr>
       <tr><td class="pad" style="padding:0 28px;"><div style="height:3px;width:56px;background-color:${BRAND_RED};"></div></td></tr>
