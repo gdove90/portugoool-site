@@ -30,7 +30,7 @@ export default function CapConceptReview() {
     </section>
     <section style={{ marginTop: 36, lineHeight: 1.7 }}><h2>Manufacturer verification still required</h2>
       <p>The dad-hat product page&apos;s embroidery table shows 4 × 4 inches; APLIIQ&apos;s hat-specific guidance says approximately 4 × 2 inches. Resolve this conflict before setting production dimensions. At final size, detail must support at least 2 mm stitches and small lettering needs vendor approval. Do not infer stitch counts from these images.</p>
-      <p>Dad hat: black garment only. White and tonal-black thread concepts, plus a brand-red contrast concept awaiting physical thread approval. Side and rear remain blank. No rear separator bar.</p>
+      <p>Dad hat: black garment only. White and tonal-black thread concepts only. Side and rear remain blank. No rear separator bar.</p>
       <p>Owner concept approval, original artwork, vendor placement/digitization proof, replacement saved-design IDs, final costs and release approval remain outstanding. No sample orders or supplier submissions were made.</p>
     </section>
   </main>;
