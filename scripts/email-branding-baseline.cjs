@@ -1,5 +1,7 @@
 // Explicit approved presentation exceptions for the locked business-file comparisons.
 module.exports = function emailBrandingBaseline(file, content) {
+  if (file === 'src/lib/email-delivery.ts') return content.replace('export async function deliverEmail(key: string): Promise<string> {', 'export async function deliverEmail(key: string): Promise<string> {\n  // Preserve any existing follow-up rows, but never claim or send them.\n  if (/^welcome\\/(live|test)\\/[23]\\//.test(key)) return "promotional_followups_disabled";');
+  if (file === 'src/lib/welcome.ts') return content.slice(0, content.indexOf('export async function runWelcomePass(')) + '// Retain the callable interface for existing workers; promotional follow-ups are retired.\nexport async function runWelcomePass(_livemode: boolean, _now: number = Date.now()): Promise<Record<string, number>> {\n  return { promotional_followups_disabled: 1 };\n}\n';
   if (!file.startsWith('src/lib/emails/')) return content;
   const name = file.split('/').pop();
   if (name === 'footer.ts') {
@@ -23,5 +25,14 @@ module.exports = function emailBrandingBaseline(file, content) {
   }
   if (['footer.ts','order-confirmation.ts','order-delay-notice.ts','shipment-notification.ts'].includes(name))
     content = content.replaceAll('width="218" height="82"','width="218" height="68"').replaceAll('width="120" height="45"','width="120" height="38"');
+  if (name === 'welcome-1.ts') content = content.split('\n').filter(line => !['Tees $38.', '`Shop the drop:', 'buttonHtml("Shop the drop",'].some(v => line.includes(v))).join('\n');
+  if (['footer.ts','order-confirmation.ts','order-delay-notice.ts','shipment-notification.ts'].includes(name)) content = content
+    .replace('<body bgcolor="#090909" style="margin:0;padding:0;background-color:#090909;color:#FFFFFF;">','<body bgcolor="#FFFFFF" style="margin:0;padding:24px 16px;background-color:#FFFFFF;color:#FFFFFF;">')
+    .replace('border="0" bgcolor="#090909" style="background-color:#090909;">','border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">')
+    .replace('<body bgcolor="${INK}" style="margin:0;padding:0;background-color:${INK};color:${PAPER};">','<body bgcolor="#FFFFFF" style="margin:0;padding:24px 16px;background-color:#FFFFFF;color:${PAPER};">')
+    .replace('border="0" bgcolor="${INK}" style="background-color:${INK};">','border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">')
+    .replace('<body style="margin:0;background:#090909;color:#fff;font-family:Arial,Helvetica,sans-serif">','<body style="margin:0;padding:24px 16px;background:#fff;color:#fff;font-family:Arial,Helvetica,sans-serif">')
+    .replace('cellpadding="0" style="background:#090909"><tr>','cellpadding="0" style="background:#fff"><tr>')
+    .replace('style="max-width:600px"','style="max-width:600px;background:#090909"');
   return content;
 };

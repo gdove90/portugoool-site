@@ -18,8 +18,6 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
     'order-delay':buildOrderDelayNotice(order),
     'shipment':buildShipmentNotification(order,{tracking_company:'Example Carrier',tracking_numbers:['PREVIEW-TRACKING'],tracking_urls:['javascript:alert(1)']}),
     'welcome-1':buildWelcome1(welcome),
-    'welcome-2':buildWelcome2({...welcome,productUrl:'https://goalathletics.shop/shop/legacy-product',imageUrl:'https://example.invalid/old-logo.png',imageAlt:'Legacy product'}),
-    'welcome-3':buildWelcome3(welcome)
   };
   assert.equal(orderNumberFor(order.id),'GOOOL-12345678');
   const sender=fs.readFileSync('src/lib/email.ts','utf8');
@@ -27,6 +25,8 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
   for(const [name,m] of Object.entries(previews)) {
     assert(m.html.includes('goal-athletics-email-wordmark-white.png'),name);
     assert(m.html.includes('alt="GOAL Athletics"'),name);
+    assert(/<body[^>]*background(?:-color)?:#(?:FFFFFF|fff)/.test(m.html),name+' white outer canvas');
+    if(name==='welcome-1') {assert(!m.html.includes('Tees $38'));assert(!m.html.includes('Shop the drop'));}
     assert(m.text.includes('goalathletics.shop'),name);
     assert(!m.html.includes('/brand/goool-athletics-lockup'),name);
     assert(!m.html.includes('javascript:'),name);
@@ -37,6 +37,10 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
     if(name==='welcome-2') assert(!m.html.includes('old-logo.png'));
     console.log('PASS '+name+' branding, links and preserved identifiers');
   }
+  global.fetch = async()=>{throw new Error('Network forbidden during template tests');};
+  assert.deepEqual(await require('../src/lib/welcome.ts').runWelcomePass(true),{promotional_followups_disabled:1});
+  for(const mode of ['live','test'])for(const step of [2,3]) assert.equal(await require('../src/lib/email-delivery.ts').deliverEmail(`welcome/${mode}/${step}/preview-only`),'promotional_followups_disabled');
+  console.log('PASS promotional passes and pre-existing follow-up deliveries cannot send or access the database');
   const meta=await sharp('public/brand/goal-athletics-email-wordmark-white.png').metadata();
   assert.equal(meta.width,1734);assert.equal(meta.height,544);assert(meta.hasAlpha);
   if(process.env.EMAIL_PREVIEW_DIR) {

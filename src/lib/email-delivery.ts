@@ -25,6 +25,8 @@ export async function queueEmail(key: string, kind: Delivery["kind"], message: E
   if (error) throw new Error("Could not persist email delivery.");
 }
 export async function deliverEmail(key: string): Promise<string> {
+  // Preserve any existing follow-up rows, but never claim or send them.
+  if (/^welcome\/(live|test)\/[23]\//.test(key)) return "promotional_followups_disabled";
   if (!emailEnabled()) return "disabled";
   const db = database();
   const token = randomUUID();

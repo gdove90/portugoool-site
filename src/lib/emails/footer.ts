@@ -110,9 +110,9 @@ export function emailShell(input: ShellInput): string {
   @media only screen and (max-width:380px) { .pad { padding-left:20px!important; padding-right:20px!important; } }
 </style>
 </head>
-<body bgcolor="#090909" style="margin:0;padding:0;background-color:#090909;color:#FFFFFF;">
+<body bgcolor="#FFFFFF" style="margin:0;padding:24px 16px;background-color:#FFFFFF;color:#FFFFFF;">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">${escapeHtml(input.preheader)}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#090909" style="background-color:#090909;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
   <tr><td align="center">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#090909" style="max-width:520px;background-color:#090909;color:#FFFFFF;">
       <tr><td align="center" class="pad" style="padding:32px 28px 20px;">

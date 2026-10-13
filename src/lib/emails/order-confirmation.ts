@@ -195,9 +195,9 @@ export function buildOrderConfirmation({ order, items, siteUrl }: ConfirmationIn
   @media only screen and (max-width:380px) { .receipt-padding { padding-left:22px!important; padding-right:22px!important; } }
 </style>
 </head>
-<body bgcolor="${INK}" style="margin:0;padding:0;background-color:${INK};color:${PAPER};">
+<body bgcolor="#FFFFFF" style="margin:0;padding:24px 16px;background-color:#FFFFFF;color:${PAPER};">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Your payment is confirmed. Order ${esc(ref)}. Thank you for choosing GOAL Athletics.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="background-color:${INK};">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
   <tr><td align="center">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${INK}" style="max-width:520px;background-color:${INK};color:${PAPER};">
       <tr><td align="center" class="receipt-padding" style="padding:32px 28px 24px;">
