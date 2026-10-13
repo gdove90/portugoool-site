@@ -34,7 +34,7 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
     if(name==='welcome-1') {assert(!m.html.includes('Tees $38'));assert(!m.html.includes('Shop the drop'));}
     assert(m.text.includes('goalathletics.shop'),name);
     assert(m.text.includes('support@goalathletics.shop'),name);
-    assert(!m.html.includes('hello@goool.shop'),name);
+    assert(!/goool\.shop/i.test(m.html+' '+m.text),name+' must not display the old website');
     assert(!m.html.includes('mailto:hello@goalathletics.shop'),name);
     assert(!m.html.includes('/brand/goool-athletics-lockup'),name);
     assert(!m.html.includes('javascript:'),name);

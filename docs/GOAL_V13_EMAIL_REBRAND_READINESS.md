@@ -21,7 +21,7 @@ Registered seller: GOOOL Athletics LLC while the amendment is pending.
 
 ## Outstanding before production approval
 - Gmail signature artwork upload requires Chrome extension file URL permission. New signature draft is being prepared; defaults have not been switched until artwork is installed and verified.
-- Deploy-preview build and hosted image verification pending latest push.
+- Deploy-preview build passed at 9623f55; both hosted PNGs returned HTTP 200 with bytes matching local V1.3 exports. The domain regression now runs before every build. Receipt desktop/mobile browser previews verified; real mail-client tests remain unverified.
 - Canonical email PNG becomes available on production only after approved release; preview availability alone is not production publication.
 - New-template real Gmail/Outlook/Apple Mail delivery and rendering are unverified. Previous approved Resend owner test authenticated SPF/DKIM/DMARC but had spam placement; do not mark inbox delivery passed. No new send authorized.
 - Human outbound response from support alias is not newly tested. Existing external inbound test is verified.

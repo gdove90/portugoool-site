@@ -41,5 +41,6 @@ module.exports = function emailBrandingBaseline(file, content) {
   if (name === 'footer.ts') content = 'import { SITE_URL, SUPPORT_EMAIL, LOCKUP_URL } from "../email-identity";\nexport { SITE_URL, SUPPORT_EMAIL, LOCKUP_URL };\n' + content
     .replace('export const SITE_URL = "https://goalathletics.shop";\n','').replace('export const SUPPORT_EMAIL = "support@goalathletics.shop";\n','').replace('export const LOCKUP_URL = `${SITE_URL}/brand/goal-athletics-email-wordmark-white.png`;\n','').replaceAll('height="68"','height="53"').replaceAll('height="38"','height="29"');
   if (['order-confirmation.ts','order-delay-notice.ts','shipment-notification.ts'].includes(name)) content = 'import { LOCKUP_URL } from "../email-identity";\n' + content.replaceAll('${esc(site)}/brand/goal-athletics-email-wordmark-white.png','${LOCKUP_URL}').replaceAll('https://goalathletics.shop/brand/goal-athletics-email-wordmark-white.png','${LOCKUP_URL}').replaceAll('height="68"','height="53"');
+  if (name === 'order-delay-notice.ts') content = content.replaceAll('>goool.shop/track-order</a>','>goalathletics.shop/track-order</a>').replaceAll('reply to this email and we will refund you in full.','contact support@goalathletics.shop and we will refund you in full.');
   return content;
 };
