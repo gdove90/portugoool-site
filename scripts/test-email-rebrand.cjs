@@ -64,7 +64,7 @@ const {buildWelcome3}=require('../src/lib/emails/welcome-3.ts');
   console.log('PASS local mock payload uses approved From and support Reply-To, including a legacy override');
 
   const meta=await sharp('public/brand/goal-athletics-email-lockup-white.png').metadata();
-  assert.equal(meta.width,2254);assert.equal(meta.height,544);assert(meta.hasAlpha);
+  assert.equal(meta.width,4800);assert.equal(meta.height,1314);assert(meta.hasAlpha);
   if(process.env.EMAIL_PREVIEW_DIR) {
     const dir=path.resolve(process.env.EMAIL_PREVIEW_DIR);fs.mkdirSync(dir,{recursive:true});
     fs.copyFileSync('public/brand/goal-athletics-email-lockup-white.png',path.join(dir,'goal-athletics-email-lockup-white.png'));

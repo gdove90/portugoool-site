@@ -33,10 +33,14 @@ assert.match(read("src/lib/business-address.ts"), /Saunderstown, RI 02874/);
 assert.match(read("src/lib/signups.ts"), /https:\/\/goalathletics\.shop\/unsubscribe/);
 const png = fs.readFileSync(path.join(__dirname, "..", "public/brand/goal-athletics-email-lockup-white.png"));
 assert.equal(png.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
-assert.equal(png.readUInt32BE(16), 2254);
-assert.equal(png.readUInt32BE(20), 544);
+assert.equal(png.readUInt32BE(16), 4800);
+assert.equal(png.readUInt32BE(20), 1314);
 const {execFileSync}=require('node:child_process');
 const forbidden=['goalathletics','com'].join('.');
 let matches='';try {matches=execFileSync('git',['grep','--cached','-n','-i','-I','--fixed-strings',forbidden,'--','.'],{encoding:'utf8'});}catch(e){if(e.status!==1)throw e;}
 assert.equal(matches,'','Unowned domain must never appear in the active tracked tree');
 console.log("GOAL email rebrand: static identity, routing, immutable refs, mailing address and PNG verified.");
+
+const crypto=require('node:crypto');
+assert.equal(crypto.createHash('sha256').update(png).digest('hex'),'169f9954ad481ab6ab2424a63361a143daf71dbc6650b85d8470af59c1541ecb','Approved source PNG must remain byte-identical');
+assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(__dirname,'..','public/brand/goal-athletics-gmail-lockup.png'))).digest('hex'),'7880f6406c3da8f916bf372f9dc62bd97463923de8048bcce538a262a7b8acab','Approved Gmail source PNG must remain byte-identical');
