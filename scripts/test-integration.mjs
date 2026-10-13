@@ -15,6 +15,7 @@ import crypto from "node:crypto";
 import Stripe from "stripe";
 
 const BASE = process.argv[2] ?? "http://localhost:3999";
+if (!['localhost','127.0.0.1'].includes(new URL(BASE).hostname)) throw new Error('Integration fixtures are restricted to loopback.');
 const WEBHOOK_SECRET = process.env.TEST_WEBHOOK_SECRET ?? "whsec_test_local_secret";
 const APLIIQ_SECRET = process.env.TEST_APLIIQ_SECRET ?? "test_apliiq_shared_secret";
 const OPS_KEY = process.env.TEST_OPS_KEY ?? "test_ops_key_0123456789abcdef";
@@ -128,11 +129,11 @@ function orderBySession(sessionId) {
 function orderNumberOf(id) {
   return `GOOOL-${id.replace(/-/g, "").slice(0, 8).toUpperCase()}`;
 }
-async function opsReconcile(orderId) {
+async function opsReconcile(orderId, action = "reconcile") {
   const res = await fetch(`${BASE}/api/fulfillment-ops`, {
     method: "POST",
     headers: { "x-ops-key": OPS_KEY, "content-type": "application/json" },
-    body: JSON.stringify({ action: "reconcile", orderId }),
+    body: JSON.stringify({ action, orderId }),
   });
   return { status: res.status, body: await res.json() };
 }
@@ -219,7 +220,9 @@ async function main() {
 
     await scenario({ mode: "ok", listOrders: [] });
     const rec = await opsReconcile(o.id);
-    check("reconcile (not found) releases order", rec.body.resolved === true && orderBySession(sessF.id).submission_status === "pending_submission", JSON.stringify(rec.body));
+    check("reconcile absence cannot authorize a retry", rec.body.resolved === false && orderBySession(sessF.id).submission_status === "needs_reconcile", JSON.stringify(rec.body));
+    const released = await opsReconcile(o.id, "release");
+    check("explicit operator release enables one retry", released.body.resolved === true && orderBySession(sessF.id).submission_status === "pending_submission");
     check("reconcile itself never resubmits", mock.posts.length === postsBefore, `posts=${mock.posts.length}`);
 
     await sendEvent("checkout.session.completed", sessF);
@@ -307,7 +310,9 @@ async function main() {
     writeStore(s2);
     await scenario({ mode: "ok", listOrders: [] });
     const rec2 = await opsReconcile(o.id);
-    check("R6b stuck `submitting` + absent → released for safe retry", rec2.body.resolved === true && orderBySession(sessR6.id).submission_status === "pending_submission", JSON.stringify(rec2.body));
+    check("R6b stuck attempt remains parked when absent", rec2.body.resolved === false && orderBySession(sessR6.id).submission_status === "needs_reconcile", JSON.stringify(rec2.body));
+    const released = await opsReconcile(o.id, "release");
+    check("R6b explicit operator release enables retry", released.body.resolved === true && orderBySession(sessR6.id).submission_status === "pending_submission");
     await sendEvent("checkout.session.completed", sessR6);
     check("R6c released order resubmits exactly once", orderBySession(sessR6.id).submission_status === "accepted" && mock.posts.length === postsBefore + 1, `posts=${mock.posts.length - postsBefore}`);
   }

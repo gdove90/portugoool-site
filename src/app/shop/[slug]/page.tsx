@@ -20,7 +20,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  if (MIGRATION_PREVIEW) return { title: "Collection in development", robots: { index: false, follow: false } };
+  if (MIGRATION_PREVIEW) {
+    const product = getProductBySlug((await params).slug);
+    if (!product) return { title: "Not found", robots: { index: false, follow: false } };
+    return { title: "Collection in development", alternates: { canonical: `/shop/${product.slug}` }, robots: { index: false, follow: false } };
+  }
   const product = getProductBySlug((await params).slug);
   if (!product) return { title: "Not found" };
 
