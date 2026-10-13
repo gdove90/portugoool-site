@@ -56,18 +56,19 @@ function isPublic(pathname: string): boolean {
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Canonical domain. /print/* stays reachable on both hosts because
-  // supplier file URLs reference the old domain.
-  const host = req.headers.get("host") ?? "";
-  if (
-    (host === "portugoool.com" ||
-      host === "www.portugoool.com" ||
-      host === "www.goool.shop") &&
-    !pathname.startsWith("/print/")
-  ) {
+  // Domain cutover: public old-domain URLs go to the new canonical host.
+  // Do not redirect machine callbacks, supplier artwork URLs, or in-flight
+  // checkout receipts: integrations may POST without following redirects and
+  // customers may still return to a pre-cutover payment session.
+  // Netlify must keep goool.shop attached as an alias after the switch.
+  const host = (req.headers.get("host") ?? "").toLowerCase().replace(/:\\d+$/, "");
+  const oldHosts = new Set(["goool.shop", "www.goool.shop", "portugoool.com", "www.portugoool.com"]);
+  const callbackOrReceipt = pathname.startsWith("/api/") || pathname.startsWith("/print/") ||
+    pathname === "/success" || pathname === "/track-order" || pathname.startsWith("/unsubscribe/");
+  if ((oldHosts.has(host) && !callbackOrReceipt) || host === "www.goalathletics.shop") {
     const url = req.nextUrl.clone();
     url.protocol = "https";
-    url.host = "goool.shop";
+    url.host = "goalathletics.shop";
     url.port = "";
     return NextResponse.redirect(url, 301);
   }
