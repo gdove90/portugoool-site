@@ -45,6 +45,7 @@ const PUBLIC_PATHS = new Set([
   "/refunds",
   "/robots.txt",
   "/icon.png",
+  "/icon.svg",
   "/apple-icon.png",
 ]);
 const PUBLIC_PREFIXES = ["/print/", "/fonts/", "/unsubscribe/", "/opengraph-image", "/.well-known/", "/.netlify/"];
