@@ -1,6 +1,6 @@
 # GOAL Athletics V1.3 implementation and release runbook
 
-Verified 13 October 2026. Migration remains staged in draft PR #31. DNS approval covers the two recorded web changes; it does not authorize production deployment, primary-domain promotion, reopening, supplier submission or customer announcements.
+Verified 13 October 2026. Migration remains staged in draft PR #31. Separate owner approval authorized only customer-service PR #29, which is now merged and deployed. DNS and email-test approvals do not authorize the full migration deployment, primary-domain promotion, reopening, supplier submission or customer announcements.
 
 ## A. Status
 
@@ -8,11 +8,11 @@ The existing business infrastructure remains in use. The new domain reaches the 
 
 ## B. GitHub
 
-Repository: gdove90/portugoool-site. Branch: codex/goalathletics-domain-cutover-v13-20261013. Draft PR #31 reconciles PR #27's migration work, PR #29's customer-service exceptions and the owner's exact copy without replacing the original V1.3 GA/wordmark paths. Existing main remains 24903a4ae6ea63c22bf5b34d9169dc4a4762e9ca. No migration merge has occurred.
+Repository: gdove90/portugoool-site. Branch: codex/goalathletics-domain-cutover-v13-20261013. Draft PR #31 reconciles PR #27's migration work, PR #29's customer-service exceptions and the owner's exact copy without replacing the original V1.3 GA/wordmark paths. Approved PR #29 merged to main e5f900866117d5e792638e1cff8e02ff076dc407. PR #31 includes that main update; migration code remains unmerged.
 
 ## C. Netlify
 
-Same project goool-shop, site 047c082c-2bc2-42d5-889f-57876fa55b78. Published production deploy remains 6acd5bf24cad2bdcce632bf3. Primary remains https://goool.shop. New apex and www are domain aliases, added using the alias workflow and verified by read-back. Latest code preview build and local production build pass; four existing no-img-element lint warnings remain.
+Same project goool-shop, site 047c082c-2bc2-42d5-889f-57876fa55b78. Customer-service production deploy 6ace2311512fd0a82cb43927 published at 2026-10-13T12:26:28.403Z from main e5f900866117d5e792638e1cff8e02ff076dc407. Primary remains https://goool.shop. New apex and www are domain aliases, added using the alias workflow and verified by read-back. PR #31 preview deploy 6ace234fb3ac998bbf5ab7a4 is ready at reconciled code commit bcbd19f58fd6a14e309043c2a96b11a575499268. Local production build passes; four existing no-img-element lint warnings remain.
 
 ## D. Domain
 
@@ -26,7 +26,7 @@ Same project goool-shop, site 047c082c-2bc2-42d5-889f-57876fa55b78. Published pr
 - [ ] Promote goalathletics.shop to primary only after provider checks and explicit production approval.
 - [ ] Verify platform-level legacy endpoint continuity after the approved release and promotion. Current portugoool.com and www.goool.shop blanket redirects are a known pre-existing concern.
 
-New-domain MX now points to smtp.google.com with priority 1 after separate owner approval. Google ownership TXT, Google SPF and the account-issued 2048-bit DKIM record are saved and authoritatively verified. Existing goool.shop mail routing is unchanged. The alias is Verified/All ok in the same Workspace account; message delivery tests remain outstanding.
+New-domain MX now points to smtp.google.com with priority 1 after separate owner approval. Google ownership TXT, Google SPF and the account-issued 2048-bit DKIM record are saved and authoritatively verified. Existing goool.shop mail routing is unchanged. The alias is Verified/All ok in the same Workspace account. Both approved owner-only tests delivered; the incoming alias test reached Inbox, but the new-domain sending test reached Spam despite SPF/DKIM/DMARC PASS. Sender activation remains blocked.
 
 ## E. Branding
 
@@ -48,7 +48,7 @@ Private local GOAL-V1.3-ARTWORK-REVIEW.zip contains 12 monochrome/web review var
 
 Preview blocks checkout, payment/supplier callbacks and scheduled worker operations with 503; product navigation and galleries are held pending verified new art. Nine existing product paths remain preserved. STORE_OPEN defaults closed. DOMAIN_CUTOVER_ENABLED defaults false; NEXT_PUBLIC_SITE_URL is a deliberate release setting.
 
-Customer-service gate exceptions are staged, not deployed. Production Contact, Support, FAQ and Shipping & Returns still need the separately approved customer-service release. Production tracking and receipts remain accessible.
+Customer-service PR #29 is deployed after explicit owner approval. Contact, FAQ and Shipping & Returns return 200; Support redirects to Contact. Service-only navigation is live, while public root and shopping routes remain gated. Tracking and receipt pages remain accessible. All 13 production service smoke checks and 33 additional route/asset continuity checks across old primary and new apex/www passed. Webhook GET requests return 405 as expected; this does not certify real signed POST handling.
 
 The prior private catalog audit covers 68 repository products, 288 variants, 113 mapped variants and 25 design IDs. Of 113 mappings, 108 match the live APLIIQ census; five legacy variants for design 6112026 remain unmatched. Decoration/art IDs, physical sizes and supplier approvals are incomplete. No supplier design or paid order was overwritten or resubmitted.
 
@@ -62,6 +62,8 @@ Email checklist:
 - [x] Sign in to existing Google Workspace administrator hello@goool.shop; goool.shop primary is Verified/All ok. Prepare goalathletics.shop as a no-cost user alias domain, preserving the existing inbox, login, history and license.
 - [x] Separately approve, save and authoritatively verify Google ownership TXT at @, MX @ smtp.google.com priority 1 and Google SPF TXT at @. Add the separately approved exact 2048-bit Google DKIM TXT at google._domainkey and confirm authentication in Workspace. Google reports Gmail ready; Manage Domains shows new alias Verified/All ok and old primary Verified/All ok. No existing old-domain MX changed. Primary-mail-domain promotion is not part of this work.
 - [x] Obtain exact account-issued ownership/DKIM and Resend records; Google MX/SPF also verified against official administrator documentation. Preserve existing DMARC. One SPF record is published at apex; Resend uses separate authenticated return-path CNAMEs.
+- [x] Send exactly the two separately approved owner-only Resend tests. Both Delivered; new receiving alias reaches existing Inbox. New-domain outgoing test passes SPF, DKIM and DMARC but lands in Spam. No spam label or filter changed to manufacture a pass.
+- [x] Revoke the separately approved temporary sending-only test key and remove the temporary local credential immediately after sending. Existing production/preview keys and sender configuration preserved.
 - [ ] Test incoming mail, authenticated outgoing mail, replies, receipts, returns and shipment delivery with owner-controlled test recipients.
 - [ ] Activate hello@goalathletics.shop only after authentication and delivery tests pass, through an approved separate release.
 - [ ] Inventory and approve Search Console/Meta/analytics/QR/social/mail-campaign link changes before announcements.
@@ -76,6 +78,8 @@ Passing: npm ci, typecheck, production build, 7 customer-service suites, 11 migr
 
 114 hosted read-only route/link/asset checks passed across 32 pages, including nine preserved product headings and canonical paths. No forms, checkout sessions, provider writes or owner authentication were performed. 62 isolated commerce HTTP checks passed. Local release-server restarts were blocked by automatic approval review with no specific reason; hosted checks were used safely. A full active storefront/provider end-to-end certification remains outstanding.
 
+After the approved PR #29 merge, all 13 production service smoke checks and 33 additional HTTPS continuity checks passed; live Contact screenshot inspected. PR #31 was reconciled with new main, then 7 service suites, 11 migration suites, 6 vector checks and typecheck passed again. Netlify's resulting preview build is ready. Two separately approved live email tests completed as described above; those writes are distinct from the read-only website checks.
+
 Nine responsive widths (320,360,375,390,430,768,1024,1440,1920) show no horizontal overflow or logo/action overlap. Desktop/mobile screenshots reviewed; mobile menu, search and bag tested. Exact original Style 3 comparison requires the missing source handoff. Artwork PDFs rendered and inspected as review proofs only.
 
 ## J. Release blockers and rollback
@@ -84,11 +88,12 @@ Nine responsive widths (320,360,375,390,430,768,1024,1440,1920) show no horizont
 - [ ] Obtain original GoDaddy export if the handoff only contains reconstruction; confirm ownership and approved manufacturing geometry.
 - [ ] Complete 36 verified primary artwork variants, physical placement specs, supplier proofs and samples; retain authentic V1.2 for apparel.
 - [ ] Reconcile outstanding paid supplier order and five unmatched legacy variants; never automatically resubmit.
-- [ ] Perform approved owner-only delivery/message-header tests and transactional receipt/return/shipment validation. Account sign-ins, Resend domain authentication, Workspace alias verification and Google DNS setup are complete. Supplier inquiry is sent after separate approval. The two owner-only tests are approved but not sent: existing Resend keys are masked in every Netlify context. Temporary sending-only key creation and immediate revocation/cleanup are prepared pending separate access approval. No protected values were unmasked and no production secret setting changed. New production sender activation remains forbidden until tests and separate approval.
+- [ ] Resolve new-domain outgoing test Spam placement and complete reply/transactional receipt/return/shipment validation. Both approved owner-only tests were sent and Delivered; receiving alias Inbox verified, outgoing SPF/DKIM/DMARC PASS. The outgoing test's Spam placement is a release blocker. Temporary sending-only key was owner-approved, used only for those two messages, revoked and removed locally. Existing masked keys were never unmasked and no production secret setting changed. New production sender activation remains forbidden until delivery tests and separate approval pass.
 - [ ] Run provider sandbox checkout/fulfillment/email tests and actual platform redirect compatibility checks.
-- [ ] Obtain explicit approval for production source merge/deploy, primary-domain promotion and any reopening. DNS approval alone does not authorize these actions.
+- [x] Obtain separate approval, merge and deploy isolated customer-service PR #29; verify service access and shopping closure on production.
+- [ ] Obtain explicit approval for full migration PR #31 merge/deploy, primary-domain promotion and any reopening. Prior narrow approvals do not authorize these actions.
 
-Rollback uses a reviewed source revert or targeted fix through the existing CI pipeline after approval, not republishing an old Netlify snapshot. Failed builds leave published production in place. Keep STORE_OPEN=false and the owner renovation access key. If an approved domain promotion fails, retain all aliases, restore goool.shop primary and coordinated prior canonical/cutover environment, rebuild and verify callbacks, receipts and supplier artwork URLs. No database restore or supplier-record changes are required for this code-only release.
+Rollback uses a reviewed source revert or targeted fix through the existing CI pipeline after approval, not republishing an old Netlify snapshot. Current production baseline is the verified customer-service release e5f900866117d5e792638e1cff8e02ff076dc407; historical pre-service source was 24903a4ae6ea63c22bf5b34d9169dc4a4762e9ca. Reverting the service release would restore the support-page access defect, so prefer a targeted repair. Failed builds leave published production in place. Preserve the owner renovation access key and shopping closure; staged migration STORE_OPEN remains false. If an approved domain promotion fails, retain all aliases, restore goool.shop primary and coordinated prior canonical/cutover environment, rebuild and verify callbacks, receipts and supplier artwork URLs. No database restore or supplier-record changes are required for this code-only release.
 
 Private backups already verified: Git bundle with 63 refs; 11 public Supabase tables/134 rows count-checked; 160-column schema inventory; daily physical backup captured. Restore rehearsal is not complete. Protect these files outside GitHub; restoration requires a separate scoped recovery decision.
 
