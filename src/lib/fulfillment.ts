@@ -381,14 +381,14 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
   // == GOAL Athletics ST720 GA tees (owner handoff 2026-10-14) ==
   // Saved-design ids read from the Apliiq saved designs list on 2026-10-14.
   // Both products are hidden with no price, so this mapping opens nothing.
-  // GA Minimal Tee (GA 3.00in left chest + stacked back 6.00in)
+  // GA Minimal Tee (GA 3.00in centred on the chest + stacked back 6.00in). Black and True Red moved 2026-10-14 to the centred designs 6206620/6206681 (were left-chest 6206215/6206277); True Royal and White already print centred.
   "80000000-0000-4000-8000-000000000011": {
-    "Black": { apliiqProductId: 6206215, skus: { S: "APQ-6206215S6A1", M: "APQ-6206215S7A1", L: "APQ-6206215S8A1", XL: "APQ-6206215S1A1", XXL: "APQ-6206215S2A1" } },
+    "Black": { apliiqProductId: 6206620, skus: { S: "APQ-6206620S6A1", M: "APQ-6206620S7A1", L: "APQ-6206620S8A1", XL: "APQ-6206620S1A1", XXL: "APQ-6206620S2A1" } },
     "True Royal": { apliiqProductId: 6206254, skus: { S: "APQ-6206254S6A1", M: "APQ-6206254S7A1", L: "APQ-6206254S8A1", XL: "APQ-6206254S1A1", XXL: "APQ-6206254S2A1" } },
     "White · Black-Red": { apliiqProductId: 6206255, skus: { S: "APQ-6206255S6A1", M: "APQ-6206255S7A1", L: "APQ-6206255S8A1", XL: "APQ-6206255S1A1", XXL: "APQ-6206255S2A1" } },
     "White · Royal": { apliiqProductId: 6206257, skus: { S: "APQ-6206257S6A1", M: "APQ-6206257S7A1", L: "APQ-6206257S8A1", XL: "APQ-6206257S1A1", XXL: "APQ-6206257S2A1" } },
     "Silver": { apliiqProductId: 6206263, skus: { S: "APQ-6206263S6A1", M: "APQ-6206263S7A1", L: "APQ-6206263S8A1", XL: "APQ-6206263S1A1", XXL: "APQ-6206263S2A1" } },
-    "True Red": { apliiqProductId: 6206277, skus: { S: "APQ-6206277S6A1", M: "APQ-6206277S7A1", L: "APQ-6206277S8A1", XL: "APQ-6206277S1A1", XXL: "APQ-6206277S2A1" } },
+    "True Red": { apliiqProductId: 6206681, skus: { S: "APQ-6206681S6A1", M: "APQ-6206681S7A1", L: "APQ-6206681S8A1", XL: "APQ-6206681S1A1", XXL: "APQ-6206681S2A1" } },
   },
   // GA Big Tee (lockup 10.00in across the chest)
   "80000000-0000-4000-8000-000000000012": {

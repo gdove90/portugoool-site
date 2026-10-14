@@ -2961,7 +2961,7 @@ export const products: Product[] = [
     slug: "goal-athletics-ga-minimal-tee",
     blank: "ST720",
     description:
-      "Lightweight performance tee. GA monogram on the left chest, stacked GOAL ATHLETICS lockup across the upper back.",
+      "Lightweight performance tee. GA monogram centred on the chest, stacked GOAL ATHLETICS lockup across the upper back.",
     priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
@@ -2973,7 +2973,7 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-ga-minimal-tee-black-front.webp",
-        alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram on the left chest",
+        alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram centred on the chest",
         caption: "Concept render. Not a photograph of a manufactured sample.",
       },
       {
@@ -2991,7 +2991,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-tee-black-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram on the left chest",
+            alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram centred on the chest",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
@@ -3009,7 +3009,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-tee-true-royal-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in true royal, front view with the cream GA monogram on the left chest",
+            alt: "GOAL Athletics GA Minimal Tee in true royal, front view with the cream GA monogram centred on the chest",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
@@ -3027,7 +3027,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-tee-white-black-red-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in white, front view with the black and red GA monogram on the left chest",
+            alt: "GOAL Athletics GA Minimal Tee in white, front view with the black and red GA monogram centred on the chest",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {
@@ -3045,7 +3045,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-tee-true-red-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in true red, front view with the white GA monogram on the left chest",
+            alt: "GOAL Athletics GA Minimal Tee in true red, front view with the white GA monogram centred on the chest",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
           {

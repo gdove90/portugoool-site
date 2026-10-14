@@ -6,7 +6,7 @@ require.extensions['.ts'] = (m, f) => m._compile(ts.transpileModule(fs.readFileS
 const p = require('../src/lib/products.ts'), f = require('../src/lib/fulfillment.ts'), types = require('../src/lib/types.ts');
 const ORDER = ['Black', 'True Royal', 'White · Black-Red', 'True Red'];
 const TEES = {
-  'goal-athletics-ga-minimal-tee': { id: '80000000-0000-4000-8000-000000000011', ids: [6206215, 6206254, 6206255, 6206277], removed: { Silver: 6206263, 'White · Royal': 6206257 } },
+  'goal-athletics-ga-minimal-tee': { id: '80000000-0000-4000-8000-000000000011', ids: [6206620, 6206254, 6206255, 6206681], removed: { Silver: 6206263, 'White · Royal': 6206257 } },
   'goal-athletics-ga-big-tee': { id: '80000000-0000-4000-8000-000000000012', ids: [6206229, 6206234, 6206236, 6206251], removed: { Silver: 6206241, 'White · Royal': 6206239 } },
 };
 const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
