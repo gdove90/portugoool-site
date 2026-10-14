@@ -1,6 +1,6 @@
 // IND4000 GOAL hoodie handoff 2026-10-14: three hidden products, twelve Apliiq
 // designs. Verifies the catalog rows, exact Apliiq SKUs, images on disk and that
-// they stay off the site and out of checkout until the owner sets prices.
+// they stay off the site and out of checkout pending publication approval.
 // Handoff v2: Big Stack dropped (its Apliiq designs are never mapped) and no
 // back print on any style, so every back image is the plain Lockup back.
 // No network, database or provider calls.
@@ -21,7 +21,8 @@ const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
     assert(product && product.id === hoodie.id, `${slug} present`);
     assert.equal(product.isActive, false, `${slug} must stay hidden`);
     assert.equal(product.availableForSale, false);
-    assert.equal(types.hasPrice(product), false, `${slug} has no price until the owner sets it`);
+    assert.equal(types.hasPrice(product), true, `${slug} is priced`);
+    assert.equal(product.priceCents, 3800, `${slug} owner-approved $38 price`);
     assert.equal(p.getProductBySlug(slug), undefined);
     assert.equal(p.getProductById(hoodie.id), undefined);
     assert.equal(product.category, 'hoodie');
@@ -56,5 +57,5 @@ const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
     assert.equal(r.status, 400, `${hoodie.id} ${color} refused`);
   }
   assert.equal(providerCalls, 0);
-  console.log(`PASS 3 hidden IND4000 GOAL hoodies, ${variants} colourways: exact Apliiq SKUs S-XXL, renders on disk with the concept caption, no price, off the site, checkout refuses all ${variants} before Stripe. No network/database/provider calls.`);
+  console.log(`PASS 3 staged IND4000 hoodies at $38 each, ${variants} colorways: exact Apliiq SKUs S–2XL, renders preserved; products remain hidden and checkout refuses all variants before Stripe. No network/database/provider calls.`);
 })().catch(e => { console.error(e); process.exitCode = 1; });

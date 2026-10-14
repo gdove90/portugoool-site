@@ -3198,7 +3198,7 @@ export const products: Product[] = [
     blank: "IND4000",
     description:
       "Heavyweight pullover hoodie. GA monogram centred on the chest, a second GA on the left sleeve, clean back.",
-    priceCents: 0,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#1E1E1E",
@@ -3337,7 +3337,7 @@ export const products: Product[] = [
     blank: "IND4000",
     description:
       "Heavyweight pullover hoodie. GA monogram on the left chest, clean back.",
-    priceCents: 0,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#1E1E1E",
@@ -3451,7 +3451,7 @@ export const products: Product[] = [
     blank: "IND4000",
     description:
       "Heavyweight pullover hoodie. GA and GOAL ATHLETICS lockup across the chest, clean back.",
-    priceCents: 0,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#1E1E1E",

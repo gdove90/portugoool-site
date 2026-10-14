@@ -8,9 +8,8 @@
 -- src/lib/orders-store.ts); this file keeps the audit trail, as 0033 to
 -- 0035 and 0039 do.
 --
--- All three rows are hidden (is_active false) with price_cents 0 ("Price
--- to be announced") until the owner sets prices. Re-run with the real
--- prices and flags in the same commit that publishes them.
+-- Owner set Heritage, Minimal and Lockup to $38 each on 2026-10-14.
+-- All three remain hidden and not purchasable pending publication approval.
 --
 -- Apply via the Supabase dashboard SQL editor (the established workflow;
 -- the org-scoped MCP connector cannot see this project). Idempotent.
@@ -21,13 +20,13 @@ insert into public.products
    sizes, product_category, supplier_type, is_active, available_for_sale)
 values
   ('80000000-0000-4000-8000-000000000013', 'GOAL Athletics Heritage Hoodie',
-   'goal-athletics-heritage-hoodie', '', 0, 'Black', '#1E1E1E',
+   'goal-athletics-heritage-hoodie', '', 3800, 'Black', '#1E1E1E',
    array['S','M','L','XL','XXL'], 'hoodie', 'apliiq', false, false),
   ('80000000-0000-4000-8000-000000000014', 'GOAL Athletics Minimal Hoodie',
-   'goal-athletics-minimal-hoodie', '', 0, 'Black', '#1E1E1E',
+   'goal-athletics-minimal-hoodie', '', 3800, 'Black', '#1E1E1E',
    array['S','M','L','XL','XXL'], 'hoodie', 'apliiq', false, false),
   ('80000000-0000-4000-8000-000000000015', 'GOAL Athletics Lockup Hoodie',
-   'goal-athletics-lockup-hoodie', '', 0, 'Black', '#1E1E1E',
+   'goal-athletics-lockup-hoodie', '', 3800, 'Black', '#1E1E1E',
    array['S','M','L','XL','XXL'], 'hoodie', 'apliiq', false, false)
 on conflict (id) do update
   set name              = excluded.name,
