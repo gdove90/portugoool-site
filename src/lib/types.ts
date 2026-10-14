@@ -30,6 +30,8 @@ export interface ProductImage {
   /** Shown under the gallery when the image is not a product photo
    *  (e.g. a concept render or a flat artwork illustration). */
   caption?: string;
+  /** Four panels of the GA-M04 owner proof; presentation only. */
+  proofCrop?: "black-front" | "black-back" | "royal-front" | "royal-back";
 }
 
 /** One selectable colorway of a variant-based product (single product page,

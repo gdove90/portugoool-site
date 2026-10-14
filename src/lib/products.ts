@@ -49,6 +49,8 @@ const DROP_II = {
   dropLimit: null,
 };
 
+const GA_M04_PROOF = "https://d2ol7oe51mr4n9.cloudfront.net/user_3C0u7LPKg2tElAsFzMLQLapXeiu/5ba06775-0c91-4c97-8692-4364157586d4.png";
+
 export const products: Product[] = [
   // ── Performance Jersey Collection ───────────────────────────
   {
@@ -2823,6 +2825,67 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
   },
+
+  // GA-M04 is a NEW design, never routed to the archived Core Badge Apliiq SKUs.
+  // Remains visible but non-purchasable until the two exact supplier
+  // designs, production vectors, permanent gallery photography and price are approved.
+  {
+    id: "90000000-0000-4000-8000-000000000004",
+    name: "GOAL Core Badge Performance Tee · GA-M04",
+    slug: "ga-m04-core-badge-performance-tee",
+    description:
+      "Lightweight performance training tee with the angular GA monogram on the wearer's left chest and GOAL ATHLETICS high across the upper back. Two planned colourways: Black/Red and Royal/Cream.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Black / Red",
+    colorHex: "#242424",
+    blank: "ST720",
+    fabric: "Sport-Tek ST720 performance knit, subject to final supplier verification for this design.",
+    fit: ST720_FIT,
+    careInstructions: PERF_CARE,
+    images: [
+      { src: GA_M04_PROOF, alt: "GA-M04 black performance tee, front with white and red GA chest monogram", proofCrop: "black-front", caption: "GA-M04 design proof. Illustration only; not a manufactured sample or supplier-approved print." },
+      { src: GA_M04_PROOF, alt: "GA-M04 black performance tee, back with white GOAL and red ATHLETICS neck print", proofCrop: "black-back", caption: "GA-M04 design proof. Illustration only; not a manufactured sample or supplier-approved print." },
+    ],
+    colorVariants: [
+      {
+        name: "Black / Red",
+        supplierColor: "Black",
+        hex: "#242424",
+        skuFragment: "BLACK_RED",
+        comingSoon: true,
+        images: [
+          { src: GA_M04_PROOF, alt: "GA-M04 black and red, front design proof", proofCrop: "black-front", caption: "GA-M04 design proof. Illustration only; not a manufactured sample or supplier-approved print." },
+          { src: GA_M04_PROOF, alt: "GA-M04 black and red, back design proof", proofCrop: "black-back", caption: "GA-M04 design proof. Illustration only; not a manufactured sample or supplier-approved print." },
+        ],
+      },
+      {
+        name: "Royal / Cream",
+        supplierColor: "True Royal",
+        hex: "#1453a4",
+        skuFragment: "ROYAL_CREAM",
+        comingSoon: true,
+        images: [
+          { src: GA_M04_PROOF, alt: "GA-M04 royal and cream, front design proof", proofCrop: "royal-front", caption: "GA-M04 design proof. Illustration only; not a manufactured sample or supplier-approved print." },
+          { src: GA_M04_PROOF, alt: "GA-M04 royal and cream, back design proof", proofCrop: "royal-back", caption: "GA-M04 design proof. Illustration only; not a manufactured sample or supplier-approved print." },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "unassigned",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+    imageBackdrop: "neutral",
+  },
+
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────
