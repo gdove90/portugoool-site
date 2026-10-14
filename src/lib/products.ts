@@ -2228,8 +2228,8 @@ export const products: Product[] = [
     sizes: ["OS"],
     category: "hat",
     supplierType: "apliiq",
-    isActive: true,
-    availableForSale: true,
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2766,8 +2766,8 @@ export const products: Product[] = [
     sizes: ["OS"],
     category: "hat",
     supplierType: "apliiq",
-    isActive: true,
-    availableForSale: true, // migration 0033 applied 2026-09-23; the
+    isActive: false,
+    availableForSale: false, // migration 0033 applied 2026-09-23; the
     // products row exists, so order_items.product_id satisfies its FK.
     isLimitedDrop: false,
     dropVersion: null,
@@ -2812,8 +2812,8 @@ export const products: Product[] = [
     sizes: ["OS"],
     category: "hat",
     supplierType: "apliiq",
-    isActive: true,
-    availableForSale: true, // migration 0033 applied 2026-09-23; the
+    isActive: false,
+    availableForSale: false, // migration 0033 applied 2026-09-23; the
     // products row exists, so order_items.product_id satisfies its FK.
     isLimitedDrop: false,
     dropVersion: null,

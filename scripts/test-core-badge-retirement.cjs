@@ -1,12 +1,12 @@
 const fs=require('fs'),assert=require('assert/strict'),ts=require('typescript'),vm=require('vm'),cp=require('child_process');
-const {ID,retireCoreBadgeBaseline}=require('./retirement-baseline.cjs');
+const {ID,applyRetirements}=require('./retirement-baseline.cjs');
 const baseline='34586c6fd8a05924b051bb72be3c570e75946478';
 require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
 const p=require('../src/lib/products.ts'),f=require('../src/lib/fulfillment.ts');
 const normal=s=>s.replace(/\r\n/g,'\n');
 (async()=>{
  const before=normal(cp.execFileSync('git',['show',baseline+':src/lib/products.ts'],{encoding:'utf8'}));
- assert.equal(normal(fs.readFileSync('src/lib/products.ts','utf8')),retireCoreBadgeBaseline(before));
+ assert.equal(normal(fs.readFileSync('src/lib/products.ts','utf8')),applyRetirements(before));
  assert(!p.getProducts().some(x=>x.id===ID));assert.equal(p.getProductById(ID),undefined);assert.equal(p.getProductBySlug('goool-performance-tee'),undefined);
  const match=p.getProductById('80000000-0000-4000-8000-000000000006');assert(match&&match.isActive&&match.availableForSale);
  for(const color of ['Black','White','True Royal'])for(const size of ['S','M','L','XL','XXL'])assert(f.resolveApliiqSku(ID,color,size)?.sku);
