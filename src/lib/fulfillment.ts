@@ -375,6 +375,7 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "Black/Natural": { apliiqProductId: 6205992, skus: { OS: "APQ-6205992S34A1" } },
     "Red/Natural": { apliiqProductId: 6205994, skus: { OS: "APQ-6205994S34A1" } },
     "Royal/Natural": { apliiqProductId: 6205995, skus: { OS: "APQ-6205995S34A1" } },
+    "Dark Green/Natural": { apliiqProductId: 6206101, skus: { OS: "APQ-6206101S34A1" } },
   },
   // == end GOAL Athletics hats ==
 };

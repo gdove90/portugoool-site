@@ -2928,6 +2928,13 @@ export const products: Product[] = [
         skuFragment: "ROYAL",
         images: [{ src: "/products/goal-wordmark-cap-royal.webp", alt: "GOAL Athletics Wordmark Cap with royal visor, front view" }],
       },
+      {
+        name: "Dark Green/Natural",
+        supplierColor: "Dark Green/Natural",
+        hex: "#0B3D2E",
+        skuFragment: "GREEN",
+        images: [{ src: "/products/goal-wordmark-cap-dark-green.webp", alt: "GOAL Athletics Wordmark Cap with dark green visor, front view" }],
+      },
     ],
     sizes: ["OS"],
     category: "hat",

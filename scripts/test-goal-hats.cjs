@@ -1,4 +1,4 @@
-// Owner hat upload 2026-10-14: two caps, seven Apliiq colourways. Verifies the
+// Owner hat upload 2026-10-14: two caps, eight Apliiq colourways. Verifies the
 // catalog rows, exact Apliiq SKUs, images on disk and that checkout refuses
 // them while they are not for sale. No network, database or provider calls.
 const fs = require('fs'), assert = require('assert/strict'), ts = require('typescript'), vm = require('vm');
@@ -6,7 +6,7 @@ require.extensions['.ts'] = (m, f) => m._compile(ts.transpileModule(fs.readFileS
 const p = require('../src/lib/products.ts'), f = require('../src/lib/fulfillment.ts');
 const HATS = {
   'goal-athletics-monogram-cap': { id: '80000000-0000-4000-8000-000000000009', variants: { 'Black/Natural': 6205981, 'Red/Natural': 6205977, 'Royal/Natural': 6205982, 'Dark Green/Natural': 6205989 } },
-  'goal-athletics-wordmark-cap': { id: '80000000-0000-4000-8000-000000000010', variants: { 'Black/Natural': 6205992, 'Red/Natural': 6205994, 'Royal/Natural': 6205995 } },
+  'goal-athletics-wordmark-cap': { id: '80000000-0000-4000-8000-000000000010', variants: { 'Black/Natural': 6205992, 'Red/Natural': 6205994, 'Royal/Natural': 6205995, 'Dark Green/Natural': 6206101 } },
 };
 (async () => {
   let variants = 0;
