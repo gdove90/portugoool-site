@@ -3056,24 +3056,6 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Silver",
-        supplierColor: "silver",
-        hex: "#DDDFE1",
-        skuFragment: "SILVER",
-        images: [
-          {
-            src: "/products/goal-ga-minimal-tee-silver-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in silver, front view with the black and red GA monogram on the left chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
-          {
-            src: "/products/goal-ga-minimal-tee-silver-back.webp",
-            alt: "GOAL Athletics GA Minimal Tee in silver, back view with the black and red stacked GOAL ATHLETICS lockup across the upper back",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
-        ],
-      },
-      {
         name: "True Red",
         supplierColor: "True Red",
         hex: "#C8102E",
@@ -3201,24 +3183,6 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-big-tee-white-royal-back.webp",
             alt: "GOAL Athletics GA Big Tee in white, back view, no print",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
-        ],
-      },
-      {
-        name: "Silver",
-        supplierColor: "silver",
-        hex: "#DDDFE1",
-        skuFragment: "SILVER",
-        images: [
-          {
-            src: "/products/goal-ga-big-tee-silver-front.webp",
-            alt: "GOAL Athletics GA Big Tee in silver, front view with the black and red GA and GOAL ATHLETICS lockup across the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
-          {
-            src: "/products/goal-ga-big-tee-silver-back.webp",
-            alt: "GOAL Athletics GA Big Tee in silver, back view, no print",
             caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
