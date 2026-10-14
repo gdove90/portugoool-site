@@ -378,6 +378,28 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "Dark Green/Natural": { apliiqProductId: 6206101, skus: { OS: "APQ-6206101S34A1" } },
   },
   // == end GOAL Athletics hats ==
+  // == GOAL Athletics ST720 GA tees (owner handoff 2026-10-14) ==
+  // Saved-design ids read from the Apliiq saved designs list on 2026-10-14.
+  // Both products are hidden with no price, so this mapping opens nothing.
+  // GA Minimal Tee (GA 3.00in left chest + stacked back 6.00in)
+  "80000000-0000-4000-8000-000000000011": {
+    "Black": { apliiqProductId: 6206215, skus: { S: "APQ-6206215S6A1", M: "APQ-6206215S7A1", L: "APQ-6206215S8A1", XL: "APQ-6206215S1A1", XXL: "APQ-6206215S2A1" } },
+    "True Royal": { apliiqProductId: 6206254, skus: { S: "APQ-6206254S6A1", M: "APQ-6206254S7A1", L: "APQ-6206254S8A1", XL: "APQ-6206254S1A1", XXL: "APQ-6206254S2A1" } },
+    "White · Black-Red": { apliiqProductId: 6206255, skus: { S: "APQ-6206255S6A1", M: "APQ-6206255S7A1", L: "APQ-6206255S8A1", XL: "APQ-6206255S1A1", XXL: "APQ-6206255S2A1" } },
+    "White · Royal": { apliiqProductId: 6206257, skus: { S: "APQ-6206257S6A1", M: "APQ-6206257S7A1", L: "APQ-6206257S8A1", XL: "APQ-6206257S1A1", XXL: "APQ-6206257S2A1" } },
+    "Silver": { apliiqProductId: 6206263, skus: { S: "APQ-6206263S6A1", M: "APQ-6206263S7A1", L: "APQ-6206263S8A1", XL: "APQ-6206263S1A1", XXL: "APQ-6206263S2A1" } },
+    "True Red": { apliiqProductId: 6206277, skus: { S: "APQ-6206277S6A1", M: "APQ-6206277S7A1", L: "APQ-6206277S8A1", XL: "APQ-6206277S1A1", XXL: "APQ-6206277S2A1" } },
+  },
+  // GA Big Tee (lockup 10.00in across the chest)
+  "80000000-0000-4000-8000-000000000012": {
+    "Black": { apliiqProductId: 6206229, skus: { S: "APQ-6206229S6A1", M: "APQ-6206229S7A1", L: "APQ-6206229S8A1", XL: "APQ-6206229S1A1", XXL: "APQ-6206229S2A1" } },
+    "True Royal": { apliiqProductId: 6206234, skus: { S: "APQ-6206234S6A1", M: "APQ-6206234S7A1", L: "APQ-6206234S8A1", XL: "APQ-6206234S1A1", XXL: "APQ-6206234S2A1" } },
+    "White · Black-Red": { apliiqProductId: 6206236, skus: { S: "APQ-6206236S6A1", M: "APQ-6206236S7A1", L: "APQ-6206236S8A1", XL: "APQ-6206236S1A1", XXL: "APQ-6206236S2A1" } },
+    "White · Royal": { apliiqProductId: 6206239, skus: { S: "APQ-6206239S6A1", M: "APQ-6206239S7A1", L: "APQ-6206239S8A1", XL: "APQ-6206239S1A1", XXL: "APQ-6206239S2A1" } },
+    "Silver": { apliiqProductId: 6206241, skus: { S: "APQ-6206241S6A1", M: "APQ-6206241S7A1", L: "APQ-6206241S8A1", XL: "APQ-6206241S1A1", XXL: "APQ-6206241S2A1" } },
+    "True Red": { apliiqProductId: 6206251, skus: { S: "APQ-6206251S6A1", M: "APQ-6206251S7A1", L: "APQ-6206251S8A1", XL: "APQ-6206251S1A1", XXL: "APQ-6206251S2A1" } },
+  },
+  // == end GOAL Athletics ST720 GA tees ==
 };
 
 export interface ResolvedFulfillment {

@@ -1,0 +1,153 @@
+{
+  "package": "GOAL Athletics ST720 GA Tee",
+  "prepared": "2026-10-14",
+  "dpi": 300,
+  "print_files": {
+    "print/01_GA-Minimal-Front_WhiteRed_3.00in.png": {
+      "sha256": "8b8c9ab58b358a53f96c26558c8002ca520f83b774de5d8577efd925452c83f0",
+      "px": "900x811",
+      "in": "3.00x2.70",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/02_GA-Minimal-Front_Cream_3.00in.png": {
+      "sha256": "4f4f6c38cd9fe1feddaa66b51df2de456bd04f764dc301515734bbe7ac260990",
+      "px": "900x811",
+      "in": "3.00x2.70",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/03_Stacked-Back_WhiteRed_6.00in.png": {
+      "sha256": "0aee0c1108228239abed655a8b1769d32d8b7e6523fd9f83107510b562892ae2",
+      "px": "1800x679",
+      "in": "6.00x2.26",
+      "source": "supplied PNG, unchanged pixels; 300 dpi tag added (Apliiq read the untagged file as 'nan dpi')"
+    },
+    "print/04_Stacked-Back_Cream_6.00in.png": {
+      "sha256": "6c708e89e28ac2123f69ebc95ebf67b239551229fb5e8686fb1db7ae82d51bed",
+      "px": "1800x679",
+      "in": "6.00x2.26",
+      "source": "supplied PNG, unchanged pixels; 300 dpi tag added (Apliiq read the untagged file as 'nan dpi')"
+    },
+    "print/05_Lockup-Big-Front_WhiteRed_10.00in.png": {
+      "sha256": "920b77db3cf0778668dd536c8e7412da5b5935def7ce2f7a19d28388f56448ae",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/06_Lockup-Big-Front_Cream_10.00in.png": {
+      "sha256": "8b1ba1087d19d60fb33806e4328dbe5fd128bfcf4027a450b6c0d2d36e2485a8",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/07_GA-Minimal-Front_BlackRed_3.00in.png": {
+      "sha256": "e48136eb6442d86ec84e384de1b9c1920f553a2f572cba740081df13f3124ac8",
+      "px": "900x811",
+      "in": "3.00x2.70",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/08_Stacked-Back_BlackRed_6.00in.png": {
+      "sha256": "6218f3366d6e3ac8f891ea82d7e3fb7f63dc3b3e04185bbc7658859c9a8c29ee",
+      "px": "1800x679",
+      "in": "6.00x2.26",
+      "source": "supplied PNG, unchanged pixels; 300 dpi tag added (Apliiq read the untagged file as 'nan dpi')"
+    },
+    "print/09_Lockup-Big-Front_BlackRed_10.00in.png": {
+      "sha256": "ddda4b07617e8c6fa0810cc8b7f9e878aa9d5113f1a19fb5750cd8f121454e3e",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/10_GA-Minimal-Front_White_3.00in.png": {
+      "sha256": "6c1aa83d075d31df6a437bb78a04ee3e069e188bd164d5ce343cf1655e094a09",
+      "px": "900x811",
+      "in": "3.00x2.70",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/11_Stacked-Back_White_6.00in.png": {
+      "sha256": "908186cd747baa5d7ae1d4d986941e28f4cb1b715bb1c6242849cbb51f2339c4",
+      "px": "1800x679",
+      "in": "6.00x2.26",
+      "source": "supplied PNG, unchanged pixels; 300 dpi tag added (Apliiq read the untagged file as 'nan dpi')"
+    },
+    "print/12_Lockup-Big-Front_White_10.00in.png": {
+      "sha256": "84f79aa4bcf61538ae066e3394fb87fff6ce2359c1ca69671070ffbdc94a52ea",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/16_GA-Minimal-Front_Royal_3.00in.png": {
+      "sha256": "9d614d2a513e323c89f566a6a2497980b1b7303d9e3b70035b57549d5505b49f",
+      "px": "900x811",
+      "in": "3.00x2.70",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    },
+    "print/17_Stacked-Back_Royal_6.00in.png": {
+      "sha256": "2bbc1ba7744651c454c3c7a1b08914345db81ad692276873aaeee0a9c7b1fba6",
+      "px": "1800x679",
+      "in": "6.00x2.26",
+      "source": "supplied PNG, unchanged pixels; 300 dpi tag added (Apliiq read the untagged file as 'nan dpi')"
+    },
+    "print/18_Lockup-Big-Front_Royal_10.00in.png": {
+      "sha256": "c5dc97de0c14dab47521852c33ca48029c955916ba79eb1b8bc0a5d83300f9e1",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "re-exported 2026-10-14 from the owner's V1.3 vector master (GOAL_ATHLETICS_V1.3_APPROVED_NO_ORANGE, combined lockup SVG, paths unmodified) in the handoff inks; supplied enlarged PNG kept in print/supplied-enlarged/"
+    }
+  },
+  "measurements": {
+    "template": "Apliiq v5 designer, Sustainable Athletic Tee (ST720), transfer print, read 2026-10-14 at 20 px per inch from Apliiq's own garment base images (front view 4902, back view 4903)",
+    "Apliiq front area": "14.00 x 19.00 in (280 x 380 px)",
+    "Apliiq back area": "14.00 x 19.00 in (280 x 380 px)",
+    "front area starts": "2.40 in below the front collar seam at CF",
+    "back area starts": "0.20 in below the back collar seam at CB",
+    "front collar seam to back collar seam offset": "front seam sits 2.50 in lower than the back seam on Apliiq's template (y 252 px front vs 202 px back, same 590 x 900 canvas)",
+    "sizes": "one print area and one placement for every size in the designer; each zone's production note pins the size and seam distance for S to XXL",
+    "fit check on S": "big front 10.00 in inside the 14.00 in area and 5.00 in clear of each side seam on a 20 in chest; minimal GA centre 4.00 in left of CF, 4.50 in clear of the side seam",
+    "placements as saved": {
+      "Minimal front": "GA 3.00 x 2.70 in, centre 4.00 in to the wearer's left of CF, top 3.00 in below the front collar seam (0.60 in below the area top)",
+      "Minimal back": "stacked lockup 6.00 x 2.26 in, centred, top 1.50 in below the back collar seam (1.30 in below the area top)",
+      "Big front": "lockup 10.00 x 2.67 in, centred, top 3.00 in below the front collar seam (0.60 in below the area top)"
+    }
+  },
+  "swatches": {
+    "Silver": "#DDDFE1 in the Apliiq designer, lighter than the planning #A2AAAD, so the red A check does not trigger; the A reads clearly on the render",
+    "site hexes": {
+      "Black": "#373737",
+      "True Royal": "#354CAA",
+      "White": "#E7E7E7",
+      "Silver": "#DDDFE1",
+      "True Red": "#C8102E"
+    }
+  },
+  "apliiq_designs": {
+    "GOAL Athletics GA Minimal Tee · Black": 6206215,
+    "GOAL Athletics GA Minimal Tee · True Royal": 6206254,
+    "GOAL Athletics GA Minimal Tee · White · Black-Red": 6206255,
+    "GOAL Athletics GA Minimal Tee · White · Royal": 6206257,
+    "GOAL Athletics GA Minimal Tee · Silver": 6206263,
+    "GOAL Athletics GA Minimal Tee · True Red": 6206277,
+    "GOAL Athletics GA Big Tee · Black": 6206229,
+    "GOAL Athletics GA Big Tee · True Royal": 6206234,
+    "GOAL Athletics GA Big Tee · White · Black-Red": 6206236,
+    "GOAL Athletics GA Big Tee · White · Royal": 6206239,
+    "GOAL Athletics GA Big Tee · Silver": 6206241,
+    "GOAL Athletics GA Big Tee · True Red": 6206251,
+    "proof pages": "https://www.apliiq.com/product/<id>/x",
+    "every design": "transfer print, hi-res file linked (Apliiq 'final artwork', ideal quality), production note per zone, ST720 tear-away label, no private label"
+  },
+  "quotes": {
+    "quote_verified": true,
+    "read": "2026-10-14 from the first saved design of each style (Black)",
+    "Minimal (front + back transfers)": {
+      "S": 20.46,
+      "XXL": 22.46,
+      "floor": 40
+    },
+    "Big (one front transfer)": {
+      "S": 14.47,
+      "XXL": 16.47,
+      "floor": 31
+    },
+    "formula": "(worst-size quote + $3 label + $1 fulfilment + $0.30 card fee) / 0.671, rounded up"
+  }
+}
