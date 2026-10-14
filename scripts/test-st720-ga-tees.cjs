@@ -54,7 +54,7 @@ const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
   // price and immutable supplier snapshot, without creating any real session.
   let captured;
   const open = { exports: {}, process: { env: { STRIPE_SECRET_KEY: 'sk_test_fixture_not_a_key', NEXT_PUBLIC_SITE_URL: 'https://goalathletics.shop' } }, require: n => {
-    if (n === 'stripe') return { default: class { constructor() { this.checkout = { sessions: { create: async input => { captured = input; return { url: 'https://checkout.example.test/fixture' }; } } }; } } };
+    if (n === 'stripe') return class { constructor() { this.checkout = { sessions: { create: async input => { captured = input; return { url: 'https://checkout.example.test/fixture' }; } } }; } };
     if (n === '@/lib/store-status') return { storeClosed: () => false };
     if (n === '@/lib/shipping') return require('../src/lib/shipping.ts');
     if (n === '@/lib/meta-capi') return { clientIpFrom: () => null };
