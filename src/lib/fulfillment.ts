@@ -359,6 +359,24 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
       },
     },
   },
+  // == GOAL Athletics hats (owner upload 2026-10-14) ==
+  // OTTO 31-069 Natural caps. Saved-design ids and SKUs read from each
+  // Apliiq product page on 2026-10-14. The catalog keeps both products at
+  // availableForSale false, so this mapping does not open purchasing.
+  // GOAL Athletics Monogram Cap (GA monogram, embroidery 2.25 x 2.03in)
+  "80000000-0000-4000-8000-000000000009": {
+    "Black/Natural": { apliiqProductId: 6205981, skus: { OS: "APQ-6205981S34A1" } },
+    "Red/Natural": { apliiqProductId: 6205977, skus: { OS: "APQ-6205977S34A1" } },
+    "Royal/Natural": { apliiqProductId: 6205982, skus: { OS: "APQ-6205982S34A1" } },
+    "Dark Green/Natural": { apliiqProductId: 6205989, skus: { OS: "APQ-6205989S34A1" } },
+  },
+  // GOAL Athletics Wordmark Cap (GOAL / bar / ATHLETICS, embroidery 4 x 1.51in)
+  "80000000-0000-4000-8000-000000000010": {
+    "Black/Natural": { apliiqProductId: 6205992, skus: { OS: "APQ-6205992S34A1" } },
+    "Red/Natural": { apliiqProductId: 6205994, skus: { OS: "APQ-6205994S34A1" } },
+    "Royal/Natural": { apliiqProductId: 6205995, skus: { OS: "APQ-6205995S34A1" } },
+  },
+  // == end GOAL Athletics hats ==
 };
 
 export interface ResolvedFulfillment {

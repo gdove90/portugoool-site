@@ -18,10 +18,23 @@ function retireProduct(source, id) {
   assert.equal(block.split(flags).length, 2, 'Retirement must change only the exact two flags');
   return source.slice(0, start) + block.replace(flags, '    isActive: false,\n    availableForSale: false,') + source.slice(end);
 }
+// Owner upload 2026-10-14: the new hats live in one marked block in
+// products.ts and one in fulfillment.ts. Preservation tests strip exactly
+// that block, so everything outside it must still equal production.
+const HAT_START = '  // == GOAL Athletics hats (owner upload 2026-10-14) ==\n';
+const HAT_END = '  // == end GOAL Athletics hats ==\n';
+function withoutHatAdditions(source) {
+  const start = source.indexOf(HAT_START);
+  if (start < 0) return source;
+  const end = source.indexOf(HAT_END, start);
+  assert(end > start, 'Unterminated GOAL Athletics hat block');
+  assert.equal(source.indexOf(HAT_START, end), -1, 'Only one hat block per file');
+  return source.slice(0, start) + source.slice(end + HAT_END.length);
+}
 function retireCoreBadgeBaseline(source) {
   return retireProduct(source, ID);
 }
 function applyRetirements(source) {
   return [ID, ...CAP_IDS].reduce(retireProduct, source);
 }
-module.exports = { ID, CAP_IDS, retireProduct, retireCoreBadgeBaseline, applyRetirements };
+module.exports = { ID, CAP_IDS, retireProduct, retireCoreBadgeBaseline, applyRetirements, withoutHatAdditions };

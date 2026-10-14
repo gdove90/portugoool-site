@@ -24,7 +24,7 @@ const evidence = {baseline, files:[], checks:[]};
 function check(name, fn) {fn();checks++;evidence.checks.push(name);console.log('PASS '+name);}
 check('payment, webhook authentication/handling, pricing, orders and fulfillment files equal production', () => {
   for (const file of files) {
-    const content = text(file);
+    const content = require('./retirement-baseline.cjs').withoutHatAdditions(text(file));
     let expected = original(file);
     if (file === 'src/lib/products.ts') expected = require('./retirement-baseline.cjs').applyRetirements(expected);
     if (file === 'src/app/api/track-order/route.ts') expected = expected.replaceAll('Email hello@goool.shop and', 'Email support@goalathletics.shop and');

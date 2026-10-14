@@ -22,7 +22,8 @@ async function main() {
     '70000000-0000-4000-8000-000000000006', '70000000-0000-4000-8000-000000000003',
     '70000000-0000-4000-8000-000000000005', '70000000-0000-4000-8000-000000000004',
     '80000000-0000-4000-8000-000000000006', '80000000-0000-4000-8000-000000000007',
-    '80000000-0000-4000-8000-000000000008',
+    '80000000-0000-4000-8000-000000000008', '80000000-0000-4000-8000-000000000009',
+    '80000000-0000-4000-8000-000000000010',
   ];
   const catalogCode = ts.transpileModule(fs.readFileSync('src/v84/catalog-data.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
   vm.runInNewContext(catalogCode, { exports: catalogExports, require: name => {
@@ -233,7 +234,7 @@ async function main() {
         assert.deepEqual(after, before, file);
         continue;
       }
-      assert.equal(current.toString().replace(/\r\n/g, '\n'), baseline, file);
+      assert.equal(require('./retirement-baseline.cjs').withoutHatAdditions(current.toString().replace(/\r\n/g, '\n')), baseline, file);
     }
     console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; Brand, closure and worker changes have separate checks.`);
   });

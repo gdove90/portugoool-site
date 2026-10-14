@@ -2823,6 +2823,126 @@ export const products: Product[] = [
     customNumberAvailable: false,
     customizationPriceCents: 0,
   },
+  // == GOAL Athletics hats (owner upload 2026-10-14) ==
+  // OTTO 31-069 Natural caps saved on Apliiq by the owner 2026-10-14; one
+  // Apliiq design per colourway, mapped in fulfillment.ts. Visible but not
+  // purchasable until checkout is verified separately (owner brief).
+  {
+    id: "80000000-0000-4000-8000-000000000009",
+    name: "GOAL Athletics Monogram Cap",
+    slug: "goal-athletics-monogram-cap",
+    description:
+      "Structured five-panel cap with a natural front and a coloured visor. GA monogram embroidered on the front panel, adjustable snap.",
+    priceCents: 3200,
+    compareAtPriceCents: null,
+    color: "Black/Natural",
+    colorHex: "#111111",
+    fabric:
+      "65% polyester, 35% cotton twill over a firm buckram front. Buckram is the stiffener behind the front panel, and it is what holds the crown up instead of letting it collapse.",
+    fit:
+      "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
+    careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
+    images: [
+      { src: "/products/goal-monogram-cap-black.webp", alt: "GOAL Athletics Monogram Cap with black visor, front view" },
+    ],
+    colorVariants: [
+      {
+        name: "Black/Natural",
+        supplierColor: "Black/Natural",
+        hex: "#111111",
+        skuFragment: "BLACK",
+        images: [{ src: "/products/goal-monogram-cap-black.webp", alt: "GOAL Athletics Monogram Cap with black visor, front view" }],
+      },
+      {
+        name: "Red/Natural",
+        supplierColor: "Red/Natural",
+        hex: "#C8102E",
+        skuFragment: "RED",
+        images: [{ src: "/products/goal-monogram-cap-red.webp", alt: "GOAL Athletics Monogram Cap with red visor, front view" }],
+      },
+      {
+        name: "Royal/Natural",
+        supplierColor: "Royal/Natural",
+        hex: "#1F2F6B",
+        skuFragment: "ROYAL",
+        images: [{ src: "/products/goal-monogram-cap-royal.webp", alt: "GOAL Athletics Monogram Cap with royal visor, front view" }],
+      },
+      {
+        name: "Dark Green/Natural",
+        supplierColor: "Dark Green/Natural",
+        hex: "#0B3D2E",
+        skuFragment: "GREEN",
+        images: [{ src: "/products/goal-monogram-cap-dark-green.webp", alt: "GOAL Athletics Monogram Cap with dark green visor, front view" }],
+      },
+    ],
+    sizes: ["OS"],
+    category: "hat",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000010",
+    name: "GOAL Athletics Wordmark Cap",
+    slug: "goal-athletics-wordmark-cap",
+    description:
+      "Structured five-panel cap with a natural front and a coloured visor. GOAL ATHLETICS wordmark with bar embroidered on the front panel, adjustable snap.",
+    priceCents: 3200,
+    compareAtPriceCents: null,
+    color: "Black/Natural",
+    colorHex: "#111111",
+    fabric:
+      "65% polyester, 35% cotton twill over a firm buckram front. Buckram is the stiffener behind the front panel, and it is what holds the crown up instead of letting it collapse.",
+    fit:
+      "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
+    careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
+    images: [
+      { src: "/products/goal-wordmark-cap-black.webp", alt: "GOAL Athletics Wordmark Cap with black visor, front view" },
+    ],
+    colorVariants: [
+      {
+        name: "Black/Natural",
+        supplierColor: "Black/Natural",
+        hex: "#111111",
+        skuFragment: "BLACK",
+        images: [{ src: "/products/goal-wordmark-cap-black.webp", alt: "GOAL Athletics Wordmark Cap with black visor, front view" }],
+      },
+      {
+        name: "Red/Natural",
+        supplierColor: "Red/Natural",
+        hex: "#C8102E",
+        skuFragment: "RED",
+        images: [{ src: "/products/goal-wordmark-cap-red.webp", alt: "GOAL Athletics Wordmark Cap with red visor, front view" }],
+      },
+      {
+        name: "Royal/Natural",
+        supplierColor: "Royal/Natural",
+        hex: "#1F2F6B",
+        skuFragment: "ROYAL",
+        images: [{ src: "/products/goal-wordmark-cap-royal.webp", alt: "GOAL Athletics Wordmark Cap with royal visor, front view" }],
+      },
+    ],
+    sizes: ["OS"],
+    category: "hat",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics hats ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────
