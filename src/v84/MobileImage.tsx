@@ -6,6 +6,7 @@ import photographyImages from "./photography-images.json";
 const sources = images as Record<string, string>;
 const desktopSources = desktopImages as Record<string, string>;
 const photographs = photographyImages as Record<string, { src: string; desktop: string; mobile: string }>;
+export const photographySource = (src: string) => photographs[src]?.src ?? src;
 /** Responsive photography, including the owner-requested V3.0 bolt edits.
  * Archived originals remain intact; every revised format uses the same image. */
 export function MobileImage(props: ImgHTMLAttributes<HTMLImageElement>) {

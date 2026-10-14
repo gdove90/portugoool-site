@@ -1,5 +1,6 @@
 
 import { InterfaceIcon } from "@/v84/InterfaceIcon";
+import { photographySource } from "@/v84/MobileImage";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./CollectionComingSoon.module.css";
@@ -14,7 +15,7 @@ type Props = {
 export default function TempoComingSoon({ collection, audience, image, imageAlt }: Props) {
   return (
     <section className={styles.hero} aria-labelledby="collection-title">
-      <Image src={image} alt={imageAlt} fill priority sizes="100vw" className={styles.photo} />
+      <Image src={photographySource(image)} alt={imageAlt} fill priority sizes="100vw" className={styles.photo} />
       <div className={styles.shade} aria-hidden="true" />
       <div className={styles.content}>
         <p className={styles.status}>Coming soon</p>
