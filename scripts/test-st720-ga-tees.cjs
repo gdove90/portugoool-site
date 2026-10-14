@@ -1,13 +1,13 @@
-// Published ST720 GA tees: $38, S–2XL, five selectable colorways each.
-// Silver removed by owner; supplier history retained and forged selection denied.
+// Published ST720 GA tees: $38, S–2XL, four selectable colorways each.
+// Silver and White/Royal removed; historical mappings stay intact.
 // No network, database or provider calls.
 const fs = require('fs'), assert = require('assert/strict'), ts = require('typescript'), vm = require('vm');
 require.extensions['.ts'] = (m, f) => m._compile(ts.transpileModule(fs.readFileSync(f, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, resolveJsonModule: true, esModuleInterop: true } }).outputText, f);
 const p = require('../src/lib/products.ts'), f = require('../src/lib/fulfillment.ts'), types = require('../src/lib/types.ts');
-const ORDER = ['Black', 'True Royal', 'White · Black-Red', 'White · Royal', 'True Red'];
+const ORDER = ['Black', 'True Royal', 'White · Black-Red', 'True Red'];
 const TEES = {
-  'goal-athletics-ga-minimal-tee': { id: '80000000-0000-4000-8000-000000000011', ids: [6206215, 6206254, 6206255, 6206257, 6206277], silver: 6206263 },
-  'goal-athletics-ga-big-tee': { id: '80000000-0000-4000-8000-000000000012', ids: [6206229, 6206234, 6206236, 6206239, 6206251], silver: 6206241 },
+  'goal-athletics-ga-minimal-tee': { id: '80000000-0000-4000-8000-000000000011', ids: [6206215, 6206254, 6206255, 6206277], removed: { Silver: 6206263, 'White · Royal': 6206257 } },
+  'goal-athletics-ga-big-tee': { id: '80000000-0000-4000-8000-000000000012', ids: [6206229, 6206234, 6206236, 6206251], removed: { Silver: 6206241, 'White · Royal': 6206239 } },
 };
 const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
 (async () => {
@@ -72,12 +72,12 @@ const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
     assert.equal(captured.cancel_url, 'https://goalathletics.shop/cart');
     assert.match(captured.success_url, /^https:\/\/goalathletics\.shop\/success/);
   }
-  for (const tee of Object.values(TEES)) {
+  for (const tee of Object.values(TEES)) for (const [color, supplierId] of Object.entries(tee.removed)) {
     captured = undefined;
-    const r = await open.exports.POST({ json: async () => ({ items: [{ productId: tee.id, size: 'M', color: 'Silver', quantity: 1, customName: null, customNumber: null }] }), headers: { get: () => null } });
-    assert.equal(r.status, 400, 'removed Silver rejected even if store opens');
+    const r = await open.exports.POST({ json: async () => ({ items: [{ productId: tee.id, size: 'M', color, quantity: 1, customName: null, customNumber: null }] }), headers: { get: () => null } });
+    assert.equal(r.status, 400, `removed ${color} rejected even if store opens`);
     assert.equal(captured, undefined, 'removed color never creates checkout');
-    for (const [size, code] of Object.entries(SIZES)) assert.deepEqual(f.resolveApliiqSku(tee.id, 'Silver', size), { apliiqProductId: tee.silver, sku: `APQ-${tee.silver}S${code}A1` }, 'historical Silver mapping preserved');
+    for (const [size, code] of Object.entries(SIZES)) assert.deepEqual(f.resolveApliiqSku(tee.id, color, size), { apliiqProductId: supplierId, sku: `APQ-${supplierId}S${code}A1` }, `historical ${color} mapping preserved`);
   }
-  console.log(`PASS 2 ST720 tees at $38, ${variants} selectable colorways and 50 size mappings; Silver checkout denied, historical mappings preserved, S–2XL unchanged. No network/database/provider calls.`);
+  console.log(`PASS 2 ST720 tees at $38, ${variants} selectable colorways and 40 size mappings; removed colors denied, historical mappings preserved, S–2XL unchanged. No network/database/provider calls.`);
 })().catch(e => { console.error(e); process.exitCode = 1; });
