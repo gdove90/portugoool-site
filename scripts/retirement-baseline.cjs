@@ -21,11 +21,12 @@ function retireProduct(source, id) {
 // Owner upload 2026-10-14: the new hats live in one marked block in
 // products.ts and one in fulfillment.ts. Preservation tests strip exactly
 // that block, so everything outside it must still equal production.
-// The ST720 GA tees (owner handoff 2026-10-14) follow the same rule with
-// their own marked block, directly after the hats.
+// The ST720 GA tees and IND4000 hoodies (owner handoffs 2026-10-14) follow
+// the same rule with their own marked blocks, directly after the hats.
 const BLOCKS = [
   ['  // == GOAL Athletics hats (owner upload 2026-10-14) ==\n', '  // == end GOAL Athletics hats ==\n'],
   ['  // == GOAL Athletics ST720 GA tees (owner handoff 2026-10-14) ==\n', '  // == end GOAL Athletics ST720 GA tees ==\n'],
+  ['  // == GOAL Athletics IND4000 hoodies (owner handoff 2026-10-14) ==\n', '  // == end GOAL Athletics IND4000 hoodies ==\n'],
 ];
 function withoutBlock(source, [open, close]) {
   const start = source.indexOf(open);

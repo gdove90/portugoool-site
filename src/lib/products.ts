@@ -3184,6 +3184,381 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics ST720 GA tees ==
+  // == GOAL Athletics IND4000 hoodies (owner handoff 2026-10-14) ==
+  // IND4000 heavyweight pullover, DTF transfer. Twelve Apliiq designs saved
+  // 2026-10-14, mapped in fulfillment.ts. Hidden (isActive false) and priced
+  // at 0 until the owner sets prices: designs/27_ind4000-goal-hoodie-2026-10-14/.
+  // Images are Apliiq's renders; no style has a back print, so every back image
+  // is the plain Lockup back. Same blank as the GOOOL Core Hoodie, so the
+  // fabric, fit and care lines are the same. Big Stack was dropped by the owner.
+  {
+    id: "80000000-0000-4000-8000-000000000013",
+    name: "GOAL Athletics Heritage Hoodie",
+    slug: "goal-athletics-heritage-hoodie",
+    blank: "IND4000",
+    description:
+      "Heavyweight pullover hoodie. GA monogram centred on the chest, a second GA on the left sleeve, clean back.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#1E1E1E",
+    fabric:
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-heritage-hoodie-black-front.webp",
+        alt: "GOAL Athletics Heritage Hoodie in black, front view with the white and red GA monogram centred on the chest",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-lockup-hoodie-black-back.webp",
+        alt: "GOAL Athletics Heritage Hoodie in black, back view, no print",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-heritage-hoodie-black-sleeve.webp",
+        alt: "GOAL Athletics Heritage Hoodie in black, left side view with the white and red GA monogram on the left sleeve",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#1E1E1E",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-black-front.webp",
+            alt: "GOAL Athletics Heritage Hoodie in black, front view with the white and red GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-black-back.webp",
+            alt: "GOAL Athletics Heritage Hoodie in black, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-sleeve.webp",
+            alt: "GOAL Athletics Heritage Hoodie in black, left side view with the white and red GA monogram on the left sleeve",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Navy",
+        supplierColor: "navy",
+        hex: "#1F2A44",
+        skuFragment: "NAVY",
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-navy-front.webp",
+            alt: "GOAL Athletics Heritage Hoodie in navy, front view with the cream GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-navy-back.webp",
+            alt: "GOAL Athletics Heritage Hoodie in navy, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-navy-sleeve.webp",
+            alt: "GOAL Athletics Heritage Hoodie in navy, left side view with the cream GA monogram on the left sleeve",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Bone",
+        supplierColor: "Bone",
+        hex: "#CFCAC7",
+        skuFragment: "BONE",
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-bone-front.webp",
+            alt: "GOAL Athletics Heritage Hoodie in bone, front view with the black and red GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-bone-back.webp",
+            alt: "GOAL Athletics Heritage Hoodie in bone, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-bone-sleeve.webp",
+            alt: "GOAL Athletics Heritage Hoodie in bone, left side view with the black and red GA monogram on the left sleeve",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Grey Heather",
+        supplierColor: "Grey Heather",
+        hex: "#D9D9D9",
+        skuFragment: "GREYHEATHER",
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-front.webp",
+            alt: "GOAL Athletics Heritage Hoodie in grey heather, front view with the black and red GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-back.webp",
+            alt: "GOAL Athletics Heritage Hoodie in grey heather, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-sleeve.webp",
+            alt: "GOAL Athletics Heritage Hoodie in grey heather, left side view with the black and red GA monogram on the left sleeve",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "apliiq",
+    isActive: false,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000014",
+    name: "GOAL Athletics Minimal Hoodie",
+    slug: "goal-athletics-minimal-hoodie",
+    blank: "IND4000",
+    description:
+      "Heavyweight pullover hoodie. GA monogram on the left chest, clean back.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#1E1E1E",
+    fabric:
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-minimal-hoodie-black-front.webp",
+        alt: "GOAL Athletics Minimal Hoodie in black, front view with the white and red GA monogram on the left chest",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-lockup-hoodie-black-back.webp",
+        alt: "GOAL Athletics Minimal Hoodie in black, back view, no print",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#1E1E1E",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-minimal-hoodie-black-front.webp",
+            alt: "GOAL Athletics Minimal Hoodie in black, front view with the white and red GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-black-back.webp",
+            alt: "GOAL Athletics Minimal Hoodie in black, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Navy",
+        supplierColor: "navy",
+        hex: "#1F2A44",
+        skuFragment: "NAVY",
+        images: [
+          {
+            src: "/products/goal-minimal-hoodie-navy-front.webp",
+            alt: "GOAL Athletics Minimal Hoodie in navy, front view with the cream GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-navy-back.webp",
+            alt: "GOAL Athletics Minimal Hoodie in navy, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Bone",
+        supplierColor: "Bone",
+        hex: "#CFCAC7",
+        skuFragment: "BONE",
+        images: [
+          {
+            src: "/products/goal-minimal-hoodie-bone-front.webp",
+            alt: "GOAL Athletics Minimal Hoodie in bone, front view with the black and red GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-bone-back.webp",
+            alt: "GOAL Athletics Minimal Hoodie in bone, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Grey Heather",
+        supplierColor: "Grey Heather",
+        hex: "#D9D9D9",
+        skuFragment: "GREYHEATHER",
+        images: [
+          {
+            src: "/products/goal-minimal-hoodie-grey-heather-front.webp",
+            alt: "GOAL Athletics Minimal Hoodie in grey heather, front view with the black and red GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-back.webp",
+            alt: "GOAL Athletics Minimal Hoodie in grey heather, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "apliiq",
+    isActive: false,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000015",
+    name: "GOAL Athletics Lockup Hoodie",
+    slug: "goal-athletics-lockup-hoodie",
+    blank: "IND4000",
+    description:
+      "Heavyweight pullover hoodie. GA and GOAL ATHLETICS lockup across the chest, clean back.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#1E1E1E",
+    fabric:
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-lockup-hoodie-black-front.webp",
+        alt: "GOAL Athletics Lockup Hoodie in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-lockup-hoodie-black-back.webp",
+        alt: "GOAL Athletics Lockup Hoodie in black, back view, no print",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#1E1E1E",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-black-front.webp",
+            alt: "GOAL Athletics Lockup Hoodie in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-black-back.webp",
+            alt: "GOAL Athletics Lockup Hoodie in black, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Navy",
+        supplierColor: "navy",
+        hex: "#1F2A44",
+        skuFragment: "NAVY",
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-navy-front.webp",
+            alt: "GOAL Athletics Lockup Hoodie in navy, front view with the cream GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-navy-back.webp",
+            alt: "GOAL Athletics Lockup Hoodie in navy, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Bone",
+        supplierColor: "Bone",
+        hex: "#CFCAC7",
+        skuFragment: "BONE",
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-bone-front.webp",
+            alt: "GOAL Athletics Lockup Hoodie in bone, front view with the black and red GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-bone-back.webp",
+            alt: "GOAL Athletics Lockup Hoodie in bone, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Grey Heather",
+        supplierColor: "Grey Heather",
+        hex: "#D9D9D9",
+        skuFragment: "GREYHEATHER",
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-front.webp",
+            alt: "GOAL Athletics Lockup Hoodie in grey heather, front view with the black and red GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-back.webp",
+            alt: "GOAL Athletics Lockup Hoodie in grey heather, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "apliiq",
+    isActive: false,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics IND4000 hoodies ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────
