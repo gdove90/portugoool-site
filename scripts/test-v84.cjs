@@ -24,6 +24,7 @@ async function main() {
     '80000000-0000-4000-8000-000000000006', '80000000-0000-4000-8000-000000000007',
     '80000000-0000-4000-8000-000000000008', '80000000-0000-4000-8000-000000000009',
     '80000000-0000-4000-8000-000000000010',
+    '80000000-0000-4000-8000-000000000011', '80000000-0000-4000-8000-000000000012',
   ];
   const catalogCode = ts.transpileModule(fs.readFileSync('src/v84/catalog-data.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
   vm.runInNewContext(catalogCode, { exports: catalogExports, require: name => {

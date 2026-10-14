@@ -7,24 +7,20 @@
 -- src/lib/orders-store.ts); this file keeps the audit trail, as 0033 to
 -- 0035 do.
 --
--- Both rows are hidden (is_active false) with price_cents 0 ("Price to
--- be announced") until the owner sets the price. Re-run with the real
--- price and flags in the same commit that publishes them.
---
--- Apply via the Supabase dashboard SQL editor (the established workflow;
--- the org-scoped MCP connector cannot see this project). Idempotent.
--- NOT YET APPLIED (2026-10-14).
+-- Owner approved publication on 2026-10-14 at the existing ST720 price:
+-- Minimal $38 and Big $38. Existing storefront renovation gate stays closed.
+-- Idempotent catalog upsert; no historical orders or supplier designs changed.
 
 insert into public.products
   (id, name, slug, description, price_cents, color, color_hex,
    sizes, product_category, supplier_type, is_active, available_for_sale)
 values
   ('80000000-0000-4000-8000-000000000011', 'GOAL Athletics GA Minimal Tee',
-   'goal-athletics-ga-minimal-tee', '', 0, 'Black', '#373737',
-   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', false, false),
+   'goal-athletics-ga-minimal-tee', '', 3800, 'Black', '#373737',
+   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, true),
   ('80000000-0000-4000-8000-000000000012', 'GOAL Athletics GA Big Tee',
-   'goal-athletics-ga-big-tee', '', 0, 'Black', '#373737',
-   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', false, false)
+   'goal-athletics-ga-big-tee', '', 3800, 'Black', '#373737',
+   array['S','M','L','XL','XXL'], 'tshirt', 'apliiq', true, true)
 on conflict (id) do update
   set name              = excluded.name,
       slug              = excluded.slug,
