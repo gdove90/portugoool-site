@@ -33,11 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // · GOAL". The brand is stripped here and the template puts it back
   // once, with the price, which is what a shopper scans for in a result.
   const short = product.name.replace(/^GOOOL\s+/, "");
-  const price = `$${(product.priceCents / 100).toFixed(0)}`;
+  const price = product.priceCents > 0 ? `${(product.priceCents / 100).toFixed(0)}` : "Coming soon";
 
   return {
     title: `${short} · ${price}`,
     description: product.description,
+    ...(product.priceCents <= 0 ? { robots: { index: false, follow: true } } : {}),
     alternates: { canonical: `/shop/${product.slug}` },
     openGraph: {
       title: `${product.name} · ${price}`,
