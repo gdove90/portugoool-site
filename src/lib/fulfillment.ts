@@ -400,6 +400,32 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "True Red": { apliiqProductId: 6206251, skus: { S: "APQ-6206251S6A1", M: "APQ-6206251S7A1", L: "APQ-6206251S8A1", XL: "APQ-6206251S1A1", XXL: "APQ-6206251S2A1" } },
   },
   // == end GOAL Athletics ST720 GA tees ==
+  // == GOAL Athletics IND4000 hoodies (owner handoff 2026-10-14) ==
+  // Saved-design ids read from the Apliiq saved designs list on 2026-10-14;
+  // size codes read from the product page SKU list. All three products
+  // are hidden with no price, so this mapping opens nothing.
+  // Heritage (GA 3.50in centre chest + GA 3.00in left sleeve; back print removed 2026-10-14)
+  "80000000-0000-4000-8000-000000000013": {
+    "Black": { apliiqProductId: 6206334, skus: { S: "APQ-6206334S6A1", M: "APQ-6206334S7A1", L: "APQ-6206334S8A1", XL: "APQ-6206334S1A1", XXL: "APQ-6206334S2A1" } },
+    "Navy": { apliiqProductId: 6206365, skus: { S: "APQ-6206365S6A1", M: "APQ-6206365S7A1", L: "APQ-6206365S8A1", XL: "APQ-6206365S1A1", XXL: "APQ-6206365S2A1" } },
+    "Bone": { apliiqProductId: 6206384, skus: { S: "APQ-6206384S6A1", M: "APQ-6206384S7A1", L: "APQ-6206384S8A1", XL: "APQ-6206384S1A1", XXL: "APQ-6206384S2A1" } },
+    "Grey Heather": { apliiqProductId: 6206395, skus: { S: "APQ-6206395S6A1", M: "APQ-6206395S7A1", L: "APQ-6206395S8A1", XL: "APQ-6206395S1A1", XXL: "APQ-6206395S2A1" } },
+  },
+  // Minimal (GA 3.50in left chest; back print removed 2026-10-14)
+  "80000000-0000-4000-8000-000000000014": {
+    "Black": { apliiqProductId: 6206401, skus: { S: "APQ-6206401S6A1", M: "APQ-6206401S7A1", L: "APQ-6206401S8A1", XL: "APQ-6206401S1A1", XXL: "APQ-6206401S2A1" } },
+    "Navy": { apliiqProductId: 6206408, skus: { S: "APQ-6206408S6A1", M: "APQ-6206408S7A1", L: "APQ-6206408S8A1", XL: "APQ-6206408S1A1", XXL: "APQ-6206408S2A1" } },
+    "Bone": { apliiqProductId: 6206414, skus: { S: "APQ-6206414S6A1", M: "APQ-6206414S7A1", L: "APQ-6206414S8A1", XL: "APQ-6206414S1A1", XXL: "APQ-6206414S2A1" } },
+    "Grey Heather": { apliiqProductId: 6206424, skus: { S: "APQ-6206424S6A1", M: "APQ-6206424S7A1", L: "APQ-6206424S8A1", XL: "APQ-6206424S1A1", XXL: "APQ-6206424S2A1" } },
+  },
+  // Lockup (GA + GOAL ATHLETICS 10.00in across the chest)
+  "80000000-0000-4000-8000-000000000015": {
+    "Black": { apliiqProductId: 6206733, skus: { S: "APQ-6206733S6A1", M: "APQ-6206733S7A1", L: "APQ-6206733S8A1", XL: "APQ-6206733S1A1", XXL: "APQ-6206733S2A1" } },
+    "Navy": { apliiqProductId: 6206737, skus: { S: "APQ-6206737S6A1", M: "APQ-6206737S7A1", L: "APQ-6206737S8A1", XL: "APQ-6206737S1A1", XXL: "APQ-6206737S2A1" } },
+    "Bone": { apliiqProductId: 6206741, skus: { S: "APQ-6206741S6A1", M: "APQ-6206741S7A1", L: "APQ-6206741S8A1", XL: "APQ-6206741S1A1", XXL: "APQ-6206741S2A1" } },
+    "Grey Heather": { apliiqProductId: 6206746, skus: { S: "APQ-6206746S6A1", M: "APQ-6206746S7A1", L: "APQ-6206746S8A1", XL: "APQ-6206746S1A1", XXL: "APQ-6206746S2A1" } },
+  },
+  // == end GOAL Athletics IND4000 hoodies ==
 };
 
 export interface ResolvedFulfillment {

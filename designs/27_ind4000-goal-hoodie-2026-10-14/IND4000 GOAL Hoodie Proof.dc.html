@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#FFFFFF;} a{color:#E51226;} a:hover{color:#0A0A0A;}</style>
+</helmet>
+<div style="font-family:Barlow,sans-serif;color:#0A0A0A;background:#FFFFFF;min-height:100vh;">
+  <div style="background:#0A0A0A;padding:28px clamp(20px,4vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+    <img src="uploads/AutoCap-WhiteRed-Lockup.png" alt="GOAL Athletics" style="height:48px;width:auto;display:block;">
+    <div style="color:rgba(255,255,255,0.72);font-size:15px;">Placement proof · Independent IND4000 · 14 Oct 2026</div>
+  </div>
+
+  <div style="padding:48px clamp(20px,4vw,56px) 24px;display:flex;flex-direction:column;gap:12px;">
+    <div style="font-family:Anton;font-size:clamp(40px,6vw,76px);line-height:0.95;">IND4000 HEAVYWEIGHT HOODIE · GA STACK</div>
+    <div style="font-size:19px;line-height:1.5;color:rgba(10,10,10,0.72);max-width:880px;text-wrap:pretty;">Three styles, four colours. Minimal: GA on the left chest, with GOAL ATHLETICS on the upper back. Big Stack: the stacked GA / GOAL / ATHLETICS lockup across the chest, above the pocket. Heritage: GA centred on the chest, a second GA on the left sleeve above the cuff, GOAL ATHLETICS on the upper back. All art comes from the V1.3 vector masters and is drawn to scale on a size S (1 square = 1 in). The dashed outline on the back is the hood lying flat.</div>
+  </div>
+
+  <div style="padding:16px clamp(20px,4vw,56px) 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:40px;">
+    <sc-for list="{{ boards }}" as="b" hint-placeholder-count="4">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+          <span style="font-family:Anton;font-size:30px;">{{ b.style }}</span>
+          <span style="font-size:17px;font-weight:700;">{{ b.colour }}</span>
+          <span style="font-size:15px;color:rgba(10,10,10,0.6);">{{ b.ink }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;">
+          <div style="background:#EFEFEC;display:flex;flex-direction:column;gap:6px;padding:12px;">
+            <div style="position:relative;">
+              <svg viewBox="0 -2 30 36" style="width:100%;height:auto;display:block;">
+                <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><path d="{{ grid }}" stroke="rgba(10,10,10,0.07)" stroke-width="0.04" fill="none"></path></sc-if>
+                <path d="M10,2.5 Q9,-1.4 15,-1.6 Q21,-1.4 20,2.5 Z" fill="{{ b.hex }}" stroke="rgba(0,0,0,0.35)" stroke-width="0.06"></path>
+                <path d="M10,2.5 Q15,7 20,2.5 L25.5,4.5 L29.5,24 L26.5,24.6 L25.5,12 L25.5,30.5 L4.5,30.5 L4.5,12 L3.5,24.6 L0.5,24 L4.5,4.5 Z" fill="{{ b.hex }}" stroke="rgba(0,0,0,0.35)" stroke-width="0.06"></path>
+                <path d="M10,2.5 Q15,7 20,2.5 Q19,0 15,-0.2 Q11,0 10,2.5 Z" fill="rgba(0,0,0,0.22)"></path>
+                <path d="M9.5,20 L20.5,20 L22,27.5 L8,27.5 Z" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="0.07"></path>
+                <path d="M4.5,27.5 H25.5" stroke="rgba(0,0,0,0.3)" stroke-width="0.07"></path>
+                <path d="M14,4.8 V11 M16,4.8 V11" stroke="{{ b.cord }}" stroke-width="0.14" stroke-linecap="round"></path>
+                <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><line x1="{{ b.fmx }}" y1="4.75" x2="{{ b.fmx }}" y2="8" stroke="#E51226" stroke-width="0.08" stroke-dasharray="0.25 0.18"></line></sc-if>
+              </svg>
+              <div role="img" aria-label="front print" style="{{ b.fStyle }}"></div><div role="img" aria-label="sleeve print, front view" style="{{ b.sfStyle }}"></div>
+            </div>
+            <div style="font-size:14px;font-weight:700;letter-spacing:0.12em;text-align:center;">FRONT</div>
+          </div>
+          <div style="background:#EFEFEC;display:flex;flex-direction:column;gap:6px;padding:12px;">
+            <div style="position:relative;">
+              <svg viewBox="0 -2 30 36" style="width:100%;height:auto;display:block;">
+                <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><path d="{{ grid }}" stroke="rgba(10,10,10,0.07)" stroke-width="0.04" fill="none"></path></sc-if>
+                <path d="M10,2.5 Q15,3.5 20,2.5 L25.5,4.5 L29.5,24 L26.5,24.6 L25.5,12 L25.5,30.5 L4.5,30.5 L4.5,12 L3.5,24.6 L0.5,24 L4.5,4.5 Z" fill="{{ b.hex }}" stroke="rgba(0,0,0,0.35)" stroke-width="0.06"></path>
+                <path d="M4.5,27.5 H25.5" stroke="rgba(0,0,0,0.3)" stroke-width="0.07"></path>
+                <path d="M10,2.5 Q8.2,10.5 15,14.8 Q21.8,10.5 20,2.5 Q15,3.5 10,2.5 Z" fill="rgba(0,0,0,0.08)" stroke="rgba(0,0,0,0.45)" stroke-width="0.08" stroke-dasharray="0.3 0.2"></path>
+                <sc-if value="{{ b.showBackLine }}" hint-placeholder-val="{{ true }}"><line x1="15" y1="3" x2="15" y2="{{ b.bLineY }}" stroke="#E51226" stroke-width="0.08" stroke-dasharray="0.25 0.18"></line></sc-if>
+              </svg>
+              <sc-if value="{{ b.hasBack }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="back print" style="{{ b.bStyle }}"></div></sc-if>
+            </div>
+            <div style="font-size:14px;font-weight:700;letter-spacing:0.12em;text-align:center;">{{ b.backLabel }}</div>
+          </div>
+          <sc-if value="{{ b.hasSleeve }}" hint-placeholder-val="{{ false }}">
+            <div style="background:#EFEFEC;display:flex;flex-direction:column;gap:6px;padding:12px;">
+              <div style="position:relative;">
+                <svg viewBox="-4 -1 16 25" style="width:100%;height:auto;display:block;">
+                  <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><path d="{{ sgrid }}" stroke="rgba(10,10,10,0.07)" stroke-width="0.04" fill="none"></path></sc-if>
+                  <path d="M0,0 L8,0 L6.6,19 L1.4,19 Z" fill="{{ b.hex }}" stroke="rgba(0,0,0,0.35)" stroke-width="0.06"></path>
+                  <path d="M1.4,19 L6.6,19 L6.4,22.5 L1.6,22.5 Z" fill="{{ b.hex }}" stroke="rgba(0,0,0,0.35)" stroke-width="0.06"></path>
+                  <path d="M2.4,19.2 V22.3 M3.4,19.2 V22.3 M4.4,19.2 V22.3 M5.4,19.2 V22.3" stroke="rgba(0,0,0,0.12)" stroke-width="0.06"></path>
+                  <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><line x1="4" y1="16" x2="4" y2="19" stroke="#E51226" stroke-width="0.08" stroke-dasharray="0.25 0.18"></line></sc-if>
+                </svg>
+                <div role="img" aria-label="sleeve print" style="{{ b.sStyle }}"></div>
+              </div>
+              <div style="font-size:14px;font-weight:700;letter-spacing:0.12em;text-align:center;">LEFT SLEEVE</div>
+            </div>
+          </sc-if>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(70px,90px) minmax(0,1fr);gap:8px 16px;font-size:16px;line-height:1.45;">
+          <div style="font-weight:700;">Front</div><div>{{ b.frontSpec }}</div>
+          <div style="font-weight:700;">Back</div><div>{{ b.backSpec }}</div>
+          <sc-if value="{{ b.hasSleeve }}" hint-placeholder-val="{{ false }}"><div style="font-weight:700;">Sleeve</div></sc-if><sc-if value="{{ b.hasSleeve }}" hint-placeholder-val="{{ false }}"><div>{{ b.sleeveSpec }}</div></sc-if>
+          <div style="font-weight:700;">Files</div><div style="color:rgba(10,10,10,0.7);">{{ b.files }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="padding:48px clamp(20px,4vw,56px);background:#F4F4F2;display:flex;flex-direction:column;gap:24px;">
+    <div style="font-family:Anton;font-size:32px;">PRODUCTION SPEC</div>
+    <div style="display:grid;grid-template-columns:minmax(120px,200px) minmax(0,1fr);gap:14px 28px;font-size:17px;line-height:1.5;max-width:1000px;">
+      <div style="font-weight:700;">Blank</div><div>Independent Trading Co IND4000 Heavyweight Hooded Pullover, 10 oz (via Apliiq). Colours: Black, Classic Navy, Bone, Grey Heather. Confirm the exact navy name in the Apliiq designer.</div>
+      <div style="font-weight:700;">Research</div><div>Left chest is still the strongest placement on heavyweight fleece. Current direction keeps the front minimal and puts the brand story on the back. Champion's Reverse Weave puts its C logo on the left sleeve near the cuff, and Nike Tech Fleece puts the Swoosh on the left sleeve. Heritage follows that sleeve tradition.</div>
+      <div style="font-weight:700;">Sizes</div><div>S, M, L, XL, XXL. Same files and positions on every size. S chest is 21 in flat.</div>
+      <div style="font-weight:700;">Method</div><div>DTF transfer, all placements.</div>
+      <div style="font-weight:700;">Apliiq limits</div><div>Transfer print maximums (Apliiq IND4000 page, 14 Oct 2026): front 13.5 × 15 in, back 15 × 19 in, each sleeve 3.5 × 19 in. Every placement fits: left chest GA 3.50 × 3.15, big stack 9.00 × 7.45, back wordmark 8.00 × 2.44, sleeve GA 3.00 × 2.70 (0.25 in spare each side of the 3.5 in sleeve width).</div>
+      <div style="font-weight:700;">Measured from</div><div>Front: hood seam at centre front. Back: back hood seam at centre back. Left chest is the wearer's left.</div>
+      <div style="font-weight:700;">Ink</div><div>Black: White #FFFFFF + Red #E51226. Classic Navy: Cream #F9F1DF, one colour. Bone and Grey Heather: Black #080808 + Red #E51226. The red A is softer on Grey Heather (about 2.3:1) than on Bone (2.8:1); the black lettering is strong on both.</div>
+      <div style="font-weight:700;">Measured detail</div><div>GA at 3.50 in: smallest gap 3.78 mm. Back wordmark at 8.00 in: smallest gap 2.65 mm (same letter scale as the stack at 8.00 in). Stack at 9.00 in: smallest gap 2.42 mm. The 1.8–1.9 mm stroke readings are the pointed GA tips. The stack fails below 7.45 in wide (gaps in ATHLETICS drop under 2 mm), so 8.00 in is the smallest back width.</div>
+      <div style="font-weight:700;">Clearances (S)</div><div>Big front: art ends 10.45 in below the CF hood seam; pocket top estimated at 15.00 in, 4.55 in clear. Back: hood lying flat estimated to end 11.80 in below the back hood seam; upper-back art sits 2.00–4.44 in below the back hood seam, under the hood when it is down. The below-hood option (12.25–14.69 in) is in Tweaks. Both use estimated seam positions; measure them on the Apliiq template.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;backPosition&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Upper back&quot;,&quot;Below hood&quot;],&quot;default&quot;:&quot;Upper back&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;bigStyleBack&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showMeasurements&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">class Component extends DCLogic {
+  renderVals() {
+    const P = 'designs/27_ind4000-goal-hoodie-2026-10-14/print/';
+    const showGrid = this.props.showMeasurements ?? true;
+    const bigBack = this.props.bigStyleBack ?? false;
+    let g = '';
+    for (let x = 1; x < 30; x++) g += `M${x},-2V34`;
+    for (let y = -1; y < 34; y++) g += `M0,${y}H30`;
+    const cw = [
+      { colour: 'Black', hex: '#1E1E1E', cord: '#E8E8E8', ink: 'White + Red #E51226', tag: 'WhiteRed' },
+      { colour: 'Classic Navy', hex: '#263147', cord: '#E8E8E8', ink: 'Cream #F9F1DF', tag: 'Cream' },
+      { colour: 'Bone', hex: '#CFCAC7', cord: '#F4F1EE', ink: 'Black #080808 + Red #E51226', tag: 'BlackRed' },
+      { colour: 'Grey Heather', hex: '#B5B4B2', cord: '#E6E5E3', ink: 'Black #080808 + Red #E51226', tag: 'BlackRed' }
+    ];
+    const V = 30, VY = 36, Y0 = -2;
+    const box = (x, y, w, h, u) => ({ position: 'absolute', left: (x / V * 100) + '%', top: ((y - Y0) / VY * 100) + '%', width: (w / V * 100) + '%', aspectRatio: w + ' / ' + h, backgroundImage: 'url("' + u + '")', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' });
+    const upper = (this.props.backPosition ?? 'Upper back') === 'Upper back';
+    const bTop = upper ? 2.0 : 12.25;
+    const backSpec = upper ? 'GOAL ATHLETICS wordmark (no GA) · 8.00 × 2.44 in · centred on centre back · top of art 2.00 in below the back hood seam at CB. Partly under the hood when it is down; fully visible with the hood up.' : 'GOAL ATHLETICS wordmark (no GA) · 8.00 × 2.44 in · centred on centre back · top of art 12.25 in below the back hood seam at CB, below the hood.';
+    const boards = [];
+    ['HERITAGE', 'MINIMAL', 'BIG STACK'].forEach(style => cw.forEach(c => {
+      const back = `${P}Wordmark-Back_${c.tag}_8.00in.png`;
+      const min = style === 'MINIMAL', her = style === 'HERITAGE';
+      const front = (her || min) ? `${P}GA-LeftChest_${c.tag}_3.50in.png` : `${P}Stack-BigFront_${c.tag}_9.00in.png`;
+      const sleeve = `${P}GA-Sleeve_${c.tag}_3.00in.png`;
+      const hasBack = min || her || bigBack;
+      boards.push({
+        style, ...c, fmx: (min && !her) ? 19 : 15, hasBack,
+        showBackLine: hasBack && showGrid,
+        backLabel: hasBack ? 'BACK' : 'BACK · NO PRINT',
+        sfStyle: her ? { ...box(26.3, 18.4, 2.3, 2.07, sleeve), transform: 'rotate(-11.6deg)', transformOrigin: 'center' } : { display: 'none' },
+        fStyle: her ? box(13.25, 8, 3.5, 3.15, front) : min ? box(17.25, 8, 3.5, 3.15, front) : box(10.5, 8, 9, 7.45, front),
+        hasSleeve: her,
+        sStyle: { position: 'absolute', left: (6.5 / 16 * 100) + '%', top: (14.3 / 25 * 100) + '%', width: (3 / 16 * 100) + '%', aspectRatio: '3 / 2.7', backgroundImage: 'url("' + sleeve + '")', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' },
+        sleeveSpec: 'GA monogram · 3.00 × 2.70 in · centred on the outer left sleeve, upright · bottom of art 3.00 in above the cuff seam.',
+        bStyle: box(11, 3 + bTop, 8, 2.44, back), bLineY: 3 + bTop,
+        frontSpec: her ? 'GA monogram · 3.50 × 3.15 in · centred on centre front · top 3.00 in below the hood seam at CF.' : min ? 'GA monogram · 3.50 × 3.15 in · wearer\'s left chest, centre of art 4.00 in from centre front · top 3.00 in below the hood seam at CF.' : 'GA stack · 9.00 × 7.45 in · centred on centre front · top 3.00 in below the hood seam at CF · 4.55 in above the pocket on S.',
+        backSpec: hasBack ? backSpec : 'No back print.',
+        files: [front, her ? sleeve : '', hasBack ? back : ''].filter(Boolean).map(f => f.replace(P, '')).join(' · ')
+      });
+    }));
+    let sg = '';
+    for (let x = -3; x < 12; x++) sg += `M${x},-1V24`;
+    for (let y = 0; y < 24; y++) sg += `M-4,${y}H12`;
+    return { boards, showGrid, grid: g, sgrid: sg };
+  }
+}</script>
+</body>
+</html>

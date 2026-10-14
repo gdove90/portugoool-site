@@ -1,0 +1,185 @@
+{
+  "package": "GOAL Athletics IND4000 Hoodie",
+  "prepared": "2026-10-14",
+  "dpi": 300,
+  "source": "vector/GA-Stack-*.svg (V1.3 vector masters from uploads/GOAL Stacked Colorways/03 Vector Masters)",
+  "print_files": {
+    "print/GA-LeftChest_BlackRed_3.50in.png": {
+      "sha256": "3cf6b829f59a3ada07f55b145e251b5182b403ce11d29c38b9e0898a4ea56ef2",
+      "px": "1050x946",
+      "in": "3.50x3.15",
+      "sha256_as_received": "f735986df83adb34e5dc438f2a986a0bae7ebb38fb459691283d0e256bf4036c",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/GA-LeftChest_Cream_3.50in.png": {
+      "sha256": "85149f9956f9b9487a72aa016a3a6089a177123ee08667fa0b2f1a6395242caa",
+      "px": "1050x946",
+      "in": "3.50x3.15",
+      "sha256_as_received": "37540ca023fd9d15ca92addd47a5bd1a547928570f555501df6aabd9e28c1f0b",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/GA-LeftChest_WhiteRed_3.50in.png": {
+      "sha256": "4e39f3164ad23dfd8f19066c6372e4a625879c9f55c33aaf7c3d3ccaafecec76",
+      "px": "1050x946",
+      "in": "3.50x3.15",
+      "sha256_as_received": "b5cb80eb34f2abe2fd2d520881900fea418588b6b0cc27028a986e22585c4343",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/GA-Sleeve_BlackRed_3.00in.png": {
+      "sha256": "3b90ca0fec31b604a878bd6f8b948d8e0eff666bc35b751dc19435127ccc670e",
+      "px": "900x810",
+      "in": "3.00x2.70",
+      "sha256_as_received": "8d3f69aab07fda1c94bf8719b31bdb62b7c498bcddf994337f5d40a5c55c7fcb",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/GA-Sleeve_Cream_3.00in.png": {
+      "sha256": "ff09427e34b59aa7ee02906161f0a467aa95a61e0638f6d6dc63719cb2dfe30a",
+      "px": "900x810",
+      "in": "3.00x2.70",
+      "sha256_as_received": "e386d302f4052fc064ad4bf8187e77faefc3eacacbc22826e7a5f7a19333136e",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/GA-Sleeve_WhiteRed_3.00in.png": {
+      "sha256": "77656c23ef0427b265a205e33aa1df704b2d0c96c14c53a34f2783dbda0b2569",
+      "px": "900x810",
+      "in": "3.00x2.70",
+      "sha256_as_received": "b0de9a0e92c3b5c2ab89f757c7fd500cc697da0be4898afd41762d25cc17790d",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/Lockup-Front_WhiteRed_10.00in.png": {
+      "sha256": "920b77db3cf0778668dd536c8e7412da5b5935def7ce2f7a19d28388f56448ae",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "exported 2026-10-14 from the owner's V1.3 vector master (combined lockup SVG, paths unmodified) in the handoff inks; replaces the handoff's enlarged 1125 px PNG"
+    },
+    "print/Lockup-Front_Cream_10.00in.png": {
+      "sha256": "8b1ba1087d19d60fb33806e4328dbe5fd128bfcf4027a450b6c0d2d36e2485a8",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "exported 2026-10-14 from the owner's V1.3 vector master (combined lockup SVG, paths unmodified) in the handoff inks; replaces the handoff's enlarged 1125 px PNG"
+    },
+    "print/Lockup-Front_BlackRed_10.00in.png": {
+      "sha256": "3ccaa8f366e25784cae33d1015d403ee77b68ca5d38752e20cc2eea658339355",
+      "px": "3000x801",
+      "in": "10.00x2.67",
+      "source": "exported 2026-10-14 from the owner's V1.3 vector master (combined lockup SVG, paths unmodified) in the handoff inks; replaces the handoff's enlarged 1125 px PNG"
+    }
+  },
+  "measurements": {
+    "template": "Apliiq v5 designer, independent heavyweight pullover hoodie (ind4000), transfer print, read 2026-10-14 from Apliiq's own garment images: front view 6399 at 24 px/in, back 4559, left sleeve 5947 and right sleeve 4577 at 20 px/in (scales read from Apliiq's inch readouts). The template garment reads about size L/XL.",
+    "front area": "13.50 x 10.00 in (324 x 240 px), top 3.6 in below the CF hood seam (seam read at y 164; the 2026-09-24 Core Hoodie reading was y 170, 3.3 in)",
+    "left sleeve area": "3.50 x 19.00 in (70 x 380 px); bottom edge 3.75 in above the cuff seam",
+    "front_hood_seam_to_pocket_top_S": "16.0 in on the template (pocket top y 549). Pass: Big Stack needs 12.45 in. Canvas clearance under the stack is 5.0 in.",
+    "sleeve width check": "the sleeve area is 3.50 in wide along its whole length, including the GA position. Pass.",
+    "classic_navy_exact_name": "navy (Apliiq swatch name; designs are named '· Navy')",
+    "swatch_hexes": {
+      "black": "#000000",
+      "navy": "#111932",
+      "Bone": "#EBE3E0",
+      "Grey Heather": "#F4F4F4"
+    },
+    "supplier constraint": "Apliiq keeps art inside its areas. Front art sits at the top of the front area (about 3.6 in below the CF hood seam on the template) and the sleeve GA on the bottom of the sleeve area (3.75 in above the cuff seam); each production note carries the handoff figure (3.00 in). The back area starts below the hood, which is why the owner dropped back prints.",
+    "placements as saved": {
+      "Heritage front": "GA 3.50 x 3.15 in, centred, top on the area top",
+      "Heritage left sleeve": "GA 3.00 x 2.70 in, centred on the sleeve area, bottom on the area bottom",
+      "Minimal front": "GA 3.50 x 3.15 in, centre 4.00 in to the wearer's left of CF, top on the area top",
+      "Lockup front": "lockup 10.00 x 2.67 in, centred, top on the area top"
+    }
+  },
+  "apliiq_designs": {
+    "Heritage (front GA + left sleeve GA)": {
+      "Black": 6206334,
+      "Navy": 6206365,
+      "Bone": 6206384,
+      "Grey Heather": 6206395
+    },
+    "Minimal (left chest GA)": {
+      "Black": 6206401,
+      "Navy": 6206408,
+      "Bone": 6206414,
+      "Grey Heather": 6206424
+    },
+    "Lockup (GA + GOAL ATHLETICS 10.00 in)": {
+      "Black": 6206733,
+      "Navy": 6206737,
+      "Bone": 6206741,
+      "Grey Heather": 6206746
+    },
+    "Big Stack (dropped, left on Apliiq, never mapped)": {
+      "Black": 6206428,
+      "Navy": 6206432,
+      "Bone": 6206441,
+      "Grey Heather": 6206442
+    },
+    "back prints": "removed 2026-10-14 from all eight Heritage and Minimal designs (Apliiq log 'removing transfer print'); same design ids",
+    "renders": "Apliiq still serves the pre-removal back renders for Heritage and Minimal, so the site uses the plain Lockup back render of each colour",
+    "proof pages": "https://www.apliiq.com/product/<id>/x",
+    "skus": "APQ-<id>S<n>A1 with S 6, M 7, L 8, XL 1, XXL 2"
+  },
+  "quotes": {
+    "quote_verified": true,
+    "read": "2026-10-14 from the dropship price on each Black design after the back prints were removed; XXL is +$2.00 on this blank",
+    "Heritage (2 transfers)": {
+      "S": 35.54,
+      "XXL": 37.54,
+      "floor": 63
+    },
+    "Minimal (1 transfer)": {
+      "S": 29.55,
+      "XXL": 31.55,
+      "floor": 54
+    },
+    "Lockup (1 transfer)": {
+      "S": 29.55,
+      "XXL": 31.55,
+      "floor": 54
+    },
+    "formula": "(worst-size quote + $3 label + $1 fulfilment + $0.30 card fee) / 0.671, rounded up"
+  },
+  "dropped_print_files": {
+    "print/Stack-BigFront_BlackRed_9.00in.png": {
+      "sha256": "9a95bb7be9860eeb757fbc828662f22d4fe131e4f1234f5f48906355fe24d2de",
+      "px": "2700x2234",
+      "in": "9.00x7.45",
+      "sha256_as_received": "0d1d1a22e5ff43a9ee7195c88a3b58901c5ab8a27795078098fd8c11f69e9a56",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/Stack-BigFront_Cream_9.00in.png": {
+      "sha256": "9cd0388e535520c2b55a881dd01ddeec928a7813708391b90368e165dbc133ef",
+      "px": "2700x2234",
+      "in": "9.00x7.45",
+      "sha256_as_received": "612dd6df9145712afd410cbc70b78d9e0e1dee8b7a006c3b35ac1107b08283a8",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/Stack-BigFront_WhiteRed_9.00in.png": {
+      "sha256": "7b1c3dda2edfaf99ea8cf790d8a51cb6b0758cef859c51d4101bf9857d844bf3",
+      "px": "2700x2234",
+      "in": "9.00x7.45",
+      "sha256_as_received": "21e8bb9721f8119689dca016aaae035836575ebf05573ab86dee3d873b942ba1",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/Wordmark-Back_BlackRed_8.00in.png": {
+      "sha256": "6fb4e02567aa2043648be7d9dd0a5e21790e13b19249d04f98e1bd6537660847",
+      "px": "2400x732",
+      "in": "8.00x2.44",
+      "sha256_as_received": "be2937f1e90cead2c07467d73cf9305a1a6a4508fac3d029732993a2ae7759ef",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/Wordmark-Back_Cream_8.00in.png": {
+      "sha256": "7bd640b0561016b90d7997c82171f26677e61d4d3cb29e68f04287efa3d365d6",
+      "px": "2400x732",
+      "in": "8.00x2.44",
+      "sha256_as_received": "0c057aea137b904e47ec990459e963b01eed191fa924c470747a03a060c77636",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    },
+    "print/Wordmark-Back_WhiteRed_8.00in.png": {
+      "sha256": "7d9113365978eb26f1eba91ae0c91cb32782eae43a05910bcde5606a3c3f0b31",
+      "px": "2400x732",
+      "in": "8.00x2.44",
+      "sha256_as_received": "baaa974092cec2f17bbb44005b9026977719414ca5dc7b1da3644950385a262c",
+      "note": "300 dpi tag added 2026-10-14, pixels unchanged (Apliiq reads untagged files as 'nan dpi')"
+    }
+  },
+  "handoff_version": "v2 (Claude Design, 14 Oct 2026): Heritage, Minimal, Lockup; Big Stack dropped; no back print",
+  "dropped_print_files_note": "Big Stack fronts and upper-back wordmarks are v1 files, unused after handoff v2 (Big Stack dropped, no back print). Kept for the record."
+}
