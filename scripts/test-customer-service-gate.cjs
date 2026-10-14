@@ -33,6 +33,12 @@ async function check(name, fn) { await fn(); passed++; console.log('PASS ' + nam
       for (const method of ['GET', 'HEAD']) assert.equal((await middleware(request(route, method))).headers.get('x-middleware-next'), '1', route);
     }
   });
+  await check('released ST720 images bypass closure without opening adjacent paths', async () => {
+    for (const style of ['minimal', 'big']) for (const color of ['black', 'true-royal', 'white-black-red', 'white-royal', 'silver', 'true-red']) for (const view of ['front', 'back']) {
+      for (const method of ['GET','HEAD']) assert.equal((await middleware(request(`/products/goal-ga-${style}-tee-${color}-${view}.webp`, method))).headers.get('x-middleware-next'), '1');
+    }
+    for (const route of ['/products/goal-ga-minimal-tee-black-front.webp/private', '/products/goal-ga-minimal-tee-indigo-front.webp', '/shop/goal-athletics-ga-minimal-tee', '/shop/goal-athletics-ga-big-tee']) assert.equal((await middleware(request(route))).status, 307, route);
+  });
   await check('catalog, product, cart and adjacent service-like paths stay gated', async () => {
     for (const route of ['/', '/shop', '/men', '/cart', '/shop/goool-athletics-badge-cap', '/contact/catalog', '/faq-private', '/support/shop', '/shipping-returns-extra']) {
       for (const cookie of ['', 'goool_preview=test-only-customer-service', 'goool_gate=invalid']) {
