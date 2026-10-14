@@ -2829,7 +2829,7 @@ export const products: Product[] = [
   // purchasable until checkout is verified separately (owner brief).
   {
     id: "80000000-0000-4000-8000-000000000009",
-    name: "GOAL Athletics Monogram Cap",
+    name: "GA Matchday Cap",
     slug: "goal-athletics-monogram-cap",
     description:
       "Structured five-panel cap with a natural front and a coloured visor. GA monogram embroidered on the front panel, adjustable snap.",
@@ -2843,7 +2843,7 @@ export const products: Product[] = [
       "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
     careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
-      { src: "/products/goal-monogram-cap-black.webp", alt: "GOAL Athletics Monogram Cap with black visor, front view" },
+      { src: "/products/goal-monogram-cap-black.webp", alt: "GA Matchday Cap with black visor, front view" },
     ],
     colorVariants: [
       {
@@ -2851,28 +2851,28 @@ export const products: Product[] = [
         supplierColor: "Black/Natural",
         hex: "#111111",
         skuFragment: "BLACK",
-        images: [{ src: "/products/goal-monogram-cap-black.webp", alt: "GOAL Athletics Monogram Cap with black visor, front view" }],
+        images: [{ src: "/products/goal-monogram-cap-black.webp", alt: "GA Matchday Cap with black visor, front view" }],
       },
       {
         name: "Red/Natural",
         supplierColor: "Red/Natural",
         hex: "#C8102E",
         skuFragment: "RED",
-        images: [{ src: "/products/goal-monogram-cap-red.webp", alt: "GOAL Athletics Monogram Cap with red visor, front view" }],
+        images: [{ src: "/products/goal-monogram-cap-red.webp", alt: "GA Matchday Cap with red visor, front view" }],
       },
       {
         name: "Royal/Natural",
         supplierColor: "Royal/Natural",
         hex: "#1F2F6B",
         skuFragment: "ROYAL",
-        images: [{ src: "/products/goal-monogram-cap-royal.webp", alt: "GOAL Athletics Monogram Cap with royal visor, front view" }],
+        images: [{ src: "/products/goal-monogram-cap-royal.webp", alt: "GA Matchday Cap with royal visor, front view" }],
       },
       {
         name: "Dark Green/Natural",
         supplierColor: "Dark Green/Natural",
         hex: "#0B3D2E",
         skuFragment: "GREEN",
-        images: [{ src: "/products/goal-monogram-cap-dark-green.webp", alt: "GOAL Athletics Monogram Cap with dark green visor, front view" }],
+        images: [{ src: "/products/goal-monogram-cap-dark-green.webp", alt: "GA Matchday Cap with dark green visor, front view" }],
       },
     ],
     sizes: ["OS"],
@@ -2890,7 +2890,7 @@ export const products: Product[] = [
   },
   {
     id: "80000000-0000-4000-8000-000000000010",
-    name: "GOAL Athletics Wordmark Cap",
+    name: "Stacked Stadium Cap",
     slug: "goal-athletics-wordmark-cap",
     description:
       "Structured five-panel cap with a natural front and a coloured visor. GOAL ATHLETICS wordmark with bar embroidered on the front panel, adjustable snap.",
@@ -2904,7 +2904,7 @@ export const products: Product[] = [
       "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
     careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
-      { src: "/products/goal-wordmark-cap-black.webp", alt: "GOAL Athletics Wordmark Cap with black visor, front view" },
+      { src: "/products/goal-wordmark-cap-black.webp", alt: "Stacked Stadium Cap with black visor, front view" },
     ],
     colorVariants: [
       {
@@ -2912,28 +2912,28 @@ export const products: Product[] = [
         supplierColor: "Black/Natural",
         hex: "#111111",
         skuFragment: "BLACK",
-        images: [{ src: "/products/goal-wordmark-cap-black.webp", alt: "GOAL Athletics Wordmark Cap with black visor, front view" }],
+        images: [{ src: "/products/goal-wordmark-cap-black.webp", alt: "Stacked Stadium Cap with black visor, front view" }],
       },
       {
         name: "Red/Natural",
         supplierColor: "Red/Natural",
         hex: "#C8102E",
         skuFragment: "RED",
-        images: [{ src: "/products/goal-wordmark-cap-red.webp", alt: "GOAL Athletics Wordmark Cap with red visor, front view" }],
+        images: [{ src: "/products/goal-wordmark-cap-red.webp", alt: "Stacked Stadium Cap with red visor, front view" }],
       },
       {
         name: "Royal/Natural",
         supplierColor: "Royal/Natural",
         hex: "#1F2F6B",
         skuFragment: "ROYAL",
-        images: [{ src: "/products/goal-wordmark-cap-royal.webp", alt: "GOAL Athletics Wordmark Cap with royal visor, front view" }],
+        images: [{ src: "/products/goal-wordmark-cap-royal.webp", alt: "Stacked Stadium Cap with royal visor, front view" }],
       },
       {
         name: "Dark Green/Natural",
         supplierColor: "Dark Green/Natural",
         hex: "#0B3D2E",
         skuFragment: "GREEN",
-        images: [{ src: "/products/goal-wordmark-cap-dark-green.webp", alt: "GOAL Athletics Wordmark Cap with dark green visor, front view" }],
+        images: [{ src: "/products/goal-wordmark-cap-dark-green.webp", alt: "Stacked Stadium Cap with dark green visor, front view" }],
       },
     ],
     sizes: ["OS"],
