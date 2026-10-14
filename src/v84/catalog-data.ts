@@ -4,6 +4,8 @@ import type { Product } from "@/lib/types";
 export type Audience = "men" | "women";
 // Owner assignment is deliberately separate from fulfillment and product identity.
 export const audienceAssignments: Record<string, Audience[]> = {
+  "80000000-0000-4000-8000-000000000011": ["men"],
+  "80000000-0000-4000-8000-000000000012": ["men"],
   "70000000-0000-4000-8000-000000000001": ["men"],
   "70000000-0000-4000-8000-000000000002": ["men"],
   "70000000-0000-4000-8000-000000000006": ["men"],

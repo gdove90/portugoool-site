@@ -21,15 +21,22 @@ function retireProduct(source, id) {
 // Owner upload 2026-10-14: the new hats live in one marked block in
 // products.ts and one in fulfillment.ts. Preservation tests strip exactly
 // that block, so everything outside it must still equal production.
-const HAT_START = '  // == GOAL Athletics hats (owner upload 2026-10-14) ==\n';
-const HAT_END = '  // == end GOAL Athletics hats ==\n';
-function withoutHatAdditions(source) {
-  const start = source.indexOf(HAT_START);
+// The ST720 GA tees (owner handoff 2026-10-14) follow the same rule with
+// their own marked block, directly after the hats.
+const BLOCKS = [
+  ['  // == GOAL Athletics hats (owner upload 2026-10-14) ==\n', '  // == end GOAL Athletics hats ==\n'],
+  ['  // == GOAL Athletics ST720 GA tees (owner handoff 2026-10-14) ==\n', '  // == end GOAL Athletics ST720 GA tees ==\n'],
+];
+function withoutBlock(source, [open, close]) {
+  const start = source.indexOf(open);
   if (start < 0) return source;
-  const end = source.indexOf(HAT_END, start);
-  assert(end > start, 'Unterminated GOAL Athletics hat block');
-  assert.equal(source.indexOf(HAT_START, end), -1, 'Only one hat block per file');
-  return source.slice(0, start) + source.slice(end + HAT_END.length);
+  const end = source.indexOf(close, start);
+  assert(end > start, `Unterminated block: ${open.trim()}`);
+  assert.equal(source.indexOf(open, end), -1, `Only one block per file: ${open.trim()}`);
+  return source.slice(0, start) + source.slice(end + close.length);
+}
+function withoutHatAdditions(source) {
+  return BLOCKS.reduce(withoutBlock, source);
 }
 function retireCoreBadgeBaseline(source) {
   return retireProduct(source, ID);

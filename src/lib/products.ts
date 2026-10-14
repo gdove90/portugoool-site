@@ -2950,6 +2950,312 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics hats ==
+  // == GOAL Athletics ST720 GA tees (owner handoff 2026-10-14) ==
+  // Sport-Tek ST720, DTF transfer. Twelve Apliiq designs saved 2026-10-14,
+  // mapped in fulfillment.ts. Hidden (isActive false) and priced at 0 until
+  // the owner sets the price: designs/26_st720-ga-tee-2026-10-14/.
+  // Images are Apliiq's renders of the saved designs.
+  {
+    id: "80000000-0000-4000-8000-000000000011",
+    name: "GOAL Athletics GA Minimal Tee",
+    slug: "goal-athletics-ga-minimal-tee",
+    blank: "ST720",
+    description:
+      "Lightweight performance tee. GA monogram on the left chest, stacked GOAL ATHLETICS lockup across the upper back.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#373737",
+    fabric:
+      "3.8 oz recycled polyester performance knit. Taped at the neck with a label that tears out, so nothing sits raw against your skin. Set-in sleeves follow the line of the shoulder and leave the arm its full range.",
+    fit: ST720_FIT,
+    careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-ga-minimal-tee-black-front.webp",
+        alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram on the left chest",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-ga-minimal-tee-black-back.webp",
+        alt: "GOAL Athletics GA Minimal Tee in black, back view with the white and red stacked GOAL ATHLETICS lockup across the upper back",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#373737",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-tee-black-front.webp",
+            alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-tee-black-back.webp",
+            alt: "GOAL Athletics GA Minimal Tee in black, back view with the white and red stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "True Royal",
+        supplierColor: "true royal",
+        hex: "#354CAA",
+        skuFragment: "ROYAL",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-tee-true-royal-front.webp",
+            alt: "GOAL Athletics GA Minimal Tee in true royal, front view with the cream GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-tee-true-royal-back.webp",
+            alt: "GOAL Athletics GA Minimal Tee in true royal, back view with the cream stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "White · Black-Red",
+        supplierColor: "white",
+        hex: "#E7E7E7",
+        skuFragment: "WHITE-BLACKRED",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-tee-white-black-red-front.webp",
+            alt: "GOAL Athletics GA Minimal Tee in white, front view with the black and red GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-tee-white-black-red-back.webp",
+            alt: "GOAL Athletics GA Minimal Tee in white, back view with the black and red stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "White · Royal",
+        supplierColor: "white",
+        hex: "#E7E7E7",
+        skuFragment: "WHITE-ROYAL",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-tee-white-royal-front.webp",
+            alt: "GOAL Athletics GA Minimal Tee in white, front view with the royal blue GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-tee-white-royal-back.webp",
+            alt: "GOAL Athletics GA Minimal Tee in white, back view with the royal blue stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Silver",
+        supplierColor: "silver",
+        hex: "#DDDFE1",
+        skuFragment: "SILVER",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-tee-silver-front.webp",
+            alt: "GOAL Athletics GA Minimal Tee in silver, front view with the black and red GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-tee-silver-back.webp",
+            alt: "GOAL Athletics GA Minimal Tee in silver, back view with the black and red stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "True Red",
+        supplierColor: "True Red",
+        hex: "#C8102E",
+        skuFragment: "RED",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-tee-true-red-front.webp",
+            alt: "GOAL Athletics GA Minimal Tee in true red, front view with the white GA monogram on the left chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-tee-true-red-back.webp",
+            alt: "GOAL Athletics GA Minimal Tee in true red, back view with the white stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  {
+    id: "80000000-0000-4000-8000-000000000012",
+    name: "GOAL Athletics GA Big Tee",
+    slug: "goal-athletics-ga-big-tee",
+    blank: "ST720",
+    description:
+      "Lightweight performance tee. GA monogram and GOAL ATHLETICS lockup across the chest, clean back.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#373737",
+    fabric:
+      "3.8 oz recycled polyester performance knit. Taped at the neck with a label that tears out, so nothing sits raw against your skin. Set-in sleeves follow the line of the shoulder and leave the arm its full range.",
+    fit: ST720_FIT,
+    careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-ga-big-tee-black-front.webp",
+        alt: "GOAL Athletics GA Big Tee in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-ga-big-tee-black-back.webp",
+        alt: "GOAL Athletics GA Big Tee in black, back view, no print",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#373737",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-ga-big-tee-black-front.webp",
+            alt: "GOAL Athletics GA Big Tee in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-black-back.webp",
+            alt: "GOAL Athletics GA Big Tee in black, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "True Royal",
+        supplierColor: "true royal",
+        hex: "#354CAA",
+        skuFragment: "ROYAL",
+        images: [
+          {
+            src: "/products/goal-ga-big-tee-true-royal-front.webp",
+            alt: "GOAL Athletics GA Big Tee in true royal, front view with the cream GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-true-royal-back.webp",
+            alt: "GOAL Athletics GA Big Tee in true royal, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "White · Black-Red",
+        supplierColor: "white",
+        hex: "#E7E7E7",
+        skuFragment: "WHITE-BLACKRED",
+        images: [
+          {
+            src: "/products/goal-ga-big-tee-white-black-red-front.webp",
+            alt: "GOAL Athletics GA Big Tee in white, front view with the black and red GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-white-black-red-back.webp",
+            alt: "GOAL Athletics GA Big Tee in white, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "White · Royal",
+        supplierColor: "white",
+        hex: "#E7E7E7",
+        skuFragment: "WHITE-ROYAL",
+        images: [
+          {
+            src: "/products/goal-ga-big-tee-white-royal-front.webp",
+            alt: "GOAL Athletics GA Big Tee in white, front view with the royal blue GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-white-royal-back.webp",
+            alt: "GOAL Athletics GA Big Tee in white, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Silver",
+        supplierColor: "silver",
+        hex: "#DDDFE1",
+        skuFragment: "SILVER",
+        images: [
+          {
+            src: "/products/goal-ga-big-tee-silver-front.webp",
+            alt: "GOAL Athletics GA Big Tee in silver, front view with the black and red GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-silver-back.webp",
+            alt: "GOAL Athletics GA Big Tee in silver, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "True Red",
+        supplierColor: "True Red",
+        hex: "#C8102E",
+        skuFragment: "RED",
+        images: [
+          {
+            src: "/products/goal-ga-big-tee-true-red-front.webp",
+            alt: "GOAL Athletics GA Big Tee in true red, front view with the white GA and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-true-red-back.webp",
+            alt: "GOAL Athletics GA Big Tee in true red, back view, no print",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics ST720 GA tees ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────
