@@ -1,6 +1,6 @@
 // Shared shell and footer for the welcome sequence (owner decision
 // 2026-09-29). The footer identifies Support for customer conversations,
-// same lockup, same order, same tagline, then the two lines the law
+// compact header lockup, monogram signature, same tagline, then the two lines the law
 // requires on marketing mail: a physical mailing address and an
 // unsubscribe link. Black background, white type, one accent colour.
 //
@@ -11,8 +11,11 @@ export { SUPPORT_EMAIL };
 export { MAILING_STREET, MAILING_CITY_LINE };
 export const BRAND_RED = "#C1121F";
 export const SITE_URL = "https://goalathletics.shop";
-export const INSTAGRAM_HANDLE = "@gooolathletics";
-export const LOCKUP_URL = `${SITE_URL}/brand/goal-athletics-popup-white.png`;
+export const INSTAGRAM_HANDLE = "@weargoalathletics";
+export const INSTAGRAM_URL = "https://instagram.com/weargoalathletics";
+// Approved vector exports at 6x the displayed widths; retain their proportions.
+export const LOCKUP_URL = `${SITE_URL}/brand/goal-horizontal-white-red-email.png`;
+export const MONOGRAM_URL = `${SITE_URL}/brand/goal-monogram-white-red-email-6x.png`;
 
 const FONT = "Helvetica,Arial,sans-serif";
 
@@ -29,7 +32,9 @@ export function footerText(unsubscribeUrl: string): string[] {
   return [
     "GOAL Athletics",
     "The Goal Brand Group LLC",
-    `${SUPPORT_EMAIL} · goool.shop · ${INSTAGRAM_HANDLE}`,
+    SUPPORT_EMAIL,
+    "goalathletics.shop",
+    `${INSTAGRAM_HANDLE} (${INSTAGRAM_URL})`,
     "WEAR THE FEELING.",
     "",
     mailingAddressLine(),
@@ -44,18 +49,18 @@ export function footerHtml(unsubscribeUrl: string): string {
     <tr><td style="border-top:1px solid #393939;padding-top:22px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td valign="top" style="padding-right:16px;">
+          <td width="64" valign="top" style="width:64px;padding-top:3px;padding-right:16px;">
             <a href="${SITE_URL}" target="_blank" style="text-decoration:none;">
-              <img src="${LOCKUP_URL}" width="120" height="45" alt="GOAL Athletics" border="0" style="display:block;width:120px;height:auto;border:0;color:#FFFFFF;font:700 16px/1.3 ${FONT};">
+              <img src="${MONOGRAM_URL}" width="64" height="58" alt="GOAL Athletics" border="0" style="display:block;width:64px;height:auto;border:0;color:#FFFFFF;font:700 16px/1.3 ${FONT};">
             </a>
           </td>
           <td valign="top">
             <div style="font:700 15px/1.45 ${FONT};color:#FFFFFF;">GOAL Athletics</div>
             <div style="${small}">The Goal Brand Group LLC</div>
-            <div style="margin-top:6px;${small}">
-              <a href="mailto:${SUPPORT_EMAIL}" style="color:#FFFFFF;text-decoration:underline;">${SUPPORT_EMAIL}</a>
-              &nbsp;·&nbsp;<a href="${SITE_URL}" target="_blank" style="color:#FFFFFF;text-decoration:underline;">goalathletics.shop</a>
-              &nbsp;·&nbsp;<a href="https://instagram.com/gooolathletics" target="_blank" style="color:#FFFFFF;text-decoration:underline;">${INSTAGRAM_HANDLE}</a>
+            <div style="margin-top:8px;font:400 13px/22px ${FONT};text-align:left;">
+              <div style="margin:0;"><a href="mailto:${SUPPORT_EMAIL}" style="color:#FFFFFF;text-decoration:underline;white-space:nowrap;">${SUPPORT_EMAIL}</a></div>
+              <div style="margin:0;"><a href="${SITE_URL}" target="_blank" style="color:#FFFFFF;text-decoration:underline;white-space:nowrap;">goalathletics.shop</a></div>
+              <div style="margin:0;"><a href="${INSTAGRAM_URL}" target="_blank" style="color:#FFFFFF;text-decoration:underline;white-space:nowrap;">${INSTAGRAM_HANDLE}</a></div>
             </div>
             <div style="margin-top:8px;font:700 12px/1.5 ${FONT};letter-spacing:1.5px;color:#FFFFFF;">WEAR THE FEELING.</div>
           </td>
@@ -118,7 +123,7 @@ export function emailShell(input: ShellInput): string {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#090909" style="max-width:520px;background-color:#090909;color:#FFFFFF;">
       <tr><td align="center" class="pad" style="padding:32px 28px 20px;">
         <a href="${SITE_URL}" target="_blank" style="color:#FFFFFF;text-decoration:none;">
-          <img src="${LOCKUP_URL}" width="218" height="82" alt="GOAL Athletics" border="0" style="display:block;width:218px;max-width:100%;height:auto;border:0;color:#FFFFFF;font:700 24px/1.3 ${FONT};">
+          <img src="${LOCKUP_URL}" width="248" height="63" alt="GOAL Athletics" border="0" style="display:block;width:248px;max-width:100%;height:auto;border:0;color:#FFFFFF;font:700 24px/1.3 ${FONT};">
         </a>
       </td></tr>
       <tr><td class="pad" style="padding:0 28px;"><div style="height:3px;width:56px;background-color:${BRAND_RED};"></div></td></tr>

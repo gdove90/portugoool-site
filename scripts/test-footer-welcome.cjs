@@ -52,6 +52,13 @@ const req = email => ({ json: async () => ({ email, consent: 'denied' }) });
     assert.match(message.text, /Your code: GOAL20-QA0/);
     assert.match(message.html, /href="mailto:support@goalathletics.shop"/);
     assert.match(message.text, /PO Box 19, Saunderstown, RI 02874/);
+    for (const content of [message.html, message.text]) {
+      assert.doesNotMatch(content, /goool\.(?:shop|com)|goalathletics\.com|gooolathletics/i);
+      assert.match(content, /https:\/\/instagram\.com\/weargoalathletics/);
+    }
+    assert.match(message.html, /src="https:\/\/goalathletics\.shop\/brand\/goal-horizontal-white-red-email\.png"/);
+    assert.match(message.html, /src="https:\/\/goalathletics\.shop\/brand\/goal-monogram-white-red-email-6x\.png"/);
+    assert.ok(message.text.includes('support@goalathletics.shop\ngoalathletics.shop\n@weargoalathletics'));
     assert.ok(message.headers['List-Unsubscribe'].includes('https://goalathletics.shop/unsubscribe/' + row.unsubscribe_token));
     assert.equal(message.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
     fs.mkdirSync(path.join(__dirname, '../tmp'), { recursive: true });
