@@ -101,7 +101,7 @@ export async function queueFulfillmentAlert(
 // Customer delay notice for the same event. Keyed on the order alone, so
 // a customer hears about a delay once no matter how many times the order
 // parks before it goes through; the owner alert carries the per-attempt
-// detail. Replies go to hello@goool.shop, which is where the refund
+// detail. Replies go to support@goalathletics.shop, where the refund
 // offer in the email is honoured.
 export async function queueOrderDelayNotice(
   store: OrdersStore,
@@ -115,7 +115,7 @@ export async function queueOrderDelayNotice(
   await queueEmail(
     key,
     "order",
-    { to: order.customer_email, replyTo: "hello@goool.shop", ...buildOrderDelayNotice(order) },
+    { to: order.customer_email, ...buildOrderDelayNotice(order) },
     livemode,
     orderId
   );
