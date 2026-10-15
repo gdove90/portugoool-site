@@ -3088,14 +3088,24 @@ export const products: Product[] = [
         skuFragment: "RED",
         images: [
           {
-            src: "/products/goal-ga-minimal-tee-true-red-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in true red, front view with the white GA monogram centred on the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-true-red-catalog-model-front-20261015.webp",
+            alt: "Model facing forward in the True Red GA Minimal Tee with the white GA monogram centred on the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/goal-ga-minimal-tee-true-red-back.webp",
-            alt: "GOAL Athletics GA Minimal Tee in true red, back view with the white stacked GOAL ATHLETICS lockup across the upper back",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-true-red-catalog-model-front-quarter-20261015.webp",
+            alt: "Same model in a front quarter turn, True Red GA Minimal Tee with the white GA monogram on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-true-red-catalog-model-rear-20261015.webp",
+            alt: "Same model from behind in the True Red GA Minimal Tee, white GOAL ATHLETICS lockup across the upper back",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-true-red-catalog-model-rear-quarter-20261015.webp",
+            alt: "Same model in a back quarter turn, showing the white GOAL ATHLETICS lockup on the True Red tee",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },

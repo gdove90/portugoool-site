@@ -90,6 +90,15 @@
   .v84 .thumbnail>img[src*="goal-ga-minimal-true-royal-catalog-"],
   .v84 .thumbnail>img[src*="goal-ga-minimal-black-catalog-"]{object-fit:cover}
 }
+/* The True Red model set is native 941 x 1672, so it gets that exact frame. */
+.v84 .gallery-main>img[src*="goal-ga-minimal-true-red-catalog-"],
+.v84 .thumbnail>img[src*="goal-ga-minimal-true-red-catalog-"]{object-fit:contain}
+@supports selector(:has(*)){
+  .v84 .gallery-main:has(>img[src*="goal-ga-minimal-true-red-catalog-"]),
+  .v84 .thumbnail:has(>img[src*="goal-ga-minimal-true-red-catalog-"]){aspect-ratio:941/1672;height:auto}
+  .v84 .gallery-main>img[src*="goal-ga-minimal-true-red-catalog-"],
+  .v84 .thumbnail>img[src*="goal-ga-minimal-true-red-catalog-"]{object-fit:cover}
+}
 
 /* Mobile menu: one typography scale for primary destinations and Support. */
 @media (max-width: 1023px) {
