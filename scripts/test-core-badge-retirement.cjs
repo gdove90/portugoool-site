@@ -8,7 +8,7 @@ const normal=s=>s.replace(/\r\n/g,'\n');
  const before=normal(cp.execFileSync('git',['show',baseline+':src/lib/products.ts'],{encoding:'utf8'}));
  assert.equal(withoutHatAdditions(normal(fs.readFileSync('src/lib/products.ts','utf8'))),applyRetirements(before));
  assert(!p.getProducts().some(x=>x.id===ID));assert.equal(p.getProductById(ID),undefined);assert.equal(p.getProductBySlug('goool-performance-tee'),undefined);
- const match=p.getProductById('80000000-0000-4000-8000-000000000006');assert(match&&match.isActive&&match.availableForSale);
+ assert.equal(p.getProductById('80000000-0000-4000-8000-000000000006'),undefined);
  for(const color of ['Black','White','True Royal'])for(const size of ['S','M','L','XL','XXL'])assert(f.resolveApliiqSku(ID,color,size)?.sku);
  for(const file of ['src/lib/fulfillment.ts','src/lib/fulfillment-submit.ts','src/lib/orders-store.ts','src/lib/shipment.ts','src/lib/emails/order-confirmation.ts','src/lib/emails/shipment-notification.ts','src/app/api/stripe-webhook/route.ts','src/app/api/apliiq-fulfillment/route.ts','src/app/api/checkout/route.ts'])assert.equal(withoutHatAdditions(normal(fs.readFileSync(file,'utf8'))),normal(cp.execFileSync('git',['show',baseline+':'+file],{encoding:'utf8'})),file);
  const source=fs.readFileSync('src/app/api/checkout/route.ts','utf8'),compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;

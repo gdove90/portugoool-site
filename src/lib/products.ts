@@ -1871,8 +1871,8 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
     supplierType: "apliiq",
-    isActive: true,
-    availableForSale: true,
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -1981,8 +1981,8 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
     supplierType: "apliiq",
-    isActive: true,
-    availableForSale: true,
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2077,12 +2077,12 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "apliiq",
-    isActive: true,
+    isActive: false,
     // Purchasing opened by the owner on 2026-09-24 ("ensure all new
     // products are able to be purchased"): both colours map to saved
     // Apliiq designs (Black 6120860, Natural 6120889) and the products
     // row for this id exists in Supabase.
-    availableForSale: true,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2176,14 +2176,14 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "apliiq",
-    isActive: true,
+    isActive: false,
     // Purchasing opened by the owner on 2026-09-24 ("open all four ...
     // there should be no shirt not available for sale unless I say so").
     // Both colours map to saved Apliiq designs (Natural 6120887, Black
     // 6120898). The Supabase products row for this id is created on
     // demand by the order store (ensureProductRow) until migration 0034
     // has been applied.
-    availableForSale: true,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -2713,8 +2713,8 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "unassigned",
-    isActive: true,
-    availableForSale: true,
+    isActive: false,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

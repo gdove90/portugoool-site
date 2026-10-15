@@ -128,15 +128,25 @@ export async function middleware(req: NextRequest) {
     return redirectToShop(req);
   }
 
-  // The cotton Modern Sport Tee is archived in favour of its ST720
-  // performance twin. Its URL was live, so it points at the replacement
-  // rather than 404ing. This used to sit inside the preview-cookie branch
-  // and would have been lost with it.
+  // The cotton Modern Sport Tee is archived. Its URL was live and used to
+  // point at its ST720 performance twin, which was retired on 2026-10-15
+  // with the rest of the GOOOL clothing, so it now goes to the shop.
   if (pathname === "/shop/goool-athletics-modern-sport-tee") {
-    const url = req.nextUrl.clone();
-    url.pathname = "/shop/goool-athletics-modern-sport-performance-tee";
-    url.search = "";
-    return NextResponse.redirect(url, 301);
+    return redirectToShop(req);
+  }
+
+  // Retired from the website on 2026-10-15 (owner: remove all clothing that
+  // uses the spelling GOOOL): both Core Hoodie rows, both Terrace Tee rows
+  // and the Matchday Tee. Their Apliiq designs remain saved. Old links go to
+  // the shop rather than 404ing.
+  if (
+    pathname === "/shop/goool-heavyweight-hoodie" ||
+    pathname === "/shop/goool-heavyweight-hoodie-blue" ||
+    pathname === "/shop/goool-heavyweight-casual-tee" ||
+    pathname === "/shop/goool-heavyweight-casual-tee-blue" ||
+    pathname === "/shop/goool-athletics-modern-sport-performance-tee"
+  ) {
+    return redirectToShop(req);
   }
 
   // Retired from the website on 2026-09-24 for the Core Capsule launch

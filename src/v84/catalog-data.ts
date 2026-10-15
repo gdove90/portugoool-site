@@ -19,11 +19,12 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000010": ["men"],
   "80000000-0000-4000-8000-000000000013": ["men"],
 };
+// The GOOOL pieces that filled this grid were retired on 2026-10-15, so the
+// home page features the GOAL Athletics pieces on sale.
 export const featuredProductIds: string[] = [
-  "70000000-0000-4000-8000-000000000002",
-  "70000000-0000-4000-8000-000000000003",
-  "80000000-0000-4000-8000-000000000006",
-  "70000000-0000-4000-8000-000000000004",
+  "80000000-0000-4000-8000-000000000011",
+  "80000000-0000-4000-8000-000000000012",
+  "80000000-0000-4000-8000-000000000013",
 ];
 export function featuredProducts() {
   const products = getProducts();

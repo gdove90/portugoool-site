@@ -7,6 +7,16 @@ const CAP_IDS = [
   '80000000-0000-4000-8000-000000000007',
   '80000000-0000-4000-8000-000000000008',
 ];
+// Owner decision 2026-10-15: all clothing that uses the spelling GOOOL comes
+// off the site (both Core Hoodie rows, both Terrace Tee rows and the
+// Matchday Tee). History and SKUs stay intact.
+const GOOOL_IDS = [
+  '70000000-0000-4000-8000-000000000002',
+  '70000000-0000-4000-8000-000000000006',
+  '70000000-0000-4000-8000-000000000003',
+  '70000000-0000-4000-8000-000000000005',
+  '80000000-0000-4000-8000-000000000006',
+];
 function retireProduct(source, id) {
   const start = source.indexOf(`id: "${id}"`);
   assert(start >= 0, `Retired product ${id} missing from baseline`);
@@ -14,9 +24,15 @@ function retireProduct(source, id) {
   const end = next >= 0 ? next : source.indexOf('\n];', start);
   assert(end > start, `Cannot isolate retired product ${id}`);
   const block = source.slice(start, end);
-  const flags = '    isActive: true,\n    availableForSale: true,';
-  assert.equal(block.split(flags).length, 2, 'Retirement must change only the exact two flags');
-  return source.slice(0, start) + block.replace(flags, '    isActive: false,\n    availableForSale: false,') + source.slice(end);
+  // The two flags may be split by a comment (the Terrace Tees), so each is
+  // matched on its own, exactly once.
+  let retired = block;
+  for (const flag of ['isActive', 'availableForSale']) {
+    const on = `\n    ${flag}: true,`;
+    assert.equal(block.split(on).length, 2, 'Retirement must change only the exact two flags');
+    retired = retired.replace(on, `\n    ${flag}: false,`);
+  }
+  return source.slice(0, start) + retired + source.slice(end);
 }
 // Owner upload 2026-10-14: the new hats live in one marked block in
 // products.ts and one in fulfillment.ts. Preservation tests strip exactly
@@ -48,6 +64,6 @@ function retireCoreBadgeBaseline(source) {
   return retireProduct(source, ID);
 }
 function applyRetirements(source) {
-  return [ID, ...CAP_IDS].reduce(retireProduct, source);
+  return [ID, ...CAP_IDS, ...GOOOL_IDS].reduce(retireProduct, source);
 }
-module.exports = { ID, CAP_IDS, retireProduct, retireCoreBadgeBaseline, applyRetirements, withoutHatAdditions };
+module.exports = { ID, CAP_IDS, GOOOL_IDS, retireProduct, retireCoreBadgeBaseline, applyRetirements, withoutHatAdditions };
