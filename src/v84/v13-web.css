@@ -1,5 +1,5 @@
 /* V1.3 letterforms retained: white navigation overlays photo heroes.
-   Strike remains available for apparel and other brand expressions, never nav. */
+   Existing product artwork is managed separately from website decoration. */
 .v84 #header { position:absolute; top:0; left:0; right:0; background:transparent; color:#fff; border-bottom:1px solid #ffffff28; }
 .v84 #header.light { position:relative; top:auto; background:#fff; color:#0a0a0a; border-bottom:1px solid #dfdfdf; }
 .v84 #header > .brand { display:flex; align-items:center; gap:8px; color:inherit; }
@@ -27,7 +27,8 @@
 .v84 .brand-ga { display:block; width:38px; flex:none; }
 
 /* Audit remediation: preserve the approved SVGs and their intrinsic proportions. */
-.v84 .editorial-approved-lockup { width:254px; max-width:100%; height:auto; }
+.v84 .editorial-wordmark { width:126px; max-width:100%; height:auto; }
+.v84 .brand-divider:empty, .v84 .editorial-brand:empty { display:none; }
 .v84 #header > nav { gap:clamp(12px, 1.2vw, 24px); }
 .v84 .pdp-info .add-button { background:var(--ink); color:#fff; border:1px solid var(--ink); width:100%; min-height:52px; font-size:14px; }
 .v84 .pdp-info .add-button:hover { background:#31312f; }
