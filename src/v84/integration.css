@@ -62,6 +62,10 @@
 .v84 .product-image,.v84 .category .product-image,.v84 .gallery-main,.v84 .thumbnail{aspect-ratio:1;background:#c5c5c5}
 .v84 .product-image .asset,.v84 .gallery-main>img,.v84 .thumbnail>img{object-fit:cover}
 
+/* Preserve the approved portrait framing for this six-view catalog set. */
+.v84 .gallery-main>img[src*="goal-ga-minimal-white-black-red-catalog-"],
+.v84 .thumbnail>img[src*="goal-ga-minimal-white-black-red-catalog-"]{object-fit:contain}
+
 /* Mobile menu: one typography scale for primary destinations and Support. */
 @media (max-width: 1023px) {
   .v84 .menu-dialog nav > a:not(.menu-reference),

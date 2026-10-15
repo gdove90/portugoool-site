@@ -1,0 +1,93 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000011",
+  "slug": "goal-athletics-ga-minimal-tee",
+  "colorway": "White · Black-Red",
+  "source": "Approved individual catalog PNGs supplied through ChatGPT and downloaded on 2026-10-14; original files preserved unchanged.",
+  "export": "WebP quality 95, method 6, native 1122 x 1402 pixels; no resizing, cropping, recoloring or retouching.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "ChatGPT Image Oct 14, 2026, 05_39_49 PM-1.png",
+      "sourceSha256": "54980684efc59892659c1fe07365bafe3e048f4a4000dd4b3108ff14dedf5505",
+      "sourceBytes": 1784613,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "deployedPath": "/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp",
+      "webpSha256": "3b0a11d46402df2a44c0f0d26e9c6987f3d70942946aac40512f31f5aa2821f4",
+      "webpBytes": 97014
+    },
+    {
+      "order": 2,
+      "view": "product-back",
+      "sourceFilename": "ChatGPT Image Oct 14, 2026, 05_39_50 PM-2.png",
+      "sourceSha256": "d2942979cd0a10ba49e75edf78f4fdc617a89322cceccb657de1278472e58da6",
+      "sourceBytes": 1744328,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "deployedPath": "/products/goal-ga-minimal-white-black-red-catalog-product-back-20261014.webp",
+      "webpSha256": "93047b0af313c06423f451523030a083c434c7024f416696b0a33f362a37b036",
+      "webpBytes": 82496
+    },
+    {
+      "order": 3,
+      "view": "model-front",
+      "sourceFilename": "ChatGPT Image Oct 14, 2026, 05_39_51 PM-3.png",
+      "sourceSha256": "c24c02d6a73052acccdd45bcc8b113f21fd8759c44b0f05c2411f6f1f8700a24",
+      "sourceBytes": 1720689,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "deployedPath": "/products/goal-ga-minimal-white-black-red-catalog-model-front-20261014.webp",
+      "webpSha256": "f1e69653ba43ce29b6627ff9ceddbb8d577c15338d3afa544e2da64d8b0413a5",
+      "webpBytes": 97420
+    },
+    {
+      "order": 4,
+      "view": "model-three-quarter",
+      "sourceFilename": "ChatGPT Image Oct 14, 2026, 05_39_52 PM-4.png",
+      "sourceSha256": "5654a2f08ea90ce81de8cb978f5c494c02144cd36359f84f2f4b0b94e4174f46",
+      "sourceBytes": 1729745,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "deployedPath": "/products/goal-ga-minimal-white-black-red-catalog-model-three-quarter-20261014.webp",
+      "webpSha256": "0b39d86f7653cc0919b517e9f87884c6cee35a6f97983ea7622919ae083abbec",
+      "webpBytes": 97088
+    },
+    {
+      "order": 5,
+      "view": "model-rear",
+      "sourceFilename": "ChatGPT Image Oct 14, 2026, 05_39_53 PM-5.png",
+      "sourceSha256": "485c0c7dfdb4f5169347909ec6b121a1ff7e7251403a1c642a52c1b31ddb15d2",
+      "sourceBytes": 1701637,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "deployedPath": "/products/goal-ga-minimal-white-black-red-catalog-model-rear-20261014.webp",
+      "webpSha256": "2031f898834410ea9018ec62b9f34e4951c86c7bb9ac00789ccf012c4b821daa",
+      "webpBytes": 91032
+    },
+    {
+      "order": 6,
+      "view": "print-detail",
+      "sourceFilename": "ChatGPT Image Oct 14, 2026, 05_39_55 PM-6.png",
+      "sourceSha256": "87b6e7a40566d0f9bb5ae0538eb28a62de5b9fac6bc3a991295d2ddf140f7e90",
+      "sourceBytes": 2206328,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "deployedPath": "/products/goal-ga-minimal-white-black-red-catalog-print-detail-20261014.webp",
+      "webpSha256": "2fb1ae4fa2bf32f97aef844083c04cd171a8cbd7ea238f9bf53e2189d067b2fa",
+      "webpBytes": 272790
+    }
+  ]
+}

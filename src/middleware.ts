@@ -63,11 +63,12 @@ const PUBLIC_PREFIXES = ["/icons/", "/print/", "/fonts/", "/brand/", "/unsubscri
 const LEGACY_RETURN_PATHS = new Set(["/success", "/track-order"]);
 
 // Next image optimization fetches local product files without the team cookie.
-// Permit only these 24 released assets; catalog pages and checkout stay gated.
+// Permit only the released ST720 assets; catalog pages and checkout stay gated.
 const ST720_IMAGE = /^\/products\/goal-ga-(?:minimal|big)-tee-(?:black|true-royal|white-black-red|white-royal|silver|true-red)-(?:front|back)\.webp$/;
+const GA_MINIMAL_WHITE_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-white-black-red-catalog-(?:product-front|product-back|model-front|model-three-quarter|model-rear|print-detail)-20261014\.webp$/;
 
 function isPublic(pathname: string): boolean {
-  return ST720_IMAGE.test(pathname) || (TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
+  return ST720_IMAGE.test(pathname) || GA_MINIMAL_WHITE_CATALOG_IMAGE.test(pathname) || (TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
 export async function middleware(req: NextRequest) {

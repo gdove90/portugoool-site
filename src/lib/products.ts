@@ -3026,14 +3026,34 @@ export const products: Product[] = [
         skuFragment: "WHITE-BLACKRED",
         images: [
           {
-            src: "/products/goal-ga-minimal-tee-white-black-red-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in white, front view with the black and red GA monogram centred on the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp",
+            alt: "White GA Minimal Tee, product front with black and red GA monogram",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/goal-ga-minimal-tee-white-black-red-back.webp",
-            alt: "GOAL Athletics GA Minimal Tee in white, back view with the black and red stacked GOAL ATHLETICS lockup across the upper back",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-white-black-red-catalog-product-back-20261014.webp",
+            alt: "White GA Minimal Tee, product back with black GOAL ATHLETICS lettering and red bar",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-white-black-red-catalog-model-front-20261014.webp",
+            alt: "Model standing front-on in the white GA Minimal Tee, plain black shorts and white socks",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-white-black-red-catalog-model-three-quarter-20261014.webp",
+            alt: "Same model in a standing three-quarter view of the white GA Minimal Tee, black shorts and white socks",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-white-black-red-catalog-model-rear-20261014.webp",
+            alt: "Same model standing rear-on in the white GA Minimal Tee, showing the black and red back design",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-white-black-red-catalog-print-detail-20261014.webp",
+            alt: "Close-up of the black and red GA monogram and white performance fabric",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
