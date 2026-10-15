@@ -65,6 +65,15 @@
 /* Preserve the approved portrait framing for this six-view catalog set. */
 .v84 .gallery-main>img[src*="goal-ga-minimal-white-black-red-catalog-"],
 .v84 .thumbnail>img[src*="goal-ga-minimal-white-black-red-catalog-"]{object-fit:contain}
+/* The set is native 4:5 (1122 x 1402) on its own studio gray, so a 4:5 frame
+   lets every view fill edge to edge with nothing cropped. Browsers without
+   :has() keep the contained square above. */
+@supports selector(:has(*)){
+  .v84 .gallery-main:has(>img[src*="goal-ga-minimal-white-black-red-catalog-"]),
+  .v84 .thumbnail:has(>img[src*="goal-ga-minimal-white-black-red-catalog-"]){aspect-ratio:4/5;height:auto}
+  .v84 .gallery-main>img[src*="goal-ga-minimal-white-black-red-catalog-"],
+  .v84 .thumbnail>img[src*="goal-ga-minimal-white-black-red-catalog-"]{object-fit:cover}
+}
 
 /* Mobile menu: one typography scale for primary destinations and Support. */
 @media (max-width: 1023px) {
