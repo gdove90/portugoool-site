@@ -9,6 +9,18 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Reuse approved editorial derivatives on repeat visits. These stable paths
+# revalidate after one hour; do not cache customer APIs or gated HTML here.
+[[headers]]
+  for = "/v84/mobile/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/v84/optimized/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
 # Keep legacy domains as aliases. Do not add blanket host redirects here:
 # existing POST callbacks and supplier artwork URLs must retain their hosts.
 # Middleware canonicalizes consumer GET/HEAD requests after the approved flip.

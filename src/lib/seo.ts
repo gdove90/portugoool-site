@@ -9,7 +9,7 @@ import { BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 // fulfillment mapping and checkout policies. Missing identifiers or delivery
 // estimates must stay absent. Availability follows the existing sale gates.
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? (process.env.DOMAIN_CUTOVER_ENABLED === "true" ? "https://goalathletics.shop" : "https://goool.shop");
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://goalathletics.shop";
 
 export const LEGAL_NAME = "GOOOL Athletics LLC";
 export const BRAND_NAME = "GOAL Athletics";
