@@ -74,6 +74,16 @@
   .v84 .gallery-main>img[src*="goal-ga-minimal-white-black-red-catalog-"],
   .v84 .thumbnail>img[src*="goal-ga-minimal-white-black-red-catalog-"]{object-fit:cover}
 }
+/* The True Royal set is native 2:3 (1024 x 1536); a square cover crop would
+   cut the model's head and feet, so frame it at 2:3 the same way. */
+.v84 .gallery-main>img[src*="goal-ga-minimal-true-royal-catalog-"],
+.v84 .thumbnail>img[src*="goal-ga-minimal-true-royal-catalog-"]{object-fit:contain}
+@supports selector(:has(*)){
+  .v84 .gallery-main:has(>img[src*="goal-ga-minimal-true-royal-catalog-"]),
+  .v84 .thumbnail:has(>img[src*="goal-ga-minimal-true-royal-catalog-"]){aspect-ratio:2/3;height:auto}
+  .v84 .gallery-main>img[src*="goal-ga-minimal-true-royal-catalog-"],
+  .v84 .thumbnail>img[src*="goal-ga-minimal-true-royal-catalog-"]{object-fit:cover}
+}
 
 /* Mobile menu: one typography scale for primary destinations and Support. */
 @media (max-width: 1023px) {
