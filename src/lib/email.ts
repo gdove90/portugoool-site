@@ -1,10 +1,11 @@
-// Single transactional transport. Mailchimp alone owns marketing subscriptions.
+// Single transport for automated customer emails.
 // No provider fallback: switching senders after an uncertain response can duplicate mail.
 export interface EmailMessage {
   to: string;
   subject: string;
   html: string;
   text: string;
+  /** Legacy queued messages may contain this; replies now always go to Support. */
   replyTo?: string;
   /** Extra SMTP headers, e.g. List-Unsubscribe on marketing sends. */
   headers?: Record<string, string>;
@@ -14,8 +15,8 @@ export type EmailResult =
   | { sent: false; reason: string; disabled?: boolean };
 export function emailEnabled(): boolean { return Boolean(process.env.RESEND_API_KEY); }
 export function emailProvider(): "resend" | "disabled" { return emailEnabled() ? "resend" : "disabled"; }
-// Sender name is the company (owner decision 2026-09-29).
-export function emailFrom(): string { return "Goool Athletics <hello@goool.shop>"; }
+export const SUPPORT_EMAIL = "support@goalathletics.shop";
+export function emailFrom(): string { return "GOAL Athletics <hello@goalathletics.shop>"; }
 
 export async function sendEmail(msg: EmailMessage, idempotencyKey: string): Promise<EmailResult> {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(msg.to) || msg.to.length > 254)
@@ -31,7 +32,8 @@ export async function sendEmail(msg: EmailMessage, idempotencyKey: string): Prom
       headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
         "Content-Type": "application/json", "Idempotency-Key": idempotencyKey },
       body: JSON.stringify({ from: emailFrom(), to: [msg.to], subject: msg.subject,
-        html: msg.html, text: msg.text, reply_to: msg.replyTo ?? "hello@goool.shop",
+        // Apply the current reply address to previously queued messages as well.
+        html: msg.html, text: msg.text, reply_to: SUPPORT_EMAIL,
         ...(msg.headers ? { headers: msg.headers } : {}) }),
       signal: AbortSignal.timeout(8000),
     });
