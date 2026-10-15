@@ -46,6 +46,8 @@ export interface ColorVariant {
   skuFragment: string;
   /** Gallery for this colorway (front first — used as the card image). */
   images: ProductImage[];
+  /** Card and search image when it should differ from the first gallery image. */
+  cardImage?: ProductImage;
   /**
    * Shown on the page but not sellable yet: the supplier design and SKUs
    * for this colour do not exist, so checkout would refuse it. The page

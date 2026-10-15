@@ -2988,16 +2988,30 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#373737",
         skuFragment: "BLACK",
+        cardImage: {
+          src: "/products/goal-ga-minimal-tee-black-front.webp",
+          alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram centred on the chest",
+        },
         images: [
           {
-            src: "/products/goal-ga-minimal-tee-black-front.webp",
-            alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram centred on the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-black-catalog-model-front-20261015.webp",
+            alt: "Model facing forward in the black GA Minimal Tee with the white and red GA monogram centred on the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/goal-ga-minimal-tee-black-back.webp",
-            alt: "GOAL Athletics GA Minimal Tee in black, back view with the white and red stacked GOAL ATHLETICS lockup across the upper back",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-black-catalog-model-front-quarter-20261015.webp",
+            alt: "Same model in a front quarter turn, black GA Minimal Tee with the white and red GA monogram on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-black-catalog-model-rear-20261015.webp",
+            alt: "Same model from behind in the black GA Minimal Tee, white GOAL ATHLETICS lockup with a red bar across the upper back",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-black-catalog-model-rear-quarter-20261015.webp",
+            alt: "Same model in a back quarter turn, showing the white and red GOAL ATHLETICS lockup on the black tee",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
