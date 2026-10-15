@@ -3,9 +3,9 @@ import Stripe from "stripe";
 import { getSupabaseAdmin } from "./supabase";
 
 // ─────────────────────────────────────────────────────────────
-// GOOOL20: 20% off a first order, one code per person, one use per code.
+// GOAL20: 20% off a first order, one code per person, one use per code.
 //
-// Every signup gets its own Stripe promotion code, GOOOL20-XXXX, on the
+// Every signup gets its own Stripe promotion code, GOAL20-XXXX, on the
 // shared 20%-once coupon, with max_redemptions 1. The ledger
 // (discount_codes, migration 0036) ties the code to the normalised email
 // so a repeat signup returns the same code, or "already used" once it is
@@ -18,9 +18,10 @@ import { getSupabaseAdmin } from "./supabase";
 // discount_repeat_flags view surfaces matches for ops.
 // ─────────────────────────────────────────────────────────────
 
+// Preserve the shared coupon identity; the public promotion-code prefix is separate.
 const COUPON_NAME = "GOOOL20 · 20% off first order";
 const COUPON_SOURCE = "goool20-popup";
-const CODE_PREFIX = "GOOOL20-";
+const CODE_PREFIX = "GOAL20-";
 const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O/1/I
 // Owner decision 2026-09-29: 14 days from sign-up (was 30). Stripe
 // expires_at and the ledger mirror are written from the same value
@@ -226,7 +227,7 @@ export type CodeValidation =
   | { ok: false; reason: "format" | "unknown" | "expired" | "used" | "email" | "coupon" };
 
 export const CODE_REJECTION_MESSAGE: Record<Extract<CodeValidation, { ok: false }>["reason"], string> = {
-  format: "That code doesn't look right. Codes look like GOOOL20-XXXX.",
+  format: "That code doesn't look right. Codes look like GOAL20-XXXX.",
   unknown: "We don't recognise that code.",
   expired: "That code has expired.",
   used: "That code has already been used.",
@@ -248,7 +249,8 @@ export async function validatePromotionCode(
   email: string
 ): Promise<CodeValidation> {
   const code = normalizeCode(rawCode);
-  if (!/^GOOOL20-[A-Z2-9]{4}$/.test(code)) return { ok: false, reason: "format" };
+  // Codes already emailed before the branding change retain their original terms.
+  if (!/^(?:GOAL20|GOOOL20)-[A-Z2-9]{4}$/.test(code)) return { ok: false, reason: "format" };
 
   const list = await stripe.promotionCodes.list({ code, limit: 1, expand: ["data.coupon"] });
   const promo = list.data[0];

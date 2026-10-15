@@ -28,7 +28,7 @@ const req = email => ({ json: async () => ({ email, consent: 'denied' }) });
     '@/lib/discount': { issueDiscountCode: async email => {
       if (unavailable) return { status: 'unavailable', reason: 'mock outage' };
       if (email === 'returning@example.com') return { status: 'redeemed' };
-      if (!codes.has(email)) codes.set(email, 'GOOOL20-QA' + codes.size);
+      if (!codes.has(email)) codes.set(email, 'GOAL20-QA' + codes.size);
       return { status: 'existing', code: codes.get(email) };
     } },
     '@/lib/meta-capi': { clientIpFrom: () => null, sendMetaServerEvent: async () => {} },
@@ -41,7 +41,7 @@ const req = email => ({ json: async () => ({ email, consent: 'denied' }) });
   await check('Footer and renovation signup sends a welcome from Hello with Support replies and discount', async () => {
     const response = await newsletter.POST(req('  New@Example.com  '));
     assert.equal(response.status, 200);
-    assert.equal(response.body.code, 'GOOOL20-QA0');
+    assert.equal(response.body.code, 'GOAL20-QA0');
     const row = db.tables.newsletter_signups[0];
     assert.equal(row.email, 'new@example.com'); assert.equal(row.source, 'footer'); assert.ok(row.sent_at_email1);
     const message = sent[0].body;
@@ -49,7 +49,7 @@ const req = email => ({ json: async () => ({ email, consent: 'denied' }) });
     assert.equal(message.reply_to, 'support@goalathletics.shop');
     assert.deepEqual(message.to, ['new@example.com']);
     assert.match(message.text, /Thanks for joining our community/);
-    assert.match(message.text, /Your code: GOOOL20-QA0/);
+    assert.match(message.text, /Your code: GOAL20-QA0/);
     assert.match(message.html, /href="mailto:support@goalathletics.shop"/);
     assert.match(message.text, /PO Box 19, Saunderstown, RI 02874/);
     assert.ok(message.headers['List-Unsubscribe'].includes('https://goalathletics.shop/unsubscribe/' + row.unsubscribe_token));
