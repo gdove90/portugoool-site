@@ -4,7 +4,7 @@ import desktopImages from "./desktop-images.json";
 
 const sources = images as Record<string, string>;
 const desktopSources = desktopImages as Record<string, string>;
-/** Approved photography: phone compression and pixel-identical desktop WebP.
+/** Existing editorial imagery with separate phone and desktop compression.
  * Original PNGs remain as the fallback; dimensions, crop and styling stay intact. */
 export function MobileImage(props: ImgHTMLAttributes<HTMLImageElement>) {
   const source = typeof props.src === "string" ? sources[props.src] : undefined;

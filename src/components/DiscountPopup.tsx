@@ -62,7 +62,7 @@ export default function DiscountPopup({ review = false }: { review?: boolean }) 
     if (QUIET_PATHS.some(p => path === p || path.startsWith(p + "/"))) return;
     if (automatic && !AUTO_PATHS.includes(path)) return;
     // Skip a busy visit instead of surprising the shopper after a dialog closes.
-    if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"], [data-goool-consent]')) return;
+    if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"], [data-goool-consent], header details[open]')) return;
     if (automatic && document.activeElement?.matches?.('input,textarea,select,[contenteditable="true"]')) return;
     closingRef.current = false;
     setClosing(false);

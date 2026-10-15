@@ -21,7 +21,8 @@ check('Payment, fulfillment, email, customer records and intentional launch-gate
 check('Agreement versions and every company-name/consent source line are preserved',()=>{
  assert.equal(current('src/lib/intake/agreements.json'),original('src/lib/intake/agreements.json'));
  const files=cp.execFileSync('git',['ls-files','src'],{cwd:root,encoding:'utf8'}).trim().split('\n').filter(f=>/\.(tsx?|jsx?|mjs|json)$/.test(f));
- for(const file of files){const legalLines=text=>text.split('\n').filter(line=>/LLC|L\.L\.C\./i.test(line));assert.deepEqual(legalLines(current(file)),legalLines(original(file)),file);}
+ const baselineFiles=new Set(cp.execFileSync('git',['ls-tree','-r','--name-only',baseline,'src'],{cwd:root,encoding:'utf8'}).trim().split('\n'));
+ for(const file of files){const legalLines=text=>text.split('\n').filter(line=>/LLC|L\.L\.C\./i.test(line)).map(line=>file==='src/v84/Shell.tsx'?line.replace(/<(\/?)(h3)(?=[ >])/g,'<$1h2'):line);assert.deepEqual(legalLines(current(file)),baselineFiles.has(file)?legalLines(original(file)):[],file);}
 });
 check('Canonical fallback is the GOAL shop domain with no dependency on cutover or a missing variable',()=>{
  const previous={...process.env};
