@@ -101,7 +101,7 @@ export async function markEmailSent(id: string, step: 1 | 2 | 3, at: string = ne
 }
 
 export function unsubscribeUrl(token: string): string {
-  return `https://goool.shop/unsubscribe/${token}`;
+  return `https://goalathletics.shop/unsubscribe/${token}`;
 }
 
 /**

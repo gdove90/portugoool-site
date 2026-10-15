@@ -9,6 +9,7 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function FooterSignup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const [successMsg, setSuccessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("Something went wrong. Try again.");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -21,11 +22,12 @@ export default function FooterSignup() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
+      const body = await res.json().catch(() => null);
       if (!res.ok) {
-        const body = await res.json().catch(() => null);
         setErrorMsg(body?.error ?? "Something went wrong. Try again.");
         throw new Error("signup failed");
       }
+      setSuccessMsg(body?.message || "Welcome to GOAL! Check your inbox for your welcome email and code.");
       setStatus("success");
       setEmail("");
     } catch {
@@ -37,12 +39,12 @@ export default function FooterSignup() {
     <div className="mt-2 flex flex-col gap-2.5">
       <p className="text-base font-semibold text-paper">Get the next drop first.</p>
       <p className="text-[15px] leading-snug text-paper/75">
-        New releases, early access, and the occasional offer. No noise.
+        Join for a welcome email and 20% off your first order, plus new releases and early access.
       </p>
 
       {status === "success" ? (
         <p className="py-3 text-base font-semibold text-paper" role="status">
-          You&apos;re on the list.
+          {successMsg}
         </p>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-2 md:flex-row">
@@ -76,7 +78,7 @@ export default function FooterSignup() {
 
       {status !== "success" && (
         <p className="text-[13px] leading-relaxed text-paper/60">
-          By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to support@goalathletics.shop.
+          By joining, you agree to receive GOAL Athletics welcome, collection, and offer emails. Unsubscribe anytime. <a href="mailto:support@goalathletics.shop">Contact Support</a>. <a href="/privacy">Privacy</a>.
         </p>
       )}
     </div>

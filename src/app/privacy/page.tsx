@@ -38,9 +38,7 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-semibold text-ink">Who touches your data</h2>
           <p className="mt-2">
             Only service providers required to run the store: Stripe
-            (payments), Supabase (order storage), Resend (transactional order and shipping emails), Mailchimp (our email list,
-            which is where newsletter signups are stored and from which
-            newsletters are sent), Netlify
+            (payments), Supabase (order and signup storage), Resend (order and shipping emails, welcome discount emails, and our opt-in marketing list), Netlify
             (hosting), and our print partner (name and shipping address only,
             to make and deliver your order). We never sell or rent personal
             data to anyone. With your permission, Meta may also receive browser/device information, pages visited, and purchase value/currency for ad measurement. We do not intentionally send your email, shipping address, payment details or Stripe Checkout session ID to Meta.
@@ -50,7 +48,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Your choices</h2>
           <ul className="mt-2 space-y-1.5">
-            <li>· Unsubscribe from emails anytime via the link in any email or by contacting us</li>
+            <li>· Unsubscribe from marketing emails anytime via the unsubscribe link or by contacting us. Order and shipping updates still arrive when needed</li>
             <li>· Ask what we hold about you, or ask us to delete it. Email us and we&apos;ll handle it within 30 days</li>
           </ul>
         </section>
@@ -65,7 +63,7 @@ export default function PrivacyPage() {
         </section>
       </div>
 
-      <p className="mt-12 text-xs text-ink/40">Last updated September 2026.</p>
+      <p className="mt-12 text-xs text-ink/40">Last updated October 2026.</p>
     </div>
   );
 }
