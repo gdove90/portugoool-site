@@ -17,13 +17,15 @@
 // blank swap ships the gate is closed: the pass skips the step and
 // writes nothing.
 
+import { listUnsubscribeHeaders } from "./email-subscription";
+export { listUnsubscribeHeaders } from "./email-subscription";
 import { getSupabaseAdmin } from "./supabase";
 import { getProductBySlug } from "./products";
 import { hasPrice, isAvailableForSale, type Product } from "./types";
 import { deliverEmail, queueEmail } from "./email-delivery";
 import { buildWelcome2 } from "./emails/welcome-2";
 import { buildWelcome3 } from "./emails/welcome-3";
-import { SITE_URL, SUPPORT_EMAIL } from "./emails/footer";
+import { SITE_URL } from "./emails/footer";
 import { markEmailSent, unsubscribeUrl, type SignupRow } from "./signups";
 
 export const PERFORMANCE_TEE_SLUG = "goool-athletics-modern-sport-performance-tee";
@@ -45,13 +47,6 @@ export function email2GateOpen(): boolean {
   return performanceTee() !== null;
 }
 
-/** RFC 8058 one-click headers for marketing sends. */
-export function listUnsubscribeHeaders(url: string): Record<string, string> {
-  return {
-    "List-Unsubscribe": `<${url}>, <mailto:${SUPPORT_EMAIL}?subject=unsubscribe>`,
-    "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
-  };
-}
 
 interface LedgerCode {
   email_hash: string;

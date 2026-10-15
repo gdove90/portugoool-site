@@ -32,6 +32,21 @@ export async function deliverEmail(key: string): Promise<string> {
   if (error) throw new Error("Email claim unavailable.");
   const row = (data as Delivery[] | null)?.[0];
   if (!row) return "already_sent_or_pending";
+  // Consent can change after a marketing email was queued, including between
+  // provider retries. Never apply this suppression to receipts or shipping mail.
+  if (row.kind === "discount") {
+    const { data: subscriber, error: consentError } = await db.from("newsletter_signups")
+      .select("unsubscribed_at").eq("email", row.message.to.trim().toLowerCase()).maybeSingle();
+    if (consentError) throw new Error("Email subscription check unavailable.");
+    if (!subscriber || subscriber.unsubscribed_at) {
+      const { error: suppressError } = await db.from("email_deliveries")
+        .update({ status: "needs_review", lease_until: null,
+          last_error: "Marketing delivery suppressed: no active subscription. Do not resend without fresh consent." })
+        .eq("key", key).eq("claim_token", token);
+      if (suppressError) throw new Error("Email suppression could not be persisted.");
+      return "suppressed";
+    }
+  }
   const result = await sendEmail(row.message, row.key);
   const fields = result.sent
     ? { status: "sent", sent_at: new Date().toISOString(), provider_id: result.id,

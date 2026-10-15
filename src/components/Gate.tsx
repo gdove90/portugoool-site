@@ -94,10 +94,10 @@ export default function Gate({ next }: { next: string }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      const result = (await res.json().catch(() => ({}))) as { error?: string };
+      const result = (await res.json().catch(() => ({}))) as { error?: string; message?: string };
       if (!res.ok) throw new Error(result.error || "Please try again.");
       setNotifyState("done");
-      setNotifyMessage("You're on the list. We'll email you when the doors reopen.");
+      setNotifyMessage(result.message || "Welcome to GOAL! Check your inbox for your welcome email and code.");
       setEmail("");
     } catch (error) {
       setNotifyState("error");
@@ -183,6 +183,7 @@ export default function Gate({ next }: { next: string }) {
 
           <form className={`${styles.notify} ${styles.reveal} ${styles.d4}`} onSubmit={notify} noValidate>
             <label className={styles.notifyLabel} htmlFor="gate-notify-email">Be first through the doors</label>
+            <p className={styles.fine}>Join for a welcome email, 20% off your first order, and reopening news. Codes are valid for 14 days from signup.</p>
             <div className={styles.field}>
               <input
                 id="gate-notify-email"
@@ -205,7 +206,7 @@ export default function Gate({ next }: { next: string }) {
               {notifyMessage}
             </p>
             <p id="gate-notify-fine" className={styles.fine}>
-              By joining, you agree to receive GOOOL Athletics LLC marketing emails. Unsubscribe with one click from any email, or write to support@goalathletics.shop.
+              By joining, you agree to receive GOAL Athletics welcome, collection, and offer emails. Unsubscribe anytime. <a href="mailto:support@goalathletics.shop">Contact Support</a>. <a href="/privacy">Privacy</a>.
             </p>
           </form>
 

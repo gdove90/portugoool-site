@@ -1,5 +1,6 @@
 import { OrderItemRow, OrderRow } from "../orders-store";
 import { orderNumberFor } from "./order-confirmation";
+import { SUPPORT_EMAIL } from "../email";
 import { getProductById } from "../products";
 
 // ─────────────────────────────────────────────────────────────
@@ -63,6 +64,7 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
     "3. If it will be late, email the customer from support@goalathletics.shop.",
     "",
     "The customer has only received the payment receipt; they have not been told anything is wrong.",
+    `Support: ${SUPPORT_EMAIL}`,
   ].join("\n");
 
   const html = `<!doctype html><html><body style="margin:0;padding:24px;font:400 15px/1.6 Helvetica,Arial,sans-serif;color:#0A0A0A;">
@@ -81,6 +83,7 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
 <li>If it will be late, email the customer from support@goalathletics.shop.</li>
 </ol>
 <p style="margin:20px 0 0;color:#666;">The customer has only received the payment receipt; they have not been told anything is wrong.</p>
+<p style="margin:20px 0 0;">Support: <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a></p>
 </body></html>`;
 
   return { subject, html, text };
