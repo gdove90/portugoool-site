@@ -32,6 +32,7 @@ const BIG_STRIKE = (
 export default function Gate({ next }: { next: string }) {
   const [panelOpen, setPanelOpen] = useState(false);
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [gateState, setGateState] = useState<"idle" | "checking" | "wrong" | "error">("idle");
   const [email, setEmail] = useState("");
   const [notifyState, setNotifyState] = useState<"idle" | "sending" | "done" | "error">("idle");
@@ -143,7 +144,7 @@ export default function Gate({ next }: { next: string }) {
                 <input
                   ref={passwordRef}
                   id="gate-password"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   autoComplete="current-password"
                   placeholder="Password"
                   value={password}
@@ -154,6 +155,20 @@ export default function Gate({ next }: { next: string }) {
                   aria-invalid={rejected}
                   aria-describedby={rejected ? "gate-error" : undefined}
                 />
+                <button
+                  className={styles.peek}
+                  type="button"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  aria-pressed={showPassword}
+                  aria-controls="gate-password"
+                  onClick={() => setShowPassword((shown) => !shown)}
+                >
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+                    <path d="M1.25 8S3.75 3.25 8 3.25 14.75 8 14.75 8 12.25 12.75 8 12.75 1.25 8 1.25 8Z" />
+                    <circle cx="8" cy="8" r="2.25" />
+                    {showPassword && <path d="M2.5 13.5 13.5 2.5" />}
+                  </svg>
+                </button>
                 <button className={styles.btn} type="submit" disabled={gateState === "checking"}>
                   {gateState === "checking" ? "Checking" : "Enter"}
                 </button>

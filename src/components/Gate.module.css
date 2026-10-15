@@ -143,6 +143,22 @@
 }
 .panelRow input::placeholder { color: #8d8983; }
 .panelRow .btn { min-height: 48px; padding: 0 20px; }
+.peek {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-height: 48px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .2s;
+}
+.peek:hover, .peek[aria-pressed="true"] { color: var(--paper); }
+.peek:focus-visible { outline-offset: -4px; }
+.peek svg { width: 18px; height: 18px; }
 .panelError { margin: 12px 0 0; font-size: 13px; line-height: 1.55; color: var(--coral); }
 
 /* ---------- content ---------- */
