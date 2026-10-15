@@ -11,7 +11,7 @@ import BrandLockup from "./WebBrandLockup";
 // designs/renovation-page-2026-10-12/.
 //
 // Visual language is the live v84 site, unchanged: Barlow Condensed 600
-// display, Inter body, ink/paper, the V1.2 strike. No old wordmark artwork.
+// display, Inter body, ink/paper and the approved header identity.
 //
 // The password check is real. It is validated server-side in /api/preview
 // against PREVIEW_KEY and never reaches the client bundle. The email form
@@ -21,13 +21,6 @@ import BrandLockup from "./WebBrandLockup";
 // Fixed overlay at z-index 35: above the site header (30) so the shop nav
 // and bag are not offered while the store is closed, and below the
 // advertising-consent banner (40) so that notice still shows.
-
-const BIG_STRIKE = (
-  <svg className={styles.bgStrike} viewBox="0 0 890.161617719 400" aria-hidden="true" focusable="false">
-    <polygon className={styles.barA} points="0,400 360.161617719,0 550.161617719,0 190,400" />
-    <polygon className={styles.barB} points="340,400 700.161617719,0 890.161617719,0 530,400" />
-  </svg>
-);
 
 export default function Gate({ next }: { next: string }) {
   const [panelOpen, setPanelOpen] = useState(false);
@@ -110,7 +103,6 @@ export default function Gate({ next }: { next: string }) {
   return (
     <div className={styles.overlay}>
       <div className={styles.stage}>
-        {BIG_STRIKE}
 
         <header className={styles.top}>
           <span className={styles.brand}>

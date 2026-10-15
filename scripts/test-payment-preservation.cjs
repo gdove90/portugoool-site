@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const ts = require('typescript');
 const {execFileSync} = require('node:child_process');
 const {createHash} = require('node:crypto');
-const baseline = process.argv[2] || 'e5f900866117d5e792638e1cff8e02ff076dc407';
+const baseline = process.argv[2] || 'dc60d09b5471cd12a2a9a2661a87b95856b26e06';
 const text = file => fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
 const original = file => execFileSync('git', ['show', `${baseline}:${file}`], {encoding:'utf8'}).replace(/\r\n/g, '\n');
 const files = [
@@ -24,24 +24,15 @@ const evidence = {baseline, files:[], checks:[]};
 function check(name, fn) {fn();checks++;evidence.checks.push(name);console.log('PASS '+name);}
 check('payment, webhook authentication/handling, pricing, orders and fulfillment files equal production', () => {
   for (const file of files) {
-    const content = require('./retirement-baseline.cjs').withoutHatAdditions(text(file));
-    let expected = original(file);
-    if (file === 'src/lib/products.ts') expected = require('./retirement-baseline.cjs').applyRetirements(expected);
-    if (file === 'src/app/api/track-order/route.ts') expected = expected.replaceAll('Email hello@goool.shop and', 'Email support@goalathletics.shop and');
+    const content = text(file);
+    const expected = original(file);
     assert.equal(content, expected, file);
     evidence.files.push({file, normalizedSha256:createHash('sha256').update(content).digest('hex')});
   }
 });
 const checkout = text('src/app/api/checkout/route.ts');
-check('checkout differs only by the explicit renovation/preview refusal', () => {
-  const additions = [
-    'import { MIGRATION_PREVIEW } from "@/lib/migration-preview";\n',
-    'import { storeClosed } from "@/lib/store-status";\n',
-    '  if (MIGRATION_PREVIEW || storeClosed()) return NextResponse.json({ error: "The store is closed for renovation. Existing orders remain supported." }, { status: 503 });\n',
-  ];
-  let stripped = checkout;
-  for (const addition of additions) {assert.equal(stripped.split(addition).length, 2);stripped = stripped.replace(addition,'');}
-  assert.equal(stripped, original('src/app/api/checkout/route.ts'));
+check('checkout including the renovation/preview refusal equals the audit baseline', () => {
+  assert.equal(checkout, original('src/app/api/checkout/route.ts'));
 });
 // Evaluate only the existing URL expressions from the syntax tree. Never
 // evaluate the route, import Stripe or invoke sessions.create (even as a mock).

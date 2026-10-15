@@ -1,5 +1,5 @@
 /* V1.3 letterforms retained: white navigation overlays photo heroes.
-   Strike remains available for apparel and other brand expressions, never nav. */
+   Existing product artwork is managed separately from website decoration. */
 .v84 #header { position:absolute; top:0; left:0; right:0; background:transparent; color:#fff; border-bottom:1px solid #ffffff28; }
 .v84 #header.light { position:relative; top:auto; background:#fff; color:#0a0a0a; border-bottom:1px solid #dfdfdf; }
 .v84 #header > .brand { display:flex; align-items:center; gap:8px; color:inherit; }
@@ -16,6 +16,35 @@
   .v84 #header .header-actions .icon-button,
   .v84 #header .header-actions .bag-button { min-width:44px; min-height:44px; padding:7px; }
 }
+
+/* Clear navigation groups retain the existing V1.3 type, color and logo assets. */
+.v84 #header .grouped-desktop-nav { gap:20px; }
+.v84 .grouped-desktop-nav details { position:relative; }
+.v84 .grouped-desktop-nav summary { display:flex; align-items:center; gap:10px; min-height:44px; padding:10px 4px; font-size:14px; cursor:pointer; list-style:none; }
+.v84 .grouped-desktop-nav summary::-webkit-details-marker { display:none; }
+.v84 .grouped-desktop-nav summary::after { content:""; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg) translateY(-2px); }
+.v84 .grouped-desktop-nav details[open] summary::after { transform:rotate(225deg) translate(-2px,-1px); }
+.v84 #header .navigation-panel { position:absolute; top:100%; left:-16px; min-width:250px; padding:12px; background:var(--paper); color:var(--ink); border:1px solid var(--line); box-shadow:0 12px 28px #0002; }
+.v84 #header .navigation-panel a { display:flex; align-items:center; min-height:44px; padding:10px 12px; font-size:14px; line-height:1.4; }
+.v84 #header .navigation-panel a::after { display:none; }
+.v84 #header .navigation-panel a:hover, .v84 #header .navigation-panel a[aria-current="page"] { background:#eae7e1; text-decoration:underline; text-underline-offset:4px; }
+.v84 .grouped-mobile-nav section + section { margin-top:24px; }
+.v84 .menu-dialog .grouped-mobile-nav h2 { margin:0 0 8px; font-size:13px; font-weight:600; line-height:1.5; letter-spacing:.12em; text-transform:uppercase; }
+.v84 .menu-dialog .grouped-mobile-nav a[href] { font-size:17px; min-height:48px; padding:12px 0; letter-spacing:0; line-height:1.4; }
+.v84 .footer-grid h2 { font-size:13px; font-weight:600; letter-spacing:.1em; margin-bottom:16px; line-height:1.5; }
+.v84 .footer-signup h2 { font-size:24px; font-weight:500; line-height:1.4; letter-spacing:0; margin:0 0 8px; }
+.v84 .footer-bottom .copyright-lockup .brand { min-height:44px; display:inline-flex; align-items:center; }
+.v84 .search-status { font-size:14px; line-height:1.5; margin:16px 0 0; color:var(--ink); }
+.v84 .no-results { display:grid; justify-items:start; gap:16px; font-size:16px; color:var(--ink); }
+.v84 .no-results p { margin:0; }
+.v84 .search-reset, .v84 .search-support { min-height:44px; display:inline-flex; align-items:center; text-decoration:underline; text-underline-offset:4px; font-size:14px; }
+.v84 .search-reset { background:transparent; border:0; padding:0 8px; cursor:pointer; color:inherit; }
+.v84 .bag-shipping { margin:20px 0; font-size:16px; line-height:1.5; }
+.v84 .bag-shipping progress { width:100%; height:6px; margin:12px 0 4px; accent-color:var(--ink); }
+.v84 .bag-shipping .cart-note, .v84 #bag-body > .cart-note { font-size:14px; line-height:1.6; }
+.v84 #bag-body .bag-checkout { background:var(--ink); color:#fff; border:1px solid var(--ink); width:100%; min-height:52px; font-size:14px; justify-content:center; }
+.v84 #bag-body .bag-checkout:hover { background:#31312f; }
+.v84 #bag-body .cart-note a { text-decoration:underline; text-underline-offset:3px; }
 @media (max-width:360px) {
   .v84 #header > .brand .brand-ga { width:24px; }
   .v84 #header > .brand .brand-wordmark { width:130px; }
@@ -25,3 +54,36 @@
 
 @media(max-width:1279px) { .v84 #header > nav { display:none; } }
 .v84 .brand-ga { display:block; width:38px; flex:none; }
+
+/* Audit remediation: preserve the approved SVGs and their intrinsic proportions. */
+.v84 .editorial-wordmark { width:126px; max-width:100%; height:auto; }
+.v84 .brand-divider:empty, .v84 .editorial-brand:empty { display:none; }
+.v84 #header > nav { gap:clamp(12px, 1.2vw, 24px); }
+.v84 .pdp-info .add-button { background:var(--ink); color:#fff; border:1px solid var(--ink); width:100%; min-height:52px; font-size:14px; }
+.v84 .pdp-info .add-button:hover { background:#31312f; }
+.v84 .mobile-purchase-bar { display:none; }
+.v84 .filter-list a.filter { display:inline-flex; align-items:center; min-height:44px; }
+@media (max-width:1279px) {
+  .v84 #header > .brand { flex:1; }
+  .v84 #header > .brand .brand-wordmark { flex:0 1 auto; min-width:0; }
+}
+@media (min-width:1280px) and (max-width:1439px) {
+  .v84 #header > nav { display:none; }
+  .v84 #header > .brand { margin-right:auto; }
+  .v84 #header .header-actions .menu-button { display:flex; }
+}
+@media (max-width:1023px) {
+  .v84:has(.mobile-purchase-bar) { padding-bottom:calc(90px + env(safe-area-inset-bottom)); }
+  .v84 .mobile-purchase-bar { position:fixed; z-index:31; inset:auto 0 0; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 20px calc(12px + env(safe-area-inset-bottom)); background:var(--paper); color:var(--ink); border-top:1px solid var(--line); box-shadow:0 -4px 20px #0000000d; }
+  .v84 .mobile-purchase-bar > span { min-width:0; font-size:18px; line-height:1.4; }
+  .v84 .mobile-purchase-bar small { display:block; font-size:12px; overflow-wrap:anywhere; }
+  .v84 .mobile-purchase-bar .btn { background:var(--ink); color:white; border:1px solid var(--ink); min-height:48px; font-size:14px; padding:12px 18px; gap:12px; flex-shrink:0; }
+  .v84 .pdp-info .sizes { scroll-margin-block:24px 110px; }
+  .v84 .pdp-info .size:focus-visible { outline-color:var(--red); }
+  .v84 .signup-note, .v84 .signup-note a { font-size:13px; }
+}
+@media (min-width:1024px) {
+  .v84 #header > nav.grouped-desktop-nav { display:flex; }
+  .v84 #header .header-actions .menu-button { display:none; }
+  .v84 #header > .brand { flex:0 1 auto; margin-right:0; }
+}

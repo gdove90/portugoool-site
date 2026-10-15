@@ -15,7 +15,8 @@ import "./discount-popup.css";
 const STORAGE_KEY = "goool20_popup";
 const SHOW_DELAY_MS = 6000;
 const DISMISS_DAYS = 30;
-const QUIET_PATHS = ["/cart", "/success", "/gate", "/track-order", "/checkout", "/admin"];
+const QUIET_PATHS = ["/shop", "/men", "/women", "/cart", "/success", "/gate", "/track-order", "/checkout", "/admin", "/kit-wear", "/share-your-goals", "/whats-your-goool"];
+const AUTO_PATHS = ["/", "/about"];
 
 type Status = "idle" | "loading" | "done" | "error";
 
@@ -54,64 +55,36 @@ export default function DiscountPopup({ review = false }: { review?: boolean }) 
   const inputRef = useRef<HTMLInputElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const pendingOpenRef = useRef<MutationObserver | null>(null);
-  const automaticOpenRef = useRef(false);
-  const pendingTimerRef = useRef<number | null>(null);
-
-  const cancelPendingOpen = useCallback(() => {
-    pendingOpenRef.current?.disconnect();
-    pendingOpenRef.current = null;
-    if (pendingTimerRef.current !== null) window.clearTimeout(pendingTimerRef.current);
-    pendingTimerRef.current = null;
-  }, []);
 
   const requestOpen = useCallback((automatic = false) => {
-    cancelPendingOpen();
     if (dialogRef.current?.open) return;
-    const tryOpen = () => {
-      // Never interrupt navigation, search, the bag or another active dialog.
-      if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]')) return;
-      cancelPendingOpen();
-      if (automatic && QUIET_PATHS.some(p => window.location.pathname.startsWith(p))) return;
-      automaticOpenRef.current = automatic;
-      closingRef.current = false;
-      setClosing(false);
-      setDragOffset(0);
-      setOpen(true);
-    };
-    const observer = new MutationObserver(() => {
-      if (pendingTimerRef.current !== null) return;
-      // Let destination navigation settle before showing a deferred offer.
-      pendingTimerRef.current = window.setTimeout(() => {
-        pendingTimerRef.current = null;
-        tryOpen();
-      }, 150);
-    });
-    pendingOpenRef.current = observer;
-    observer.observe(document.body, {
-      childList: true, subtree: true, attributes: true,
-      attributeFilter: ["open", "aria-modal"],
-    });
-    tryOpen();
-  }, [cancelPendingOpen]);
+    const path = window.location.pathname;
+    if (QUIET_PATHS.some(p => path === p || path.startsWith(p + "/"))) return;
+    if (automatic && !AUTO_PATHS.includes(path)) return;
+    // Skip a busy visit instead of surprising the shopper after a dialog closes.
+    if (document.querySelector('dialog[open], [role="dialog"][aria-modal="true"], [data-goool-consent], header details[open]')) return;
+    if (automatic && document.activeElement?.matches?.('input,textarea,select,[contenteditable="true"]')) return;
+    closingRef.current = false;
+    setClosing(false);
+    setDragOffset(0);
+    setOpen(true);
+  }, []);
 
-  const quiet = QUIET_PATHS.some((p) => pathname?.startsWith(p));
+  const quiet = QUIET_PATHS.some((p) => pathname === p || pathname?.startsWith(p + "/"));
 
   useEffect(() => {
     if (quiet) {
-      cancelPendingOpen();
-      if (automaticOpenRef.current) setOpen(false);
+      setOpen(false);
       return;
     }
-    if (review) { requestOpen(); return cancelPendingOpen; }
+    if (review) { requestOpen(); return; }
+    if (!AUTO_PATHS.includes(pathname)) return;
     const state = readState();
     if (state?.claimed) return;
     if (state?.dismissedAt && Date.now() - state.dismissedAt < DISMISS_DAYS * 86400000) return;
     const t = window.setTimeout(() => requestOpen(true), SHOW_DELAY_MS);
-    return () => { window.clearTimeout(t); cancelPendingOpen(); };
-  }, [quiet, requestOpen, cancelPendingOpen, review]);
-
-  useEffect(() => () => cancelPendingOpen(), [cancelPendingOpen]);
+    return () => window.clearTimeout(t);
+  }, [pathname, quiet, requestOpen, review]);
 
   useEffect(() => {
     const onOpen = () => requestOpen();
@@ -120,14 +93,13 @@ export default function DiscountPopup({ review = false }: { review?: boolean }) 
   }, [requestOpen]);
 
   const close = useCallback(() => {
-    cancelPendingOpen();
     if (closingRef.current) return;
     closingRef.current = true;
     setClosing(true);
     closeTimer.current = window.setTimeout(() => setOpen(false), window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 180);
     const state = readState() ?? {};
     writeState({ ...state, dismissedAt: Date.now() });
-  }, [cancelPendingOpen]);
+  }, []);
 
   // Native modal makes the page inert; restore focus and scroll on every close.
   useEffect(() => {
