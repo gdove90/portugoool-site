@@ -22,10 +22,12 @@ function retireProduct(source, id) {
 // products.ts and one in fulfillment.ts. Preservation tests strip exactly
 // that block, so everything outside it must still equal production.
 // The ST720 GA tees (owner handoff 2026-10-14) follow the same rule with
-// their own marked block, directly after the hats.
+// their own marked block, directly after the hats, and so do the GA
+// Minimal Shorts (owner proof 2026-10-14), directly after the tees.
 const BLOCKS = [
   ['  // == GOAL Athletics hats (owner upload 2026-10-14) ==\n', '  // == end GOAL Athletics hats ==\n'],
   ['  // == GOAL Athletics ST720 GA tees (owner handoff 2026-10-14) ==\n', '  // == end GOAL Athletics ST720 GA tees ==\n'],
+  ['  // == GOAL Athletics GA Minimal Shorts (owner proof 2026-10-14) ==\n', '  // == end GOAL Athletics GA Minimal Shorts ==\n'],
 ];
 function withoutBlock(source, [open, close]) {
   const start = source.indexOf(open);
@@ -35,8 +37,12 @@ function withoutBlock(source, [open, close]) {
   assert.equal(source.indexOf(open, end), -1, `Only one block per file: ${open.trim()}`);
   return source.slice(0, start) + source.slice(end + close.length);
 }
+// The shorts also add one value to the category union in types.ts. Only
+// that exact line is reverted; the rest of the file must equal production.
+const SHORTS_CATEGORY_LINE = 'export type ProductCategory = "jersey" | "casual" | "tshirt" | "hoodie" | "accessory" | "hat" | "shorts";\n';
+const PRODUCTION_CATEGORY_LINE = 'export type ProductCategory = "jersey" | "casual" | "tshirt" | "hoodie" | "accessory" | "hat";\n';
 function withoutHatAdditions(source) {
-  return BLOCKS.reduce(withoutBlock, source);
+  return BLOCKS.reduce(withoutBlock, source).replace(SHORTS_CATEGORY_LINE, PRODUCTION_CATEGORY_LINE);
 }
 function retireCoreBadgeBaseline(source) {
   return retireProduct(source, ID);

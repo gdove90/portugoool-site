@@ -3207,8 +3207,8 @@ export const products: Product[] = [
   // == GOAL Athletics GA Minimal Shorts (owner proof 2026-10-14) ==
   // AS Colour 5620 active shorts, DTF transfer: GA 3.00 x 2.70 in on the
   // wearer's left leg (Apliiq zone Front Bottom Left), no back print.
-  // Three Apliiq designs saved 2026-10-14, mapped in fulfillment.ts. $32 set
-  // by the owner 2026-10-14; still Coming Soon. Sizes map to waist sizes
+  // Three Apliiq designs saved 2026-10-14, mapped in fulfillment.ts. On sale
+  // at $32 by owner decision 2026-10-14. Sizes map to waist sizes
   // by owner decision 2026-10-14: S=30, M=32, L=34, XL=36, XXL=38 (40 unused).
   // The Vertical style is not built: every 5620 zone is 4 x 4 in.
   // Images are Apliiq's renders: designs/28_as5620-goal-shorts-2026-10-14/.
@@ -3281,7 +3281,7 @@ export const products: Product[] = [
     category: "shorts",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: false,
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

@@ -8,7 +8,7 @@
 -- src/lib/orders-store.ts), and that upsert would fail the category check
 -- without 'shorts'. This file keeps the audit trail, as 0039 does.
 --
--- $32 (owner, 2026-10-14), still Coming Soon: available_for_sale false.
+-- On sale at $32 (owner, 2026-10-14).
 -- Sizes S to XXL map to waist 30 to 38 (fulfillment.ts).
 -- Idempotent; no historical orders or supplier designs changed.
 
@@ -22,7 +22,7 @@ insert into public.products
 values
   ('80000000-0000-4000-8000-000000000013', 'GOAL Athletics GA Minimal Shorts',
    'goal-athletics-ga-minimal-shorts', '', 3200, 'Black', '#242424',
-   array['S','M','L','XL','XXL'], 'shorts', 'apliiq', true, false)
+   array['S','M','L','XL','XXL'], 'shorts', 'apliiq', true, true)
 on conflict (id) do update
   set name              = excluded.name,
       slug              = excluded.slug,
