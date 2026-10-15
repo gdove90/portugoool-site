@@ -11,6 +11,8 @@
 -- On sale at $32 (owner, 2026-10-14).
 -- Sizes S to XXL map to waist 30 to 38 (fulfillment.ts).
 -- Idempotent; no historical orders or supplier designs changed.
+-- Applied 2026-10-14 in the Supabase SQL editor; verified the row ($32,
+-- shorts, active, for sale, S-XXL) and the widened category check.
 
 alter table public.products drop constraint if exists products_product_category_check;
 alter table public.products add constraint products_product_category_check
