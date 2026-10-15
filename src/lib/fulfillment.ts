@@ -400,6 +400,18 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "True Red": { apliiqProductId: 6206251, skus: { S: "APQ-6206251S6A1", M: "APQ-6206251S7A1", L: "APQ-6206251S8A1", XL: "APQ-6206251S1A1", XXL: "APQ-6206251S2A1" } },
   },
   // == end GOAL Athletics ST720 GA tees ==
+  // == GOAL Athletics GA Minimal Shorts (AS Colour 5620, owner proof 2026-10-14) ==
+  // GA 3.00 x 2.70 in, Front Bottom Left (wearer's left leg), transfer print,
+  // with the placement note on each design. Ids and SKUs read off each design
+  // page 2026-10-14. Apliiq sizes by waist; owner mapping S=30, M=32, L=34,
+  // XL=36, XXL=38 (waist 40, S76A1, is not sold). Coming Soon with no price,
+  // so this mapping opens nothing yet.
+  "80000000-0000-4000-8000-000000000013": {
+    "Black": { apliiqProductId: 6208695, skus: { S: "APQ-6208695S71A1", M: "APQ-6208695S72A1", L: "APQ-6208695S73A1", XL: "APQ-6208695S74A1", XXL: "APQ-6208695S75A1" } },
+    "Ink Blue": { apliiqProductId: 6208705, skus: { S: "APQ-6208705S71A1", M: "APQ-6208705S72A1", L: "APQ-6208705S73A1", XL: "APQ-6208705S74A1", XXL: "APQ-6208705S75A1" } },
+    "Shadow": { apliiqProductId: 6208713, skus: { S: "APQ-6208713S71A1", M: "APQ-6208713S72A1", L: "APQ-6208713S73A1", XL: "APQ-6208713S74A1", XXL: "APQ-6208713S75A1" } },
+  },
+  // == end GOAL Athletics GA Minimal Shorts ==
 };
 
 export interface ResolvedFulfillment {

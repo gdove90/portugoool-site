@@ -17,6 +17,7 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000008": ["men"],
   "80000000-0000-4000-8000-000000000009": ["men"],
   "80000000-0000-4000-8000-000000000010": ["men"],
+  "80000000-0000-4000-8000-000000000013": ["men"],
 };
 export const featuredProductIds: string[] = [
   "70000000-0000-4000-8000-000000000002",
@@ -29,7 +30,7 @@ export function featuredProducts() {
   return featuredProductIds.flatMap(id => products.filter(product => product.id === id));
 }
 export function productType(product: Product) {
-  return product.category === "hoodie" ? "hoodies" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
+  return product.category === "hoodie" ? "hoodies" : product.category === "shorts" ? "shorts" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
 }
 export function forAudience(audience: Audience) {
   return getProducts().filter(p => audienceAssignments[p.id]?.includes(audience));

@@ -38,7 +38,7 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     const category = query.get("category");
-    if (category) setType(category === "hoodie" ? "hoodies" : category === "hat" || category === "accessory" ? "hats" : "tees");
+    if (category) setType(category === "hoodie" ? "hoodies" : category === "shorts" ? "shorts" : category === "hat" || category === "accessory" ? "hats" : "tees");
     const close = (event: PointerEvent) => { if (!sortRef.current?.contains(event.target as Node)) setOpen(false); };
     document.addEventListener("pointerdown", close);
     return () => document.removeEventListener("pointerdown", close);

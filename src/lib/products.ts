@@ -3204,6 +3204,93 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics ST720 GA tees ==
+  // == GOAL Athletics GA Minimal Shorts (owner proof 2026-10-14) ==
+  // AS Colour 5620 active shorts, DTF transfer: GA 3.00 x 2.70 in on the
+  // wearer's left leg (Apliiq zone Front Bottom Left), no back print.
+  // Three Apliiq designs saved 2026-10-14, mapped in fulfillment.ts. Coming
+  // Soon with no price until the owner sets one. Sizes map to waist sizes
+  // by owner decision 2026-10-14: S=30, M=32, L=34, XL=36, XXL=38 (40 unused).
+  // The Vertical style is not built: every 5620 zone is 4 x 4 in.
+  // Images are Apliiq's renders: designs/28_as5620-goal-shorts-2026-10-14/.
+  {
+    id: "80000000-0000-4000-8000-000000000013",
+    name: "GOAL Athletics GA Minimal Shorts",
+    slug: "goal-athletics-ga-minimal-shorts",
+    blank: "AS5620",
+    description:
+      "Lightweight active shorts. GA monogram on the left leg just above the hem, clean back.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#242424",
+    fabric:
+      "125 gsm knit, 93% recycled polyester and 7% spandex, so the shorts stretch with every stride.",
+    fit:
+      "Elastic waist with an outside drawcord, two side pockets, a zip back pocket and split sides. Full length 17.7 in on a size S.",
+    fitNote: "Sized by waist: S is a 30, M a 32, L a 34, XL a 36 and XXL a 38.",
+    careInstructions: "Machine wash cold, inside out. Hang to dry. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-ga-minimal-shorts-black-front.webp",
+        alt: "GOAL Athletics GA Minimal Shorts in black, front view with the white and red GA monogram on the left leg above the hem",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#242424",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-shorts-black-front.webp",
+            alt: "GOAL Athletics GA Minimal Shorts in black, front view with the white and red GA monogram on the left leg above the hem",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Ink Blue",
+        supplierColor: "Ink Blue",
+        hex: "#1F1F2B",
+        skuFragment: "INK-BLUE",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-shorts-ink-blue-front.webp",
+            alt: "GOAL Athletics GA Minimal Shorts in ink blue, front view with the cream GA monogram on the left leg above the hem",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Shadow",
+        supplierColor: "Shadow",
+        hex: "#DBDBDB",
+        skuFragment: "SHADOW",
+        images: [
+          {
+            src: "/products/goal-ga-minimal-shorts-shadow-front.webp",
+            alt: "GOAL Athletics GA Minimal Shorts in shadow grey, front view with the black and red GA monogram on the left leg above the hem",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "shorts",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics GA Minimal Shorts ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

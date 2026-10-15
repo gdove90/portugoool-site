@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProductDetail from "@/v84/ProductDetail";
 import { getProductBySlug, getProducts } from "@/lib/products";
+import { hasPrice } from "@/lib/types";
 import {
   productJsonLd,
   breadcrumbJsonLd,
@@ -33,14 +34,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // · GOAL". The brand is stripped here and the template puts it back
   // once, with the price, which is what a shopper scans for in a result.
   const short = product.name.replace(/^GOOOL\s+/, "");
-  const price = `$${(product.priceCents / 100).toFixed(0)}`;
+  // An unpriced (Coming Soon) piece shows "Price to be announced" on the
+  // page, so the title leaves the price out instead of claiming $0.
+  const price = hasPrice(product) ? ` · $${(product.priceCents / 100).toFixed(0)}` : "";
 
   return {
-    title: `${short} · ${price}`,
+    title: `${short}${price}`,
     description: product.description,
     alternates: { canonical: `/shop/${product.slug}` },
     openGraph: {
-      title: `${product.name} · ${price}`,
+      title: `${product.name}${price}`,
       description: product.description,
       type: "website",
       url: `/shop/${product.slug}`,
