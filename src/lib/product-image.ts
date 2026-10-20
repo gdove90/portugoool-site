@@ -14,6 +14,8 @@ export function catalogImageSrc(src: string): string {
     ? "modern-back-v6-5in-20260925"
     : /^\/products\/GOOOL_MODERN_PERFORMANCE_(?:ROYAL_|WHITE_)?(?:FRONT|BACK_DETAIL)_V[36]\.png$/.test(url.pathname)
     ? "modern-print-20260925-v4"
+    : /^\/products\/goal-ga-(?:big-tee-(?:black|true-royal|white-black-red)|minimal-true-red|minimal-white-black-red)-catalog-/.test(url.pathname)
+    ? "frame-2x3-20261020"
     : "backdrop-20260925";
   url.searchParams.set("v", revision);
   return url.pathname + url.search + url.hash;

@@ -62,53 +62,17 @@
 .v84 .product-image,.v84 .category .product-image,.v84 .gallery-main,.v84 .thumbnail{aspect-ratio:1;background:#c5c5c5}
 .v84 .product-image .asset,.v84 .gallery-main>img,.v84 .thumbnail>img{object-fit:cover}
 
-/* Preserve the approved portrait framing for this six-view catalog set. */
-.v84 .gallery-main>img[src*="goal-ga-minimal-white-black-red-catalog-"],
-.v84 .thumbnail>img[src*="goal-ga-minimal-white-black-red-catalog-"]{object-fit:contain}
-/* The set is native 4:5 (1122 x 1402) on its own studio gray, so a 4:5 frame
-   lets every view fill edge to edge with nothing cropped. Browsers without
-   :has() keep the contained square above. */
+/* Owner standard 2026-10-20: every catalog photo is 2:3 with its studio
+   background edge to edge (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md),
+   so every product shows the same frame and the same background width.
+   Browsers without :has() keep the contained square above. */
+.v84 .gallery-main>img[src*="-catalog-"],
+.v84 .thumbnail>img[src*="-catalog-"]{object-fit:contain}
 @supports selector(:has(*)){
-  .v84 .gallery-main:has(>img[src*="goal-ga-minimal-white-black-red-catalog-"]),
-  .v84 .thumbnail:has(>img[src*="goal-ga-minimal-white-black-red-catalog-"]){aspect-ratio:4/5;height:auto}
-  .v84 .gallery-main>img[src*="goal-ga-minimal-white-black-red-catalog-"],
-  .v84 .thumbnail>img[src*="goal-ga-minimal-white-black-red-catalog-"]{object-fit:cover}
-}
-/* The True Royal and Black model sets are native 2:3 (1024 x 1536); a square
-   cover crop would cut the model's head and feet, so frame them at 2:3. */
-.v84 .gallery-main>img[src*="goal-ga-minimal-true-royal-catalog-"],
-.v84 .gallery-main>img[src*="goal-ga-minimal-black-catalog-"],
-.v84 .thumbnail>img[src*="goal-ga-minimal-true-royal-catalog-"],
-.v84 .thumbnail>img[src*="goal-ga-minimal-black-catalog-"]{object-fit:contain}
-@supports selector(:has(*)){
-  .v84 .gallery-main:has(>img[src*="goal-ga-minimal-true-royal-catalog-"]),
-  .v84 .gallery-main:has(>img[src*="goal-ga-minimal-black-catalog-"]),
-  .v84 .thumbnail:has(>img[src*="goal-ga-minimal-true-royal-catalog-"]),
-  .v84 .thumbnail:has(>img[src*="goal-ga-minimal-black-catalog-"]){aspect-ratio:2/3;height:auto}
-  .v84 .gallery-main>img[src*="goal-ga-minimal-true-royal-catalog-"],
-  .v84 .gallery-main>img[src*="goal-ga-minimal-black-catalog-"],
-  .v84 .thumbnail>img[src*="goal-ga-minimal-true-royal-catalog-"],
-  .v84 .thumbnail>img[src*="goal-ga-minimal-black-catalog-"]{object-fit:cover}
-}
-/* The True Red model set is native 941 x 1672, so it gets that exact frame. */
-.v84 .gallery-main>img[src*="goal-ga-minimal-true-red-catalog-"],
-.v84 .thumbnail>img[src*="goal-ga-minimal-true-red-catalog-"]{object-fit:contain}
-@supports selector(:has(*)){
-  .v84 .gallery-main:has(>img[src*="goal-ga-minimal-true-red-catalog-"]),
-  .v84 .thumbnail:has(>img[src*="goal-ga-minimal-true-red-catalog-"]){aspect-ratio:941/1672;height:auto}
-  .v84 .gallery-main>img[src*="goal-ga-minimal-true-red-catalog-"],
-  .v84 .thumbnail>img[src*="goal-ga-minimal-true-red-catalog-"]{object-fit:cover}
-}
-/* The Big Tee model photos come in mixed portrait sizes (Black 335-354 x 1536
-   with the arms cropped, True Royal 440-586 x 1024, True Red 1024 x 1536,
-   White 941 x 1672). Contain each whole in one 2:3 frame with no studio grey
-   behind, so a narrow strip's edge reads as the photo's own crop and the
-   frame does not jump between colours. */
-.v84 .gallery-main>img[src*="goal-ga-big-tee-"][src*="-catalog-"],
-.v84 .thumbnail>img[src*="goal-ga-big-tee-"][src*="-catalog-"]{object-fit:contain}
-@supports selector(:has(*)){
-  .v84 .gallery-main:has(>img[src*="goal-ga-big-tee-"][src*="-catalog-"]),
-  .v84 .thumbnail:has(>img[src*="goal-ga-big-tee-"][src*="-catalog-"]){aspect-ratio:2/3;height:auto;background:transparent}
+  .v84 .gallery-main:has(>img[src*="-catalog-"]),
+  .v84 .thumbnail:has(>img[src*="-catalog-"]){aspect-ratio:2/3;height:auto}
+  .v84 .gallery-main>img[src*="-catalog-"],
+  .v84 .thumbnail>img[src*="-catalog-"]{object-fit:cover}
 }
 
 /* Mobile menu: one typography scale for primary destinations and Support. */
