@@ -99,10 +99,11 @@
   .v84 .gallery-main>img[src*="goal-ga-minimal-true-red-catalog-"],
   .v84 .thumbnail>img[src*="goal-ga-minimal-true-red-catalog-"]{object-fit:cover}
 }
-/* The Big Tee model photos are narrow portrait strips of mixed widths (Black
-   335-354 x 1536 with the arms cropped, True Royal 440-586 x 1024). Contain
-   them whole in a 2:3 frame with no studio grey behind, so each strip's edge
-   reads as the photo's own crop. */
+/* The Big Tee model photos come in mixed portrait sizes (Black 335-354 x 1536
+   with the arms cropped, True Royal 440-586 x 1024, True Red 1024 x 1536,
+   White 941 x 1672). Contain each whole in one 2:3 frame with no studio grey
+   behind, so a narrow strip's edge reads as the photo's own crop and the
+   frame does not jump between colours. */
 .v84 .gallery-main>img[src*="goal-ga-big-tee-"][src*="-catalog-"],
 .v84 .thumbnail>img[src*="goal-ga-big-tee-"][src*="-catalog-"]{object-fit:contain}
 @supports selector(:has(*)){
