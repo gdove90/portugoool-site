@@ -3156,16 +3156,25 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#373737",
         skuFragment: "BLACK",
+        cardImage: {
+          src: "/products/goal-ga-big-tee-black-front.webp",
+          alt: "GOAL Athletics GA Big Tee in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
+        },
         images: [
           {
-            src: "/products/goal-ga-big-tee-black-front.webp",
-            alt: "GOAL Athletics GA Big Tee in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-big-tee-black-catalog-model-front-20261020.webp",
+            alt: "Model facing forward in the black GA Big Tee with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/goal-ga-big-tee-black-back.webp",
-            alt: "GOAL Athletics GA Big Tee in black, back view, no print",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-big-tee-black-catalog-model-three-quarter-20261020.webp",
+            alt: "Same model in a three-quarter turn, black GA Big Tee with the white and red GA and GOAL ATHLETICS lockup on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-black-catalog-model-rear-20261020.webp",
+            alt: "Same model from behind in the black GA Big Tee, clean back with no print",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
