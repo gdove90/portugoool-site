@@ -3185,14 +3185,19 @@ export const products: Product[] = [
         skuFragment: "ROYAL",
         images: [
           {
-            src: "/products/goal-ga-big-tee-true-royal-front.webp",
-            alt: "GOAL Athletics GA Big Tee in true royal, front view with the cream GA and GOAL ATHLETICS lockup across the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-big-tee-true-royal-catalog-model-front-20261020.webp",
+            alt: "Model facing forward in the true royal GA Big Tee with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/goal-ga-big-tee-true-royal-back.webp",
-            alt: "GOAL Athletics GA Big Tee in true royal, back view, no print",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-big-tee-true-royal-catalog-model-three-quarter-20261020.webp",
+            alt: "Same model in a three-quarter turn, true royal GA Big Tee with the cream GA and GOAL ATHLETICS lockup on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-big-tee-true-royal-catalog-model-rear-20261020.webp",
+            alt: "Same model from behind in the true royal GA Big Tee, clean back with no print",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
