@@ -1,0 +1,97 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000012",
+  "slug": "goal-athletics-ga-big-tee",
+  "source": "Four product fronts (one per colourway) supplied by the owner in the Claude session on 2026-10-22 on pure white backgrounds; originals preserved unchanged in designs/57_ga-big-tee-product-fronts-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Owner instruction: the shots must carry the same studio backdrop as every other garment, so the white was replaced by the backdrop while the garment pixels and its own cast shadow were kept (scripts/studio-backdrop-product-shot.py), then framed at 2:3 (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md).",
+  "galleryOrder": "Product front first in every colourway, then the model views. Black is the card default, so its product front is the collection card and the product-level image.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Black",
+      "view": "product-front",
+      "sourceFilename": "black-product-front-as-received.webp",
+      "receivedAs": "55.webp",
+      "sourceSha256": "6a82d37e1af3697409b151ce3a3d5478ada6cc5dacac113ad75cc4dd52ddec4b",
+      "sourceBytes": 48180,
+      "sourceDimensions": [
+        1374,
+        1145
+      ],
+      "framing": "1374 x 1145 landscape; columns 80 to 1290 kept (--crop-x), then the backdrop drawn above and below to 2:3; garment and its cast shadow kept, white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py.",
+      "dimensions": [
+        1210,
+        1815
+      ],
+      "deployedPath": "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
+      "webpSha256": "fdc35f66ef6c69c611afc61a745cf6258d4ceeff67d511113783a430769f9b5c",
+      "webpBytes": 49666,
+      "replaces": "/products/goal-ga-big-tee-black-front.webp (Apliiq render, moved to designs/57_ga-big-tee-product-fronts-2026-10-22/retired-render/)"
+    },
+    {
+      "order": 2,
+      "colorway": "True Royal",
+      "view": "product-front",
+      "sourceFilename": "true-royal-product-front-as-received.webp",
+      "receivedAs": "54.webp",
+      "sourceSha256": "b89658ad40f45662ff3049f4f19a0bd296cab26d2d863634652b56a4670a22b6",
+      "sourceBytes": 147588,
+      "sourceDimensions": [
+        1145,
+        1374
+      ],
+      "framing": "1145 x 1374; backdrop drawn above and below to 2:3; garment and its cast shadow kept, white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py.",
+      "dimensions": [
+        1145,
+        1718
+      ],
+      "deployedPath": "/products/goal-ga-big-tee-true-royal-catalog-product-front-20261022.webp",
+      "webpSha256": "e7363e3d9eb9767839acd1b969eb31b40a9780611f578bb22e63f3d880cbf77a",
+      "webpBytes": 139300,
+      "replaces": "/products/goal-ga-big-tee-true-royal-front.webp (Apliiq render, moved to designs/57_ga-big-tee-product-fronts-2026-10-22/retired-render/)"
+    },
+    {
+      "order": 3,
+      "colorway": "White \u00b7 Black-Red",
+      "view": "product-front",
+      "sourceFilename": "white-black-red-product-front-as-received.webp",
+      "receivedAs": "56.webp",
+      "sourceSha256": "d9ec5d8ca880ba8586bd01674963fdb023b1e21867314a242d61a1fc6b671420",
+      "sourceBytes": 41498,
+      "sourceDimensions": [
+        1374,
+        1145
+      ],
+      "framing": "1374 x 1145 landscape; mask grown from the Black shot as prior (--mask-from), columns 80 to 1290 kept, backdrop drawn above and below to 2:3; garment and its cast shadow kept, white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py.",
+      "dimensions": [
+        1210,
+        1815
+      ],
+      "deployedPath": "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp",
+      "webpSha256": "b99376f3fbc21711a100bd66f0d4669ab843126c5eb494ba13d41fdacc1b0288",
+      "webpBytes": 46176,
+      "replaces": "/products/goal-ga-big-tee-white-black-red-front.webp (Apliiq render, moved to designs/57_ga-big-tee-product-fronts-2026-10-22/retired-render/)"
+    },
+    {
+      "order": 4,
+      "colorway": "True Red",
+      "view": "product-front",
+      "sourceFilename": "true-red-product-front-as-received.webp",
+      "receivedAs": "57.webp",
+      "sourceSha256": "a4035559071f518b9c8a4b6650a8c22cdd6168266c1561674e66f923e80114a4",
+      "sourceBytes": 123786,
+      "sourceDimensions": [
+        1145,
+        1374
+      ],
+      "framing": "1145 x 1374; backdrop drawn above and below to 2:3; garment and its cast shadow kept, white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py.",
+      "dimensions": [
+        1145,
+        1718
+      ],
+      "deployedPath": "/products/goal-ga-big-tee-true-red-catalog-product-front-20261022.webp",
+      "webpSha256": "3255829b9292ae858aa5c29f1503c930167f27cb027f5ea3eb39d2c1a8f11ea4",
+      "webpBytes": 121606,
+      "replaces": "/products/goal-ga-big-tee-true-red-front.webp (Apliiq render, moved to designs/57_ga-big-tee-product-fronts-2026-10-22/retired-render/)"
+    }
+  ]
+}

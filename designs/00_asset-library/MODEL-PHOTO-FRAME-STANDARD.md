@@ -34,6 +34,12 @@ python scripts/frame-model-photo-2x3.py IN OUT.webp
 - **A model cut off by the photo's own edge** (arms cropped) can't be extended
   this way. Ask the owner for a wider original. Never use Higgsfield or any
   other paid tool without the owner's go-ahead.
+- **A product shot on pure white** (a supplier-style render): run
+  `python scripts/studio-backdrop-product-shot.py IN OUT.webp`. It keeps the
+  garment and its own cast shadow and swaps only the white for the studio
+  backdrop, drawn over the whole 2:3 canvas. `--crop-x A:B` trims a landscape
+  shot's empty sides first. A white garment needs `--mask-from DARK.webp`, a
+  dark or coloured shot of the same render, as the mask prior.
 - **A landscape close-up** (a head-and-shoulders shot, about 3:2): a plain
   2:3 crop would leave it tiny, so trim only its empty sides with
   `--crop-width N` (N wide enough to keep the whole subject) and let the
@@ -88,11 +94,13 @@ photos are uploaded.
 | GA Minimal Tee Black · product front, back | 1024 x 1536 (soft grey; both replaced later the same day, the first pair 1200 x 1500 on flat #F2F2F2) | 1024 x 1536 unchanged (already 2:3) |
 | GA Minimal Tee True Royal · product front, back | 1024 x 1536, 1122 x 1402 (soft grey backdrop; both replaced later the same day, the back twice) | 1024 x 1536 unchanged (already 2:3); 1122 x 1683, backdrop extended above and below (joins 0.10 and 0.00) |
 | GA Minimal Tee True Red · product front, back | 1122 x 1402 (soft grey backdrop; the back replaced later the same day) | 1122 x 1683, backdrop extended 140/141 px above and below (joins 0.00; 0.00 and 0.03) |
+| GA Big Tee · product fronts, 4 colourways | 1145 x 1374 and 1374 x 1145 on pure white | 1145 x 1718 and 1210 x 1815, white replaced by the studio backdrop (garment and cast shadow kept), landscape sides trimmed to columns 80-1290 |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
 `docs/catalog/ga-matchday-cap-{black,red,royal,dark-green}-20261022.json`,
 `docs/catalog/stacked-stadium-cap-{black,royal,red}-20261022.json`,
-`docs/catalog/ga-minimal-tee-{black,true-royal,true-red}-product-20261022.json`.
+`docs/catalog/ga-minimal-tee-{black,true-royal,true-red}-product-20261022.json`,
+`docs/catalog/ga-big-tee-product-fronts-20261022.json`.
 Every GA Matchday Cap colourway now shows catalog photos; its four Apliiq
 renders are kept under designs/46-49.
 All three Apliiq shorts renders left `public/products/`; they stay in

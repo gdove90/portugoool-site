@@ -3388,14 +3388,9 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/goal-ga-big-tee-black-front.webp",
-        alt: "GOAL Athletics GA Big Tee in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
-      },
-      {
-        src: "/products/goal-ga-big-tee-black-back.webp",
-        alt: "GOAL Athletics GA Big Tee in black, back view, no print",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
+        src: "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
+        alt: "GA Big Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3404,11 +3399,17 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#373737",
         skuFragment: "BLACK",
-        cardImage: {
-          src: "/products/goal-ga-big-tee-black-front.webp",
-          alt: "GOAL Athletics GA Big Tee in black, front view with the white and red GA and GOAL ATHLETICS lockup across the chest",
-        },
+        // Every colourway leads with the owner's product front (2026-10-22),
+        // lifted off its white render background onto the studio backdrop;
+        // the Apliiq front renders were retired. Records:
+        // designs/57_ga-big-tee-product-fronts-2026-10-22/ and
+        // docs/catalog/ga-big-tee-product-fronts-20261022.json.
         images: [
+          {
+            src: "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
+            alt: "GA Big Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
           {
             src: "/products/goal-ga-big-tee-black-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the black GA Big Tee with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
@@ -3433,6 +3434,11 @@ export const products: Product[] = [
         skuFragment: "ROYAL",
         images: [
           {
+            src: "/products/goal-ga-big-tee-true-royal-catalog-product-front-20261022.webp",
+            alt: "GA Big Tee in True Royal, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
             src: "/products/goal-ga-big-tee-true-royal-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the true royal GA Big Tee with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
@@ -3456,6 +3462,11 @@ export const products: Product[] = [
         skuFragment: "WHITE-BLACKRED",
         images: [
           {
+            src: "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp",
+            alt: "GA Big Tee in White · Black-Red, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the white GA Big Tee with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
@@ -3478,6 +3489,11 @@ export const products: Product[] = [
         hex: "#C8102E",
         skuFragment: "RED",
         images: [
+          {
+            src: "/products/goal-ga-big-tee-true-red-catalog-product-front-20261022.webp",
+            alt: "GA Big Tee in True Red, product front with the white GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the true red GA Big Tee with the white GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
