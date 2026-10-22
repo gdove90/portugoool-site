@@ -66,3 +66,16 @@ photos are uploaded.
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`.
 All three Apliiq shorts renders left `public/products/`; they stay in
 `designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/`.
+
+## Gallery fit on screen (2026-10-22)
+
+Owner decision: the whole primary photo is on screen the moment a product
+page opens, with no scrolling, on every product. The gallery frame carries
+the photo's own ratio (2:3 for catalog photos; the remaining Apliiq renders
+are 590 x 900) and gives up width until its height fits under the header
+and breadcrumb with 24px to spare; the photo is never cropped
+(`object-fit: contain`) and nothing shows beside it. Rule:
+`.v84 .gallery .gallery-main` in `src/v84/integration.css`. A 240px-wide
+floor keeps the frame usable on short landscape phones, the one case where
+it may still extend below the fold. Collection cards and thumbnails are
+unchanged.

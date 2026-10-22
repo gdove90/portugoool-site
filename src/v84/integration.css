@@ -58,22 +58,36 @@
   .v84 .kit-review dd { margin:0 0 16px; }
 }
 
-/* All catalog and gallery assets use a square, full-bleed studio canvas. */
-.v84 .product-image,.v84 .category .product-image,.v84 .gallery-main,.v84 .thumbnail{aspect-ratio:1;background:#c5c5c5}
-.v84 .product-image .asset,.v84 .gallery-main>img,.v84 .thumbnail>img{object-fit:cover}
+/* Collection cards and gallery thumbnails use a square, full-bleed studio canvas. */
+.v84 .product-image,.v84 .category .product-image,.v84 .thumbnail{aspect-ratio:1;background:#c5c5c5}
+.v84 .product-image .asset,.v84 .thumbnail>img{object-fit:cover}
 
-/* Owner standard 2026-10-20: every catalog photo is 2:3 with its studio
-   background edge to edge (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md),
-   so every product shows the same frame and the same background width.
-   Browsers without :has() keep the contained square above. */
-.v84 .gallery-main>img[src*="-catalog-"],
-.v84 .thumbnail>img[src*="-catalog-"]{object-fit:contain}
+/* The product gallery's primary photo.
+   Owner standard 2026-10-20: every catalog photo is 2:3 with its studio
+   background edge to edge (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md).
+   Owner standard 2026-10-22: the whole photo is on screen when the page
+   opens, with no scrolling and no cropping. The frame carries the photo's
+   own ratio (catalog photos 2:3; every other gallery image in use is an
+   Apliiq 590 x 900 render), so object-fit: contain shows nothing beside it,
+   and it gives up width until its height fits under the header and
+   breadcrumb with 24px to spare. --pdp-above is what sits above the
+   gallery: the header (90px, 72px under 701px) plus the breadcrumb (68px
+   desktop, 61px under 1024px). A 240px floor stops the frame collapsing on
+   very short landscape screens. svh counts the viewport with the mobile
+   browser bar shown; vh is the fallback for browsers without it. */
+.v84 .pdp{--pdp-above:158px;--gallery-fit:calc(100vh - var(--pdp-above) - 24px);--gallery-fit:calc(100svh - var(--pdp-above) - 24px)}
+.v84 .gallery .gallery-main{--frame-ratio:0.6556;background:#c5c5c5;aspect-ratio:var(--frame-ratio);height:auto;width:min(100%,max(240px,calc(var(--gallery-fit) * var(--frame-ratio))));justify-self:start}
+.v84 .gallery-main>img{object-fit:contain}
 @supports selector(:has(*)){
-  .v84 .gallery-main:has(>img[src*="-catalog-"]),
+  .v84 .gallery .gallery-main:has(>img[src*="-catalog-"]){--frame-ratio:0.6667}
   .v84 .thumbnail:has(>img[src*="-catalog-"]){aspect-ratio:2/3;height:auto}
-  .v84 .gallery-main>img[src*="-catalog-"],
   .v84 .thumbnail>img[src*="-catalog-"]{object-fit:cover}
 }
+@media (max-width:1023px){
+  .v84 .pdp{--pdp-above:151px}
+  .v84 .gallery .gallery-main{justify-self:center}
+}
+@media (max-width:700px){ .v84 .pdp{--pdp-above:133px} }
 
 /* Mobile menu: one typography scale for primary destinations and Support. */
 @media (max-width: 1023px) {
