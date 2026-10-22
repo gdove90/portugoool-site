@@ -1,0 +1,93 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000010",
+  "slug": "goal-athletics-wordmark-cap",
+  "colorway": "Royal/Natural",
+  "source": "Four catalog photos supplied by the owner in the Claude session on 2026-10-22 (landscape, about 3:2); originals preserved unchanged in designs/51_stacked-stadium-cap-royal-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Landscape sources: the empty sides were trimmed and the backdrop extended to reach the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py, so the subject stays at native resolution; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-wordmark-cap-royal.webp (Apliiq render of design 6205995, moved to designs/51_stacked-stadium-cap-royal-photos-2026-10-22/retired-render/)"
+  ],
+  "galleryOrder": "Product shot first, by owner instruction 2026-10-22.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "royal-product-front-as-received.webp",
+      "receivedAs": "32.webp",
+      "sourceSha256": "62523b6ca6fd533d67d2f63abf2d6224a3c7c5a4a4d16b1daf6869a176ac8acd",
+      "sourceBytes": 58934,
+      "sourceDimensions": [
+        763,
+        512
+      ],
+      "framing": "Landscape source. Seam rows dropped, sides trimmed to 600 px about the centre (--crop-width 600, empty backdrop only), then the backdrop extended 195 px above and below to 2:3 (joins 0.0 and 0.56 levels on the outer backdrop columns).",
+      "dimensions": [
+        600,
+        900
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp",
+      "webpSha256": "e3bae75d05d83f0ec190870d86f1d3e19fff99da6059879ea3abc50b5fbe2083",
+      "webpBytes": 75580
+    },
+    {
+      "order": 2,
+      "view": "model-front",
+      "sourceFilename": "royal-model-front-as-received.png",
+      "receivedAs": "33.png",
+      "sourceSha256": "3b5f8b515bced11ea8f29c63babb407fcce03238b0860fad7b4b7b9e81ddab90",
+      "sourceBytes": 436120,
+      "sourceDimensions": [
+        763,
+        505
+      ],
+      "framing": "Landscape head-and-shoulders source. Seam rows dropped, sides trimmed to 480 px about the centre (--crop-width 480), photo kept at the bottom of the canvas and the backdrop extended 218 px above (--extend-anchor end; join 0.0).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-royal-catalog-model-front-20261022.webp",
+      "webpSha256": "3f6308f904b109c9d5cf4b6923d9ac936174430e4e4482acf9a0bf7af405e6a0",
+      "webpBytes": 41358
+    },
+    {
+      "order": 3,
+      "view": "model-three-quarter",
+      "sourceFilename": "royal-model-three-quarter-as-received.png",
+      "receivedAs": "31.png",
+      "sourceSha256": "3cef7fd0eb7e93aa98456bc1094979f54753689621be105001ddc3fd64e6a21f",
+      "sourceBytes": 477048,
+      "sourceDimensions": [
+        763,
+        512
+      ],
+      "framing": "Same handling, extended 210 px above (join 0.07).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-royal-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "da15627a33f9c9ea5a34c0fd2f7745892d688cecdbcfe743d49cf740892006c4",
+      "webpBytes": 49200
+    },
+    {
+      "order": 4,
+      "view": "model-side",
+      "sourceFilename": "royal-model-side-as-received.png",
+      "receivedAs": "30.png",
+      "sourceSha256": "579c1094144c2ac0bae93729dc382e369c0a2f6c41e2a70f418eff41e9d284ae",
+      "sourceBytes": 445320,
+      "sourceDimensions": [
+        763,
+        505
+      ],
+      "framing": "Same handling, extended 218 px above (join 0.0).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-royal-catalog-model-side-20261022.webp",
+      "webpSha256": "fbdef137b811385fe1e85cf39432683eeafdc8e840b1d6db681bfdb6ae909629",
+      "webpBytes": 42916
+    }
+  ]
+}

@@ -3091,7 +3091,32 @@ export const products: Product[] = [
         supplierColor: "Royal/Natural",
         hex: "#1F2F6B",
         skuFragment: "ROYAL",
-        images: [{ src: "/products/goal-wordmark-cap-royal.webp", alt: "Stacked Stadium Cap with royal visor, front view" }],
+        // Royal/Natural shows the owner's four catalog photos (2026-10-22),
+        // product shot first; its Apliiq render was retired. Records:
+        // designs/51_stacked-stadium-cap-royal-photos-2026-10-22/ and
+        // docs/catalog/stacked-stadium-cap-royal-20261022.json.
+        images: [
+          {
+            src: "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp",
+            alt: "Stacked Stadium Cap in Royal/Natural, front view: natural crown with the royal blue GOAL ATHLETICS wordmark and bar embroidered on the front panel and a royal blue visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-royal-catalog-model-front-20261022.webp",
+            alt: "Model facing the camera wearing the Royal/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-royal-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the royal blue wordmark on the natural front panel and the royal blue visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-royal-catalog-model-side-20261022.webp",
+            alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the royal blue visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Dark Green/Natural",

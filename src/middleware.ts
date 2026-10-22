@@ -66,7 +66,7 @@ const LEGACY_RETURN_PATHS = new Set(["/success", "/track-order"]);
 // Permit only the released ST720 assets; catalog pages and checkout stay gated.
 const ST720_IMAGE = /^\/products\/goal-ga-(?:minimal|big)-tee-(?:black|true-royal|white-black-red|white-royal|silver|true-red)-(?:front|back)\.webp$/;
 const GA_MINIMAL_WHITE_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-white-black-red-catalog-(?:product-front|product-back|model-front|model-three-quarter|model-rear|print-detail)-20261014\.webp$/;
-const STADIUM_CAP_CATALOG_IMAGE = /^\/products\/goal-wordmark-cap-black-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
+const STADIUM_CAP_CATALOG_IMAGE = /^\/products\/goal-wordmark-cap-(?:black|royal)-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
 const GA_MATCHDAY_CAP_CATALOG_IMAGE = /^\/products\/goal-monogram-cap-(?:black|red|royal|dark-green)-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
 const GA_MINIMAL_SHORTS_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-shorts-(?:black|ink-blue|shadow)-catalog-(?:model-front|model-front-close|print-detail)-20261022\.webp$/;
 const GA_MINIMAL_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-(?:true-royal|black|true-red)-catalog-model-(?:front|front-quarter|rear|rear-quarter)-20261015\.webp$/;
