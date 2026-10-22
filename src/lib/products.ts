@@ -3643,6 +3643,101 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics GA Minimal Shorts ==
+  // == GOAL Athletics Heritage Hoodie (Apliiq saved designs seen 2026-10-22) ==
+  // Independent IND4000 heavyweight hoodie, DTF transfer. Four saved designs
+  // exist on the Apliiq account, "goal athletics heritage hoodie · black /
+  // grey heather / bone / navy", two artworks each: the GA monogram centred
+  // on the chest and a small GA monogram on the sleeve above the cuff (read
+  // off the saved-designs list thumbnails; which sleeve and the print sizes
+  // are to be confirmed on each design page). Record:
+  // designs/58_heritage-hoodie-ind4000-2026-10-22/.
+  // Three inputs are still to come, and each has its own gate:
+  //   - renders: isActive false until every gallery below has images in
+  //     public/products/ (ProductCard reads images[0]);
+  //   - design ids and per-size SKUs: every colourway comingSoon until
+  //     fulfillment.ts carries them, so checkout refuses it even if the
+  //     product is activated;
+  //   - retail price: priceCents 0 shows "Price to be announced" and can
+  //     never reach checkout.
+  // scripts/test-heritage-hoodie.cjs holds those gates. Remove each only when
+  // its input is in the repo.
+  // Apliiq offers the blank XS to 5XL; the site sells S to XXL on every
+  // garment, as the Core Hoodie rows above did on this blank.
+  {
+    id: "80000000-0000-4000-8000-000000000014",
+    name: "GOAL Athletics Heritage Hoodie",
+    slug: "goal-athletics-heritage-hoodie",
+    blank: "IND4000",
+    description:
+      "Heavyweight fleece hoodie. GA monogram centred on the chest, small GA monogram on the sleeve above the cuff, kangaroo pocket and a generous cut.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#1E1E1E",
+    // IND4000 fabric, fit and care carried over from the Core Hoodie rows
+    // (same blank, same Apliiq record). Black's blend is the only one
+    // documented, so the fabric line states Black's blend only. Do not
+    // extend it to Grey Heather, Bone or Navy.
+    fabric:
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
+    // Empty until the Apliiq renders (or owner product shots) are filed.
+    images: [],
+    // Swatches: Black, Grey Heather and Bone reuse the hexes the Core Hoodie
+    // rows settled on for this blank; Navy is the garment body sampled from
+    // Apliiq's own saved-design thumbnail (#1E243A).
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#1E1E1E",
+        skuFragment: "BLACK",
+        images: [],
+        comingSoon: true,
+      },
+      {
+        name: "Grey Heather",
+        supplierColor: "Grey Heather",
+        hex: "#D9D9D9",
+        skuFragment: "GREYHEATHER",
+        images: [],
+        comingSoon: true,
+      },
+      {
+        name: "Bone",
+        supplierColor: "Bone",
+        hex: "#CFCAC7",
+        skuFragment: "BONE",
+        images: [],
+        comingSoon: true,
+      },
+      {
+        name: "Navy",
+        supplierColor: "Navy",
+        hex: "#1E243A",
+        skuFragment: "NAVY",
+        images: [],
+        comingSoon: true,
+      },
+    ],
+    // Garment made in China (Apliiq's IND4000 record, as for the Core
+    // Hoodie); decorated at Apliiq's US facilities, so Printed in the USA.
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "apliiq",
+    isActive: false,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics Heritage Hoodie ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

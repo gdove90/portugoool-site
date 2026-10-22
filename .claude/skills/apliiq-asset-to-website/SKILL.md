@@ -176,3 +176,9 @@ deploy id, and the PDP URL returning 200. What is still unverified
   built with the procedure above (6136475 Black, 6136494 True Royal,
   6136511 White); 6112037 and 6113361 renamed "delete"; all three
   colourways live on the site.
+- 2026-10-22 Heritage Hoodie (IND4000): four saved designs on the account
+  (Black, Grey Heather, Bone, Navy; GA monogram on the chest and on the
+  sleeve above the cuff), seen on the saved-designs list only. Catalog row
+  …0014 is hidden, every colourway coming soon, no fulfillment entry, until
+  the ids, SKUs, renders and price are read off the design pages.
+  `designs/58_heritage-hoodie-ind4000-2026-10-22/`.

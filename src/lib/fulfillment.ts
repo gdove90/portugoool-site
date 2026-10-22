@@ -412,6 +412,19 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "Shadow": { apliiqProductId: 6208713, skus: { S: "APQ-6208713S71A1", M: "APQ-6208713S72A1", L: "APQ-6208713S73A1", XL: "APQ-6208713S74A1", XXL: "APQ-6208713S75A1" } },
   },
   // == end GOAL Athletics GA Minimal Shorts ==
+  // == GOAL Athletics Heritage Hoodie (Independent IND4000) ==
+  // Four saved designs exist on the account as of 2026-10-22 ("goal
+  // athletics heritage hoodie · black / grey heather / bone / navy", GA
+  // monogram on the chest and sleeve, two transfers each), seen only on the
+  // saved-designs list, which shows neither ids nor SKUs. Nothing is
+  // recorded for "80000000-0000-4000-8000-000000000014" until each id and
+  // its five SKUs (APQ-<id>S6A1 S, S7A1 M, S8A1 L, S1A1 XL, S2A1 XXL) are
+  // read off the design's own page, so resolveApliiqSku returns null and
+  // checkout refuses every colourway. Never infer an id from a neighbouring
+  // design. Keys, when they land: "Black", "Grey Heather", "Bone", "Navy"
+  // (the colorVariants[].name strings). Record:
+  // designs/58_heritage-hoodie-ind4000-2026-10-22/.
+  // == end GOAL Athletics Heritage Hoodie ==
 };
 
 export interface ResolvedFulfillment {
