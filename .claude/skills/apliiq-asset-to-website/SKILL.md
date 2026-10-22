@@ -171,6 +171,11 @@ deploy id, and the PDP URL returning 200. What is still unverified
 
 ## Records
 
+- 2026-10-22 GA Matchday Cap thread-colour notes: **PENDING on Apliiq.**
+  Paste the per-design note from
+  `designs/45_ga-matchday-cap-thread-spec-2026-10-22/README.md` onto the
+  front placement of 6205981, 6205977, 6205982 and 6205989 (`...` menu >
+  add note), then record each activity-log line in that README.
 - 2026-09-25 Matchday Tee: back v6 5.00 x 1.812 in, White colourway.
   `designs/31_matchday-tee-v6-all-colours-2026-09-25/`. Three new designs
   built with the procedure above (6136475 Black, 6136494 True Royal,

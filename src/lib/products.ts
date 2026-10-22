@@ -2827,6 +2827,9 @@ export const products: Product[] = [
   // OTTO 31-069 Natural caps saved on Apliiq by the owner 2026-10-14; one
   // Apliiq design per colourway, mapped in fulfillment.ts. Visible but not
   // purchasable until checkout is verified separately (owner brief).
+  // GA Matchday Cap thread rule (owner, 2026-10-22): GA thread matches the
+  // bill colour per colourway; see fulfillment.ts and
+  // designs/45_ga-matchday-cap-thread-spec-2026-10-22/README.md.
   {
     id: "80000000-0000-4000-8000-000000000009",
     name: "GA Matchday Cap",

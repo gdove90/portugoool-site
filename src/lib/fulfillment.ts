@@ -364,6 +364,13 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
   // Apliiq product page on 2026-10-14. The catalog keeps both products at
   // availableForSale false, so this mapping does not open purchasing.
   // GA Matchday Cap (GA monogram, embroidery 2.25 x 2.03in)
+  // Thread rule (owner, 2026-10-22): the GA is embroidered in thread that
+  // matches the bill. Black/Natural black, Red/Natural red, Royal/Natural
+  // royal blue, Dark Green/Natural the approved two-tone green GA with the
+  // primary dark green matching the bill. No contrasting thread without
+  // approval; confirm thread against the physical cap before production.
+  // Record and the production note per saved design:
+  // designs/45_ga-matchday-cap-thread-spec-2026-10-22/README.md
   "80000000-0000-4000-8000-000000000009": {
     "Black/Natural": { apliiqProductId: 6205981, skus: { OS: "APQ-6205981S34A1" } },
     "Red/Natural": { apliiqProductId: 6205977, skus: { OS: "APQ-6205977S34A1" } },
