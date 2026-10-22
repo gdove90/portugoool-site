@@ -135,7 +135,8 @@ const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
   "80000000-0000-4000-8000-000000000004": "cc1717", // Circular Badge Tee
   "80000000-0000-4000-8000-000000000005": "as5150", // Circular Center Crewneck
   "80000000-0000-4000-8000-000000000006": "st720", // Matchday Tee
-  "80000000-0000-4000-8000-000000000014": "ind4000", // GOAL Athletics Heritage Hoodie (hidden until renders, ids and price land)
+  "80000000-0000-4000-8000-000000000014": "ind4000", // GOAL Athletics Heritage Hoodie (hidden until renders and ids land)
+  "80000000-0000-4000-8000-000000000015": "ind4000", // GOAL Athletics Lockup Hoodie (hidden until renders and ids land)
 };
 
 export function sizeChartFor(productId: string): SizeChart | null {

@@ -10,7 +10,7 @@
 --
 -- Retail price $78 (owner, 2026-10-22). Hidden and not for sale: the design
 -- ids, per-size SKUs and renders are not in the repo yet (the gates are in
--- src/lib/products.ts and scripts/test-heritage-hoodie.cjs). When the owner
+-- src/lib/products.ts and scripts/test-goal-hoodies.cjs). When the owner
 -- publishes the hoodie, set is_active and available_for_sale below to match
 -- products.ts and run this file again; the upsert carries them.
 -- Idempotent; no historical orders or supplier designs changed.

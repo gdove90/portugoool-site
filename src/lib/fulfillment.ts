@@ -425,6 +425,17 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
   // (the colorVariants[].name strings). Record:
   // designs/58_heritage-hoodie-ind4000-2026-10-22/.
   // == end GOAL Athletics Heritage Hoodie ==
+  // == GOAL Athletics Lockup Hoodie (Independent IND4000) ==
+  // Same situation as the Heritage Hoodie: four saved designs on the
+  // account as of 2026-10-22 ("goal athletics lockup hoodie · grey heather /
+  // bone / navy / black", GA monogram and GOAL ATHLETICS lockup across the
+  // chest), seen on the saved-designs grid only. Nothing is recorded for
+  // "80000000-0000-4000-8000-000000000015" until each id and its five SKUs
+  // are read off the design's own page; until then resolveApliiqSku returns
+  // null and checkout refuses every colourway. Keys, when they land:
+  // "Black", "Grey Heather", "Bone", "Navy". Record:
+  // designs/59_lockup-hoodie-ind4000-2026-10-22/.
+  // == end GOAL Athletics Lockup Hoodie ==
 };
 
 export interface ResolvedFulfillment {

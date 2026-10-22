@@ -19,8 +19,10 @@ Thumbnails: the Black row shows the front with the GA monogram (white G,
 red strike) centred on the chest; the other three rows show the garment
 from the side with a small GA monogram on the sleeve just above the cuff.
 Which sleeve, and the print sizes, are to be confirmed on each design
-page. Garment body sampled from the Navy thumbnail: `#1E243A` (the site
-swatch). Black, Grey Heather and Bone reuse the hexes the Core Hoodie rows
+page. The Navy site swatch, `#2A3043`, is the garment body sampled from
+Apliiq's larger grid thumbnail of the Lockup Hoodie (same blank, same
+colour); it was `#1E243A` from this list's tile until 2026-10-22, later
+the same day. Black, Grey Heather and Bone reuse the hexes the Core Hoodie rows
 settled on for this blank.
 
 ## What is NOT in hand
@@ -52,7 +54,7 @@ price on this blank).
   on `/men` and `/shop` the moment it is activated.
 - `supabase/migrations/0041_heritage_hoodie.sql`: catalog row for the
   audit trail (hidden, not for sale, $78). Not yet applied.
-- `scripts/test-heritage-hoodie.cjs`: holds the gates and runs the real
+- `scripts/test-goal-hoodies.cjs`: holds the gates and runs the real
   checkout route against every colourway and size, as shipped and with
   the flags forced on; all refused before Stripe.
 
@@ -73,5 +75,5 @@ deployed.
 3. Add the four entries to `fulfillment.ts` and remove `comingSoon`.
 4. Set `availableForSale: true`; update and run migration 0041 in the
    Supabase SQL editor.
-5. `node scripts/test-heritage-hoodie.cjs` must still pass (it flips to
+5. `node scripts/test-goal-hoodies.cjs` must still pass (it flips to
    expecting a 200 from checkout once every input is in).

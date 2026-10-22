@@ -183,3 +183,8 @@ deploy id, and the PDP URL returning 200. What is still unverified
   fulfillment entry, until the ids, SKUs and renders are read off the
   design pages.
   `designs/58_heritage-hoodie-ind4000-2026-10-22/`.
+- 2026-10-22 Lockup Hoodie (IND4000): four saved designs on the account
+  (Black, Grey Heather, Bone, Navy; GA monogram and GOAL ATHLETICS lockup
+  across the chest), seen on the saved-designs grid only. Catalog row
+  …0015, same price and gates as the Heritage row; the owner is supplying
+  the model pictures. `designs/59_lockup-hoodie-ind4000-2026-10-22/`.

@@ -18,9 +18,11 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000009": ["men"],
   "80000000-0000-4000-8000-000000000010": ["men"],
   "80000000-0000-4000-8000-000000000013": ["men"],
-  // Heritage Hoodie: listed here now so it appears on /men and /shop the
-  // moment products.ts activates it (forAudience reads active products only).
+  // Heritage and Lockup Hoodies: listed here now so they appear on /men and
+  // /shop the moment products.ts activates them (forAudience reads active
+  // products only).
   "80000000-0000-4000-8000-000000000014": ["men"],
+  "80000000-0000-4000-8000-000000000015": ["men"],
 };
 // The GOOOL pieces that filled this grid were retired on 2026-10-15, so the
 // home page features the GOAL Athletics pieces on sale.
