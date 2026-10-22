@@ -10,12 +10,16 @@ export function catalogImageSrc(src: string): string {
   const studioPath = studioPaths.get(url.pathname);
   if (studioPath) url.pathname = studioPath;
   const isRevisedBack = /^\/products\/GOOOL_MODERN_PERFORMANCE_(?:ROYAL_|WHITE_)?BACK_DETAIL_V6\.png$/.test(url.pathname);
-  // The True Royal Minimal Tee product back was replaced at the same path
-  // later on 2026-10-22 (white lettering for the cream one); the tag keeps
-  // every image cache from serving the first file.
-  const isTrueRoyalBackV2 = url.pathname === "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp";
-  const revision = isTrueRoyalBackV2
-    ? "true-royal-back-white-20261022"
+  // The True Royal Minimal Tee product shots were replaced at their paths
+  // later on 2026-10-22 (the back for white lettering, the front after it
+  // had gone live); the tags keep every image cache from serving the first
+  // files.
+  const replaced: Record<string, string> = {
+    "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp": "true-royal-back-white-20261022",
+    "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp": "true-royal-front-v2-20261022",
+  };
+  const revision = replaced[url.pathname]
+    ? replaced[url.pathname]
     : isRevisedBack
     ? "modern-back-v6-5in-20260925"
     : /^\/products\/GOOOL_MODERN_PERFORMANCE_(?:ROYAL_|WHITE_)?(?:FRONT|BACK_DETAIL)_V[36]\.png$/.test(url.pathname)

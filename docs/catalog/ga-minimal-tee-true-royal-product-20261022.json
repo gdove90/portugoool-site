@@ -2,7 +2,7 @@
   "productId": "80000000-0000-4000-8000-000000000011",
   "slug": "goal-athletics-ga-minimal-tee",
   "colorway": "True Royal",
-  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (WebP, soft grey studio backdrop); the back replaced later the same day by owner instruction (white lettering, 1122 x 1402); originals preserved unchanged in designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/as-received/.",
+  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (WebP, soft grey studio backdrop); the back and then the front replaced later the same day by owner instruction (back: white lettering, 1122 x 1402; front: 1024 x 1536); originals preserved unchanged in designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/as-received/.",
   "export": "WebP quality 92, method 6, native scale. Backdrop extended to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md); no resizing, recoloring or retouching of the original pixels.",
   "replaces": [
     "/products/goal-ga-minimal-tee-true-royal-front.webp and -back.webp (Apliiq renders, previously unused by the True Royal gallery; moved to designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/retired-render/)"
@@ -13,21 +13,21 @@
       "order": 1,
       "view": "product-front",
       "sourceFilename": "true-royal-product-front-as-received.webp",
-      "receivedAs": "43.webp",
-      "sourceSha256": "055d594b806d327fdfe075a1688b67b664d2e987c1a9aebe8d45f46d662c89fa",
-      "sourceBytes": 80154,
+      "receivedAs": "48.webp",
+      "sourceSha256": "9c5efd07250643d6ecc23cd2f83879b1eafd8c0a38052ea73627a6b69ca6ead5",
+      "sourceBytes": 107744,
       "sourceDimensions": [
-        799,
-        1024
+        1024,
+        1536
       ],
-      "framing": "799 x 1024 source on a soft grey studio backdrop with a floor shadow; backdrop extended 87 px above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00; original pixels untouched).",
+      "framing": "1024 x 1536 source on a soft grey studio backdrop with a floor shadow, already 2:3: deployed byte-for-byte, no re-encode. Replaces, by owner instruction on 2026-10-22 after the first set went live, the first front (799 x 1024, extended to 799 x 1198, sha256 055d594b806d327fdfe075a1688b67b664d2e987c1a9aebe8d45f46d662c89fa), kept as true-royal-product-front-SUPERSEDED-799x1024-as-received.webp.",
       "dimensions": [
-        799,
-        1198
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp",
-      "webpSha256": "a99971f7a703720c626a3bcd60e6254f86a1d8fcaa4ade6bb9ea7fac933d5309",
-      "webpBytes": 80536
+      "webpSha256": "9c5efd07250643d6ecc23cd2f83879b1eafd8c0a38052ea73627a6b69ca6ead5",
+      "webpBytes": 107744
     },
     {
       "order": 2,
