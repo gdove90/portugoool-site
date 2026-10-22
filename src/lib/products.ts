@@ -3651,14 +3651,14 @@ export const products: Product[] = [
   // off the saved-designs list thumbnails; which sleeve and the print sizes
   // are to be confirmed on each design page). Record:
   // designs/58_heritage-hoodie-ind4000-2026-10-22/.
-  // Three inputs are still to come, and each has its own gate:
+  // Retail price $78, set by the owner on 2026-10-22 (the same price the
+  // Core Hoodie rows carried on this blank). Two inputs are still to come,
+  // and each has its own gate:
   //   - renders: isActive false until every gallery below has images in
   //     public/products/ (ProductCard reads images[0]);
   //   - design ids and per-size SKUs: every colourway comingSoon until
   //     fulfillment.ts carries them, so checkout refuses it even if the
-  //     product is activated;
-  //   - retail price: priceCents 0 shows "Price to be announced" and can
-  //     never reach checkout.
+  //     product is activated.
   // scripts/test-heritage-hoodie.cjs holds those gates. Remove each only when
   // its input is in the repo.
   // Apliiq offers the blank XS to 5XL; the site sells S to XXL on every
@@ -3670,7 +3670,7 @@ export const products: Product[] = [
     blank: "IND4000",
     description:
       "Heavyweight fleece hoodie. GA monogram centred on the chest, small GA monogram on the sleeve above the cuff, kangaroo pocket and a generous cut.",
-    priceCents: 0,
+    priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#1E1E1E",

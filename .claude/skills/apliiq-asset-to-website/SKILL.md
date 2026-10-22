@@ -179,6 +179,7 @@ deploy id, and the PDP URL returning 200. What is still unverified
 - 2026-10-22 Heritage Hoodie (IND4000): four saved designs on the account
   (Black, Grey Heather, Bone, Navy; GA monogram on the chest and on the
   sleeve above the cuff), seen on the saved-designs list only. Catalog row
-  …0014 is hidden, every colourway coming soon, no fulfillment entry, until
-  the ids, SKUs, renders and price are read off the design pages.
+  …0014 is priced at $78 (owner), hidden, every colourway coming soon, no
+  fulfillment entry, until the ids, SKUs and renders are read off the
+  design pages.
   `designs/58_heritage-hoodie-ind4000-2026-10-22/`.
