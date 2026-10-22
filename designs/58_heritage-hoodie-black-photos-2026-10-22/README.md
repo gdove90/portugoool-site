@@ -47,6 +47,7 @@ the gated site's public-image allowlist (`src/middleware.ts`).
 
 - Read the four design ids and SKUs off Apliiq and map them in
   `src/lib/fulfillment.ts`; set the price; flip `availableForSale`.
-- Grey Heather, Bone and Navy photos as the owner supplies them.
+- Bone and Navy photos as the owner supplies them (Grey Heather went up
+  the same day: `designs/59_heritage-hoodie-grey-heather-photos-2026-10-22/`).
 - Apply migration 0041 in the SQL editor.
 - Physical sample.

@@ -50,12 +50,12 @@ async function check(name, fn) { await fn(); passed++; console.log('PASS ' + nam
       assert.equal((await middleware(request(route))).status, 307, route);
     }
   });
-  await check('four Heritage Hoodie Black catalog photos load without opening other paths', async () => {
-    const prefix = '/products/goal-heritage-hoodie-black-catalog-';
-    for (const view of ['product-front', 'model-front', 'model-three-quarter', 'model-side']) {
-      for (const method of ['GET', 'HEAD']) assert.equal((await middleware(request(`${prefix}${view}-20261022.webp`, method))).headers.get('x-middleware-next'), '1');
+  await check('eight Heritage Hoodie catalog photos load without opening other paths', async () => {
+    for (const colour of ['black', 'grey-heather']) for (const view of ['product-front', 'model-front', 'model-three-quarter', 'model-side']) {
+      for (const method of ['GET', 'HEAD']) assert.equal((await middleware(request(`/products/goal-heritage-hoodie-${colour}-catalog-${view}-20261022.webp`, method))).headers.get('x-middleware-next'), '1');
     }
-    for (const route of [`${prefix}model-rear-20261022.webp`, `${prefix}product-front-20261023.webp`, '/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp', `${prefix}product-front-20261022.webp/private`, '/shop/goal-athletics-heritage-hoodie']) {
+    const prefix = '/products/goal-heritage-hoodie-black-catalog-';
+    for (const route of [`${prefix}model-rear-20261022.webp`, `${prefix}product-front-20261023.webp`, '/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp', `${prefix}product-front-20261022.webp/private`, '/shop/goal-athletics-heritage-hoodie']) {
       assert.equal((await middleware(request(route))).status, 307, route);
     }
   });

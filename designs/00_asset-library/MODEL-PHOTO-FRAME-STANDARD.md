@@ -97,6 +97,8 @@ photos are uploaded.
 | GA Big Tee · product fronts, 4 colourways | 1145 x 1374 and 1374 x 1145 on pure white | 1145 x 1718 and 1210 x 1815, white replaced by the studio backdrop (garment and cast shadow kept), landscape sides trimmed to columns 80-1290 |
 | Heritage Hoodie Black · product front | 1199 x 1312 (soft grey) | 1199 x 1798, backdrop extended 243 rows above and below (joins 0.00 and 0.00) |
 | Heritage Hoodie Black · model front, three-quarter, side | 510 x 1024 (soft grey) | 683 x 1024, backdrop extended at the sides (joins 0.02/0.26, 0.02/0.20, 0.00/0.06) |
+| Heritage Hoodie Grey Heather · product front | 1122 x 1402 (soft grey) | 1122 x 1683, backdrop extended 140/141 rows above and below (joins 0.36 and 0.00) |
+| Heritage Hoodie Grey Heather · model front, three-quarter, side | 941 x 1672 (soft grey) | 1115 x 1672, backdrop extended 87 columns at each side (joins 0.00/0.29, 0.00/0.41, 0.01/0.15) |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
 `docs/catalog/ga-matchday-cap-{black,red,royal,dark-green}-20261022.json`,

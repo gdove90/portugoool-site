@@ -3651,11 +3651,12 @@ export const products: Product[] = [
   // Navy seen on the saved-designs list 2026-10-22); their ids and SKUs are
   // not mapped in fulfillment.ts yet and no price is set, so the listing
   // shows but does not sell (availableForSale false, priceCents 0). Fabric,
-  // fit and care copy are the IND4000 lines of the Core Hoodie. Black shows
-  // the owner's four catalog photos, product front first, brought to the
-  // 2:3 frame of MODEL-PHOTO-FRAME-STANDARD.md. Records:
-  // designs/58_heritage-hoodie-black-photos-2026-10-22/ and
-  // docs/catalog/heritage-hoodie-black-20261022.json.
+  // fit and care copy are the IND4000 lines of the Core Hoodie. Black and
+  // Grey Heather each show the owner's four catalog photos, product front
+  // first, brought to the 2:3 frame of MODEL-PHOTO-FRAME-STANDARD.md.
+  // Records: designs/58_heritage-hoodie-black-photos-2026-10-22/,
+  // designs/59_heritage-hoodie-grey-heather-photos-2026-10-22/ and
+  // docs/catalog/heritage-hoodie-{black,grey-heather}-20261022.json.
   {
     id: "80000000-0000-4000-8000-000000000014",
     name: "GOAL Athletics Heritage Hoodie",
@@ -3719,6 +3720,36 @@ export const products: Product[] = [
           {
             src: "/products/goal-heritage-hoodie-black-catalog-model-side-20261022.webp",
             alt: "Same model in a quarter turn to the right, showing the GA monogram on the chest, the hood and the kangaroo pocket of the black Heritage Hoodie",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+      {
+        name: "Grey Heather",
+        supplierColor: "Grey Heather",
+        // Swatch value shared with the Core Hoodie, the same IND4000 colour
+        // (the photos read darker, about #AEAEB0, under their studio light).
+        hex: "#D9D9D9",
+        skuFragment: "GREYHEATHER",
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
+            alt: "Heritage Hoodie in Grey Heather, product front with the black and red GA monogram centred on the chest and a small GA on the left sleeve above the cuff",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Grey Heather Heritage Hoodie with the black and red GA monogram on the chest and the small GA on the left sleeve, hood down, black shorts, white socks and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn to the left, showing the GA monogram on the chest and the small GA on the left sleeve of the Grey Heather Heritage Hoodie",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-catalog-model-side-20261022.webp",
+            alt: "Same model in a quarter turn to the right, showing the GA monogram on the chest, the hood and the small GA on the left sleeve of the Grey Heather Heritage Hoodie",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],

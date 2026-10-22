@@ -1,0 +1,98 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000014",
+  "slug": "goal-athletics-heritage-hoodie",
+  "source": "Four Grey Heather catalog photos (product front and three model views) supplied by the owner in the Claude session on 2026-10-22, already on the soft grey studio backdrop; originals preserved unchanged in designs/59_heritage-hoodie-grey-heather-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale, framed at 2:3 by continuing each photo's own backdrop (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md).",
+  "galleryOrder": "Product front first, then model front, three-quarter and side. Second colourway of the listing (after Black); nothing replaced. Swatch hex #D9D9D9, the Core Hoodie's value for the same IND4000 Grey Heather; the photos themselves read about #AEAEB0.",
+  "listing": "Colourway added 2026-10-22 to the Heritage Hoodie listed the same day. Still not for sale: no price and no Apliiq ids/SKUs mapped in src/lib/fulfillment.ts (the saved design goal athletics heritage hoodie \u00b7 grey heather exists on Apliiq).",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Grey Heather",
+      "view": "product-front",
+      "sourceFilename": "grey-heather-product-front-as-received.webp",
+      "receivedAs": "65.webp",
+      "sourceSha256": "7dc09aba7a65560a16277add40c4163939459e891b3e3c5d813cb635de1e3f0c",
+      "sourceBytes": 202156,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402; the soft grey backdrop continued 140/141 rows above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.36 and 0.00 levels).",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
+      "webpSha256": "6a55eb7d9369ed2b656d6d1226df77cd34d1eb8f438c9f18908231b31aa7d2e2",
+      "webpBytes": 210838,
+      "replaces": null
+    },
+    {
+      "order": 2,
+      "colorway": "Grey Heather",
+      "view": "model-front",
+      "sourceFilename": "grey-heather-model-front-as-received.webp",
+      "receivedAs": "62.webp",
+      "sourceSha256": "026d09316138d4cbcb3aa19f0ead87ed0bfd5a79e648f448c4f09521144589e8",
+      "sourceBytes": 86296,
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "framing": "941 x 1672 narrow; the backdrop continued 87 columns at each side to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00 and 0.29 levels).",
+      "dimensions": [
+        1115,
+        1672
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-model-front-20261022.webp",
+      "webpSha256": "6280f8dae8929a8e41491d6cd10dc7b0ac2281f26067974a1fb00691eec7d2e5",
+      "webpBytes": 96156,
+      "replaces": null
+    },
+    {
+      "order": 3,
+      "colorway": "Grey Heather",
+      "view": "model-three-quarter",
+      "sourceFilename": "grey-heather-model-three-quarter-as-received.webp",
+      "receivedAs": "63.webp",
+      "sourceSha256": "5eee9e9547c700ed39102e94bd7da4268d7ad6608e880a62eb9492203906e071",
+      "sourceBytes": 88798,
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "framing": "941 x 1672 narrow; the backdrop continued 87 columns at each side to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00 and 0.41 levels).",
+      "dimensions": [
+        1115,
+        1672
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "0e4e01d1d2e1f92f46ccd5d5a39e0787241e918e08310d8e59c947b8a691b364",
+      "webpBytes": 97776,
+      "replaces": null
+    },
+    {
+      "order": 4,
+      "colorway": "Grey Heather",
+      "view": "model-side",
+      "sourceFilename": "grey-heather-model-side-as-received.webp",
+      "receivedAs": "64.webp",
+      "sourceSha256": "6728b0a6c58fb517c2999f0d2c8d95a28893f1b8dd5d10b44363f34315ff6362",
+      "sourceBytes": 89914,
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "framing": "941 x 1672 narrow; the backdrop continued 87 columns at each side to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.01 and 0.15 levels).",
+      "dimensions": [
+        1115,
+        1672
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-model-side-20261022.webp",
+      "webpSha256": "3eb7d655a26a8f2008c2cdc7d42472c83239387156d0194ada956045aa022307",
+      "webpBytes": 101292,
+      "replaces": null
+    }
+  ]
+}
