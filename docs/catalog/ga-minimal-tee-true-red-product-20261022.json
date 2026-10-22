@@ -2,7 +2,7 @@
   "productId": "80000000-0000-4000-8000-000000000011",
   "slug": "goal-athletics-ga-minimal-tee",
   "colorway": "True Red",
-  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (WebP, soft grey studio backdrop); originals preserved unchanged in designs/55_ga-minimal-tee-true-red-product-shots-2026-10-22/as-received/.",
+  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (WebP, soft grey studio backdrop); originals preserved unchanged in designs/55_ga-minimal-tee-true-red-product-shots-2026-10-22/as-received/. The back was replaced later the same day by owner instruction.",
   "export": "WebP quality 92, method 6, native scale. Backdrop extended to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md); no resizing, recoloring or retouching of the original pixels.",
   "replaces": [
     "/products/goal-ga-minimal-tee-true-red-front.webp and -back.webp (Apliiq renders, previously unused by the True Red gallery; moved to designs/55_ga-minimal-tee-true-red-product-shots-2026-10-22/retired-render/)"
@@ -33,21 +33,21 @@
       "order": 2,
       "view": "product-back",
       "sourceFilename": "true-red-product-back-as-received.webp",
-      "receivedAs": "45.webp",
-      "sourceSha256": "1f82f278b5a690a3ba571b2acbb3f72de38795f9d4cbe009b21a3e13e1d90321",
-      "sourceBytes": 115426,
+      "receivedAs": "52.webp",
+      "sourceSha256": "0ddea91b7891f610aa82d535ac476e3e4715218b5b0583f3998e1a845b68d572",
+      "sourceBytes": 66658,
       "sourceDimensions": [
         1122,
         1402
       ],
-      "framing": "1122 x 1402 source, same backdrop; extended 140/141 px above and below (joins 0.30 and 0.00).",
+      "framing": "1122 x 1402 source on a soft grey studio backdrop with a floor shadow (cooler, slightly bluish grey); backdrop extended 140/141 px above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00 and 0.03; original pixels untouched). Replaces, by owner instruction on 2026-10-22 after the first set went live, the first back (1122 x 1402, sha256 1f82f278b5a690a3ba571b2acbb3f72de38795f9d4cbe009b21a3e13e1d90321), kept as true-red-product-back-SUPERSEDED-as-received.webp.",
       "dimensions": [
         1122,
         1683
       ],
       "deployedPath": "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp",
-      "webpSha256": "258f4a9e6cfb0a8305698e9207c96dc165bff630d35e7b5a5a42c4e62ccb7c63",
-      "webpBytes": 106454
+      "webpSha256": "29682e9067a6bc4a70997b2fe65791ae5578fa2196ca82385fd3c97015240bd9",
+      "webpBytes": 64510
     }
   ]
 }
