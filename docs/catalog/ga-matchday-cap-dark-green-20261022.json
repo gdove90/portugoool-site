@@ -1,0 +1,93 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000009",
+  "slug": "goal-athletics-monogram-cap",
+  "colorway": "Dark Green/Natural",
+  "source": "Four catalog photos supplied by the owner in the Claude session on 2026-10-22 (three PNG model shots, one WebP product shot); originals preserved unchanged in designs/48_ga-matchday-cap-dark-green-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Each photo brought to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-monogram-cap-dark-green.webp (Apliiq render of design 6205989, moved to designs/48_ga-matchday-cap-dark-green-photos-2026-10-22/retired-render/)"
+  ],
+  "galleryOrder": "Product shot first, by owner instruction 2026-10-22.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "dark-green-product-front-as-received.webp",
+      "receivedAs": "18.webp",
+      "sourceSha256": "e550c35ed42c692373cb9726e86fd35de43266db13c7d6a6e281494e89ea04b7",
+      "sourceBytes": 56134,
+      "sourceDimensions": [
+        622,
+        609
+      ],
+      "framing": "One crop-seam row dropped at the top edge, then backdrop extended 162 px above and 163 px below to 2:3 (seam steps 1.24 and 0.04 levels; the 1.24 is the backdrop gradient near the top edge, not visible; original pixels untouched).",
+      "dimensions": [
+        622,
+        933
+      ],
+      "deployedPath": "/products/goal-monogram-cap-dark-green-catalog-product-front-20261022.webp",
+      "webpSha256": "c3448117aec97a020865074e6dde832d391887f67e77507c568ec2d8b8a7a087",
+      "webpBytes": 59072
+    },
+    {
+      "order": 2,
+      "view": "model-front",
+      "sourceFilename": "dark-green-model-front-as-received.png",
+      "receivedAs": "19.png",
+      "sourceSha256": "568c4a3c023fa8afe0b1a9e804a9439c1bd089e30985cdc923ae0142c841d42b",
+      "sourceBytes": 395293,
+      "sourceDimensions": [
+        622,
+        636
+      ],
+      "framing": "One seam row dropped at the bottom edge, then centre-cropped 99/100 px from the sides to 2:3 (--crop): the shoes touch the bottom edge, so the backdrop could not be extended below; only empty backdrop was removed.",
+      "dimensions": [
+        423,
+        635
+      ],
+      "deployedPath": "/products/goal-monogram-cap-dark-green-catalog-model-front-20261022.webp",
+      "webpSha256": "4b00fc7c223b16b6d9a5c8904511df9630e13a1223995df248bb105219da33fb",
+      "webpBytes": 21468
+    },
+    {
+      "order": 3,
+      "view": "model-three-quarter",
+      "sourceFilename": "dark-green-model-three-quarter-as-received.png",
+      "receivedAs": "20.png",
+      "sourceSha256": "95397e4bf61070c2bfc24b84edd89d986f22df508d74adf835c46956bb628a03",
+      "sourceBytes": 388974,
+      "sourceDimensions": [
+        622,
+        636
+      ],
+      "framing": "One seam row dropped at the bottom edge, then centre-cropped 99/100 px from the sides to 2:3 (--crop), same reason.",
+      "dimensions": [
+        423,
+        635
+      ],
+      "deployedPath": "/products/goal-monogram-cap-dark-green-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "4626ad59ed7eda033e389c07afbf6bec7f7108d88918157e539493bcc1676fc2",
+      "webpBytes": 20242
+    },
+    {
+      "order": 4,
+      "view": "model-side",
+      "sourceFilename": "dark-green-model-side-as-received.png",
+      "receivedAs": "21.png",
+      "sourceSha256": "9b34f9834b69cbfa5ddcab34fa129451ca958e905a163dd3c3722afe3fdb8bdb",
+      "sourceBytes": 368248,
+      "sourceDimensions": [
+        622,
+        609
+      ],
+      "framing": "Two seam rows dropped (top and bottom edges), then centre-cropped 108/109 px from the sides to 2:3 (--crop), same reason.",
+      "dimensions": [
+        405,
+        607
+      ],
+      "deployedPath": "/products/goal-monogram-cap-dark-green-catalog-model-side-20261022.webp",
+      "webpSha256": "3960cd81cd93cd3afb4b01f36a0ecbe3e93551f468dfa91ceed780931295b9bd",
+      "webpBytes": 17626
+    }
+  ]
+}

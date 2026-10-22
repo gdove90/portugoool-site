@@ -66,9 +66,11 @@ photos are uploaded.
 | GA Matchday Cap Red · model front, three-quarter, side | 555 x 671, 556 x 671, 555 x 723 | 447 x 671, 447 x 671, 482 x 723, cropped at the sides (shoes touch the bottom edge, so no extension below) |
 | GA Matchday Cap Royal · product front | 556 x 727 | 556 x 834, 1 seam row dropped at the top, backdrop extended above and below (seam steps 1.46 and 0.11; the 1.46 is the backdrop gradient, not visible) |
 | GA Matchday Cap Royal · model front, three-quarter, side | 556 x 668, 556 x 668, 556 x 727 | 445 x 667, 445 x 667, 484 x 726, one seam row dropped, cropped at the sides |
+| GA Matchday Cap Dark Green · product front | 622 x 609 | 622 x 933, 1 seam row dropped at the top, backdrop extended 162/163 px above and below (seam steps 1.24 and 0.04; the 1.24 is the backdrop gradient, not visible) |
+| GA Matchday Cap Dark Green · model front, three-quarter, side | 622 x 636, 622 x 636, 622 x 609 | 423 x 635, 423 x 635, 405 x 607, seam rows dropped, cropped at the sides |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
-`docs/catalog/ga-matchday-cap-{red,royal}-20261022.json`.
+`docs/catalog/ga-matchday-cap-{red,royal,dark-green}-20261022.json`.
 All three Apliiq shorts renders left `public/products/`; they stay in
 `designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/`.
 

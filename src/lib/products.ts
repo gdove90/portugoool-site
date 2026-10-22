@@ -2922,7 +2922,32 @@ export const products: Product[] = [
         supplierColor: "Dark Green/Natural",
         hex: "#0B3D2E",
         skuFragment: "GREEN",
-        images: [{ src: "/products/goal-monogram-cap-dark-green.webp", alt: "GA Matchday Cap with dark green visor, front view" }],
+        // Dark Green/Natural shows the owner's four catalog photos
+        // (2026-10-22), product shot first; its Apliiq render was retired.
+        // Records: designs/48_ga-matchday-cap-dark-green-photos-2026-10-22/
+        // and docs/catalog/ga-matchday-cap-dark-green-20261022.json.
+        images: [
+          {
+            src: "/products/goal-monogram-cap-dark-green-catalog-product-front-20261022.webp",
+            alt: "GA Matchday Cap in Dark Green/Natural, front view: natural crown with the dark green GA monogram embroidered on the front panel and a dark green visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-dark-green-catalog-model-front-20261022.webp",
+            alt: "Model facing forward wearing the Dark Green/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-dark-green-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the dark green GA monogram on the natural front panel of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-dark-green-catalog-model-side-20261022.webp",
+            alt: "Same model turned to the side, showing the dark green visor and crown profile of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
     ],
     sizes: ["OS"],
