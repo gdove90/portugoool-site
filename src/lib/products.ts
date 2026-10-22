@@ -3187,14 +3187,14 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold, inside out. Tumble dry low. Skip the fabric softener, it coats the fibres and reduces wicking. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/goal-ga-minimal-tee-black-front.webp",
-        alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram centred on the chest",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
+        src: "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
+        alt: "GA Minimal Tee in black, product front with the white and red GA monogram centred on the chest",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
-        src: "/products/goal-ga-minimal-tee-black-back.webp",
-        alt: "GOAL Athletics GA Minimal Tee in black, back view with the white and red stacked GOAL ATHLETICS lockup across the upper back",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
+        src: "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
+        alt: "GA Minimal Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3203,11 +3203,21 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#373737",
         skuFragment: "BLACK",
-        cardImage: {
-          src: "/products/goal-ga-minimal-tee-black-front.webp",
-          alt: "GOAL Athletics GA Minimal Tee in black, front view with the white and red GA monogram centred on the chest",
-        },
+        // Black leads with the owner's product front and back (2026-10-22),
+        // which also serve as the catalog card; the Apliiq renders were
+        // retired. Records: designs/53_ga-minimal-tee-black-product-shots-
+        // 2026-10-22/ and docs/catalog/ga-minimal-tee-black-product-20261022.json.
         images: [
+          {
+            src: "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
+            alt: "GA Minimal Tee in black, product front with the white and red GA monogram centred on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
+            alt: "GA Minimal Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-front-20261015.webp",
             alt: "Model facing forward in the black GA Minimal Tee with the white and red GA monogram centred on the chest, black shorts and white sneakers",
