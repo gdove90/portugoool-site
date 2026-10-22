@@ -1,0 +1,93 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000010",
+  "slug": "goal-athletics-wordmark-cap",
+  "colorway": "Black/Natural",
+  "source": "Four catalog photos supplied by the owner in the Claude session on 2026-10-22 (landscape, about 3:2); originals preserved unchanged in designs/50_stacked-stadium-cap-black-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Landscape sources: the empty sides were trimmed and the backdrop extended to reach the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py, so the subject stays at native resolution; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-wordmark-cap-black.webp (Apliiq render of design 6205992, moved to designs/50_stacked-stadium-cap-black-photos-2026-10-22/retired-render/). It was also the product-level image list and the catalog card image; both now use the product-front photo."
+  ],
+  "galleryOrder": "Product shot first, by owner instruction 2026-10-22.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "black-product-front-as-received.webp",
+      "receivedAs": "27.webp",
+      "sourceSha256": "581babf0209e961e8a4b199c64408c5a61dd0f457c938215453d102d0f134da1",
+      "sourceBytes": 56322,
+      "sourceDimensions": [
+        764,
+        510
+      ],
+      "framing": "Landscape source. Two crop-seam rows dropped at the top, sides trimmed to 600 px about the centre (--crop-width 600, empty backdrop only), then the backdrop extended 196 px above and below to 2:3 (joins 0.23 and 0.42 levels on backdrop pixels).",
+      "dimensions": [
+        600,
+        900
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
+      "webpSha256": "3a7a55d0ca998716958cccaa1e4861f78f288367ea15e823e05d1368395bb306",
+      "webpBytes": 70024
+    },
+    {
+      "order": 2,
+      "view": "model-front",
+      "sourceFilename": "black-model-front-as-received.png",
+      "receivedAs": "28.png",
+      "sourceSha256": "23aa964af95594fa647bc7d7ab127c944db717147c0b59b44c79d264fa66f8bb",
+      "sourceBytes": 425660,
+      "sourceDimensions": [
+        764,
+        508
+      ],
+      "framing": "Landscape head-and-shoulders source. Seam rows dropped, sides trimmed to 480 px about the centre (--crop-width 480), photo kept at the bottom of the canvas and the backdrop extended 216 px above (--extend-anchor end; join 0.43).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-black-catalog-model-front-20261022.webp",
+      "webpSha256": "eaca8f23695d52f16a22623819511798f27c6a1c33a819c9d6c0cddde1d180f6",
+      "webpBytes": 33506
+    },
+    {
+      "order": 3,
+      "view": "model-three-quarter",
+      "sourceFilename": "black-model-three-quarter-as-received.png",
+      "receivedAs": "29.png",
+      "sourceSha256": "4ac2b3afa3c8eea58bd566aa73b8f984e7e40aa516a236c27e28a939bfcd907d",
+      "sourceBytes": 431159,
+      "sourceDimensions": [
+        764,
+        508
+      ],
+      "framing": "Same handling as model-front (join 0.49).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-black-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "67bc7653bb32d02ae62c93d345622805f22522c80b216d962c3ea2eb4ab96bd3",
+      "webpBytes": 35006
+    },
+    {
+      "order": 4,
+      "view": "model-side",
+      "sourceFilename": "black-model-side-as-received.png",
+      "receivedAs": "26.png",
+      "sourceSha256": "c2062569899526f58820577d2b7555ffb911980f33917b829e0578dced6730d1",
+      "sourceBytes": 447613,
+      "sourceDimensions": [
+        764,
+        510
+      ],
+      "framing": "Same handling; this file carried a bright line over a dark line at its top edge, both dropped (join 0.9).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-black-catalog-model-side-20261022.webp",
+      "webpSha256": "d96fd0549470f343d5a855da9fd4c396d5d576ee49f75bfd51e846434a5d7b2c",
+      "webpBytes": 56516
+    }
+  ]
+}

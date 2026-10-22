@@ -34,6 +34,15 @@ python scripts/frame-model-photo-2x3.py IN OUT.webp
 - **A model cut off by the photo's own edge** (arms cropped) can't be extended
   this way. Ask the owner for a wider original. Never use Higgsfield or any
   other paid tool without the owner's go-ahead.
+- **A landscape close-up** (a head-and-shoulders shot, about 3:2): a plain
+  2:3 crop would leave it tiny, so trim only its empty sides with
+  `--crop-width N` (N wide enough to keep the whole subject) and let the
+  script extend the backdrop to 2:3. Add `--extend-anchor end` when the tee
+  runs off the bottom edge, so the extension goes above the head.
+- The extension carries the backdrop's own gradient outward (one slope per
+  edge, easing to flat over 24 lines) and starts from each line's fitted
+  edge value, so a sloped studio backdrop meets it without a step. Joins
+  are measured on backdrop pixels only and should stay under one level.
 
 ## Applied 2026-10-20
 
@@ -70,9 +79,12 @@ photos are uploaded.
 | GA Matchday Cap Dark Green · model front, three-quarter, side | 622 x 636, 622 x 636, 622 x 609 | 423 x 635, 423 x 635, 405 x 607, seam rows dropped, cropped at the sides |
 | GA Matchday Cap Black · product front | 556 x 707 | 556 x 834, 2 seam rows dropped at the top, backdrop extended 64/65 px above and below (seam steps 0.01 and 0.07) |
 | GA Matchday Cap Black · model front, three-quarter, side | 555 x 687, 556 x 687, 555 x 707 | 457 x 686, 457 x 686, 470 x 705, seam rows dropped, cropped at the sides |
+| Stacked Stadium Cap Black · product front | 764 x 510 (landscape) | 600 x 900, sides trimmed to 600, extended 196 px above and below (joins 0.23 and 0.42) |
+| Stacked Stadium Cap Black · model front, three-quarter, side | 764 x 508/510 (landscape) | 480 x 720, sides trimmed to 480, extended 216 px above the head (joins 0.43, 0.49, 0.9) |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
-`docs/catalog/ga-matchday-cap-{black,red,royal,dark-green}-20261022.json`.
+`docs/catalog/ga-matchday-cap-{black,red,royal,dark-green}-20261022.json`,
+`docs/catalog/stacked-stadium-cap-black-20261022.json`.
 Every GA Matchday Cap colourway now shows catalog photos; its four Apliiq
 renders are kept under designs/46-49.
 All three Apliiq shorts renders left `public/products/`; they stay in

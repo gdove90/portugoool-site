@@ -3024,7 +3024,26 @@ export const products: Product[] = [
       "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
     careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
-      { src: "/products/goal-wordmark-cap-black.webp", alt: "Stacked Stadium Cap with black visor, front view" },
+      {
+        src: "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
+        alt: "Stacked Stadium Cap in Black/Natural, front view: natural crown with the black GOAL ATHLETICS wordmark and bar embroidered on the front panel and a black visor",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-wordmark-cap-black-catalog-model-front-20261022.webp",
+        alt: "Model facing the camera wearing the Black/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-wordmark-cap-black-catalog-model-three-quarter-20261022.webp",
+        alt: "Same model in a three-quarter turn, showing the GOAL ATHLETICS wordmark on the natural front panel and the black visor",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-wordmark-cap-black-catalog-model-side-20261022.webp",
+        alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the black visor",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
     ],
     colorVariants: [
       {
@@ -3032,7 +3051,33 @@ export const products: Product[] = [
         supplierColor: "Black/Natural",
         hex: "#111111",
         skuFragment: "BLACK",
-        images: [{ src: "/products/goal-wordmark-cap-black.webp", alt: "Stacked Stadium Cap with black visor, front view" }],
+        // Black/Natural shows the owner's four catalog photos (2026-10-22),
+        // product shot first; it is the card's default colourway, so the
+        // product shot is also the catalog card. Its Apliiq render was
+        // retired. Records: designs/50_stacked-stadium-cap-black-photos-2026-10-22/
+        // and docs/catalog/stacked-stadium-cap-black-20261022.json.
+        images: [
+          {
+            src: "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
+            alt: "Stacked Stadium Cap in Black/Natural, front view: natural crown with the black GOAL ATHLETICS wordmark and bar embroidered on the front panel and a black visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-black-catalog-model-front-20261022.webp",
+            alt: "Model facing the camera wearing the Black/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-black-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the GOAL ATHLETICS wordmark on the natural front panel and the black visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-black-catalog-model-side-20261022.webp",
+            alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the black visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Red/Natural",
