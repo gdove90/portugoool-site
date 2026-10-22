@@ -2890,7 +2890,32 @@ export const products: Product[] = [
         supplierColor: "Royal/Natural",
         hex: "#1F2F6B",
         skuFragment: "ROYAL",
-        images: [{ src: "/products/goal-monogram-cap-royal.webp", alt: "GA Matchday Cap with royal visor, front view" }],
+        // Royal/Natural shows the owner's four catalog photos (2026-10-22),
+        // product shot first; its Apliiq render was retired. Records:
+        // designs/47_ga-matchday-cap-royal-photos-2026-10-22/ and
+        // docs/catalog/ga-matchday-cap-royal-20261022.json.
+        images: [
+          {
+            src: "/products/goal-monogram-cap-royal-catalog-product-front-20261022.webp",
+            alt: "GA Matchday Cap in Royal/Natural, front view: natural crown with the royal blue GA monogram embroidered on the front panel and a royal blue visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-royal-catalog-model-front-20261022.webp",
+            alt: "Model facing forward wearing the Royal/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-royal-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the royal blue GA monogram on the natural front panel of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-royal-catalog-model-side-20261022.webp",
+            alt: "Same model turned to the side, showing the royal blue visor and crown profile of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Dark Green/Natural",

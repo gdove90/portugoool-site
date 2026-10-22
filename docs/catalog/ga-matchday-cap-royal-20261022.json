@@ -1,0 +1,93 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000009",
+  "slug": "goal-athletics-monogram-cap",
+  "colorway": "Royal/Natural",
+  "source": "Four catalog photos supplied by the owner in the Claude session on 2026-10-22 (three RGBA PNG model shots, one WebP product shot); originals preserved unchanged in designs/47_ga-matchday-cap-royal-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Each photo brought to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-monogram-cap-royal.webp (Apliiq render of design 6205982, moved to designs/47_ga-matchday-cap-royal-photos-2026-10-22/retired-render/)"
+  ],
+  "galleryOrder": "Product shot first, by owner instruction 2026-10-22: the lead image is the one shown on the catalog card for the colourway and the first image in the gallery.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "royal-product-front-as-received.webp",
+      "receivedAs": "14.webp",
+      "sourceSha256": "0fee6bc705b66d262e7538f9c758719839fe02366c7ffa80b01a6286fcdff85c",
+      "sourceBytes": 52696,
+      "sourceDimensions": [
+        556,
+        727
+      ],
+      "framing": "One crop-seam row dropped at the top edge, then backdrop extended above and below to 2:3 (seam steps 1.46 and 0.11 levels; the 1.46 is the backdrop gradient near the top edge, not visible; original pixels untouched).",
+      "dimensions": [
+        556,
+        834
+      ],
+      "deployedPath": "/products/goal-monogram-cap-royal-catalog-product-front-20261022.webp",
+      "webpSha256": "3f6105a0d5e25f3516ca8c91bebe136d433477fcdeca343ceeeeb5bb9e4e0fc6",
+      "webpBytes": 52730
+    },
+    {
+      "order": 2,
+      "view": "model-front",
+      "sourceFilename": "royal-model-front-as-received.png",
+      "receivedAs": "15.png",
+      "sourceSha256": "1d36b7cc18f0387164e2f9ae3d1b8f4b104793d8003b1962ae2862abb1726407",
+      "sourceBytes": 391440,
+      "sourceDimensions": [
+        556,
+        668
+      ],
+      "framing": "Centre-cropped 55/56 px from the sides to 2:3 (--crop): the shoes touch the bottom edge, so the backdrop could not be extended below; only empty backdrop was removed. One seam row dropped at the bottom edge.",
+      "dimensions": [
+        445,
+        667
+      ],
+      "deployedPath": "/products/goal-monogram-cap-royal-catalog-model-front-20261022.webp",
+      "webpSha256": "c2ebe62411486a58d144392c41556fe11c1f07cf183fcc6ad91497f13d868bf1",
+      "webpBytes": 20862
+    },
+    {
+      "order": 3,
+      "view": "model-three-quarter",
+      "sourceFilename": "royal-model-three-quarter-as-received.png",
+      "receivedAs": "16.png",
+      "sourceSha256": "3aa40f4cefb6c3de8a9127c77f27ea2c9b6795a9af0e2522521e03114549501d",
+      "sourceBytes": 391391,
+      "sourceDimensions": [
+        556,
+        668
+      ],
+      "framing": "Centre-cropped 55/56 px from the sides to 2:3 (--crop), same reason. One seam row dropped at the bottom edge.",
+      "dimensions": [
+        445,
+        667
+      ],
+      "deployedPath": "/products/goal-monogram-cap-royal-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "a210460bb52f640074beeab545982e4c5d24633912ca265913923e6209aa6170",
+      "webpBytes": 19254
+    },
+    {
+      "order": 4,
+      "view": "model-side",
+      "sourceFilename": "royal-model-side-as-received.png",
+      "receivedAs": "13.png",
+      "sourceSha256": "520fa3d38ab80a8a0fb94b890fa251dcbe8ddbc70c36a81f70736f908e5f985d",
+      "sourceBytes": 421449,
+      "sourceDimensions": [
+        556,
+        727
+      ],
+      "framing": "Centre-cropped 36 px from each side to 2:3 (--crop), same reason. One seam row dropped at the top edge.",
+      "dimensions": [
+        484,
+        726
+      ],
+      "deployedPath": "/products/goal-monogram-cap-royal-catalog-model-side-20261022.webp",
+      "webpSha256": "967e4e16b5dea0ead422c312714a2680e5aba312ea00bf6e36500c1da3f3059b",
+      "webpBytes": 21716
+    }
+  ]
+}

@@ -64,9 +64,11 @@ photos are uploaded.
 | GA Minimal Shorts Black · print detail | 682 x 1024 | 679 x 1018, white seam (2 columns) dropped, 6 rows cropped from the bottom |
 | GA Matchday Cap Red · product front | 556 x 723 | 556 x 834, 2 seam rows dropped at the top, backdrop extended above and below (seam steps 0.49 and 0.05) |
 | GA Matchday Cap Red · model front, three-quarter, side | 555 x 671, 556 x 671, 555 x 723 | 447 x 671, 447 x 671, 482 x 723, cropped at the sides (shoes touch the bottom edge, so no extension below) |
+| GA Matchday Cap Royal · product front | 556 x 727 | 556 x 834, 1 seam row dropped at the top, backdrop extended above and below (seam steps 1.46 and 0.11; the 1.46 is the backdrop gradient, not visible) |
+| GA Matchday Cap Royal · model front, three-quarter, side | 556 x 668, 556 x 668, 556 x 727 | 445 x 667, 445 x 667, 484 x 726, one seam row dropped, cropped at the sides |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
-`docs/catalog/ga-matchday-cap-red-20261022.json`.
+`docs/catalog/ga-matchday-cap-{red,royal}-20261022.json`.
 All three Apliiq shorts renders left `public/products/`; they stay in
 `designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/`.
 
