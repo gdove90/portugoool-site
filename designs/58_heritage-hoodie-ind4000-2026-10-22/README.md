@@ -61,7 +61,53 @@ price on this blank).
 Nothing is visible on goool.shop from this change, and nothing was
 deployed.
 
-## To publish
+## Published 2026-10-22 (owner: all four lockup and heritage hoodies uploaded)
+
+Read off each design's own page on the owner's Apliiq login:
+
+| Colourway | Design | Ink | SKUs S / M / L / XL / XXL |
+|---|---|---|---|
+| Black | 6210750 | white and red | APQ-6210750S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+| Grey Heather | 6210742 | black and red | APQ-6210742S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+| Bone | 6210734 | black and red | APQ-6210734S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+| Navy | 6210732 | cream | APQ-6210732S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+
+- Two transfers on every design:
+  - Front: GA monogram 4.00 x 3.61 in (`ga-chest_<ink>_4-00in`), centred on
+    centre front, top of art 3.00 in (76.2 mm) below the hood seam.
+  - Sleeve: GA monogram 2.00 x 1.80 in (`ga-sleeve_<ink>_2-00in`), outer
+    left sleeve, upright, bottom of art 3.00 in above the cuff seam.
+  - Each placement carries a "do not scale" note. The private label sb-6
+    sits inside the neck (activity log 2026-10-15).
+- Not mapped: an older "goal athletics heritage hoodie · grey heather",
+  design 6206395 (chest `ga-leftchest` 3.50 x 3.15 in, sleeve 3.00 x 2.70 in),
+  is still on the saved-designs list. It is a superseded draft; renaming it
+  "delete" is the owner's call.
+- Renders: Apliiq's own front (template 6399) and sleeve-side (5947) render
+  of each design are kept unchanged in `as-received/`. Black's exist only at
+  590 x 900; the others are 944 x 1440. The Black design also carries two
+  override images uploaded on Apliiq on 2026-10-16. They show a larger sleeve
+  mark than the saved 2.00 in placement, so they are filed but not used.
+  The white was replaced by the studio backdrop at 2:3 with
+  `scripts/studio-backdrop-product-shot.py`. Grey Heather and Bone take their
+  mask from the Navy render of the same template, with `--erode 3` on the
+  front and `--erode 6` on the side view, because that template rim-lights
+  the garment edge brighter than the backdrop. Results are in
+  `site-images/` and `public/products/` as
+  `goal-heritage-hoodie-<colour>-catalog-product-{front,sleeve}-20261022.webp`,
+  recorded in `docs/catalog/goal-heritage-hoodie-product-20261022.json`.
+- Site: the ids and SKUs are in `src/lib/fulfillment.ts`, every gallery
+  shows front then sleeve ("Concept render" caption), `comingSoon` is
+  removed, and the row is `isActive` and `availableForSale` at $78. The
+  paths are allowlisted in `src/middleware.ts`. `node
+  scripts/test-goal-hoodies.cjs` passes, with every colourway and size
+  opening a session that carries its own SKU. Migration 0041 is updated to
+  active and for sale. It has not been run; the order store upserts the row
+  before any order item.
+- Still open: the owner's model pictures, a physical sample, and the hi-res
+  link status on each placement (not read).
+
+## Original publish checklist
 
 1. Open each of the four design pages on the owner's Apliiq login; copy
    the URL (the id) and the "color offered" section (the SKUs).

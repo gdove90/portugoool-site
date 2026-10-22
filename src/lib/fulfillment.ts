@@ -413,17 +413,21 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
   },
   // == end GOAL Athletics GA Minimal Shorts ==
   // == GOAL Athletics Heritage Hoodie (Independent IND4000) ==
-  // Four saved designs exist on the account as of 2026-10-22 ("goal
-  // athletics heritage hoodie · black / grey heather / bone / navy", GA
-  // monogram on the chest and sleeve, two transfers each), seen only on the
-  // saved-designs list, which shows neither ids nor SKUs. Nothing is
-  // recorded for "80000000-0000-4000-8000-000000000014" until each id and
-  // its five SKUs (APQ-<id>S6A1 S, S7A1 M, S8A1 L, S1A1 XL, S2A1 XXL) are
-  // read off the design's own page, so resolveApliiqSku returns null and
-  // checkout refuses every colourway. Never infer an id from a neighbouring
-  // design. Keys, when they land: "Black", "Grey Heather", "Bone", "Navy"
-  // (the colorVariants[].name strings). Record:
-  // designs/58_heritage-hoodie-ind4000-2026-10-22/.
+  // Ids and SKUs read off each design's own page on 2026-10-22. Two
+  // transfers per design: GA monogram 4.00 x 3.61 in centred on centre front,
+  // top of art 3.00 in below the hood seam; GA monogram 2.00 x 1.80 in on the
+  // outer left sleeve, upright, bottom of art 3.00 in above the cuff seam
+  // ("do not scale" note on each placement). White/red files on Black,
+  // black/red on Grey Heather and Bone, cream on Navy. Private label sb-6
+  // inside the neck. An older Grey Heather design, 6206395 (chest 3.50 in,
+  // sleeve 3.00 in), is superseded and not mapped.
+  // Record: designs/58_heritage-hoodie-ind4000-2026-10-22/.
+  "80000000-0000-4000-8000-000000000014": {
+    "Black": { apliiqProductId: 6210750, skus: { S: "APQ-6210750S6A1", M: "APQ-6210750S7A1", L: "APQ-6210750S8A1", XL: "APQ-6210750S1A1", XXL: "APQ-6210750S2A1" } },
+    "Grey Heather": { apliiqProductId: 6210742, skus: { S: "APQ-6210742S6A1", M: "APQ-6210742S7A1", L: "APQ-6210742S8A1", XL: "APQ-6210742S1A1", XXL: "APQ-6210742S2A1" } },
+    "Bone": { apliiqProductId: 6210734, skus: { S: "APQ-6210734S6A1", M: "APQ-6210734S7A1", L: "APQ-6210734S8A1", XL: "APQ-6210734S1A1", XXL: "APQ-6210734S2A1" } },
+    "Navy": { apliiqProductId: 6210732, skus: { S: "APQ-6210732S6A1", M: "APQ-6210732S7A1", L: "APQ-6210732S8A1", XL: "APQ-6210732S1A1", XXL: "APQ-6210732S2A1" } },
+  },
   // == end GOAL Athletics Heritage Hoodie ==
   // == GOAL Athletics Lockup Hoodie (Independent IND4000) ==
   // Ids and SKUs read off each design's own page on 2026-10-22. One transfer

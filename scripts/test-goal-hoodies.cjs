@@ -1,9 +1,8 @@
 // GOAL Athletics hoodies on the Independent IND4000: the Heritage Hoodie (GA
 // monogram on the chest and sleeve) and the Lockup Hoodie (GA monogram and
 // GOAL ATHLETICS lockup across the chest). Four Apliiq saved designs each
-// (Black, Grey Heather, Bone, Navy), priced at $78. The Lockup row is mapped
-// and live since 2026-10-22; the Heritage row's ids, SKUs and renders are not
-// in the repo yet. This guards the gates that keep a row invisible and
+// (Black, Grey Heather, Bone, Navy), priced at $78. Both rows are mapped and
+// live since 2026-10-22. This guards the gates that keep a row invisible and
 // unsellable until every input lands (hidden while any gallery is empty,
 // every unmapped colourway coming soon, not for sale while any colourway is
 // coming soon, refused by checkout on every path including a forced

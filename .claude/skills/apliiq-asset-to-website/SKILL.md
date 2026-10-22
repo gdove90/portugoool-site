@@ -183,6 +183,11 @@ deploy id, and the PDP URL returning 200. What is still unverified
   fulfillment entry, until the ids, SKUs and renders are read off the
   design pages.
   `designs/58_heritage-hoodie-ind4000-2026-10-22/`.
+  Published later on 2026-10-22: ids 6210750 Black, 6210742 Grey Heather,
+  6210734 Bone, 6210732 Navy (chest GA 4.00 in, left-sleeve GA 2.00 in);
+  front render template 6399, sleeve side 5947. The side template
+  rim-lights the edge, so light colours need `--erode 6`. Older Grey
+  Heather draft 6206395 is not mapped.
 - 2026-10-22 Lockup Hoodie (IND4000): four saved designs on the account
   (Black, Grey Heather, Bone, Navy; GA monogram and GOAL ATHLETICS lockup
   across the chest), seen on the saved-designs grid only. Catalog row

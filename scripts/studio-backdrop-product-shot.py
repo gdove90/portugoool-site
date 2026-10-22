@@ -27,7 +27,7 @@ seamless by construction. --crop-x A:B trims a landscape shot's empty sides
 first (columns A to B kept) so the garment does not shrink in the frame.
 
 Usage:
-  python scripts/studio-backdrop-product-shot.py IN OUT.webp [--mask-from DARK.webp]
+  python scripts/studio-backdrop-product-shot.py IN OUT.webp [--mask-from DARK.webp] [--erode 3]
          [--crop-x A:B] [--quality 92] [--debug-mask MASK.png]
 """
 import argparse
@@ -42,6 +42,10 @@ ap.add_argument('--mask-from', help='dark or coloured shot of the same render, w
 ap.add_argument('--crop-x', help='keep columns A:B of the source before framing')
 ap.add_argument('--quality', type=int, default=92)
 ap.add_argument('--debug-mask', help='write the garment mask here as a PNG')
+ap.add_argument('--erode', type=int, default=1,
+                help='px the garment mask is pulled in before compositing (default 1). Raise to 3 when a '
+                     'light garment shows a white rim: its near-white anti-aliased edge then takes the '
+                     'shadow treatment instead of being copied')
 args = ap.parse_args()
 
 try:
@@ -123,9 +127,9 @@ else:
 if args.debug_mask:
     Image.fromarray((mask * 255).astype(np.uint8)).save(args.debug_mask)
 
-# Feathered alpha: erode 1 px so the anti-aliased edge takes the shadow
-# treatment (a dark hairline at worst), never a light halo.
-alpha = ndimage.binary_erosion(mask, iterations=1).astype(np.float64)
+# Feathered alpha: erode (1 px by default) so the anti-aliased edge takes the
+# shadow treatment (a dark hairline at worst), never a light halo.
+alpha = ndimage.binary_erosion(mask, iterations=args.erode).astype(np.float64)
 alpha = ndimage.gaussian_filter(alpha, 1.0)
 
 # 2:3 canvas with the shot centred vertically (wider) or horizontally (narrower).

@@ -1,0 +1,194 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000014",
+  "slug": "goal-athletics-heritage-hoodie",
+  "source": "Apliiq's own full-size renders of each saved design (template 6399 front, 5947 sleeve side), downloaded 2026-10-22 from the design's public render URL; originals kept unchanged in designs/58_heritage-hoodie-ind4000-2026-10-22/as-received/, with the two override images found on the Black design (uploaded on Apliiq 2026-10-16, larger sleeve mark than the saved 2.00 in placement, not used).",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md. Black's renders exist only at 590 x 900 on Apliiq, so its images are 600 x 900.",
+  "caption": "Concept render. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Product front, then the sleeve side view, in every colourway; the owner's model pictures follow when they land. Black is the card default.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Black",
+      "view": "product-front",
+      "apliiqDesignId": 6210750,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210750_6399.jpg",
+      "sourceFilename": "apliiq-render-black-6210750-front-6399.jpg",
+      "sourceSha256": "7b9c06aada7d4ecda8626aa7564a24a7e956cc00ba42bfe67b06a948a69eadca",
+      "sourceBytes": 61490,
+      "sourceDimensions": [
+        590,
+        900
+      ],
+      "print": "GA monogram, white and red, 4.00 x 3.61 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "590 x 900 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas",
+      "dimensions": [
+        600,
+        900
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+      "webpSha256": "b24d9d6b69a874e3e9f164297635583ae04a00e33af2e1333971b8d426a0e22e",
+      "webpBytes": 15710
+    },
+    {
+      "order": 2,
+      "colorway": "Black",
+      "view": "product-sleeve",
+      "apliiqDesignId": 6210750,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210750_5947.jpg",
+      "sourceFilename": "apliiq-render-black-6210750-sleeve-5947.jpg",
+      "sourceSha256": "b0d4994924a998b799230b725f12aa8481c83fc6aa9d44876ec30b9ae700f19c",
+      "sourceBytes": 36172,
+      "sourceDimensions": [
+        590,
+        900
+      ],
+      "print": "GA monogram, white and red, 2.00 x 1.80 in on the outer left sleeve, upright, bottom of art 3.00 in above the cuff seam",
+      "framing": "590 x 900 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas",
+      "dimensions": [
+        600,
+        900
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",
+      "webpSha256": "c536ebd5a7db41620d6ff0982dc95b635ae3b631dc580b09ab49a7fd54a450e8",
+      "webpBytes": 10722
+    },
+    {
+      "order": 3,
+      "colorway": "Grey Heather",
+      "view": "product-front",
+      "apliiqDesignId": 6210742,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210742_6399.jpg",
+      "sourceFilename": "apliiq-render-grey-heather-6210742-front-6399.jpg",
+      "sourceSha256": "f7582b196fa073743d00a82657efe572269b183cc9b20c95b250f7ae1a756261",
+      "sourceBytes": 1006109,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA monogram, black and red, 4.00 x 3.61 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas; garment mask from the Navy render of the same template (--mask-from), --erode 3 so the render's rim-lit edge does not show as a white outline",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
+      "webpSha256": "0a639b994ccd502895f03857b3a26714a332aedba48342fbec0e332e6432bb33",
+      "webpBytes": 158380
+    },
+    {
+      "order": 4,
+      "colorway": "Grey Heather",
+      "view": "product-sleeve",
+      "apliiqDesignId": 6210742,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210742_5947.jpg",
+      "sourceFilename": "apliiq-render-grey-heather-6210742-sleeve-5947.jpg",
+      "sourceSha256": "dcd7504186d1fac73598dfb7f049c6098a97cfbf36384729b723d6015301569e",
+      "sourceBytes": 489646,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA monogram, black and red, 2.00 x 1.80 in on the outer left sleeve, upright, bottom of art 3.00 in above the cuff seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas; garment mask from the Navy render of the same template (--mask-from), --erode 6 so the render's rim-lit edge does not show as a white outline",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-product-sleeve-20261022.webp",
+      "webpSha256": "cdeb44fe6b38cfbe24c27f145ab89f51c9d1712665f233e396cea6bc487aae57",
+      "webpBytes": 80424
+    },
+    {
+      "order": 5,
+      "colorway": "Bone",
+      "view": "product-front",
+      "apliiqDesignId": 6210734,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210734_6399.jpg",
+      "sourceFilename": "apliiq-render-bone-6210734-front-6399.jpg",
+      "sourceSha256": "66301499f64039c480622436ede59e17445b998551cbbf320f485064512be74e",
+      "sourceBytes": 970444,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA monogram, black and red, 4.00 x 3.61 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas; garment mask from the Navy render of the same template (--mask-from), --erode 3 so the render's rim-lit edge does not show as a white outline",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
+      "webpSha256": "ad3c30b19803eaad6c45b138de235f10a027aea9dea0952181a2072eb1c48b5c",
+      "webpBytes": 110766
+    },
+    {
+      "order": 6,
+      "colorway": "Bone",
+      "view": "product-sleeve",
+      "apliiqDesignId": 6210734,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210734_5947.jpg",
+      "sourceFilename": "apliiq-render-bone-6210734-sleeve-5947.jpg",
+      "sourceSha256": "bcb24c051daaaa4165fd93ddfa3ee5b6df42cea3a956df483c67c5e32073d26a",
+      "sourceBytes": 374446,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA monogram, black and red, 2.00 x 1.80 in on the outer left sleeve, upright, bottom of art 3.00 in above the cuff seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas; garment mask from the Navy render of the same template (--mask-from), --erode 6 so the render's rim-lit edge does not show as a white outline",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-product-sleeve-20261022.webp",
+      "webpSha256": "711ac68606dd80d38cae59244e9624ecd7f80ed2cb78bef7ec1bfb262028887b",
+      "webpBytes": 65426
+    },
+    {
+      "order": 7,
+      "colorway": "Navy",
+      "view": "product-front",
+      "apliiqDesignId": 6210732,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210732_6399.jpg",
+      "sourceFilename": "apliiq-render-navy-6210732-front-6399.jpg",
+      "sourceSha256": "6a2dad05e7d5b8e563a3eb0fbfcc93b3369a2f0e965c6c11d508d7a97357f22a",
+      "sourceBytes": 822543,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA monogram, cream, 4.00 x 3.61 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
+      "webpSha256": "76ed76a4f9c6153b021b4e1fa7f09434255411e8f9bc36bc02d992b65501d05b",
+      "webpBytes": 37558
+    },
+    {
+      "order": 8,
+      "colorway": "Navy",
+      "view": "product-sleeve",
+      "apliiqDesignId": 6210732,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6210732_5947.jpg",
+      "sourceFilename": "apliiq-render-navy-6210732-sleeve-5947.jpg",
+      "sourceSha256": "5df7b5077951f3f0a10075b719275d98a27df8d56cbf0b2c879f58649a60ae20",
+      "sourceBytes": 382380,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA monogram, cream, 2.00 x 1.80 in on the outer left sleeve, upright, bottom of art 3.00 in above the cuff seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-product-sleeve-20261022.webp",
+      "webpSha256": "4bfa30ced8acd8977b48570b7fabd8836a2f887e2726a0324c1a5cf2b57f4c1f",
+      "webpBytes": 27250
+    }
+  ]
+}

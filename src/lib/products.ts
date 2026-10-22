@@ -3643,24 +3643,19 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics GA Minimal Shorts ==
-  // == GOAL Athletics Heritage Hoodie (Apliiq saved designs seen 2026-10-22) ==
+  // == GOAL Athletics Heritage Hoodie (Apliiq designs read 2026-10-22) ==
   // Independent IND4000 heavyweight hoodie, DTF transfer. Four saved designs
-  // exist on the Apliiq account, "goal athletics heritage hoodie · black /
-  // grey heather / bone / navy", two artworks each: the GA monogram centred
-  // on the chest and a small GA monogram on the sleeve above the cuff (read
-  // off the saved-designs list thumbnails; which sleeve and the print sizes
-  // are to be confirmed on each design page). Record:
+  // (Black 6210750, Grey Heather 6210742, Bone 6210734, Navy 6210732), two
+  // artworks each: the GA monogram 4.00 x 3.61 in centred on the chest and a
+  // 2.00 x 1.80 in GA monogram on the outer left sleeve above the cuff;
+  // white/red on Black, black/red on Grey Heather and Bone, cream on Navy.
+  // Each gallery shows Apliiq's own renders of that design, front then the
+  // sleeve side, their white swapped for the studio backdrop and framed 2:3
+  // (scripts/studio-backdrop-product-shot.py). Black's renders come from
+  // Apliiq at 590 x 900 only (600 x 900 framed); the others at 944 x 1440.
+  // Live and for sale at $78 (the owner's hoodie price, set 2026-10-22) on
+  // the owner's instruction 2026-10-22. Record:
   // designs/58_heritage-hoodie-ind4000-2026-10-22/.
-  // Retail price $78, set by the owner on 2026-10-22 (the same price the
-  // Core Hoodie rows carried on this blank). Two inputs are still to come,
-  // and each has its own gate:
-  //   - renders: isActive false until every gallery below has images in
-  //     public/products/ (ProductCard reads images[0]);
-  //   - design ids and per-size SKUs: every colourway comingSoon until
-  //     fulfillment.ts carries them, so checkout refuses it even if the
-  //     product is activated.
-  // scripts/test-goal-hoodies.cjs holds those gates. Remove each only when
-  // its input is in the repo.
   // Apliiq offers the blank XS to 5XL; the site sells S to XXL on every
   // garment, as the Core Hoodie rows above did on this blank.
   {
@@ -3669,7 +3664,7 @@ export const products: Product[] = [
     slug: "goal-athletics-heritage-hoodie",
     blank: "IND4000",
     description:
-      "Heavyweight fleece hoodie. GA monogram centred on the chest, small GA monogram on the sleeve above the cuff, kangaroo pocket and a generous cut.",
+      "Heavyweight fleece hoodie. GA monogram centred on the chest, small GA monogram on the left sleeve above the cuff, kangaroo pocket and a generous cut.",
     priceCents: 7800,
     compareAtPriceCents: null,
     color: "Black",
@@ -3682,8 +3677,18 @@ export const products: Product[] = [
       "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
     fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
-    // Empty until the Apliiq renders (or owner product shots) are filed.
-    images: [],
+    images: [
+      {
+        src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+        alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",
+        alt: "GOAL Athletics Heritage Hoodie in Black, side view with the small white and red GA monogram on the left sleeve above the cuff",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
     // Swatches: Black, Grey Heather and Bone reuse the hexes the Core Hoodie
     // rows settled on for this blank; Navy is the garment body sampled from
     // Apliiq's own saved-design thumbnail (#2A3043, the Lockup Hoodie grid
@@ -3694,32 +3699,72 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#1E1E1E",
         skuFragment: "BLACK",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Black, side view with the small white and red GA monogram on the left sleeve above the cuff",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Grey Heather",
         supplierColor: "Grey Heather",
         hex: "#D9D9D9",
         skuFragment: "GREYHEATHER",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Grey Heather, product front with the black and red GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-grey-heather-catalog-product-sleeve-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Grey Heather, side view with the small black and red GA monogram on the left sleeve above the cuff",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Bone",
         supplierColor: "Bone",
         hex: "#CFCAC7",
         skuFragment: "BONE",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Bone, product front with the black and red GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-bone-catalog-product-sleeve-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Bone, side view with the small black and red GA monogram on the left sleeve above the cuff",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Navy",
         supplierColor: "Navy",
         hex: "#2A3043",
         skuFragment: "NAVY",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Navy, product front with the cream GA monogram centred on the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-navy-catalog-product-sleeve-20261022.webp",
+            alt: "GOAL Athletics Heritage Hoodie in Navy, side view with the small cream GA monogram on the left sleeve above the cuff",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
     ],
     // Garment made in China (Apliiq's IND4000 record, as for the Core
@@ -3728,8 +3773,8 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
     supplierType: "apliiq",
-    isActive: false,
-    availableForSale: false,
+    isActive: true,
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
