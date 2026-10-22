@@ -1,0 +1,53 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000011",
+  "slug": "goal-athletics-ga-minimal-tee",
+  "colorway": "True Royal",
+  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (WebP, soft grey studio backdrop); originals preserved unchanged in designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Backdrop extended to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md); no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-ga-minimal-tee-true-royal-front.webp and -back.webp (Apliiq renders, previously unused by the True Royal gallery; moved to designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/retired-render/)"
+  ],
+  "galleryOrder": "Product front, product back, then the four model views.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "true-royal-product-front-as-received.webp",
+      "receivedAs": "43.webp",
+      "sourceSha256": "055d594b806d327fdfe075a1688b67b664d2e987c1a9aebe8d45f46d662c89fa",
+      "sourceBytes": 80154,
+      "sourceDimensions": [
+        799,
+        1024
+      ],
+      "framing": "799 x 1024 source on a soft grey studio backdrop with a floor shadow; backdrop extended 87 px above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00; original pixels untouched).",
+      "dimensions": [
+        799,
+        1198
+      ],
+      "deployedPath": "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp",
+      "webpSha256": "a99971f7a703720c626a3bcd60e6254f86a1d8fcaa4ade6bb9ea7fac933d5309",
+      "webpBytes": 80536
+    },
+    {
+      "order": 2,
+      "view": "product-back",
+      "sourceFilename": "true-royal-product-back-as-received.webp",
+      "receivedAs": "44.webp",
+      "sourceSha256": "18c6a04abb15ac20d3b8b2e33a9834843bdef07f9f84a420b0947a345abe6e9d",
+      "sourceBytes": 62054,
+      "sourceDimensions": [
+        737,
+        1024
+      ],
+      "framing": "737 x 1024 source, same backdrop; extended 41 px above and below to 2:3 (joins 0.00).",
+      "dimensions": [
+        737,
+        1106
+      ],
+      "deployedPath": "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp",
+      "webpSha256": "421bfc966ae1c4a2b464018c8260f65e8fcff7917e0af19c45ab7a9367d9937f",
+      "webpBytes": 54658
+    }
+  ]
+}

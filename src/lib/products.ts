@@ -3245,7 +3245,21 @@ export const products: Product[] = [
         supplierColor: "true royal",
         hex: "#354CAA",
         skuFragment: "ROYAL",
+        // True Royal leads with the owner's product front and back
+        // (2026-10-22); the Apliiq renders were retired. Records:
+        // designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/ and
+        // docs/catalog/ga-minimal-tee-true-royal-product-20261022.json.
         images: [
+          {
+            src: "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp",
+            alt: "GA Minimal Tee in True Royal, product front with the cream GA monogram centred on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp",
+            alt: "GA Minimal Tee in True Royal, product back with the cream stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-front-20261015.webp",
             alt: "Model facing forward in the True Royal GA Minimal Tee with the cream GA monogram centred on the chest, black shorts and white sneakers",
