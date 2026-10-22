@@ -2843,7 +2843,26 @@ export const products: Product[] = [
       "Adjustable · One Size. Structured mid-profile crown, slightly curved visor, plastic snap at the back.",
     careInstructions: "Spot clean with cool water and a soft cloth. Do not machine wash or tumble dry, it will collapse the structured front panel. Air dry only.",
     images: [
-      { src: "/products/goal-monogram-cap-black.webp", alt: "GA Matchday Cap with black visor, front view" },
+      {
+        src: "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp",
+        alt: "GA Matchday Cap in Black/Natural, front view: natural crown with the black GA monogram embroidered on the front panel and a black visor",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-monogram-cap-black-catalog-model-front-20261022.webp",
+        alt: "Model facing forward wearing the Black/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-monogram-cap-black-catalog-model-three-quarter-20261022.webp",
+        alt: "Same model in a three-quarter turn, showing the black GA monogram on the natural front panel of the cap",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-monogram-cap-black-catalog-model-side-20261022.webp",
+        alt: "Same model turned to the side, showing the black visor and crown profile of the cap",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
     ],
     colorVariants: [
       {
@@ -2851,7 +2870,33 @@ export const products: Product[] = [
         supplierColor: "Black/Natural",
         hex: "#111111",
         skuFragment: "BLACK",
-        images: [{ src: "/products/goal-monogram-cap-black.webp", alt: "GA Matchday Cap with black visor, front view" }],
+        // Black/Natural shows the owner's four catalog photos (2026-10-22),
+        // product shot first; it is the card's default colourway, so the
+        // product shot is also the catalog card. Its Apliiq render was
+        // retired. Records: designs/49_ga-matchday-cap-black-photos-2026-10-22/
+        // and docs/catalog/ga-matchday-cap-black-20261022.json.
+        images: [
+          {
+            src: "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp",
+            alt: "GA Matchday Cap in Black/Natural, front view: natural crown with the black GA monogram embroidered on the front panel and a black visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-black-catalog-model-front-20261022.webp",
+            alt: "Model facing forward wearing the Black/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-black-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the black GA monogram on the natural front panel of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-black-catalog-model-side-20261022.webp",
+            alt: "Same model turned to the side, showing the black visor and crown profile of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Red/Natural",

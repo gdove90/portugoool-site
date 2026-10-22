@@ -48,8 +48,8 @@ python scripts/frame-model-photo-2x3.py IN OUT.webp
 | GA Minimal White · Black-Red (6 views) | 1122 x 1402 (4:5) | 1122 x 1683, backdrop extended above and below; print detail cropped to 935 x 1402 |
 
 The seam between the original and the extension measured under one level of
-brightness (0-255) on every photo. Products without model photos yet (the caps)
-still show square concept renders. They meet this standard when their model
+brightness (0-255) on every photo. Every active product now shows catalog
+photos; a product that arrives with renders only meets this standard when its
 photos are uploaded.
 
 ## Applied 2026-10-22
@@ -68,9 +68,13 @@ photos are uploaded.
 | GA Matchday Cap Royal · model front, three-quarter, side | 556 x 668, 556 x 668, 556 x 727 | 445 x 667, 445 x 667, 484 x 726, one seam row dropped, cropped at the sides |
 | GA Matchday Cap Dark Green · product front | 622 x 609 | 622 x 933, 1 seam row dropped at the top, backdrop extended 162/163 px above and below (seam steps 1.24 and 0.04; the 1.24 is the backdrop gradient, not visible) |
 | GA Matchday Cap Dark Green · model front, three-quarter, side | 622 x 636, 622 x 636, 622 x 609 | 423 x 635, 423 x 635, 405 x 607, seam rows dropped, cropped at the sides |
+| GA Matchday Cap Black · product front | 556 x 707 | 556 x 834, 2 seam rows dropped at the top, backdrop extended 64/65 px above and below (seam steps 0.01 and 0.07) |
+| GA Matchday Cap Black · model front, three-quarter, side | 555 x 687, 556 x 687, 555 x 707 | 457 x 686, 457 x 686, 470 x 705, seam rows dropped, cropped at the sides |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
-`docs/catalog/ga-matchday-cap-{red,royal,dark-green}-20261022.json`.
+`docs/catalog/ga-matchday-cap-{black,red,royal,dark-green}-20261022.json`.
+Every GA Matchday Cap colourway now shows catalog photos; its four Apliiq
+renders are kept under designs/46-49.
 All three Apliiq shorts renders left `public/products/`; they stay in
 `designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/`.
 
