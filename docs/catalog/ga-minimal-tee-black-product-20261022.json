@@ -2,7 +2,7 @@
   "productId": "80000000-0000-4000-8000-000000000011",
   "slug": "goal-athletics-ga-minimal-tee",
   "colorway": "Black",
-  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (1200 x 1500 PNG on a flat #F2F2F2 backdrop); originals preserved unchanged in designs/53_ga-minimal-tee-black-product-shots-2026-10-22/as-received/. True Red and True Royal shots sent at the same time were rejected by the owner and not used. The front was replaced later the same day by owner instruction (1024 x 1536 on a soft grey backdrop); the back stays on flat #F2F2F2.",
+  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (1200 x 1500 PNG on a flat #F2F2F2 backdrop); originals preserved unchanged in designs/53_ga-minimal-tee-black-product-shots-2026-10-22/as-received/. True Red and True Royal shots sent at the same time were rejected by the owner and not used. The front and then the back were replaced later the same day by owner instruction (both 1024 x 1536 on a soft grey backdrop).",
   "export": "WebP quality 92, method 6, native scale. Backdrop extended to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md); no resizing, recoloring or retouching of the original pixels.",
   "replaces": [
     "/products/goal-ga-minimal-tee-black-front.webp and -back.webp (Apliiq renders, the product-level images and the Black card image; moved to designs/53_ga-minimal-tee-black-product-shots-2026-10-22/retired-render/)"
@@ -32,22 +32,22 @@
     {
       "order": 2,
       "view": "product-back",
-      "sourceFilename": "black-product-back-as-received.png",
-      "receivedAs": "39.png",
-      "sourceSha256": "a10d07b6f92305a5a20b205776ed37f20ef98924c469812bac1850a0f991a57c",
-      "sourceBytes": 400327,
+      "sourceFilename": "black-product-back-as-received.webp",
+      "receivedAs": "50.webp",
+      "sourceSha256": "ce7740c826ed5b759302bafe7484febde419bcd61719738f97a9a266f48d0b2b",
+      "sourceBytes": 43396,
       "sourceDimensions": [
-        1200,
-        1500
+        1024,
+        1536
       ],
-      "framing": "4:5 source on a flat #F2F2F2 backdrop; backdrop extended 150 px above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00; original pixels untouched).",
+      "framing": "1024 x 1536 source on a soft grey studio backdrop with a floor shadow, already 2:3: deployed byte-for-byte, no re-encode. Replaces, by owner instruction on 2026-10-22 after the first set went live, the first back (1200 x 1500 on flat #F2F2F2, extended to 1200 x 1800, sha256 a10d07b6f92305a5a20b205776ed37f20ef98924c469812bac1850a0f991a57c), kept as black-product-back-SUPERSEDED-F2F2F2-as-received.png.",
       "dimensions": [
-        1200,
-        1800
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
-      "webpSha256": "5b1661c1501df0407ef95ac00fbbda149325c3202b893ccca0ace5aa5b7dca65",
-      "webpBytes": 32096
+      "webpSha256": "ce7740c826ed5b759302bafe7484febde419bcd61719738f97a9a266f48d0b2b",
+      "webpBytes": 43396
     }
   ]
 }
