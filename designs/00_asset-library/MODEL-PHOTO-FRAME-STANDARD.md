@@ -25,7 +25,10 @@ python scripts/frame-model-photo-2x3.py IN OUT.webp
 - **Narrower than 2:3:** the photo's own backdrop is extended left and right.
 - **Wider than 2:3:** the backdrop is extended above and below.
 - **A close-up that fills its frame** (a print detail): add `--crop` to trim
-  the sides to 2:3 instead.
+  it to 2:3 instead: columns off a wider photo, rows off a narrower one.
+  `--anchor start` keeps the top (or left), `end` the bottom (or right);
+  the default trims about the centre. A narrow shorts close-up keeps its
+  waistband with `--crop --anchor start` and gives up leg below the hem.
 - The original pixels sit untouched in the middle at their native scale. A
   1-2 px seam left by a hand crop is dropped first.
 - **A model cut off by the photo's own edge** (arms cropped) can't be extended
@@ -45,9 +48,9 @@ python scripts/frame-model-photo-2x3.py IN OUT.webp
 | GA Minimal White · Black-Red (6 views) | 1122 x 1402 (4:5) | 1122 x 1683, backdrop extended above and below; print detail cropped to 935 x 1402 |
 
 The seam between the original and the extension measured under one level of
-brightness (0-255) on every photo. Products without model photos yet (GA Minimal
-Shorts in Black and Ink Blue, the caps) still show square concept renders. They
-meet this standard when their model photos are uploaded.
+brightness (0-255) on every photo. Products without model photos yet (the caps)
+still show square concept renders. They meet this standard when their model
+photos are uploaded.
 
 ## Applied 2026-10-22
 
@@ -55,6 +58,11 @@ meet this standard when their model photos are uploaded.
 |---|---|---|
 | GA Minimal Shorts Shadow · model front | 941 x 1672 | 1115 x 1672, backdrop extended at the sides (seam steps 0.00 and 0.13 levels) |
 | GA Minimal Shorts Shadow · model front close, print detail | 1086 x 1448 (3:4) | 965 x 1448, cropped 60 px from each side |
+| GA Minimal Shorts Ink Blue · model front | 487 x 1024 | 683 x 1024, backdrop extended at the sides (seam steps 0.00 and 0.45) |
+| GA Minimal Shorts Ink Blue · print detail | 588 x 1024 | 586 x 879, two seam columns dropped, cropped from the bottom (`--anchor start`) |
+| GA Minimal Shorts Black · model front | 420 x 1024 | 683 x 1024, one seam column dropped, backdrop extended at the sides (seam steps 0.01 and 0.31) |
+| GA Minimal Shorts Black · print detail | 682 x 1024 | 679 x 1018, white seam (2 columns) dropped, 6 rows cropped from the bottom |
 
-Record: `docs/catalog/ga-minimal-shorts-shadow-20261022.json`. The Shadow
-Apliiq render left `public/products/`; the Black and Ink Blue renders remain.
+Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`.
+All three Apliiq shorts renders left `public/products/`; they stay in
+`designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/`.

@@ -3269,12 +3269,12 @@ export const products: Product[] = [
   // at $32 by owner decision 2026-10-14. Sizes map to waist sizes
   // by owner decision 2026-10-14: S=30, M=32, L=34, XL=36, XXL=38 (40 unused).
   // The Vertical style is not built: every 5620 zone is 4 x 4 in.
-  // Shadow shows the owner's three catalog photos (2026-10-22), brought to
-  // the 2:3 frame of MODEL-PHOTO-FRAME-STANDARD.md; its Apliiq render was
-  // retired from public/products. Black and Ink Blue still show Apliiq's
-  // renders until their photos arrive. Records:
+  // Every colourway shows the owner's catalog photos (2026-10-22): three
+  // for Shadow, two each for Black and Ink Blue, brought to the 2:3 frame of
+  // MODEL-PHOTO-FRAME-STANDARD.md. The Apliiq renders left public/products
+  // (they stay in the designs folder). Records:
   // designs/28_as5620-goal-shorts-2026-10-14/ and
-  // docs/catalog/ga-minimal-shorts-shadow-20261022.json.
+  // docs/catalog/ga-minimal-shorts-*-20261022.json.
   {
     id: "80000000-0000-4000-8000-000000000013",
     name: "GOAL Athletics GA Minimal Shorts",
@@ -3294,9 +3294,14 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold, inside out. Hang to dry. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/goal-ga-minimal-shorts-black-front.webp",
-        alt: "GOAL Athletics GA Minimal Shorts in black, front view with the white and red GA monogram on the left leg above the hem",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
+        src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
+        alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
+        alt: "Close-up of the white and red GA monogram on the left leg of the black GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3307,9 +3312,14 @@ export const products: Product[] = [
         skuFragment: "BLACK",
         images: [
           {
-            src: "/products/goal-ga-minimal-shorts-black-front.webp",
-            alt: "GOAL Athletics GA Minimal Shorts in black, front view with the white and red GA monogram on the left leg above the hem",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
+            alt: "Close-up of the white and red GA monogram on the left leg of the black GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3320,9 +3330,14 @@ export const products: Product[] = [
         skuFragment: "INK-BLUE",
         images: [
           {
-            src: "/products/goal-ga-minimal-shorts-ink-blue-front.webp",
-            alt: "GOAL Athletics GA Minimal Shorts in ink blue, front view with the cream GA monogram on the left leg above the hem",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Ink Blue GA Minimal Shorts with the cream GA monogram on the left leg above the hem, white socks and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-print-detail-20261022.webp",
+            alt: "Close-up of the cream GA monogram on the left leg of the Ink Blue GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },

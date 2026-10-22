@@ -87,8 +87,29 @@ same pixels brought to the site's 2:3 model-photo frame with
 
 The Shadow Apliiq render (`goal-ga-minimal-shorts-shadow-front.webp`) was
 removed from `public/products/` by owner instruction; the render itself stays
-in `proofs/apliiq-renders/6208713_shadow_5658.jpg`. Black and Ink Blue keep
-their Apliiq renders on the site until their photos arrive. Checksums and
-sizes: `docs/catalog/ga-minimal-shorts-shadow-20261022.json`. Print spec is
+in `proofs/apliiq-renders/6208713_shadow_5658.jpg`. Checksums and sizes:
+`docs/catalog/ga-minimal-shorts-shadow-20261022.json`. Print spec is
 unchanged: GA 3.00 x 2.70 in, Front Bottom Left, bottom of art 1.75 in above
 the hem, centre 4.00 in from the side seam, rotation 0, no back print.
+
+## Site photos: Ink Blue and Black (2026-10-22, later the same day)
+
+Two photos per colourway, same handling. The close-ups touch the frame at
+the sides, so they were cropped from the bottom (`--crop --anchor start`,
+added to the script for this) rather than extended; the full-length shots
+had their backdrop extended at the sides. Crop-seam columns the files
+arrived with were dropped first.
+
+| Colourway | View | Received | Deployed |
+|---|---|---|---|
+| Ink Blue (cream GA) | model-front | 487 x 1024 | `goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp`, 683 x 1024 |
+| Ink Blue (cream GA) | print-detail | 588 x 1024 | `goal-ga-minimal-shorts-ink-blue-catalog-print-detail-20261022.webp`, 586 x 879 |
+| Black (white and red GA) | model-front | 420 x 1024 PNG | `goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp`, 683 x 1024 |
+| Black (white and red GA) | print-detail | 682 x 1024 | `goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp`, 679 x 1018 |
+
+The Black and Ink Blue Apliiq renders (`…-black-front.webp`,
+`…-ink-blue-front.webp`) left `public/products/`; `proofs/apliiq-renders/`
+keeps them. The whole product now shows photos. Records:
+`docs/catalog/ga-minimal-shorts-ink-blue-20261022.json` and
+`docs/catalog/ga-minimal-shorts-black-20261022.json`. These two sets are
+1024 px tall, lower than the Shadow set.

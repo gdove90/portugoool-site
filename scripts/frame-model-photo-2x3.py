@@ -13,13 +13,16 @@ sides, a wider one gains rows above and below. Each new row (column) takes the
 mean colour of the outermost 12 pixels of that row (column), skipping model
 pixels (saturated or dark), smoothed along the edge so the grain of a single
 pixel never streaks, plus fresh noise at the backdrop's measured grain.
---crop instead trims a wider close-up (a print detail) to 2:3 about its
-centre. A photo whose model is cut by its own edge (arms cropped) cannot be
-extended this way: ask the owner for a wider original. Never outpaint on
-Higgsfield or any paid tool without the owner's permission.
+--crop instead trims a close-up (a print detail) to 2:3: a wider photo loses
+columns, a narrower one loses rows. --anchor says which end to keep (start =
+top or left, end = bottom or right; default centre), so a narrow close-up can
+keep its waistband and give up leg below the hem. A photo whose model is cut
+by its own edge (arms cropped) cannot be extended this way: ask the owner for
+a wider original. Never outpaint on Higgsfield or any paid tool without the
+owner's permission.
 
 Usage:
-  python scripts/frame-model-photo-2x3.py IN OUT.webp [--crop] [--quality 92]
+  python scripts/frame-model-photo-2x3.py IN OUT.webp [--crop [--anchor start|center|end]] [--quality 92]
 """
 import argparse
 import numpy as np
@@ -28,7 +31,8 @@ from PIL import Image
 ap = argparse.ArgumentParser()
 ap.add_argument('src')
 ap.add_argument('dst')
-ap.add_argument('--crop', action='store_true', help='center-crop a wider close-up to 2:3 instead of extending')
+ap.add_argument('--crop', action='store_true', help='crop a close-up to 2:3 instead of extending (columns off a wider photo, rows off a narrower one)')
+ap.add_argument('--anchor', choices=['start', 'center', 'end'], default='center', help='with --crop: keep the top/left (start), middle (center) or bottom/right (end)')
 ap.add_argument('--quality', type=int, default=92)
 args = ap.parse_args()
 
@@ -92,8 +96,16 @@ if w / h < target:
     a = a[:, lt:w - rt]
     h, w, _ = a.shape
 
+def crop_offset(excess):
+    return {'start': 0, 'center': excess // 2, 'end': excess}[args.anchor]
+
+
 if abs(w / h - target) < 0.002:
     out = a
+elif args.crop and w / h < target:
+    new_h = round(w / target)
+    y0 = crop_offset(h - new_h)
+    out = a[y0:y0 + new_h]
 elif w / h < target:
     new_w = round(h * target)
     left = (new_w - w) // 2
@@ -103,7 +115,7 @@ elif w / h < target:
     out = np.concatenate([fill(lc, lg, left), a, fill(rc, rg, right)], 1)
 elif args.crop:
     new_w = round(h * target)
-    x0 = (w - new_w) // 2
+    x0 = crop_offset(w - new_w)
     out = a[:, x0:x0 + new_w]
 else:
     new_h = round(w * 1.5)

@@ -1,0 +1,52 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000013",
+  "slug": "goal-athletics-ga-minimal-shorts",
+  "colorway": "Ink Blue",
+  "source": "Two catalog photos supplied by the owner in the Claude session on 2026-10-22; originals preserved unchanged in designs/28_as5620-goal-shorts-2026-10-14/site-images/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Each photo brought to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-ga-minimal-shorts-ink-blue-front.webp (Apliiq render 6208705, deleted from public/products; the render itself stays in designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/)"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "view": "model-front",
+      "sourceFilename": "ink-blue-model-front-as-received.webp",
+      "receivedAs": "6.webp",
+      "sourceSha256": "2d3956f8bc9c9e67e72ce5b34a159cdcade6909e92b6e2b592ef2a1021f7e86a",
+      "sourceBytes": 40074,
+      "sourceDimensions": [
+        487,
+        1024
+      ],
+      "framing": "Backdrop extended 98 px on each side (original pixels untouched; seam steps 0.00 and 0.45 levels).",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp",
+      "webpSha256": "3ef26e250e5e6cd5e42bdf16ba3da4c3cf9f836a687fd751f02dc9f9c6e36795",
+      "webpBytes": 43522
+    },
+    {
+      "order": 2,
+      "view": "print-detail",
+      "sourceFilename": "ink-blue-print-detail-as-received.webp",
+      "receivedAs": "5.webp",
+      "sourceSha256": "9e3ed2ab41f54b9c25d1e9c4baa49df4ece73cb03b06a04952484ab0cf988608",
+      "sourceBytes": 76428,
+      "sourceDimensions": [
+        588,
+        1024
+      ],
+      "framing": "Two dark crop-seam columns dropped at the left edge, then cropped to 2:3 with --crop --anchor start: top kept (whole waistband), 145 rows of leg below the hem removed.",
+      "dimensions": [
+        586,
+        879
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-ink-blue-catalog-print-detail-20261022.webp",
+      "webpSha256": "220a58fee3021cbd98899b59009901f1107d7e9ecb58cedafc513d949d134b12",
+      "webpBytes": 55170
+    }
+  ]
+}

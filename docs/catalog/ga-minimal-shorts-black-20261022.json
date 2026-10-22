@@ -1,0 +1,52 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000013",
+  "slug": "goal-athletics-ga-minimal-shorts",
+  "colorway": "Black",
+  "source": "Two catalog photos supplied by the owner in the Claude session on 2026-10-22; originals preserved unchanged in designs/28_as5620-goal-shorts-2026-10-14/site-images/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Each photo brought to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-ga-minimal-shorts-black-front.webp (Apliiq render 6208695, deleted from public/products; the render itself stays in designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/)"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "view": "model-front",
+      "sourceFilename": "black-model-front-as-received.png",
+      "receivedAs": "8.png",
+      "sourceSha256": "17726ae7a1e29832e54442947830899a46134600e661a6013b458148135ad123",
+      "sourceBytes": 487289,
+      "sourceDimensions": [
+        420,
+        1024
+      ],
+      "framing": "One crop-seam column dropped at the left edge, then backdrop extended 132 px on each side (original pixels untouched; seam steps 0.01 and 0.31 levels).",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
+      "webpSha256": "945892abd44d49c37dec0be5b7d8af700a3893623c423d638e3d9354d3519ac6",
+      "webpBytes": 41514
+    },
+    {
+      "order": 2,
+      "view": "print-detail",
+      "sourceFilename": "black-print-detail-as-received.webp",
+      "receivedAs": "7.webp",
+      "sourceSha256": "fb5d022a51102b14afcc8ad52f091177b0ca153e4b7efe39d461b83d82322b57",
+      "sourceBytes": 77272,
+      "sourceDimensions": [
+        682,
+        1024
+      ],
+      "framing": "White crop seam (2 columns) plus one edge column dropped at the left, then cropped to 2:3 with --crop --anchor start: 6 rows removed from the bottom.",
+      "dimensions": [
+        679,
+        1018
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
+      "webpSha256": "d71c687844737ebbe13d82f736c082c889e5b594b6603e3f9ae92cc6906b5940",
+      "webpBytes": 72656
+    }
+  ]
+}
