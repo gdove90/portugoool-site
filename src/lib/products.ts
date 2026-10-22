@@ -3325,7 +3325,21 @@ export const products: Product[] = [
         supplierColor: "True Red",
         hex: "#C8102E",
         skuFragment: "RED",
+        // True Red leads with the owner's product front and back
+        // (2026-10-22); the Apliiq renders were retired. Records:
+        // designs/55_ga-minimal-tee-true-red-product-shots-2026-10-22/ and
+        // docs/catalog/ga-minimal-tee-true-red-product-20261022.json.
         images: [
+          {
+            src: "/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp",
+            alt: "GA Minimal Tee in True Red, product front with the white GA monogram centred on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp",
+            alt: "GA Minimal Tee in True Red, product back with the white stacked GOAL ATHLETICS lockup across the upper back",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-front-20261015.webp",
             alt: "Model facing forward in the True Red GA Minimal Tee with the white GA monogram centred on the chest, black shorts and white sneakers",
