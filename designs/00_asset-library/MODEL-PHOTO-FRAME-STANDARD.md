@@ -95,6 +95,8 @@ photos are uploaded.
 | GA Minimal Tee True Royal · product front, back | 1024 x 1536, 1122 x 1402 (soft grey backdrop; both replaced later the same day, the back twice) | 1024 x 1536 unchanged (already 2:3); 1122 x 1683, backdrop extended above and below (joins 0.10 and 0.00) |
 | GA Minimal Tee True Red · product front, back | 1122 x 1402 (soft grey backdrop; the back replaced later the same day) | 1122 x 1683, backdrop extended 140/141 px above and below (joins 0.00; 0.00 and 0.03) |
 | GA Big Tee · product fronts, 4 colourways | 1145 x 1374 and 1374 x 1145 on pure white | 1145 x 1718 and 1210 x 1815, white replaced by the studio backdrop (garment and cast shadow kept), landscape sides trimmed to columns 80-1290 |
+| Heritage Hoodie Black · product front | 1199 x 1312 (soft grey) | 1199 x 1798, backdrop extended 243 rows above and below (joins 0.00 and 0.00) |
+| Heritage Hoodie Black · model front, three-quarter, side | 510 x 1024 (soft grey) | 683 x 1024, backdrop extended at the sides (joins 0.02/0.26, 0.02/0.20, 0.00/0.06) |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
 `docs/catalog/ga-matchday-cap-{black,red,royal,dark-green}-20261022.json`,

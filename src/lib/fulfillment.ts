@@ -412,6 +412,14 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "Shadow": { apliiqProductId: 6208713, skus: { S: "APQ-6208713S71A1", M: "APQ-6208713S72A1", L: "APQ-6208713S73A1", XL: "APQ-6208713S74A1", XXL: "APQ-6208713S75A1" } },
   },
   // == end GOAL Athletics GA Minimal Shorts ==
+  // == GOAL Athletics Heritage Hoodie (listed 2026-10-22, not mapped) ==
+  // Product 80000000-0000-4000-8000-000000000014. Apliiq has the saved
+  // designs "goal athletics heritage hoodie · Black / Grey Heather / Bone /
+  // Navy" (IND4000, chest GA + sleeve GA). Their ids and SKUs must be read
+  // off each design page before an entry goes here; until then
+  // resolveApliiqSku returns null and the listing stays availableForSale:
+  // false in products.ts.
+  // == end GOAL Athletics Heritage Hoodie ==
 };
 
 export interface ResolvedFulfillment {

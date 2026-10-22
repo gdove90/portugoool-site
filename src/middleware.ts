@@ -74,9 +74,11 @@ const GA_MATCHDAY_CAP_CATALOG_IMAGE = /^\/products\/goal-monogram-cap-(?:black|r
 const GA_MINIMAL_SHORTS_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-shorts-(?:black|ink-blue|shadow)-catalog-(?:model-front|model-front-close|print-detail)-20261022\.webp$/;
 const GA_MINIMAL_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-(?:true-royal|black|true-red)-catalog-model-(?:front|front-quarter|rear|rear-quarter)-20261015\.webp$/;
 const GA_BIG_TEE_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-big-tee-(?:black|true-royal|true-red|white-black-red)-catalog-model-(?:front|three-quarter|rear)-20261020\.webp$/;
+// Heritage Hoodie catalog photos (owner, 2026-10-22): product front first, then three model views.
+const HERITAGE_HOODIE_CATALOG_IMAGE = /^\/products\/goal-heritage-hoodie-(?:black)-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
 
 function isPublic(pathname: string): boolean {
-  return ST720_IMAGE.test(pathname) || GA_MINIMAL_WHITE_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_PRODUCT_IMAGE.test(pathname) || GA_BIG_TEE_PRODUCT_IMAGE.test(pathname) || GA_MINIMAL_SHORTS_CATALOG_IMAGE.test(pathname) || GA_MATCHDAY_CAP_CATALOG_IMAGE.test(pathname) || STADIUM_CAP_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_MODEL_CATALOG_IMAGE.test(pathname) || GA_BIG_TEE_MODEL_CATALOG_IMAGE.test(pathname) ||(TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
+  return ST720_IMAGE.test(pathname) || GA_MINIMAL_WHITE_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_PRODUCT_IMAGE.test(pathname) || GA_BIG_TEE_PRODUCT_IMAGE.test(pathname) || GA_MINIMAL_SHORTS_CATALOG_IMAGE.test(pathname) || GA_MATCHDAY_CAP_CATALOG_IMAGE.test(pathname) || STADIUM_CAP_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_MODEL_CATALOG_IMAGE.test(pathname) || GA_BIG_TEE_MODEL_CATALOG_IMAGE.test(pathname) || HERITAGE_HOODIE_CATALOG_IMAGE.test(pathname) ||(TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
 export async function middleware(req: NextRequest) {

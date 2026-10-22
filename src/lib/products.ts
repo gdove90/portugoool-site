@@ -3643,6 +3643,101 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics GA Minimal Shorts ==
+  // == GOAL Athletics Heritage Hoodie (owner photos 2026-10-22) ==
+  // Independent IND4000 heavyweight fleece, two transfer prints: the GA
+  // monogram centred on the chest and a small GA on the wearer's left
+  // sleeve above the cuff, no back print. Apliiq holds the saved designs
+  // "goal athletics heritage hoodie · <colour>" (Black, Grey Heather, Bone,
+  // Navy seen on the saved-designs list 2026-10-22); their ids and SKUs are
+  // not mapped in fulfillment.ts yet and no price is set, so the listing
+  // shows but does not sell (availableForSale false, priceCents 0). Fabric,
+  // fit and care copy are the IND4000 lines of the Core Hoodie. Black shows
+  // the owner's four catalog photos, product front first, brought to the
+  // 2:3 frame of MODEL-PHOTO-FRAME-STANDARD.md. Records:
+  // designs/58_heritage-hoodie-black-photos-2026-10-22/ and
+  // docs/catalog/heritage-hoodie-black-20261022.json.
+  {
+    id: "80000000-0000-4000-8000-000000000014",
+    name: "GOAL Athletics Heritage Hoodie",
+    slug: "goal-athletics-heritage-hoodie",
+    blank: "IND4000",
+    description:
+      "Heavyweight fleece hoodie. GA monogram centred on the chest and a small GA on the left sleeve above the cuff, clean back.",
+    priceCents: 0,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#1E1E1E",
+    fabric:
+      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
+    originLabel: "Printed in the USA",
+    images: [
+      {
+        src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+        alt: "Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and a small GA on the left sleeve above the cuff",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-heritage-hoodie-black-catalog-model-front-20261022.webp",
+        alt: "Model facing forward in the black Heritage Hoodie with the white and red GA monogram on the chest, hood down, black shorts, white socks and white sneakers",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-heritage-hoodie-black-catalog-model-three-quarter-20261022.webp",
+        alt: "Same model in a three-quarter turn to the left, showing the GA monogram on the chest and the small GA on the left sleeve of the black Heritage Hoodie",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
+        src: "/products/goal-heritage-hoodie-black-catalog-model-side-20261022.webp",
+        alt: "Same model in a quarter turn to the right, showing the GA monogram on the chest, the hood and the kangaroo pocket of the black Heritage Hoodie",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#1E1E1E",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+            alt: "Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and a small GA on the left sleeve above the cuff",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the black Heritage Hoodie with the white and red GA monogram on the chest, hood down, black shorts, white socks and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn to the left, showing the GA monogram on the chest and the small GA on the left sleeve of the black Heritage Hoodie",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-model-side-20261022.webp",
+            alt: "Same model in a quarter turn to the right, showing the GA monogram on the chest, the hood and the kangaroo pocket of the black Heritage Hoodie",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
+      },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics Heritage Hoodie ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

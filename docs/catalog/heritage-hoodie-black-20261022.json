@@ -1,0 +1,98 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000014",
+  "slug": "goal-athletics-heritage-hoodie",
+  "source": "Four Black catalog photos (product front and three model views) supplied by the owner in the Claude session on 2026-10-22, already on the soft grey studio backdrop; originals preserved unchanged in designs/58_heritage-hoodie-black-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale, framed at 2:3 by continuing each photo's own backdrop (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md).",
+  "galleryOrder": "Product front first, then model front, three-quarter and side. New listing: nothing replaced. Black is the only colourway so far and the card default.",
+  "listing": "New product on 2026-10-22. Apliiq saved designs exist (goal athletics heritage hoodie \u00b7 Black / Grey Heather / Bone / Navy, IND4000) but their ids and SKUs are not yet in src/lib/fulfillment.ts and no price is set, so availableForSale is false and priceCents 0.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Black",
+      "view": "product-front",
+      "sourceFilename": "black-product-front-as-received.webp",
+      "receivedAs": "61.webp",
+      "sourceSha256": "7c3327bb278bbbca1e25211911f46c9fbb29716328a88962b40a5b5fed60f89c",
+      "sourceBytes": 92128,
+      "sourceDimensions": [
+        1199,
+        1312
+      ],
+      "framing": "1199 x 1312; the soft grey backdrop continued 243 rows above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00 and 0.00 levels).",
+      "dimensions": [
+        1199,
+        1798
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+      "webpSha256": "516953ea0c99b3d5dc77722ad96fc1ae5eadbea552db4e78cb9863e869b35235",
+      "webpBytes": 83510,
+      "replaces": null
+    },
+    {
+      "order": 2,
+      "colorway": "Black",
+      "view": "model-front",
+      "sourceFilename": "black-model-front-as-received.webp",
+      "receivedAs": "59.webp",
+      "sourceSha256": "ce1246329afe29edef3d0ac2372a95456a2b72b9f99f9119e8b59a3c14a56606",
+      "sourceBytes": 32836,
+      "sourceDimensions": [
+        510,
+        1024
+      ],
+      "framing": "510 x 1024 narrow; the backdrop continued 86/87 columns at each side to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.02 and 0.26 levels).",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-black-catalog-model-front-20261022.webp",
+      "webpSha256": "164244f7b3c18ee78172655a114581ac6737e8922bbb3c5b6acd4e9e20eb7eb7",
+      "webpBytes": 34774,
+      "replaces": null
+    },
+    {
+      "order": 3,
+      "colorway": "Black",
+      "view": "model-three-quarter",
+      "sourceFilename": "black-model-three-quarter-as-received.webp",
+      "receivedAs": "60.webp",
+      "sourceSha256": "aed90adfcacc8aa247c75aba5ebddfc51f3e7a62754cbfb827a601eb07fa9dcd",
+      "sourceBytes": 31202,
+      "sourceDimensions": [
+        510,
+        1024
+      ],
+      "framing": "510 x 1024 narrow; the backdrop continued 86/87 columns at each side to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.02 and 0.20 levels).",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-black-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "b3d118306319a3f830a131a13a792b257b0bc72ccfa4f6300838c23bc3faf508",
+      "webpBytes": 32408,
+      "replaces": null
+    },
+    {
+      "order": 4,
+      "colorway": "Black",
+      "view": "model-side",
+      "sourceFilename": "black-model-side-as-received.webp",
+      "receivedAs": "58.webp",
+      "sourceSha256": "a5919ce24db38197885cb0c99f1b7063de8a997e90432d84c355f0062a814f07",
+      "sourceBytes": 30248,
+      "sourceDimensions": [
+        510,
+        1024
+      ],
+      "framing": "510 x 1024 narrow; the backdrop continued 86/87 columns at each side to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00 and 0.06 levels).",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-black-catalog-model-side-20261022.webp",
+      "webpSha256": "fa66cd6dde794070be03bcf852946e00d76a5a376aba59c898358e2df7bf4eb5",
+      "webpBytes": 31774,
+      "replaces": null
+    }
+  ]
+}
