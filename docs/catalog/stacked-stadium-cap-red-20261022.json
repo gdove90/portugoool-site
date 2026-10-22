@@ -1,0 +1,93 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000010",
+  "slug": "goal-athletics-wordmark-cap",
+  "colorway": "Red/Natural",
+  "source": "Four catalog photos supplied by the owner in the Claude session on 2026-10-22 (landscape, about 3:2); originals preserved unchanged in designs/52_stacked-stadium-cap-red-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Landscape sources: the empty sides were trimmed and the backdrop extended to reach the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py, so the subject stays at native resolution; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-wordmark-cap-red.webp (Apliiq render of design 6205994, moved to designs/52_stacked-stadium-cap-red-photos-2026-10-22/retired-render/)"
+  ],
+  "galleryOrder": "Product shot first, by owner instruction 2026-10-22.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "red-product-front-as-received.png",
+      "receivedAs": "35.png",
+      "sourceSha256": "7ca23da4acc03670c4980a8d5bdfd19fe75325c61c7d03f74da44e45bf565f20",
+      "sourceBytes": 452632,
+      "sourceDimensions": [
+        764,
+        510
+      ],
+      "framing": "Landscape source. Seam rows dropped, sides trimmed to 600 px about the centre (--crop-width 600, empty backdrop only), then the backdrop extended 196 px above and below to 2:3 (joins 0.18 and 0.09 levels on the outer backdrop columns).",
+      "dimensions": [
+        600,
+        900
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp",
+      "webpSha256": "cf0bea14fd786b6b2c8549b36ea6c885edf92835b294309048b3d57601b23c33",
+      "webpBytes": 44660
+    },
+    {
+      "order": 2,
+      "view": "model-front",
+      "sourceFilename": "red-model-front-as-received.png",
+      "receivedAs": "36.png",
+      "sourceSha256": "a4d80808a9cca5b815feddea60d404989ac2676ac5f5157740a49063ba26b691",
+      "sourceBytes": 433177,
+      "sourceDimensions": [
+        764,
+        506
+      ],
+      "framing": "Landscape head-and-shoulders source. Seam rows dropped, sides trimmed to 480 px about the centre (--crop-width 480), photo kept at the bottom of the canvas and the backdrop extended 218 px above (--extend-anchor end; join 0.0).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-red-catalog-model-front-20261022.webp",
+      "webpSha256": "57230bef7c9e6db81aa3744dad539b8ac99bf1af2967193dab5323f01d6f9153",
+      "webpBytes": 39038
+    },
+    {
+      "order": 3,
+      "view": "model-three-quarter",
+      "sourceFilename": "red-model-three-quarter-as-received.png",
+      "receivedAs": "37.png",
+      "sourceSha256": "ddff9cccf8b9138a738df65c127124c9a23be8b96d7918fe09c64905f715b0c3",
+      "sourceBytes": 439962,
+      "sourceDimensions": [
+        764,
+        506
+      ],
+      "framing": "Same handling, extended 215 px above (join 0.0).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-red-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "b1e8e1e1a81ed4f88f91247f627167adc9ee5a62527782c9d958ae6067d92b9d",
+      "webpBytes": 40498
+    },
+    {
+      "order": 4,
+      "view": "model-side",
+      "sourceFilename": "red-model-side-as-received.png",
+      "receivedAs": "34.png",
+      "sourceSha256": "e5d59375b5f2af7cf4588a4834e0d0a5a584d7346cb44ccf1479fcd3a3117d14",
+      "sourceBytes": 450791,
+      "sourceDimensions": [
+        764,
+        510
+      ],
+      "framing": "Same handling, extended 211 px above (join 0.42).",
+      "dimensions": [
+        480,
+        720
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-red-catalog-model-side-20261022.webp",
+      "webpSha256": "5330d749dafdef53b6c89a2ef8f4ca83c91fb5a0550c24d707ab7dc00cbb4f24",
+      "webpBytes": 60348
+    }
+  ]
+}

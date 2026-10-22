@@ -3084,7 +3084,32 @@ export const products: Product[] = [
         supplierColor: "Red/Natural",
         hex: "#C8102E",
         skuFragment: "RED",
-        images: [{ src: "/products/goal-wordmark-cap-red.webp", alt: "Stacked Stadium Cap with red visor, front view" }],
+        // Red/Natural shows the owner's four catalog photos (2026-10-22),
+        // product shot first; its Apliiq render was retired. Records:
+        // designs/52_stacked-stadium-cap-red-photos-2026-10-22/ and
+        // docs/catalog/stacked-stadium-cap-red-20261022.json.
+        images: [
+          {
+            src: "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp",
+            alt: "Stacked Stadium Cap in Red/Natural, front view: natural crown with the red GOAL ATHLETICS wordmark and bar embroidered on the front panel and a red visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-red-catalog-model-front-20261022.webp",
+            alt: "Model facing the camera wearing the Red/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-red-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the red wordmark on the natural front panel and the red visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-red-catalog-model-side-20261022.webp",
+            alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the red visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Royal/Natural",

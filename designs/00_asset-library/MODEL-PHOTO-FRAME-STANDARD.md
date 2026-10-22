@@ -83,10 +83,12 @@ photos are uploaded.
 | Stacked Stadium Cap Black · model front, three-quarter, side | 764 x 508/510 (landscape) | 480 x 720, sides trimmed to 480, extended 216 px above the head (joins 0.43, 0.49, 0.9) |
 | Stacked Stadium Cap Royal · product front | 763 x 512 (landscape) | 600 x 900, sides trimmed to 600, extended 195 px above and below (joins 0.0 and 0.56) |
 | Stacked Stadium Cap Royal · model front, three-quarter, side | 763 x 505/512 (landscape) | 480 x 720, sides trimmed to 480, extended 210-218 px above the head (joins 0.0, 0.07, 0.0) |
+| Stacked Stadium Cap Red · product front | 764 x 510 (landscape) | 600 x 900, sides trimmed to 600, extended 196 px above and below (joins 0.18 and 0.09) |
+| Stacked Stadium Cap Red · model front, three-quarter, side | 764 x 506/510 (landscape) | 480 x 720, sides trimmed to 480, extended 211-218 px above the head (joins 0.0, 0.0, 0.42) |
 
 Records: `docs/catalog/ga-minimal-shorts-{shadow,ink-blue,black}-20261022.json`,
 `docs/catalog/ga-matchday-cap-{black,red,royal,dark-green}-20261022.json`,
-`docs/catalog/stacked-stadium-cap-{black,royal}-20261022.json`.
+`docs/catalog/stacked-stadium-cap-{black,royal,red}-20261022.json`.
 Every GA Matchday Cap colourway now shows catalog photos; its four Apliiq
 renders are kept under designs/46-49.
 All three Apliiq shorts renders left `public/products/`; they stay in
