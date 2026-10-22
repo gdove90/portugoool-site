@@ -16,7 +16,7 @@ extension.
 | View | Received | Deployed |
 |---|---|---|
 | product-front | 1024 x 1536 | `goal-ga-minimal-true-royal-catalog-product-front-20261022.webp`, 1024 x 1536 (already 2:3, deployed byte-for-byte) |
-| product-back | 1122 x 1402 | `goal-ga-minimal-true-royal-catalog-product-back-20261022.webp`, 1122 x 1683 (joins 0.50 and 0.00) |
+| product-back | 1122 x 1402 | `goal-ga-minimal-true-royal-catalog-product-back-20261022.webp`, 1122 x 1683 (joins 0.10 and 0.00; third back, cream lettering) |
 
 The back was replaced later on 2026-10-22 by owner instruction: the first
 back shot (cream lettering, 737 x 1024, extended to 737 x 1106) gave way to
@@ -26,6 +26,12 @@ the deployed path is unchanged because it had not been published, and
 `src/lib/product-image.ts` tags it with revision `true-royal-back-white-20261022`
 so no image cache (the dev optimizer held the first file even after its
 on-disk cache was cleared) can serve the first file.
+
+The back was replaced a second time, after the white-lettered one had
+gone live: a cream-lettered 1122 x 1402 shot on the same backdrop, framed
+the same way. The white-lettered file is kept as
+`as-received/true-royal-product-back-SUPERSEDED-white-as-received.webp`; the
+revision tag moved on to `true-royal-back-v3-20261022`.
 
 The front was replaced too, after the first set had gone live on
 2026-10-22: the 799 x 1024 shot gave way to a 1024 x 1536 one, already
