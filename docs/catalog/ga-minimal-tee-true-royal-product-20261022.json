@@ -2,7 +2,7 @@
   "productId": "80000000-0000-4000-8000-000000000011",
   "slug": "goal-athletics-ga-minimal-tee",
   "colorway": "True Royal",
-  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (WebP, soft grey studio backdrop); originals preserved unchanged in designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/as-received/.",
+  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (WebP, soft grey studio backdrop); the back replaced later the same day by owner instruction (white lettering, 1122 x 1402); originals preserved unchanged in designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/as-received/.",
   "export": "WebP quality 92, method 6, native scale. Backdrop extended to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md); no resizing, recoloring or retouching of the original pixels.",
   "replaces": [
     "/products/goal-ga-minimal-tee-true-royal-front.webp and -back.webp (Apliiq renders, previously unused by the True Royal gallery; moved to designs/54_ga-minimal-tee-true-royal-product-shots-2026-10-22/retired-render/)"
@@ -33,21 +33,21 @@
       "order": 2,
       "view": "product-back",
       "sourceFilename": "true-royal-product-back-as-received.webp",
-      "receivedAs": "44.webp",
-      "sourceSha256": "18c6a04abb15ac20d3b8b2e33a9834843bdef07f9f84a420b0947a345abe6e9d",
-      "sourceBytes": 62054,
+      "receivedAs": "47.webp",
+      "sourceSha256": "74bfa4495a22562eac052c96cd7dc00fcb2e34222a363698dc8f3f3a84a79f0e",
+      "sourceBytes": 146076,
       "sourceDimensions": [
-        737,
-        1024
+        1122,
+        1402
       ],
-      "framing": "737 x 1024 source, same backdrop; extended 41 px above and below to 2:3 (joins 0.00).",
+      "framing": "1122 x 1402 source on a soft grey studio backdrop with a floor shadow; backdrop extended 140/141 px above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.50 and 0.00; original pixels untouched). Replaces, by owner instruction later on 2026-10-22, the first back shot (cream lettering, 737 x 1024, sha256 18c6a04abb15ac20d3b8b2e33a9834843bdef07f9f84a420b0947a345abe6e9d), kept as true-royal-product-back-SUPERSEDED-cream-as-received.webp.",
       "dimensions": [
-        737,
-        1106
+        1122,
+        1683
       ],
       "deployedPath": "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp",
-      "webpSha256": "421bfc966ae1c4a2b464018c8260f65e8fcff7917e0af19c45ab7a9367d9937f",
-      "webpBytes": 54658
+      "webpSha256": "bb908dfb488fb1a82074a07b5779ada724643f4f1378ec5539d57bceecd0199f",
+      "webpBytes": 144392
     }
   ]
 }

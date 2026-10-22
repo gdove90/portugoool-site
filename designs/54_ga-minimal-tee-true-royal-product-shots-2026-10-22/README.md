@@ -10,13 +10,22 @@ in `as-received/`.
 Unlike the Black product shots (designs/53, flat #F2F2F2), these sit on a
 soft grey studio backdrop with a floor shadow, closer to the model photos.
 Each was extended above and below to the 2:3 frame with
-`scripts/frame-model-photo-2x3.py` (joins 0.00). The sleeves touch the side
-edges of both sources; the sides are not extended, so nothing is affected.
+`scripts/frame-model-photo-2x3.py`. The front's sleeves touch its side
+edges; the sides are not extended, so nothing is affected.
 
 | View | Received | Deployed |
 |---|---|---|
 | product-front | 799 x 1024 | `goal-ga-minimal-true-royal-catalog-product-front-20261022.webp`, 799 x 1198 |
-| product-back | 737 x 1024 | `goal-ga-minimal-true-royal-catalog-product-back-20261022.webp`, 737 x 1106 |
+| product-back | 1122 x 1402 | `goal-ga-minimal-true-royal-catalog-product-back-20261022.webp`, 1122 x 1683 (joins 0.50 and 0.00) |
+
+The back was replaced later on 2026-10-22 by owner instruction: the first
+back shot (cream lettering, 737 x 1024, extended to 737 x 1106) gave way to
+a white-lettered 1122 x 1402 shot matching the True Red set. The first one
+is kept as `as-received/true-royal-product-back-SUPERSEDED-cream-as-received.webp`;
+the deployed path is unchanged because it had not been published, and
+`src/lib/product-image.ts` tags it with revision `true-royal-back-white-20261022`
+so no image cache (the dev optimizer held the first file even after its
+on-disk cache was cleared) can serve the first file.
 
 The Apliiq renders `goal-ga-minimal-tee-true-royal-front.webp` and
 `-back.webp` (not used by the True Royal gallery since the model photos
