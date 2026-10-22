@@ -39,11 +39,13 @@ async function check(name, fn) { await fn(); passed++; console.log('PASS ' + nam
     }
     for (const route of ['/products/goal-ga-minimal-tee-black-front.webp/private', '/products/goal-ga-minimal-tee-indigo-front.webp', '/shop/goal-athletics-ga-minimal-tee', '/shop/goal-athletics-ga-big-tee']) assert.equal((await middleware(request(route))).status, 307, route);
   });
-  await check('six approved White Black-Red catalog images load without opening other paths', async () => {
+  await check('five approved White Black-Red catalog images load without opening other paths', async () => {
     const prefix = '/products/goal-ga-minimal-white-black-red-catalog-';
-    for (const view of ['product-front', 'product-back', 'model-front', 'model-three-quarter', 'model-rear', 'print-detail']) {
+    for (const view of ['product-front', 'product-back', 'model-front', 'model-three-quarter', 'model-rear']) {
       for (const method of ['GET', 'HEAD']) assert.equal((await middleware(request(`${prefix}${view}-20261014.webp`, method))).headers.get('x-middleware-next'), '1');
     }
+    // The print-detail view was retired 2026-10-22; its path is gated like any other.
+    assert.equal((await middleware(request(`${prefix}print-detail-20261014.webp`))).status, 307);
     for (const route of [`${prefix}other-20261014.webp`, `${prefix}model-front-20261015.webp`, `${prefix}model-front-20261014.webp/private`, '/shop/goal-athletics-ga-minimal-tee']) {
       assert.equal((await middleware(request(route))).status, 307, route);
     }

@@ -54,7 +54,7 @@ python scripts/frame-model-photo-2x3.py IN OUT.webp
 | GA Big Tee True Red | 1024 x 1536 | unchanged |
 | GA Minimal Black, True Royal | 1024 x 1536 | unchanged |
 | GA Minimal True Red | 941 x 1672 | 1115 x 1672, backdrop extended at the sides |
-| GA Minimal White · Black-Red (6 views) | 1122 x 1402 (4:5) | 1122 x 1683, backdrop extended above and below; print detail cropped to 935 x 1402 |
+| GA Minimal White · Black-Red (6 views; the print detail retired 2026-10-22) | 1122 x 1402 (4:5) | 1122 x 1683, backdrop extended above and below; print detail cropped to 935 x 1402 |
 
 The seam between the original and the extension measured under one level of
 brightness (0-255) on every photo. Every active product now shows catalog

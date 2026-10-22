@@ -1,7 +1,7 @@
 {
   "productId": "80000000-0000-4000-8000-000000000011",
   "slug": "goal-athletics-ga-minimal-tee",
-  "colorway": "White · Black-Red",
+  "colorway": "White \u00b7 Black-Red",
   "source": "Approved individual catalog PNGs supplied through ChatGPT and downloaded on 2026-10-14; original files preserved unchanged.",
   "export": "WebP quality 95, method 6, native 1122 x 1402 pixels; no resizing, cropping, recoloring or retouching.",
   "images": [
@@ -87,7 +87,8 @@
       ],
       "deployedPath": "/products/goal-ga-minimal-white-black-red-catalog-print-detail-20261014.webp",
       "webpSha256": "2fb1ae4fa2bf32f97aef844083c04cd171a8cbd7ea238f9bf53e2189d067b2fa",
-      "webpBytes": 272790
+      "webpBytes": 272790,
+      "retired": "Removed from the gallery and from public/products on 2026-10-22 by owner instruction; the file is kept at designs/56_ga-minimal-tee-white-print-detail-retired-2026-10-22/retired/."
     }
   ]
 }

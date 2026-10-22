@@ -3313,11 +3313,6 @@ export const products: Product[] = [
             alt: "Same model standing rear-on in the white GA Minimal Tee, showing the black and red back design",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
-          {
-            src: "/products/goal-ga-minimal-white-black-red-catalog-print-detail-20261014.webp",
-            alt: "Close-up of the black and red GA monogram and white performance fabric",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
-          },
         ],
       },
       {
