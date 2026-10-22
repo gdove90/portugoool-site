@@ -85,7 +85,7 @@ photos are uploaded.
 | Stacked Stadium Cap Royal · model front, three-quarter, side | 763 x 505/512 (landscape) | 480 x 720, sides trimmed to 480, extended 210-218 px above the head (joins 0.0, 0.07, 0.0) |
 | Stacked Stadium Cap Red · product front | 764 x 510 (landscape) | 600 x 900, sides trimmed to 600, extended 196 px above and below (joins 0.18 and 0.09) |
 | Stacked Stadium Cap Red · model front, three-quarter, side | 764 x 506/510 (landscape) | 480 x 720, sides trimmed to 480, extended 211-218 px above the head (joins 0.0, 0.0, 0.42) |
-| GA Minimal Tee Black · product front, back | 1200 x 1500 (4:5, flat #F2F2F2) | 1200 x 1800, backdrop extended 150 px above and below (joins 0.00) |
+| GA Minimal Tee Black · product front, back | 1024 x 1536 (soft grey; replaced later the same day), 1200 x 1500 (4:5, flat #F2F2F2) | 1024 x 1536 unchanged (already 2:3); 1200 x 1800, backdrop extended 150 px above and below (joins 0.00) |
 | GA Minimal Tee True Royal · product front, back | 1024 x 1536, 1122 x 1402 (soft grey backdrop; both replaced later the same day) | 1024 x 1536 unchanged (already 2:3); 1122 x 1683, backdrop extended above and below (joins 0.50 and 0.00) |
 | GA Minimal Tee True Red · product front, back | 1122 x 1402 (soft grey backdrop) | 1122 x 1683, backdrop extended 140/141 px above and below (joins 0.00, 0.30) |
 

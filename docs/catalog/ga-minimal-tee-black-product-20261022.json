@@ -2,7 +2,7 @@
   "productId": "80000000-0000-4000-8000-000000000011",
   "slug": "goal-athletics-ga-minimal-tee",
   "colorway": "Black",
-  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (1200 x 1500 PNG on a flat #F2F2F2 backdrop); originals preserved unchanged in designs/53_ga-minimal-tee-black-product-shots-2026-10-22/as-received/. True Red and True Royal shots sent at the same time were rejected by the owner and not used.",
+  "source": "Product front and back supplied by the owner in the Claude session on 2026-10-22 (1200 x 1500 PNG on a flat #F2F2F2 backdrop); originals preserved unchanged in designs/53_ga-minimal-tee-black-product-shots-2026-10-22/as-received/. True Red and True Royal shots sent at the same time were rejected by the owner and not used. The front was replaced later the same day by owner instruction (1024 x 1536 on a soft grey backdrop); the back stays on flat #F2F2F2.",
   "export": "WebP quality 92, method 6, native scale. Backdrop extended to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md); no resizing, recoloring or retouching of the original pixels.",
   "replaces": [
     "/products/goal-ga-minimal-tee-black-front.webp and -back.webp (Apliiq renders, the product-level images and the Black card image; moved to designs/53_ga-minimal-tee-black-product-shots-2026-10-22/retired-render/)"
@@ -12,22 +12,22 @@
     {
       "order": 1,
       "view": "product-front",
-      "sourceFilename": "black-product-front-as-received.png",
-      "receivedAs": "38.png",
-      "sourceSha256": "bbc45522df204848ddda597620b2816b65b9bd886ef13acdf6888ca103edf093",
-      "sourceBytes": 402124,
+      "sourceFilename": "black-product-front-as-received.webp",
+      "receivedAs": "49.webp",
+      "sourceSha256": "f461c9ce414cf043fe3437016478aad3a97b6ba05e3ff20b951dfbac774ca59c",
+      "sourceBytes": 59518,
       "sourceDimensions": [
-        1200,
-        1500
+        1024,
+        1536
       ],
-      "framing": "4:5 source on a flat #F2F2F2 backdrop; backdrop extended 150 px above and below to 2:3 with scripts/frame-model-photo-2x3.py (joins 0.00; original pixels untouched).",
+      "framing": "1024 x 1536 source on a soft grey studio backdrop with a floor shadow, already 2:3: deployed byte-for-byte, no re-encode. Replaces, by owner instruction on 2026-10-22 after the first set went live, the first front (1200 x 1500 on flat #F2F2F2, extended to 1200 x 1800, sha256 bbc45522df204848ddda597620b2816b65b9bd886ef13acdf6888ca103edf093), kept as black-product-front-SUPERSEDED-F2F2F2-as-received.png.",
       "dimensions": [
-        1200,
-        1800
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
-      "webpSha256": "d5c3c74993644f004703581760568cf1446c4a3b04da51b14007094d62674705",
-      "webpBytes": 30676
+      "webpSha256": "f461c9ce414cf043fe3437016478aad3a97b6ba05e3ff20b951dfbac774ca59c",
+      "webpBytes": 59518
     },
     {
       "order": 2,
