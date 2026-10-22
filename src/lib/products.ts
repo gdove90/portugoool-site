@@ -3269,7 +3269,12 @@ export const products: Product[] = [
   // at $32 by owner decision 2026-10-14. Sizes map to waist sizes
   // by owner decision 2026-10-14: S=30, M=32, L=34, XL=36, XXL=38 (40 unused).
   // The Vertical style is not built: every 5620 zone is 4 x 4 in.
-  // Images are Apliiq's renders: designs/28_as5620-goal-shorts-2026-10-14/.
+  // Shadow shows the owner's three catalog photos (2026-10-22), brought to
+  // the 2:3 frame of MODEL-PHOTO-FRAME-STANDARD.md; its Apliiq render was
+  // retired from public/products. Black and Ink Blue still show Apliiq's
+  // renders until their photos arrive. Records:
+  // designs/28_as5620-goal-shorts-2026-10-14/ and
+  // docs/catalog/ga-minimal-shorts-shadow-20261022.json.
   {
     id: "80000000-0000-4000-8000-000000000013",
     name: "GOAL Athletics GA Minimal Shorts",
@@ -3328,9 +3333,19 @@ export const products: Product[] = [
         skuFragment: "SHADOW",
         images: [
           {
-            src: "/products/goal-ga-minimal-shorts-shadow-front.webp",
-            alt: "GOAL Athletics GA Minimal Shorts in shadow grey, front view with the black and red GA monogram on the left leg above the hem",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            src: "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Shadow GA Minimal Shorts with the black and red GA monogram on the left leg above the hem, white socks and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-close-20261022.webp",
+            alt: "Same model from waist to knee, front view of the Shadow GA Minimal Shorts showing the drawcord waist, side pockets and the black and red GA monogram on the left leg",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp",
+            alt: "Close-up of the black and red GA monogram on the left leg of the Shadow GA Minimal Shorts, just above the hem",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },

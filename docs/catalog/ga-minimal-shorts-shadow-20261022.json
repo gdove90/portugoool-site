@@ -1,0 +1,72 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000013",
+  "slug": "goal-athletics-ga-minimal-shorts",
+  "colorway": "Shadow",
+  "source": "Three catalog photos supplied by the owner in the Claude session on 2026-10-22; originals preserved unchanged in designs/28_as5620-goal-shorts-2026-10-14/site-images/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Each photo brought to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md); no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-ga-minimal-shorts-shadow-front.webp (Apliiq render 6208713, deleted from public/products; the render itself stays in designs/28_as5620-goal-shorts-2026-10-14/proofs/apliiq-renders/)"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "view": "model-front",
+      "sourceFilename": "shadow-model-front-as-received.webp",
+      "receivedAs": "1.webp",
+      "sourceSha256": "0d239bda636f92d2f1864986fc4fd76dc7bf435429bef70745418e80efa9f165",
+      "sourceBytes": 68948,
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "framing": "Backdrop extended 87 px on each side with scripts/frame-model-photo-2x3.py (original pixels untouched; seam steps 0.00 and 0.13 levels).",
+      "dimensions": [
+        1115,
+        1672
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp",
+      "webpSha256": "a7c30367fcafe9304a73a2fd808f6bd9d9e5094cdfc16b127e49f422e6532831",
+      "webpBytes": 68884
+    },
+    {
+      "order": 2,
+      "view": "model-front-close",
+      "sourceFilename": "shadow-model-front-close-as-received.webp",
+      "receivedAs": "2.webp",
+      "sourceSha256": "c670121ecb32b928be846ba814b68353f8122a9e8be85c770ff851b4067d8c22",
+      "sourceBytes": 163780,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "Centre-cropped 60 px from each side to 2:3 with scripts/frame-model-photo-2x3.py --crop (close-up that fills its frame).",
+      "dimensions": [
+        965,
+        1448
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-close-20261022.webp",
+      "webpSha256": "9a3ca8ad2aade03fbf5e4566746b775d6d64a9043f59808db2ed3efabc33f8d5",
+      "webpBytes": 144588
+    },
+    {
+      "order": 3,
+      "view": "print-detail",
+      "sourceFilename": "shadow-print-detail-as-received.webp",
+      "receivedAs": "3.webp",
+      "sourceSha256": "69821ebd4c3c5840d1b70295f40fe42aa69abacc6029ca70cf27fb8e8fe6db8d",
+      "sourceBytes": 204862,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "Centre-cropped 60 px from each side to 2:3 with scripts/frame-model-photo-2x3.py --crop (close-up that fills its frame).",
+      "dimensions": [
+        965,
+        1448
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp",
+      "webpSha256": "732db9f2cd2d844fac8be70e385d87d8829901097c744a945c932d85d50c6e52",
+      "webpBytes": 179786
+    }
+  ]
+}

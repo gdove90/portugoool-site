@@ -69,3 +69,26 @@ zone, or ask Apliiq about a custom placement.
   only if a back print is added) and the GA position against the side
   pocket opening.
 - No physical sample exists. Renders are Apliiq mockups, not photographs.
+
+## Site photos: Shadow (2026-10-22)
+
+The owner supplied three catalog photos of the Shadow shorts (black and red GA
+on the wearer's left leg). Originals, unchanged, are in
+`site-images/as-received/`; the deployed files in `public/products/` are the
+same pixels brought to the site's 2:3 model-photo frame with
+`scripts/frame-model-photo-2x3.py`
+(designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md).
+
+| View | Received | Deployed | Framing |
+|---|---|---|---|
+| model-front | 941 x 1672 | `goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp`, 1115 x 1672 | backdrop extended 87 px each side |
+| model-front-close | 1086 x 1448 | `goal-ga-minimal-shorts-shadow-catalog-model-front-close-20261022.webp`, 965 x 1448 | cropped 60 px each side |
+| print-detail | 1086 x 1448 | `goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp`, 965 x 1448 | cropped 60 px each side |
+
+The Shadow Apliiq render (`goal-ga-minimal-shorts-shadow-front.webp`) was
+removed from `public/products/` by owner instruction; the render itself stays
+in `proofs/apliiq-renders/6208713_shadow_5658.jpg`. Black and Ink Blue keep
+their Apliiq renders on the site until their photos arrive. Checksums and
+sizes: `docs/catalog/ga-minimal-shorts-shadow-20261022.json`. Print spec is
+unchanged: GA 3.00 x 2.70 in, Front Bottom Left, bottom of art 1.75 in above
+the hem, centre 4.00 in from the side seam, rotation 0, no back print.

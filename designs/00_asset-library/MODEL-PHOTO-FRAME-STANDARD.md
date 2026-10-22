@@ -46,5 +46,15 @@ python scripts/frame-model-photo-2x3.py IN OUT.webp
 
 The seam between the original and the extension measured under one level of
 brightness (0-255) on every photo. Products without model photos yet (GA Minimal
-Shorts, the caps) still show square concept renders. They meet this standard
-when their model photos are uploaded.
+Shorts in Black and Ink Blue, the caps) still show square concept renders. They
+meet this standard when their model photos are uploaded.
+
+## Applied 2026-10-22
+
+| Set | Was | Now |
+|---|---|---|
+| GA Minimal Shorts Shadow · model front | 941 x 1672 | 1115 x 1672, backdrop extended at the sides (seam steps 0.00 and 0.13 levels) |
+| GA Minimal Shorts Shadow · model front close, print detail | 1086 x 1448 (3:4) | 965 x 1448, cropped 60 px from each side |
+
+Record: `docs/catalog/ga-minimal-shorts-shadow-20261022.json`. The Shadow
+Apliiq render left `public/products/`; the Black and Ink Blue renders remain.
