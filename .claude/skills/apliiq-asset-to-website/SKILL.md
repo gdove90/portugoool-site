@@ -188,3 +188,10 @@ deploy id, and the PDP URL returning 200. What is still unverified
   across the chest), seen on the saved-designs grid only. Catalog row
   …0015, same price and gates as the Heritage row; the owner is supplying
   the model pictures. `designs/59_lockup-hoodie-ind4000-2026-10-22/`.
+  Published later on 2026-10-22: ids 6206733 Black, 6206746 Grey Heather,
+  6206741 Bone, 6206737 Navy read off the design pages. Ids also show on
+  the saved-designs list in each row's image path
+  (`resized-products/<id>_…`). The full render is public at
+  `blob.apliiq.com/sitestorage/products/<id>_<template>.jpg` on white; put it
+  on the studio backdrop with `scripts/studio-backdrop-product-shot.py`
+  (`--mask-from` the Black render for light colours).

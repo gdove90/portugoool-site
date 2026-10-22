@@ -3739,21 +3739,19 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Heritage Hoodie ==
-  // == GOAL Athletics Lockup Hoodie (Apliiq saved designs seen 2026-10-22) ==
+  // == GOAL Athletics Lockup Hoodie (Apliiq designs read 2026-10-22) ==
   // Independent IND4000 heavyweight hoodie, DTF transfer. Four saved designs
-  // exist on the Apliiq account, "goal athletics lockup hoodie · grey
-  // heather / bone / navy / black": the GA monogram and GOAL ATHLETICS
-  // lockup across the chest, as on the GA Big Tee (read off the saved-designs
-  // grid thumbnails, front only; the back, the print size and the artwork
-  // count are to be confirmed on each design page). Record:
-  // designs/59_lockup-hoodie-ind4000-2026-10-22/.
-  // Retail price $78 (owner's hoodie price, 2026-10-22). Two inputs are
-  // still to come, each with its own gate, exactly as for the Heritage
-  // Hoodie above: isActive false until every gallery has images (the owner
-  // is supplying the model pictures), every colourway comingSoon until
-  // fulfillment.ts carries its design id and SKUs. scripts/test-goal-hoodies.cjs
-  // holds those gates. Same blank, so the same fabric, fit, care, origin,
-  // sizes (S to XXL of Apliiq's XS to 5XL) and swatches as the Heritage row.
+  // (Black 6206733, Grey Heather 6206746, Bone 6206741, Navy 6206737): the
+  // GA monogram and GOAL ATHLETICS lockup, 10.00 x 2.67 in across the chest,
+  // as on the GA Big Tee; white/red on Black, black/red on Grey Heather and
+  // Bone, cream on Navy; no back print. Each gallery leads with Apliiq's own
+  // render of that design, its white swapped for the studio backdrop and
+  // framed 2:3 (scripts/studio-backdrop-product-shot.py); the owner's model
+  // pictures follow when they land. Live and for sale at $78 (owner's hoodie
+  // price) on the owner's instruction 2026-10-22. Record:
+  // designs/59_lockup-hoodie-ind4000-2026-10-22/. Same blank as the Heritage
+  // row, so the same fabric, fit, care, origin, sizes (S to XXL of Apliiq's
+  // XS to 5XL) and swatches.
   {
     id: "80000000-0000-4000-8000-000000000015",
     name: "GOAL Athletics Lockup Hoodie",
@@ -3769,48 +3767,73 @@ export const products: Product[] = [
       "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
     fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
-    // Empty until the owner's model pictures are filed.
-    images: [],
+    images: [
+      {
+        src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
+        alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+        caption: "Concept render. Not a photograph of a manufactured sample.",
+      },
+    ],
     colorVariants: [
       {
         name: "Black",
         supplierColor: "Black",
         hex: "#1E1E1E",
         skuFragment: "BLACK",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Grey Heather",
         supplierColor: "Grey Heather",
         hex: "#D9D9D9",
         skuFragment: "GREYHEATHER",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Lockup Hoodie in Grey Heather, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Bone",
         supplierColor: "Bone",
         hex: "#CFCAC7",
         skuFragment: "BONE",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Lockup Hoodie in Bone, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Navy",
         supplierColor: "Navy",
         hex: "#2A3043",
         skuFragment: "NAVY",
-        images: [],
-        comingSoon: true,
+        images: [
+          {
+            src: "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp",
+            alt: "GOAL Athletics Lockup Hoodie in Navy, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
+            caption: "Concept render. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
     ],
     originLabel: "Printed in the USA",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "hoodie",
     supplierType: "apliiq",
-    isActive: false,
-    availableForSale: false,
+    isActive: true,
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

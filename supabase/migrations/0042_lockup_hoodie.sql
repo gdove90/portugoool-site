@@ -9,12 +9,11 @@
 -- src/lib/orders-store.ts); this file keeps the audit trail, as 0039 to
 -- 0041 do.
 --
--- Retail price $78 (owner's hoodie price, 2026-10-22). Hidden and not for
--- sale: the design ids, per-size SKUs and renders are not in the repo yet
--- (the gates are in src/lib/products.ts and scripts/test-goal-hoodies.cjs).
--- When the owner publishes the hoodie, set is_active and available_for_sale
--- below to match products.ts and run this file again; the upsert carries
--- them. Idempotent; no historical orders or supplier designs changed.
+-- Retail price $78 (owner's hoodie price, 2026-10-22). Published the same
+-- day on the owner's instruction: the four design ids and SKUs were read off
+-- the Apliiq design pages (src/lib/fulfillment.ts), so the row is active and
+-- for sale, matching src/lib/products.ts. Idempotent; no historical orders or
+-- supplier designs changed.
 -- Not yet applied. Run in the Supabase SQL editor (supabase-sql-editor skill).
 
 insert into public.products
@@ -23,7 +22,7 @@ insert into public.products
 values
   ('80000000-0000-4000-8000-000000000015', 'GOAL Athletics Lockup Hoodie',
    'goal-athletics-lockup-hoodie', '', 7800, 'Black', '#1E1E1E',
-   array['S','M','L','XL','XXL'], 'hoodie', 'apliiq', false, false)
+   array['S','M','L','XL','XXL'], 'hoodie', 'apliiq', true, true)
 on conflict (id) do update
   set name              = excluded.name,
       slug              = excluded.slug,
@@ -36,7 +35,7 @@ on conflict (id) do update
       is_active         = excluded.is_active,
       available_for_sale = excluded.available_for_sale;
 
--- verify: expect one row, hidden and not for sale at 7800
+-- verify: expect one row, active and for sale at 7800
 select id, name, slug, color, price_cents, product_category, is_active, available_for_sale
 from public.products
 where id = '80000000-0000-4000-8000-000000000015';

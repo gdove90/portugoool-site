@@ -426,15 +426,18 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
   // designs/58_heritage-hoodie-ind4000-2026-10-22/.
   // == end GOAL Athletics Heritage Hoodie ==
   // == GOAL Athletics Lockup Hoodie (Independent IND4000) ==
-  // Same situation as the Heritage Hoodie: four saved designs on the
-  // account as of 2026-10-22 ("goal athletics lockup hoodie · grey heather /
-  // bone / navy / black", GA monogram and GOAL ATHLETICS lockup across the
-  // chest), seen on the saved-designs grid only. Nothing is recorded for
-  // "80000000-0000-4000-8000-000000000015" until each id and its five SKUs
-  // are read off the design's own page; until then resolveApliiqSku returns
-  // null and checkout refuses every colourway. Keys, when they land:
-  // "Black", "Grey Heather", "Bone", "Navy". Record:
-  // designs/59_lockup-hoodie-ind4000-2026-10-22/.
+  // Ids and SKUs read off each design's own page on 2026-10-22. One transfer
+  // per design: the GA + GOAL ATHLETICS lockup, 10.00 x 2.67 in, centred on
+  // centre front, top of art 3.00 in below the hood seam ("do not scale"
+  // note on each placement); white/red file on Black, black/red on Grey
+  // Heather and Bone, cream on Navy. Private label sb-6 inside the neck. No
+  // back print. Record: designs/59_lockup-hoodie-ind4000-2026-10-22/.
+  "80000000-0000-4000-8000-000000000015": {
+    "Black": { apliiqProductId: 6206733, skus: { S: "APQ-6206733S6A1", M: "APQ-6206733S7A1", L: "APQ-6206733S8A1", XL: "APQ-6206733S1A1", XXL: "APQ-6206733S2A1" } },
+    "Grey Heather": { apliiqProductId: 6206746, skus: { S: "APQ-6206746S6A1", M: "APQ-6206746S7A1", L: "APQ-6206746S8A1", XL: "APQ-6206746S1A1", XXL: "APQ-6206746S2A1" } },
+    "Bone": { apliiqProductId: 6206741, skus: { S: "APQ-6206741S6A1", M: "APQ-6206741S7A1", L: "APQ-6206741S8A1", XL: "APQ-6206741S1A1", XXL: "APQ-6206741S2A1" } },
+    "Navy": { apliiqProductId: 6206737, skus: { S: "APQ-6206737S6A1", M: "APQ-6206737S7A1", L: "APQ-6206737S8A1", XL: "APQ-6206737S1A1", XXL: "APQ-6206737S2A1" } },
+  },
   // == end GOAL Athletics Lockup Hoodie ==
 };
 

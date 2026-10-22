@@ -1,0 +1,102 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000015",
+  "slug": "goal-athletics-lockup-hoodie",
+  "source": "Apliiq's own full-size render of each saved design (template 6399), downloaded 2026-10-22 from the design's public render URL; originals kept unchanged in designs/59_lockup-hoodie-ind4000-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md.",
+  "caption": "Concept render. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Product front only until the owner's model pictures land; they follow the front. Black is the card default, so its product front is the collection card and the product-level image.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Black",
+      "view": "product-front",
+      "apliiqDesignId": 6206733,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6206733_6399.jpg",
+      "sourceFilename": "apliiq-render-black-6206733.jpg",
+      "sourceSha256": "844a7b838af597c8b7f4f3997285fbb7c4de7b4aa41de75cc35590c4177e3910",
+      "sourceBytes": 579521,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA + GOAL ATHLETICS lockup, white and red, 10.00 x 2.67 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
+      "webpSha256": "578a87cb6c8399259ac89384a295f6ca1cc433617d1063a93b6c3945f58d04f3",
+      "webpBytes": 33132
+    },
+    {
+      "order": 2,
+      "colorway": "Grey Heather",
+      "view": "product-front",
+      "apliiqDesignId": 6206746,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6206746_6399.jpg",
+      "sourceFilename": "apliiq-render-grey-heather-6206746.jpg",
+      "sourceSha256": "03095d093bac6aaa902f584e2c2f732c26b38da3f0a6a8d85c31bfbd07b59450",
+      "sourceBytes": 1008513,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA + GOAL ATHLETICS lockup, black and red, 10.00 x 2.67 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas; garment mask from the Black render of the same template (--mask-from)",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp",
+      "webpSha256": "3fd27dd014c22e55d3cd4ee4786308dc411cd5726741ecf8cf0358c2703ec5b5",
+      "webpBytes": 160930
+    },
+    {
+      "order": 3,
+      "colorway": "Bone",
+      "view": "product-front",
+      "apliiqDesignId": 6206741,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6206741_6399.jpg",
+      "sourceFilename": "apliiq-render-bone-6206741.jpg",
+      "sourceSha256": "3fe184148dedd5a7dea2eaf1197693688ff7061ea9d56a1fd7fde6412c18a982",
+      "sourceBytes": 974201,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA + GOAL ATHLETICS lockup, black and red, 10.00 x 2.67 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas; garment mask from the Black render of the same template (--mask-from)",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
+      "webpSha256": "47f021625910097b57b3988901c99a732470533683df7cf3249d7e7f65c45762",
+      "webpBytes": 113972
+    },
+    {
+      "order": 4,
+      "colorway": "Navy",
+      "view": "product-front",
+      "apliiqDesignId": 6206737,
+      "sourceUrl": "https://blob.apliiq.com/sitestorage/products/6206737_6399.jpg",
+      "sourceFilename": "apliiq-render-navy-6206737.jpg",
+      "sourceSha256": "f072cde5bf367c1ed6b97d3d0a23c97f38990313576f6f6659469626eeaafb84",
+      "sourceBytes": 831230,
+      "sourceDimensions": [
+        944,
+        1440
+      ],
+      "print": "GA + GOAL ATHLETICS lockup, cream, 10.00 x 2.67 in, centred on centre front, top of art 3.00 in below the hood seam",
+      "framing": "944 x 1440 on pure white; white replaced by the studio backdrop with scripts/studio-backdrop-product-shot.py (garment and its cast shadow kept), drawn over a 2:3 canvas",
+      "dimensions": [
+        960,
+        1440
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp",
+      "webpSha256": "3594070301eb5295843a31a9b0468c58e9799b7e6ea94c08700ac930b9c93071",
+      "webpBytes": 41834
+    }
+  ]
+}

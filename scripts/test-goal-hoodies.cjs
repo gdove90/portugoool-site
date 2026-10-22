@@ -1,12 +1,15 @@
 // GOAL Athletics hoodies on the Independent IND4000: the Heritage Hoodie (GA
 // monogram on the chest and sleeve) and the Lockup Hoodie (GA monogram and
 // GOAL ATHLETICS lockup across the chest). Four Apliiq saved designs each
-// (Black, Grey Heather, Bone, Navy), priced at $78, but their ids, SKUs and
-// renders are not in the repo yet. This guards the gates that keep each row
-// invisible and unsellable until every input lands: hidden while any gallery
-// is empty, every unmapped colourway coming soon, not for sale while any
-// colourway is coming soon, and refused by checkout on every path, including
-// a forced activation. No network, database or provider calls.
+// (Black, Grey Heather, Bone, Navy), priced at $78. The Lockup row is mapped
+// and live since 2026-10-22; the Heritage row's ids, SKUs and renders are not
+// in the repo yet. This guards the gates that keep a row invisible and
+// unsellable until every input lands (hidden while any gallery is empty,
+// every unmapped colourway coming soon, not for sale while any colourway is
+// coming soon, refused by checkout on every path including a forced
+// activation), and that a live row's every colourway and size opens a
+// checkout session carrying its own Apliiq SKU. Stripe is an in-memory
+// adapter; a refused line never reaches it. No network or database calls.
 const fs = require('fs'), assert = require('assert/strict'), ts = require('typescript'), vm = require('vm');
 require.extensions['.ts'] = (m, f) => m._compile(ts.transpileModule(fs.readFileSync(f, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, resolveJsonModule: true, esModuleInterop: true } }).outputText, f);
 const p = require('../src/lib/products.ts'), f = require('../src/lib/fulfillment.ts'), types = require('../src/lib/types.ts'), charts = require('../src/lib/size-charts.ts');
@@ -23,12 +26,13 @@ const PRICE = 7800;
   const source = fs.readFileSync('src/app/api/checkout/route.ts', 'utf8');
   const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true } }).outputText;
   let providerCalls = 0;
+  let lastSession = null;
   // Run the real checkout route with the store open and an in-memory Stripe
   // adapter against every colourway and size of one product.
   const run = async (productsModule, id) => {
     const ctx = { exports: {}, process: { env: { STRIPE_SECRET_KEY: 'sk_test_fixture_not_a_key', NEXT_PUBLIC_SITE_URL: 'https://goalathletics.shop' } }, require: n => {
       if (n === 'next/server') return { NextResponse: { json: (body, init) => ({ body, status: init?.status ?? 200 }) } };
-      if (n === 'stripe') return { default: class { constructor() { providerCalls++; } } };
+      if (n === 'stripe') return { __esModule: true, default: class { constructor() { providerCalls++; this.checkout = { sessions: { create: async params => { lastSession = params; return { url: 'https://checkout.stripe.test/session' }; } } }; } } };
       if (n === '@/lib/migration-preview') return { MIGRATION_PREVIEW: false };
       if (n === '@/lib/store-status') return { storeClosed: () => false };
       if (n === '@/lib/products') return productsModule;
@@ -41,8 +45,10 @@ const PRICE = 7800;
     vm.runInNewContext(compiled, ctx);
     const results = [];
     for (const color of ORDER) for (const size of SIZES) {
+      const before = providerCalls;
+      lastSession = null;
       const r = await ctx.exports.POST({ json: async () => ({ items: [{ productId: id, size, color, quantity: 1, customName: null, customNumber: null }] }), headers: { get: () => null } });
-      results.push({ color, size, status: r.status, error: r.body?.error });
+      results.push({ color, size, status: r.status, error: r.body?.error, reachedStripe: providerCalls > before, session: lastSession });
     }
     return results;
   };
@@ -85,8 +91,15 @@ const PRICE = 7800;
     // Checkout as shipped: sellable only once every input is in.
     const sellable = product.isActive && product.availableForSale && types.hasPrice(product) && mapped === ORDER.length;
     for (const r of await run(p, id)) {
-      if (sellable) assert.equal(r.status, 200, `${slug} ${r.color} ${r.size} sellable once every input is in`);
-      else assert.equal(r.status, 400, `${slug} ${r.color} ${r.size} refused as shipped: ${r.error}`);
+      if (sellable) {
+        assert.equal(r.status, 200, `${slug} ${r.color} ${r.size} sellable once every input is in: ${r.error ?? ''}`);
+        const sku = f.resolveApliiqSku(id, r.color, r.size).sku;
+        const items = Object.keys(r.session.metadata).filter(k => /^items_\d+$/.test(k)).sort().map(k => r.session.metadata[k]).join('');
+        assert(items.includes(sku), `${slug} ${r.color} ${r.size}: the session carries ${sku}`);
+      } else {
+        assert.equal(r.status, 400, `${slug} ${r.color} ${r.size} refused as shipped: ${r.error}`);
+        assert.equal(r.reachedStripe, false, `${slug} ${r.color} ${r.size}: a refused line never reaches Stripe`);
+      }
     }
     // Forced active, for sale and priced (what flipping the flags without
     // SKUs would do): still refused by the comingSoon check or the missing
@@ -96,9 +109,9 @@ const PRICE = 7800;
       const variant = product.colorVariants.find(v => v.name === r.color);
       const expected = variant.comingSoon || !f.resolveApliiqSku(id, r.color, r.size) ? 400 : 200;
       assert.equal(r.status, expected, `${slug} ${r.color} ${r.size} forced active: ${r.error ?? 'session created'}`);
+      if (expected === 400) assert.equal(r.reachedStripe, false, `${slug} ${r.color} ${r.size} forced active: a refused line never reaches Stripe`);
     }
     summary.push(`${slug}: ${mapped}/${ORDER.length} mapped, ${product.isActive ? 'visible' : 'hidden'}, ${product.availableForSale ? 'for sale' : 'not for sale'}`);
   }
-  assert.equal(providerCalls, 0, 'Stripe is never reached for a refused line');
-  console.log(`PASS GOAL hoodies at $78 (${summary.join('; ')}); checkout refused every unmapped line. No network/database/provider calls.`);
+  console.log(`PASS GOAL hoodies at $78 (${summary.join('; ')}); checkout refused every unmapped line before Stripe and opened a session with its own SKU for every live one. No network/database calls.`);
 })().catch(e => { console.error(e); process.exitCode = 1; });

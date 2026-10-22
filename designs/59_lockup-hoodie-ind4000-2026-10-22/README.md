@@ -61,7 +61,44 @@ The retail price is set: $78, the owner's hoodie price (2026-10-22).
 Nothing is visible on goool.shop from this change, and nothing was
 deployed.
 
-## To publish
+## Published 2026-10-22 (owner: "upload these four lockup hoodies to the website")
+
+Read off each design's own page on the owner's Apliiq login:
+
+| Colourway | Design | Front file (10.00 x 2.67 in) | SKUs S / M / L / XL / XXL |
+|---|---|---|---|
+| Black | 6206733 | lockup-front_whitered_10-00in | APQ-6206733S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+| Grey Heather | 6206746 | lockup-front_blackred_10-00in | APQ-6206746S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+| Bone | 6206741 | lockup-front_blackred_10-00in | APQ-6206741S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+| Navy | 6206737 | lockup-front_cream_10-00in | APQ-6206737S6A1 / S7A1 / S8A1 / S1A1 / S2A1 |
+
+- Every design has one transfer (artwork count 1, no back print). It is
+  centred on centre front, with the top of the art 3.00 in (76.2 mm) below
+  the hood seam, the same on every size, and the placement carries a "do not
+  scale" note. The private label sb-6 sits inside the neck (activity log
+  2026-10-15). Navy prints the cream lockup, not white and red as the grid
+  read suggested.
+- Renders: Apliiq's own full-size render of each design
+  (`blob.apliiq.com/sitestorage/products/<id>_6399.jpg`, 944 x 1440 on
+  white) is kept unchanged in `as-received/`. The white was replaced by the
+  studio backdrop at 2:3 with `scripts/studio-backdrop-product-shot.py`; Grey
+  Heather and Bone took their garment mask from the Black render of the same
+  template. The results are in `site-images/` and `public/products/` as
+  `goal-lockup-hoodie-<colour>-catalog-product-front-20261022.webp`
+  (960 x 1440), recorded in `docs/catalog/goal-lockup-hoodie-product-20261022.json`.
+- Site: the four ids and SKUs are in `src/lib/fulfillment.ts`, every gallery
+  leads with its render ("Concept render" caption), `comingSoon` is removed,
+  and the row is `isActive` and `availableForSale` at $78. The paths are
+  allowlisted in `src/middleware.ts`.
+  `node scripts/test-goal-hoodies.cjs` passes, and its in-memory Stripe now
+  confirms every live colourway and size opens a session carrying its own
+  SKU. Migration 0042 is updated to active and for sale. It has not been run;
+  the order store upserts the row before any order item.
+- Still open: the owner's model pictures (they go after the product front
+  in each gallery), a physical sample, and the hi-res link status on each
+  placement (not read).
+
+## Original publish checklist
 
 1. Open each of the four design pages on the owner's Apliiq login; copy
    the URL (the id) and the "color offered" section (the SKUs).
