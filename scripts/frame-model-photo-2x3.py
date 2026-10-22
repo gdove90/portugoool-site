@@ -12,7 +12,9 @@ How the backdrop is extended: a photo narrower than 2:3 gains columns on both
 sides, a wider one gains rows above and below. Each new row (column) takes the
 mean colour of the outermost 12 pixels of that row (column), skipping model
 pixels (saturated or dark), smoothed along the edge so the grain of a single
-pixel never streaks, plus fresh noise at the backdrop's measured grain.
+pixel never streaks, plus fresh noise at the backdrop's measured grain. A 1-3
+line crop seam at the edges being extended (the sides of a narrow photo, the
+top and bottom of a wide one) is dropped first.
 --crop instead trims a close-up (a print detail) to 2:3: a wider photo loses
 columns, a narrower one loses rows. --anchor says which end to keep (start =
 top or left, end = bottom or right; default centre), so a narrow close-up can
@@ -94,6 +96,13 @@ if w / h < target:
     lt = crop_seam(a.transpose(1, 0, 2)[:10])
     rt = crop_seam(a.transpose(1, 0, 2)[::-1][:10])
     a = a[:, lt:w - rt]
+    h, w, _ = a.shape
+elif w / h > target:
+    # A wider photo is extended above and below, so its top and bottom
+    # edges are the ones that must continue the real backdrop.
+    tt = crop_seam(a[:10])
+    bt = crop_seam(a[::-1][:10])
+    a = a[tt:h - bt]
     h, w, _ = a.shape
 
 def crop_offset(excess):

@@ -1,0 +1,92 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000009",
+  "slug": "goal-athletics-monogram-cap",
+  "colorway": "Red/Natural",
+  "source": "Four catalog photos supplied by the owner in the Claude session on 2026-10-22 (RGBA PNG); originals preserved unchanged in designs/46_ga-matchday-cap-red-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, method 6, native scale. Each photo brought to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-monogram-cap-red.webp (Apliiq render of design 6205977, moved to designs/46_ga-matchday-cap-red-photos-2026-10-22/retired-render/)"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "red-product-front-as-received.png",
+      "receivedAs": "12.png",
+      "sourceSha256": "e84bb11fab2363c5b05bcb4fccf8998b0d8e28cd7aeb568d24f6f8abf8008581",
+      "sourceBytes": 511896,
+      "sourceDimensions": [
+        556,
+        723
+      ],
+      "framing": "Two crop-seam rows dropped at the top edge, then backdrop extended above and below to 2:3 (seam steps 0.49 and 0.05 levels; original pixels untouched).",
+      "dimensions": [
+        556,
+        834
+      ],
+      "deployedPath": "/products/goal-monogram-cap-red-catalog-product-front-20261022.webp",
+      "webpSha256": "48eaffffa43e3df3f64dfc022687cef030937680c03760cc12c0b73f2dc92adb",
+      "webpBytes": 42348
+    },
+    {
+      "order": 2,
+      "view": "model-front",
+      "sourceFilename": "red-model-front-as-received.png",
+      "receivedAs": "9.png",
+      "sourceSha256": "626b5693d87e8f9b20f37b1b29e1485575dd5dacb11945b10f34dfc74afe8db0",
+      "sourceBytes": 410602,
+      "sourceDimensions": [
+        555,
+        671
+      ],
+      "framing": "Centre-cropped 54 px from each side to 2:3 (--crop): the shoes touch the bottom edge, so the backdrop could not be extended below; only empty backdrop was removed.",
+      "dimensions": [
+        447,
+        671
+      ],
+      "deployedPath": "/products/goal-monogram-cap-red-catalog-model-front-20261022.webp",
+      "webpSha256": "4b294b6e2f543964a1bad2ac42da605c916a35e525a4ea877fb5cd8e3377978d",
+      "webpBytes": 22996
+    },
+    {
+      "order": 3,
+      "view": "model-three-quarter",
+      "sourceFilename": "red-model-three-quarter-as-received.png",
+      "receivedAs": "10.png",
+      "sourceSha256": "2b352f466975f56b6e35166b7200791702de279139dbd4afe5d208ad09663b70",
+      "sourceBytes": 409458,
+      "sourceDimensions": [
+        556,
+        671
+      ],
+      "framing": "Centre-cropped 54/55 px from the sides to 2:3 (--crop), same reason.",
+      "dimensions": [
+        447,
+        671
+      ],
+      "deployedPath": "/products/goal-monogram-cap-red-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "c4862ab73c6b12a6766b4f7e770132283a73f7361f05266ab8c76fa561947051",
+      "webpBytes": 21676
+    },
+    {
+      "order": 4,
+      "view": "model-side",
+      "sourceFilename": "red-model-side-as-received.png",
+      "receivedAs": "11.png",
+      "sourceSha256": "8df8265f80a263a25e9e01d3a82d9f13b993d61f46a17332f6706ac11d23e392",
+      "sourceBytes": 431176,
+      "sourceDimensions": [
+        555,
+        723
+      ],
+      "framing": "Centre-cropped 36/37 px from the sides to 2:3 (--crop), same reason.",
+      "dimensions": [
+        482,
+        723
+      ],
+      "deployedPath": "/products/goal-monogram-cap-red-catalog-model-side-20261022.webp",
+      "webpSha256": "e220e771adee39646a945640cd1f936392627bfa9c5bf57e0dfab9f432cb11cb",
+      "webpBytes": 22746
+    }
+  ]
+}

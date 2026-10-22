@@ -2858,7 +2858,32 @@ export const products: Product[] = [
         supplierColor: "Red/Natural",
         hex: "#C8102E",
         skuFragment: "RED",
-        images: [{ src: "/products/goal-monogram-cap-red.webp", alt: "GA Matchday Cap with red visor, front view" }],
+        // Red/Natural shows the owner's four catalog photos (2026-10-22);
+        // its Apliiq render was retired from public/products. Records:
+        // designs/46_ga-matchday-cap-red-photos-2026-10-22/ and
+        // docs/catalog/ga-matchday-cap-red-20261022.json.
+        images: [
+          {
+            src: "/products/goal-monogram-cap-red-catalog-product-front-20261022.webp",
+            alt: "GA Matchday Cap in Red/Natural, front view: natural crown with the red GA monogram embroidered on the front panel and a red visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-red-catalog-model-front-20261022.webp",
+            alt: "Model facing forward wearing the Red/Natural GA Matchday Cap with a grey tee, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-red-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the red GA monogram on the natural front panel of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-monogram-cap-red-catalog-model-side-20261022.webp",
+            alt: "Same model turned to the side, showing the red visor and crown profile of the cap",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
       {
         name: "Royal/Natural",
