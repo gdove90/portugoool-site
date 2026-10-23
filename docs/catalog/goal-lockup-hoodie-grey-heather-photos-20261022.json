@@ -1,0 +1,95 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000015",
+  "slug": "goal-athletics-lockup-hoodie",
+  "source": "Owner's product shot and three model photos of the Grey Heather Lockup Hoodie, supplied in the Claude session on 2026-10-22; originals unchanged in designs/59_lockup-hoodie-ind4000-2026-10-22/as-received-owner/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md; original pixels untouched; seams under one level.",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Owner product front, model front, model quarter left, model quarter right.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Grey Heather",
+      "view": "product-front",
+      "sourceFilename": "grey-heather-product-front-as-received.webp",
+      "receivedAs": "48.webp",
+      "sourceSha256": "d28177a3714264a02fc3983c1b60bbb97b1b1ae38d67b2d34f7e176b85772f94",
+      "sourceBytes": 227224,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.33/0.26)",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp",
+      "webpSha256": "bd2436e1e9f785cec71e7267c612f6f4a00a59727fa6bba8fa0902819143cbf7",
+      "webpBytes": 232714,
+      "replaces": "Apliiq render at the same path (moved to designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/); cache revision grey-heather-front-photo-20261022 in src/lib/product-image.ts"
+    },
+    {
+      "order": 2,
+      "colorway": "Grey Heather",
+      "view": "model-front",
+      "sourceFilename": "grey-heather-model-front-as-received.webp",
+      "receivedAs": "45.webp",
+      "sourceSha256": "d81f06f058e8d8609d43f1462f49f1acbf25e5d7c0b5dfdb9ec6fe793c74f5a4",
+      "sourceBytes": 97040,
+      "sourceDimensions": [
+        971,
+        1619
+      ],
+      "framing": "971 x 1619; backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.44/0.89)",
+      "dimensions": [
+        1079,
+        1619
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-grey-heather-catalog-model-front-20261022.webp",
+      "webpSha256": "a1c6f71a137d347879312a89a7233042803d95e87a029499a3a4151eab97c137",
+      "webpBytes": 100166
+    },
+    {
+      "order": 3,
+      "colorway": "Grey Heather",
+      "view": "model-quarter-left",
+      "sourceFilename": "grey-heather-model-quarter-left-as-received.webp",
+      "receivedAs": "46.webp",
+      "sourceSha256": "ce261c429337a1236d5926a22face1fca4ef25f5bd782250f1648ad185baa830",
+      "sourceBytes": 94508,
+      "sourceDimensions": [
+        971,
+        1619
+      ],
+      "framing": "971 x 1619; backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.27/0.52)",
+      "dimensions": [
+        1079,
+        1619
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
+      "webpSha256": "9a0745f6b90983443077117aec0195e36a75c60b4c5a501852b74541188ae1be",
+      "webpBytes": 100196
+    },
+    {
+      "order": 4,
+      "colorway": "Grey Heather",
+      "view": "model-quarter-right",
+      "sourceFilename": "grey-heather-model-quarter-right-as-received.webp",
+      "receivedAs": "47.webp",
+      "sourceSha256": "6f0493078e68bf025ee58a81237f7d1e75f911dd39f5ca61e07f844aecdb84ff",
+      "sourceBytes": 89580,
+      "sourceDimensions": [
+        971,
+        1619
+      ],
+      "framing": "971 x 1619; backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.20/0.68)",
+      "dimensions": [
+        1079,
+        1619
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
+      "webpSha256": "ded0c9eed17448ad3f579d2b3d811bceecaa7ec979754459472d3806da8e4727",
+      "webpBytes": 92088
+    }
+  ]
+}

@@ -118,7 +118,13 @@ Navy colourway (cream lockup).
   was read from the fabric (warm, about 203/198/193, against Grey Heather's
   neutral grey). Cache revision `bone-front-photo-20261022`. Record:
   `docs/catalog/goal-lockup-hoodie-bone-photos-20261022.json`.
-- Grey Heather still shows the Apliiq render.
+- Grey Heather followed. The product shot was 1122 x 1402, extended above and
+  below to 1122 x 1683. The three model photos were 971 x 1619, extended at
+  the sides to 1079 x 1619. Seams 0.20 to 0.89. Cache revision
+  `grey-heather-front-photo-20261022`. Record:
+  `docs/catalog/goal-lockup-hoodie-grey-heather-photos-20261022.json`. All four
+  Lockup colours now show only the owner's photos; the four Apliiq renders
+  are in `retired-render/`.
 
 ## Original publish checklist
 

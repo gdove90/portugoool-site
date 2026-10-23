@@ -3828,11 +3828,11 @@ export const products: Product[] = [
   // (Black 6206733, Grey Heather 6206746, Bone 6206741, Navy 6206737): the
   // GA monogram and GOAL ATHLETICS lockup, 10.00 x 2.67 in across the chest,
   // as on the GA Big Tee; white/red on Black, black/red on Grey Heather and
-  // Bone, cream on Navy; no back print. Black, Navy and Bone show the owner's
-  // product shot and model photos (2026-10-22); Grey Heather still shows
-  // Apliiq's own render on the studio backdrop, framed 2:3
-  // (scripts/studio-backdrop-product-shot.py). Live and for sale at $78
-  // (owner's hoodie price) on the owner's instruction 2026-10-22. Record:
+  // Bone, cream on Navy; no back print. Every colour shows the owner's
+  // product shot and model photos (2026-10-22), framed 2:3; Apliiq's renders
+  // are kept in designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/.
+  // Live and for sale at $78 (owner's hoodie price) on the owner's
+  // instruction 2026-10-22. Record:
   // designs/59_lockup-hoodie-ind4000-2026-10-22/. Same blank as the Heritage
   // row, so the same fabric, fit, care, origin, sizes (S to XXL of Apliiq's
   // XS to 5XL) and swatches.
@@ -3893,11 +3893,27 @@ export const products: Product[] = [
         supplierColor: "Grey Heather",
         hex: "#D9D9D9",
         skuFragment: "GREYHEATHER",
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Grey Heather, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Grey Heather Lockup Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
+            alt: "Same model turned to the left in the Grey Heather Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
+            alt: "Same model turned to the right in the Grey Heather Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
