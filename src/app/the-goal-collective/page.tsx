@@ -1,82 +1,92 @@
 import Image from "next/image";
+import Link from "next/link";
 import "@fontsource/inter/latin-300.css";
+import "@fontsource/inter/latin-400.css";
 import { pageMetadata } from "@/lib/page-metadata";
 
-// Approved coming-soon page: Figma Make "Collective page design reference",
-// src/App.tsx (owner, 2026-10-22, updated 2026-10-23). On this page the site
-// header carries The Goal Collective's mark and links (Shell.tsx), so the Make
-// page's own top bar is gone and its line of copy opens the hero. Its email
-// form was removed on the owner's word: the footer signup covers it.
-// Below desktop the photo fills the hero and the white copy sits over a band
-// that darkens toward the bottom. On desktop the whole photo stands, uncropped,
-// to the right of a dark panel holding the copy (owner, 2026-10-23: show all
-// of her, not just her head).
+// Approved coming-soon page, wired in as built (owner brief, 2026-10-23 evening):
+// Figma Make "Collective page design reference", TheGoalCollective.tsx, ported
+// to the App Router with next/image. The copy is approved verbatim. The page
+// brings its own header, so the site shell renders no header on this route
+// (Shell.tsx); the site footer still follows. Inter weights map to Tailwind:
+// inter-light 300, inter-regular 400, inter-medium 500, inter-semibold 600.
 export const metadata = pageMetadata(
   "/the-goal-collective",
   "The Goal Collective · Coming soon",
   "The Goal Collective is our lifestyle division. Everyday pieces, shaped by people pursuing their goals, becoming the best version of themselves, living fully, and growing together.",
 );
 
-// The hero fills the screen under the site header: 72px tall up to 700px wide, 90px above.
-const HERO_HEIGHT = "min-h-[calc(100svh-72px)] min-[701px]:min-h-[calc(100svh-90px)]";
-
-export default function Collective() {
+function ArrowUpRight() {
   return (
-    <section aria-labelledby="collective-title" className={`relative flex overflow-hidden bg-[#171817] text-white ${HERO_HEIGHT}`}>
-      {/* On desktop the photo's box keeps its 2:3 shape at the hero's height
-          (at most half the width), so the whole photo shows. */}
-      <div className="absolute inset-0 lg:relative lg:inset-auto lg:order-last lg:w-[min(50%,calc((100svh_-_90px)*2/3))] lg:shrink-0">
+    <svg viewBox="0 0 20 20" aria-hidden="true" className="h-4 w-4" fill="none">
+      <path d="M5 15 15 5M7 5h8v8" stroke="currentColor" strokeWidth="1.25" />
+    </svg>
+  );
+}
+
+export default function TheGoalCollective() {
+  return (
+    <div className="min-h-screen bg-[#efeee7] text-[#171817]">
+      <header className="absolute inset-x-0 top-0 z-20 flex h-[76px] items-center justify-between border-b border-black/15 bg-transparent px-5 md:h-[92px] md:px-12 lg:px-16">
+        <Link href="/the-goal-collective" aria-label="The Goal Collective home" className="flex items-center gap-3">
+          <Image
+            src="/assets/brand/goal-collective-halo-flow.png"
+            alt=""
+            width={44}
+            height={44}
+            loading="eager"
+            className="h-9 w-9 object-contain md:h-11 md:w-11"
+          />
+          <span className="text-[13px] font-semibold uppercase tracking-[-0.02em] sm:text-[15px] md:text-[18px]">
+            The Goal Collective
+          </span>
+        </Link>
+        <p className="hidden text-[9px] font-medium uppercase tracking-[0.2em] text-white md:block">
+          Performance for every day · Coming soon
+        </p>
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-[10px] font-normal uppercase tracking-[0.12em] transition-opacity hover:opacity-50"
+        >
+          Goal Athletics
+          <ArrowUpRight />
+        </Link>
+      </header>
+
+      <main className="relative min-h-screen overflow-hidden bg-[#34352f] text-white">
         <Image
           src="/assets/editorial/women-run-clean.jpg"
           alt="A woman running across a grassy hillside at golden hour"
           fill
           priority
-          sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover object-top lg:object-center"
+          sizes="100vw"
+          className="object-cover object-[center_20%] md:object-[center_18%]"
         />
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/5 from-20% via-black/30 via-52% to-black/90" />
 
-      <div className="relative z-10 flex flex-1 flex-col justify-end pt-8 [container-type:inline-size] md:pt-10 lg:pt-0">
-        {/* Below desktop the copy sits in a band that fades in over the photo
-            and darkens toward the bottom, so the white type reads at any
-            screen size while the top of the photo stays open. */}
-        <div className="bg-[linear-gradient(to_bottom,rgb(0_0_0/0)_0%,rgb(0_0_0/0.6)_96px,rgb(0_0_0/0.78)_100%)] px-5 pb-7 pt-24 [text-shadow:0_1px_12px_rgb(0_0_0/0.3)] md:px-12 md:pb-9 lg:flex lg:flex-1 lg:flex-col lg:justify-between lg:bg-none lg:px-16 lg:py-12 lg:[text-shadow:none]">
-          <p className="mb-5 text-[9px] font-medium uppercase tracking-[0.2em] text-white/80 lg:mb-0 lg:text-white/60">
-            Performance for every day · Coming soon
-          </p>
-
-          <div>
-            <p className="flex items-center gap-3 text-[10px] font-normal uppercase tracking-[0.22em] text-white/85 lg:text-[9px] lg:text-white/90">
-              <span className="block h-px w-9 bg-white/85 lg:bg-white/70" />
+        <section className="relative z-10 flex min-h-screen flex-col justify-end px-5 pb-7 pt-[42vh] md:px-12 md:pb-9 lg:px-16">
+          <div className="max-w-[980px]">
+            <p className="flex items-center gap-3 text-[9px] font-normal uppercase tracking-[0.22em] text-white/75">
+              <span className="block h-px w-9 bg-white/70" />
               02 / Everyday movement
             </p>
-
-            <div className="mb-9 mt-5 max-w-[760px] lg:mb-0 lg:max-w-[980px]">
-              {/* On desktop the headline scales with the copy panel, so
-                  "Built to move." always fits beside the photo. */}
-              <h1
-                id="collective-title"
-                className="text-[55px] font-semibold uppercase italic leading-[0.88] tracking-[-0.065em] text-white sm:text-[74px] md:text-[96px] lg:text-[length:clamp(52px,calc((100cqw_-_128px)/7.4),122px)]"
-              >
-                Built to move.
-                <br />
-                <span className="text-[#dedfd8]">Made to live.</span>
-              </h1>
-              <div className="mt-7 max-w-[550px] lg:mt-6 lg:max-w-[620px]">
-                <p className="text-[14px] font-normal leading-[1.65] text-white/90 md:text-[16px] lg:font-light">
-                  The Goal Collective is our lifestyle division. Everyday pieces, shaped by people pursuing their goals, becoming the best version of themselves, living fully, and growing together.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4 border-t border-white/40 pt-4 text-[10px] font-normal uppercase tracking-[0.14em] text-white/85 lg:mt-8 lg:border-white/30 lg:text-[9px] lg:text-white/70">
-              <span><b className="text-white">01</b><br />Training to street</span>
-              <span><b className="text-white">02</b><br />Women + Men</span>
-              <span><b className="text-white">03</b><br />Everyday versatility</span>
-            </div>
+            <h1 className="mt-5 text-[55px] font-semibold uppercase italic leading-[0.88] tracking-[-0.065em] sm:text-[74px] md:text-[96px] lg:text-[clamp(72px,8vw,122px)]">
+              Built to move.
+              <br />
+              <span className="text-[#dedfd8]">Made to live.</span>
+            </h1>
+            <p className="mt-6 max-w-[620px] text-[14px] font-light leading-[1.65] text-white/90 md:text-[16px]">
+              The Goal Collective is our lifestyle division. Everyday pieces, shaped by people pursuing their goals, becoming the best version of themselves, living fully, and growing together.
+            </p>
           </div>
-        </div>
-      </div>
-    </section>
+
+          <div className="mt-8 grid grid-cols-3 gap-4 border-t border-white/30 pt-4 text-[8px] font-normal uppercase tracking-[0.14em] text-white/70 md:text-[9px]">
+            <span><b className="text-white">01</b><br />All-day comfort</span>
+            <span><b className="text-white">02</b><br />Women + Men</span>
+            <span><b className="text-white">03</b><br />Everyday versatility</span>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }

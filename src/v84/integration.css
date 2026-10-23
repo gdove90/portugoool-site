@@ -130,5 +130,3 @@
 .v84 .performance-intro h2 { max-width:800px; margin:20px 0; font-size:clamp(30px,4vw,54px); line-height:1.08; }
 .v84 .performance-intro > p:last-child { max-width:640px; font-size:18px; line-height:1.6; }
 @media (max-width:700px) { .v84 .performance-intro { padding:48px 20px; } .v84 .performance-intro > p:last-child { font-size:16px; } }
-/* The Goal Collective's mark is dark ink; on the dark menu panel it shows white. */
-.v84 .menu-dialog .brand img { filter:brightness(0) invert(1); }
