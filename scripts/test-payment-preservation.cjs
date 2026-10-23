@@ -9,11 +9,11 @@ const {execFileSync} = require('node:child_process');
 const {createHash} = require('node:crypto');
 // The reviewed production commit the payment path is pinned to. Move it only
 // after a change to these files has been reviewed and deployed (2026-10-23:
-// f672945, the Stacked Stadium Cap on sale, after the rebrand and the Stripe
+// 7659237, every product on sale and the captions gone, after the Stripe
 // inspection and the owner alert address). The legacy pin predates the catalog
 // retirements and the hat/ST720 blocks, which its comparison normalises away.
 const LEGACY_BASELINE = 'e5f900866117d5e792638e1cff8e02ff076dc407';
-const baseline = process.argv[2] || 'f6729452bfeb09db45dcad56d39415f209e1ee66';
+const baseline = process.argv[2] || '76592371d0a4cdfadd02f0e9a08d15158bd4d3ea';
 const legacy = baseline === LEGACY_BASELINE;
 const text = file => fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
 const original = file => execFileSync('git', ['show', `${baseline}:${file}`], {encoding:'utf8'}).replace(/\r\n/g, '\n');
