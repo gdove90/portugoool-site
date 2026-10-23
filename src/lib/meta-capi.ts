@@ -60,7 +60,7 @@ export async function sendMetaServerEvent(ev: MetaServerEvent): Promise<MetaSend
         event_name: ev.name,
         event_time: ev.eventTime ?? Math.floor(Date.now() / 1000),
         event_id: ev.eventId,
-        event_source_url: ev.sourceUrl ?? "https://goool.shop/",
+        event_source_url: ev.sourceUrl ?? "https://goalathletics.shop/",
         action_source: "website",
         user_data: userData,
         ...(ev.customData ? { custom_data: ev.customData } : {}),

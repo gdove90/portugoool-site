@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       userAgent: req.headers?.get?.("user-agent") ?? null,
       fbp: req.cookies?.get?.("_fbp")?.value ?? null,
       fbc: req.cookies?.get?.("_fbc")?.value ?? null,
-      sourceUrl: "https://goool.shop/",
+      sourceUrl: "https://goalathletics.shop/",
       consent,
       livemode: result.live,
       customData: { content_name: "GOOOL20 sign-up" },

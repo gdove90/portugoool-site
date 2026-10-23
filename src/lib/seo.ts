@@ -11,7 +11,8 @@ import { BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? (process.env.DOMAIN_CUTOVER_ENABLED === "true" ? "https://goalathletics.shop" : "https://goool.shop");
 
-export const LEGAL_NAME = "GOOOL Athletics LLC";
+import { LEGAL_NAME } from "./business-address";
+export { LEGAL_NAME };
 export const BRAND_NAME = "GOAL Athletics";
 export const CONTACT_EMAIL = "support@goalathletics.shop";
 

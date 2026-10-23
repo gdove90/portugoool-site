@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { unsubscribeByToken } from "@/lib/signups";
+import { LEGAL_NAME } from "@/lib/business-address";
 
 // One-click unsubscribe (owner decision 2026-09-29). The link in every
 // welcome email and the List-Unsubscribe header both point here. GET is
@@ -19,7 +20,7 @@ function page(title: string, body: string, status: number) {
 <img src="https://goalathletics.shop/brand/goal-athletics-horizontal-lockup-white.svg" width="160" alt="GOAL Athletics" style="display:block;width:160px;height:auto;margin-bottom:28px;">
 <h1 style="margin:0 0 12px;font-size:24px;line-height:1.2;">${title}</h1>
 <p style="margin:0 0 24px;color:#d6d6d6;">${body}</p>
-<p style="margin:0;color:#d6d6d6;">GOOOL Athletics LLC · <a href="https://goalathletics.shop" style="color:#fff;">goalathletics.shop</a> · <a href="mailto:support@goalathletics.shop" style="color:#fff;">support@goalathletics.shop</a></p>
+<p style="margin:0;color:#d6d6d6;">${LEGAL_NAME} · <a href="https://goalathletics.shop" style="color:#fff;">goalathletics.shop</a> · <a href="mailto:support@goalathletics.shop" style="color:#fff;">support@goalathletics.shop</a></p>
 </div></body></html>`;
   return new NextResponse(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }

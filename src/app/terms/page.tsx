@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/page-metadata";
+import { LEGAL_NAME } from "@/lib/business-address";
 import Link from "next/link";
 
 export const metadata = pageMetadata("/terms", "Terms of Service", "The terms that govern purchases and use of goalathletics.shop.");
@@ -19,7 +20,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Who we are</h2>
           <p className="mt-2">
-            GOOOL Athletics LLC is an independent brand. We are not
+            GOAL Athletics is an independent brand of {LEGAL_NAME}. We are not
             affiliated with, endorsed by, or connected to any soccer
             federation, club, league, tournament, or governing body. All
             designs and marks are original.

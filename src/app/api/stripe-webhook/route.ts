@@ -58,7 +58,7 @@ async function sendPurchaseToMeta(session: Stripe.Checkout.Session, orderId: str
       name: "Purchase",
       eventId: await metaEventId("Purchase", session.id),
       eventTime,
-      sourceUrl: "https://goool.shop/success",
+      sourceUrl: "https://goalathletics.shop/success",
       email: session.customer_details?.email ?? session.customer_email ?? null,
       clientIp: md.ip ?? null,
       userAgent: md.ua ?? null,

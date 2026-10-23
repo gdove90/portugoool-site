@@ -62,7 +62,8 @@ async function main() {
       assert.equal((await fetch(base+endpoint)).status, 503, endpoint+' must be non-operational in design preview'); checked++;
     }
   }
-  assert.equal(productRoutes.length, 9, 'All nine existing product routes must remain available.');
+  // Seven catalog routes since 2026-10-22: five clothing products and the two caps.
+  assert.equal(productRoutes.length, 7, 'All seven existing product routes must remain available.');
   for (const route of productRoutes) {
     const response = await fetch(base + route); assert.equal(response.status, 200, route);
     const tree = nodes(parse(await response.text()));
@@ -82,6 +83,6 @@ async function main() {
   assert.equal(alias.status, 308); assert.equal(alias.headers.get('location'), '/shop'); checked++;
   const unknown = await fetch(base + '/v84-test-route-that-does-not-exist');
   assert.equal(unknown.status, 404); checked++;
-  console.log(`${checked} local release route/link/asset checks passed across ${routes.length + productRoutes.length} pages, including all nine product headings and canonical paths. No forms, checkout sessions, provider writes or owner authentication were performed.`);
+  console.log(`${checked} local release route/link/asset checks passed across ${routes.length + productRoutes.length} pages, including every product heading and canonical path. No forms, checkout sessions, provider writes or owner authentication were performed.`);
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });
