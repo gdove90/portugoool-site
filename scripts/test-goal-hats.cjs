@@ -1,12 +1,14 @@
 // Owner hat upload 2026-10-14: two caps, eight Apliiq colourways. Verifies the
 // catalog rows, exact Apliiq SKUs, images on disk and that checkout refuses
-// them while they are not for sale. No network, database or provider calls.
+// the cap that is not for sale. The Stacked Stadium Cap went on sale on
+// 2026-10-23 for the first live Apliiq order. No network, database or
+// provider calls.
 const fs = require('fs'), assert = require('assert/strict'), ts = require('typescript'), vm = require('vm');
 require.extensions['.ts'] = (m, f) => m._compile(ts.transpileModule(fs.readFileSync(f, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, resolveJsonModule: true, esModuleInterop: true } }).outputText, f);
 const p = require('../src/lib/products.ts'), f = require('../src/lib/fulfillment.ts');
 const HATS = {
   'goal-athletics-monogram-cap': { id: '80000000-0000-4000-8000-000000000009', variants: { 'Black/Natural': 6205981, 'Red/Natural': 6205977, 'Royal/Natural': 6205982, 'Dark Green/Natural': 6205989 } },
-  'goal-athletics-wordmark-cap': { id: '80000000-0000-4000-8000-000000000010', variants: { 'Black/Natural': 6205992, 'Red/Natural': 6205994, 'Royal/Natural': 6205995, 'Dark Green/Natural': 6206101 } },
+  'goal-athletics-wordmark-cap': { id: '80000000-0000-4000-8000-000000000010', forSale: true, variants: { 'Black/Natural': 6205992, 'Red/Natural': 6205994, 'Royal/Natural': 6205995, 'Dark Green/Natural': 6206101 } },
 };
 (async () => {
   let variants = 0;
@@ -14,7 +16,7 @@ const HATS = {
     const product = p.getProductBySlug(slug);
     assert(product && product.id === hat.id && product.isActive, `${slug} listed`);
     assert.equal(product.category, 'hat');
-    assert.equal(product.availableForSale, false, `${slug} must not be purchasable yet`);
+    assert.equal(product.availableForSale, hat.forSale === true, `${slug} sale state`);
     assert.equal(product.priceCents, 3200);
     assert.deepEqual(product.colorVariants.map(v => v.name), Object.keys(hat.variants));
     for (const variant of product.colorVariants) {
@@ -33,7 +35,7 @@ const HATS = {
   let providerCalls = 0;
   const context = { exports: {}, process: { env: { STRIPE_SECRET_KEY: 'sk_live_fixture_not_a_key' } }, require: n => n === 'next/server' ? { NextResponse: { json: (body, init) => ({ body, status: init?.status ?? 200 }) } } : n === 'stripe' ? { default: class { constructor() { providerCalls++; throw Error('Provider must never be reached'); } } } : n === '@/lib/migration-preview' ? { MIGRATION_PREVIEW: false } : n === '@/lib/store-status' ? { storeClosed: () => false } : n === '@/lib/products' ? p : n === '@/lib/types' ? require('../src/lib/types.ts') : n === '@/lib/fulfillment' ? f : {} };
   vm.runInNewContext(compiled, context);
-  for (const hat of Object.values(HATS)) for (const color of Object.keys(hat.variants)) {
+  for (const hat of Object.values(HATS).filter(h => !h.forSale)) for (const color of Object.keys(hat.variants)) {
     const r = await context.exports.POST({ json: async () => ({ items: [{ productId: hat.id, size: 'OS', color, quantity: 1, customName: null, customNumber: null }] }), headers: { get: () => null } });
     assert.equal(r.status, 400, `${hat.id} ${color} refused`);
   }

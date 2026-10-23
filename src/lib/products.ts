@@ -3181,7 +3181,9 @@ export const products: Product[] = [
     category: "hat",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: false,
+    // On sale since 2026-10-23: the owner chose this cap for the first live
+    // order through the automatic Apliiq path.
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
