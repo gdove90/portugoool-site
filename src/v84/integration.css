@@ -35,8 +35,10 @@
 .v84 .owner-signin input { width:100%; border:1px solid var(--line); padding:12px; background:white; }
 .v84-admin { font-family:var(--font-inter),Arial,sans-serif; min-height:100vh; }
 .v84-admin [hidden] { display:none!important; }
-.v84 .privacy-settings { background:var(--ink); color:var(--paper); padding:0 4vw 24px; font-size:11px; }
-.v84 .privacy-settings:empty { display:none; }
+/* One footer (owner, 2026-10-23): a single legal line under the columns carries the company, the mailing address and the tracking opt-out. */
+.v84 .footer-legal { border-top:1px solid #ffffff30; padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px 24px; font-size:12px; letter-spacing:.02em; line-height:1.6; color:#b8b6b1; }
+.v84 .footer-legal-end { display:inline-flex; align-items:center; flex-wrap:wrap; gap:6px 16px; }
+.v84 .footer-legal button { text-decoration:underline; text-underline-offset:3px; }
 .v84 .v84-existing-page :is(h1,h2,h3) { letter-spacing:0; text-transform:none; }
 .v84 .v84-existing-page :is(a,button).bg-red { background:var(--ink); color:var(--paper); border-radius:0; }
 .v84 .v84-existing-page :is(a,button).bg-red:hover { background:#333; }

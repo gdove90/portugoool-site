@@ -121,11 +121,7 @@
   .v84 .signup-copy { font-size:16px; }
   .v84 .footer-signup .signup-field button { font-size:14px; }
   .v84 .signup-note { color:#bdbbb5; }
-  .v84 .footer-bottom { display:flex; flex-direction:column; align-items:flex-start; font-size:12px; gap:24px; }
-  .v84 .footer-signoff { text-align:left; }
-  .v84 .footer-signoff p { white-space:normal; margin-left:0; }
-  .v84 .privacy-settings { padding:0 var(--mobile-gutter) max(24px,env(safe-area-inset-bottom)); font-size:14px; }
-  .v84 .privacy-settings button { min-height:44px; }
+  .v84 .footer-legal { flex-direction:column; align-items:flex-start; gap:8px; font-size:13px; padding-bottom:env(safe-area-inset-bottom); }
   .v84 :is(.side-dialog,.search-dialog,.info-dialog,.kit-review,.match-terms-dialog) { max-height:100dvh; padding:24px var(--mobile-gutter) max(24px,env(safe-area-inset-bottom)); overflow-y:auto; overscroll-behavior:contain; }
   .v84 .side-dialog { width:min(480px,100%); height:100dvh; }
   .v84 .dialog-head { gap:16px; padding-bottom:20px; }
