@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import Gate from "@/components/Gate";
+import { storeClosed } from "@/lib/store-status";
 
 // The gate's own route. Middleware sends every un-cookied request here with
 // the path they wanted in ?next=, so unlocking returns them where they were
@@ -31,5 +33,8 @@ export default async function GatePage({
   searchParams: Promise<{ next?: string | string[] }>;
 }) {
   const { next } = await searchParams;
+  // Once the store is open, links and bookmarks made while it was closed
+  // (/gate?next=...) go straight to the page they were aiming for.
+  if (!storeClosed()) redirect(safeNext(next));
   return <Gate next={safeNext(next)} />;
 }
