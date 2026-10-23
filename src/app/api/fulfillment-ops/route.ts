@@ -120,7 +120,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({
         livemode: liveKey,
         // Which Stripe business the deploy's key belongs to: id and names only.
-        account: { id: account.id, name: account.settings?.dashboard?.display_name ?? account.business_profile?.name ?? null },
+        account: {
+          id: account.id,
+          name: account.settings?.dashboard?.display_name ?? account.business_profile?.name ?? null,
+          publicName: account.business_profile?.name ?? null,
+          businessType: account.business_type ?? null,
+          legalName: account.company?.name ?? account.business_profile?.name ?? null,
+          statementDescriptor: account.settings?.payments?.statement_descriptor ?? null,
+        },
         endpoints: endpoints.data.map((e) => ({
           id: e.id, url: e.url, status: e.status, livemode: e.livemode, enabled_events: e.enabled_events,
           created: new Date(e.created * 1000).toISOString(), api_version: e.api_version, description: e.description,
