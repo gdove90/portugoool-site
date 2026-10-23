@@ -168,27 +168,54 @@ export async function POST(req: NextRequest) {
     if (!secretKey) return NextResponse.json({ error: "Stripe is not configured." }, { status: 503 });
     const site = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://goalathletics.shop").replace(/\/$/, "");
     const stripe = new Stripe(secretKey);
+    // Stripe's own error messages name parameters, never secrets, so they
+    // are returned to the operator to show which step refused.
+    const describe = (err: unknown) => (err instanceof Error ? `${err.name}: ${err.message}` : String(err));
+    let step = "start";
     try {
       const upload = async (path: string, purpose: "business_logo" | "business_icon") => {
+        step = `fetch ${path}`;
         const res = await fetch(`${site}${path}`);
-        if (!res.ok) throw new Error(`asset ${path} answered ${res.status}`);
+        if (!res.ok) throw new Error(`asset answered ${res.status}`);
         const data = Buffer.from(await res.arrayBuffer());
-        const file = await stripe.files.create({ purpose, file: { data, name: path.split("/").pop() ?? "brand.png", type: "application/octet-stream" } });
+        step = `upload ${purpose}`;
+        const file = await stripe.files.create({ purpose, file: { data, name: path.split("/").pop() ?? "brand.png", type: "image/png" } });
         return file.id;
       };
-      const [logo, icon] = await Promise.all([
-        upload("/brand/stripe/goal-athletics-logo-ink.png", "business_logo"),
-        upload("/brand/stripe/goal-athletics-icon-ink.png", "business_icon"),
-      ]);
-      const account = await stripe.accounts.retrieve();
-      const updated = await stripe.accounts.update(account.id, {
+      const logo = await upload("/brand/stripe/goal-athletics-logo-ink.png", "business_logo");
+      const icon = await upload("/brand/stripe/goal-athletics-icon-ink.png", "business_icon");
+      const params = {
         business_profile: { name: "GOAL Athletics" },
         settings: { branding: { logo, icon, primary_color: "#FFFFFF", secondary_color: "#C1121F" } },
-      });
+      };
+      step = "update account";
+      const account = await stripe.accounts.retrieve();
+      let updated: Stripe.Account;
+      try {
+        updated = await stripe.accounts.update(account.id, params);
+      } catch {
+        // The platform's own account is updated through /v1/account, which
+        // this SDK version has no helper for: one form-encoded request.
+        step = "update account (own-account endpoint)";
+        const form = new URLSearchParams();
+        form.set("business_profile[name]", params.business_profile.name);
+        form.set("settings[branding][logo]", logo);
+        form.set("settings[branding][icon]", icon);
+        form.set("settings[branding][primary_color]", params.settings.branding.primary_color);
+        form.set("settings[branding][secondary_color]", params.settings.branding.secondary_color);
+        const res = await fetch("https://api.stripe.com/v1/account", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${secretKey}`, "Content-Type": "application/x-www-form-urlencoded" },
+          body: form,
+        });
+        const json = (await res.json()) as Stripe.Account & { error?: { message?: string } };
+        if (!res.ok) throw new Error(json.error?.message ?? `HTTP ${res.status}`);
+        updated = json;
+      }
       return NextResponse.json({ account: updated.id, name: updated.business_profile?.name ?? null, branding: updated.settings?.branding ?? null });
     } catch (err) {
-      console.error("stripe-branding:", err);
-      return NextResponse.json({ error: "Stripe branding update failed." }, { status: 502 });
+      console.error("stripe-branding:", step, err);
+      return NextResponse.json({ error: "Stripe branding update failed.", step, detail: describe(err) }, { status: 502 });
     }
   }
 
