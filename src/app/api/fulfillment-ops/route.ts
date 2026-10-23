@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
-  let body: { action?: string; orderId?: string; welcome?: boolean; endpointId?: string };
+  let body: { action?: string; orderId?: string; welcome?: boolean; endpointId?: string; confirm?: string };
   try {
     body = await req.json();
   } catch {
@@ -155,6 +155,40 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ id: endpoint.id, url: endpoint.url, status: endpoint.status, livemode: endpoint.livemode });
     } catch {
       return NextResponse.json({ error: "Stripe endpoint update failed." }, { status: 502 });
+    }
+  }
+
+  // Checkout page branding (owner, 2026-10-23): the public business name
+  // becomes GOAL Athletics, the summary panel white with the brand red as
+  // accent, and the GOAL lockup and mark become logo and icon. The images are
+  // fetched from this site and handed to Stripe's Files API. Nothing else on
+  // the account changes; the statement descriptor is left alone.
+  if (body.action === "stripe-branding" && body.confirm === "GOAL Athletics") {
+    const secretKey = process.env.STRIPE_SECRET_KEY;
+    if (!secretKey) return NextResponse.json({ error: "Stripe is not configured." }, { status: 503 });
+    const site = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://goalathletics.shop").replace(/\/$/, "");
+    const stripe = new Stripe(secretKey);
+    try {
+      const upload = async (path: string, purpose: "business_logo" | "business_icon") => {
+        const res = await fetch(`${site}${path}`);
+        if (!res.ok) throw new Error(`asset ${path} answered ${res.status}`);
+        const data = Buffer.from(await res.arrayBuffer());
+        const file = await stripe.files.create({ purpose, file: { data, name: path.split("/").pop() ?? "brand.png", type: "application/octet-stream" } });
+        return file.id;
+      };
+      const [logo, icon] = await Promise.all([
+        upload("/brand/stripe/goal-athletics-logo-ink.png", "business_logo"),
+        upload("/brand/stripe/goal-athletics-icon-ink.png", "business_icon"),
+      ]);
+      const account = await stripe.accounts.retrieve();
+      const updated = await stripe.accounts.update(account.id, {
+        business_profile: { name: "GOAL Athletics" },
+        settings: { branding: { logo, icon, primary_color: "#FFFFFF", secondary_color: "#C1121F" } },
+      });
+      return NextResponse.json({ account: updated.id, name: updated.business_profile?.name ?? null, branding: updated.settings?.branding ?? null });
+    } catch (err) {
+      console.error("stripe-branding:", err);
+      return NextResponse.json({ error: "Stripe branding update failed." }, { status: 502 });
     }
   }
 
