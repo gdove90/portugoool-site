@@ -1,0 +1,95 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000014",
+  "slug": "goal-athletics-heritage-hoodie",
+  "source": "Owner's product shot and three model photos of the Bone Heritage Hoodie (PNG), supplied in the Claude session on 2026-10-22; originals unchanged in designs/58_heritage-hoodie-ind4000-2026-10-22/as-received-owner/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md; photograph pixels untouched; seams 0.27 to 0.72.",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Owner product front, model front, model quarter left, model quarter right, then Apliiq's sleeve-side render.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Bone",
+      "view": "product-front",
+      "sourceFilename": "bone-product-front-as-received.png",
+      "receivedAs": "28.png",
+      "sourceSha256": "36f3281fbb59b986789faa73d5d5f8f84d0835a82367528a5f1f40064d3b6990",
+      "sourceBytes": 485577,
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "framing": "768 x 1024 as received, but only columns 166 to 600 are photograph: both sides were padded with row-constant grey panels (every row repeats one edge pixel, giving horizontal streaks; on the three-quarter-right photo the panels also differ in brightness, 158.6 and 179.9 against about 162 to 165). Cropped to the photograph (434 x 1024, the model and garment wholly inside) and the backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py.",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
+      "webpSha256": "7e1652774a2413afdbeb7eff853ab59411ed7ceacce9ec4debf96971ceca324c",
+      "webpBytes": 25268,
+      "replaces": "Apliiq render at the same path (moved to designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/); cache revision bone-front-photo-20261022 in src/lib/product-image.ts"
+    },
+    {
+      "order": 2,
+      "colorway": "Bone",
+      "view": "model-front",
+      "sourceFilename": "bone-model-front-as-received.png",
+      "receivedAs": "29.png",
+      "sourceSha256": "b1e917ba390491dd6956bf751343b6d565a97dc980dfc7e775477778e8985a2a",
+      "sourceBytes": 488722,
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "framing": "768 x 1024 as received, but only columns 193 to 574 are photograph: both sides were padded with row-constant grey panels (every row repeats one edge pixel, giving horizontal streaks; on the three-quarter-right photo the panels also differ in brightness, 158.6 and 179.9 against about 162 to 165). Cropped to the photograph (381 x 1024, the model and garment wholly inside) and the backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py.",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-model-front-20261022.webp",
+      "webpSha256": "447c17d06a1df9b544986283d394d402c4099fa1fb3e9717521c16739c472402",
+      "webpBytes": 39732
+    },
+    {
+      "order": 3,
+      "colorway": "Bone",
+      "view": "model-quarter-left",
+      "sourceFilename": "bone-model-quarter-left-as-received.png",
+      "receivedAs": "30.png",
+      "sourceSha256": "9aea28540aefd507ed77a3d18539435629fd47ab0d9eb2507a6a44a173fb7c23",
+      "sourceBytes": 459890,
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "framing": "768 x 1024 as received, but only columns 207 to 560 are photograph: both sides were padded with row-constant grey panels (every row repeats one edge pixel, giving horizontal streaks; on the three-quarter-right photo the panels also differ in brightness, 158.6 and 179.9 against about 162 to 165). Cropped to the photograph (353 x 1024, the model and garment wholly inside) and the backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py.",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-model-quarter-left-20261022.webp",
+      "webpSha256": "94b0ae19cca35f37db6ead0cc7ec8930c5e5e605f1ecf05a784f43c8e1127206",
+      "webpBytes": 43344
+    },
+    {
+      "order": 4,
+      "colorway": "Bone",
+      "view": "model-quarter-right",
+      "sourceFilename": "bone-model-quarter-right-as-received.png",
+      "receivedAs": "31.png",
+      "sourceSha256": "584e6060ab8ad149e8b254796878565c3aaa10ad885e5f8957ef187eec72f864",
+      "sourceBytes": 459739,
+      "sourceDimensions": [
+        768,
+        1024
+      ],
+      "framing": "768 x 1024 as received, but only columns 207 to 561 are photograph: both sides were padded with row-constant grey panels (every row repeats one edge pixel, giving horizontal streaks; on the three-quarter-right photo the panels also differ in brightness, 158.6 and 179.9 against about 162 to 165). Cropped to the photograph (354 x 1024, the model and garment wholly inside) and the backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py.",
+      "dimensions": [
+        683,
+        1024
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-model-quarter-right-20261022.webp",
+      "webpSha256": "394275ab5c9969178dc01b33950f2f0825bc0d67536974a2f439b9324073af7d",
+      "webpBytes": 38786
+    }
+  ]
+}

@@ -132,7 +132,14 @@ The owner supplied a product shot and three model photos for Grey Heather
   above and below to 1122 x 1683 (seams 0.31 to 0.52). Cache revision
   `navy-front-photo-20261022`. Record:
   `docs/catalog/goal-heritage-hoodie-navy-photos-20261022.json`.
-- Bone still shows Apliiq's renders until its photos land.
+- Bone followed in the same order. All four PNGs (768 x 1024) were
+  photographs padded at both sides with row-constant grey panels. On the
+  three-quarter-right photo the panels visibly mismatched in brightness. Each
+  was cropped to its photograph (434, 381, 353 and 354 px wide, the model and
+  garment wholly inside), then extended to 683 x 1024 (seams 0.27 to 0.72).
+  Cache revision `bone-front-photo-20261022`. Record:
+  `docs/catalog/goal-heritage-hoodie-bone-photos-20261022.json`. All four
+  Heritage colours now lead with the owner's photos.
 
 ## Original publish checklist
 
