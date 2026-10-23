@@ -75,7 +75,7 @@ const GA_MINIMAL_SHORTS_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-shorts-(?:
 const GA_MINIMAL_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-(?:true-royal|black|true-red)-catalog-model-(?:front|front-quarter|rear|rear-quarter)-20261015\.webp$/;
 const GA_BIG_TEE_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-big-tee-(?:black|true-royal|true-red|white-black-red)-catalog-model-(?:front|three-quarter|rear)-20261020\.webp$/;
 const LOCKUP_HOODIE_CATALOG_IMAGE = /^\/products\/goal-lockup-hoodie-(?:black|grey-heather|bone|navy)-catalog-product-front-20261022\.webp$/;
-const HERITAGE_HOODIE_CATALOG_IMAGE = /^\/products\/goal-heritage-hoodie-(?:black|grey-heather|bone|navy)-catalog-product-(?:front|sleeve)-20261022\.webp$/;
+const HERITAGE_HOODIE_CATALOG_IMAGE = /^\/products\/goal-heritage-hoodie-(?:black|grey-heather|bone|navy)-catalog-(?:product-(?:front|sleeve)|model-(?:front|quarter-left|quarter-right))-20261022\.webp$/;
 
 function isPublic(pathname: string): boolean {
   return ST720_IMAGE.test(pathname) || GA_MINIMAL_WHITE_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_PRODUCT_IMAGE.test(pathname) || GA_BIG_TEE_PRODUCT_IMAGE.test(pathname) || GA_MINIMAL_SHORTS_CATALOG_IMAGE.test(pathname) || GA_MATCHDAY_CAP_CATALOG_IMAGE.test(pathname) || STADIUM_CAP_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_MODEL_CATALOG_IMAGE.test(pathname) || GA_BIG_TEE_MODEL_CATALOG_IMAGE.test(pathname) || LOCKUP_HOODIE_CATALOG_IMAGE.test(pathname) || HERITAGE_HOODIE_CATALOG_IMAGE.test(pathname) ||(TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));

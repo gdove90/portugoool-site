@@ -1,0 +1,95 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000014",
+  "slug": "goal-athletics-heritage-hoodie",
+  "source": "Owner's product shot and three model photos of the Grey Heather Heritage Hoodie, supplied in the Claude session on 2026-10-22; originals unchanged in designs/58_heritage-hoodie-ind4000-2026-10-22/as-received-owner/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md; original pixels untouched in the middle of the canvas; seams under one level (product front 0.27/0.64, model views 0.45 to 0.80).",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Owner product front, model front, model quarter left, model quarter right, then Apliiq's sleeve-side render.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Grey Heather",
+      "view": "product-front",
+      "sourceFilename": "grey-heather-product-front-as-received.webp",
+      "receivedAs": "16.webp",
+      "sourceSha256": "83a6775bd94ff0b61ba99c8e4786f31f02a05670a013751de6924556d7a60ba3",
+      "sourceBytes": 212300,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
+      "webpSha256": "6bdd7fb9e566394242240093e314928717ad7f4c75074d724a6942bd8071ef65",
+      "webpBytes": 219508,
+      "replaces": "Apliiq render at the same path (moved to designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/); cache revision grey-heather-front-photo-20261022 in src/lib/product-image.ts"
+    },
+    {
+      "order": 2,
+      "colorway": "Grey Heather",
+      "view": "model-front",
+      "sourceFilename": "grey-heather-model-front-as-received.webp",
+      "receivedAs": "17.webp",
+      "sourceSha256": "3215bcfee872e6ffcfebb81b79c31f4b929acb0abd9f61a0f8cea4c02400365a",
+      "sourceBytes": 88784,
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "framing": "941 x 1672; backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1115,
+        1672
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-model-front-20261022.webp",
+      "webpSha256": "31abe520c50d8feba1c698dab6d801fbbb34e3a618390c621971a701b97bbc66",
+      "webpBytes": 96774
+    },
+    {
+      "order": 3,
+      "colorway": "Grey Heather",
+      "view": "model-quarter-left",
+      "sourceFilename": "grey-heather-model-quarter-left-as-received.webp",
+      "receivedAs": "18.webp",
+      "sourceSha256": "819d88e7b45fe021e4611e2765c874a867f05660fb357a50d561b5beb315cec1",
+      "sourceBytes": 91674,
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "framing": "941 x 1672; backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1115,
+        1672
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
+      "webpSha256": "f66beb43a7fab7ccfb16a568a5a55e338fbfb207de1080ffcb20454f58f6361e",
+      "webpBytes": 97078
+    },
+    {
+      "order": 4,
+      "colorway": "Grey Heather",
+      "view": "model-quarter-right",
+      "sourceFilename": "grey-heather-model-quarter-right-as-received.webp",
+      "receivedAs": "19.webp",
+      "sourceSha256": "2a38bbd616fbd1c4b59428dbd44f28015ee5858ce94feb84cc5c8eb77aa78940",
+      "sourceBytes": 94074,
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "framing": "941 x 1672; backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1115,
+        1672
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
+      "webpSha256": "f2600c5c7b7b8ddec99367b52d8fc60fe6eed9e7899df403ef39263dff092ecf",
+      "webpBytes": 100414
+    }
+  ]
+}

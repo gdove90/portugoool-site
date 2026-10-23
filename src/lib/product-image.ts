@@ -20,6 +20,9 @@ export function catalogImageSrc(src: string): string {
     "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp": "black-front-v2-20261022",
     "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp": "black-back-v2-20261022",
     "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp": "true-red-back-v2-20261022",
+    // Heritage Hoodie Grey Heather: the owner's product shot replaced the
+    // Apliiq render at this path the day both went live.
+    "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp": "grey-heather-front-photo-20261022",
   };
   const revision = replaced[url.pathname]
     ? replaced[url.pathname]

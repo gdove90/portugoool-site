@@ -107,6 +107,22 @@ Read off each design's own page on the owner's Apliiq login:
 - Still open: the owner's model pictures, a physical sample, and the hi-res
   link status on each placement (not read).
 
+### Grey Heather photos (later on 2026-10-22)
+
+The owner supplied a product shot and three model photos for Grey Heather
+("yes these are the heritage hoodies").
+- Originals are kept unchanged in `as-received-owner/`.
+- Each photo was framed 2:3 with `scripts/frame-model-photo-2x3.py`: the
+  product shot gained backdrop above and below, the model photos at the sides.
+  Every seam measured under one level.
+- The gallery order is now: product shot, model front, model quarter left,
+  model quarter right, then Apliiq's sleeve-side render.
+- The product shot replaced the Apliiq front render at the same path, with
+  cache revision `grey-heather-front-photo-20261022`. The render moved to
+  `retired-render/`.
+- Record: `docs/catalog/goal-heritage-hoodie-grey-heather-photos-20261022.json`.
+- Black, Bone and Navy still show Apliiq's renders until their photos land.
+
 ## Original publish checklist
 
 1. Open each of the four design pages on the owner's Apliiq login; copy
