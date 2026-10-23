@@ -46,6 +46,14 @@ ap.add_argument('--erode', type=int, default=1,
                 help='px the garment mask is pulled in before compositing (default 1). Raise to 3 when a '
                      'light garment shows a white rim: its near-white anti-aliased edge then takes the '
                      'shadow treatment instead of being copied')
+ap.add_argument('--rim', choices=['shadow', 'plain'], default='shadow',
+                help='what the --erode band becomes: shadow (default) darkens it like a cast shadow; plain '
+                     'lays the bare backdrop there. Use plain with a rim-lit light garment on a darker '
+                     'backdrop, where a darkened band reads as an outline')
+ap.add_argument('--profile-from', nargs='+', metavar='PHOTO',
+                help='match the backdrop to these photos instead of the studio grey: the RGB gradient is '
+                     'sampled from their outer 4%% columns, top to bottom, and averaged (use the 2:3 photos '
+                     'of the same gallery so a render sits on the same grey as the photos beside it)')
 args = ap.parse_args()
 
 try:
@@ -98,8 +106,28 @@ def white_garment_mask(a, prior):
     return ndimage.binary_fill_holes(m)
 
 
+def photo_profile(paths, steps=41):
+    """RGB backdrop gradient of the given photos: the median of their outer 4%
+    columns at each height fraction, averaged across the photos."""
+    fr = np.linspace(0, 1, steps)
+    curves = []
+    for p in paths:
+        a = load(p)
+        h, w, _ = a.shape
+        band = max(2, int(w * 0.04))
+        edge = np.concatenate([a[:, :band], a[:, w - band:]], 1)
+        rows = np.clip((fr * (h - 1)).round().astype(int), 0, h - 1)
+        curves.append(np.stack([np.median(edge[max(0, r - 3):r + 4].reshape(-1, 3), 0) for r in rows]))
+    return fr, np.mean(curves, 0)
+
+
 def backdrop(h, w):
     ys = np.linspace(0, 1, h)
+    if args.profile_from:
+        fr, rgb = photo_profile(args.profile_from)
+        col = np.stack([np.interp(ys, fr, rgb[:, c]) for c in range(3)], 1)
+        b = np.repeat(col[:, None, :], w, 1)
+        return b + rng.normal(0, GRAIN, b.shape)
     xs = [p[0] for p in PROFILE]
     vs = [p[1] for p in PROFILE]
     col = np.interp(ys, xs, vs)
@@ -143,6 +171,9 @@ B = backdrop(H, W)
 Bs = B[top:top + h, left:left + w]
 
 strength = np.clip(a / WHITE, 0, 1)
+if args.rim == 'plain':
+    # The eroded band is garment edge, not shadow: bare backdrop there.
+    strength[mask] = 1.0
 shadowed = Bs * strength
 composite = alpha[..., None] * a + (1 - alpha[..., None]) * shadowed
 

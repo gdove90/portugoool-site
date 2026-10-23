@@ -140,6 +140,17 @@ The owner supplied a product shot and three model photos for Grey Heather
   Cache revision `bone-front-photo-20261022`. Record:
   `docs/catalog/goal-heritage-hoodie-bone-photos-20261022.json`. All four
   Heritage colours now lead with the owner's photos.
+- Background match (owner: "fix the background then"): the four sleeve-side
+  renders sat on the lighter studio grey (195 to 223), while the owner's
+  photos beside them sit on darker greys (about 155 to 190 at the top). Each
+  was re-rendered with `scripts/studio-backdrop-product-shot.py
+  --profile-from <that colour's four photos>`, so its backdrop takes the
+  photos' own RGB gradient: Black 170 to 205, Grey Heather 157 to 191, Bone
+  160 to 195, Navy 172 to 218. Black and Navy keep their mask settings.
+  On the darker grey, the old 6 px darkened rim of Grey Heather and Bone
+  read as an outline. They were redone with `--erode 5 --rim plain` (new
+  option: the rim band takes the bare backdrop instead of a shadow). Cache
+  revision `sleeve-matched-20261022`.
 
 ## Original publish checklist
 

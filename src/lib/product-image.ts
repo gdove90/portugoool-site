@@ -26,6 +26,12 @@ export function catalogImageSrc(src: string): string {
     "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp": "black-front-photo-20261022",
     "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
     "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp": "bone-front-photo-20261022",
+    // Heritage sleeve-side renders re-rendered on each gallery's own photo
+    // backdrop (owner: fix the background) instead of the studio grey.
+    "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp": "sleeve-matched-20261022",
+    "/products/goal-heritage-hoodie-grey-heather-catalog-product-sleeve-20261022.webp": "sleeve-matched-20261022",
+    "/products/goal-heritage-hoodie-bone-catalog-product-sleeve-20261022.webp": "sleeve-matched-20261022",
+    "/products/goal-heritage-hoodie-navy-catalog-product-sleeve-20261022.webp": "sleeve-matched-20261022",
   };
   const revision = replaced[url.pathname]
     ? replaced[url.pathname]
