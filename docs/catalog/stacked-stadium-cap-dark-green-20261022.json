@@ -1,0 +1,93 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000010",
+  "slug": "goal-athletics-wordmark-cap",
+  "colorway": "Dark Green/Natural",
+  "source": "Four catalog photos supplied by the owner in the Claude session on 2026-10-22 (square screenshots, about 622 x 625), with the instruction to remove the cap photo showing the supplier's brim sticker; originals preserved unchanged in designs/60_stacked-stadium-cap-dark-green-photos-2026-10-22/as-received/.",
+  "export": "WebP quality 92, native scale. The light screenshot edge lines were trimmed and the backdrop extended to the 2:3 model-photo frame (designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md) with scripts/frame-model-photo-2x3.py; no resizing, recoloring or retouching of the original pixels.",
+  "replaces": [
+    "/products/goal-wordmark-cap-dark-green.webp (the only Dark Green image, which showed the supplier's sticker on the visor; sha256 786bc5b79c903adceaf8be47069e9a074ea6ba89739be710bf79c05f9b5ad908; moved to designs/60_stacked-stadium-cap-dark-green-photos-2026-10-22/retired-render/)"
+  ],
+  "galleryOrder": "Product shot first, then model front, three-quarter and side, as on the other colours.",
+  "images": [
+    {
+      "order": 1,
+      "view": "product-front",
+      "sourceFilename": "dark-green-product-front-as-received.png",
+      "receivedAs": "61.png",
+      "sourceSha256": "0b63d5b4409b55c0ffebb14efab295aba87a297973978cbeff57dc00a10a9049",
+      "sourceBytes": 502677,
+      "sourceDimensions": [
+        622,
+        627
+      ],
+      "framing": "Square source with a 1 px light line along the top and left edges (screenshot crop). Those lines and the seam rows were dropped, then the backdrop extended above and below to 2:3.",
+      "dimensions": [
+        621,
+        932
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp",
+      "webpSha256": "baa1f500e33c595859ae46dbfa907dc890df778d8781b895fedb456f24ad6bad",
+      "webpBytes": 54558
+    },
+    {
+      "order": 2,
+      "view": "model-front",
+      "sourceFilename": "dark-green-model-front-as-received.png",
+      "receivedAs": "62.png",
+      "sourceSha256": "308fa6a6904f693cc67e432973527d7fc9460e55d628921ae34ca35760584b07",
+      "sourceBytes": 474520,
+      "sourceDimensions": [
+        622,
+        623
+      ],
+      "framing": "Square head-and-shoulders source with 5 white rows under the tee and a 2 px light line on the right (screenshot crop). Those were dropped, the photo kept at the bottom of the canvas and the backdrop extended above to 2:3 (--extend-anchor end).",
+      "dimensions": [
+        620,
+        930
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-dark-green-catalog-model-front-20261022.webp",
+      "webpSha256": "497ad343c7165fe05557a8f805b88c9ca2dd33502620b1cdb6f5c2049ca02cc9",
+      "webpBytes": 46604
+    },
+    {
+      "order": 3,
+      "view": "model-three-quarter",
+      "sourceFilename": "dark-green-model-three-quarter-as-received.png",
+      "receivedAs": "60.png",
+      "sourceSha256": "b38c37c78c4089b65823851c1acf9d1d7cfa59c48c9c86dd75c617c3ef5ff2a6",
+      "sourceBytes": 510958,
+      "sourceDimensions": [
+        622,
+        627
+      ],
+      "framing": "Square head-and-shoulders source with a 1 px light line along the top and a 2 px line on the right (screenshot crop). Those were dropped, the photo kept at the bottom of the canvas and the backdrop extended above to 2:3 (--extend-anchor end).",
+      "dimensions": [
+        620,
+        930
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-dark-green-catalog-model-three-quarter-20261022.webp",
+      "webpSha256": "8b59fa4eea35c3e8c26610fce89509ce0764c33107fe8ba696e970c856aa406a",
+      "webpBytes": 55712
+    },
+    {
+      "order": 4,
+      "view": "model-side",
+      "sourceFilename": "dark-green-model-side-as-received.png",
+      "receivedAs": "63.png",
+      "sourceSha256": "6df73c24d5859f0cf2493f7375ca22f5a3423508fc511ef51b930044dd9364f2",
+      "sourceBytes": 486722,
+      "sourceDimensions": [
+        622,
+        623
+      ],
+      "framing": "Square head-and-shoulders source with 5 white rows under the tee and a 1 px light line on the left (screenshot crop). Those were dropped, the photo kept at the bottom of the canvas and the backdrop extended above to 2:3 (--extend-anchor end).",
+      "dimensions": [
+        621,
+        932
+      ],
+      "deployedPath": "/products/goal-wordmark-cap-dark-green-catalog-model-side-20261022.webp",
+      "webpSha256": "10b4f31fc7e46072edf85e59b993218894939e1e333e6db27cbc9c2a61ec0f95",
+      "webpBytes": 46858
+    }
+  ]
+}

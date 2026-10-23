@@ -20,8 +20,8 @@ const HATS = {
     for (const variant of product.colorVariants) {
       const id = hat.variants[variant.name];
       assert.deepEqual(f.resolveApliiqSku(hat.id, variant.name, 'OS'), { apliiqProductId: id, sku: `APQ-${id}S34A1` }, `${slug} ${variant.name}`);
-      assert.equal(variant.images.length, 1);
-      assert(fs.existsSync('public' + variant.images[0].src), variant.images[0].src);
+      assert(variant.images.length >= 1, `${slug} ${variant.name} has images`);
+      for (const image of variant.images) assert(fs.existsSync('public' + image.src), image.src);
       variants++;
     }
   }

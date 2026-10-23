@@ -69,10 +69,7 @@ const GA_BIG_TEE_PRODUCT_IMAGE = /^\/products\/goal-ga-big-tee-(?:black|true-roy
 const GA_MINIMAL_PRODUCT_IMAGE = /^\/products\/goal-ga-minimal-(?:black|true-royal|true-red)-catalog-product-(?:front|back)-20261022\.webp$/;
 // The print-detail view was retired 2026-10-22 (owner instruction); its file left public/products.
 const GA_MINIMAL_WHITE_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-white-black-red-catalog-(?:product-front|product-back|model-front|model-three-quarter|model-rear)-20261014\.webp$/;
-const STADIUM_CAP_CATALOG_IMAGE = /^\/products\/goal-wordmark-cap-(?:black|royal|red)-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
-// Dark Green still shows Apliiq's own render (no photos yet) and is listed
-// with the other colours, so the image optimizer must reach it too.
-const STADIUM_CAP_DARK_GREEN_IMAGE = /^\/products\/goal-wordmark-cap-dark-green\.webp$/;
+const STADIUM_CAP_CATALOG_IMAGE = /^\/products\/goal-wordmark-cap-(?:black|royal|red|dark-green)-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
 const GA_MATCHDAY_CAP_CATALOG_IMAGE = /^\/products\/goal-monogram-cap-(?:black|red|royal|dark-green)-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
 const GA_MINIMAL_SHORTS_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-shorts-(?:black|ink-blue|shadow)-catalog-(?:product-front|model-front|print-detail)-20261022\.webp$/;
 const GA_MINIMAL_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-(?:true-royal|black|true-red)-catalog-model-(?:front|front-quarter|rear|rear-quarter)-20261015\.webp$/;
@@ -81,7 +78,7 @@ const LOCKUP_HOODIE_CATALOG_IMAGE = /^\/products\/goal-lockup-hoodie-(?:black|gr
 const HERITAGE_HOODIE_CATALOG_IMAGE = /^\/products\/goal-heritage-hoodie-(?:black|grey-heather|bone|navy)-catalog-(?:product-front|model-(?:front|quarter-left|quarter-right))-20261022\.webp$/;
 
 function isPublic(pathname: string): boolean {
-  return ST720_IMAGE.test(pathname) || GA_MINIMAL_WHITE_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_PRODUCT_IMAGE.test(pathname) || GA_BIG_TEE_PRODUCT_IMAGE.test(pathname) || GA_MINIMAL_SHORTS_CATALOG_IMAGE.test(pathname) || GA_MATCHDAY_CAP_CATALOG_IMAGE.test(pathname) || STADIUM_CAP_CATALOG_IMAGE.test(pathname) || STADIUM_CAP_DARK_GREEN_IMAGE.test(pathname) || GA_MINIMAL_MODEL_CATALOG_IMAGE.test(pathname) || GA_BIG_TEE_MODEL_CATALOG_IMAGE.test(pathname) || LOCKUP_HOODIE_CATALOG_IMAGE.test(pathname) || HERITAGE_HOODIE_CATALOG_IMAGE.test(pathname) ||(TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
+  return ST720_IMAGE.test(pathname) || GA_MINIMAL_WHITE_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_PRODUCT_IMAGE.test(pathname) || GA_BIG_TEE_PRODUCT_IMAGE.test(pathname) || GA_MINIMAL_SHORTS_CATALOG_IMAGE.test(pathname) || GA_MATCHDAY_CAP_CATALOG_IMAGE.test(pathname) || STADIUM_CAP_CATALOG_IMAGE.test(pathname) ||GA_MINIMAL_MODEL_CATALOG_IMAGE.test(pathname) || GA_BIG_TEE_MODEL_CATALOG_IMAGE.test(pathname) || LOCKUP_HOODIE_CATALOG_IMAGE.test(pathname) || HERITAGE_HOODIE_CATALOG_IMAGE.test(pathname) ||(TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
 export async function middleware(req: NextRequest) {

@@ -3148,7 +3148,33 @@ export const products: Product[] = [
         supplierColor: "Dark Green/Natural",
         hex: "#0B3D2E",
         skuFragment: "GREEN",
-        images: [{ src: "/products/goal-wordmark-cap-dark-green.webp", alt: "Stacked Stadium Cap with dark green visor, front view" }],
+        // Dark Green/Natural shows the owner's four catalog photos (2026-10-22),
+        // product shot first; the earlier image, which showed the supplier's
+        // sticker on the visor, was retired. Records:
+        // designs/60_stacked-stadium-cap-dark-green-photos-2026-10-22/ and
+        // docs/catalog/stacked-stadium-cap-dark-green-20261022.json.
+        images: [
+          {
+            src: "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp",
+            alt: "Stacked Stadium Cap in Dark Green/Natural, front view: natural crown with the dark green GOAL ATHLETICS wordmark and bar embroidered on the front panel and a dark green visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-dark-green-catalog-model-front-20261022.webp",
+            alt: "Model facing the camera wearing the Dark Green/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-dark-green-catalog-model-three-quarter-20261022.webp",
+            alt: "Same model in a three-quarter turn, showing the dark green wordmark on the natural front panel and the dark green visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-wordmark-cap-dark-green-catalog-model-side-20261022.webp",
+            alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the dark green visor",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+        ],
       },
     ],
     sizes: ["OS"],
