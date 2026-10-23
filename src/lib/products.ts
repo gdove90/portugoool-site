@@ -3680,8 +3680,8 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
-        alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
+        alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",
@@ -3699,11 +3699,28 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#1E1E1E",
         skuFragment: "BLACK",
+        // The owner's product shot and model photos (2026-10-22) lead; Apliiq's
+        // sleeve-side render stays last for the sleeve detail.
         images: [
           {
             src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
-            alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Black Heritage Hoodie with the white and red GA monogram on the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-model-quarter-left-20261022.webp",
+            alt: "Same model turned to the left in the Black Heritage Hoodie, white and red GA monogram on the chest and the left sleeve",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-black-catalog-model-quarter-right-20261022.webp",
+            alt: "Same model turned to the right in the Black Heritage Hoodie, white and red GA monogram on the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",

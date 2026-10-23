@@ -121,7 +121,14 @@ The owner supplied a product shot and three model photos for Grey Heather
   cache revision `grey-heather-front-photo-20261022`. The render moved to
   `retired-render/`.
 - Record: `docs/catalog/goal-heritage-hoodie-grey-heather-photos-20261022.json`.
-- Black, Bone and Navy still show Apliiq's renders until their photos land.
+- Black followed the same afternoon in the same order and the same way.
+  Its product shot was 1199 x 1312, extended above and below to 1199 x 1798.
+  The three model photos were 510 x 1024, extended at the sides to 683 x 1024.
+  Every seam measured under one level. Cache revision
+  `black-front-photo-20261022`. Record:
+  `docs/catalog/goal-heritage-hoodie-black-photos-20261022.json`. Black is the
+  card default, so its product shot is now the collection card.
+- Bone and Navy still show Apliiq's renders until their photos land.
 
 ## Original publish checklist
 
