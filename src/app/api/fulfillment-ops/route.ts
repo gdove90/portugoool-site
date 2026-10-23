@@ -114,10 +114,13 @@ export async function POST(req: NextRequest) {
     if (!secretKey) return NextResponse.json({ error: "Stripe is not configured." }, { status: 503 });
     const stripe = new Stripe(secretKey);
     try {
+      const account = await stripe.accounts.retrieve();
       const endpoints = await stripe.webhookEndpoints.list({ limit: 20 });
       const undelivered = await stripe.events.list({ delivery_success: false, limit: 20 });
       return NextResponse.json({
         livemode: liveKey,
+        // Which Stripe business the deploy's key belongs to: id and names only.
+        account: { id: account.id, name: account.settings?.dashboard?.display_name ?? account.business_profile?.name ?? null },
         endpoints: endpoints.data.map((e) => ({
           id: e.id, url: e.url, status: e.status, livemode: e.livemode, enabled_events: e.enabled_events,
           created: new Date(e.created * 1000).toISOString(), api_version: e.api_version, description: e.description,
