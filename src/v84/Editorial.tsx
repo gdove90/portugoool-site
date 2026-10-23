@@ -21,5 +21,10 @@ export default function Editorial({ route }: { route: "home" | "men" | "women" |
     }
     return <div key={key} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: serializeOuter(node) }} />;
   }
-  return <>{parseFragment(mobileImageMarkup(normalizeInterfaceMarkup(referenceExperience().markup(route)))).childNodes.map(render)}</>;
+  // One block wrapper, not a fragment: after a client-side navigation Next.js
+  // scrolls to the page's first element and skips the zero-size
+  // display:contents wrappers above, so a fragment sent it to the first real
+  // block (the catalog grid), below the fold on phones. The wrapper's top is
+  // the page's top, so arrivals land there.
+  return <div>{parseFragment(mobileImageMarkup(normalizeInterfaceMarkup(referenceExperience().markup(route)))).childNodes.map(render)}</div>;
 }

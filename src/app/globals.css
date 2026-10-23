@@ -59,8 +59,6 @@ body {
 
 .v84:has(.migration-preview-note)>#header{background:#0b0b0b;color:#fff}.collection-coming-soon{grid-column:1/-1;padding:64px 24px;text-align:center;background:#ede9e1;color:#171817;width:100%}.collection-coming-soon h2{font:600 clamp(40px,5vw,72px)/1 'Barlow Condensed',sans-serif;margin:20px 0}.collection-coming-soon p{margin:20px auto;max-width:480px}.collection-coming-soon .btn{margin-top:12px}
 .v84>#header.light+.migration-preview-note{margin-top:0}
-/* The Goal Collective, desktop: the hero photo starts at the top of the screen and the shared header floats over it, fully transparent (owner, 2026-10-23). */
-@media (min-width:1024px){.v84:has(.collective-hero)>#header.light{position:absolute;top:0;left:0;right:0;background:transparent;border-bottom-color:rgb(0 0 0/.15)}}
 @media(max-width:350px){.goal-horizontal-lockup{gap:5px}.goal-lockup-strike{width:30px}.goal-lockup-wordmark{width:85px}.goal-lockup-divider{height:21px}}
 
 .goal-web-ga { width:38px; height:auto; flex:none; }
