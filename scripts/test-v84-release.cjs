@@ -2,20 +2,24 @@ const assert = require('node:assert/strict');
 const { parse } = require('parse5');
 const base = process.env.V84_TEST_URL || 'http://127.0.0.1:3184';
 assert.ok(['localhost', '127.0.0.1'].includes(new URL(base).hostname), 'Use an isolated local preview only.');
-const routes = ['/', '/men', '/women', '/shop', '/about', '/whats-your-goool', '/share-your-goals', '/kit-wear', '/references', '/contact', '/faq', '/shipping-returns', '/size-guide', '/privacy', '/terms', '/refunds', '/cart', '/success', '/track-order', '/admin/sign-in', '/share-your-goals/preview/goal', '/share-your-goals/preview/highlight', '/share-your-goals/preview/save'];
+const routes = ['/', '/men', '/women', '/shop', '/about', '/kit-wear', '/references', '/contact', '/faq', '/shipping-returns', '/size-guide', '/privacy', '/terms', '/refunds', '/cart', '/success', '/track-order', '/admin/sign-in', '/share-your-goals/preview/goal', '/share-your-goals/preview/highlight', '/share-your-goals/preview/save'];
 function nodes(root) {
   const result = [];
   function visit(node) { result.push(node); for (const child of node.childNodes || []) visit(child); }
   visit(root); return result;
 }
 async function main() {
+  // Owner-only pages send a signed-out visitor to the owner sign-in.
+  for (const route of ['/whats-your-goool', '/share-your-goals', '/share-your-goals/preview/goal']) {
+    const response = await fetch(base + route, { redirect: 'manual' });
+    assert.ok([303, 307, 308].includes(response.status), route + ' is owner-only, got ' + response.status);
+    assert.equal(new URL(response.headers.get('location'), base).pathname, '/admin/sign-in', route + ' redirects to the owner sign-in');
+  }
   const links = new Set(), assets = new Set(); let checked = 0;
   for (const route of routes) {
     const response = await fetch(base + route); assert.equal(response.status, 200, route);
     const tree = nodes(parse(await response.text()));
     assert.ok(tree.some(n => n.tagName === 'h1'), route + ' needs a heading');
-    const campaignHeading = { '/whats-your-goool': 'What\u2019s yourGOAL?', '/share-your-goals': 'Share yourGOALS!' }[route];
-    if (campaignHeading) assert.equal(nodes(tree.find(n => n.tagName === 'h1')).filter(n => n.nodeName === '#text').map(n => n.value).join(''), campaignHeading, 'Match the rebranded campaign headline');
     const canonical = tree.find(n => n.tagName === 'link' && n.attrs.some(a => a.name === 'rel' && a.value === 'canonical'));
     assert.ok(canonical, route + ' needs a canonical');
     if (route === '/') {
@@ -24,12 +28,12 @@ async function main() {
       const collection = nodes(footer).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === '/shop'));
       assert.ok(collection, 'Footer needs its collection link');
       assert.equal(nodes(collection).filter(node => node.nodeName === '#text').map(node => node.value).join('').trim(), 'The collection', 'Match the approved footer label');
+      // Your Story and Match Highlights are owner-only since 2026-10-22: no
+      // desktop, mobile or footer link reaches them.
       for (const scope of [...tree.filter(node => node.tagName === 'nav'), footer]) {
-        for (const [href, label] of [['/whats-your-goool', 'Your Story'], ['/share-your-goals', 'Match Highlights']]) {
+        for (const href of ['/whats-your-goool', '/share-your-goals']) {
           const link = nodes(scope).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === href));
-          assert.ok(link, 'Shared navigation retains ' + href);
-          const text = nodes(link).filter(node => node.nodeName === '#text').map(node => node.value).join('').trim();
-          assert.ok(text.startsWith(label), 'Desktop, mobile and footer use ' + label);
+          assert.equal(link, undefined, 'Shared navigation no longer links ' + href);
         }
       }
     }
