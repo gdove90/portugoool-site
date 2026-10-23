@@ -3617,11 +3617,6 @@ export const products: Product[] = [
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
-            src: "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-close-20261022.webp",
-            alt: "Same model from waist to knee, front view of the Shadow GA Minimal Shorts showing the drawcord waist, side pockets and the black and red GA monogram on the left leg",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
-          },
-          {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp",
             alt: "Close-up of the black and red GA monogram on the left leg of the Shadow GA Minimal Shorts, just above the hem",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
