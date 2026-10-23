@@ -1,0 +1,27 @@
+{
+  "/v84/assets/hero.png": {
+    "src": "/v84/bolt-v3/hero.png",
+    "desktop": "/v84/bolt-v3/hero-desktop.webp",
+    "mobile": "/v84/bolt-v3/hero-mobile.webp"
+  },
+  "/v84/assets/women.png": {
+    "src": "/v84/bolt-v3/women.png",
+    "desktop": "/v84/bolt-v3/women-desktop.webp",
+    "mobile": "/v84/bolt-v3/women-mobile.webp"
+  },
+  "/v84/assets/goal-campaign.png": {
+    "src": "/v84/bolt-v3/goal-campaign.png",
+    "desktop": "/v84/bolt-v3/goal-campaign-desktop.webp",
+    "mobile": "/v84/bolt-v3/goal-campaign-mobile.webp"
+  },
+  "/v84/assets/collection-editorial.png": {
+    "src": "/v84/bolt-v3/collection-editorial.png",
+    "desktop": "/v84/bolt-v3/collection-editorial-desktop.webp",
+    "mobile": "/v84/bolt-v3/collection-editorial-mobile.webp"
+  },
+  "/v84/assets/goal-darius-descending-stadium.png": {
+    "src": "/v84/bolt-v3/goal-darius-descending-stadium.png",
+    "desktop": "/v84/bolt-v3/goal-darius-descending-stadium-desktop.webp",
+    "mobile": "/v84/bolt-v3/goal-darius-descending-stadium-mobile.webp"
+  }
+}
