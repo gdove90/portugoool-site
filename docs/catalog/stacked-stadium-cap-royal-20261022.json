@@ -12,22 +12,34 @@
     {
       "order": 1,
       "view": "product-front",
-      "sourceFilename": "royal-product-front-as-received.webp",
-      "receivedAs": "32.webp",
-      "sourceSha256": "62523b6ca6fd533d67d2f63abf2d6224a3c7c5a4a4d16b1daf6869a176ac8acd",
-      "sourceBytes": 58934,
+      "sourceFilename": "royal-product-front-v2-as-received.webp",
+      "receivedAs": "69.webp",
+      "sourceSha256": "a06d839bffeab3c31fb03f368a16ca0b60339d8a3eaf276322bb17a1ae6c1411",
+      "sourceBytes": 171490,
       "sourceDimensions": [
-        763,
-        512
+        1024,
+        1536
       ],
-      "framing": "Landscape source. Seam rows dropped, sides trimmed to 600 px about the centre (--crop-width 600, empty backdrop only), then the backdrop extended 195 px above and below to 2:3 (joins 0.0 and 0.56 levels on the outer backdrop columns).",
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
       "dimensions": [
-        600,
-        900
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp",
-      "webpSha256": "e3bae75d05d83f0ec190870d86f1d3e19fff99da6059879ea3abc50b5fbe2083",
-      "webpBytes": 75580
+      "webpSha256": "a06d839bffeab3c31fb03f368a16ca0b60339d8a3eaf276322bb17a1ae6c1411",
+      "webpBytes": 171490,
+      "replacedVersion1": {
+        "sourceFilename": "royal-product-front-as-received.webp",
+        "receivedAs": "32.webp",
+        "sourceSha256": "62523b6ca6fd533d67d2f63abf2d6224a3c7c5a4a4d16b1daf6869a176ac8acd",
+        "webpSha256": "e3bae75d05d83f0ec190870d86f1d3e19fff99da6059879ea3abc50b5fbe2083",
+        "dimensions": [
+          600,
+          900
+        ],
+        "note": "first product shot; replaced on the owner's word on 2026-10-23 by the owner's new front, one of a matching set of three (Red, Royal, Dark Green); file kept in designs/51_stacked-stadium-cap-royal-photos-2026-10-22/retired-render/goal-wordmark-cap-royal-catalog-product-front-owner-v1-20261022.webp"
+      },
+      "cacheRevision": "royal-front-v2-20261023"
     },
     {
       "order": 2,

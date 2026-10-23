@@ -12,22 +12,34 @@
     {
       "order": 1,
       "view": "product-front",
-      "sourceFilename": "dark-green-product-front-as-received.png",
-      "receivedAs": "61.png",
-      "sourceSha256": "0b63d5b4409b55c0ffebb14efab295aba87a297973978cbeff57dc00a10a9049",
-      "sourceBytes": 502677,
+      "sourceFilename": "dark-green-product-front-v2-as-received.webp",
+      "receivedAs": "68.webp",
+      "sourceSha256": "ceffabe2a5f327623db295a4826dba0c90bd94ef21b65c8322f7311213e5bb10",
+      "sourceBytes": 165026,
       "sourceDimensions": [
-        622,
-        627
+        1024,
+        1536
       ],
-      "framing": "Square source with a 1 px light line along the top and left edges (screenshot crop). Those lines and the seam rows were dropped, then the backdrop extended above and below to 2:3.",
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
       "dimensions": [
-        621,
-        932
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp",
-      "webpSha256": "baa1f500e33c595859ae46dbfa907dc890df778d8781b895fedb456f24ad6bad",
-      "webpBytes": 54558
+      "webpSha256": "ceffabe2a5f327623db295a4826dba0c90bd94ef21b65c8322f7311213e5bb10",
+      "webpBytes": 165026,
+      "replacedVersion1": {
+        "sourceFilename": "dark-green-product-front-as-received.png",
+        "receivedAs": "61.png",
+        "sourceSha256": "0b63d5b4409b55c0ffebb14efab295aba87a297973978cbeff57dc00a10a9049",
+        "webpSha256": "baa1f500e33c595859ae46dbfa907dc890df778d8781b895fedb456f24ad6bad",
+        "dimensions": [
+          621,
+          932
+        ],
+        "note": "first product shot; replaced on the owner's word on 2026-10-23 by the owner's new front, one of a matching set of three (Red, Royal, Dark Green); file kept in designs/60_stacked-stadium-cap-dark-green-photos-2026-10-22/retired-render/goal-wordmark-cap-dark-green-catalog-product-front-owner-v1-20261022.webp"
+      },
+      "cacheRevision": "dark-green-front-v2-20261023"
     },
     {
       "order": 2,

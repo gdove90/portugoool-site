@@ -28,3 +28,12 @@ The Apliiq render for Royal/Natural (`goal-wordmark-cap-royal.webp`) left
 their renders on the site until their photos arrive. Checksums and sizes:
 `docs/catalog/stacked-stadium-cap-royal-20261022.json`. The cap stays
 visible and not for sale.
+
+## Product shot v2 (2026-10-23)
+
+Owner instruction: "Replace these three front hat picks." The new front (69.webp) is one of a
+matching set of three fronts (Red, Royal, Dark Green), 1024 x 1536, already 2:3 on a clean backdrop,
+deployed byte for byte at the same path. Cache revision
+`royal-front-v2-20261023`. The first version is in `retired-render/`
+(`*-owner-v1-*`); the new original is in `as-received/`. Record:
+`docs/catalog/stacked-stadium-cap-royal-20261022.json`.

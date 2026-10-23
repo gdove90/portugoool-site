@@ -12,22 +12,34 @@
     {
       "order": 1,
       "view": "product-front",
-      "sourceFilename": "red-product-front-as-received.png",
-      "receivedAs": "35.png",
-      "sourceSha256": "7ca23da4acc03670c4980a8d5bdfd19fe75325c61c7d03f74da44e45bf565f20",
-      "sourceBytes": 452632,
+      "sourceFilename": "red-product-front-v2-as-received.webp",
+      "receivedAs": "67.webp",
+      "sourceSha256": "e4fdda08c4ad929519ceb13bb302df48629b3a5e63134b41bd404f26469ed7fc",
+      "sourceBytes": 184612,
       "sourceDimensions": [
-        764,
-        510
+        1024,
+        1536
       ],
-      "framing": "Landscape source. Seam rows dropped, sides trimmed to 600 px about the centre (--crop-width 600, empty backdrop only), then the backdrop extended 196 px above and below to 2:3 (joins 0.18 and 0.09 levels on the outer backdrop columns).",
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
       "dimensions": [
-        600,
-        900
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp",
-      "webpSha256": "cf0bea14fd786b6b2c8549b36ea6c885edf92835b294309048b3d57601b23c33",
-      "webpBytes": 44660
+      "webpSha256": "e4fdda08c4ad929519ceb13bb302df48629b3a5e63134b41bd404f26469ed7fc",
+      "webpBytes": 184612,
+      "replacedVersion1": {
+        "sourceFilename": "red-product-front-as-received.png",
+        "receivedAs": "35.png",
+        "sourceSha256": "7ca23da4acc03670c4980a8d5bdfd19fe75325c61c7d03f74da44e45bf565f20",
+        "webpSha256": "cf0bea14fd786b6b2c8549b36ea6c885edf92835b294309048b3d57601b23c33",
+        "dimensions": [
+          600,
+          900
+        ],
+        "note": "first product shot; replaced on the owner's word on 2026-10-23 by the owner's new front, one of a matching set of three (Red, Royal, Dark Green); file kept in designs/52_stacked-stadium-cap-red-photos-2026-10-22/retired-render/goal-wordmark-cap-red-catalog-product-front-owner-v1-20261022.webp"
+      },
+      "cacheRevision": "red-front-v2-20261023"
     },
     {
       "order": 2,
