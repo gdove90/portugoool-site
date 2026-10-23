@@ -14,7 +14,8 @@ let passed=0;function check(name,run){run();passed++;console.log('PASS '+name);}
 const products=load(root+'/src/lib/products.ts').getProducts(),seo=load(root+'/src/lib/seo.ts'),catalog=load(root+'/src/v84/catalog-data.ts'),gallery=load(root+'/src/v84/product-gallery-images.ts'),fulfillment=load(root+'/src/lib/fulfillment.ts');
 const variants=s=>s.hasVariant||[s];let count=0;const skus=new Set();
 check('every active product variant matches the approved price, SKU, color, size and gallery',()=>{
- assert.equal(products.length,9);
+ // Seven catalog rows since 2026-10-22: five clothing products for sale and the two caps (not for sale).
+ assert.equal(products.length,7);
  for(const p of products){
   const s=seo.productJsonLd(p),entries=variants(s);assert.equal(s.name,p.name);
   assert.equal(entries.length,(p.colorVariants?.length||1)*p.sizes.length);
@@ -24,7 +25,7 @@ check('every active product variant matches the approved price, SKU, color, size
    const index=p.colorVariants?.findIndex(c=>c.name===color)||0;
    assert.equal(v.image[0],seo.absolute(gallery.productGalleryImages(p,index)[0].src));
    assert.equal(v.sku,fulfillment.resolveApliiqSku(p.id,color,size)?.sku);assert.ok(v.sku);assert.ok(!skus.has(v.sku));skus.add(v.sku);
-   assert.equal(v.offers.price,(p.priceCents/100).toFixed(2));assert.equal(v.offers.priceCurrency,'USD');assert.equal(v.offers.availability,'https://schema.org/InStock');assert.equal(v.offers.url,v.url);
+   assert.equal(v.offers.price,(p.priceCents/100).toFixed(2));assert.equal(v.offers.priceCurrency,'USD');assert.equal(v.offers.availability,p.availableForSale?'https://schema.org/InStock':'https://schema.org/OutOfStock');assert.equal(v.offers.url,v.url);
    assert.equal(v.gtin,undefined);assert.equal(v.aggregateRating,undefined);assert.equal(v.review,undefined);
    for(const shipping of v.offers.shippingDetails)assert.equal(shipping.shippingRate.value,p.priceCents>=7000?'0.00':'6.95');
    assert.equal(v.offers.hasMerchantReturnPolicy.returnPolicyCategory,'https://schema.org/MerchantReturnNotPermitted');
@@ -32,14 +33,16 @@ check('every active product variant matches the approved price, SKU, color, size
  }
 });
 check('sale, sold-out, inactive and coming-soon states never emit purchasable offers',()=>{
- const p=products[0];
+ const p=products.find(x=>x.availableForSale);
  for(const change of [{availableForSale:false},{dropLimit:1,dropSoldCount:1},{isActive:false}])assert.ok(variants(seo.productJsonLd({...p,...change})).every(v=>v.offers.availability==='https://schema.org/OutOfStock'));
  const gated=seo.productJsonLd({...p,colorVariants:p.colorVariants.map((v,i)=>({...v,comingSoon:i===0}))});
  assert.equal(gated.hasVariant[0].offers.availability,'https://schema.org/OutOfStock');assert.equal(gated.hasVariant.at(-1).offers.availability,'https://schema.org/InStock');
  assert.ok(variants(seo.productJsonLd({...p,priceCents:0})).every(v=>v.offers===undefined));
 });
 check('public sitemap excludes private, retired and gated internal routes without invented dates',()=>{
- const rows=load(root+'/src/app/sitemap.ts').default();assert.equal(rows.length,26);assert.equal(new Set(rows.map(r=>r.url)).size,26);
+ // 22 since 2026-10-22: seven catalog rows and the public pages, with Your Story and Match Highlights owner-only.
+ const rows=load(root+'/src/app/sitemap.ts').default();assert.equal(rows.length,22);assert.equal(new Set(rows.map(r=>r.url)).size,22);
+ assert.ok(!rows.some(r=>/\/(whats-your-goool|share-your-goals)(\/|$)/.test(new URL(r.url).pathname)));
  for(const row of rows){assert.ok(row.url.startsWith('https://goalathletics.shop/'));assert.equal(row.lastModified,undefined);assert.ok(!/\/(cart|success|track-order|gate|admin|api|print)(\/|$)/.test(new URL(row.url).pathname));}
  assert.ok(rows.some(r=>r.url.endsWith('/the-goal-collective')));
  env.STORE_OPEN='false';
