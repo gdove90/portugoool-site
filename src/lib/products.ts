@@ -3935,11 +3935,27 @@ export const products: Product[] = [
         supplierColor: "Bone",
         hex: "#CFCAC7",
         skuFragment: "BONE",
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Bone, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-bone-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Bone Lockup Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-bone-catalog-model-quarter-left-20261022.webp",
+            alt: "Same model turned to the left in the Bone Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-bone-catalog-model-quarter-right-20261022.webp",
+            alt: "Same model turned to the right in the Bone Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },

@@ -113,7 +113,12 @@ Navy colourway (cream lockup).
   The renders moved to `retired-render/`.
 - The gate allowlist now covers the model views. Records:
   `docs/catalog/goal-lockup-hoodie-{black,navy}-photos-20261022.json`.
-- Grey Heather and Bone still show the Apliiq renders.
+- Bone followed: four 1024 x 1536 photos, already 2:3, deployed byte for
+  byte (product shot, model front, quarter left, quarter right). The colour
+  was read from the fabric (warm, about 203/198/193, against Grey Heather's
+  neutral grey). Cache revision `bone-front-photo-20261022`. Record:
+  `docs/catalog/goal-lockup-hoodie-bone-photos-20261022.json`.
+- Grey Heather still shows the Apliiq render.
 
 ## Original publish checklist
 

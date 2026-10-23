@@ -1,0 +1,95 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000015",
+  "slug": "goal-athletics-lockup-hoodie",
+  "source": "Owner's product shot and three model photos of the Bone Lockup Hoodie (colour identified from the garment: warm RGB about 203/198/193 against the Bone swatch, Grey Heather being neutral), supplied in the Claude session on 2026-10-22; originals unchanged in designs/59_lockup-hoodie-ind4000-2026-10-22/as-received-owner/.",
+  "export": "Original WebP files, byte for byte (already 2:3).",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Owner product front, model front, model quarter left, model quarter right.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Bone",
+      "view": "product-front",
+      "sourceFilename": "bone-product-front-as-received.webp",
+      "receivedAs": "43.webp",
+      "sourceSha256": "83c6a806c01cb79d849d2a57e79a2b04a027f9357ed3d6b000057b4f3c85e079",
+      "sourceBytes": 136506,
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
+      "webpSha256": "83c6a806c01cb79d849d2a57e79a2b04a027f9357ed3d6b000057b4f3c85e079",
+      "webpBytes": 136506,
+      "replaces": "Apliiq render at the same path (moved to designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/); cache revision bone-front-photo-20261022 in src/lib/product-image.ts"
+    },
+    {
+      "order": 2,
+      "colorway": "Bone",
+      "view": "model-front",
+      "sourceFilename": "bone-model-front-as-received.webp",
+      "receivedAs": "40.webp",
+      "sourceSha256": "3db87df0bebd06641db03d4e318f5cae936b850b6ee4529c254ecca8f8e0881f",
+      "sourceBytes": 68016,
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-bone-catalog-model-front-20261022.webp",
+      "webpSha256": "3db87df0bebd06641db03d4e318f5cae936b850b6ee4529c254ecca8f8e0881f",
+      "webpBytes": 68016
+    },
+    {
+      "order": 3,
+      "colorway": "Bone",
+      "view": "model-quarter-left",
+      "sourceFilename": "bone-model-quarter-left-as-received.webp",
+      "receivedAs": "41.webp",
+      "sourceSha256": "bf48646151a8d0c0dc7de189b8fdf74dd4af54210793b7505cc70dc4b7b6fee0",
+      "sourceBytes": 76188,
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-bone-catalog-model-quarter-left-20261022.webp",
+      "webpSha256": "bf48646151a8d0c0dc7de189b8fdf74dd4af54210793b7505cc70dc4b7b6fee0",
+      "webpBytes": 76188
+    },
+    {
+      "order": 4,
+      "colorway": "Bone",
+      "view": "model-quarter-right",
+      "sourceFilename": "bone-model-quarter-right-as-received.webp",
+      "receivedAs": "42.webp",
+      "sourceSha256": "71e3ca38727d8428824d93f366b2b015a67e7528956debcae663168cd821e644",
+      "sourceBytes": 64768,
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-bone-catalog-model-quarter-right-20261022.webp",
+      "webpSha256": "71e3ca38727d8428824d93f366b2b015a67e7528956debcae663168cd821e644",
+      "webpBytes": 64768
+    }
+  ]
+}
