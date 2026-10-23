@@ -1,0 +1,95 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000015",
+  "slug": "goal-athletics-lockup-hoodie",
+  "source": "Owner's product shot and model photos of the Navy Lockup Hoodie (sent as 'ink blue'), supplied in the Claude session on 2026-10-22; originals unchanged in designs/59_lockup-hoodie-ind4000-2026-10-22/as-received-owner/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md; original pixels untouched; seams under one level.",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Owner product front, then the model views.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Navy",
+      "view": "product-front",
+      "sourceFilename": "navy-product-front-as-received.webp",
+      "receivedAs": "38.webp",
+      "sourceSha256": "5553054977b687fcc59c8becc630f4aace2d7a7a67a7aef2c10df0c220308e3f",
+      "sourceBytes": 111334,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "1086 x 1448 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1086,
+        1629
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp",
+      "webpSha256": "1a4d71d9fb9cc3b226068cd46c158625d82e3ab2e98b50f33882399a5e8319d2",
+      "webpBytes": 103168,
+      "replaces": "Apliiq render at the same path (moved to designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/); cache revision navy-front-photo-20261022 in src/lib/product-image.ts"
+    },
+    {
+      "order": 2,
+      "colorway": "Navy",
+      "view": "model-front",
+      "sourceFilename": "navy-model-front-as-received.webp",
+      "receivedAs": "35.webp",
+      "sourceSha256": "599c0d7178f19945b7ce042655381a5d368b1575b3419d5fdc9a76dfa39d1927",
+      "sourceBytes": 55958,
+      "sourceDimensions": [
+        1087,
+        1447
+      ],
+      "framing": "1087 x 1447 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1087,
+        1630
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-navy-catalog-model-front-20261022.webp",
+      "webpSha256": "94a17ba2611d46424da9249c3bafbbd45d68e25c62cbfbbeaaeefc23234475e8",
+      "webpBytes": 59200
+    },
+    {
+      "order": 3,
+      "colorway": "Navy",
+      "view": "model-quarter-left",
+      "sourceFilename": "navy-model-quarter-left-as-received.webp",
+      "receivedAs": "36.webp",
+      "sourceSha256": "d46536f46ecd00739e57a84531ee86a50260f6a487e1d4024e12d0a9e77a623d",
+      "sourceBytes": 60056,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "1086 x 1448 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1086,
+        1629
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-navy-catalog-model-quarter-left-20261022.webp",
+      "webpSha256": "48aa92ef8773b5a103416381bfb19d91436a44b0c3b48632970034753a7e8a7d",
+      "webpBytes": 61648
+    },
+    {
+      "order": 4,
+      "colorway": "Navy",
+      "view": "model-quarter-right",
+      "sourceFilename": "navy-model-quarter-right-as-received.webp",
+      "receivedAs": "37.webp",
+      "sourceSha256": "6763ac024f819e699cdc96635966d1504bbfcb8594d958af80dccca5038ec1ff",
+      "sourceBytes": 59130,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "1086 x 1448 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1086,
+        1629
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-navy-catalog-model-quarter-right-20261022.webp",
+      "webpSha256": "c7989c5a5f6d469f2033030a80af7bd89466d616ef8d9f409f30811ec5ba7fa0",
+      "webpBytes": 61750
+    }
+  ]
+}

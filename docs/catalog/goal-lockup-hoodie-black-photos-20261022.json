@@ -1,0 +1,74 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000015",
+  "slug": "goal-athletics-lockup-hoodie",
+  "source": "Owner's product shot and model photos of the Black Lockup Hoodie, supplied in the Claude session on 2026-10-22; originals unchanged in designs/59_lockup-hoodie-ind4000-2026-10-22/as-received-owner/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md; original pixels untouched; seams under one level.",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Owner product front, then the model views.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Black",
+      "view": "product-front",
+      "sourceFilename": "black-product-front-as-received.webp",
+      "receivedAs": "34.webp",
+      "sourceSha256": "247c915c3db69d30fd71f61f9e1b1f90d94f557c3c60bee6d6f82ddd9fd66a81",
+      "sourceBytes": 71674,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "1086 x 1448 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1086,
+        1629
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
+      "webpSha256": "43f976a55f25bfc8b8a42f530bfc2ef841874ef6a047a1135ffcba40ba6da108",
+      "webpBytes": 60626,
+      "replaces": "Apliiq render at the same path (moved to designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/); cache revision black-front-photo-20261022 in src/lib/product-image.ts"
+    },
+    {
+      "order": 2,
+      "colorway": "Black",
+      "view": "model-front",
+      "sourceFilename": "black-model-front-as-received.webp",
+      "receivedAs": "32.webp",
+      "sourceSha256": "47d3d84c4f1ae9ba47c56834a97fa3a8f5ccd62935ca8be31a25efa8d3b64691",
+      "sourceBytes": 59344,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "1086 x 1448 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1086,
+        1629
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-black-catalog-model-front-20261022.webp",
+      "webpSha256": "304214f62856d5e62a955156fae9c021a6da4ce1d96add206054e2f36f4cbb14",
+      "webpBytes": 59900
+    },
+    {
+      "order": 3,
+      "colorway": "Black",
+      "view": "model-quarter-right",
+      "sourceFilename": "black-model-quarter-right-as-received.webp",
+      "receivedAs": "33.webp",
+      "sourceSha256": "4a7560fa2406f48a6c5046a79f938cb7874ff7f2fe6fa40b9f661f3289465719",
+      "sourceBytes": 64778,
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "framing": "1086 x 1448 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1086,
+        1629
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-black-catalog-model-quarter-right-20261022.webp",
+      "webpSha256": "5117cf311b1be5978b0a4a6510d06b9e8c3dd25721ba00e6329dd50591f16943",
+      "webpBytes": 65568
+    }
+  ]
+}

@@ -3884,7 +3884,7 @@ export const products: Product[] = [
       {
         src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
         alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3893,11 +3893,22 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#1E1E1E",
         skuFragment: "BLACK",
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-black-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Black Lockup Hoodie with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-black-catalog-model-quarter-right-20261022.webp",
+            alt: "Same model turned to the right in the Black Lockup Hoodie, white and red GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3932,11 +3943,27 @@ export const products: Product[] = [
         supplierColor: "Navy",
         hex: "#2A3043",
         skuFragment: "NAVY",
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Navy, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-navy-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Navy Lockup Hoodie with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-navy-catalog-model-quarter-left-20261022.webp",
+            alt: "Same model turned to the left in the Navy Lockup Hoodie, cream GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-lockup-hoodie-navy-catalog-model-quarter-right-20261022.webp",
+            alt: "Same model turned to the right in the Navy Lockup Hoodie, cream GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },

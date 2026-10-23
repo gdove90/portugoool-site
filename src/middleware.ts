@@ -74,7 +74,7 @@ const GA_MATCHDAY_CAP_CATALOG_IMAGE = /^\/products\/goal-monogram-cap-(?:black|r
 const GA_MINIMAL_SHORTS_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-shorts-(?:black|ink-blue|shadow)-catalog-(?:model-front|model-front-close|print-detail)-20261022\.webp$/;
 const GA_MINIMAL_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-(?:true-royal|black|true-red)-catalog-model-(?:front|front-quarter|rear|rear-quarter)-20261015\.webp$/;
 const GA_BIG_TEE_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-big-tee-(?:black|true-royal|true-red|white-black-red)-catalog-model-(?:front|three-quarter|rear)-20261020\.webp$/;
-const LOCKUP_HOODIE_CATALOG_IMAGE = /^\/products\/goal-lockup-hoodie-(?:black|grey-heather|bone|navy)-catalog-product-front-20261022\.webp$/;
+const LOCKUP_HOODIE_CATALOG_IMAGE = /^\/products\/goal-lockup-hoodie-(?:black|grey-heather|bone|navy)-catalog-(?:product-front|model-(?:front|quarter-left|quarter-right))-20261022\.webp$/;
 const HERITAGE_HOODIE_CATALOG_IMAGE = /^\/products\/goal-heritage-hoodie-(?:black|grey-heather|bone|navy)-catalog-(?:product-(?:front|sleeve)|model-(?:front|quarter-left|quarter-right))-20261022\.webp$/;
 
 function isPublic(pathname: string): boolean {

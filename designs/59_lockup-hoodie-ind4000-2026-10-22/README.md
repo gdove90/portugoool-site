@@ -98,6 +98,22 @@ Read off each design's own page on the owner's Apliiq login:
   in each gallery), a physical sample, and the hi-res link status on each
   placement (not read).
 
+### Owner photos for Black and Navy (later on 2026-10-22)
+
+The owner sent "4 ink blue images and the 3 black images". Ink blue is the
+Navy colourway (cream lockup).
+- Black: product shot, model front, model quarter right.
+- Navy: product shot, model front, model quarter left, model quarter right.
+- All seven are about 1086 x 1448 on clean backdrops, with no padding and
+  nothing touching an edge. Each was extended above and below to 2:3
+  (1086 x 1629) with `scripts/frame-model-photo-2x3.py`; seams 0.23 to 0.62.
+- The product shots replaced the Apliiq renders at the same paths, with
+  cache revisions `black-front-photo-20261022` and `navy-front-photo-20261022`.
+  The renders moved to `retired-render/`.
+- The gate allowlist now covers the model views. Records:
+  `docs/catalog/goal-lockup-hoodie-{black,navy}-photos-20261022.json`.
+- Grey Heather and Bone still show the Apliiq renders.
+
 ## Original publish checklist
 
 1. Open each of the four design pages on the owner's Apliiq login; copy

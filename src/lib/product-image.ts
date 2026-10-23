@@ -32,6 +32,9 @@ export function catalogImageSrc(src: string): string {
     "/products/goal-heritage-hoodie-grey-heather-catalog-product-sleeve-20261022.webp": "sleeve-matched-20261022",
     "/products/goal-heritage-hoodie-bone-catalog-product-sleeve-20261022.webp": "sleeve-matched-20261022",
     "/products/goal-heritage-hoodie-navy-catalog-product-sleeve-20261022.webp": "sleeve-matched-20261022",
+    // Lockup Hoodie: the owner's product shots replaced the Apliiq renders.
+    "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp": "black-front-photo-20261022",
+    "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
   };
   const revision = replaced[url.pathname]
     ? replaced[url.pathname]
