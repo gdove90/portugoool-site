@@ -1792,7 +1792,7 @@ export const products: Product[] = [
     // Heather's blends are documented nowhere, so the fabric line states
     // Black's blend only. Do not extend it to the other colours.
     fabric:
-      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+      "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
     fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
@@ -1902,7 +1902,7 @@ export const products: Product[] = [
     // Heather's blends are documented nowhere, so the fabric line states
     // Black's blend only. Do not extend it to the other colours.
     fabric:
-      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+      "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
     fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
@@ -3578,7 +3578,7 @@ export const products: Product[] = [
     color: "Black",
     colorHex: "#242424",
     fabric:
-      "125 gsm knit, 93% recycled polyester and 7% spandex, so the shorts stretch with every stride.",
+      "Lightweight 125 gsm fabric, 93% recycled polyester and 7% spandex, so the shorts stretch with every stride.",
     fit:
       "Elastic waist with an outside drawcord, two side pockets, a zip back pocket and split sides. Full length 17.7 in on a size S.",
     fitNote: "Sized by waist: S is a 30, M a 32, L a 34, XL a 36 and XXL a 38.",
@@ -3716,7 +3716,7 @@ export const products: Product[] = [
     // documented, so the fabric line states Black's blend only. Do not
     // extend it to Grey Heather, Bone or Navy.
     fabric:
-      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+      "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
     fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
@@ -3890,7 +3890,7 @@ export const products: Product[] = [
     color: "Black",
     colorHex: "#1E1E1E",
     fabric:
-      "10 oz of 3-end fleece, 330 gsm, built on a 100% cotton face yarn: the face is the outer side of the cloth, so cotton is what your hand finds. The Black colourway is 70% cotton, 30% polyester. Fleece-lined hood with a cotton drawcord through nickel eyelets. Cut generous, so all that weight has room to hang.",
+      "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
     fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
