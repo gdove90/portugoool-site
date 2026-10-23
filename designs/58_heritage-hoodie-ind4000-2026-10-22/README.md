@@ -128,7 +128,11 @@ The owner supplied a product shot and three model photos for Grey Heather
   `black-front-photo-20261022`. Record:
   `docs/catalog/goal-heritage-hoodie-black-photos-20261022.json`. Black is the
   card default, so its product shot is now the collection card.
-- Bone and Navy still show Apliiq's renders until their photos land.
+- Navy followed in the same order: four 1122 x 1402 photos, each extended
+  above and below to 1122 x 1683 (seams 0.31 to 0.52). Cache revision
+  `navy-front-photo-20261022`. Record:
+  `docs/catalog/goal-heritage-hoodie-navy-photos-20261022.json`.
+- Bone still shows Apliiq's renders until its photos land.
 
 ## Original publish checklist
 

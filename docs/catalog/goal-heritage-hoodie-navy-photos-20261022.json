@@ -1,0 +1,95 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000014",
+  "slug": "goal-athletics-heritage-hoodie",
+  "source": "Owner's product shot and three model photos of the Navy Heritage Hoodie, supplied in the Claude session on 2026-10-22; originals unchanged in designs/58_heritage-hoodie-ind4000-2026-10-22/as-received-owner/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md; original pixels untouched in the middle of the canvas; seams under one level (0.31 to 0.52).",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "Owner product front, model front, model quarter left, model quarter right, then Apliiq's sleeve-side render.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Navy",
+      "view": "product-front",
+      "sourceFilename": "navy-product-front-as-received.webp",
+      "receivedAs": "26.webp",
+      "sourceSha256": "dc8b17b9089536081fa03ca29a3012ed2ca9615f3401e8a378dab9bc6a4e91f0",
+      "sourceBytes": 148514,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
+      "webpSha256": "daf21a8e3d9606e6b63941c56a51408607b3a9bd64fab5563705b5e08b611f1f",
+      "webpBytes": 143950,
+      "replaces": "Apliiq render at the same path (moved to designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/); cache revision navy-front-photo-20261022 in src/lib/product-image.ts"
+    },
+    {
+      "order": 2,
+      "colorway": "Navy",
+      "view": "model-front",
+      "sourceFilename": "navy-model-front-as-received.webp",
+      "receivedAs": "27.webp",
+      "sourceSha256": "6fb5d589fe9caed9228f10591807c26ada47bddfbefe762f88c3c240b00a0424",
+      "sourceBytes": 67194,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-model-front-20261022.webp",
+      "webpSha256": "8f7a357a7ff17d68fc4ddfdbcdebc4e4bc96660eaa1e7991e5c04d6b1b0458d2",
+      "webpBytes": 71254
+    },
+    {
+      "order": 3,
+      "colorway": "Navy",
+      "view": "model-quarter-left",
+      "sourceFilename": "navy-model-quarter-left-as-received.webp",
+      "receivedAs": "25.webp",
+      "sourceSha256": "262ac119b1a0bf8a52c0cee9d8d015398d52ad1fb0645849fdebfd0de419d97b",
+      "sourceBytes": 61842,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-model-quarter-left-20261022.webp",
+      "webpSha256": "8f803d17c7823fee340505dd4fa66412e2cbd8c1882f3b1be0596a0d6254bc27",
+      "webpBytes": 66778
+    },
+    {
+      "order": 4,
+      "colorway": "Navy",
+      "view": "model-quarter-right",
+      "sourceFilename": "navy-model-quarter-right-as-received.webp",
+      "receivedAs": "24.webp",
+      "sourceSha256": "21f2db027049868d28d233ffdad71fb10804430a4b38bcd0a52e7f671a782c72",
+      "sourceBytes": 62706,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-model-quarter-right-20261022.webp",
+      "webpSha256": "e17043fc675ef36bd2e8cac95013caeccc8aa4109b957de13a10da37d351630e",
+      "webpBytes": 67258
+    }
+  ]
+}

@@ -3787,11 +3787,28 @@ export const products: Product[] = [
         supplierColor: "Navy",
         hex: "#2A3043",
         skuFragment: "NAVY",
+        // The owner's product shot and model photos (2026-10-22) lead; Apliiq's
+        // sleeve-side render stays last for the sleeve detail.
         images: [
           {
             src: "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
-            alt: "GOAL Athletics Heritage Hoodie in Navy, product front with the cream GA monogram centred on the chest",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
+            alt: "GOAL Athletics Heritage Hoodie in Navy, product front with the cream GA monogram centred on the chest and the small cream GA monogram on the left sleeve above the cuff",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-navy-catalog-model-front-20261022.webp",
+            alt: "Model facing forward in the Navy Heritage Hoodie with the cream GA monogram on the chest and on the left sleeve, black shorts and white sneakers",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-navy-catalog-model-quarter-left-20261022.webp",
+            alt: "Same model turned to the left in the Navy Heritage Hoodie, cream GA monogram on the chest and the left sleeve",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
+            src: "/products/goal-heritage-hoodie-navy-catalog-model-quarter-right-20261022.webp",
+            alt: "Same model turned to the right in the Navy Heritage Hoodie, cream GA monogram on the chest and the left sleeve",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-navy-catalog-product-sleeve-20261022.webp",
