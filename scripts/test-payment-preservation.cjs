@@ -8,9 +8,9 @@ const ts = require('typescript');
 const {execFileSync} = require('node:child_process');
 const {createHash} = require('node:crypto');
 // The reviewed production commit the payment path is pinned to. Move it only
-// after a change to these files has been reviewed and deployed 
-// 0392275, the rebranded customer emails and legal lines, after the Stripe inspection
-// and the owner alert address). The legacy pin predates the catalog
+// after a change to these files has been reviewed and deployed (2026-10-23:
+// 0392275, the rebranded customer emails and legal lines, after the Stripe
+// inspection and the owner alert address). The legacy pin predates the catalog
 // retirements and the hat/ST720 blocks, which its comparison normalises away.
 const LEGACY_BASELINE = 'e5f900866117d5e792638e1cff8e02ff076dc407';
 const baseline = process.argv[2] || '039227515b2a52f5c97987b10d3a79a8a14b92b2';
