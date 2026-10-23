@@ -10,23 +10,35 @@
       "order": 1,
       "colorway": "Bone",
       "view": "product-front",
-      "sourceFilename": "bone-product-front-as-received.png",
-      "receivedAs": "28.png",
-      "sourceSha256": "36f3281fbb59b986789faa73d5d5f8f84d0835a82367528a5f1f40064d3b6990",
-      "sourceBytes": 485577,
+      "sourceFilename": "bone-product-front-v2-as-received.webp",
+      "receivedAs": "49.webp",
+      "sourceSha256": "6179d7f600c1c8d220d64e967af4d7e5e730dad0f5fd68be6109e2e6e4958a33",
+      "sourceBytes": 105626,
       "sourceDimensions": [
-        768,
-        1024
+        1024,
+        1536
       ],
-      "framing": "768 x 1024 as received, but only columns 166 to 600 are photograph: both sides were padded with row-constant grey panels (every row repeats one edge pixel, giving horizontal streaks; on the three-quarter-right photo the panels also differ in brightness, 158.6 and 179.9 against about 162 to 165). Cropped to the photograph (434 x 1024, the model and garment wholly inside) and the backdrop extended at the sides to 2:3 with scripts/frame-model-photo-2x3.py.",
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding): deployed byte for byte",
       "dimensions": [
-        683,
-        1024
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
-      "webpSha256": "7e1652774a2413afdbeb7eff853ab59411ed7ceacce9ec4debf96971ceca324c",
-      "webpBytes": 25268,
-      "replaces": "Apliiq render at the same path (moved to designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/); cache revision bone-front-photo-20261022 in src/lib/product-image.ts"
+      "webpSha256": "6179d7f600c1c8d220d64e967af4d7e5e730dad0f5fd68be6109e2e6e4958a33",
+      "webpBytes": 105626,
+      "replaces": "Apliiq render at the same path (moved to designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/); cache revision bone-front-photo-20261022 in src/lib/product-image.ts",
+      "replacedVersion1": {
+        "sourceFilename": "bone-product-front-as-received.png",
+        "receivedAs": "28.png",
+        "sourceSha256": "36f3281fbb59b986789faa73d5d5f8f84d0835a82367528a5f1f40064d3b6990",
+        "webpSha256": "7e1652774a2413afdbeb7eff853ab59411ed7ceacce9ec4debf96971ceca324c",
+        "dimensions": [
+          683,
+          1024
+        ],
+        "note": "owner's first Bone product shot (28.png, padded strip, cropped and extended); replaced on the owner's word later on 2026-10-22; framed file kept in designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/goal-heritage-hoodie-bone-catalog-product-front-owner-v1-20261022.webp"
+      },
+      "cacheRevision": "bone-front-photo-v2-20261022"
     },
     {
       "order": 2,

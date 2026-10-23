@@ -140,6 +140,11 @@ The owner supplied a product shot and three model photos for Grey Heather
   Cache revision `bone-front-photo-20261022`. Record:
   `docs/catalog/goal-heritage-hoodie-bone-photos-20261022.json`. All four
   Heritage colours now lead with the owner's photos.
+- Bone product shot replaced later on 2026-10-22 (owner: "replace the
+  current bone hoodie monogram with this one"). The new shot is 1024 x 1536,
+  already 2:3 on a clean backdrop, deployed byte for byte. Cache revision
+  `bone-front-photo-v2-20261022`. The first version is in `retired-render/`
+  (`*-owner-v1-*`); both originals are in `as-received-owner/`.
 - Background match (owner: "fix the background then"): the four sleeve-side
   renders sat on the lighter studio grey (195 to 223), while the owner's
   photos beside them sit on darker greys (about 155 to 190 at the top). Each
