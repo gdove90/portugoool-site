@@ -1,0 +1,73 @@
+{
+  "productId": "80000000-0000-4000-8000-000000000013",
+  "slug": "goal-athletics-ga-minimal-shorts",
+  "source": "Owner's product shots of the GA Minimal Shorts, one per colourway, supplied in the Claude session on 2026-10-22 ('upload these as to their appropriate placement and have them be the catalog picture'); originals unchanged in designs/28_as5620-goal-shorts-2026-10-14/site-images/as-received/.",
+  "export": "WebP quality 92, method 6, native scale, 2:3 per designs/00_asset-library/MODEL-PHOTO-FRAME-STANDARD.md; original pixels untouched.",
+  "caption": "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+  "galleryOrder": "The product shot leads each colourway, then the model front and the print detail. Black is the card default, so its product shot is the collection card and the first product-level image.",
+  "images": [
+    {
+      "order": 1,
+      "colorway": "Black",
+      "view": "product-front",
+      "sourceFilename": "black-product-front-as-received.webp",
+      "receivedAs": "51.webp",
+      "sourceSha256": "90e2eaa62d5fb235a5b9f57b8dfb7309701790f7a2f94354d7679cca7b50844c",
+      "sourceBytes": 70532,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.27/0.19)",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
+      "webpSha256": "f23b793b647f56d43095d58682154ad404f10e07af96518d8bfa4cc845b9d4ca",
+      "webpBytes": 70422
+    },
+    {
+      "order": 2,
+      "colorway": "Ink Blue",
+      "view": "product-front",
+      "sourceFilename": "ink-blue-product-front-as-received.webp",
+      "receivedAs": "52.webp",
+      "sourceSha256": "9e8c3c26ebac3e6848157008791ca4b6f57b33adf74f65dfd0ddb44e45d93b29",
+      "sourceBytes": 64310,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.42/0.28)",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-ink-blue-catalog-product-front-20261022.webp",
+      "webpSha256": "a0c0295ab16215a6e0fc2d52fc990238bca3a760205c2d08e0b2593fe1cae25e",
+      "webpBytes": 62720
+    },
+    {
+      "order": 3,
+      "colorway": "Shadow",
+      "view": "product-front",
+      "sourceFilename": "shadow-product-front-as-received.webp",
+      "receivedAs": "53.webp",
+      "sourceSha256": "8f77bbec06b42773b323a084b0607d80e6cc0e90eaa5c80bad82e1703c1f5a4b",
+      "sourceBytes": 86474,
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "framing": "1122 x 1402 (4:5) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.35/0.18)",
+      "dimensions": [
+        1122,
+        1683
+      ],
+      "deployedPath": "/products/goal-ga-minimal-shorts-shadow-catalog-product-front-20261022.webp",
+      "webpSha256": "df917546e1c80c9204ad5878aac8c886705650b6850756e294c4aab1ccd3faf2",
+      "webpBytes": 83958
+    }
+  ]
+}

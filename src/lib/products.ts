@@ -3533,8 +3533,9 @@ export const products: Product[] = [
   // at $32 by owner decision 2026-10-14. Sizes map to waist sizes
   // by owner decision 2026-10-14: S=30, M=32, L=34, XL=36, XXL=38 (40 unused).
   // The Vertical style is not built: every 5620 zone is 4 x 4 in.
-  // Every colourway shows the owner's catalog photos (2026-10-22): three
-  // for Shadow, two each for Black and Ink Blue, brought to the 2:3 frame of
+  // Every colourway shows the owner's catalog photos (2026-10-22): the
+  // product shot first (Black's is also the collection card), then the model
+  // front and the print detail, brought to the 2:3 frame of
   // MODEL-PHOTO-FRAME-STANDARD.md. The Apliiq renders left public/products
   // (they stay in the designs folder). Records:
   // designs/28_as5620-goal-shorts-2026-10-14/ and
@@ -3558,6 +3559,11 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold, inside out. Hang to dry. Do not iron directly on the print.",
     images: [
       {
+        src: "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
+        alt: "GA Minimal Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
+        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+      },
+      {
         src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
         alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
         caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
@@ -3575,6 +3581,11 @@ export const products: Product[] = [
         hex: "#242424",
         skuFragment: "BLACK",
         images: [
+          {
+            src: "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
+            alt: "GA Minimal Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
           {
             src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
@@ -3594,6 +3605,11 @@ export const products: Product[] = [
         skuFragment: "INK-BLUE",
         images: [
           {
+            src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-product-front-20261022.webp",
+            alt: "GA Minimal Shorts in Ink Blue, product front with the cream GA monogram on the left leg above the hem, drawcord waist and side pockets",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
             src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Ink Blue GA Minimal Shorts with the cream GA monogram on the left leg above the hem, white socks and white sneakers",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
@@ -3611,6 +3627,11 @@ export const products: Product[] = [
         hex: "#DBDBDB",
         skuFragment: "SHADOW",
         images: [
+          {
+            src: "/products/goal-ga-minimal-shorts-shadow-catalog-product-front-20261022.webp",
+            alt: "GA Minimal Shorts in Shadow, product front with the black and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
           {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Shadow GA Minimal Shorts with the black and red GA monogram on the left leg above the hem, white socks and white sneakers",

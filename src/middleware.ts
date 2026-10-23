@@ -74,7 +74,7 @@ const STADIUM_CAP_CATALOG_IMAGE = /^\/products\/goal-wordmark-cap-(?:black|royal
 // with the other colours, so the image optimizer must reach it too.
 const STADIUM_CAP_DARK_GREEN_IMAGE = /^\/products\/goal-wordmark-cap-dark-green\.webp$/;
 const GA_MATCHDAY_CAP_CATALOG_IMAGE = /^\/products\/goal-monogram-cap-(?:black|red|royal|dark-green)-catalog-(?:product-front|model-front|model-three-quarter|model-side)-20261022\.webp$/;
-const GA_MINIMAL_SHORTS_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-shorts-(?:black|ink-blue|shadow)-catalog-(?:model-front|print-detail)-20261022\.webp$/;
+const GA_MINIMAL_SHORTS_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-shorts-(?:black|ink-blue|shadow)-catalog-(?:product-front|model-front|print-detail)-20261022\.webp$/;
 const GA_MINIMAL_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-minimal-(?:true-royal|black|true-red)-catalog-model-(?:front|front-quarter|rear|rear-quarter)-20261015\.webp$/;
 const GA_BIG_TEE_MODEL_CATALOG_IMAGE = /^\/products\/goal-ga-big-tee-(?:black|true-royal|true-red|white-black-red)-catalog-model-(?:front|three-quarter|rear)-20261020\.webp$/;
 const LOCKUP_HOODIE_CATALOG_IMAGE = /^\/products\/goal-lockup-hoodie-(?:black|grey-heather|bone|navy)-catalog-(?:product-front|model-(?:front|quarter-left|quarter-right))-20261022\.webp$/;
