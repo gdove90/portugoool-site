@@ -52,6 +52,27 @@
     {
       "order": 3,
       "colorway": "Black",
+      "view": "model-quarter-left",
+      "sourceFilename": "black-model-quarter-left-as-received.webp",
+      "receivedAs": "39.webp",
+      "sourceSha256": "d0ba57426d13a53291a956a5ff593e6ea92951b53511236af0dafb0b61e779a3",
+      "sourceBytes": 59652,
+      "sourceDimensions": [
+        1084,
+        1451
+      ],
+      "framing": "1084 x 1451 (about 3:4) on the studio backdrop; backdrop extended above and below to 2:3 with scripts/frame-model-photo-2x3.py (seams 0.34/0.65)",
+      "dimensions": [
+        1084,
+        1626
+      ],
+      "deployedPath": "/products/goal-lockup-hoodie-black-catalog-model-quarter-left-20261022.webp",
+      "webpSha256": "19843bd1242bd82a5e6e0c8ccc0d77abd7834f773783efa5d486b355eec68ac8",
+      "webpBytes": 61078
+    },
+    {
+      "order": 4,
+      "colorway": "Black",
       "view": "model-quarter-right",
       "sourceFilename": "black-model-quarter-right-as-received.webp",
       "receivedAs": "33.webp",

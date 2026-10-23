@@ -3906,6 +3906,11 @@ export const products: Product[] = [
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
+            src: "/products/goal-lockup-hoodie-black-catalog-model-quarter-left-20261022.webp",
+            alt: "Same model turned to the left in the Black Lockup Hoodie, white and red GOAL ATHLETICS lockup across the chest",
+            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
+          },
+          {
             src: "/products/goal-lockup-hoodie-black-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Black Lockup Hoodie, white and red GOAL ATHLETICS lockup across the chest",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",

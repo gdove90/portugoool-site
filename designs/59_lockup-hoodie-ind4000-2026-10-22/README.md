@@ -102,7 +102,8 @@ Read off each design's own page on the owner's Apliiq login:
 
 The owner sent "4 ink blue images and the 3 black images". Ink blue is the
 Navy colourway (cream lockup).
-- Black: product shot, model front, model quarter right.
+- Black: product shot, model front, model quarter left (resent separately the
+  same evening, 1084 x 1451 extended to 1084 x 1626), model quarter right.
 - Navy: product shot, model front, model quarter left, model quarter right.
 - All seven are about 1086 x 1448 on clean backdrops, with no padding and
   nothing touching an edge. Each was extended above and below to 2:3
