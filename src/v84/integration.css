@@ -75,7 +75,7 @@
    desktop, 61px under 1024px). A 240px floor stops the frame collapsing on
    very short landscape screens. svh counts the viewport with the mobile
    browser bar shown; vh is the fallback for browsers without it. */
-.v84 .pdp{--pdp-above:158px;--gallery-fit:calc(100vh - var(--pdp-above) - 24px);--gallery-fit:calc(100svh - var(--pdp-above) - 24px)}
+.v84 :is(.pdp,.pdp-breadcrumb){--pdp-above:158px;--gallery-fit:calc(100vh - var(--pdp-above) - 24px);--gallery-fit:calc(100svh - var(--pdp-above) - 24px)}
 .v84 .gallery .gallery-main{--frame-ratio:0.6556;background:#c5c5c5;aspect-ratio:var(--frame-ratio);height:auto;width:min(100%,max(240px,calc(var(--gallery-fit) * var(--frame-ratio))));justify-self:start}
 .v84 .gallery-main>img{object-fit:contain}
 @supports selector(:has(*)){
@@ -84,10 +84,26 @@
   .v84 .thumbnail>img[src*="-catalog-"]{object-fit:cover}
 }
 @media (max-width:1023px){
-  .v84 .pdp{--pdp-above:151px}
+  .v84 :is(.pdp,.pdp-breadcrumb){--pdp-above:151px}
   .v84 .gallery .gallery-main{justify-self:center}
 }
-@media (max-width:700px){ .v84 .pdp{--pdp-above:133px} }
+@media (max-width:700px){ .v84 :is(.pdp,.pdp-breadcrumb){--pdp-above:133px} }
+/* Owner request 2026-10-22: no dead band between the photo and the details.
+   The photo above gives up width to fit the window height, so where the
+   photo and the details sit side by side (every width the 1023px stacked
+   layout does not take, fractional zoomed widths included) the gallery
+   column is sized to it: thumbnails (65px) + gap (12px) + the 2:3 photo,
+   never wider than leaves the details their 340px minimum. The details sit
+   beside it at up to 560px, the gap scales from 48px to 88px with the
+   window, and the pair is centred on the page (even 5% gutters; they were
+   4% left and 6% right). The breadcrumb starts where the pair starts: the
+   5% gutter plus half of what the 90% content width has left over (zero
+   once the pair fills it). */
+@media not all and (max-width:1023px){
+  .v84 :is(.pdp,.pdp-breadcrumb){--pdp-gap:clamp(48px,5vw,88px);--gallery-w:calc(77px + max(240px,var(--gallery-fit) * 0.6667));--pdp-pair:calc(var(--gallery-w) + var(--pdp-gap) + 560px)}
+  .v84 .pdp{grid-template-columns:min(var(--gallery-w),100% - var(--pdp-gap) - 340px) minmax(340px,560px);column-gap:var(--pdp-gap);justify-content:center;padding-left:5%;padding-right:5%}
+  .v84 .pdp-breadcrumb{padding-left:calc(5% + max(0px,(90% - var(--pdp-pair)) / 2))}
+}
 
 /* Mobile menu: one typography scale for primary destinations and Support. */
 @media (max-width: 1023px) {

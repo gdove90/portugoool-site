@@ -118,3 +118,19 @@ and breadcrumb with 24px to spare; the photo is never cropped
 floor keeps the frame usable on short landscape phones, the one case where
 it may still extend below the fold. Collection cards and thumbnails are
 unchanged.
+
+## Photo and details side by side (2026-10-22)
+
+Owner decision: no dead band between the photo and the details. With the
+photo sized to the window height, its column kept a fixed share of the page
+width, leaving about 430px of empty column beside the photo on a 1745 x 915
+window. Where the two sit side by side (1024px and wider), the gallery column
+is now sized to the photo (thumbnails + gap + the 2:3 photo). The details sit
+beside it at up to 560px, the gap scales from 48px to 88px with the window,
+and the pair is centred on the page. The breadcrumb starts where the pair
+starts. The photo itself is the same size as before. Rules: the
+`not all and (max-width:1023px)` block after the gallery rules in
+`src/v84/integration.css` (the exact complement of the stacked layout, so a
+zoomed window between 1023 and 1024px is covered too) and the
+`pdp-breadcrumb` class in `src/v84/ProductDetail.tsx`. Where the page
+stacks (1023px and narrower), nothing changed.
