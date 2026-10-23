@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
+import Stripe from "stripe";
 import { apliiqSubmitEnabled, checkApliiqConnection, submissionEnvironmentAllowed } from "@/lib/apliiq";
 import { drainEmailQueue, queueOrderConfirmation, queueOrderDelayNotice, queueShipmentNotification } from "@/lib/email-delivery";
 import { emailProvider } from "@/lib/email";
@@ -56,7 +57,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
-  let body: { action?: string; orderId?: string; welcome?: boolean };
+  let body: { action?: string; orderId?: string; welcome?: boolean; endpointId?: string };
   try {
     body = await req.json();
   } catch {
@@ -102,6 +103,49 @@ export async function POST(req: NextRequest) {
       metaPixelConfigured: /^\d{5,25}$/.test(process.env.NEXT_PUBLIC_META_PIXEL_ID ?? ""),
       orderStorageConnected,
     }, { headers: { "Cache-Control": "no-store" } });
+  }
+
+  // Read-only Stripe webhook inspection through the key this deploy already
+  // holds: endpoint urls, states and subscribed events, plus the events
+  // Stripe could not deliver. No secrets and no customer data are returned
+  // (event ids and types only).
+  if (body.action === "stripe-webhooks") {
+    const secretKey = process.env.STRIPE_SECRET_KEY;
+    if (!secretKey) return NextResponse.json({ error: "Stripe is not configured." }, { status: 503 });
+    const stripe = new Stripe(secretKey);
+    try {
+      const endpoints = await stripe.webhookEndpoints.list({ limit: 20 });
+      const undelivered = await stripe.events.list({ delivery_success: false, limit: 20 });
+      return NextResponse.json({
+        livemode: liveKey,
+        endpoints: endpoints.data.map((e) => ({
+          id: e.id, url: e.url, status: e.status, livemode: e.livemode, enabled_events: e.enabled_events,
+          created: new Date(e.created * 1000).toISOString(), api_version: e.api_version, description: e.description,
+        })),
+        undelivered: undelivered.data.map((ev) => ({
+          id: ev.id, type: ev.type, created: new Date(ev.created * 1000).toISOString(), pending_webhooks: ev.pending_webhooks,
+        })),
+      }, { headers: { "Cache-Control": "no-store" } });
+    } catch {
+      return NextResponse.json({ error: "Stripe inspection failed." }, { status: 502 });
+    }
+  }
+
+  // Point an existing endpoint at this site's webhook route. Stripe keeps the
+  // endpoint's signing secret on a url change, so STRIPE_WEBHOOK_SECRET in
+  // Netlify stays valid. The target is fixed to this site; nothing else can
+  // be set through here.
+  if (body.action === "stripe-webhook-url" && typeof body.endpointId === "string") {
+    const secretKey = process.env.STRIPE_SECRET_KEY;
+    if (!secretKey) return NextResponse.json({ error: "Stripe is not configured." }, { status: 503 });
+    const url = `${(process.env.NEXT_PUBLIC_SITE_URL ?? "https://goalathletics.shop").replace(/\/$/, "")}/api/stripe-webhook`;
+    const stripe = new Stripe(secretKey);
+    try {
+      const endpoint = await stripe.webhookEndpoints.update(body.endpointId, { url });
+      return NextResponse.json({ id: endpoint.id, url: endpoint.url, status: endpoint.status, livemode: endpoint.livemode });
+    } catch {
+      return NextResponse.json({ error: "Stripe endpoint update failed." }, { status: 502 });
+    }
   }
 
   const store = getOrdersStore();
