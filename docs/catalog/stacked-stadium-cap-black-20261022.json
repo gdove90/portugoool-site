@@ -12,22 +12,34 @@
     {
       "order": 1,
       "view": "product-front",
-      "sourceFilename": "black-product-front-as-received.webp",
-      "receivedAs": "27.webp",
-      "sourceSha256": "581babf0209e961e8a4b199c64408c5a61dd0f457c938215453d102d0f134da1",
-      "sourceBytes": 56322,
+      "sourceFilename": "black-product-front-v2-as-received.webp",
+      "receivedAs": "70.webp",
+      "sourceSha256": "10187c6876dd9d667708499fe8df6abd1ef6b24a645373b2983362a07d1aa06c",
+      "sourceBytes": 214142,
       "sourceDimensions": [
-        764,
-        510
+        1024,
+        1536
       ],
-      "framing": "Landscape source. Two crop-seam rows dropped at the top, sides trimmed to 600 px about the centre (--crop-width 600, empty backdrop only), then the backdrop extended 196 px above and below to 2:3 (joins 0.23 and 0.42 levels on backdrop pixels).",
+      "framing": "1024 x 1536, already 2:3 on a clean backdrop (no padding, nothing touching an edge): deployed byte for byte, no re-encode",
       "dimensions": [
-        600,
-        900
+        1024,
+        1536
       ],
       "deployedPath": "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
-      "webpSha256": "3a7a55d0ca998716958cccaa1e4861f78f288367ea15e823e05d1368395bb306",
-      "webpBytes": 70024
+      "webpSha256": "10187c6876dd9d667708499fe8df6abd1ef6b24a645373b2983362a07d1aa06c",
+      "webpBytes": 214142,
+      "replacedVersion1": {
+        "sourceFilename": "black-product-front-as-received.webp",
+        "receivedAs": "27.webp",
+        "sourceSha256": "581babf0209e961e8a4b199c64408c5a61dd0f457c938215453d102d0f134da1",
+        "webpSha256": "3a7a55d0ca998716958cccaa1e4861f78f288367ea15e823e05d1368395bb306",
+        "dimensions": [
+          600,
+          900
+        ],
+        "note": "first product shot, which showed the supplier's sticker on the visor; replaced on the owner's word on 2026-10-23 by a clean front matching the Red, Royal and Dark Green set; file kept in designs/50_stacked-stadium-cap-black-photos-2026-10-22/retired-render/goal-wordmark-cap-black-catalog-product-front-owner-v1-20261022.webp"
+      },
+      "cacheRevision": "black-front-v2-20261023"
     },
     {
       "order": 2,

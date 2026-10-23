@@ -36,6 +36,7 @@ export function catalogImageSrc(src: string): string {
     "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp": "red-front-v2-20261023",
     "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp": "royal-front-v2-20261023",
     "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp": "dark-green-front-v2-20261023",
+    "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp": "black-front-v2-20261023",
   };
   const revision = replaced[url.pathname]
     ? replaced[url.pathname]

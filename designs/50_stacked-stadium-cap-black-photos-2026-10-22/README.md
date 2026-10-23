@@ -34,3 +34,12 @@ The Apliiq render for Black/Natural (`goal-wordmark-cap-black.webp`) left
 `public/products/` and is kept in `retired-render/`. Checksums and sizes:
 `docs/catalog/stacked-stadium-cap-black-20261022.json`. The cap stays
 visible and not for sale.
+
+## Product shot v2 (2026-10-23)
+
+The first front showed the supplier's sticker on the visor. The owner sent a
+clean front (70.webp) matching the Red, Royal and Dark Green set: 1024 x 1536,
+already 2:3 on a clean backdrop, deployed byte for byte at the same path.
+Cache revision `black-front-v2-20261023`. The first version is in
+`retired-render/` (`*-owner-v1-*`); the new original is in `as-received/`.
+Record: `docs/catalog/stacked-stadium-cap-black-20261022.json`.
