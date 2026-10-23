@@ -151,6 +151,13 @@ The owner supplied a product shot and three model photos for Grey Heather
   read as an outline. They were redone with `--erode 5 --rim plain` (new
   option: the rim band takes the bare backdrop instead of a shadow). Cache
   revision `sleeve-matched-20261022`.
+- Removed later the same day on the owner's word ("remove this image" for
+  Black, then "remove these from the website" for the other three): all four
+  sleeve-side renders left the galleries. The files are out of
+  `public/products/` and kept in `retired-render/` (`*-removed-20261022`),
+  and the gate allowlist no longer admits sleeve paths. Every colour now
+  shows only the owner's photos: product shot, model front, quarter left,
+  quarter right.
 
 ## Original publish checklist
 

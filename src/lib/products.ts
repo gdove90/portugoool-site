@@ -3649,10 +3649,10 @@ export const products: Product[] = [
   // artworks each: the GA monogram 4.00 x 3.61 in centred on the chest and a
   // 2.00 x 1.80 in GA monogram on the outer left sleeve above the cuff;
   // white/red on Black, black/red on Grey Heather and Bone, cream on Navy.
-  // Each gallery shows Apliiq's own renders of that design, front then the
-  // sleeve side, their white swapped for the studio backdrop and framed 2:3
-  // (scripts/studio-backdrop-product-shot.py). Black's renders come from
-  // Apliiq at 590 x 900 only (600 x 900 framed); the others at 944 x 1440.
+  // Each gallery shows the owner's product shot and three model photos
+  // (2026-10-22), framed 2:3. Apliiq's front and sleeve-side renders were
+  // taken off the site on the owner's word; they are kept in
+  // designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/.
   // Live and for sale at $78 (the owner's hoodie price, set 2026-10-22) on
   // the owner's instruction 2026-10-22. Record:
   // designs/58_heritage-hoodie-ind4000-2026-10-22/.
@@ -3683,11 +3683,6 @@ export const products: Product[] = [
         alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff",
         caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
-      {
-        src: "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",
-        alt: "GOAL Athletics Heritage Hoodie in Black, side view with the small white and red GA monogram on the left sleeve above the cuff",
-        caption: "Concept render. Not a photograph of a manufactured sample.",
-      },
     ],
     // Swatches: Black, Grey Heather and Bone reuse the hexes the Core Hoodie
     // rows settled on for this blank; Navy is the garment body sampled from
@@ -3699,8 +3694,7 @@ export const products: Product[] = [
         supplierColor: "Black",
         hex: "#1E1E1E",
         skuFragment: "BLACK",
-        // The owner's product shot and model photos (2026-10-22) lead; Apliiq's
-        // sleeve-side render stays last for the sleeve detail.
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
@@ -3722,11 +3716,6 @@ export const products: Product[] = [
             alt: "Same model turned to the right in the Black Heritage Hoodie, white and red GA monogram on the chest",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
-          {
-            src: "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",
-            alt: "GOAL Athletics Heritage Hoodie in Black, side view with the small white and red GA monogram on the left sleeve above the cuff",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
         ],
       },
       {
@@ -3734,8 +3723,7 @@ export const products: Product[] = [
         supplierColor: "Grey Heather",
         hex: "#D9D9D9",
         skuFragment: "GREYHEATHER",
-        // The owner's product shot and model photos (2026-10-22) lead; Apliiq's
-        // sleeve-side render stays last for the sleeve detail.
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
@@ -3757,11 +3745,6 @@ export const products: Product[] = [
             alt: "Same model turned to the right in the Grey Heather Heritage Hoodie, GA monogram on the chest and the left sleeve",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
-          {
-            src: "/products/goal-heritage-hoodie-grey-heather-catalog-product-sleeve-20261022.webp",
-            alt: "GOAL Athletics Heritage Hoodie in Grey Heather, side view with the small black and red GA monogram on the left sleeve above the cuff",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
         ],
       },
       {
@@ -3769,8 +3752,7 @@ export const products: Product[] = [
         supplierColor: "Bone",
         hex: "#CFCAC7",
         skuFragment: "BONE",
-        // The owner's product shot and model photos (2026-10-22) lead; Apliiq's
-        // sleeve-side render stays last for the sleeve detail.
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
@@ -3792,11 +3774,6 @@ export const products: Product[] = [
             alt: "Same model turned to the right in the Bone Heritage Hoodie, black and red GA monogram on the chest",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
-          {
-            src: "/products/goal-heritage-hoodie-bone-catalog-product-sleeve-20261022.webp",
-            alt: "GOAL Athletics Heritage Hoodie in Bone, side view with the small black and red GA monogram on the left sleeve above the cuff",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
-          },
         ],
       },
       {
@@ -3804,8 +3781,7 @@ export const products: Product[] = [
         supplierColor: "Navy",
         hex: "#2A3043",
         skuFragment: "NAVY",
-        // The owner's product shot and model photos (2026-10-22) lead; Apliiq's
-        // sleeve-side render stays last for the sleeve detail.
+        // The owner's product shot and model photos (2026-10-22).
         images: [
           {
             src: "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
@@ -3826,11 +3802,6 @@ export const products: Product[] = [
             src: "/products/goal-heritage-hoodie-navy-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Navy Heritage Hoodie, cream GA monogram on the chest and the left sleeve",
             caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
-          },
-          {
-            src: "/products/goal-heritage-hoodie-navy-catalog-product-sleeve-20261022.webp",
-            alt: "GOAL Athletics Heritage Hoodie in Navy, side view with the small cream GA monogram on the left sleeve above the cuff",
-            caption: "Concept render. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3857,11 +3828,11 @@ export const products: Product[] = [
   // (Black 6206733, Grey Heather 6206746, Bone 6206741, Navy 6206737): the
   // GA monogram and GOAL ATHLETICS lockup, 10.00 x 2.67 in across the chest,
   // as on the GA Big Tee; white/red on Black, black/red on Grey Heather and
-  // Bone, cream on Navy; no back print. Each gallery leads with Apliiq's own
-  // render of that design, its white swapped for the studio backdrop and
-  // framed 2:3 (scripts/studio-backdrop-product-shot.py); the owner's model
-  // pictures follow when they land. Live and for sale at $78 (owner's hoodie
-  // price) on the owner's instruction 2026-10-22. Record:
+  // Bone, cream on Navy; no back print. Black, Navy and Bone show the owner's
+  // product shot and model photos (2026-10-22); Grey Heather still shows
+  // Apliiq's own render on the studio backdrop, framed 2:3
+  // (scripts/studio-backdrop-product-shot.py). Live and for sale at $78
+  // (owner's hoodie price) on the owner's instruction 2026-10-22. Record:
   // designs/59_lockup-hoodie-ind4000-2026-10-22/. Same blank as the Heritage
   // row, so the same fabric, fit, care, origin, sizes (S to XXL of Apliiq's
   // XS to 5XL) and swatches.

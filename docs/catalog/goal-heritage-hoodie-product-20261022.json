@@ -27,7 +27,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
       "webpSha256": "b24d9d6b69a874e3e9f164297635583ae04a00e33af2e1333971b8d426a0e22e",
-      "webpBytes": 15710
+      "webpBytes": 15710,
+      "replacedOnSite": "2026-10-22, by the owner's product shot at the same path (docs/catalog/goal-heritage-hoodie-<colour>-photos-20261022.json)"
     },
     {
       "order": 2,
@@ -50,7 +51,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-black-catalog-product-sleeve-20261022.webp",
       "webpSha256": "c536ebd5a7db41620d6ff0982dc95b635ae3b631dc580b09ab49a7fd54a450e8",
-      "webpBytes": 10722
+      "webpBytes": 10722,
+      "removedFromSite": "2026-10-22, owner instruction; file kept in designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/"
     },
     {
       "order": 3,
@@ -73,7 +75,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
       "webpSha256": "0a639b994ccd502895f03857b3a26714a332aedba48342fbec0e332e6432bb33",
-      "webpBytes": 158380
+      "webpBytes": 158380,
+      "replacedOnSite": "2026-10-22, by the owner's product shot at the same path (docs/catalog/goal-heritage-hoodie-<colour>-photos-20261022.json)"
     },
     {
       "order": 4,
@@ -96,7 +99,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-grey-heather-catalog-product-sleeve-20261022.webp",
       "webpSha256": "cdeb44fe6b38cfbe24c27f145ab89f51c9d1712665f233e396cea6bc487aae57",
-      "webpBytes": 80424
+      "webpBytes": 80424,
+      "removedFromSite": "2026-10-22, owner instruction; file kept in designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/"
     },
     {
       "order": 5,
@@ -119,7 +123,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
       "webpSha256": "ad3c30b19803eaad6c45b138de235f10a027aea9dea0952181a2072eb1c48b5c",
-      "webpBytes": 110766
+      "webpBytes": 110766,
+      "replacedOnSite": "2026-10-22, by the owner's product shot at the same path (docs/catalog/goal-heritage-hoodie-<colour>-photos-20261022.json)"
     },
     {
       "order": 6,
@@ -142,7 +147,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-bone-catalog-product-sleeve-20261022.webp",
       "webpSha256": "711ac68606dd80d38cae59244e9624ecd7f80ed2cb78bef7ec1bfb262028887b",
-      "webpBytes": 65426
+      "webpBytes": 65426,
+      "removedFromSite": "2026-10-22, owner instruction; file kept in designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/"
     },
     {
       "order": 7,
@@ -165,7 +171,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
       "webpSha256": "76ed76a4f9c6153b021b4e1fa7f09434255411e8f9bc36bc02d992b65501d05b",
-      "webpBytes": 37558
+      "webpBytes": 37558,
+      "replacedOnSite": "2026-10-22, by the owner's product shot at the same path (docs/catalog/goal-heritage-hoodie-<colour>-photos-20261022.json)"
     },
     {
       "order": 8,
@@ -188,7 +195,8 @@
       ],
       "deployedPath": "/products/goal-heritage-hoodie-navy-catalog-product-sleeve-20261022.webp",
       "webpSha256": "4bfa30ced8acd8977b48570b7fabd8836a2f887e2726a0324c1a5cf2b57f4c1f",
-      "webpBytes": 27250
+      "webpBytes": 27250,
+      "removedFromSite": "2026-10-22, owner instruction; file kept in designs/58_heritage-hoodie-ind4000-2026-10-22/retired-render/"
     }
   ]
 }
