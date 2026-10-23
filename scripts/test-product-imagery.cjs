@@ -11,6 +11,8 @@ const root = path.resolve(__dirname, '..');
 const manifest = require('../src/v84/mens-on-body-v2.json');
 function load(file, dependencies = {}) {
   const context = { exports: {}, require: name => {
+    // Presentation manifests are data the module ships with; code dependencies stay explicit.
+    if (name.endsWith('.json') && !(name in dependencies)) return require(path.join(root, path.dirname(file), name));
     assert.ok(name in dependencies, `Unexpected dependency: ${name}`);
     return dependencies[name];
   } };

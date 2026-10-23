@@ -2846,22 +2846,18 @@ export const products: Product[] = [
       {
         src: "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp",
         alt: "GA Matchday Cap in Black/Natural, front view: natural crown with the black GA monogram embroidered on the front panel and a black visor",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-monogram-cap-black-catalog-model-front-20261022.webp",
         alt: "Model facing forward wearing the Black/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-monogram-cap-black-catalog-model-three-quarter-20261022.webp",
         alt: "Same model in a three-quarter turn, showing the black GA monogram on the natural front panel of the cap",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-monogram-cap-black-catalog-model-side-20261022.webp",
         alt: "Same model turned to the side, showing the black visor and crown profile of the cap",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -2879,22 +2875,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp",
             alt: "GA Matchday Cap in Black/Natural, front view: natural crown with the black GA monogram embroidered on the front panel and a black visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-black-catalog-model-front-20261022.webp",
             alt: "Model facing forward wearing the Black/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-black-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the black GA monogram on the natural front panel of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-black-catalog-model-side-20261022.webp",
             alt: "Same model turned to the side, showing the black visor and crown profile of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2911,22 +2903,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-monogram-cap-red-catalog-product-front-20261022.webp",
             alt: "GA Matchday Cap in Red/Natural, front view: natural crown with the red GA monogram embroidered on the front panel and a red visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-red-catalog-model-front-20261022.webp",
             alt: "Model facing forward wearing the Red/Natural GA Matchday Cap with a grey tee, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-red-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the red GA monogram on the natural front panel of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-red-catalog-model-side-20261022.webp",
             alt: "Same model turned to the side, showing the red visor and crown profile of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2943,22 +2931,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-monogram-cap-royal-catalog-product-front-20261022.webp",
             alt: "GA Matchday Cap in Royal/Natural, front view: natural crown with the royal blue GA monogram embroidered on the front panel and a royal blue visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-royal-catalog-model-front-20261022.webp",
             alt: "Model facing forward wearing the Royal/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-royal-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the royal blue GA monogram on the natural front panel of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-royal-catalog-model-side-20261022.webp",
             alt: "Same model turned to the side, showing the royal blue visor and crown profile of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2975,22 +2959,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-monogram-cap-dark-green-catalog-product-front-20261022.webp",
             alt: "GA Matchday Cap in Dark Green/Natural, front view: natural crown with the dark green GA monogram embroidered on the front panel and a dark green visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-dark-green-catalog-model-front-20261022.webp",
             alt: "Model facing forward wearing the Dark Green/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-dark-green-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the dark green GA monogram on the natural front panel of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-monogram-cap-dark-green-catalog-model-side-20261022.webp",
             alt: "Same model turned to the side, showing the dark green visor and crown profile of the cap",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -2999,7 +2979,9 @@ export const products: Product[] = [
     category: "hat",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: false,
+    // On sale since 2026-10-23 (owner: every listed product is live, nothing
+    // is coming soon).
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -3027,22 +3009,18 @@ export const products: Product[] = [
       {
         src: "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
         alt: "Stacked Stadium Cap in Black/Natural, front view: natural crown with the black GOAL ATHLETICS wordmark and bar embroidered on the front panel and a black visor",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-wordmark-cap-black-catalog-model-front-20261022.webp",
         alt: "Model facing the camera wearing the Black/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-wordmark-cap-black-catalog-model-three-quarter-20261022.webp",
         alt: "Same model in a three-quarter turn, showing the GOAL ATHLETICS wordmark on the natural front panel and the black visor",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-wordmark-cap-black-catalog-model-side-20261022.webp",
         alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the black visor",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3060,22 +3038,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
             alt: "Stacked Stadium Cap in Black/Natural, front view: natural crown with the black GOAL ATHLETICS wordmark and bar embroidered on the front panel and a black visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-black-catalog-model-front-20261022.webp",
             alt: "Model facing the camera wearing the Black/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-black-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the GOAL ATHLETICS wordmark on the natural front panel and the black visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-black-catalog-model-side-20261022.webp",
             alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the black visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3092,22 +3066,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp",
             alt: "Stacked Stadium Cap in Red/Natural, front view: natural crown with the red GOAL ATHLETICS wordmark and bar embroidered on the front panel and a red visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-red-catalog-model-front-20261022.webp",
             alt: "Model facing the camera wearing the Red/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-red-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the red wordmark on the natural front panel and the red visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-red-catalog-model-side-20261022.webp",
             alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the red visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3124,22 +3094,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp",
             alt: "Stacked Stadium Cap in Royal/Natural, front view: natural crown with the royal blue GOAL ATHLETICS wordmark and bar embroidered on the front panel and a royal blue visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-royal-catalog-model-front-20261022.webp",
             alt: "Model facing the camera wearing the Royal/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-royal-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the royal blue wordmark on the natural front panel and the royal blue visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-royal-catalog-model-side-20261022.webp",
             alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the royal blue visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3157,22 +3123,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp",
             alt: "Stacked Stadium Cap in Dark Green/Natural, front view: natural crown with the dark green GOAL ATHLETICS wordmark and bar embroidered on the front panel and a dark green visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-dark-green-catalog-model-front-20261022.webp",
             alt: "Model facing the camera wearing the Dark Green/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-dark-green-catalog-model-three-quarter-20261022.webp",
             alt: "Same model in a three-quarter turn, showing the dark green wordmark on the natural front panel and the dark green visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-wordmark-cap-dark-green-catalog-model-side-20261022.webp",
             alt: "Same model turned the other way, showing the wordmark on the front panel and the profile of the dark green visor",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3217,12 +3179,10 @@ export const products: Product[] = [
       {
         src: "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
         alt: "GA Minimal Tee in black, product front with the white and red GA monogram centred on the chest",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
         alt: "GA Minimal Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3239,32 +3199,26 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
             alt: "GA Minimal Tee in black, product front with the white and red GA monogram centred on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
             alt: "GA Minimal Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-front-20261015.webp",
             alt: "Model facing forward in the black GA Minimal Tee with the white and red GA monogram centred on the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-front-quarter-20261015.webp",
             alt: "Same model in a front quarter turn, black GA Minimal Tee with the white and red GA monogram on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-rear-20261015.webp",
             alt: "Same model from behind in the black GA Minimal Tee, white GOAL ATHLETICS lockup with a red bar across the upper back",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-rear-quarter-20261015.webp",
             alt: "Same model in a back quarter turn, showing the white and red GOAL ATHLETICS lockup on the black tee",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3281,32 +3235,26 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp",
             alt: "GA Minimal Tee in True Royal, product front with the cream GA monogram centred on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp",
             alt: "GA Minimal Tee in True Royal, product back with the cream stacked GOAL ATHLETICS lockup across the upper back",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-front-20261015.webp",
             alt: "Model facing forward in the True Royal GA Minimal Tee with the cream GA monogram centred on the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-front-quarter-20261015.webp",
             alt: "Same model in a front quarter turn, True Royal GA Minimal Tee with the cream GA monogram on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-rear-20261015.webp",
             alt: "Same model from behind in the True Royal GA Minimal Tee, cream GOAL ATHLETICS lockup across the upper back",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-rear-quarter-20261015.webp",
             alt: "Same model in a back quarter turn, showing the cream GOAL ATHLETICS lockup on the True Royal tee",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3319,27 +3267,22 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp",
             alt: "White GA Minimal Tee, product front with black and red GA monogram",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-product-back-20261014.webp",
             alt: "White GA Minimal Tee, product back with black GOAL ATHLETICS lettering and red bar",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-model-front-20261014.webp",
             alt: "Model standing front-on in the white GA Minimal Tee, plain black shorts and white socks",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-model-three-quarter-20261014.webp",
             alt: "Same model in a standing three-quarter view of the white GA Minimal Tee, black shorts and white socks",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-model-rear-20261014.webp",
             alt: "Same model standing rear-on in the white GA Minimal Tee, showing the black and red back design",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3356,32 +3299,26 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp",
             alt: "GA Minimal Tee in True Red, product front with the white GA monogram centred on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp",
             alt: "GA Minimal Tee in True Red, product back with the white stacked GOAL ATHLETICS lockup across the upper back",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-front-20261015.webp",
             alt: "Model facing forward in the True Red GA Minimal Tee with the white GA monogram centred on the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-front-quarter-20261015.webp",
             alt: "Same model in a front quarter turn, True Red GA Minimal Tee with the white GA monogram on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-rear-20261015.webp",
             alt: "Same model from behind in the True Red GA Minimal Tee, white GOAL ATHLETICS lockup across the upper back",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-rear-quarter-20261015.webp",
             alt: "Same model in a back quarter turn, showing the white GOAL ATHLETICS lockup on the True Red tee",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3418,7 +3355,6 @@ export const products: Product[] = [
       {
         src: "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
         alt: "GA Big Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3436,22 +3372,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
             alt: "GA Big Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-black-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the black GA Big Tee with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-black-catalog-model-three-quarter-20261020.webp",
             alt: "Same model in a three-quarter turn, black GA Big Tee with the white and red GA and GOAL ATHLETICS lockup on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-black-catalog-model-rear-20261020.webp",
             alt: "Same model from behind in the black GA Big Tee, clean back with no print",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3464,22 +3396,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-product-front-20261022.webp",
             alt: "GA Big Tee in True Royal, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the true royal GA Big Tee with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-model-three-quarter-20261020.webp",
             alt: "Same model in a three-quarter turn, true royal GA Big Tee with the cream GA and GOAL ATHLETICS lockup on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-model-rear-20261020.webp",
             alt: "Same model from behind in the true royal GA Big Tee, clean back with no print",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3492,22 +3420,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp",
             alt: "GA Big Tee in White · Black-Red, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the white GA Big Tee with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-model-three-quarter-20261020.webp",
             alt: "Same model in a three-quarter turn, white GA Big Tee with the black and red GA and GOAL ATHLETICS lockup on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-model-rear-20261020.webp",
             alt: "Same model from behind in the white GA Big Tee, clean back with no print",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3520,22 +3444,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-product-front-20261022.webp",
             alt: "GA Big Tee in True Red, product front with the white GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-model-front-20261020.webp",
             alt: "Model facing forward in the true red GA Big Tee with the white GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-model-three-quarter-20261020.webp",
             alt: "Same model in a three-quarter turn, true red GA Big Tee with the white GA and GOAL ATHLETICS lockup on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-model-rear-20261020.webp",
             alt: "Same model from behind in the true red GA Big Tee, clean back with no print",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3589,17 +3509,14 @@ export const products: Product[] = [
       {
         src: "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
         alt: "GA Minimal Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
         alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
       {
         src: "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
         alt: "Close-up of the white and red GA monogram on the left leg of the black GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3612,17 +3529,14 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
             alt: "GA Minimal Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
             alt: "Close-up of the white and red GA monogram on the left leg of the black GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3635,17 +3549,14 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-product-front-20261022.webp",
             alt: "GA Minimal Shorts in Ink Blue, product front with the cream GA monogram on the left leg above the hem, drawcord waist and side pockets",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Ink Blue GA Minimal Shorts with the cream GA monogram on the left leg above the hem, white socks and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-print-detail-20261022.webp",
             alt: "Close-up of the cream GA monogram on the left leg of the Ink Blue GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3658,17 +3569,14 @@ export const products: Product[] = [
           {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-product-front-20261022.webp",
             alt: "GA Minimal Shorts in Shadow, product front with the black and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Shadow GA Minimal Shorts with the black and red GA monogram on the left leg above the hem, white socks and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp",
             alt: "Close-up of the black and red GA monogram on the left leg of the Shadow GA Minimal Shorts, just above the hem",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3725,7 +3633,6 @@ export const products: Product[] = [
       {
         src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
         alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     // Swatches: Black, Grey Heather and Bone reuse the hexes the Core Hoodie
@@ -3743,22 +3650,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-black-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Black Heritage Hoodie with the white and red GA monogram on the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-black-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Black Heritage Hoodie, white and red GA monogram on the chest and the left sleeve",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-black-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Black Heritage Hoodie, white and red GA monogram on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3772,22 +3675,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Heritage Hoodie in Grey Heather, product front with the black and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-grey-heather-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Grey Heather Heritage Hoodie with the black and red GA monogram on the chest and on the left sleeve, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Grey Heather Heritage Hoodie, GA monogram on the chest and the left sleeve",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Grey Heather Heritage Hoodie, GA monogram on the chest and the left sleeve",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3801,22 +3700,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Heritage Hoodie in Bone, product front with the black and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-bone-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Bone Heritage Hoodie with the black and red GA monogram on the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-bone-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Bone Heritage Hoodie, black and red GA monogram on the chest and the left sleeve",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-bone-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Bone Heritage Hoodie, black and red GA monogram on the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3830,22 +3725,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Heritage Hoodie in Navy, product front with the cream GA monogram centred on the chest and the small cream GA monogram on the left sleeve above the cuff",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-navy-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Navy Heritage Hoodie with the cream GA monogram on the chest and on the left sleeve, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-navy-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Navy Heritage Hoodie, cream GA monogram on the chest and the left sleeve",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-heritage-hoodie-navy-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Navy Heritage Hoodie, cream GA monogram on the chest and the left sleeve",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3899,7 +3790,6 @@ export const products: Product[] = [
       {
         src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
         alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
-        caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
       },
     ],
     colorVariants: [
@@ -3913,22 +3803,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-black-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Black Lockup Hoodie with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-black-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Black Lockup Hoodie, white and red GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-black-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Black Lockup Hoodie, white and red GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3942,22 +3828,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Grey Heather, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Grey Heather Lockup Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Grey Heather Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Grey Heather Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -3971,22 +3853,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Bone, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Bone Lockup Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Bone Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Bone Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },
@@ -4000,22 +3878,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp",
             alt: "GOAL Athletics Lockup Hoodie in Navy, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-model-front-20261022.webp",
             alt: "Model facing forward in the Navy Lockup Hoodie with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-model-quarter-left-20261022.webp",
             alt: "Same model turned to the left in the Navy Lockup Hoodie, cream GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-model-quarter-right-20261022.webp",
             alt: "Same model turned to the right in the Navy Lockup Hoodie, cream GOAL ATHLETICS lockup across the chest",
-            caption: "AI-generated catalog visualization. Not a photograph of a manufactured sample.",
           },
         ],
       },

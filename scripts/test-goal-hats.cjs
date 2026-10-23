@@ -1,13 +1,13 @@
 // Owner hat upload 2026-10-14: two caps, eight Apliiq colourways. Verifies the
 // catalog rows, exact Apliiq SKUs, images on disk and that checkout refuses
-// the cap that is not for sale. The Stacked Stadium Cap went on sale on
-// 2026-10-23 for the first live Apliiq order. No network, database or
+// any cap that is not for sale (none since 2026-10-23: both caps went on sale
+// for the first live Apliiq order, owner: nothing is coming soon). No network, database or
 // provider calls.
 const fs = require('fs'), assert = require('assert/strict'), ts = require('typescript'), vm = require('vm');
 require.extensions['.ts'] = (m, f) => m._compile(ts.transpileModule(fs.readFileSync(f, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, resolveJsonModule: true, esModuleInterop: true } }).outputText, f);
 const p = require('../src/lib/products.ts'), f = require('../src/lib/fulfillment.ts');
 const HATS = {
-  'goal-athletics-monogram-cap': { id: '80000000-0000-4000-8000-000000000009', variants: { 'Black/Natural': 6205981, 'Red/Natural': 6205977, 'Royal/Natural': 6205982, 'Dark Green/Natural': 6205989 } },
+  'goal-athletics-monogram-cap': { id: '80000000-0000-4000-8000-000000000009', forSale: true, variants: { 'Black/Natural': 6205981, 'Red/Natural': 6205977, 'Royal/Natural': 6205982, 'Dark Green/Natural': 6205989 } },
   'goal-athletics-wordmark-cap': { id: '80000000-0000-4000-8000-000000000010', forSale: true, variants: { 'Black/Natural': 6205992, 'Red/Natural': 6205994, 'Royal/Natural': 6205995, 'Dark Green/Natural': 6206101 } },
 };
 (async () => {

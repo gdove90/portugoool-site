@@ -42,11 +42,8 @@ function sourceGalleryImages(product: Product, variantIndex: number): Product["i
   const src = directory + entry.webp.split("/").pop();
   const remaining = images.filter((image, index) => image.src !== src && !image.src.startsWith(directory)
     && (index < 2 || !/on[- ]body/i.test(image.alt)));
-  const onBody = {
-    src,
-    alt: entry.alt,
-    caption: "AI-generated on-body visualization. Not a photograph of a manufactured sample.",
-  };
+  // Owner, 2026-10-23: no visualization captions under product images.
+  const onBody = { src, alt: entry.alt };
   return [...remaining.slice(0, 2), onBody, ...remaining.slice(2)];
 }
 
@@ -55,6 +52,7 @@ const backgrounds = new Map(backgroundManifest.map(image => [image.originalSrc, 
 export function productGalleryImages(product: Product, variantIndex: number): Product["images"] {
   return sourceGalleryImages(product, variantIndex).map(image => {
     const replacement = backgrounds.get(image.src);
-    return replacement ? { src: replacement.src, alt: image.alt, caption: replacement.caption } : image;
+    // Owner, 2026-10-23: no visualization captions under product images.
+    return replacement ? { src: replacement.src, alt: image.alt } : image;
   });
 }
