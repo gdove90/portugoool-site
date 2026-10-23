@@ -10,10 +10,10 @@
       "order": 1,
       "colorway": "Bone",
       "view": "product-front",
-      "sourceFilename": "bone-product-front-as-received.webp",
-      "receivedAs": "43.webp",
-      "sourceSha256": "83c6a806c01cb79d849d2a57e79a2b04a027f9357ed3d6b000057b4f3c85e079",
-      "sourceBytes": 136506,
+      "sourceFilename": "bone-product-front-v2-as-received.webp",
+      "receivedAs": "57.webp",
+      "sourceSha256": "04f33b545c4e89080391bb3dd0b9ee090a55f41fc7acaf122e2bae87e6568064",
+      "sourceBytes": 127182,
       "sourceDimensions": [
         1024,
         1536
@@ -24,9 +24,21 @@
         1536
       ],
       "deployedPath": "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
-      "webpSha256": "83c6a806c01cb79d849d2a57e79a2b04a027f9357ed3d6b000057b4f3c85e079",
-      "webpBytes": 136506,
-      "replaces": "Apliiq render at the same path (moved to designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/); cache revision bone-front-photo-20261022 in src/lib/product-image.ts"
+      "webpSha256": "04f33b545c4e89080391bb3dd0b9ee090a55f41fc7acaf122e2bae87e6568064",
+      "webpBytes": 127182,
+      "replaces": "Apliiq render at the same path (moved to designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/); cache revision bone-front-photo-20261022 in src/lib/product-image.ts",
+      "replacedVersion1": {
+        "sourceFilename": "bone-product-front-as-received.webp",
+        "receivedAs": "43.webp",
+        "sourceSha256": "83c6a806c01cb79d849d2a57e79a2b04a027f9357ed3d6b000057b4f3c85e079",
+        "webpSha256": "83c6a806c01cb79d849d2a57e79a2b04a027f9357ed3d6b000057b4f3c85e079",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "note": "owner's first Bone product shot (the drawstrings were see-through, so the chest print showed through them); replaced on the owner's word later on 2026-10-22; file kept in designs/59_lockup-hoodie-ind4000-2026-10-22/retired-render/goal-lockup-hoodie-bone-catalog-product-front-owner-v1-20261022.webp"
+      },
+      "cacheRevision": "bone-front-photo-v2-20261022"
     },
     {
       "order": 2,

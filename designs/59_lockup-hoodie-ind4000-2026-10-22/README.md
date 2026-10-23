@@ -125,6 +125,14 @@ Navy colourway (cream lockup).
   `docs/catalog/goal-lockup-hoodie-grey-heather-photos-20261022.json`. All four
   Lockup colours now show only the owner's photos; the four Apliiq renders
   are in `retired-render/`.
+- Bone product shot replaced later on 2026-10-22 (owner: "replace the
+  current lockup floating hoodie with this image"). The colour was read from
+  the fabric (about 200/195/190, the Bone shot's own). In the first version
+  the drawstrings were see-through and the chest print showed through them;
+  the new shot has solid cords. It is 1024 x 1536, already 2:3 on a clean
+  backdrop, deployed byte for byte. Cache revision
+  `bone-front-photo-v2-20261022`. The first version is in `retired-render/`
+  (`*-owner-v1-*`); both originals are in `as-received-owner/`.
 
 ## Original publish checklist
 
