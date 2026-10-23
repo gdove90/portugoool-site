@@ -33,7 +33,7 @@ assert.equal(new Set(backgrounds.map(image => image.originalSrc)).size, 51);
 for (const image of backgrounds) {
   assert.equal(image.dimensions[0], image.dimensions[1], 'all assets must be square');
   assert.ok(image.dimensions[0] >= 1024);
-  assert.ok(image.caption.includes('AI-edited'));
+  assert.equal(image.caption, undefined, 'no imagery-provenance caption (owner, 2026-10-23)');
   assert.equal(new URL(catalogImageSrc(image.originalSrc), 'https://goool.shop').pathname, image.src, 'supplier references resolve to studio assets everywhere');
 }
 assert.equal(manifest.length, 18, 'all 18 approved color variants need a gallery');
@@ -69,7 +69,7 @@ for (const entry of manifest) {
     assert.ok(fs.statSync(file).size > 1000, 'empty/truncated image: ' + file);
     if (image.src.includes('men-studio-v4')) {
       files.add(file);
-      assert.ok(image.caption.includes('AI-generated'), 'generated views retain disclosure');
+      assert.ok(!/\bAI\b/i.test(image.caption ?? ''), 'no AI language on the site (owner, 2026-10-23)');
       const bytes = fs.readFileSync(file);
       assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
       assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
