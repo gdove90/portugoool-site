@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import Stripe from "stripe";
-import { apliiqSubmitEnabled, checkApliiqConnection, submissionEnvironmentAllowed } from "@/lib/apliiq";
+import { apliiqSubmitEnabled, checkApliiqConnection, describeOrderListing, submissionEnvironmentAllowed } from "@/lib/apliiq";
 import { drainEmailQueue, queueOrderConfirmation, queueOrderDelayNotice, queueShipmentNotification } from "@/lib/email-delivery";
 import { emailProvider } from "@/lib/email";
 import { runWelcomePass } from "@/lib/welcome";
@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
-  let body: { action?: string; orderId?: string; welcome?: boolean; endpointId?: string; confirm?: string };
+  let body: { action?: string; orderId?: string; welcome?: boolean; endpointId?: string; confirm?: string; month?: number; year?: number };
   try {
     body = await req.json();
   } catch {
@@ -247,6 +247,15 @@ export async function POST(req: NextRequest) {
   if (body.action === "retry-confirmation" && body.orderId) {
     try { return NextResponse.json({ confirmation: await queueOrderConfirmation(store, body.orderId) }); }
     catch { return NextResponse.json({ error: "Confirmation could not be queued." }, { status: 503 }); }
+  }
+
+  if (body.action === "apliiq-listing") {
+    // Read-only: the shape of Apliiq's order listing (identifier fields
+    // only), so the reconcile parser can be matched to the real API.
+    const now = new Date();
+    const month = Number(body.month ?? now.getUTCMonth() + 1);
+    const year = Number(body.year ?? now.getUTCFullYear());
+    return NextResponse.json(await describeOrderListing(month, year));
   }
 
   if (body.action === "reconcile" && body.orderId) {

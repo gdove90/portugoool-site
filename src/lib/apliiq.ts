@@ -369,3 +369,61 @@ export function verifyFulfillmentSignature(rawBody: string, header: string | nul
   const b = Buffer.from(header.trim());
   return a.length === b.length && crypto.timingSafeEqual(a, b);
 }
+
+/**
+ * Operator diagnostic for the reconcile path: what does GET /v1/Order
+ * really return for a month? Reports the response shape and
+ * identifier-like fields only (no addresses, no line items), so the
+ * listing parser above can be matched to the real contract instead of
+ * guessed at. Read-only.
+ */
+export async function describeOrderListing(
+  month: number,
+  year: number
+): Promise<Record<string, unknown>> {
+  let res: Response;
+  try {
+    res = await apliiqFetch(`/v1/Order?month=${month}&year=${year}`, { method: "GET" }, 8000);
+  } catch (error) {
+    return {
+      ok: false,
+      error: error instanceof Error ? `${error.name}: ${error.message}` : String(error),
+    };
+  }
+  const text = await res.text();
+  const summary: Record<string, unknown> = {
+    ok: res.ok,
+    status: res.status,
+    contentType: res.headers.get("content-type"),
+    bytes: text.length,
+  };
+  let body: unknown;
+  try {
+    body = JSON.parse(text);
+  } catch {
+    return { ...summary, bodyKind: "non-json", head: text.slice(0, 200) };
+  }
+  summary.bodyKind = Array.isArray(body) ? "array" : body === null ? "null" : typeof body;
+  if (body && typeof body === "object" && !Array.isArray(body)) {
+    summary.topKeys = Object.keys(body as object).slice(0, 30);
+  }
+  const rows = extractOrderArray(body);
+  if (!rows) return { ...summary, rows: null, head: text.slice(0, 200) };
+  const idLike = /id|number|name|status|date|reference|external|store/i;
+  summary.rowCount = rows.length;
+  summary.rows = rows.slice(0, 20).map((row) => {
+    if (!row || typeof row !== "object") return { kind: typeof row };
+    const out: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(row as Record<string, unknown>)) {
+      if (value !== null && typeof value === "object") {
+        out[key] = Array.isArray(value)
+          ? `array(${value.length})`
+          : `object{${Object.keys(value).slice(0, 8).join(",")}}`;
+      } else if (idLike.test(key)) {
+        out[key] = typeof value === "string" ? value.slice(0, 60) : value;
+      }
+    }
+    return out;
+  });
+  return summary;
+}
