@@ -1,0 +1,19 @@
+/* Payment-success page (owner-approved design, 2026-10-23). The page brings
+   its own fully transparent header over the field photo and reuses the
+   production Brand component; these rules give that logo the storefront
+   header's exact responsive sizes (v13-web.css: 38/250 from 1280px,
+   27/165 below it, 24/130 at 360px and under). The extra .v84 ancestor
+   keeps them ahead of the generic .v84 .brand sizing. */
+.v84 .order-complete .brand { display:flex; align-items:center; gap:8px; color:#fff; }
+.v84 .order-complete .brand .brand-ga { width:38px; height:36px; flex:none; }
+.v84 .order-complete .brand .brand-wordmark { width:250px; height:auto; flex:none; }
+@media (max-width:1279px) {
+  .v84 .order-complete .brand { gap:5px; }
+  .v84 .order-complete .brand .brand-ga { width:27px; height:29px; }
+  .v84 .order-complete .brand .brand-wordmark { width:165px; max-width:calc(100vw - 192px); }
+}
+@media (max-width:360px) {
+  .v84 .order-complete .brand .brand-ga { width:24px; }
+  .v84 .order-complete .brand .brand-wordmark { width:130px; }
+}
+.v84 .order-complete a:focus-visible { outline:2px solid #fff; outline-offset:4px; }

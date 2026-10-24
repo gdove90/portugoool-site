@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // ─────────────────────────────────────────────────────────────
 // Real order tracking. The lookup calls /api/track-order with the
@@ -32,6 +32,13 @@ export default function TrackOrderPage() {
   const [reference, setReference] = useState("");
   const [email, setEmail] = useState("");
   const [result, setResult] = useState<Result>({ kind: "idle" });
+
+  // The confirmation page links here with the real order reference; pre-fill
+  // it so the customer only adds their email. Anything else is ignored.
+  useEffect(() => {
+    const given = new URLSearchParams(window.location.search).get("reference") ?? "";
+    if (/^GOOOL-[0-9A-F]{8}$/i.test(given)) setReference(given.toUpperCase());
+  }, []);
 
   async function lookup(e: React.FormEvent) {
     e.preventDefault();

@@ -31,7 +31,7 @@ export default function Shell({ children }: { children: ReactNode }) {
   // shopping dialogs, or discount popup behind the renovation gate.
   if (path === "/gate") return <main id="main">{children}</main>;
   if (["/contact", "/support", "/faq", "/shipping-returns", "/track-order", "/success", "/privacy", "/terms", "/refunds"].includes(path)) {
-    return <CustomerServiceShell>{children}</CustomerServiceShell>;
+    return <CustomerServiceShell immersive={path === "/success"}>{children}</CustomerServiceShell>;
   }
   return <StoreShell comingSoonOnly={path === "/women" && TEMPO_COLLECTION_COMING_SOON}>{children}</StoreShell>;
 }
