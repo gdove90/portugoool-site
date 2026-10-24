@@ -21,7 +21,7 @@ import { BRAND_SEARCH_TITLE, BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metada
 
 // Approved v84 families are self-hosted, including local/offline staging.
 
-// "Premium futbol fan apparel" stood in all three of these strings until
+// "Premium soccer fan apparel" stood in all three of these strings until
 // 2026-09-23. "Premium Quality" was removed from the visible benefit bar
 // that morning as an adjective with nothing behind it, but the same word
 // kept shipping here - and metadata is what search results and link

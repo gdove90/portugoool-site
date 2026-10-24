@@ -67,7 +67,7 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
     `${LEGAL_NAME} · goalathletics.shop`,
     MAILING_ADDRESS,
     "",
-    `GOAL Athletics is an independent brand of ${LEGAL_NAME}. Not affiliated with, endorsed by, or connected to any futbol federation, club, league, or governing body.`,
+    `GOAL Athletics is an independent brand of ${LEGAL_NAME}. Not affiliated with, endorsed by, or connected to any soccer federation, club, league, or governing body.`,
   ].join("\n");
 
   const html = `<!DOCTYPE html>
@@ -118,7 +118,7 @@ export function buildOrderDelayNotice(order: OrderRow & { id: string }): {
             <div style="font:700 19px/1.35 Helvetica,Arial,sans-serif;color:${PAPER};">Wear the Feeling.</div>
             <div style="margin-top:13px;font:400 11px/1.65 Helvetica,Arial,sans-serif;letter-spacing:.6px;color:${MUTED};">${esc(LEGAL_NAME)} · <a href="${esc(site)}" target="_blank" style="color:${PAPER};text-decoration:underline;">goalathletics.shop</a></div>
             <div style="margin-top:10px;font:400 12px/1.65 Helvetica,Arial,sans-serif;color:${MUTED};">${esc(MAILING_STREET)}<br>${esc(MAILING_CITY_LINE)}</div>
-            <div style="margin-top:13px;font:400 11px/1.65 Helvetica,Arial,sans-serif;color:${FAINT};">GOAL Athletics is an independent brand of ${esc(LEGAL_NAME)}. Not affiliated with, endorsed by, or connected to any futbol federation, club, league, or governing body.</div>
+            <div style="margin-top:13px;font:400 11px/1.65 Helvetica,Arial,sans-serif;color:${FAINT};">GOAL Athletics is an independent brand of ${esc(LEGAL_NAME)}. Not affiliated with, endorsed by, or connected to any soccer federation, club, league, or governing body.</div>
           </td></tr>
         </table>
       </td></tr>

@@ -29,7 +29,7 @@ export default function TempoComingSoon({ collection, audience, image, imageAlt 
           <Link href="/men" className="btn outline">Explore men <InterfaceIcon name="arrow-up-right" /></Link>
         </div>
       </div>
-      <p className={styles.signature}>ROOTED IN FUTBOL. MADE FOR YOUR EVERYDAY.</p>
+      <p className={styles.signature}>ROOTED IN SOCCER. MADE FOR YOUR EVERYDAY.</p>
     </section>
   );
 }
