@@ -304,14 +304,13 @@ export default function SuccessPage() {
           </article>
         </div>
 
-        <footer className="mt-10 flex items-end justify-between gap-6 border-t border-white/35 pt-4 text-white/85">
+        <footer className="mt-10 border-t border-white/35 pt-4 text-white/85">
           <div>
             <p className="max-w-[210px] text-[8px] uppercase leading-[1.7] tracking-[0.14em] md:max-w-none">
               {LEGAL_NAME} · {city}
             </p>
             <p className="mt-1 text-[7px] tracking-[0.08em] text-white/60">Photo by Serhii Kalyn</p>
           </div>
-          <p className="text-[8px] font-medium uppercase tracking-[0.2em]">Made for the pursuit</p>
         </footer>
       </section>
     </div>
