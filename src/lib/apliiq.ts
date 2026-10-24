@@ -271,6 +271,10 @@ export async function submitOrder(
  * The response contract beyond "GET /v1/Order?month&year returns the
  * period's orders" is undocumented; anything surprising stays
  * unresolved and keeps the order parked in needs_reconcile.
+ * Observed live on 2026-10-23: a bare array of { OrderId, OrderDate,
+ * ExpectedDate, SN[], StoreName, StoreOrderId (our order_number),
+ * StoreSystemOrderId (our numeric id), Status }; month and year were
+ * ignored and the whole history came back (9 rows).
  */
 const LIST_TRUNCATION_GUARD = 200;
 
@@ -288,7 +292,16 @@ function extractOrderArray(body: unknown): unknown[] | null {
 function rowMatches(row: unknown, orderNumber: string): boolean | null {
   if (!row || typeof row !== "object") return null; // not comparable
   const r = row as Record<string, unknown>;
-  const candidates = [r.order_number, r.orderNumber, r.OrderNumber, r.name, r.Name];
+  const candidates = [
+    r.order_number,
+    r.orderNumber,
+    r.OrderNumber,
+    r.StoreOrderId,
+    r.storeOrderId,
+    r.store_order_id,
+    r.name,
+    r.Name,
+  ];
   const comparable = candidates.filter((c) => c != null);
   if (comparable.length === 0) return null; // nothing to compare against
   return comparable.some((c) => String(c) === orderNumber);
@@ -340,7 +353,8 @@ export async function findOrderByNumber(
         continue;
       }
       if (match) {
-        const id = (row as { id?: unknown; Id?: unknown }).id ?? (row as { Id?: unknown }).Id;
+        const r = row as { id?: unknown; Id?: unknown; OrderId?: unknown; orderId?: unknown; order_id?: unknown };
+        const id = r.id ?? r.Id ?? r.OrderId ?? r.orderId ?? r.order_id;
         return { found: true, apliiqOrderId: id != null ? String(id) : undefined };
       }
     }
