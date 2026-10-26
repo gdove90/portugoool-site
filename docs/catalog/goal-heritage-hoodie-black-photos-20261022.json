@@ -91,5 +91,22 @@
       "webpSha256": "fa66cd6dde794070be03bcf852946e00d76a5a376aba59c898358e2df7bf4eb5",
       "webpBytes": 31774
     }
+  ],
+  "replacements": [
+    {
+      "date": "2026-10-26",
+      "colorway": "Black",
+      "view": "product-front",
+      "deployedPath": "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+      "cacheRevision": "black-front-photo-v2-20261026",
+      "source": "Owner-supplied in the Claude session on 2026-10-26 with the instruction to upload it and replace the current hoodie image; used as given (already 2:3 on a grey studio backdrop), no re-encode or backdrop processing.",
+      "asReceived": "designs/58_heritage-hoodie-ind4000-2026-10-22/as-received-owner/black-product-front-v2-as-received-20261026.webp",
+      "sha256": "21a3db4c66036f5144b4b3c1b875ddd58215a1e7ac7e5077363ec915ebe359d1",
+      "bytes": 92676,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    }
   ]
 }

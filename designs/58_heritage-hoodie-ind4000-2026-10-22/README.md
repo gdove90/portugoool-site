@@ -180,3 +180,7 @@ The owner supplied a product shot and three model photos for Grey Heather
    Supabase SQL editor.
 5. `node scripts/test-goal-hoodies.cjs` must still pass (it flips to
    expecting a 200 from checkout once every input is in).
+
+## Black front v2 (2026-10-26)
+
+The owner replaced the Black product front with a new shot (`as-received-owner/black-product-front-v2-as-received-20261026.webp`, 1024 x 1536, 2:3, grey studio backdrop, used as given). Same path in `public/products/`; cache revision `black-front-photo-v2-20261026` in `src/lib/product-image.ts`.
