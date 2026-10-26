@@ -4187,15 +4187,17 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end TEMPO Quarter Zip ==
-  // == TEMPO Training Pants (built 2026-10-26) ==
-  // Apliiq designs 6240577 Deep Red/White, 6240578 True Navy/White,
-  // 6240579 Black/White: GA monogram 3.00 x 2.70 in in the wearer's left
-  // hip print box (about 9 in below the waist, Apliiq's box) and the
-  // wordmark 4.00 x 1.22 in in the back right hip box. The brief's
-  // Black/Black is a separate Apliiq listing; Black/White was built from
-  // this one. Apliiq quote $41.98 (XXL +$2): 25% model floor $72, priced
-  // $72. Apliiq has only rendered the front for Deep Red so far, so the
-  // other two colours lead with their back render. Record:
+  // == TEMPO Training Pants (built 2026-10-26, rebuilt the same day) ==
+  // Apliiq designs 6240609 Deep Red/White, 6240610 True Navy/White,
+  // 6240611 Black/White: GA monogram 2.00 x 1.80 in (the design update of
+  // 2026-10-26; was 3.00 x 2.70 in on 6240577/78/79, now renamed "delete")
+  // in the wearer's left hip print box, 8.50 in below the waistband seam,
+  // and the wordmark 4.00 x 1.22 in in the back right hip box (unchanged).
+  // The brief's Black/Black is a separate Apliiq listing; Black/White was
+  // built from this one. Apliiq quote $41.98 (XXL +$2): 25% model floor
+  // $72, priced $72. Apliiq has not rendered the fronts of the rebuilt
+  // designs (and the old Deep Red front showed the 3 in GA), so every
+  // colour leads with its back render until a front exists. Record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000019",
@@ -4250,10 +4252,6 @@ export const products: Product[] = [
         skuFragment: "DEEPREDWHITE",
         images: [
           {
-            src: "/products/tempo-training-pants-deep-red-white-catalog-product-front-20261026.webp",
-            alt: "TEMPO Training Pants in Deep Red/White, product front with the white GA monogram on the left thigh",
-          },
-          {
             src: "/products/tempo-training-pants-deep-red-white-catalog-product-back-20261026.webp",
             alt: "TEMPO Training Pants in Deep Red/White, product back with the white GOAL ATHLETICS wordmark on the right hip",
           },
@@ -4275,6 +4273,87 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end TEMPO Training Pants ==
+  // == TEMPO Training Shorts (built 2026-10-26) ==
+  // Apliiq designs 6240613 Black, 6240615 Iron Grey, 6240616 True Navy on
+  // the Sport-Tek LST485 ladies repeat short: the V1.3 GA monogram at
+  // 2.00 x 1.80 in filling the wearer's left leg print box (2 x 2 in, the
+  // only box on the blank), the size the 2026-10-26 design update accepted.
+  // Apliiq quote $23.99 (XXL +$2): 25% model floor $46, priced $48 (model
+  // price, not owner-set). Images are Apliiq's renders on the studio
+  // backdrop. Record: designs/62_tempo-collection-proofs-2026-10-26/.
+  {
+    id: "80000000-0000-4000-8000-000000000022",
+    name: "TEMPO Training Shorts",
+    slug: "tempo-training-shorts",
+    blank: "LST485",
+    description:
+      "Women's lightweight stretch short with the GA monogram on the left leg above the hem. Wide flat waistband, curved hem, clean back.",
+    priceCents: 4800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#252525",
+    fabric: "86% polyester, 14% spandex. Lightweight four-way stretch that moves with every stride.",
+    fit: "Women's cut with a wide, flat waistband and a curved hem. True to size.",
+    careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/tempo-training-shorts-black-catalog-product-front-20261026.webp",
+        alt: "TEMPO Training Shorts in Black, product front with the white and red GA monogram on the left leg above the hem",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#252525",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/tempo-training-shorts-black-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Shorts in Black, product front with the white and red GA monogram on the left leg above the hem",
+          },
+        ],
+      },
+      {
+        name: "Iron Grey",
+        supplierColor: "Iron Grey",
+        hex: "#5F5F5F",
+        skuFragment: "IRONGREY",
+        images: [
+          {
+            src: "/products/tempo-training-shorts-iron-grey-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Shorts in Iron Grey, product front with the black GA monogram on the left leg above the hem",
+          },
+        ],
+      },
+      {
+        name: "True Navy",
+        supplierColor: "True Navy",
+        hex: "#202030",
+        skuFragment: "TRUENAVY",
+        images: [
+          {
+            src: "/products/tempo-training-shorts-true-navy-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Shorts in True Navy, product front with the cream GA monogram on the left leg above the hem",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "shorts",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end TEMPO Training Shorts ==
   // == TEMPO Warmup Hoodie (built 2026-10-26) ==
   // Apliiq designs 6240580 Black, 6240581 Vintage White, 6240582 Navy: the
   // V1.3 GA monogram 3.25 x 2.93 in centred on the chest, top 3 in below

@@ -494,11 +494,18 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "White": { apliiqProductId: 6240570, skus: { S: "APQ-6240570S6A1", M: "APQ-6240570S7A1", L: "APQ-6240570S8A1", XL: "APQ-6240570S1A1", XXL: "APQ-6240570S2A1" } },
     "Iron Grey": { apliiqProductId: 6240571, skus: { S: "APQ-6240571S6A1", M: "APQ-6240571S7A1", L: "APQ-6240571S8A1", XL: "APQ-6240571S1A1", XXL: "APQ-6240571S2A1" } },
   },
-  // TEMPO Training Pants (Sport-Tek LPST800)
+  // TEMPO Training Pants (Sport-Tek LPST800), rebuilt 2026-10-26 with the
+  // front GA at 2.00 x 1.80 in; 6240577/78/79 (3 in GA) renamed "delete".
   "80000000-0000-4000-8000-000000000019": {
-    "Deep Red/White": { apliiqProductId: 6240577, skus: { S: "APQ-6240577S6A1", M: "APQ-6240577S7A1", L: "APQ-6240577S8A1", XL: "APQ-6240577S1A1", XXL: "APQ-6240577S2A1" } },
-    "True Navy/White": { apliiqProductId: 6240578, skus: { S: "APQ-6240578S6A1", M: "APQ-6240578S7A1", L: "APQ-6240578S8A1", XL: "APQ-6240578S1A1", XXL: "APQ-6240578S2A1" } },
-    "Black/White": { apliiqProductId: 6240579, skus: { S: "APQ-6240579S6A1", M: "APQ-6240579S7A1", L: "APQ-6240579S8A1", XL: "APQ-6240579S1A1", XXL: "APQ-6240579S2A1" } },
+    "Deep Red/White": { apliiqProductId: 6240609, skus: { S: "APQ-6240609S6A1", M: "APQ-6240609S7A1", L: "APQ-6240609S8A1", XL: "APQ-6240609S1A1", XXL: "APQ-6240609S2A1" } },
+    "True Navy/White": { apliiqProductId: 6240610, skus: { S: "APQ-6240610S6A1", M: "APQ-6240610S7A1", L: "APQ-6240610S8A1", XL: "APQ-6240610S1A1", XXL: "APQ-6240610S2A1" } },
+    "Black/White": { apliiqProductId: 6240611, skus: { S: "APQ-6240611S6A1", M: "APQ-6240611S7A1", L: "APQ-6240611S8A1", XL: "APQ-6240611S1A1", XXL: "APQ-6240611S2A1" } },
+  },
+  // TEMPO Training Shorts (Sport-Tek LST485), GA 2.00 x 1.80 in, left leg
+  "80000000-0000-4000-8000-000000000022": {
+    "Black": { apliiqProductId: 6240613, skus: { S: "APQ-6240613S6A1", M: "APQ-6240613S7A1", L: "APQ-6240613S8A1", XL: "APQ-6240613S1A1", XXL: "APQ-6240613S2A1" } },
+    "Iron Grey": { apliiqProductId: 6240615, skus: { S: "APQ-6240615S6A1", M: "APQ-6240615S7A1", L: "APQ-6240615S8A1", XL: "APQ-6240615S1A1", XXL: "APQ-6240615S2A1" } },
+    "True Navy": { apliiqProductId: 6240616, skus: { S: "APQ-6240616S6A1", M: "APQ-6240616S7A1", L: "APQ-6240616S8A1", XL: "APQ-6240616S1A1", XXL: "APQ-6240616S2A1" } },
   },
   // TEMPO Warmup Hoodie (Bella+Canvas 7519)
   "80000000-0000-4000-8000-000000000020": {

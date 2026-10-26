@@ -86,6 +86,14 @@ export const GUIDE = [
     productIds: ["80000000-0000-4000-8000-000000000019"],
   },
   {
+    id: "women-shorts",
+    label: "Women's Shorts",
+    chart: null,
+    productIds: ["80000000-0000-4000-8000-000000000022"],
+    blank: "Women's stretch short · 86% polyester, 14% spandex",
+    note: "Sold S to XXL. A women's cut with a wide, flat waistband that sits at the natural waist; order your usual size. The maker's flat measurements are still to be published here.",
+  },
+  {
     id: "layers",
     label: "Quarter Zip",
     chart: null,

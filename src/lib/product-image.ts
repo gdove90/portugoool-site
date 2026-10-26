@@ -28,6 +28,11 @@ export function catalogImageSrc(src: string): string {
   "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp": "owner-front-20261026",
   "/products/goal-core-everyday-raincoat-true-navy-catalog-product-front-20261026.webp": "owner-front-20261026",
   "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-front-20261026.webp": "owner-front-20261026",
+    // TEMPO Training Pants backs re-rendered from the rebuilt designs
+    // (6240609/610/611) later on 2026-10-26.
+    "/products/tempo-training-pants-deep-red-white-catalog-product-back-20261026.webp": "pants-v2-20261026",
+    "/products/tempo-training-pants-true-navy-white-catalog-product-back-20261026.webp": "pants-v2-20261026",
+    "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp": "pants-v2-20261026",
     "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
     "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp": "bone-front-photo-v2-20261022",
     // Lockup Hoodie: the owner's product shots replaced the Apliiq renders.

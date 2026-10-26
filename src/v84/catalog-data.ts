@@ -32,6 +32,7 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000019": ["women"],
   "80000000-0000-4000-8000-000000000020": ["women"],
   "80000000-0000-4000-8000-000000000021": ["women"],
+  "80000000-0000-4000-8000-000000000022": ["women"],
 };
 // The GOOOL pieces that filled this grid were retired on 2026-10-15, so the
 // home page features the GOAL Athletics pieces on sale.
