@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProductDetail from "@/v84/ProductDetail";
 import { getProductBySlug, getProducts } from "@/lib/products";
-import { tempoHidden } from "@/lib/collection-launch";
-import { verifiedOwner } from "@/lib/intake/auth";
 import { hasPrice } from "@/lib/types";
 import {
   productJsonLd,
@@ -22,15 +20,10 @@ export function generateStaticParams() {
   return getProducts().map((p) => ({ slug: p.slug }));
 }
 
-// A product of a gated collection (TEMPO while it is coming soon) exists
-// only for the signed-in owner; everyone else gets the 404 the public
-// catalog would give.
-async function visibleProduct(slug: string) {
-  const product = getProductBySlug(slug, { includeTempo: true });
-  if (!product) return undefined;
-  if (tempoHidden(product.id) && !(await verifiedOwner().catch(() => null))) return undefined;
-  return product;
-}
+// Products of a gated collection (TEMPO while it is coming soon) are not
+// in the public catalog, so they 404 here; the owner reviews them at
+// /women/preview/<slug>. This route reads no request cookies so the
+// public product pages stay prerendered.
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (MIGRATION_PREVIEW) {
@@ -38,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!product) return { title: "Not found", robots: { index: false, follow: false } };
     return { title: "Collection in development", alternates: { canonical: `/shop/${product.slug}` }, robots: { index: false, follow: false } };
   }
-  const product = await visibleProduct((await params).slug);
+  const product = getProductBySlug((await params).slug);
   if (!product) return { title: "Not found" };
 
   // The title template appends " · GOAL", and every product name already
@@ -68,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProductPage({ params }: Props) {
-  const product = await visibleProduct((await params).slug);
+  const product = getProductBySlug((await params).slug);
   if (!product) notFound();
   if (MIGRATION_PREVIEW) return <><h1 className="sr-only">Collection in development</h1><ProductDetail product={product} /></>;
 
