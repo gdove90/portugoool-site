@@ -25,6 +25,9 @@ export function catalogImageSrc(src: string): string {
     "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp": "grey-heather-front-photo-20261022",
     // Black front replaced again by the owner's v2 shot on 2026-10-26.
     "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp": "black-front-photo-v2-20261026",
+  "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp": "owner-front-20261026",
+  "/products/goal-core-everyday-raincoat-true-navy-catalog-product-front-20261026.webp": "owner-front-20261026",
+  "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-front-20261026.webp": "owner-front-20261026",
     "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
     "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp": "bone-front-photo-v2-20261022",
     // Lockup Hoodie: the owner's product shots replaced the Apliiq renders.

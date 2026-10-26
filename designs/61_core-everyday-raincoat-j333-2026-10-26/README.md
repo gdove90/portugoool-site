@@ -51,6 +51,13 @@ physical sample exists. Proof-check the first order's mockup.
 `site-images/`: the same renders on the studio backdrop at 2:3 via
 `scripts/studio-backdrop-product-shot.py` (default settings), copied to
 `public/products/goal-core-everyday-raincoat-<colour>-catalog-product-front-20261026.webp`.
-These are supplier renders, not photographs of a manufactured sample.
-Swap for owner photos at the same paths with a new revision in
-`src/lib/product-image.ts`.
+Those renders were on the site from launch until later on 2026-10-26.
+
+**Owner product shots (2026-10-26, later):** the owner supplied a front
+and a back per colour (1024 x 1536, 2:3, used as given, no retouching);
+originals in `as-received-owner/`. The fronts replaced the renders at the
+same `public/products/...-product-front-20261026.webp` paths (revision
+`owner-front-20261026` in `src/lib/product-image.ts`) and the backs were
+added as `...-product-back-20261026.webp`, second in each gallery. The
+owner's ten uploads were five byte-identical pairs; one of each was kept.
+Model pictures are next (owner).

@@ -3948,11 +3948,12 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
-        alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the GOAL ATHLETICS wordmark on the right chest",
+        alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the white and red GOAL ATHLETICS wordmark on the right chest, hood up",
       },
     ],
     // Swatches sampled from the garment body of Apliiq's own renders
-    // (2026-10-26).
+    // (2026-10-26). Owner product shots replaced those renders at the same
+    // front paths later that day (revision owner-front-20261026).
     colorVariants: [
       {
         name: "Black",
@@ -3962,7 +3963,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
-            alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the GOAL ATHLETICS wordmark on the right chest",
+            alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the white and red GOAL ATHLETICS wordmark on the right chest, hood up",
+          },
+          {
+            src: "/products/goal-core-everyday-raincoat-black-catalog-product-back-20261026.webp",
+            alt: "GOAL Athletics Core Everyday Raincoat in Black, product back, plain with the hood down",
           },
         ],
       },
@@ -3974,7 +3979,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-core-everyday-raincoat-true-navy-catalog-product-front-20261026.webp",
-            alt: "GOAL Athletics Core Everyday Raincoat in True Navy, product front with the cream GA monogram on the left chest and the cream GOAL ATHLETICS wordmark on the right chest",
+            alt: "GOAL Athletics Core Everyday Raincoat in True Navy, product front with the cream GA monogram on the left chest and the cream GOAL ATHLETICS wordmark on the right chest, hood up",
+          },
+          {
+            src: "/products/goal-core-everyday-raincoat-true-navy-catalog-product-back-20261026.webp",
+            alt: "GOAL Athletics Core Everyday Raincoat in True Navy, product back, plain with the hood down",
           },
         ],
       },
@@ -3986,7 +3995,11 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-front-20261026.webp",
-            alt: "GOAL Athletics Core Everyday Raincoat in Dark Grey Heather, product front with the black GA monogram on the left chest and the black GOAL ATHLETICS wordmark on the right chest",
+            alt: "GOAL Athletics Core Everyday Raincoat in Dark Grey Heather, product front with the black GA monogram on the left chest and the black GOAL ATHLETICS wordmark on the right chest, hood up",
+          },
+          {
+            src: "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-back-20261026.webp",
+            alt: "GOAL Athletics Core Everyday Raincoat in Dark Grey Heather, product back, plain with the hood down",
           },
         ],
       },
