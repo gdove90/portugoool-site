@@ -1,7 +1,5 @@
 
-import { InterfaceIcon } from "@/v84/InterfaceIcon";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./CollectionComingSoon.module.css";
 
 type Props = {
@@ -11,6 +9,7 @@ type Props = {
   imageAlt: string;
 };
 
+// No buttons (owner, 2026-10-26): status, title, line and signature only.
 export default function TempoComingSoon({ collection, audience, image, imageAlt }: Props) {
   return (
     <section className={styles.hero} aria-labelledby="collection-title">
@@ -24,10 +23,6 @@ export default function TempoComingSoon({ collection, audience, image, imageAlt 
           <span className={styles.collection}>Collection.</span>
         </h1>
         <p className={styles.copy}>A new rhythm.</p>
-        <div className={styles.actions}>
-          <a href="#footer-signup" className="btn white">Join the list <InterfaceIcon name="arrow-up-right" /></a>
-          <Link href="/men" className="btn outline">Explore men <InterfaceIcon name="arrow-up-right" /></Link>
-        </div>
       </div>
       <p className={styles.signature}>ROOTED IN SOCCER. MADE FOR YOUR EVERYDAY.</p>
     </section>
