@@ -15,7 +15,16 @@ and its own handoff (`handoff/CLAUDE-CODE-HANDOFF.md`) says: "Do not
 implement until images, prices and supplier IDs are filled in." All three
 are still null in `handoff/products.json`.
 
-## What was built
+## Owner correction, same day
+
+The owner does not want the Claude Design sheet published. The
+`/references/tempo` page, its component, data module and `public/tempo`
+artwork were reverted from main (commit after 06642ba). The artwork PNGs
+now live here in `artwork/` for the supplier builds. The instruction is to
+build the garments themselves on Apliiq and Tapstitch and list them on the
+site; Printful (leggings) was not named.
+
+## What was built first (reverted)
 
 - **Owner-only page** `/references/tempo` (same sign-in gate as `/admin`,
   `robots: noindex`, off the menus and sitemap). `?grid=0` hides the 1 in
