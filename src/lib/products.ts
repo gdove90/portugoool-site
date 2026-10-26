@@ -4032,10 +4032,12 @@ export const products: Product[] = [
   // minimum is unconfirmed), the horizontal lockup could not meet it at
   // crest size (5.50 in did not fit the chest panel uncropped), so the
   // crest is the monogram alone (gap 2.35 mm at 2.00 in). Front only.
-  // Inks: white/red on Black and Dark Gray, all black on White (owner). Tapstitch MT0063 runs S
+  // Inks: white/red on Black; all black on White and Dark Gray (owner). Tapstitch MT0063 runs S
   // to 4XL; the site sells S to XXL (owner: nothing above 2XL). Quote
   // $15.98 a unit ($12.99 blank + $2.99 print) plus about $5 shipping: the
-  // 25% model's floor is $41; priced $48 (model price, not owner-set).
+  // 25% model's floor is $41. Priced $32 by owner decision 2026-10-26
+  // ("it's 16 for us"), below the model floor: about $10 is left per
+  // piece after the unit cost and Tapstitch's shipping, before card fees.
   // Tapstitch has no order API: lines are placed by hand from the alert
   // email (fulfillment-submit.ts) and shipped with the manual-shipped ops
   // action. Images are Tapstitch's mockups on the studio backdrop.
@@ -4046,7 +4048,7 @@ export const products: Product[] = [
     blank: "MT0063",
     description:
       "Lightweight quarter zip with the GA monogram worn like a crest on the left chest. Stand collar, reflective hits, clean back.",
-    priceCents: 4800,
+    priceCents: 3200,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#171717",
@@ -4092,7 +4094,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp",
-            alt: "Core Quarter Zip in Dark Gray, product front with the white and red GA monogram on the left chest beside the zip",
+            alt: "Core Quarter Zip in Dark Gray, product front with the black GA monogram on the left chest beside the zip",
           },
         ],
       },

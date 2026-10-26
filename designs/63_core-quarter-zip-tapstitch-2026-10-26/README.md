@@ -16,7 +16,7 @@ would add $2.99 (seen in the designer) and is not used.
 |---|---|---|---|
 | Black | 1564299910617194496 | V1.3 GA monogram, white/red, 2.00 x 1.80 in | wearer's left chest beside the zip: GA centre about 1.5 in right of the zipper line, level with the bottom of the zip placket; back blank |
 | White | 1564523403115982848 | GA monogram, all black (owner), 2.00 x 1.80 in | same; measured on the mockups the three centres agree within 2 px (about 0.06 in) |
-| Dark Gray | 1564524205054324736 | GA monogram, white/red, 2.00 x 1.80 in | same |
+| Dark Gray | 1564524205054324736 | GA monogram, all black (owner), 2.00 x 1.80 in | same |
 
 Design ids never changed: every revision was made with "Edit design" and
 "Save Design" on the same three designs.
@@ -38,7 +38,7 @@ Design ids never changed: every revision was made with "Edit design" and
    **GA monogram alone at 2.00 x 1.80 in** (gap 2.35 mm), which fits the
    crest spot with room on both sides. A stacked lockup on the back was
    considered for a few minutes and withdrawn: **front only**.
-4. Inks: white/red on Black and Dark Gray; **all black on White** (owner).
+4. Inks: white/red on Black; **all black on White and Dark Gray** (owner).
    Print files in `print/`: `GOAL_GA_04_White_Red_2.00in_300dpi.png`,
    `GOAL_GA_01_Solid_Black_2.00in_300dpi.png` (the vertical lockup exports
    there are unused). Mockups `quarter-zip-<colour>-ga-<id>.png` are the
@@ -48,8 +48,9 @@ Design ids never changed: every revision was made with "Edit design" and
 
 Row `80000000-0000-4000-8000-000000000023` "GOAL Athletics Core Quarter
 Zip", slug `goal-athletics-core-quarter-zip`, men's audience, category
-`pullover`, supplier `tapstitch`, sizes S to XXL, **$48** (25% model floor
-$41 on $15.98 + $5 shipping; model price, not owner-set), disclosure
+`pullover`, supplier `tapstitch`, sizes S to XXL, **$32 (owner decision
+2026-10-26: "it's 16 for us"; the 25% model floor was $41 and the first
+listing price $48)**, disclosure
 "Ships from our overseas partner: allow 10 to 17 days." Size-guide tab
 `quarter-zip` (note; no flat chart published yet). Migration 0047 applied.
 
