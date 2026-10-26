@@ -1,0 +1,56 @@
+{
+  "collection": "TEMPO",
+  "generated": "2026-10-26",
+  "note": "Copied from the Claude Design project b9b09d57 (tempo/handoff/products.json) on 2026-10-26. Every price, supplier_product_id, material, fit, care and image is still null or pending in the source; nothing here is on the site.",
+  "products": [
+    {"proposed_id": "P04", "merch_order": 1, "slug": "tempo-core-training-tee", "name": "TEMPO Core Training Tee", "supplier": "Apliiq", "manufacturer": "Sport-Tek", "style_code": "LST350", "source_url": "https://www.apliiq.com/customize/womens/tshirts/Sport-Tek-Ladies-Competitor-Tee", "supplier_product_id": null, "verification_status": "unverified",
+     "decoration": {"method": "DTF transfer", "mark": "V1.3 GA monogram", "width_in": 3, "height_in": 2.7, "placement": "Wearer's left chest; top 3.00 in below collar seam (level with CF); art centre 4.00 in from CF", "back": "undecorated", "sleeves": "undecorated", "production_ready": false},
+     "sizes": ["XS", "S", "M", "L", "XL", "2XL"], "price": null,
+     "colorways": [
+       {"website_label": "Black", "supplier_color_name": "Black", "color_type": "stock", "artwork_ink": "04_White_Red"},
+       {"website_label": "White", "supplier_color_name": "White", "color_type": "stock", "artwork_ink": "03_Black_Red"},
+       {"website_label": "Iron Grey", "supplier_color_name": "Iron Grey", "color_type": "stock", "artwork_ink": "01_Solid_Black"}]},
+    {"proposed_id": "P02", "merch_order": 2, "slug": "tempo-quarter-zip", "name": "TEMPO Quarter Zip", "supplier": "Tapstitch", "manufacturer": "Tapstitch", "style_code": "WT0092-P001-V2", "source_url": "https://www.tapstitch.com/custom/1483492130176507904", "supplier_product_id": "WT0092-P001-V2", "verification_status": "verified_page_2026-10-26",
+     "decoration": {"method": "DTF transfer", "mark": "V1.3 GA monogram", "width_in": 3, "height_in": 2.7, "placement": "Wearer's left chest; top 3.00 in below collar seam (level with CF); art centre 4.00 in from zipper centreline", "back": "undecorated", "sleeves": "undecorated", "production_ready": false},
+     "sizes": ["S", "M", "L", "XL"], "price": null,
+     "colorways": [
+       {"website_label": "Black", "supplier_color_name": "Black", "color_type": "stock", "artwork_ink": "04_White_Red"},
+       {"website_label": "White", "supplier_color_name": "White", "color_type": "stock", "artwork_ink": "03_Black_Red"},
+       {"website_label": "Light Purple", "supplier_color_name": "Light Purple", "color_type": "stock", "artwork_ink": "01_Solid_Black"}]},
+    {"proposed_id": "P06", "merch_order": 3, "slug": "tempo-training-pants", "name": "TEMPO Training Pants", "supplier": "Apliiq", "manufacturer": "Sport-Tek", "style_code": "LPST800", "source_url": "https://www.apliiq.com/customize/womens/pants/Womens-Travel-Pants", "supplier_product_id": null, "verification_status": "partly_verified",
+     "decoration": {"method": "DTF transfer", "mark": "V1.3 GA monogram", "width_in": 3, "height_in": 2.7, "placement": "Wearer's left upper thigh; top 8.50 in below waistband seam; centred on front leg panel (3.65 in in from outseam)", "back": {"mark": "V1.3 GOAL ATHLETICS wordmark", "width_in": 4.5, "height_in": 1.37, "placement": "Back of wearer's right leg at back-pocket height; top 3.00 in below waistband seam; centred on back leg panel (no back pocket on this pant)", "ink": "same as front", "measured": "stroke 2.35 mm, gap 2.42 mm at 4.50 in"}, "sleeves": "undecorated", "production_ready": false},
+     "sizes": ["XS", "S", "M", "L", "XL", "2XL"], "price": null,
+     "colorways": [
+       {"website_label": "Black/Black", "supplier_color_name": "Black/Black", "color_type": "stock", "artwork_ink": "04_White_Red", "note": "separate Apliiq listing"},
+       {"website_label": "True Navy/White", "supplier_color_name": "True Navy/White", "color_type": "stock", "artwork_ink": "06_Light_Cream"},
+       {"website_label": "Deep Red/White", "supplier_color_name": "Deep Red/White", "color_type": "stock", "artwork_ink": "02_Solid_White"}]},
+    {"proposed_id": "P05", "merch_order": 4, "slug": "tempo-training-shorts", "name": "TEMPO Training Shorts", "supplier": "Apliiq", "manufacturer": "Sport-Tek", "style_code": "LST485", "source_url": "https://www.apliiq.com/customize/womens/shorts/Ladies-Repeat-Short", "supplier_product_id": null, "verification_status": "unverified",
+     "decoration": {"method": "DTF transfer", "mark": "V1.3 GA monogram", "width_in": 3, "height_in": 2.7, "placement": "Wearer's left front leg; bottom 1.25 in above leg hem; art centre 3.30 in in from side seam", "back": "undecorated", "sleeves": "undecorated", "production_ready": false},
+     "sizes": ["XS", "S", "M", "L", "XL", "2XL"], "price": null,
+     "colorways": [
+       {"website_label": "Black", "supplier_color_name": "Black", "color_type": "stock", "artwork_ink": "04_White_Red"},
+       {"website_label": "Iron Grey", "supplier_color_name": "Iron Grey", "color_type": "stock", "artwork_ink": "01_Solid_Black"},
+       {"website_label": "True Navy", "supplier_color_name": "True Navy", "color_type": "stock", "artwork_ink": "06_Light_Cream"}]},
+    {"proposed_id": "P01", "merch_order": 5, "slug": "tempo-warmup-hoodie", "name": "TEMPO Warmup Hoodie", "supplier": "Apliiq", "manufacturer": "Bella+Canvas", "style_code": "7519", "source_url": "https://www.apliiq.com/customize/womens/hoodies/Womens-Classic-Hoodie-Sweatshirt", "supplier_product_id": null, "verification_status": "unverified",
+     "decoration": {"method": "DTF transfer", "mark": "V1.3 GA monogram", "width_in": 3.25, "height_in": 2.93, "placement": "Centre front; top 3.00 in below hood seam at CF", "back": "undecorated", "sleeves": "undecorated", "production_ready": false},
+     "sizes": ["S", "M", "L", "XL", "2XL"], "price": null,
+     "colorways": [
+       {"website_label": "Black", "supplier_color_name": "Black", "color_type": "stock", "artwork_ink": "04_White_Red"},
+       {"website_label": "Vintage White", "supplier_color_name": "Vintage White", "color_type": "stock", "artwork_ink": "03_Black_Red"},
+       {"website_label": "Navy", "supplier_color_name": "Navy", "color_type": "stock", "artwork_ink": "06_Light_Cream"}]},
+    {"proposed_id": "P03", "merch_order": 6, "slug": "tempo-training-tee", "name": "TEMPO Training Tee", "supplier": "Tapstitch", "manufacturer": "Tapstitch", "style_code": "WT0216-P001-V2", "source_url": "https://www.tapstitch.com/custom/1521567164749025280", "supplier_product_id": "WT0216-P001-V2", "verification_status": "verified_page_2026-10-26",
+     "decoration": {"method": "DTF transfer", "mark": "V1.3 GA + GOAL ATHLETICS horizontal lockup", "width_in": 7, "height_in": 1.87, "placement": "Centre front; top 3.00 in below collar seam at CF", "back": "undecorated", "sleeves": "undecorated", "production_ready": false},
+     "sizes": ["S", "M", "L", "XL", "2XL"], "price": null,
+     "colorways": [
+       {"website_label": "White", "supplier_color_name": "White", "color_type": "stock", "artwork_ink": "03_Black_Red"},
+       {"website_label": "Red", "supplier_color_name": "Red", "color_type": "stock", "artwork_ink": "02_Solid_White"},
+       {"website_label": "Purple", "supplier_color_name": "Purple", "color_type": "stock", "artwork_ink": "01_Solid_Black"}]},
+    {"proposed_id": "P07", "merch_order": 7, "slug": "tempo-training-leggings", "name": "TEMPO Training Leggings", "supplier": "Printful", "manufacturer": "Printful", "style_code": "3012", "source_url": "https://www.printful.com/custom/womens/leggings/all-over-print-recycled-leggings-with-pockets", "supplier_product_id": null, "verification_status": "unverified",
+     "decoration": {"method": "All-over print (cut-and-sew)", "mark": "V1.3 GA monogram", "width_in": 3, "height_in": 2.7, "placement": "Wearer's left front thigh; top 5.00 in below waistband seam; art centre 3.00 in from front centre line", "back": "undecorated", "sleeves": "undecorated", "production_ready": false},
+     "sizes": ["2XS", "XS", "S", "M", "L", "XL", "2XL"], "price": null,
+     "colorways": [
+       {"website_label": "Custom Black", "supplier_color_name": "custom print #0E0E10", "color_type": "custom_print", "artwork_ink": "04_White_Red"},
+       {"website_label": "Custom Charcoal", "supplier_color_name": "custom print #3A3D42", "color_type": "custom_print", "artwork_ink": "01_Solid_Black"},
+       {"website_label": "Custom Navy", "supplier_color_name": "custom print #1B2442", "color_type": "custom_print", "artwork_ink": "06_Light_Cream"}]}
+  ]
+}

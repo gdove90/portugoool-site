@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Read from Claude Design project b9b09d57-f93e-4f13-a93b-4a7ecdae2f93 on 2026-10-26 (file "TEMPO Collection.dc.html"). The template body is kept; the data script that drives it is ported to src/lib/tempo-proofs.ts and reproduced in full there. -->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#FFFFFF;} a{color:#E51226;} a:hover{color:#0A0A0A;}</style>
+</helmet>
+<div style="font-family:Barlow,sans-serif;color:#0A0A0A;background:#FFFFFF;min-height:100vh;">
+  <div style="background:#0A0A0A;padding:28px clamp(20px,4vw,56px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+    <img src="uploads/AutoCap-WhiteRed-Lockup.png" alt="GOAL Athletics" style="height:48px;width:auto;display:block;">
+    <div style="color:rgba(255,255,255,0.72);font-size:15px;">TEMPO women's collection · placement proofs · 26 Oct 2026</div>
+  </div>
+
+  <div style="padding:48px clamp(20px,4vw,56px) 24px;display:flex;flex-direction:column;gap:12px;">
+    <div style="font-family:Anton;font-size:clamp(40px,6vw,76px);line-height:0.95;">TEMPO · 7 PRODUCTS · 21 COLOURWAYS</div>
+    <div style="font-size:19px;line-height:1.5;color:rgba(10,10,10,0.72);max-width:900px;text-wrap:pretty;">Women's training range in the GOAL Athletics V1.3 identity. One front decoration per garment. Backs and sleeves are plain, except the Training Pants back wordmark. Garments are drawn as flat placement proofs at the smallest size, 1 square = 1 in, with the real V1.3 artwork at production size. They are not product photos: the website images need supplier blank photos.</div>
+  </div>
+
+  <div style="padding:8px clamp(20px,4vw,56px) 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;">
+    <div style="background:#0A0A0A;color:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:8px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;color:#E51226;">RULE APPLIED</div>
+      <div style="font-size:17px;line-height:1.45;">Logo sizes follow our minimums: GA 3.00 in wide, lockup 6.00 in or more. Brief widths of 1.50 to 2.25 in were raised to 3.00 in.</div>
+    </div>
+    <div style="background:#0A0A0A;color:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:8px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;color:#E51226;">SIZE RUN</div>
+      <div style="font-size:17px;line-height:1.45;">Smallest supplier size up to 2XL. Every print fits the smallest size. The Quarter Zip stops at XL, so it has no 2XL.</div>
+    </div>
+    <div style="background:#0A0A0A;color:#FFFFFF;padding:20px;display:flex;flex-direction:column;gap:8px;">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;color:#E51226;">MEASURED AT FINAL SIZE</div>
+      <div style="font-size:17px;line-height:1.45;">GA at 3.00 in: 1.75 mm stroke at the pointed G/A tips, 3.33 mm gap. Lockup at 7.00 in clears 6.00 in. Each supplier's own minimum still needs checking.</div>
+    </div>
+  </div>
+
+  <div style="padding:24px clamp(20px,4vw,56px);display:flex;flex-direction:column;gap:20px;">
+    <div style="font-family:Anton;font-size:40px;line-height:1;">21 COLOURWAYS</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;">
+      <sc-for list="{{ swatches }}" as="s" hint-placeholder-count="21">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.12);background:{{ s.hex }};">
+            <img src="{{ s.art }}" alt="{{ s.ink }}" style="width:{{ s.artPct }};height:auto;display:block;">
+          </div>
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;">{{ s.product }}</div>
+          <div style="font-size:15px;line-height:1.3;">{{ s.colour }}</div>
+          <div style="font-size:13px;color:rgba(10,10,10,0.6);">{{ s.ink }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font-size:14px;color:rgba(10,10,10,0.6);max-width:900px;line-height:1.5;">Garment swatches are display approximations, not supplier colour standards. Leggings values are our print design values. Purple (Training Tee) and Light Purple (Quarter Zip) are separate supplier shades.</div>
+  </div>
+
+  <sc-for list="{{ products }}" as="p" hint-placeholder-count="7">
+    <div data-screen-label="{{ p.label }}" style="padding:48px clamp(20px,4vw,56px);border-top:1px solid rgba(10,10,10,0.12);display:flex;flex-direction:column;gap:24px;">
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:baseline;gap:16px;">
+          <span style="font-family:Anton;font-size:22px;color:#E51226;">{{ p.order }}</span>
+          <span style="font-family:Anton;font-size:clamp(32px,4vw,48px);line-height:1.05;">{{ p.name }}</span>
+        </div>
+        <span style="font-size:17px;color:rgba(10,10,10,0.7);">{{ p.blank }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;">
+        <sc-for list="{{ p.views }}" as="v" hint-placeholder-count="4">
+          <div style="background:#E6E6E3;padding:14px;display:flex;flex-direction:column;gap:8px;">
+            <div style="position:relative;">
+              <svg viewBox="{{ p.vb }}" style="width:100%;height:auto;display:block;">
+                <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><path d="{{ p.grid }}" stroke="rgba(10,10,10,0.08)" stroke-width="0.04" fill="none"></path></sc-if>
+                <sc-for list="{{ v.paths }}" as="g" hint-placeholder-count="3">
+                  <path d="{{ g.d }}" fill="{{ g.fill }}" stroke="{{ g.stroke }}" stroke-width="{{ g.sw }}" stroke-dasharray="{{ g.dash }}" stroke-linecap="round"></path>
+                </sc-for>
+              </svg>
+              <sc-if value="{{ v.hasArt }}" hint-placeholder-val="{{ true }}"><img src="{{ v.art }}" alt="{{ v.ink }}" style="{{ v.artStyle }}"></sc-if>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:8px;font-size:14px;">
+              <span style="font-weight:700;letter-spacing:0.08em;">{{ v.title }}</span>
+              <span style="color:rgba(10,10,10,0.65);text-align:right;">{{ v.ink }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(90px,140px) minmax(0,1fr);gap:8px 20px;font-size:16px;line-height:1.45;max-width:1100px;">
+        <sc-for list="{{ p.spec }}" as="r" hint-placeholder-count="8">
+          <div style="font-weight:700;">{{ r.k }}</div><div style="text-wrap:pretty;">{{ r.v }}</div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-for>
+
+  <div style="padding:48px clamp(20px,4vw,56px);border-top:1px solid rgba(10,10,10,0.12);display:flex;flex-direction:column;gap:20px;">
+    <div style="font-family:Anton;font-size:40px;line-height:1;">ASSET REGISTER</div>
+    <div style="overflow-x:auto;">
+      <div style="display:grid;grid-template-columns:minmax(260px,2.2fr) minmax(110px,1fr) minmax(110px,1fr) minmax(200px,1.6fr);min-width:720px;font-size:15px;line-height:1.4;">
+        <div style="font-weight:700;padding:8px 10px;border-bottom:2px solid #0A0A0A;">File</div><div style="font-weight:700;padding:8px 10px;border-bottom:2px solid #0A0A0A;">Mark</div><div style="font-weight:700;padding:8px 10px;border-bottom:2px solid #0A0A0A;">Colour</div><div style="font-weight:700;padding:8px 10px;border-bottom:2px solid #0A0A0A;">Format · size</div>
+        <sc-for list="{{ assets }}" as="a" hint-placeholder-count="8">
+          <div style="padding:8px 10px;border-bottom:1px solid rgba(10,10,10,0.12);word-break:break-all;">{{ a.file }}</div><div style="padding:8px 10px;border-bottom:1px solid rgba(10,10,10,0.12);">{{ a.mark }}</div><div style="padding:8px 10px;border-bottom:1px solid rgba(10,10,10,0.12);">{{ a.colour }}</div><div style="padding:8px 10px;border-bottom:1px solid rgba(10,10,10,0.12);">{{ a.fmt }}</div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="font-size:15px;color:rgba(10,10,10,0.7);max-width:900px;line-height:1.5;text-wrap:pretty;">Source: uploads/GOAL_ATHLETICS_V1.3_APPROVED_PALETTES_NO_ORANGE/01_PRODUCTION_ARTWORK. Originals are unchanged. The pack notes the paths are a vector reconstruction from a low-resolution reference, and RGB values are approximate, not Pantone. Embroidery files are not included.</div>
+  </div>
+
+  <div style="padding:48px clamp(20px,4vw,56px);border-top:1px solid rgba(10,10,10,0.12);display:flex;flex-direction:column;gap:20px;">
+    <div style="font-family:Anton;font-size:40px;line-height:1;">SUPPLIER CHECK · 26 OCT 2026</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px;">
+      <sc-for list="{{ checks }}" as="c" hint-placeholder-count="7">
+        <div style="background:#F3F3F1;padding:18px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline;">
+            <span style="font-weight:700;font-size:16px;">{{ c.name }}</span>
+            <span style="font-size:12px;font-weight:700;letter-spacing:0.12em;color:{{ c.color }};">{{ c.status }}</span>
+          </div>
+          <div style="font-size:15px;line-height:1.45;color:rgba(10,10,10,0.75);text-wrap:pretty;">{{ c.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="padding:48px clamp(20px,4vw,56px) 72px;border-top:1px solid rgba(10,10,10,0.12);display:flex;flex-direction:column;gap:16px;">
+    <div style="font-family:Anton;font-size:40px;line-height:1;">OPEN ITEMS</div>
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:1000px;">
+      <sc-for list="{{ open }}" as="o" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;font-size:16px;line-height:1.45;">
+          <span style="font-family:Anton;color:#E51226;">{{ o.n }}</span><span style="text-wrap:pretty;">{{ o.t }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+</x-dc>
+<!-- The data-dc-script (P, INK, MARK, renderVals) is ported verbatim to src/lib/tempo-proofs.ts. -->
+</body>
+</html>

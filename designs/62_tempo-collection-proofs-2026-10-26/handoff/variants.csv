@@ -1,0 +1,118 @@
+proposed_product_id,slug,website_color,supplier_color_name,color_type,size,supplier,style_code,external_variant_id,availability_status
+P04,tempo-core-training-tee,"Black","Black",stock,XS,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Black","Black",stock,S,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Black","Black",stock,M,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Black","Black",stock,L,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Black","Black",stock,XL,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Black","Black",stock,2XL,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"White","White",stock,XS,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"White","White",stock,S,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"White","White",stock,M,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"White","White",stock,L,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"White","White",stock,XL,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"White","White",stock,2XL,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Iron Grey","Iron Grey",stock,XS,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Iron Grey","Iron Grey",stock,S,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Iron Grey","Iron Grey",stock,M,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Iron Grey","Iron Grey",stock,L,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Iron Grey","Iron Grey",stock,XL,Apliiq,LST350,,not_checked
+P04,tempo-core-training-tee,"Iron Grey","Iron Grey",stock,2XL,Apliiq,LST350,,not_checked
+P02,tempo-quarter-zip,"Black","Black",stock,S,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"Black","Black",stock,M,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"Black","Black",stock,L,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"Black","Black",stock,XL,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"White","White",stock,S,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"White","White",stock,M,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"White","White",stock,L,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"White","White",stock,XL,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"Light Purple","Light Purple",stock,S,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"Light Purple","Light Purple",stock,M,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"Light Purple","Light Purple",stock,L,Tapstitch,WT0092-P001-V2,,not_checked
+P02,tempo-quarter-zip,"Light Purple","Light Purple",stock,XL,Tapstitch,WT0092-P001-V2,,not_checked
+P06,tempo-training-pants,"Black/Black","Black/Black",stock,XS,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Black/Black","Black/Black",stock,S,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Black/Black","Black/Black",stock,M,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Black/Black","Black/Black",stock,L,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Black/Black","Black/Black",stock,XL,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Black/Black","Black/Black",stock,2XL,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"True Navy/White","True Navy/White",stock,XS,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"True Navy/White","True Navy/White",stock,S,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"True Navy/White","True Navy/White",stock,M,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"True Navy/White","True Navy/White",stock,L,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"True Navy/White","True Navy/White",stock,XL,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"True Navy/White","True Navy/White",stock,2XL,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Deep Red/White","Deep Red/White",stock,XS,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Deep Red/White","Deep Red/White",stock,S,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Deep Red/White","Deep Red/White",stock,M,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Deep Red/White","Deep Red/White",stock,L,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Deep Red/White","Deep Red/White",stock,XL,Apliiq,LPST800,,not_checked
+P06,tempo-training-pants,"Deep Red/White","Deep Red/White",stock,2XL,Apliiq,LPST800,,not_checked
+P05,tempo-training-shorts,"Black","Black",stock,XS,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Black","Black",stock,S,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Black","Black",stock,M,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Black","Black",stock,L,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Black","Black",stock,XL,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Black","Black",stock,2XL,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Iron Grey","Iron Grey",stock,XS,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Iron Grey","Iron Grey",stock,S,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Iron Grey","Iron Grey",stock,M,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Iron Grey","Iron Grey",stock,L,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Iron Grey","Iron Grey",stock,XL,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"Iron Grey","Iron Grey",stock,2XL,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"True Navy","True Navy",stock,XS,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"True Navy","True Navy",stock,S,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"True Navy","True Navy",stock,M,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"True Navy","True Navy",stock,L,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"True Navy","True Navy",stock,XL,Apliiq,LST485,,not_checked
+P05,tempo-training-shorts,"True Navy","True Navy",stock,2XL,Apliiq,LST485,,not_checked
+P01,tempo-warmup-hoodie,"Black","Black",stock,S,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Black","Black",stock,M,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Black","Black",stock,L,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Black","Black",stock,XL,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Black","Black",stock,2XL,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Vintage White","Vintage White",stock,S,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Vintage White","Vintage White",stock,M,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Vintage White","Vintage White",stock,L,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Vintage White","Vintage White",stock,XL,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Vintage White","Vintage White",stock,2XL,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Navy","Navy",stock,S,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Navy","Navy",stock,M,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Navy","Navy",stock,L,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Navy","Navy",stock,XL,Apliiq,7519,,not_checked
+P01,tempo-warmup-hoodie,"Navy","Navy",stock,2XL,Apliiq,7519,,not_checked
+P03,tempo-training-tee,"White","White",stock,S,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"White","White",stock,M,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"White","White",stock,L,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"White","White",stock,XL,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"White","White",stock,2XL,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Red","Red",stock,S,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Red","Red",stock,M,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Red","Red",stock,L,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Red","Red",stock,XL,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Red","Red",stock,2XL,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Purple","Purple",stock,S,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Purple","Purple",stock,M,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Purple","Purple",stock,L,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Purple","Purple",stock,XL,Tapstitch,WT0216-P001-V2,,not_checked
+P03,tempo-training-tee,"Purple","Purple",stock,2XL,Tapstitch,WT0216-P001-V2,,not_checked
+P07,tempo-training-leggings,"Custom Black","custom print #0E0E10",custom_print,2XS,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Black","custom print #0E0E10",custom_print,XS,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Black","custom print #0E0E10",custom_print,S,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Black","custom print #0E0E10",custom_print,M,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Black","custom print #0E0E10",custom_print,L,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Black","custom print #0E0E10",custom_print,XL,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Black","custom print #0E0E10",custom_print,2XL,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Charcoal","custom print #3A3D42",custom_print,2XS,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Charcoal","custom print #3A3D42",custom_print,XS,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Charcoal","custom print #3A3D42",custom_print,S,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Charcoal","custom print #3A3D42",custom_print,M,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Charcoal","custom print #3A3D42",custom_print,L,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Charcoal","custom print #3A3D42",custom_print,XL,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Charcoal","custom print #3A3D42",custom_print,2XL,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Navy","custom print #1B2442",custom_print,2XS,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Navy","custom print #1B2442",custom_print,XS,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Navy","custom print #1B2442",custom_print,S,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Navy","custom print #1B2442",custom_print,M,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Navy","custom print #1B2442",custom_print,L,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Navy","custom print #1B2442",custom_print,XL,Printful,3012,,not_checked
+P07,tempo-training-leggings,"Custom Navy","custom print #1B2442",custom_print,2XL,Printful,3012,,not_checked
