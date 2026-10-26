@@ -66,6 +66,15 @@ function StoreShell({ children, comingSoonOnly = false }: { children: ReactNode;
     document.getElementById("header")?.classList.toggle("light", !immersive);
   }, [path, immersive]);
   useEffect(() => {
+    // Phone header (mobile-header.css): pinned, and white once the page scrolls.
+    const header = document.getElementById("header");
+    if (!header) return;
+    const update = () => header.classList.toggle("scrolled", window.scrollY > 8);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, [path]);
+  useEffect(() => {
     const showBag = () => bag.current?.showModal();
     document.addEventListener("goool:open-bag", showBag);
     const click = (e: MouseEvent) => {

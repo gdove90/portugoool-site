@@ -14,6 +14,7 @@ import "@/v84/kit-wear.css";
 import "@/v84/integration.css";
 import "@/v84/mobile.css";
 import "@/v84/v13-web.css";
+import "@/v84/mobile-header.css";
 import { organizationJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Shell from "@/v84/Shell";

@@ -1,0 +1,28 @@
+/* Mobile nav bar, owner-approved 2026-10-26 (Hummel-style mockup).
+   Phones only (max-width:700px): the two-line menu and search on the left,
+   the V1.3 GA monogram centred on the screen, the bag on the right, and the
+   bar pinned to the top while scrolling. Over photo heroes it stays
+   transparent with white marks until the page scrolls, then turns white.
+   Tablet and desktop keep the header defined in v13-web.css unchanged.
+   Selectors start with `html` so they win over v13-web.css whatever the
+   stylesheet load order. */
+@media (max-width:700px) {
+  html .v84 #header { position:fixed; top:0; left:0; right:0; justify-content:flex-start; gap:0; transition:background-color .2s ease, color .2s ease, border-color .2s ease; }
+  html .v84 #header.light { position:sticky; top:0; }
+  html .v84 #header.scrolled { background:#fff; color:#0a0a0a; border-bottom-color:#dfdfdf; }
+  html .v84 #header > .brand { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); margin:0; gap:0; }
+  html .v84 #header > .brand .brand-wordmark { display:none; }
+  html .v84 #header > .brand .brand-ga { width:34px; height:31px; }
+  html .v84 #header > .brand .brand-ga svg { display:block; width:100%; height:100%; }
+  html .v84 #header .header-actions { display:contents; }
+  html .v84 #header .header-help { display:none; }
+  html .v84 #header .header-actions .menu-button { order:1; }
+  html .v84 #header .header-actions .icon-button:not(.menu-button) { order:2; }
+  html .v84 #header .header-actions .bag-button { order:3; margin-left:auto; }
+  html .v84 #header .menu-button .interface-icon { display:none; }
+  html .v84 #header .menu-button .menu-lines { display:block; width:22px; height:10px; border-top:2px solid currentColor; border-bottom:2px solid currentColor; }
+  html { scroll-padding-top:72px; }
+}
+@media (max-width:700px) and (prefers-reduced-motion:reduce) {
+  html .v84 #header { transition:none; }
+}
