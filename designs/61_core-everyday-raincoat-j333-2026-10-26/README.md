@@ -29,9 +29,9 @@ physical sample exists. Proof-check the first order's mockup.
 ## Site
 
 - Catalog row `80000000-0000-4000-8000-000000000016`, slug
-  `goal-athletics-core-everyday-raincoat`, **$108** (25% contribution model
+  `goal-athletics-core-everyday-raincoat`, launched at $108 (25% contribution model
   on the $64.58 quote + $2 XXL + $3 label + $1 fulfilment + $0.30, floor
-  $106, rounded up $2 as the hoodie was). The owner has not set this price.
+  $106). Owner decision later on 2026-10-26: **$98**, under the $100 line (about 26% on M, 24% on XXL on the VIP cost basis); migration 0044.
 - New product category `jacket` (types, catalog tabs "Jackets", Supabase
   check constraint widened in migration 0043).
 - Men's section via `audienceAssignments` in `src/v84/catalog-data.ts`.

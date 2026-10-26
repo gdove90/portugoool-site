@@ -9,8 +9,8 @@
 -- src/lib/orders-store.ts), and that upsert would fail the category check
 -- without 'jacket'. This file keeps the audit trail, as 0040 does.
 --
--- Retail price $108 (25% contribution model on the $64.58 dropship quote,
--- XXL +$2.00; floor $106). Live and for sale on the owner's instruction
+-- Retail price $108 at launch (25% model on the $64.58 dropship quote,
+-- XXL +$2.00; floor $106); $98 from migration 0044 (owner). Live and for sale on the owner's instruction
 -- 2026-10-26, men's section. Idempotent; no historical orders or supplier
 -- designs changed.
 -- Applied 2026-10-26 in the Supabase SQL editor (bundled with 0041 and 0042);

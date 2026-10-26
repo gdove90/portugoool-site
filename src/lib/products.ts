@@ -3919,10 +3919,12 @@ export const products: Product[] = [
   // black on Dark Grey Heather. Private label inside the neck. Every gallery
   // shows Apliiq's own front render on the studio backdrop (2:3) until the
   // owner supplies photos; no physical sample exists yet.
-  // Price $108: the 25% contribution model on the dropship quote read off
-  // the Black design on 2026-10-26 ($64.58, XXL +$2.00) gives a $106 floor;
-  // rounded up two dollars as the hoodie was. Live and for sale on the
-  // owner's instruction 2026-10-26, men's section. Record:
+  // Price $98 (owner decision 2026-10-26, under the $100 line). On the VIP
+  // cost basis (dropship quote $64.58 x 0.8, XXL +$2.00, +$1 fulfilment,
+  // $11.80 absorbed shipping, card fees and 5% reserve) that is about a 26%
+  // contribution on M and 24% on XXL; the formal 25% model's floor is $106.
+  // Live and for sale on the owner's instruction 2026-10-26, men's section.
+  // Record:
   // designs/61_core-everyday-raincoat-j333-2026-10-26/.
   // Apliiq offers the blank XS to 4XL; the site sells S to XXL as on every
   // garment.
@@ -3933,7 +3935,7 @@ export const products: Product[] = [
     blank: "J333",
     description:
       "Fully seam-sealed waterproof shell with a zip-off hood. GA monogram on the left chest, GOAL ATHLETICS wordmark on the right, waterproof zips, front zip pockets and a drawcord hem. Folds into its own pouch.",
-    priceCents: 10800,
+    priceCents: 9800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#151515",
