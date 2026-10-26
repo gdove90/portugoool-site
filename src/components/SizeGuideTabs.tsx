@@ -120,15 +120,24 @@ export function guideTabFor(productId: string) {
 
 const DEFAULT_TAB: GuideTabId = "performance";
 
-/** The tabs whose products the public catalog shows (a gated collection's tabs stay off the page). */
-function visibleTabs() {
+/**
+ * The tabs whose products the public catalog shows (a gated collection's
+ * tabs stay off the page), plus the tab the URL hash names: the owner's
+ * link from a gated product's fit guide must still open that product's own
+ * tab, never fall back to another garment's.
+ */
+function visibleTabs(hash?: string) {
   const ids = new Set(getProducts().map((p) => p.id));
-  return GUIDE.filter((g) => (g.productIds as readonly string[]).some((id) => ids.has(id)));
+  return GUIDE.filter((g) => g.id === hash || (g.productIds as readonly string[]).some((id) => ids.has(id)));
+}
+
+function hashTab(): string {
+  return typeof window === "undefined" ? "" : window.location.hash.replace(/^#/, "");
 }
 
 function tabFromHash(): GuideTabId {
-  const hash = window.location.hash.replace(/^#/, "");
-  return visibleTabs().some((g) => g.id === hash) ? (hash as GuideTabId) : DEFAULT_TAB;
+  const hash = hashTab();
+  return GUIDE.some((g) => g.id === hash) ? (hash as GuideTabId) : DEFAULT_TAB;
 }
 
 export default function SizeGuideTabs() {
@@ -146,7 +155,7 @@ export default function SizeGuideTabs() {
     window.history.replaceState(null, "", `#${id}`);
   }
 
-  const tabs = visibleTabs();
+  const tabs = visibleTabs(active);
   const tab = tabs.find((g) => g.id === active) ?? tabs[0];
 
   return (
