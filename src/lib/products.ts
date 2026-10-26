@@ -4025,12 +4025,14 @@ export const products: Product[] = [
   // == GOAL Athletics Core Quarter Zip (built 2026-10-26) ==
   // Tapstitch designs 1564299910617194496 Black (2026-10-26, owner-directed
   // crest placement), 1564523403115982848 White and 1564524205054324736 Dark Gray
-  // (same day, owner: three colours): the V1.3 horizontal lockup 5.50 x
-  // 1.47 in on the wearer's left chest, level with the bottom of the zip
-  // placket, about half an inch clear of the zip. 5.50 in is the smallest
-  // width that keeps the lockup's thinnest gap at 2.00 mm or more (2.20 mm
-  // at 6.00 in); the owner chose the 2 mm rule over the 4 in crest on
-  // 2026-10-26 because Tapstitch's own DTF minimum is unconfirmed. Tapstitch MT0063 runs S
+  // (same day, owner: three colours): the V1.3 GA monogram 2.00 x 1.80 in
+  // on the wearer's left chest, level with the bottom of the zip placket,
+  // about half an inch clear of the zip; back blank. Owner decisions
+  // 2026-10-26: the 2 mm DTF gap rule applies to Tapstitch too (its own
+  // minimum is unconfirmed), the horizontal lockup could not meet it at
+  // crest size (5.50 in did not fit the chest panel uncropped), so the
+  // crest is the monogram alone (gap 2.35 mm at 2.00 in). Front only.
+  // Inks: white/red on Black and Dark Gray, all black on White (owner). Tapstitch MT0063 runs S
   // to 4XL; the site sells S to XXL (owner: nothing above 2XL). Quote
   // $15.98 a unit ($12.99 blank + $2.99 print) plus about $5 shipping: the
   // 25% model's floor is $41; priced $48 (model price, not owner-set).
@@ -4043,7 +4045,7 @@ export const products: Product[] = [
     slug: "goal-athletics-core-quarter-zip",
     blank: "MT0063",
     description:
-      "Lightweight quarter zip with the GOAL ATHLETICS lockup worn like a crest on the left chest. Stand collar, reflective hits, clean back.",
+      "Lightweight quarter zip with the GA monogram worn like a crest on the left chest. Stand collar, reflective hits, clean back.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
@@ -4054,7 +4056,7 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
-        alt: "Core Quarter Zip in Black, product front with the white and red GOAL ATHLETICS lockup on the left chest beside the zip",
+        alt: "Core Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
       },
     ],
     colorVariants: [
@@ -4066,7 +4068,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
-            alt: "Core Quarter Zip in Black, product front with the white and red GOAL ATHLETICS lockup on the left chest beside the zip",
+            alt: "Core Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
           },
         ],
       },
@@ -4078,7 +4080,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp",
-            alt: "Core Quarter Zip in White, product front with the black and red GOAL ATHLETICS lockup on the left chest beside the zip",
+            alt: "Core Quarter Zip in White, product front with the black GA monogram on the left chest beside the zip",
           },
         ],
       },
@@ -4090,7 +4092,7 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp",
-            alt: "Core Quarter Zip in Dark Gray, product front with the white and red GOAL ATHLETICS lockup on the left chest beside the zip",
+            alt: "Core Quarter Zip in Dark Gray, product front with the white and red GA monogram on the left chest beside the zip",
           },
         ],
       },

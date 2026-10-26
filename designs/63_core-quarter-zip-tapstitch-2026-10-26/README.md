@@ -9,34 +9,40 @@ connected to the store as far as it can be, and the order flow written down.
 Tapstitch **Men's Quarter-Zip Training T-Shirt, MT0063-P001-V2**
 (230 gsm performance knit, S to 4XL offered; the site sells S to XXL).
 Unit cost $12.99 blank + $2.99 front DTF = **$15.98**, plus Tapstitch's
-shipping at checkout (about $5 for one piece to the US).
+shipping at checkout (about $5 for one piece to the US). A back print
+would add $2.99 (seen in the designer) and is not used.
 
-| Colour | Tapstitch design | Mark | Placement |
+| Colour | Tapstitch design | Mark (final, 2026-10-26 evening) | Placement |
 |---|---|---|---|
-| Black | 1564299910617194496 (built earlier on 2026-10-26, owner-directed) | V1.3 horizontal lockup, white/red, **5.50 x 1.47 in** (was 4.00 x 1.07) | wearer's left chest: level with the bottom of the zip placket, about half an inch clear of the zip |
-| White | 1564523403115982848 | lockup black/red, 5.50 x 1.47 in | same, matched to the Black design on the canvas |
-| Dark Gray | 1564524205054324736 | lockup white/red, 5.50 x 1.47 in | same |
+| Black | 1564299910617194496 | V1.3 GA monogram, white/red, 2.00 x 1.80 in | wearer's left chest beside the zip: GA centre about 1.5 in right of the zipper line, level with the bottom of the zip placket; back blank |
+| White | 1564523403115982848 | GA monogram, all black (owner), 2.00 x 1.80 in | same; measured on the mockups the three centres agree within 2 px (about 0.06 in) |
+| Dark Gray | 1564524205054324736 | GA monogram, white/red, 2.00 x 1.80 in | same |
 
-Built from the product page ("Design Now" per colour gives a fresh design
-id; "Edit design" on an existing one keeps its id). Artwork: the V1.3
-lockup PNGs from `designs/62_tempo-collection-proofs-2026-10-26/print/smallest-2026-10-26/`
-(1800 x 480 px, 450 ppi at 4 in). Mockups in `tapstitch-mockups/`, framed
-on the studio backdrop in `site-images/` and copied to
-`public/products/goal-core-quarter-zip-*`.
+Design ids never changed: every revision was made with "Edit design" and
+"Save Design" on the same three designs.
 
-**2 mm rule (owner, later on 2026-10-26):** the owner's size brief measured
-the lockup's thinnest gaps at 2.20 mm at 6.00 in wide, so the 4.00 in crest
-first built here came to about 1.47 mm, under the 2 mm DTF rule the house
-holds Apliiq to. Tapstitch's own minimum is unconfirmed, and the owner
-chose to keep the 2 mm rule regardless: all three designs were resized in
-place (ids unchanged) to **5.50 x 1.47 in**, the smallest width that keeps
-every gap at 2.00 mm or more (6.00 x 2.00 / 2.20 = 5.45 in, rounded up),
-and re-placed. At 5.50 in the lockup only fits the chest panel if its left
-edge sits about 0.3 in from the zip tape (the first 5.50 in placement, half
-an inch clear, ran into the raglan sleeve seam and the mockup clipped
-"GOAL" to "GOA"); the final position keeps the right edge just inside the
-body panel at placket-bottom height. The lockup PNG is 1800 px wide,
-327 ppi at 5.50 in. Mockups `*-5.5in-v2-*.png` are the saved state.
+### How the mark got here (all on 2026-10-26)
+
+1. Built with the V1.3 horizontal lockup 4.00 x 1.07 in in the crest spot
+   (the owner's earlier direction for this piece).
+2. **2 mm rule:** the owner's size brief measured the lockup's thinnest gaps
+   at 2.20 mm at 6.00 in wide, so 4.00 in came to about 1.47 mm, under the
+   2 mm DTF rule the house holds Apliiq to. Tapstitch's own minimum is
+   unconfirmed and the owner chose to keep the 2 mm rule regardless, so the
+   lockup went to 5.50 x 1.47 in (the smallest width that keeps every gap at
+   2.00 mm or more).
+3. At 5.50 in the lockup did not fit the chest spot uncropped: half an inch
+   clear of the zip it ran into the raglan sleeve seam; tight to the zip the
+   mockup still clipped the G. The owner wanted the mark to stay on the
+   chest where it was, so the lockup was dropped in favour of the
+   **GA monogram alone at 2.00 x 1.80 in** (gap 2.35 mm), which fits the
+   crest spot with room on both sides. A stacked lockup on the back was
+   considered for a few minutes and withdrawn: **front only**.
+4. Inks: white/red on Black and Dark Gray; **all black on White** (owner).
+   Print files in `print/`: `GOAL_GA_04_White_Red_2.00in_300dpi.png`,
+   `GOAL_GA_01_Solid_Black_2.00in_300dpi.png` (the vertical lockup exports
+   there are unused). Mockups `quarter-zip-<colour>-ga-<id>.png` are the
+   saved state; earlier lockup mockups were removed.
 
 ## Site
 
