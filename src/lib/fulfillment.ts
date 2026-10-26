@@ -532,6 +532,14 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "Red": tapstitch("1564325002000687104", ["S", "M", "L", "XL", "XXL"]),
     "Purple": tapstitch("1564325488367988736", ["S", "M", "L", "XL", "XXL"]),
   },
+  // GOAL Athletics Core Quarter Zip (Tapstitch MT0063, men): lockup 4.00 x
+  // 1.07 in, wearer's left chest crest position. Tapstitch runs S to 4XL;
+  // the site sells S to XXL.
+  "80000000-0000-4000-8000-000000000023": {
+    "Black": tapstitch("1564299910617194496", ["S", "M", "L", "XL", "XXL"]),
+    "White": tapstitch("1564523403115982848", ["S", "M", "L", "XL", "XXL"]),
+    "Dark Gray": tapstitch("1564524205054324736", ["S", "M", "L", "XL", "XXL"]),
+  },
   // == end TEMPO ==
 };
 

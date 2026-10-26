@@ -51,6 +51,14 @@ export const GUIDE = [
     productIds: ["80000000-0000-4000-8000-000000000016"],
   },
   {
+    id: "quarter-zip",
+    label: "Quarter Zip",
+    chart: null,
+    productIds: ["80000000-0000-4000-8000-000000000023"],
+    blank: "Men's lightweight quarter zip · 230 gsm performance knit",
+    note: "Sold S to XXL. A regular athletic fit with a stand collar; order the size you wear in our tees. The maker's flat measurements are still to be published here.",
+  },
+  {
     id: "caps",
     label: "Caps",
     chart: null,

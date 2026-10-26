@@ -4022,6 +4022,92 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Core Everyday Raincoat ==
+  // == GOAL Athletics Core Quarter Zip (built 2026-10-26) ==
+  // Tapstitch designs 1564299910617194496 Black (2026-10-26, owner-directed
+  // crest placement), 1564523403115982848 White and 1564524205054324736 Dark Gray
+  // (same day, owner: three colours): the V1.3 horizontal lockup 4.00 x
+  // 1.07 in on the wearer's left chest, level with the bottom of the zip
+  // placket, about half an inch clear of the zip. Tapstitch MT0063 runs S
+  // to 4XL; the site sells S to XXL (owner: nothing above 2XL). Quote
+  // $15.98 a unit ($12.99 blank + $2.99 print) plus about $5 shipping: the
+  // 25% model's floor is $41; priced $48 (model price, not owner-set).
+  // Tapstitch has no order API: lines are placed by hand from the alert
+  // email (fulfillment-submit.ts) and shipped with the manual-shipped ops
+  // action. Images are Tapstitch's mockups on the studio backdrop.
+  {
+    id: "80000000-0000-4000-8000-000000000023",
+    name: "GOAL Athletics Core Quarter Zip",
+    slug: "goal-athletics-core-quarter-zip",
+    blank: "MT0063",
+    description:
+      "Lightweight quarter zip with the GOAL ATHLETICS lockup worn like a crest on the left chest. Stand collar, reflective hits, clean back.",
+    priceCents: 4800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#171717",
+    fabric: "Lightweight 230 gsm performance knit with stretch; wicks and dries fast.",
+    fit: "Regular athletic fit through the body with a stand collar and quarter zip. True to size.",
+    careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
+        alt: "Core Quarter Zip in Black, product front with the white and red GOAL ATHLETICS lockup on the left chest beside the zip",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#171717",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
+            alt: "Core Quarter Zip in Black, product front with the white and red GOAL ATHLETICS lockup on the left chest beside the zip",
+          },
+        ],
+      },
+      {
+        name: "White",
+        supplierColor: "White",
+        hex: "#F4F3F1",
+        skuFragment: "WHITE",
+        images: [
+          {
+            src: "/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp",
+            alt: "Core Quarter Zip in White, product front with the black and red GOAL ATHLETICS lockup on the left chest beside the zip",
+          },
+        ],
+      },
+      {
+        name: "Dark Gray",
+        supplierColor: "Dark Gray",
+        hex: "#3F4545",
+        skuFragment: "DARKGRAY",
+        images: [
+          {
+            src: "/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp",
+            alt: "Core Quarter Zip in Dark Gray, product front with the white and red GOAL ATHLETICS lockup on the left chest beside the zip",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    disclosure: "Ships from our overseas partner: allow 10 to 17 days.",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "pullover",
+    supplierType: "tapstitch",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics Core Quarter Zip ==
   // == TEMPO Core Training Tee (built 2026-10-26) ==
   // Apliiq designs 6241853 Black, 6241860 White, 6241864 Iron Grey (rebuilt
   // 2026-10-26 at the owner's smallest size; 6240566/70/71 renamed delete):

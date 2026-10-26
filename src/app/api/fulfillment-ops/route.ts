@@ -5,7 +5,8 @@ import { apliiqSubmitEnabled, checkApliiqConnection, describeOrderListing, submi
 import { drainEmailQueue, queueOrderConfirmation, queueOrderDelayNotice, queueShipmentNotification } from "@/lib/email-delivery";
 import { emailProvider } from "@/lib/email";
 import { runWelcomePass } from "@/lib/welcome";
-import { getOrdersStore } from "@/lib/orders-store";
+import { getOrdersStore, ShipmentRow } from "@/lib/orders-store";
+import { trackingNumbers } from "@/lib/shipment";
 import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "@/lib/fulfillment-submit";
 
 // ─────────────────────────────────────────────────────────────
@@ -34,6 +35,13 @@ import { reconcileOrder, releaseOrder, retrySubmission, submitPaidOrder } from "
 //              same gates as the webhook, using the order's PERSISTED
 //              payment mode; duplicate protection (CAS lock, attempt
 //              identity) is identical.
+//   manual-shipped
+//              Record a shipment the owner made by hand (Tapstitch has no
+//              order API: its lines are placed on tapstitch.com from the
+//              alert email). Body: { orderId, carrier, trackingNumbers:
+//              [...], trackingUrls?: [...] }. Stores the shipment row,
+//              queues the customer's shipping email (same template and
+//              dedupe as an Apliiq callback) and marks the order shipped.
 // ─────────────────────────────────────────────────────────────
 
 export const dynamic = "force-dynamic";
@@ -57,7 +65,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
-  let body: { action?: string; orderId?: string; welcome?: boolean; endpointId?: string; confirm?: string; month?: number; year?: number };
+  let body: { action?: string; orderId?: string; welcome?: boolean; carrier?: string; trackingNumbers?: unknown; trackingUrls?: unknown; endpointId?: string; confirm?: string; month?: number; year?: number };
   try {
     body = await req.json();
   } catch {
@@ -242,6 +250,25 @@ export async function POST(req: NextRequest) {
     if (!order) return NextResponse.json({ error: "Order not found." }, { status: 404 });
     try { return NextResponse.json({ delayNotice: await queueOrderDelayNotice(store, order.id, order.livemode) }); }
     catch { return NextResponse.json({ error: "Delay notice could not be queued." }, { status: 503 }); }
+  }
+
+  if (body.action === "manual-shipped" && body.orderId) {
+    const order = await store.getOrderById(body.orderId);
+    if (!order) return NextResponse.json({ error: "Order not found." }, { status: 404 });
+    const numbers = trackingNumbers(body.trackingNumbers);
+    if (!numbers.length) return NextResponse.json({ error: "trackingNumbers is required." }, { status: 400 });
+    const shipment: ShipmentRow = {
+      order_id: order.id,
+      status: "shipped",
+      tracking_company: typeof body.carrier === "string" && body.carrier.trim() ? body.carrier.trim().slice(0, 100) : null,
+      tracking_numbers: numbers,
+      tracking_urls: Array.isArray(body.trackingUrls) ? body.trackingUrls.filter((u: unknown): u is string => typeof u === "string" && /^https:\/\//.test(u)).slice(0, 10) : [],
+      line_items: [],
+    };
+    await store.addShipment(shipment);
+    const notice = await queueShipmentNotification(order, shipment);
+    if (order.fulfillment_status !== "delivered") await store.setFulfillmentStatus(order.id, "shipped");
+    return NextResponse.json({ shipped: true, notice });
   }
 
   if (body.action === "retry-confirmation" && body.orderId) {
