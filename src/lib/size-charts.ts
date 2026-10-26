@@ -114,6 +114,18 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
       { size: "XXL", chestIn: 27.75, lengthIn: 31, sleeveIn: null },
     ],
   },
+  j333: {
+    blank: "Waterproof shell jacket · mesh lined",
+    source: "https://www.blankstyle.com/files/specs/11793/SpecSheetMeasurements_J333.pdf",
+    note: "Cut with room for a hoodie underneath. Chest is measured one inch below the armhole, laid flat; sleeve is a raglan measure from the centre back neck to the cuff.",
+    rows: [
+      { size: "S", chestIn: 22, lengthIn: 28.5, sleeveIn: 35.5 },
+      { size: "M", chestIn: 23.5, lengthIn: 29.5, sleeveIn: 36.25 },
+      { size: "L", chestIn: 25, lengthIn: 30.5, sleeveIn: 37 },
+      { size: "XL", chestIn: 26.5, lengthIn: 31.5, sleeveIn: 37.75 },
+      { size: "XXL", chestIn: 28, lengthIn: 32.5, sleeveIn: 38.5 },
+    ],
+  },
 };
 
 /**
@@ -135,6 +147,8 @@ const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
   "80000000-0000-4000-8000-000000000004": "cc1717", // Circular Badge Tee
   "80000000-0000-4000-8000-000000000005": "as5150", // Circular Center Crewneck
   "80000000-0000-4000-8000-000000000006": "st720", // Matchday Tee
+  "80000000-0000-4000-8000-000000000011": "st720", // GOAL Athletics Warm-Up Tee (mapped 2026-10-26)
+  "80000000-0000-4000-8000-000000000012": "st720", // GOAL Athletics Match Day Tee (mapped 2026-10-26)
   "80000000-0000-4000-8000-000000000014": "ind4000", // GOAL Athletics Heritage Hoodie (hidden until renders and ids land)
   "80000000-0000-4000-8000-000000000015": "ind4000", // GOAL Athletics Lockup Hoodie (hidden until renders and ids land)
   "80000000-0000-4000-8000-000000000016": "j333", // GOAL Athletics Core Everyday Raincoat (2026-10-26)

@@ -2,34 +2,78 @@
 
 import { useEffect, useState } from "react";
 import { SIZE_CHARTS, inches } from "@/lib/size-charts";
+import { getProducts } from "@/lib/products";
 
 // ─────────────────────────────────────────────────────────────
 // The tabbed chart on /size-guide (design 3b). One config array drives
 // the tabs, the panel titles and which blank's rows are shown; the
 // numbers themselves come from SIZE_CHARTS and are never written here.
-// GUIDE is exported so the product-page dropdown (SizeGuide.tsx) can
-// deep-link a product to its tab by blank key.
+// GUIDE is exported so the product-page dialog (SizeGuide.tsx) can
+// deep-link a product to its tab by product id. Each tab lists the
+// catalog ids it covers; the panel title is the live names of those
+// products, so a rename in products.ts renames the tab's heading too
+// (2026-10-26: the raincoat landed on the Matchday Tee tab because the
+// tabs were keyed by blank and titled by hand).
 //
-// The active tab lives in the URL hash (#performance, #casual, ...):
+// The active tab lives in the URL hash (#performance, #hoodies, ...):
 // read on mount, written with replaceState on click so the back button
 // is not polluted, and followed on hashchange so in-page links work.
 // ─────────────────────────────────────────────────────────────
 
 export const GUIDE = [
-  { id: "performance", label: "Performance Tees", title: "Core Badge Tee · Matchday Tee", chart: "st720" },
-  { id: "casual", label: "Casual Tees", title: "Terrace Tee", chart: "bc3010" },
-  { id: "hoodies", label: "Hoodies", title: "Core Hoodie", chart: "ind4000" },
+  {
+    id: "performance",
+    label: "Performance Tees",
+    chart: "st720",
+    productIds: ["80000000-0000-4000-8000-000000000011", "80000000-0000-4000-8000-000000000012"],
+  },
+  {
+    id: "hoodies",
+    label: "Hoodies",
+    chart: "ind4000",
+    productIds: ["80000000-0000-4000-8000-000000000014", "80000000-0000-4000-8000-000000000015"],
+  },
+  {
+    id: "shorts",
+    label: "Shorts",
+    chart: null,
+    productIds: ["80000000-0000-4000-8000-000000000013"],
+    blank: "Training shorts · split sides",
+    // The letter sizes are the owner's waist mapping (fulfillment.ts); the
+    // maker publishes no flat garment table we have verified, so none is
+    // shown.
+    note: "Sold S to XXL, and each letter is a waist size: S fits a 30 in waist, M 32 in, L 34 in, XL 36 in, XXL 38 in. Order the waist you wear in jeans.",
+  },
+  {
+    id: "jackets",
+    label: "Jackets",
+    chart: "j333",
+    productIds: ["80000000-0000-4000-8000-000000000016"],
+  },
   {
     id: "caps",
     label: "Caps",
-    title: "Caps",
     chart: null,
+    productIds: ["80000000-0000-4000-8000-000000000009", "80000000-0000-4000-8000-000000000010"],
     blank: "Structured cotton-blend twill cap",
     note: "One adjustable size.",
   },
 ] as const;
 
 export type GuideTabId = (typeof GUIDE)[number]["id"];
+
+/** The tab's heading: the live names of the products it covers. */
+export function guideTitle(tab: (typeof GUIDE)[number]): string {
+  const names = getProducts()
+    .filter((p) => (tab.productIds as readonly string[]).includes(p.id))
+    .map((p) => p.name.replace(/^GOAL Athletics /, ""));
+  return names.length ? names.join(" · ") : tab.label;
+}
+
+/** The /size-guide tab for a catalog product, or null when none covers it. */
+export function guideTabFor(productId: string) {
+  return GUIDE.find((g) => (g.productIds as readonly string[]).includes(productId)) ?? null;
+}
 
 const DEFAULT_TAB: GuideTabId = "performance";
 
@@ -89,7 +133,7 @@ export default function SizeGuideTabs() {
         aria-labelledby={`tab-${tab.id}`}
         className="flex flex-col gap-4"
       >
-        <h2 className="font-display text-[28px] uppercase leading-tight">{tab.title}</h2>
+        <h2 className="font-display text-[28px] uppercase leading-tight">{guideTitle(tab)}</h2>
         {tab.chart === null ? (
           <>
             <p className="text-[15px] text-ink/60">{tab.blank}</p>

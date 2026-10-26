@@ -1,8 +1,8 @@
 
 import { InterfaceIcon } from "@/v84/InterfaceIcon";
 import Link from "next/link";
-import { SIZE_CHARTS, sizeChartFor, inches } from "@/lib/size-charts";
-import { GUIDE } from "@/components/SizeGuideTabs";
+import { sizeChartFor, inches } from "@/lib/size-charts";
+import { guideTabFor } from "@/components/SizeGuideTabs";
 
 // Collapsed by default and built on <details>/<summary> so it costs no
 // JavaScript, works before hydration, and is keyboard and screen-reader
@@ -20,19 +20,32 @@ import { GUIDE } from "@/components/SizeGuideTabs";
 // two sizes up.
 export default function SizeGuide({ productId }: { productId: string }) {
   const chart = sizeChartFor(productId);
-  if (!chart) return null;
+
+  // Deep-link to this product's own tab on /size-guide (GUIDE lists the
+  // product ids each tab covers). A product with no tab links to the top.
+  const tab = guideTabFor(productId);
+  const guideHref = tab ? `/size-guide#${tab.id}` : "/size-guide";
+
+  // No flat table for this garment (shorts are sized by waist, caps are one
+  // size): say what the guide says and point at its tab, never at another
+  // garment's chart.
+  if (!chart) {
+    if (!tab || !("note" in tab)) return null;
+    return (
+      <div className="border-t border-ink/10 py-4">
+        <p className="text-xs text-ink/50">{tab.blank}</p>
+        <p className="mt-2 text-sm leading-relaxed text-ink/70">{tab.note}</p>
+        <Link
+          href={guideHref}
+          className="mt-3 inline-block text-sm font-semibold text-ink underline underline-offset-4"
+        >
+          Full size guide <InterfaceIcon name="arrow-right" />
+        </Link>
+      </div>
+    );
+  }
 
   const hasSleeve = chart.rows.some((r) => r.sleeveIn != null);
-
-  // Deep-link to the matching tab on /size-guide. The chart object is the
-  // one registered in SIZE_CHARTS, so its key is found by identity, and
-  // GUIDE maps that blank key to a tab (st720 -> performance, bc3010 ->
-  // casual, ind4000 -> hoodies). A blank without a tab links to the top.
-  const blankKey = (Object.keys(SIZE_CHARTS) as (keyof typeof SIZE_CHARTS)[]).find(
-    (k) => SIZE_CHARTS[k] === chart
-  );
-  const tabId = GUIDE.find((g) => g.chart === blankKey)?.id;
-  const guideHref = tabId ? `/size-guide#${tabId}` : "/size-guide";
 
   return (
     <details className="group border-t border-ink/10 py-4">
