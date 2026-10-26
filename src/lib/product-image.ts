@@ -31,6 +31,10 @@ export function catalogImageSrc(src: string): string {
     "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
     "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp": "bone-front-photo-v2-20261022",
     "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp": "grey-heather-front-photo-20261022",
+    // Match Day Tee Black and White · Black-Red: the owner's v2 product
+    // fronts replaced the first ones at these paths on 2026-10-26.
+    "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp": "black-front-v2-20261026",
+    "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp": "white-black-red-front-v2-20261026",
     // Stacked Stadium Cap: the owner's clean fronts (no supplier sticker)
     // replaced the first product shots at these paths on 2026-10-23.
     "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp": "red-front-v2-20261023",

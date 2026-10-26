@@ -51,7 +51,7 @@
     },
     {
       "order": 3,
-      "colorway": "White \u00b7 Black-Red",
+      "colorway": "White · Black-Red",
       "view": "product-front",
       "sourceFilename": "white-black-red-product-front-as-received.webp",
       "receivedAs": "56.webp",
@@ -92,6 +92,38 @@
       "webpSha256": "3255829b9292ae858aa5c29f1503c930167f27cb027f5ea3eb39d2c1a8f11ea4",
       "webpBytes": 121606,
       "replaces": "/products/goal-ga-big-tee-true-red-front.webp (Apliiq render, moved to designs/57_ga-big-tee-product-fronts-2026-10-22/retired-render/)"
+    }
+  ],
+  "replacements": [
+    {
+      "date": "2026-10-26",
+      "colorway": "Black",
+      "view": "product-front",
+      "deployedPath": "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
+      "cacheRevision": "black-front-v2-20261026",
+      "source": "Owner-supplied in the Claude session on 2026-10-26 with the instruction to replace the current Black product front; used as given (already 2:3 on a grey studio backdrop), no re-encode or backdrop processing.",
+      "asReceived": "designs/57_ga-big-tee-product-fronts-2026-10-22/as-received/black-product-front-v2-as-received-20261026.webp",
+      "sha256": "15992bbcc3b7ac72bd64b76865040bb96ff2cdb1108144a4b217a2ebed4eac7e",
+      "bytes": 87388,
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "colorway": "White · Black-Red",
+      "view": "product-front",
+      "deployedPath": "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp",
+      "cacheRevision": "white-black-red-front-v2-20261026",
+      "source": "Owner-supplied in the Claude session on 2026-10-26 with the instruction to replace the current white product front the same way as the Black one; used as given (already 2:3 on a grey studio backdrop), no re-encode or backdrop processing.",
+      "asReceived": "designs/57_ga-big-tee-product-fronts-2026-10-22/as-received/white-black-red-product-front-v2-as-received-20261026.webp",
+      "sha256": "776ff5c95b52a57a6658d4d865309c3da1fbef619f265942c9b63010293a15ae",
+      "bytes": 52430,
+      "dimensions": [
+        1024,
+        1536
+      ]
     }
   ]
 }

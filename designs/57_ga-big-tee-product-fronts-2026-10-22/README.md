@@ -47,3 +47,9 @@ card and the product-level image. The four Apliiq front renders
 `retired-render/`; the back renders were never in a gallery and stay as
 they were. Checksums and sizes:
 `docs/catalog/ga-big-tee-product-fronts-20261022.json`.
+
+## Black front v2 (2026-10-26)
+
+The owner replaced the Black product front with a new shot (`as-received/black-product-front-v2-as-received-20261026.webp`, 1024 x 1536, 2:3, grey studio backdrop, used as given). Same path in `public/products/`; cache revision `black-front-v2-20261026` in `src/lib/product-image.ts`.
+
+The White · Black-Red product front was replaced the same way the same day (`as-received/white-black-red-product-front-v2-as-received-20261026.webp`, 1024 x 1536, used as given; cache revision `white-black-red-front-v2-20261026`).

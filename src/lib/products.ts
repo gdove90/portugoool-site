@@ -3178,11 +3178,11 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
-        alt: "GA Minimal Tee in black, product front with the white and red GA monogram centred on the chest",
+        alt: "Warm-Up Tee in black, product front with the white and red GA monogram centred on the chest",
       },
       {
         src: "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
-        alt: "GA Minimal Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
+        alt: "Warm-Up Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
       },
     ],
     colorVariants: [
@@ -3198,23 +3198,23 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
-            alt: "GA Minimal Tee in black, product front with the white and red GA monogram centred on the chest",
+            alt: "Warm-Up Tee in black, product front with the white and red GA monogram centred on the chest",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
-            alt: "GA Minimal Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
+            alt: "Warm-Up Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-front-20261015.webp",
-            alt: "Model facing forward in the black GA Minimal Tee with the white and red GA monogram centred on the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the black Warm-Up Tee with the white and red GA monogram centred on the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-front-quarter-20261015.webp",
-            alt: "Same model in a front quarter turn, black GA Minimal Tee with the white and red GA monogram on the chest",
+            alt: "Same model in a front quarter turn, black Warm-Up Tee with the white and red GA monogram on the chest",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-rear-20261015.webp",
-            alt: "Same model from behind in the black GA Minimal Tee, white GOAL ATHLETICS lockup with a red bar across the upper back",
+            alt: "Same model from behind in the black Warm-Up Tee, white GOAL ATHLETICS lockup with a red bar across the upper back",
           },
           {
             src: "/products/goal-ga-minimal-black-catalog-model-rear-quarter-20261015.webp",
@@ -3234,23 +3234,23 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp",
-            alt: "GA Minimal Tee in True Royal, product front with the cream GA monogram centred on the chest",
+            alt: "Warm-Up Tee in True Royal, product front with the cream GA monogram centred on the chest",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp",
-            alt: "GA Minimal Tee in True Royal, product back with the cream stacked GOAL ATHLETICS lockup across the upper back",
+            alt: "Warm-Up Tee in True Royal, product back with the cream stacked GOAL ATHLETICS lockup across the upper back",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-front-20261015.webp",
-            alt: "Model facing forward in the True Royal GA Minimal Tee with the cream GA monogram centred on the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the True Royal Warm-Up Tee with the cream GA monogram centred on the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-front-quarter-20261015.webp",
-            alt: "Same model in a front quarter turn, True Royal GA Minimal Tee with the cream GA monogram on the chest",
+            alt: "Same model in a front quarter turn, True Royal Warm-Up Tee with the cream GA monogram on the chest",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-rear-20261015.webp",
-            alt: "Same model from behind in the True Royal GA Minimal Tee, cream GOAL ATHLETICS lockup across the upper back",
+            alt: "Same model from behind in the True Royal Warm-Up Tee, cream GOAL ATHLETICS lockup across the upper back",
           },
           {
             src: "/products/goal-ga-minimal-true-royal-catalog-model-rear-quarter-20261015.webp",
@@ -3266,23 +3266,23 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp",
-            alt: "White GA Minimal Tee, product front with black and red GA monogram",
+            alt: "White Warm-Up Tee, product front with black and red GA monogram",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-product-back-20261014.webp",
-            alt: "White GA Minimal Tee, product back with black GOAL ATHLETICS lettering and red bar",
+            alt: "White Warm-Up Tee, product back with black GOAL ATHLETICS lettering and red bar",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-model-front-20261014.webp",
-            alt: "Model standing front-on in the white GA Minimal Tee, plain black shorts and white socks",
+            alt: "Model standing front-on in the white Warm-Up Tee, plain black shorts and white socks",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-model-three-quarter-20261014.webp",
-            alt: "Same model in a standing three-quarter view of the white GA Minimal Tee, black shorts and white socks",
+            alt: "Same model in a standing three-quarter view of the white Warm-Up Tee, black shorts and white socks",
           },
           {
             src: "/products/goal-ga-minimal-white-black-red-catalog-model-rear-20261014.webp",
-            alt: "Same model standing rear-on in the white GA Minimal Tee, showing the black and red back design",
+            alt: "Same model standing rear-on in the white Warm-Up Tee, showing the black and red back design",
           },
         ],
       },
@@ -3298,23 +3298,23 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp",
-            alt: "GA Minimal Tee in True Red, product front with the white GA monogram centred on the chest",
+            alt: "Warm-Up Tee in True Red, product front with the white GA monogram centred on the chest",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp",
-            alt: "GA Minimal Tee in True Red, product back with the white stacked GOAL ATHLETICS lockup across the upper back",
+            alt: "Warm-Up Tee in True Red, product back with the white stacked GOAL ATHLETICS lockup across the upper back",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-front-20261015.webp",
-            alt: "Model facing forward in the True Red GA Minimal Tee with the white GA monogram centred on the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the True Red Warm-Up Tee with the white GA monogram centred on the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-front-quarter-20261015.webp",
-            alt: "Same model in a front quarter turn, True Red GA Minimal Tee with the white GA monogram on the chest",
+            alt: "Same model in a front quarter turn, True Red Warm-Up Tee with the white GA monogram on the chest",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-rear-20261015.webp",
-            alt: "Same model from behind in the True Red GA Minimal Tee, white GOAL ATHLETICS lockup across the upper back",
+            alt: "Same model from behind in the True Red Warm-Up Tee, white GOAL ATHLETICS lockup across the upper back",
           },
           {
             src: "/products/goal-ga-minimal-true-red-catalog-model-rear-quarter-20261015.webp",
@@ -3354,7 +3354,7 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
-        alt: "GA Big Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+        alt: "Match Day Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
       },
     ],
     colorVariants: [
@@ -3371,19 +3371,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
-            alt: "GA Big Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "Match Day Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-ga-big-tee-black-catalog-model-front-20261020.webp",
-            alt: "Model facing forward in the black GA Big Tee with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the black Match Day Tee with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-ga-big-tee-black-catalog-model-three-quarter-20261020.webp",
-            alt: "Same model in a three-quarter turn, black GA Big Tee with the white and red GA and GOAL ATHLETICS lockup on the chest",
+            alt: "Same model in a three-quarter turn, black Match Day Tee with the white and red GA and GOAL ATHLETICS lockup on the chest",
           },
           {
             src: "/products/goal-ga-big-tee-black-catalog-model-rear-20261020.webp",
-            alt: "Same model from behind in the black GA Big Tee, clean back with no print",
+            alt: "Same model from behind in the black Match Day Tee, clean back with no print",
           },
         ],
       },
@@ -3395,19 +3395,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-product-front-20261022.webp",
-            alt: "GA Big Tee in True Royal, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "Match Day Tee in True Royal, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-model-front-20261020.webp",
-            alt: "Model facing forward in the true royal GA Big Tee with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the true royal Match Day Tee with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-model-three-quarter-20261020.webp",
-            alt: "Same model in a three-quarter turn, true royal GA Big Tee with the cream GA and GOAL ATHLETICS lockup on the chest",
+            alt: "Same model in a three-quarter turn, true royal Match Day Tee with the cream GA and GOAL ATHLETICS lockup on the chest",
           },
           {
             src: "/products/goal-ga-big-tee-true-royal-catalog-model-rear-20261020.webp",
-            alt: "Same model from behind in the true royal GA Big Tee, clean back with no print",
+            alt: "Same model from behind in the true royal Match Day Tee, clean back with no print",
           },
         ],
       },
@@ -3419,19 +3419,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp",
-            alt: "GA Big Tee in White · Black-Red, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "Match Day Tee in White · Black-Red, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-model-front-20261020.webp",
-            alt: "Model facing forward in the white GA Big Tee with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the white Match Day Tee with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-model-three-quarter-20261020.webp",
-            alt: "Same model in a three-quarter turn, white GA Big Tee with the black and red GA and GOAL ATHLETICS lockup on the chest",
+            alt: "Same model in a three-quarter turn, white Match Day Tee with the black and red GA and GOAL ATHLETICS lockup on the chest",
           },
           {
             src: "/products/goal-ga-big-tee-white-black-red-catalog-model-rear-20261020.webp",
-            alt: "Same model from behind in the white GA Big Tee, clean back with no print",
+            alt: "Same model from behind in the white Match Day Tee, clean back with no print",
           },
         ],
       },
@@ -3443,19 +3443,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-product-front-20261022.webp",
-            alt: "GA Big Tee in True Red, product front with the white GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "Match Day Tee in True Red, product front with the white GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-model-front-20261020.webp",
-            alt: "Model facing forward in the true red GA Big Tee with the white GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the true red Match Day Tee with the white GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-model-three-quarter-20261020.webp",
-            alt: "Same model in a three-quarter turn, true red GA Big Tee with the white GA and GOAL ATHLETICS lockup on the chest",
+            alt: "Same model in a three-quarter turn, true red Match Day Tee with the white GA and GOAL ATHLETICS lockup on the chest",
           },
           {
             src: "/products/goal-ga-big-tee-true-red-catalog-model-rear-20261020.webp",
-            alt: "Same model from behind in the true red GA Big Tee, clean back with no print",
+            alt: "Same model from behind in the true red Match Day Tee, clean back with no print",
           },
         ],
       },
@@ -3508,15 +3508,15 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
-        alt: "GA Minimal Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
+        alt: "Core Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
       },
       {
         src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
-        alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
+        alt: "Model facing forward in the black Core Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
       },
       {
         src: "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
-        alt: "Close-up of the white and red GA monogram on the left leg of the black GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
+        alt: "Close-up of the white and red GA monogram on the left leg of the black Core Shorts, just above the hem, with the drawcord waist and side pocket",
       },
     ],
     colorVariants: [
@@ -3528,15 +3528,15 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
-            alt: "GA Minimal Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
+            alt: "Core Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
           },
           {
             src: "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
-            alt: "Model facing forward in the black GA Minimal Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
+            alt: "Model facing forward in the black Core Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers",
           },
           {
             src: "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
-            alt: "Close-up of the white and red GA monogram on the left leg of the black GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
+            alt: "Close-up of the white and red GA monogram on the left leg of the black Core Shorts, just above the hem, with the drawcord waist and side pocket",
           },
         ],
       },
@@ -3548,15 +3548,15 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-product-front-20261022.webp",
-            alt: "GA Minimal Shorts in Ink Blue, product front with the cream GA monogram on the left leg above the hem, drawcord waist and side pockets",
+            alt: "Core Shorts in Ink Blue, product front with the cream GA monogram on the left leg above the hem, drawcord waist and side pockets",
           },
           {
             src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp",
-            alt: "Model facing forward in the Ink Blue GA Minimal Shorts with the cream GA monogram on the left leg above the hem, white socks and white sneakers",
+            alt: "Model facing forward in the Ink Blue Core Shorts with the cream GA monogram on the left leg above the hem, white socks and white sneakers",
           },
           {
             src: "/products/goal-ga-minimal-shorts-ink-blue-catalog-print-detail-20261022.webp",
-            alt: "Close-up of the cream GA monogram on the left leg of the Ink Blue GA Minimal Shorts, just above the hem, with the drawcord waist and side pocket",
+            alt: "Close-up of the cream GA monogram on the left leg of the Ink Blue Core Shorts, just above the hem, with the drawcord waist and side pocket",
           },
         ],
       },
@@ -3568,15 +3568,15 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-product-front-20261022.webp",
-            alt: "GA Minimal Shorts in Shadow, product front with the black and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
+            alt: "Core Shorts in Shadow, product front with the black and red GA monogram on the left leg above the hem, drawcord waist and side pockets",
           },
           {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp",
-            alt: "Model facing forward in the Shadow GA Minimal Shorts with the black and red GA monogram on the left leg above the hem, white socks and white sneakers",
+            alt: "Model facing forward in the Shadow Core Shorts with the black and red GA monogram on the left leg above the hem, white socks and white sneakers",
           },
           {
             src: "/products/goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp",
-            alt: "Close-up of the black and red GA monogram on the left leg of the Shadow GA Minimal Shorts, just above the hem",
+            alt: "Close-up of the black and red GA monogram on the left leg of the Shadow Core Shorts, just above the hem",
           },
         ],
       },
@@ -3789,7 +3789,7 @@ export const products: Product[] = [
     images: [
       {
         src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
-        alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+        alt: "GOAL Athletics Core Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
       },
     ],
     colorVariants: [
@@ -3802,19 +3802,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
-            alt: "GOAL Athletics Lockup Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "GOAL Athletics Core Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-black-catalog-model-front-20261022.webp",
-            alt: "Model facing forward in the Black Lockup Hoodie with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the Black Core Hoodie with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-lockup-hoodie-black-catalog-model-quarter-left-20261022.webp",
-            alt: "Same model turned to the left in the Black Lockup Hoodie, white and red GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the left in the Black Core Hoodie, white and red GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-black-catalog-model-quarter-right-20261022.webp",
-            alt: "Same model turned to the right in the Black Lockup Hoodie, white and red GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the right in the Black Core Hoodie, white and red GOAL ATHLETICS lockup across the chest",
           },
         ],
       },
@@ -3827,19 +3827,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp",
-            alt: "GOAL Athletics Lockup Hoodie in Grey Heather, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "GOAL Athletics Core Hoodie in Grey Heather, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-front-20261022.webp",
-            alt: "Model facing forward in the Grey Heather Lockup Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the Grey Heather Core Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
-            alt: "Same model turned to the left in the Grey Heather Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the left in the Grey Heather Core Hoodie, black and red GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
-            alt: "Same model turned to the right in the Grey Heather Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the right in the Grey Heather Core Hoodie, black and red GOAL ATHLETICS lockup across the chest",
           },
         ],
       },
@@ -3852,19 +3852,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
-            alt: "GOAL Athletics Lockup Hoodie in Bone, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "GOAL Athletics Core Hoodie in Bone, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-model-front-20261022.webp",
-            alt: "Model facing forward in the Bone Lockup Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the Bone Core Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-model-quarter-left-20261022.webp",
-            alt: "Same model turned to the left in the Bone Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the left in the Bone Core Hoodie, black and red GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-bone-catalog-model-quarter-right-20261022.webp",
-            alt: "Same model turned to the right in the Bone Lockup Hoodie, black and red GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the right in the Bone Core Hoodie, black and red GOAL ATHLETICS lockup across the chest",
           },
         ],
       },
@@ -3877,19 +3877,19 @@ export const products: Product[] = [
         images: [
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp",
-            alt: "GOAL Athletics Lockup Hoodie in Navy, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
+            alt: "GOAL Athletics Core Hoodie in Navy, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-model-front-20261022.webp",
-            alt: "Model facing forward in the Navy Lockup Hoodie with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
+            alt: "Model facing forward in the Navy Core Hoodie with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers",
           },
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-model-quarter-left-20261022.webp",
-            alt: "Same model turned to the left in the Navy Lockup Hoodie, cream GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the left in the Navy Core Hoodie, cream GOAL ATHLETICS lockup across the chest",
           },
           {
             src: "/products/goal-lockup-hoodie-navy-catalog-model-quarter-right-20261022.webp",
-            alt: "Same model turned to the right in the Navy Lockup Hoodie, cream GOAL ATHLETICS lockup across the chest",
+            alt: "Same model turned to the right in the Navy Core Hoodie, cream GOAL ATHLETICS lockup across the chest",
           },
         ],
       },
