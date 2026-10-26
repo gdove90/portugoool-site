@@ -3909,6 +3909,103 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Lockup Hoodie ==
+  // == GOAL Athletics Core Everyday Raincoat (Apliiq designs read 2026-10-26) ==
+  // Waterproof shell jacket (supplier blank J333), DTF transfer. Three saved
+  // designs on the account, titled "core everyday raincoat" by the owner
+  // (Black 6240401, True Navy 6240414, Dark Grey Heather 6240424), two
+  // artworks each, front only, back blank: the GA monogram 3.00 x 2.70 in on
+  // the wearer's left chest and the GOAL ATHLETICS wordmark 3.50 x 1.07 in on
+  // the wearer's right chest; white/red on Black, cream on True Navy, solid
+  // black on Dark Grey Heather. Private label inside the neck. Every gallery
+  // shows Apliiq's own front render on the studio backdrop (2:3) until the
+  // owner supplies photos; no physical sample exists yet.
+  // Price $108: the 25% contribution model on the dropship quote read off
+  // the Black design on 2026-10-26 ($64.58, XXL +$2.00) gives a $106 floor;
+  // rounded up two dollars as the hoodie was. Live and for sale on the
+  // owner's instruction 2026-10-26, men's section. Record:
+  // designs/61_core-everyday-raincoat-j333-2026-10-26/.
+  // Apliiq offers the blank XS to 4XL; the site sells S to XXL as on every
+  // garment.
+  {
+    id: "80000000-0000-4000-8000-000000000016",
+    name: "GOAL Athletics Core Everyday Raincoat",
+    slug: "goal-athletics-core-everyday-raincoat",
+    blank: "J333",
+    description:
+      "Fully seam-sealed waterproof shell with a zip-off hood. GA monogram on the left chest, GOAL ATHLETICS wordmark on the right, waterproof zips, front zip pockets and a drawcord hem. Folds into its own pouch.",
+    priceCents: 10800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#151515",
+    // Fabric and care from the blank's spec sheet (2026-10-26); the shell is
+    // the supplier's "5000MM waterproof, 3000G/M2 breathability" rating.
+    fabric:
+      "100% polyester waterproof shell, fully seam sealed, rated 5,000 mm waterproof and 3,000 g/m² breathable. Mesh-lined body and hood, waterproof contrast zips, zip-off hood, adjustable hook-and-loop cuffs and an open hem with a locking drawcord. Comes with a drawstring carry pouch.",
+    fit: "Regular fit with room to layer over a hoodie. True to size.",
+    careInstructions: "Machine wash cold. Do not bleach. Cool iron if needed. Do not dry clean.",
+    images: [
+      {
+        src: "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
+        alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the GOAL ATHLETICS wordmark on the right chest",
+      },
+    ],
+    // Swatches sampled from the garment body of Apliiq's own renders
+    // (2026-10-26).
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#151515",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
+            alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the GOAL ATHLETICS wordmark on the right chest",
+          },
+        ],
+      },
+      {
+        name: "True Navy",
+        supplierColor: "True Navy",
+        hex: "#374252",
+        skuFragment: "TRUENAVY",
+        images: [
+          {
+            src: "/products/goal-core-everyday-raincoat-true-navy-catalog-product-front-20261026.webp",
+            alt: "GOAL Athletics Core Everyday Raincoat in True Navy, product front with the cream GA monogram on the left chest and the cream GOAL ATHLETICS wordmark on the right chest",
+          },
+        ],
+      },
+      {
+        name: "Dark Grey Heather",
+        supplierColor: "Dark Grey Heather",
+        hex: "#626561",
+        skuFragment: "DARKGREYHEATHER",
+        images: [
+          {
+            src: "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-front-20261026.webp",
+            alt: "GOAL Athletics Core Everyday Raincoat in Dark Grey Heather, product front with the black GA monogram on the left chest and the black GOAL ATHLETICS wordmark on the right chest",
+          },
+        ],
+      },
+    ],
+    // Garment made in Bangladesh (Apliiq's J333 record); decorated at
+    // Apliiq's US facilities, so Printed in the USA.
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "jacket",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics Core Everyday Raincoat ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

@@ -13,7 +13,8 @@
 -- design pages (src/lib/fulfillment.ts), so the row is active and for sale,
 -- matching src/lib/products.ts. Idempotent; no historical orders or supplier
 -- designs changed.
--- Not yet applied. Run in the Supabase SQL editor (supabase-sql-editor skill).
+-- Applied 2026-10-26 in the Supabase SQL editor (bundled with 0043); the
+-- row verified active and for sale at 7800.
 
 insert into public.products
   (id, name, slug, description, price_cents, color, color_hex,

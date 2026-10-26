@@ -23,6 +23,9 @@ export const audienceAssignments: Record<string, Audience[]> = {
   // products only).
   "80000000-0000-4000-8000-000000000014": ["men"],
   "80000000-0000-4000-8000-000000000015": ["men"],
+  // Core Everyday Raincoat (Apliiq designs 6240401/6240414/6240424), owner
+  // instruction 2026-10-26: men's section.
+  "80000000-0000-4000-8000-000000000016": ["men"],
 };
 // The GOOOL pieces that filled this grid were retired on 2026-10-15, so the
 // home page features the GOAL Athletics pieces on sale.
@@ -36,7 +39,7 @@ export function featuredProducts() {
   return featuredProductIds.flatMap(id => products.filter(product => product.id === id));
 }
 export function productType(product: Product) {
-  return product.category === "hoodie" ? "hoodies" : product.category === "shorts" ? "shorts" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
+  return product.category === "hoodie" ? "hoodies" : product.category === "shorts" ? "shorts" : product.category === "jacket" ? "jackets" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
 }
 export function forAudience(audience: Audience) {
   return getProducts().filter(p => audienceAssignments[p.id]?.includes(audience));

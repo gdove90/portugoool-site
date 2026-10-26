@@ -443,6 +443,23 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "Navy": { apliiqProductId: 6206737, skus: { S: "APQ-6206737S6A1", M: "APQ-6206737S7A1", L: "APQ-6206737S8A1", XL: "APQ-6206737S1A1", XXL: "APQ-6206737S2A1" } },
   },
   // == end GOAL Athletics Lockup Hoodie ==
+  // == GOAL Athletics Core Everyday Raincoat (Port Authority J333) ==
+  // Ids and SKUs read off each design's own page on 2026-10-26. Two
+  // transfers per design, front only, back blank: the GA monogram 3.00 x
+  // 2.70 in on the wearer's left chest and the GOAL ATHLETICS wordmark 3.50 x
+  // 1.07 in on the wearer's right chest, aligned to the monogram's centre
+  // ("preserve proportions, no recoloring, stroke or mirroring; shell-safe
+  // transfer" note on each placement). White/red files on Black, cream on
+  // True Navy, solid black on Dark Grey Heather. Private label sb-6-161561
+  // inside the neck. Apliiq offers XS to 4XL (S5A1 XS, S21A1 3XL, S61A1
+  // 4XL); the site sells S to XXL. Record:
+  // designs/61_core-everyday-raincoat-j333-2026-10-26/.
+  "80000000-0000-4000-8000-000000000016": {
+    "Black": { apliiqProductId: 6240401, skus: { S: "APQ-6240401S6A1", M: "APQ-6240401S7A1", L: "APQ-6240401S8A1", XL: "APQ-6240401S1A1", XXL: "APQ-6240401S2A1" } },
+    "True Navy": { apliiqProductId: 6240414, skus: { S: "APQ-6240414S6A1", M: "APQ-6240414S7A1", L: "APQ-6240414S8A1", XL: "APQ-6240414S1A1", XXL: "APQ-6240414S2A1" } },
+    "Dark Grey Heather": { apliiqProductId: 6240424, skus: { S: "APQ-6240424S6A1", M: "APQ-6240424S7A1", L: "APQ-6240424S8A1", XL: "APQ-6240424S1A1", XXL: "APQ-6240424S2A1" } },
+  },
+  // == end GOAL Athletics Core Everyday Raincoat ==
 };
 
 export interface ResolvedFulfillment {
