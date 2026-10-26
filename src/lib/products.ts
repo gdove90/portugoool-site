@@ -4021,6 +4021,422 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Core Everyday Raincoat ==
+  // == TEMPO Core Training Tee (built 2026-10-26) ==
+  // Apliiq designs 6240566 Black, 6240570 White, 6240571 Iron Grey: the
+  // V1.3 GA monogram 3.00 x 2.70 in at the top of the wearer's left chest
+  // print area (Apliiq's box starts about 4 in below the collar on this
+  // blank). Apliiq quote $14.59 (XXL +$2): the 25% model's floor is $32;
+  // priced $38 to sit with the men's tees. Images are Apliiq's renders on
+  // the studio backdrop; no owner photos or sample yet. Record:
+  // designs/62_tempo-collection-proofs-2026-10-26/.
+  {
+    id: "80000000-0000-4000-8000-000000000017",
+    name: "TEMPO Core Training Tee",
+    slug: "tempo-core-training-tee",
+    blank: "LST350",
+    description:
+      "Women's performance tee with the GA monogram on the left chest. Lightweight, moisture-wicking polyester that holds its colour and its print, wash after wash.",
+    priceCents: 3800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#141414",
+    fabric:
+      "3.8 oz 100% polyester interlock, moisture-wicking, with a colour-locking finish so the fabric and the print stay sharp. Women's cut.",
+    fit: "Women's cut, easy through the body. True to size.",
+    careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/tempo-core-training-tee-black-catalog-product-front-20261026.webp",
+        alt: "TEMPO Core Training Tee in Black, product front with the white and red GA monogram on the left chest",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#141414",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/tempo-core-training-tee-black-catalog-product-front-20261026.webp",
+            alt: "TEMPO Core Training Tee in Black, product front with the white and red GA monogram on the left chest",
+          },
+        ],
+      },
+      {
+        name: "White",
+        supplierColor: "White",
+        hex: "#F3F3F1",
+        skuFragment: "WHITE",
+        images: [
+          {
+            src: "/products/tempo-core-training-tee-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Core Training Tee in White, product front with the black and red GA monogram on the left chest",
+          },
+        ],
+      },
+      {
+        name: "Iron Grey",
+        supplierColor: "Iron Grey",
+        hex: "#4B4F54",
+        skuFragment: "IRONGREY",
+        images: [
+          {
+            src: "/products/tempo-core-training-tee-iron-grey-catalog-product-front-20261026.webp",
+            alt: "TEMPO Core Training Tee in Iron Grey, product front with the black GA monogram on the left chest",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end TEMPO Core Training Tee ==
+  // == TEMPO Quarter Zip (built 2026-10-26) ==
+  // Tapstitch designs 1564321596708188160 Black, 1564322937081917440 White,
+  // 1564323621013516288 Light Purple: the V1.3 GA monogram 3.00 x 2.70 in
+  // on the wearer's left chest, centred 4 in from the zip, top 3 in below
+  // the collar. Tapstitch sells S to XL only. Quote $11.98 a unit plus
+  // about $5 shipping: the 25% model's floor is $32; priced $44. Tapstitch
+  // orders are placed by hand (see fulfillment-submit.ts) until an API is
+  // connected. Images are Tapstitch's mockups. Record:
+  // designs/62_tempo-collection-proofs-2026-10-26/.
+  {
+    id: "80000000-0000-4000-8000-000000000018",
+    name: "TEMPO Quarter Zip",
+    slug: "tempo-quarter-zip",
+    blank: "WT0092",
+    description:
+      "Women's stretch quarter zip with the GA monogram on the left chest, a mock neck and thumbholes. The warm-up layer that goes from the car to the pitch.",
+    priceCents: 4400,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#141414",
+    fabric:
+      "91% polyester, 9% spandex, 165 gsm. Four-way stretch, mock neck, quarter zip and thumbhole cuffs.",
+    fit: "Close, body-skimming fit. Size up for room to layer.",
+    careInstructions: "Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low. Cool iron, avoiding the print. Do not dry clean.",
+    images: [
+      {
+        src: "/products/tempo-quarter-zip-black-catalog-product-front-20261026.webp",
+        alt: "TEMPO Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#141414",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/tempo-quarter-zip-black-catalog-product-front-20261026.webp",
+            alt: "TEMPO Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
+          },
+        ],
+      },
+      {
+        name: "White",
+        supplierColor: "White",
+        hex: "#F7F7F5",
+        skuFragment: "WHITE",
+        images: [
+          {
+            src: "/products/tempo-quarter-zip-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Quarter Zip in White, product front with the black and red GA monogram on the left chest beside the zip",
+          },
+        ],
+      },
+      {
+        name: "Light Purple",
+        supplierColor: "Light Purple",
+        hex: "#C8B9DE",
+        skuFragment: "LIGHTPURPLE",
+        images: [
+          {
+            src: "/products/tempo-quarter-zip-light-purple-catalog-product-front-20261026.webp",
+            alt: "TEMPO Quarter Zip in Light Purple, product front with the black GA monogram on the left chest beside the zip",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    disclosure: "Ships from our overseas partner: allow 10 to 17 days.",
+    sizes: ["S", "M", "L", "XL"],
+    category: "pullover",
+    supplierType: "tapstitch",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end TEMPO Quarter Zip ==
+  // == TEMPO Training Pants (built 2026-10-26) ==
+  // Apliiq designs 6240577 Deep Red/White, 6240578 True Navy/White,
+  // 6240579 Black/White: GA monogram 3.00 x 2.70 in in the wearer's left
+  // hip print box (about 9 in below the waist, Apliiq's box) and the
+  // wordmark 4.00 x 1.22 in in the back right hip box. The brief's
+  // Black/Black is a separate Apliiq listing; Black/White was built from
+  // this one. Apliiq quote $41.98 (XXL +$2): 25% model floor $72, priced
+  // $72. Apliiq has only rendered the front for Deep Red so far, so the
+  // other two colours lead with their back render. Record:
+  // designs/62_tempo-collection-proofs-2026-10-26/.
+  {
+    id: "80000000-0000-4000-8000-000000000019",
+    name: "TEMPO Training Pants",
+    slug: "tempo-training-pants",
+    blank: "LPST800",
+    description:
+      "Women's travel pant in recycled polyester with the GA monogram on the left thigh and the GOAL ATHLETICS wordmark on the back of the right leg. Drawcord waist, side pockets, tapered leg with zips at the ankle.",
+    priceCents: 7200,
+    compareAtPriceCents: null,
+    color: "Black/White",
+    colorHex: "#141414",
+    fabric:
+      "100% recycled polyester, moisture-wicking. Drawcord waist, side slash pockets, colourblock side panel, tapered leg with extended side zippers.",
+    fit: "Women's cut, tapered through the leg. True to size; the drawcord waist gives room.",
+    careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp",
+        alt: "TEMPO Training Pants in Black/White, product back with the white and red GOAL ATHLETICS wordmark on the right hip",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black/White",
+        supplierColor: "Black/White",
+        hex: "#141414",
+        skuFragment: "BLACKWHITE",
+        images: [
+          {
+            src: "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp",
+            alt: "TEMPO Training Pants in Black/White, product back with the white and red GOAL ATHLETICS wordmark on the right hip",
+          },
+        ],
+      },
+      {
+        name: "True Navy/White",
+        supplierColor: "True Navy/White",
+        hex: "#1E2846",
+        skuFragment: "TRUENAVYWHITE",
+        images: [
+          {
+            src: "/products/tempo-training-pants-true-navy-white-catalog-product-back-20261026.webp",
+            alt: "TEMPO Training Pants in True Navy/White, product back with the cream GOAL ATHLETICS wordmark on the right hip",
+          },
+        ],
+      },
+      {
+        name: "Deep Red/White",
+        supplierColor: "Deep Red/White",
+        hex: "#8E1B2A",
+        skuFragment: "DEEPREDWHITE",
+        images: [
+          {
+            src: "/products/tempo-training-pants-deep-red-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Pants in Deep Red/White, product front with the white GA monogram on the left thigh",
+          },
+          {
+            src: "/products/tempo-training-pants-deep-red-white-catalog-product-back-20261026.webp",
+            alt: "TEMPO Training Pants in Deep Red/White, product back with the white GOAL ATHLETICS wordmark on the right hip",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "pants",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end TEMPO Training Pants ==
+  // == TEMPO Warmup Hoodie (built 2026-10-26) ==
+  // Apliiq designs 6240580 Black, 6240581 Vintage White, 6240582 Navy: the
+  // V1.3 GA monogram 3.25 x 2.93 in centred on the chest, top 3 in below
+  // the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
+  // priced $68. Images are Apliiq's renders on the studio backdrop. Record:
+  // designs/62_tempo-collection-proofs-2026-10-26/.
+  {
+    id: "80000000-0000-4000-8000-000000000020",
+    name: "TEMPO Warmup Hoodie",
+    slug: "tempo-warmup-hoodie",
+    blank: "7519",
+    description:
+      "Women's classic fleece hoodie with the GA monogram centred on the chest. Mid-length, soft-brushed inside, no drawcord to fuss with.",
+    priceCents: 6800,
+    compareAtPriceCents: null,
+    color: "Black",
+    colorHex: "#161616",
+    fabric:
+      "8 oz combed and ring-spun cotton and polyester fleece (52/48), brushed inside. Women's mid-length cut with semi-set-in sleeves and a lined hood.",
+    fit: "Women's fit, true to size, mid-length in the body.",
+    careInstructions: "Machine wash cold, inside out, with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/tempo-warmup-hoodie-black-catalog-product-front-20261026.webp",
+        alt: "TEMPO Warmup Hoodie in Black, product front with the white and red GA monogram centred on the chest",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Black",
+        supplierColor: "Black",
+        hex: "#161616",
+        skuFragment: "BLACK",
+        images: [
+          {
+            src: "/products/tempo-warmup-hoodie-black-catalog-product-front-20261026.webp",
+            alt: "TEMPO Warmup Hoodie in Black, product front with the white and red GA monogram centred on the chest",
+          },
+        ],
+      },
+      {
+        name: "Vintage White",
+        supplierColor: "Vintage White",
+        hex: "#ECE5D6",
+        skuFragment: "VINTAGEWHITE",
+        images: [
+          {
+            src: "/products/tempo-warmup-hoodie-vintage-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Warmup Hoodie in Vintage White, product front with the black and red GA monogram centred on the chest",
+          },
+        ],
+      },
+      {
+        name: "Navy",
+        supplierColor: "Navy",
+        hex: "#222B45",
+        skuFragment: "NAVY",
+        images: [
+          {
+            src: "/products/tempo-warmup-hoodie-navy-catalog-product-front-20261026.webp",
+            alt: "TEMPO Warmup Hoodie in Navy, product front with the cream GA monogram centred on the chest",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "hoodie",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end TEMPO Warmup Hoodie ==
+  // == TEMPO Training Tee (built 2026-10-26) ==
+  // Tapstitch designs 1564324134866087936 White, 1564325002000687104 Red,
+  // 1564325488367988736 Purple: the V1.3 horizontal lockup 7.00 x 1.87 in
+  // centred on the chest, top 3 in below the collar. Quote $9.98 a unit plus
+  // about $5 shipping: 25% model floor $29; priced $34. Tapstitch orders
+  // are placed by hand until an API is connected. Images are Tapstitch's
+  // mockups. Record: designs/62_tempo-collection-proofs-2026-10-26/.
+  {
+    id: "80000000-0000-4000-8000-000000000021",
+    name: "TEMPO Training Tee",
+    slug: "tempo-training-tee",
+    blank: "WT0216",
+    description:
+      "Women's lightweight training tee with the GA and GOAL ATHLETICS lockup across the chest. Featherweight polyester for the session itself.",
+    priceCents: 3400,
+    compareAtPriceCents: null,
+    color: "White",
+    colorHex: "#F7F7F5",
+    fabric:
+      "100% polyester, 130 gsm. Light, quick-drying and smooth against the skin.",
+    fit: "Regular women's fit that sits closer to the body than the Core tees. Between sizes, go up.",
+    careInstructions: "Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low. Cool iron, avoiding the print. Do not dry clean.",
+    images: [
+      {
+        src: "/products/tempo-training-tee-white-catalog-product-front-20261026.webp",
+        alt: "TEMPO Training Tee in White, product front with the black and red GA and GOAL ATHLETICS lockup across the chest",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "White",
+        supplierColor: "White",
+        hex: "#F7F7F5",
+        skuFragment: "WHITE",
+        images: [
+          {
+            src: "/products/tempo-training-tee-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Tee in White, product front with the black and red GA and GOAL ATHLETICS lockup across the chest",
+          },
+        ],
+      },
+      {
+        name: "Red",
+        supplierColor: "Red",
+        hex: "#C3132B",
+        skuFragment: "RED",
+        images: [
+          {
+            src: "/products/tempo-training-tee-red-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Tee in Red, product front with the white GA and GOAL ATHLETICS lockup across the chest",
+          },
+        ],
+      },
+      {
+        name: "Purple",
+        supplierColor: "Purple",
+        hex: "#6B3F99",
+        skuFragment: "PURPLE",
+        images: [
+          {
+            src: "/products/tempo-training-tee-purple-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Tee in Purple, product front with the black GA and GOAL ATHLETICS lockup across the chest",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    disclosure: "Ships from our overseas partner: allow 10 to 17 days.",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "tshirt",
+    supplierType: "tapstitch",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end TEMPO Training Tee ==
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

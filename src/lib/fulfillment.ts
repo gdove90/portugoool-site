@@ -13,14 +13,36 @@ import { Size } from "./types";
 // ─────────────────────────────────────────────────────────────
 
 interface ApliiqVariant {
+  supplier?: "apliiq";
   /** Apliiq saved-product id (the design that gets printed). */
   apliiqProductId: number;
   /** Exact per-size fulfillment SKUs from Apliiq's records. */
   skus: Partial<Record<Size, string>>;
 }
 
-/** productId (catalog UUID) → color name → Apliiq variant. */
-const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
+/**
+ * A Tapstitch saved design (2026-10-26). Tapstitch has no order API wired
+ * into this site yet, so the per-size "SKUs" are our own stable line ids,
+ * TAP-<designId>-<SIZE>; fulfillment-submit.ts keeps these lines away from
+ * Apliiq and alerts the owner to place them on tapstitch.com by hand.
+ */
+interface TapstitchVariant {
+  supplier: "tapstitch";
+  /** Tapstitch design id (the "ID:" shown on the Designs list). */
+  tapstitchDesignId: string;
+  skus: Partial<Record<Size, string>>;
+}
+
+type SupplierVariant = ApliiqVariant | TapstitchVariant;
+
+const tapstitch = (designId: string, sizes: Size[]): TapstitchVariant => ({
+  supplier: "tapstitch",
+  tapstitchDesignId: designId,
+  skus: Object.fromEntries(sizes.map((s) => [s, `TAP-${designId}-${s}`])) as Partial<Record<Size, string>>,
+});
+
+/** productId (catalog UUID) → color name → supplier variant. */
+const MAPPING: Record<string, Record<string, SupplierVariant>> = {
   // GOOOL Core Badge Tee (Sport-Tek ST720)
   "70000000-0000-4000-8000-000000000001": {
     Black: {
@@ -460,12 +482,50 @@ const MAPPING: Record<string, Record<string, ApliiqVariant>> = {
     "Dark Grey Heather": { apliiqProductId: 6240424, skus: { S: "APQ-6240424S6A1", M: "APQ-6240424S7A1", L: "APQ-6240424S8A1", XL: "APQ-6240424S1A1", XXL: "APQ-6240424S2A1" } },
   },
   // == end GOAL Athletics Core Everyday Raincoat ==
+  // == TEMPO (women) · Apliiq designs built 2026-10-26 ==
+  // Ids and SKUs read off each design's own page the same day. One GA
+  // monogram per garment (3.00 in; 3.25 in on the hoodie), front only; the
+  // Training Pants add a 4.00 in GOAL ATHLETICS wordmark on the back of
+  // the wearer's right leg at hip height. Apliiq offers XS to 4XL / 3XL;
+  // the site sells S to XXL. Record: designs/62_tempo-collection-proofs-2026-10-26/.
+  // TEMPO Core Training Tee (Sport-Tek LST350)
+  "80000000-0000-4000-8000-000000000017": {
+    "Black": { apliiqProductId: 6240566, skus: { S: "APQ-6240566S6A1", M: "APQ-6240566S7A1", L: "APQ-6240566S8A1", XL: "APQ-6240566S1A1", XXL: "APQ-6240566S2A1" } },
+    "White": { apliiqProductId: 6240570, skus: { S: "APQ-6240570S6A1", M: "APQ-6240570S7A1", L: "APQ-6240570S8A1", XL: "APQ-6240570S1A1", XXL: "APQ-6240570S2A1" } },
+    "Iron Grey": { apliiqProductId: 6240571, skus: { S: "APQ-6240571S6A1", M: "APQ-6240571S7A1", L: "APQ-6240571S8A1", XL: "APQ-6240571S1A1", XXL: "APQ-6240571S2A1" } },
+  },
+  // TEMPO Training Pants (Sport-Tek LPST800)
+  "80000000-0000-4000-8000-000000000019": {
+    "Deep Red/White": { apliiqProductId: 6240577, skus: { S: "APQ-6240577S6A1", M: "APQ-6240577S7A1", L: "APQ-6240577S8A1", XL: "APQ-6240577S1A1", XXL: "APQ-6240577S2A1" } },
+    "True Navy/White": { apliiqProductId: 6240578, skus: { S: "APQ-6240578S6A1", M: "APQ-6240578S7A1", L: "APQ-6240578S8A1", XL: "APQ-6240578S1A1", XXL: "APQ-6240578S2A1" } },
+    "Black/White": { apliiqProductId: 6240579, skus: { S: "APQ-6240579S6A1", M: "APQ-6240579S7A1", L: "APQ-6240579S8A1", XL: "APQ-6240579S1A1", XXL: "APQ-6240579S2A1" } },
+  },
+  // TEMPO Warmup Hoodie (Bella+Canvas 7519)
+  "80000000-0000-4000-8000-000000000020": {
+    "Black": { apliiqProductId: 6240580, skus: { S: "APQ-6240580S6A1", M: "APQ-6240580S7A1", L: "APQ-6240580S8A1", XL: "APQ-6240580S1A1", XXL: "APQ-6240580S2A1" } },
+    "Vintage White": { apliiqProductId: 6240581, skus: { S: "APQ-6240581S6A1", M: "APQ-6240581S7A1", L: "APQ-6240581S8A1", XL: "APQ-6240581S1A1", XXL: "APQ-6240581S2A1" } },
+    "Navy": { apliiqProductId: 6240582, skus: { S: "APQ-6240582S6A1", M: "APQ-6240582S7A1", L: "APQ-6240582S8A1", XL: "APQ-6240582S1A1", XXL: "APQ-6240582S2A1" } },
+  },
+  // == TEMPO (women) · Tapstitch designs built 2026-10-26 ==
+  // Design ids from the Tapstitch Designs list. Quarter Zip WT0092 (S to XL,
+  // the supplier's whole run), Training Tee WT0216 (S to 2XL). Lines are
+  // placed on tapstitch.com by the owner until an order integration exists.
+  "80000000-0000-4000-8000-000000000018": {
+    "Black": tapstitch("1564321596708188160", ["S", "M", "L", "XL"]),
+    "White": tapstitch("1564322937081917440", ["S", "M", "L", "XL"]),
+    "Light Purple": tapstitch("1564323621013516288", ["S", "M", "L", "XL"]),
+  },
+  "80000000-0000-4000-8000-000000000021": {
+    "White": tapstitch("1564324134866087936", ["S", "M", "L", "XL", "XXL"]),
+    "Red": tapstitch("1564325002000687104", ["S", "M", "L", "XL", "XXL"]),
+    "Purple": tapstitch("1564325488367988736", ["S", "M", "L", "XL", "XXL"]),
+  },
+  // == end TEMPO ==
 };
 
-export interface ResolvedFulfillment {
-  apliiqProductId: number;
-  sku: string;
-}
+export type ResolvedFulfillment =
+  | { supplier: "apliiq"; apliiqProductId: number; sku: string }
+  | { supplier: "tapstitch"; tapstitchDesignId: string; sku: string };
 
 /**
  * Resolve the exact Apliiq SKU for a purchased variant.
@@ -483,5 +543,8 @@ export function resolveApliiqSku(
   if (!variant) return null;
   const sku = variant.skus[size];
   if (!sku) return null;
-  return { apliiqProductId: variant.apliiqProductId, sku };
+  if (variant.supplier === "tapstitch") {
+    return { supplier: "tapstitch", tapstitchDesignId: variant.tapstitchDesignId, sku };
+  }
+  return { supplier: "apliiq", apliiqProductId: variant.apliiqProductId, sku };
 }

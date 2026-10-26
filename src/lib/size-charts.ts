@@ -29,6 +29,8 @@ export interface SizeRow {
 
 export interface SizeChart {
   blank: string;
+  /** "waist" relabels the columns for bottoms: waist flat / around, inseam. */
+  measure?: "chest" | "waist";
   /** Manufacturer spec URL the numbers came from (internal; never rendered).
       The blank label above is customer-facing and names the fabric only:
       no supplier or garment brand appears on the site (owner, 2026-09-29). */
@@ -126,6 +128,43 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
       { size: "XXL", chestIn: 28, lengthIn: 32.5, sleeveIn: 38.5 },
     ],
   },
+  lst350: {
+    blank: "Women's performance tee · polyester interlock",
+    source: "https://www.blankstyle.com/files/specs/6100/SpecSheetMeasurements_LST350.pdf",
+    note: "A women's cut, shaped through the body. Bust is measured one inch below the armhole, laid flat.",
+    rows: [
+      { size: "S", chestIn: 19, lengthIn: 25.5, sleeveIn: null },
+      { size: "M", chestIn: 20, lengthIn: 26, sleeveIn: null },
+      { size: "L", chestIn: 21.5, lengthIn: 27, sleeveIn: null },
+      { size: "XL", chestIn: 23, lengthIn: 28, sleeveIn: null },
+      { size: "XXL", chestIn: 24.5, lengthIn: 29, sleeveIn: null },
+    ],
+  },
+  bc7519: {
+    blank: "Women's classic fleece hoodie",
+    source: "https://www.blankstyle.com/bella-canvas-7519-ladies-classic-pullover-hooded-sweatshirt",
+    note: "A women's fit that runs true to size, mid-length in the body.",
+    rows: [
+      { size: "S", chestIn: 20, lengthIn: 22.75, sleeveIn: null },
+      { size: "M", chestIn: 20.75, lengthIn: 23.375, sleeveIn: null },
+      { size: "L", chestIn: 21.75, lengthIn: 24, sleeveIn: null },
+      { size: "XL", chestIn: 22.75, lengthIn: 24.625, sleeveIn: null },
+      { size: "XXL", chestIn: 23.75, lengthIn: 25.25, sleeveIn: null },
+    ],
+  },
+  lpst800: {
+    blank: "Women's travel pant · recycled polyester",
+    measure: "waist",
+    source: "https://assets.dc-onesource.com/4/8/48319e73a835172c2ffbc2f8161aa155.pdf",
+    note: "Waist is measured point to point across the waistband, laid flat; inseam from the crotch seam to the hem. The drawcord waist gives a couple of inches of play.",
+    rows: [
+      { size: "S", chestIn: 15, lengthIn: 28.5, sleeveIn: null },
+      { size: "M", chestIn: 16, lengthIn: 29, sleeveIn: null },
+      { size: "L", chestIn: 17.5, lengthIn: 29.5, sleeveIn: null },
+      { size: "XL", chestIn: 19, lengthIn: 30, sleeveIn: null },
+      { size: "XXL", chestIn: 20.5, lengthIn: 30.5, sleeveIn: null },
+    ],
+  },
 };
 
 /**
@@ -152,6 +191,9 @@ const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
   "80000000-0000-4000-8000-000000000014": "ind4000", // GOAL Athletics Heritage Hoodie (hidden until renders and ids land)
   "80000000-0000-4000-8000-000000000015": "ind4000", // GOAL Athletics Lockup Hoodie (hidden until renders and ids land)
   "80000000-0000-4000-8000-000000000016": "j333", // GOAL Athletics Core Everyday Raincoat (2026-10-26)
+  "80000000-0000-4000-8000-000000000017": "lst350", // TEMPO Core Training Tee (2026-10-26)
+  "80000000-0000-4000-8000-000000000019": "lpst800", // TEMPO Training Pants (2026-10-26)
+  "80000000-0000-4000-8000-000000000020": "bc7519", // TEMPO Warmup Hoodie (2026-10-26)
 };
 
 export function sizeChartFor(productId: string): SizeChart | null {

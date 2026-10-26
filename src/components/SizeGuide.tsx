@@ -46,6 +46,7 @@ export default function SizeGuide({ productId }: { productId: string }) {
   }
 
   const hasSleeve = chart.rows.some((r) => r.sleeveIn != null);
+  const waist = chart.measure === "waist";
 
   return (
     <details className="group border-t border-ink/10 py-4">
@@ -79,21 +80,21 @@ export default function SizeGuide({ productId }: { productId: string }) {
               <tr className="border-b border-ink/15 text-left">
                 <th className="py-2 pr-3 font-semibold text-ink">Size</th>
                 <th className="py-2 pr-3 font-semibold text-ink">
-                  Chest, flat
+                  {waist ? "Waist, flat" : "Chest, flat"}
                   <span className="block text-[11px] font-normal text-ink/45">
-                    pit to pit
+                    {waist ? "across the waistband" : "pit to pit"}
                   </span>
                 </th>
                 <th className="py-2 pr-3 font-semibold text-ink">
-                  Chest, around
+                  {waist ? "Waist, around" : "Chest, around"}
                   <span className="block text-[11px] font-normal text-ink/45">
                     measure yourself
                   </span>
                 </th>
                 <th className="py-2 pr-3 font-semibold text-ink">
-                  Length
+                  {waist ? "Inseam" : "Length"}
                   <span className="block text-[11px] font-normal text-ink/45">
-                    shoulder to hem
+                    {waist ? "crotch to hem" : "shoulder to hem"}
                   </span>
                 </th>
                 {hasSleeve && (

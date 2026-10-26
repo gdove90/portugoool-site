@@ -13,13 +13,14 @@ export const OVERSIZED_TEE_SIZES: Size[] = ["S", "M", "L", "XL", "XXL"];
 export const ONE_SIZE: Size[] = ["OS"];
 export const ALL_SIZES: Size[] = [...SHIRT_SIZES, "OS"];
 
-export type ProductCategory = "jersey" | "casual" | "tshirt" | "hoodie" | "accessory" | "hat" | "shorts" | "jacket";
+export type ProductCategory = "jersey" | "casual" | "tshirt" | "hoodie" | "accessory" | "hat" | "shorts" | "jacket" | "pants" | "pullover";
 
 /** Future fulfillment routing — no integration yet, just clean structure. */
 export type SupplierType =
   | "printful"
   | "printify"
   | "apliiq"
+  | "tapstitch"
   | "gelato"
   | "local"
   | "unassigned";

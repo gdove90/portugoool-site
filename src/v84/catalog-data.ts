@@ -26,6 +26,12 @@ export const audienceAssignments: Record<string, Audience[]> = {
   // Core Everyday Raincoat (Apliiq designs 6240401/6240414/6240424), owner
   // instruction 2026-10-26: men's section.
   "80000000-0000-4000-8000-000000000016": ["men"],
+  // TEMPO (women), built on Apliiq and Tapstitch 2026-10-26.
+  "80000000-0000-4000-8000-000000000017": ["women"],
+  "80000000-0000-4000-8000-000000000018": ["women"],
+  "80000000-0000-4000-8000-000000000019": ["women"],
+  "80000000-0000-4000-8000-000000000020": ["women"],
+  "80000000-0000-4000-8000-000000000021": ["women"],
 };
 // The GOOOL pieces that filled this grid were retired on 2026-10-15, so the
 // home page features the GOAL Athletics pieces on sale.
@@ -39,7 +45,11 @@ export function featuredProducts() {
   return featuredProductIds.flatMap(id => products.filter(product => product.id === id));
 }
 export function productType(product: Product) {
-  return product.category === "hoodie" ? "hoodies" : product.category === "shorts" ? "shorts" : product.category === "jacket" ? "jackets" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
+  return product.category === "hoodie" ? "hoodies" : product.category === "shorts" ? "shorts" : product.category === "jacket" ? "jackets" : product.category === "pants" ? "pants" : product.category === "pullover" ? "layers" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
+}
+/** The collection a product belongs to, for tags and eyebrows: women's pieces are TEMPO, everything else CORE. */
+export function collectionLabel(product: Product): "TEMPO" | "CORE" {
+  return audienceAssignments[product.id]?.includes("women") ? "TEMPO" : "CORE";
 }
 export function forAudience(audience: Audience) {
   return getProducts().filter(p => audienceAssignments[p.id]?.includes(audience));

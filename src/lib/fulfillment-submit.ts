@@ -155,7 +155,27 @@ export async function submitPaidOrder(
   }
 
   const items = await store.listOrderItems(orderId);
-  const payload = buildApliiqPayload(order, items);
+
+  // Tapstitch lines (sku TAP-<design>-<size>) have no order API here yet.
+  // They are mailed to the owner to place on tapstitch.com; only the Apliiq
+  // lines go on to Apliiq. An order made only of Tapstitch lines is parked
+  // as not_submitted / manual_tapstitch so nothing ever retries it.
+  const tapstitchItems = items.filter((it) => it.apliiq_sku?.startsWith("TAP-"));
+  const apliiqItems = items.filter((it) => !it.apliiq_sku?.startsWith("TAP-"));
+  if (tapstitchItems.length) {
+    const reason =
+      "Tapstitch lines to place on tapstitch.com: " +
+      tapstitchItems.map((it) => `${it.quantity} x ${it.apliiq_sku} (${it.color} / ${it.size})`).join("; ");
+    await alertOwner(store, orderId, opts.livemode, "tapstitch_manual", reason);
+    if (!apliiqItems.length) {
+      await store.transitionSubmission(orderId, "pending_submission", "not_submitted", {
+        submission_last_error: reason,
+      });
+      await store.setFulfillmentStatus(orderId, "manual_tapstitch");
+      return { action: "not_eligible", detail: reason };
+    }
+  }
+  const payload = buildApliiqPayload(order, apliiqItems);
   if ("error" in payload) {
     await store.transitionSubmission(orderId, "pending_submission", "failed", {
       submission_last_error: payload.error,

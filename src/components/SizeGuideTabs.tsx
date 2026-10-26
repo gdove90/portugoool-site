@@ -58,6 +58,41 @@ export const GUIDE = [
     blank: "Structured cotton-blend twill cap",
     note: "One adjustable size.",
   },
+  // TEMPO (women), 2026-10-26.
+  {
+    id: "women-tees",
+    label: "Women's Tees",
+    chart: "lst350",
+    productIds: ["80000000-0000-4000-8000-000000000017"],
+  },
+  {
+    id: "women-training-tee",
+    label: "Training Tee",
+    chart: null,
+    productIds: ["80000000-0000-4000-8000-000000000021"],
+    blank: "Women's lightweight polyester crew · 130 gsm",
+    note: "Sold S to XXL. A regular women's fit that sits closer to the body than the Core tees; between sizes, go up. The maker's flat measurements are still to be published here.",
+  },
+  {
+    id: "women-hoodies",
+    label: "Women's Hoodies",
+    chart: "bc7519",
+    productIds: ["80000000-0000-4000-8000-000000000020"],
+  },
+  {
+    id: "pants",
+    label: "Pants",
+    chart: "lpst800",
+    productIds: ["80000000-0000-4000-8000-000000000019"],
+  },
+  {
+    id: "layers",
+    label: "Quarter Zip",
+    chart: null,
+    productIds: ["80000000-0000-4000-8000-000000000018"],
+    blank: "Women's stretch quarter zip · 91% polyester, 9% spandex",
+    note: "Sold S to XL, the maker's whole run. A close, body-skimming fit with thumbholes; size up for room to layer. The maker's flat measurements are still to be published here.",
+  },
 ] as const;
 
 export type GuideTabId = (typeof GUIDE)[number]["id"];
@@ -150,6 +185,7 @@ export default function SizeGuideTabs() {
 function ChartTable({ chartKey }: { chartKey: keyof typeof SIZE_CHARTS }) {
   const chart = SIZE_CHARTS[chartKey];
   const hasSleeve = chart.rows.some((r) => r.sleeveIn != null);
+  const waist = chart.measure === "waist";
   const cols = hasSleeve
     ? "grid-cols-[70px_repeat(4,minmax(0,1fr))]"
     : "grid-cols-[70px_repeat(3,minmax(0,1fr))]";
@@ -163,16 +199,16 @@ function ChartTable({ chartKey }: { chartKey: keyof typeof SIZE_CHARTS }) {
           <div role="row" className={`grid ${cols} gap-3 border-b-2 border-ink py-3 text-[15px] font-bold`}>
             <span role="columnheader">Size</span>
             <span role="columnheader">
-              Chest, flat
-              <span className="block text-xs font-medium text-ink/55">pit to pit</span>
+              {waist ? "Waist, flat" : "Chest, flat"}
+              <span className="block text-xs font-medium text-ink/55">{waist ? "across the waistband" : "pit to pit"}</span>
             </span>
             <span role="columnheader">
-              Chest, around
+              {waist ? "Waist, around" : "Chest, around"}
               <span className="block text-xs font-medium text-ink/55">measure yourself</span>
             </span>
             <span role="columnheader">
-              Length
-              <span className="block text-xs font-medium text-ink/55">shoulder to hem</span>
+              {waist ? "Inseam" : "Length"}
+              <span className="block text-xs font-medium text-ink/55">{waist ? "crotch to hem" : "shoulder to hem"}</span>
             </span>
             {hasSleeve && (
               <span role="columnheader">

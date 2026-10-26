@@ -154,7 +154,7 @@ export async function POST(req: NextRequest) {
     const unitCents = product.priceCents + (hasCustomization ? product.customizationPriceCents : 0);
     subtotalCents += unitCents * quantity;
     compactItems.push({ p: product.id, c: color, s: item.size, q: quantity,
-      u: unitCents, k: mapping.sku, a: mapping.apliiqProductId,
+      u: unitCents, k: mapping.sku, a: mapping.supplier === "apliiq" ? mapping.apliiqProductId : null,
       ...(customName ? { n: customName } : {}), ...(customNumber ? { m: customNumber } : {}) });
 
     const descriptionParts = [`Size ${item.size}`, color];

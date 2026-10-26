@@ -9,13 +9,13 @@ import { getProducts } from "@/lib/products";
 import { formatPrice } from "@/lib/format";
 import { catalogImageSrc } from "@/lib/product-image";
 import { hasPrice, type Product } from "@/lib/types";
-import { audienceAssignments, defaultVariant, forAudience, orderedVariants, productType, type Audience } from "./catalog-data";
+import { audienceAssignments, collectionLabel, defaultVariant, forAudience, orderedVariants, productType, type Audience } from "./catalog-data";
 import { Strike } from "./Brand";
 
 export function ProductCard({ product }: { product: Product }) {
   const variant = defaultVariant(product)?.variant;
   const image = variant?.cardImage || (variant?.images || product.images)[0];
-  return <Link className="product-card" href={`/shop/${product.slug}`}><div className="product-image"><Image className="asset" src={catalogImageSrc(image.src)} alt={image.alt} fill sizes="(max-width:1023px) 46vw, 23vw" /><span className="product-tag">CORE</span></div><div className="product-meta"><h3>{product.name}</h3><span>{hasPrice(product) ? formatPrice(product.priceCents) : "Price to be announced"}</span></div><div className="product-sub">{orderedVariants(product).map(({ variant: v }) => <i key={v.name} className="swatch-small" style={{ background: v.hex }} />)} {variant?.name || product.color}</div></Link>;
+  return <Link className="product-card" href={`/shop/${product.slug}`}><div className="product-image"><Image className="asset" src={catalogImageSrc(image.src)} alt={image.alt} fill sizes="(max-width:1023px) 46vw, 23vw" /><span className="product-tag">{collectionLabel(product)}</span></div><div className="product-meta"><h3>{product.name}</h3><span>{hasPrice(product) ? formatPrice(product.priceCents) : "Price to be announced"}</span></div><div className="product-sub">{orderedVariants(product).map(({ variant: v }) => <i key={v.name} className="swatch-small" style={{ background: v.hex }} />)} {variant?.name || product.color}</div></Link>;
 }
 
 export function ProductGrid({ products }: { products: Product[] }) {
@@ -30,7 +30,7 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
   const [open, setOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
   const list = audience ? forAudience(audience) : getProducts();
-  const types = ["tees", "tanks", "leggings", "shorts", "hoodies", "jackets", "hats"].filter(t => list.some(p => productType(p) === t));
+  const types = ["tees", "tanks", "leggings", "shorts", "pants", "hoodies", "layers", "jackets", "hats"].filter(t => list.some(p => productType(p) === t));
   const options = [["featured", "Featured"], ["low", "Price: low to high"], ["high", "Price: high to low"]];
   useEffect(() => {
     if (open) sortRef.current?.querySelector<HTMLButtonElement>(`[data-sort="${sort}"]`)?.focus();
@@ -38,7 +38,7 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     const category = query.get("category");
-    if (category) setType(category === "hoodie" ? "hoodies" : category === "shorts" ? "shorts" : category === "jacket" ? "jackets" : category === "hat" || category === "accessory" ? "hats" : "tees");
+    if (category) setType(category === "hoodie" ? "hoodies" : category === "shorts" ? "shorts" : category === "jacket" ? "jackets" : category === "pants" ? "pants" : category === "pullover" ? "layers" : category === "hat" || category === "accessory" ? "hats" : "tees");
     const close = (event: PointerEvent) => { if (!sortRef.current?.contains(event.target as Node)) setOpen(false); };
     document.addEventListener("pointerdown", close);
     return () => document.removeEventListener("pointerdown", close);
