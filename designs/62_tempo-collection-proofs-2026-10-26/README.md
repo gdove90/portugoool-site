@@ -70,9 +70,12 @@ per saved design, transfer print, no recolouring.
 | TEMPO Core Training Tee | Sport-Tek LST350 | Black (white/red GA) | 6240566 | APQ-6240566 S6A1 / S7A1 / S8A1 / S1A1 / S2A1 | GA 3.00 x 2.70 in, wearer's left chest, top at the print box top (about 4.25 in below the collar seam on Apliiq's mockup), centre 4 in from CF | $14.59, XXL +$2 |
 | | | White (black/red GA) | 6240570 | APQ-6240570 … | same | |
 | | | Iron Grey (solid black GA) | 6240571 | APQ-6240571 … | same | |
-| TEMPO Training Pants | Sport-Tek LPST800 | Deep Red/White (solid white) | 6240577 | APQ-6240577 … | GA 3.00 x 2.70 in centred in the wearer's left hip box (4 x 4 in, top about 9 in below the waist); wordmark 4.00 x 1.22 in in the back right hip box (4 x 4 in, top about 3 in below the waist) | $41.98, XXL +$2 |
-| | | True Navy/White (light cream) | 6240578 | APQ-6240578 … | same | |
-| | | Black/White (white/red) | 6240579 | APQ-6240579 … | same. The brief's Black/Black is a separate Apliiq listing, not built | |
+| TEMPO Training Pants (rebuilt, see below) | Sport-Tek LPST800 | Deep Red/White (solid white) | 6240609 | APQ-6240609 S6A1 / S7A1 / S8A1 / S1A1 / S2A1 | GA 2.00 x 1.80 in in the wearer's left hip box (4 x 4 in), top 8.50 in below the waistband seam; wordmark 4.00 x 1.22 in in the back right hip box (4 x 4 in, top about 3 in below the waist) | $41.98, XXL +$2 |
+| | | True Navy/White (light cream) | 6240610 | APQ-6240610 … | same | |
+| | | Black/White (white/red) | 6240611 | APQ-6240611 … | same. The brief's Black/Black is a separate Apliiq listing, not built | |
+| TEMPO Training Shorts | Sport-Tek LST485 | Black (white/red GA) | 6240613 | APQ-6240613 S6A1 / S7A1 / S8A1 / S1A1 / S2A1 | GA 2.00 x 1.80 in filling the wearer's left leg box (2 x 2 in, 40 px per inch; the only box on the blank) | $23.99, XXL +$2 |
+| | | Iron Grey (solid black) | 6240615 | APQ-6240615 … | same | |
+| | | True Navy (light cream) | 6240616 | APQ-6240616 … | same | |
 | TEMPO Warmup Hoodie | Bella+Canvas 7519 | Black (white/red) | 6240580 | APQ-6240580 … | GA 3.25 x 2.93 in centred, top 3.00 in below the hood seam | $37.28, XXL +$2 |
 | | | Vintage White (black/red) | 6240581 | APQ-6240581 … | same | |
 | | | Navy (light cream) | 6240582 | APQ-6240582 … | same | |
@@ -83,9 +86,18 @@ front GA of 6240577; elsewhere the uploaded PNGs are themselves 300 ppi or
 better at the printed size (388 ppi GA, 666 ppi wordmark) and Apliiq reads
 "ideal quality". Private label: none selected on these nine designs.
 
-**Training Shorts (Sport-Tek LST485) not built:** Apliiq's leg print box
-on that blank is 2 x 2 in (40 px per inch in the customizer), under the
-3.00 in GA minimum. Nothing saved.
+**Design update, later on 2026-10-26 (pasted by the owner):** the front
+GA on the Training Pants comes down from 3.00 x 2.70 in to 2.00 x 1.80 in
+(Apliiq's smallest GA, the sleeve size the owner accepted); it stays
+8.50 in below the waistband seam on the wearer's left upper thigh; the
+back wordmark is unchanged. So the pants were rebuilt as 6240609 / 6240610
+/ 6240611 (above) and 6240577 / 6240578 / 6240579 were renamed "delete" on
+Apliiq (never map them again). The same 2.00 in GA fits the LST485 leg
+box, so the **Training Shorts** were built the same evening (above).
+Apliiq has not generated the front renders (template 7149) of the rebuilt
+pants; the back renders (7150) and the shorts renders (5608) exist and are
+in `apliiq-renders/` (`pants2-*`, `shorts-*`). The Leggings (Printful) are
+still not built.
 
 ### Tapstitch (designer, inches typed; drag placement)
 
@@ -107,13 +119,15 @@ Tapstitch ships internationally, 10 to 17 days; the product pages say so.
 ### Site
 
 Rows …0017 Core Training Tee $38, …0018 Quarter Zip $44, …0019 Training
-Pants $72, …0020 Warmup Hoodie $68, …0021 Training Tee $34 (25% model
-floors $32 / $32 / $72 / $65 / $29; house rounding), women's audience,
+Pants $72, …0020 Warmup Hoodie $68, …0021 Training Tee $34, …0022 Training
+Shorts $48 (25% model floors $32 / $32 / $72 / $65 / $29 / $46; house
+rounding; none owner-set), women's audience,
 `/women` opened (TEMPO_COLLECTION_COMING_SOON false), categories `pants`
 and `pullover`, supplier `tapstitch`, migration 0045 applied. Images:
 `apliiq-renders/` and `tapstitch-mockups/` on the studio backdrop in
-`site-images/`, copied to `public/products/tempo-*`. Apliiq had not
-rendered the front of the navy and black pants (only Deep Red), so those
-two colours lead with the back render. Size charts: LST350 and LPST800
+`site-images/`, copied to `public/products/tempo-*`. Apliiq has not
+rendered the fronts of the rebuilt pants, so every pants colour leads with
+its back render (the first Deep Red front, which showed the 3 in GA, was
+taken down). Migration 0046 (shorts row) applied the same day. Size charts: LST350 and LPST800
 from the maker's spec sheets, 7519 from the Blankstyle listing; Tapstitch
 blanks carry a note until their size guides are read.
