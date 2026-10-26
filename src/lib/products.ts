@@ -3162,7 +3162,7 @@ export const products: Product[] = [
   // Images are Apliiq's renders of the saved designs.
   {
     id: "80000000-0000-4000-8000-000000000011",
-    name: "GOAL Athletics GA Minimal Tee",
+    name: "GOAL Athletics Warm-Up Tee",
     slug: "goal-athletics-ga-minimal-tee",
     blank: "ST720",
     description:
@@ -3338,7 +3338,7 @@ export const products: Product[] = [
   },
   {
     id: "80000000-0000-4000-8000-000000000012",
-    name: "GOAL Athletics GA Big Tee",
+    name: "GOAL Athletics Match Day Tee",
     slug: "goal-athletics-ga-big-tee",
     blank: "ST720",
     description:
@@ -3490,12 +3490,12 @@ export const products: Product[] = [
   // docs/catalog/ga-minimal-shorts-*-20261022.json.
   {
     id: "80000000-0000-4000-8000-000000000013",
-    name: "GOAL Athletics GA Minimal Shorts",
+    name: "GOAL Athletics Core Shorts",
     slug: "goal-athletics-ga-minimal-shorts",
     blank: "AS5620",
     description:
       "Lightweight active shorts. GA monogram on the left leg just above the hem, clean back.",
-    priceCents: 3200,
+    priceCents: 4500,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#242424",
@@ -3773,7 +3773,7 @@ export const products: Product[] = [
   // XS to 5XL) and swatches.
   {
     id: "80000000-0000-4000-8000-000000000015",
-    name: "GOAL Athletics Lockup Hoodie",
+    name: "GOAL Athletics Core Hoodie",
     slug: "goal-athletics-lockup-hoodie",
     blank: "IND4000",
     description:

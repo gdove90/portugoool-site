@@ -228,7 +228,7 @@ async function main() {
     const html = m.html ?? "";
     const text = m.text ?? "";
     check("html and plain text are both present", html.length > 500 && text.length > 200, `html=${html.length} text=${text.length}`);
-    check("shows both product names", /GA Minimal Tee/.test(html) && /Heritage Hoodie/.test(html));
+    check("shows both product names", /Warm-Up Tee/.test(html) && /Heritage Hoodie/.test(html));
     check("shows colour and size", /Black/.test(text) && /\bM\b/.test(text));
     check("line total uses qty x unit price ($76.00)", /\$76\.00/.test(html), "2 x $38");
     check("shows the hoodie at the price paid ($78.00)", /\$78\.00/.test(html));
