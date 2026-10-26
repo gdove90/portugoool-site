@@ -13,9 +13,9 @@ shipping at checkout (about $5 for one piece to the US).
 
 | Colour | Tapstitch design | Mark | Placement |
 |---|---|---|---|
-| Black | 1564299910617194496 (built earlier on 2026-10-26, owner-directed) | V1.3 horizontal lockup, white/red, 4.00 x 1.07 in | wearer's left chest, crest position: level with the bottom of the zip placket, about half an inch clear of the zip |
-| White | 1564523403115982848 | lockup black/red, 4.00 x 1.07 in | same, matched to the Black design on the canvas |
-| Dark Gray | 1564524205054324736 | lockup white/red, 4.00 x 1.07 in | same |
+| Black | 1564299910617194496 (built earlier on 2026-10-26, owner-directed) | V1.3 horizontal lockup, white/red, **5.50 x 1.47 in** (was 4.00 x 1.07) | wearer's left chest: level with the bottom of the zip placket, about half an inch clear of the zip |
+| White | 1564523403115982848 | lockup black/red, 5.50 x 1.47 in | same, matched to the Black design on the canvas |
+| Dark Gray | 1564524205054324736 | lockup white/red, 5.50 x 1.47 in | same |
 
 Built from the product page ("Design Now" per colour gives a fresh design
 id; "Edit design" on an existing one keeps its id). Artwork: the V1.3
@@ -24,12 +24,15 @@ lockup PNGs from `designs/62_tempo-collection-proofs-2026-10-26/print/smallest-2
 on the studio backdrop in `site-images/` and copied to
 `public/products/goal-core-quarter-zip-*`.
 
-**Size flag:** the owner's 2026-10-26 size brief measured the lockup's
-smallest gaps at 2.20 mm at 6.00 in wide. At the crest size of 4.00 in they
-scale to about 1.47 mm, under the 2 mm DTF rule used for Apliiq. Tapstitch's
-own DTF minimum is unconfirmed. The 4 in crest is the owner's placement
-decision; a sample should be checked before ads. Raising to 6.00 in would
-turn the crest into a chest print.
+**2 mm rule (owner, later on 2026-10-26):** the owner's size brief measured
+the lockup's thinnest gaps at 2.20 mm at 6.00 in wide, so the 4.00 in crest
+first built here came to about 1.47 mm, under the 2 mm DTF rule the house
+holds Apliiq to. Tapstitch's own minimum is unconfirmed, and the owner
+chose to keep the 2 mm rule regardless: all three designs were resized in
+place (ids unchanged) to **5.50 x 1.47 in**, the smallest width that keeps
+every gap at 2.00 mm or more (6.00 x 2.00 / 2.20 = 5.45 in, rounded up),
+and moved so the left edge stays about half an inch clear of the zip. The
+lockup PNG is 1800 px wide, 327 ppi at 5.50 in.
 
 ## Site
 

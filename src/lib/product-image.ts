@@ -49,6 +49,10 @@ export function catalogImageSrc(src: string): string {
     "/products/tempo-training-tee-red-catalog-product-front-20261026.webp": "smallest-20261026",
     "/products/tempo-training-tee-purple-catalog-product-front-20261026.webp": "smallest-20261026",
     "/products/tempo-training-tee-white-catalog-product-front-20261026.webp": "smallest-20261026",
+    // Core Quarter Zip: lockup resized to 5.50 in (2 mm rule) the day it launched.
+    "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp": "lockup-5-5in-20261026",
+    "/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp": "lockup-5-5in-20261026",
+    "/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp": "lockup-5-5in-20261026",
     "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
     "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp": "bone-front-photo-v2-20261022",
     // Lockup Hoodie: the owner's product shots replaced the Apliiq renders.

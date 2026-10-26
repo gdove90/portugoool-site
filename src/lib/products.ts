@@ -4025,9 +4025,12 @@ export const products: Product[] = [
   // == GOAL Athletics Core Quarter Zip (built 2026-10-26) ==
   // Tapstitch designs 1564299910617194496 Black (2026-10-26, owner-directed
   // crest placement), 1564523403115982848 White and 1564524205054324736 Dark Gray
-  // (same day, owner: three colours): the V1.3 horizontal lockup 4.00 x
-  // 1.07 in on the wearer's left chest, level with the bottom of the zip
-  // placket, about half an inch clear of the zip. Tapstitch MT0063 runs S
+  // (same day, owner: three colours): the V1.3 horizontal lockup 5.50 x
+  // 1.47 in on the wearer's left chest, level with the bottom of the zip
+  // placket, about half an inch clear of the zip. 5.50 in is the smallest
+  // width that keeps the lockup's thinnest gap at 2.00 mm or more (2.20 mm
+  // at 6.00 in); the owner chose the 2 mm rule over the 4 in crest on
+  // 2026-10-26 because Tapstitch's own DTF minimum is unconfirmed. Tapstitch MT0063 runs S
   // to 4XL; the site sells S to XXL (owner: nothing above 2XL). Quote
   // $15.98 a unit ($12.99 blank + $2.99 print) plus about $5 shipping: the
   // 25% model's floor is $41; priced $48 (model price, not owner-set).
