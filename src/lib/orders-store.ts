@@ -152,7 +152,7 @@ class SupabaseStore implements OrdersStore {
    */
   private async ensureProductRows(items: OrderItemRow[]) {
     const ids = [...new Set(items.map((it) => it.product_id))];
-    const catalog = getProducts();
+    const catalog = getProducts({ includeTempo: true });
     const rows = ids.flatMap((id) => {
       const p = catalog.find((c) => c.id === id);
       if (!p) return [];

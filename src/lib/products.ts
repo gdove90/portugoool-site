@@ -1,4 +1,5 @@
 import { Product, SHIRT_SIZES, JERSEY_SIZES, OVERSIZED_TEE_SIZES, ONE_SIZE, ProductCategory } from "./types";
+import { tempoHidden } from "./collection-launch";
 
 // ─────────────────────────────────────────────────────────────
 // Launch catalog · Drop Version I.
@@ -4520,24 +4521,36 @@ export const products: Product[] = [
 
 // ── Data access (swap these for Supabase queries later) ───────
 
-export function getProducts(): Product[] {
-  return products.filter((p) => p.isActive);
+// A gated collection (TEMPO while it is coming soon) is active in the
+// catalog but invisible to the public: every reader drops it unless the
+// caller asks for it with includeTempo, which only the owner's pages and
+// the order records of already-placed orders do.
+export interface CatalogRead {
+  includeTempo?: boolean;
 }
 
-export function getProductBySlug(slug: string): Product | undefined {
-  return products.find((p) => p.slug === slug && p.isActive);
+function visible(p: Product, opts?: CatalogRead): boolean {
+  return p.isActive && (opts?.includeTempo === true || !tempoHidden(p.id));
 }
 
-export function getProductById(id: string): Product | undefined {
-  return products.find((p) => p.id === id && p.isActive);
+export function getProducts(opts?: CatalogRead): Product[] {
+  return products.filter((p) => visible(p, opts));
+}
+
+export function getProductBySlug(slug: string, opts?: CatalogRead): Product | undefined {
+  return products.find((p) => p.slug === slug && visible(p, opts));
+}
+
+export function getProductById(id: string, opts?: CatalogRead): Product | undefined {
+  return products.find((p) => p.id === id && visible(p, opts));
 }
 
 export function getLimitedDropProducts(): Product[] {
-  return products.filter((p) => p.isActive && p.isLimitedDrop);
+  return products.filter((p) => visible(p) && p.isLimitedDrop);
 }
 
 export function getProductsByCategory(category: ProductCategory): Product[] {
-  return products.filter((p) => p.isActive && p.category === category);
+  return products.filter((p) => visible(p) && p.category === category);
 }
 
 export function getJerseysByDrop(version: string): Product[] {

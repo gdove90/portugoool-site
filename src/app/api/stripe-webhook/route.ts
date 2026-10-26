@@ -69,7 +69,7 @@ async function sendPurchaseToMeta(session: Stripe.Checkout.Session, orderId: str
       customData: {
         value: (session.amount_total ?? 0) / 100,
         currency: (session.currency ?? "usd").toUpperCase(),
-        content_ids: items.map((i) => getProductById(i.product_id)?.slug ?? i.product_id),
+        content_ids: items.map((i) => getProductById(i.product_id, { includeTempo: true })?.slug ?? i.product_id),
         content_type: "product",
         num_items: items.reduce((n, i) => n + (i.quantity ?? 0), 0),
         order_id: orderNumber(orderId),

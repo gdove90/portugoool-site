@@ -53,7 +53,9 @@ export function collectionLabel(product: Product): "TEMPO" | "CORE" {
   return audienceAssignments[product.id]?.includes("women") ? "TEMPO" : "CORE";
 }
 export function forAudience(audience: Audience) {
-  return getProducts().filter(p => audienceAssignments[p.id]?.includes(audience));
+  // The women's grid renders only on /women, which the owner gate guards
+  // while TEMPO is coming soon, so it may read the gated rows.
+  return getProducts({ includeTempo: audience === "women" }).filter(p => audienceAssignments[p.id]?.includes(audience));
 }
 function brightness(hex: string) {
   const rgb = hex.replace("#", "").match(/.{2}/g)?.map(v => parseInt(v, 16)) || [0, 0, 0];

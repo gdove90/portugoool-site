@@ -57,7 +57,7 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
   const mode = order.livemode ? "" : "[TEST] ";
   const subject = `${mode}Action needed: ${ref} was not accepted by Apliiq`;
   const lines = items.map((it) => {
-    const name = getProductById(it.product_id)?.name ?? it.product_id;
+    const name = getProductById(it.product_id, { includeTempo: true })?.name ?? it.product_id;
     return `${it.quantity} x ${name} · ${it.color} / ${it.size}${it.apliiq_sku ? ` (SKU ${it.apliiq_sku})` : ""}`;
   });
   const paidAt = order.paid_at ? new Date(order.paid_at).toLocaleString("en-US", { timeZone: "America/New_York" }) : "-";

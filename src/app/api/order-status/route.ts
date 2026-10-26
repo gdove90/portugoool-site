@@ -82,7 +82,7 @@ export async function GET(req: NextRequest) {
       id: await metaEventId("Purchase", session.id),
       value: session.amount_total / 100,
       currency: (session.currency ?? "usd").toUpperCase(),
-      content_ids: purchaseItems(session).map((i) => getProductById(i.p)?.slug ?? i.p),
+      content_ids: purchaseItems(session).map((i) => getProductById(i.p, { includeTempo: true })?.slug ?? i.p),
       num_items: purchaseItems(session).reduce((n, i) => n + (i.q ?? 0), 0),
       order_id: reference ?? session.id,
     } : null;

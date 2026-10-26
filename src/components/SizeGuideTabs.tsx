@@ -120,9 +120,15 @@ export function guideTabFor(productId: string) {
 
 const DEFAULT_TAB: GuideTabId = "performance";
 
+/** The tabs whose products the public catalog shows (a gated collection's tabs stay off the page). */
+function visibleTabs() {
+  const ids = new Set(getProducts().map((p) => p.id));
+  return GUIDE.filter((g) => (g.productIds as readonly string[]).some((id) => ids.has(id)));
+}
+
 function tabFromHash(): GuideTabId {
   const hash = window.location.hash.replace(/^#/, "");
-  return GUIDE.some((g) => g.id === hash) ? (hash as GuideTabId) : DEFAULT_TAB;
+  return visibleTabs().some((g) => g.id === hash) ? (hash as GuideTabId) : DEFAULT_TAB;
 }
 
 export default function SizeGuideTabs() {
@@ -140,7 +146,8 @@ export default function SizeGuideTabs() {
     window.history.replaceState(null, "", `#${id}`);
   }
 
-  const tab = GUIDE.find((g) => g.id === active) ?? GUIDE[0];
+  const tabs = visibleTabs();
+  const tab = tabs.find((g) => g.id === active) ?? tabs[0];
 
   return (
     <div className="flex flex-col gap-7">
@@ -149,7 +156,7 @@ export default function SizeGuideTabs() {
         aria-label="Garment"
         className="-mr-5 flex gap-2 overflow-x-auto border-b border-ink/10 pb-5 md:mr-0 md:flex-wrap md:overflow-visible"
       >
-        {GUIDE.map((g) => {
+        {tabs.map((g) => {
           const selected = g.id === active;
           return (
             <button
