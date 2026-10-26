@@ -31,8 +31,12 @@ holds Apliiq to. Tapstitch's own minimum is unconfirmed, and the owner
 chose to keep the 2 mm rule regardless: all three designs were resized in
 place (ids unchanged) to **5.50 x 1.47 in**, the smallest width that keeps
 every gap at 2.00 mm or more (6.00 x 2.00 / 2.20 = 5.45 in, rounded up),
-and moved so the left edge stays about half an inch clear of the zip. The
-lockup PNG is 1800 px wide, 327 ppi at 5.50 in.
+and re-placed. At 5.50 in the lockup only fits the chest panel if its left
+edge sits about 0.3 in from the zip tape (the first 5.50 in placement, half
+an inch clear, ran into the raglan sleeve seam and the mockup clipped
+"GOAL" to "GOA"); the final position keeps the right edge just inside the
+body panel at placket-bottom height. The lockup PNG is 1800 px wide,
+327 ppi at 5.50 in. Mockups `*-5.5in-v2-*.png` are the saved state.
 
 ## Site
 
