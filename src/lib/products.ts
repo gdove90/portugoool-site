@@ -1793,7 +1793,7 @@ export const products: Product[] = [
     // Black's blend only. Do not extend it to the other colours.
     fabric:
       "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
-    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    fit: "Generous fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
@@ -1903,7 +1903,7 @@ export const products: Product[] = [
     // Black's blend only. Do not extend it to the other colours.
     fabric:
       "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
-    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    fit: "Generous fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
@@ -3627,7 +3627,7 @@ export const products: Product[] = [
     // extend it to Grey Heather, Bone or Navy.
     fabric:
       "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
-    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    fit: "Generous fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
@@ -3784,7 +3784,7 @@ export const products: Product[] = [
     colorHex: "#1E1E1E",
     fabric:
       "10 oz heavyweight 3-end fleece in 70% cotton and 30% polyester, with ring-spun cotton for a smooth print surface. Fleece-lined hood with a cotton drawcord through nickel eyelets, and a tear-away label. Cut generous, so all that weight has room to hang.",
-    fit: "Generous unisex fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
+    fit: "Generous fit with 1x1 ribbed cuffs. True to size for room to layer. Size down for a more snug fit.",
     careInstructions: "Machine wash cold, inside out, with like colours. Tumble dry low. Do not bleach. Do not iron directly on the print.",
     images: [
       {
