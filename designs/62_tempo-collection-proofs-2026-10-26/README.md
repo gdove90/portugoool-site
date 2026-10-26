@@ -131,3 +131,65 @@ its back render (the first Deep Red front, which showed the 3 in GA, was
 taken down). Migration 0046 (shorts row) applied the same day. Size charts: LST350 and LPST800
 from the maker's spec sheets, 7519 from the Blankstyle listing; Tapstitch
 blanks carry a note until their size guides are read.
+
+## Smallest-size rebuild, later on 2026-10-26 (owner's TEMPO logo size update)
+
+Owner brief (pasted 2026-10-26): every mark at its smallest producible
+size. GA monogram 2.00 x 1.80 in on all GA products; Training Tee lockup
+6.00 x 1.60 in; Training Pants back wordmark 4.00 x 1.22 in. Production
+PNGs re-exported from the V1.3 trimmed artwork at 300 ppi at the final
+sizes: `print/smallest-2026-10-26/` (GA 600 x 540 px, lockup 1800 x 480,
+wordmark 1199 x 366); these are the files on the Apliiq designs below
+(artwork and linked hi-res). The same morning the owner also found both
+pants marks on the back of one leg (the second pants build had the GA in
+the back view), so the pants were rebuilt with the GA on the front.
+
+### Apliiq (new designs; the earlier ones are renamed "delete" or were removed)
+
+| Product | Colour | New design | Placement | Old design |
+|---|---|---|---|---|
+| Core Training Tee LST350 | Black (white/red GA) | 6241853 | GA 2.00 x 1.80 in, top of the wearer's left chest box, art centre 4 in from CF (box top about 4 in below the collar) | 6240566 |
+| | White (black/red) | 6241860 | same | 6240570 |
+| | Iron Grey (solid black) | 6241864 | same | 6240571 |
+| Training Pants LPST800 | Deep Red/White (solid white) | 6241817 | GA 2.00 x 1.80 in at the top of the FRONT wearer's-left hip box (view 7149 box 1; box top about 9 in below the waist, the brief asks 8.50 in and the box allows no higher); wordmark 4.00 x 1.22 in in the BACK wearer's-right hip box (view 7150 box 1), as the first build | 6240609 (gone) |
+| | True Navy/White (light cream) | 6241833 | same | 6240610 (gone) |
+| | Black/White (white/red) | 6241843 | same | 6240611 (gone) |
+| Warmup Hoodie 7519 | Black (white/red) | 6241875 | GA 2.00 x 1.80 in centred, top 3.00 in below the hood seam | 6240580 |
+| | Vintage White (black/red) | 6241879 | same | 6240581 |
+| | Navy (light cream) | 6241888 | same | 6240582 |
+
+SKUs follow the same pattern (`APQ-<id>S6A1` S through `S2A1` XXL), read
+off each page; quotes unchanged ($14.59 / $41.98 / $37.28, XXL +$2).
+Every placement was checked through the customizer's own review list
+(`customizer.reviewItems()`: view id, box id, inches, hi-res path) before
+saving. Lesson: after switching views or re-clicking an artwork the
+customizer can reset its box to the default (box 4) and the resize handler
+then snaps it there; always re-drag into the intended box and re-read the
+review list before saving.
+
+**Training Shorts (6240613/615/616) unchanged:** already 2.00 x 1.80 in;
+Apliiq's leg box is fixed at 2 x 2 in so the brief's "bottom 1.25 in
+above hem, centre 3.30 in from the side seam" cannot be set; the GA sits
+where the box is.
+
+### Tapstitch (edited in place, ids unchanged)
+
+Tapstitch's "Edit design" keeps the design id. The existing 300 ppi
+layers were resized with the Width/Height fields (inches): Training Tee
+lockup 7.00 x 1.87 to **6.00 x 1.60 in**, centred (1564324134866087936
+White, 1564325002000687104 Red, 1564325488367988736 Purple); Quarter Zip
+GA 3.00 x 2.70 to **2.00 x 1.80 in** on the wearer's left chest
+(1564321596708188160 Black, 1564322937081917440 White,
+1564323621013516288 Light Purple). The resize is centre-anchored, so the
+art centre stays 4 in from the zip; each GA was then nudged up about
+0.45 in so its top stays 3 in below the collar. Tapstitch's own DTF
+minimum is still unconfirmed (no size was raised).
+
+### Site
+
+fulfillment.ts maps the nine new Apliiq ids; the Tapstitch ids are
+unchanged. Catalog images re-rendered from the new designs (tee, hoodie,
+pants front and back) with a new cache revision; the Tapstitch mockups
+were refreshed after the edits. Comments in products.ts, handoff
+products.json and README carry the new sizes. Leggings (Printful) not
+built.

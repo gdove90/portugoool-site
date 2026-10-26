@@ -28,11 +28,27 @@ export function catalogImageSrc(src: string): string {
   "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp": "owner-front-20261026",
   "/products/goal-core-everyday-raincoat-true-navy-catalog-product-front-20261026.webp": "owner-front-20261026",
   "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-front-20261026.webp": "owner-front-20261026",
-    // TEMPO Training Pants backs re-rendered from the rebuilt designs
-    // (6240609/610/611) later on 2026-10-26.
-    "/products/tempo-training-pants-deep-red-white-catalog-product-back-20261026.webp": "pants-v2-20261026",
-    "/products/tempo-training-pants-true-navy-white-catalog-product-back-20261026.webp": "pants-v2-20261026",
-    "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp": "pants-v2-20261026",
+    // TEMPO marks went to their smallest sizes on 2026-10-26 (GA 2.00 in on
+    // the tee, hoodie and pants; pants rebuilt with the GA on the front);
+    // every render at these paths was replaced.
+    "/products/tempo-training-pants-deep-red-white-catalog-product-back-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-pants-true-navy-white-catalog-product-back-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-pants-deep-red-white-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-pants-true-navy-white-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-pants-black-white-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-core-training-tee-black-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-core-training-tee-white-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-core-training-tee-iron-grey-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-warmup-hoodie-black-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-warmup-hoodie-vintage-white-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-warmup-hoodie-navy-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-quarter-zip-black-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-quarter-zip-white-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-quarter-zip-light-purple-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-tee-red-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-tee-purple-catalog-product-front-20261026.webp": "smallest-20261026",
+    "/products/tempo-training-tee-white-catalog-product-front-20261026.webp": "smallest-20261026",
     "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
     "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp": "bone-front-photo-v2-20261022",
     // Lockup Hoodie: the owner's product shots replaced the Apliiq renders.

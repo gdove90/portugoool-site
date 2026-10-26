@@ -483,23 +483,28 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
   },
   // == end GOAL Athletics Core Everyday Raincoat ==
   // == TEMPO (women) · Apliiq designs built 2026-10-26 ==
-  // Ids and SKUs read off each design's own page the same day. One GA
-  // monogram per garment (3.00 in; 3.25 in on the hoodie), front only; the
-  // Training Pants add a 4.00 in GOAL ATHLETICS wordmark on the back of
-  // the wearer's right leg at hip height. Apliiq offers XS to 4XL / 3XL;
-  // the site sells S to XXL. Record: designs/62_tempo-collection-proofs-2026-10-26/.
-  // TEMPO Core Training Tee (Sport-Tek LST350)
+  // Ids and SKUs read off each design's own page. Rebuilt later the same
+  // day at the owner's smallest sizes: one GA monogram 2.00 x 1.80 in per
+  // garment, front only; the Training Pants add the 4.00 x 1.22 in GOAL
+  // ATHLETICS wordmark on the back of the wearer's right leg at hip height
+  // (GA on the front of the wearer's left thigh). The first designs
+  // (6240566/70/71 tee, 6240580/81/82 hoodie, 6240609/610/611 pants) are
+  // renamed "delete" or gone and never mapped again. Apliiq offers XS to
+  // 4XL / 3XL; the site sells S to XXL. Record:
+  // designs/62_tempo-collection-proofs-2026-10-26/.
+  // TEMPO Core Training Tee (Sport-Tek LST350), GA 2.00 x 1.80 in
   "80000000-0000-4000-8000-000000000017": {
-    "Black": { apliiqProductId: 6240566, skus: { S: "APQ-6240566S6A1", M: "APQ-6240566S7A1", L: "APQ-6240566S8A1", XL: "APQ-6240566S1A1", XXL: "APQ-6240566S2A1" } },
-    "White": { apliiqProductId: 6240570, skus: { S: "APQ-6240570S6A1", M: "APQ-6240570S7A1", L: "APQ-6240570S8A1", XL: "APQ-6240570S1A1", XXL: "APQ-6240570S2A1" } },
-    "Iron Grey": { apliiqProductId: 6240571, skus: { S: "APQ-6240571S6A1", M: "APQ-6240571S7A1", L: "APQ-6240571S8A1", XL: "APQ-6240571S1A1", XXL: "APQ-6240571S2A1" } },
+    "Black": { apliiqProductId: 6241853, skus: { S: "APQ-6241853S6A1", M: "APQ-6241853S7A1", L: "APQ-6241853S8A1", XL: "APQ-6241853S1A1", XXL: "APQ-6241853S2A1" } },
+    "White": { apliiqProductId: 6241860, skus: { S: "APQ-6241860S6A1", M: "APQ-6241860S7A1", L: "APQ-6241860S8A1", XL: "APQ-6241860S1A1", XXL: "APQ-6241860S2A1" } },
+    "Iron Grey": { apliiqProductId: 6241864, skus: { S: "APQ-6241864S6A1", M: "APQ-6241864S7A1", L: "APQ-6241864S8A1", XL: "APQ-6241864S1A1", XXL: "APQ-6241864S2A1" } },
   },
-  // TEMPO Training Pants (Sport-Tek LPST800), rebuilt 2026-10-26 with the
-  // front GA at 2.00 x 1.80 in; 6240577/78/79 (3 in GA) renamed "delete".
+  // TEMPO Training Pants (Sport-Tek LPST800): GA 2.00 x 1.80 in, front
+  // left hip box; wordmark 4.00 x 1.22 in, back right hip box (owner fix
+  // 2026-10-26: the second build had both marks on the back).
   "80000000-0000-4000-8000-000000000019": {
-    "Deep Red/White": { apliiqProductId: 6240609, skus: { S: "APQ-6240609S6A1", M: "APQ-6240609S7A1", L: "APQ-6240609S8A1", XL: "APQ-6240609S1A1", XXL: "APQ-6240609S2A1" } },
-    "True Navy/White": { apliiqProductId: 6240610, skus: { S: "APQ-6240610S6A1", M: "APQ-6240610S7A1", L: "APQ-6240610S8A1", XL: "APQ-6240610S1A1", XXL: "APQ-6240610S2A1" } },
-    "Black/White": { apliiqProductId: 6240611, skus: { S: "APQ-6240611S6A1", M: "APQ-6240611S7A1", L: "APQ-6240611S8A1", XL: "APQ-6240611S1A1", XXL: "APQ-6240611S2A1" } },
+    "Deep Red/White": { apliiqProductId: 6241817, skus: { S: "APQ-6241817S6A1", M: "APQ-6241817S7A1", L: "APQ-6241817S8A1", XL: "APQ-6241817S1A1", XXL: "APQ-6241817S2A1" } },
+    "True Navy/White": { apliiqProductId: 6241833, skus: { S: "APQ-6241833S6A1", M: "APQ-6241833S7A1", L: "APQ-6241833S8A1", XL: "APQ-6241833S1A1", XXL: "APQ-6241833S2A1" } },
+    "Black/White": { apliiqProductId: 6241843, skus: { S: "APQ-6241843S6A1", M: "APQ-6241843S7A1", L: "APQ-6241843S8A1", XL: "APQ-6241843S1A1", XXL: "APQ-6241843S2A1" } },
   },
   // TEMPO Training Shorts (Sport-Tek LST485), GA 2.00 x 1.80 in, left leg
   "80000000-0000-4000-8000-000000000022": {
@@ -507,11 +512,11 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "Iron Grey": { apliiqProductId: 6240615, skus: { S: "APQ-6240615S6A1", M: "APQ-6240615S7A1", L: "APQ-6240615S8A1", XL: "APQ-6240615S1A1", XXL: "APQ-6240615S2A1" } },
     "True Navy": { apliiqProductId: 6240616, skus: { S: "APQ-6240616S6A1", M: "APQ-6240616S7A1", L: "APQ-6240616S8A1", XL: "APQ-6240616S1A1", XXL: "APQ-6240616S2A1" } },
   },
-  // TEMPO Warmup Hoodie (Bella+Canvas 7519)
+  // TEMPO Warmup Hoodie (Bella+Canvas 7519), GA 2.00 x 1.80 in centred
   "80000000-0000-4000-8000-000000000020": {
-    "Black": { apliiqProductId: 6240580, skus: { S: "APQ-6240580S6A1", M: "APQ-6240580S7A1", L: "APQ-6240580S8A1", XL: "APQ-6240580S1A1", XXL: "APQ-6240580S2A1" } },
-    "Vintage White": { apliiqProductId: 6240581, skus: { S: "APQ-6240581S6A1", M: "APQ-6240581S7A1", L: "APQ-6240581S8A1", XL: "APQ-6240581S1A1", XXL: "APQ-6240581S2A1" } },
-    "Navy": { apliiqProductId: 6240582, skus: { S: "APQ-6240582S6A1", M: "APQ-6240582S7A1", L: "APQ-6240582S8A1", XL: "APQ-6240582S1A1", XXL: "APQ-6240582S2A1" } },
+    "Black": { apliiqProductId: 6241875, skus: { S: "APQ-6241875S6A1", M: "APQ-6241875S7A1", L: "APQ-6241875S8A1", XL: "APQ-6241875S1A1", XXL: "APQ-6241875S2A1" } },
+    "Vintage White": { apliiqProductId: 6241879, skus: { S: "APQ-6241879S6A1", M: "APQ-6241879S7A1", L: "APQ-6241879S8A1", XL: "APQ-6241879S1A1", XXL: "APQ-6241879S2A1" } },
+    "Navy": { apliiqProductId: 6241888, skus: { S: "APQ-6241888S6A1", M: "APQ-6241888S7A1", L: "APQ-6241888S8A1", XL: "APQ-6241888S1A1", XXL: "APQ-6241888S2A1" } },
   },
   // == TEMPO (women) · Tapstitch designs built 2026-10-26 ==
   // Design ids from the Tapstitch Designs list. Quarter Zip WT0092 (S to XL,

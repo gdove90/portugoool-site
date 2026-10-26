@@ -8,7 +8,7 @@ Status 2026-10-26. Phase 1 of the TEMPO brief.
 - products.json, variants.csv, asset-manifest.csv (records; external IDs and prices null).
 
 ## Design decisions
-- Logo minimums apply: GA 3.00 in wide, lockup 6.00 in. Brief widths of 1.50–2.25 in raised to 3.00 in. Hoodie 3.25 in and Training Tee lockup 7.00 in kept.
+- Logo sizes (owner update 26 Oct 2026, smallest producible): GA 2.00 x 1.80 in on every GA product, Training Tee lockup 6.00 x 1.60 in, Training Pants back wordmark 4.00 x 1.22 in. Earlier line, superseded: - Logo minimums apply: GA 3.00 in wide, lockup 6.00 in. Brief widths of 1.50–2.25 in raised to 3.00 in. Hoodie 3.25 in and Training Tee lockup 7.00 in
 - Size run: smallest supplier size to 2XL. Quarter Zip ends at XL.
 - Legal entity: The Goal Brand Group LLC.
 

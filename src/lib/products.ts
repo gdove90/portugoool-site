@@ -4023,10 +4023,11 @@ export const products: Product[] = [
   },
   // == end GOAL Athletics Core Everyday Raincoat ==
   // == TEMPO Core Training Tee (built 2026-10-26) ==
-  // Apliiq designs 6240566 Black, 6240570 White, 6240571 Iron Grey: the
-  // V1.3 GA monogram 3.00 x 2.70 in at the top of the wearer's left chest
-  // print area (Apliiq's box starts about 4 in below the collar on this
-  // blank). Apliiq quote $14.59 (XXL +$2): the 25% model's floor is $32;
+  // Apliiq designs 6241853 Black, 6241860 White, 6241864 Iron Grey (rebuilt
+  // 2026-10-26 at the owner's smallest size; 6240566/70/71 renamed delete):
+  // the V1.3 GA monogram 2.00 x 1.80 in at the top of the wearer's left
+  // chest print area, art centre 4 in from centre front (Apliiq's box
+  // starts about 4 in below the collar on this blank). Apliiq quote $14.59 (XXL +$2): the 25% model's floor is $32;
   // priced $38 to sit with the men's tees. Images are Apliiq's renders on
   // the studio backdrop; no owner photos or sample yet. Record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
@@ -4106,9 +4107,9 @@ export const products: Product[] = [
   // == end TEMPO Core Training Tee ==
   // == TEMPO Quarter Zip (built 2026-10-26) ==
   // Tapstitch designs 1564321596708188160 Black, 1564322937081917440 White,
-  // 1564323621013516288 Light Purple: the V1.3 GA monogram 3.00 x 2.70 in
-  // on the wearer's left chest, centred 4 in from the zip, top 3 in below
-  // the collar. Tapstitch sells S to XL only. Quote $11.98 a unit plus
+  // 1564323621013516288 Light Purple: the V1.3 GA monogram 2.00 x 1.80 in
+  // (resized in place 2026-10-26, was 3.00 in) on the wearer's left chest,
+  // centred 4 in from the zip, top 3 in below the collar. Tapstitch sells S to XL only. Quote $11.98 a unit plus
   // about $5 shipping: the 25% model's floor is $32; priced $44. Tapstitch
   // orders are placed by hand (see fulfillment-submit.ts) until an API is
   // connected. Images are Tapstitch's mockups. Record:
@@ -4188,18 +4189,18 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end TEMPO Quarter Zip ==
-  // == TEMPO Training Pants (built 2026-10-26, rebuilt the same day) ==
-  // Apliiq designs 6240609 Deep Red/White, 6240610 True Navy/White,
-  // 6240611 Black/White: GA monogram 2.00 x 1.80 in (the design update of
-  // 2026-10-26; was 3.00 x 2.70 in on 6240577/78/79, now renamed "delete")
-  // in the wearer's left hip print box, 8.50 in below the waistband seam,
-  // and the wordmark 4.00 x 1.22 in in the back right hip box (unchanged).
-  // The brief's Black/Black is a separate Apliiq listing; Black/White was
-  // built from this one. Apliiq quote $41.98 (XXL +$2): 25% model floor
-  // $72, priced $72. Apliiq has not rendered the fronts of the rebuilt
-  // designs (and the old Deep Red front showed the 3 in GA), so every
-  // colour leads with its back render until a front exists. Record:
-  // designs/62_tempo-collection-proofs-2026-10-26/.
+  // == TEMPO Training Pants (built 2026-10-26, rebuilt twice the same day) ==
+  // Apliiq designs 6241817 Deep Red/White, 6241833 True Navy/White,
+  // 6241843 Black/White: GA monogram 2.00 x 1.80 in at the top of the
+  // wearer's LEFT front hip print box (Apliiq's box, about 9 in below the
+  // waist; the brief asks 8.50 in) and the GOAL ATHLETICS wordmark
+  // 4.00 x 1.22 in in the back RIGHT hip box, so the two marks sit on
+  // opposite sides (owner, 2026-10-26: the second build had both on the
+  // back of one leg; those designs, 6240609/610/611, are gone). The brief's
+  // Black/Black is a separate Apliiq listing; Black/White was built from
+  // this one. Apliiq quote $41.98 (XXL +$2): 25% model floor $72, priced
+  // $72. Images: Apliiq's front and back renders on the studio backdrop.
+  // Record: designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000019",
     name: "TEMPO Training Pants",
@@ -4217,6 +4218,10 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
+        src: "/products/tempo-training-pants-black-white-catalog-product-front-20261026.webp",
+        alt: "TEMPO Training Pants in Black/White, product front with the white and red GA monogram on the left thigh",
+      },
+      {
         src: "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp",
         alt: "TEMPO Training Pants in Black/White, product back with the white and red GOAL ATHLETICS wordmark on the right hip",
       },
@@ -4228,6 +4233,10 @@ export const products: Product[] = [
         hex: "#141414",
         skuFragment: "BLACKWHITE",
         images: [
+          {
+            src: "/products/tempo-training-pants-black-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Pants in Black/White, product front with the white and red GA monogram on the left thigh",
+          },
           {
             src: "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp",
             alt: "TEMPO Training Pants in Black/White, product back with the white and red GOAL ATHLETICS wordmark on the right hip",
@@ -4241,6 +4250,10 @@ export const products: Product[] = [
         skuFragment: "TRUENAVYWHITE",
         images: [
           {
+            src: "/products/tempo-training-pants-true-navy-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Pants in True Navy/White, product front with the cream GA monogram on the left thigh",
+          },
+          {
             src: "/products/tempo-training-pants-true-navy-white-catalog-product-back-20261026.webp",
             alt: "TEMPO Training Pants in True Navy/White, product back with the cream GOAL ATHLETICS wordmark on the right hip",
           },
@@ -4252,6 +4265,10 @@ export const products: Product[] = [
         hex: "#8E1B2A",
         skuFragment: "DEEPREDWHITE",
         images: [
+          {
+            src: "/products/tempo-training-pants-deep-red-white-catalog-product-front-20261026.webp",
+            alt: "TEMPO Training Pants in Deep Red/White, product front with the white GA monogram on the left thigh",
+          },
           {
             src: "/products/tempo-training-pants-deep-red-white-catalog-product-back-20261026.webp",
             alt: "TEMPO Training Pants in Deep Red/White, product back with the white GOAL ATHLETICS wordmark on the right hip",
@@ -4356,9 +4373,10 @@ export const products: Product[] = [
   },
   // == end TEMPO Training Shorts ==
   // == TEMPO Warmup Hoodie (built 2026-10-26) ==
-  // Apliiq designs 6240580 Black, 6240581 Vintage White, 6240582 Navy: the
-  // V1.3 GA monogram 3.25 x 2.93 in centred on the chest, top 3 in below
-  // the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
+  // Apliiq designs 6241875 Black, 6241879 Vintage White, 6241888 Navy
+  // (rebuilt 2026-10-26 at the owner's smallest size; 6240580/81/82 renamed
+  // delete): the V1.3 GA monogram 2.00 x 1.80 in centred on the chest, top
+  // 3 in below the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
   // priced $68. Images are Apliiq's renders on the studio backdrop. Record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
@@ -4437,8 +4455,9 @@ export const products: Product[] = [
   // == end TEMPO Warmup Hoodie ==
   // == TEMPO Training Tee (built 2026-10-26) ==
   // Tapstitch designs 1564324134866087936 White, 1564325002000687104 Red,
-  // 1564325488367988736 Purple: the V1.3 horizontal lockup 7.00 x 1.87 in
-  // centred on the chest, top 3 in below the collar. Quote $9.98 a unit plus
+  // 1564325488367988736 Purple: the V1.3 horizontal lockup 6.00 x 1.60 in
+  // (resized in place 2026-10-26, was 7.00 in) centred on the chest, top
+  // 3 in below the collar. Quote $9.98 a unit plus
   // about $5 shipping: 25% model floor $29; priced $34. Tapstitch orders
   // are placed by hand until an API is connected. Images are Tapstitch's
   // mockups. Record: designs/62_tempo-collection-proofs-2026-10-26/.
