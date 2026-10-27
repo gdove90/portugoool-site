@@ -1,4 +1,4 @@
-# GA Matchday Cap, Royal/Natural and Black/Natural: owner product fronts, 2026-10-26
+# GA Matchday Cap: owner product fronts (Royal, Black, Red), 2026-10-26
 
 Owner instruction 2026-10-26: replace the Royal/Natural product image on
 the site with the supplied photo (natural crown, royal bill and button,
@@ -19,3 +19,11 @@ received: `goal-monogram-cap-black-product-front-owner-20261026.webp`
 cache revision `black-front-v2-20261026`. Black/Natural is also the colour
 the collection card and the product's lead image use, so the new shot
 shows on /men and /shop as well. Model shots untouched.
+
+## Red/Natural, same day
+
+Source as received: `goal-monogram-cap-red-product-front-owner-20261026.webp`
+(1024 x 1536). Live path unchanged:
+`public/products/goal-monogram-cap-red-catalog-product-front-20261022.webp`,
+cache revision `red-front-v2-20261026`. Model shots untouched. Dark
+Green/Natural still shows its first shot.
