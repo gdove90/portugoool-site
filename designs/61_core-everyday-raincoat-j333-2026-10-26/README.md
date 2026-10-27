@@ -61,3 +61,12 @@ same `public/products/...-product-front-20261026.webp` paths (revision
 added as `...-product-back-20261026.webp`, second in each gallery. The
 owner's ten uploads were five byte-identical pairs; one of each was kept.
 Model pictures are next (owner).
+
+## Owner model photos, Black, 2026-10-27
+
+Three photos supplied by the owner (941 x 1672; `owner-photos/black-model-*-as-received.webp`),
+framed to the 2:3 catalog frame with `scripts/frame-model-photo-2x3.py`
+(1115 x 1672) and added after the Black product front on the lead gallery
+and the Black colourway: model front, side, rear
+(`public/products/goal-core-everyday-raincoat-black-catalog-model-*-20261027.webp`).
+Uploaded as given.

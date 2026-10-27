@@ -3951,7 +3951,22 @@ export const products: Product[] = [
         src: "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
         alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the white and red GOAL ATHLETICS wordmark on the right chest, hood up",
       },
+      {
+        src: "/products/goal-core-everyday-raincoat-black-catalog-model-front-20261027.webp",
+        alt: "Model facing forward in the black Core Everyday Raincoat, hood down, white and red GA monogram on the left chest and GOAL ATHLETICS wordmark on the right chest, grey joggers, white socks and white sneakers",
+      },
+      {
+        src: "/products/goal-core-everyday-raincoat-black-catalog-model-side-20261027.webp",
+        alt: "Model turned to the side in the black Core Everyday Raincoat, the chest marks and the waterproof pocket zip showing",
+      },
+      {
+        src: "/products/goal-core-everyday-raincoat-black-catalog-model-rear-20261027.webp",
+        alt: "Model from behind in the black Core Everyday Raincoat, plain back with the hood down",
+      },
     ],
+    // Owner model photos (Black, 2026-10-27: front, side, rear; 941 x 1672
+    // framed to 2:3 with scripts/frame-model-photo-2x3.py) follow the
+    // product front; uploaded as given.
     // Swatches sampled from the garment body of Apliiq's own renders
     // (2026-10-26). Owner product shots replaced those renders at the same
     // front paths later that day (revision owner-front-20261026).
@@ -3965,6 +3980,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
             alt: "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the white and red GOAL ATHLETICS wordmark on the right chest, hood up",
+          },
+          {
+            src: "/products/goal-core-everyday-raincoat-black-catalog-model-front-20261027.webp",
+            alt: "Model facing forward in the black Core Everyday Raincoat, hood down, white and red GA monogram on the left chest and GOAL ATHLETICS wordmark on the right chest, grey joggers, white socks and white sneakers",
+          },
+          {
+            src: "/products/goal-core-everyday-raincoat-black-catalog-model-side-20261027.webp",
+            alt: "Model turned to the side in the black Core Everyday Raincoat, the chest marks and the waterproof pocket zip showing",
+          },
+          {
+            src: "/products/goal-core-everyday-raincoat-black-catalog-model-rear-20261027.webp",
+            alt: "Model from behind in the black Core Everyday Raincoat, plain back with the hood down",
           },
           {
             src: "/products/goal-core-everyday-raincoat-black-catalog-product-back-20261026.webp",
