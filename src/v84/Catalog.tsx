@@ -10,7 +10,7 @@ import { tempoHidden } from "@/lib/collection-launch";
 import { formatPrice } from "@/lib/format";
 import { catalogImageSrc } from "@/lib/product-image";
 import { hasPrice, type Product } from "@/lib/types";
-import { audienceAssignments, collectionLabel, defaultVariant, forAudience, orderedVariants, productType, type Audience } from "./catalog-data";
+import { catalogOrder, audienceAssignments, collectionLabel, defaultVariant, forAudience, orderedVariants, productType, type Audience } from "./catalog-data";
 import { Strike } from "./Brand";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -30,7 +30,7 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
   const [sort, setSort] = useState("featured");
   const [open, setOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
-  const list = audience ? forAudience(audience) : getProducts();
+  const list = audience ? forAudience(audience) : catalogOrder(getProducts());
   const types = ["tees", "tanks", "leggings", "shorts", "pants", "hoodies", "layers", "jackets", "hats"].filter(t => list.some(p => productType(p) === t));
   const options = [["featured", "Featured"], ["low", "Price: low to high"], ["high", "Price: high to low"]];
   useEffect(() => {

@@ -56,10 +56,36 @@ export function productType(product: Product) {
 export function collectionLabel(product: Product): "TEMPO" | "CORE" {
   return audienceAssignments[product.id]?.includes("women") ? "TEMPO" : "CORE";
 }
+// Catalog order (owner, 2026-10-27): what you wear in the warmth first,
+// the coldest layers last. Caps, tees, shorts, joggers, quarter zip, then
+// hoodies and the jacket. Women's TEMPO pieces follow the same idea.
+// Products not listed keep their products.ts order after the ranked ones.
+const CATALOG_RANK: readonly string[] = [
+  "80000000-0000-4000-8000-000000000009", // GA Matchday Cap
+  "80000000-0000-4000-8000-000000000010", // Stacked Stadium Cap
+  "80000000-0000-4000-8000-000000000011", // Warm-Up Tee
+  "80000000-0000-4000-8000-000000000012", // Match Day Tee
+  "80000000-0000-4000-8000-000000000017", // TEMPO Core Training Tee
+  "80000000-0000-4000-8000-000000000021", // TEMPO Training Tee
+  "80000000-0000-4000-8000-000000000013", // Core Shorts
+  "80000000-0000-4000-8000-000000000022", // TEMPO Training Shorts
+  "80000000-0000-4000-8000-000000000024", // Core Jogger
+  "80000000-0000-4000-8000-000000000019", // TEMPO Training Pants
+  "80000000-0000-4000-8000-000000000023", // Core Quarter Zip
+  "80000000-0000-4000-8000-000000000018", // TEMPO Quarter Zip
+  "80000000-0000-4000-8000-000000000014", // Heritage Hoodie
+  "80000000-0000-4000-8000-000000000015", // Core Hoodie
+  "80000000-0000-4000-8000-000000000020", // TEMPO Warmup Hoodie
+  "80000000-0000-4000-8000-000000000016", // Core Everyday Raincoat
+];
+export function catalogOrder(list: Product[]): Product[] {
+  const rank = (p: Product) => { const i = CATALOG_RANK.indexOf(p.id); return i === -1 ? CATALOG_RANK.length : i; };
+  return list.map((p, index) => ({ p, index })).sort((a, b) => rank(a.p) - rank(b.p) || a.index - b.index).map(x => x.p);
+}
 export function forAudience(audience: Audience) {
   // The women's grid renders only on /women, which the owner gate guards
   // while TEMPO is coming soon, so it may read the gated rows.
-  return getProducts({ includeTempo: audience === "women" }).filter(p => audienceAssignments[p.id]?.includes(audience));
+  return catalogOrder(getProducts({ includeTempo: audience === "women" }).filter(p => audienceAssignments[p.id]?.includes(audience)));
 }
 function brightness(hex: string) {
   const rgb = hex.replace("#", "").match(/.{2}/g)?.map(v => parseInt(v, 16)) || [0, 0, 0];
