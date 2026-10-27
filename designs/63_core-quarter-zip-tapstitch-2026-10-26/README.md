@@ -89,3 +89,12 @@ store). The site therefore handles a Tapstitch line like this:
 
 The alternative that would make Tapstitch "connected" is a Shopify store
 fed by Tapstitch's Shopify app, which this site does not use.
+
+## Owner model photos, Black, 2026-10-26
+
+Three photos supplied by the owner (941 x 1672 each; `owner-photos/`),
+brought to the 2:3 catalog frame with `scripts/frame-model-photo-2x3.py`
+and added after the product front on the Black colourway and the product's
+lead gallery: model front, three-quarter and rear
+(`public/products/goal-core-quarter-zip-black-catalog-model-*-20261026.webp`).
+Uploaded as given (owner rule 2026-10-20: never retouch or flag the sneakers).

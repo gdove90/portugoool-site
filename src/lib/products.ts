@@ -4061,6 +4061,18 @@ export const products: Product[] = [
         src: "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
         alt: "Core Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
       },
+      {
+        src: "/products/goal-core-quarter-zip-black-catalog-model-front-20261026.webp",
+        alt: "Model facing forward in the black Core Quarter Zip, white and red GA monogram on the left chest, black shorts, white socks and white sneakers",
+      },
+      {
+        src: "/products/goal-core-quarter-zip-black-catalog-model-three-quarter-20261026.webp",
+        alt: "Model turned three quarters in the black Core Quarter Zip, the GA monogram on the left chest and the reflective sleeve hit showing",
+      },
+      {
+        src: "/products/goal-core-quarter-zip-black-catalog-model-rear-20261026.webp",
+        alt: "Model from behind in the black Core Quarter Zip, clean back with reflective hits on both sleeves",
+      },
     ],
     colorVariants: [
       {
@@ -4072,6 +4084,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
             alt: "Core Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
+          },
+          {
+            src: "/products/goal-core-quarter-zip-black-catalog-model-front-20261026.webp",
+            alt: "Model facing forward in the black Core Quarter Zip, white and red GA monogram on the left chest, black shorts, white socks and white sneakers",
+          },
+          {
+            src: "/products/goal-core-quarter-zip-black-catalog-model-three-quarter-20261026.webp",
+            alt: "Model turned three quarters in the black Core Quarter Zip, the GA monogram on the left chest and the reflective sleeve hit showing",
+          },
+          {
+            src: "/products/goal-core-quarter-zip-black-catalog-model-rear-20261026.webp",
+            alt: "Model from behind in the black Core Quarter Zip, clean back with reflective hits on both sleeves",
           },
         ],
       },
