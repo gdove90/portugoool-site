@@ -104,3 +104,9 @@ Uploaded as given (owner rule 2026-10-20: never retouch or flag the sneakers).
 Three photos (941 x 1672; `owner-photos/white-*`), framed to 2:3 the same
 way and added after the White product front in the owner's order: model
 front, three-quarter, rear. Uploaded as given.
+
+## Owner model photos, Dark Gray, 2026-10-26
+
+Three photos (941 x 1672; `owner-photos/dark-gray-*`), framed to 2:3 and
+added after the Dark Gray product front: model front, three-quarter, rear.
+Uploaded as given. All three colours now carry the owner's model shots.
