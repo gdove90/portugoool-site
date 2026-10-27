@@ -4224,10 +4224,11 @@ export const products: Product[] = [
   // 3.00 in) centred in the wearer's left front hip box; white/red on Deep
   // Black, solid white on Graphite; back blank; transfer print, no
   // recolouring or stroke; private label sb-6-161561 inside the waist.
-  // Apliiq VIP quote $35.99 with the print; 25% model price $64, priced $58
-  // by owner decision 2026-10-27 ("something accommodating"): about $11 a
-  // pair after unit cost, fulfilment, card fees, reserve and the shipping
-  // gap on a single-pair order. Images are
+  // Apliiq VIP quote $35.99 with the print; 25% model price $64. Priced
+  // $48 by owner decision 2026-10-27 ("the vip price is 35.99 lets charge
+  // 48"; $58 for a few minutes before that): about $2 a pair after unit
+  // cost, fulfilment, card fees, reserve and the shipping gap on a
+  // single-pair order. Images are
   // the owner's product shots (front and back per colour, 2026-10-27,
   // framed to 2:3); no physical sample exists. Record:
   // designs/65_pst871-lockup-jogger-2026-10-27/.
@@ -4238,7 +4239,7 @@ export const products: Product[] = [
     blank: "PST871",
     description:
       "Built for the warm-up, the session and the walk home. A lightweight stretch knit moves with every stride and wicks sweat away as you work. The drawcord waist stays put when you sprint, the tapered leg sits clean over boots or sneakers, zip pockets front and back keep keys and phone secure, and zipped ankles pull on and off over footwear. GA monogram on the left hip.",
-    priceCents: 5800,
+    priceCents: 4800,
     compareAtPriceCents: null,
     color: "Deep Black",
     colorHex: "#2B2B2B",
