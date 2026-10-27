@@ -73,6 +73,7 @@ export function catalogImageSrc(src: string): string {
     // GA Matchday Cap Royal/Natural: the owner's product front replaced the
     // first shot at this path on 2026-10-26.
     "/products/goal-monogram-cap-royal-catalog-product-front-20261022.webp": "royal-front-v2-20261026",
+    "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp": "black-front-v2-20261026",
   };
   const revision = replaced[url.pathname]
     ? replaced[url.pathname]
