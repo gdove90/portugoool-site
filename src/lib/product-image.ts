@@ -70,6 +70,9 @@ export function catalogImageSrc(src: string): string {
     "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp": "royal-front-v2-20261023",
     "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp": "dark-green-front-v2-20261023",
     "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp": "black-front-v2-20261023",
+    // GA Matchday Cap Royal/Natural: the owner's product front replaced the
+    // first shot at this path on 2026-10-26.
+    "/products/goal-monogram-cap-royal-catalog-product-front-20261022.webp": "royal-front-v2-20261026",
   };
   const revision = replaced[url.pathname]
     ? replaced[url.pathname]
