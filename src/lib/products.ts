@@ -4234,7 +4234,7 @@ export const products: Product[] = [
     slug: "goal-athletics-core-jogger",
     blank: "PST871",
     description:
-      "Tapered performance jogger with the GA monogram on the left hip. Moisture-wicking stretch knit, drawcord waist, zip side pockets.",
+      "Built for the warm-up, the session and the walk home. A lightweight stretch knit moves with every stride and wicks sweat away as you work. The drawcord waist stays put when you sprint, the tapered leg sits clean over boots or sneakers, zip pockets front and back keep keys and phone secure, and zipped ankles pull on and off over footwear. GA monogram on the left hip.",
     priceCents: 6400,
     compareAtPriceCents: null,
     color: "Deep Black",
