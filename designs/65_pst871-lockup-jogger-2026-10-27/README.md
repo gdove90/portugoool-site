@@ -83,3 +83,13 @@ The owner's own front and back shots per colour (1122 x 1402;
 2:3 (1122 x 1683, own backdrop extended) replaced the Apliiq renders at
 `public/products/goal-core-jogger-<colour>-catalog-product-{front,back}-owner-20261027.webp`.
 The render-based fronts were removed from public/; renders stay in `renders/`.
+
+## Descriptions, 2026-10-27
+
+Owner rule: never sound like a print-on-demand company; descriptions talk
+about the benefits of wearing the piece (movement, comfort, what it is
+good for), drawn from the maker's specs and reworded in brand language.
+Both Apliiq designs had the save dialog's default supplier copy in their
+description field; replaced on 6242924 and 6242929 with the brand copy
+(also used, colour-neutral, on the site row). No supplier names, no
+print-on-demand language.
