@@ -124,3 +124,11 @@ The owner's own product shot (`owner-photos/white-product-front-as-received.webp
 1120 x 1440, used byte for byte at the owner's instruction) replaced the
 mockup at `public/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp`
 (cache revision `owner-front-20261026`). Nothing else changed.
+
+## Owner product front, Dark Gray, 2026-10-26
+
+The owner's own product shot (`owner-photos/dark-gray-product-front-as-received.webp`,
+used as sent) replaced the mockup at
+`public/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp`
+(cache revision `owner-front-20261026`). All three colours now lead with
+the owner's product shots. Nothing else changed.
