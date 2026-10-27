@@ -70,3 +70,10 @@ framed to the 2:3 catalog frame with `scripts/frame-model-photo-2x3.py`
 and the Black colourway: model front, side, rear
 (`public/products/goal-core-everyday-raincoat-black-catalog-model-*-20261027.webp`).
 Uploaded as given.
+
+## Owner model photos, Dark Grey Heather and True Navy, 2026-10-27
+
+Three photos per colour (1024 x 1536, already 2:3; `owner-photos/<colour>-model-*-as-received.webp`),
+added after each colour's product front: model front, side, rear
+(`public/products/goal-core-everyday-raincoat-<colour>-catalog-model-*-20261027.webp`).
+Uploaded as given. All three colourways now carry the owner's model shots.
