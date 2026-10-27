@@ -4191,6 +4191,80 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Core Quarter Zip ==
+  // == GOAL Athletics Core Jogger (built 2026-10-27) ==
+  // Sport-Tek PST871 Circuit Jogger on Apliiq: 6242924 Deep Black and
+  // 6242929 Graphite, saved 2026-10-27. The Claude Design proof asked
+  // for the vertical lockup 1.60 x 6.00 in on the front thigh, but this
+  // blank has only two 4 x 4 in front hip boxes and one back box at Apliiq,
+  // so the owner chose the GA monogram 3.00 x 2.70 in (men's GA minimum
+  // 3.00 in) centred in the wearer's left front hip box; white/red on Deep
+  // Black, solid white on Graphite; back blank; transfer print, no
+  // recolouring or stroke; private label sb-6-161561 inside the waist.
+  // Apliiq VIP quote $35.99 with the print; 25% model price $64. Images are
+  // Apliiq's front renders on the studio backdrop until the owner supplies
+  // photos; no physical sample exists. Record:
+  // designs/65_pst871-lockup-jogger-2026-10-27/.
+  {
+    id: "80000000-0000-4000-8000-000000000024",
+    name: "GOAL Athletics Core Jogger",
+    slug: "goal-athletics-core-jogger",
+    blank: "PST871",
+    description:
+      "Tapered performance jogger with the GA monogram on the left hip. Moisture-wicking stretch knit, drawcord waist, zip side pockets.",
+    priceCents: 6400,
+    compareAtPriceCents: null,
+    color: "Deep Black",
+    colorHex: "#2B2B2B",
+    fabric: "78% polyester, 22% spandex performance knit with four-way stretch; wicks moisture and dries fast.",
+    fit: "Tapered athletic fit with an elastic drawcord waist and cuffed ankle. True to size.",
+    careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
+    images: [
+      {
+        src: "/products/goal-core-jogger-deep-black-catalog-product-front-20261027.webp",
+        alt: "Core Jogger in Deep Black, product front with the white and red GA monogram on the left hip",
+      },
+    ],
+    colorVariants: [
+      {
+        name: "Deep Black",
+        supplierColor: "Deep Black",
+        hex: "#2B2B2B",
+        skuFragment: "DEEPBLACK",
+        images: [
+          {
+            src: "/products/goal-core-jogger-deep-black-catalog-product-front-20261027.webp",
+            alt: "Core Jogger in Deep Black, product front with the white and red GA monogram on the left hip",
+          },
+        ],
+      },
+      {
+        name: "Graphite",
+        supplierColor: "Graphite",
+        hex: "#515151",
+        skuFragment: "GRAPHITE",
+        images: [
+          {
+            src: "/products/goal-core-jogger-graphite-catalog-product-front-20261027.webp",
+            alt: "Core Jogger in Graphite, product front with the white GA monogram on the left hip",
+          },
+        ],
+      },
+    ],
+    originLabel: "Printed in the USA",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "pants",
+    supplierType: "apliiq",
+    isActive: true,
+    availableForSale: true,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
+  // == end GOAL Athletics Core Jogger ==
   // == TEMPO Core Training Tee (built 2026-10-26) ==
   // Apliiq designs 6241853 Black, 6241860 White, 6241864 Iron Grey (rebuilt
   // 2026-10-26 at the owner's smallest size; 6240566/70/71 renamed delete):

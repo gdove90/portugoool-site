@@ -541,6 +541,13 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "Dark Gray": tapstitch("1564524205054324736", ["S", "M", "L", "XL", "XXL"]),
   },
   // == end TEMPO ==
+  // GOAL Athletics Core Jogger (Sport-Tek PST871, men): GA monogram 3.00 x
+  // 2.70 in in the wearer's left front hip box, back blank, private label
+  // inside the waist. SKUs read off the design pages 2026-10-27.
+  "80000000-0000-4000-8000-000000000024": {
+    "Deep Black": { apliiqProductId: 6242924, skus: { S: "APQ-6242924S6A1", M: "APQ-6242924S7A1", L: "APQ-6242924S8A1", XL: "APQ-6242924S1A1", XXL: "APQ-6242924S2A1" } },
+    "Graphite": { apliiqProductId: 6242929, skus: { S: "APQ-6242929S6A1", M: "APQ-6242929S7A1", L: "APQ-6242929S8A1", XL: "APQ-6242929S1A1", XXL: "APQ-6242929S2A1" } },
+  },
 };
 
 export type ResolvedFulfillment =

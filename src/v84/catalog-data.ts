@@ -28,6 +28,8 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000016": ["men"],
   // Core Quarter Zip (Tapstitch, three colours), owner instruction 2026-10-26.
   "80000000-0000-4000-8000-000000000023": ["men"],
+  // Core Jogger (Apliiq PST871, two colours), owner instruction 2026-10-27.
+  "80000000-0000-4000-8000-000000000024": ["men"],
   // TEMPO (women), built on Apliiq and Tapstitch 2026-10-26.
   "80000000-0000-4000-8000-000000000017": ["women"],
   "80000000-0000-4000-8000-000000000018": ["women"],

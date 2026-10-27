@@ -59,6 +59,14 @@ export const GUIDE = [
     note: "Sold S to XXL. A regular athletic fit with a stand collar; order the size you wear in our tees. The maker's flat measurements are still to be published here.",
   },
   {
+    id: "joggers",
+    label: "Joggers",
+    chart: null,
+    productIds: ["80000000-0000-4000-8000-000000000024"],
+    blank: "Men's performance jogger · 78% polyester, 22% spandex",
+    note: "Sold S to XXL. A tapered athletic fit with a drawcord waist; order your usual waist size. The maker's flat measurements are still to be published here.",
+  },
+  {
     id: "caps",
     label: "Caps",
     chart: null,
