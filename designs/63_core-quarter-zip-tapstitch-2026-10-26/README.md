@@ -48,9 +48,9 @@ Design ids never changed: every revision was made with "Edit design" and
 
 Row `80000000-0000-4000-8000-000000000023` "GOAL Athletics Core Quarter
 Zip", slug `goal-athletics-core-quarter-zip`, men's audience, category
-`pullover`, supplier `tapstitch`, sizes S to XXL, **$32 (owner decision
-2026-10-26: "it's 16 for us"; the 25% model floor was $41 and the first
-listing price $48)**, disclosure
+`pullover`, supplier `tapstitch`, sizes S to XXL, **$36 (owner decision
+2026-10-26, "final offer"; $32 for an hour before that; the 25% model
+floor was $41 and the first listing price $48)**, disclosure
 "Ships from our overseas partner: allow 10 to 17 days." Size-guide tab
 `quarter-zip` (note; no flat chart published yet). Migration 0047 applied.
 
