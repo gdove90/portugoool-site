@@ -4109,6 +4109,18 @@ export const products: Product[] = [
             src: "/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp",
             alt: "Core Quarter Zip in White, product front with the black GA monogram on the left chest beside the zip",
           },
+          {
+            src: "/products/goal-core-quarter-zip-white-catalog-model-front-20261026.webp",
+            alt: "Model facing forward in the white Core Quarter Zip, black GA monogram on the left chest, black shorts, white socks and white sneakers",
+          },
+          {
+            src: "/products/goal-core-quarter-zip-white-catalog-model-three-quarter-20261026.webp",
+            alt: "Model turned three quarters in the white Core Quarter Zip, the black GA monogram on the left chest and the reflective sleeve hit showing",
+          },
+          {
+            src: "/products/goal-core-quarter-zip-white-catalog-model-rear-20261026.webp",
+            alt: "Model from behind in the white Core Quarter Zip, clean back with reflective hits on both sleeves",
+          },
         ],
       },
       {

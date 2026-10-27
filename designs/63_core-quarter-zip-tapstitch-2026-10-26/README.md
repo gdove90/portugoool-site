@@ -98,3 +98,9 @@ and added after the product front on the Black colourway and the product's
 lead gallery: model front, three-quarter and rear
 (`public/products/goal-core-quarter-zip-black-catalog-model-*-20261026.webp`).
 Uploaded as given (owner rule 2026-10-20: never retouch or flag the sneakers).
+
+## Owner model photos, White, 2026-10-26
+
+Three photos (941 x 1672; `owner-photos/white-*`), framed to 2:3 the same
+way and added after the White product front in the owner's order: model
+front, three-quarter, rear. Uploaded as given.
