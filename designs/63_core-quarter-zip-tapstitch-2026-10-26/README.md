@@ -132,3 +132,8 @@ used as sent) replaced the mockup at
 `public/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp`
 (cache revision `owner-front-20261026`). All three colours now lead with
 the owner's product shots. Nothing else changed.
+
+Later the same day the White front was brought to the 2:3 frame
+(`scripts/frame-model-photo-2x3.py`: 1122 x 1402 to 1122 x 1683, its own
+backdrop extended above and below) because the squarer file showed bands
+top and bottom in the gallery; cache revision `owner-front-2x3-20261026`.
