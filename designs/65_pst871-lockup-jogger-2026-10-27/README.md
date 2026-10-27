@@ -75,3 +75,11 @@ Jogger", slug `goal-athletics-core-jogger`, men, category pants, **$64**
 (25% model on the $35.99 VIP quote), sizes S to XXL, size-guide tab
 `joggers` (note only), images = Apliiq front renders on the studio
 backdrop. Migration 0050. No physical sample exists.
+
+## Owner product shots, 2026-10-27
+
+The owner's own front and back shots per colour (1122 x 1402;
+`owner-photos/<colour>-product-{front,back}-as-received.webp`), framed to
+2:3 (1122 x 1683, own backdrop extended) replaced the Apliiq renders at
+`public/products/goal-core-jogger-<colour>-catalog-product-{front,back}-owner-20261027.webp`.
+The render-based fronts were removed from public/; renders stay in `renders/`.

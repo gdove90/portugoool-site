@@ -4225,8 +4225,8 @@ export const products: Product[] = [
   // Black, solid white on Graphite; back blank; transfer print, no
   // recolouring or stroke; private label sb-6-161561 inside the waist.
   // Apliiq VIP quote $35.99 with the print; 25% model price $64. Images are
-  // Apliiq's front renders on the studio backdrop until the owner supplies
-  // photos; no physical sample exists. Record:
+  // the owner's product shots (front and back per colour, 2026-10-27,
+  // framed to 2:3); no physical sample exists. Record:
   // designs/65_pst871-lockup-jogger-2026-10-27/.
   {
     id: "80000000-0000-4000-8000-000000000024",
@@ -4244,8 +4244,12 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/goal-core-jogger-deep-black-catalog-product-front-20261027.webp",
+        src: "/products/goal-core-jogger-deep-black-catalog-product-front-owner-20261027.webp",
         alt: "Core Jogger in Deep Black, product front with the white and red GA monogram on the left hip",
+      },
+      {
+        src: "/products/goal-core-jogger-deep-black-catalog-product-back-owner-20261027.webp",
+        alt: "Core Jogger in Deep Black, product back, plain with the zip back pocket",
       },
     ],
     colorVariants: [
@@ -4256,8 +4260,12 @@ export const products: Product[] = [
         skuFragment: "DEEPBLACK",
         images: [
           {
-            src: "/products/goal-core-jogger-deep-black-catalog-product-front-20261027.webp",
+            src: "/products/goal-core-jogger-deep-black-catalog-product-front-owner-20261027.webp",
             alt: "Core Jogger in Deep Black, product front with the white and red GA monogram on the left hip",
+          },
+          {
+            src: "/products/goal-core-jogger-deep-black-catalog-product-back-owner-20261027.webp",
+            alt: "Core Jogger in Deep Black, product back, plain with the zip back pocket",
           },
         ],
       },
@@ -4268,8 +4276,12 @@ export const products: Product[] = [
         skuFragment: "GRAPHITE",
         images: [
           {
-            src: "/products/goal-core-jogger-graphite-catalog-product-front-20261027.webp",
+            src: "/products/goal-core-jogger-graphite-catalog-product-front-owner-20261027.webp",
             alt: "Core Jogger in Graphite, product front with the white GA monogram on the left hip",
+          },
+          {
+            src: "/products/goal-core-jogger-graphite-catalog-product-back-owner-20261027.webp",
+            alt: "Core Jogger in Graphite, product back, plain with the zip back pocket",
           },
         ],
       },
