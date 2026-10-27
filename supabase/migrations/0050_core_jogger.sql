@@ -4,8 +4,8 @@
 -- Graphite (GA solid white, same placement), private label inside the
 -- waist, S to XXL. Price is the 25% model on the $35.99 VIP quote
 -- (ceil((35.99 + 2 + 3 + 1 + 0.30) / 0.671) = $64). Category 'pants' and
--- supplier 'apliiq' are already allowed. Idempotent. Apply in the
--- Supabase SQL editor.
+-- supplier 'apliiq' are already allowed. Idempotent. Applied 2026-10-27 in the
+-- Supabase SQL editor (verify select returned the row, 6400, pants, apliiq, true, true).
 
 insert into public.products
   (id, name, slug, description, price_cents, color, color_hex,
