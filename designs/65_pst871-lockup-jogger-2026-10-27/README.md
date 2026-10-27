@@ -93,3 +93,7 @@ Both Apliiq designs had the save dialog's default supplier copy in their
 description field; replaced on 6242924 and 6242929 with the brand copy
 (also used, colour-neutral, on the site row). No supplier names, no
 print-on-demand language.
+
+## Owner model photos, 2026-10-27
+
+Three per colour (1024 x 1536, already 2:3; `owner-photos/<colour>-model-{front,detail,rear}-as-received.webp`) added after each product front: model front, hip detail, rear (`public/products/goal-core-jogger-<colour>-catalog-model-*-20261027.webp`). Uploaded as given.

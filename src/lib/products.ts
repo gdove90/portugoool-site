@@ -4248,6 +4248,18 @@ export const products: Product[] = [
         alt: "Core Jogger in Deep Black, product front with the white and red GA monogram on the left hip",
       },
       {
+        src: "/products/goal-core-jogger-deep-black-catalog-model-front-20261027.webp",
+        alt: "Model facing forward in the Deep Black Core Jogger with a white tee, white and red GA monogram on the left hip, white sneakers",
+      },
+      {
+        src: "/products/goal-core-jogger-deep-black-catalog-model-detail-20261027.webp",
+        alt: "Close view of the Deep Black Core Jogger hip, white and red GA monogram beside the zip pocket",
+      },
+      {
+        src: "/products/goal-core-jogger-deep-black-catalog-model-rear-20261027.webp",
+        alt: "Model from behind in the Deep Black Core Jogger, plain back with the zip back pocket, GOAL ATHLETICS tee",
+      },
+      {
         src: "/products/goal-core-jogger-deep-black-catalog-product-back-owner-20261027.webp",
         alt: "Core Jogger in Deep Black, product back, plain with the zip back pocket",
       },
@@ -4264,6 +4276,18 @@ export const products: Product[] = [
             alt: "Core Jogger in Deep Black, product front with the white and red GA monogram on the left hip",
           },
           {
+            src: "/products/goal-core-jogger-deep-black-catalog-model-front-20261027.webp",
+            alt: "Model facing forward in the Deep Black Core Jogger with a white tee, white and red GA monogram on the left hip, white sneakers",
+          },
+          {
+            src: "/products/goal-core-jogger-deep-black-catalog-model-detail-20261027.webp",
+            alt: "Close view of the Deep Black Core Jogger hip, white and red GA monogram beside the zip pocket",
+          },
+          {
+            src: "/products/goal-core-jogger-deep-black-catalog-model-rear-20261027.webp",
+            alt: "Model from behind in the Deep Black Core Jogger, plain back with the zip back pocket, GOAL ATHLETICS tee",
+          },
+          {
             src: "/products/goal-core-jogger-deep-black-catalog-product-back-owner-20261027.webp",
             alt: "Core Jogger in Deep Black, product back, plain with the zip back pocket",
           },
@@ -4278,6 +4302,18 @@ export const products: Product[] = [
           {
             src: "/products/goal-core-jogger-graphite-catalog-product-front-owner-20261027.webp",
             alt: "Core Jogger in Graphite, product front with the white GA monogram on the left hip",
+          },
+          {
+            src: "/products/goal-core-jogger-graphite-catalog-model-front-20261027.webp",
+            alt: "Model facing forward in the Graphite Core Jogger with a white tee, white GA monogram on the left hip, white sneakers",
+          },
+          {
+            src: "/products/goal-core-jogger-graphite-catalog-model-detail-20261027.webp",
+            alt: "Close view of the Graphite Core Jogger hip, white GA monogram beside the zip pocket",
+          },
+          {
+            src: "/products/goal-core-jogger-graphite-catalog-model-rear-20261027.webp",
+            alt: "Model from behind in the Graphite Core Jogger, plain back with the zip back pocket, GOAL ATHLETICS tee",
           },
           {
             src: "/products/goal-core-jogger-graphite-catalog-product-back-owner-20261027.webp",
