@@ -110,3 +110,10 @@ front, three-quarter, rear. Uploaded as given.
 Three photos (941 x 1672; `owner-photos/dark-gray-*`), framed to 2:3 and
 added after the Dark Gray product front: model front, three-quarter, rear.
 Uploaded as given. All three colours now carry the owner's model shots.
+
+## Owner product front, Black, 2026-10-26
+
+The owner's own product shot (`owner-photos/black-product-front-as-received.webp`,
+1024 x 1536) replaced the Tapstitch mockup at
+`public/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp`
+(cache revision `owner-front-20261026`). Nothing else changed.

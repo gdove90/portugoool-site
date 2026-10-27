@@ -50,7 +50,7 @@ export function catalogImageSrc(src: string): string {
     "/products/tempo-training-tee-purple-catalog-product-front-20261026.webp": "smallest-20261026",
     "/products/tempo-training-tee-white-catalog-product-front-20261026.webp": "smallest-20261026",
     // Core Quarter Zip: front mark became the GA monogram crest the day it launched.
-    "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp": "ga-crest-v2-20261026",
+    "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp": "owner-front-20261026",
     "/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp": "ga-crest-v2-20261026",
     "/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp": "ga-crest-v2-20261026",
     "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp": "navy-front-photo-20261022",
