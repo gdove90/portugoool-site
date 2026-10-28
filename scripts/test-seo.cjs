@@ -59,6 +59,6 @@ check('canonical and social metadata are page-specific and JSON-LD escapes embed
  const m=load(root+'/src/lib/page-metadata.ts').pageMetadata('/about','Our World','Approved description');
  assert.equal(m.alternates.canonical,'/about');assert.equal(m.openGraph.url,'/about');assert.equal(m.twitter.description,'Approved description');assert.equal(m.openGraph.title,'Our World · GOAL Athletics');
  assert.ok(!seo.jsonLdScript({name:'</script>'}).__html.includes('<'));
- const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOAL Athletics');assert.equal(org[0].legalName,'The Goal Brand Group LLC');assert.equal(org[0].logo,'https://goalathletics.shop/brand/goal-athletics-horizontal-lockup-ink.svg');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
+ const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOAL Athletics');assert.equal(org[0].legalName,undefined,'no legalName until the planned company is formed (owner 2026-10-28)');assert.equal(org[0].logo,'https://goalathletics.shop/brand/goal-athletics-horizontal-lockup-ink.svg');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
 });
 console.log(`${passed} SEO checks passed; ${products.length} products, ${count} exact fulfillment variants.`);

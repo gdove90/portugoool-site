@@ -165,7 +165,16 @@ Header now documents: existing values stay valid, no row read or rewritten, RLS 
 ## Validation (this pass)
 tsc clean; lint 0 errors; production build OK (`/whats-your-goal` now dynamic); intake 26 checks (one new), admin 9, upload 5, maintenance 6, SEO 4 (seven-product count relaxed), smoke 6: pass. Release test: campaign assertions pass; it still stops at its pre-existing seven-product assumption. Local preview: STATE A and STATE B as above; legacy 301; page text has zero GOOOL and no entity name inside the campaign (the only "LLC" on the page is the site footer).
 
-## Production actions needing owner approval (none taken)
+## Production actions needing owner approval
 1. Apply migration 0053 (SQL editor).
 2. Merge PR 56 to main (Netlify auto-deploys STATE A).
 3. Later: confirm the operator wording, ship consent `live-4`, set `STORY_INTAKE_OPEN=true`, redeploy (STATE B), one real test submission, delete it in /admin.
+
+---
+
+# STATE A deployment (owner authorization 2026-10-28, "MODE: DEPLOY — STATE A")
+
+- Footer correction: the site footer (`Shell.tsx`) and the customer-service page footer (`CustomerServiceShell.tsx`) now read "GOAL Athletics · PO Box 19, Saunderstown, RI 02874"; the Organization JSON-LD no longer emits `legalName`. The Goal Brand Group LLC stays in `business-address.ts` as the planned company. Still naming it, flagged for a separate decision: the Terms page ("an independent brand of …"), the order confirmation and delay emails, the unsubscribe page, the payment success page and the closed-store gate page.
+- `STORY_INTAKE_OPEN=false` set explicitly in the Netlify production context (read back: false).
+- Migration 0053 applied in the Supabase SQL editor at the owner's authorization; verification select returned the nine-value constraint and 0 rows present.
+- Merge and production verification results are in the PR and the closing report.

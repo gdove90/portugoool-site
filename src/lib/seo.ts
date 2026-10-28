@@ -32,7 +32,9 @@ export function organizationJsonLd() {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: BRAND_NAME,
-        legalName: LEGAL_NAME,
+        // No legalName: the planned company (see business-address.ts) is not
+        // formed yet, and structured data must not claim an entity that does
+        // not exist (owner decision 2026-10-28).
         url: SITE_URL,
         // Existing approved dark wordmark stays legible on Google's light background.
         logo: absolute("/brand/goal-athletics-horizontal-lockup-ink.svg"),
