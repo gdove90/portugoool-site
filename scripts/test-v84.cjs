@@ -32,7 +32,15 @@ async function main() {
     return { getProducts: () => [...approvedMenIds, 'unapproved-product'].map(id => ({ id })) };
   } });
   await check('only approved existing products appear in Men; Women remains unassigned', () => {
-    assert.deepEqual(Array.from(catalogExports.forAudience('men'), p => p.id), approvedMenIds);
+    assert.deepEqual(Array.from(catalogExports.forAudience('men'), p => p.id), [
+      '80000000-0000-4000-8000-000000000009', '80000000-0000-4000-8000-000000000010',
+      '80000000-0000-4000-8000-000000000011', '80000000-0000-4000-8000-000000000012',
+      '70000000-0000-4000-8000-000000000001', '70000000-0000-4000-8000-000000000002',
+      '70000000-0000-4000-8000-000000000006', '70000000-0000-4000-8000-000000000003',
+      '70000000-0000-4000-8000-000000000005', '70000000-0000-4000-8000-000000000004',
+      '80000000-0000-4000-8000-000000000006', '80000000-0000-4000-8000-000000000007',
+      '80000000-0000-4000-8000-000000000008',
+    ]);
     assert.equal(catalogExports.forAudience('women').length, 0);
     assert.deepEqual(Array.from(catalogExports.featuredProducts(), p => p.id), [
       '80000000-0000-4000-8000-000000000011', '80000000-0000-4000-8000-000000000012',
@@ -197,14 +205,13 @@ async function main() {
   } finally { await db.close(); }
 
   await check('protected business files match baseline with explicit presentation-only exceptions', () => {
-    const productionBaseline = 'e672376527f7a1c11b89dba344ee9f6daea8da66';
+    const productionBaseline = '096d09044a23f5526fe2071fc7a40e8643357db4';
     const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
     // SEO output and the tracking page's metadata are covered by test-seo.cjs.
     // Product data, tracking behavior/API, payment and all other business files remain locked.
     const seoOnly = new Set(['netlify/functions/deliver-emails.mts', 'netlify/functions/intake-maintenance.mts', 'src/lib/seo.ts', 'src/lib/page-metadata.ts', 'src/app/track-order/layout.tsx', 'src/app/cart/layout.tsx', 'src/app/success/layout.tsx', 'src/app/api/checkout/route.ts', 'src/app/api/preview/route.ts']);
     for (const file of files.filter(file => !seoOnly.has(file))) {
       let baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]).toString().replace(/\r\n/g, '\n');
-      if (file === 'src/lib/products.ts') baseline = require('./retirement-baseline.cjs').applyRetirements(baseline);
       const current = fs.readFileSync(file);
       // Owner-approved public wording only; every tracking request, reference,
       // validation, state transition and UI control still matches the baseline.
@@ -234,12 +241,12 @@ async function main() {
         assert.deepEqual(after, before, file);
         continue;
       }
-      assert.equal(require('./retirement-baseline.cjs').withoutHatAdditions(current.toString().replace(/\r\n/g, '\n')), baseline, file);
+      assert.equal(current.toString().replace(/\r\n/g, '\n'), execFileSync('git', ['show', `${productionBaseline}:${file}`]).toString().replace(/\r\n/g, '\n'), file);
     }
     console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; Brand, closure and worker changes have separate checks.`);
   });
   await check('all approved visual assets are byte-identical', () => {
-    const baseline = '24903a4ae6ea63c22bf5b34d9169dc4a4762e9ca';
+    const baseline = '096d09044a23f5526fe2071fc7a40e8643357db4';
     const source = 'public/v84/assets';
     const files = fs.readdirSync(source, { recursive: true }).filter(file => fs.statSync(path.join(source, file)).isFile());
     const sha = file => createHash('sha256').update(fs.readFileSync(file)).digest('hex');

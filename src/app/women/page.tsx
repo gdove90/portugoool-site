@@ -8,8 +8,8 @@ import Editorial from "@/v84/Editorial";
 export const dynamic = "force-dynamic";
 
 export const metadata = TEMPO_COLLECTION_COMING_SOON
-  ? pageMetadata("/women", "Tempo Women's Collection - Coming Soon", "The Tempo Collection by GOAL Athletics. Women's athletic wear, coming soon. A new rhythm.")
-  : pageMetadata("/women", "Women's Athletic Wear | Tempo Collection", "Discover the Tempo Collection by GOAL Athletics. A new rhythm.");
+  ? pageMetadata("/women", "Tempo Women's Performance Athleticwear - Coming Soon", "The Tempo Collection by GOAL Athletics. Women's performance athleticwear for training and what comes next. Coming soon.")
+  : pageMetadata("/women", "Women's Performance Athleticwear | Tempo Collection", "Explore Tempo by GOAL Athletics: women's performance athleticwear, training tees and warm-up layers for your next goal.");
 
 // While the collection is coming soon the public gets the Tempo landing
 // page; the signed-in owner (same cookie gate as /admin) gets the real

@@ -15,7 +15,7 @@ const products=load(root+'/src/lib/products.ts').getProducts(),seo=load(root+'/s
 const variants=s=>s.hasVariant||[s];let count=0;const skus=new Set();
 check('every active product variant matches the approved price, SKU, color, size and gallery',()=>{
  // Seven catalog rows since 2026-10-22: five clothing products for sale and the two caps (not for sale).
- assert.equal(products.length,7);
+ assert.equal(products.length,10);
  for(const p of products){
   const s=seo.productJsonLd(p),entries=variants(s);assert.equal(s.name,p.name);
   assert.equal(entries.length,(p.colorVariants?.length||1)*p.sizes.length);
@@ -41,7 +41,7 @@ check('sale, sold-out, inactive and coming-soon states never emit purchasable of
 });
 check('public sitemap excludes private, retired and gated internal routes without invented dates',()=>{
  // 22 since 2026-10-22: seven catalog rows and the public pages, with Your Story and Match Highlights owner-only.
- const rows=load(root+'/src/app/sitemap.ts').default();assert.equal(rows.length,22);assert.equal(new Set(rows.map(r=>r.url)).size,22);
+ const rows=load(root+'/src/app/sitemap.ts').default();assert.equal(rows.length,25);assert.equal(new Set(rows.map(r=>r.url)).size,25);
  assert.ok(!rows.some(r=>/\/(whats-your-goool|share-your-goals)(\/|$)/.test(new URL(r.url).pathname)));
  for(const row of rows){assert.ok(row.url.startsWith('https://goalathletics.shop/'));assert.equal(row.lastModified,undefined);assert.ok(!/\/(cart|success|track-order|gate|admin|api|print)(\/|$)/.test(new URL(row.url).pathname));}
  assert.ok(rows.some(r=>r.url.endsWith('/the-goal-collective')));

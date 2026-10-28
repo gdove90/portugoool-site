@@ -24,7 +24,7 @@ export default function TempoComingSoon({ collection, audience, image, imageAlt 
         </h1>
         <p className={styles.copy}>A new rhythm.</p>
       </div>
-      <p className={styles.signature}>ROOTED IN SOCCER. MADE FOR YOUR EVERYDAY.</p>
+      <p className={styles.signature}>WOMEN’S PERFORMANCE ATHLETICWEAR.</p>
     </section>
   );
 }
