@@ -11,7 +11,7 @@ const vm = require('node:vm');
 let passed = 0;
 async function check(name, run) { await run(); passed++; console.log(`PASS ${name}`); }
 const rejects = fn => assert.throws(fn, e => e.status === 400);
-const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-04-live-1' } });
+const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-28-live-2' } });
 const kit = () => ({ kind: 'kit', payload: { name: 'Local test', email: 'fixture@example.test', design: 'original', color: 'Black', quantity: 10, number: 10, numberStyle: 'goool', rights: true } });
 const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-04-live-1' } });
 

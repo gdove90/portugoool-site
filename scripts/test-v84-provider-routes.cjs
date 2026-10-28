@@ -76,7 +76,7 @@ async function main() {
     console.log('PASS real authenticated expired-draft cleanup preserves fresh drafts and all received fixture records');
     const base = { name: 'Release Fixture', email: 'release-fixture@example.test', adult: true, rights: true, permission: true };
     const cases = [
-      { kind: 'story', payload: { ...base, goal: 'Provider verification', story: 'Disposable release fixture', termsVersion: 'WYG-2026-10-04-live-1' }, files: [] },
+      { kind: 'story', payload: { ...base, goal: 'Provider verification', story: 'Disposable release fixture', termsVersion: 'WYG-2026-10-28-live-2' }, files: [] },
       { kind: 'video', payload: { ...base, category: 'Goals', role: 'Player', player: 'Fixture', camera: 'Fixture camera', termsVersion: 'SYG-2026-10-04-live-1' }, files: [{ name: 'fixture.mp4', purpose: 'main', bytes: Buffer.from([0, 0, 0, 16, 102, 116, 121, 112, 105, 115, 111, 109, 0, 0, 0, 0]) }] },
       { kind: 'kit', payload: { ...base, design: 'original', color: 'Black', quantity: 10, number: 99, numberStyle: 'goool', backName: 'FIXTURE' }, files: [{ name: 'fixture.svg', purpose: 'crest', bytes: Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M0 0h20v20H0z"/></svg>') }] }
     ];

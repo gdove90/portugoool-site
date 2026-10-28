@@ -21,7 +21,7 @@ import { mountDepth } from "./depth";
 import DiscountPopup from "@/components/DiscountPopup";
 import MarketingConsent, { CookieSettingsButton } from "@/components/MarketingConsent";
 
-// Your Story (/whats-your-goool) and Match Highlights (/share-your-goals) left
+// What's Your GOAL? (/whats-your-goal, public since 2026-10-28) and Match Highlights (/share-your-goals) left
 // the public menus and footer on 2026-10-22 (owner); the pages stay, owner-only.
 // From board to browser (/references) left the footer the same day (owner).
 const navigation = [["/men", "Men"], ["/women", "Women"], ["/shop", "Collection"], ["/about", "Our world"], ["/the-goal-collective", "The Goal Collective"]];
@@ -53,7 +53,7 @@ function StoreShell({ children, comingSoonOnly = false }: { children: ReactNode;
   useEffect(() => {
     setPopupReview(MIGRATION_PREVIEW && new URLSearchParams(window.location.search).get("discount-preview") === "1");
   }, []);
-  const immersive = ["/", "/men", "/women", "/shop", "/about", "/whats-your-goool"].includes(path);
+  const immersive = ["/", "/men", "/women", "/shop", "/about", "/whats-your-goal"].includes(path);
   // The Goal Collective's approved page brings its own header (owner brief,
   // 2026-10-23), so the site header stays out of that route; the footer remains.
   const collective = path === "/the-goal-collective";

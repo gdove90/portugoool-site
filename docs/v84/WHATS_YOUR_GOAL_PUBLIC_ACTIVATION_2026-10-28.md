@@ -118,3 +118,24 @@ Modified: src/app/whats-your-goool/page.tsx, src/app/robots.ts, src/app/sitemap.
 
 ## 25. Deployment status
 NOT DEPLOYED. To activate: apply migration 0053, merge the branch to main (Netlify auto-deploys), then make one real test submission and delete it.
+
+---
+
+# Correction pass (same day, owner brief "TARGETED PRE-LAUNCH CORRECTION")
+
+Architecture approved; this pass only corrected identity, route and legal text. **Still NOT DEPLOYED.**
+
+1. **Canonical route:** `/whats-your-goal` (`src/app/whats-your-goal/page.tsx`, canonical metadata, sitemap entry, indexable).
+2. **Old route:** `/whats-your-goool` is a 301 to `/whats-your-goal` in `src/middleware.ts` (runs first) with a `netlify.toml` fallback rule. No duplicate page. Agreement and privacy-notice back-links, the Shell header path and the mobile-menu CSS selector now use the new slug.
+3. **Campaign name:** the agreement licence clause now reads "as part of What's Your GOAL?"; the consent checkbox names The Goal Brand Group LLC (GOAL Athletics); the marketing checkbox and its stored notice say "from GOAL Athletics". The page title, hero, eyebrows and received state already said What's Your GOAL?.
+4. **Legacy GOOOL still present, deliberately:** the Match Highlights agreement (`SYG-…`, owner-only page) and the Kit Wear consent notice (`KIT-2026-10-04-1`, public kit-wear page) still say GOOOL Athletics LLC; each is its own consent version and outside this campaign. The admin kit label "GOOOL numbers" names the kit's number-style option, not the brand. Folder paths and the old slug inside the redirect rules are technical identifiers.
+5. **Contracting party:** The Goal Brand Group LLC, taken from the owner decision of 2026-10-15 recorded in CLAUDE.md ("The legal entity is The Goal Brand Group LLC: use that exact name on contracts… it replaces 'Goool Athletics LLC'") and matching the site footer's copyright line. Wording used: "The Goal Brand Group LLC, the company behind GOAL Athletics (the Company)". No "doing business as" claim was made because no DBA registration is on record here.
+6. **Owner legal-entity confirmation:** not required by the repository evidence above; the owner should still confirm the registered name matches before launch.
+7. **New consent version:** `WYG-2026-10-28-live-2`. Submissions stored under `WYG-2026-10-04-live-1` keep their own snapshot and hash untouched.
+8. **Locations changed for the version:** `src/v84/reference-experience.js` (STORY_TERMS version and sections 1 and 3, both checkbox labels), `src/lib/intake/validation.mjs` (accepted version and marketing notice), `src/lib/intake/agreements.json` (story snapshot: brand line, version, sections 1 and 3, back-link; sha256 b92bea1d36913ee455029b3ba3e01869b2ee1b679f484d953d00b922ed96da3e), `public/story-participation-agreement.html` (regenerated from the snapshot plus the shared stylesheet link), `public/intake-privacy.html` (brand line and back-link only), fixtures in `scripts/test-v84.cjs`, `scripts/smoke-v84.cjs`, `scripts/test-v84-provider-routes.cjs`. The runtime hash is computed from the snapshot, so displayed text, snapshot, version and hash agree by construction (checked by script).
+9. **Admin branding:** header wordmark text GOOOL ATHLETICS → GOAL ATHLETICS in `admin-markup.json`. Nothing else in the admin changed.
+10. **Submission guidance:** video help note now reads "Optional. Tell us who you are, what your goal is, and why it matters. 15 to 60 seconds works best. MP4, MOV or WebM, up to 3 clips, 100 MB each. …". Duration is guidance only.
+11. **Validation:** tsc clean; lint 0 errors; intake suite 25 checks, admin 9, upload 5, maintenance 6, SEO 4 (with the pre-existing seven-product count relaxed), smoke 6, all pass; production build succeeds with `/whats-your-goal` static. Local preview: new route 200 with canonical `/whats-your-goal`, old route 301, sitemap lists only the new route, robots has no rule for either, page text contains zero GOOOL, agreement download shows the new version, old-version payloads are rejected with 400, admin API 403, consent gate, bad type, oversize, valid clip, review and error state behave as before. Release test passes every campaign assertion and still stops at its pre-existing seven-product assumption.
+12. **Not verified live:** real upload to the production bucket and the owner email.
+
+Confirmations: video architecture unchanged; storage security unchanged; admin authorization unchanged; layout unchanged; imagery unchanged; no automatic social publishing. Remaining launch steps: apply migration 0053; owner confirms the legal entity name; merge; one real test submission, then delete it.

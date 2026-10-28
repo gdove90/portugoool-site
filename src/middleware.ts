@@ -131,6 +131,15 @@ export async function middleware(req: NextRequest) {
     return redirectToShop(req);
   }
 
+  // The "What's Your GOAL?" campaign moved from the legacy GOOOL spelling to
+  // its canonical route on 2026-10-28 (owner decision). Old links, captions
+  // and the agreement back-links keep working.
+  if (pathname === "/whats-your-goool") {
+    const url = req.nextUrl.clone();
+    url.pathname = "/whats-your-goal";
+    return NextResponse.redirect(url, 301);
+  }
+
   // /world-cup was a seasonal campaign page, retired 2026-09-22.
   if (pathname === "/world-cup") {
     return redirectToShop(req);

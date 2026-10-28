@@ -12,11 +12,11 @@ function cleanPayload(data){
   payload={name,email,team,design:p.design,color:p.color,quantity:p.quantity,number:p.number,numberStyle:p.numberStyle,backName:str(p.backName||'',24),removeChestLogo:typeof p.removeChestLogo==='boolean'?p.removeChestLogo:p.removeBranding===true,removeFrontSponsor:typeof p.removeFrontSponsor==='boolean'?p.removeFrontSponsor:p.removeBranding===true,sizes:str(p.sizes||'',500),notes:str(p.notes||'',1000)};
   category='Kit request';consent={version:'KIT-2026-10-04-1',artworkRights:true,notice:'I own this artwork or have permission to use it on apparel. I agree that GOOOL Athletics LLC may store and review this request and contact me about it. This is a quote request, not an order or marketing signup.'};
  }else if(kind==='story'){
-  if(p.adult!==true||p.rights!==true||p.permission!==true||p.termsVersion!=='WYG-2026-10-04-live-1')fail(400,'Read and accept all three story acknowledgments.');
+  if(p.adult!==true||p.rights!==true||p.permission!==true||p.termsVersion!=='WYG-2026-10-28-live-2')fail(400,'Read and accept all three story acknowledgments.');
   const handle=str(p.handle||'',31);if(handle&&!/^@?[A-Za-z0-9_.]{1,30}$/.test(handle))fail(400,'Enter an Instagram handle, or leave it blank.');
   payload={name:str(p.name,60,true),email,team:'',goal:str(p.goal,100,true),story:str(p.story,250,true),handle,marketing:p.marketing===true};
   category='Personal story';
-  consent={version:p.termsVersion,adult:true,rights:true,permission:true,tagHandle:handle,marketing:p.marketing===true,marketingNotice:'Also send me new pieces and updates from GOOOL Athletics LLC. Optional.'};
+  consent={version:p.termsVersion,adult:true,rights:true,permission:true,tagHandle:handle,marketing:p.marketing===true,marketingNotice:'Also send me new pieces and updates from GOAL Athletics. Optional.'};
  }else{
   category=p.category;if(!['Goals','Highlights','Saves'].includes(category))fail(400,'Choose goals, highlights or saves.');
   if(!['Player','Coach or team representative','Parent or guardian','Videographer','Friend / teammate'].includes(p.role))fail(400,'Choose how you are sharing.');
