@@ -139,3 +139,33 @@ Architecture approved; this pass only corrected identity, route and legal text. 
 12. **Not verified live:** real upload to the production bucket and the owner email.
 
 Confirmations: video architecture unchanged; storage security unchanged; admin authorization unchanged; layout unchanged; imagery unchanged; no automatic social publishing. Remaining launch steps: apply migration 0053; owner confirms the legal entity name; merge; one real test submission, then delete it.
+
+---
+
+# Launch preparation pass (same day, owner brief "BUILD / LAUNCH PREPARATION")
+
+Owner clarification: The Goal Brand Group LLC is the approved future parent company; it is NOT formed yet (name checked in Rhode Island only). Formation is not a technical blocker, but no public participant agreement may present it as an existing entity. Third commit on the PR branch. **Still NOT DEPLOYED; migration 0053 NOT applied.**
+
+## Consent v3 (`WYG-2026-10-28-live-3`)
+Smallest accurate adjustment for the current stage: the agreement names no legal entity. Section 1 now reads "This agreement is between GOAL Athletics, an independent athletic apparel brand based in Rhode Island (the Company), and the adult identified as the submitter (you)." The brand line on the agreement and the privacy notice reads "GOAL ATHLETICS"; the consent checkbox reads "the participation agreement with GOAL Athletics". No other clause changed. Same four synchronized places as v2 (STORY_TERMS, validation.mjs, agreements.json snapshot sha256 ed80e6ec05dd9fd273eb53063d97819859ec6670a5cff6f4373e988bdbf20981, public copy regenerated from the snapshot), plus the test fixtures. v2 never collected a submission (production has zero rows), so no stored snapshot is affected.
+
+**Operator not established.** The repository records (business-address.ts, 2026-10-23) that the Rhode Island registry showed no filing and that the live Stripe merchant account was an individual account under the public name GOOOL ATHLETICS. That suggests the current operator is the owner personally, trading as GOAL Athletics, but nothing in the repo states it for legal use. **OPERATOR IDENTITY REQUIRED BEFORE STATE B**: before public video intake opens, section 1 must name the actual operator (for example "[Owner's legal name], doing business as GOAL Athletics" if that is the fact), as a further version (`live-4`) with a matching snapshot. Until then STATE A collects nothing under this agreement.
+
+Out of this PR, flagged only: the site footer "© The Goal Brand Group LLC · PO Box 19, Saunderstown, RI 02874" and the Organization JSON-LD `legalName` (`src/lib/business-address.ts`, locked owner decision 2026-10-23) present the same unformed entity site-wide. The Match Highlights (SYG) and Kit Wear (KIT) agreements still name GOOOL Athletics LLC and are untouched by instruction.
+
+## Launch switch: STATE A / STATE B
+The existing flag `INTAKE_ENABLED` gates every intake kind (kit quotes and match clips too), so it cannot separate the campaign. New campaign-only switch `STORY_INTAKE_OPEN` (`src/lib/intake/story-launch.ts`):
+- **STATE A (default, nothing to configure):** `/whats-your-goal` is public and readable; the form label reads "SUBMISSIONS OPEN SOON"; the review step's Submit button is disabled with the note "Submissions are not open yet. Nothing has been sent; check back soon."; the server refuses story starts with 503 "Story submissions are not open yet" before any row, token or upload exists. Kit and match intake keep their `INTAKE_ENABLED` behaviour.
+- **STATE B:** set `STORY_INTAKE_OPEN=true` in the Netlify production context and redeploy. The page is `force-dynamic`, so the flag is read per request. Any other value stays closed.
+- Verified locally in both states (two preview configs): A shows the closed UI and makes zero intake requests on Submit; B shows the open UI, calls the API and gets the environment's reply. Unit check added to `test-v84.cjs` (closed for unset/false/TRUE/1; kit unaffected; open falls through to `INTAKE_ENABLED`).
+
+## Migration 0053
+Header now documents: existing values stay valid, no row read or rewritten, RLS and grants untouched, idempotent re-run, rollback statements, and the verification select. Production check 2026-10-28: NOT applied, zero submissions, zero files, zero objects. It is ready to paste into the SQL editor on the owner's go-ahead.
+
+## Validation (this pass)
+tsc clean; lint 0 errors; production build OK (`/whats-your-goal` now dynamic); intake 26 checks (one new), admin 9, upload 5, maintenance 6, SEO 4 (seven-product count relaxed), smoke 6: pass. Release test: campaign assertions pass; it still stops at its pre-existing seven-product assumption. Local preview: STATE A and STATE B as above; legacy 301; page text has zero GOOOL and no entity name inside the campaign (the only "LLC" on the page is the site footer).
+
+## Production actions needing owner approval (none taken)
+1. Apply migration 0053 (SQL editor).
+2. Merge PR 56 to main (Netlify auto-deploys STATE A).
+3. Later: confirm the operator wording, ship consent `live-4`, set `STORY_INTAKE_OPEN=true`, redeploy (STATE B), one real test submission, delete it in /admin.

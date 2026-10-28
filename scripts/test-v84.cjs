@@ -11,7 +11,7 @@ const vm = require('node:vm');
 let passed = 0;
 async function check(name, run) { await run(); passed++; console.log(`PASS ${name}`); }
 const rejects = fn => assert.throws(fn, e => e.status === 400);
-const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-28-live-2' } });
+const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-28-live-3' } });
 const kit = () => ({ kind: 'kit', payload: { name: 'Local test', email: 'fixture@example.test', design: 'original', color: 'Black', quantity: 10, number: 10, numberStyle: 'goool', rights: true } });
 const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-04-live-1' } });
 
@@ -101,12 +101,14 @@ async function main() {
 
   const exports = {};
   const module = { exports };
+  const serverEnv = {};
   const serverCode = ts.transpileModule(fs.readFileSync('src/lib/intake/server.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true } }).outputText;
-  vm.runInNewContext(serverCode + '\nexports.readBoundedForTest = readBounded;', { exports, module, Buffer, URL, Request, Response, process: { env: {} }, require: id => {
+  vm.runInNewContext(serverCode + '\nexports.readBoundedForTest = readBounded;', { exports, module, Buffer, URL, Request, Response, process: { env: serverEnv }, require: id => {
     if (id === 'server-only') return {};
     if (id === './validation.mjs') return { cleanPayload, filesMeta, checkMagic };
     if (id === './agreements.json') return require('../src/lib/intake/agreements.json');
     if (id === './notify') return { notifyOwnerOfSubmission: async () => {} };
+    if (id === './story-launch') return { storyIntakeOpen: () => serverEnv.STORY_INTAKE_OPEN === 'true' };
     return require(id);
   } });
   await check('bounded provider reads return without waiting on an unread Next fetch clone', async () => {
@@ -126,6 +128,17 @@ async function main() {
   await check('disabled intake cannot create a success receipt', async () => {
     const request = new Request('http://localhost/api/intake/start', { method: 'POST', headers: { Origin: 'http://localhost' }, body: JSON.stringify({ ...story(), files: [] }) });
     await assert.rejects(() => exports.startIntake(request), e => e.status === 503);
+  });
+  await check('story intake is closed by default (STATE A) and opens only with STORY_INTAKE_OPEN=true', async () => {
+    const start = body => exports.startIntake(new Request('http://localhost/api/intake/start', { method: 'POST', headers: { Origin: 'http://localhost' }, body: JSON.stringify(body) }));
+    serverEnv.INTAKE_ENABLED = 'true';
+    for (const value of [undefined, 'false', 'TRUE', '1']) { serverEnv.STORY_INTAKE_OPEN = value; await assert.rejects(() => start({ ...story(), files: [] }), e => e.status === 503 && /not open yet/.test(e.message)); }
+    // Kit and match requests follow INTAKE_ENABLED alone; the story switch never touches them.
+    delete serverEnv.INTAKE_ENABLED; delete serverEnv.STORY_INTAKE_OPEN;
+    await assert.rejects(() => start({ ...kit(), files: [{ name: 'crest.png', size: 10, purpose: 'crest' }] }), e => e.status === 503 && /not ready yet/.test(e.message));
+    serverEnv.STORY_INTAKE_OPEN = 'true';
+    await assert.rejects(() => start({ ...story(), files: [] }), e => e.status === 503 && /not ready yet/.test(e.message));
+    delete serverEnv.STORY_INTAKE_OPEN;
   });
   await check('write origin and malformed JSON are rejected', async () => {
     assert.throws(() => exports.sameOrigin(new Request('https://store.test/api/intake/start', { headers: { Origin: 'https://other.test' } })), e => e.status === 403);
