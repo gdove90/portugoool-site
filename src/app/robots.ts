@@ -19,7 +19,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         // Cart must be crawlable for its explicit noindex tag to be read.
         // The confirmation/API exclusions remain; robots is not access control.
-        disallow: ["/api/", "/admin", "/whats-your-goool", "/share-your-goals", "/success", "/print/"],
+        // /whats-your-goool is public again since 2026-10-28 (campaign funnel).
+        disallow: ["/api/", "/admin", "/share-your-goals", "/success", "/print/"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

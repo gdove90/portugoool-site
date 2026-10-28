@@ -106,6 +106,7 @@ async function main() {
     if (id === 'server-only') return {};
     if (id === './validation.mjs') return { cleanPayload, filesMeta, checkMagic };
     if (id === './agreements.json') return require('../src/lib/intake/agreements.json');
+    if (id === './notify') return { notifyOwnerOfSubmission: async () => {} };
     return require(id);
   } });
   await check('bounded provider reads return without waiting on an unread Next fetch clone', async () => {
@@ -136,6 +137,14 @@ async function main() {
   try {
     await db.exec('create role anon; create role authenticated; create role service_role bypassrls;');
     await db.exec(fs.readFileSync('docs/v84/intake-schema-proposal.sql', 'utf8'));
+    await db.exec(fs.readFileSync('supabase/migrations/0053_intake_story_statuses.sql', 'utf8'));
+    await check('migration 0053 admits the campaign moderation states and nothing else', async () => {
+      const probe = randomUUID();
+      await db.query('select public.intake_begin($1,$2)', [JSON.stringify({ ...cleanPayload(story()), id: probe, upload_token_hash: 'probe', upload_expires_at: new Date(Date.now() + 86400000).toISOString() }), '[]']);
+      for (const status of ['approved', 'featured', 'achieved', 'rejected', 'archived']) await db.query('update public.intake_submissions set status=$2 where id=$1', [probe, status]);
+      await assert.rejects(() => db.query('update public.intake_submissions set status=$2 where id=$1', [probe, 'published']));
+      await db.query('delete from public.intake_submissions where id=$1', [probe]);
+    });
     await check('all private tables have RLS enabled', async () => {
       const result = await db.query("select relname,relrowsecurity from pg_class where relname in ('intake_submissions','intake_files','intake_rate_limits')");
       assert.equal(result.rows.length, 3); assert.ok(result.rows.every(r => r.relrowsecurity));

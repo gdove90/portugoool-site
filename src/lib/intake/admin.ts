@@ -1,7 +1,10 @@
 import "server-only";
 import { requireOwner } from "./auth";
 import { bodyJSON, checked, fail, intakeClient, response, sameOrigin } from "./server";
-const states = ["new","reviewing","approved","featured","quoted","closed"];
+// Mirrors migration 0053: new/reviewing = pending review, approved = eligible
+// for use, featured = used on a GOAL channel, achieved = goal reached,
+// rejected = not eligible, quoted = kit quote sent, closed/archived = retired.
+export const states = ["new","reviewing","approved","featured","achieved","rejected","quoted","closed","archived"];
 
 export async function adminRequest(request: Request, path: string[]) {
   const user = await requireOwner();

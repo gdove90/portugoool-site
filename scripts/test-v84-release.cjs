@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const { parse } = require('parse5');
 const base = process.env.V84_TEST_URL || 'http://127.0.0.1:3184';
 assert.ok(['localhost', '127.0.0.1'].includes(new URL(base).hostname), 'Use an isolated local preview only.');
-const routes = ['/', '/men', '/women', '/shop', '/about', '/kit-wear', '/references', '/contact', '/faq', '/shipping-returns', '/size-guide', '/privacy', '/terms', '/refunds', '/cart', '/success', '/track-order', '/admin/sign-in', '/share-your-goals/preview/goal', '/share-your-goals/preview/highlight', '/share-your-goals/preview/save'];
+const routes = ['/', '/men', '/women', '/shop', '/about', '/kit-wear', '/references', '/whats-your-goool', '/contact', '/faq', '/shipping-returns', '/size-guide', '/privacy', '/terms', '/refunds', '/cart', '/success', '/track-order', '/admin/sign-in', '/share-your-goals/preview/goal', '/share-your-goals/preview/highlight', '/share-your-goals/preview/save'];
 function nodes(root) {
   const result = [];
   function visit(node) { result.push(node); for (const child of node.childNodes || []) visit(child); }
@@ -10,7 +10,8 @@ function nodes(root) {
 }
 async function main() {
   // Owner-only pages send a signed-out visitor to the owner sign-in.
-  for (const route of ['/whats-your-goool', '/share-your-goals', '/share-your-goals/preview/goal']) {
+  // /whats-your-goool is the public What's Your GOAL? funnel again (2026-10-28).
+  for (const route of ['/share-your-goals', '/share-your-goals/preview/goal']) {
     const response = await fetch(base + route, { redirect: 'manual' });
     assert.ok([303, 307, 308].includes(response.status), route + ' is owner-only, got ' + response.status);
     assert.equal(new URL(response.headers.get('location'), base).pathname, '/admin/sign-in', route + ' redirects to the owner sign-in');
