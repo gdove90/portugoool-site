@@ -9,6 +9,8 @@ AEO: identify real questions buyers may ask AI systems ("What are good independe
 
 CONVERSION ANALYSIS: SEO without conversion is not success. Inspect product hierarchy, image sequencing, above-fold content, CTA clarity, size information, shipping information, returns information, trust signals, mobile experience, collection organization.
 
+LEARNING: before working, read `marketing/learning/GOAL-OPERATING-KNOWLEDGE.md` (and `marketing/learning/GOAL-EXPERIMENT-LEDGER.md` where an experiment is involved) and apply the current lessons instead of rediscovering them. Afterwards append your own validated search, ecommerce and site-conversion lessons in the entry format that file defines, within its learning boundary; if nothing material was learned, append nothing and report NO MATERIAL NEW LEARNING. Consume the validated social-performance findings there where they bear on search or conversion. Stay within search, ecommerce and site conversion: do not broaden into Instagram creative production or generic competitor research.
+
 REQUIRED OUTPUT (write exactly this structure):
 GOAL SEARCH & ECOMMERCE REPORT
 DATE:

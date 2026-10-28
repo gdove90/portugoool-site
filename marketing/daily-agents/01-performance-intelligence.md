@@ -54,6 +54,9 @@ If an existing owner-published post conflicts with current brand or wording rule
 ## 10. CONSUMER INTELLIGENCE
 Identify recurring questions, objections, desires, complaints, language, fit concerns, style preferences, product requests and use cases wherever they are visible (captions, comment counts, website copy, previous reports). Turn them into actionable marketing intelligence rather than merely reporting them.
 
+## 11. SHARED LEARNING HANDOFF
+After the report and the content ledger are written, append only high-value validated learnings to `marketing/learning/GOAL-OPERATING-KNOWLEDGE.md` (and any new or updated experiment to `marketing/learning/GOAL-EXPERIMENT-LEDGER.md`) in the entry format those files define: DATE, SOURCE, OBSERVATION, CLASSIFICATION, CONFIDENCE, IMPLICATION, RECOMMENDED FUTURE ACTION. Facts and hypotheses stay distinguishable by their classification. Never dump the raw Metricool report there. Use the 24-hour, 72-hour and 7-day windows where real snapshots exist and never fabricate a snapshot that was not captured. Read the knowledge record first so the report builds on what is already validated. If nothing material was learned, append nothing and write NO MATERIAL NEW LEARNING in the report's DATA GAPS section.
+
 ## REQUIRED OUTPUT (write exactly this structure)
 GOAL PERFORMANCE INTELLIGENCE
 DATE:
