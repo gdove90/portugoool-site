@@ -34,3 +34,12 @@
   to = "/shop"
   status = 301
   force = true
+
+# The "What's Your GOAL?" campaign's canonical route is /whats-your-goal
+# (2026-10-28). The live redirect is in src/middleware.ts; this is the
+# fallback for when middleware is deleted.
+[[redirects]]
+  from = "/whats-your-goool"
+  to = "/whats-your-goal"
+  status = 301
+  force = true

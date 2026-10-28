@@ -11,7 +11,7 @@ const vm = require('node:vm');
 let passed = 0;
 async function check(name, run) { await run(); passed++; console.log(`PASS ${name}`); }
 const rejects = fn => assert.throws(fn, e => e.status === 400);
-const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-04-live-1' } });
+const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-28-live-3' } });
 const kit = () => ({ kind: 'kit', payload: { name: 'Local test', email: 'fixture@example.test', design: 'original', color: 'Black', quantity: 10, number: 10, numberStyle: 'goool', rights: true } });
 const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-04-live-1' } });
 
@@ -109,11 +109,14 @@ async function main() {
 
   const exports = {};
   const module = { exports };
+  const serverEnv = {};
   const serverCode = ts.transpileModule(fs.readFileSync('src/lib/intake/server.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true } }).outputText;
-  vm.runInNewContext(serverCode + '\nexports.readBoundedForTest = readBounded;', { exports, module, Buffer, URL, Request, Response, process: { env: {} }, require: id => {
+  vm.runInNewContext(serverCode + '\nexports.readBoundedForTest = readBounded;', { exports, module, Buffer, URL, Request, Response, process: { env: serverEnv }, require: id => {
     if (id === 'server-only') return {};
     if (id === './validation.mjs') return { cleanPayload, filesMeta, checkMagic };
     if (id === './agreements.json') return require('../src/lib/intake/agreements.json');
+    if (id === './notify') return { notifyOwnerOfSubmission: async () => {} };
+    if (id === './story-launch') return { storyIntakeOpen: () => serverEnv.STORY_INTAKE_OPEN === 'true' };
     return require(id);
   } });
   await check('bounded provider reads return without waiting on an unread Next fetch clone', async () => {
@@ -134,6 +137,17 @@ async function main() {
     const request = new Request('http://localhost/api/intake/start', { method: 'POST', headers: { Origin: 'http://localhost' }, body: JSON.stringify({ ...story(), files: [] }) });
     await assert.rejects(() => exports.startIntake(request), e => e.status === 503);
   });
+  await check('story intake is closed by default (STATE A) and opens only with STORY_INTAKE_OPEN=true', async () => {
+    const start = body => exports.startIntake(new Request('http://localhost/api/intake/start', { method: 'POST', headers: { Origin: 'http://localhost' }, body: JSON.stringify(body) }));
+    serverEnv.INTAKE_ENABLED = 'true';
+    for (const value of [undefined, 'false', 'TRUE', '1']) { serverEnv.STORY_INTAKE_OPEN = value; await assert.rejects(() => start({ ...story(), files: [] }), e => e.status === 503 && /not open yet/.test(e.message)); }
+    // Kit and match requests follow INTAKE_ENABLED alone; the story switch never touches them.
+    delete serverEnv.INTAKE_ENABLED; delete serverEnv.STORY_INTAKE_OPEN;
+    await assert.rejects(() => start({ ...kit(), files: [{ name: 'crest.png', size: 10, purpose: 'crest' }] }), e => e.status === 503 && /not ready yet/.test(e.message));
+    serverEnv.STORY_INTAKE_OPEN = 'true';
+    await assert.rejects(() => start({ ...story(), files: [] }), e => e.status === 503 && /not ready yet/.test(e.message));
+    delete serverEnv.STORY_INTAKE_OPEN;
+  });
   await check('write origin and malformed JSON are rejected', async () => {
     assert.throws(() => exports.sameOrigin(new Request('https://store.test/api/intake/start', { headers: { Origin: 'https://other.test' } })), e => e.status === 403);
     for (const body of ['null', '[]', '{invalid']) await assert.rejects(() => exports.bodyJSON(new Request('http://localhost', { method: 'POST', body })), e => e.status === 400);
@@ -144,6 +158,14 @@ async function main() {
   try {
     await db.exec('create role anon; create role authenticated; create role service_role bypassrls;');
     await db.exec(fs.readFileSync('docs/v84/intake-schema-proposal.sql', 'utf8'));
+    await db.exec(fs.readFileSync('supabase/migrations/0053_intake_story_statuses.sql', 'utf8'));
+    await check('migration 0053 admits the campaign moderation states and nothing else', async () => {
+      const probe = randomUUID();
+      await db.query('select public.intake_begin($1,$2)', [JSON.stringify({ ...cleanPayload(story()), id: probe, upload_token_hash: 'probe', upload_expires_at: new Date(Date.now() + 86400000).toISOString() }), '[]']);
+      for (const status of ['approved', 'featured', 'achieved', 'rejected', 'archived']) await db.query('update public.intake_submissions set status=$2 where id=$1', [probe, status]);
+      await assert.rejects(() => db.query('update public.intake_submissions set status=$2 where id=$1', [probe, 'published']));
+      await db.query('delete from public.intake_submissions where id=$1', [probe]);
+    });
     await check('all private tables have RLS enabled', async () => {
       const result = await db.query("select relname,relrowsecurity from pg_class where relname in ('intake_submissions','intake_files','intake_rate_limits')");
       assert.equal(result.rows.length, 3); assert.ok(result.rows.every(r => r.relrowsecurity));

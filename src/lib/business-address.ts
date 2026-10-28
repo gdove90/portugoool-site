@@ -15,4 +15,11 @@ export const MAILING_ADDRESS = `${MAILING_STREET}, ${MAILING_CITY_LINE}`;
 // individual account under the public name "GOOOL ATHLETICS". Where a legal
 // text must distinguish pending registration from completed formation, say
 // so; do not change the name because of it.
+//
+// Owner clarification 2026-10-28: the company is the approved FUTURE parent
+// of GOAL Athletics and is not legally formed yet. The public site footer and
+// the Organization structured data no longer present it as an existing
+// entity (they say GOAL Athletics). The name stays here for planning and for
+// the remaining legal lines (terms, order emails, unsubscribe, success page),
+// which are flagged for the owner's separate decision.
 export const LEGAL_NAME = "The Goal Brand Group LLC";

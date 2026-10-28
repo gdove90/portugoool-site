@@ -28,7 +28,7 @@ export default function CustomerServiceShell({ children, immersive = false }: { 
         <Link href="/privacy">Privacy</Link>
         <Link href="/terms">Terms</Link>
       </nav>
-      <p>The Goal Brand Group LLC · {MAILING_STREET}, {MAILING_CITY_LINE}</p>
+      <p>GOAL Athletics · {MAILING_STREET}, {MAILING_CITY_LINE}</p>
     </footer>
   </div>;
 }

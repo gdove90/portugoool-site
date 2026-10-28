@@ -40,9 +40,11 @@ check('sale, sold-out, inactive and coming-soon states never emit purchasable of
  assert.ok(variants(seo.productJsonLd({...p,priceCents:0})).every(v=>v.offers===undefined));
 });
 check('public sitemap excludes private, retired and gated internal routes without invented dates',()=>{
- // 22 since 2026-10-22: seven catalog rows and the public pages, with Your Story and Match Highlights owner-only.
- const rows=load(root+'/src/app/sitemap.ts').default();assert.equal(rows.length,25);assert.equal(new Set(rows.map(r=>r.url)).size,25);
- assert.ok(!rows.some(r=>/\/(whats-your-goool|share-your-goals)(\/|$)/.test(new URL(r.url).pathname)));
+ // The catalog rows plus 16 public pages: Match Highlights stays owner-only, What's Your GOAL? is public again (2026-10-28).
+ const rows=load(root+'/src/app/sitemap.ts').default();assert.equal(rows.length,products.length+16);assert.equal(new Set(rows.map(r=>r.url)).size,rows.length);
+ assert.ok(!rows.some(r=>/\/(share-your-goals)(\/|$)/.test(new URL(r.url).pathname)));
+ assert.ok(rows.some(r=>new URL(r.url).pathname==='/whats-your-goal'),'the public What\'s Your GOAL? funnel is in the sitemap');
+ assert.ok(!rows.some(r=>new URL(r.url).pathname==='/whats-your-goool'),'the legacy GOOOL slug redirects and is not listed');
  for(const row of rows){assert.ok(row.url.startsWith('https://goalathletics.shop/'));assert.equal(row.lastModified,undefined);assert.ok(!/\/(cart|success|track-order|gate|admin|api|print)(\/|$)/.test(new URL(row.url).pathname));}
  assert.ok(rows.some(r=>r.url.endsWith('/the-goal-collective')));
  env.STORE_OPEN='false';
@@ -57,6 +59,6 @@ check('canonical and social metadata are page-specific and JSON-LD escapes embed
  const m=load(root+'/src/lib/page-metadata.ts').pageMetadata('/about','Our World','Approved description');
  assert.equal(m.alternates.canonical,'/about');assert.equal(m.openGraph.url,'/about');assert.equal(m.twitter.description,'Approved description');assert.equal(m.openGraph.title,'Our World · GOAL Athletics');
  assert.ok(!seo.jsonLdScript({name:'</script>'}).__html.includes('<'));
- const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOAL Athletics');assert.equal(org[0].legalName,'The Goal Brand Group LLC');assert.equal(org[0].logo,'https://goalathletics.shop/brand/goal-athletics-horizontal-lockup-ink.svg');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
+ const org=seo.organizationJsonLd()['@graph'];assert.equal(org[0].name,'GOAL Athletics');assert.equal(org[0].legalName,undefined,'no legalName until the planned company is formed (owner 2026-10-28)');assert.equal(org[0].logo,'https://goalathletics.shop/brand/goal-athletics-horizontal-lockup-ink.svg');assert.equal(org[0].address,undefined);assert.equal(org[1].potentialAction,undefined);
 });
 console.log(`${passed} SEO checks passed; ${products.length} products, ${count} exact fulfillment variants.`);

@@ -4,6 +4,8 @@ import { createHash, createHmac, randomBytes, randomUUID, timingSafeEqual } from
 import { SaxesParser } from "saxes";
 import { cleanPayload, filesMeta, checkMagic } from "./validation.mjs";
 import agreements from "./agreements.json";
+import { notifyOwnerOfSubmission } from "./notify";
+import { storyIntakeOpen } from "./story-launch";
 
 export class IntakeError extends Error { constructor(public status: number, message: string) { super(message); } }
 export const fail = (status: number, message: string): never => { throw new IntakeError(status, message); };
@@ -62,6 +64,8 @@ export async function startIntake(request: Request) {
   sameOrigin(request);
   const data = await bodyJSON(request);
   const record = cleanPayload(data), metadata = filesMeta(data.files, record) as { name: string; mime: string; size: number; purpose: string }[];
+  // What's Your GOAL? has its own launch switch (STATE A closed by default); kit and match keep INTAKE_ENABLED only.
+  if (record.kind === "story" && !storyIntakeOpen()) return fail(503, "Story submissions are not open yet. Your details have not been sent.");
   if (process.env.INTAKE_ENABLED !== "true") return fail(503, "Private submissions are not ready yet. Your details have not been sent.");
   await rateLimit(request);
   const client = intakeClient(), bucket = process.env.INTAKE_BUCKET;
@@ -159,5 +163,7 @@ export async function finishIntake(request: Request, id: string) {
   // The transaction rechecks token, expiry and deletion state under a row lock.
   const receipt=checked(await client.rpc("intake_finish",{p_id:id,p_token_hash:row.upload_token_hash}));
   if(!receipt) return fail(409,"Could not complete this request. Please retry.");
+  // Owner heads-up only on the first completion (repeat finishes returned above). Delivery failure never fails the receipt.
+  await notifyOwnerOfSubmission(row,files.length).catch(()=>{});
   return response(receipt);
 }

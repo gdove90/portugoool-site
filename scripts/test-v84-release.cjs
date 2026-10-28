@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const { parse } = require('parse5');
 const base = process.env.V84_TEST_URL || 'http://127.0.0.1:3184';
 assert.ok(['localhost', '127.0.0.1'].includes(new URL(base).hostname), 'Use an isolated local preview only.');
-const routes = ['/', '/men', '/women', '/shop', '/about', '/kit-wear', '/references', '/contact', '/faq', '/shipping-returns', '/size-guide', '/privacy', '/terms', '/refunds', '/cart', '/success', '/track-order', '/admin/sign-in', '/share-your-goals/preview/goal', '/share-your-goals/preview/highlight', '/share-your-goals/preview/save'];
+const routes = ['/', '/men', '/women', '/shop', '/about', '/kit-wear', '/references', '/whats-your-goal', '/contact', '/faq', '/shipping-returns', '/size-guide', '/privacy', '/terms', '/refunds', '/cart', '/success', '/track-order', '/admin/sign-in', '/share-your-goals/preview/goal', '/share-your-goals/preview/highlight', '/share-your-goals/preview/save'];
 function nodes(root) {
   const result = [];
   function visit(node) { result.push(node); for (const child of node.childNodes || []) visit(child); }
@@ -10,7 +10,11 @@ function nodes(root) {
 }
 async function main() {
   // Owner-only pages send a signed-out visitor to the owner sign-in.
-  for (const route of ['/whats-your-goool', '/share-your-goals', '/share-your-goals/preview/goal']) {
+  // /whats-your-goal is the public What's Your GOAL? funnel (2026-10-28); the legacy slug 301s to it.
+  const legacy = await fetch(base + '/whats-your-goool', { redirect: 'manual' });
+  assert.equal(legacy.status, 301, 'legacy GOOOL slug is a permanent redirect');
+  assert.equal(new URL(legacy.headers.get('location'), base).pathname, '/whats-your-goal');
+  for (const route of ['/share-your-goals', '/share-your-goals/preview/goal']) {
     const response = await fetch(base + route, { redirect: 'manual' });
     assert.ok([303, 307, 308].includes(response.status), route + ' is owner-only, got ' + response.status);
     assert.equal(new URL(response.headers.get('location'), base).pathname, '/admin/sign-in', route + ' redirects to the owner sign-in');
@@ -31,7 +35,7 @@ async function main() {
       // Your Story and Match Highlights are owner-only since 2026-10-22: no
       // desktop, mobile or footer link reaches them.
       for (const scope of [...tree.filter(node => node.tagName === 'nav'), footer]) {
-        for (const href of ['/whats-your-goool', '/share-your-goals']) {
+        for (const href of ['/whats-your-goal', '/whats-your-goool', '/share-your-goals']) {
           const link = nodes(scope).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === href));
           assert.equal(link, undefined, 'Shared navigation no longer links ' + href);
         }
