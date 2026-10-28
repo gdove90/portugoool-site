@@ -13,7 +13,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 export const metadata = pageMetadata(
   "/the-goal-collective",
   "The Goal Collective · Coming soon",
-  "The Goal Collective is our lifestyle division. Everyday pieces, shaped by people pursuing their goals, becoming the best version of themselves, living fully, and growing together.",
+  "The Goal Collective brings the GOAL outlook to elevated everyday wear. Lifestyle and athleisure shaped around comfort, silhouette, and life off duty.",
 );
 
 function ArrowUpRight() {
@@ -42,7 +42,7 @@ export default function TheGoalCollective() {
           </span>
         </Link>
         <p className="hidden text-[9px] font-medium uppercase tracking-[0.2em] text-white md:block">
-          Performance for every day · Coming soon
+          Elevated everyday wear · Coming soon
         </p>
         <Link
           href="/"
@@ -68,15 +68,15 @@ export default function TheGoalCollective() {
           <div className="max-w-[980px]">
             <p className="flex items-center gap-3 text-[9px] font-normal uppercase tracking-[0.22em] text-white/75">
               <span className="block h-px w-9 bg-white/70" />
-              02 / Everyday movement
+              02 / Lifestyle + athleisure
             </p>
             <h1 className="mt-5 text-[55px] font-semibold uppercase italic leading-[0.88] tracking-[-0.065em] sm:text-[74px] md:text-[96px] lg:text-[clamp(72px,8vw,122px)]">
-              Built to move.
+              Life off duty.
               <br />
-              <span className="text-[#dedfd8]">Made to live.</span>
+              <span className="text-[#dedfd8]">Still GOAL.</span>
             </h1>
             <p className="mt-6 max-w-[620px] text-[14px] font-light leading-[1.65] text-white/90 md:text-[16px]">
-              The Goal Collective is our lifestyle division. Everyday pieces, shaped by people pursuing their goals, becoming the best version of themselves, living fully, and growing together.
+              The Goal Collective brings the GOAL outlook to elevated everyday wear. Lifestyle and athleisure shaped around comfort, silhouette, and life off duty.
             </p>
           </div>
 

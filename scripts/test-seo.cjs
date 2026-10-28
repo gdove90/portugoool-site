@@ -15,7 +15,7 @@ const products=load(root+'/src/lib/products.ts').getProducts(),seo=load(root+'/s
 const variants=s=>s.hasVariant||[s];let count=0;const skus=new Set();
 check('every active product variant matches the approved price, SKU, color, size and gallery',()=>{
  // Seven catalog rows since 2026-10-22: five clothing products for sale and the two caps (not for sale).
- assert.equal(products.length,7);
+ assert.equal(products.length,10);
  for(const p of products){
   const s=seo.productJsonLd(p),entries=variants(s);assert.equal(s.name,p.name);
   assert.equal(entries.length,(p.colorVariants?.length||1)*p.sizes.length);
