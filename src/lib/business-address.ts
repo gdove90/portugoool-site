@@ -16,10 +16,15 @@ export const MAILING_ADDRESS = `${MAILING_STREET}, ${MAILING_CITY_LINE}`;
 // text must distinguish pending registration from completed formation, say
 // so; do not change the name because of it.
 //
-// Owner clarification 2026-10-28: the company is the approved FUTURE parent
-// of GOAL Athletics and is not legally formed yet. The public site footer and
-// the Organization structured data no longer present it as an existing
-// entity (they say GOAL Athletics). The name stays here for planning and for
-// the remaining legal lines (terms, order emails, unsubscribe, success page),
-// which are flagged for the owner's separate decision.
+// Owner clarification 2026-10-28 (morning): the company is the approved FUTURE
+// parent of GOAL Athletics and was not legally formed yet, so the public site
+// footer and the Organization structured data stopped presenting it (they say
+// GOAL Athletics).
+//
+// Owner decision 2026-10-28 (evening): use The Goal Brand Group LLC as the
+// legal/operator entity everywhere a legal or operator name is required
+// (terms, order emails, unsubscribe, success page, gate, intake agreements:
+// story WYG-2026-10-28-live-4, Match Highlights SYG-2026-10-28-live-2, Kit Wear
+// KIT-2026-10-28-2). GOAL Athletics stays the customer-facing brand. The
+// owner's personal name is never used publicly.
 export const LEGAL_NAME = "The Goal Brand Group LLC";

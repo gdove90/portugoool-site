@@ -12,32 +12,34 @@ function text(node) {
   if (['script', 'style'].includes(node.tagName)) return '';
   return node.nodeName === '#text' ? node.value : (node.childNodes || []).map(text).join(' ');
 }
+const LLC = 'The Goal Brand Group LLC';
+const PARTY = 'This agreement is between ' + LLC + ', the company behind GOAL Athletics (the Company)';
+const validator = fs.readFileSync('src/lib/intake/validation.mjs', 'utf8');
 for (const route of ['home','men','women','about','references','story','kit','match']) {
   const html = experience.markup(route);
-  const visible = text(parse5.parse(html)).replace(/GOOOL Athletics LLC/gi, 'registered seller').replace(/What’s Your GOOOL\?/g, 'historical licensed series');
-  assert(!/goool/i.test(visible), route + ': remaining nonlegal branding ' + visible.match(/.{0,50}goool.{0,70}/gi));
+  const visible = text(parse5.parse(html));
+  // Owner decision 2026-10-28: no legacy GOOOL spelling anywhere in rendered copy, legal party lines included.
+  assert(!/goool/i.test(visible), route + ': remaining legacy branding ' + visible.match(/.{0,50}goool.{0,70}/gi));
   console.log('PASS visible presentation copy: ' + route);
 }
-for (const name of ['participation-agreement.html', 'story-participation-agreement.html']) {
+const VERSIONS = { 'participation-agreement.html': 'SYG-2026-10-28-live-2', 'story-participation-agreement.html': 'WYG-2026-10-28-live-4' };
+for (const name of Object.keys(VERSIONS)) {
   const html = fs.readFileSync('public/'+name,'utf8');
-  if (name === 'participation-agreement.html') {
-    // Preserve the separate existing Match Highlights agreement; no legal cleanup here.
-    assert(html.includes('This agreement is between GOOOL Athletics LLC'));
-  } else {
-    // State A on reviewed main6b4 uses the new v3 brand-only story agreement.
-    // This checks current consent/version consistency, not legal sufficiency.
-    assert(html.includes('This agreement is between GOAL Athletics, an independent athletic apparel brand based in Rhode Island'));
-    assert(!html.includes('This agreement is between GOOOL Athletics LLC'));
-    for (const content of [html, require('../src/lib/intake/agreements.json')[name], fs.readFileSync('src/lib/intake/validation.mjs','utf8'), source]) {
-      assert(content.includes('WYG-2026-10-28-live-3'), 'public agreement, snapshot, validator and controller retain approved v3');
-    }
-    assert.match(html, /href="\/whats-your-goal"/);
-    assert.doesNotMatch(html, /href="\/whats-your-goool"/);
+  // The operator named in every active agreement is the legal entity, never a bare brand or legacy name.
+  assert(html.includes(PARTY), name + ' names the operator');
+  assert(!/GOOOL|an independent athletic apparel brand based in Rhode Island \(the Company\)/.test(html), name + ' carries no superseded party line');
+  for (const content of [html, require('../src/lib/intake/agreements.json')[name], validator, source]) {
+    assert(content.includes(VERSIONS[name]), name + ': public agreement, snapshot, validator and controller share ' + VERSIONS[name]);
   }
-  const presentation = html.replace(/<section>[\s\S]*?<\/section>/g, '').replace(/GOOOL Athletics LLC/gi, 'registered seller');
-  assert(!/goool/i.test(text(parse5.parse(presentation))), name);
-  console.log('PASS document headings/navigation and registered party: ' + name);
+  if (name === 'story-participation-agreement.html') assert.match(html, /href="\/whats-your-goal"/, 'story agreement links back to the canonical route');
+  assert.doesNotMatch(html, /href="\/whats-your-goool"/);
+  assert(!/goool/i.test(text(parse5.parse(html))), name);
+  console.log('PASS agreement party, version and navigation: ' + name);
 }
+assert(validator.includes("version:'KIT-2026-10-28-2'") && validator.includes('I agree that ' + LLC + ' may store and review this request'), 'Kit Wear consent names the operator');
+assert(!/GOOOL Athletics LLC/.test(validator + source), 'no legacy operator name in validator or controller');
+assert(!/goool/i.test(fs.readFileSync('src/app/terms/page.tsx', 'utf8')), 'Terms page carries no legacy spelling');
+console.log('PASS Kit Wear consent, validator, controller and Terms name only the operator and the brand');
 for (const name of ['src/v84/admin-markup.json', 'src/v84/admin-controller.js']) {
   // Admin brand cleanup (2026-10-28): no legacy GOOOL display text in the owner inbox or its labels.
   const admin = fs.readFileSync(name, 'utf8');
