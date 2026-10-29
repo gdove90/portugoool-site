@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import ShipmentTracking from "@/components/ShipmentTracking";
+import {
+  normalizeCarrier,
+  uniqueShipmentPackages,
+  type TrackingDetails,
+  type TrackingPackage,
+} from "@/lib/carrier-tracking/presentation";
 
 // ─────────────────────────────────────────────────────────────
 // Real order tracking. The lookup calls /api/track-order with the
@@ -12,8 +19,8 @@ import { useEffect, useState } from "react";
 //
 // Design 3a (2026-09-29): black hero band with the page title, then a
 // lookup card that overlaps the hero on desktop beside the three-step
-// timeline. UI only; the lookup, its request body and every branch of
-// the Result union are unchanged, and the copy is word for word.
+// timeline. Carrier enrichment reads a separate authenticated cache after
+// the original lookup succeeds; it cannot replace that lookup's result.
 // ─────────────────────────────────────────────────────────────
 
 interface Shipment {
@@ -28,40 +35,103 @@ type Result =
   | { kind: "found"; status: string; shipments: Shipment[] }
   | { kind: "error"; message: string };
 
+function abortLookups(
+  generation: { current: number },
+  lookup: { current: AbortController | null },
+  details: { current: AbortController | null },
+) {
+  generation.current++;
+  lookup.current?.abort();
+  details.current?.abort();
+}
+
 export default function TrackOrderPage() {
   const [reference, setReference] = useState("");
   const [email, setEmail] = useState("");
   const [result, setResult] = useState<Result>({ kind: "idle" });
+  const [details, setDetails] = useState<TrackingDetails | null>(null);
+  const [detailsLoading, setDetailsLoading] = useState(false);
+  const lookupGeneration = useRef(0);
+  const lookupController = useRef<AbortController | null>(null);
+  const detailsController = useRef<AbortController | null>(null);
 
   // The confirmation page links here with the real order reference; pre-fill
   // it so the customer only adds their email. Anything else is ignored.
   useEffect(() => {
     const given = new URLSearchParams(window.location.search).get("reference") ?? "";
     if (/^GOOOL-[0-9A-F]{8}$/i.test(given)) setReference(given.toUpperCase());
+    return () => abortLookups(lookupGeneration, lookupController, detailsController);
   }, []);
+
+  async function enrich(credentials: { reference: string; email: string }, generation: number) {
+    const controller = new AbortController();
+    detailsController.current = controller;
+    const timeout = window.setTimeout(() => controller.abort(), 8000);
+    setDetailsLoading(true);
+    try {
+      const res = await fetch("/api/track-order-details", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(credentials),
+        cache: "no-store",
+        signal: controller.signal,
+      });
+      const data = await res.json();
+      if (generation !== lookupGeneration.current) return;
+      setDetails(res.ok && typeof data.available === "boolean" && Array.isArray(data.packages)
+        ? data as TrackingDetails : { available: false, packages: [] });
+    } catch {
+      if (generation === lookupGeneration.current) setDetails({ available: false, packages: [] });
+    } finally {
+      window.clearTimeout(timeout);
+      if (generation === lookupGeneration.current) setDetailsLoading(false);
+    }
+  }
 
   async function lookup(e: React.FormEvent) {
     e.preventDefault();
+    const generation = ++lookupGeneration.current;
+    lookupController.current?.abort();
+    detailsController.current?.abort();
+    const controller = new AbortController();
+    lookupController.current = controller;
+    const timeout = window.setTimeout(() => controller.abort(), 15000);
+    const credentials = { reference, email };
+    setDetails(null);
+    setDetailsLoading(false);
     setResult({ kind: "loading" });
     try {
       const res = await fetch("/api/track-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ reference, email }),
+        body: JSON.stringify(credentials),
+        cache: "no-store",
+        signal: controller.signal,
       });
       const data = await res.json();
+      if (generation !== lookupGeneration.current) return;
       if (!res.ok) {
         setResult({ kind: "error", message: data.error ?? "Lookup failed." });
         return;
       }
       setResult({ kind: "found", status: data.status, shipments: data.shipments ?? [] });
+      void enrich(credentials, generation);
     } catch {
+      if (generation !== lookupGeneration.current) return;
       setResult({
         kind: "error",
         message: "Order lookup isn't available right now. Email support@goalathletics.shop and we'll check for you.",
       });
+    } finally {
+      window.clearTimeout(timeout);
     }
   }
+
+  const fallbackPackages = result.kind === "found" ? uniqueShipmentPackages(result.shipments) : [];
+  const packageKey = (pkg: TrackingPackage) => `${(normalizeCarrier(pkg.carrier) ?? pkg.carrier ?? "").toLowerCase()}:${pkg.trackingNumber.replace(/\s/g, "").toUpperCase()}`;
+  const enrichedPackages = new Map((details?.packages ?? []).map(pkg => [packageKey(pkg), pkg]));
+  // Render every persisted package even when enrichment has only some of them.
+  const packages = fallbackPackages.map(pkg => enrichedPackages.get(packageKey(pkg)) ?? pkg);
 
   return (
     <>
@@ -91,6 +161,7 @@ export default function TrackOrderPage() {
                 id="track-ref"
                 type="text"
                 required
+                maxLength={32}
                 value={reference}
                 onChange={(e) => setReference(e.target.value)}
                 placeholder="GOOOL-1A2B3C4D"
@@ -105,6 +176,7 @@ export default function TrackOrderPage() {
                 id="track-email"
                 type="email"
                 required
+                maxLength={254}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@email.com"
@@ -122,25 +194,9 @@ export default function TrackOrderPage() {
 
           {result.kind === "found" && (
             <div className="border-l-4 border-red bg-smoke px-[18px] py-4" role="status">
+              <p className="text-sm font-semibold text-ink/70">{["Refunded.", "Cancelled."].includes(result.status) ? "Order status" : "Supplier fulfillment status"}</p>
               <p className="text-[17px] font-bold">{result.status}</p>
-              {result.shipments.map((s, i) => (
-                <p key={i} className="mt-1 text-base text-ink/70">
-                  {s.carrier ? `${s.carrier}: ` : ""}
-                  {s.trackingUrls.length > 0
-                    ? s.trackingUrls.map((u, j) => (
-                        <a
-                          key={u}
-                          href={u}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-bold text-ink underline underline-offset-[3px]"
-                        >
-                          {s.trackingNumbers[j] ?? "Track package"}
-                        </a>
-                      ))
-                    : s.trackingNumbers.join(", ")}
-                </p>
-              ))}
+              {fallbackPackages.length > 0 && <p className="mt-2 text-base leading-relaxed text-ink/70">See each package&apos;s carrier status alongside. A shipment notice does not confirm carrier acceptance.</p>}
             </div>
           )}
           {result.kind === "error" && (
@@ -152,6 +208,10 @@ export default function TrackOrderPage() {
 
         {/* Timeline */}
         <div className="flex min-w-0 flex-1 flex-col gap-2">
+          {result.kind === "found" ? (
+            <ShipmentTracking packages={packages} loading={detailsLoading} available={details?.available ?? false} />
+          ) : (
+            <>
           <p className="text-[17px] text-ink/70">Here&apos;s how the timeline works:</p>
 
           <ol>
@@ -171,6 +231,8 @@ export default function TrackOrderPage() {
               </li>
             ))}
           </ol>
+            </>
+          )}
 
           <p className="border-t border-ink/10 pt-[18px] text-base text-ink/70">
             Still stuck?{" "}
