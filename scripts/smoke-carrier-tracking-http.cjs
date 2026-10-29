@@ -2,6 +2,8 @@
 const assert = require('node:assert/strict');
 const base = process.argv[2] || 'http://127.0.0.1:3997';
 const preview = process.argv[3] === 'preview';
+const baseline = process.argv[4];
+if (baseline && !/^https:\/\/[a-f0-9]{24}--goool-shop\.netlify\.app$/.test(baseline)) throw new Error('Baseline must be an immutable GOAL deploy.');
 const url = new URL(base);
 if (!(url.protocol === 'http:' && ['127.0.0.1','localhost'].includes(url.hostname)) &&
     !['https://goalathletics.shop','https://deploy-preview-60--goool-shop.netlify.app'].includes(url.origin)) {
@@ -36,6 +38,15 @@ async function post(path, body) {
   });
   await check('Unrelated API and storefront gates retain their existing behavior', async()=>{
     const response=await post('/api/not-a-tracking-route',{});
+    if(baseline){
+      const original=await fetch(baseline+'/api/not-a-tracking-route',{method:'POST',headers:{'content-type':'application/json'},body:'{}',redirect:'manual',signal:AbortSignal.timeout(30000)});
+      assert.equal(response.status,original.status);
+      const [shop,oldShop]=await Promise.all([base,baseline].map(origin=>fetch(origin+'/shop',{redirect:'manual',signal:AbortSignal.timeout(30000)})));
+      assert.equal(shop.status,oldShop.status);
+      const location=response=>response.headers.get('location')?new URL(response.headers.get('location')).pathname+new URL(response.headers.get('location')).search:null;
+      assert.equal(location(shop),location(oldShop));
+      return;
+    }
     assert.equal(response.status,preview?503:401);
     if(!preview){
       const shop=await fetch(base+'/shop',{redirect:'manual',signal:AbortSignal.timeout(30000)});
