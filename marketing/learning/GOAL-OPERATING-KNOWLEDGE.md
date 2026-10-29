@@ -73,3 +73,11 @@ CLASSIFICATION: APPROVED PREFERENCE (the standing rules stand; the posts are OWN
 CONFIDENCE: HIGH
 IMPLICATION: no agent repeats a named player, a player handle or "football" in any draft, whatever an earlier post did.
 RECOMMENDED FUTURE ACTION: none beyond compliance; flag any new conflict in the performance report.
+
+DATE: 2026-10-29
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-10-29/03-search-ecommerce.md (live pages fetched 2026-10-29)
+OBSERVATION: the "maker's flat measurements are still to be published" placeholder is on both the Core Quarter Zip and Core Jogger pages, and the size guide has a chart only for the two tees. The Quarter Zip also still shows "10 to 17 days, overseas partner" against 7-12 business days on the shipping page and FAQ. A 20% first-order offer applied to Quarter Zip + Jogger ($84) gives about $67.20, below the $70 free-shipping threshold ("after discounts").
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for the page text (fetched directly); impact on conversion is NO DATA
+IMPLICATION: sizing and delivery clarity are the unresolved site-conversion gaps for non-tee products; offer and free-shipping messaging can conflict for the obvious bundle.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, supply flat measurements, confirm one true delivery window, decide offer vs threshold messaging; keep social CTAs free of delivery promises until then.
