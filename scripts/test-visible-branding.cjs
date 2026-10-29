@@ -38,4 +38,10 @@ for (const name of ['participation-agreement.html', 'story-participation-agreeme
   assert(!/goool/i.test(text(parse5.parse(presentation))), name);
   console.log('PASS document headings/navigation and registered party: ' + name);
 }
+for (const name of ['src/v84/admin-markup.json', 'src/v84/admin-controller.js']) {
+  // Admin brand cleanup (2026-10-28): no legacy GOOOL display text in the owner inbox or its labels.
+  const admin = fs.readFileSync(name, 'utf8');
+  assert(!/goool/i.test(admin), name + ': legacy admin text ' + admin.match(/.{0,40}goool.{0,40}/gi));
+  console.log('PASS admin presentation text: ' + name);
+}
 console.log('Presentation audit does not certify legacy raster product artwork or new manufacturing approval.');
