@@ -1,75 +1,60 @@
+// Current active imagery plus retained historical on-body branch coverage.
+// All fixtures are local; archived products never re-enter the public catalog.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const vm = require('node:vm');
-const ts = require('typescript');
 const sharp = require('sharp');
 const { createHash } = require('node:crypto');
 const { execFileSync } = require('node:child_process');
-
-const root = path.resolve(__dirname, '..');
-const manifest = require('../src/v84/mens-on-body-v2.json');
-function load(file, dependencies = {}) {
-  const context = { exports: {}, require: name => {
-    // Presentation manifests are data the module ships with; code dependencies stay explicit.
-    if (name.endsWith('.json') && !(name in dependencies)) return require(path.join(root, path.dirname(file), name));
-    assert.ok(name in dependencies, `Unexpected dependency: ${name}`);
-    return dependencies[name];
-  } };
-  vm.runInNewContext(ts.transpileModule(fs.readFileSync(path.join(root, file), 'utf8'), {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true },
-  }).outputText, context);
-  return context.exports;
-}
-const types = load('src/lib/types.ts');
-const catalog = load('src/lib/products.ts', { './types': types });
-const { productGalleryImages } = load('src/v84/product-gallery-images.ts', { './mens-on-body-v2.json': manifest });
-const ordering = load('src/v84/catalog-data.ts', { '@/lib/products': catalog });
+const { createSourceLoader, root } = require('./fixtures/test-source-loader.cjs');
+const { APPROVED_BASELINE } = require('./fixtures/approved-catalog-state.cjs');
+const { assertActiveGalleries, assertActiveGalleryHttp } = require('./fixtures/assert-active-galleries.cjs');
+const load = createSourceLoader();
+const catalog = load('src/lib/products.ts');
+const manifest = load('src/v84/mens-on-body-v2.json');
 const plain = value => JSON.parse(JSON.stringify(value));
-
+// Explicit test dependencies isolate the v2 fallback from later v3/v4 overrides.
+const legacyLoad = createSourceLoader({ overrides: {
+  'src/v84/mens-studio-v3.json': [], 'src/v84/mens-studio-v4.json': [], 'src/v84/studio-backgrounds-v5.json': [],
+} });
+const legacyGallery = legacyLoad('src/v84/product-gallery-images.ts').productGalleryImages;
 async function main() {
+  const active = assertActiveGalleries(load);
+  console.log(`PASS current active gallery snapshot: ${active.products} products, ${active.colors} colors, ${active.views} ordered views, ${active.assets} exact asset hashes.`);
   assert.equal(manifest.length, 8);
-  assert.equal(new Set(manifest.map(entry => entry.productId)).size, 8);
+  assert.equal(new Set(manifest.map(e => e.productId)).size, 8);
   for (const entry of manifest) {
-    const product = catalog.getProductById(entry.productId);
-    assert.ok(product);
-    assert.equal(product.slug, entry.slug);
-    const before = JSON.stringify(product);
-    const intendedColor = entry.color === 'Natural / Black' ? 'Black/Natural' : entry.color;
-    const indices = product.colorVariants ? product.colorVariants.map((_, index) => index) : [0];
+    const archived = catalog.products.find(p => p.id === entry.productId && p.slug === entry.slug);
+    assert.ok(archived && !archived.isActive, 'v2 fixture is historical, not a public product');
+    assert.equal(catalog.getProductById(entry.productId), undefined);
+    const historicalBefore = JSON.stringify(archived);
+    const fixture = { ...archived, images: archived.images.slice(0, 2), colorVariants: archived.colorVariants?.map(v => ({ ...v, images: v.images.slice(0, 2) })) };
+    const intended = entry.color === 'Natural / Black' ? 'Black/Natural' : entry.color;
     let assigned = 0;
-    for (const index of indices) {
-      const variant = product.colorVariants?.[index];
-      const original = variant?.images || product.images;
-      const images = productGalleryImages(product, index);
-      const color = variant?.name || product.color;
-      if (color !== intendedColor) {
-        assert.equal(images, original, `${entry.slug}: other color changed`);
-        assert.ok(!images.some(image => image.src.includes('/editorial/men-v2/')));
+    for (let index = 0; index < (fixture.colorVariants?.length || 1); index++) {
+      const variant = fixture.colorVariants?.[index], original = variant?.images || fixture.images;
+      const actual = legacyGallery(fixture, index), color = variant?.name || fixture.color;
+      if (color !== intended) {
+        assert.deepEqual(plain(actual), plain(original), 'unassigned colors keep their own supplier images');
+        assert.ok(actual.every(image => !image.src.includes('/editorial/men-v2/')));
         continue;
       }
       assigned++;
-      assert.deepEqual(plain(images.slice(0, 2)), plain(original.slice(0, 2)));
-      assert.equal(images[2].src, '/products/editorial/men-v2/' + path.basename(entry.webp));
-      assert.equal(images[2].alt, entry.alt);
-      assert.equal(images.length, original.length + 1);
-      assert.equal(new Set(images.map(image => image.src)).size, images.length);
-      const repeated = plain(product);
-      if (variant) repeated.colorVariants[index].images = plain(images);
-      else repeated.images = plain(images);
-      assert.deepEqual(plain(productGalleryImages(repeated, index)), plain(images), 'Not idempotent');
-      const prior = plain(product);
-      const replacement = [...plain(original), { src: '/products/old-on-body.webp', alt: 'Previous on-body fit' }];
-      if (variant) prior.colorVariants[index].images = replacement;
-      else prior.images = replacement;
-      assert.deepEqual(plain(productGalleryImages(prior, index)), plain(images), 'Previous role not replaced');
-      assert.equal(productGalleryImages({ ...product, slug: 'wrong-product' }, index), original);
+      assert.deepEqual(plain(actual.slice(0, 2)), plain(original));
+      assert.equal(actual.length, 3);
+      assert.equal(actual[2].src, '/products/editorial/men-v2/' + path.basename(entry.webp));
+      assert.equal(actual[2].alt, entry.alt);
+      const repeated = plain(fixture);
+      if (variant) repeated.colorVariants[index].images = plain(actual); else repeated.images = plain(actual);
+      assert.deepEqual(plain(legacyGallery(repeated, index)), plain(actual), 'v2 on-body insertion is idempotent');
+      const prior = plain(fixture);
+      const oldImages = [...plain(original), { src: '/products/old-on-body.webp', alt: 'Previous on-body fit' }];
+      if (variant) prior.colorVariants[index].images = oldImages; else prior.images = oldImages;
+      assert.deepEqual(plain(legacyGallery(prior, index)), plain(actual), 'previous on-body role is replaced');
+      assert.deepEqual(plain(legacyGallery({ ...fixture, slug: 'wrong-product' }, index)), plain(original), 'identity includes id and slug');
     }
     assert.equal(assigned, 1);
-    assert.equal(JSON.stringify(product), before, 'Product or variant data mutated');
-    const index = ordering.defaultVariant(product)?.index || 0;
-    assert.equal(productGalleryImages(product, index)[2].alt, entry.alt, 'Default not intended color');
-    if (product.colorVariants) assert.equal(ordering.defaultVariant(product).variant.name, 'Black');
+    assert.equal(JSON.stringify(archived), historicalBefore, 'historical catalog record cannot be mutated');
     const asset = path.join(root, 'public/products/editorial/men-v2', path.basename(entry.webp));
     const meta = await sharp(asset).metadata();
     assert.equal(meta.width, 1254); assert.equal(meta.height, 1254); assert.equal(meta.format, 'webp');
@@ -79,55 +64,21 @@ async function main() {
       assert.equal(createHash('sha256').update(master).digest('hex'), entry.sha256);
       assert.ok(fs.readFileSync(asset).equals(fs.readFileSync(path.join(process.env.PHOTO_SOURCE_DIR, entry.webp))));
     }
-    console.log(`PASS ${entry.slug}: identity, color isolation, third image, front/back preservation, idempotency, decode`);
+    console.log(`PASS historical v2 ${entry.slug}: retirement, identity/color isolation, front/back, idempotency, replacement and decode.`);
   }
-  const touchline = catalog.getProductBySlug('goool-touchline-cap');
-  assert.equal(productGalleryImages(touchline, 0), touchline.images);
-  const unchanged = ['src/lib/products.ts', 'src/lib/types.ts', 'src/lib/cart.tsx', 'src/v84/Catalog.tsx', 'src/lib/product-image.ts'];
-  for (const file of unchanged) {
-    const baseline = execFileSync('git', ['show', `2fe3e13904db2265fce2440c8206f306d48f259c:${file}`], { cwd: root });
-    const working = fs.readFileSync(path.join(root, file));
-    assert.equal(working.toString().replace(/\r\n/g, '\n'), baseline.toString().replace(/\r\n/g, '\n'), `${file}: unexpected change`);
+  const touchline = catalog.products.find(product => product.slug === 'goool-touchline-cap');
+  assert.ok(touchline && !touchline.isActive, 'Touchline remains a retired historical record');
+  assert.equal(catalog.getProductBySlug(touchline.slug), undefined, 'Touchline public lookup remains unavailable');
+  const touchlineImages = load('src/v84/product-gallery-images.ts').productGalleryImages(touchline, 0);
+  assert.deepEqual(plain(touchlineImages), [
+    { src: '/products/editorial/studio-v5/goool-touchline-cap-black-natural-front-v5.webp', alt: 'GOOOL Touchline Cap in black and natural, front view' },
+    { src: '/products/editorial/studio-v5/goool-touchline-cap-black-natural-back-v5.webp', alt: 'GOOOL Touchline Cap in black and natural, back view' },
+  ], 'Touchline keeps its approved front/back fallback without inheriting model/on-body gallery views');
+  console.log('PASS archived Touchline fallback: exact approved two-view front/back data, no attached model gallery, public route stays retired.');
+  for (const file of ['src/lib/products.ts', 'src/lib/types.ts', 'src/lib/cart.tsx', 'src/v84/Catalog.tsx', 'src/lib/product-image.ts', 'src/v84/product-gallery-images.ts']) {
+    assert.equal(fs.readFileSync(path.join(root, file), 'utf8').replace(/\r\n/g, '\n'), execFileSync('git', ['show', APPROVED_BASELINE + ':' + file], { cwd: root, encoding: 'utf8' }).replace(/\r\n/g, '\n'), 'approved production source preserved: ' + file);
   }
-  console.log('PASS Touchline exclusion; catalog, commerce identity, cart and collection covers remain unchanged');
-  if (process.env.PHOTO_BASE_URL) {
-    const { parse } = await import('parse5');
-    const base = process.env.PHOTO_BASE_URL;
-    const nodes = node => [node, ...(node.childNodes || []).flatMap(nodes)];
-    const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value;
-    const hasClass = (node, name) => (attr(node, 'class') || '').split(/\s+/).includes(name);
-    const getPage = async pathname => {
-      const response = await fetch(new URL(pathname, base), { signal: AbortSignal.timeout(30000) });
-      assert.equal(response.status, 200, pathname);
-      return nodes(parse(await response.text()));
-    };
-    const men = await getPage('/men');
-    for (const entry of manifest) {
-      const product = catalog.getProductById(entry.productId);
-      const index = ordering.defaultVariant(product)?.index || 0;
-      const images = productGalleryImages(product, index);
-      const page = await getPage('/shop/' + entry.slug);
-      const thumbs = page.filter(node => hasClass(node, 'thumbnail'));
-      assert.equal(thumbs.length, images.length);
-      images.forEach((image, i) => {
-        assert.equal(attr(thumbs[i], 'aria-label'), `View image ${i + 1}: ${image.alt}`);
-        const thumbnail = nodes(thumbs[i]).find(node => node.tagName === 'img');
-        assert.equal(new URL(attr(thumbnail, 'src'), base).pathname, image.src);
-      });
-      const main = page.find(node => hasClass(node, 'gallery-main'));
-      assert.equal(attr(nodes(main).find(node => node.tagName === 'img'), 'alt'), images[0].alt);
-      const card = men.find(node => hasClass(node, 'product-card') && attr(node, 'href') === '/shop/' + entry.slug);
-      assert.ok(card, 'Missing Men card: ' + entry.slug);
-      assert.equal(attr(nodes(card).find(node => node.tagName === 'img'), 'alt'), images[0].alt);
-      const response = await fetch(new URL(images[2].src, base), { signal: AbortSignal.timeout(30000) });
-      assert.equal(response.status, 200);
-      assert.match(response.headers.get('content-type'), /image\/webp/);
-      const bytes = Buffer.from(await response.arrayBuffer());
-      assert.ok(bytes.equals(fs.readFileSync(path.join(root, 'public', images[2].src))), 'Published asset bytes differ');
-      await sharp(bytes).raw().toBuffer();
-      console.log(`PASS HTTP ${base} ${entry.slug}: thumbnail order/alt, default main, Men link/front cover, exact asset bytes`);
-    }
-    console.log('HTTP checks do not claim interactive color, cart or responsive browser acceptance.');
-  }
+  console.log('PASS fixed approved catalog, cart, image helpers and covers remain unchanged. No image or production source written.');
+  if (process.env.PHOTO_BASE_URL) await assertActiveGalleryHttp(load, process.env.PHOTO_BASE_URL);
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

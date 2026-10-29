@@ -1,0 +1,1206 @@
+{
+  "baseline": "6b4cc47960752dda3ae0ef2d55a8e23c228ae6f8",
+  "note": "Fixed test-only approved public catalog snapshot. Deliberate catalog changes require fixture review; tests never regenerate this expectation.",
+  "productCount": 10,
+  "variantCount": 143,
+  "supplierVariants": {
+    "apliiq": 128,
+    "tapstitch": 15
+  },
+  "products": [
+    {
+      "id": "80000000-0000-4000-8000-000000000009",
+      "slug": "goal-athletics-monogram-cap",
+      "priceCents": 3200,
+      "sizes": [
+        "OS"
+      ],
+      "colors": [
+        {
+          "name": "Black/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6205981,
+              "sku": "APQ-6205981S34A1"
+            }
+          }
+        },
+        {
+          "name": "Red/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6205977,
+              "sku": "APQ-6205977S34A1"
+            }
+          }
+        },
+        {
+          "name": "Royal/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6205982,
+              "sku": "APQ-6205982S34A1"
+            }
+          }
+        },
+        {
+          "name": "Dark Green/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6205989,
+              "sku": "APQ-6205989S34A1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000010",
+      "slug": "goal-athletics-wordmark-cap",
+      "priceCents": 3200,
+      "sizes": [
+        "OS"
+      ],
+      "colors": [
+        {
+          "name": "Black/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6205992,
+              "sku": "APQ-6205992S34A1"
+            }
+          }
+        },
+        {
+          "name": "Red/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6205994,
+              "sku": "APQ-6205994S34A1"
+            }
+          }
+        },
+        {
+          "name": "Royal/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6205995,
+              "sku": "APQ-6205995S34A1"
+            }
+          }
+        },
+        {
+          "name": "Dark Green/Natural",
+          "bySize": {
+            "OS": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206101,
+              "sku": "APQ-6206101S34A1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000011",
+      "slug": "goal-athletics-ga-minimal-tee",
+      "priceCents": 3800,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206620,
+              "sku": "APQ-6206620S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206620,
+              "sku": "APQ-6206620S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206620,
+              "sku": "APQ-6206620S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206620,
+              "sku": "APQ-6206620S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206620,
+              "sku": "APQ-6206620S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
+              "alt": "Warm-Up Tee in black, product front with the white and red GA monogram centred on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
+              "alt": "Warm-Up Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-front-20261015.webp",
+              "alt": "Model facing forward in the black Warm-Up Tee with the white and red GA monogram centred on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-front-quarter-20261015.webp",
+              "alt": "Same model in a front quarter turn, black Warm-Up Tee with the white and red GA monogram on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-rear-20261015.webp",
+              "alt": "Same model from behind in the black Warm-Up Tee, white GOAL ATHLETICS lockup with a red bar across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-rear-quarter-20261015.webp",
+              "alt": "Same model in a back quarter turn, showing the white and red GOAL ATHLETICS lockup on the black tee"
+            }
+          ]
+        },
+        {
+          "name": "True Royal",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206254,
+              "sku": "APQ-6206254S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206254,
+              "sku": "APQ-6206254S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206254,
+              "sku": "APQ-6206254S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206254,
+              "sku": "APQ-6206254S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206254,
+              "sku": "APQ-6206254S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp",
+              "alt": "Warm-Up Tee in True Royal, product front with the cream GA monogram centred on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp",
+              "alt": "Warm-Up Tee in True Royal, product back with the cream stacked GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-front-20261015.webp",
+              "alt": "Model facing forward in the True Royal Warm-Up Tee with the cream GA monogram centred on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-front-quarter-20261015.webp",
+              "alt": "Same model in a front quarter turn, True Royal Warm-Up Tee with the cream GA monogram on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-rear-20261015.webp",
+              "alt": "Same model from behind in the True Royal Warm-Up Tee, cream GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-rear-quarter-20261015.webp",
+              "alt": "Same model in a back quarter turn, showing the cream GOAL ATHLETICS lockup on the True Royal tee"
+            }
+          ]
+        },
+        {
+          "name": "White · Black-Red",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206255,
+              "sku": "APQ-6206255S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206255,
+              "sku": "APQ-6206255S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206255,
+              "sku": "APQ-6206255S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206255,
+              "sku": "APQ-6206255S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206255,
+              "sku": "APQ-6206255S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp",
+              "alt": "White Warm-Up Tee, product front with black and red GA monogram"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-product-back-20261014.webp",
+              "alt": "White Warm-Up Tee, product back with black GOAL ATHLETICS lettering and red bar"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-model-front-20261014.webp",
+              "alt": "Model standing front-on in the white Warm-Up Tee, plain black shorts and white socks"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-model-three-quarter-20261014.webp",
+              "alt": "Same model in a standing three-quarter view of the white Warm-Up Tee, black shorts and white socks"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-model-rear-20261014.webp",
+              "alt": "Same model standing rear-on in the white Warm-Up Tee, showing the black and red back design"
+            }
+          ]
+        },
+        {
+          "name": "True Red",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206681,
+              "sku": "APQ-6206681S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206681,
+              "sku": "APQ-6206681S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206681,
+              "sku": "APQ-6206681S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206681,
+              "sku": "APQ-6206681S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206681,
+              "sku": "APQ-6206681S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp",
+              "alt": "Warm-Up Tee in True Red, product front with the white GA monogram centred on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp",
+              "alt": "Warm-Up Tee in True Red, product back with the white stacked GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-front-20261015.webp",
+              "alt": "Model facing forward in the True Red Warm-Up Tee with the white GA monogram centred on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-front-quarter-20261015.webp",
+              "alt": "Same model in a front quarter turn, True Red Warm-Up Tee with the white GA monogram on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-rear-20261015.webp",
+              "alt": "Same model from behind in the True Red Warm-Up Tee, white GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-rear-quarter-20261015.webp",
+              "alt": "Same model in a back quarter turn, showing the white GOAL ATHLETICS lockup on the True Red tee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000012",
+      "slug": "goal-athletics-ga-big-tee",
+      "priceCents": 3800,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206229,
+              "sku": "APQ-6206229S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206229,
+              "sku": "APQ-6206229S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206229,
+              "sku": "APQ-6206229S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206229,
+              "sku": "APQ-6206229S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206229,
+              "sku": "APQ-6206229S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the black Match Day Tee with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, black Match Day Tee with the white and red GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the black Match Day Tee, clean back with no print"
+            }
+          ]
+        },
+        {
+          "name": "True Royal",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206234,
+              "sku": "APQ-6206234S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206234,
+              "sku": "APQ-6206234S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206234,
+              "sku": "APQ-6206234S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206234,
+              "sku": "APQ-6206234S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206234,
+              "sku": "APQ-6206234S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in True Royal, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the true royal Match Day Tee with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, true royal Match Day Tee with the cream GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the true royal Match Day Tee, clean back with no print"
+            }
+          ]
+        },
+        {
+          "name": "White · Black-Red",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206236,
+              "sku": "APQ-6206236S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206236,
+              "sku": "APQ-6206236S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206236,
+              "sku": "APQ-6206236S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206236,
+              "sku": "APQ-6206236S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206236,
+              "sku": "APQ-6206236S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in White · Black-Red, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the white Match Day Tee with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, white Match Day Tee with the black and red GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the white Match Day Tee, clean back with no print"
+            }
+          ]
+        },
+        {
+          "name": "True Red",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206251,
+              "sku": "APQ-6206251S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206251,
+              "sku": "APQ-6206251S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206251,
+              "sku": "APQ-6206251S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206251,
+              "sku": "APQ-6206251S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206251,
+              "sku": "APQ-6206251S2A1"
+            }
+          },
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in True Red, product front with the white GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the true red Match Day Tee with the white GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, true red Match Day Tee with the white GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the true red Match Day Tee, clean back with no print"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000013",
+      "slug": "goal-athletics-ga-minimal-shorts",
+      "priceCents": 4500,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208695,
+              "sku": "APQ-6208695S71A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208695,
+              "sku": "APQ-6208695S72A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208695,
+              "sku": "APQ-6208695S73A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208695,
+              "sku": "APQ-6208695S74A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208695,
+              "sku": "APQ-6208695S75A1"
+            }
+          }
+        },
+        {
+          "name": "Ink Blue",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208705,
+              "sku": "APQ-6208705S71A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208705,
+              "sku": "APQ-6208705S72A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208705,
+              "sku": "APQ-6208705S73A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208705,
+              "sku": "APQ-6208705S74A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208705,
+              "sku": "APQ-6208705S75A1"
+            }
+          }
+        },
+        {
+          "name": "Shadow",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208713,
+              "sku": "APQ-6208713S71A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208713,
+              "sku": "APQ-6208713S72A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208713,
+              "sku": "APQ-6208713S73A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208713,
+              "sku": "APQ-6208713S74A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6208713,
+              "sku": "APQ-6208713S75A1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000014",
+      "slug": "goal-athletics-heritage-hoodie",
+      "priceCents": 7800,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210750,
+              "sku": "APQ-6210750S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210750,
+              "sku": "APQ-6210750S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210750,
+              "sku": "APQ-6210750S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210750,
+              "sku": "APQ-6210750S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210750,
+              "sku": "APQ-6210750S2A1"
+            }
+          }
+        },
+        {
+          "name": "Grey Heather",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210742,
+              "sku": "APQ-6210742S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210742,
+              "sku": "APQ-6210742S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210742,
+              "sku": "APQ-6210742S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210742,
+              "sku": "APQ-6210742S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210742,
+              "sku": "APQ-6210742S2A1"
+            }
+          }
+        },
+        {
+          "name": "Bone",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210734,
+              "sku": "APQ-6210734S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210734,
+              "sku": "APQ-6210734S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210734,
+              "sku": "APQ-6210734S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210734,
+              "sku": "APQ-6210734S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210734,
+              "sku": "APQ-6210734S2A1"
+            }
+          }
+        },
+        {
+          "name": "Navy",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210732,
+              "sku": "APQ-6210732S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210732,
+              "sku": "APQ-6210732S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210732,
+              "sku": "APQ-6210732S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210732,
+              "sku": "APQ-6210732S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6210732,
+              "sku": "APQ-6210732S2A1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000015",
+      "slug": "goal-athletics-lockup-hoodie",
+      "priceCents": 7800,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206733,
+              "sku": "APQ-6206733S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206733,
+              "sku": "APQ-6206733S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206733,
+              "sku": "APQ-6206733S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206733,
+              "sku": "APQ-6206733S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206733,
+              "sku": "APQ-6206733S2A1"
+            }
+          }
+        },
+        {
+          "name": "Grey Heather",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206746,
+              "sku": "APQ-6206746S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206746,
+              "sku": "APQ-6206746S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206746,
+              "sku": "APQ-6206746S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206746,
+              "sku": "APQ-6206746S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206746,
+              "sku": "APQ-6206746S2A1"
+            }
+          }
+        },
+        {
+          "name": "Bone",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206741,
+              "sku": "APQ-6206741S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206741,
+              "sku": "APQ-6206741S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206741,
+              "sku": "APQ-6206741S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206741,
+              "sku": "APQ-6206741S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206741,
+              "sku": "APQ-6206741S2A1"
+            }
+          }
+        },
+        {
+          "name": "Navy",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206737,
+              "sku": "APQ-6206737S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206737,
+              "sku": "APQ-6206737S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206737,
+              "sku": "APQ-6206737S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206737,
+              "sku": "APQ-6206737S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6206737,
+              "sku": "APQ-6206737S2A1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000016",
+      "slug": "goal-athletics-core-everyday-raincoat",
+      "priceCents": 9800,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240401,
+              "sku": "APQ-6240401S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240401,
+              "sku": "APQ-6240401S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240401,
+              "sku": "APQ-6240401S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240401,
+              "sku": "APQ-6240401S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240401,
+              "sku": "APQ-6240401S2A1"
+            }
+          }
+        },
+        {
+          "name": "True Navy",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240414,
+              "sku": "APQ-6240414S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240414,
+              "sku": "APQ-6240414S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240414,
+              "sku": "APQ-6240414S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240414,
+              "sku": "APQ-6240414S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240414,
+              "sku": "APQ-6240414S2A1"
+            }
+          }
+        },
+        {
+          "name": "Dark Grey Heather",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240424,
+              "sku": "APQ-6240424S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240424,
+              "sku": "APQ-6240424S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240424,
+              "sku": "APQ-6240424S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240424,
+              "sku": "APQ-6240424S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6240424,
+              "sku": "APQ-6240424S2A1"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000023",
+      "slug": "goal-athletics-core-quarter-zip",
+      "priceCents": 3600,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "bySize": {
+            "S": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564299910617194496",
+              "sku": "TAP-1564299910617194496-S"
+            },
+            "M": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564299910617194496",
+              "sku": "TAP-1564299910617194496-M"
+            },
+            "L": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564299910617194496",
+              "sku": "TAP-1564299910617194496-L"
+            },
+            "XL": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564299910617194496",
+              "sku": "TAP-1564299910617194496-XL"
+            },
+            "XXL": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564299910617194496",
+              "sku": "TAP-1564299910617194496-XXL"
+            }
+          }
+        },
+        {
+          "name": "White",
+          "bySize": {
+            "S": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564523403115982848",
+              "sku": "TAP-1564523403115982848-S"
+            },
+            "M": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564523403115982848",
+              "sku": "TAP-1564523403115982848-M"
+            },
+            "L": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564523403115982848",
+              "sku": "TAP-1564523403115982848-L"
+            },
+            "XL": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564523403115982848",
+              "sku": "TAP-1564523403115982848-XL"
+            },
+            "XXL": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564523403115982848",
+              "sku": "TAP-1564523403115982848-XXL"
+            }
+          }
+        },
+        {
+          "name": "Dark Gray",
+          "bySize": {
+            "S": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564524205054324736",
+              "sku": "TAP-1564524205054324736-S"
+            },
+            "M": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564524205054324736",
+              "sku": "TAP-1564524205054324736-M"
+            },
+            "L": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564524205054324736",
+              "sku": "TAP-1564524205054324736-L"
+            },
+            "XL": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564524205054324736",
+              "sku": "TAP-1564524205054324736-XL"
+            },
+            "XXL": {
+              "supplier": "tapstitch",
+              "tapstitchDesignId": "1564524205054324736",
+              "sku": "TAP-1564524205054324736-XXL"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000024",
+      "slug": "goal-athletics-core-jogger",
+      "priceCents": 4800,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Deep Black",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242924,
+              "sku": "APQ-6242924S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242924,
+              "sku": "APQ-6242924S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242924,
+              "sku": "APQ-6242924S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242924,
+              "sku": "APQ-6242924S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242924,
+              "sku": "APQ-6242924S2A1"
+            }
+          }
+        },
+        {
+          "name": "Graphite",
+          "bySize": {
+            "S": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242929,
+              "sku": "APQ-6242929S6A1"
+            },
+            "M": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242929,
+              "sku": "APQ-6242929S7A1"
+            },
+            "L": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242929,
+              "sku": "APQ-6242929S8A1"
+            },
+            "XL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242929,
+              "sku": "APQ-6242929S1A1"
+            },
+            "XXL": {
+              "supplier": "apliiq",
+              "apliiqProductId": 6242929,
+              "sku": "APQ-6242929S2A1"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

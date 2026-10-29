@@ -3,6 +3,14 @@ const { parse } = require('parse5');
 const base = process.env.V84_TEST_URL || 'http://127.0.0.1:3184';
 assert.ok(['localhost', '127.0.0.1'].includes(new URL(base).hostname), 'Use an isolated local preview only.');
 const routes = ['/', '/men', '/women', '/shop', '/about', '/kit-wear', '/references', '/whats-your-goal', '/contact', '/faq', '/shipping-returns', '/size-guide', '/privacy', '/terms', '/refunds', '/cart', '/success', '/track-order', '/admin/sign-in', '/share-your-goals/preview/goal', '/share-your-goals/preview/highlight', '/share-your-goals/preview/save'];
+// Fixed reviewed public catalog at main6b4cc47; adding/removing a route needs review.
+const expectedProductRoutes = [
+  '/shop/goal-athletics-monogram-cap', '/shop/goal-athletics-wordmark-cap',
+  '/shop/goal-athletics-ga-minimal-tee', '/shop/goal-athletics-ga-big-tee',
+  '/shop/goal-athletics-ga-minimal-shorts', '/shop/goal-athletics-core-jogger',
+  '/shop/goal-athletics-core-quarter-zip', '/shop/goal-athletics-heritage-hoodie',
+  '/shop/goal-athletics-lockup-hoodie', '/shop/goal-athletics-core-everyday-raincoat',
+];
 function nodes(root) {
   const result = [];
   function visit(node) { result.push(node); for (const child of node.childNodes || []) visit(child); }
@@ -26,6 +34,12 @@ async function main() {
     assert.ok(tree.some(n => n.tagName === 'h1'), route + ' needs a heading');
     const canonical = tree.find(n => n.tagName === 'link' && n.attrs.some(a => a.name === 'rel' && a.value === 'canonical'));
     assert.ok(canonical, route + ' needs a canonical');
+    if (route === '/whats-your-goal') {
+      const href = canonical.attrs.find(a => a.name === 'href').value;
+      assert.equal(new URL(href, base).pathname, '/whats-your-goal', 'State A campaign keeps its canonical route');
+      const robots = tree.find(n => n.tagName === 'meta' && n.attrs.some(a => a.name === 'name' && a.value === 'robots'));
+      if (process.env.V84_DESIGN_PREVIEW !== 'true') assert.ok(!robots || !robots.attrs.some(a => a.name === 'content' && /noindex/.test(a.value)), 'Public campaign is indexable outside design preview');
+    }
     if (route === '/') {
       const footer = tree.find(node => node.tagName === 'footer');
       assert.ok(footer, 'Homepage needs the shared footer');
@@ -66,8 +80,7 @@ async function main() {
       assert.equal((await fetch(base+endpoint)).status, 503, endpoint+' must be non-operational in design preview'); checked++;
     }
   }
-  // Seven catalog routes since 2026-10-22: five clothing products and the two caps.
-  assert.equal(productRoutes.length, 7, 'All seven existing product routes must remain available.');
+  assert.deepEqual([...productRoutes].sort(), [...expectedProductRoutes].sort(), 'Exactly the ten reviewed public product routes remain; gated TEMPO/retired products stay absent.');
   for (const route of productRoutes) {
     const response = await fetch(base + route); assert.equal(response.status, 200, route);
     const tree = nodes(parse(await response.text()));

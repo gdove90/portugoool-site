@@ -21,7 +21,7 @@ const HATS = {
     assert.deepEqual(product.colorVariants.map(v => v.name), Object.keys(hat.variants));
     for (const variant of product.colorVariants) {
       const id = hat.variants[variant.name];
-      assert.deepEqual(f.resolveApliiqSku(hat.id, variant.name, 'OS'), { apliiqProductId: id, sku: `APQ-${id}S34A1` }, `${slug} ${variant.name}`);
+      assert.deepEqual(f.resolveApliiqSku(hat.id, variant.name, 'OS'), { supplier: 'apliiq', apliiqProductId: id, sku: `APQ-${id}S34A1` }, `${slug} ${variant.name}`);
       assert(variant.images.length >= 1, `${slug} ${variant.name} has images`);
       for (const image of variant.images) assert(fs.existsSync('public' + image.src), image.src);
       variants++;
@@ -33,12 +33,13 @@ const HATS = {
   const source = fs.readFileSync('src/app/api/checkout/route.ts', 'utf8');
   const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true } }).outputText;
   let providerCalls = 0;
-  const context = { exports: {}, process: { env: { STRIPE_SECRET_KEY: 'sk_live_fixture_not_a_key' } }, require: n => n === 'next/server' ? { NextResponse: { json: (body, init) => ({ body, status: init?.status ?? 200 }) } } : n === 'stripe' ? { default: class { constructor() { providerCalls++; throw Error('Provider must never be reached'); } } } : n === '@/lib/migration-preview' ? { MIGRATION_PREVIEW: false } : n === '@/lib/store-status' ? { storeClosed: () => false } : n === '@/lib/products' ? p : n === '@/lib/types' ? require('../src/lib/types.ts') : n === '@/lib/fulfillment' ? f : {} };
+  const unavailableCatalog = { ...p, getProductById: id => { const product = p.getProductById(id); return product ? { ...product, availableForSale: false } : product; } };
+  const context = { exports: {}, process: { env: { STRIPE_SECRET_KEY: 'sk_live_fixture_not_a_key' } }, require: n => n === 'next/server' ? { NextResponse: { json: (body, init) => ({ body, status: init?.status ?? 200 }) } } : n === 'stripe' ? { default: class { constructor() { providerCalls++; throw Error('Provider must never be reached'); } } } : n === '@/lib/migration-preview' ? { MIGRATION_PREVIEW: false } : n === '@/lib/store-status' ? { storeClosed: () => false } : n === '@/lib/products' ? unavailableCatalog : n === '@/lib/types' ? require('../src/lib/types.ts') : n === '@/lib/fulfillment' ? f : {} };
   vm.runInNewContext(compiled, context);
-  for (const hat of Object.values(HATS).filter(h => !h.forSale)) for (const color of Object.keys(hat.variants)) {
+  for (const hat of Object.values(HATS)) for (const color of Object.keys(hat.variants)) {
     const r = await context.exports.POST({ json: async () => ({ items: [{ productId: hat.id, size: 'OS', color, quantity: 1, customName: null, customNumber: null }] }), headers: { get: () => null } });
     assert.equal(r.status, 400, `${hat.id} ${color} refused`);
   }
   assert.equal(providerCalls, 0);
-  console.log(`PASS 2 caps, ${variants} colourways: exact Apliiq SKUs, images on disk, listed as hats, not purchasable (checkout refuses all ${variants} before Stripe). No network/database/provider calls.`);
+  console.log(`PASS 2 caps, ${variants} colourways: exact Apliiq SKUs, images on disk, listed as hats, approved sale states preserved; simulated Coming Soon variants refuse checkout before Stripe. No network/database/provider calls.`);
 })().catch(e => { console.error(e); process.exitCode = 1; });

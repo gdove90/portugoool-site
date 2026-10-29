@@ -226,49 +226,20 @@ async function main() {
     });
   } finally { await db.close(); }
 
-  await check('protected business files match baseline with explicit presentation-only exceptions', () => {
-    const productionBaseline = '096d09044a23f5526fe2071fc7a40e8643357db4';
-    const files = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, 'src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-    // SEO output and the tracking page's metadata are covered by test-seo.cjs.
-    // Product data, tracking behavior/API, payment and all other business files remain locked.
-    const seoOnly = new Set(['netlify/functions/deliver-emails.mts', 'netlify/functions/intake-maintenance.mts', 'src/lib/seo.ts', 'src/lib/page-metadata.ts', 'src/app/track-order/layout.tsx', 'src/app/cart/layout.tsx', 'src/app/success/layout.tsx', 'src/app/api/checkout/route.ts', 'src/app/api/preview/route.ts']);
-    for (const file of files.filter(file => !seoOnly.has(file))) {
-      let baseline = execFileSync('git', ['show', `${productionBaseline}:${file}`]).toString().replace(/\r\n/g, '\n');
-      const current = fs.readFileSync(file);
-      // Owner-approved public wording only; every tracking request, reference,
-      // validation, state transition and UI control still matches the baseline.
-      if (file === 'src/app/track-order/page.tsx') baseline = baseline
-        .replace('hello@goool.shop', 'support@goalathletics.shop')
-        .replace('with your GOOOL order reference', 'with your order reference');
-      // Explicit presentation-only changes; the rest of each protected file stays locked.
-      if (file === 'src/app/api/track-order/route.ts') baseline = baseline.replaceAll('Email hello@goool.shop and', 'Email support@goalathletics.shop and');
-      if (file === 'src/app/cart/page.tsx') baseline = baseline.replace('placeholder="GOOOL20-XXXX"', 'placeholder="Enter your discount code"');
-      if (file === 'src/lib/faq.ts') baseline = baseline.replace('No. GOOOL Athletics LLC is an independent brand.', 'No. GOAL Athletics is an independent brand.');
-      if (file === 'src/lib/intake/agreements.json') {
-        const before = JSON.parse(baseline), after = JSON.parse(current.toString());
-        for (const key of Object.keys(before)) {
-          before[key] = before[key]
-            .replace('<title>Share Your GOOOLS! Participation Agreement | GOOOL Athletics LLC</title>', '<title>Match Highlights Participation Agreement | GOAL Athletics</title>')
-            .replace('<title>What’s Your GOOOL? Participation Agreement | GOOOL Athletics LLC</title>', '<title>Your Story Participation Agreement | GOAL Athletics</title>')
-            .replace('<h1>Share Your GOOOLS! Participation Agreement</h1>', '<h1>Match Highlights Participation Agreement</h1>')
-            .replace('<h1>What’s Your GOOOL? Participation Agreement</h1>', '<h1>Your Story Participation Agreement</h1>')
-            .replaceAll('>Back to Share Your GOOOLS!<', '>Back to Match Highlights<')
-            .replaceAll('>Back to What’s Your GOOOL?<', '>Back to Your Story<')
-            .replaceAll('hello@goool.shop', 'support@goalathletics.shop');
-          if (key === 'intake-privacy.html') before[key] = before[key]
-            .replace('Submission privacy | GOOOL Athletics LLC', 'Submission privacy | GOAL Athletics')
-            .replace('What’s Your GOOOL? personal stories and Share Your GOOOLS! video submissions', 'Your Story personal stories and Match Highlights video submissions').trim();
-        }
-        // Exact document comparison preserves all clauses, permissions and version identifiers.
-        assert.deepEqual(after, before, file);
-        continue;
-      }
-      assert.equal(current.toString().replace(/\r\n/g, '\n'), execFileSync('git', ['show', `${productionBaseline}:${file}`]).toString().replace(/\r\n/g, '\n'), file);
+  await check('all current approved business files match fixed main baseline', () => {
+    const productionBaseline = '6b4cc47960752dda3ae0ef2d55a8e23c228ae6f8';
+    const protectedPaths = ['src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'];
+    const expected = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, ...protectedPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean).sort();
+    const current = execFileSync('git', ['ls-files', '--', ...protectedPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean).sort();
+    assert.deepEqual(current, expected, 'Protected source inventory stays at reviewed State A main; no legacy exemptions');
+    for (const file of expected) {
+      const approved = execFileSync('git', ['show', productionBaseline + ':' + file], { maxBuffer: 32 * 1024 * 1024 }).toString().replace(/\r\n/g, '\n');
+      assert.equal(fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n'), approved, file);
     }
-    console.log(`  Compared ${files.filter(file => !seoOnly.has(file)).length} protected baseline files; Brand, closure and worker changes have separate checks.`);
+    console.log('  Compared ' + expected.length + ' exact protected files against reviewed State A main.');
   });
   await check('all approved visual assets are byte-identical', () => {
-    const baseline = '096d09044a23f5526fe2071fc7a40e8643357db4';
+    const baseline = '6b4cc47960752dda3ae0ef2d55a8e23c228ae6f8';
     const source = 'public/v84/assets';
     const files = fs.readdirSync(source, { recursive: true }).filter(file => fs.statSync(path.join(source, file)).isFile());
     const sha = file => createHash('sha256').update(fs.readFileSync(file)).digest('hex');

@@ -10,6 +10,7 @@ const TEES = {
   'goal-athletics-ga-big-tee': { id: '80000000-0000-4000-8000-000000000012', ids: [6206229, 6206234, 6206236, 6206251], removed: { Silver: 6206241, 'White · Royal': 6206239 } },
 };
 const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
+const APPROVED = require('./fixtures/approved-supplier-catalog-20261028.json');
 (async () => {
   let variants = 0;
   for (const [slug, tee] of Object.entries(TEES)) {
@@ -27,11 +28,12 @@ const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
     product.colorVariants.forEach((variant, i) => {
       const id = tee.ids[i];
       for (const [size, code] of Object.entries(SIZES))
-        assert.deepEqual(f.resolveApliiqSku(tee.id, variant.name, size), { apliiqProductId: id, sku: `APQ-${id}S${code}A1` }, `${slug} ${variant.name} ${size}`);
-      assert.equal(variant.images.length, 2);
+        assert.deepEqual(f.resolveApliiqSku(tee.id, variant.name, size), { supplier: 'apliiq', apliiqProductId: id, sku: `APQ-${id}S${code}A1` }, `${slug} ${variant.name} ${size}`);
+      const expectedImages = APPROVED.products.find(p => p.id === tee.id).colors.find(c => c.name === variant.name).images;
+      assert.deepEqual(variant.images, expectedImages, 'approved image sequence and alt text');
       for (const image of variant.images) {
         assert(fs.existsSync('public' + image.src), image.src);
-        assert.equal(image.caption, 'Concept render. Not a photograph of a manufactured sample.');
+        assert.equal(image.caption, undefined, 'retired concept-render captions stay absent');
       }
       variants++;
     });
@@ -77,7 +79,7 @@ const SIZES = { S: 6, M: 7, L: 8, XL: 1, XXL: 2 };
     const r = await open.exports.POST({ json: async () => ({ items: [{ productId: tee.id, size: 'M', color, quantity: 1, customName: null, customNumber: null }] }), headers: { get: () => null } });
     assert.equal(r.status, 400, `removed ${color} rejected even if store opens`);
     assert.equal(captured, undefined, 'removed color never creates checkout');
-    for (const [size, code] of Object.entries(SIZES)) assert.deepEqual(f.resolveApliiqSku(tee.id, color, size), { apliiqProductId: supplierId, sku: `APQ-${supplierId}S${code}A1` }, `historical ${color} mapping preserved`);
+    for (const [size, code] of Object.entries(SIZES)) assert.deepEqual(f.resolveApliiqSku(tee.id, color, size), { supplier: 'apliiq', apliiqProductId: supplierId, sku: `APQ-${supplierId}S${code}A1` }, `historical ${color} mapping preserved`);
   }
   console.log(`PASS 2 ST720 tees at $38, ${variants} selectable colorways and 40 size mappings; removed colors denied, historical mappings preserved, S–2XL unchanged. No network/database/provider calls.`);
 })().catch(e => { console.error(e); process.exitCode = 1; });
