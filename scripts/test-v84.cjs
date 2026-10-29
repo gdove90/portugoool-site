@@ -11,9 +11,9 @@ const vm = require('node:vm');
 let passed = 0;
 async function check(name, run) { await run(); passed++; console.log(`PASS ${name}`); }
 const rejects = fn => assert.throws(fn, e => e.status === 400);
-const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-28-live-3' } });
+const story = () => ({ kind: 'story', payload: { name: 'Local test', email: 'fixture@example.test', goal: 'Train every week', story: 'A disposable local validation fixture.', adult: true, rights: true, permission: true, termsVersion: 'WYG-2026-10-28-live-4' } });
 const kit = () => ({ kind: 'kit', payload: { name: 'Local test', email: 'fixture@example.test', design: 'original', color: 'Black', quantity: 10, number: 10, numberStyle: 'goool', rights: true } });
-const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-04-live-1' } });
+const video = () => ({ kind: 'video', payload: { name: 'Local test', email: 'fixture@example.test', category: 'Goals', role: 'Player', player: 'Fixture player', camera: 'Fixture camera', adult: true, rights: true, permission: true, termsVersion: 'SYG-2026-10-28-live-2' } });
 
 async function main() {
   const catalogExports = {};
@@ -227,7 +227,7 @@ async function main() {
   } finally { await db.close(); }
 
   await check('all current approved business files match fixed main baseline', () => {
-    const productionBaseline = '6b4cc47960752dda3ae0ef2d55a8e23c228ae6f8';
+    const productionBaseline = 'd21ccdf7f21e9c5947f120a84a5d170002153be2';
     const protectedPaths = ['src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'];
     const expected = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, ...protectedPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean).sort();
     const current = execFileSync('git', ['ls-files', '--', ...protectedPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean).sort();
