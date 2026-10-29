@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { trackingConfig } from "./config";
-import { createTracker, retrieveTracker, findTracker, TrackingProviderError } from "./easypost";
+import { createTracker, retrieveTracker, findTracker, validateTrackerWindow, TrackingProviderError } from "./easypost";
 import { checked, finishPackage, type ClaimedPackage, type TrackingDatabase } from "./storage";
 
 /** Bounded independent ingestion; never imports supplier, payment or email mutation APIs. */
@@ -12,6 +12,8 @@ export async function runTrackingWorker(db: TrackingDatabase, config: NonNullabl
   const counts = { discovered: Number(discovered), processed: 0, retry: 0, review: 0 };
   for (const pkg of packages || []) {
     try {
+      if (!pkg.registration_not_before || !/T.*(?:Z|[+-]\d{2}:?\d{2})$/.test(pkg.registration_not_before) ||
+        !Number.isFinite(Date.parse(pkg.registration_not_before))) throw new TrackingProviderError("configuration");
       let snapshot;
       if (pkg.tracker_id) snapshot = await retrieveTracker({ key: config.key, trackerId: pkg.tracker_id, mode: config.mode, timeoutMs: 6000 });
       else if (pkg.registration_started_at) {
@@ -26,6 +28,7 @@ export async function runTrackingWorker(db: TrackingDatabase, config: NonNullabl
       }
       if (!snapshot || snapshot.mode !== pkg.environment || snapshot.trackingNumber.replace(/\s/g, "").toUpperCase() !== pkg.tracking_number || snapshot.carrier.toUpperCase() !== pkg.carrier.toUpperCase())
         throw new Error("Tracker identity mismatch.");
+      validateTrackerWindow(snapshot, pkg.registration_not_before);
       await finishPackage(db, pkg, snapshot); counts.processed++;
     } catch (error) {
       const terminal = error instanceof TrackingProviderError && !error.retryable && !error.ambiguousCreate;

@@ -108,6 +108,17 @@ const client = { key: 'unit-only-api-key', mode: 'test' };
     const pretransit = provider.normalizeTracker({ ...base, tracking_details: [{ status: 'pre_transit', message: 'Accepted data' }] });
     assert.match(pretransit.events[0].message, /awaiting package/);
   });
+  await check('Order window rejects recycled tracker identities and earlier offset-bearing scan history', () => {
+    const normalized = provider.normalizeTracker(base);
+    provider.validateTrackerWindow(normalized, '2026-10-29T00:00:00Z', now);
+    fails(() => provider.validateTrackerWindow(normalized, '2026-10-29T15:30:00Z', now), 'ambiguous');
+    fails(() => provider.validateTrackerWindow({ ...normalized, createdAt: '2026-10-29T16:00:31Z' }, '2026-10-29T00:00:00Z', now), 'ambiguous');
+    fails(() => provider.validateTrackerWindow(normalized, undefined, now), 'payload');
+    fails(() => provider.validateTrackerWindow({ ...normalized, events: [{ id: 'earlier', status: 'delivered',
+      occurredAt: '2026-10-28T10:00:00-04:00', detail: null, message: null, location: null }] }, '2026-10-29T00:00:00Z', now), 'ambiguous');
+    provider.validateTrackerWindow({ ...normalized, events: [{ id: 'naive', status: 'in_transit',
+      occurredAt: '2026-10-29T01:00:00', detail: null, message: null, location: null }] }, '2026-10-29T00:00:00Z', now);
+  });
   await check('Creation calls only the official standalone tracker endpoint with a timeout and no redirects', async () => {
     let calls = 0;
     const result = await provider.createTracker({ ...client, trackingNumber: base.tracking_code, carrier: 'USPS',
@@ -167,7 +178,7 @@ const client = { key: 'unit-only-api-key', mode: 'test' };
       createdAfter: '2026-10-28T00:00:00Z', createdBefore: '2026-10-30T00:00:00Z' };
     const result = await provider.findTracker({ ...opts, fetchImpl: async (raw, options) => {
       const url = new URL(raw); assert.equal(options.method, 'GET');
-      assert.equal(url.searchParams.get('tracking_codes[]'), base.tracking_code);
+      assert.equal(url.searchParams.get('tracking_codes'), base.tracking_code);
       assert.equal(url.searchParams.get('start_datetime'), opts.createdAfter);
       assert.equal(url.searchParams.get('end_datetime'), opts.createdBefore);
       return http({ trackers: [base], has_more: false });

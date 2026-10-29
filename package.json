@@ -11,6 +11,7 @@
     "test:customer-service": "node scripts/test-customer-service-gate.cjs",
     "test:payment-preservation": "node scripts/test-payment-preservation.cjs",
     "test:carrier-tracking": "node scripts/test-carrier-provider.cjs && node scripts/test-carrier-presentation.cjs && node scripts/test-carrier-database.cjs && node scripts/test-carrier-tracking.cjs",
+    "test:carrier-tracking:http": "node scripts/smoke-carrier-tracking-http.cjs",
     "test:customer-service:http": "node scripts/smoke-customer-service.cjs",
     "test:v84": "node scripts/test-v84.cjs",
     "test:v84:admin": "node scripts/test-v84-admin.cjs",

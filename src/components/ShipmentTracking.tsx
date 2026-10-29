@@ -75,7 +75,7 @@ export default function ShipmentTracking({ packages, loading, available }: {
                 <summary className="min-h-[44px] cursor-pointer py-3 text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink">
                   Carrier event history ({events.length})
                 </summary>
-                {!comparableTimes && <p className="mb-4 text-base text-ink/70">Events follow the carrier&apos;s reported order where timestamps or time zones cannot be compared.</p>}
+                {!comparableTimes && <p className="mb-4 text-base text-ink/70">Event order may differ where timestamps or time zones cannot be compared.</p>}
                 <ol className="pl-4">
                   {events.map(event => {
                     const location = locationLabel(event.location);

@@ -13,6 +13,8 @@ export async function boundedBody(request: Request, max: number) {
   if (!request.body) throw new TrackingRequestError(400, "Invalid request.");
   const reader = request.body.getReader();
   const parts: Uint8Array[] = []; let length = 0;
+  let timedOut = false;
+  const timer = setTimeout(() => { timedOut = true; void reader.cancel().catch(() => {}); }, 1500);
   try {
     while (true) {
       const part = await reader.read(); if (part.done) break;
@@ -20,7 +22,8 @@ export async function boundedBody(request: Request, max: number) {
       if (length > max) { await reader.cancel(); throw new TrackingRequestError(413, "Request too large."); }
       parts.push(part.value);
     }
-  } finally { reader.releaseLock(); }
+    if (timedOut) throw new TrackingRequestError(408, "Request timed out.");
+  } finally { clearTimeout(timer); reader.releaseLock(); }
   return Buffer.concat(parts).toString("utf8");
 }
 export function secretMatches(received: string | null, expected: string) {

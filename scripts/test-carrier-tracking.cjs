@@ -72,7 +72,12 @@ let tableRows = {};
 let rpc = async name => ({ data: name === "carrier_tracking_rate" ? 1 : null, error: null });
 function mockDatabase() {
   return {
-    rpc: async (name, args) => { calls.push({ rpc: name, args }); return rpc(name, args); },
+    rpc: (name, args) => {
+      calls.push({ rpc: name, args });
+      const operation = Promise.resolve().then(() => rpc(name, args));
+      operation.abortSignal = signal => { assert.ok(signal instanceof AbortSignal); return operation; };
+      return operation;
+    },
     from(table) {
       const filters = [];
       calls.push({ table, filters });
@@ -124,6 +129,18 @@ function signedEvent({ mode = "production", id = "evt_fixtureA", age = 0, invali
       assert.equal((await detailsRoute.POST(request(body))).status, 400);
     }
     assert.equal((await detailsRoute.POST(request("X".repeat(2049)))).status, 413);
+  });
+  await check("slow request bodies stop within the body deadline before authorization queries", async () => {
+    let cancelled = false;
+    const slow = new NextRequest("https://goalathletics.shop/api/track-order-details", {
+      method: "POST", duplex: "half", headers: { "x-nf-client-connection-ip": `198.51.100.${++requests}` },
+      body: new ReadableStream({ start(controller) { controller.enqueue(new TextEncoder().encode('{"reference":')); },
+        cancel() { cancelled = true; } }),
+    });
+    const before = orderEmailCalls.length; const started = Date.now();
+    const response = await detailsRoute.POST(slow);
+    assert.equal(response.status, 408); assert.equal(cancelled, true);
+    assert.equal(orderEmailCalls.length, before); assert.ok(Date.now() - started < 3000);
   });
   await check("cache reads are order-scoped, sanitized, private and never call the provider", async () => {
     calls = []; const beforeExternal = externalCalls;
@@ -183,6 +200,25 @@ function signedEvent({ mode = "production", id = "evt_fixtureA", age = 0, invali
     rpc = async () => ({ data: null, error: { code: "fixture_write_failure" } });
     assert.equal((await webhookRoute.POST(signedEvent())).status, 503);
   });
+  await check("webhook persistence applies its four-second deadline and returns 503 on an ambiguous timeout", async () => {
+    const realTimeout = AbortSignal.timeout; let configured = null; let aborted = false;
+    AbortSignal.timeout = milliseconds => {
+      configured = milliseconds; const controller = new AbortController();
+      // A referenced test timer prevents Node exiting while only an unref'ed AbortSignal timer remains.
+      setTimeout(() => controller.abort(), 20); return controller.signal;
+    };
+    db = { rpc(name) {
+      assert.equal(name, "carrier_tracking_receive");
+      return { abortSignal(signal) { return new Promise(resolve => {
+        signal.addEventListener("abort", () => { aborted = true; resolve({ data: null, error: { code: "fixture_timeout" } }); }, { once: true });
+      }); } };
+    } };
+    try {
+      const response = await webhookRoute.POST(signedEvent());
+      assert.equal(configured, 4000); assert.equal(aborted, true); assert.equal(response.status, 503);
+      assert.deepEqual(await response.json(), { error: "Please retry." });
+    } finally { AbortSignal.timeout = realTimeout; db = mockDatabase(); }
+  });
   await check("operations use the separate tracking secret and cannot run in a preview", async () => {
     assert.equal((await opsRoute.POST(request(undefined, "/api/carrier-tracking-ops", { "x-ops-key": enabledConfig.CARRIER_TRACKING_OPS_KEY }))).status, 401);
     process.env.CONTEXT = "deploy-preview";
@@ -210,7 +246,8 @@ function signedEvent({ mode = "production", id = "evt_fixtureA", age = 0, invali
     assert.equal((await middleware(request({}, "/api/checkout"))).status, 401);
   });
   const claimed = { id: "fixture-package", order_id: orders[0].id, carrier: "USPS", tracking_number: "TESTTRACK0001", environment: "production", tracker_id: null,
-    lease_token: "11111111-0000-4000-8000-000000000099", registration_started_at: null, attempts: 1 };
+    lease_token: "11111111-0000-4000-8000-000000000099", registration_started_at: null,
+    registration_not_before: new Date(Date.now() - 86400000).toISOString(), attempts: 1 };
   const workerConfig = { key: "fixture-key-only", webhookSecret: "fixture-secret-only", opsSecret: enabledConfig.CARRIER_TRACKING_OPS_KEY, mode: "production" };
   let claimedRows = [];
   const workerDb = { rpc: async (name, args) => {
@@ -234,6 +271,23 @@ function signedEvent({ mode = "production", id = "evt_fixtureA", age = 0, invali
     const counts = await runTrackingWorker(workerDb, workerConfig);
     assert.equal(counts.retry, 1); assert.equal(providerRequests.length, 1);
     assert.equal(providerRequests[0].method, "GET"); assert.match(providerRequests[0].url, /\/trackers\?/);
+    assert.ok(!calls.some(call => call.rpc === "carrier_tracking_start" || call.rpc === "carrier_tracking_finish"));
+  });
+  await check("recycled code history and unknown order windows go to review without exposing old scans", async () => {
+    calls = []; claimedRows = [claimed];
+    global.fetch = async () => Response.json(tracker({ created_at: new Date(Date.parse(claimed.registration_not_before) - 86400000).toISOString() }));
+    let counts = await runTrackingWorker(workerDb, workerConfig);
+    assert.equal(counts.review, 1); assert.equal(counts.processed, 0);
+    assert.ok(!calls.some(call => call.rpc === "carrier_tracking_finish"));
+    calls = [];
+    global.fetch = async () => Response.json(tracker({ tracking_details: [{ status: "delivered", message: "Delivered",
+      datetime: new Date(Date.parse(claimed.registration_not_before) - 86400000).toISOString() }] }));
+    counts = await runTrackingWorker(workerDb, workerConfig);
+    assert.equal(counts.review, 1); assert.ok(!calls.some(call => call.rpc === "carrier_tracking_finish"));
+    calls = []; claimedRows = [{ ...claimed, registration_not_before: undefined }]; let requested = false;
+    global.fetch = async () => { requested = true; throw new Error("Must reject before provider request"); };
+    counts = await runTrackingWorker(workerDb, workerConfig);
+    assert.equal(counts.review, 1); assert.equal(requested, false);
     assert.ok(!calls.some(call => call.rpc === "carrier_tracking_start" || call.rpc === "carrier_tracking_finish"));
   });
   await check("mapped trackers reconcile through read-only GET and reject mismatched identities", async () => {

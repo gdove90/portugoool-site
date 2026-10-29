@@ -115,6 +115,9 @@ check("missing or incomparable timestamp zones preserve reported order without a
   assert.match(html, /Carrier event report/);
   assert.match(html, /where timestamps or time zones cannot be compared/);
   assert.doesNotMatch(html, /Last reported carrier event/);
+  const naive = [event("a", "2026-01-10T12:00:00", null, "Scan A"), event("b", "2026-01-10T10:00:00", null, "Scan B")];
+  assert.equal(helpers.eventsHaveComparableTimes(naive), false);
+  assert.deepEqual(helpers.chronologicalEvents(naive).map(event => event.id), ["a", "b"]);
 });
 check("provider unavailable and no-tracking cases give truthful fallback feedback", () => {
   assert.match(render([base], { available: false }), /order status is still shown/);

@@ -80,12 +80,13 @@ export function safeCarrierUrl(carrier: string | null, trackingNumber: string, s
   if (!known || !number || number.length > 200 || /[\u0000-\u001f\u007f]/.test(number)) return null;
   // Generate canonical links with only the tracking identifier. Supplier query
   // strings are never passed through, even when their official host is valid.
-  if (supplied) validateCarrierUrl(carrier, supplied);
   const encoded = encodeURIComponent(number);
-  if (known === "USPS") return `https://tools.usps.com/go/TrackConfirmAction?tLabels=${encoded}`;
-  if (known === "UPS") return `https://www.ups.com/track?tracknum=${encoded}`;
-  if (known === "FedEx") return `https://www.fedex.com/fedextrack/?trknbr=${encoded}`;
-  return `https://www.dhl.com/global-en/home/tracking.html?tracking-id=${encoded}`;
+  const canonical = known === "USPS" ? `https://tools.usps.com/go/TrackConfirmAction?tLabels=${encoded}` :
+    known === "UPS" ? `https://www.ups.com/track?tracknum=${encoded}` :
+      known === "FedEx" ? `https://www.fedex.com/fedextrack/?trknbr=${encoded}` :
+        `https://www.dhl.com/global-en/home/tracking.html?tracking-id=${encoded}`;
+  const checked = validateCarrierUrl(carrier, supplied);
+  return checked === canonical ? checked : canonical;
 }
 
 export function statusLabel(status: string, detail: string | null, carrier: string | null): string {
@@ -140,8 +141,8 @@ export function formatTimestamp(value: string | null): string | null {
 }
 
 export function chronologicalEvents(events: TrackingEvent[]): TrackingEvent[] {
-  // ISO wall times compare within a carrier's unspecified zone. Offset-bearing
-  // times can be ordered as instants. Unknown times retain their provider order.
+  // Only offset-bearing times establish comparable instants across scan locations.
+  // Unknown times retain their saved order without a chronological claim.
   if (!eventsHaveComparableTimes(events)) return [...events];
   return events.map((event, index) => ({ event, index })).sort((a, b) => {
     const left = a.event.occurredAt;
@@ -151,8 +152,6 @@ export function chronologicalEvents(events: TrackingEvent[]): TrackingEvent[] {
     if (withZone.test(left) && withZone.test(right)) {
       const delta = Date.parse(left) - Date.parse(right);
       if (Number.isFinite(delta) && delta !== 0) return delta;
-    } else if (!withZone.test(left) && !withZone.test(right)) {
-      return left.localeCompare(right) || a.index - b.index;
     }
     return a.index - b.index;
   }).map(({ event }) => event);
@@ -160,9 +159,8 @@ export function chronologicalEvents(events: TrackingEvent[]): TrackingEvent[] {
 
 export function eventsHaveComparableTimes(events: TrackingEvent[]): boolean {
   const withZone = /(?:Z|[+-]\d{2}:?\d{2})$/;
-  return events.length > 0 && events.every(event => Boolean(formatTimestamp(event.occurredAt))) &&
-    (events.every(event => withZone.test(event.occurredAt ?? "")) ||
-      events.every(event => !withZone.test(event.occurredAt ?? "")));
+  return events.length > 0 && events.every(event => Boolean(formatTimestamp(event.occurredAt)) &&
+    withZone.test(event.occurredAt ?? "") && Number.isFinite(Date.parse(event.occurredAt ?? "")));
 }
 
 export function uniqueShipmentPackages(shipments: LegacyTrackingShipment[]): TrackingPackage[] {

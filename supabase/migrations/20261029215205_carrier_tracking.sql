@@ -14,6 +14,7 @@ create table public.carrier_tracking_packages (
   provider_updated_at timestamptz,
   last_synced_at timestamptz,
   registration_started_at timestamptz,
+  registration_not_before timestamptz not null,
   attempts integer not null default 0,
   lease_token uuid,
   lease_until timestamptz,
@@ -70,7 +71,7 @@ declare n integer;
 begin
   if p_limit is null or p_lookback_days is null or p_limit not between 1 and 100 or p_lookback_days not between 1 and 30 then raise exception 'Invalid discovery bounds'; end if;
   with candidates as (
-    select distinct s.order_id, s.received_at,
+    select distinct s.order_id, s.received_at, o.created_at as registration_not_before,
       case regexp_replace(lower(coalesce(s.tracking_company,'')), '[^a-z0-9]', '', 'g')
         when 'usps' then 'USPS' when 'unitedstatespostalservice' then 'USPS' when 'uspostalservice' then 'USPS'
         when 'ups' then 'UPS' when 'unitedparcelservice' then 'UPS'
@@ -82,18 +83,19 @@ begin
     from public.order_shipments s join public.orders o on o.id = s.order_id
     cross join lateral jsonb_array_elements(case when jsonb_typeof(s.tracking_numbers) = 'array' then s.tracking_numbers else '[]'::jsonb end) number(value)
     where o.livemode = true and o.status = 'paid'
+      and o.created_at >= now() - interval '90 days' and o.created_at <= now()
       and lower(s.status) in ('success','shipped','delivered')
       and s.received_at >= now() - make_interval(days => p_lookback_days)
       and jsonb_typeof(number.value) = 'string'
   ), bounded as (
-    select c.order_id,c.carrier,c.tracking_number,max(c.received_at) as received_at from candidates c
+    select c.order_id,c.carrier,c.tracking_number,c.registration_not_before,max(c.received_at) as received_at from candidates c
     where c.carrier is not null and c.tracking_number ~ '^[A-Z0-9-]{5,100}$'
       and not exists (select 1 from public.carrier_tracking_packages p where p.order_id = c.order_id
         and p.carrier = c.carrier and p.tracking_number = c.tracking_number and p.environment = 'production')
-    group by c.order_id,c.carrier,c.tracking_number order by max(c.received_at) desc limit p_limit
+    group by c.order_id,c.carrier,c.tracking_number,c.registration_not_before order by max(c.received_at) desc limit p_limit
   )
-  insert into public.carrier_tracking_packages(order_id,carrier,tracking_number,environment)
-    select order_id,carrier,tracking_number,'production' from bounded on conflict do nothing;
+  insert into public.carrier_tracking_packages(order_id,carrier,tracking_number,environment,registration_not_before)
+    select order_id,carrier,tracking_number,'production',registration_not_before from bounded on conflict do nothing;
   get diagnostics n = row_count;
   return n;
 end $$;
@@ -124,7 +126,7 @@ end $$;
 -- inside this transaction. No status ordering: newer carrier corrections win.
 create function public.carrier_tracking_apply(p_id uuid, p_snapshot jsonb) returns boolean
 language plpgsql security invoker set search_path = '' as $$
-declare p public.carrier_tracking_packages; version timestamptz; event jsonb;
+declare p public.carrier_tracking_packages; version timestamptz; tracker_created timestamptz; event jsonb;
 begin
   select * into p from public.carrier_tracking_packages where id = p_id for update;
   if not found or p_snapshot->>'trackerId' is distinct from p.tracker_id
@@ -132,9 +134,18 @@ begin
     or upper(p_snapshot->>'carrier') is distinct from upper(p.carrier)
     or upper(regexp_replace(p_snapshot->>'trackingNumber','\s','','g')) is distinct from p.tracking_number
     then raise exception 'Tracker ownership mismatch'; end if;
+  if p_snapshot->>'createdAt' is null or p_snapshot->>'createdAt' !~ 'T.*(Z|[+-][0-9]{2}:?[0-9]{2})$'
+    then raise exception 'Tracker creation time unavailable'; end if;
+  tracker_created := (p_snapshot->>'createdAt')::timestamptz;
+  if tracker_created < p.registration_not_before or tracker_created > now() + interval '30 seconds'
+    then raise exception 'Tracker outside order window'; end if;
   version := (p_snapshot->>'updatedAt')::timestamptz;
   if version is null then raise exception 'Missing provider version'; end if;
   for event in select value from jsonb_array_elements(p_snapshot->'events') loop
+    -- Only offset-bearing scans establish an instant. Never infer a zone for naive carrier data.
+    if event->>'occurredAt' ~ 'T.*(Z|[+-][0-9]{2}:?[0-9]{2})$'
+      and (event->>'occurredAt')::timestamptz < p.registration_not_before
+      then raise exception 'Carrier history predates order'; end if;
     insert into public.carrier_tracking_events(package_id,event_id,event,provider_updated_at)
       values(p_id,event->>'id',event,version)
       on conflict(package_id,event_id) do update set event = excluded.event, provider_updated_at = excluded.provider_updated_at

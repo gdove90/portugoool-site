@@ -16,6 +16,7 @@ export interface ClaimedPackage {
   id: string; order_id: string; carrier: string; tracking_number: string;
   environment: "production"; tracker_id: string | null; lease_token: string;
   registration_started_at: string | null; attempts: number;
+  registration_not_before: string;
 }
 export async function readPackages(db: TrackingDatabase, orderId: string): Promise<TrackingPackage[]> {
   const rows = checked(await db.from("carrier_tracking_packages")
@@ -49,7 +50,7 @@ export async function readPackages(db: TrackingDatabase, orderId: string): Promi
 export async function persistWebhook(db: TrackingDatabase, event: VerifiedTrackingWebhook) {
   return checked(await db.rpc("carrier_tracking_receive", {
     p_event_id: event.eventId, p_environment: event.mode, p_snapshot: event.snapshot,
-  }));
+  }).abortSignal(AbortSignal.timeout(4000)));
 }
 export async function finishPackage(db: TrackingDatabase, pkg: ClaimedPackage, snapshot: TrackingSnapshot) {
   return checked(await db.rpc("carrier_tracking_finish", {

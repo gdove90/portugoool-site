@@ -18,7 +18,7 @@ async function reset() {
   await db.exec('reset role; truncate public.carrier_tracking_events, public.carrier_tracking_inbox, public.carrier_tracking_packages; set role service_role');
 }
 async function addPackage(number = 'TRACK001') {
-  return scalar("insert into public.carrier_tracking_packages(order_id,carrier,tracking_number,environment) values($1,'USPS',$2,'production') returning id", [orderA, number]);
+  return scalar("insert into public.carrier_tracking_packages(order_id,carrier,tracking_number,environment,registration_not_before) values($1,'USPS',$2,'production','2026-10-29T00:00:00Z') returning id", [orderA, number]);
 }
 function snapshot(id = 'trk_synthetic1', version = '2026-10-29T15:00:00Z', status = 'in_transit', number = 'TRACK001', events = []) {
   return { trackerId: id, mode: 'production', trackingNumber: number, carrier: 'USPS', status, detail: null,
@@ -41,7 +41,7 @@ async function rejected(sql, args = [], pattern) {
 (async () => {
   try {
     await db.exec(`create role anon; create role authenticated; create role service_role bypassrls;
-      create table public.orders(id uuid primary key,status text not null,livemode boolean not null);
+      create table public.orders(id uuid primary key,status text not null,livemode boolean not null,created_at timestamptz not null default now()-interval '1 day');
       create table public.order_shipments(id uuid primary key default gen_random_uuid(),order_id uuid not null references public.orders(id),
         tracking_company text,tracking_numbers jsonb,status text,received_at timestamptz not null default now());
       grant select on public.orders,public.order_shipments to service_role;`);
@@ -49,7 +49,7 @@ async function rejected(sql, args = [], pattern) {
       await db.exec(migration);
       assert.equal(await scalar("select count(*)::integer from pg_tables where schemaname='public' and tablename like 'carrier_tracking_%'"), 4);
     });
-    await db.query('insert into public.orders values($1,$2,true),($3,$2,true)', [orderA, 'paid', orderB]);
+    await db.query('insert into public.orders(id,status,livemode) values($1,$2,true),($3,$2,true)', [orderA, 'paid', orderB]);
     await check('Discovery deduplicates split, repeated, reordered and changing-status shipment rows', async () => {
       for (const [carrier, status, numbers] of [
         ['USPS', 'success', ['TRACK001', 'TRACK002', 'TRACK001', null, 123]],
@@ -61,6 +61,7 @@ async function rejected(sql, args = [], pattern) {
       assert.equal(await scalar('select public.carrier_tracking_discover()'), 4);
       assert.equal(await scalar('select public.carrier_tracking_discover()'), 0);
       assert.equal(await scalar('select count(*)::integer from public.carrier_tracking_packages'), 4);
+      assert.equal(await scalar('select count(*)::integer from public.carrier_tracking_packages p join public.orders o on o.id=p.order_id where p.registration_not_before=o.created_at'), 4);
       assert.equal(await scalar('select count(*)::integer from public.order_shipments'), 5);
     });
     await check('Discovery is bounded to recent live paid shipments and known carriers/numbers', async () => {
@@ -72,9 +73,11 @@ async function rejected(sql, args = [], pattern) {
         ['30000000-0000-4000-8000-000000000004', 'paid', false],
       ];
       for (const [id, status, live] of scoped) {
-        await db.query('insert into public.orders values($1,$2,$3)', [id, status, live]);
+        await db.query('insert into public.orders(id,status,livemode) values($1,$2,$3)', [id, status, live]);
         await db.query("insert into public.order_shipments(order_id,tracking_company,status,tracking_numbers) values($1,'USPS','shipped','[\"EXCLUDED001\"]')", [id]);
       }
+      await db.query("insert into public.orders(id,status,livemode,created_at) values('30000000-0000-4000-8000-000000000005','paid',true,now()-interval '91 days')");
+      await db.query("insert into public.order_shipments(order_id,tracking_company,status,tracking_numbers) values('30000000-0000-4000-8000-000000000005','USPS','delivered','[\"LATEOLDORDER\"]')");
       for (const [carrier, numbers, status, age] of [
         ['Unknown Carrier', ['EXCLUDED002'], 'shipped', 0], ['USPS', ['X', {}, null, '<script>', 'NUMBER/URL'], 'shipped', 0],
         ['USPS', ['EXCLUDED003'], 'failed', 0], ['USPS', ['EXCLUDED004'], 'success', 31], ['USPS', {}, 'success', 0],
@@ -126,6 +129,28 @@ async function rejected(sql, args = [], pattern) {
       assert.equal(await scalar('select count(*)::integer from public.carrier_tracking_events'), 2);
       assert.equal(await receive('evt_early1', early), true);
       assert.equal(await scalar('select count(*)::integer from public.carrier_tracking_events'), 2);
+    });
+    await check('Recycled trackers and pre-order history cannot attach through worker finish or webhook updates', async () => {
+      const id = await addPackage('RECYCLED001');
+      await claim(leaseB);
+      const old = { ...snapshot('trk_recycled', '2026-10-29T20:00:00Z', 'delivered', 'RECYCLED001'), createdAt: '2026-10-28T12:00:00Z' };
+      await assert.rejects(() => finish(id, leaseB, old), /Tracker outside order window/);
+      assert.equal(await scalar('select tracker_id from public.carrier_tracking_packages where id=$1', [id]), null);
+      const historical = { ...old, createdAt: '2026-10-29T12:00:00Z', events: [{ ...scan('oldHistory'), occurredAt: '2026-10-28T12:00:00Z' }] };
+      await assert.rejects(() => finish(id, leaseB, historical), /Carrier history predates order/);
+      await assert.rejects(() => finish(id, leaseB, { ...old, createdAt: '2099-10-29T12:00:00Z' }), /Tracker outside order window/);
+      await assert.rejects(() => finish(id, leaseB, { ...old, createdAt: null }), /Tracker creation time unavailable/);
+      assert.equal(await finish(id, leaseB, { ...old, status: 'in_transit', createdAt: '2026-10-29T12:00:00Z' }), true);
+      await assert.rejects(() => receive('evt_recycledOld', old), /Tracker outside order window/);
+      await assert.rejects(() => receive('evt_recycledHistory', historical), /Carrier history predates order/);
+      assert.equal(await scalar('select snapshot->>\'status\' from public.carrier_tracking_packages where id=$1', [id]), 'in_transit');
+      assert.equal(await scalar("select count(*)::integer from public.carrier_tracking_inbox where event_id like 'evt_recycled%'"), 0);
+      // Missing offsets remain unknown, rather than assigning a timezone to force an ordering claim.
+      assert.equal(await receive('evt_recycledNaive', { ...old, status: 'in_transit', createdAt: '2026-10-29T12:00:00Z',
+        events: [{ ...scan('naiveHistory'), occurredAt: '2026-10-28T12:00:00' }] }), true);
+      await db.query('delete from public.carrier_tracking_inbox where tracker_id=$1', ['trk_recycled']);
+      await db.query('delete from public.carrier_tracking_events where package_id=$1', [id]);
+      await db.query('delete from public.carrier_tracking_packages where id=$1', [id]);
     });
     await check('Out-of-order snapshots preserve newest state while retaining distinct older scan events', async () => {
       const newer = snapshot('trk_synthetic1', '2026-10-29T17:00:00Z', 'delivered', 'TRACK001', [scan('scanA'), scan('scanC', 'delivered')]);

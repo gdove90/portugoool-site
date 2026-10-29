@@ -147,6 +147,19 @@ export function normalizeTracker(input: unknown): TrackingSnapshot {
   };
 }
 
+/** A recycled code must never attach a previous shipment's tracker/history to a later order. */
+export function validateTrackerWindow(snapshot: TrackingSnapshot, notBefore: string, now = Date.now()): void {
+  const lower = Date.parse(versionTimestamp(notBefore));
+  const created = Date.parse(versionTimestamp(snapshot.createdAt));
+  if (!Number.isFinite(now) || created < lower || created > now + 30_000) throw new TrackingProviderError('ambiguous');
+  for (const event of snapshot.events) {
+    // Compare actual instants only. A naive carrier timestamp must not acquire an invented offset.
+    if (event.occurredAt && /T.*(?:Z|[+-]\d{2}:?\d{2})$/.test(event.occurredAt) && Date.parse(event.occurredAt) < lower) {
+      throw new TrackingProviderError('ambiguous');
+    }
+  }
+}
+
 type WebhookHeaders = Headers | Record<string, string | undefined>;
 function header(headers: WebhookHeaders, name: string): string | null {
   if (typeof (headers as Headers).get === 'function') return (headers as Headers).get(name);
@@ -302,7 +315,8 @@ export async function findTracker(options: ClientOptions & {
   const end = versionTimestamp(options.createdBefore);
   const startMs = Date.parse(start), endMs = Date.parse(end);
   if (endMs <= startMs || endMs - startMs > 90 * 86400_000) throw new TrackingProviderError('configuration');
-  const params = new URLSearchParams({ 'tracking_codes[]': options.trackingNumber, carrier: options.carrier,
+  // Match the official Node client's serialization for a single tracking_codes element.
+  const params = new URLSearchParams({ tracking_codes: options.trackingNumber, carrier: options.carrier,
     start_datetime: start, end_datetime: end, page_size: '100' });
   const raw = record(await request(options, `trackers?${params.toString()}`, 'GET'));
   if (!Array.isArray(raw.trackers) || raw.trackers.length > 100) throw new TrackingProviderError('invalid_response', true);

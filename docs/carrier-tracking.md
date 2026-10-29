@@ -58,16 +58,19 @@ nonproduction CONTEXT is refused. The scheduler additionally requires the immuta
 operational build marker emitted by the unchanged prebuild script.
 
 Discovery reads live paid orders and success/shipped/delivered shipment rows received within
-30 days, most recent first, at most 100 new identities per invocation. Unknown carriers remain
+30 days on orders created within 90 days, most recent first, at most 100 new identities per invocation. Unknown carriers remain
 on the official-link fallback when supported. Each normalized carrier/number is unique per
 order and environment. Two packages at a time are claimed transactionally with two-minute
-leases, bounded backoff, six retries and a review state. No email/supplier/payment work is
+leases, bounded backoff, six attempts and a review state. No email/supplier/payment work is
 imported or invoked. There is no unbounded historical backfill.
 
 Registration intent is committed before the external POST. On timeout, crash, or response loss,
 later attempts only search within bounded creation dates; they never blindly repeat POST.
 An unresolved or rejected registration moves to review for an operator. A mapping uniqueness
 conflict also stops registration; recycled numbers must be investigated, never reassigned blindly.
+Each package stores its order-creation time as a tracking identity boundary. Both worker and
+SQL reject a provider tracker created before that order, or offset-bearing scan history from
+before it. These cases require operator review; naive timestamps retain their unknown zone.
 Registered trackers are reconciled once per day for up to 60 days; provider webhooks drive updates.
 The ten-minute discovery schedule does not promise ten-minute carrier scans. Carrier polling
 frequency and latency vary.
@@ -75,6 +78,9 @@ frequency and latency vary.
 Inbox receipt and processing completion are transactional. Webhooks arriving before mapping
 are retained, consumed at registration completion and checked by a bounded reconciliation
 pass on every worker invocation. Duplicate events acknowledge safely. DB failures return 503.
+Request-body reads have a 1.5-second deadline and webhook persistence has a 4-second deadline,
+leaving time for an acknowledgement within EasyPost's seven-second delivery limit. An aborted
+persistence request may have committed; the provider retry is safe through transactional deduplication.
 Newer provider updated_at replaces state, including legitimate corrections; stale snapshots
 cannot overwrite current status. Event fingerprints are independent of callback array order.
 
