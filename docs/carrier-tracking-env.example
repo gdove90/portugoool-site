@@ -1,0 +1,7 @@
+# Add only to Netlify PRODUCTION context, server/function scope. No NEXT_PUBLIC keys.
+CARRIER_TRACKING_ENABLED=false
+EASYPOST_API_KEY=<production EasyPost key; account/charges approved separately>
+EASYPOST_WEBHOOK_SECRET=<dedicated webhook secret configured in EasyPost>
+CARRIER_TRACKING_OPS_KEY=<new random secret, at least 32 characters>
+# Existing commerce URL must already equal https://oexibflpshttgzmdvhpr.supabase.co.
+# Preserve all existing environment values. Never reuse FULFILLMENT_OPS_KEY.
