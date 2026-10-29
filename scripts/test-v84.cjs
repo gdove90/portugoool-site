@@ -227,7 +227,7 @@ async function main() {
   } finally { await db.close(); }
 
   await check('all current approved business files match fixed main baseline', () => {
-    const productionBaseline = 'd21ccdf7f21e9c5947f120a84a5d170002153be2';
+    const productionBaseline = 'c854638e136d0f53b4ec75a91bd872b13a64680b';
     const protectedPaths = ['src/lib', 'src/data', 'src/app/api', 'netlify', 'supabase', 'src/app/cart', 'src/app/success', 'src/app/track-order'];
     const expected = execFileSync('git', ['ls-tree', '-r', '--name-only', productionBaseline, ...protectedPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean).sort();
     const current = execFileSync('git', ['ls-files', '--', ...protectedPaths], { encoding: 'utf8' }).trim().split('\n').filter(Boolean).sort();

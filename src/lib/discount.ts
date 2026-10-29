@@ -19,7 +19,7 @@ import { getSupabaseAdmin } from "./supabase";
 // ─────────────────────────────────────────────────────────────
 
 // Preserve the shared coupon identity; the public promotion-code prefix is separate.
-const COUPON_NAME = "GOOOL20 · 20% off first order";
+const COUPON_NAME = "GOAL20 · 20% off first order";
 const COUPON_SOURCE = "goool20-popup";
 const CODE_PREFIX = "GOAL20-";
 const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O/1/I
