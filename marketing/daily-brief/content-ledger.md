@@ -2,7 +2,7 @@
 
 Maintained by Agent 2 (Performance Intelligence). One row per published feed post, Reel and Story that Metricool returns. Reach/Views/Interactions/Saves/Shares/Follows are CUMULATIVE values as of the "Last refreshed" date below, not time-bucketed. 24h/72h cells are only filled from a snapshot actually taken at that age; never overwrite an older observation with a newer number.
 
-Last refreshed: 2026-10-28 (05:00 ET run). Stories: none returned by Metricool (NOT POPULATED).
+Last refreshed: 2026-10-29 (05:00 ET run); all four rows unchanged since 2026-10-28, no new content published 10-28 or 10-29 to date. Stories: none returned by Metricool (NOT POPULATED).
 
 | Date | Content (first 60 chars) | Product | Format | Hook | Creative type | Publishing time ET | Reach | Views | Interactions | Saves | Shares | Follows | Other available actions | 24-hour observation | 72-hour observation | Lesson |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
