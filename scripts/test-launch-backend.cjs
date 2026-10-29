@@ -1,5 +1,6 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const ROOT=path.resolve(__dirname,"..");const ts=require(ROOT+'/node_modules/typescript');
+const APPROVED = require('./fixtures/approved-supplier-catalog-20261028.json');
 class NextResponse{constructor(body,opt={}){this.body=body;this.status=opt.status||200;this.headers=opt.headers||{}}static json(body,opt={}){return {status:opt.status||200,body}}}
 function load(file,mocks={},cache={}){
  const full=path.resolve(ROOT,file);if(cache[full])return cache[full];
@@ -26,14 +27,37 @@ function memory(initial={}){
  return {tables,from,rpc:async(name,{p_key,p_token})=>{const r=tables.email_deliveries?.find(r=>r.key===p_key);if(!r||r.status!=='pending'||Date.parse(r.next_attempt_at)>Date.now())return {data:[],error:null};Object.assign(r,{status:'sending',claim_token:p_token,first_attempt_at:r.first_attempt_at??new Date().toISOString(),attempts:r.attempts+1});return {data:[structuredClone(r)],error:null}}};
 }
 (async()=>{
+ // Process-local fixture only: checkout uses an in-memory Stripe adapter below.
+ process.env.STORE_OPEN='true'; delete process.env.PREVIEW_KEY;
  process.env.STRIPE_SECRET_KEY='sk_live_mock';process.env.STRIPE_SHIPPING_RATE_ID='shr_mock';process.env.STRIPE_WEBHOOK_SECRET='whsec_mock';process.env.RESEND_API_KEY='re_mock';
  let sessions=[];class Stripe{checkout={sessions:{create:async p=>{sessions.push(p);return {url:'https://checkout.stripe.com/mock'}}}}}
  const checkout=load('src/app/api/checkout/route.ts',{stripe:Stripe});const catalog=load('src/lib/products.ts');
- // The catalog opens with the two caps, visible but not for sale, so the checkout fixtures use the first sellable rows.
+ // The approved public catalog includes both caps for sale; use its first sellable rows.
  const sellable=catalog.getProducts().filter(x=>x.availableForSale);const p=sellable[0],p2=sellable[1];const item={productId:p.id,color:p.colorVariants?.[0].name??p.color,size:p.sizes[0],quantity:1};
  for(const [name,body] of Object.entries({nullBody:null,empty:{items:[]},nullLine:{items:[null]},missingQty:{items:[{...item,quantity:undefined}]},stringQty:{items:[{...item,quantity:'1'}]},fraction:{items:[{...item,quantity:1.5}]},negative:{items:[{...item,quantity:-1}]},excess:{items:[{...item,quantity:11}]},badCustom:{items:[{...item,customName:123}]},badSize:{items:[{...item,size:'BAD'}]},badColor:{items:[{...item,color:'BAD'}]}}))await test('Reject malformed checkout: '+name,async()=>assert.equal((await checkout.POST(request(body))).status,400));
- // 103 since 2026-10-23: four colours x five sizes for each tee and hoodie, three colours x five sizes for the shorts, and both caps' four colours in one size.
- await test('All 103 sellable variants use identical server prices and fulfillment snapshots',async()=>{let count=0;for(const prod of sellable)for(const color of prod.colorVariants?.filter(v=>!v.comingSoon).map(v=>v.name)??[prod.color])for(const size of prod.sizes){const r=await checkout.POST(request({items:[{productId:prod.id,color,size,quantity:2,priceCents:1}]}));assert.equal(r.status,200);const session=sessions.at(-1);const snap=JSON.parse(Object.keys(session.metadata).filter(k=>/^items_\d+$/.test(k)).sort((a,b)=>Number(a.slice(6))-Number(b.slice(6))).map(k=>session.metadata[k]).join(''))[0];assert.equal(snap.u,prod.priceCents);assert.equal(snap.u,session.line_items[0].price_data.unit_amount);assert.equal(snap.q,2);assert.ok(snap.k&&snap.a);count++}assert.equal(count,103)});
+ // Fixed approved snapshot protects IDs, prices, sizes and all supplier mappings.
+ await test('All 143 approved sellable variants use exact server prices and supplier-aware snapshots', async()=>{
+  assert.equal(sellable.length, APPROVED.productCount);
+  assert.deepEqual(sellable.map(p=>p.id), APPROVED.products.map(p=>p.id));
+  let count=0;const suppliers={apliiq:0,tapstitch:0};
+  for(const prod of sellable){
+   const expected=APPROVED.products.find(p=>p.id===prod.id);
+   assert.equal(prod.slug,expected.slug);assert.equal(prod.priceCents,expected.priceCents);
+   assert.deepEqual(prod.sizes,expected.sizes);assert.deepEqual(prod.colorVariants.map(v=>v.name),expected.colors.map(v=>v.name));
+   for(const color of expected.colors)for(const size of expected.sizes){
+    const mapping=color.bySize[size];
+    const r=await checkout.POST(request({items:[{productId:prod.id,color:color.name,size,quantity:2,priceCents:1}]}));
+    assert.equal(r.status,200);const session=sessions.at(-1);
+    const snap=JSON.parse(Object.keys(session.metadata).filter(k=>/^items_\d+$/.test(k)).sort((a,b)=>Number(a.slice(6))-Number(b.slice(6))).map(k=>session.metadata[k]).join(''))[0];
+    assert.deepEqual(snap,{p:prod.id,c:color.name,s:size,q:2,u:expected.priceCents,k:mapping.sku,a:mapping.supplier==='apliiq'?mapping.apliiqProductId:null});
+    assert.equal(session.line_items[0].price_data.unit_amount,expected.priceCents);assert.equal(session.line_items[0].quantity,2);
+    if(mapping.supplier==='apliiq')assert.ok(Number.isInteger(snap.a)&&snap.a>0,'Apliiq requires its approved identifier');
+    else {assert.equal(mapping.supplier,'tapstitch');assert.equal(snap.a,null,'canonical null means no Apliiq identifier');assert.match(snap.k,/^TAP-/);}
+    suppliers[mapping.supplier]++;count++;
+   }
+  }
+  assert.equal(count,143);assert.deepEqual(suppliers,{apliiq:128,tapstitch:15});
+ });
  const mail=load('src/lib/emails/order-confirmation.ts');await test('Discounted receipt reconciles subtotal, discount, shipping and total',()=>{const m=mail.buildOrderConfirmation({order:{id:'abc',amount_subtotal_cents:5000,amount_discount_cents:1000,amount_shipping_cents:950,amount_tax_cents:0,total_cents:4950,currency:'usd'},items:[]});assert.match(m.text,/Discount: -\$10.00/);assert.match(m.html,/-\$10.00/);assert.match(m.text,/Total paid: \$49.50/)});
  let promoSeq=0;class DiscountStripe{coupons={list:async()=>({data:[{id:'coupon',valid:true,percent_off:20,metadata:{source:'goool20-popup'}}]})};promotionCodes={retrieve:async()=>({times_redeemed:0}),create:async(p)=>{DiscountStripe.lastCreate=p;return {id:'promo'+(++promoSeq)}},update:async()=>({})}}
  const ledger=memory({discount_codes:[{email_hash:load('src/lib/discount.ts',{stripe:DiscountStripe,'./supabase':{getSupabaseAdmin:()=>null}}).emailHash('qa@example.com'),code:'GOOOL20-OLD',stripe_promotion_code_id:'old',livemode:true,expires_at:'2000-01-01',redeemed_at:null}]});

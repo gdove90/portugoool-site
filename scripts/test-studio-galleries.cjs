@@ -4,6 +4,8 @@ const path = require('node:path');
 const vm = require('node:vm');
 const ts = require('typescript');
 const { execFileSync } = require('node:child_process');
+const { APPROVED_BASELINE, assertApprovedCatalog } = require('./fixtures/approved-catalog-state.cjs');
+const { assertActiveGalleries, assertActiveGalleryHttp } = require('./fixtures/assert-active-galleries.cjs');
 const cache = new Map();
 
 function load(file) {
@@ -22,11 +24,15 @@ function load(file) {
   return exports;
 }
 
-const { products } = load('src/lib/products.ts');
+const catalog = load('src/lib/products.ts');
+const { products } = catalog;
 const { productGalleryImages } = load('src/v84/product-gallery-images.ts');
 const { catalogImageSrc } = load('src/lib/product-image.ts');
 const manifest = load('src/v84/mens-studio-v4.json');
 const backgrounds = load('src/v84/studio-backgrounds-v5.json');
+assertApprovedCatalog(catalog, load('src/v84/catalog-data.ts'));
+const active = assertActiveGalleries(load);
+console.log(`PASS fixed active gallery baseline: ${active.products} current products, ${active.colors} colors, ${active.views} ordered views and ${active.assets} approved asset hashes.`);
 const replacement = src => backgrounds.find(image => image.originalSrc === src)?.src || src;
 assert.equal(backgrounds.length, 51, 'every standalone and detail view has a replacement');
 assert.equal(new Set(backgrounds.map(image => image.originalSrc)).size, 51);
@@ -43,7 +49,9 @@ let galleryViews = 0;
 const files = new Set();
 for (const entry of manifest) {
   const product = products.find(product => product.id === entry.productId && product.slug === entry.slug);
-  assert.ok(product && product.isActive, entry.slug + ' must be an active real product');
+  assert.ok(product && !product.isActive, entry.slug + ' remains an archived historical product');
+  assert.equal(catalog.getProductById(entry.productId), undefined, 'historical gallery cannot reactivate public product');
+  assert.equal(catalog.getProductBySlug(entry.slug), undefined, 'historical gallery cannot reactivate public route');
   assert.notEqual(product.slug, 'goool-touchline-cap');
   const index = product.colorVariants?.findIndex(variant => variant.name === entry.color) ?? 0;
   assert.ok(index >= 0, entry.slug + ': ' + entry.color + ' must be an actual color');
@@ -85,45 +93,32 @@ const fixture = { id: 'unknown', slug: manifest[0].slug, color: manifest[0].colo
 assert.deepEqual(Array.from(productGalleryImages(fixture, 0), image => image.src), ['/a', '/b'], 'slug alone cannot attach another product gallery');
 // Presentation components now accept responsive sizes and variant deep links.
 // The approved product data and gallery sequence remain protected here.
-for (const file of ['src/lib/products.ts', 'src/lib/types.ts', 'src/lib/cart.tsx', 'src/lib/collection-launch.ts']) {
-  assert.equal(fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n'), execFileSync('git', ['show', 'HEAD:' + file], { encoding: 'utf8' }).replace(/\r\n/g, '\n'), 'unrelated catalog, commerce or Tempo change: ' + file);
+for (const file of ['src/lib/products.ts', 'src/lib/types.ts', 'src/lib/cart.tsx', 'src/lib/collection-launch.ts', 'src/v84/product-gallery-images.ts']) {
+  assert.equal(fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n'), execFileSync('git', ['show', APPROVED_BASELINE + ':' + file], { encoding: 'utf8' }).replace(/\r\n/g, '\n'), 'approved catalog, commerce, gallery or Tempo change: ' + file);
 }
 const unknownColor = { id: manifest[0].productId, slug: manifest[0].slug, color: 'Unknown', images: fixture.images };
 assert.deepEqual(Array.from(productGalleryImages(unknownColor, 0), image => image.src), ['/a', '/b'], 'unlisted colors cannot inherit a different color gallery');
 assert.equal(galleryViews, 103, 'blank rear products have five views; decorated rear products have six');
 assert.equal(files.size, 54, 'all new studio assets are linked');
-console.log('PASS: 8 products, 18 colors, ' + galleryViews + ' studio gallery views, ' + files.size + ' new assets; square covers and details matched; commerce data preserved.');
+const ordering = load('src/v84/catalog-data.ts');
+assert.throws(() => assertApprovedCatalog(catalog, { ...ordering, catalogOrder: list => ordering.catalogOrder(list).slice().reverse() }), /approved public product identity and ordering/, 'test fixture rejects a changed public product order');
+const wrongGalleryLoad = file => file === 'src/v84/product-gallery-images.ts'
+  ? { productGalleryImages: (product, index) => productGalleryImages(product, index).slice().reverse() }
+  : load(file);
+assert.throws(() => assertActiveGalleries(wrongGalleryLoad), /fixed approved path/, 'static approved snapshot rejects changed gallery ordering');
+console.log('PASS: 8 retired historical products, 18 historical colors, ' + galleryViews + ' archived studio gallery views, ' + files.size + ' retained model assets; square covers and details matched; current commerce data preserved.');
 
 if (process.env.PHOTO_BASE_URL) (async () => {
-  const { parse } = await import('parse5');
-  const { defaultVariant } = load('src/v84/catalog-data.ts');
   const base = process.env.PHOTO_BASE_URL;
-  const nodes = node => [node, ...(node.childNodes || []).flatMap(nodes)];
-  const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value;
-  const hasClass = (node, name) => (attr(node, 'class') || '').split(/\s+/).includes(name);
-  await Promise.all([...new Set([...manifest.map(entry => entry.slug), 'goool-touchline-cap'])].map(async slug => {
-    const product = products.find(product => product.slug === slug);
-    const gallery = productGalleryImages(product, defaultVariant(product)?.index || 0);
-    const response = await fetch(new URL('/shop/' + slug, base), { signal: AbortSignal.timeout(30000) });
-    assert.equal(response.status, 200, slug);
-    const page = nodes(parse(await response.text()));
-    const thumbs = page.filter(node => hasClass(node, 'thumbnail'));
-    assert.equal(thumbs.length, gallery.length, slug + ': rendered thumbnail count');
-    gallery.forEach((image, index) => {
-      assert.equal(attr(thumbs[index], 'aria-label'), `View image ${index + 1}: ${image.alt}`);
-      const thumbnail = nodes(thumbs[index]).find(node => node.tagName === 'img');
-      const thumbUrl = new URL(attr(thumbnail, 'src'), base);
-      const sourceUrl = thumbUrl.searchParams.get('url') || thumbUrl.pathname;
-      assert.equal(new URL(sourceUrl, base).pathname, image.src);
-    });
-    const main = page.find(node => hasClass(node, 'gallery-main'));
-    assert.equal(attr(nodes(main).find(node => node.tagName === 'img'), 'alt'), gallery[0].alt);
-  }));
+  await assertActiveGalleryHttp(load, base);
+  // Archived assets remain immutable and available to historical references,
+  // while retired routes retain their fixed approved301-to-shop/404 split.
   await Promise.all([...manifest.flatMap(entry => entry.images.slice(0, 3)), ...backgrounds].map(async image => {
     const response = await fetch(new URL(image.src, base), { signal: AbortSignal.timeout(30000) });
     assert.equal(response.status, 200, image.src);
     const bytes = Buffer.from(await response.arrayBuffer());
     assert.equal(bytes.toString('ascii', 8, 12), 'WEBP', image.src);
+    assert.ok(bytes.equals(fs.readFileSync(path.join('public', image.src))), 'historical published asset bytes differ: ' + image.src);
   }));
-  console.log('PASS: rendered galleries for all nine product pages, 54 model images, and 51 studio replacements.');
+  console.log('PASS HTTP current public/retired route split, 54 retained model images, and 51 historical studio replacements.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

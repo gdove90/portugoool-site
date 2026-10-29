@@ -1,0 +1,1034 @@
+{
+  "baseline": "6b4cc47960752dda3ae0ef2d55a8e23c228ae6f8",
+  "reviewedOn": "2026-10-28",
+  "description": "Fixed approved active storefront gallery snapshots; updates require catalog/imagery release review.",
+  "products": [
+    {
+      "id": "80000000-0000-4000-8000-000000000009",
+      "slug": "goal-athletics-monogram-cap",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black/Natural",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp",
+              "alt": "GA Matchday Cap in Black/Natural, front view: natural crown with the black GA monogram embroidered on the front panel and a black visor"
+            },
+            {
+              "src": "/products/goal-monogram-cap-black-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward wearing the Black/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-monogram-cap-black-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the black GA monogram on the natural front panel of the cap"
+            },
+            {
+              "src": "/products/goal-monogram-cap-black-catalog-model-side-20261022.webp",
+              "alt": "Same model turned to the side, showing the black visor and crown profile of the cap"
+            }
+          ]
+        },
+        {
+          "color": "Red/Natural",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-monogram-cap-red-catalog-product-front-20261022.webp",
+              "alt": "GA Matchday Cap in Red/Natural, front view: natural crown with the red GA monogram embroidered on the front panel and a red visor"
+            },
+            {
+              "src": "/products/goal-monogram-cap-red-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward wearing the Red/Natural GA Matchday Cap with a grey tee, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-monogram-cap-red-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the red GA monogram on the natural front panel of the cap"
+            },
+            {
+              "src": "/products/goal-monogram-cap-red-catalog-model-side-20261022.webp",
+              "alt": "Same model turned to the side, showing the red visor and crown profile of the cap"
+            }
+          ]
+        },
+        {
+          "color": "Royal/Natural",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-monogram-cap-royal-catalog-product-front-20261022.webp",
+              "alt": "GA Matchday Cap in Royal/Natural, front view: natural crown with the royal blue GA monogram embroidered on the front panel and a royal blue visor"
+            },
+            {
+              "src": "/products/goal-monogram-cap-royal-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward wearing the Royal/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-monogram-cap-royal-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the royal blue GA monogram on the natural front panel of the cap"
+            },
+            {
+              "src": "/products/goal-monogram-cap-royal-catalog-model-side-20261022.webp",
+              "alt": "Same model turned to the side, showing the royal blue visor and crown profile of the cap"
+            }
+          ]
+        },
+        {
+          "color": "Dark Green/Natural",
+          "index": 3,
+          "images": [
+            {
+              "src": "/products/goal-monogram-cap-dark-green-catalog-product-front-20261022.webp",
+              "alt": "GA Matchday Cap in Dark Green/Natural, front view: natural crown with the dark green GA monogram embroidered on the front panel and a dark green visor"
+            },
+            {
+              "src": "/products/goal-monogram-cap-dark-green-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward wearing the Dark Green/Natural GA Matchday Cap with a charcoal tee, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-monogram-cap-dark-green-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the dark green GA monogram on the natural front panel of the cap"
+            },
+            {
+              "src": "/products/goal-monogram-cap-dark-green-catalog-model-side-20261022.webp",
+              "alt": "Same model turned to the side, showing the dark green visor and crown profile of the cap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000010",
+      "slug": "goal-athletics-wordmark-cap",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black/Natural",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
+              "alt": "Stacked Stadium Cap in Black/Natural, front view: natural crown with the black GOAL ATHLETICS wordmark and bar embroidered on the front panel and a black visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-black-catalog-model-front-20261022.webp",
+              "alt": "Model facing the camera wearing the Black/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-black-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the GOAL ATHLETICS wordmark on the natural front panel and the black visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-black-catalog-model-side-20261022.webp",
+              "alt": "Same model turned the other way, showing the wordmark on the front panel and the profile of the black visor"
+            }
+          ]
+        },
+        {
+          "color": "Red/Natural",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp",
+              "alt": "Stacked Stadium Cap in Red/Natural, front view: natural crown with the red GOAL ATHLETICS wordmark and bar embroidered on the front panel and a red visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-red-catalog-model-front-20261022.webp",
+              "alt": "Model facing the camera wearing the Red/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-red-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the red wordmark on the natural front panel and the red visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-red-catalog-model-side-20261022.webp",
+              "alt": "Same model turned the other way, showing the wordmark on the front panel and the profile of the red visor"
+            }
+          ]
+        },
+        {
+          "color": "Royal/Natural",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp",
+              "alt": "Stacked Stadium Cap in Royal/Natural, front view: natural crown with the royal blue GOAL ATHLETICS wordmark and bar embroidered on the front panel and a royal blue visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-royal-catalog-model-front-20261022.webp",
+              "alt": "Model facing the camera wearing the Royal/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-royal-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the royal blue wordmark on the natural front panel and the royal blue visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-royal-catalog-model-side-20261022.webp",
+              "alt": "Same model turned the other way, showing the wordmark on the front panel and the profile of the royal blue visor"
+            }
+          ]
+        },
+        {
+          "color": "Dark Green/Natural",
+          "index": 3,
+          "images": [
+            {
+              "src": "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp",
+              "alt": "Stacked Stadium Cap in Dark Green/Natural, front view: natural crown with the dark green GOAL ATHLETICS wordmark and bar embroidered on the front panel and a dark green visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-dark-green-catalog-model-front-20261022.webp",
+              "alt": "Model facing the camera wearing the Dark Green/Natural Stacked Stadium Cap with a charcoal tee, head and shoulders"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-dark-green-catalog-model-three-quarter-20261022.webp",
+              "alt": "Same model in a three-quarter turn, showing the dark green wordmark on the natural front panel and the dark green visor"
+            },
+            {
+              "src": "/products/goal-wordmark-cap-dark-green-catalog-model-side-20261022.webp",
+              "alt": "Same model turned the other way, showing the wordmark on the front panel and the profile of the dark green visor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000011",
+      "slug": "goal-athletics-ga-minimal-tee",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
+              "alt": "Warm-Up Tee in black, product front with the white and red GA monogram centred on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp",
+              "alt": "Warm-Up Tee in black, product back with the white stacked GOAL ATHLETICS lockup and red bar across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-front-20261015.webp",
+              "alt": "Model facing forward in the black Warm-Up Tee with the white and red GA monogram centred on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-front-quarter-20261015.webp",
+              "alt": "Same model in a front quarter turn, black Warm-Up Tee with the white and red GA monogram on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-rear-20261015.webp",
+              "alt": "Same model from behind in the black Warm-Up Tee, white GOAL ATHLETICS lockup with a red bar across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-black-catalog-model-rear-quarter-20261015.webp",
+              "alt": "Same model in a back quarter turn, showing the white and red GOAL ATHLETICS lockup on the black tee"
+            }
+          ]
+        },
+        {
+          "color": "True Royal",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp",
+              "alt": "Warm-Up Tee in True Royal, product front with the cream GA monogram centred on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp",
+              "alt": "Warm-Up Tee in True Royal, product back with the cream stacked GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-front-20261015.webp",
+              "alt": "Model facing forward in the True Royal Warm-Up Tee with the cream GA monogram centred on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-front-quarter-20261015.webp",
+              "alt": "Same model in a front quarter turn, True Royal Warm-Up Tee with the cream GA monogram on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-rear-20261015.webp",
+              "alt": "Same model from behind in the True Royal Warm-Up Tee, cream GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-royal-catalog-model-rear-quarter-20261015.webp",
+              "alt": "Same model in a back quarter turn, showing the cream GOAL ATHLETICS lockup on the True Royal tee"
+            }
+          ]
+        },
+        {
+          "color": "White · Black-Red",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp",
+              "alt": "White Warm-Up Tee, product front with black and red GA monogram"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-product-back-20261014.webp",
+              "alt": "White Warm-Up Tee, product back with black GOAL ATHLETICS lettering and red bar"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-model-front-20261014.webp",
+              "alt": "Model standing front-on in the white Warm-Up Tee, plain black shorts and white socks"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-model-three-quarter-20261014.webp",
+              "alt": "Same model in a standing three-quarter view of the white Warm-Up Tee, black shorts and white socks"
+            },
+            {
+              "src": "/products/goal-ga-minimal-white-black-red-catalog-model-rear-20261014.webp",
+              "alt": "Same model standing rear-on in the white Warm-Up Tee, showing the black and red back design"
+            }
+          ]
+        },
+        {
+          "color": "True Red",
+          "index": 3,
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp",
+              "alt": "Warm-Up Tee in True Red, product front with the white GA monogram centred on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp",
+              "alt": "Warm-Up Tee in True Red, product back with the white stacked GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-front-20261015.webp",
+              "alt": "Model facing forward in the True Red Warm-Up Tee with the white GA monogram centred on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-front-quarter-20261015.webp",
+              "alt": "Same model in a front quarter turn, True Red Warm-Up Tee with the white GA monogram on the chest"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-rear-20261015.webp",
+              "alt": "Same model from behind in the True Red Warm-Up Tee, white GOAL ATHLETICS lockup across the upper back"
+            },
+            {
+              "src": "/products/goal-ga-minimal-true-red-catalog-model-rear-quarter-20261015.webp",
+              "alt": "Same model in a back quarter turn, showing the white GOAL ATHLETICS lockup on the True Red tee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000012",
+      "slug": "goal-athletics-ga-big-tee",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the black Match Day Tee with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, black Match Day Tee with the white and red GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-black-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the black Match Day Tee, clean back with no print"
+            }
+          ]
+        },
+        {
+          "color": "True Royal",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in True Royal, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the true royal Match Day Tee with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, true royal Match Day Tee with the cream GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-royal-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the true royal Match Day Tee, clean back with no print"
+            }
+          ]
+        },
+        {
+          "color": "White · Black-Red",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in White · Black-Red, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the white Match Day Tee with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, white Match Day Tee with the black and red GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-white-black-red-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the white Match Day Tee, clean back with no print"
+            }
+          ]
+        },
+        {
+          "color": "True Red",
+          "index": 3,
+          "images": [
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-product-front-20261022.webp",
+              "alt": "Match Day Tee in True Red, product front with the white GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-model-front-20261020.webp",
+              "alt": "Model facing forward in the true red Match Day Tee with the white GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-model-three-quarter-20261020.webp",
+              "alt": "Same model in a three-quarter turn, true red Match Day Tee with the white GA and GOAL ATHLETICS lockup on the chest"
+            },
+            {
+              "src": "/products/goal-ga-big-tee-true-red-catalog-model-rear-20261020.webp",
+              "alt": "Same model from behind in the true red Match Day Tee, clean back with no print"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000013",
+      "slug": "goal-athletics-ga-minimal-shorts",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
+              "alt": "Core Shorts in black, product front with the white and red GA monogram on the left leg above the hem, drawcord waist and side pockets"
+            },
+            {
+              "src": "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the black Core Shorts with the white and red GA monogram on the left leg above the hem, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp",
+              "alt": "Close-up of the white and red GA monogram on the left leg of the black Core Shorts, just above the hem, with the drawcord waist and side pocket"
+            }
+          ]
+        },
+        {
+          "color": "Ink Blue",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-shorts-ink-blue-catalog-product-front-20261022.webp",
+              "alt": "Core Shorts in Ink Blue, product front with the cream GA monogram on the left leg above the hem, drawcord waist and side pockets"
+            },
+            {
+              "src": "/products/goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Ink Blue Core Shorts with the cream GA monogram on the left leg above the hem, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-shorts-ink-blue-catalog-print-detail-20261022.webp",
+              "alt": "Close-up of the cream GA monogram on the left leg of the Ink Blue Core Shorts, just above the hem, with the drawcord waist and side pocket"
+            }
+          ]
+        },
+        {
+          "color": "Shadow",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-ga-minimal-shorts-shadow-catalog-product-front-20261022.webp",
+              "alt": "Core Shorts in Shadow, product front with the black and red GA monogram on the left leg above the hem, drawcord waist and side pockets"
+            },
+            {
+              "src": "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Shadow Core Shorts with the black and red GA monogram on the left leg above the hem, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp",
+              "alt": "Close-up of the black and red GA monogram on the left leg of the Shadow Core Shorts, just above the hem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000024",
+      "slug": "goal-athletics-core-jogger",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Deep Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-core-jogger-deep-black-catalog-product-front-owner-20261027.webp",
+              "alt": "Core Jogger in Deep Black, product front with the white and red GA monogram on the left hip"
+            },
+            {
+              "src": "/products/goal-core-jogger-deep-black-catalog-model-front-20261027.webp",
+              "alt": "Model facing forward in the Deep Black Core Jogger with a white tee, white and red GA monogram on the left hip, white sneakers"
+            },
+            {
+              "src": "/products/goal-core-jogger-deep-black-catalog-model-detail-20261027.webp",
+              "alt": "Close view of the Deep Black Core Jogger hip, white and red GA monogram beside the zip pocket"
+            },
+            {
+              "src": "/products/goal-core-jogger-deep-black-catalog-model-rear-20261027.webp",
+              "alt": "Model from behind in the Deep Black Core Jogger, plain back with the zip back pocket, GOAL ATHLETICS tee"
+            },
+            {
+              "src": "/products/goal-core-jogger-deep-black-catalog-product-back-owner-20261027.webp",
+              "alt": "Core Jogger in Deep Black, product back, plain with the zip back pocket"
+            }
+          ]
+        },
+        {
+          "color": "Graphite",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-core-jogger-graphite-catalog-product-front-owner-20261027.webp",
+              "alt": "Core Jogger in Graphite, product front with the white GA monogram on the left hip"
+            },
+            {
+              "src": "/products/goal-core-jogger-graphite-catalog-model-front-20261027.webp",
+              "alt": "Model facing forward in the Graphite Core Jogger with a white tee, white GA monogram on the left hip, white sneakers"
+            },
+            {
+              "src": "/products/goal-core-jogger-graphite-catalog-model-detail-20261027.webp",
+              "alt": "Close view of the Graphite Core Jogger hip, white GA monogram beside the zip pocket"
+            },
+            {
+              "src": "/products/goal-core-jogger-graphite-catalog-model-rear-20261027.webp",
+              "alt": "Model from behind in the Graphite Core Jogger, plain back with the zip back pocket, GOAL ATHLETICS tee"
+            },
+            {
+              "src": "/products/goal-core-jogger-graphite-catalog-product-back-owner-20261027.webp",
+              "alt": "Core Jogger in Graphite, product back, plain with the zip back pocket"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000023",
+      "slug": "goal-athletics-core-quarter-zip",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
+              "alt": "Core Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-black-catalog-model-front-20261026.webp",
+              "alt": "Model facing forward in the black Core Quarter Zip, white and red GA monogram on the left chest, black shorts, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-black-catalog-model-three-quarter-20261026.webp",
+              "alt": "Model turned three quarters in the black Core Quarter Zip, the GA monogram on the left chest and the reflective sleeve hit showing"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-black-catalog-model-rear-20261026.webp",
+              "alt": "Model from behind in the black Core Quarter Zip, clean back with reflective hits on both sleeves"
+            }
+          ]
+        },
+        {
+          "color": "White",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp",
+              "alt": "Core Quarter Zip in White, product front with the black GA monogram on the left chest beside the zip"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-white-catalog-model-front-20261026.webp",
+              "alt": "Model facing forward in the white Core Quarter Zip, black GA monogram on the left chest, black shorts, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-white-catalog-model-three-quarter-20261026.webp",
+              "alt": "Model turned three quarters in the white Core Quarter Zip, the black GA monogram on the left chest and the reflective sleeve hit showing"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-white-catalog-model-rear-20261026.webp",
+              "alt": "Model from behind in the white Core Quarter Zip, clean back with reflective hits on both sleeves"
+            }
+          ]
+        },
+        {
+          "color": "Dark Gray",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp",
+              "alt": "Core Quarter Zip in Dark Gray, product front with the black GA monogram on the left chest beside the zip"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-dark-gray-catalog-model-front-20261026.webp",
+              "alt": "Model facing forward in the dark gray Core Quarter Zip, black GA monogram on the left chest, black shorts, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-dark-gray-catalog-model-three-quarter-20261026.webp",
+              "alt": "Model turned three quarters in the dark gray Core Quarter Zip, the black GA monogram on the left chest and the reflective sleeve hit showing"
+            },
+            {
+              "src": "/products/goal-core-quarter-zip-dark-gray-catalog-model-rear-20261026.webp",
+              "alt": "Model from behind in the dark gray Core Quarter Zip, clean back with reflective hits on both sleeves"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000014",
+      "slug": "goal-athletics-heritage-hoodie",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Heritage Hoodie in Black, product front with the white and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-black-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Black Heritage Hoodie with the white and red GA monogram on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-black-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Black Heritage Hoodie, white and red GA monogram on the chest and the left sleeve"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-black-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Black Heritage Hoodie, white and red GA monogram on the chest"
+            }
+          ]
+        },
+        {
+          "color": "Grey Heather",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Heritage Hoodie in Grey Heather, product front with the black and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-grey-heather-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Grey Heather Heritage Hoodie with the black and red GA monogram on the chest and on the left sleeve, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Grey Heather Heritage Hoodie, GA monogram on the chest and the left sleeve"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Grey Heather Heritage Hoodie, GA monogram on the chest and the left sleeve"
+            }
+          ]
+        },
+        {
+          "color": "Bone",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Heritage Hoodie in Bone, product front with the black and red GA monogram centred on the chest and the small GA monogram on the left sleeve above the cuff"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-bone-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Bone Heritage Hoodie with the black and red GA monogram on the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-bone-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Bone Heritage Hoodie, black and red GA monogram on the chest and the left sleeve"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-bone-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Bone Heritage Hoodie, black and red GA monogram on the chest"
+            }
+          ]
+        },
+        {
+          "color": "Navy",
+          "index": 3,
+          "images": [
+            {
+              "src": "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Heritage Hoodie in Navy, product front with the cream GA monogram centred on the chest and the small cream GA monogram on the left sleeve above the cuff"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-navy-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Navy Heritage Hoodie with the cream GA monogram on the chest and on the left sleeve, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-navy-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Navy Heritage Hoodie, cream GA monogram on the chest and the left sleeve"
+            },
+            {
+              "src": "/products/goal-heritage-hoodie-navy-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Navy Heritage Hoodie, cream GA monogram on the chest and the left sleeve"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000015",
+      "slug": "goal-athletics-lockup-hoodie",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Core Hoodie in Black, product front with the white and red GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-black-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Black Core Hoodie with the white and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-black-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Black Core Hoodie, white and red GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-black-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Black Core Hoodie, white and red GOAL ATHLETICS lockup across the chest"
+            }
+          ]
+        },
+        {
+          "color": "Grey Heather",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Core Hoodie in Grey Heather, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-grey-heather-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Grey Heather Core Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Grey Heather Core Hoodie, black and red GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Grey Heather Core Hoodie, black and red GOAL ATHLETICS lockup across the chest"
+            }
+          ]
+        },
+        {
+          "color": "Bone",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Core Hoodie in Bone, product front with the black and red GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-bone-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Bone Core Hoodie with the black and red GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-bone-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Bone Core Hoodie, black and red GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-bone-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Bone Core Hoodie, black and red GOAL ATHLETICS lockup across the chest"
+            }
+          ]
+        },
+        {
+          "color": "Navy",
+          "index": 3,
+          "images": [
+            {
+              "src": "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp",
+              "alt": "GOAL Athletics Core Hoodie in Navy, product front with the cream GA monogram and GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-navy-catalog-model-front-20261022.webp",
+              "alt": "Model facing forward in the Navy Core Hoodie with the cream GA monogram and GOAL ATHLETICS lockup across the chest, black shorts and white sneakers"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-navy-catalog-model-quarter-left-20261022.webp",
+              "alt": "Same model turned to the left in the Navy Core Hoodie, cream GOAL ATHLETICS lockup across the chest"
+            },
+            {
+              "src": "/products/goal-lockup-hoodie-navy-catalog-model-quarter-right-20261022.webp",
+              "alt": "Same model turned to the right in the Navy Core Hoodie, cream GOAL ATHLETICS lockup across the chest"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000016",
+      "slug": "goal-athletics-core-everyday-raincoat",
+      "defaultVariant": 0,
+      "colors": [
+        {
+          "color": "Black",
+          "index": 0,
+          "images": [
+            {
+              "src": "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
+              "alt": "GOAL Athletics Core Everyday Raincoat in Black, product front with the white and red GA monogram on the left chest and the white and red GOAL ATHLETICS wordmark on the right chest, hood up"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-black-catalog-model-front-20261027.webp",
+              "alt": "Model facing forward in the black Core Everyday Raincoat, hood down, white and red GA monogram on the left chest and GOAL ATHLETICS wordmark on the right chest, grey joggers, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-black-catalog-model-side-20261027.webp",
+              "alt": "Model turned to the side in the black Core Everyday Raincoat, the chest marks and the waterproof pocket zip showing"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-black-catalog-model-rear-20261027.webp",
+              "alt": "Model from behind in the black Core Everyday Raincoat, plain back with the hood down"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-black-catalog-product-back-20261026.webp",
+              "alt": "GOAL Athletics Core Everyday Raincoat in Black, product back, plain with the hood down"
+            }
+          ]
+        },
+        {
+          "color": "True Navy",
+          "index": 1,
+          "images": [
+            {
+              "src": "/products/goal-core-everyday-raincoat-true-navy-catalog-product-front-20261026.webp",
+              "alt": "GOAL Athletics Core Everyday Raincoat in True Navy, product front with the cream GA monogram on the left chest and the cream GOAL ATHLETICS wordmark on the right chest, hood up"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-true-navy-catalog-model-front-20261027.webp",
+              "alt": "Model facing forward in the navy Core Everyday Raincoat, hood down, cream GA monogram on the left chest and GOAL ATHLETICS wordmark on the right chest, grey joggers, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-true-navy-catalog-model-side-20261027.webp",
+              "alt": "Model turned to the side in the navy Core Everyday Raincoat, the chest marks and the waterproof pocket zip showing"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-true-navy-catalog-model-rear-20261027.webp",
+              "alt": "Model from behind in the navy Core Everyday Raincoat, plain back with the hood down"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-true-navy-catalog-product-back-20261026.webp",
+              "alt": "GOAL Athletics Core Everyday Raincoat in True Navy, product back, plain with the hood down"
+            }
+          ]
+        },
+        {
+          "color": "Dark Grey Heather",
+          "index": 2,
+          "images": [
+            {
+              "src": "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-front-20261026.webp",
+              "alt": "GOAL Athletics Core Everyday Raincoat in Dark Grey Heather, product front with the black GA monogram on the left chest and the black GOAL ATHLETICS wordmark on the right chest, hood up"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-model-front-20261027.webp",
+              "alt": "Model facing forward in the dark grey heather Core Everyday Raincoat, hood down, black GA monogram on the left chest and GOAL ATHLETICS wordmark on the right chest, grey joggers, white socks and white sneakers"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-model-side-20261027.webp",
+              "alt": "Model turned to the side in the dark grey heather Core Everyday Raincoat, the chest marks and the waterproof pocket zip showing"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-model-rear-20261027.webp",
+              "alt": "Model from behind in the dark grey heather Core Everyday Raincoat, plain back with the hood down"
+            },
+            {
+              "src": "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-back-20261026.webp",
+              "alt": "GOAL Athletics Core Everyday Raincoat in Dark Grey Heather, product back, plain with the hood down"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp": "27ded790f730a376497c61dd323df76b90e37228679a1f29bc9991ef08b4581d",
+    "/products/goal-monogram-cap-black-catalog-model-front-20261022.webp": "e2765798141ecf5b7849eaa237db560af68949ef4cc9824d747e2f8d8840cdfd",
+    "/products/goal-monogram-cap-black-catalog-model-three-quarter-20261022.webp": "8f2fee08596d28b33487660a73578d17b1cf80f46815254bc4dde99ad6a18bc6",
+    "/products/goal-monogram-cap-black-catalog-model-side-20261022.webp": "dbfb75db40b36a58ee5754996daea847d056815bd89b9e093e4758746002d15d",
+    "/products/goal-monogram-cap-red-catalog-product-front-20261022.webp": "78d400dedbbe5bc777f4999f76a756a288b3bdac336a4b21ab180577b8c51bc8",
+    "/products/goal-monogram-cap-red-catalog-model-front-20261022.webp": "4b294b6e2f543964a1bad2ac42da605c916a35e525a4ea877fb5cd8e3377978d",
+    "/products/goal-monogram-cap-red-catalog-model-three-quarter-20261022.webp": "c4862ab73c6b12a6766b4f7e770132283a73f7361f05266ab8c76fa561947051",
+    "/products/goal-monogram-cap-red-catalog-model-side-20261022.webp": "e220e771adee39646a945640cd1f936392627bfa9c5bf57e0dfab9f432cb11cb",
+    "/products/goal-monogram-cap-royal-catalog-product-front-20261022.webp": "9a109005183b664e9887142aaccfd849e0382fa891267edb3969c126e8a56f9f",
+    "/products/goal-monogram-cap-royal-catalog-model-front-20261022.webp": "c2ebe62411486a58d144392c41556fe11c1f07cf183fcc6ad91497f13d868bf1",
+    "/products/goal-monogram-cap-royal-catalog-model-three-quarter-20261022.webp": "a210460bb52f640074beeab545982e4c5d24633912ca265913923e6209aa6170",
+    "/products/goal-monogram-cap-royal-catalog-model-side-20261022.webp": "967e4e16b5dea0ead422c312714a2680e5aba312ea00bf6e36500c1da3f3059b",
+    "/products/goal-monogram-cap-dark-green-catalog-product-front-20261022.webp": "c3448117aec97a020865074e6dde832d391887f67e77507c568ec2d8b8a7a087",
+    "/products/goal-monogram-cap-dark-green-catalog-model-front-20261022.webp": "4b00fc7c223b16b6d9a5c8904511df9630e13a1223995df248bb105219da33fb",
+    "/products/goal-monogram-cap-dark-green-catalog-model-three-quarter-20261022.webp": "4626ad59ed7eda033e389c07afbf6bec7f7108d88918157e539493bcc1676fc2",
+    "/products/goal-monogram-cap-dark-green-catalog-model-side-20261022.webp": "3960cd81cd93cd3afb4b01f36a0ecbe3e93551f468dfa91ceed780931295b9bd",
+    "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp": "10187c6876dd9d667708499fe8df6abd1ef6b24a645373b2983362a07d1aa06c",
+    "/products/goal-wordmark-cap-black-catalog-model-front-20261022.webp": "eaca8f23695d52f16a22623819511798f27c6a1c33a819c9d6c0cddde1d180f6",
+    "/products/goal-wordmark-cap-black-catalog-model-three-quarter-20261022.webp": "67bc7653bb32d02ae62c93d345622805f22522c80b216d962c3ea2eb4ab96bd3",
+    "/products/goal-wordmark-cap-black-catalog-model-side-20261022.webp": "d96fd0549470f343d5a855da9fd4c396d5d576ee49f75bfd51e846434a5d7b2c",
+    "/products/goal-wordmark-cap-red-catalog-product-front-20261022.webp": "e4fdda08c4ad929519ceb13bb302df48629b3a5e63134b41bd404f26469ed7fc",
+    "/products/goal-wordmark-cap-red-catalog-model-front-20261022.webp": "57230bef7c9e6db81aa3744dad539b8ac99bf1af2967193dab5323f01d6f9153",
+    "/products/goal-wordmark-cap-red-catalog-model-three-quarter-20261022.webp": "b1e8e1e1a81ed4f88f91247f627167adc9ee5a62527782c9d958ae6067d92b9d",
+    "/products/goal-wordmark-cap-red-catalog-model-side-20261022.webp": "5330d749dafdef53b6c89a2ef8f4ca83c91fb5a0550c24d707ab7dc00cbb4f24",
+    "/products/goal-wordmark-cap-royal-catalog-product-front-20261022.webp": "a06d839bffeab3c31fb03f368a16ca0b60339d8a3eaf276322bb17a1ae6c1411",
+    "/products/goal-wordmark-cap-royal-catalog-model-front-20261022.webp": "3f6308f904b109c9d5cf4b6923d9ac936174430e4e4482acf9a0bf7af405e6a0",
+    "/products/goal-wordmark-cap-royal-catalog-model-three-quarter-20261022.webp": "da15627a33f9c9ea5a34c0fd2f7745892d688cecdbcfe743d49cf740892006c4",
+    "/products/goal-wordmark-cap-royal-catalog-model-side-20261022.webp": "fbdef137b811385fe1e85cf39432683eeafdc8e840b1d6db681bfdb6ae909629",
+    "/products/goal-wordmark-cap-dark-green-catalog-product-front-20261022.webp": "ceffabe2a5f327623db295a4826dba0c90bd94ef21b65c8322f7311213e5bb10",
+    "/products/goal-wordmark-cap-dark-green-catalog-model-front-20261022.webp": "497ad343c7165fe05557a8f805b88c9ca2dd33502620b1cdb6f5c2049ca02cc9",
+    "/products/goal-wordmark-cap-dark-green-catalog-model-three-quarter-20261022.webp": "8b59fa4eea35c3e8c26610fce89509ce0764c33107fe8ba696e970c856aa406a",
+    "/products/goal-wordmark-cap-dark-green-catalog-model-side-20261022.webp": "10b4f31fc7e46072edf85e59b993218894939e1e333e6db27cbc9c2a61ec0f95",
+    "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp": "f461c9ce414cf043fe3437016478aad3a97b6ba05e3ff20b951dfbac774ca59c",
+    "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp": "ce7740c826ed5b759302bafe7484febde419bcd61719738f97a9a266f48d0b2b",
+    "/products/goal-ga-minimal-black-catalog-model-front-20261015.webp": "d590ac96f958743e34aa4dccfc41ec4abfab6404a1322a9254c411886fbac378",
+    "/products/goal-ga-minimal-black-catalog-model-front-quarter-20261015.webp": "9eee7e8159feb782fb32dad056c56b0968971c42c85116698ac0aacfa6a1b0da",
+    "/products/goal-ga-minimal-black-catalog-model-rear-20261015.webp": "65e6557c5a1d0b8d3995664dfc224c3e53ba0e7f574ffb28e20be3e0c32d435c",
+    "/products/goal-ga-minimal-black-catalog-model-rear-quarter-20261015.webp": "932be641d0f0f69beb6918464f1a8c68010a3b7325c3083078c71f3170d7b7d2",
+    "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp": "9c5efd07250643d6ecc23cd2f83879b1eafd8c0a38052ea73627a6b69ca6ead5",
+    "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp": "524e7b85fadd38755cbd21837a518453fceafc074a5eecde3ff1c6ef8feef690",
+    "/products/goal-ga-minimal-true-royal-catalog-model-front-20261015.webp": "158a36023ce409bdf5e703bb31039223633e32e0b658d969fefd1e9410dcc76a",
+    "/products/goal-ga-minimal-true-royal-catalog-model-front-quarter-20261015.webp": "a7448b959ee0f5a602951a175e6da3ae1cf364af73fa9eb39c26f36f22796819",
+    "/products/goal-ga-minimal-true-royal-catalog-model-rear-20261015.webp": "c011bd506a55a6c9f690bb1bd3b49bf6021865d22bf9dff15bc9d15bfd1c02ee",
+    "/products/goal-ga-minimal-true-royal-catalog-model-rear-quarter-20261015.webp": "d1796dd8e30b0b9d4b58b15755a05426f7f04bc898369a98d40b1b6d22b31d0f",
+    "/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp": "fb63b460b9579343647d08381d4bd95f1572d55f65079e4b3258a0a8068e936b",
+    "/products/goal-ga-minimal-white-black-red-catalog-product-back-20261014.webp": "db1681071af80b38268b45254340465fe003a24b6ca7d48276e89a70f3f62a5e",
+    "/products/goal-ga-minimal-white-black-red-catalog-model-front-20261014.webp": "6c753817877479f6d9eadca7db15aa352e0b10857cc97d11ac50f289c070fb89",
+    "/products/goal-ga-minimal-white-black-red-catalog-model-three-quarter-20261014.webp": "75b7965c5c3073047b30503d3a18a6dc52c10c0a13925ca723c38d0a4b7177b3",
+    "/products/goal-ga-minimal-white-black-red-catalog-model-rear-20261014.webp": "c42e4df02d109c96053f624518898dd9fed3ae25f7e420f9296e69d63c272d38",
+    "/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp": "77fc1376384983cd1d73d42a9fed5ad3224ea333396df249d2d690cb001c2edc",
+    "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp": "29682e9067a6bc4a70997b2fe65791ae5578fa2196ca82385fd3c97015240bd9",
+    "/products/goal-ga-minimal-true-red-catalog-model-front-20261015.webp": "6bebe9e181722edabb76a02870a1c501b9ba9cb316e33b3a3ac9855d42dd5d9d",
+    "/products/goal-ga-minimal-true-red-catalog-model-front-quarter-20261015.webp": "c6a9bb392ae39ebd8abba3fbbbf50218493d62f9c2f163f6d533bcb70b38969f",
+    "/products/goal-ga-minimal-true-red-catalog-model-rear-20261015.webp": "f74d43317fb0e05cb4ec663cf57a313fedcbf81540600b134a216648915639d5",
+    "/products/goal-ga-minimal-true-red-catalog-model-rear-quarter-20261015.webp": "e60264a4ad2196f5de6fc65a7c0dd594a1bbc55e353c384d0e994ac3fbd05594",
+    "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp": "15992bbcc3b7ac72bd64b76865040bb96ff2cdb1108144a4b217a2ebed4eac7e",
+    "/products/goal-ga-big-tee-black-catalog-model-front-20261020.webp": "418efe5cce6258693740df55e02c693129938ef19cd2e18c8814f76de78a8954",
+    "/products/goal-ga-big-tee-black-catalog-model-three-quarter-20261020.webp": "dae5290daf55786f3cc9621ba3dff3e197701a30eac0e2937fb3c1eea8f30806",
+    "/products/goal-ga-big-tee-black-catalog-model-rear-20261020.webp": "18056a4f39eb5c1dc115d871457f3070275198c9946be63fd722eb63642d7285",
+    "/products/goal-ga-big-tee-true-royal-catalog-product-front-20261022.webp": "e7363e3d9eb9767839acd1b969eb31b40a9780611f578bb22e63f3d880cbf77a",
+    "/products/goal-ga-big-tee-true-royal-catalog-model-front-20261020.webp": "53c4ad3413c6df93ef07051f7cd1c32ce207514e512c51647e62177467dada8b",
+    "/products/goal-ga-big-tee-true-royal-catalog-model-three-quarter-20261020.webp": "c5f41f4d2c00639550a46881e5122b9b747b84f2d018b7b3331495601866492e",
+    "/products/goal-ga-big-tee-true-royal-catalog-model-rear-20261020.webp": "2954134ca35adbce013d5586701dc36d46d81f1b7580b41e803e629420c9535b",
+    "/products/goal-ga-big-tee-white-black-red-catalog-product-front-20261022.webp": "776ff5c95b52a57a6658d4d865309c3da1fbef619f265942c9b63010293a15ae",
+    "/products/goal-ga-big-tee-white-black-red-catalog-model-front-20261020.webp": "fa2892cb9a874ee41218bfdae838a09c73f957f9e052f449c48a1cc671a8d79b",
+    "/products/goal-ga-big-tee-white-black-red-catalog-model-three-quarter-20261020.webp": "63bec5d463dfc3fceb5e35b3c0f490934a03602a6610e0856b1ff4254fbd8883",
+    "/products/goal-ga-big-tee-white-black-red-catalog-model-rear-20261020.webp": "701b3a775aa5051440b92addbeb61bb1a809a77217726b716e07ed5a1626c0a0",
+    "/products/goal-ga-big-tee-true-red-catalog-product-front-20261022.webp": "3255829b9292ae858aa5c29f1503c930167f27cb027f5ea3eb39d2c1a8f11ea4",
+    "/products/goal-ga-big-tee-true-red-catalog-model-front-20261020.webp": "26cd1ed4905fbc6b0c4c70fc07be1511a50eda30e6baecd30939b68590c68bf4",
+    "/products/goal-ga-big-tee-true-red-catalog-model-three-quarter-20261020.webp": "83666e812ec5c3ce19603f12b005706a42fda2c13dd28128fdb97240f856addc",
+    "/products/goal-ga-big-tee-true-red-catalog-model-rear-20261020.webp": "933cb8f9d95d9a432597c631f55c4bbb54b7340e8d2c7530d3f5a5a47c218f5a",
+    "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp": "f23b793b647f56d43095d58682154ad404f10e07af96518d8bfa4cc845b9d4ca",
+    "/products/goal-ga-minimal-shorts-black-catalog-model-front-20261022.webp": "945892abd44d49c37dec0be5b7d8af700a3893623c423d638e3d9354d3519ac6",
+    "/products/goal-ga-minimal-shorts-black-catalog-print-detail-20261022.webp": "d71c687844737ebbe13d82f736c082c889e5b594b6603e3f9ae92cc6906b5940",
+    "/products/goal-ga-minimal-shorts-ink-blue-catalog-product-front-20261022.webp": "a0c0295ab16215a6e0fc2d52fc990238bca3a760205c2d08e0b2593fe1cae25e",
+    "/products/goal-ga-minimal-shorts-ink-blue-catalog-model-front-20261022.webp": "3ef26e250e5e6cd5e42bdf16ba3da4c3cf9f836a687fd751f02dc9f9c6e36795",
+    "/products/goal-ga-minimal-shorts-ink-blue-catalog-print-detail-20261022.webp": "220a58fee3021cbd98899b59009901f1107d7e9ecb58cedafc513d949d134b12",
+    "/products/goal-ga-minimal-shorts-shadow-catalog-product-front-20261022.webp": "df917546e1c80c9204ad5878aac8c886705650b6850756e294c4aab1ccd3faf2",
+    "/products/goal-ga-minimal-shorts-shadow-catalog-model-front-20261022.webp": "a7c30367fcafe9304a73a2fd808f6bd9d9e5094cdfc16b127e49f422e6532831",
+    "/products/goal-ga-minimal-shorts-shadow-catalog-print-detail-20261022.webp": "732db9f2cd2d844fac8be70e385d87d8829901097c744a945c932d85d50c6e52",
+    "/products/goal-core-jogger-deep-black-catalog-product-front-owner-20261027.webp": "2b798a6d437fd88170815aa946481a4a9de182058e167d0f45e8f2bd2eb7dfcb",
+    "/products/goal-core-jogger-deep-black-catalog-model-front-20261027.webp": "8d20156e0e6714720e3049e8857e19fd71379236aca94271186cf1749193c032",
+    "/products/goal-core-jogger-deep-black-catalog-model-detail-20261027.webp": "470a56d00444abca2b3b4c5be4779744544cca2cfd2aa67e6892c2ec37670c39",
+    "/products/goal-core-jogger-deep-black-catalog-model-rear-20261027.webp": "2ae8fddb49bebe700ecb3560cb4b9d21e67e211506a70eee9f6745c5e591545e",
+    "/products/goal-core-jogger-deep-black-catalog-product-back-owner-20261027.webp": "6b19d5665ff549c1f3220b681cf274cad04cbaca45cf2c100f23022720f89dac",
+    "/products/goal-core-jogger-graphite-catalog-product-front-owner-20261027.webp": "8bb2c25258ad7906804b09fab1487503d31a8a6c8c3b11105ecc5a5f3c2b915e",
+    "/products/goal-core-jogger-graphite-catalog-model-front-20261027.webp": "c8dbb3c5f6b33f34d08028425c9a85f47e5578a75366f81f0a1b2d0608a4de12",
+    "/products/goal-core-jogger-graphite-catalog-model-detail-20261027.webp": "72e3911e5c1b95b4f99929962a1822b649f7c5f4b7d84202d897d7a04ab77bc6",
+    "/products/goal-core-jogger-graphite-catalog-model-rear-20261027.webp": "89f6eeb431fd6b3563f2de257015a295c408fea53b4c21084669a421e8ec8d67",
+    "/products/goal-core-jogger-graphite-catalog-product-back-owner-20261027.webp": "9276664a8bef75d2313d8365990c056fb7f647e3541a2e81e8bed7f0388aac78",
+    "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp": "21042ec2503f939ad7a709091dc2b6f49dd524b6cce9033457cc170b3cba4b75",
+    "/products/goal-core-quarter-zip-black-catalog-model-front-20261026.webp": "687ca7e88a7766eb390a361e112eae8c57e85245596f7bf923d619a6889119fa",
+    "/products/goal-core-quarter-zip-black-catalog-model-three-quarter-20261026.webp": "8e13cf81d0c0da09e019e4b41754999f43a99b62273f3da88670b427b933db09",
+    "/products/goal-core-quarter-zip-black-catalog-model-rear-20261026.webp": "2378318e569b3ea055b9b2542c4592215a66222963c5cb866b2a386b72592431",
+    "/products/goal-core-quarter-zip-white-catalog-product-front-20261026.webp": "441b3ab5130d39d5c9ab402f214b7ba334d4c46469ddc9bdde511a102bf62151",
+    "/products/goal-core-quarter-zip-white-catalog-model-front-20261026.webp": "6ea44de32b5ec87f6e4c0ec7f079669a423a08cbcb3343d2f8a01f5446a25fd3",
+    "/products/goal-core-quarter-zip-white-catalog-model-three-quarter-20261026.webp": "ee85feba5d5b31b228b57b494feb977c546cd639fdfd36be71bed3adb5e71a0b",
+    "/products/goal-core-quarter-zip-white-catalog-model-rear-20261026.webp": "f8be92e2d05bdf0bf2b82e0e8ae5efbafed5d51874cf804529c6b2198786e02c",
+    "/products/goal-core-quarter-zip-dark-gray-catalog-product-front-20261026.webp": "9393f75a2f3b23ec807d0f364cba3cd183bfb4002925a11df67a18b93f326f4a",
+    "/products/goal-core-quarter-zip-dark-gray-catalog-model-front-20261026.webp": "4ba27cb67b2cb312cc5b63c69af4de15cc19e4768373c0538dbd27d4ae7f68cb",
+    "/products/goal-core-quarter-zip-dark-gray-catalog-model-three-quarter-20261026.webp": "90e7b69af89603288beb656fcdd70d1ae180cc3807a2af2a3f37f39de9534ed6",
+    "/products/goal-core-quarter-zip-dark-gray-catalog-model-rear-20261026.webp": "e3121504939fa2517da6061e6a6ec18489896de7df81268d7bf540342f93a69b",
+    "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp": "21a3db4c66036f5144b4b3c1b875ddd58215a1e7ac7e5077363ec915ebe359d1",
+    "/products/goal-heritage-hoodie-black-catalog-model-front-20261022.webp": "164244f7b3c18ee78172655a114581ac6737e8922bbb3c5b6acd4e9e20eb7eb7",
+    "/products/goal-heritage-hoodie-black-catalog-model-quarter-left-20261022.webp": "b3d118306319a3f830a131a13a792b257b0bc72ccfa4f6300838c23bc3faf508",
+    "/products/goal-heritage-hoodie-black-catalog-model-quarter-right-20261022.webp": "fa66cd6dde794070be03bcf852946e00d76a5a376aba59c898358e2df7bf4eb5",
+    "/products/goal-heritage-hoodie-grey-heather-catalog-product-front-20261022.webp": "6bdd7fb9e566394242240093e314928717ad7f4c75074d724a6942bd8071ef65",
+    "/products/goal-heritage-hoodie-grey-heather-catalog-model-front-20261022.webp": "31abe520c50d8feba1c698dab6d801fbbb34e3a618390c621971a701b97bbc66",
+    "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp": "f66beb43a7fab7ccfb16a568a5a55e338fbfb207de1080ffcb20454f58f6361e",
+    "/products/goal-heritage-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp": "f2600c5c7b7b8ddec99367b52d8fc60fe6eed9e7899df403ef39263dff092ecf",
+    "/products/goal-heritage-hoodie-bone-catalog-product-front-20261022.webp": "6179d7f600c1c8d220d64e967af4d7e5e730dad0f5fd68be6109e2e6e4958a33",
+    "/products/goal-heritage-hoodie-bone-catalog-model-front-20261022.webp": "447c17d06a1df9b544986283d394d402c4099fa1fb3e9717521c16739c472402",
+    "/products/goal-heritage-hoodie-bone-catalog-model-quarter-left-20261022.webp": "94b0ae19cca35f37db6ead0cc7ec8930c5e5e605f1ecf05a784f43c8e1127206",
+    "/products/goal-heritage-hoodie-bone-catalog-model-quarter-right-20261022.webp": "394275ab5c9969178dc01b33950f2f0825bc0d67536974a2f439b9324073af7d",
+    "/products/goal-heritage-hoodie-navy-catalog-product-front-20261022.webp": "daf21a8e3d9606e6b63941c56a51408607b3a9bd64fab5563705b5e08b611f1f",
+    "/products/goal-heritage-hoodie-navy-catalog-model-front-20261022.webp": "8f7a357a7ff17d68fc4ddfdbcdebc4e4bc96660eaa1e7991e5c04d6b1b0458d2",
+    "/products/goal-heritage-hoodie-navy-catalog-model-quarter-left-20261022.webp": "8f803d17c7823fee340505dd4fa66412e2cbd8c1882f3b1be0596a0d6254bc27",
+    "/products/goal-heritage-hoodie-navy-catalog-model-quarter-right-20261022.webp": "e17043fc675ef36bd2e8cac95013caeccc8aa4109b957de13a10da37d351630e",
+    "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp": "43f976a55f25bfc8b8a42f530bfc2ef841874ef6a047a1135ffcba40ba6da108",
+    "/products/goal-lockup-hoodie-black-catalog-model-front-20261022.webp": "304214f62856d5e62a955156fae9c021a6da4ce1d96add206054e2f36f4cbb14",
+    "/products/goal-lockup-hoodie-black-catalog-model-quarter-left-20261022.webp": "19843bd1242bd82a5e6e0c8ccc0d77abd7834f773783efa5d486b355eec68ac8",
+    "/products/goal-lockup-hoodie-black-catalog-model-quarter-right-20261022.webp": "5117cf311b1be5978b0a4a6510d06b9e8c3dd25721ba00e6329dd50591f16943",
+    "/products/goal-lockup-hoodie-grey-heather-catalog-product-front-20261022.webp": "bd2436e1e9f785cec71e7267c612f6f4a00a59727fa6bba8fa0902819143cbf7",
+    "/products/goal-lockup-hoodie-grey-heather-catalog-model-front-20261022.webp": "a1c6f71a137d347879312a89a7233042803d95e87a029499a3a4151eab97c137",
+    "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-left-20261022.webp": "9a0745f6b90983443077117aec0195e36a75c60b4c5a501852b74541188ae1be",
+    "/products/goal-lockup-hoodie-grey-heather-catalog-model-quarter-right-20261022.webp": "ded0c9eed17448ad3f579d2b3d811bceecaa7ec979754459472d3806da8e4727",
+    "/products/goal-lockup-hoodie-bone-catalog-product-front-20261022.webp": "04f33b545c4e89080391bb3dd0b9ee090a55f41fc7acaf122e2bae87e6568064",
+    "/products/goal-lockup-hoodie-bone-catalog-model-front-20261022.webp": "3db87df0bebd06641db03d4e318f5cae936b850b6ee4529c254ecca8f8e0881f",
+    "/products/goal-lockup-hoodie-bone-catalog-model-quarter-left-20261022.webp": "bf48646151a8d0c0dc7de189b8fdf74dd4af54210793b7505cc70dc4b7b6fee0",
+    "/products/goal-lockup-hoodie-bone-catalog-model-quarter-right-20261022.webp": "71e3ca38727d8428824d93f366b2b015a67e7528956debcae663168cd821e644",
+    "/products/goal-lockup-hoodie-navy-catalog-product-front-20261022.webp": "1a4d71d9fb9cc3b226068cd46c158625d82e3ab2e98b50f33882399a5e8319d2",
+    "/products/goal-lockup-hoodie-navy-catalog-model-front-20261022.webp": "94a17ba2611d46424da9249c3bafbbd45d68e25c62cbfbbeaaeefc23234475e8",
+    "/products/goal-lockup-hoodie-navy-catalog-model-quarter-left-20261022.webp": "48aa92ef8773b5a103416381bfb19d91436a44b0c3b48632970034753a7e8a7d",
+    "/products/goal-lockup-hoodie-navy-catalog-model-quarter-right-20261022.webp": "c7989c5a5f6d469f2033030a80af7bd89466d616ef8d9f409f30811ec5ba7fa0",
+    "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp": "3d8eb244b58642419ccb66d4400569662bad8093ea1bfc0cabb1d821faf11ea0",
+    "/products/goal-core-everyday-raincoat-black-catalog-model-front-20261027.webp": "d462f1fee0215724766a9fc117595fcae4b7f2247515a9e582b6c900fb605335",
+    "/products/goal-core-everyday-raincoat-black-catalog-model-side-20261027.webp": "7729a27e9037fe8217f3a3c9b922d0d7e1ea2777eb5a165ff9f1f8e616493ad2",
+    "/products/goal-core-everyday-raincoat-black-catalog-model-rear-20261027.webp": "0eff715b69146a96c3972db877c2feeba3efe528a2d70fca50cfaa4a6d2409f9",
+    "/products/goal-core-everyday-raincoat-black-catalog-product-back-20261026.webp": "ac46e252e37930039074603c3b3883a412c7a311658ae406dc0889ecffc8bcb2",
+    "/products/goal-core-everyday-raincoat-true-navy-catalog-product-front-20261026.webp": "b5501ade2a54953c990b343574f341b8b6453341764b77d194e4fef961f73af8",
+    "/products/goal-core-everyday-raincoat-true-navy-catalog-model-front-20261027.webp": "4b0fa984b72ee824b6b9fb016359b3979a749ede6772f614efe05eafd62f054f",
+    "/products/goal-core-everyday-raincoat-true-navy-catalog-model-side-20261027.webp": "8bd53a053c8846de71c5591c71a9976d57efbde28ab73b44b916171955afaa4e",
+    "/products/goal-core-everyday-raincoat-true-navy-catalog-model-rear-20261027.webp": "95ca05911a7fecb22de5636a511fb88b8ba2f4fdb4492adbdb37cb7ba0f992e8",
+    "/products/goal-core-everyday-raincoat-true-navy-catalog-product-back-20261026.webp": "12928650c94078dc79380e362badb6eb47d5eafa5c5f2817a32dc531ef28a5cb",
+    "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-front-20261026.webp": "b1ab51c56f07b3b762540f485ce1e84301aa59b09d36da6129c368bab2fdc8ea",
+    "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-model-front-20261027.webp": "b3e7d767b55fb1d715ab1ee63a392685062505c5754d8c62f2f4fef09822ebc0",
+    "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-model-side-20261027.webp": "5c62f20c6a8959a318bbad30c121a24d6ed560fc26961d65ca076b083c5db020",
+    "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-model-rear-20261027.webp": "0433375b96a93cf6d7abcda1a214b0f0f81771d8281b783ad66fd0201f0a36b5",
+    "/products/goal-core-everyday-raincoat-dark-grey-heather-catalog-product-back-20261026.webp": "9fe436f303a8780b8e51a9a6dd3b3985c73e07b49c5d5fd393e5be3a72377e8e"
+  }
+}

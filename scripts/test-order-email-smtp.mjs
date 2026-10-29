@@ -1,225 +1,205 @@
-/**
- * Order confirmation over Google Workspace SMTP.
- *
- * test-order-email.mjs covers the HTTP adapter. This covers the one the
- * site will actually use, because goool.shop is a Workspace domain and
- * hello@goool.shop is a real inbox. Testing only the HTTP path would
- * have left the live path unexercised.
- *
- * Runs a minimal SMTP server in-process: no network, no credentials, no
- * mail leaves the machine.
- *
- *   STORE_DIR=<dir> node scripts/test-order-email-smtp.mjs <baseUrl> <smtpPort>
- *
- * Point STORE_DIR (and the server's ORDERS_TEST_STORE) at a directory
- * OUTSIDE any OneDrive-synced folder. The file store writes via
- * write-temp-then-rename, and OneDrive holds a lock on the target long
- * enough that the rename intermittently fails with EPERM on Windows.
- * That, not the application, is what made these suites look flaky.
- */
-import net from "node:net";
-import fs from "node:fs";
-import path from "node:path";
-import crypto from "node:crypto";
-import Stripe from "stripe";
-
-const BASE = process.argv[2] ?? "http://localhost:3996";
-const SMTP_PORT = Number(process.argv[3] ?? 4466);
-const STORE_DIR = process.env.STORE_DIR ?? "./tmp/orders-test-store";
-const WEBHOOK_SECRET = process.env.TEST_WEBHOOK_SECRET ?? "whsec_test_local_secret";
-const stripe = new Stripe("sk_test_dummy_key_not_real");
-
-let passed = 0, failed = 0;
-const check = (name, cond, detail = "") => {
-  if (cond) { passed++; console.log(`  PASS  ${name}`); }
-  else { failed++; console.log(`  FAIL  ${name}  ${detail}`); }
-};
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-// ── minimal SMTP server ──────────────────────────────────────
-// mode: ok | authfail | rcptreject
-const smtp = { mode: "ok", received: [], authSeen: null };
-const smtpServer = net.createServer((sock) => {
-  let buf = "";
-  let inData = false;
-  let msg = { from: "", to: [], data: "" };
-  const send = (s) => sock.write(s + "\r\n");
-  send("220 mock.goool.shop ESMTP ready");
-
-  sock.on("data", (chunk) => {
-    buf += chunk.toString("utf8");
-    for (;;) {
-      if (inData) {
-        const end = buf.indexOf("\r\n.\r\n");
-        if (end < 0) return;
-        msg.data += buf.slice(0, end);
-        buf = buf.slice(end + 5);
-        inData = false;
-        smtp.received.push({ ...msg });
-        msg = { from: "", to: [], data: "" };
-        send("250 2.0.0 OK queued");
-        continue;
-      }
-      const nl = buf.indexOf("\r\n");
-      if (nl < 0) return;
-      const line = buf.slice(0, nl);
-      buf = buf.slice(nl + 2);
-      const up = line.toUpperCase();
-
-      if (up.startsWith("EHLO") || up.startsWith("HELO")) {
-        send("250-mock.goool.shop");
-        send("250-AUTH LOGIN PLAIN");
-        send("250 8BITMIME");
-      } else if (up.startsWith("AUTH LOGIN")) {
-        send("334 VXNlcm5hbWU6");
-        sock.once("data", (u) => {
-          smtp.authSeen = Buffer.from(u.toString().trim(), "base64").toString();
-          send("334 UGFzc3dvcmQ6");
-          sock.once("data", () => {
-            if (smtp.mode === "authfail") send("535 5.7.8 Username and Password not accepted");
-            else send("235 2.7.0 Accepted");
-          });
-        });
-        return;
-      } else if (up.startsWith("AUTH PLAIN")) {
-        const b64 = line.split(" ")[2] ?? "";
-        smtp.authSeen = Buffer.from(b64, "base64").toString().split("\0").filter(Boolean)[0] ?? null;
-        if (smtp.mode === "authfail") send("535 5.7.8 Username and Password not accepted");
-        else send("235 2.7.0 Accepted");
-      } else if (up.startsWith("MAIL FROM")) {
-        msg.from = (line.match(/<([^>]*)>/) || [, ""])[1];
-        send("250 2.1.0 OK");
-      } else if (up.startsWith("RCPT TO")) {
-        if (smtp.mode === "rcptreject") { send("550 5.1.1 No such user"); continue; }
-        msg.to.push((line.match(/<([^>]*)>/) || [, ""])[1]);
-        send("250 2.1.5 OK");
-      } else if (up.startsWith("DATA")) {
-        inData = true;
-        send("354 End data with <CR><LF>.<CR><LF>");
-      } else if (up.startsWith("QUIT")) {
-        send("221 2.0.0 Bye");
-        sock.end();
-        return;
-      } else if (up.startsWith("RSET") || up.startsWith("NOOP")) {
-        send("250 2.0.0 OK");
-      } else {
-        send("250 2.0.0 OK");
-      }
-    }
-  });
-  sock.on("error", () => {});
+/** Historical inventory filename. SMTP is unsupported; this now protects the
+ * actual paid-webhook -> durable receipt queue -> Resend worker path.
+ * Run: node scripts/test-order-email-smtp.mjs. Legacy CLI args are unnecessary.
+ * No server, real credentials, external request or filesystem order store. */
+import assert from 'node:assert/strict';
+import harness from './fixtures/resend-queue-harness.cjs';
+const { createHarness, reporter, ORDER_ID } = harness, { check, finish } = reporter('queued-receipt');
+await check('Paid webhook queues a durable receipt without sending inline', async () => {
+    const h = createHarness(), r = await h.webhook();
+    assert.equal(r.status, 200);
+    assert.equal(r.body.confirmation, 'queued');
+    assert.equal(h.requests.length, 0);
+    assert.equal(h.tables.orders.length, 1);
+    assert.equal(h.tables.orders[0].status, 'paid');
+    assert.equal(h.tables.orders[0].confirmation_sent_at, null);
+    assert.equal(h.row().key, 'order/test/' + ORDER_ID);
+    assert.equal(h.row().kind, 'order');
+    assert.equal(h.row().livemode, false);
+    assert.equal(h.row().order_id, ORDER_ID);
+    assert.equal(h.row().status, 'pending');
+    assert.equal(h.receiptRequests.length, 1);
+    assert.deepEqual(h.receiptRequests[0].payload, { receipt_email: 'buyer@example.test' });
 });
-
-// ── helpers ──────────────────────────────────────────────────
-const ITEMS = [
-  { p: "70000000-0000-4000-8000-000000000001", c: "True Royal", s: "M", q: 1, u: 4800, k: "APQ-6099129S7A1", a: 6099129 },
-];
-function makeSession(email = "buyer@example.com") {
-  const json = JSON.stringify(ITEMS);
-  const metadata = {};
-  for (let i = 0; i * 450 < json.length; i++) metadata[`items_${i}`] = json.slice(i * 450, (i + 1) * 450);
-  return {
-    id: `cs_test_${crypto.randomUUID().replace(/-/g, "")}`,
-    object: "checkout.session",
-    payment_status: "paid", status: "complete",
-    amount_total: 5750, amount_subtotal: 4800,
-    total_details: { amount_shipping: 950, amount_tax: 0 },
-    currency: "usd",
-    payment_intent: `pi_${crypto.randomUUID().replace(/-/g, "").slice(0, 24)}`,
-    customer_details: { email },
-    collected_information: { shipping_details: {
-      name: "Test Buyer",
-      address: { line1: "1 Stadium Way", line2: "", city: "Providence", state: "RI", postal_code: "02901", country: "US" },
-    } },
-    metadata,
-  };
-}
-async function sendEvent(object, eventId = `evt_${crypto.randomUUID().replace(/-/g, "")}`) {
-  const payload = JSON.stringify({ id: eventId, object: "event", type: "checkout.session.completed", livemode: false, data: { object } });
-  const sig = stripe.webhooks.generateTestHeaderString({ payload, secret: WEBHOOK_SECRET });
-  const res = await fetch(`${BASE}/api/stripe-webhook`, {
-    method: "POST", headers: { "stripe-signature": sig, "content-type": "application/json" }, body: payload,
-  });
-  return { status: res.status, body: await res.json().catch(() => ({})) };
-}
-const readStore = () => JSON.parse(fs.readFileSync(path.join(STORE_DIR, "orders-store.json"), "utf8"));
-const orderBySession = (sid) => Object.values(readStore().orders).find((o) => o.stripe_session_id === sid);
-const refOf = (id) => `GOOOL-${id.replace(/-/g, "").slice(0, 8).toUpperCase()}`;
-const decodeBody = (raw) => {
-  // headers may be quoted-printable / base64 encoded by nodemailer
-  let out = raw;
-  if (/Content-Transfer-Encoding:\s*base64/i.test(raw)) {
-    out += "\n" + raw.split(/\r?\n\r?\n/).slice(1).map((p) => {
-      try { return Buffer.from(p.replace(/\s+/g, ""), "base64").toString("utf8"); } catch { return ""; }
-    }).join("\n");
-  }
-  return out.replace(/=\r?\n/g, "").replace(/=3D/g, "=");
-};
-
-async function main() {
-  await new Promise((r) => smtpServer.listen(SMTP_PORT, "127.0.0.1", r));
-  console.log(`SMTP mock on 127.0.0.1:${SMTP_PORT}   target ${BASE}\n`);
-
-  console.log("1. a paid order is delivered over Workspace SMTP");
-  const sess = makeSession();
-  {
-    const r = await sendEvent(sess);
-    check("webhook returns 200", r.status === 200, JSON.stringify(r.body));
-    check("confirmation reported sent", r.body.confirmation === "sent", JSON.stringify(r.body));
-    await sleep(200);
-    check("SMTP server received exactly one message", smtp.received.length === 1, `got ${smtp.received.length}`);
-
-    const m = smtp.received[0] ?? { data: "", to: [], from: "" };
-    const body = decodeBody(m.data);
-    const o = orderBySession(sess.id);
-    const ref = refOf(o.id);
-    check("authenticated as hello@goool.shop", smtp.authSeen === "hello@goool.shop", String(smtp.authSeen));
-    check("envelope sender is the Workspace account", /hello@goool\.shop/.test(m.from), m.from);
-    check("envelope recipient is the buyer", m.to.includes("buyer@example.com"), JSON.stringify(m.to));
-    check("From header shows GOOOL", /^From:.*GOOOL/mi.test(body), (body.match(/^From:.*/mi) || [])[0]);
-    check("Reply-To is hello@goool.shop", /^Reply-To:.*hello@goool\.shop/mi.test(body), (body.match(/^Reply-To:.*/mi) || [])[0]);
-    check("Subject carries the order reference", body.includes(ref), (body.match(/^Subject:.*/mi) || [])[0]);
-    check("multipart: both html and text parts", /text\/html/i.test(body) && /text\/plain/i.test(body));
-    check("body shows the price paid", /\$48\.00/.test(body));
-    check("body shows the total", /\$57\.50/.test(body));
-    check("body does not claim it shipped", !/(on its way now|has shipped|dispatched)/i.test(body));
-    check("order marked as confirmation sent", Boolean(o?.confirmation_sent_at), String(o?.confirmation_sent_at));
-  }
-
-  console.log("\n2. a rejected recipient is never recorded as sent");
-  {
-    smtp.mode = "rcptreject";
-    const s2 = makeSession("nobody@example.com");
-    const r = await sendEvent(s2);
-    check("webhook still 200", r.status === 200, JSON.stringify(r.body));
-    check("reports failed, not sent", r.body.confirmation === "failed", JSON.stringify(r.body));
-    const o = orderBySession(s2.id);
-    check("claim released for a later retry", o?.confirmation_sent_at == null, String(o?.confirmation_sent_at));
-    check("order still recorded as paid", o?.status === "paid", o?.status);
-  }
-
-  console.log("\n3. bad credentials fail loudly and stay recoverable");
-  {
-    smtp.mode = "authfail";
-    const s3 = makeSession("third@example.com");
-    const r = await sendEvent(s3);
-    check("webhook still 200 (no retry storm on a captured payment)", r.status === 200, JSON.stringify(r.body));
-    check("reports failed", r.body.confirmation === "failed", JSON.stringify(r.body));
-    const o = orderBySession(s3.id);
-    check("claim released", o?.confirmation_sent_at == null, String(o?.confirmation_sent_at));
-
-    // credentials fixed, a later delivery gets the receipt out
-    smtp.mode = "ok";
-    const before = smtp.received.length;
-    const r2 = await sendEvent(s3);
-    check("retry after fixing credentials delivers", r2.body.confirmation === "sent", JSON.stringify(r2.body));
-    await sleep(200);
-    check("exactly one message for that order", smtp.received.length === before + 1, `got ${smtp.received.length - before}`);
-  }
-
-  console.log(`\n${passed} passed, ${failed} failed`);
-  smtpServer.close();
-  process.exit(failed === 0 ? 0 : 1);
-}
-
-main().catch((e) => { console.error(e); smtpServer.close(); process.exit(1); });
+await check('Receipt payload preserves paid quantities/prices/totals and escapes unsafe strings', async () => {
+    const h = createHarness();
+    await h.webhook();
+    const m = h.row().message;
+    assert.equal(m.to, 'buyer@example.test');
+    assert.equal(m.subject, 'Order GOOOL-10000000 confirmed');
+    assert.match(m.text, /2 x GOAL Athletics Match Day Tee/);
+    for (const value of ['Subtotal: $82.00', 'Discount: -$5.00', 'Shipping: $6.95', 'Tax: $1.20', 'Total paid: $85.15', 'https://goalathletics.shop/track-order'])
+        assert.ok(m.text.includes(value), value);
+    assert.ok(!m.text.includes('$76.00'), 'Current catalog price must not overwrite purchased snapshot');
+    assert.match(m.html, /\$85\.15/);
+    assert.match(m.html, /Test &lt;Buyer&gt;/);
+    assert.match(m.html, /1 &lt;Pitch&gt; Way/);
+    assert.match(m.html, /A&amp;B/);
+    assert.ok(!m.html.includes('<9>'));
+    assert.ok(!m.html.includes('<Pitch>'));
+});
+await check('Receipt confirms payment without falsely claiming dispatch', async () => {
+    const h = createHarness();
+    await h.webhook();
+    const m = h.row().message;
+    for (const text of [m.text, m.html])
+        assert.doesNotMatch(text, /(has shipped|on its way now|dispatched)/i);
+    assert.match(m.text, /Your payment is confirmed/);
+    assert.match(m.text, /few days to prepare before it ships/);
+    assert.match(m.text, /support@goalathletics\.shop/);
+    assert.match(m.text, /PO Box 19, Saunderstown, RI 02874/);
+});
+await check('Event and session replays do not duplicate an order or its delivery intent', async () => {
+    const h = createHarness(), first = h.webhookEvent();
+    await h.webhook(first);
+    assert.equal((await h.webhook(first)).body.duplicate, true);
+    assert.equal((await h.webhook(h.webhookEvent({ eventId: 'evt_same_session_again' }))).body.confirmation, 'queued');
+    assert.equal(h.tables.orders.length, 1);
+    assert.equal(h.tables.email_deliveries.length, 1);
+    assert.equal(h.requests.length, 0);
+    assert.ok(h.operations.filter(x => x.op === 'upsert').every(x => x.options.onConflict === 'key' && x.options.ignoreDuplicates === true));
+});
+await check('Unpaid delayed checkout queues only after async payment succeeds', async () => {
+    const h = createHarness(), r = await h.webhook(h.webhookEvent({ paymentStatus: 'unpaid' }));
+    assert.equal(r.body.awaiting, 'async payment');
+    assert.equal(h.tables.orders[0].status, 'pending');
+    assert.equal(h.tables.email_deliveries.length, 0);
+    const paid = await h.webhook(h.webhookEvent({ eventId: 'evt_async_paid', type: 'checkout.session.async_payment_succeeded', paymentStatus: 'unpaid' }));
+    assert.equal(paid.body.confirmation, 'queued');
+    assert.equal(h.tables.orders[0].status, 'paid');
+    assert.equal(h.tables.email_deliveries.length, 1);
+    assert.equal(h.requests.length, 0);
+});
+await check('Queue persistence failure leaves the webhook retryable without a second order', async () => {
+    const h = createHarness();
+    h.faults.queue = true;
+    assert.equal((await h.webhook()).status, 500);
+    assert.equal(h.events.size, 0);
+    assert.equal(h.tables.orders.length, 1);
+    assert.equal(h.tables.orders[0].status, 'paid');
+    assert.equal(h.requests.length, 0);
+    h.faults.queue = false;
+    assert.equal((await h.webhook()).body.confirmation, 'queued');
+    assert.equal(h.events.size, 1);
+    assert.equal(h.tables.orders.length, 1);
+    assert.equal(h.tables.email_deliveries.length, 1);
+});
+await check('Invalid webhook signature cannot create an order or delivery', async () => {
+    const h = createHarness();
+    assert.equal((await h.webhook(h.webhookEvent(), 'fixture-invalid')).status, 400);
+    assert.equal(h.tables.orders.length, 0);
+    assert.equal(h.tables.email_deliveries.length, 0);
+    assert.equal(h.requests.length, 0);
+});
+await check('Worker sends with current brand sender, Support reply and stable Resend identity', async () => {
+    const h = createHarness();
+    await h.webhook();
+    const d = h.load('src/lib/email-delivery.ts');
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'sent');
+    assert.equal(h.requests.length, 1);
+    const r = h.requests[0];
+    assert.equal(r.url, 'https://api.resend.com/emails');
+    assert.equal(r.method, 'POST');
+    assert.equal(r.headers.Authorization, 'Bearer re_fixture_only');
+    assert.equal(r.headers['Idempotency-Key'], 'order/test/' + ORDER_ID);
+    assert.equal(r.body.from, 'GOAL Athletics <hello@goalathletics.shop>');
+    assert.equal(r.body.reply_to, 'support@goalathletics.shop');
+    assert.deepEqual(r.body.to, ['buyer@example.test']);
+    assert.equal(r.body.subject, 'Order GOOOL-10000000 confirmed');
+    assert.match(r.body.text, /Total paid: \$85\.15/);
+    assert.ok(r.body.html.length > 1000 && r.body.text.length > 300);
+    assert.equal(h.row().status, 'sent');
+    assert.equal(h.row().provider_id, 'resend_fixture_1');
+    assert.ok(h.tables.orders[0].confirmation_sent_at);
+});
+await check('Concurrent claims and later worker/webhook replays send once only', async () => {
+    const h = createHarness();
+    await h.webhook();
+    const d = h.load('src/lib/email-delivery.ts'), results = await Promise.all([d.deliverEmail('order/test/' + ORDER_ID), d.deliverEmail('order/test/' + ORDER_ID)]);
+    assert.deepEqual(results.sort(), ['already_sent_or_pending', 'sent']);
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'already_sent_or_pending');
+    assert.equal((await h.webhook()).body.duplicate, true);
+    assert.equal(h.requests.length, 1);
+    assert.equal(h.row().attempts, 1);
+});
+await check('Provider rejection leaves paid receipt pending with backoff, then retries the same key', async () => {
+    const h = createHarness();
+    await h.webhook();
+    h.transport.mode = 'reject';
+    const d = h.load('src/lib/email-delivery.ts');
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'queued');
+    assert.equal(h.row().status, 'pending');
+    assert.equal(h.tables.orders[0].status, 'paid');
+    assert.equal(h.tables.orders[0].confirmation_sent_at, null);
+    assert.match(h.row().last_error, /HTTP 422/);
+    assert.equal(Date.parse(h.row().next_attempt_at) - h.clock.now, 120000);
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'already_sent_or_pending');
+    assert.equal(h.requests.length, 1);
+    h.advance(120001);
+    h.transport.mode = 'ok';
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'sent');
+    assert.equal(h.requests.length, 2);
+    assert.equal(h.requests[0].headers['Idempotency-Key'], h.requests[1].headers['Idempotency-Key']);
+    assert.equal(h.row().attempts, 2);
+});
+await check('Ambiguous response never triggers a fallback sender or fresh delivery identity', async () => {
+    const h = createHarness({ SMTP_HOST: 'never-used.invalid', GMAIL_SERVICE_ACCOUNT_EMAIL: 'never-used@example.test' });
+    await h.webhook();
+    h.transport.mode = 'ambiguous';
+    const d = h.load('src/lib/email-delivery.ts');
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'queued');
+    assert.match(h.row().last_error, /retry with the same delivery identity/);
+    assert.equal(h.tables.orders[0].confirmation_sent_at, null);
+    h.advance(120001);
+    h.transport.mode = 'ok';
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'sent');
+    assert.deepEqual(h.requests.map(r => r.url), ['https://api.resend.com/emails', 'https://api.resend.com/emails']);
+    assert.deepEqual(h.requests.map(r => r.headers['Idempotency-Key']), ['order/test/' + ORDER_ID, 'order/test/' + ORDER_ID]);
+});
+await check('Missing Resend configuration persists intent but cannot claim a send', async () => {
+    const h = createHarness({ RESEND_API_KEY: '' });
+    assert.equal((await h.webhook()).body.confirmation, 'queued');
+    assert.equal(await h.load('src/lib/email-delivery.ts').deliverEmail('order/test/' + ORDER_ID), 'disabled');
+    assert.equal(h.row().status, 'pending');
+    assert.equal(h.row().attempts, 0);
+    assert.equal(h.requests.length, 0);
+    assert.equal(h.tables.orders[0].confirmation_sent_at, null);
+});
+await check('Receipt guards reject missing, unpaid, already-sent or missing-address orders', async () => {
+    for (const status of ['pending', 'cancelled', 'refunded']) {
+        const h = createHarness();
+        h.seedReceipt({ status });
+        assert.equal(await h.load('src/lib/email-delivery.ts').queueOrderConfirmation(h.store, ORDER_ID), 'not_paid');
+        assert.equal(h.tables.email_deliveries.length, 0);
+    }
+    const missing = createHarness();
+    assert.equal(await missing.load('src/lib/email-delivery.ts').queueOrderConfirmation(missing.store, ORDER_ID), 'not_paid');
+    const sent = createHarness();
+    sent.seedReceipt({ confirmation_sent_at: '2026-10-28T11:59:00Z' });
+    assert.equal(await sent.load('src/lib/email-delivery.ts').queueOrderConfirmation(sent.store, ORDER_ID), 'already_sent');
+    const noAddress = createHarness();
+    noAddress.seedReceipt({ customer_email: null });
+    await assert.rejects(() => noAddress.load('src/lib/email-delivery.ts').queueOrderConfirmation(noAddress.store, ORDER_ID), /no receipt address/);
+});
+await check('Delivery-result persistence failure never sets the order sent marker', async () => {
+    const h = createHarness();
+    await h.webhook();
+    h.faults.save = true;
+    await assert.rejects(() => h.load('src/lib/email-delivery.ts').deliverEmail('order/test/' + ORDER_ID), /could not be persisted/);
+    assert.equal(h.row().status, 'sending');
+    assert.equal(h.tables.orders[0].confirmation_sent_at, null);
+    assert.equal(h.requests.length, 1);
+});
+await check('Authoritative sent ledger blocks duplicates if compatibility marker update fails', async () => {
+    const h = createHarness();
+    await h.webhook();
+    h.faults.orderMarker = true;
+    const d = h.load('src/lib/email-delivery.ts');
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'sent');
+    assert.equal(h.row().status, 'sent');
+    assert.equal(h.tables.orders[0].confirmation_sent_at, null);
+    assert.equal(await d.deliverEmail('order/test/' + ORDER_ID), 'already_sent_or_pending');
+    assert.equal(h.requests.length, 1);
+    assert.ok(h.errors.some(x => x.includes('ledger remains authoritative')));
+});
+finish(15);
