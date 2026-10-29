@@ -65,6 +65,8 @@ Changing any of these would break existing cookies, saved codes, order reference
 
 ### 2e. Public legal text and Stripe account strings that still say GOOOL (owner decision required)
 
+> Resolved later the same day: see section 9. The legal-text rows below were corrected; the Stripe rows remain manual dashboard changes.
+
 These are active and can surface publicly. They were left unchanged because each is a legal party name, an agreement clause or a Stripe account object, and the owner's standing instruction excludes the Kit Wear and Match Highlights agreements and all commerce changes from campaign cleanup.
 
 | Surface | Current text | Can surface | Proposed resolution |
@@ -76,6 +78,8 @@ These are active and can surface publicly. They were left unchanged because each
 | Stripe coupon | Name "GOOOL20 · 20% off first order" (`src/lib/discount.ts` `COUPON_NAME`; the existing coupon is found by metadata, so a code edit would not rename it). Shown as the discount label in Stripe Checkout when a code is applied | Yes, at checkout | Owner renames the coupon in the Stripe dashboard to "GOAL20 · 20% off first order"; then `COUPON_NAME` can follow in code. |
 
 ## 3. Legal and operator identity audit
+
+> Decision received after this audit (section 9): the owner chose The Goal Brand Group LLC as the operator everywhere a legal name is required.
 
 Surfaces audited and what each says today:
 
@@ -167,10 +171,64 @@ Files changed on the branch:
 - SUPPLIER INTEGRATIONS UNCHANGED (Apliiq, Tapstitch, Printful files untouched).
 - `STORY_INTAKE_OPEN=false` before and after; no live intake request, no production submission, no Netlify change.
 
-## 8. Remaining State B blockers
+## 8. Remaining State B blockers (as of the first pass; updated in section 9)
 
 1. OWNER LEGAL ENTITY CONFIRMATION REQUIRED BEFORE STATE B (section 3), then consent live-4.
 2. Owner decisions on the five public legal/Stripe strings in section 2e (Kit Wear consent is the one that collects public data today under "GOOOL Athletics LLC").
 3. State B activation itself: `STORY_INTAKE_OPEN=true` in Netlify, redeploy, one controlled real submission, end-to-end check of video, consent snapshot and owner alert, then delete the test submission. Separate authorisation.
 
 Deployment status: **NOT DEPLOYED.** Branch `claude/pre-state-b-cleanup` holds the change locally; nothing pushed, nothing merged, no Netlify or Supabase change.
+
+## 9. Second pass: operator decision applied (2026-10-28, evening)
+
+Owner decision: The Goal Brand Group LLC is the legal/operator entity for GOAL Athletics and What's Your Goal?; GOAL Athletics is the customer-facing brand; the owner's personal name is never used publicly.
+
+### 9a. Changes
+
+| Surface | Before | After |
+|---|---|---|
+| What's Your Goal? agreement, `STORY_TERMS` in `src/v84/reference-experience.js`, validator pin in `src/lib/intake/validation.mjs`, snapshot in `src/lib/intake/agreements.json`, public `public/story-participation-agreement.html` | `WYG-2026-10-28-live-3`, party "GOAL Athletics, an independent athletic apparel brand based in Rhode Island (the Company)", eyebrow GOAL ATHLETICS | `WYG-2026-10-28-live-4`, party "This agreement is between The Goal Brand Group LLC, the company behind GOAL Athletics (the Company), and the adult identified as the submitter (you).", eyebrow "GOAL ATHLETICS · THE GOAL BRAND GROUP LLC". Snapshot sha256 `8c626a0995358ec6fabaec4b347a9e3a0c44c4714671c4714dcffc8c7df0e530`. |
+| Story consent checkbox | "I have read the participation agreement with GOAL Athletics." | "I have read the participation agreement with The Goal Brand Group LLC, the company behind GOAL Athletics." |
+| Match Highlights agreement (`MATCH_TERMS`, validator, snapshot, `public/participation-agreement.html`) | `SYG-2026-10-04-live-1`, "GOOOL Athletics LLC", "Share Your GOOOLS!" in the snapshot | `SYG-2026-10-28-live-2`, the same LLC party line, "Share Your Goals!" (matching the displayed terms), eyebrow as above. Snapshot sha256 `2349d596a43a6bb2c57cbedf83f1e0f7db2105227ce7c0865684a7ebef927cf5`. |
+| Match Highlights consent label and dialog header | "with GOOOL Athletics LLC", "GOOOL ATHLETICS LLC" | "with The Goal Brand Group LLC", "GOAL ATHLETICS · THE GOAL BRAND GROUP LLC" |
+| Kit Wear consent (`reference-experience.js` label and `validation.mjs` stored notice) | `KIT-2026-10-04-1`, "I agree that GOOOL Athletics LLC may store and review this request" | `KIT-2026-10-28-2`, "I agree that The Goal Brand Group LLC may store and review this request" |
+| Submission privacy notice `public/intake-privacy.html` | eyebrow GOAL ATHLETICS | eyebrow "GOAL ATHLETICS · THE GOAL BRAND GROUP LLC" (body unchanged) |
+| Terms, Intellectual property clause | "The GOOOL and GOAL ATHLETICS names, wordmarks, designs, and site content are our property." | "The GOAL ATHLETICS name, wordmarks, designs, and site content, including our earlier marks, are our property." |
+| `src/lib/business-address.ts` | comment recorded the morning clarification | comment records the evening decision; `LEGAL_NAME` unchanged, so Terms "Who we are", order and delay emails, email footer, unsubscribe page, success page and gate already name The Goal Brand Group LLC |
+| Tests | pins on live-3 / SYG live-1; "registered seller" exemptions | `test-v84.cjs`, `smoke-v84.cjs`, `test-v84-provider-routes.cjs` pinned to live-4 / SYG live-2; `test-visible-branding.cjs` now forbids any GOOOL in rendered copy with no exemption, requires the LLC party line and shared version in each agreement's public copy, snapshot, validator and controller, requires the KIT-2 notice, and checks the Terms page |
+
+Unchanged by design: site footer and customer-service footer ("GOAL Athletics · PO Box 19…", brand presentation) and the Organization JSON-LD without `legalName`; both can carry the LLC on request. Order reference prefix `GOOOL-XXXXXXXX` (and its explanation on `/track-order`) stays as an identifier. The dormant Email 2 copy about the retired tri-blend tee stays behind its closed gate.
+
+### 9b. Historical consent preserved
+
+- No stored submission row was read or written. Rows keep their accepted `termsVersion`, `termsSnapshot` and `termsHash`.
+- Superseded snapshot texts remain in git history: story live-3 and Match Highlights live-1 at `0fda828` (`src/lib/intake/agreements.json`, `public/*.html`), story live-2 at `020510e`, story live-1 before `39d444f`.
+
+### 9c. Manual Stripe dashboard changes (owner)
+
+Live account `acct_1UHzboBG7q8OBDEm`, Stripe Dashboard, Settings:
+
+1. Business details, "Business name" / legal name: enter The Goal Brand Group LLC once the entity is formed and its EIN exists; until then Stripe keeps the individual account's name. Public business name under Public details: "GOAL Athletics" (already set).
+2. Public details, "Statement descriptor": change "GOOOL ATHLETICS" to "GOAL ATHLETICS" (5 to 22 characters, letters and spaces; no asterisks, quotes or brackets). Optional shortened descriptor: "GOAL ATHLETICS". Dashboard display name (Settings, Account details, account name): change "GOOOL ATHLETICS" to "GOAL Athletics".
+3. Products, Coupons: open the coupon whose metadata `source` is `goool20-popup` (20% off) and rename it from "GOOOL20 · 20% off first order" to "GOAL20 · 20% off first order". The code lookup is by metadata, so renaming keeps every issued GOAL20-XXXX and legacy GOOOL20-XXXX promotion code working. After that, `COUPON_NAME` in `src/lib/discount.ts` can follow in a separate reviewed commit (that file is pinned by the payment preservation suite).
+
+### 9d. Validation
+
+Re-run in full after the second-pass edits, on branch `claude/pre-state-b-cleanup` at commit `d21ccdf` plus the baseline-pin commit that follows it. `STORY_INTAKE_OPEN` unset locally and read back from Netlify production as `false` before and after.
+
+| Check | Result |
+|---|---|
+| Safe local inventory, 35 suites (same 26 offline + 9 server-backed suites and fixture layout as section 6) | **35 PASS / 0 FAIL** |
+| `test-v84.cjs` protected-source check | The check compares every file under `src/lib`, `src/app/api`, `netlify`, `supabase`, `cart`, `success` and `track-order` byte for byte against a pinned commit. `validation.mjs`, `agreements.json` and `business-address.ts` changed in this pass by the owner's instruction, so the pin moved from `6b4cc47` (State A main) to `d21ccdf` (the consent commit). The comparison itself is unchanged: full inventory, no per-file exemption. 29 checks pass. |
+| `test-visible-branding.cjs` | Rewritten without exemptions: no GOOOL in any rendered route; both agreements carry the LLC party line and a version shared by public copy, snapshot, validator and controller; Kit Wear notice KIT-2026-10-28-2; Terms page clean; admin files clean. |
+| `test-payment-preservation.cjs` against production `0fda828` | pass, 18 core files match production (none of them changed) |
+| `npm run lint` / `npm run typecheck` / `npm run build` | exit 0 / exit 0 / exit 0, compiled successfully |
+| `git diff --check` | clean |
+| Release preview on 127.0.0.1:3184: story start with a live-3 payload | 400 (superseded version refused by the validator) |
+| Release preview: story start with a valid live-4 payload | 503 "not open yet" (State A still closed) |
+| Release preview documents | `/story-participation-agreement.html` live-4, `/participation-agreement.html` SYG live-2, `/intake-privacy.html`: each names The Goal Brand Group LLC and contains no GOOOL |
+| Release preview rendered text (built-in browser, scripts and styles excluded): `/`, `/about`, `/whats-your-goal`, `/kit-wear`, `/terms` | 0 GOOOL in text and attributes; the LLC appears on the three legal surfaces; label "SUBMISSIONS OPEN SOON" |
+| Owner's personal name in `src/`, `public/`, `netlify/` | Not present in any rendered or emailed copy. It occurs once in a code comment (`src/app/api/preview/route.ts`) and the owner alert address `gdove90@goalathletics.shop` is used only as the recipient of internal alerts. |
+| Remaining active public GOOOL references | **0**. Identifiers retained as section 2b lists them (order reference `GOOOL-XXXXXXXX`, cookies, slugs, SKUs, coupon metadata, the `/whats-your-goool` 301). |
+
+Deployment status: **NOT DEPLOYED.** The branch is local; nothing pushed, merged, or changed in Netlify or Supabase. Remaining State B steps: owner's Stripe dashboard changes (9c, can follow activation), then the separate State B authorisation (`STORY_INTAKE_OPEN=true`, redeploy, one controlled real submission, end-to-end check, delete it).
