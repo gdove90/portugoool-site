@@ -30,9 +30,10 @@ async function post(path, body) {
       if(!preview && path.endsWith('details')) assert.match(response.headers.get('cache-control')||'',/no-store/);
     }
   });
-  await check('Webhook and ops routes refuse work with tracking disabled, without gate redirects', async()=>{
+  await check('Webhook and ops routes refuse unauthenticated work without gate redirects', async()=>{
     for(const path of ['/api/carrier-tracking-webhook','/api/carrier-tracking-ops']) {
-      const response=await post(path,{}); assert.equal(response.status,503,path);
+      const response=await post(path,{});
+      assert.ok([401,503].includes(response.status),path+': expected authentication refusal or disabled configuration');
       assert.equal(response.headers.get('location'),null); assert.ok((await response.json()).error);
     }
   });

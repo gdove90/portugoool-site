@@ -1,4 +1,4 @@
-import { trackingConfig } from "@/lib/carrier-tracking/config";
+import { trackingEnabled, trackingPreparationConfig } from "@/lib/carrier-tracking/config";
 import { verifyWebhook } from "@/lib/carrier-tracking/easypost";
 import { boundedBody, trackingResponse, TrackingRequestError } from "@/lib/carrier-tracking/http";
 import { persistWebhook, trackingDatabase } from "@/lib/carrier-tracking/storage";
@@ -6,7 +6,7 @@ import { persistWebhook, trackingDatabase } from "@/lib/carrier-tracking/storage
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 export async function POST(request: Request) {
-  const config = trackingConfig(), db = trackingDatabase();
+  const config = trackingPreparationConfig(), db = trackingDatabase();
   if (!config || !db) return trackingResponse({ error: "Tracking is disabled." }, 503);
   let event;
   try { event = verifyWebhook(await boundedBody(request, 524288), request.headers, config.webhookSecret); }
@@ -14,7 +14,9 @@ export async function POST(request: Request) {
   if (event.mode !== config.mode) return trackingResponse({ error: "Wrong tracking environment." }, 400);
   try {
     // SQL commits inbox + snapshot atomically. Unknown mappings remain pending for reconciliation.
-    await persistWebhook(db, event);
+    // While automatic tracking is OFF, SQL permits only the one explicitly
+    // enrolled preflight package and its bounded early-webhook mapping race.
+    await persistWebhook(db, event, !trackingEnabled());
     return trackingResponse({ received: true });
   } catch {
     console.error("carrier_tracking webhook_persistence_failed");
