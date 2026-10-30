@@ -65,6 +65,18 @@ async function reset(){await db.exec('reset role;truncate public.carrier_trackin
     const [pkg]=await claim();await release(pkg.id);await db.query("update public.carrier_tracking_packages set state='review' where id=$1",[pkg.id]);
     await assert.rejects(()=>claim(),/operator review/);
   });
+  await check('Targeted retries respect persisted backoff while ready package reads remain available',async()=>{
+    await reset();const [pkg]=await claim();
+    await scalar('select public.carrier_tracking_fail($1,$2,false,$3)',[pkg.id,lease,'registration_or_sync_unavailable']);
+    assert.equal(await scalar('select state from public.carrier_tracking_packages where id=$1',[pkg.id]),'retry');
+    assert.ok(Date.parse(await scalar('select next_attempt_at from public.carrier_tracking_packages where id=$1',[pkg.id]))>Date.now());
+    await assert.rejects(()=>claim(),/retry is not due/);
+    assert.equal(await scalar('select attempts from public.carrier_tracking_packages where id=$1',[pkg.id]),1);
+    await db.query("update public.carrier_tracking_packages set next_attempt_at=now()-interval '1 second' where id=$1",[pkg.id]);
+    const [retry]=await claim();assert.equal(retry.attempts,2);await release(pkg.id);
+    await db.query("update public.carrier_tracking_packages set state='ready',next_attempt_at=now()+interval '1 day' where id=$1",[pkg.id]);
+    assert.equal((await claim())[0].id,pkg.id);
+  });
   await check('Signed early mapping data remains durable and duplicate-safe, then finish reconciles it',async()=>{
     await reset();const [pkg]=await claim();const newer=snapshot({status:'in_transit',updatedAt:when(1000)});
     assert.equal(await receive('evt_early',newer),false);assert.equal(await receive('evt_early',newer),false);

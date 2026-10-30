@@ -43,6 +43,8 @@ begin
   if package.registration_not_before is distinct from shipment.order_created_at
     then raise exception 'Preflight order window mismatch'; end if;
   if package.state = 'review' or package.attempts >= 6 then raise exception 'Preflight requires operator review'; end if;
+  if package.state = 'retry' and package.next_attempt_at > now()
+    then raise exception 'Preflight retry is not due'; end if;
   if package.lease_until is not null and package.lease_until > now() then raise exception 'Preflight package is busy'; end if;
   return query update public.carrier_tracking_packages p set
     preflight_until = now() + interval '24 hours', lease_token = p_lease,
