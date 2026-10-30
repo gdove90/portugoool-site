@@ -97,3 +97,11 @@ CLASSIFICATION: SUPPORTED INFERENCE
 CONFIDENCE: LOW (two Stories, tiny base, follower/non-follower split NOT POPULATED)
 IMPLICATION: Stories reach a large share of existing followers at no production cost but produce no replies, so they surface no audience language yet.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, test a Story with a reply or choice prompt in a standing-grid slot (see report experiment).
+
+DATE: 2026-10-30
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-10-30/03-search-ecommerce.md (live pages fetched 2026-10-30)
+OBSERVATION: the Raincoat page carries real flat measurements (chest S 22" to XXL 28"), a fit note and full specs, while the Quarter Zip and Jogger pages still say flat measurements are not yet published and the size guide charts only the two tees. The Quarter Zip still says "overseas partner, 10 to 17 days" against 7-12 business days on policy pages (unchanged since 10-28).
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text; conversion impact NO DATA
+IMPLICATION: a finished product-page format already exists on-site, so sizing gaps are a data-supply issue, not a design issue; the Raincoat is the lowest-friction landing page for social traffic until the others match.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, supply measurements for the remaining non-tee products in the Raincoat format and rule on the single delivery wording; until then point non-follower traffic to the Raincoat or the tees, and keep delivery promises out of social copy.
