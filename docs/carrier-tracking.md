@@ -105,14 +105,14 @@ and does not automatically install an external alert service.
 5. Obtain suitable EasyPost account access, verify actual pricing/production entitlement, and
    authorize any standalone registration charge. Set the three new production-only secrets
    using the example file; do not print or paste secrets into chat.
-6. Configure EasyPost's production webhook to
-   `https://goalathletics.shop/api/carrier-tracking-webhook`, secret and v2 signing before
-   registration. While the feature flag is off the endpoint deliberately returns 503; enable
-   only after the webhook configuration is saved so provider retries can recover early events.
-7. Enable the flag, then run the authenticated ops route once (or wait ten minutes). Prioritize
-   the owner's existing recent persisted shipment by reviewing discovery before enabling; no
-   customer identifier is hardcoded. Verify its live Apliiq-issued USPS tracker against USPS,
-   including label-created versus physical acceptance, and compare the customer cache response.
+6. Follow [controlled activation](carrier-tracking-activation.md). Keep automatic tracking OFF,
+   configure the signed webhook, and preflight exactly one explicitly selected persisted USPS
+   shipment through the authenticated tracking operations endpoint. The default is read-only
+   tracker reuse. New registration requires prior authorization for the verified actual charge.
+   A bounded, enrolled preflight can retain signed updates while the global worker stays OFF.
+7. Only after real production access and actual signed webhook persistence are verified, obtain
+   authorization for the ongoing registration charges/discovery scope and enable the global flag
+   through a production deploy. Verify the same reference/email lookup and each physical package.
    No purchase, label creation, fulfillment replay or manual status promotion is permitted.
 
 Missing external credentials or billing authorization blocks activation, not the disabled
@@ -121,7 +121,9 @@ release. Keep the distinction explicit in the handoff.
 ## Disable / revert
 
 Set CARRIER_TRACKING_ENABLED=false in production; worker does no work and details fall back
-to safe carrier links. Leave all history tables intact. If code must be reverted, revert only
+to safe carrier links. For up to 24 hours, an explicitly enrolled preflight can still retain valid
+signed callbacks for that one package without registration, discovery, or customer visibility.
+Leave all history tables intact. If code must be reverted, revert only
 the tracking change and let the existing Git/Netlify release workflow build it. Never drop
 customer history, change existing secrets or alter email/fulfillment schedules.
 

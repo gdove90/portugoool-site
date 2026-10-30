@@ -47,8 +47,8 @@ export async function readPackages(db: TrackingDatabase, orderId: string): Promi
   }
   return packages;
 }
-export async function persistWebhook(db: TrackingDatabase, event: VerifiedTrackingWebhook) {
-  return checked(await db.rpc("carrier_tracking_receive", {
+export async function persistWebhook(db: TrackingDatabase, event: VerifiedTrackingWebhook, preflightOnly = false) {
+  return checked(await db.rpc(preflightOnly ? "carrier_tracking_preflight_receive" : "carrier_tracking_receive", {
     p_event_id: event.eventId, p_environment: event.mode, p_snapshot: event.snapshot,
   }).abortSignal(AbortSignal.timeout(4000)));
 }

@@ -28,6 +28,7 @@ let requests = 0;
 let externalCalls = 0;
 global.fetch = async () => { externalCalls++; throw new Error("Unexpected external request blocked by test."); };
 let calls = [];
+let preflightCalls = [];
 let orderEmailCalls = [];
 let db = null;
 let storeAvailable = true;
@@ -45,6 +46,10 @@ const mocks = {
   [path.join(root, "src/lib/orders-store.ts")]: { getOrdersStore: () => storeAvailable ? store : null },
   [path.join(root, "src/lib/fulfillment-submit.ts")]: { orderNumber: id => "GOOOL-" + id.slice(0, 8).toUpperCase() },
   [path.join(root, "src/lib/supabase.ts")]: { getSupabaseAdmin: () => db },
+  [path.join(root, "src/lib/carrier-tracking/preflight.ts")]: { runTrackingPreflight: async (_db, _config, input) => {
+    preflightCalls.push(input);
+    return { outcome: "authorization_required", registered: false, registrationAttempted: false, reused: false };
+  } },
 };
 Module._load = function (request, parent, isMain) {
   const filename = Module._resolveFilename(request, parent);
@@ -233,6 +238,45 @@ function signedEvent({ mode = "production", id = "evt_fixtureA", age = 0, invali
     preview.MIGRATION_PREVIEW = true;
     assert.equal(config.trackingConfig(), null);
     preview.MIGRATION_PREVIEW = false;
+  });
+  await check("automatic tracking stays OFF while one authenticated preflight is selected", async () => {
+    process.env.CARRIER_TRACKING_ENABLED = "false"; calls = []; preflightCalls = [];
+    const auth = { "x-tracking-ops-key": enabledConfig.CARRIER_TRACKING_OPS_KEY };
+    assert.equal(config.trackingConfig(), null); assert.equal(config.trackingPreparationConfig().mode, "production");
+    assert.equal((await opsRoute.POST(request(undefined, "/api/carrier-tracking-ops", auth))).status, 503);
+    const selection = { action: "preflight", shipmentId: "11111111-0000-4000-8000-000000000099", trackingIndex: 0 };
+    assert.equal((await opsRoute.POST(request(selection, "/api/carrier-tracking-ops"))).status, 401);
+    const result = await opsRoute.POST(request(selection, "/api/carrier-tracking-ops", auth));
+    assert.equal(result.status, 200); assert.equal((await result.json()).outcome, "authorization_required");
+    assert.deepEqual(preflightCalls, [{ shipmentId: selection.shipmentId, trackingIndex: 0, allowRegistration: false }]);
+    assert.ok(!calls.some(call => ["carrier_tracking_discover", "carrier_tracking_claim"].includes(call.rpc)));
+    assert.equal(process.env.CARRIER_TRACKING_ENABLED, "false");
+    Object.assign(process.env, enabledConfig);
+  });
+  await check("preflight rejects arbitrary numbers, malformed selections, enabled workers and preview credentials", async () => {
+    const auth = { "x-tracking-ops-key": enabledConfig.CARRIER_TRACKING_OPS_KEY };
+    const selection = { action: "preflight", shipmentId: "11111111-0000-4000-8000-000000000099", trackingIndex: 0 };
+    assert.equal((await opsRoute.POST(request(selection, "/api/carrier-tracking-ops", auth))).status, 409);
+    process.env.CARRIER_TRACKING_ENABLED = "false"; preflightCalls = [];
+    for (const body of [{ ...selection, trackingNumber: "ARBITRARY" }, { ...selection, trackingIndex: -1 },
+      { ...selection, trackingIndex: 100 }, { ...selection, shipmentId: "not-a-uuid" }, { ...selection, allowRegistration: "true" }])
+      assert.equal((await opsRoute.POST(request(body, "/api/carrier-tracking-ops", auth))).status, 400);
+    assert.equal(preflightCalls.length, 0);
+    preview.MIGRATION_PREVIEW = true;
+    assert.equal(config.trackingPreparationConfig(), null);
+    assert.equal((await opsRoute.POST(request(selection, "/api/carrier-tracking-ops", auth))).status, 503);
+    preview.MIGRATION_PREVIEW = false; Object.assign(process.env, enabledConfig);
+  });
+  await check("OFF-mode signed webhooks use only the enrolled preflight RPC and retry persistence failure", async () => {
+    process.env.CARRIER_TRACKING_ENABLED = "false"; calls = [];
+    rpc = async name => { assert.equal(name, "carrier_tracking_preflight_receive"); return { data: false, error: null }; };
+    assert.equal((await webhookRoute.POST(signedEvent())).status, 200);
+    assert.equal(calls.length, 1); assert.equal(calls[0].rpc, "carrier_tracking_preflight_receive");
+    calls = [];
+    assert.equal((await webhookRoute.POST(signedEvent({ invalid: true }))).status, 401); assert.equal(calls.length, 0);
+    rpc = async () => ({ data: null, error: { code: "fixture_unenrolled_or_unavailable" } });
+    assert.equal((await webhookRoute.POST(signedEvent())).status, 503);
+    Object.assign(process.env, enabledConfig); rpc = async name => ({ data: name === "carrier_tracking_rate" ? 1 : null, error: null });
   });
   await check("only exact new tracking paths bypass the store gate, while design preview still denies them", async () => {
     process.env.STORE_OPEN = "false"; process.env.PREVIEW_KEY = "fixture-preview-only";
