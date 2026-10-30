@@ -5,8 +5,9 @@ const preview = process.argv[3] === 'preview';
 const baseline = process.argv[4];
 if (baseline && !/^https:\/\/[a-f0-9]{24}--goool-shop\.netlify\.app$/.test(baseline)) throw new Error('Baseline must be an immutable GOAL deploy.');
 const url = new URL(base);
-if (!(url.protocol === 'http:' && ['127.0.0.1','localhost'].includes(url.hostname)) &&
-    !['https://goalathletics.shop','https://deploy-preview-60--goool-shop.netlify.app'].includes(url.origin)) {
+const local = url.protocol === 'http:' && ['127.0.0.1','localhost'].includes(url.hostname);
+const goal = url.origin === 'https://goalathletics.shop' || /^https:\/\/deploy-preview-[1-9]\d*--goool-shop\.netlify\.app$/.test(url.origin);
+if (url.username || url.password || (!local && !goal)) {
   throw new Error('HTTP checks are restricted to GOAL and loopback.');
 }
 let passed = 0;
