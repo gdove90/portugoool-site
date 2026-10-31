@@ -105,3 +105,11 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text; conversion impact NO DATA
 IMPLICATION: a finished product-page format already exists on-site, so sizing gaps are a data-supply issue, not a design issue; the Raincoat is the lowest-friction landing page for social traffic until the others match.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, supply measurements for the remaining non-tee products in the Raincoat format and rule on the single delivery wording; until then point non-follower traffic to the Raincoat or the tees, and keep delivery promises out of social copy.
+
+DATE: 2026-10-31
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-10-31/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: the 10-29 account row (reach 5, views 10, no content) was absent on the 10-30 run and present on the 10-31 run, and the 10-30 row is absent on 10-31. Evolution rows have therefore arrived more than one day late on two consecutive runs; no content or Story dated after 10-28 appears.
+CLASSIFICATION: SUPPORTED INFERENCE
+CONFIDENCE: MEDIUM that rows lag by more than a day (two consecutive observations); LOW on the exact lag
+IMPLICATION: yesterday's and today's rows cannot be read as complete at 5:00 AM; reach for the most recent two days will look artificially empty, and a posting gap should only be stated once its row has populated.
+RECOMMENDED FUTURE ACTION: judge any day only from its own populated row; treat the last two days as NOT POPULATED; the owner can confirm what was posted on 10-30 and 10-31.
