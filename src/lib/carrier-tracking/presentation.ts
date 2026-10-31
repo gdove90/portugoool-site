@@ -93,7 +93,7 @@ export function statusLabel(status: string, detail: string | null, carrier: stri
   const state = status.toLowerCase();
   const specific = (detail ?? "").toLowerCase();
   if (["pre_transit", "label_created"].includes(state) || specific === "label_created") {
-    return `Label created — ${normalizeCarrier(carrier) ?? "carrier"} awaiting package`;
+    return `Label created: ${normalizeCarrier(carrier) ?? "carrier"} awaiting package`;
   }
   if (state === "accepted" || ["accepted", "arrived_at_facility"].includes(specific) && state === "in_transit") {
     return specific === "arrived_at_facility" ? "In transit" : "Accepted by carrier";

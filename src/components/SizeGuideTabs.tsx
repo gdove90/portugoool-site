@@ -269,7 +269,7 @@ function ChartTable({ chartKey }: { chartKey: keyof typeof SIZE_CHARTS }) {
               <span role="cell">{inches(r.chestIn * 2)}″</span>
               <span role="cell">{inches(r.lengthIn)}″</span>
               {hasSleeve && (
-                <span role="cell">{r.sleeveIn != null ? `${inches(r.sleeveIn)}″` : "—"}</span>
+                <span role="cell">{r.sleeveIn != null ? `${inches(r.sleeveIn)}″` : "-"}</span>
               )}
             </div>
           ))}
