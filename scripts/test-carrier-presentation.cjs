@@ -60,8 +60,9 @@ check("repeated callbacks, multiple numbers and number reorderings become indepe
   assert.doesNotMatch(html, /order (?:is |was )?delivered|all (?:items|packages).*delivered/i);
 });
 check("label creation does not claim carrier possession or present location", () => {
-  const html = render([{ ...base, events: [event("label", "2026-01-10T09:00:00-05:00", "Fixture Origin", "Shipping label created")] }]);
-  assert.match(html, /Label created — USPS awaiting package/);
+  const html = render([{ ...base, events: [event("label", "2026-01-10T09:00:00-05:00", "Fixture Origin", "Label created — carrier awaiting package")] }]);
+  assert.match(html, /Label created: USPS awaiting package/);
+  assert.doesNotMatch(html, /\u2014/);
   assert.match(html, /does not confirm that the carrier has received/);
   assert.match(html, /Reported event location: Fixture Origin/);
   assert.doesNotMatch(html, /current (?:parcel )?location|live GPS/i);

@@ -80,7 +80,7 @@ async function check(name, callback) { await callback(); passed++; console.log("
       await page.keyboard.press("Enter");
       await page.getByText("Carrier estimated delivery:", { exact: true }).waitFor();
       assert.equal(await page.locator("article").count(), 2);
-      assert.ok((await page.locator("body").innerText()).includes("Label created — USPS awaiting package"));
+      assert.ok((await page.locator("body").innerText()).includes("Label created: USPS awaiting package"));
       assert.equal(await page.getByRole("link", { name: /View on carrier website/ }).count(), 2);
       await banner(); await page.screenshot({ path: path.join(output, "tracking-desktop-synthetic.png"), fullPage: true });
     });

@@ -116,7 +116,7 @@ export default function SizeGuide({ productId }: { productId: string }) {
                   <td className="py-2 pr-3 text-ink/70">{inches(r.lengthIn)}&quot;</td>
                   {hasSleeve && (
                     <td className="py-2 text-ink/70">
-                      {r.sleeveIn != null ? `${inches(r.sleeveIn)}"` : "—"}
+                      {r.sleeveIn != null ? `${inches(r.sleeveIn)}"` : "-"}
                     </td>
                   )}
                 </tr>

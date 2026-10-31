@@ -57,7 +57,7 @@ export default function ShipmentTracking({ packages, loading, available }: {
             {latest && (
               <div className="mt-4 border-t border-ink/10 pt-4 text-base leading-relaxed">
                 <p className="font-semibold">{comparableTimes ? "Last reported carrier event" : "Carrier event report"}</p>
-                <p className="text-ink/70">{latest.message || statusLabel(latest.status, latest.detail, pkg.carrier)}</p>
+                <p className="text-ink/70">{latest.message?.replace(/\s*\u2014\s*/g, ": ") || statusLabel(latest.status, latest.detail, pkg.carrier)}</p>
                 {latestLocation && (
                   <p className="text-ink/70">Reported event location: {latestLocation}</p>
                 )}
@@ -81,7 +81,7 @@ export default function ShipmentTracking({ packages, loading, available }: {
                     const location = locationLabel(event.location);
                     return (
                       <li key={event.id} className="border-l border-ink/20 pb-5 pl-4 text-base leading-relaxed last:pb-0">
-                        <p className="font-semibold">{event.message || statusLabel(event.status, event.detail, pkg.carrier)}</p>
+                        <p className="font-semibold">{event.message?.replace(/\s*\u2014\s*/g, ": ") || statusLabel(event.status, event.detail, pkg.carrier)}</p>
                         {location && <p className="text-ink/70">Event location: {location}</p>}
                         <p className="text-ink/70"><ReportedTime value={event.occurredAt} /></p>
                       </li>

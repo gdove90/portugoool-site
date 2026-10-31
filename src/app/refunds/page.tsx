@@ -144,7 +144,7 @@ export default function RefundsPage() {
             <ul className="mt-6 divide-y divide-ink/10 border-y border-ink/10">
               {NOT_COVERED.map((item) => (
                 <li key={item} className="flex gap-4 py-4 text-ink">
-                  <span className="font-bold" aria-hidden="true">—</span>
+                  <span className="font-bold" aria-hidden="true">•</span>
                   {item}
                 </li>
               ))}
