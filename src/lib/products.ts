@@ -38,6 +38,28 @@ const PERF_CARE = "Machine wash cold. Tumble dry low. Do not iron the print.";
 
 const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
 
+const CORE_SWEATPANT_VARIANTS = [
+  { name: "Black", key: "black", hex: "#1B1B1B", ink: "white" },
+  { name: "Haze Blue", key: "haze-blue", hex: "#526D80", ink: "white" },
+  { name: "Apricot", key: "apricot", hex: "#E9DFC1", ink: "black" },
+].map(({ name, key, hex, ink }) => ({
+  name,
+  supplierColor: name,
+  hex,
+  skuFragment: "",
+  comingSoon: true,
+  images: [
+    {
+      src: `/products/core-sweatpant/goal-core-sweatpant-${key}-catalog-product-front-20261031.webp`,
+      alt: `The Core Sweatpant in ${name}, ghost front view with ${ink} GA monogram and three-line slogan with a red period on opposite upper thighs`,
+    },
+    {
+      src: `/products/core-sweatpant/goal-core-sweatpant-${key}-catalog-product-back-20261031.webp`,
+      alt: `The Core Sweatpant in ${name}, ghost back view with a blank back and open straight hems`,
+    },
+  ],
+}));
+
 // Shared drop settings per collection drop.
 const DROP_I = {
   isLimitedDrop: true,
@@ -4341,6 +4363,36 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Core Jogger ==
+  // Owner, 2026-10-31: Men's listing only; retail price is not approved.
+  {
+    id: "90000000-0000-4000-8000-000000000001",
+    name: "The Core Sweatpant",
+    slug: "goal-athletics-core-sweatpant",
+    blank: "UB0050",
+    description: "A goal is just the beginning. Tapered sweatpants with an open straight hem, finished with the GA monogram and our statement graphic. Made for downtime between sessions.",
+    priceCents: 0,
+    color: "Black",
+    colorHex: CORE_SWEATPANT_VARIANTS[0].hex,
+    fabric: "87% cotton / 13% polyester. 360 GSM.",
+    fit: "Unisex tapered fit with an elastic waist and an open straight hem.",
+    fitNote: "Coming soon.",
+    careInstructions: "Gentle wash at 30°C. Do not bleach. Tumble dry low. Iron on low, avoiding the print. Do not dry clean.",
+    images: CORE_SWEATPANT_VARIANTS[0].images,
+    colorVariants: CORE_SWEATPANT_VARIANTS,
+    // Nominal supplier size range. No color/size combination is orderable.
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "pants",
+    supplierType: "tapstitch",
+    isActive: true,
+    availableForSale: false,
+    isLimitedDrop: false,
+    dropVersion: null,
+    dropLimit: null,
+    dropSoldCount: 0,
+    customNameAvailable: false,
+    customNumberAvailable: false,
+    customizationPriceCents: 0,
+  },
   // == TEMPO Core Training Tee (built 2026-10-26) ==
   // Apliiq designs 6241853 Black, 6241860 White, 6241864 Iron Grey (rebuilt
   // 2026-10-26 at the owner's smallest size; 6240566/70/71 renamed delete):

@@ -30,6 +30,7 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000023": ["men"],
   // Core Jogger (Apliiq PST871, two colours), owner instruction 2026-10-27.
   "80000000-0000-4000-8000-000000000024": ["men"],
+  "90000000-0000-4000-8000-000000000001": ["men"],
   // TEMPO (women), built on Apliiq and Tapstitch 2026-10-26.
   "80000000-0000-4000-8000-000000000017": ["women"],
   "80000000-0000-4000-8000-000000000018": ["women"],
@@ -76,6 +77,7 @@ const CATALOG_RANK: readonly string[] = [
   "80000000-0000-4000-8000-000000000014", // Heritage Hoodie
   "80000000-0000-4000-8000-000000000015", // Core Hoodie
   "80000000-0000-4000-8000-000000000020", // TEMPO Warmup Hoodie
+  "90000000-0000-4000-8000-000000000001", // The Core Sweatpant
   "80000000-0000-4000-8000-000000000016", // Core Everyday Raincoat
 ];
 export function catalogOrder(list: Product[]): Product[] {
