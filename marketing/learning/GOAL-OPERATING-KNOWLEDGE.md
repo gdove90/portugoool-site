@@ -113,3 +113,11 @@ CLASSIFICATION: SUPPORTED INFERENCE
 CONFIDENCE: MEDIUM that rows lag by more than a day (two consecutive observations); LOW on the exact lag
 IMPLICATION: yesterday's and today's rows cannot be read as complete at 5:00 AM; reach for the most recent two days will look artificially empty, and a posting gap should only be stated once its row has populated.
 RECOMMENDED FUTURE ACTION: judge any day only from its own populated row; treat the last two days as NOT POPULATED; the owner can confirm what was posted on 10-30 and 10-31.
+
+DATE: 2026-10-31
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-10-31/03-search-ecommerce.md (live pages fetched 2026-10-31)
+OBSERVATION: the live catalog grew to 11 products and 27 sitemap URLs: the Core Sweatpant is listed and indexed with "Price to be announced" and an inactive add-to-bag, and /women is a no-product coming-soon page with only a 20% signup. The shipping & returns page carries no first-order offer text; the offer appears only in signup blocks.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text; conversion impact NO DATA
+IMPLICATION: two nav-reachable pages have no purchase path, so social traffic to them can convert only through email signup; earlier notes that policy pages carry the offer were wrong.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, set the Sweatpant price or launch path and add signup capture on its page; keep both pages out of social CTAs until then.
