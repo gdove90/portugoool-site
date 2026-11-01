@@ -6,7 +6,7 @@ OBSERVED: the GOALZIL Reel (2026-10-27 16:00 ET) is still the only content that 
 OBSERVED: the new feed carousel (10-31 14:00, first post since 10-28) is live with reach 4, views 19, interactions 5 (likes 4, shares 1), only hours old, so not comparable yet.
 
 ## WEAKEST SIGNAL
-OBSERVED: the 10-31 carousel's early reach is 4 against 13 to 16 for the earlier carousels at their latest readings. This is a under-24-hour reading versus multi-day readings, so no conclusion (INSUFFICIENT HISTORY).
+OBSERVED: the 10-31 carousel's early reach is 4 against 13 to 16 for the earlier carousels at their latest readings. This is an under-24-hour reading versus multi-day readings, so no conclusion (INSUFFICIENT HISTORY).
 OBSERVED: saves 0 on every feed post and the Reel; follows from content 0 on every feed post; followers flat at 38 since 10-27; comments 0 on all content (including the new "What's your GOAL?" prompt, so far).
 
 ## OBSERVED
@@ -44,7 +44,7 @@ OWNER-POSTED / HISTORICAL ISSUE (flag only, no edits): the GOALZIL Reel caption 
 
 ## SUPPORTED INFERENCES
 - Content, not baseline, drives reach: with no posts the account reached 5, 3, 2, 5 on 10-25, 10-26, 10-29, 10-30 versus 25 to 181 on posting days. SUPPORTED, tiny base.
-- Evolution rows lag by about a day or more (10-30 row arrived on the 10-01 run, 10-31 reach not yet populated). SUPPORTED (three consecutive observations).
+- Evolution rows lag by about a day or more (10-30 row arrived on the 11-01 run, 10-31 reach not yet populated). SUPPORTED (three consecutive observations).
 - Feed posts keep accruing slowly for days (Quarter Zip 14 to 16, Jogger 13 to 15). LOW; a 24 to 72 hour cut-off understates feed reach at this size.
 - Reels remain the only format that has reached beyond followers (180 vs max 24 for feed). LOW confidence, one Reel confounded with its subject.
 - A 3-day posting gap (10-29 to 10-30, nothing returned) was followed by a post on 10-31; the gap itself is now confirmed by two populated no-content rows (10-29, 10-30). SUPPORTED.
