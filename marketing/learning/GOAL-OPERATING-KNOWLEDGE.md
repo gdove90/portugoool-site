@@ -129,3 +129,11 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: LOW (six days, tiny base, one viral Reel dominates the posting-day figure)
 IMPLICATION: at this size the account has almost no organic reach without new posts, so gaps in cadence directly remove reach; also a day can only be judged once its own row has populated, usually after a one-day lag.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, keep the standing-grid cadence; Performance Intelligence reads the 10-31 carousel at 24h and 72h to test whether a question-led, no-link caption draws comments.
+
+DATE: 2026-11-01
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-01/03-search-ecommerce.md (live pages fetched 2026-11-01)
+OBSERVATION: the GA Matchday Cap is a live $32 product (/shop/goal-athletics-monogram-cap) with full material and care copy but no dimensions and no delivery line; the Jogger page has no delivery line at all, while the Quarter Zip still says "overseas partner, 10 to 17 days" against 7-12 business days on policy pages. The 10-31 carousel features all three products.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text; effect on traffic or conversion NO DATA
+IMPLICATION: social content now points at product pages whose delivery information is missing or contradictory; delivery inconsistency is present on every page the carousel features, not only the Quarter Zip.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, approve one delivery line for all product pages; until then keep delivery claims out of captions and Stories.
