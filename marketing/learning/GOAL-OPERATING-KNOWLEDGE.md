@@ -121,3 +121,11 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text; conversion impact NO DATA
 IMPLICATION: two nav-reachable pages have no purchase path, so social traffic to them can convert only through email signup; earlier notes that policy pages carry the offer were wrong.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, set the Sweatpant price or launch path and add signup capture on its page; keep both pages out of social CTAs until then.
+
+DATE: 2026-11-01
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-11-01/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: with no content on 10-25, 10-26, 10-29 and 10-30 (populated rows) daily account reach was 5, 2, 5 and 3; on posting days 10-27 and 10-28 it was 181 and 25. The 10-30 row arrived one day after its date, and the 10-31 reach row was still empty at 5:00 AM on 11-01.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: LOW (six days, tiny base, one viral Reel dominates the posting-day figure)
+IMPLICATION: at this size the account has almost no organic reach without new posts, so gaps in cadence directly remove reach; also a day can only be judged once its own row has populated, usually after a one-day lag.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, keep the standing-grid cadence; Performance Intelligence reads the 10-31 carousel at 24h and 72h to test whether a question-led, no-link caption draws comments.
