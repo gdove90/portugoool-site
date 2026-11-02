@@ -145,3 +145,11 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: MEDIUM (three days consistent, tiny account)
 IMPLICATION: IGEV37 appears to include Stories despite its description, so a count above the visible feed items is not evidence of an unsynced feed post, and a count of 1 on a Story-only day is not a hidden feed post.
 RECOMMENDED FUTURE ACTION: when content counts and visible items disagree, compare against feed posts plus Stories before flagging a sync gap; re-check if a Reel day appears alongside Stories.
+
+DATE: 2026-11-02
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-02/03-search-ecommerce.md (live pages fetched 2026-11-02)
+OBSERVATION: the /size-guide page carries a chart for the two tees only, yet the Quarter Zip, Jogger, Hoodie and Shorts pages all show "View fit guide / Full size guide" buttons. The Heritage Hoodie page has its own full flat chart; the Shorts give waist sizing (S 30 to XXL 38); the Quarter Zip and Jogger still carry the "flat measurements still to be published" placeholder.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text; effect on conversion NO DATA
+IMPLICATION: sizing information is held per product page, not centrally, so the fit-guide button can lead a jogger shopper to tee measurements; Hoodie, Raincoat and tees are the pages with complete sizing.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, supply Quarter Zip and Jogger measurements and either chart each product on /size-guide or relabel the button; until then prefer the Hoodie, Raincoat or tees as social landing pages.
