@@ -137,3 +137,11 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text; effect on traffic or conversion NO DATA
 IMPLICATION: social content now points at product pages whose delivery information is missing or contradictory; delivery inconsistency is present on every page the carousel features, not only the Quarter Zip.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, approve one delivery line for all product pages; until then keep delivery claims out of captions and Stories.
+
+DATE: 2026-11-02
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-11-02/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: the evolution field IGEV37 ("Total Content, excludes Stories") returned 3 on 10-28 (1 carousel + 2 Stories), 2 on 10-31 (1 carousel + 1 Story) and 1 on 11-01 (1 Story only); on 10-27, with no Stories, it matched the 3 feed items.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: MEDIUM (three days consistent, tiny account)
+IMPLICATION: IGEV37 appears to include Stories despite its description, so a count above the visible feed items is not evidence of an unsynced feed post, and a count of 1 on a Story-only day is not a hidden feed post.
+RECOMMENDED FUTURE ACTION: when content counts and visible items disagree, compare against feed posts plus Stories before flagging a sync gap; re-check if a Reel day appears alongside Stories.
