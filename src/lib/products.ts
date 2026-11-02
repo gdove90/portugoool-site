@@ -4383,7 +4383,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "pants",
     supplierType: "tapstitch",
-    isActive: true,
+    isActive: false,
     availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
