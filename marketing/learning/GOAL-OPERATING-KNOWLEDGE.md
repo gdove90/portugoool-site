@@ -153,3 +153,19 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text; effect on conversion NO DATA
 IMPLICATION: sizing information is held per product page, not centrally, so the fit-guide button can lead a jogger shopper to tee measurements; Hoodie, Raincoat and tees are the pages with complete sizing.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, supply Quarter Zip and Jogger measurements and either chart each product on /size-guide or relabel the button; until then prefer the Hoodie, Raincoat or tees as social landing pages.
+
+DATE: 2026-11-03
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-11-03/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: 11-01 had no feed post or Reel, only one Story, yet account reach was 17 (views 54), against 3 to 5 on the no-content days 10-29 and 10-30 and 16 on 10-31 (carousel plus Story). That Story reached 16 of 38 followers with 15 forward taps and 0 replies.
+CLASSIFICATION: SUPPORTED INFERENCE
+CONFIDENCE: LOW (one day, tiny base, Story creative not visible)
+IMPLICATION: a Story alone lifts a day to the level of a feed-post day, so the earlier "gaps in cadence remove reach" finding is mostly a Story-cadence finding; Stories are the cheapest reach lever at this size.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, keep a Story on every standing-grid day; do not read a day as empty until its own row has populated.
+
+DATE: 2026-11-03
+SOURCE: Performance & Consumer Intelligence, same report
+OBSERVATION: the 10-31 question-led, no-link carousel ("What's your GOAL?") showed reach 9, views 40 at ~39 h and identical values at ~63 h, with comments 0 at both readings (interactions 5 = likes 4 + shares 1).
+CLASSIFICATION: OBSERVED
+CONFIDENCE: LOW (one post, followers only, no control that isolates the question)
+IMPLICATION: a closing question alone, with no reply mechanic, has not drawn a comment on this account yet; feed reach for this post stopped growing by ~39 h.
+RECOMMENDED FUTURE ACTION: do not repeat the plain-question closer as the only test; use the Story question-sticker test already proposed (for OWNER REVIEW).
