@@ -12,13 +12,13 @@
     ".codex/agents/goal_product_integration.toml": "c8ef15e48f38473688eab8750b1d62dfd26e0e24d89912767cadc97bf74d13e7",
     "AGENTS.md": "7f9696772b21038b1c72c122a605f1029825aacccf61ae2c65b61c3924183940",
     "CLAUDE.md": "481c219f4b3fc286fb58881145d037ccc3bf9947efe7f186046a45c078a6b683",
-    "docs/agents/goal-product-integration/OPERATING_CONTRACT.md": "6f6dd7d0b2a8d7b94f70941f5ba516755f28009621213bddc2b61af68182fa4c",
-    "docs/agents/goal-product-integration/SETUP_AND_HANDOFF.md": "5a67a1304cbd166666aa40d80b9ea9cf8169836bb192b635e3e0aa865d3b79a4",
+    "docs/agents/goal-product-integration/OPERATING_CONTRACT.md": "c9e917215ea80e17eabd9fae1e0aff790085a210ca99857eca43dd489e32e9c9",
+    "docs/agents/goal-product-integration/SETUP_AND_HANDOFF.md": "114f3ada52ab46d177388f74d46858f6d5c48c037e3e965bc5e91ee59831fce2",
     "docs/agents/goal-product-integration/entrypoint.md": "71185cd03bab22c9f39eb0351f9ad48b031c0f8262397e90e8a8885c812bcc2c",
     "docs/agents/goal-product-integration/templates/handoff.json": "efd6ffaebf76e76930434bbd7143469ac95581ceff97ddba816aa158486f2f2a",
     "docs/agents/goal-product-integration/templates/product-readiness-manifest.json": "5057a32e91f5bf45b8c0829b42feb148d4d2714136382e93d3b1eed152e8411c",
-    "scripts/goal_agent_coordination.py": "cb99818b9b6773092c78e106dac00b953967cce309425afac6da66b4689d4ebe",
+    "scripts/goal_agent_coordination.py": "9cc9728b8de928f6e6b4ba9ef9098daad8dd7166c269d60f7e9bd5c819f71a3f",
     "scripts/goal_agent_validate.py": "dad6e68955e817f714b7e5f517056f6a1d1a791dfbcf79cb930572f9d6c97536",
-    "scripts/test_goal_agent_coordination.py": "068ff20188d43a779a16944f07e0dc1caec8473063195b622a70bd57e07abf0e"
+    "scripts/test_goal_agent_coordination.py": "44c4bd43fb2c00389291ea931a139312e055642ebbb768661008f0ad4db43c63"
   }
 }

@@ -90,6 +90,8 @@ def token_path():
 
 
 def checkout_state(branch, require_pushed=False):
+    if branch in ("main", "master", "production", "goal/agent-coordination"):
+        raise Hold("Main, production and coordination refs cannot be implementation branches.")
     if git("branch", "--show-current") != branch:
         raise Hold("Current checkout is not the owned task branch.")
     current = git("rev-parse", "HEAD")

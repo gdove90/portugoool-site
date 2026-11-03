@@ -22,6 +22,8 @@ In Codex invoke the `goal_product_integration` project agent or the `goal-produc
 
 Use a fresh clean worktree for a new task, or the current task branch for continuation. Record owner approval, base/head and the first checkpoint. Example commands use placeholder IDs; substitute the actual approved task, branch and session:
 
+For a new task only, the contract permits provisioning/pushing the unchanged inspected baseline before acquiring the lock. Read status first, preserve the existing checkout, create a new isolated feature worktree/branch from current `origin/main`, and push that branch with no content changes. Then acquire below. No edits or changed-content pushes are permitted until ownership is verified. For continuation, use the existing checkpointed task branch; do not start again from main. The helper rejects main, master, production and its own coordination ref as task branches.
+
 ```
 python scripts/goal_agent_coordination.py acquire --engine claude --session UNIQUE_SESSION --task TASK_ID --branch TASK_BRANCH --approval OWNER_APPROVAL_REFERENCE
 python scripts/goal_agent_coordination.py check --session UNIQUE_SESSION

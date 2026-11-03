@@ -168,6 +168,14 @@ class CoordinationTests(unittest.TestCase):
                   "--branch", "test/repair", "--approval", "fixture approval", "--owner-authorized",
                   "--reason", "stopped", success=False)
 
+    def test_reserved_branches_cannot_be_acquired(self):
+        self.run_git("checkout", "-b", "main", cwd=self.a)
+        self.run_git("push", "origin", "main", cwd=self.a)
+        self.call(self.a, "acquire", "--session", "a", "--engine", "claude", "--task", "test-task",
+                  "--branch", "main", "--approval", "fixture approval", success=False)
+        with self.cwd(self.a), self.assertRaises(coord.Hold):
+            coord.checkout_state("goal/agent-coordination")
+
 
 if __name__ == "__main__":
     unittest.main()
