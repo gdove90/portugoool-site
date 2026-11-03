@@ -1,3 +1,5 @@
+> **GOAL shared agent contract, November 3, 2026:** Read [AGENTS.md](AGENTS.md) and [the v2.0 shared contract](docs/agents/goal-product-integration/OPERATING_CONTRACT.md) before GOAL work. Claude and Codex use the same rules and repository-wide editing lock. Preserve the current clothing image layout and observed store/submission gates. For conflicting historical branding, domain, palette, image-ratio, store-state or permission text below, the current owner-approved contract governs. This notice does not authorize site changes, commerce repairs, supplier writes, merge or deployment.
+
 > **Production lettering hold:** [Measured small-letter failures and latest crewneck font](designs/19_colorway-and-back-print-review/README.md) govern every upload. Use the crewneck FRONT badge font on its curved back, not italic Modern Sport. Correct failed actual-size lettering before production; sharp concepts are not print approval.
 
 > **Modern Sport Performance print rebuild (2026-09-25):** the GA-01 lettering failed Apliiq's 2 mm DTF minimum (back ATHLETICS ~0.7 mm, front ~1.5 mm). ATHLETICS was re-set heavier from the original glyphs (wordmark and underline unchanged), exported as `GA-01-F_v3_3300px.png` and `GA-01-B_v3_1950px_600ppi.png`, linked as the hi-res production files on saved designs 6112037 (Black) and 6113361 (True Royal) at their existing 11 x 3.73 in / 3.25 x 1.11 in sizes, and composited into the site imagery (V3). Records, measurements and proofs: [designs/26_modern-sport-print-rebuild-2026-09-25/README.md](designs/26_modern-sport-print-rebuild-2026-09-25/README.md). Physical proof/sample still required.
@@ -334,3 +336,4 @@ Future Claude Code sessions must:
 8. When uncertain, choose the simpler solution
 9. Verify changes in a live preview before declaring them done, and keep
    `main` deployable — every push goes to production
+
