@@ -19,7 +19,7 @@
     "scripts/goal_agent_coordination.py": "db97b19923ad7fcddb9977e7358704b89241d36cc05b4bc75afbbafb514d4430",
     "scripts/goal_agent_validate.py": "f13bfb6a9fce6ac601ba69a5cc6c91419c4ea00ecae0fa42b605a93135ceba74",
     "scripts/test_goal_agent_coordination.py": "499772398b729d2ccbce0ce525d54459afde6bc87ea82dabdac4d613e3d624fa",
-    "scripts/test_goal_agent_validate.py": "666e9893076b2adeaf7068d987661a63be5530d7a340dc595e72b9111b37068a"
+    "scripts/test_goal_agent_validate.py": "c9d7a86c447f498ed65031e53e808ef7a97e98b0c644744d743bf90da5d29f31"
   },
   "hash_encoding": "utf-8-lf",
   "sha256_fragments": {

@@ -50,7 +50,7 @@ class ValidationTests(unittest.TestCase):
 
     def test_mixed_workflow_line_endings_pass(self):
         path = self.copy / ".claude/skills/goal-product-integration/SKILL.md"
-        path.write_bytes(path.read_bytes().replace(b"\n", b"\r\n"))
+        path.write_bytes(path.read_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n"))
         self.validate()
 
     def test_real_instruction_edit_still_fails_on_crlf(self):
