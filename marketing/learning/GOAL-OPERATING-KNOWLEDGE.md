@@ -169,3 +169,11 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: LOW (one post, followers only, no control that isolates the question)
 IMPLICATION: a closing question alone, with no reply mechanic, has not drawn a comment on this account yet; feed reach for this post stopped growing by ~39 h.
 RECOMMENDED FUTURE ACTION: do not repeat the plain-question closer as the only test; use the Story question-sticker test already proposed (for OWNER REVIEW).
+
+DATE: 2026-11-03
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-03/03-search-ecommerce.md (live pages fetched 2026-11-03)
+OBSERVATION: the Core Sweatpant is gone from the sitemap (26 URLs, was 27), the home search list and the collective list, and its guessed URL returns 404; the live catalog is 10 products. The /size-guide has tabs for Quarter Zip, Jogger, Hoodies, Shorts, Jackets and Caps with no numbers under them, and the Quarter Zip page's "Full size guide" links point at the empty section.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
+IMPLICATION: earlier notes about a Sweatpant "Price to be announced" page are stale; fit-guide buttons lead to empty content for all non-tee products.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, confirm the Sweatpant removal was intended and populate or hide empty size-guide tabs; do not mention the Sweatpant in drafts.
