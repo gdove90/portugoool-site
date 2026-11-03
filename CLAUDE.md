@@ -1,4 +1,8 @@
+<!-- BEGIN GOAL SHARED AGENT CONTRACT NOTICE -->
 > **GOAL shared agent contract, November 3, 2026:** Read [AGENTS.md](AGENTS.md) and [the v2.0 shared contract](docs/agents/goal-product-integration/OPERATING_CONTRACT.md) before GOAL work. Claude and Codex use the same rules and repository-wide editing lock. Preserve the current clothing image layout and observed store/submission gates. For conflicting historical branding, domain, palette, image-ratio, store-state or permission text below, the current owner-approved contract governs. This notice does not authorize site changes, commerce repairs, supplier writes, merge or deployment.
+>
+> **Name resolution:** GOAL Athletics is the current owner-approved display name. Historical GoalAthletics spelling below is superseded; this does not authorize changing stable slugs, IDs or legal/account records.
+<!-- END GOAL SHARED AGENT CONTRACT NOTICE -->
 
 > **Production lettering hold:** [Measured small-letter failures and latest crewneck font](designs/19_colorway-and-back-print-review/README.md) govern every upload. Use the crewneck FRONT badge font on its curved back, not italic Modern Sport. Correct failed actual-size lettering before production; sharp concepts are not print approval.
 

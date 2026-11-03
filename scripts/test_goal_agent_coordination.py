@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest import mock
 
 SCRIPT = Path(__file__).with_name("goal_agent_coordination.py").resolve()
 spec = importlib.util.spec_from_file_location("coord", SCRIPT)
@@ -175,6 +176,22 @@ class CoordinationTests(unittest.TestCase):
                   "--branch", "main", "--approval", "fixture approval", success=False)
         with self.cwd(self.a), self.assertRaises(coord.Hold):
             coord.checkout_state("goal/agent-coordination")
+
+    def test_git_pipe_uses_utf8_bytes_without_text_newline_translation(self):
+        record = "100644 blob " + "a" * 40 + "\tstate.json\n"
+        output = subprocess.CompletedProcess([], 0, "caf\u00e9\n".encode("utf-8"), b"")
+        with mock.patch.object(coord.subprocess, "run", return_value=output) as run:
+            self.assertEqual(coord.git("mktree", data=record), "caf\u00e9")
+        self.assertEqual(run.call_args.kwargs["input"], record.encode("utf-8"))
+        self.assertFalse(run.call_args.kwargs.get("text", False))
+        self.assertFalse(run.call_args.kwargs.get("universal_newlines", False))
+
+    def test_published_tree_has_exact_state_json_filename(self):
+        self.acquire(self.a)
+        head = self.call(self.a, "status")["coordinator_head"]
+        files = self.run_git("ls-tree", "--name-only", head, cwd=self.a)
+        self.assertEqual(files, "state.json")
+        self.assertEqual(json.loads(self.run_git("show", head + ":state.json", cwd=self.a))["holder"]["session"], "a")
 
 
 if __name__ == "__main__":

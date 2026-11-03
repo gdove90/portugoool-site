@@ -11,14 +11,22 @@
     ".claude/skills/goal-product-integration/SKILL.md": "3717a19fd4134b682802fb31afa6770c69b16ad0b536ffef66861e19d7ea7dcb",
     ".codex/agents/goal_product_integration.toml": "c8ef15e48f38473688eab8750b1d62dfd26e0e24d89912767cadc97bf74d13e7",
     "AGENTS.md": "7f9696772b21038b1c72c122a605f1029825aacccf61ae2c65b61c3924183940",
-    "CLAUDE.md": "481c219f4b3fc286fb58881145d037ccc3bf9947efe7f186046a45c078a6b683",
     "docs/agents/goal-product-integration/OPERATING_CONTRACT.md": "c9e917215ea80e17eabd9fae1e0aff790085a210ca99857eca43dd489e32e9c9",
-    "docs/agents/goal-product-integration/SETUP_AND_HANDOFF.md": "114f3ada52ab46d177388f74d46858f6d5c48c037e3e965bc5e91ee59831fce2",
+    "docs/agents/goal-product-integration/SETUP_AND_HANDOFF.md": "a5703997c50a576989526bb13c82a2559f02d3264c4c206f84f61a5faf8f2af6",
     "docs/agents/goal-product-integration/entrypoint.md": "71185cd03bab22c9f39eb0351f9ad48b031c0f8262397e90e8a8885c812bcc2c",
     "docs/agents/goal-product-integration/templates/handoff.json": "efd6ffaebf76e76930434bbd7143469ac95581ceff97ddba816aa158486f2f2a",
     "docs/agents/goal-product-integration/templates/product-readiness-manifest.json": "5057a32e91f5bf45b8c0829b42feb148d4d2714136382e93d3b1eed152e8411c",
-    "scripts/goal_agent_coordination.py": "9cc9728b8de928f6e6b4ba9ef9098daad8dd7166c269d60f7e9bd5c819f71a3f",
-    "scripts/goal_agent_validate.py": "dad6e68955e817f714b7e5f517056f6a1d1a791dfbcf79cb930572f9d6c97536",
-    "scripts/test_goal_agent_coordination.py": "44c4bd43fb2c00389291ea931a139312e055642ebbb768661008f0ad4db43c63"
+    "scripts/goal_agent_coordination.py": "db97b19923ad7fcddb9977e7358704b89241d36cc05b4bc75afbbafb514d4430",
+    "scripts/goal_agent_validate.py": "f13bfb6a9fce6ac601ba69a5cc6c91419c4ea00ecae0fa42b605a93135ceba74",
+    "scripts/test_goal_agent_coordination.py": "499772398b729d2ccbce0ce525d54459afde6bc87ea82dabdac4d613e3d624fa",
+    "scripts/test_goal_agent_validate.py": "666e9893076b2adeaf7068d987661a63be5530d7a340dc595e72b9111b37068a"
+  },
+  "hash_encoding": "utf-8-lf",
+  "sha256_fragments": {
+    "CLAUDE.md": {
+      "begin": "<!-- BEGIN GOAL SHARED AGENT CONTRACT NOTICE -->",
+      "end": "<!-- END GOAL SHARED AGENT CONTRACT NOTICE -->",
+      "sha256": "fa045e280006040a37b8bec1597d6867825de685bb36d0e624418be6f7b8f2f5"
+    }
   }
 }

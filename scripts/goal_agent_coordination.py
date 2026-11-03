@@ -21,11 +21,14 @@ class Hold(RuntimeError):
 
 
 def git(*args, data=None, ok=(0,)):
-    result = subprocess.run(["git", *args], input=data, text=True,
+    # Binary pipes keep Git's tree records byte-exact on Windows: text mode
+    # would turn the LF after state.json into CRLF, making CR part of its name.
+    stdin = data.encode("utf-8") if data is not None else None
+    result = subprocess.run(["git", *args], input=stdin,
                             capture_output=True, timeout=60)
     if result.returncode not in ok:
         raise Hold("Git operation failed or coordination changed. Re-read status; do not retry a mutation automatically.")
-    return result.stdout.strip()
+    return result.stdout.decode("utf-8").strip()
 
 
 def now():

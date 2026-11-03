@@ -11,10 +11,15 @@ After owner review, either use the exact setup branch in an isolated clean check
 ```
 python scripts/goal_agent_validate.py
 python scripts/test_goal_agent_coordination.py
+python scripts/test_goal_agent_validate.py
 python scripts/goal_agent_coordination.py status
 ```
 
 The last command needs existing Git authentication and an origin pointing to `gdove90/portugoool-site`. It creates no remote branch. A missing coordination ref means no lock has been initialized. Only the first authorized acquire creates it. The lock tests use local temporary bare repositories and never touch GitHub or providers. Do not claim a live two-machine test from their success.
+
+The validator hashes UTF-8 text after converting CRLF to LF and makes the same conversion for workflow comparison. Every other byte remains significant. It pins only the explicitly marked shared notice in `CLAUDE.md`, so unrelated historical/project notes can change without falsely reporting contract drift. Missing, duplicated or changed notice markers still fail. Any approved shared-contract change requires updating its manifest fingerprint; newline normalization is not permission to ignore actual edits.
+
+The coordination helper sends Git stdin as UTF-8 bytes and decodes stdout explicitly, preventing Windows text-mode conversion from creating a `state.json` filename with a trailing CR. The additional local regressions cover the pipe bytes, exact tree filename, CRLF and mixed checkouts, and notice integrity. A native Windows rerun is still needed before declaring Windows activation verified. Use a short isolated checkout path if the existing repository exceeds the PC's path limits. Do not change global Git settings or touch a dirty checkout to run verification.
 
 In Codex invoke the `goal_product_integration` project agent or the `goal-product-integration` skill. In Claude Code invoke `goal-product-integration-engineer` or `/goal-product-integration` from the actual repository checkout. If the current client does not discover project agents/skills, explicitly read the root instructions, identical workflow and common contract, then report discovery UNVERIFIED. Do not quietly fall back to old package prompts. Different client versions and cloud sessions can load custom instructions differently; verify discovery in each real environment.
 
