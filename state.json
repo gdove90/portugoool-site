@@ -4,14 +4,15 @@
     "contract_version": "2.0",
     "task_id": "tempo-training-bra-20261104",
     "engine": "codex",
-    "session": "codex-bra-suzanne-2beee444",
+    "session": "codex-bra-price18-098690e7",
     "branch": "codex/tempo-training-bra-20261104",
     "base_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
     "head_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
-    "worktree_state": "clean_committed_and_pushed",
+    "worktree_state": "staged_scoped_documents",
     "approved_scope": [
       "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: WT0093 specification checks, four color galleries, Suzanne Black new hairstyle, front ghost first/back ghost last, website preparation preserving holds.",
-      "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c permits Suzanne again for Brick; finish four matching views and gallery draft."
+      "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c permits Suzanne again for Brick; finish four matching views and gallery draft.",
+      "Owner 098690e7-d5c1-42a4-8271-ce6a9c1d8f39 approves USD18 retail for all four WT0093 colorways and all S-XL sizes."
     ],
     "completed": [
       "Prepared 20 generated mockup WebP images at original 1024x1536: Black Suzanne, Blue Molly and Grey Jessica six views each; Brick front/back ghosts.",
@@ -68,6 +69,11 @@
         "reference": "2beee444-brick-suzanne-publication",
         "status": "confirmed",
         "details": "Four Brick Suzanne views and three scoped documents published to existing draft PR75 at bfbcf31b804b38c0240d53df90e32e05ec802793. All24 gallery images complete. No production catalog, price, gates, supplier, SQL, payment, email, main merge or deployment effects."
+      },
+      {
+        "reference": "098690e7-bra-retail18",
+        "status": "intent",
+        "details": "Publish approved USD18 retail in readiness manifest, README, PR75 and owner decision Page; no live catalog, provider pricing, supplier save, gates or deployment changes."
       }
     ],
     "changed_paths": [
@@ -93,7 +99,7 @@
     "start_commit": "81f7079f4348acfe380539a7105b8e343f3a4dfb",
     "acquired_at": "2026-11-04T11:24:38.839079+00:00"
   },
-  "revision": 56,
+  "revision": 57,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:42:09.016408+00:00"
+  "updated_at": "2026-11-04T11:43:12.674300+00:00"
 }
