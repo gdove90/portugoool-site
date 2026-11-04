@@ -24,13 +24,15 @@
       "PASS typecheck",
       "PASS lint (three pre-existing img warnings)",
       "PASS optimized production build",
-      "PASS all 15 WebP images decode at 1024x1536"
+      "PASS all 15 WebP images decode at 1024x1536",
+      "PASS Netlify deploy preview ready at 6aeaf3bebcf545cda185e635; exact 3a5fd70f revision; redirect/header checks successful.",
+      "Preview UI intentionally shows Collection in development under existing immutable preview guard; no gate settings changed. Production UI verification will follow deployment."
     ],
     "unresolved": [
       "White supplier background-detection warning unresolved; purchasing held.",
       "STORE_OPEN/APLIIQ_SUBMIT_ENABLED values unverified; their code/settings untouched."
     ],
-    "next_action": "Inspect deploy preview, merge reviewed owner-authorized PR #74, then verify production UI and image bytes.",
+    "next_action": "Merge PR #74 exact reviewed 3a5fd70f into unchanged main, verify production deploy and all color galleries.",
     "external_effects": [
       {
         "reference": "be9312aa-gallery-publication",
@@ -46,6 +48,11 @@
         "reference": "be9312aa-git-publication",
         "status": "confirmed",
         "details": "Task branch at 3a5fd70f89fbd8e945fff55ac34ac2555dc99f90, PR https://github.com/gdove90/portugoool-site/pull/74. Production still unchanged."
+      },
+      {
+        "reference": "be9312aa-merge-pr74",
+        "status": "intent",
+        "details": "Merge exact approved 22-file PR #74 head 3a5fd70f89fbd8e945fff55ac34ac2555dc99f90 into main 522500ddc7aa94e9990734564a3fd309a682e868; expected Netlify Git CD production deploy. No SQL, supplier, environment or payment writes."
       }
     ]
   },
@@ -68,7 +75,7 @@
     "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "acquired_at": "2026-11-04T08:03:10.031538+00:00"
   },
-  "revision": 45,
+  "revision": 46,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T08:58:48.971Z"
+  "updated_at": "2026-11-04T09:01:36.762Z"
 }
