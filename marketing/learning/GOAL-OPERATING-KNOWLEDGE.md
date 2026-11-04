@@ -185,3 +185,11 @@ CLASSIFICATION: OBSERVED (numbers); the non-follower share is SUPPORTED INFERENC
 CONFIDENCE: LOW (one Story, creative not visible, tiny base)
 IMPLICATION: Story reach is not capped by follower count, and one Story outweighed every feed post and the daily baseline; what that Story carried is the unknown that matters.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, the owner reads the 11-02 Story in the app and records its stickers, hashtags and location, then EXP-002 repeats the element once.
+
+DATE: 2026-11-04
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-04/03-search-ecommerce.md (live pages fetched 2026-11-04)
+OBSERVATION: the Core Sweatpant, absent and 404 on 11-03, is back at $38 with an active Add to bag; the catalog is 13 products and 29 sitemap URLs, including two women's TEMPO tees marked "Coming soon". The TEMPO Training Tee page says Light Purple while the product list and home say White. The TEMPO pages carry full size charts; the Sweatpant, Quarter Zip and Jogger still have none.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
+IMPLICATION: the catalog can change overnight in both directions, so a one-day 404 is not proof of removal; earlier notes that the Sweatpant left the catalog are INVALIDATED. Each report must fetch the live grid and sitemap before naming products.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, confirm intended catalog state, fix the TEMPO colour mismatch, and supply the missing measurements in the TEMPO chart format.
