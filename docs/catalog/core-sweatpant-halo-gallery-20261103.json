@@ -1,0 +1,379 @@
+{
+  "schema": "goal-product-gallery-v1",
+  "product_id": "90000000-0000-4000-8000-000000000001",
+  "slug": "goal-athletics-core-sweatpant",
+  "owner_approval": "9fa3a0af-1dde-4e98-be4e-6f6c16993098",
+  "scope": "Publish approved Halo galleries; preserve price zero, unavailable-for-sale status and supplier mappings. No supplier, checkout, SQL, payment, email or store-gate changes.",
+  "source_kind": "Owner-approved generated product previews, not physical sample photographs.",
+  "image_order": [
+    "product-front",
+    "product-back",
+    "model-front",
+    "model-quarter",
+    "model-back",
+    "detail"
+  ],
+  "baseline": "d236ca4845838b88e1d9eb233f154397288f4dbc",
+  "assets": [
+    {
+      "color": "Black",
+      "supplier_color": "Black",
+      "model": "Jeff",
+      "view": "product-front",
+      "source_file": "exec-d62360b3-5e4f-475d-bb9a-b39f44081e4f.png",
+      "source_sha256": "c4d8ebf0872c347efba3a6a26151cf615de9b67ae85c09218d96cf0be1884b5a",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-product-front-20261103-c4d8ebf0.webp",
+      "sha256": "30b9d9b0aa9aabd7d1caaa8ddd5520cf3bf722353d6cf49fc0335027a2a40076",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 93474
+    },
+    {
+      "color": "Black",
+      "supplier_color": "Black",
+      "model": "Jeff",
+      "view": "product-back",
+      "source_file": "exec-0cf91ecd-ab36-45e9-9ac3-f4247476ee0d.png",
+      "source_sha256": "5da73a982cfb6e0786e7c963653435ffbfc612ae966554df600675161beb3353",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-product-back-20261103-5da73a98.webp",
+      "sha256": "3bf50cfa5432fe534d1a9696037fb3ee58c750e3e6919b7eabe7c979a5fcfca6",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 70852
+    },
+    {
+      "color": "Black",
+      "supplier_color": "Black",
+      "model": "Jeff",
+      "view": "model-front",
+      "source_file": "exec-869475b7-1843-4262-afa9-d43ac1c2ca5b.png",
+      "source_sha256": "805852553ff27a6fcfadd82ea643879193a9da71e63eb06fa128e22d180870a6",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-model-front-20261103-80585255.webp",
+      "sha256": "3e0eda02c6b31a6114b130d4e10e9449ac08f1bf4206c73393e8437122f464c3",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 111010
+    },
+    {
+      "color": "Black",
+      "supplier_color": "Black",
+      "model": "Jeff",
+      "view": "model-quarter",
+      "source_file": "exec-ed24a67c-993b-4948-ad32-ab09df53c669.png",
+      "source_sha256": "4481043ecfc5ab3083c75f1218a9d3aa2dfbc408fc689c891569fc0d3e1d4ba3",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-model-quarter-20261103-4481043e.webp",
+      "sha256": "f1493b62fba4fc2df30eb9fd6bac4ae903409a0e78379795974ffefdcd67c5e2",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 97942
+    },
+    {
+      "color": "Black",
+      "supplier_color": "Black",
+      "model": "Jeff",
+      "view": "model-back",
+      "source_file": "exec-f7c62f45-4348-4b67-afd4-579641c9f598.png",
+      "source_sha256": "517f7bab6e3f555723f7477e3d4109bb8bd8c3de27b4edf6bcadc07836043999",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-model-back-20261103-517f7bab.webp",
+      "sha256": "ff2607fe2c6baf365b53af1587eba3e21a53ac74841aa59f9a6d9e5523ee76e7",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 97214
+    },
+    {
+      "color": "Black",
+      "supplier_color": "Black",
+      "model": "Jeff",
+      "view": "detail",
+      "source_file": "exec-0a23fa30-04fe-48d1-b706-b08fd4840b92.png",
+      "source_sha256": "3f5e4c495a9ab460c54f719ebde8a9fc2dd952f36c3cc8d3bd3aab0ea642a156",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-detail-20261103-3f5e4c49.webp",
+      "sha256": "ac04fe7722e6338f406818d371c5693e00536ca6b0b5ab156409ffb1cfe612d9",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 322332
+    },
+    {
+      "color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "model": "Kai",
+      "view": "product-front",
+      "source_file": "exec-934a8607-4dce-45c6-8268-325f5687e501.png",
+      "source_sha256": "4765911951f5ffe84cff0e1c1782504f080e680efdc2699aad50d6253c755fc6",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-product-front-20261103-47659119.webp",
+      "sha256": "21640336167ceb6f28223eb10d1251a8a05aeae7f092e097678dbdcfdfa23047",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 144534
+    },
+    {
+      "color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "model": "Kai",
+      "view": "product-back",
+      "source_file": "exec-ee67ddce-e405-44a3-8088-76b6a7b19bf8.png",
+      "source_sha256": "9087aff351946259e7e7829a357bd1b687fa196b1305539dbfa1d0262871bedf",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-product-back-20261103-9087aff3.webp",
+      "sha256": "2cf0fefae12ddbf9062b2d316e2c99dcabaefbdb66e351f13b984e4efef4e4e9",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 125496
+    },
+    {
+      "color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "model": "Kai",
+      "view": "model-front",
+      "source_file": "exec-7909edf7-32b3-45a2-8d51-d86caca337ed.png",
+      "source_sha256": "7fef6268284b8792fe63e60061497399ef0c795aef0681282834244e8dc3e2bd",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-model-front-20261103-7fef6268.webp",
+      "sha256": "4d5e655f5a8230f74b714348854b8609c9d098dcb0f7341b6bdbfe5f4683fc3a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 121988
+    },
+    {
+      "color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "model": "Kai",
+      "view": "model-quarter",
+      "source_file": "exec-1dbdfc6e-eaa1-4e22-bc30-fbdb0d3d50e5.png",
+      "source_sha256": "00d31da83687b3d0cc989c48ec749666bb7f465bc3490d39312a275a103b98e5",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-model-quarter-20261103-00d31da8.webp",
+      "sha256": "df34207bc902c20af3c3584786d70d6cbb59f2aef1a72e2588db6a8e2605da2a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 111256
+    },
+    {
+      "color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "model": "Kai",
+      "view": "model-back",
+      "source_file": "exec-0c89d9c6-b077-4500-87c2-b68f6ab09985.png",
+      "source_sha256": "e8f1d0cafd9d001a4964d8412a0f907cf2e6e695c9dca8e6712269b46fdb17cc",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-model-back-20261103-e8f1d0ca.webp",
+      "sha256": "0262b07a48161646c280361a8d766820c7cd20e39f27bb27cb55de74d4fd3721",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 100900
+    },
+    {
+      "color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "model": "Kai",
+      "view": "detail",
+      "source_file": "exec-dd870cde-0732-43c0-9501-0a79f75932ef.png",
+      "source_sha256": "b3d8741de137397ebfe06f318148a56128bf6aa63445645466cb2e4f843e7d67",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-detail-20261103-b3d8741d.webp",
+      "sha256": "c769e7e29860fbbc3b2d8f6f5c46ad12f077b7470e2a14dd2b2eaa7778413460",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 501404
+    },
+    {
+      "color": "Oat",
+      "supplier_color": "Apricot",
+      "model": "Suzuki",
+      "view": "product-front",
+      "source_file": "exec-386497f3-177e-437a-8ddd-256a59b0592a.png",
+      "source_sha256": "6302283cdda10025b0b92461d08cc7889cca3b3c22dcc8c61495501288391dff",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-product-front-20261103-6302283c.webp",
+      "sha256": "0231612fff928e5df6170b2217d2608554ac2efca48ad39dbc426297edfe5e52",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 76188
+    },
+    {
+      "color": "Oat",
+      "supplier_color": "Apricot",
+      "model": "Suzuki",
+      "view": "product-back",
+      "source_file": "exec-29ef4227-929c-42c3-8090-b298dfed7823.png",
+      "source_sha256": "415ea2afd305954b8e93b21973a24cfebb29dfcb5436b1599d13d35ffee2a0bc",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-product-back-20261103-415ea2af.webp",
+      "sha256": "1debd2a006abfce71730fdb9658f12e2e69d07359c6a13ecaed5e8a989f66a65",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 68846
+    },
+    {
+      "color": "Oat",
+      "supplier_color": "Apricot",
+      "model": "Suzuki",
+      "view": "model-front",
+      "source_file": "exec-226864ef-8090-4851-8b63-5827ce6eac1a.png",
+      "source_sha256": "dc98d8388bd52aeb08997008084041ce53edf701b9ffdf2a0a266b957d755354",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-model-front-20261103-dc98d838.webp",
+      "sha256": "54e802ae70dc3d429e896b0d227c35ea8744193878f0e5e398e7fa2e6676a29c",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 99278
+    },
+    {
+      "color": "Oat",
+      "supplier_color": "Apricot",
+      "model": "Suzuki",
+      "view": "model-quarter",
+      "source_file": "exec-1b9f016b-c370-4961-b834-8c2e43929645.png",
+      "source_sha256": "a551ca390bf3e1fe0a3d80d8c13ce2b17411f372d77083eea00dca128982be47",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-model-quarter-20261103-a551ca39.webp",
+      "sha256": "c9eabddaca86e6402eebf8d9e32957bb9444beae6c9eaef846f240dcc8d64ca2",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 98452
+    },
+    {
+      "color": "Oat",
+      "supplier_color": "Apricot",
+      "model": "Suzuki",
+      "view": "model-back",
+      "source_file": "exec-f90dc795-6376-4152-b9e1-127e07302aa6.png",
+      "source_sha256": "ac5a32aa586306876e2e4334aed735d0ec81ab03773837d20abe90e98c8a4932",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-model-back-20261103-ac5a32aa.webp",
+      "sha256": "741690db44d997b17c85290480d226b6d27ec42d6ca9fe7e1d005eb021635166",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 92260
+    },
+    {
+      "color": "Oat",
+      "supplier_color": "Apricot",
+      "model": "Suzuki",
+      "view": "detail",
+      "source_file": "exec-095dd464-7501-4de8-8e1f-cc26580a0528.png",
+      "source_sha256": "30655b6f7b13d37229a037f03caf8a29b68b9285758496b8a9d2e359f6c97128",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-detail-20261103-30655b6f.webp",
+      "sha256": "6dc6b587f9a1bc2735940a7e38940613aeac1b7c6269a4d3fe92e3fd4967164c",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 410038
+    },
+    {
+      "color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "model": "Greg",
+      "view": "product-front",
+      "source_file": "exec-943eb495-076a-494b-aaec-e619c86fe6af.png",
+      "source_sha256": "4d4ecc31693548d49bbe283b68d311fea4236abb5aec9692ed3874f352468511",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-product-front-20261103-4d4ecc31.webp",
+      "sha256": "db02e845d5fd3041c8d405bbb970278c30c30a49da4f2ffd06953f72a5e373d7",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 252450
+    },
+    {
+      "color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "model": "Greg",
+      "view": "product-back",
+      "source_file": "exec-51415d0a-5d0f-4973-8461-5135aad1091e.png",
+      "source_sha256": "2f79f7879de6ee36846c0ecc0d3f100acd067d18b18a67739b75018bf568dfd6",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-product-back-20261103-2f79f787.webp",
+      "sha256": "324dad627d187dd66fdab913b71986cb4b31f06dd7b16496c827f0ef7b688a93",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 223612
+    },
+    {
+      "color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "model": "Greg",
+      "view": "model-front",
+      "source_file": "exec-8ac38006-ee2a-4ee2-84eb-ab5555a1f975.png",
+      "source_sha256": "a6fb2dc14000e2b505c98683148e8bf3d0b83d1f8a77145205c6109c9743d793",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-model-front-20261103-a6fb2dc1.webp",
+      "sha256": "69f7f70c857da012a476d6fbb3fa5bdf896bf0e176b688bcd06f13a102ba3ce2",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 146862
+    },
+    {
+      "color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "model": "Greg",
+      "view": "model-quarter",
+      "source_file": "exec-80c6a57a-8fa3-4b2c-a6ad-0a9d4c19ca7e.png",
+      "source_sha256": "00eb964c26595c131554479949b7e770af42231a06fa6c4721aa7be209f0ae37",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-model-quarter-20261103-00eb964c.webp",
+      "sha256": "1e69daf78a118227c88f8cb8b1897aa62a8665ed96b2f860432f95920fd2cd8c",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 142644
+    },
+    {
+      "color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "model": "Greg",
+      "view": "model-back",
+      "source_file": "exec-5b2597da-a0bc-456f-a097-6d4f025ebe7f.png",
+      "source_sha256": "5d1ebaf357918b08718835c889d8868ccd93034116b6362964c2a8fce11d5b0c",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-model-back-20261103-5d1ebaf3.webp",
+      "sha256": "814dfd38e86c6c9565b083a3bee560a2889464223ff8d9d2f8d02d87a03c81b8",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 137944
+    },
+    {
+      "color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "model": "Greg",
+      "view": "detail",
+      "source_file": "exec-96021436-137a-4ba8-996c-2df8f30ae2ff.png",
+      "source_sha256": "c806fa94c8bdc9236c6c6187e0b89f1a415b2c56aa3c4ea3e2576d700621c960",
+      "public_src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-detail-20261103-c806fa94.webp",
+      "sha256": "ae12317ebb4b7d51b0f0c654701a4fc750312922e6275e065ca9707dfac51fa1",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "bytes": 556952
+    }
+  ]
+}
