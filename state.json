@@ -1,6 +1,6 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 4,
+  "revision": 5,
   "holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
@@ -24,7 +24,8 @@
       "Prepared all 24 optimized same-dimension WebP derivatives with source and output hashes.",
       "Updated four color galleries, Oat supplier Apricot identity, Halo description and public gallery exposure.",
       "API-compatible shared lease acquired because local Git has read-only authentication; canonical helper check confirms ownership.",
-      "26-file task commit 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5 is pushed; local worktree and index match. PR #67 and hosted preview 6aeab6925033cc7ba703114d ready."
+      "26-file task commit 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5 is pushed; local worktree and index match. PR #67 and hosted preview 6aeab6925033cc7ba703114d ready.",
+      "PR #67 merged once, confirmed GitHub result merged=true, production merge SHA 596b9e040972fedca765404d8073c0f282f998c6."
     ],
     "tests": [
       "Contract parity PASS",
@@ -44,7 +45,7 @@
       "Preview product UI is hidden by existing collection-wide migration preview flag; no settings changed. Interactive gallery checks deferred to live publication.",
       "Product purchases remain disabled, price zero, no supplier mapping. No physical sample/fulfillment readiness claimed."
     ],
-    "next_action": "Merge exact PR #67 head 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5 under owner request; watch production deploy then verify actual live galleries at desktop/mobile.",
+    "next_action": "Wait for production deploy at exact merge SHA, then verify live 24 asset hashes, product/gallery interactions, desktop/mobile layout, Men/shop visibility, and purchasing hold.",
     "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
@@ -56,10 +57,13 @@
       },
       {
         "reference": "halo-sweatpant-gallery-live-release-20261103",
-        "intent": "Merge exact reviewed imagery commit after hosted checks, publish to goalathletics.shop with purchasing disabled.",
-        "status": "intent_verified_ready_to_execute"
+        "status": "merge_completed_deploy_pending",
+        "merge_commit": "596b9e040972fedca765404d8073c0f282f998c6",
+        "pr": 67,
+        "target": "https://goalathletics.shop",
+        "approved_head": "44433d27a6fa3bbf43fcffd260eab1ffd6a170b5"
       }
     ]
   },
-  "updated_at": "2026-11-04T04:41:24.892Z"
+  "updated_at": "2026-11-04T04:42:10.992Z"
 }
