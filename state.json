@@ -1,0 +1,16 @@
+{
+  "schema": "goal-agent-coordination-v2",
+  "revision": 1,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-halo-gallery-20261103-09bd580c",
+    "task": "halo-sweatpant-gallery-20261103",
+    "branch": "codex/halo-sweatpant-gallery-20261103",
+    "approval": "Owner request 9fa3a0af-1dde-4e98-be4e-6f6c16993098: add approved sweatpant photos to live website; imagery exposure only, preserve purchasing hold and existing gates.",
+    "start_commit": "d236ca4845838b88e1d9eb233f154397288f4dbc",
+    "token_hash": "555a536f80039f39ffc6b72348d8a4ab68f324f7e9e718e6edd43bef32d3013d",
+    "acquired_at": "2026-11-04T04:29:45.479Z"
+  },
+  "checkpoint": null,
+  "updated_at": "2026-11-04T04:29:45.479Z"
+}

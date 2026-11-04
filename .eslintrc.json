@@ -1,4 +1,0 @@
-{
-  "extends": ["next"],
-  "ignorePatterns": ["public/**", "brand-assets/**", "designs/**", "docs/**", "scripts/**"]
-}
