@@ -36,7 +36,16 @@
       }
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-tempo-training-be9312aa",
+    "task": "tempo-training-gallery-20261104",
+    "branch": "codex/tempo-training-tee-f07faa75",
+    "approval": "Owner be9312aa-5efb-4e06-b575-a7b89958f3f6: upload approved Blue Suzanne, Purple Amanda, White Molly 15-image galleries to website; continue f07faa75 publication scope, S-XL, existing $34 and purchasing hold.",
+    "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
+    "token_hash": "8960d5a81514a637ce5ce6dd5dda88828182547e1ce811219d49432e45990ad5",
+    "acquired_at": "2026-11-04T08:50:54.264103+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-tempo-training-f07faa75",
@@ -46,7 +55,7 @@
     "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "acquired_at": "2026-11-04T08:03:10.031538+00:00"
   },
-  "revision": 41,
+  "revision": 42,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T08:10:17.378Z"
+  "updated_at": "2026-11-04T08:50:54.264125+00:00"
 }
