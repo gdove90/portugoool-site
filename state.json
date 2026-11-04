@@ -33,7 +33,12 @@
       "Exact staged tree 2fa607b2693a64a167943b3fca9d05779f75af9d published as 7b59de0e21b03ff0a3736880735036d5bafd69d6; local HEAD/index match remote. PR #70 created for approved image and description release.",
       "Temporary responsive QA fixture removed from final diff; exact production diff is 11 files (six WebP images and five scoped presentation/catalog files).",
       "Final commit 3947da8aa9438da04d94e9c9499cfd4a5b2ce498 pushed and synchronized locally; PR70 rewritten around final implementation. Research saved and read back in page_a240c694e170819189a0b873bac9ecf1.",
-      "PR70 merged once under owner authorization as b04be06939bb960f44197b40ec70e75c4d83fe3b; final exact-head preview 6aeacc6af86786a5bfb91549 READY. Main baseline rechecked unchanged immediately before merge."
+      "PR70 merged once under owner authorization as b04be06939bb960f44197b40ec70e75c4d83fe3b; final exact-head preview 6aeacc6af86786a5bfb91549 READY. Main baseline rechecked unchanged immediately before merge.",
+      "Production deployment 6aeaccf2eb5c48789048b15e READY at b04be06939bb960f44197b40ec70e75c4d83fe3b, published 2026-11-04T06:14:39.548Z.",
+      "Live homepage retains stadium hero and women imagery, uses Jeff for men tile; live men markup uses approved Suzuki hero and Quarter Zip lower banner.",
+      "All six live image URLs returned200 and SHA256 matched exact approved derivatives.",
+      "Live Core Sweatpant short description confirmed beside gallery at desktop2820x1355; four color selections show identical new paragraph and $38. Existing dropdowns preserved and closed; no horizontal overflow. No bag or payment action performed.",
+      "Root research record, imagery brief and new description research Page updated with live evidence; PR70 updated with production proof."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -83,13 +88,16 @@
         "merge_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
         "migrations": [],
         "operation": "merge PR70 once after exact final preview passes",
+        "production_deploy": "6aeaccf2eb5c48789048b15e",
+        "published_at": "2026-11-04T06:14:39.548Z",
         "reference": "goal-editorial-production-98740673",
-        "status": "merged_waiting_for_production",
+        "status": "production_ready_live_verified",
         "target": "https://goalathletics.shop"
       }
     ],
     "head_commit": "3947da8aa9438da04d94e9c9499cfd4a5b2ce498",
-    "next_action": "Read-only reconcile production deployment at b04be06939bb960f44197b40ec70e75c4d83fe3b; verify actual live imagery and Core Sweatpant description/price/colors/material disclosure. Do not replay merge. Then save live evidence and release shared ownership.",
+    "next_action": "Task complete. No further deployment or provider action required. Continue only a newly authorized task after acquiring shared ownership. Revert only this image/description diff if owner requests rollback.",
+    "release_status": "LIVE_VERIFIED",
     "rollback": "Revert only approved imagery and Core Sweatpant description diff; retain prior Halo release and all paid data.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-goal-editorial-98740673",
@@ -105,34 +113,24 @@
       "Browser desktop preview shows approved Suzuki hero, Jeff tile and Quarter Zip lower banner. 390px and 768px frames select correct phone/desktop assets and have no horizontal overflow. Product route intentionally shows CollectionComingSoon in MIGRATION_PREVIEW; built production HTML contains exact new description; live PDP verification required after publication.",
       "17 isolated Halo integration checks PASS after final description edit; all20 exact variants covered; no production/provider writes.",
       "Final GitHub compare against production base has exactly 11 approved files; exact final tree c63be23af44498fbd09dc6422abcd0dc332dc406, no temporary QA file.",
-      "Final exact-head Netlify preview PASS at 3947da8aa9438da04d94e9c9499cfd4a5b2ce498; final 11-file diff reviewed."
+      "Final exact-head Netlify preview PASS at 3947da8aa9438da04d94e9c9499cfd4a5b2ce498; final 11-file diff reviewed.",
+      "Live6 image HTTP/byte integrity PASS.",
+      "Live desktop PDP/right-of-gallery exact copy, 4 colors/$38 and dropdown preservation PASS."
     ],
-    "unresolved": [
-      "Apply and verify the newly authorized Core Sweatpant description only; recheck exact product-property preservation.",
-      "Preview/browser QA and publication remain pending."
-    ],
+    "unresolved": [],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-04T05:48:38.014329+00:00",
     "approval": "Owner be83dd4e-8a18-4c92-875f-854cbd6d5d62 approved attached concrete Suzuki men hero, Jeff homepage men tile, Quarter Zip men lower banner; owner 98740673-ceb7-48c3-9491-b7dbbeb9115b explicitly requested deploy live. Preserve layout, copy, other imagery and commerce.",
     "branch": "codex/approved-editorial-imagery-98740673",
     "engine": "codex",
     "session": "codex-goal-editorial-98740673",
     "start_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
-    "task": "goal-editorial-imagery-20261104",
-    "token_hash": "9b455a26e38802da00138223647035784aecf3547a01f4c8379eb9da8004470e"
+    "task": "goal-editorial-imagery-20261104"
   },
-  "last_released_holder": {
-    "acquired_at": "2026-11-04T04:58:04.591Z",
-    "approval": "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders.",
-    "branch": "codex/halo-sweatpant-ordering-20261103",
-    "engine": "codex",
-    "session": "codex-halo-ordering-135218e7",
-    "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
-    "task": "halo-sweatpant-ordering-20261103"
-  },
-  "revision": 21,
+  "revision": 22,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:14:01.309733+00:00"
+  "updated_at": "2026-11-04T06:22:37.583669+00:00"
 }
