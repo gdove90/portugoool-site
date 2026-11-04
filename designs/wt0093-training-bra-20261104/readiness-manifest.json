@@ -285,12 +285,12 @@
     },
     {
       "color": "brick",
-      "model": "Amanda",
+      "model": "Suzanne",
       "ink": "wine #5A2030 (proposed exact shade)",
-      "complete": false,
+      "complete": true,
       "supplier_color": "Brick Red",
       "supplier_color_verification": "Verified UI label",
-      "hairstyle": "planned brunette braided bun; views not generated",
+      "hairstyle": "high braided blonde bun, matching Black Suzanne views",
       "images": [
         {
           "position": 1,
@@ -303,6 +303,46 @@
           "bytes": 59242
         },
         {
+          "position": 2,
+          "view": "model-front",
+          "path": "designs/wt0093-training-bra-20261104/gallery/goal-training-bra-brick-02-model-front-20261104.webp",
+          "source_generated_png": "exec-29b747f9-e256-4592-9f74-c0261fda6a1d.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "548ba66e40e235c48838984130bc6027e471659a0707dbbb29d23d0f6437d986",
+          "bytes": 68166
+        },
+        {
+          "position": 3,
+          "view": "model-quarter",
+          "path": "designs/wt0093-training-bra-20261104/gallery/goal-training-bra-brick-03-model-quarter-20261104.webp",
+          "source_generated_png": "exec-9f8a9255-bccd-4111-a850-0fa11bbd0736.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "c948ee837ae35fda348ce14f55fb20927ae2174158665eca80da62949e7edc70",
+          "bytes": 73584
+        },
+        {
+          "position": 4,
+          "view": "model-back",
+          "path": "designs/wt0093-training-bra-20261104/gallery/goal-training-bra-brick-04-model-back-20261104.webp",
+          "source_generated_png": "exec-b6aad63f-f750-42c7-97cb-5ff58bc10bc2.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "eb8dceeadc9875cdc280bdcd38f2774e6cbeb803d3bd00610e50ce72860316df",
+          "bytes": 74318
+        },
+        {
+          "position": 5,
+          "view": "fabric-print-detail",
+          "path": "designs/wt0093-training-bra-20261104/gallery/goal-training-bra-brick-05-fabric-print-detail-20261104.webp",
+          "source_generated_png": "exec-55d886fe-c237-41d5-909f-9fbe2ceef78d.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "330c361d75fdb1f8bcccb4db165856fef33cc5b8601f7e728cf7bb4e81e2ecbd",
+          "bytes": 257160
+        },
+        {
           "position": 6,
           "view": "ghost-back",
           "path": "designs/wt0093-training-bra-20261104/gallery/goal-training-bra-brick-06-ghost-back-20261104.webp",
@@ -312,13 +352,13 @@
           "sha256": "c400e7d5c5fae1bb1d1b109f49e391c25efd6f22fced9d736a7cb7431a99c67b",
           "bytes": 65364
         }
-      ]
+      ],
+      "model_approval": "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c explicitly allowed Suzanne again if Amanda could not be generated."
     }
   ],
   "blockers": [
     "No saved decorated supplier designs verified. Direct workspace-path upload was rejected by Tapstitch; browser policy blocked ChatGPT Library download to browser device. No supplier save or order performed.",
     "Retail price and final product name not approved.",
-    "Brick Amanda model front, quarter, rear and detail absent after image tool rejected standard sportswear generation. Preserve Amanda identity; do not replace with another model.",
     "Production detail/gap quality, smallest-size print and decorated sample stretch/wash unverified. Historical quarter-zip source comment mentions owner 2mm DTF gap target; global applicability and this small monogram not established.",
     "Manual Tapstitch paid fulfillment path must be verified separately before purchasing release."
   ],
@@ -363,5 +403,12 @@
       "sha256": "b359f77a8db7d52cca047c8e47407a82e61ace55126dbc960db34714f2ae46d1",
       "bytes": 729
     }
+  ],
+  "owner_model_change_reference": "2beee444-f1be-4e02-b5e4-3c86caecdb4c",
+  "gallery_status": "ALL_FOUR_COLORWAYS_HAVE_SIX_VIEWS; supplier/retail release requirements remain pending.",
+  "generation_history": [
+    "Amanda standard sportswear requests rejected repeatedly by the built-in image tool.",
+    "CLI route authorized but could not run because OPENAI_API_KEY was not configured. No API generation or Higgsfield credits spent.",
+    "Owner permitted Suzanne substitution for Brick; four new matching views generated successfully with built-in image tool."
   ]
 }
