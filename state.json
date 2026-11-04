@@ -87,7 +87,16 @@
       "designs/wt0093-training-bra-20261104/"
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-bra-publish-b82ef6bf",
+    "task": "tempo-training-bra-20261104",
+    "branch": "codex/tempo-training-bra-20261104",
+    "approval": "Owner b82ef6bf-1ced-42e8-aa96-7e6df3f4fb8a: put approved WT0093 bra on live website now at USD18, all four six-view galleries; preserve women's purchasing hold until supplier readiness verified.",
+    "start_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
+    "token_hash": "f07ddb1163564b0be126ec4bafbfde0390127388220cab07ad0b3bda94211da7",
+    "acquired_at": "2026-11-04T11:47:53.152978+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-bra-price18-098690e7",
@@ -97,7 +106,7 @@
     "start_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
     "acquired_at": "2026-11-04T11:42:09.016391+00:00"
   },
-  "revision": 58,
+  "revision": 59,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:44:24.072872+00:00"
+  "updated_at": "2026-11-04T11:47:53.152998+00:00"
 }
