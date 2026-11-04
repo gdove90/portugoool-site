@@ -1,16 +1,7 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 5,
-  "holder": {
-    "engine": "codex",
-    "session": "codex-halo-gallery-20261103-09bd580c",
-    "task": "halo-sweatpant-gallery-20261103",
-    "branch": "codex/halo-sweatpant-gallery-20261103",
-    "approval": "Owner request 9fa3a0af-1dde-4e98-be4e-6f6c16993098: add approved sweatpant photos to live website; imagery exposure only, preserve purchasing hold and existing gates.",
-    "start_commit": "d236ca4845838b88e1d9eb233f154397288f4dbc",
-    "token_hash": "555a536f80039f39ffc6b72348d8a4ab68f324f7e9e718e6edd43bef32d3013d",
-    "acquired_at": "2026-11-04T04:29:45.479Z"
-  },
+  "revision": 6,
+  "holder": null,
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "task_id": "halo-sweatpant-gallery-20261103",
@@ -25,7 +16,9 @@
       "Updated four color galleries, Oat supplier Apricot identity, Halo description and public gallery exposure.",
       "API-compatible shared lease acquired because local Git has read-only authentication; canonical helper check confirms ownership.",
       "26-file task commit 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5 is pushed; local worktree and index match. PR #67 and hosted preview 6aeab6925033cc7ba703114d ready.",
-      "PR #67 merged once, confirmed GitHub result merged=true, production merge SHA 596b9e040972fedca765404d8073c0f282f998c6."
+      "PR #67 merged once, confirmed GitHub result merged=true, production merge SHA 596b9e040972fedca765404d8073c0f282f998c6.",
+      "LIVE VERIFIED: production deploy 6aeab77d424209d0d8a4b909, merge SHA 596b9e040972fedca765404d8073c0f282f998c6, published 2026-11-04T04:43:16.321Z.",
+      "All four color galleries verified on live site; product visible in Men and Collection; review PR #67 updated with exact results."
     ],
     "tests": [
       "Contract parity PASS",
@@ -39,13 +32,17 @@
       "Netlify preview build PASS, commit 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5.",
       "All 24 preview assets HTTP 200 with exact SHA256 matches.",
       "Local production prerender includes all 24 assets, four colors, unannounced price and disabled Coming soon button.",
-      "26 local files exactly match committed remote blobs; working tree clean; main remains d236ca4845838b88e1d9eb233f154397288f4dbc."
+      "26 local files exactly match committed remote blobs; working tree clean; main remains d236ca4845838b88e1d9eb233f154397288f4dbc.",
+      "PASS: all 24 live production assets HTTP 200 and exact SHA256 matches.",
+      "PASS: all 24 desktop views loaded correct images and counters; all four color switches and purchase holds verified.",
+      "PASS: mobile front/detail for every color, keyboard navigation, no horizontal overflow at actual CSS widths 391 and 1440.",
+      "PASS: task branch remains 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5, local worktree clean, all 26 files match remote commit."
     ],
     "unresolved": [
-      "Preview product UI is hidden by existing collection-wide migration preview flag; no settings changed. Interactive gallery checks deferred to live publication.",
-      "Product purchases remain disabled, price zero, no supplier mapping. No physical sample/fulfillment readiness claimed."
+      "Sweatpant purchase setup remains unchanged and incomplete: price zero/unannounced, all colors Coming soon, no supplier SKU mappings. A separate readiness/release task is required before sales.",
+      "Remote environment values UNVERIFIED; no environment writes occurred. Production storefront and disabled sweatpant purchase controls directly verified."
     ],
-    "next_action": "Wait for production deploy at exact merge SHA, then verify live 24 asset hashes, product/gallery interactions, desktop/mobile layout, Men/shop visibility, and purchasing hold.",
+    "next_action": "Gallery task complete. Do not reopen purchases or modify suppliers/settings without completing the separate product-readiness scope.",
     "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
@@ -57,13 +54,25 @@
       },
       {
         "reference": "halo-sweatpant-gallery-live-release-20261103",
-        "status": "merge_completed_deploy_pending",
+        "status": "live_verified",
         "merge_commit": "596b9e040972fedca765404d8073c0f282f998c6",
+        "review_head": "44433d27a6fa3bbf43fcffd260eab1ffd6a170b5",
         "pr": 67,
-        "target": "https://goalathletics.shop",
-        "approved_head": "44433d27a6fa3bbf43fcffd260eab1ffd6a170b5"
+        "deploy_id": "6aeab77d424209d0d8a4b909",
+        "published_at": "2026-11-04T04:43:16.321Z",
+        "url": "https://goalathletics.shop/shop/goal-athletics-core-sweatpant",
+        "purchase_state": "disabled_unchanged"
       }
     ]
   },
-  "updated_at": "2026-11-04T04:42:10.992Z"
+  "updated_at": "2026-11-04T04:49:32.095Z",
+  "last_released_holder": {
+    "engine": "codex",
+    "session": "codex-halo-gallery-20261103-09bd580c",
+    "task": "halo-sweatpant-gallery-20261103",
+    "branch": "codex/halo-sweatpant-gallery-20261103",
+    "approval": "Owner request 9fa3a0af-1dde-4e98-be4e-6f6c16993098: add approved sweatpant photos to live website; imagery exposure only, preserve purchasing hold and existing gates.",
+    "start_commit": "d236ca4845838b88e1d9eb233f154397288f4dbc",
+    "acquired_at": "2026-11-04T04:29:45.479Z"
+  }
 }
