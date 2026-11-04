@@ -9,6 +9,7 @@ import { metaCapiConfigured, sendMetaServerEvent } from "@/lib/meta-capi";
 import { metaEventId } from "@/lib/meta-events";
 import { getProductById } from "@/lib/products";
 import { orderNumber } from "@/lib/fulfillment-submit";
+import { parseTapstitchSku } from "@/lib/tapstitch";
 
 // ─────────────────────────────────────────────────────────────
 // Stripe webhook — the ONLY payment authority. Fulfillment never
@@ -41,7 +42,7 @@ interface MetaItem {
   q: number; // quantity
   u?: number; // unit price cents, fixed at checkout creation
   k?: string; // Apliiq SKU, fixed at checkout creation
-  a?: number; // Apliiq saved-product id, fixed at checkout creation
+  a?: number | null; // null for Tapstitch; Apliiq ID otherwise
   n?: string; // custom name
   m?: string; // custom number
 }
@@ -119,7 +120,11 @@ function buildOrderRows(
     if (typeof mi.u !== "number" || mi.u < 0) {
       return { error: `Item ${mi.p} has no price snapshot; refusing to guess.` };
     }
-    if (!mi.k || typeof mi.a !== "number") {
+    const tapstitch = parseTapstitchSku(mi.k);
+    const mappedTapstitch = tapstitch !== null && tapstitch.size === mi.s && mi.a == null;
+    const mappedApliiq = typeof mi.k === "string" && Boolean(mi.k)
+      && !mi.k.startsWith("TAP-") && Number.isInteger(mi.a) && Number(mi.a) > 0;
+    if (!mappedTapstitch && !mappedApliiq) {
       unmapped.push(`${mi.p} / ${mi.c} / ${mi.s} (no SKU snapshot)`);
     }
     items.push({
@@ -382,6 +387,11 @@ export async function POST(req: NextRequest) {
       await recordDiscountRedemption(stripe, session);
       try {
         const outcome = await submitPaidOrder(store, orderId, { livemode: event.livemode });
+        // A manual task must be durable before acknowledging the event.
+        // Delivery failures are retried by the existing email worker.
+        if (outcome.action === "manual_handoff_pending") {
+          return NextResponse.json({ error: "Manual fulfillment handoff could not be saved; retry required." }, { status: 503 });
+        }
         submission = outcome.action;
       } catch (err) {
         console.error("stripe-webhook: submission threw for order", orderId, err);

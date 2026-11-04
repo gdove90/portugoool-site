@@ -8,6 +8,7 @@ import { EMAIL_RE } from "@/lib/signups";
 import { clientIpFrom } from "@/lib/meta-capi";
 import { getProductById } from "@/lib/products";
 import { resolveApliiqSku } from "@/lib/fulfillment";
+import { tapstitchFulfillmentReady } from "@/lib/tapstitch-readiness";
 import { Size, isSoldOut, isAvailableForSale, hasPrice, MAX_LINE_QUANTITY } from "@/lib/types";
 
 // ─────────────────────────────────────────────────────────────
@@ -79,6 +80,7 @@ export async function POST(req: NextRequest) {
   // Build line items with server-side prices only.
   const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
   let subtotalCents = 0;
+  let needsManualHandoff = false;
   const compactItems = [];
   for (const item of items) {
     const product = getProductById(item.productId);
@@ -151,6 +153,7 @@ export async function POST(req: NextRequest) {
     const mapping = resolveApliiqSku(product.id, color, item.size);
     if (!mapping) return NextResponse.json(
       { error: "This product variant cannot be ordered right now." }, { status: 400 });
+    if (mapping.supplier === "tapstitch") needsManualHandoff = true;
     const unitCents = product.priceCents + (hasCustomization ? product.customizationPriceCents : 0);
     subtotalCents += unitCents * quantity;
     compactItems.push({ p: product.id, c: color, s: item.size, q: quantity,
@@ -182,6 +185,10 @@ export async function POST(req: NextRequest) {
         },
       },
     });
+  }
+
+  if (needsManualHandoff && !(await tapstitchFulfillmentReady())) {
+    return NextResponse.json({ error: "This product cannot be ordered right now. Please try again later." }, { status: 503 });
   }
 
   const siteUrl =

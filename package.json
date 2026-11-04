@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "test:halo-checkout": "node scripts/test-halo-checkout.cjs",
     "test:customer-service": "node scripts/test-customer-service-gate.cjs",
     "test:payment-preservation": "node scripts/test-payment-preservation.cjs",
     "test:carrier-tracking": "node scripts/test-carrier-provider.cjs && node scripts/test-carrier-presentation.cjs && node scripts/test-carrier-database.cjs && node scripts/test-carrier-tracking.cjs && node scripts/test-carrier-preflight.cjs",

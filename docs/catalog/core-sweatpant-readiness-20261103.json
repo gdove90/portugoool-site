@@ -1,0 +1,392 @@
+{
+  "schema": "goal-product-readiness-v2",
+  "status": "STAGED_SALES_HELD_PENDING_RUNTIME_CHECK",
+  "owner_approval": {
+    "build": "135218e7-a503-47c5-ab42-9fd7ff626ad8",
+    "deploy": "same request: release all four if ready, $38, before raincoat",
+    "real_supplier_order": "not authorized as a test",
+    "real_paid_test": "not authorized"
+  },
+  "product": {
+    "uuid": "90000000-0000-4000-8000-000000000001",
+    "slug": "goal-athletics-core-sweatpant",
+    "name": "The Core Sweatpant",
+    "category": "pants",
+    "collection": "CORE / Men",
+    "price_cents": 3800,
+    "previously_removed_or_gated": true
+  },
+  "supplier": {
+    "name": "Tapstitch",
+    "verified_saved_design_ids": [
+      "1567484017748627456",
+      "1567487271354122240",
+      "1567489152965033984",
+      "1567491247352987648"
+    ],
+    "blank_or_style": "UB0050",
+    "fulfillment_mode": "MANUAL_TAPSTITCH_WITH_DURABLE_OWNER_TASK",
+    "observed_unit_quote_usd": 20.98,
+    "landed_cost": "UNKNOWN",
+    "margin": "UNKNOWN",
+    "decoration": {
+      "method": "DTF",
+      "side": "front",
+      "placement": "wearer left upper thigh",
+      "width_in": 3,
+      "height_in": 3,
+      "dpi": 400,
+      "back": "blank"
+    },
+    "source_reference": "Authenticated Tapstitch Designs list and each saved editor; no supplier saves or orders."
+  },
+  "variants": [
+    {
+      "site_color": "Black",
+      "supplier_color": "Black",
+      "size": "S",
+      "supplier_size": "S",
+      "saved_design_id": "1567484017748627456",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567484017748627456-S",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Black",
+      "supplier_color": "Black",
+      "size": "M",
+      "supplier_size": "M",
+      "saved_design_id": "1567484017748627456",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567484017748627456-M",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Black",
+      "supplier_color": "Black",
+      "size": "L",
+      "supplier_size": "L",
+      "saved_design_id": "1567484017748627456",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567484017748627456-L",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Black",
+      "supplier_color": "Black",
+      "size": "XL",
+      "supplier_size": "XL",
+      "saved_design_id": "1567484017748627456",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567484017748627456-XL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Black",
+      "supplier_color": "Black",
+      "size": "XXL",
+      "supplier_size": "2XL",
+      "saved_design_id": "1567484017748627456",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567484017748627456-XXL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "size": "S",
+      "supplier_size": "S",
+      "saved_design_id": "1567487271354122240",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567487271354122240-S",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "size": "M",
+      "supplier_size": "M",
+      "saved_design_id": "1567487271354122240",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567487271354122240-M",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "size": "L",
+      "supplier_size": "L",
+      "saved_design_id": "1567487271354122240",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567487271354122240-L",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "size": "XL",
+      "supplier_size": "XL",
+      "saved_design_id": "1567487271354122240",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567487271354122240-XL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Haze Blue",
+      "supplier_color": "Haze Blue",
+      "size": "XXL",
+      "supplier_size": "2XL",
+      "saved_design_id": "1567487271354122240",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567487271354122240-XXL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "cream"
+    },
+    {
+      "site_color": "Oat",
+      "supplier_color": "Apricot",
+      "size": "S",
+      "supplier_size": "S",
+      "saved_design_id": "1567489152965033984",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567489152965033984-S",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Oat",
+      "supplier_color": "Apricot",
+      "size": "M",
+      "supplier_size": "M",
+      "saved_design_id": "1567489152965033984",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567489152965033984-M",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Oat",
+      "supplier_color": "Apricot",
+      "size": "L",
+      "supplier_size": "L",
+      "saved_design_id": "1567489152965033984",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567489152965033984-L",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Oat",
+      "supplier_color": "Apricot",
+      "size": "XL",
+      "supplier_size": "XL",
+      "saved_design_id": "1567489152965033984",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567489152965033984-XL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Oat",
+      "supplier_color": "Apricot",
+      "size": "XXL",
+      "supplier_size": "2XL",
+      "saved_design_id": "1567489152965033984",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567489152965033984-XXL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "size": "S",
+      "supplier_size": "S",
+      "saved_design_id": "1567491247352987648",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567491247352987648-S",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "size": "M",
+      "supplier_size": "M",
+      "saved_design_id": "1567491247352987648",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567491247352987648-M",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "size": "L",
+      "supplier_size": "L",
+      "saved_design_id": "1567491247352987648",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567491247352987648-L",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "size": "XL",
+      "supplier_size": "XL",
+      "saved_design_id": "1567491247352987648",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567491247352987648-XL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    },
+    {
+      "site_color": "Flower Gray",
+      "supplier_color": "Flower Gray",
+      "size": "XXL",
+      "supplier_size": "2XL",
+      "saved_design_id": "1567491247352987648",
+      "supplier_sku": null,
+      "internal_sku": "TAP-1567491247352987648-XXL",
+      "sku_type": "internal manual-routing reference",
+      "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
+      "image_coverage": "six owner-approved views",
+      "available_for_sale": false,
+      "ink": "black"
+    }
+  ],
+  "imagery": {
+    "required_views_by_color": {
+      "Black": [
+        "ghost front",
+        "ghost back",
+        "model front",
+        "model quarter",
+        "model back",
+        "Halo/fabric detail"
+      ],
+      "Haze Blue": [
+        "ghost front",
+        "ghost back",
+        "model front",
+        "model quarter",
+        "model back",
+        "Halo/fabric detail"
+      ],
+      "Oat": [
+        "ghost front",
+        "ghost back",
+        "model front",
+        "model quarter",
+        "model back",
+        "Halo/fabric detail"
+      ],
+      "Flower Gray": [
+        "ghost front",
+        "ghost back",
+        "model front",
+        "model quarter",
+        "model back",
+        "Halo/fabric detail"
+      ]
+    },
+    "manifest": "core-sweatpant-halo-gallery-20261103.json",
+    "missing_views": [],
+    "physical_sample_confirmed": false,
+    "layout_policy": "preserve existing approved assets and gallery presentation"
+  },
+  "commerce_checks": {
+    "cost_verified": "unit quote only",
+    "margin_verified": false,
+    "checkout_price_matches": "isolated PASS for all 20 references",
+    "fulfillment_route_verified": "isolated PASS; production readiness probe pending",
+    "real_order_test_authorized": false
+  },
+  "quality": {
+    "tests": [
+      "17 new Halo integration checks PASS using real local PostgreSQL constraints",
+      "Both old defects reproduced as baseline failures",
+      "Existing 143-variant backend suite PASS",
+      "Typecheck PASS",
+      "Lint PASS with 3 existing image warnings",
+      "9 shipment checks PASS"
+    ],
+    "open_blockers": [
+      "Production manual-route readiness and final activation checks pending"
+    ],
+    "rollback_plan": "Fix forward; preserve paid snapshots, supplier IDs and task ledger."
+  },
+  "handoff": {
+    "implementation_owner": "codex-halo-ordering-135218e7",
+    "branch": "codex/halo-sweatpant-ordering-20261103",
+    "shared_coordination_ref": "refs/heads/goal/agent-coordination"
+  },
+  "contract_version": "2.0"
+}
