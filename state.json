@@ -32,7 +32,8 @@
       "Recorded owner-approved USD18 /1800 cents for all four WT0093 colorways and S/M/L/XL in readiness manifest and README. Published two-file change to draft PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1; updated PR and owner Page seq7.",
       "Integrated new TEMPO Training Bra row/UUID25 at USD18 S-XL;24 identical public images, four held variants, public women order after tees, Sports bras filter and supplier bust/length chart.",
       "Published37-file integration on same task branch at06d671521ba7cb90457ae576b9c775a79a5a78d0, exact tree d3753d3c17f0552cbad4905ccf5b02f3092d0371. PR75 marked ready with exact public-gallery/ComingSoon scope. Preview6aeb1d720e8e03144427be18 building.",
-      "PR75 merged at7e159131932aa59317507986f1c3c54b4d5cf50f. Production Netlify6aeb1e366b4d3fabd5b7bb1a building. Exact reviewed task head06d6715 retained clean/pushed."
+      "PR75 merged at7e159131932aa59317507986f1c3c54b4d5cf50f. Production Netlify6aeb1e366b4d3fabd5b7bb1a building. Exact reviewed task head06d6715 retained clean/pushed.",
+      "LIVE VERIFIED Netlify production6aeb1e366b4d3fabd5b7bb1a published exact main7e159131932aa59317507986f1c3c54b4d5cf50f at2026-11-04T12:01:38.677Z. /shop/tempo-training-bra showsUSD18, all4colors, S-XL andsiximages. /women shows3pieces/Sports bras filter. OwnerPage updated to live status."
     ],
     "tests": [
       "PASS 20 unique images decode at1024x1536 and SHA256/order validation.",
@@ -49,14 +50,15 @@
       "Application/commerce tests N/A: only images and design documents changed.",
       "PASS scoped two-document diff, JSON price/currency/scope assertions, unchanged variant/image objects and purchasing state; exact local/GitHub tree b43d6d6166d052bcdf9569cd6f6143e42746ad58; clean task checkout at pushed head.",
       "PASS production build and typecheck; PASS24PIL decodes/hashes; PASS new bra integration plus existing training tee; PASS17 Halo integration checks. Legacy payment-preservation command FAIL at historical7659237 pin predating already-deployed Tapstitch changes; no test weakened. Bra test separately verifies every protected payment/fulfillment file byte-identical to current main7ea51b9 and rejects all16 bra variants before Stripe.",
-      "PASS Netlify preview build exact06d6715; all24 preview assets HTTP200/exactSHA256. Preview UI intentionally hides all products under existing MIGRATION_PREVIEW, unchanged. Production-mode generated HTML confirms$18/six thumbnails/ComingSoon; live browser verification pending."
+      "PASS Netlify preview build exact06d6715; all24 preview assets HTTP200/exactSHA256. Preview UI intentionally hides all products under existing MIGRATION_PREVIEW, unchanged. Production-mode generated HTML confirms$18/six thumbnails/ComingSoon; live browser verification pending.",
+      "PASS24 production assets HTTP200 and exactSHA256; product/women/sitemapHTTP200. Browser passed all24gallery selections, fourcolors/heldbuttons, supplierbustchart, womenSportsbrasfilter, mobilegallerynextcontrol/nohorizontaloverflow. Viewportreset; live tab marked deliverable. Saved screenshot scratchonly; no Library screenshot save requested."
     ],
     "unresolved": [
       "No saved supplier decorated designs; direct file upload rejected and browser policy blocked Library-download route. Need approved PNGs uploaded in Tapstitch.",
       "Smallest-size scaling/detail-gap quality/sample and manual Tapstitch fulfillment readiness unverified.",
-      "No production deployment or catalog publication."
+      "Publication is gallery-only; bra and existing women's purchasing remain Coming Soon. ExactBlue supplier label pending. No supplier save/SQL/payment/email/store-gate changes. Environment-wide secret read was rejected; no settings were read or modified, and no workaround was attempted."
     ],
-    "next_action": "Poll existing production deploy6aeb1e366b4d3fabd5b7bb1a, verify live /shop/tempo-training-bra, all4 color galleries and women catalog, then release shared lease. No further merge/deploy initiation.",
+    "next_action": "Bra gallery is live and verified atUSD18 with all24approved images. Do not replay merge/deploy. Supplier decorated-design/print/size/sample and manual fulfillment verification is next before any separately authorized purchasing release. Continue existing task branch if needed.",
     "external_effects": [
       {
         "reference": "239154a8-draft-assets-publication",
@@ -102,32 +104,28 @@
         "reference": "b82ef6bf-wt0093-website-publication",
         "status": "merge_confirmed_deploy_building",
         "details": "GitHub mergedPR75 exactly at7e159131932aa59317507986f1c3c54b4d5cf50f; Netlify production deploy6aeb1e366b4d3fabd5b7bb1a building. Do not replay merge/deploy; poll existing deploy and verify live."
+      },
+      {
+        "reference": "b82ef6bf-wt0093-website-publication",
+        "status": "confirmed_live",
+        "details": "PR75 merged main7e159131932aa59317507986f1c3c54b4d5cf50f; production6aeb1e366b4d3fabd5b7bb1a ready/published. All24images exactSHA256; publicproductUSD18/4colors/S-XL/sixviews; women3pieces/filter and mobile/browserverified. PurchasingComingSoon; no providerpayment/SKU/settings/SQL/email changes. OwnerPage seq8 updated."
       }
     ],
     "changed_paths": [
       "designs/wt0093-training-bra-20261104/"
     ]
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-bra-publish-b82ef6bf",
     "task": "tempo-training-bra-20261104",
     "branch": "codex/tempo-training-bra-20261104",
     "approval": "Owner b82ef6bf-1ced-42e8-aa96-7e6df3f4fb8a: put approved WT0093 bra on live website now at USD18, all four six-view galleries; preserve women's purchasing hold until supplier readiness verified.",
     "start_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
-    "token_hash": "f07ddb1163564b0be126ec4bafbfde0390127388220cab07ad0b3bda94211da7",
     "acquired_at": "2026-11-04T11:47:53.152978+00:00"
   },
-  "last_released_holder": {
-    "engine": "codex",
-    "session": "codex-bra-price18-098690e7",
-    "task": "tempo-training-bra-20261104",
-    "branch": "codex/tempo-training-bra-20261104",
-    "approval": "Owner 098690e7-d5c1-42a4-8271-ce6a9c1d8f39 sets WT0093 retail price to USD18 for all four colorways; retain existing conditional publication authorization and supplier readiness holds.",
-    "start_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
-    "acquired_at": "2026-11-04T11:42:09.016391+00:00"
-  },
-  "revision": 62,
+  "revision": 63,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T12:00:53.173125+00:00"
+  "updated_at": "2026-11-04T12:06:02.027717+00:00"
 }
