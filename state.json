@@ -10,17 +10,22 @@
     "head_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
     "worktree_state": "clean",
     "approved_scope": [
-      "Owner67a44161-f211-47ea-a87d-16a22066ee64: audit differing ghost/model logo placement against saved Apliiq mockups and fix inaccurate website imagery immediately."
+      "Owner67a44161-f211-47ea-a87d-16a22066ee64: investigate supplier/mocked logo placement and fix incorrect imagery.",
+      "Owner db2fc0a0-d40a-4317-8cc8-bb5b1bc57c2d: research other brands; preference logo above breast.",
+      "Owner f393f451-6ab3-497c-96f2-363e8bb81bfe: correct ONLY front ghost mannequin images; preserve models."
     ],
     "completed": [
-      "Read saved Apliiq Black design2x1.8in and compared source supplier visual with website mockups. Model logo sits too high."
+      "Source audit shows independent generated placement drift; three saved supplier renders available.",
+      "Cancelled broad image correction batch after owner narrowed scope; no generated correction deployed or repo content edited.",
+      "Researched official Nike/Under Armour/adidas/PUMA women performance tees."
     ],
     "tests": [],
     "unresolved": [
-      "Model images need placement correction; size-specific SKU purchase hold remains."
+      "Existing supplier renders show lower chest than current model renders. Higher target requires reconciled supplier placement before sale activation.",
+      "Current purchase hold remains."
     ],
     "external_effects": [],
-    "next_action": "Verify remaining supplier references; correct only inaccurate model artwork placement, review images, publish under owner authorization.",
+    "next_action": "Prepare ONLY three ghost front higher-placement proofs matching existing models. Record Apliiq discrepancy; no supplier writes authorized or performed.",
     "changed_paths": []
   },
   "holder": {
@@ -42,7 +47,7 @@
     "start_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
     "acquired_at": "2026-11-04T06:51:11.570Z"
   },
-  "revision": 33,
+  "revision": 34,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T07:01:09.941Z"
+  "updated_at": "2026-11-04T07:06:04.515Z"
 }
