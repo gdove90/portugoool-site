@@ -2,53 +2,37 @@
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "contract_version": "2.0",
-    "task_id": "tempo-remove-ghost-backs-20261104",
+    "task_id": "tempo-placement-correction-20261104",
     "engine": "codex",
-    "session": "codex-tempo-remove-ghost-d64bbc77",
-    "branch": "codex/tempo-remove-ghost-backs-d64bbc77",
-    "base_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
-    "head_commit": "6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
-    "worktree_state": "clean_committed_and_pushed",
+    "session": "codex-tempo-placement-67a44161",
+    "branch": "codex/tempo-placement-67a44161",
+    "base_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
+    "head_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
+    "worktree_state": "clean",
     "approved_scope": [
-      "Owner d64bbc77-145b-4121-903a-5a0cee971f7c: remove the back ghost photo from each tee colorway on live website."
+      "Owner67a44161-f211-47ea-a87d-16a22066ee64: audit differing ghost/model logo placement against saved Apliiq mockups and fix inaccurate website imagery immediately."
     ],
     "completed": [
-      "Removed ghost back photos from all three live TEMPO Core Training Tee colorways; five images each, original order and model back retained.",
-      "Production6aead6a718e8ceb5b2e9223f READY at dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9; live three color swaps and mobile390px verified.",
-      "Existing $38 price and Coming soon hold preserved."
+      "Read saved Apliiq Black design2x1.8in and compared source supplier visual with website mockups. Model logo sits too high."
     ],
-    "tests": [
-      "Exact catalog diff only three requested entries removed PASS",
-      "Existing gallery/isolation/hash check PASS",
-      "Production build/typecheck PASS; three pre-existing img warnings",
-      "Exact-head Netlify preview READY at6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
-      "git diff --check PASS"
-    ],
+    "tests": [],
     "unresolved": [
-      "Purchasing SKU hold remains unchanged."
+      "Model images need placement correction; size-specific SKU purchase hold remains."
     ],
-    "external_effects": [
-      {
-        "reference": "tempo-ghost-back-removal-pr72",
-        "status": "live_verified",
-        "head": "6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
-        "pr": 72,
-        "preview": "6aead631eb5c48789049df24",
-        "merge_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
-        "production_deploy": "6aead6a718e8ceb5b2e9223f",
-        "target": "https://goalathletics.shop/shop/tempo-core-training-tee",
-        "reconciliation": "Merged once, production READY and live UI verified. No replay required."
-      }
-    ],
-    "next_action": "Complete; purchasing SKU verification remains separate.",
-    "changed_paths": [
-      "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
-      "scripts/test-tempo-core-gallery.cjs",
-      "src/lib/products.ts"
-    ],
-    "release_status": "LIVE_VERIFIED"
+    "external_effects": [],
+    "next_action": "Verify remaining supplier references; correct only inaccurate model artwork placement, review images, publish under owner authorization.",
+    "changed_paths": []
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-tempo-placement-67a44161",
+    "task": "tempo-placement-correction-20261104",
+    "branch": "codex/tempo-placement-67a44161",
+    "approval": "Owner67a44161-f211-47ea-a87d-16a22066ee64: audit differing ghost/model logo placement against saved Apliiq mockups and fix inaccurate website imagery immediately.",
+    "start_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
+    "token_hash": "0a7b1980092b9f0eb35939b876b6b862447ea0140e85acd5bdf9d7d2e9392ab1",
+    "acquired_at": "2026-11-04T07:01:09.941Z"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-tempo-remove-ghost-d64bbc77",
@@ -58,7 +42,7 @@
     "start_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
     "acquired_at": "2026-11-04T06:51:11.570Z"
   },
-  "revision": 32,
+  "revision": 33,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:56:51.310Z"
+  "updated_at": "2026-11-04T07:01:09.941Z"
 }
