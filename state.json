@@ -7,19 +7,37 @@
     "session": "codex-tempo-remove-ghost-d64bbc77",
     "branch": "codex/tempo-remove-ghost-backs-d64bbc77",
     "base_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
-    "head_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
-    "worktree_state": "clean",
+    "head_commit": "6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
+    "worktree_state": "committed_and_pushed_pending_local_adoption",
     "approved_scope": [
       "Owner d64bbc77-145b-4121-903a-5a0cee971f7c: remove the back ghost photo from each tee colorway on live website."
     ],
-    "completed": [],
-    "tests": [],
+    "completed": [
+      "Removed exactly three ghost back gallery entries; five remaining views per color preserved; source files retained."
+    ],
+    "tests": [
+      "Existing targeted gallery/isolation/hash test PASS",
+      "Production build and type checks PASS; three pre-existing img warnings",
+      "git diff --check PASS"
+    ],
     "unresolved": [
       "Purchasing SKU hold remains unchanged."
     ],
-    "external_effects": [],
-    "next_action": "Remove exactly three ghost back gallery entries, retain assets and remaining order, verify then publish.",
-    "changed_paths": []
+    "external_effects": [
+      {
+        "reference": "tempo-ghost-back-removal",
+        "status": "pr_open_preview_pending",
+        "pr": 72,
+        "head": "6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
+        "target": "https://goalathletics.shop/shop/tempo-core-training-tee"
+      }
+    ],
+    "next_action": "Wait exact-head PR72 preview, then merge once under owner live removal authorization and verify production.",
+    "changed_paths": [
+      "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
+      "scripts/test-tempo-core-gallery.cjs",
+      "src/lib/products.ts"
+    ]
   },
   "holder": {
     "engine": "codex",
@@ -40,7 +58,7 @@
     "start_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
     "acquired_at": "2026-11-04T06:33:39.341Z"
   },
-  "revision": 27,
+  "revision": 28,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:51:11.570Z"
+  "updated_at": "2026-11-04T06:52:41.248Z"
 }
