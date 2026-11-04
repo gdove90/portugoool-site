@@ -7,26 +7,43 @@
     "session": "codex-tempo-placement-67a44161",
     "branch": "codex/tempo-placement-67a44161",
     "base_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
-    "head_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
-    "worktree_state": "clean",
+    "head_commit": "9cc81e4bc76bf9a2aae15bc18a390f108591adf3",
+    "worktree_state": "committed_and_pushed_pending_local_adoption",
     "approved_scope": [
-      "Owner67a44161-f211-47ea-a87d-16a22066ee64: investigate supplier/mocked logo placement and fix incorrect imagery.",
-      "Owner db2fc0a0-d40a-4317-8cc8-bb5b1bc57c2d: research other brands; preference logo above breast.",
-      "Owner f393f451-6ab3-497c-96f2-363e8bb81bfe: correct ONLY front ghost mannequin images; preserve models."
+      "Owner17ab6889-786c-4139-8d51-fe1f4cd66166: upload and replace exactly three approved higher-position ghost FRONT images, deploy now, do nothing else. Website-only authorization supersedes previous review hold; do not change supplier or model images."
     ],
     "completed": [
-      "Source audit shows independent generated placement drift; three saved supplier renders available.",
-      "Cancelled broad image correction batch after owner narrowed scope; no generated correction deployed or repo content edited.",
-      "Researched official Nike/Under Armour/adidas/PUMA women performance tees."
+      "Prepared and reviewed three ghost fronts only at upper-left-chest position.",
+      "PR73 contains exactly three new source derivatives, three image URL swaps and provenance docs; all model images retained."
     ],
-    "tests": [],
+    "tests": [
+      "Existing gallery/isolation/hash tests PASS",
+      "Typecheck PASS",
+      "git diff --check PASS",
+      "1024x1536 outputs; layout and image ratio preserved"
+    ],
     "unresolved": [
-      "Existing supplier renders show lower chest than current model renders. Higher target requires reconciled supplier placement before sale activation.",
-      "Current purchase hold remains."
+      "Apliiq supplier placement remains lower; owner explicitly authorized website-only release, no supplier writes. Purchasing remains Coming soon."
     ],
-    "external_effects": [],
-    "next_action": "Prepare ONLY three ghost front higher-placement proofs matching existing models. Record Apliiq discrepancy; no supplier writes authorized or performed.",
-    "changed_paths": []
+    "external_effects": [
+      {
+        "reference": "tempo-three-front-replacement-pr73",
+        "status": "preview_building",
+        "head": "9cc81e4bc76bf9a2aae15bc18a390f108591adf3",
+        "pr": 73,
+        "preview": "6aeada43f4db37502ee6bad2",
+        "target": "https://goalathletics.shop/shop/tempo-core-training-tee"
+      }
+    ],
+    "next_action": "Adopt exact pushed commit, wait previewREADY, check currentmain then merge once and verify live three image hashes.",
+    "changed_paths": [
+      "src/lib/products.ts",
+      "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
+      "docs/catalog/tempo-core-tee-upper-chest-review-20261104.json",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-upper-chest-20261104-f68e64bb.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-upper-chest-20261104-b371fc94.webp"
+    ]
   },
   "holder": {
     "engine": "codex",
@@ -47,7 +64,7 @@
     "start_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
     "acquired_at": "2026-11-04T06:51:11.570Z"
   },
-  "revision": 34,
+  "revision": 35,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T07:06:04.515Z"
+  "updated_at": "2026-11-04T07:10:28.915Z"
 }
