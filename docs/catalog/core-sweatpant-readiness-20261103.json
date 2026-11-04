@@ -1,6 +1,6 @@
 {
   "schema": "goal-product-readiness-v2",
-  "status": "STAGED_SALES_HELD_PENDING_RUNTIME_CHECK",
+  "status": "APPROVED_FOR_RELEASE_RUNTIME_READY",
   "owner_approval": {
     "build": "135218e7-a503-47c5-ab42-9fd7ff626ad8",
     "deploy": "same request: release all four if ready, $38, before raincoat",
@@ -52,7 +52,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -66,7 +66,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -80,7 +80,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -94,7 +94,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -108,7 +108,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -122,7 +122,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -136,7 +136,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -150,7 +150,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -164,7 +164,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -178,7 +178,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567487271568105472",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "cream"
     },
     {
@@ -192,7 +192,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -206,7 +206,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -220,7 +220,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -234,7 +234,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -248,7 +248,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567489153183207424",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -262,7 +262,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -276,7 +276,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -290,7 +290,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -304,7 +304,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     },
     {
@@ -318,7 +318,7 @@
       "sku_type": "internal manual-routing reference",
       "sku_source_reference": "https://www.tapstitch.com/account/products-pool/product/1567491247541817344",
       "image_coverage": "six owner-approved views",
-      "available_for_sale": false,
+      "available_for_sale": true,
       "ink": "black"
     }
   ],
@@ -366,21 +366,22 @@
     "cost_verified": "unit quote only",
     "margin_verified": false,
     "checkout_price_matches": "isolated PASS for all 20 references",
-    "fulfillment_route_verified": "isolated PASS; production readiness probe pending",
+    "fulfillment_route_verified": "17 isolated signed-webhook/PostgreSQL checks PASS; live read-only runtime readiness PASS; no paid test",
     "real_order_test_authorized": false
   },
   "quality": {
     "tests": [
       "17 new Halo integration checks PASS using real local PostgreSQL constraints",
       "Both old defects reproduced as baseline failures",
-      "Existing 143-variant backend suite PASS",
+      "Expanded 163-variant backend suite PASS; original 143 expectations unchanged",
       "Typecheck PASS",
       "Lint PASS with 3 existing image warnings",
-      "9 shipment checks PASS"
+      "9 shipment checks PASS",
+      "978 tracking/business-payload quantity and discount cases PASS",
+      "Production build PASS",
+      "Protected artwork, 24-image manifest, shipping, discounts, existing supplier gates and presentation preservation PASS"
     ],
-    "open_blockers": [
-      "Production manual-route readiness and final activation checks pending"
-    ],
+    "open_blockers": [],
     "rollback_plan": "Fix forward; preserve paid snapshots, supplier IDs and task ledger."
   },
   "handoff": {
@@ -388,5 +389,10 @@
     "branch": "codex/halo-sweatpant-ordering-20261103",
     "shared_coordination_ref": "refs/heads/goal/agent-coordination"
   },
-  "contract_version": "2.0"
+  "contract_version": "2.0",
+  "runtime_evidence": {
+    "repair_merge_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
+    "production_deploy": "6aeac3684ca4e112c1a33e01",
+    "manual_route_preview": "PASS HTTP 200 on live production; $36 existing Tapstitch item plus $6.95 shipping; no session, payment or email created"
+  }
 }

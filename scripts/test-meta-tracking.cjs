@@ -18,7 +18,7 @@ function browser(country='US',gpc=false){global.localStorage=storage();global.se
  await check('A hashing failure cannot hide verified payment confirmation',async()=>{class Stripe{checkout={sessions:{retrieve:async()=>({id:'cs_live_qa',livemode:true,payment_status:'paid',amount_total:3800,currency:'usd'})}}}const route=load('src/app/api/order-status/route.ts',{stripe:Stripe,'@/lib/meta-events':{metaEventId:async()=>{throw Error('hash failed')}},'@/lib/orders-store':{getOrdersStore:()=>({getOrderBySession:async()=>({id:'11111111-2222-4333-8444-555555555555',status:'paid',livemode:true})})}});const r=await route.GET({nextUrl:new URL('https://goool.shop/api/order-status?session_id=cs_live_qa')});assert.equal(r.status,200);assert.equal(r.body.state,'paid');assert.equal(r.body.purchaseEvent,null)});
  await check('Checkout business payload preserves the pre-tracking baseline for all suppliers, quantities and discounts',async()=>{
   const ts=require(ROOT+'/node_modules/typescript');
-  const approved=require('./fixtures/approved-supplier-catalog-20261028.json');
+  const approved=require('./fixtures/approved-supplier-catalog-20261103.json');
   const base=cp.execFileSync('git',['show','24903a4:src/app/api/checkout/route.ts'],{cwd:ROOT,encoding:'utf8'});
   let submitted=[];class Stripe{checkout={sessions:{create:async p=>{submitted.push(p);return {url:'https://checkout.stripe.com/mock'}}}}}
   const discount=load('src/lib/discount.ts');
@@ -52,7 +52,7 @@ function browser(country='US',gpc=false){global.localStorage=storage();global.se
    }
    assert.deepEqual(submitted[0],submitted[1]);supplierCases[mapping.supplier]++;cases++;
   }
-  assert.equal(cases,858);assert.deepEqual(supplierCases,{apliiq:768,tapstitch:90});
+  assert.equal(cases,978);assert.deepEqual(supplierCases,{apliiq:768,tapstitch:210});
  });
  await flush();fs.writeFileSync(path.join(ROOT,'tmp/meta-tracking-regression-results.json'),JSON.stringify({checkedAt:new Date().toISOString(),results,passed:results.filter(r=>r.pass).length,failed:results.filter(r=>!r.pass).length},null,2));if(results.some(r=>!r.pass))process.exitCode=1;
 })();
