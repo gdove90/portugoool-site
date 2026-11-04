@@ -28,15 +28,16 @@
     "external_effects": [
       {
         "reference": "tempo-three-front-replacement-pr73",
-        "status": "merge_intent",
+        "status": "merged_production_pending",
         "head": "9cc81e4bc76bf9a2aae15bc18a390f108591adf3",
         "pr": 73,
         "preview": "6aeada43f4db37502ee6bad2",
+        "merge_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
         "target": "https://goalathletics.shop/shop/tempo-core-training-tee",
-        "reconciliation": "Merge once; if uncertain reconcile PR and main before retry."
+        "reconciliation": "PR73 merged once; no replay. Wait exact production then verify front images."
       }
     ],
-    "next_action": "Merge PR73 once, then verify exact production commit and live three front images.",
+    "next_action": "Wait productionREADY at522500ddc7aa94e9990734564a3fd309a682e868; verify three front hashes and live color gallery.",
     "changed_paths": [
       "src/lib/products.ts",
       "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
@@ -65,7 +66,7 @@
     "start_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
     "acquired_at": "2026-11-04T06:51:11.570Z"
   },
-  "revision": 36,
+  "revision": 37,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T07:11:57.324Z"
+  "updated_at": "2026-11-04T07:12:15.439Z"
 }
