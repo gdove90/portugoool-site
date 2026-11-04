@@ -32,7 +32,8 @@
       "Applied owner-requested Core Sweatpant description exactly; no material names, percentages or slogan in short description. All other catalog bytes identical to approved production baseline.",
       "Exact staged tree 2fa607b2693a64a167943b3fca9d05779f75af9d published as 7b59de0e21b03ff0a3736880735036d5bafd69d6; local HEAD/index match remote. PR #70 created for approved image and description release.",
       "Temporary responsive QA fixture removed from final diff; exact production diff is 11 files (six WebP images and five scoped presentation/catalog files).",
-      "Final commit 3947da8aa9438da04d94e9c9499cfd4a5b2ce498 pushed and synchronized locally; PR70 rewritten around final implementation. Research saved and read back in page_a240c694e170819189a0b873bac9ecf1."
+      "Final commit 3947da8aa9438da04d94e9c9499cfd4a5b2ce498 pushed and synchronized locally; PR70 rewritten around final implementation. Research saved and read back in page_a240c694e170819189a0b873bac9ecf1.",
+      "PR70 merged once under owner authorization as b04be06939bb960f44197b40ec70e75c4d83fe3b; final exact-head preview 6aeacc6af86786a5bfb91549 READY. Main baseline rechecked unchanged immediately before merge."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -78,15 +79,17 @@
       {
         "expected_head": "3947da8aa9438da04d94e9c9499cfd4a5b2ce498",
         "expected_main": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
+        "final_preview": "6aeacc6af86786a5bfb91549",
+        "merge_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
         "migrations": [],
         "operation": "merge PR70 once after exact final preview passes",
         "reference": "goal-editorial-production-98740673",
-        "status": "intent_not_executed",
+        "status": "merged_waiting_for_production",
         "target": "https://goalathletics.shop"
       }
     ],
     "head_commit": "3947da8aa9438da04d94e9c9499cfd4a5b2ce498",
-    "next_action": "Confirm final preview at 3947da8, merge PR70 with expected head under owner deployment authorization, wait for exact production deploy and verify live3 imagery placements plus sweatpant description beside photos. Reconcile PR/deploy state before retry.",
+    "next_action": "Read-only reconcile production deployment at b04be06939bb960f44197b40ec70e75c4d83fe3b; verify actual live imagery and Core Sweatpant description/price/colors/material disclosure. Do not replay merge. Then save live evidence and release shared ownership.",
     "rollback": "Revert only approved imagery and Core Sweatpant description diff; retain prior Halo release and all paid data.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-goal-editorial-98740673",
@@ -101,7 +104,8 @@
       "Exact-head Netlify preview 6aeaca13e500ed20ddd2ab87 READY at 7b59de0e21b03ff0a3736880735036d5bafd69d6.",
       "Browser desktop preview shows approved Suzuki hero, Jeff tile and Quarter Zip lower banner. 390px and 768px frames select correct phone/desktop assets and have no horizontal overflow. Product route intentionally shows CollectionComingSoon in MIGRATION_PREVIEW; built production HTML contains exact new description; live PDP verification required after publication.",
       "17 isolated Halo integration checks PASS after final description edit; all20 exact variants covered; no production/provider writes.",
-      "Final GitHub compare against production base has exactly 11 approved files; exact final tree c63be23af44498fbd09dc6422abcd0dc332dc406, no temporary QA file."
+      "Final GitHub compare against production base has exactly 11 approved files; exact final tree c63be23af44498fbd09dc6422abcd0dc332dc406, no temporary QA file.",
+      "Final exact-head Netlify preview PASS at 3947da8aa9438da04d94e9c9499cfd4a5b2ce498; final 11-file diff reviewed."
     ],
     "unresolved": [
       "Apply and verify the newly authorized Core Sweatpant description only; recheck exact product-property preservation.",
@@ -128,7 +132,7 @@
     "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
     "task": "halo-sweatpant-ordering-20261103"
   },
-  "revision": 20,
+  "revision": 21,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:12:27.359298+00:00"
+  "updated_at": "2026-11-04T06:14:01.309733+00:00"
 }
