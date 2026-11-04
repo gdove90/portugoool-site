@@ -74,7 +74,16 @@
       "designs/wt0093-training-bra-20261104/"
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-bra-price18-098690e7",
+    "task": "tempo-training-bra-20261104",
+    "branch": "codex/tempo-training-bra-20261104",
+    "approval": "Owner 098690e7-d5c1-42a4-8271-ce6a9c1d8f39 sets WT0093 retail price to USD18 for all four colorways; retain existing conditional publication authorization and supplier readiness holds.",
+    "start_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
+    "token_hash": "39dfc33187faf6958c794dc2a4fe7736cee46efcdb7a708106b5ace978f1759b",
+    "acquired_at": "2026-11-04T11:42:09.016391+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-bra-suzanne-2beee444",
@@ -84,7 +93,7 @@
     "start_commit": "81f7079f4348acfe380539a7105b8e343f3a4dfb",
     "acquired_at": "2026-11-04T11:24:38.839079+00:00"
   },
-  "revision": 55,
+  "revision": 56,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:30:46.906295+00:00"
+  "updated_at": "2026-11-04T11:42:09.016408+00:00"
 }
