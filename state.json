@@ -1,16 +1,9 @@
 {
-  "schema": "goal-agent-coordination-v2",
-  "revision": 14,
-  "holder": null,
   "checkpoint": {
-    "schema": "goal-agent-handoff-v2",
-    "task_id": "halo-sweatpant-ordering-20261103",
-    "branch": "codex/halo-sweatpant-ordering-20261103",
-    "head_commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
-    "contract_version": "2.0",
     "approved_scope": [
       "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders."
     ],
+    "branch": "codex/halo-sweatpant-ordering-20261103",
     "completed": [
       "Read shared contract/manifest; validator PASS; previous imagery release complete and shared holder null.",
       "Verified GOAL Athletics live Stripe account and enabled live goalathletics.shop/api/stripe-webhook endpoint with required checkout/async/refund/dispute events.",
@@ -27,6 +20,47 @@
       "Production activation deploy 6aeac58511a3899574f03836 READY at fe6e4a7b316fc0002b0220b2adae8f48132bbaff. All 20 live pricing previews returned $38 + $6.95, resisting submitted $0.01 prices; four colors/six photos/Add to bag live. Men listing confirmed immediately before raincoat.",
       "LIVE VERIFIED: all four colorways at $38 with 24 approved photos; desktop and mobile gallery checks, live Men placement before raincoat, all20 live price previews and exact live Stripe unpaid handoff PASS. PR #69 updated with production evidence. Final main and current production deploy rechecked; task worktree clean at fe59673b0ad20df3874fa939ea305ad949d5d6db."
     ],
+    "contract_version": "2.0",
+    "external_effects": [
+      {
+        "commit": "423984a7f02c96bdb95b3e6f9029f70db8da1425",
+        "merge_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
+        "pr": 68,
+        "production_deploy": "6aeac3684ca4e112c1a33e01",
+        "reference": "halo-ordering-repair-stage1",
+        "status": "production_ready_live_runtime_check_pass"
+      },
+      {
+        "commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
+        "intent": "Merge exact tested activation after preview passes, verify storefront and 20 live read-only pricing previews.",
+        "merge_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
+        "pr": 69,
+        "preview_deploy": "6aeac50bb158b7e81533f335",
+        "production_deploy": "6aeac58511a3899574f03836",
+        "reference": "halo-ordering-activation-stage2",
+        "status": "production_ready_live_verified"
+      },
+      {
+        "amount_subtotal": 3800,
+        "amount_total": 4495,
+        "cleanup": "No expire operation exposed by connector. Unpaid Session expires automatically. No payment, supplier order, customer email or site order created.",
+        "email_supplied": false,
+        "expires_at": "2026-11-05T05:44:25.000Z",
+        "payment_intent": null,
+        "payment_status": "unpaid",
+        "reference": "halo-unpaid-checkout-verification",
+        "session_id": "cs_live_a1LkvQYsbdUVDDHHnNgRbbvhia9amPxW3WZq9MQn9rajEkLyPiY3OZn59Y",
+        "shipping": 695,
+        "status": "created_and_verified_unpaid_no_charge",
+        "stripe_account": "acct_1UHzboBG7q8OBDEm",
+        "supplier_sku_snapshot": "TAP-1567489152965033984-XXL"
+      }
+    ],
+    "head_commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
+    "next_action": "Task complete. Normal paid orders use exact immutable supplier references and the documented manual Tapstitch workflow; no further test transaction or release action required.",
+    "release_status": "LIVE_VERIFIED",
+    "schema": "goal-agent-handoff-v2",
+    "task_id": "halo-sweatpant-ordering-20261103",
     "tests": [
       "Contract validator PASS",
       "17 new integration checks PASS, including all 20 color-size variants through checkout, signed webhook, real local PostgreSQL constraints and manual task",
@@ -46,53 +80,28 @@
       "No real paid test, supplier order or customer email performed. The single verification Session is unpaid with automatic expiry recorded; historical order remediation remains outside this task.",
       "Landed contribution margin and physical sample verification remain UNKNOWN; retail $38 explicitly approved."
     ],
-    "next_action": "Task complete. Normal paid orders use exact immutable supplier references and the documented manual Tapstitch workflow; no further test transaction or release action required.",
-    "worktree_state": "clean_committed_and_pushed",
-    "external_effects": [
-      {
-        "reference": "halo-ordering-repair-stage1",
-        "status": "production_ready_live_runtime_check_pass",
-        "commit": "423984a7f02c96bdb95b3e6f9029f70db8da1425",
-        "merge_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
-        "pr": 68,
-        "production_deploy": "6aeac3684ca4e112c1a33e01"
-      },
-      {
-        "reference": "halo-ordering-activation-stage2",
-        "status": "production_ready_live_verified",
-        "commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
-        "pr": 69,
-        "preview_deploy": "6aeac50bb158b7e81533f335",
-        "intent": "Merge exact tested activation after preview passes, verify storefront and 20 live read-only pricing previews.",
-        "merge_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
-        "production_deploy": "6aeac58511a3899574f03836"
-      },
-      {
-        "reference": "halo-unpaid-checkout-verification",
-        "status": "created_and_verified_unpaid_no_charge",
-        "session_id": "cs_live_a1LkvQYsbdUVDDHHnNgRbbvhia9amPxW3WZq9MQn9rajEkLyPiY3OZn59Y",
-        "stripe_account": "acct_1UHzboBG7q8OBDEm",
-        "amount_subtotal": 3800,
-        "amount_total": 4495,
-        "shipping": 695,
-        "payment_status": "unpaid",
-        "payment_intent": null,
-        "email_supplied": false,
-        "supplier_sku_snapshot": "TAP-1567489152965033984-XXL",
-        "expires_at": "2026-11-05T05:44:25.000Z",
-        "cleanup": "No expire operation exposed by connector. Unpaid Session expires automatically. No payment, supplier order, customer email or site order created."
-      }
-    ],
-    "release_status": "LIVE_VERIFIED"
+    "worktree_state": "clean_committed_and_pushed"
   },
-  "updated_at": "2026-11-04T05:47:21.866Z",
+  "holder": {
+    "acquired_at": "2026-11-04T05:48:38.014329+00:00",
+    "approval": "Owner be83dd4e-8a18-4c92-875f-854cbd6d5d62 approved attached concrete Suzuki men hero, Jeff homepage men tile, Quarter Zip men lower banner; owner 98740673-ceb7-48c3-9491-b7dbbeb9115b explicitly requested deploy live. Preserve layout, copy, other imagery and commerce.",
+    "branch": "codex/approved-editorial-imagery-98740673",
+    "engine": "codex",
+    "session": "codex-goal-editorial-98740673",
+    "start_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
+    "task": "goal-editorial-imagery-20261104",
+    "token_hash": "9b455a26e38802da00138223647035784aecf3547a01f4c8379eb9da8004470e"
+  },
   "last_released_holder": {
+    "acquired_at": "2026-11-04T04:58:04.591Z",
+    "approval": "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders.",
+    "branch": "codex/halo-sweatpant-ordering-20261103",
     "engine": "codex",
     "session": "codex-halo-ordering-135218e7",
-    "task": "halo-sweatpant-ordering-20261103",
-    "branch": "codex/halo-sweatpant-ordering-20261103",
-    "approval": "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders.",
     "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
-    "acquired_at": "2026-11-04T04:58:04.591Z"
-  }
+    "task": "halo-sweatpant-ordering-20261103"
+  },
+  "revision": 15,
+  "schema": "goal-agent-coordination-v2",
+  "updated_at": "2026-11-04T05:48:38.014353+00:00"
 }
