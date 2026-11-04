@@ -1,9 +1,10 @@
-// Owner, 2026-11-04: publish the first completed women's tee gallery.
+// Owner, 2026-11-04: publish the two completed women's tee galleries.
 // The remaining TEMPO pieces stay hidden until individually approved.
 export const TEMPO_COLLECTION_COMING_SOON = false;
 
 export const TEMPO_PUBLIC_PRODUCT_IDS: ReadonlySet<string> = new Set([
   "80000000-0000-4000-8000-000000000017",
+  "80000000-0000-4000-8000-000000000021",
 ]);
 
 // The TEMPO catalog rows. While the collection is coming soon they leave
