@@ -13,7 +13,6 @@
     "base_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
     "branch": "codex/approved-editorial-imagery-98740673",
     "changed_paths": [
-      "public/goal-imagery-qa.html",
       "public/v84/editorial/home-men-jeff-hoodie-20261104-mobile.webp",
       "public/v84/editorial/home-men-jeff-hoodie-20261104.webp",
       "public/v84/editorial/men-editorial-quarter-zip-20261104-mobile.webp",
@@ -31,7 +30,8 @@
       "Inherited latest approved production fe6e4a7b316fc0002b0220b2adae8f48132bbaff; three image swaps implemented with six 450238-byte WebP variants.",
       "Read current live sweatpant product at Black/$38 and official Vuori, lululemon, Alphalete product wording plus current UB0050 supplier facts: 87/13 blend, 360gsm/thick, loose tapered leg, elastic waist, straight hem. New description contains no fiber names or unsupported stretch/wicking claims.",
       "Applied owner-requested Core Sweatpant description exactly; no material names, percentages or slogan in short description. All other catalog bytes identical to approved production baseline.",
-      "Exact staged tree 2fa607b2693a64a167943b3fca9d05779f75af9d published as 7b59de0e21b03ff0a3736880735036d5bafd69d6; local HEAD/index match remote. PR #70 created for approved image and description release."
+      "Exact staged tree 2fa607b2693a64a167943b3fca9d05779f75af9d published as 7b59de0e21b03ff0a3736880735036d5bafd69d6; local HEAD/index match remote. PR #70 created for approved image and description release.",
+      "Temporary responsive QA fixture removed from final diff; exact production diff is 11 files (six WebP images and five scoped presentation/catalog files)."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -63,10 +63,19 @@
         "qa_fixture": "Temporary responsive frame harness in preview; remove before production.",
         "reference": "goal-editorial-98740673-preview",
         "status": "commit_and_pr_published"
+      },
+      {
+        "expected_parent": "7b59de0e21b03ff0a3736880735036d5bafd69d6",
+        "pr": 70,
+        "proposed_tree": "c63be23af44498fbd09dc6422abcd0dc332dc406",
+        "reference": "goal-editorial-final-98740673",
+        "scope": "Three approved image swaps plus only Core Sweatpant short description; no QA route in production.",
+        "status": "intent_not_executed",
+        "target": "https://goalathletics.shop"
       }
     ],
     "head_commit": "7b59de0e21b03ff0a3736880735036d5bafd69d6",
-    "next_action": "Wait for exact-head PR70 preview; inspect desktop and true 390/768px frames; remove temporary QA fixture then deploy exact final image/description diff.",
+    "next_action": "Publish QA-fixture removal commit, verify exact-head preview/build and final 11-file diff, merge PR70 under owner live-deploy approval, verify live imagery and PDP text.",
     "rollback": "Revert only approved imagery and Core Sweatpant description diff; retain prior Halo release and all paid data.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-goal-editorial-98740673",
@@ -77,13 +86,15 @@
       "Production build PASS after hydrating missing tracked brand asset in sparse checkout. Three pre-existing img lint warnings.",
       "Six payment preservation checks PASS against current live baseline fe6e4a7b; default historical 7659237 pin fails because it predates approved Tapstitch backend release, no assertions changed.",
       "Final image+description production build PASS; typecheck/lint PASS with same three image warnings; git diff --check PASS.",
-      "Exact products.ts baseline replacement check PASS: only Core Sweatpant description changed, including all four colors/20 variants, $38, galleries and supplier references preserved."
+      "Exact products.ts baseline replacement check PASS: only Core Sweatpant description changed, including all four colors/20 variants, $38, galleries and supplier references preserved.",
+      "Exact-head Netlify preview 6aeaca13e500ed20ddd2ab87 READY at 7b59de0e21b03ff0a3736880735036d5bafd69d6.",
+      "Browser desktop preview shows approved Suzuki hero, Jeff tile and Quarter Zip lower banner. 390px and 768px frames select correct phone/desktop assets and have no horizontal overflow. Product route intentionally shows CollectionComingSoon in MIGRATION_PREVIEW; built production HTML contains exact new description; live PDP verification required after publication."
     ],
     "unresolved": [
       "Apply and verify the newly authorized Core Sweatpant description only; recheck exact product-property preservation.",
       "Preview/browser QA and publication remain pending."
     ],
-    "worktree_state": "clean_committed_and_pushed"
+    "worktree_state": "scoped_staged_qa_fixture_removal"
   },
   "holder": {
     "acquired_at": "2026-11-04T05:48:38.014329+00:00",
@@ -104,7 +115,7 @@
     "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
     "task": "halo-sweatpant-ordering-20261103"
   },
-  "revision": 18,
+  "revision": 19,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:01:19.628164+00:00"
+  "updated_at": "2026-11-04T06:10:10.201411+00:00"
 }
