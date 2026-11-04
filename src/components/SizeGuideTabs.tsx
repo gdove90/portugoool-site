@@ -88,6 +88,12 @@ export const GUIDE = [
     productIds: ["80000000-0000-4000-8000-000000000021"],
   },
   {
+    id: "women-sports-bras",
+    label: "Sports Bras",
+    chart: "wt0093",
+    productIds: ["80000000-0000-4000-8000-000000000025"],
+  },
+  {
     id: "women-hoodies",
     label: "Women's Hoodies",
     chart: "bc7519",
@@ -224,6 +230,7 @@ function ChartTable({ chartKey }: { chartKey: keyof typeof SIZE_CHARTS }) {
   const chart = SIZE_CHARTS[chartKey];
   const hasSleeve = chart.rows.some((r) => r.sleeveIn != null);
   const waist = chart.measure === "waist";
+  const bust = chart.measure === "bust";
   const cols = hasSleeve
     ? "grid-cols-[70px_repeat(4,minmax(0,1fr))]"
     : "grid-cols-[70px_repeat(3,minmax(0,1fr))]";
@@ -237,12 +244,12 @@ function ChartTable({ chartKey }: { chartKey: keyof typeof SIZE_CHARTS }) {
           <div role="row" className={`grid ${cols} gap-3 border-b-2 border-ink py-3 text-[15px] font-bold`}>
             <span role="columnheader">Size</span>
             <span role="columnheader">
-              {waist ? "Waist, flat" : "Chest, flat"}
+              {waist ? "Waist, flat" : bust ? "Bust, flat" : "Chest, flat"}
               <span className="block text-xs font-medium text-ink/55">{waist ? "across the waistband" : "pit to pit"}</span>
             </span>
             <span role="columnheader">
-              {waist ? "Waist, around" : "Chest, around"}
-              <span className="block text-xs font-medium text-ink/55">measure yourself</span>
+              {waist ? "Waist, around" : bust ? "Bust, around" : "Chest, around"}
+              <span className="block text-xs font-medium text-ink/55">{bust ? "garment, unstretched" : "measure yourself"}</span>
             </span>
             <span role="columnheader">
               {waist ? "Inseam" : "Length"}

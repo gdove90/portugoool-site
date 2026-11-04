@@ -1,9 +1,9 @@
 {
-  "status": "DRAFT_ASSET_PREPARATION_NOT_RELEASED",
+  "status": "WEBSITE_GALLERY_INTEGRATION_PURCHASING_HELD",
   "owner_reference": "239154a8-d329-40d3-a832-a15f8936e0e8",
   "style": "WT0093-P001-V2",
   "proposed_name": "TEMPO Training Bra",
-  "name_approved": false,
+  "name_approved": true,
   "supplier_url": "https://www.tapstitch.com/custom/1484550248251678720",
   "sizes": [
     "S",
@@ -43,7 +43,7 @@
     "fabric-print-detail",
     "ghost-back"
   ],
-  "purchase_state": "UNCHANGED; no catalog/product published",
+  "purchase_state": "Coming Soon; availableForSale false; no supplier or payment activation",
   "images_are": "Generated ecommerce mockups, not physical samples",
   "supplier_scaling": "Reference size L. Supplier scales with garment size; fixed physical artwork on S-XL not verified.",
   "size_chart_inches_flat": {
@@ -358,7 +358,6 @@
   ],
   "blockers": [
     "No saved decorated supplier designs verified. Direct workspace-path upload was rejected by Tapstitch; browser policy blocked ChatGPT Library download to browser device. No supplier save or order performed.",
-    "Final product name not approved. Retail price is owner-approved at USD18 across all four colorways and S/M/L/XL sizes.",
     "Production detail/gap quality, smallest-size print and decorated sample stretch/wash unverified. Historical quarter-zip source comment mentions owner 2mm DTF gap target; global applicability and this small monogram not established.",
     "Manual Tapstitch paid fulfillment path must be verified separately before purchasing release."
   ],
@@ -405,7 +404,7 @@
     }
   ],
   "owner_model_change_reference": "2beee444-f1be-4e02-b5e4-3c86caecdb4c",
-  "gallery_status": "ALL_FOUR_COLORWAYS_HAVE_SIX_VIEWS; supplier/name release requirements remain pending; USD18 retail is owner-approved.",
+  "gallery_status": "ALL_FOUR_COLORWAYS_HAVE_SIX_VIEWS; website publication authorized; supplier and purchasing release checks remain pending.",
   "generation_history": [
     "Amanda standard sportswear requests rejected repeatedly by the built-in image tool.",
     "CLI route authorized but could not run because OPENAI_API_KEY was not configured. No API generation or Higgsfield credits spent.",
@@ -413,5 +412,9 @@
   ],
   "retail_price_currency": "USD",
   "retail_price_owner_reference": "098690e7-d5c1-42a4-8271-ce6a9c1d8f39",
-  "retail_price_scope": "All four colorways and S/M/L/XL sizes"
+  "retail_price_scope": "All four colorways and S/M/L/XL sizes",
+  "website_publication_approval": "b82ef6bf-1ced-42e8-aa96-7e6df3f4fb8a",
+  "name_approval_basis": "Owner requested publishing the current product draft under its proposed name.",
+  "catalog_product_id": "80000000-0000-4000-8000-000000000025",
+  "catalog_slug": "tempo-training-bra"
 }

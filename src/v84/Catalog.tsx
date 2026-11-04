@@ -31,7 +31,7 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
   const [open, setOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
   const list = audience ? forAudience(audience) : catalogOrder(getProducts());
-  const types = ["tees", "tanks", "leggings", "shorts", "pants", "hoodies", "layers", "jackets", "hats"].filter(t => list.some(p => productType(p) === t));
+  const types = ["tees", "sports bras", "tanks", "leggings", "shorts", "pants", "hoodies", "layers", "jackets", "hats"].filter(t => list.some(p => productType(p) === t));
   const options = [["featured", "Featured"], ["low", "Price: low to high"], ["high", "Price: high to low"]];
   useEffect(() => {
     if (open) sortRef.current?.querySelector<HTMLButtonElement>(`[data-sort="${sort}"]`)?.focus();
@@ -39,7 +39,7 @@ export function CollectionGrid({ audience }: { audience?: Audience }) {
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     const category = query.get("category");
-    if (category) setType(category === "hoodie" ? "hoodies" : category === "shorts" ? "shorts" : category === "jacket" ? "jackets" : category === "pants" ? "pants" : category === "pullover" ? "layers" : category === "hat" || category === "accessory" ? "hats" : "tees");
+    if (category) setType(category === "bra" ? "sports bras" : category === "hoodie" ? "hoodies" : category === "shorts" ? "shorts" : category === "jacket" ? "jackets" : category === "pants" ? "pants" : category === "pullover" ? "layers" : category === "hat" || category === "accessory" ? "hats" : "tees");
     const close = (event: PointerEvent) => { if (!sortRef.current?.contains(event.target as Node)) setOpen(false); };
     document.addEventListener("pointerdown", close);
     return () => document.removeEventListener("pointerdown", close);

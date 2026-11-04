@@ -364,6 +364,166 @@ const TEMPO_TRAINING_TEE_VARIANTS = [
   }
 ];
 
+// WT0093 owner-approved gallery publication. Supplier production checks remain held.
+const TEMPO_TRAINING_BRA_VARIANTS = [
+  {
+    "name": "Black",
+    "supplierColor": "Black",
+    "hex": "#1B1B1B",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Black, front ghost view",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-black-02-model-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Black, model facing forward",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-black-03-model-quarter-20261104.webp",
+        "alt": "TEMPO Training Bra in Black, model at a front-left quarter turn",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-black-04-model-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Black, model facing away",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-black-05-fabric-print-detail-20261104.webp",
+        "alt": "TEMPO Training Bra in Black, rear fabric and print close-up",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-black-06-ghost-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Black, back ghost view",
+        "caption": "Product visualization."
+      }
+    ]
+  },
+  {
+    "name": "Blue",
+    "supplierColor": "Blue",
+    "hex": "#B8DCE3",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-blue-01-ghost-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Blue, front ghost view",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-blue-02-model-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Blue, model facing forward",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-blue-03-model-quarter-20261104.webp",
+        "alt": "TEMPO Training Bra in Blue, model at a front-left quarter turn",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-blue-04-model-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Blue, model facing away",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-blue-05-fabric-print-detail-20261104.webp",
+        "alt": "TEMPO Training Bra in Blue, rear fabric and print close-up",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-blue-06-ghost-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Blue, back ghost view",
+        "caption": "Product visualization."
+      }
+    ]
+  },
+  {
+    "name": "Grey",
+    "supplierColor": "Flower Gray",
+    "hex": "#A4A5A5",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-grey-01-ghost-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Grey, front ghost view",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-grey-02-model-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Grey, model facing forward",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-grey-03-model-quarter-20261104.webp",
+        "alt": "TEMPO Training Bra in Grey, model at a front-left quarter turn",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-grey-04-model-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Grey, model facing away",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-grey-05-fabric-print-detail-20261104.webp",
+        "alt": "TEMPO Training Bra in Grey, rear fabric and print close-up",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-grey-06-ghost-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Grey, back ghost view",
+        "caption": "Product visualization."
+      }
+    ]
+  },
+  {
+    "name": "Brick",
+    "supplierColor": "Brick Red",
+    "hex": "#BD776C",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-brick-01-ghost-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Brick, front ghost view",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-brick-02-model-front-20261104.webp",
+        "alt": "TEMPO Training Bra in Brick, model facing forward",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-brick-03-model-quarter-20261104.webp",
+        "alt": "TEMPO Training Bra in Brick, model at a front-left quarter turn",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-brick-04-model-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Brick, model facing away",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-brick-05-fabric-print-detail-20261104.webp",
+        "alt": "TEMPO Training Bra in Brick, rear fabric and print close-up",
+        "caption": "Product visualization."
+      },
+      {
+        "src": "/products/tempo-training-bra/goal-training-bra-brick-06-ghost-back-20261104.webp",
+        "alt": "TEMPO Training Bra in Brick, back ghost view",
+        "caption": "Product visualization."
+      }
+    ]
+  }
+];
+
 export const products: Product[] = [
   // ── Performance Jersey Collection ───────────────────────────
   {
@@ -5107,6 +5267,39 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end TEMPO Training Tee ==
+  {
+    "id": "80000000-0000-4000-8000-000000000025",
+    "name": "TEMPO Training Bra",
+    "slug": "tempo-training-bra",
+    "blank": "WT0093",
+    "description": "A close-fitting racerback with a cropped length and stretch that moves with you. An easy addition to your daily rotation.",
+    "priceCents": 1800,
+    "compareAtPriceCents": null,
+    "color": "Black",
+    "colorHex": "#1B1B1B",
+    "fabric": "89% polyester, 11% spandex. 230 gsm stretch knit.",
+    "fit": "Close-fitting cropped racerback. Compare the flat measurements with a similar bra you own before choosing your size.",
+    "careInstructions": "Follow the garment care label. Avoid ironing directly over the print.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "bra",
+    "supplierType": "tapstitch",
+    "isActive": true,
+    "availableForSale": false,
+    "isLimitedDrop": false,
+    "dropVersion": null,
+    "dropLimit": null,
+    "dropSoldCount": 0,
+    "customNameAvailable": false,
+    "customNumberAvailable": false,
+    "customizationPriceCents": 0,
+    "images": TEMPO_TRAINING_BRA_VARIANTS[0].images,
+    "colorVariants": TEMPO_TRAINING_BRA_VARIANTS
+  },
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

@@ -23,8 +23,8 @@ assert.deepEqual(tee.colorVariants.map(v => v.name), ['White', 'Lake Blue', 'Lig
 assert.equal(tee.originLabel, undefined); assert.equal(tee.disclosure, undefined);
 for (const product of before.products) if (product.id !== ID) assert.deepEqual(catalog.products.find(p => p.id === product.id), product);
 assert.deepEqual(load('src/v84/catalog-data.ts').forAudience('men'), old('src/v84/catalog-data.ts').forAudience('men'));
-assert.deepEqual(load('src/v84/catalog-data.ts').forAudience('women').map(p => p.id), ['80000000-0000-4000-8000-000000000017', ID]);
-for (const id of load('src/lib/collection-launch.ts').TEMPO_PRODUCT_IDS) if (![ID, '80000000-0000-4000-8000-000000000017'].includes(id)) assert.equal(catalog.getProductById(id), undefined);
+assert.deepEqual(load('src/v84/catalog-data.ts').forAudience('women').map(p => p.id), ['80000000-0000-4000-8000-000000000017', ID, '80000000-0000-4000-8000-000000000025']);
+for (const id of load('src/lib/collection-launch.ts').TEMPO_PRODUCT_IDS) if (![ID, '80000000-0000-4000-8000-000000000017', '80000000-0000-4000-8000-000000000025'].includes(id)) assert.equal(catalog.getProductById(id), undefined);
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/catalog/tempo-training-tee-gallery-20261104.json'))), seen = new Set();
 assert.equal(manifest.files.length, 15);
 for (const variant of tee.colorVariants) {

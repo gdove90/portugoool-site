@@ -38,6 +38,7 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000020": ["women"],
   "80000000-0000-4000-8000-000000000021": ["women"],
   "80000000-0000-4000-8000-000000000022": ["women"],
+  "80000000-0000-4000-8000-000000000025": ["women"],
 };
 // The GOOOL pieces that filled this grid were retired on 2026-10-15, so the
 // home page features the GOAL Athletics pieces on sale.
@@ -51,7 +52,7 @@ export function featuredProducts() {
   return featuredProductIds.flatMap(id => products.filter(product => product.id === id));
 }
 export function productType(product: Product) {
-  return product.category === "hoodie" ? "hoodies" : product.category === "shorts" ? "shorts" : product.category === "jacket" ? "jackets" : product.category === "pants" ? "pants" : product.category === "pullover" ? "layers" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
+  return product.category === "bra" ? "sports bras" : product.category === "hoodie" ? "hoodies" : product.category === "shorts" ? "shorts" : product.category === "jacket" ? "jackets" : product.category === "pants" ? "pants" : product.category === "pullover" ? "layers" : ["hat", "accessory"].includes(product.category) ? "hats" : "tees";
 }
 /** The collection a product belongs to, for tags and eyebrows: women's pieces are TEMPO, everything else CORE. */
 export function collectionLabel(product: Product): "TEMPO" | "CORE" {
@@ -68,6 +69,7 @@ const CATALOG_RANK: readonly string[] = [
   "80000000-0000-4000-8000-000000000012", // Match Day Tee
   "80000000-0000-4000-8000-000000000017", // TEMPO Core Training Tee
   "80000000-0000-4000-8000-000000000021", // TEMPO Training Tee
+  "80000000-0000-4000-8000-000000000025", // TEMPO Training Bra
   "80000000-0000-4000-8000-000000000013", // Core Shorts
   "80000000-0000-4000-8000-000000000022", // TEMPO Training Shorts
   "80000000-0000-4000-8000-000000000024", // Core Jogger
