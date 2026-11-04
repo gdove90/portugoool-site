@@ -7,31 +7,44 @@
     "session": "codex-women-lower-ea28ab9b",
     "branch": "codex/women-lower-track-banner-20261104",
     "base_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
-    "head_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
-    "worktree_state": "staged_local_ready_to_publish",
+    "head_commit": "1bc427e4a3bed9a775d23033cbac7d321676dab7",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "Owner requests 26cfcab2 and ea28ab9b: deploy only approved trackside lower /women photo, remove oversized GOAL ATHLETICS lettering, preserve For your next session. and leave top hero unchanged."
     ],
     "completed": [
       "Recovered exact previously approved bottom-only release package; reviewed current main64f8e8d and preserved completed garment-label/purchasing changes.",
       "Shared contract validator PASS; acquired the single coordinator ref through native GitHub CAS transport; canonical helper check verified ownership.",
-      "Prepared exact five-file scoped tree 1a4217f2343cc36ff0b0c261af22e50c15e826b0 with approved desktop/mobile WebPs, lower-only markup/reference change and decision record."
+      "Prepared exact five-file scoped tree 1a4217f2343cc36ff0b0c261af22e50c15e826b0 with approved desktop/mobile WebPs, lower-only markup/reference change and decision record.",
+      "Published exact verified five-file tree1a4217f2343cc36ff0b0c261af22e50c15e826b0 at1bc427e4a3bed9a775d23033cbac7d321676dab7; PR77 created. Local branch is clean and matches published tree; sparse metadata reconciled without content changes.",
+      "Netlify preview6aeb8a05068eddd216883728 READY exact1bc427e4; desktop and390pxphone previews visually verified. Both hero/lower sources loaded; phone crop selected; no horizontal overflow; headline retained and oversized wordmark absent. Existing nonproduction collection gate preserved."
     ],
     "tests": [
       "PASS typecheck and production build. Only preexisting img warnings.",
       "PASS runtime baseline comparisons: women top hero unchanged; all seven unrelated routes unchanged; lower headline exact; large wordmark absent; all prior mobile mappings preserved.",
       "PASS WebP decode and approved byte comparisons; desktop1925x817/88188bytes,mobile900x957/44230bytes.",
-      "PASS git diff --check; source diff excludes all catalog,commerce,CSS and existing hero assets."
+      "PASS git diff --check; source diff excludes all catalog,commerce,CSS and existing hero assets.",
+      "PASS hosted preview visual QA at desktop and390px; responsive asset load and nooverflow checks."
     ],
     "unresolved": [
-      "Pre-release browser visual check pending hosted preview; production verification follows deployment."
+      "Production merge/deploy and post-release verification pending."
     ],
-    "next_action": "Publish exact five-file tree to feature branch, create scoped PR, inspect hosted preview, merge owner-approved change, verify production desktop/mobile and release lock.",
+    "next_action": "Merge PR77 at exact1bc427e4 against current main64f8e8d; monitor existing Netlify Git deployment, verify production desktop/mobile, then record outcome and release lock.",
     "external_effects": [
       {
         "reference": "ea28ab9b-bottom-only-release",
         "status": "intent",
         "details": "Publish exactly tree 1a4217f2343cc36ff0b0c261af22e50c15e826b0 to codex/women-lower-track-banner-20261104 and merge only reviewed lower-image diff to main for existing Netlify Git deployment. No top image, catalog, prices, purchasing, CSS, supplier, SQL or email changes."
+      },
+      {
+        "reference": "ea28ab9b-bottom-only-release",
+        "status": "source_published_preview_building",
+        "details": "PR77 source1bc427e4a3bed9a775d23033cbac7d321676dab7; Netlify preview6aeb8a05068eddd216883728 building. Main/production remains64f8e8d; no merge or production deployment yet. Do not replay source publication."
+      },
+      {
+        "reference": "ea28ab9b-bottom-only-release",
+        "status": "preview_ready_merge_intent",
+        "details": "Preview6aeb8a05068eddd216883728 READY exact source1bc427e4a3bed9a775d23033cbac7d321676dab7; desktop/phone image/headline verified. Owner-authorized exact five-file PR77 will merge to main64f8e8d for existing GitCD. No realpaid/provider/SQL/email operations."
       }
     ],
     "changed_paths": [
@@ -61,7 +74,7 @@
     "start_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
     "acquired_at": "2026-11-04T12:18:15.662200+00:00"
   },
-  "revision": 73,
+  "revision": 74,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T19:38:36.039979+00:00"
+  "updated_at": "2026-11-04T19:41:44.421928+00:00"
 }
