@@ -4,15 +4,16 @@
     "contract_version": "2.0",
     "task_id": "tempo-training-bra-20261104",
     "engine": "codex",
-    "session": "codex-bra-price18-098690e7",
+    "session": "codex-bra-publish-b82ef6bf",
     "branch": "codex/tempo-training-bra-20261104",
     "base_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
     "head_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
-    "worktree_state": "clean_committed_and_pushed",
+    "worktree_state": "staged_scoped_integration",
     "approved_scope": [
       "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: WT0093 specification checks, four color galleries, Suzanne Black new hairstyle, front ghost first/back ghost last, website preparation preserving holds.",
       "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c permits Suzanne again for Brick; finish four matching views and gallery draft.",
-      "Owner 098690e7-d5c1-42a4-8271-ce6a9c1d8f39 approves USD18 retail for all four WT0093 colorways and all S-XL sizes."
+      "Owner 098690e7-d5c1-42a4-8271-ce6a9c1d8f39 approves USD18 retail for all four WT0093 colorways and all S-XL sizes.",
+      "Owner b82ef6bf-1ced-42e8-aa96-7e6df3f4fb8a authorizes publishing the current WT0093 product draft now at USD18 with all four six-view galleries; preserve Coming Soon while supplier verification remains pending."
     ],
     "completed": [
       "Prepared 20 generated mockup WebP images at original 1024x1536: Black Suzanne, Blue Molly and Grey Jessica six views each; Brick front/back ghosts.",
@@ -27,7 +28,8 @@
       "Generated four Brick Suzanne views successfully, preserving high braided bun, source poses/framing and rear Wine GA. All four colors now six images.",
       "Published the seven-file Brick Suzanne completion at bfbcf31b804b38c0240d53df90e32e05ec802793 in existing draft PR75; exact tree4c8d8bba76d6a4b8a7e9b7579741230c4ec2924e verified.",
       "Updated readiness manifest, PR description and owner decision Page seq6: all four colorways now six images, Suzanne approved for Brick; no pending Amanda imagery requirement.",
-      "Recorded owner-approved USD18 /1800 cents for all four WT0093 colorways and S/M/L/XL in readiness manifest and README. Published two-file change to draft PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1; updated PR and owner Page seq7."
+      "Recorded owner-approved USD18 /1800 cents for all four WT0093 colorways and S/M/L/XL in readiness manifest and README. Published two-file change to draft PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1; updated PR and owner Page seq7.",
+      "Integrated new TEMPO Training Bra row/UUID25 at USD18 S-XL;24 identical public images, four held variants, public women order after tees, Sports bras filter and supplier bust/length chart."
     ],
     "tests": [
       "PASS 20 unique images decode at1024x1536 and SHA256/order validation.",
@@ -42,11 +44,11 @@
       "PASS staged seven-file scoped diff and whitespace check.",
       "PASS all seven new/changed GitHub blob hashes, exact tree, clean checkout and task remote commit verification.",
       "Application/commerce tests N/A: only images and design documents changed.",
-      "PASS scoped two-document diff, JSON price/currency/scope assertions, unchanged variant/image objects and purchasing state; exact local/GitHub tree b43d6d6166d052bcdf9569cd6f6143e42746ad58; clean task checkout at pushed head."
+      "PASS scoped two-document diff, JSON price/currency/scope assertions, unchanged variant/image objects and purchasing state; exact local/GitHub tree b43d6d6166d052bcdf9569cd6f6143e42746ad58; clean task checkout at pushed head.",
+      "PASS production build and typecheck; PASS24PIL decodes/hashes; PASS new bra integration plus existing training tee; PASS17 Halo integration checks. Legacy payment-preservation command FAIL at historical7659237 pin predating already-deployed Tapstitch changes; no test weakened. Bra test separately verifies every protected payment/fulfillment file byte-identical to current main7ea51b9 and rejects all16 bra variants before Stripe."
     ],
     "unresolved": [
       "No saved supplier decorated designs; direct file upload rejected and browser policy blocked Library-download route. Need approved PNGs uploaded in Tapstitch.",
-      "Final product name pending. USD18 retail approved and recorded.",
       "Smallest-size scaling/detail-gap quality/sample and manual Tapstitch fulfillment readiness unverified.",
       "No production deployment or catalog publication."
     ],
@@ -81,6 +83,11 @@
         "reference": "098690e7-bra-retail18",
         "status": "confirmed",
         "details": "Draft manifest/README published in PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1, PR body updated, owner decision Page seq7. USD18 retail recorded for all colors/sizes. No production pricing, payment, supplier, gates or deployment changes."
+      },
+      {
+        "reference": "b82ef6bf-wt0093-website-publication",
+        "status": "intent",
+        "details": "Publish scoped source/assets on existing PR75, verify preview, merge approved listing to main and verify Netlify production at goalathletics.shop. New product visible at /shop/tempo-training-bra with USD18/all24 images, availableForSale false; no supplier saves, provider SKU fabrication, payment, SQL, gate or email changes."
       }
     ],
     "changed_paths": [
@@ -106,7 +113,7 @@
     "start_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
     "acquired_at": "2026-11-04T11:42:09.016391+00:00"
   },
-  "revision": 59,
+  "revision": 60,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:47:53.152998+00:00"
+  "updated_at": "2026-11-04T11:55:24.008684+00:00"
 }
