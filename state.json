@@ -13,7 +13,9 @@
       "Owner d64bbc77-145b-4121-903a-5a0cee971f7c: remove the back ghost photo from each tee colorway on live website."
     ],
     "completed": [
-      "Removed exactly three ghost back gallery entries; five remaining views per color preserved; source files retained."
+      "Removed ghost back photos from all three live TEMPO Core Training Tee colorways; five images each, original order and model back retained.",
+      "Production6aead6a718e8ceb5b2e9223f READY at dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9; live three color swaps and mobile390px verified.",
+      "Existing $38 price and Coming soon hold preserved."
     ],
     "tests": [
       "Exact catalog diff only three requested entries removed PASS",
@@ -28,42 +30,35 @@
     "external_effects": [
       {
         "reference": "tempo-ghost-back-removal-pr72",
-        "status": "merged_production_pending",
+        "status": "live_verified",
         "head": "6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
         "pr": 72,
         "preview": "6aead631eb5c48789049df24",
         "merge_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
+        "production_deploy": "6aead6a718e8ceb5b2e9223f",
         "target": "https://goalathletics.shop/shop/tempo-core-training-tee",
-        "reconciliation": "PR72 merged once; no replay. Read production exact merge and verify UI."
+        "reconciliation": "Merged once, production READY and live UI verified. No replay required."
       }
     ],
-    "next_action": "Wait READY production at dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9 then verify five images for Black/White/Iron Grey and hold.",
+    "next_action": "Complete; purchasing SKU verification remains separate.",
     "changed_paths": [
       "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
       "scripts/test-tempo-core-gallery.cjs",
       "src/lib/products.ts"
-    ]
+    ],
+    "release_status": "LIVE_VERIFIED"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-tempo-remove-ghost-d64bbc77",
     "task": "tempo-remove-ghost-backs-20261104",
     "branch": "codex/tempo-remove-ghost-backs-d64bbc77",
     "approval": "Owner d64bbc77-145b-4121-903a-5a0cee971f7c: remove the back ghost photo from each tee colorway on live website.",
     "start_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
-    "token_hash": "978f3310c762a0ad4448c85ae2bd41d3953b9ec286122005753fe8ea565e9931",
     "acquired_at": "2026-11-04T06:51:11.570Z"
   },
-  "last_released_holder": {
-    "engine": "codex",
-    "session": "codex-tempo-core-tee-c60e8d03",
-    "task": "tempo-core-tee-gallery-20261104",
-    "branch": "codex/tempo-core-tee-c60e8d03",
-    "approval": "Owner c60e8d03-bca9-4650-aa42-9e9615af6fd2: upload approved18 tee images and expose this as first women's piece; preserve other product holds, layout and commerce settings. Existing name TEMPO Core Training Tee recommended.",
-    "start_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
-    "acquired_at": "2026-11-04T06:33:39.341Z"
-  },
-  "revision": 31,
+  "revision": 32,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:54:43.297Z"
+  "updated_at": "2026-11-04T06:56:51.310Z"
 }
