@@ -67,7 +67,16 @@
       "designs/product-editorial-predawn-20261104/README.md"
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-rect-tag-173c22e6",
+    "task": "goal-labels-womens-purchase-20261104",
+    "branch": "codex/goal-labels-womens-purchase-20261104",
+    "approval": "Owner173c22e6 authorizes implementing approved V1.3 rectangular 6x2cm tag on products where needed, starting four UB0050 pants. Submit new tag for review and assign only when Approved; preserve existing approved branding until replacement ready. No orders, charges, live catalog, images or Apliiq men.",
+    "start_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
+    "token_hash": "b03ff20106e49af04a54624f297c0b7a3acada43b4dbf1ffabbce644a86a8fc8",
+    "acquired_at": "2026-11-04T21:06:47.303184+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-predawn-d8cbb24b",
@@ -77,7 +86,7 @@
     "start_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
     "acquired_at": "2026-11-04T20:37:21.589071+00:00"
   },
-  "revision": 83,
+  "revision": 84,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T20:58:06.903632+00:00"
+  "updated_at": "2026-11-04T21:06:47.303203+00:00"
 }
