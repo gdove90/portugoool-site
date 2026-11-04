@@ -7,8 +7,8 @@
     "session": "codex-bra-publish-b82ef6bf",
     "branch": "codex/tempo-training-bra-20261104",
     "base_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
-    "head_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
-    "worktree_state": "staged_scoped_integration",
+    "head_commit": "06d671521ba7cb90457ae576b9c775a79a5a78d0",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: WT0093 specification checks, four color galleries, Suzanne Black new hairstyle, front ghost first/back ghost last, website preparation preserving holds.",
       "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c permits Suzanne again for Brick; finish four matching views and gallery draft.",
@@ -29,7 +29,8 @@
       "Published the seven-file Brick Suzanne completion at bfbcf31b804b38c0240d53df90e32e05ec802793 in existing draft PR75; exact tree4c8d8bba76d6a4b8a7e9b7579741230c4ec2924e verified.",
       "Updated readiness manifest, PR description and owner decision Page seq6: all four colorways now six images, Suzanne approved for Brick; no pending Amanda imagery requirement.",
       "Recorded owner-approved USD18 /1800 cents for all four WT0093 colorways and S/M/L/XL in readiness manifest and README. Published two-file change to draft PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1; updated PR and owner Page seq7.",
-      "Integrated new TEMPO Training Bra row/UUID25 at USD18 S-XL;24 identical public images, four held variants, public women order after tees, Sports bras filter and supplier bust/length chart."
+      "Integrated new TEMPO Training Bra row/UUID25 at USD18 S-XL;24 identical public images, four held variants, public women order after tees, Sports bras filter and supplier bust/length chart.",
+      "Published37-file integration on same task branch at06d671521ba7cb90457ae576b9c775a79a5a78d0, exact tree d3753d3c17f0552cbad4905ccf5b02f3092d0371. PR75 marked ready with exact public-gallery/ComingSoon scope. Preview6aeb1d720e8e03144427be18 building."
     ],
     "tests": [
       "PASS 20 unique images decode at1024x1536 and SHA256/order validation.",
@@ -52,7 +53,7 @@
       "Smallest-size scaling/detail-gap quality/sample and manual Tapstitch fulfillment readiness unverified.",
       "No production deployment or catalog publication."
     ],
-    "next_action": "USD18 retail is approved across all four WT0093 colorways and S-XL sizes. All24 gallery images complete. Continue same branch/PR75 for saved decorated Tapstitch designs, final naming and applicable supplier/fulfillment checks; preserve holds.",
+    "next_action": "Verify preview /shop/tempo-training-bra and women listing, then execute already-authorized PR75 merge and verify production. Keep bra and all prior women's purchasing holds.",
     "external_effects": [
       {
         "reference": "239154a8-draft-assets-publication",
@@ -88,6 +89,11 @@
         "reference": "b82ef6bf-wt0093-website-publication",
         "status": "intent",
         "details": "Publish scoped source/assets on existing PR75, verify preview, merge approved listing to main and verify Netlify production at goalathletics.shop. New product visible at /shop/tempo-training-bra with USD18/all24 images, availableForSale false; no supplier saves, provider SKU fabrication, payment, SQL, gate or email changes."
+      },
+      {
+        "reference": "b82ef6bf-wt0093-website-publication",
+        "status": "source_and_preview_confirmed",
+        "details": "Source integration at06d6715 and PR75 ready; Netlify preview6aeb1d720e8e03144427be18 building exact commit. Main and production unchanged so far."
       }
     ],
     "changed_paths": [
@@ -113,7 +119,7 @@
     "start_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
     "acquired_at": "2026-11-04T11:42:09.016391+00:00"
   },
-  "revision": 60,
+  "revision": 61,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:55:24.008684+00:00"
+  "updated_at": "2026-11-04T11:57:49.361202+00:00"
 }
