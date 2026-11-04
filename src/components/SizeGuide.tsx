@@ -47,6 +47,7 @@ export default function SizeGuide({ productId }: { productId: string }) {
 
   const hasSleeve = chart.rows.some((r) => r.sleeveIn != null);
   const waist = chart.measure === "waist";
+  const bust = chart.measure === "bust";
 
   return (
     <details className="group border-t border-ink/10 py-4">
@@ -59,8 +60,7 @@ export default function SizeGuide({ productId }: { productId: string }) {
             Between sizes?
           </span>
           <span className="mt-0.5 block text-xs font-normal leading-relaxed text-ink/55">
-            Measure a tee you already like across the chest, and match the
-            flat figure.
+            {bust ? "Measure a similar bra you own, unstretched, and match the flat figure." : "Measure a tee you already like across the chest, and match the flat figure."}
           </span>
         </span>
         <span
@@ -80,15 +80,15 @@ export default function SizeGuide({ productId }: { productId: string }) {
               <tr className="border-b border-ink/15 text-left">
                 <th className="py-2 pr-3 font-semibold text-ink">Size</th>
                 <th className="py-2 pr-3 font-semibold text-ink">
-                  {waist ? "Waist, flat" : "Chest, flat"}
+                  {waist ? "Waist, flat" : bust ? "Bust, flat" : "Chest, flat"}
                   <span className="block text-[11px] font-normal text-ink/45">
                     {waist ? "across the waistband" : "pit to pit"}
                   </span>
                 </th>
                 <th className="py-2 pr-3 font-semibold text-ink">
-                  {waist ? "Waist, around" : "Chest, around"}
+                  {waist ? "Waist, around" : bust ? "Bust, around" : "Chest, around"}
                   <span className="block text-[11px] font-normal text-ink/45">
-                    measure yourself
+                    {bust ? "garment, unstretched" : "measure yourself"}
                   </span>
                 </th>
                 <th className="py-2 pr-3 font-semibold text-ink">

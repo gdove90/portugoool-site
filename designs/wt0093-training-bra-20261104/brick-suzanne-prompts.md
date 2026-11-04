@@ -1,0 +1,7 @@
+# Brick Suzanne image prompts
+
+Method: built-in image generation. Owner reference: 2beee444-f1be-4e02-b5e4-3c86caecdb4c. These are generated ecommerce mockups, not physical-sample photographs.
+
+Front and quarter-turn prompts: Ecommerce product colorway edit. In the existing Black Suzanne view, change only the WT0093 athletic top to the exact muted Brick Red color and matching trim of the approved Brick ghost. Preserve her face, high braided blonde bun, original pose, garment construction, seams, fit, fine matte stretch fabric, black GOAL shorts, white socks and shoes, gray studio, lighting and full 1024x1536 composition. Top front remains plain; shorts remain black with their white/red GA. One catalog photograph, no text or watermark. Each view was generated separately using its own matching Black view.
+
+Rear and detail prompts: Ecommerce garment colorway edit. Change only the Black Suzanne WT0093 top to the muted Brick Red and matching trim of the approved Brick rear ghost. Change its small cream GA to solid deep wine #5A2030 using the exact V1.3 reference silhouette. Keep the same proposed 1.25-inch-wide physical print size, centered on the wide middle lower-back panel below armholes and above narrow hem, with flat opaque DTF appearance. Preserve racerback seams/binding, fine matte performance knit, fit, Suzanne identity and braided bun, original rear or close-detail pose/framing, studio lighting and 1024x1536 composition. Visible shorts retain the simple phone pocket without a zipper. No new words or graphics. Each view was generated separately.

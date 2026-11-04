@@ -30,7 +30,7 @@ export interface SizeRow {
 export interface SizeChart {
   blank: string;
   /** "waist" relabels the columns for bottoms: waist flat / around, inseam. */
-  measure?: "chest" | "waist";
+  measure?: "chest" | "waist" | "bust";
   /** Manufacturer spec URL the numbers came from (internal; never rendered).
       The blank label above is customer-facing and names the fabric only:
       no supplier or garment brand appears on the site (owner, 2026-09-29). */
@@ -141,6 +141,18 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     ],
   },
   // Saved WT0216 supplier design chart, inspected 2026-11-04.
+  wt0093: {
+    blank: "Women's cropped racerback · stretch knit",
+    measure: "bust",
+    source: "https://www.tapstitch.com/custom/1484550248251678720",
+    note: "Unstretched garment measurements, not body measurements. Compare with a similar bra you own. Actual measurements may vary by 1 to 3 cm.",
+    rows: [
+      { size: "S", chestIn: 12.99, lengthIn: 12.17, sleeveIn: null },
+      { size: "M", chestIn: 13.78, lengthIn: 12.48, sleeveIn: null },
+      { size: "L", chestIn: 14.57, lengthIn: 12.80, sleeveIn: null },
+      { size: "XL", chestIn: 15.35, lengthIn: 13.11, sleeveIn: null },
+    ],
+  },
   wt0216: {
     blank: "Women's lightweight polyester crew · 130 gsm",
     source: "https://www.tapstitch.com/account/products-pool/product/1567566233338085376",
@@ -187,6 +199,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
  * meaningless.
  */
 const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
+  "80000000-0000-4000-8000-000000000025": "wt0093", // TEMPO Training Bra
   "70000000-0000-4000-8000-000000000001": "st720", // Core Badge Tee
   "70000000-0000-4000-8000-000000000002": "ind4000", // Core Hoodie · Red
   "70000000-0000-4000-8000-000000000006": "ind4000", // Core Hoodie · Club Blue (own product from 2026-09-24)
