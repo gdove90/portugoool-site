@@ -1,6 +1,6 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 12,
+  "revision": 13,
   "holder": {
     "engine": "codex",
     "session": "codex-halo-ordering-135218e7",
@@ -32,7 +32,8 @@
       "Stage 1 exact 16-file repair/price commit 423984a7f02c96bdb95b3e6f9029f70db8da1425 pushed to preserved task branch; PR #68 created; local checkout/index match remote.",
       "Stage 1 merged PR #68 as 34ff8dad1f0e1234c58615337240fdb0950a6583; production deploy 6aeac3684ca4e112c1a33e01 ready at exact commit. Live read-only Quarter Zip checkout preview returned 200, $36 + $6.95, proving manual supplier runtime/ledger/schema prerequisites.",
       "Stage 2 conditional activation committed and pushed as fe59673b0ad20df3874fa939ea305ad949d5d6db, PR #69: four colors available at $38, original imagery/presentation/order unchanged.",
-      "Activation exact-head preview 6aeac50bb158b7e81533f335 READY. PR #69 merged once as fe6e4a7b316fc0002b0220b2adae8f48132bbaff under current owner approval."
+      "Activation exact-head preview 6aeac50bb158b7e81533f335 READY. PR #69 merged once as fe6e4a7b316fc0002b0220b2adae8f48132bbaff under current owner approval.",
+      "Production activation deploy 6aeac58511a3899574f03836 READY at fe6e4a7b316fc0002b0220b2adae8f48132bbaff. All 20 live pricing previews returned $38 + $6.95, resisting submitted $0.01 prices; four colors/six photos/Add to bag live. Men listing confirmed immediately before raincoat."
     ],
     "tests": [
       "Contract validator PASS",
@@ -44,14 +45,15 @@
       "Typecheck and lint PASS; three pre-existing image warnings",
       "Production build PASS",
       "Catalog preservation PASS: only target price changed; sales still held; every other product, 24 images, catalog order, source supplier gates, shipping and presentation unchanged",
-      "Stage 2 expanded 163-variant supplier/price checks PASS; all prior 143 expectations unchanged; 978 quantity/discount payload cases PASS; 17 Halo checks/typecheck/lint/build/preservation PASS."
+      "Stage 2 expanded 163-variant supplier/price checks PASS; all prior 143 expectations unchanged; 978 quantity/discount payload cases PASS; 17 Halo checks/typecheck/lint/build/preservation PASS.",
+      "Live GOAL Stripe account retrieved the exact website-created unpaid Oat XXL Checkout Session: USD3800 item,4495 total,695 shipping, TAP-1567489152965033984-XXL, a:null, consent denied, no customer/email/payment intent. Exact Stripe line-item unit amount3800 PASS."
     ],
     "unresolved": [
       "Deploy repair with target sales still held, then verify live read-only manual-route readiness before final activation.",
       "No actual charge, customer email or supplier order performed as a test; historical order repair is outside this task.",
       "Tapstitch ordering remains manual. Landed cost/margin and physical sample verification remain unverified; owner explicitly approved $38."
     ],
-    "next_action": "Wait for exact activation production deploy; verify 20 live read-only checkout previews and desktop/mobile galleries; create one unpaid website Checkout Session for Oat XXL and retrieve its exact Stripe record without payment.",
+    "next_action": "Finish visual proof, update release review record, clean committed branch checkpoint and release lease. No further payment or supplier actions.",
     "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
@@ -64,22 +66,32 @@
       },
       {
         "reference": "halo-ordering-activation-stage2",
-        "status": "merged_production_build_pending",
+        "status": "production_ready_live_verified",
         "commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
         "pr": 69,
         "preview_deploy": "6aeac50bb158b7e81533f335",
         "intent": "Merge exact tested activation after preview passes, verify storefront and 20 live read-only pricing previews.",
-        "merge_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff"
+        "merge_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
+        "production_deploy": "6aeac58511a3899574f03836"
       },
       {
         "reference": "halo-unpaid-checkout-verification",
-        "status": "intent_not_executed",
-        "intent": "Create exactly one unpaid live hosted Checkout Session through website for Oat XXL, no email or PII; retrieve under GOAL Stripe account to verify actual totals and metadata; never pay or place supplier order. Connector has no expire operation; Session will expire automatically.",
-        "reconciliation": "Record exact returned cs_live Session ID once; on uncertain POST outcome reconcile before any retry."
+        "status": "created_and_verified_unpaid_no_charge",
+        "session_id": "cs_live_a1LkvQYsbdUVDDHHnNgRbbvhia9amPxW3WZq9MQn9rajEkLyPiY3OZn59Y",
+        "stripe_account": "acct_1UHzboBG7q8OBDEm",
+        "amount_subtotal": 3800,
+        "amount_total": 4495,
+        "shipping": 695,
+        "payment_status": "unpaid",
+        "payment_intent": null,
+        "email_supplied": false,
+        "supplier_sku_snapshot": "TAP-1567489152965033984-XXL",
+        "expires_at": "2026-11-05T05:44:25.000Z",
+        "cleanup": "No expire operation exposed by connector. Unpaid Session expires automatically. No payment, supplier order, customer email or site order created."
       }
     ]
   },
-  "updated_at": "2026-11-04T05:41:41.831Z",
+  "updated_at": "2026-11-04T05:45:51.254Z",
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
