@@ -57,7 +57,16 @@
       "designs/wt0093-training-bra-20261104/"
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-bra-suzanne-2beee444",
+    "task": "tempo-training-bra-20261104",
+    "branch": "codex/tempo-training-bra-20261104",
+    "approval": "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c: use Suzanne again for Brick if Amanda cannot be generated; finish four missing matching views and existing bra gallery package. Existing conditional website authorization preserved; retail/supplier checks still pending.",
+    "start_commit": "81f7079f4348acfe380539a7105b8e343f3a4dfb",
+    "token_hash": "94baec738d056d68bd54bf1e4da14a9a260ffeb20eebe40bd4061a2bdc7d6eaa",
+    "acquired_at": "2026-11-04T11:24:38.839079+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-bra-239154a8",
@@ -67,7 +76,7 @@
     "start_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
     "acquired_at": "2026-11-04T10:35:12.000495+00:00"
   },
-  "revision": 52,
+  "revision": 53,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:13:10.360342+00:00"
+  "updated_at": "2026-11-04T11:24:38.839096+00:00"
 }
