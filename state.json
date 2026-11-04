@@ -1,71 +1,45 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 6,
-  "holder": null,
+  "revision": 7,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-halo-ordering-135218e7",
+    "task": "halo-sweatpant-ordering-20261103",
+    "branch": "codex/halo-sweatpant-ordering-20261103",
+    "approval": "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders.",
+    "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
+    "token_hash": "dcda44c00305e2eec0296aea10cc81221ee5d0d9b2046ab984756e4fa8e10ff2",
+    "acquired_at": "2026-11-04T04:58:04.591Z"
+  },
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
-    "task_id": "halo-sweatpant-gallery-20261103",
-    "branch": "codex/halo-sweatpant-gallery-20261103",
-    "head_commit": "44433d27a6fa3bbf43fcffd260eab1ffd6a170b5",
+    "task_id": "halo-sweatpant-ordering-20261103",
+    "branch": "codex/halo-sweatpant-ordering-20261103",
+    "head_commit": "596b9e040972fedca765404d8073c0f282f998c6",
     "contract_version": "2.0",
     "approved_scope": [
-      "Owner request 9fa3a0af-1dde-4e98-be4e-6f6c16993098: publish approved 24 sweatpant images across Black/Haze Blue/Oat/Flower Gray; gallery public only; preserve purchasing hold, price, store gates, supplier mappings and all other products."
+      "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders."
     ],
     "completed": [
-      "Prepared all 24 optimized same-dimension WebP derivatives with source and output hashes.",
-      "Updated four color galleries, Oat supplier Apricot identity, Halo description and public gallery exposure.",
-      "API-compatible shared lease acquired because local Git has read-only authentication; canonical helper check confirms ownership.",
-      "26-file task commit 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5 is pushed; local worktree and index match. PR #67 and hosted preview 6aeab6925033cc7ba703114d ready.",
-      "PR #67 merged once, confirmed GitHub result merged=true, production merge SHA 596b9e040972fedca765404d8073c0f282f998c6.",
-      "LIVE VERIFIED: production deploy 6aeab77d424209d0d8a4b909, merge SHA 596b9e040972fedca765404d8073c0f282f998c6, published 2026-11-04T04:43:16.321Z.",
-      "All four color galleries verified on live site; product visible in Men and Collection; review PR #67 updated with exact results."
+      "Read shared contract/manifest; validator PASS; previous imagery release complete and shared holder null.",
+      "Verified GOAL Athletics live Stripe account and enabled live goalathletics.shop/api/stripe-webhook endpoint with required checkout/async/refund/dispute events.",
+      "Tapstitch current saved Halo designs found for all four colors, DTF, sizes S/M/L/XL/2XL, displayed cost $20.98; old pre-Halo product URL is discontinued.",
+      "Source audit reproduced null-Apliiq-ID mapping defect and concurrent order-line persistence race; fixes required before release."
     ],
     "tests": [
-      "Contract parity PASS",
-      "Typecheck PASS",
-      "Lint PASS with 3 existing image warnings",
-      "24 asset hash/decode checks PASS after replacing 2 incomplete local writes",
-      "Catalog and gallery routing PASS; all 20 color/size combinations remain unavailable; all other products and 13 protected commerce/layout files unchanged",
-      "First local build found missing brand asset from sparse inspection checkout; existing public/brand and netlify files now hydrated, build retry in progress",
-      "Production build PASS after hydrating existing baseline brand asset; no source fix required.",
-      "Remote environment values UNVERIFIED: broad environment-list request rejected; proceed using byte-identical gate/config files and no environment writes.",
-      "Netlify preview build PASS, commit 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5.",
-      "All 24 preview assets HTTP 200 with exact SHA256 matches.",
-      "Local production prerender includes all 24 assets, four colors, unannounced price and disabled Coming soon button.",
-      "26 local files exactly match committed remote blobs; working tree clean; main remains d236ca4845838b88e1d9eb233f154397288f4dbc.",
-      "PASS: all 24 live production assets HTTP 200 and exact SHA256 matches.",
-      "PASS: all 24 desktop views loaded correct images and counters; all four color switches and purchase holds verified.",
-      "PASS: mobile front/detail for every color, keyboard navigation, no horizontal overflow at actual CSS widths 391 and 1440.",
-      "PASS: task branch remains 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5, local worktree clean, all 26 files match remote commit."
+      "Existing contract parity PASS"
     ],
     "unresolved": [
-      "Sweatpant purchase setup remains unchanged and incomplete: price zero/unannounced, all colors Coming soon, no supplier SKU mappings. A separate readiness/release task is required before sales.",
-      "Remote environment values UNVERIFIED; no environment writes occurred. Production storefront and disabled sweatpant purchase controls directly verified."
+      "Verify each saved design blank/color/3-inch Halo and exact authoritative IDs.",
+      "Implement/test supplier-aware paid snapshot handling and idempotent line persistence.",
+      "Verify tested manual Tapstitch operator workflow, alerts and tracking; no direct Tapstitch ordering API assumed.",
+      "Only live Stripe account exposed; no sandbox account or paid test authorized."
     ],
-    "next_action": "Gallery task complete. Do not reopen purchases or modify suppliers/settings without completing the separate product-readiness scope.",
+    "next_action": "Verify source designs; implement exact 20 variant mappings, price $38, backend correctness and isolated integration regressions; release only when readiness conditions met.",
     "worktree_state": "clean_committed_and_pushed",
-    "external_effects": [
-      {
-        "reference": "halo-sweatpant-gallery-20261103",
-        "status": "completed_task_branch_publish",
-        "commit": "44433d27a6fa3bbf43fcffd260eab1ffd6a170b5",
-        "pr": "https://github.com/gdove90/portugoool-site/pull/67",
-        "preview_deploy": "6aeab6925033cc7ba703114d"
-      },
-      {
-        "reference": "halo-sweatpant-gallery-live-release-20261103",
-        "status": "live_verified",
-        "merge_commit": "596b9e040972fedca765404d8073c0f282f998c6",
-        "review_head": "44433d27a6fa3bbf43fcffd260eab1ffd6a170b5",
-        "pr": 67,
-        "deploy_id": "6aeab77d424209d0d8a4b909",
-        "published_at": "2026-11-04T04:43:16.321Z",
-        "url": "https://goalathletics.shop/shop/goal-athletics-core-sweatpant",
-        "purchase_state": "disabled_unchanged"
-      }
-    ]
+    "external_effects": []
   },
-  "updated_at": "2026-11-04T04:49:32.095Z",
+  "updated_at": "2026-11-04T04:58:04.591Z",
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
