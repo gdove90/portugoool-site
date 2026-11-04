@@ -2,69 +2,45 @@
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "contract_version": "2.0",
-    "task_id": "goal-women-lower-track-banner-20261104",
+    "task_id": "goal-shared-predawn-banner-20261104",
     "engine": "codex",
-    "session": "codex-women-lower-ea28ab9b",
-    "branch": "codex/women-lower-track-banner-20261104",
-    "base_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
-    "head_commit": "1bc427e4a3bed9a775d23033cbac7d321676dab7",
-    "worktree_state": "clean_committed_and_pushed",
+    "session": "codex-predawn-d8cbb24b",
+    "branch": "codex/shared-predawn-product-banner-20261104",
+    "base_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
+    "head_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
+    "worktree_state": "scoped_changes_staged_pending_publication",
     "approved_scope": [
-      "Owner requests 26cfcab2 and ea28ab9b: deploy only approved trackside lower /women photo, remove oversized GOAL ATHLETICS lettering, preserve For your next session. and leave top hero unchanged."
+      "Owner fd43b744 deploy mixed-athlete predawn banner shared by all product pages. Owner d8cbb24b requires white/red GA on mens shorts before deployment. Product names are proposals only."
     ],
     "completed": [
-      "Recovered exact previously approved bottom-only release package; reviewed current main64f8e8d and preserved completed garment-label/purchasing changes.",
-      "Shared contract validator PASS; acquired the single coordinator ref through native GitHub CAS transport; canonical helper check verified ownership.",
-      "Prepared exact five-file scoped tree 1a4217f2343cc36ff0b0c261af22e50c15e826b0 with approved desktop/mobile WebPs, lower-only markup/reference change and decision record.",
-      "Published exact verified five-file tree1a4217f2343cc36ff0b0c261af22e50c15e826b0 at1bc427e4a3bed9a775d23033cbac7d321676dab7; PR77 created. Local branch is clean and matches published tree; sparse metadata reconciled without content changes.",
-      "Netlify preview6aeb8a05068eddd216883728 READY exact1bc427e4; desktop and390pxphone previews visually verified. Both hero/lower sources loaded; phone crop selected; no horizontal overflow; headline retained and oversized wordmark absent. Existing nonproduction collection gate preserved.",
-      "PR77 merged successfully to main8483b4960add4fbc49de944be88ba415e05d8b09 with exact reviewed lower-only image tree. Existing Netlify GitCD production deployment pending.",
-      "LIVE VERIFIED: Netlify production6aeb8b1e5f5567a612167932 published2026-11-04T19:46:13.243Z at exact main8483b4960add4fbc49de944be88ba415e05d8b09. Browser desktop and390pxproduction views show approved lower image, exact headline and no oversized wordmark; unchanged top image source verified. Both CDN WebPs are HTTP200 and exact approved SHA256 bytes."
+      "Read canonical v2 contract and setup branch; parity validator PASS. Current main8483b496 and prior bottom-only release verified; prior work preserved.",
+      "Acquired repository-wide coordination through canonical helper with authenticated native GitHub CAS publication transport; ownership verified.",
+      "Prepared corrected desktop and phone editorial assets; mens shorts GA follows current Core Shorts reference, footwear unbranded, no baked headline.",
+      "Changed only shared PDP MobileImage source/alt/dimensions, one mobile mapping, two new WebPs and decision README."
     ],
     "tests": [
-      "PASS typecheck and production build. Only preexisting img warnings.",
-      "PASS runtime baseline comparisons: women top hero unchanged; all seven unrelated routes unchanged; lower headline exact; large wordmark absent; all prior mobile mappings preserved.",
-      "PASS WebP decode and approved byte comparisons; desktop1925x817/88188bytes,mobile900x957/44230bytes.",
-      "PASS git diff --check; source diff excludes all catalog,commerce,CSS and existing hero assets.",
-      "PASS hosted preview visual QA at desktop and390px; responsive asset load and nooverflow checks.",
-      "PASS production desktop and390pxmobile visual/loading/nooverflow verification; unchanged top desktop/mobile source.",
-      "PASS production desktop asset SHA2566ed5124c62dd794d5b981a804dca198046a5110315ab59517e5ec95e9e8ff86b and mobile497fbc9970a1bdb3a119a54d91ef65bca094f2001e2cd018992396f4aa6e0ae8; bothHTTP200/image-webp."
+      "PASS typecheck.",
+      "PASS production build after materializing the baseline brand asset omitted by initial sparse inspection; only preexisting img warnings.",
+      "PASS exact template comparison: only image element changed; HTML heading remains once.",
+      "PASS git diff --check, asset decode and scoped source review."
     ],
-    "unresolved": [],
-    "next_action": "Complete. Do not replay PR77 merge or production deploy. Preserve top hero; further visual changes require owner direction.",
+    "unresolved": [
+      "Hosted preview desktop/mobile visual verification and production publication pending."
+    ],
+    "next_action": "Publish exact reviewed five-file source tree to owned feature branch, create PR, verify preview desktop/mobile, then owner-authorized merge and observe GitCD production.",
     "external_effects": [
       {
-        "reference": "ea28ab9b-bottom-only-release",
+        "reference": "shared-predawn-banner-d8cbb24b",
         "status": "intent",
-        "details": "Publish exactly tree 1a4217f2343cc36ff0b0c261af22e50c15e826b0 to codex/women-lower-track-banner-20261104 and merge only reviewed lower-image diff to main for existing Netlify Git deployment. No top image, catalog, prices, purchasing, CSS, supplier, SQL or email changes."
-      },
-      {
-        "reference": "ea28ab9b-bottom-only-release",
-        "status": "source_published_preview_building",
-        "details": "PR77 source1bc427e4a3bed9a775d23033cbac7d321676dab7; Netlify preview6aeb8a05068eddd216883728 building. Main/production remains64f8e8d; no merge or production deployment yet. Do not replay source publication."
-      },
-      {
-        "reference": "ea28ab9b-bottom-only-release",
-        "status": "preview_ready_merge_intent",
-        "details": "Preview6aeb8a05068eddd216883728 READY exact source1bc427e4a3bed9a775d23033cbac7d321676dab7; desktop/phone image/headline verified. Owner-authorized exact five-file PR77 will merge to main64f8e8d for existing GitCD. No realpaid/provider/SQL/email operations."
-      },
-      {
-        "reference": "ea28ab9b-bottom-only-release",
-        "status": "merge_confirmed_production_pending",
-        "details": "PR77 merge confirmed at main8483b4960add4fbc49de944be88ba415e05d8b09. Do not replay merge or start an extra deploy. Monitor GitCD for exact commit and verify live lower image/headline and unchanged top."
-      },
-      {
-        "reference": "ea28ab9b-bottom-only-release",
-        "status": "confirmed_live",
-        "details": "PR77 merged at main8483b4960add4fbc49de944be88ba415e05d8b09; Netlify6aeb8b1e5f5567a612167932 published exactcommit. Desktop/phone lower image andheadline verified, large lettering removed, top referencesunchanged, assethashesexact. No other catalog/commerce/provider/settings/SQL/email changes."
+        "details": "Publish only corrected banner assets and shared image element/mobile mapping/docs; preserve all galleries,catalog,prices,checkout,collection pages,provider settings,SQL and emails. Existing GitCD deploys after reviewed PR merge; do not start a parallel manual deploy."
       }
     ],
     "changed_paths": [
-      "designs/women-lower-editorial-20261104/README.md",
-      "public/v84/editorial/women-editorial-track-20261104-mobile.webp",
-      "public/v84/editorial/women-editorial-track-20261104.webp",
+      "src/v84/ProductDetail.tsx",
       "src/v84/mobile-images.json",
-      "src/v84/reference-experience.js"
+      "public/v84/editorial/product-editorial-predawn-training-20261104.webp",
+      "public/v84/editorial/product-editorial-predawn-training-20261104-mobile.webp",
+      "designs/product-editorial-predawn-20261104/README.md"
     ]
   },
   "holder": {
@@ -86,7 +62,7 @@
     "start_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
     "acquired_at": "2026-11-04T19:34:10.430261+00:00"
   },
-  "revision": 77,
+  "revision": 78,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T20:37:21.589098+00:00"
+  "updated_at": "2026-11-04T20:43:20.491509+00:00"
 }
