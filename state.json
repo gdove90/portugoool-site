@@ -17,18 +17,20 @@
       "Acquired repository-wide coordination through canonical helper with authenticated native GitHub CAS publication transport; ownership verified.",
       "Prepared corrected desktop and phone editorial assets; mens shorts GA follows current Core Shorts reference, footwear unbranded, no baked headline.",
       "Changed only shared PDP MobileImage source/alt/dimensions, one mobile mapping, two new WebPs and decision README.",
-      "Published exact verified five-file tree362b5d140142cf70bafc837a6c0702da0fa2a383 at4d9566792b158c020df2d0e6453f9f24136fd703; local branch clean and matches remote. PR78 created; Netlify preview6aeb99ec6351ad1619b508c4 building."
+      "Published exact verified five-file tree362b5d140142cf70bafc837a6c0702da0fa2a383 at4d9566792b158c020df2d0e6453f9f24136fd703; local branch clean and matches remote. PR78 created; Netlify preview6aeb99ec6351ad1619b508c4 building.",
+      "Preview6aeb99ec READY exact4d956679. Desktop and390px phone asset files visually verified; both athletes, garment chest marks and mens shorts GA visible. Both hosted WebPs HTTP200 and byte-identical to reviewed files. Existing preview storegate prevents full PDP view; no gate change."
     ],
     "tests": [
       "PASS typecheck.",
       "PASS production build after materializing the baseline brand asset omitted by initial sparse inspection; only preexisting img warnings.",
       "PASS exact template comparison: only image element changed; HTML heading remains once.",
-      "PASS git diff --check, asset decode and scoped source review."
+      "PASS git diff --check, asset decode and scoped source review.",
+      "PASS hosted desktop/mobile asset decode, composition/logo checks and SHA256 equality. Full hosted PDP preview gated; production layout verification pending."
     ],
     "unresolved": [
       "Hosted preview desktop/mobile visual verification and production publication pending."
     ],
-    "next_action": "Verify hosted preview desktop and390px mobile, recheck baseline and owned lock, then merge approved PR78 and observe GitCD production.",
+    "next_action": "Merge exact approved PR78 after ownership/baseline checks; monitor existing production GitCD, verify mens/womens PDP banner and390px mobile layout. Do not change names.",
     "external_effects": [
       {
         "reference": "shared-predawn-banner-d8cbb24b",
@@ -39,6 +41,11 @@
         "reference": "shared-predawn-banner-d8cbb24b",
         "status": "source_published_preview_building",
         "details": "PR78 exact head4d956679; Netlify preview6aeb99ec building. Main unchanged8483b496. Do not replay source publication."
+      },
+      {
+        "reference": "shared-predawn-banner-d8cbb24b",
+        "status": "preview_assets_verified_merge_intent",
+        "details": "Owner-authorized merge of exact five-file PR78 head4d956679 to main8483b496 for existing GitCD. Preview store gate preserved; immediately verify actual production PDP layout desktop/mobile after deploy."
       }
     ],
     "changed_paths": [
@@ -68,7 +75,7 @@
     "start_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
     "acquired_at": "2026-11-04T19:34:10.430261+00:00"
   },
-  "revision": 79,
+  "revision": 80,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T20:48:31.339627+00:00"
+  "updated_at": "2026-11-04T20:51:27.968403+00:00"
 }
