@@ -13,16 +13,24 @@
     "base_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
     "branch": "codex/approved-editorial-imagery-98740673",
     "changed_paths": [
-      "src/v84/reference-experience.js",
+      "public/goal-imagery-qa.html",
+      "public/v84/editorial/home-men-jeff-hoodie-20261104-mobile.webp",
+      "public/v84/editorial/home-men-jeff-hoodie-20261104.webp",
+      "public/v84/editorial/men-editorial-quarter-zip-20261104-mobile.webp",
+      "public/v84/editorial/men-editorial-quarter-zip-20261104.webp",
+      "public/v84/editorial/men-hero-suzuki-concrete-20261104-mobile.webp",
+      "public/v84/editorial/men-hero-suzuki-concrete-20261104.webp",
+      "src/lib/products.ts",
       "src/v84/MobileImage.tsx",
       "src/v84/mobile-images.json",
-      "src/v84/style.css",
-      "public/v84/editorial/*"
+      "src/v84/reference-experience.js",
+      "src/v84/style.css"
     ],
     "completed": [
       "Acquired shared coordinator revision15 after Halo session explicitly released; normal CLI Git writes unavailable, authenticated GitHub API transport publishes same shared ref with expected-head guard; official lease validation preserved.",
       "Inherited latest approved production fe6e4a7b316fc0002b0220b2adae8f48132bbaff; three image swaps implemented with six 450238-byte WebP variants.",
-      "Read current live sweatpant product at Black/$38 and official Vuori, lululemon, Alphalete product wording plus current UB0050 supplier facts: 87/13 blend, 360gsm/thick, loose tapered leg, elastic waist, straight hem. New description contains no fiber names or unsupported stretch/wicking claims."
+      "Read current live sweatpant product at Black/$38 and official Vuori, lululemon, Alphalete product wording plus current UB0050 supplier facts: 87/13 blend, 360gsm/thick, loose tapered leg, elastic waist, straight hem. New description contains no fiber names or unsupported stretch/wicking claims.",
+      "Applied owner-requested Core Sweatpant description exactly; no material names, percentages or slogan in short description. All other catalog bytes identical to approved production baseline."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -31,10 +39,31 @@
         "branch": "codex/approved-editorial-imagery-98740673",
         "reference": "goal-editorial-bootstrap",
         "status": "baseline_branch_only"
+      },
+      {
+        "changed_paths": [
+          "public/goal-imagery-qa.html",
+          "public/v84/editorial/home-men-jeff-hoodie-20261104-mobile.webp",
+          "public/v84/editorial/home-men-jeff-hoodie-20261104.webp",
+          "public/v84/editorial/men-editorial-quarter-zip-20261104-mobile.webp",
+          "public/v84/editorial/men-editorial-quarter-zip-20261104.webp",
+          "public/v84/editorial/men-hero-suzuki-concrete-20261104-mobile.webp",
+          "public/v84/editorial/men-hero-suzuki-concrete-20261104.webp",
+          "src/lib/products.ts",
+          "src/v84/MobileImage.tsx",
+          "src/v84/mobile-images.json",
+          "src/v84/reference-experience.js",
+          "src/v84/style.css"
+        ],
+        "expected_parent": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
+        "proposed_tree": "2fa607b2693a64a167943b3fca9d05779f75af9d",
+        "qa_fixture": "Temporary responsive frame harness in preview; remove before production.",
+        "reference": "goal-editorial-98740673-preview",
+        "status": "intent_not_executed"
       }
     ],
     "head_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
-    "next_action": "Apply researched sweatpant description; verify only this catalog field changes; build and review exact image/copy release, deploy under current owner authorization.",
+    "next_action": "Publish exact staged preview commit and PR, verify desktop/390px/768px imagery and product wording; remove QA-only fixture, review exact final diff and deploy under owner approval.",
     "rollback": "Revert only approved imagery and Core Sweatpant description diff; retain prior Halo release and all paid data.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-goal-editorial-98740673",
@@ -43,13 +72,15 @@
       "Eight route markup comparison PASS; all copy/layout/controls preserved, six unaffected routes byte-identical.",
       "Three distinct images and 700px-only portrait routing PASS; prior mappings unchanged.",
       "Production build PASS after hydrating missing tracked brand asset in sparse checkout. Three pre-existing img lint warnings.",
-      "Six payment preservation checks PASS against current live baseline fe6e4a7b; default historical 7659237 pin fails because it predates approved Tapstitch backend release, no assertions changed."
+      "Six payment preservation checks PASS against current live baseline fe6e4a7b; default historical 7659237 pin fails because it predates approved Tapstitch backend release, no assertions changed.",
+      "Final image+description production build PASS; typecheck/lint PASS with same three image warnings; git diff --check PASS.",
+      "Exact products.ts baseline replacement check PASS: only Core Sweatpant description changed, including all four colors/20 variants, $38, galleries and supplier references preserved."
     ],
     "unresolved": [
       "Apply and verify the newly authorized Core Sweatpant description only; recheck exact product-property preservation.",
       "Preview/browser QA and publication remain pending."
     ],
-    "worktree_state": "scoped_uncommitted_imagery_changes"
+    "worktree_state": "scoped_staged_image_and_description_changes"
   },
   "holder": {
     "acquired_at": "2026-11-04T05:48:38.014329+00:00",
@@ -70,7 +101,7 @@
     "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
     "task": "halo-sweatpant-ordering-20261103"
   },
-  "revision": 16,
+  "revision": 17,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T05:54:54.513125+00:00"
+  "updated_at": "2026-11-04T05:58:59.320648+00:00"
 }
