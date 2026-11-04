@@ -1,6 +1,6 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 11,
+  "revision": 12,
   "holder": {
     "engine": "codex",
     "session": "codex-halo-ordering-135218e7",
@@ -31,7 +31,8 @@
       "Documented operator workflow, missed-alert fallback, Stripe payment metadata supplier-order reference, duplicate prevention and tracking in docs/catalog/core-sweatpant-tapstitch-fulfillment.md.",
       "Stage 1 exact 16-file repair/price commit 423984a7f02c96bdb95b3e6f9029f70db8da1425 pushed to preserved task branch; PR #68 created; local checkout/index match remote.",
       "Stage 1 merged PR #68 as 34ff8dad1f0e1234c58615337240fdb0950a6583; production deploy 6aeac3684ca4e112c1a33e01 ready at exact commit. Live read-only Quarter Zip checkout preview returned 200, $36 + $6.95, proving manual supplier runtime/ledger/schema prerequisites.",
-      "Stage 2 conditional activation committed and pushed as fe59673b0ad20df3874fa939ea305ad949d5d6db, PR #69: four colors available at $38, original imagery/presentation/order unchanged."
+      "Stage 2 conditional activation committed and pushed as fe59673b0ad20df3874fa939ea305ad949d5d6db, PR #69: four colors available at $38, original imagery/presentation/order unchanged.",
+      "Activation exact-head preview 6aeac50bb158b7e81533f335 READY. PR #69 merged once as fe6e4a7b316fc0002b0220b2adae8f48132bbaff under current owner approval."
     ],
     "tests": [
       "Contract validator PASS",
@@ -50,7 +51,7 @@
       "No actual charge, customer email or supplier order performed as a test; historical order repair is outside this task.",
       "Tapstitch ordering remains manual. Landed cost/margin and physical sample verification remain unverified; owner explicitly approved $38."
     ],
-    "next_action": "Wait for PR #69 exact-head preview, merge under owner release authorization, live pricing/UI and one unpaid hosted Checkout verification.",
+    "next_action": "Wait for exact activation production deploy; verify 20 live read-only checkout previews and desktop/mobile galleries; create one unpaid website Checkout Session for Oat XXL and retrieve its exact Stripe record without payment.",
     "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
@@ -63,11 +64,12 @@
       },
       {
         "reference": "halo-ordering-activation-stage2",
-        "status": "task_commit_pushed_preview_pending",
+        "status": "merged_production_build_pending",
         "commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
         "pr": 69,
         "preview_deploy": "6aeac50bb158b7e81533f335",
-        "intent": "Merge exact tested activation after preview passes, verify storefront and 20 live read-only pricing previews."
+        "intent": "Merge exact tested activation after preview passes, verify storefront and 20 live read-only pricing previews.",
+        "merge_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff"
       },
       {
         "reference": "halo-unpaid-checkout-verification",
@@ -77,7 +79,7 @@
       }
     ]
   },
-  "updated_at": "2026-11-04T05:39:55.722Z",
+  "updated_at": "2026-11-04T05:41:41.831Z",
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
