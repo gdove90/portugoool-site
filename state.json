@@ -2,77 +2,44 @@
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "contract_version": "2.0",
-    "task_id": "tempo-training-gallery-20261104",
+    "task_id": "tempo-training-bra-20261104",
     "engine": "codex",
-    "session": "codex-tempo-training-be9312aa",
-    "branch": "codex/tempo-training-tee-f07faa75",
-    "base_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
-    "head_commit": "3a5fd70f89fbd8e945fff55ac34ac2555dc99f90",
-    "worktree_state": "clean_committed_and_pushed",
+    "session": "codex-bra-239154a8",
+    "branch": "codex/tempo-training-bra-20261104",
+    "base_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
+    "head_commit": "efd76c24cbaec3916ae4b0c8a5a3afd885fc379e",
+    "worktree_state": "clean_local_commit_not_pushed",
     "approved_scope": [
-      "Owner be9312aa-5efb-4e06-b575-a7b89958f3f6: upload approved Blue Suzanne, Purple Amanda, White Molly 15-image galleries to website; continue f07faa75 publication scope, S-XL, existing $34 and purchasing hold."
+      "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: WT0093 specification checks, four color galleries, Suzanne Black new hairstyle, front ghost first/back ghost last, website preparation preserving holds."
     ],
     "completed": [
-      "Completed and owner-approved five matching views for Lake Blue Suzanne, Light Purple Amanda and White Molly.",
-      "Prepared 15 original-framing 1024x1536 WebP assets and exact SHA256 manifest.",
-      "Updated only WT0216 catalog, three colors, S-XL, saved-design mapping, supplier size chart and women public inclusion; existing $34 and purchasing hold preserved.",
-      "Uploaded exact 15 approved WebP assets and product data; PR #74 opened at 3a5fd70f89fbd8e945fff55ac34ac2555dc99f90",
-      "PR #74 merged by owner-authorized publication at main 7ea51b999cdcec386b5d5cf0ce579706ffaadc0b.",
-      "LIVE VERIFIED: production deploy 6aeaf48013f939a44a9f9aa1 READY, commit 7ea51b999cdcec386b5d5cf0ce579706ffaadc0b, published 2026-11-04T09:03:27Z.",
-      "All 15 live asset SHA256 hashes match approved uploads; product and women pages HTTP200.",
-      "Desktop: checked every view in all three galleries, including deferred image loads. Mobile390px: verified color swaps/model views, no horizontal overflow and disabled Coming Soon button.",
-      "Women listing verified: TEMPO Core Training Tee followed by TEMPO Training Tee. Captured live storefront proof."
+      "Prepared 20 generated mockup WebP images at original 1024x1536: Black Suzanne, Blue Molly and Grey Jessica six views each; Brick front/back ghosts.",
+      "Prepared four exact V1.3 path-color variants in SVG and transparent 1200x1085 PNG.",
+      "Verified middle print frame 3075x409 at300DPI,10.3x1.4in; actual WT0093 S-XL/89poly11spandex230gsm.",
+      "Confirmed Flower Gray heather body/black hem, Brick Red label and supplier flat size chart.",
+      "Corrected invented zip details in coordinating shorts rear views.",
+      "Removed temporary white and Halo editor test layers; no supplier save/order performed."
     ],
     "tests": [
-      "PASS 15-image gallery and full other-product preservation checks",
-      "PASS real isolated checkout refuses every color without provider calls",
-      "PASS typecheck",
-      "PASS lint (three pre-existing img warnings)",
-      "PASS optimized production build",
-      "PASS all 15 WebP images decode at 1024x1536",
-      "PASS Netlify deploy preview ready at 6aeaf3bebcf545cda185e635; exact 3a5fd70f revision; redirect/header checks successful.",
-      "Preview UI intentionally shows Collection in development under existing immutable preview guard; no gate settings changed. Production UI verification will follow deployment.",
-      "PASS production exact merge/deploy identity",
-      "PASS all 15 live image hashes and desktop gallery views",
-      "PASS mobile three-color gallery navigation and no overflow",
-      "PASS live $34/S-XL and Coming Soon hold",
-      "PASS women listing order"
+      "PASS 20 unique images decode at1024x1536 and SHA256/order validation.",
+      "PASS front ghost first and back ghost last in every prepared gallery; explicit missing Brick views.",
+      "PASS four artwork PNGs RGBA/transparency/resolution/size checks.",
+      "PASS git diff --check; 30 asset/document-only files.",
+      "Application tests N/A: no application/catalog/commerce files changed."
     ],
     "unresolved": [
-      "White supplier background-detection warning unresolved; purchasing held.",
-      "STORE_OPEN/APLIIQ_SUBMIT_ENABLED values unverified; their code/settings untouched."
+      "Amanda Brick four model/detail views rejected by image tool; no model substitution.",
+      "No saved supplier decorated designs; direct file upload rejected and browser policy blocked Library-download route. Need approved PNGs uploaded in Tapstitch.",
+      "Retail price and final product name pending.",
+      "Smallest-size scaling/detail-gap quality/sample and manual Tapstitch fulfillment readiness unverified.",
+      "No production deployment or catalog publication."
     ],
-    "next_action": "Completed. Keep purchasing held pending White supplier background warning, production print/sample and separately approved fulfillment readiness. No further image work needed.",
+    "next_action": "Upload exact 30-file asset-only tree6bc9646fb24228b55062d2dc2297cd193ae50dca to same task branch, create draft PR. Preserve all live catalog, prices and gates. Record new exact connector commit then checkpoint/release.",
     "external_effects": [
       {
-        "reference": "be9312aa-gallery-publication",
+        "reference": "239154a8-draft-assets-publication",
         "status": "intent",
-        "details": "Owner authorized publishing approved 15 images for TEMPO Training Tee. No deploy performed yet."
-      },
-      {
-        "reference": "be9312aa-git-publication",
-        "status": "intent",
-        "details": "Publish exact scoped 22-file tree 71bb03fb8a3ea90ca2cd2af6ebe8c19181d2326f to existing task branch and open PR for deploy preview; no live deployment yet."
-      },
-      {
-        "reference": "be9312aa-git-publication",
-        "status": "confirmed",
-        "details": "Task branch at 3a5fd70f89fbd8e945fff55ac34ac2555dc99f90, PR https://github.com/gdove90/portugoool-site/pull/74. Production still unchanged."
-      },
-      {
-        "reference": "be9312aa-merge-pr74",
-        "status": "intent",
-        "details": "Merge exact approved 22-file PR #74 head 3a5fd70f89fbd8e945fff55ac34ac2555dc99f90 into main 522500ddc7aa94e9990734564a3fd309a682e868; expected Netlify Git CD production deploy. No SQL, supplier, environment or payment writes."
-      },
-      {
-        "reference": "be9312aa-merge-pr74",
-        "status": "confirmed",
-        "details": "Merge returned merged=true, main 7ea51b999cdcec386b5d5cf0ce579706ffaadc0b; await production deploy before reporting live."
-      },
-      {
-        "reference": "be9312aa-live-release",
-        "status": "confirmed",
-        "details": "https://goalathletics.shop/shop/tempo-training-tee; Netlify 6aeaf48013f939a44a9f9aa1 READY at exact 7ea51b999cdcec386b5d5cf0ce579706ffaadc0b; 15 live images verified. No supplier, SQL, environment, payment or email effects."
+        "details": "Publish only designs/wt0093-training-bra-20261104 assets/specification to isolated task branch, open draft PR. No main merge, production deploy, supplier save, SQL, payment or email changes."
       }
     ]
   },
@@ -95,7 +62,7 @@
     "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "acquired_at": "2026-11-04T08:50:54.264103+00:00"
   },
-  "revision": 50,
+  "revision": 51,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T10:35:12.000514+00:00"
+  "updated_at": "2026-11-04T11:04:59.884646+00:00"
 }
