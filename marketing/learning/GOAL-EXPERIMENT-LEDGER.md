@@ -28,3 +28,15 @@ RESULT: DATA NOT AVAILABLE (not yet approved or published)
 LESSON: none yet
 CONFIDENCE: LOW
 FUTURE ACTION: owner decides whether to film and publish; Performance Intelligence captures the 24-hour, 72-hour and 7-day readings if it runs.
+
+ID: EXP-002
+STATUS: PROPOSED
+PROPOSED BY / DATE: Performance & Consumer Intelligence, 2026-11-04 (report 01 of that date)
+HYPOTHESIS: the 2026-11-02 Story reached 92 accounts on 38 followers because of a discoverability element (hashtag, location or mention sticker, or a share), not because of the product or the follower base.
+VARIABLE CHANGED: presence of the identified element on one Story, after the owner records what the 11-02 Story carried (not visible through Metricool).
+WHAT STAYED CONSTANT: product, plain image Story, caption rules, standing-grid slot.
+PRIMARY METRIC: Story reach at 24 hours, with forward taps, exits and replies secondary. Control: plain Stories to date (reach 15 to 18). Winning condition: reach 40 or more with the element against about 15 to 20 without.
+RESULT: DATA NOT AVAILABLE (not yet approved or run)
+LESSON: none yet
+CONFIDENCE: LOW
+FUTURE ACTION: owner reads the 11-02 15:00 Story in the app and decides whether to repeat the element; Performance Intelligence reads the result.
