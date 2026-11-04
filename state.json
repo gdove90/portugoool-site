@@ -2,118 +2,42 @@
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "contract_version": "2.0",
-    "task_id": "tempo-training-bra-20261104",
+    "task_id": "goal-labels-womens-purchase-20261104",
     "engine": "codex",
-    "session": "codex-bra-publish-b82ef6bf",
-    "branch": "codex/tempo-training-bra-20261104",
-    "base_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
-    "head_commit": "06d671521ba7cb90457ae576b9c775a79a5a78d0",
+    "session": "codex-labels-purchase-683b2d58",
+    "branch": "codex/goal-labels-womens-purchase-20261104",
+    "base_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
+    "head_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
     "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
-      "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: WT0093 specification checks, four color galleries, Suzanne Black new hairstyle, front ghost first/back ghost last, website preparation preserving holds.",
-      "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c permits Suzanne again for Brick; finish four matching views and gallery draft.",
-      "Owner 098690e7-d5c1-42a4-8271-ce6a9c1d8f39 approves USD18 retail for all four WT0093 colorways and all S-XL sizes.",
-      "Owner b82ef6bf-1ced-42e8-aa96-7e6df3f4fb8a authorizes publishing the current WT0093 product draft now at USD18 with all four six-view galleries; preserve Coming Soon while supplier verification remains pending.",
-      "Owner ae400829-264b-4851-ba99-ea6fae1b8d4a reiterates: deploy sports bra to the website."
+      "7af95634: ensure GOAL tag or interior print on men/women. cfa89dcf: Tapstitch men/women first, then Apliiq women only.",
+      "683b2d58: make currently online women's products purchasable.53f0ae83 confirms supplied PNG is exact tag. Current prices/artwork/images preserved."
     ],
     "completed": [
-      "Prepared 20 generated mockup WebP images at original 1024x1536: Black Suzanne, Blue Molly and Grey Jessica six views each; Brick front/back ghosts.",
-      "Prepared four exact V1.3 path-color variants in SVG and transparent 1200x1085 PNG.",
-      "Verified middle print frame 3075x409 at300DPI,10.3x1.4in; actual WT0093 S-XL/89poly11spandex230gsm.",
-      "Confirmed Flower Gray heather body/black hem, Brick Red label and supplier flat size chart.",
-      "Corrected invented zip details in coordinating shorts rear views.",
-      "Removed temporary white and Halo editor test layers; no supplier save/order performed.",
-      "Published exact30-file tree6bc9646fb24228b55062d2dc2297cd193ae50dca at task head81f7079f4348acfe380539a7105b8e343f3a4dfb; draft PR75 https://github.com/gdove90/portugoool-site/pull/75.",
-      "Preserved local source commit efd76c24cbaec3916ae4b0c8a5a3afd885fc379e on local backup branch after verifying identical tree to connector commit.",
-      "Updated owner research decision Page seq5 with six-view exception, model assignments, verified results and remaining blockers.",
-      "Generated four Brick Suzanne views successfully, preserving high braided bun, source poses/framing and rear Wine GA. All four colors now six images.",
-      "Published the seven-file Brick Suzanne completion at bfbcf31b804b38c0240d53df90e32e05ec802793 in existing draft PR75; exact tree4c8d8bba76d6a4b8a7e9b7579741230c4ec2924e verified.",
-      "Updated readiness manifest, PR description and owner decision Page seq6: all four colorways now six images, Suzanne approved for Brick; no pending Amanda imagery requirement.",
-      "Recorded owner-approved USD18 /1800 cents for all four WT0093 colorways and S/M/L/XL in readiness manifest and README. Published two-file change to draft PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1; updated PR and owner Page seq7.",
-      "Integrated new TEMPO Training Bra row/UUID25 at USD18 S-XL;24 identical public images, four held variants, public women order after tees, Sports bras filter and supplier bust/length chart.",
-      "Published37-file integration on same task branch at06d671521ba7cb90457ae576b9c775a79a5a78d0, exact tree d3753d3c17f0552cbad4905ccf5b02f3092d0371. PR75 marked ready with exact public-gallery/ComingSoon scope. Preview6aeb1d720e8e03144427be18 building.",
-      "PR75 merged at7e159131932aa59317507986f1c3c54b4d5cf50f. Production Netlify6aeb1e366b4d3fabd5b7bb1a building. Exact reviewed task head06d6715 retained clean/pushed.",
-      "LIVE VERIFIED Netlify production6aeb1e366b4d3fabd5b7bb1a published exact main7e159131932aa59317507986f1c3c54b4d5cf50f at2026-11-04T12:01:38.677Z. /shop/tempo-training-bra showsUSD18, all4colors, S-XL andsiximages. /women shows3pieces/Sports bras filter. OwnerPage updated to live status."
+      "Verified exact attached tag:1254x1254 transparentRGBA black V1.3 GA/GOALATHLETICS vertical lockup; matches existing approved Tapstitch4x4cm My clothing label at$0.99.",
+      "Audited14savedTapstitch rows across2pages. All showAddBranding; WT0216LakeBlue and WT0092Black dialogs explicitly select do not apply clothing label.",
+      "13current mapped Tapstitch designs: menMT0063three+UB0050four, womenWT0092three+WT0216three. Extra WT0216design1564325002000687104 is unmapped older draft.",
+      "No WT0093 bra appears in savedDesigns. New unsaved draft productId1567634502975635456 opened for production/label eligibility inspection; no SaveDesign.",
+      "Apliiq women's12currentTEMPO rows observed. CoreteeBlack expanded showsfrontprintonly. Current label selection needs customizer inspection; Apliiq blocked by another Chrome extension UI. Asked owner to close that panel; no Apliiq men inspected/changed."
     ],
     "tests": [
-      "PASS 20 unique images decode at1024x1536 and SHA256/order validation.",
-      "PASS front ghost first and back ghost last in every prepared gallery; explicit missing Brick views.",
-      "PASS four artwork PNGs RGBA/transparency/resolution/size checks.",
-      "PASS git diff --check; 30 asset/document-only files.",
-      "Application tests N/A: no application/catalog/commerce files changed.",
-      "PASS all30 GitHub blob hashes and exact tree identity.",
-      "PASS final20-image dimension/order/SHA256 validation after shorts zipper corrections.",
-      "PASS clean task worktree at exact remote head; no catalog/application changes.",
-      "PASS all24 unique1024x1536 images, complete six-view order and SHA256 validation; original20 images unchanged.",
-      "PASS staged seven-file scoped diff and whitespace check.",
-      "PASS all seven new/changed GitHub blob hashes, exact tree, clean checkout and task remote commit verification.",
-      "Application/commerce tests N/A: only images and design documents changed.",
-      "PASS scoped two-document diff, JSON price/currency/scope assertions, unchanged variant/image objects and purchasing state; exact local/GitHub tree b43d6d6166d052bcdf9569cd6f6143e42746ad58; clean task checkout at pushed head.",
-      "PASS production build and typecheck; PASS24PIL decodes/hashes; PASS new bra integration plus existing training tee; PASS17 Halo integration checks. Legacy payment-preservation command FAIL at historical7659237 pin predating already-deployed Tapstitch changes; no test weakened. Bra test separately verifies every protected payment/fulfillment file byte-identical to current main7ea51b9 and rejects all16 bra variants before Stripe.",
-      "PASS Netlify preview build exact06d6715; all24 preview assets HTTP200/exactSHA256. Preview UI intentionally hides all products under existing MIGRATION_PREVIEW, unchanged. Production-mode generated HTML confirms$18/six thumbnails/ComingSoon; live browser verification pending.",
-      "PASS24 production assets HTTP200 and exactSHA256; product/women/sitemapHTTP200. Browser passed all24gallery selections, fourcolors/heldbuttons, supplierbustchart, womenSportsbrasfilter, mobilegallerynextcontrol/nohorizontaloverflow. Viewportreset; live tab marked deliverable. Saved screenshot scratchonly; no Library screenshot save requested."
+      "PASS shared-contract parity validator on verifiedPR66review source. No tracked modifications yet."
     ],
     "unresolved": [
-      "No saved supplier decorated designs; direct file upload rejected and browser policy blocked Library-download route. Need approved PNGs uploaded in Tapstitch.",
-      "Smallest-size scaling/detail-gap quality/sample and manual Tapstitch fulfillment readiness unverified.",
-      "Publication is gallery-only; bra and existing women's purchasing remain Coming Soon. ExactBlue supplier label pending. No supplier save/SQL/payment/email/store-gate changes. Environment-wide secret read was rejected; no settings were read or modified, and no workaround was attempted."
+      "Apliiq browser blocker requires owner dismissing another extension panel; do not bypass.",
+      "Tapstitch approved tag not bound to current designs.",
+      "WT0093savedcolored designs missing; some source artwork uploads remain unavailable, no invented references.",
+      "All3onlinewomen currentlyComingSoon; purchasing can release only verified supplier variants with matching branding."
     ],
-    "next_action": "Bra gallery is live and verified atUSD18 with all24approved images. Do not replay merge/deploy. Supplier decorated-design/print/size/sample and manual fulfillment verification is next before any separately authorized purchasing release. Continue existing task branch if needed.",
+    "next_action": "Bind existing exact approved label to13currentTapstitch designs and confirmpersistentselection. InspectWT0093label eligibility/artwork; finishreadyintake. ContinueApliiqwomen only afterowner clearsChromeextensionpanel. Enable verifiedonlinewomen prices/variants throughreviewedrelease, preserveothers.",
     "external_effects": [
       {
-        "reference": "239154a8-draft-assets-publication",
+        "reference": "labels-womens-purchase-683b2d58",
         "status": "intent",
-        "details": "Publish only designs/wt0093-training-bra-20261104 assets/specification to isolated task branch, open draft PR. No main merge, production deploy, supplier save, SQL, payment or email changes."
-      },
-      {
-        "reference": "239154a8-draft-assets-publication",
-        "status": "confirmed",
-        "details": "30 assets/docs only in draft PR75, task81f7079f4348acfe380539a7105b8e343f3a4dfb, exact verified tree6bc9646fb24228b55062d2dc2297cd193ae50dca. No main merge, catalog release or production deploy. No supplier save/order, SQL, payment, gates or email changes."
-      },
-      {
-        "reference": "2beee444-brick-suzanne-publication",
-        "status": "intent",
-        "details": "Publish four newly generated Brick Suzanne WebPs plus README, readiness manifest and prompt set to same task branch/PR75. No production catalog, price, gates or deploy effects."
-      },
-      {
-        "reference": "2beee444-brick-suzanne-publication",
-        "status": "confirmed",
-        "details": "Four Brick Suzanne views and three scoped documents published to existing draft PR75 at bfbcf31b804b38c0240d53df90e32e05ec802793. All24 gallery images complete. No production catalog, price, gates, supplier, SQL, payment, email, main merge or deployment effects."
-      },
-      {
-        "reference": "098690e7-bra-retail18",
-        "status": "intent",
-        "details": "Publish approved USD18 retail in readiness manifest, README, PR75 and owner decision Page; no live catalog, provider pricing, supplier save, gates or deployment changes."
-      },
-      {
-        "reference": "098690e7-bra-retail18",
-        "status": "confirmed",
-        "details": "Draft manifest/README published in PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1, PR body updated, owner decision Page seq7. USD18 retail recorded for all colors/sizes. No production pricing, payment, supplier, gates or deployment changes."
-      },
-      {
-        "reference": "b82ef6bf-wt0093-website-publication",
-        "status": "intent",
-        "details": "Publish scoped source/assets on existing PR75, verify preview, merge approved listing to main and verify Netlify production at goalathletics.shop. New product visible at /shop/tempo-training-bra with USD18/all24 images, availableForSale false; no supplier saves, provider SKU fabrication, payment, SQL, gate or email changes."
-      },
-      {
-        "reference": "b82ef6bf-wt0093-website-publication",
-        "status": "source_and_preview_confirmed",
-        "details": "Source integration at06d6715 and PR75 ready; Netlify preview6aeb1d720e8e03144427be18 building exact commit. Main and production unchanged so far."
-      },
-      {
-        "reference": "b82ef6bf-wt0093-website-publication",
-        "status": "merge_confirmed_deploy_building",
-        "details": "GitHub mergedPR75 exactly at7e159131932aa59317507986f1c3c54b4d5cf50f; Netlify production deploy6aeb1e366b4d3fabd5b7bb1a building. Do not replay merge/deploy; poll existing deploy and verify live."
-      },
-      {
-        "reference": "b82ef6bf-wt0093-website-publication",
-        "status": "confirmed_live",
-        "details": "PR75 merged main7e159131932aa59317507986f1c3c54b4d5cf50f; production6aeb1e366b4d3fabd5b7bb1a ready/published. All24images exactSHA256; publicproductUSD18/4colors/S-XL/sixviews; women3pieces/filter and mobile/browserverified. PurchasingComingSoon; no providerpayment/SKU/settings/SQL/email changes. OwnerPage seq8 updated."
+        "details": "Apply existing approved matching Tapstitch$0.99label to13currentdesigns, compatiblebra drafts when saved; inspect/apply exact existing Apliiqtag on women's12designs only when browserclear; no supplierorder/payment/newsubscription. Saveverifiedintake, enableonlyreadycurrentlyonlinewomen at existingprices and deployscopedrelease. No historicalorders, unrelatedproducts/artwork/photos orApliiqmen changes."
       }
     ],
-    "changed_paths": [
-      "designs/wt0093-training-bra-20261104/"
-    ]
+    "changed_paths": []
   },
   "holder": {
     "engine": "codex",
@@ -134,7 +58,7 @@
     "start_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
     "acquired_at": "2026-11-04T11:47:53.152978+00:00"
   },
-  "revision": 64,
+  "revision": 65,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T12:18:15.662220+00:00"
+  "updated_at": "2026-11-04T12:22:11.831724+00:00"
 }
