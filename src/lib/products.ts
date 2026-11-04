@@ -38,27 +38,143 @@ const PERF_CARE = "Machine wash cold. Tumble dry low. Do not iron the print.";
 
 const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
 
+// Owner-approved V1.3 Halo imagery, November 3, 2026.
+// The gallery is public; ordering stays on hold pending price and fulfillment readiness.
+// Oat is the customer-facing name for supplier Apricot.
 const CORE_SWEATPANT_VARIANTS = [
-  { name: "Black", key: "black", hex: "#1B1B1B", ink: "white" },
-  { name: "Haze Blue", key: "haze-blue", hex: "#526D80", ink: "white" },
-  { name: "Apricot", key: "apricot", hex: "#E9DFC1", ink: "black" },
-].map(({ name, key, hex, ink }) => ({
-  name,
-  supplierColor: name,
-  hex,
-  skuFragment: "",
-  comingSoon: true,
-  images: [
-    {
-      src: `/products/core-sweatpant/goal-core-sweatpant-${key}-catalog-product-front-20261031.webp`,
-      alt: `The Core Sweatpant in ${name}, ghost front view with ${ink} GA monogram and three-line slogan with a red period on opposite upper thighs`,
-    },
-    {
-      src: `/products/core-sweatpant/goal-core-sweatpant-${key}-catalog-product-back-20261031.webp`,
-      alt: `The Core Sweatpant in ${name}, ghost back view with a blank back and open straight hems`,
-    },
-  ],
-}));
+  {
+    "name": "Black",
+    "supplierColor": "Black",
+    "hex": "#1B1B1B",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-product-front-20261103-c4d8ebf0.webp",
+        "alt": "The Core Sweatpant in Black, ghost front view with the cream V1.3 Halo on the left thigh and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-product-back-20261103-5da73a98.webp",
+        "alt": "The Core Sweatpant in Black, ghost back view with one right patch pocket and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-model-front-20261103-80585255.webp",
+        "alt": "Jeff shirtless facing forward in the Black Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-model-quarter-20261103-4481043e.webp",
+        "alt": "Jeff shirtless at a quarter turn in the Black Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-model-back-20261103-517f7bab.webp",
+        "alt": "Jeff shirtless with his back to the camera in the Black Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-detail-20261103-3f5e4c49.webp",
+        "alt": "Close-up of the cream V1.3 Halo print and Black Core Sweatpant fabric"
+      }
+    ]
+  },
+  {
+    "name": "Haze Blue",
+    "supplierColor": "Haze Blue",
+    "hex": "#526D80",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-product-front-20261103-47659119.webp",
+        "alt": "The Core Sweatpant in Haze Blue, ghost front view with the cream V1.3 Halo on the left thigh and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-product-back-20261103-9087aff3.webp",
+        "alt": "The Core Sweatpant in Haze Blue, ghost back view with one right patch pocket and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-model-front-20261103-7fef6268.webp",
+        "alt": "Kai shirtless facing forward in the Haze Blue Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-model-quarter-20261103-00d31da8.webp",
+        "alt": "Kai shirtless at a quarter turn in the Haze Blue Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-model-back-20261103-e8f1d0ca.webp",
+        "alt": "Kai shirtless with his back to the camera in the Haze Blue Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-detail-20261103-b3d8741d.webp",
+        "alt": "Close-up of the cream V1.3 Halo print and Haze Blue Core Sweatpant fabric"
+      }
+    ]
+  },
+  {
+    "name": "Oat",
+    "supplierColor": "Apricot",
+    "hex": "#E9DFC1",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-product-front-20261103-6302283c.webp",
+        "alt": "The Core Sweatpant in Oat, ghost front view with the black V1.3 Halo on the left thigh and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-product-back-20261103-415ea2af.webp",
+        "alt": "The Core Sweatpant in Oat, ghost back view with one right patch pocket and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-model-front-20261103-dc98d838.webp",
+        "alt": "Suzuki shirtless facing forward in the Oat Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-model-quarter-20261103-a551ca39.webp",
+        "alt": "Suzuki shirtless at a quarter turn in the Oat Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-model-back-20261103-ac5a32aa.webp",
+        "alt": "Suzuki shirtless with his back to the camera in the Oat Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-detail-20261103-30655b6f.webp",
+        "alt": "Close-up of the black V1.3 Halo print and Oat Core Sweatpant fabric"
+      }
+    ]
+  },
+  {
+    "name": "Flower Gray",
+    "supplierColor": "Flower Gray",
+    "hex": "#A5A6A4",
+    "skuFragment": "",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-product-front-20261103-4d4ecc31.webp",
+        "alt": "The Core Sweatpant in Flower Gray, ghost front view with the black V1.3 Halo on the left thigh and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-product-back-20261103-2f79f787.webp",
+        "alt": "The Core Sweatpant in Flower Gray, ghost back view with one right patch pocket and open straight hems"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-model-front-20261103-a6fb2dc1.webp",
+        "alt": "Greg shirtless facing forward in the Flower Gray Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-model-quarter-20261103-00eb964c.webp",
+        "alt": "Greg shirtless at a quarter turn in the Flower Gray Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-model-back-20261103-5d1ebaf3.webp",
+        "alt": "Greg shirtless with his back to the camera in the Flower Gray Core Sweatpant with plain white sneakers"
+      },
+      {
+        "src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-detail-20261103-c806fa94.webp",
+        "alt": "Close-up of the black V1.3 Halo print and Flower Gray Core Sweatpant fabric"
+      }
+    ]
+  }
+];
 
 // Shared drop settings per collection drop.
 const DROP_I = {
@@ -4363,13 +4479,13 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Core Jogger ==
-  // Owner, 2026-10-31: Men's listing only; retail price is not approved.
+  // Owner, 2026-11-03: publish approved Halo photos in Men; ordering remains disabled.
   {
     id: "90000000-0000-4000-8000-000000000001",
     name: "The Core Sweatpant",
     slug: "goal-athletics-core-sweatpant",
     blank: "UB0050",
-    description: "A goal is just the beginning. Tapered sweatpants with an open straight hem, finished with the GA monogram and our statement graphic. Made for downtime between sessions.",
+    description: "A goal is just the beginning. Tapered sweatpants with an open straight hem, finished with the Halo monogram on the left thigh. Made for downtime between sessions.",
     priceCents: 0,
     color: "Black",
     colorHex: CORE_SWEATPANT_VARIANTS[0].hex,
@@ -4383,7 +4499,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "pants",
     supplierType: "tapstitch",
-    isActive: false,
+    isActive: true,
     availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
