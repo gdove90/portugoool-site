@@ -1,6 +1,6 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 1,
+  "revision": 2,
   "holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
@@ -11,6 +11,41 @@
     "token_hash": "555a536f80039f39ffc6b72348d8a4ab68f324f7e9e718e6edd43bef32d3013d",
     "acquired_at": "2026-11-04T04:29:45.479Z"
   },
-  "checkpoint": null,
-  "updated_at": "2026-11-04T04:29:45.479Z"
+  "checkpoint": {
+    "schema": "goal-agent-handoff-v2",
+    "task_id": "halo-sweatpant-gallery-20261103",
+    "branch": "codex/halo-sweatpant-gallery-20261103",
+    "head_commit": "d236ca4845838b88e1d9eb233f154397288f4dbc",
+    "contract_version": "2.0",
+    "approved_scope": [
+      "Owner request 9fa3a0af-1dde-4e98-be4e-6f6c16993098: publish approved 24 sweatpant images across Black/Haze Blue/Oat/Flower Gray; gallery public only; preserve purchasing hold, price, store gates, supplier mappings and all other products."
+    ],
+    "completed": [
+      "Prepared all 24 optimized same-dimension WebP derivatives with source and output hashes.",
+      "Updated four color galleries, Oat supplier Apricot identity, Halo description and public gallery exposure.",
+      "API-compatible shared lease acquired because local Git has read-only authentication; canonical helper check confirms ownership."
+    ],
+    "tests": [
+      "Contract parity PASS",
+      "Typecheck PASS",
+      "Lint PASS with 3 existing image warnings",
+      "24 asset hash/decode checks PASS after replacing 2 incomplete local writes",
+      "Catalog and gallery routing PASS; all 20 color/size combinations remain unavailable; all other products and 13 protected commerce/layout files unchanged",
+      "First local build found missing brand asset from sparse inspection checkout; existing public/brand and netlify files now hydrated, build retry in progress"
+    ],
+    "unresolved": [
+      "Sweatpant remains unavailable for sale: price zero, no supplier mappings; Tapstitch paid-route readiness not established. No commerce repair authorized.",
+      "Remote preview and live visual verification pending."
+    ],
+    "next_action": "Upload exact scoped blobs and create task-branch review commit; run hosted preview and live release checks.",
+    "worktree_state": "scoped_uncommitted_gallery_changes",
+    "external_effects": [
+      {
+        "intent": "Publish 24 approved images and scoped catalog presentation through one GitHub feature-branch commit, then owner-authorized merge/deploy after verification.",
+        "reference": "halo-sweatpant-gallery-20261103",
+        "status": "intent_recorded_no_content_commit_yet"
+      }
+    ]
+  },
+  "updated_at": "2026-11-04T04:35:51.920Z"
 }
