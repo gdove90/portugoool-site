@@ -37,13 +37,14 @@
       "PASS Netlifyproductionexact64f8e8d;12livewomen-onlyread-onlypreviewtotals;15livegallerySHA256;desktop/mobileavailability. No realpaidtransaction/providerorder/email performed."
     ],
     "unresolved": [
+      "After completed live verification, Browser reported Chrome ChatGPT extension must be updated before further UI use. No bypass/retry. Owner must update extension before remaining supplier checks; prior Apliiq extension-panel block also remains unresolved.",
       "Apliiq women's current inside-label/production/SKU/stock verification still requires owner dismissing the other Chrome extension UI on its tab. Do not bypass or inspect/change Apliiq men.",
       "WT0093 four saved decorated supplier designs and exact order references are missing. Existing exact Cream and Wine plain GA PNGs need owner-local upload into Tapstitch; direct workspace upload was rejected and browser transfer route was denied. Do not substitute Halo/crop/redraw/alternate host.",
       "CoreTrainingTee andTrainingBra remain held. Current owner authorizes future release once actual production/branding/fulfillment readiness is verified; no need to ask launch permission again for same current scope.",
       "Physical samples/full landed contribution margin unverified; no such approval or margin claim.",
       "Men's live checkout preflight was automatically rejected as outside authorized women's scope; not executed/retried. Preserve and report this rejection; no men checkout state was created."
     ],
-    "next_action": "Completed13TapstitchtagassignmentsandWT0216purchasingrelease. Do not reapplylabels/remergePR76/redeploycompletedwork. Continue same taskbranch afterreacquisition; Apliiqwomenonly afterowner clearspanel; verify/applymatchingcurrenttagandactualSKUs. Forbra owner uploads exactCream/WineplainGAfiles locally; finishactual4saveddesigns/tag/sizequality checks and routing beforeenable. Never inventproviderSKUs or bypasstransferblock.",
+    "next_action": "Completed13TapstitchlabelsandWT0216livepurchaseverification. OwnerupdateChromeChatGPTextensionanddismissApliiqpanel; afterclearresumeApliiqwomenonly andcurrentexacttagverification. Bra needsowner-localCream/WineplainGAuploads then4saveddesigns/routing. Reacquiresamebranch;neverreplaylabels,mergePR76ordeploycompletedrelease.",
     "external_effects": [
       {
         "reference": "labels-womens-purchase-683b2d58",
@@ -87,26 +88,17 @@
       "docs/catalog/goal-label-audit-20261104.md"
     ]
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-labels-purchase-683b2d58",
     "task": "goal-labels-womens-purchase-20261104",
     "branch": "codex/goal-labels-womens-purchase-20261104",
     "approval": "Owner7af95634 requires sewn GOAL tag or printed branding on men/women; cfa89dcf orders Tapstitch men/women then Apliiq women only. Owner683b2d58 authorizes enabling current online women's purchases and supplies exact tag, confirmed53f0ae83. Apply existing approved matching label where compatible, finish verified supplier intake, enable only verified ready variants with current prices/images. No purchases, new subscriptions, historical orders or Apliiq men.",
     "start_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
-    "token_hash": "24eadeeb294d1f9c9d488a772c577f30b2e0eee96b34e97da408e346b9d03aea",
     "acquired_at": "2026-11-04T12:18:15.662200+00:00"
   },
-  "last_released_holder": {
-    "engine": "codex",
-    "session": "codex-bra-publish-b82ef6bf",
-    "task": "tempo-training-bra-20261104",
-    "branch": "codex/tempo-training-bra-20261104",
-    "approval": "Owner b82ef6bf-1ced-42e8-aa96-7e6df3f4fb8a: put approved WT0093 bra on live website now at USD18, all four six-view galleries; preserve women's purchasing hold until supplier readiness verified.",
-    "start_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
-    "acquired_at": "2026-11-04T11:47:53.152978+00:00"
-  },
-  "revision": 70,
+  "revision": 71,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T13:32:46.756158+00:00"
+  "updated_at": "2026-11-04T13:33:35.557099+00:00"
 }
