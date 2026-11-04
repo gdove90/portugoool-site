@@ -16,8 +16,10 @@
       "Removed exactly three ghost back gallery entries; five remaining views per color preserved; source files retained."
     ],
     "tests": [
-      "Existing targeted gallery/isolation/hash test PASS",
-      "Production build and type checks PASS; three pre-existing img warnings",
+      "Exact catalog diff only three requested entries removed PASS",
+      "Existing gallery/isolation/hash check PASS",
+      "Production build/typecheck PASS; three pre-existing img warnings",
+      "Exact-head Netlify preview READY at6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
       "git diff --check PASS"
     ],
     "unresolved": [
@@ -25,14 +27,16 @@
     ],
     "external_effects": [
       {
-        "reference": "tempo-ghost-back-removal",
-        "status": "pr_open_preview_pending",
-        "pr": 72,
+        "reference": "tempo-ghost-back-removal-pr72",
+        "status": "merge_intent",
         "head": "6897e7fbad1f881ffdead4adfb7cc3ffdab50f84",
-        "target": "https://goalathletics.shop/shop/tempo-core-training-tee"
+        "pr": 72,
+        "preview": "6aead631eb5c48789049df24",
+        "target": "https://goalathletics.shop/shop/tempo-core-training-tee",
+        "reconciliation": "Merge exactly once; if unknown outcome read PR/main before retry."
       }
     ],
-    "next_action": "Wait exact preview6aead631eb5c48789049df24, recheck main and lease then merge PR72 once.",
+    "next_action": "Merge PR72 exactly once then wait production and verify all three live galleries.",
     "changed_paths": [
       "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
       "scripts/test-tempo-core-gallery.cjs",
@@ -58,7 +62,7 @@
     "start_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
     "acquired_at": "2026-11-04T06:33:39.341Z"
   },
-  "revision": 29,
+  "revision": 30,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:53:12.058Z"
+  "updated_at": "2026-11-04T06:54:25.540Z"
 }
