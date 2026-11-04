@@ -7,8 +7,8 @@
     "session": "codex-bra-239154a8",
     "branch": "codex/tempo-training-bra-20261104",
     "base_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
-    "head_commit": "efd76c24cbaec3916ae4b0c8a5a3afd885fc379e",
-    "worktree_state": "clean_local_commit_not_pushed",
+    "head_commit": "81f7079f4348acfe380539a7105b8e343f3a4dfb",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: WT0093 specification checks, four color galleries, Suzanne Black new hairstyle, front ghost first/back ghost last, website preparation preserving holds."
     ],
@@ -18,14 +18,20 @@
       "Verified middle print frame 3075x409 at300DPI,10.3x1.4in; actual WT0093 S-XL/89poly11spandex230gsm.",
       "Confirmed Flower Gray heather body/black hem, Brick Red label and supplier flat size chart.",
       "Corrected invented zip details in coordinating shorts rear views.",
-      "Removed temporary white and Halo editor test layers; no supplier save/order performed."
+      "Removed temporary white and Halo editor test layers; no supplier save/order performed.",
+      "Published exact30-file tree6bc9646fb24228b55062d2dc2297cd193ae50dca at task head81f7079f4348acfe380539a7105b8e343f3a4dfb; draft PR75 https://github.com/gdove90/portugoool-site/pull/75.",
+      "Preserved local source commit efd76c24cbaec3916ae4b0c8a5a3afd885fc379e on local backup branch after verifying identical tree to connector commit.",
+      "Updated owner research decision Page seq5 with six-view exception, model assignments, verified results and remaining blockers."
     ],
     "tests": [
       "PASS 20 unique images decode at1024x1536 and SHA256/order validation.",
       "PASS front ghost first and back ghost last in every prepared gallery; explicit missing Brick views.",
       "PASS four artwork PNGs RGBA/transparency/resolution/size checks.",
       "PASS git diff --check; 30 asset/document-only files.",
-      "Application tests N/A: no application/catalog/commerce files changed."
+      "Application tests N/A: no application/catalog/commerce files changed.",
+      "PASS all30 GitHub blob hashes and exact tree identity.",
+      "PASS final20-image dimension/order/SHA256 validation after shorts zipper corrections.",
+      "PASS clean task worktree at exact remote head; no catalog/application changes."
     ],
     "unresolved": [
       "Amanda Brick four model/detail views rejected by image tool; no model substitution.",
@@ -34,35 +40,34 @@
       "Smallest-size scaling/detail-gap quality/sample and manual Tapstitch fulfillment readiness unverified.",
       "No production deployment or catalog publication."
     ],
-    "next_action": "Upload exact 30-file asset-only tree6bc9646fb24228b55062d2dc2297cd193ae50dca to same task branch, create draft PR. Preserve all live catalog, prices and gates. Record new exact connector commit then checkpoint/release.",
+    "next_action": "HOLD for supplier artwork transfer/saves and print-detail/smallest-size checks, missing Amanda Brick views and owner retail price/final name. Continue same task branch and PR75 after blockers resolved, preserving every commerce hold. No deploy or main merge authorized by readiness evidence yet.",
     "external_effects": [
       {
         "reference": "239154a8-draft-assets-publication",
         "status": "intent",
         "details": "Publish only designs/wt0093-training-bra-20261104 assets/specification to isolated task branch, open draft PR. No main merge, production deploy, supplier save, SQL, payment or email changes."
+      },
+      {
+        "reference": "239154a8-draft-assets-publication",
+        "status": "confirmed",
+        "details": "30 assets/docs only in draft PR75, task81f7079f4348acfe380539a7105b8e343f3a4dfb, exact verified tree6bc9646fb24228b55062d2dc2297cd193ae50dca. No main merge, catalog release or production deploy. No supplier save/order, SQL, payment, gates or email changes."
       }
+    ],
+    "changed_paths": [
+      "designs/wt0093-training-bra-20261104/"
     ]
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-bra-239154a8",
     "task": "tempo-training-bra-20261104",
     "branch": "codex/tempo-training-bra-20261104",
     "approval": "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: verify WT0093 specifications; six-view galleries front ghost first, back ghost last, all four approved women; Suzanne in Black with new hairstyle; website preparation preserving holds.",
     "start_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
-    "token_hash": "ce874ce990f697b9c4632545caa1afd29ea9d04f44a2e1e43bdd12bcae965607",
     "acquired_at": "2026-11-04T10:35:12.000495+00:00"
   },
-  "last_released_holder": {
-    "engine": "codex",
-    "session": "codex-tempo-training-be9312aa",
-    "task": "tempo-training-gallery-20261104",
-    "branch": "codex/tempo-training-tee-f07faa75",
-    "approval": "Owner be9312aa-5efb-4e06-b575-a7b89958f3f6: upload approved Blue Suzanne, Purple Amanda, White Molly 15-image galleries to website; continue f07faa75 publication scope, S-XL, existing $34 and purchasing hold.",
-    "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
-    "acquired_at": "2026-11-04T08:50:54.264103+00:00"
-  },
-  "revision": 51,
+  "revision": 52,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:04:59.884646+00:00"
+  "updated_at": "2026-11-04T11:13:10.360342+00:00"
 }
