@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const ROOT=path.resolve(__dirname,"..");const ts=require(ROOT+'/node_modules/typescript');
-const APPROVED = require('./fixtures/approved-supplier-catalog-20261028.json');
+const APPROVED = require('./fixtures/approved-supplier-catalog-20261103.json');
 class NextResponse{constructor(body,opt={}){this.body=body;this.status=opt.status||200;this.headers=opt.headers||{}}static json(body,opt={}){return {status:opt.status||200,body}}}
 function load(file,mocks={},cache={}){
  const full=path.resolve(ROOT,file);if(cache[full])return cache[full];
@@ -36,7 +36,7 @@ function memory(initial={}){
  const sellable=catalog.getProducts().filter(x=>x.availableForSale);const p=sellable[0],p2=sellable[1];const item={productId:p.id,color:p.colorVariants?.[0].name??p.color,size:p.sizes[0],quantity:1};
  for(const [name,body] of Object.entries({nullBody:null,empty:{items:[]},nullLine:{items:[null]},missingQty:{items:[{...item,quantity:undefined}]},stringQty:{items:[{...item,quantity:'1'}]},fraction:{items:[{...item,quantity:1.5}]},negative:{items:[{...item,quantity:-1}]},excess:{items:[{...item,quantity:11}]},badCustom:{items:[{...item,customName:123}]},badSize:{items:[{...item,size:'BAD'}]},badColor:{items:[{...item,color:'BAD'}]}}))await test('Reject malformed checkout: '+name,async()=>assert.equal((await checkout.POST(request(body))).status,400));
  // Fixed approved snapshot protects IDs, prices, sizes and all supplier mappings.
- await test('All 143 approved sellable variants use exact server prices and supplier-aware snapshots', async()=>{
+ await test('All 163 approved sellable variants use exact server prices and supplier-aware snapshots', async()=>{
   assert.equal(sellable.length, APPROVED.productCount);
   assert.deepEqual(sellable.map(p=>p.id), APPROVED.products.map(p=>p.id));
   let count=0;const suppliers={apliiq:0,tapstitch:0};
@@ -56,7 +56,7 @@ function memory(initial={}){
     suppliers[mapping.supplier]++;count++;
    }
   }
-  assert.equal(count,143);assert.deepEqual(suppliers,{apliiq:128,tapstitch:15});
+  assert.equal(count,163);assert.deepEqual(suppliers,{apliiq:128,tapstitch:35});
  });
  const mail=load('src/lib/emails/order-confirmation.ts');await test('Discounted receipt reconciles subtotal, discount, shipping and total',()=>{const m=mail.buildOrderConfirmation({order:{id:'abc',amount_subtotal_cents:5000,amount_discount_cents:1000,amount_shipping_cents:950,amount_tax_cents:0,total_cents:4950,currency:'usd'},items:[]});assert.match(m.text,/Discount: -\$10.00/);assert.match(m.html,/-\$10.00/);assert.match(m.text,/Total paid: \$49.50/)});
  let promoSeq=0;class DiscountStripe{coupons={list:async()=>({data:[{id:'coupon',valid:true,percent_off:20,metadata:{source:'goool20-popup'}}]})};promotionCodes={retrieve:async()=>({times_redeemed:0}),create:async(p)=>{DiscountStripe.lastCreate=p;return {id:'promo'+(++promoSeq)}},update:async()=>({})}}

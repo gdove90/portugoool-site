@@ -39,7 +39,7 @@ const PERF_CARE = "Machine wash cold. Tumble dry low. Do not iron the print.";
 const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
 
 // Owner-approved V1.3 Halo imagery, November 3, 2026.
-// The gallery is public; ordering stays on hold pending runtime fulfillment verification.
+// Owner-authorized $38 release after supplier and live runtime verification.
 // Oat is the customer-facing name for supplier Apricot.
 const CORE_SWEATPANT_VARIANTS = [
   {
@@ -47,7 +47,7 @@ const CORE_SWEATPANT_VARIANTS = [
     "supplierColor": "Black",
     "hex": "#1B1B1B",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/core-sweatpant/goal-core-sweatpant-black-halo-product-front-20261103-c4d8ebf0.webp",
@@ -80,7 +80,7 @@ const CORE_SWEATPANT_VARIANTS = [
     "supplierColor": "Haze Blue",
     "hex": "#526D80",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/core-sweatpant/goal-core-sweatpant-haze-blue-halo-product-front-20261103-47659119.webp",
@@ -113,7 +113,7 @@ const CORE_SWEATPANT_VARIANTS = [
     "supplierColor": "Apricot",
     "hex": "#E9DFC1",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/core-sweatpant/goal-core-sweatpant-oat-halo-product-front-20261103-6302283c.webp",
@@ -146,7 +146,7 @@ const CORE_SWEATPANT_VARIANTS = [
     "supplierColor": "Flower Gray",
     "hex": "#A5A6A4",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/core-sweatpant/goal-core-sweatpant-flower-gray-halo-product-front-20261103-4d4ecc31.webp",
@@ -4479,7 +4479,7 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end GOAL Athletics Core Jogger ==
-  // Owner, 2026-11-03: publish approved Halo photos in Men; ordering remains disabled.
+  // Owner, 2026-11-04: release all four verified Halo colors at $38 before the raincoat.
   {
     id: "90000000-0000-4000-8000-000000000001",
     name: "The Core Sweatpant",
@@ -4491,16 +4491,15 @@ export const products: Product[] = [
     colorHex: CORE_SWEATPANT_VARIANTS[0].hex,
     fabric: "87% cotton / 13% polyester. 360 GSM.",
     fit: "Unisex tapered fit with an elastic waist and an open straight hem.",
-    fitNote: "Coming soon.",
     careInstructions: "Gentle wash at 30°C. Do not bleach. Tumble dry low. Iron on low, avoiding the print. Do not dry clean.",
     images: CORE_SWEATPANT_VARIANTS[0].images,
     colorVariants: CORE_SWEATPANT_VARIANTS,
-    // Nominal supplier size range. No color/size combination is orderable.
+    // Verified UB0050 sizes; site XXL maps to supplier 2XL.
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "pants",
     supplierType: "tapstitch",
     isActive: true,
-    availableForSale: false,
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
