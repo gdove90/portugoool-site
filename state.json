@@ -88,7 +88,16 @@
       "docs/catalog/goal-label-audit-20261104.md"
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-women-lower-ea28ab9b",
+    "task": "goal-women-lower-track-banner-20261104",
+    "branch": "codex/women-lower-track-banner-20261104",
+    "approval": "Owner approved trackside lower photograph, removed oversized GOAL ATHLETICS lettering, preserved For your next session. and explicitly requested bottom-only deployment leaving top unchanged. Requests 26cfcab2-619d-4ff6-a171-21637808eeb7 and ea28ab9b-71d9-44ed-b93b-b7c611a26c7c.",
+    "start_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
+    "token_hash": "11121686f78eb67ef1c7457d03726d484764234bbb6356deda8d0343bc90d575",
+    "acquired_at": "2026-11-04T19:34:10.430261+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-labels-purchase-683b2d58",
@@ -98,7 +107,7 @@
     "start_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
     "acquired_at": "2026-11-04T12:18:15.662200+00:00"
   },
-  "revision": 71,
+  "revision": 72,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T13:33:35.557099+00:00"
+  "updated_at": "2026-11-04T19:34:10.430283+00:00"
 }
