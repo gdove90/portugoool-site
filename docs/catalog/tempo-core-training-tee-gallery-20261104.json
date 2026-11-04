@@ -238,5 +238,17 @@
     }
   ],
   "other_tempo_pieces": "remain hidden",
-  "layout": "unchanged"
+  "layout": "unchanged",
+  "gallery_revision": {
+    "owner_request": "d64bbc77-145b-4121-903a-5a0cee971f7c",
+    "change": "Remove ghost back photo from each colorway gallery; original files retained as source records",
+    "active_views": [
+      "product-front",
+      "model-front",
+      "model-quarter",
+      "model-back",
+      "detail"
+    ],
+    "active_image_count": 15
+  }
 }

@@ -189,10 +189,6 @@ const TEMPO_CORE_TEE_VARIANTS = [
         "alt": "TEMPO Core Training Tee in Black, ghost front view with the V1.3 GA monogram on the left chest"
       },
       {
-        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-back-20261104-4ae4f3a4.webp",
-        "alt": "TEMPO Core Training Tee in Black, ghost back view with a plain back"
-      },
-      {
         "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-model-front-20261104-a8f18bfb.webp",
         "alt": "Suzanne in the Black TEMPO Core Training Tee, front view"
       },
@@ -221,10 +217,6 @@ const TEMPO_CORE_TEE_VARIANTS = [
         "alt": "TEMPO Core Training Tee in White, ghost front view with the V1.3 GA monogram on the left chest"
       },
       {
-        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-product-back-20261104-f30fa00f.webp",
-        "alt": "TEMPO Core Training Tee in White, ghost back view with a plain back"
-      },
-      {
         "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-model-front-20261104-215d8ef1.webp",
         "alt": "Molly in the White TEMPO Core Training Tee, front view"
       },
@@ -251,10 +243,6 @@ const TEMPO_CORE_TEE_VARIANTS = [
       {
         "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-20261104-c57c798f.webp",
         "alt": "TEMPO Core Training Tee in Iron Grey, ghost front view with the V1.3 GA monogram on the left chest"
-      },
-      {
-        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-back-20261104-fff100f1.webp",
-        "alt": "TEMPO Core Training Tee in Iron Grey, ghost back view with a plain back"
       },
       {
         "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-model-front-20261104-d0e4e913.webp",
