@@ -8,7 +8,7 @@
     "branch": "codex/tempo-placement-67a44161",
     "base_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
     "head_commit": "9cc81e4bc76bf9a2aae15bc18a390f108591adf3",
-    "worktree_state": "committed_and_pushed_pending_local_adoption",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "Owner17ab6889-786c-4139-8d51-fe1f4cd66166: upload and replace exactly three approved higher-position ghost FRONT images, deploy now, do nothing else. Website-only authorization supersedes previous review hold; do not change supplier or model images."
     ],
@@ -28,14 +28,15 @@
     "external_effects": [
       {
         "reference": "tempo-three-front-replacement-pr73",
-        "status": "preview_building",
+        "status": "merge_intent",
         "head": "9cc81e4bc76bf9a2aae15bc18a390f108591adf3",
         "pr": 73,
         "preview": "6aeada43f4db37502ee6bad2",
-        "target": "https://goalathletics.shop/shop/tempo-core-training-tee"
+        "target": "https://goalathletics.shop/shop/tempo-core-training-tee",
+        "reconciliation": "Merge once; if uncertain reconcile PR and main before retry."
       }
     ],
-    "next_action": "Adopt exact pushed commit, wait previewREADY, check currentmain then merge once and verify live three image hashes.",
+    "next_action": "Merge PR73 once, then verify exact production commit and live three front images.",
     "changed_paths": [
       "src/lib/products.ts",
       "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
@@ -64,7 +65,7 @@
     "start_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
     "acquired_at": "2026-11-04T06:51:11.570Z"
   },
-  "revision": 35,
+  "revision": 36,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T07:10:28.915Z"
+  "updated_at": "2026-11-04T07:11:57.324Z"
 }
