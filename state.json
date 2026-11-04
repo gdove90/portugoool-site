@@ -1,6 +1,6 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 8,
+  "revision": 9,
   "holder": {
     "engine": "codex",
     "session": "codex-halo-ordering-135218e7",
@@ -15,7 +15,7 @@
     "schema": "goal-agent-handoff-v2",
     "task_id": "halo-sweatpant-ordering-20261103",
     "branch": "codex/halo-sweatpant-ordering-20261103",
-    "head_commit": "596b9e040972fedca765404d8073c0f282f998c6",
+    "head_commit": "423984a7f02c96bdb95b3e6f9029f70db8da1425",
     "contract_version": "2.0",
     "approved_scope": [
       "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders."
@@ -28,7 +28,8 @@
       "Verified all four authoritative saved Halo design IDs, distinct ordering-page IDs, UB0050 S/M/L/XL/2XL, DTF 3x3 inches at 400 DPI. Both actual vendor PNG thumbnails preserve transparency; automated background warning reviewed, no supplier edits made.",
       "Implemented 20 immutable internal TAP references, approved $38 price with sales still held, supplier-aware paid snapshot validation, stable UUIDv5 item keys/upsert, durable retryable manual handoff, independent Apliiq gate and accurate operator task content.",
       "Added read-only checkout readiness checks for runtime context, email transport, order/task schema and deployed supplier/category compatibility. No credentials or private customer rows returned.",
-      "Documented operator workflow, missed-alert fallback, Stripe payment metadata supplier-order reference, duplicate prevention and tracking in docs/catalog/core-sweatpant-tapstitch-fulfillment.md."
+      "Documented operator workflow, missed-alert fallback, Stripe payment metadata supplier-order reference, duplicate prevention and tracking in docs/catalog/core-sweatpant-tapstitch-fulfillment.md.",
+      "Stage 1 exact 16-file repair/price commit 423984a7f02c96bdb95b3e6f9029f70db8da1425 pushed to preserved task branch; PR #68 created; local checkout/index match remote."
     ],
     "tests": [
       "Contract validator PASS",
@@ -46,13 +47,16 @@
       "No actual charge, customer email or supplier order performed as a test; historical order repair is outside this task.",
       "Tapstitch ordering remains manual. Landed cost/margin and physical sample verification remain unverified; owner explicitly approved $38."
     ],
-    "next_action": "Commit/push exact 16-file repair and price diff, review/build via PR, deploy with sales held, then probe existing live Tapstitch checkout preview. Activate four colors only if runtime proof passes.",
-    "worktree_state": "scoped_uncommitted_backend_changes",
+    "next_action": "Wait for stage-1 preview build, merge under owner authorization with sales held, verify production read-only manual-route readiness; prepare conditional four-color activation locally.",
+    "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
         "reference": "halo-ordering-repair-stage1",
-        "intent": "Publish reviewed backend repair and $38 price to goalathletics.shop while maintaining target coming-soon flags; no supplier/environment/SQL changes or charges.",
-        "status": "intent_recorded_not_executed"
+        "status": "task_commit_pushed_preview_pending",
+        "commit": "423984a7f02c96bdb95b3e6f9029f70db8da1425",
+        "pr": 68,
+        "preview_deploy": "6aeac29842b008e7cea39535",
+        "target": "https://goalathletics.shop"
       },
       {
         "reference": "halo-ordering-activation-stage2",
@@ -61,7 +65,7 @@
       }
     ]
   },
-  "updated_at": "2026-11-04T05:26:36.553Z",
+  "updated_at": "2026-11-04T05:31:55.395Z",
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
