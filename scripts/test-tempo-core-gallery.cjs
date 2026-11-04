@@ -1,0 +1,15 @@
+const fs=require('fs'),path=require('path'),ts=require('typescript'),assert=require('assert/strict'),cp=require('child_process'),crypto=require('crypto');
+const ROOT=path.resolve(__dirname,'..'),BASE='b04be06939bb960f44197b40ec70e75c4d83fe3b';
+function loader(old=false){const cache={};function load(file){file=path.relative(ROOT,path.resolve(ROOT,file));if(cache[file])return cache[file].exports;const source=old?cp.execFileSync('git',['show',BASE+':'+file],{cwd:ROOT,encoding:'utf8'}):fs.readFileSync(path.join(ROOT,file),'utf8');const m={exports:{}};cache[file]=m;const req=id=>id.startsWith('.')||id.startsWith('@/')?load((id.startsWith('@/')?'src/'+id.slice(2):path.join(path.dirname(file),id))+'.ts'):require(id);new Function('require','module','exports',ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText)(req,m,m.exports);return m.exports}return load}
+const now=loader(),old=loader(true),catalog=now('src/lib/products.ts'),before=old('src/lib/products.ts'),id='80000000-0000-4000-8000-000000000017';
+assert.deepEqual(now('src/v84/catalog-data.ts').forAudience('women').map(p=>p.id),[id]);
+assert.deepEqual(now('src/v84/catalog-data.ts').forAudience('men'),old('src/v84/catalog-data.ts').forAudience('men'));
+for(const p of before.products){if(p.id!==id)assert.deepEqual(catalog.products.find(x=>x.id===p.id),p)}
+const tee=catalog.getProductById(id),prior=before.products.find(p=>p.id===id);assert.ok(tee);assert.equal(tee.availableForSale,false);assert.equal(tee.priceCents,3800);assert.deepEqual(tee.sizes,prior.sizes);assert.equal(tee.slug,prior.slug);assert.equal(tee.name,'TEMPO Core Training Tee');
+for(const productId of now('src/lib/collection-launch.ts').TEMPO_PRODUCT_IDS){if(productId!==id)assert.equal(catalog.getProductById(productId),undefined)}
+const approved={Black:'Suzanne',White:'Molly','Iron Grey':'Jessica'};
+assert.deepEqual(tee.colorVariants.map(v=>v.name),Object.keys(approved));
+const manifest=JSON.parse(fs.readFileSync(path.join(ROOT,'docs/catalog/tempo-core-training-tee-gallery-20261104.json')));assert.equal(manifest.files.length,18);const seen=new Set();
+for(const v of tee.colorVariants){assert.equal(v.images.length,6);for(const img of v.images){assert.ok(!seen.has(img.src));seen.add(img.src);const row=manifest.files.find(r=>'/'+r.path.replace(/^public\//,'')===img.src);assert.ok(row);const bytes=fs.readFileSync(path.join(ROOT,row.path));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),row.sha256);assert.equal(row.width/row.height,2/3)}for(const image of v.images.slice(2,5))assert.ok(image.alt.includes(approved[v.name]))}
+assert.ok(manifest.files.find(r=>r.source_file==='exec-dc4ec095-fce0-4945-b665-3350598ae3dd.png'));assert.ok(manifest.files.find(r=>r.source_file==='exec-474455ea-af2d-4258-865f-433b8b7a5549.png'));
+console.log('PASS first women product only; five other TEMPO holds; all men and other products unchanged; $38/S-XXL preserved; purchasing held; 18 exact assets and corrected Jessica sources verified');

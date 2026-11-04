@@ -176,6 +176,106 @@ const CORE_SWEATPANT_VARIANTS = [
   }
 ];
 
+// Owner-approved TEMPO tee galleries, November 4, 2026.
+const TEMPO_CORE_TEE_VARIANTS = [
+  {
+    "name": "Black",
+    "supplierColor": "Black",
+    "hex": "#141414",
+    "skuFragment": "BLACK",
+    "images": [
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-20261104-5c36d887.webp",
+        "alt": "TEMPO Core Training Tee in Black, ghost front view with the V1.3 GA monogram on the left chest"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-back-20261104-4ae4f3a4.webp",
+        "alt": "TEMPO Core Training Tee in Black, ghost back view with a plain back"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-model-front-20261104-a8f18bfb.webp",
+        "alt": "Suzanne in the Black TEMPO Core Training Tee, front view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-model-quarter-20261104-a3e4f8ff.webp",
+        "alt": "Suzanne in the Black TEMPO Core Training Tee, quarter-turn view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-model-back-20261104-b3657af0.webp",
+        "alt": "Suzanne in the Black TEMPO Core Training Tee, back view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-detail-20261104-9d649d0e.webp",
+        "alt": "Close-up of the V1.3 GA print and Black TEMPO Core Training Tee fabric"
+      }
+    ]
+  },
+  {
+    "name": "White",
+    "supplierColor": "White",
+    "hex": "#F3F3F1",
+    "skuFragment": "WHITE",
+    "images": [
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-20261104-5fc9afed.webp",
+        "alt": "TEMPO Core Training Tee in White, ghost front view with the V1.3 GA monogram on the left chest"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-product-back-20261104-f30fa00f.webp",
+        "alt": "TEMPO Core Training Tee in White, ghost back view with a plain back"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-model-front-20261104-215d8ef1.webp",
+        "alt": "Molly in the White TEMPO Core Training Tee, front view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-model-quarter-20261104-8414ec3c.webp",
+        "alt": "Molly in the White TEMPO Core Training Tee, quarter-turn view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-model-back-20261104-4813bf0d.webp",
+        "alt": "Molly in the White TEMPO Core Training Tee, back view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-detail-20261104-0885a910.webp",
+        "alt": "Close-up of the V1.3 GA print and White TEMPO Core Training Tee fabric"
+      }
+    ]
+  },
+  {
+    "name": "Iron Grey",
+    "supplierColor": "Iron Grey",
+    "hex": "#4B4F54",
+    "skuFragment": "IRONGREY",
+    "images": [
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-20261104-c57c798f.webp",
+        "alt": "TEMPO Core Training Tee in Iron Grey, ghost front view with the V1.3 GA monogram on the left chest"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-back-20261104-fff100f1.webp",
+        "alt": "TEMPO Core Training Tee in Iron Grey, ghost back view with a plain back"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-model-front-20261104-d0e4e913.webp",
+        "alt": "Jessica in the Iron Grey TEMPO Core Training Tee, front view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-model-quarter-20261104-347f1998.webp",
+        "alt": "Jessica in the Iron Grey TEMPO Core Training Tee, quarter-turn view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-model-back-20261104-c77beeb2.webp",
+        "alt": "Jessica in the Iron Grey TEMPO Core Training Tee, back view"
+      },
+      {
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-detail-20261104-a87942a5.webp",
+        "alt": "Close-up of the V1.3 GA print and Iron Grey TEMPO Core Training Tee fabric"
+      }
+    ]
+  }
+];
+
 // Shared drop settings per collection drop.
 const DROP_I = {
   isLimitedDrop: true,
@@ -4532,56 +4632,14 @@ export const products: Product[] = [
       "3.8 oz 100% polyester interlock, moisture-wicking, with a colour-locking finish so the fabric and the print stay sharp. Women's cut.",
     fit: "Women's cut, easy through the body. True to size.",
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
-    images: [
-      {
-        src: "/products/tempo-core-training-tee-black-catalog-product-front-20261026.webp",
-        alt: "TEMPO Core Training Tee in Black, product front with the white and red GA monogram on the left chest",
-      },
-    ],
-    colorVariants: [
-      {
-        name: "Black",
-        supplierColor: "Black",
-        hex: "#141414",
-        skuFragment: "BLACK",
-        images: [
-          {
-            src: "/products/tempo-core-training-tee-black-catalog-product-front-20261026.webp",
-            alt: "TEMPO Core Training Tee in Black, product front with the white and red GA monogram on the left chest",
-          },
-        ],
-      },
-      {
-        name: "White",
-        supplierColor: "White",
-        hex: "#F3F3F1",
-        skuFragment: "WHITE",
-        images: [
-          {
-            src: "/products/tempo-core-training-tee-white-catalog-product-front-20261026.webp",
-            alt: "TEMPO Core Training Tee in White, product front with the black and red GA monogram on the left chest",
-          },
-        ],
-      },
-      {
-        name: "Iron Grey",
-        supplierColor: "Iron Grey",
-        hex: "#4B4F54",
-        skuFragment: "IRONGREY",
-        images: [
-          {
-            src: "/products/tempo-core-training-tee-iron-grey-catalog-product-front-20261026.webp",
-            alt: "TEMPO Core Training Tee in Iron Grey, product front with the black GA monogram on the left chest",
-          },
-        ],
-      },
-    ],
+    images: TEMPO_CORE_TEE_VARIANTS[0].images,
+    colorVariants: TEMPO_CORE_TEE_VARIANTS,
     originLabel: "Printed in the USA",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "tshirt",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: true,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

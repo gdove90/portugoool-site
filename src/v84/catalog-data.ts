@@ -85,9 +85,8 @@ export function catalogOrder(list: Product[]): Product[] {
   return list.map((p, index) => ({ p, index })).sort((a, b) => rank(a.p) - rank(b.p) || a.index - b.index).map(x => x.p);
 }
 export function forAudience(audience: Audience) {
-  // The women's grid renders only on /women, which the owner gate guards
-  // while TEMPO is coming soon, so it may read the gated rows.
-  return catalogOrder(getProducts({ includeTempo: audience === "women" }).filter(p => audienceAssignments[p.id]?.includes(audience)));
+  // Public audience grids show individually released products only.
+  return catalogOrder(getProducts().filter(p => audienceAssignments[p.id]?.includes(audience)));
 }
 function brightness(hex: string) {
   const rgb = hex.replace("#", "").match(/.{2}/g)?.map(v => parseInt(v, 16)) || [0, 0, 0];
