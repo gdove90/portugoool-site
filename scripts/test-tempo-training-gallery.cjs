@@ -1,6 +1,6 @@
 const fs = require('node:fs'), path = require('node:path'), assert = require('node:assert/strict');
 const cp = require('node:child_process'), crypto = require('node:crypto'), ts = require('typescript');
-const ROOT = path.resolve(__dirname, '..'), BASE = '522500ddc7aa94e9990734564a3fd309a682e868';
+const ROOT = path.resolve(__dirname, '..'), BASE = '7e159131932aa59317507986f1c3c54b4d5cf50f';
 const ID = '80000000-0000-4000-8000-000000000021';
 const plain = value => JSON.parse(JSON.stringify(value));
 function loader(old = false) {
@@ -17,7 +17,8 @@ function loader(old = false) {
 }
 const load = loader(), old = loader(true), catalog = load('src/lib/products.ts'), before = old('src/lib/products.ts');
 const tee = catalog.getProductById(ID), prior = before.products.find(p => p.id === ID);
-assert.ok(tee); assert.equal(tee.slug, prior.slug); assert.equal(tee.priceCents, 3400); assert.equal(tee.availableForSale, false);
+assert.ok(tee); assert.equal(tee.slug, prior.slug); assert.equal(tee.priceCents, 3400); assert.equal(tee.availableForSale, true);
+assert.deepEqual(tee, { ...prior, availableForSale: true });
 assert.deepEqual(tee.sizes, ['S', 'M', 'L', 'XL']);
 assert.deepEqual(tee.colorVariants.map(v => v.name), ['White', 'Lake Blue', 'Light Purple']);
 assert.equal(tee.originLabel, undefined); assert.equal(tee.disclosure, undefined);
@@ -40,22 +41,33 @@ for (const variant of tee.colorVariants) {
 assert.deepEqual(load('src/lib/size-charts.ts').sizeChartFor(ID).rows.map(row => row.size), tee.sizes);
 const protectedPaths = ['src/app/api/checkout/route.ts', 'src/app/api/stripe-webhook/route.ts', 'src/lib/orders-store.ts', 'src/lib/fulfillment-submit.ts', 'src/lib/tapstitch-readiness.ts', 'src/lib/store-status.ts', 'netlify.toml', 'src/components/ProductGallery.tsx', 'src/components/ProductDetail.tsx', 'src/app/globals.css'];
 for (const file of protectedPaths) if (fs.existsSync(path.join(ROOT, file))) assert.equal(fs.readFileSync(path.join(ROOT, file), 'utf8'), cp.execFileSync('git', ['show', BASE + ':' + file], { cwd: ROOT, encoding: 'utf8' }), file);
-// Exercise the real checkout route with an isolated request. A mocked Stripe
-// constructor throws if reached; all variants must refuse before any session.
+// Exercise the real checkout route using captured providers only. No real
+// Stripe, database, email or supplier request is made.
 const checkoutSource = fs.readFileSync(path.join(ROOT, 'src/app/api/checkout/route.ts'), 'utf8');
 const moduleFixture = { exports: {} };
+const sessions = [];
 const mocks = {
   'next/server': { NextResponse: { json: (body, opts = {}) => ({ status: opts.status || 200, body }) } },
-  stripe: class { constructor() { throw Error('Unexpected Stripe session path'); } },
+  stripe: class { checkout = { sessions: { create: async params => { sessions.push(params); return { url: 'https://checkout.stripe.com/offline-fixture' }; } } }; },
   '@/lib/migration-preview': { MIGRATION_PREVIEW: false }, '@/lib/store-status': { storeClosed: () => false },
   '@/lib/products': catalog, '@/lib/types': load('src/lib/types.ts'), '@/lib/fulfillment': load('src/lib/fulfillment.ts'),
-  '@/lib/shipping': {}, '@/lib/discount': {}, '@/lib/signups': { EMAIL_RE: /@/ }, '@/lib/meta-capi': {}, '@/lib/tapstitch-readiness': {}
+  '@/lib/shipping': load('src/lib/shipping.ts'), '@/lib/discount': {}, '@/lib/signups': { EMAIL_RE: /@/ }, '@/lib/meta-capi': {clientIpFrom:()=>null}, '@/lib/tapstitch-readiness': {tapstitchFulfillmentReady:async()=>true}
 };
 new Function('require', 'module', 'exports', 'process', ts.transpileModule(checkoutSource, { compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true, target: ts.ScriptTarget.ES2022 } }).outputText)(name => { assert.ok(name in mocks, name); return mocks[name]; }, moduleFixture, moduleFixture.exports, { env: { STRIPE_SECRET_KEY: 'sk_test_offline_fixture', CHECKOUT_TEST_MODE: 'false' } });
 (async () => {
-  for (const color of tee.colorVariants) {
-    const result = await moduleFixture.exports.POST({ json: async () => ({ items: [{ productId: ID, size: 'S', color: color.name, quantity: 1 }] }), headers: { get: () => null } });
-    assert.equal(result.status, 400); assert.match(result.body.error, /coming soon/);
+  const request = body => ({ json: async () => body, headers: { get: () => null }, nextUrl: new URL('https://goalathletics.shop/api/checkout') });
+  for (const color of tee.colorVariants) for (const size of tee.sizes) {
+    const item = { productId: ID, size, color: color.name, quantity: 1, priceCents: 1 };
+    const preview = await moduleFixture.exports.POST(request({items:[item],preview:true}));
+    assert.equal(preview.status,200); assert.equal(preview.body.subtotalCents,3400); assert.equal(preview.body.totalCents,4095);
+    const result = await moduleFixture.exports.POST(request({items:[item]}));
+    assert.equal(result.status,200);
+    const params=sessions.at(-1), snapshot=JSON.parse(params.metadata.items_0)[0];
+    assert.equal(params.line_items[0].price_data.unit_amount,3400);
+    assert.equal(snapshot.k,`TAP-${manifest.supplier_designs[color.name]}-${size}`); assert.equal(snapshot.a,null);
   }
-  console.log('PASS 15 approved images and gallery order; three colors/S-XL/$34; correct women order; other products and payment/UI files unchanged; real checkout refuses every color without provider calls.');
+  assert.equal(sessions.length,12);
+  for (const [size,color] of [['XS','White'],['XXL','White'],['S','Black']]) assert.equal((await moduleFixture.exports.POST(request({items:[{productId:ID,size,color,quantity:1}]}))).status,400);
+  assert.equal(sessions.length,12);
+  console.log('PASS 15 unchanged images/order; only tee availability changed; 12 exact references at $34 and $40.95 single-item totals; invalid variants rejected; protected UI/commerce files unchanged. Captured providers only.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

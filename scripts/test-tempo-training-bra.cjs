@@ -22,7 +22,13 @@ assert.ok(bra); assert.equal(bra.slug, 'tempo-training-bra'); assert.equal(bra.p
 assert.equal(bra.availableForSale, false); assert.equal(bra.category, 'bra');
 assert.deepEqual(bra.sizes, ['S', 'M', 'L', 'XL']);
 assert.deepEqual(bra.colorVariants.map(v => v.name), ['Black', 'Blue', 'Grey', 'Brick']);
-for (const product of before.products) assert.deepEqual(catalog.products.find(p => p.id === product.id), product);
+for (const product of before.products) {
+  // The separate, owner-authorized WT0216 purchase release changes only
+  // its availability; every other field and every other product is frozen.
+  const expected = product.id === '80000000-0000-4000-8000-000000000021'
+    ? { ...product, availableForSale: true } : product;
+  assert.deepEqual(catalog.products.find(p => p.id === product.id), expected);
+}
 assert.equal(catalog.products.length, before.products.length + 1);
 const presentation = load('src/v84/catalog-data.ts');
 assert.deepEqual(presentation.forAudience('men'), old('src/v84/catalog-data.ts').forAudience('men'));
