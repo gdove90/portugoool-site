@@ -7,15 +7,16 @@
     "session": "codex-tempo-training-be9312aa",
     "branch": "codex/tempo-training-tee-f07faa75",
     "base_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
-    "head_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
-    "worktree_state": "scoped_local_edits",
+    "head_commit": "3a5fd70f89fbd8e945fff55ac34ac2555dc99f90",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "Owner be9312aa-5efb-4e06-b575-a7b89958f3f6: upload approved Blue Suzanne, Purple Amanda, White Molly 15-image galleries to website; continue f07faa75 publication scope, S-XL, existing $34 and purchasing hold."
     ],
     "completed": [
       "Completed and owner-approved five matching views for Lake Blue Suzanne, Light Purple Amanda and White Molly.",
       "Prepared 15 original-framing 1024x1536 WebP assets and exact SHA256 manifest.",
-      "Updated only WT0216 catalog, three colors, S-XL, saved-design mapping, supplier size chart and women public inclusion; existing $34 and purchasing hold preserved."
+      "Updated only WT0216 catalog, three colors, S-XL, saved-design mapping, supplier size chart and women public inclusion; existing $34 and purchasing hold preserved.",
+      "Uploaded exact 15 approved WebP assets and product data; PR #74 opened at 3a5fd70f89fbd8e945fff55ac34ac2555dc99f90"
     ],
     "tests": [
       "PASS 15-image gallery and full other-product preservation checks",
@@ -29,7 +30,7 @@
       "White supplier background-detection warning unresolved; purchasing held.",
       "STORE_OPEN/APLIIQ_SUBMIT_ENABLED values unverified; their code/settings untouched."
     ],
-    "next_action": "Finish build, commit and push same task branch, create PR/preview then deploy owner-authorized gallery publication.",
+    "next_action": "Inspect deploy preview, merge reviewed owner-authorized PR #74, then verify production UI and image bytes.",
     "external_effects": [
       {
         "reference": "be9312aa-gallery-publication",
@@ -40,6 +41,11 @@
         "reference": "be9312aa-git-publication",
         "status": "intent",
         "details": "Publish exact scoped 22-file tree 71bb03fb8a3ea90ca2cd2af6ebe8c19181d2326f to existing task branch and open PR for deploy preview; no live deployment yet."
+      },
+      {
+        "reference": "be9312aa-git-publication",
+        "status": "confirmed",
+        "details": "Task branch at 3a5fd70f89fbd8e945fff55ac34ac2555dc99f90, PR https://github.com/gdove90/portugoool-site/pull/74. Production still unchanged."
       }
     ]
   },
@@ -62,7 +68,7 @@
     "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "acquired_at": "2026-11-04T08:03:10.031538+00:00"
   },
-  "revision": 44,
+  "revision": 45,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T08:57:58.259Z"
+  "updated_at": "2026-11-04T08:58:48.971Z"
 }
