@@ -17,7 +17,8 @@
       "Shared contract validator PASS; acquired the single coordinator ref through native GitHub CAS transport; canonical helper check verified ownership.",
       "Prepared exact five-file scoped tree 1a4217f2343cc36ff0b0c261af22e50c15e826b0 with approved desktop/mobile WebPs, lower-only markup/reference change and decision record.",
       "Published exact verified five-file tree1a4217f2343cc36ff0b0c261af22e50c15e826b0 at1bc427e4a3bed9a775d23033cbac7d321676dab7; PR77 created. Local branch is clean and matches published tree; sparse metadata reconciled without content changes.",
-      "Netlify preview6aeb8a05068eddd216883728 READY exact1bc427e4; desktop and390pxphone previews visually verified. Both hero/lower sources loaded; phone crop selected; no horizontal overflow; headline retained and oversized wordmark absent. Existing nonproduction collection gate preserved."
+      "Netlify preview6aeb8a05068eddd216883728 READY exact1bc427e4; desktop and390pxphone previews visually verified. Both hero/lower sources loaded; phone crop selected; no horizontal overflow; headline retained and oversized wordmark absent. Existing nonproduction collection gate preserved.",
+      "PR77 merged successfully to main8483b4960add4fbc49de944be88ba415e05d8b09 with exact reviewed lower-only image tree. Existing Netlify GitCD production deployment pending."
     ],
     "tests": [
       "PASS typecheck and production build. Only preexisting img warnings.",
@@ -27,9 +28,9 @@
       "PASS hosted preview visual QA at desktop and390px; responsive asset load and nooverflow checks."
     ],
     "unresolved": [
-      "Production merge/deploy and post-release verification pending."
+      "Production deployment and final browser verification pending."
     ],
-    "next_action": "Merge PR77 at exact1bc427e4 against current main64f8e8d; monitor existing Netlify Git deployment, verify production desktop/mobile, then record outcome and release lock.",
+    "next_action": "Monitor production GitCD for exact8483b4960add4fbc49de944be88ba415e05d8b09, verify desktop/mobile, checkpoint final outcome, release lock.",
     "external_effects": [
       {
         "reference": "ea28ab9b-bottom-only-release",
@@ -45,6 +46,11 @@
         "reference": "ea28ab9b-bottom-only-release",
         "status": "preview_ready_merge_intent",
         "details": "Preview6aeb8a05068eddd216883728 READY exact source1bc427e4a3bed9a775d23033cbac7d321676dab7; desktop/phone image/headline verified. Owner-authorized exact five-file PR77 will merge to main64f8e8d for existing GitCD. No realpaid/provider/SQL/email operations."
+      },
+      {
+        "reference": "ea28ab9b-bottom-only-release",
+        "status": "merge_confirmed_production_pending",
+        "details": "PR77 merge confirmed at main8483b4960add4fbc49de944be88ba415e05d8b09. Do not replay merge or start an extra deploy. Monitor GitCD for exact commit and verify live lower image/headline and unchanged top."
       }
     ],
     "changed_paths": [
@@ -74,7 +80,7 @@
     "start_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
     "acquired_at": "2026-11-04T12:18:15.662200+00:00"
   },
-  "revision": 74,
+  "revision": 75,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T19:41:44.421928+00:00"
+  "updated_at": "2026-11-04T19:44:58.972680+00:00"
 }
