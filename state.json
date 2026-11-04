@@ -1,16 +1,7 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 13,
-  "holder": {
-    "engine": "codex",
-    "session": "codex-halo-ordering-135218e7",
-    "task": "halo-sweatpant-ordering-20261103",
-    "branch": "codex/halo-sweatpant-ordering-20261103",
-    "approval": "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders.",
-    "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
-    "token_hash": "dcda44c00305e2eec0296aea10cc81221ee5d0d9b2046ab984756e4fa8e10ff2",
-    "acquired_at": "2026-11-04T04:58:04.591Z"
-  },
+  "revision": 14,
+  "holder": null,
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "task_id": "halo-sweatpant-ordering-20261103",
@@ -33,7 +24,8 @@
       "Stage 1 merged PR #68 as 34ff8dad1f0e1234c58615337240fdb0950a6583; production deploy 6aeac3684ca4e112c1a33e01 ready at exact commit. Live read-only Quarter Zip checkout preview returned 200, $36 + $6.95, proving manual supplier runtime/ledger/schema prerequisites.",
       "Stage 2 conditional activation committed and pushed as fe59673b0ad20df3874fa939ea305ad949d5d6db, PR #69: four colors available at $38, original imagery/presentation/order unchanged.",
       "Activation exact-head preview 6aeac50bb158b7e81533f335 READY. PR #69 merged once as fe6e4a7b316fc0002b0220b2adae8f48132bbaff under current owner approval.",
-      "Production activation deploy 6aeac58511a3899574f03836 READY at fe6e4a7b316fc0002b0220b2adae8f48132bbaff. All 20 live pricing previews returned $38 + $6.95, resisting submitted $0.01 prices; four colors/six photos/Add to bag live. Men listing confirmed immediately before raincoat."
+      "Production activation deploy 6aeac58511a3899574f03836 READY at fe6e4a7b316fc0002b0220b2adae8f48132bbaff. All 20 live pricing previews returned $38 + $6.95, resisting submitted $0.01 prices; four colors/six photos/Add to bag live. Men listing confirmed immediately before raincoat.",
+      "LIVE VERIFIED: all four colorways at $38 with 24 approved photos; desktop and mobile gallery checks, live Men placement before raincoat, all20 live price previews and exact live Stripe unpaid handoff PASS. PR #69 updated with production evidence. Final main and current production deploy rechecked; task worktree clean at fe59673b0ad20df3874fa939ea305ad949d5d6db."
     ],
     "tests": [
       "Contract validator PASS",
@@ -46,14 +38,15 @@
       "Production build PASS",
       "Catalog preservation PASS: only target price changed; sales still held; every other product, 24 images, catalog order, source supplier gates, shipping and presentation unchanged",
       "Stage 2 expanded 163-variant supplier/price checks PASS; all prior 143 expectations unchanged; 978 quantity/discount payload cases PASS; 17 Halo checks/typecheck/lint/build/preservation PASS.",
-      "Live GOAL Stripe account retrieved the exact website-created unpaid Oat XXL Checkout Session: USD3800 item,4495 total,695 shipping, TAP-1567489152965033984-XXL, a:null, consent denied, no customer/email/payment intent. Exact Stripe line-item unit amount3800 PASS."
+      "Live GOAL Stripe account retrieved the exact website-created unpaid Oat XXL Checkout Session: USD3800 item,4495 total,695 shipping, TAP-1567489152965033984-XXL, a:null, consent denied, no customer/email/payment intent. Exact Stripe line-item unit amount3800 PASS.",
+      "Browser PASS: 6 photos per color, matching front/detail swaps, Add to bag enabled after size selection, no horizontal overflow at mobile391; final live screenshot captured and user bag preserved."
     ],
     "unresolved": [
-      "Deploy repair with target sales still held, then verify live read-only manual-route readiness before final activation.",
-      "No actual charge, customer email or supplier order performed as a test; historical order repair is outside this task.",
-      "Tapstitch ordering remains manual. Landed cost/margin and physical sample verification remain unverified; owner explicitly approved $38."
+      "Tapstitch placement remains manual by Gary Dove using durable owner task and docs/catalog/core-sweatpant-tapstitch-fulfillment.md; no direct Tapstitch ordering API claimed.",
+      "No real paid test, supplier order or customer email performed. The single verification Session is unpaid with automatic expiry recorded; historical order remediation remains outside this task.",
+      "Landed contribution margin and physical sample verification remain UNKNOWN; retail $38 explicitly approved."
     ],
-    "next_action": "Finish visual proof, update release review record, clean committed branch checkpoint and release lease. No further payment or supplier actions.",
+    "next_action": "Task complete. Normal paid orders use exact immutable supplier references and the documented manual Tapstitch workflow; no further test transaction or release action required.",
     "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
@@ -89,16 +82,17 @@
         "expires_at": "2026-11-05T05:44:25.000Z",
         "cleanup": "No expire operation exposed by connector. Unpaid Session expires automatically. No payment, supplier order, customer email or site order created."
       }
-    ]
+    ],
+    "release_status": "LIVE_VERIFIED"
   },
-  "updated_at": "2026-11-04T05:45:51.254Z",
+  "updated_at": "2026-11-04T05:47:21.866Z",
   "last_released_holder": {
     "engine": "codex",
-    "session": "codex-halo-gallery-20261103-09bd580c",
-    "task": "halo-sweatpant-gallery-20261103",
-    "branch": "codex/halo-sweatpant-gallery-20261103",
-    "approval": "Owner request 9fa3a0af-1dde-4e98-be4e-6f6c16993098: add approved sweatpant photos to live website; imagery exposure only, preserve purchasing hold and existing gates.",
-    "start_commit": "d236ca4845838b88e1d9eb233f154397288f4dbc",
-    "acquired_at": "2026-11-04T04:29:45.479Z"
+    "session": "codex-halo-ordering-135218e7",
+    "task": "halo-sweatpant-ordering-20261103",
+    "branch": "codex/halo-sweatpant-ordering-20261103",
+    "approval": "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders.",
+    "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
+    "acquired_at": "2026-11-04T04:58:04.591Z"
   }
 }
