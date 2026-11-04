@@ -17,23 +17,26 @@
       "Continued existing task branch at pushed5ecf688; main separately advanced03ae0c... by PR78, preserve those changes.",
       "Read latest shared coordinator revision83,noholder; acquired unique new session933d432... Canonical PR66 contract and15manifest files/parity validatorPASS; no tracked code changes.",
       "Authenticated Tapstitch Branding shows exactly one existing My clothing label4x4cm,Approved,$0.99; no duplicate rectangular label.",
-      "Approved clean artwork:Librarylibfile_32d87b2521b48191bf3766ce3919b401,1440x480RGBA,609.6DPI,nominal60x20mm,32004bytes,SHA2562ac2f8e3a46938b3c1bd0200dd2e1f81478c822166a563e1967d9ad5d82a9399. Original16SVGpaths retained; proposed graphic48x12.17mm centered. Final suppliertemplateplacementpending."
+      "Approved clean artwork:Librarylibfile_32d87b2521b48191bf3766ce3919b401,1440x480RGBA,609.6DPI,nominal60x20mm,32004bytes,SHA2562ac2f8e3a46938b3c1bd0200dd2e1f81478c822166a563e1967d9ad5d82a9399. Original16SVGpaths retained; proposed graphic48x12.17mm centered. Final suppliertemplateplacementpending.",
+      "Current Tapstitch rectangular draft1567767387741245440, selected2x6cm White. Actual printable zone5.4x1.7cm,638x201px at300DPI verified in upload dialog.",
+      "Clean PNG file chooser transfer rejected by Tapstitch Invalid File Type despite validated PNG. No new file uploaded. Reused existing all-black V1.3 horizontal supplier source dfd5140be4c84d9e8f1dd62b544fb302,2973x793px,9.9x2.6in@300DPI.",
+      "One source layer resized proportionally with linked dimensions to4.8x1.3cm displayed,0rotation,Good1573DPI. Both horizontal and vertical center Align applied; screenshot verifies print stays within safe dashed area."
     ],
     "tests": [
       "PASS canonical configuration parity from current PR66 review source; current task has no AGENTS/contract yet. Isolated inspection only.",
-      "PASS PNG decode/alpha/resolution/dimensions/exactsourcegeometry checks from approved preparation; filepresentforupload."
+      "PASS PNG decode/alpha/resolution/dimensions/exactsourcegeometry checks from approved preparation; filepresentforupload.",
+      "PASS current editor resolution and safe-area visual check; aspect link enabled and dimensions preserved; no supplier submission yet."
     ],
     "unresolved": [
-      "New rectangular label not yet submitted or Approved; existing square branding must remain until valid replacement.",
-      "Browser upload must use supported file chooser, then current upload troubleshooting if it fails. Prior Library transfer route was blocked; do not use another host/raw API/browser workaround.",
-      "Apliiq women's tag audit and WT0093 complete saved production designs remain separate pending work; do not relaunch blocked products or replay prior WT0216 release."
+      "New rectangular label not yet submitted or Approved; preserve existing square labels until replacement available.",
+      "Apliiq women's audit and unsaved WT0093 production designs remain separate unresolved work."
     ],
-    "next_action": "Open Addnewlabel,select2x6cmWhite,uploadexactapprovedPNGviafilechooser,placeinsideactualeditorboundsandverifyquality. Submitforreviewonce;reconciletableifuncertain. AssignonlyApprovedreplacementtofourUB0050colors,verifyfreshreload. IfPendingorfiletransferblocked,checkpointandhandoffwithoutremovingexistinglabels.",
+    "next_action": "Submit this single finished2x6cmWhite draft once; reconcile supplier result. Rename if offered. OnlyApproved label may replace fourUB0050 tags; ifPending, release with no assignments.",
     "external_effects": [
       {
         "reference": "rect-label-2x6-173c22e6",
         "status": "intent",
-        "details": "Create exactly one named GOAL V1.3 Rectangular 2x6 cm label on authenticated Tapstitch, White background, exact approvedPNG. Submit for supplier review; only if Approved, replace4x4label on UB0050 saveddesigns1567484017748627456Black,1567487271354122240HazeBlue,1567489152965033984Apricot(siteOat),1567491247352987648FlowerGray. Preserve all otherlabels,artwork,retail,images,orders andgates. No charges/orders."
+        "details": "Submit single2x6cmWhite label draft1567767387741245440 with existing supplier all-blackV1.3horizontal source dfd5140be4c84d9e8f1dd62b544fb302, centered4.8x1.3cm,Good1573DPI. This reuses uploaded approvedV1.3 geometry instead of rejected file transfer. Name GOAL V1.3 Rectangular2x6cm if possible. OnlyApproved assign to fourUB0050 saveddesigns1567484017748627456,1567487271354122240,1567489152965033984,1567491247352987648; preserve allotherproducts/artwork/retail/images/orders/gates. No orders orcharges."
       }
     ],
     "changed_paths": []
@@ -57,7 +60,7 @@
     "start_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
     "acquired_at": "2026-11-04T20:37:21.589071+00:00"
   },
-  "revision": 85,
+  "revision": 86,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T21:07:30.273764+00:00"
+  "updated_at": "2026-11-04T21:22:13.768611+00:00"
 }
