@@ -251,9 +251,40 @@ async function main() {
     const h=createHarness();const f=h.seedReceipt();f.items=[{product_id:PRODUCT,size:'XXL',color:'Oat',quantity:1,custom_name:null,custom_number:null,unit_price_cents:3800,apliiq_product_id:null,apliiq_sku:`TAP-${EXPECTED.Oat}-XXL`}];h.itemRows.set(f.order.id,f.items);
     h.transport.mode='fail';const mail=h.load('src/lib/email-delivery.ts');await mail.queueFulfillmentAlert(h.store,f.order.id,false,'tapstitch_manual','manual');h.tables.orders[0].submission_attempt_id='different-apliiq-attempt';await mail.queueFulfillmentAlert(h.store,f.order.id,false,'tapstitch_manual','manual');assert.equal(h.tables.email_deliveries.length,1);assert(h.tables.email_deliveries[0].key.endsWith('/tapstitch_manual/first'));
   });
+  const teeId='80000000-0000-4000-8000-000000000021';
+  const tees={White:['1564324134866087936','1564324861776748544'],'Lake Blue':['1567566232960516096','1567566233338085376'],'Light Purple':['1564325488367988736','1564325823350292480']};
+  const teeCart=(color,size,quantity=1)=>({productId:teeId,color,size,quantity,priceCents:1});
+  await check('All 12 released WT0216 variants preserve $34, paid snapshot, exact saved design and tagged manual owner task',async()=>{
+    const providerCount=state.provider.length;
+    for(const [color,[design,page]] of Object.entries(tees))for(const size of ['S','M','L','XL']){
+      const r=await checkout.POST(req({items:[teeCart(color,size)]}));assert.equal(r.status,200);
+      const params=state.sessions.at(-1),snapshot=JSON.parse(params.metadata.items_0)[0];
+      assert.deepEqual(snapshot,{p:teeId,c:color,s:size,q:1,u:3400,k:`TAP-${design}-${size}`,a:null});
+      const paid=await deliver(event(params,{session:{amount_total:4095}}));assert.equal(paid.body.submission,'manual_tapstitch');
+      const order=await store.getOrderById(paid.body.order),items=await store.listOrderItems(order.id);
+      assert.equal(order.status,'paid');assert.equal(order.total_cents,4095);assert.equal(items.length,1);assert.equal(items[0].unit_price_cents,3400);assert.equal(items[0].apliiq_sku,snapshot.k);
+      assert(state.alerts.has(order.id+'/tapstitch_manual'));
+      const message=load('src/lib/emails/fulfillment-alert.ts').buildFulfillmentAlert({order,items,parkedAs:'tapstitch_manual',reason:''});
+      for(const text of [design,page,`supplier color ${color}`,`supplier size ${size}`,'GOAL 4 x 4 cm clothing label'])assert(message.text.includes(text),text);
+    }
+    assert.equal(state.provider.length,providerCount,'No WT0216 line may reach Apliiq');
+  });
+  await check('WT0216 totals and discounts retain the existing post-discount free-shipping threshold',async()=>{
+    const before=state.sessions.length;
+    for(const [quantity,code,total,shipping] of [[1,'',4095,695],[2,'',7495,695],[3,'',10200,0],[2,'GOOOL20-FIXTURE',6135,695],[3,'GOOOL20-FIXTURE',8160,0]]){
+      const r=await checkout.POST(req({items:[teeCart('White','S',quantity)],preview:true,code,email:code?'buyer@example.test':''}));
+      assert.equal(r.status,200);assert.equal(r.body.totalCents,total);assert.equal(r.body.shippingCents,shipping);
+    }
+    assert.equal(state.sessions.length,before,'Preview must not create Checkout Sessions');
+  });
+  await check('WT0216 invalid variants and the other held women products cannot reach Stripe',async()=>{
+    const before=state.sessions.length;
+    for(const item of [teeCart('White','XS'),teeCart('White','XXL'),teeCart('Black','S'),{productId:'80000000-0000-4000-8000-000000000017',color:'White',size:'S',quantity:1},{productId:'80000000-0000-4000-8000-000000000025',color:'Black',size:'S',quantity:1}])assert.equal((await checkout.POST(req({items:[item]}))).status,400);
+    assert.equal(state.sessions.length,before);
+  });
   await pg.close();
-  if (!process.argv[2]) assert.equal(passed,17,'All independent checks must run');
+  if (!process.argv[2]) assert.equal(passed,20,'All independent checks must run');
   else assert(passed > 0,'The requested test filter must match a check');
-  console.log(`${passed} Halo integration checks passed; 20 exact variants covered. No production writes or provider requests.`);
+  console.log(`${passed} Tapstitch integration checks passed; 20 Halo and 12 WT0216 variants covered. No production writes or provider requests.`);
 }
 main().catch(e=>{console.error(e);process.exit(1);});

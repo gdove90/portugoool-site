@@ -10,7 +10,7 @@
     "L",
     "XL"
   ],
-  "available_for_sale": false,
+  "available_for_sale": true,
   "artwork_reference_inches": {
     "width": 7.5,
     "height": 2,
@@ -23,10 +23,7 @@
     "Lake Blue": "1567566232960516096",
     "Light Purple": "1564325488367988736"
   },
-  "hold_reasons": [
-    "White supplier background-detection warning needs resolution; physical print/sample not approved.",
-    "Internal TAP identifiers are not supplier SKUs; purchasing release is outside this gallery publication."
-  ],
+  "hold_reasons": [],
   "files": [
     {
       "path": "public/products/tempo-training-tee/tempo-training-tee-white-ghost-front-20261104.webp",
@@ -223,5 +220,17 @@
       "view": "detail",
       "art": "black"
     }
-  ]
+  ],
+  "purchase_release_approval": "Owner 683b2d58-288d-446c-b5cb-1df34f5d80ba: ensure currently online women products can be purchased.",
+  "production_verification": {
+    "date": "2026-11-04",
+    "status": "APPROVED_FOR_RELEASE_PENDING_LIVE_RUNTIME_CHECK",
+    "all_three_editors": "7.5 x 2 inches, DPI Good396; reference L, DTF; exact approved inks; S-XL offered within supplier S-2XL.",
+    "white_background_warning": "False positive reviewed in supplier Image Review red print mask: checkerboard surrounds mark and letter interiors, only artwork prints. Observed PNG has transparent edges/corners. No Remove Background, artwork edit or supplier design save performed.",
+    "sample": "No physical sample claimed or approved.",
+    "label": "Existing approved My clothing label, GOAL V1.3 vertical lockup, 4 x 4 cm, $0.99; assigned and persisted for all three saved designs.",
+    "unit_quote_usd": 10.97,
+    "landed_contribution_margin": "UNKNOWN: shipping, fees, duties and full landed costs not established.",
+    "fulfillment": "Existing paid manual Tapstitch route; Gary is operator. See tempo-training-tee-purchase-20261104.md. TAP references are internal routing references, not API SKUs."
+  }
 }

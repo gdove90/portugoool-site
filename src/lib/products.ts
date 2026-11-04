@@ -5235,7 +5235,8 @@ export const products: Product[] = [
   // == end TEMPO Warmup Hoodie ==
   // Owner-approved WT0216 galleries, 2026-11-04. DTF horizontal V1.3
   // 7.5 x 2 in on reference L; supplier scales by garment size.
-  // White black/red, Lake Blue white, Light Purple black. Purchasing held.
+  // White black/red, Lake Blue white, Light Purple black. Owner released
+  // purchasing 2026-11-04 after saved artwork and clothing-label checks.
   {
     id: "80000000-0000-4000-8000-000000000021",
     name: "TEMPO Training Tee",
@@ -5257,7 +5258,7 @@ export const products: Product[] = [
     category: "tshirt",
     supplierType: "tapstitch",
     isActive: true,
-    availableForSale: false,
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
