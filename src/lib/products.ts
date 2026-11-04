@@ -4485,7 +4485,7 @@ export const products: Product[] = [
     name: "The Core Sweatpant",
     slug: "goal-athletics-core-sweatpant",
     blank: "UB0050",
-    description: "A goal is just the beginning. Tapered sweatpants with an open straight hem, finished with the Halo monogram on the left thigh. Made for downtime between sessions.",
+    description: "Made for the hours between sessions, these sweatpants have a soft, substantial feel and an easy, relaxed fit. The leg tapers to an open hem, with an elastic waist and the Halo monogram on the left thigh.",
     priceCents: 3800,
     color: "Black",
     colorHex: CORE_SWEATPANT_VARIANTS[0].hex,

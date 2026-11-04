@@ -515,3 +515,6 @@
 @media (max-width: 1023px) {
   :where(.v84) .mobile-hide-emoji-arrow { display: none !important; }
 }
+
+/* Approved men’s hero: retain the athlete across landscape and phone crops. */
+:where(.v84) .collection-hero.men .hero-photo{object-position:75% center}
