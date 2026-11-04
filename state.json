@@ -7,8 +7,8 @@
     "session": "codex-bra-price18-098690e7",
     "branch": "codex/tempo-training-bra-20261104",
     "base_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
-    "head_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
-    "worktree_state": "staged_scoped_documents",
+    "head_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: WT0093 specification checks, four color galleries, Suzanne Black new hairstyle, front ghost first/back ghost last, website preparation preserving holds.",
       "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c permits Suzanne again for Brick; finish four matching views and gallery draft.",
@@ -26,7 +26,8 @@
       "Updated owner research decision Page seq5 with six-view exception, model assignments, verified results and remaining blockers.",
       "Generated four Brick Suzanne views successfully, preserving high braided bun, source poses/framing and rear Wine GA. All four colors now six images.",
       "Published the seven-file Brick Suzanne completion at bfbcf31b804b38c0240d53df90e32e05ec802793 in existing draft PR75; exact tree4c8d8bba76d6a4b8a7e9b7579741230c4ec2924e verified.",
-      "Updated readiness manifest, PR description and owner decision Page seq6: all four colorways now six images, Suzanne approved for Brick; no pending Amanda imagery requirement."
+      "Updated readiness manifest, PR description and owner decision Page seq6: all four colorways now six images, Suzanne approved for Brick; no pending Amanda imagery requirement.",
+      "Recorded owner-approved USD18 /1800 cents for all four WT0093 colorways and S/M/L/XL in readiness manifest and README. Published two-file change to draft PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1; updated PR and owner Page seq7."
     ],
     "tests": [
       "PASS 20 unique images decode at1024x1536 and SHA256/order validation.",
@@ -40,15 +41,16 @@
       "PASS all24 unique1024x1536 images, complete six-view order and SHA256 validation; original20 images unchanged.",
       "PASS staged seven-file scoped diff and whitespace check.",
       "PASS all seven new/changed GitHub blob hashes, exact tree, clean checkout and task remote commit verification.",
-      "Application/commerce tests N/A: only images and design documents changed."
+      "Application/commerce tests N/A: only images and design documents changed.",
+      "PASS scoped two-document diff, JSON price/currency/scope assertions, unchanged variant/image objects and purchasing state; exact local/GitHub tree b43d6d6166d052bcdf9569cd6f6143e42746ad58; clean task checkout at pushed head."
     ],
     "unresolved": [
       "No saved supplier decorated designs; direct file upload rejected and browser policy blocked Library-download route. Need approved PNGs uploaded in Tapstitch.",
-      "Retail price and final product name pending.",
+      "Final product name pending. USD18 retail approved and recorded.",
       "Smallest-size scaling/detail-gap quality/sample and manual Tapstitch fulfillment readiness unverified.",
       "No production deployment or catalog publication."
     ],
-    "next_action": "All24 gallery images complete. Continue same branch/PR75 for retail price/name and saved Tapstitch design checks. Preserve purchasing holds and do not deploy incomplete supplier/retail intake. No more gallery generation needed.",
+    "next_action": "USD18 retail is approved across all four WT0093 colorways and S-XL sizes. All24 gallery images complete. Continue same branch/PR75 for saved decorated Tapstitch designs, final naming and applicable supplier/fulfillment checks; preserve holds.",
     "external_effects": [
       {
         "reference": "239154a8-draft-assets-publication",
@@ -74,32 +76,28 @@
         "reference": "098690e7-bra-retail18",
         "status": "intent",
         "details": "Publish approved USD18 retail in readiness manifest, README, PR75 and owner decision Page; no live catalog, provider pricing, supplier save, gates or deployment changes."
+      },
+      {
+        "reference": "098690e7-bra-retail18",
+        "status": "confirmed",
+        "details": "Draft manifest/README published in PR75 at 2f2852e6260393b59fb0528331d9bbf1dfa5c8b1, PR body updated, owner decision Page seq7. USD18 retail recorded for all colors/sizes. No production pricing, payment, supplier, gates or deployment changes."
       }
     ],
     "changed_paths": [
       "designs/wt0093-training-bra-20261104/"
     ]
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-bra-price18-098690e7",
     "task": "tempo-training-bra-20261104",
     "branch": "codex/tempo-training-bra-20261104",
     "approval": "Owner 098690e7-d5c1-42a4-8271-ce6a9c1d8f39 sets WT0093 retail price to USD18 for all four colorways; retain existing conditional publication authorization and supplier readiness holds.",
     "start_commit": "bfbcf31b804b38c0240d53df90e32e05ec802793",
-    "token_hash": "39dfc33187faf6958c794dc2a4fe7736cee46efcdb7a708106b5ace978f1759b",
     "acquired_at": "2026-11-04T11:42:09.016391+00:00"
   },
-  "last_released_holder": {
-    "engine": "codex",
-    "session": "codex-bra-suzanne-2beee444",
-    "task": "tempo-training-bra-20261104",
-    "branch": "codex/tempo-training-bra-20261104",
-    "approval": "Owner2beee444-f1be-4e02-b5e4-3c86caecdb4c: use Suzanne again for Brick if Amanda cannot be generated; finish four missing matching views and existing bra gallery package. Existing conditional website authorization preserved; retail/supplier checks still pending.",
-    "start_commit": "81f7079f4348acfe380539a7105b8e343f3a4dfb",
-    "acquired_at": "2026-11-04T11:24:38.839079+00:00"
-  },
-  "revision": 57,
+  "revision": 58,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T11:43:12.674300+00:00"
+  "updated_at": "2026-11-04T11:44:24.072872+00:00"
 }
