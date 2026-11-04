@@ -67,26 +67,17 @@
       "designs/product-editorial-predawn-20261104/README.md"
     ]
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-predawn-d8cbb24b",
     "task": "goal-shared-predawn-banner-20261104",
     "branch": "codex/shared-predawn-product-banner-20261104",
     "approval": "Owner fd43b744 deploy approved mixed-athlete banner; d8cbb24b add GA logo to mens shorts before deployment. Names remain proposals.",
     "start_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
-    "token_hash": "a44840235c4b66cfa771321fea25a8dc1757678a49c22865dbe63d877256eb00",
     "acquired_at": "2026-11-04T20:37:21.589071+00:00"
   },
-  "last_released_holder": {
-    "engine": "codex",
-    "session": "codex-women-lower-ea28ab9b",
-    "task": "goal-women-lower-track-banner-20261104",
-    "branch": "codex/women-lower-track-banner-20261104",
-    "approval": "Owner approved trackside lower photograph, removed oversized GOAL ATHLETICS lettering, preserved For your next session. and explicitly requested bottom-only deployment leaving top unchanged. Requests 26cfcab2-619d-4ff6-a171-21637808eeb7 and ea28ab9b-71d9-44ed-b93b-b7c611a26c7c.",
-    "start_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
-    "acquired_at": "2026-11-04T19:34:10.430261+00:00"
-  },
-  "revision": 82,
+  "revision": 83,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T20:56:36.464387+00:00"
+  "updated_at": "2026-11-04T20:58:06.903632+00:00"
 }
