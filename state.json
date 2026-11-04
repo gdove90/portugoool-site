@@ -29,13 +29,16 @@
     "external_effects": [
       {
         "reference": "tempo-tee-gallery-release",
-        "status": "preview_pending",
+        "status": "merged_production_pending",
         "commit": "0933efa48a8a78eaf39e046e1a7dd274ee15b188",
         "pr": 71,
-        "intent": "Merge this exact23-file imagery/exposure release after preview passes; target goalathletics.shop. No payment, supplier order, SQL or settings changes."
+        "preview_deploy": "6aead2d391d3306bf1f95883",
+        "merge_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
+        "target": "https://goalathletics.shop",
+        "reconciliation": "PR71 merged once after exact-head READY; do not replay merge. Wait for production then read-only verify."
       }
     ],
-    "next_action": "Verify exact-head preview then publish under owner c60e8d03 approval; live desktop/mobile galleries, one women's item and other holds.",
+    "next_action": "Watch exact production merge d6b77f32f93d867e1f96ae89f51565f6804c433d; verify women one item,18 assets and3 color galleries, desktop/mobile and checkout hold.",
     "changed_paths": [
       "src/lib/products.ts",
       "src/lib/collection-launch.ts",
@@ -81,7 +84,7 @@
     "start_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
     "task": "goal-editorial-imagery-20261104"
   },
-  "revision": 24,
+  "revision": 25,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:38:37.496Z"
+  "updated_at": "2026-11-04T06:41:22.171Z"
 }
