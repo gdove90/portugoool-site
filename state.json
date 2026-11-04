@@ -1,6 +1,6 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 3,
+  "revision": 4,
   "holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
@@ -34,13 +34,17 @@
       "Catalog and gallery routing PASS; all 20 color/size combinations remain unavailable; all other products and 13 protected commerce/layout files unchanged",
       "First local build found missing brand asset from sparse inspection checkout; existing public/brand and netlify files now hydrated, build retry in progress",
       "Production build PASS after hydrating existing baseline brand asset; no source fix required.",
-      "Remote environment values UNVERIFIED: broad environment-list request rejected; proceed using byte-identical gate/config files and no environment writes."
+      "Remote environment values UNVERIFIED: broad environment-list request rejected; proceed using byte-identical gate/config files and no environment writes.",
+      "Netlify preview build PASS, commit 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5.",
+      "All 24 preview assets HTTP 200 with exact SHA256 matches.",
+      "Local production prerender includes all 24 assets, four colors, unannounced price and disabled Coming soon button.",
+      "26 local files exactly match committed remote blobs; working tree clean; main remains d236ca4845838b88e1d9eb233f154397288f4dbc."
     ],
     "unresolved": [
-      "Sweatpant remains unavailable for sale: price zero, no supplier mappings; Tapstitch paid-route readiness not established. No commerce repair authorized.",
-      "Remote preview and live visual verification pending."
+      "Preview product UI is hidden by existing collection-wide migration preview flag; no settings changed. Interactive gallery checks deferred to live publication.",
+      "Product purchases remain disabled, price zero, no supplier mapping. No physical sample/fulfillment readiness claimed."
     ],
-    "next_action": "Verify ready hosted preview at desktop/mobile, all 24 image hashes, colors/views and disabled purchasing; then owner-authorized imagery-only merge/deploy and live verification.",
+    "next_action": "Merge exact PR #67 head 44433d27a6fa3bbf43fcffd260eab1ffd6a170b5 under owner request; watch production deploy then verify actual live galleries at desktop/mobile.",
     "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
@@ -53,9 +57,9 @@
       {
         "reference": "halo-sweatpant-gallery-live-release-20261103",
         "intent": "Merge exact reviewed imagery commit after hosted checks, publish to goalathletics.shop with purchasing disabled.",
-        "status": "intent_recorded_not_executed"
+        "status": "intent_verified_ready_to_execute"
       }
     ]
   },
-  "updated_at": "2026-11-04T04:39:42.763Z"
+  "updated_at": "2026-11-04T04:41:24.892Z"
 }
