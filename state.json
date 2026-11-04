@@ -1,6 +1,6 @@
 {
   "schema": "goal-agent-coordination-v2",
-  "revision": 7,
+  "revision": 8,
   "holder": {
     "engine": "codex",
     "session": "codex-halo-ordering-135218e7",
@@ -24,22 +24,44 @@
       "Read shared contract/manifest; validator PASS; previous imagery release complete and shared holder null.",
       "Verified GOAL Athletics live Stripe account and enabled live goalathletics.shop/api/stripe-webhook endpoint with required checkout/async/refund/dispute events.",
       "Tapstitch current saved Halo designs found for all four colors, DTF, sizes S/M/L/XL/2XL, displayed cost $20.98; old pre-Halo product URL is discontinued.",
-      "Source audit reproduced null-Apliiq-ID mapping defect and concurrent order-line persistence race; fixes required before release."
+      "Source audit reproduced null-Apliiq-ID mapping defect and concurrent order-line persistence race; fixes required before release.",
+      "Verified all four authoritative saved Halo design IDs, distinct ordering-page IDs, UB0050 S/M/L/XL/2XL, DTF 3x3 inches at 400 DPI. Both actual vendor PNG thumbnails preserve transparency; automated background warning reviewed, no supplier edits made.",
+      "Implemented 20 immutable internal TAP references, approved $38 price with sales still held, supplier-aware paid snapshot validation, stable UUIDv5 item keys/upsert, durable retryable manual handoff, independent Apliiq gate and accurate operator task content.",
+      "Added read-only checkout readiness checks for runtime context, email transport, order/task schema and deployed supplier/category compatibility. No credentials or private customer rows returned.",
+      "Documented operator workflow, missed-alert fallback, Stripe payment metadata supplier-order reference, duplicate prevention and tracking in docs/catalog/core-sweatpant-tapstitch-fulfillment.md."
     ],
     "tests": [
-      "Existing contract parity PASS"
+      "Contract validator PASS",
+      "17 new integration checks PASS, including all 20 color-size variants through checkout, signed webhook, real local PostgreSQL constraints and manual task",
+      "Original null-Apliiq-ID defect and original duplicate-line race independently reproduced as baseline failures",
+      "Existing 143-variant backend/receipt/email queue suite PASS",
+      "10 Meta tracking/business-payload checks PASS, including 858 existing quantity/discount cases",
+      "9 shipment checks PASS",
+      "Typecheck and lint PASS; three pre-existing image warnings",
+      "Production build PASS",
+      "Catalog preservation PASS: only target price changed; sales still held; every other product, 24 images, catalog order, source supplier gates, shipping and presentation unchanged"
     ],
     "unresolved": [
-      "Verify each saved design blank/color/3-inch Halo and exact authoritative IDs.",
-      "Implement/test supplier-aware paid snapshot handling and idempotent line persistence.",
-      "Verify tested manual Tapstitch operator workflow, alerts and tracking; no direct Tapstitch ordering API assumed.",
-      "Only live Stripe account exposed; no sandbox account or paid test authorized."
+      "Deploy repair with target sales still held, then verify live read-only manual-route readiness before final activation.",
+      "No actual charge, customer email or supplier order performed as a test; historical order repair is outside this task.",
+      "Tapstitch ordering remains manual. Landed cost/margin and physical sample verification remain unverified; owner explicitly approved $38."
     ],
-    "next_action": "Verify source designs; implement exact 20 variant mappings, price $38, backend correctness and isolated integration regressions; release only when readiness conditions met.",
-    "worktree_state": "clean_committed_and_pushed",
-    "external_effects": []
+    "next_action": "Commit/push exact 16-file repair and price diff, review/build via PR, deploy with sales held, then probe existing live Tapstitch checkout preview. Activate four colors only if runtime proof passes.",
+    "worktree_state": "scoped_uncommitted_backend_changes",
+    "external_effects": [
+      {
+        "reference": "halo-ordering-repair-stage1",
+        "intent": "Publish reviewed backend repair and $38 price to goalathletics.shop while maintaining target coming-soon flags; no supplier/environment/SQL changes or charges.",
+        "status": "intent_recorded_not_executed"
+      },
+      {
+        "reference": "halo-ordering-activation-stage2",
+        "intent": "After production readiness passes, activate all four colors and verify $38 totals/Stripe hosted Checkout without paying.",
+        "status": "conditional_intent_not_executed"
+      }
+    ]
   },
-  "updated_at": "2026-11-04T04:58:04.591Z",
+  "updated_at": "2026-11-04T05:26:36.553Z",
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-halo-gallery-20261103-09bd580c",
