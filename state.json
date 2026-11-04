@@ -1,126 +1,38 @@
 {
   "checkpoint": {
-    "approval_references": [
-      "be83dd4e-8a18-4c92-875f-854cbd6d5d62",
-      "98740673-ceb7-48c3-9491-b7dbbeb9115b",
-      "64b7a3b3-c368-4961-84ea-2f7e1b6cf96a"
-    ],
+    "schema": "goal-agent-handoff-v2",
+    "contract_version": "2.0",
+    "task_id": "tempo-core-tee-gallery-20261104",
+    "engine": "codex",
+    "session": "codex-tempo-core-tee-c60e8d03",
+    "branch": "codex/tempo-core-tee-c60e8d03",
+    "base_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
+    "head_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
+    "worktree_state": "clean",
     "approved_scope": [
-      "Owner be83dd4e approved exact attached Suzuki concrete men hero, Jeff hoodie homepage men tile and Quarter Zip lower men banner.",
-      "Owner 98740673 explicitly requested deployment to goalathletics.shop.",
-      "Owner 64b7a3b3-c368-4961-84ea-2f7e1b6cf96a additionally requested research-backed Core Sweatpant description beside images: remove A goal is just the beginning; describe verified feel/construction without naming materials. Preserve all other product properties and presentation."
-    ],
-    "base_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
-    "branch": "codex/approved-editorial-imagery-98740673",
-    "changed_paths": [
-      "public/v84/editorial/home-men-jeff-hoodie-20261104-mobile.webp",
-      "public/v84/editorial/home-men-jeff-hoodie-20261104.webp",
-      "public/v84/editorial/men-editorial-quarter-zip-20261104-mobile.webp",
-      "public/v84/editorial/men-editorial-quarter-zip-20261104.webp",
-      "public/v84/editorial/men-hero-suzuki-concrete-20261104-mobile.webp",
-      "public/v84/editorial/men-hero-suzuki-concrete-20261104.webp",
-      "src/lib/products.ts",
-      "src/v84/MobileImage.tsx",
-      "src/v84/mobile-images.json",
-      "src/v84/reference-experience.js",
-      "src/v84/style.css"
+      "Owner c60e8d03-bca9-4650-aa42-9e9615af6fd2: upload approved18 tee images and expose this as first women's piece; preserve other product holds, layout and commerce settings. Existing name TEMPO Core Training Tee recommended."
     ],
     "completed": [
-      "Acquired shared coordinator revision15 after Halo session explicitly released; normal CLI Git writes unavailable, authenticated GitHub API transport publishes same shared ref with expected-head guard; official lease validation preserved.",
-      "Inherited latest approved production fe6e4a7b316fc0002b0220b2adae8f48132bbaff; three image swaps implemented with six 450238-byte WebP variants.",
-      "Read current live sweatpant product at Black/$38 and official Vuori, lululemon, Alphalete product wording plus current UB0050 supplier facts: 87/13 blend, 360gsm/thick, loose tapered leg, elastic waist, straight hem. New description contains no fiber names or unsupported stretch/wicking claims.",
-      "Applied owner-requested Core Sweatpant description exactly; no material names, percentages or slogan in short description. All other catalog bytes identical to approved production baseline.",
-      "Exact staged tree 2fa607b2693a64a167943b3fca9d05779f75af9d published as 7b59de0e21b03ff0a3736880735036d5bafd69d6; local HEAD/index match remote. PR #70 created for approved image and description release.",
-      "Temporary responsive QA fixture removed from final diff; exact production diff is 11 files (six WebP images and five scoped presentation/catalog files).",
-      "Final commit 3947da8aa9438da04d94e9c9499cfd4a5b2ce498 pushed and synchronized locally; PR70 rewritten around final implementation. Research saved and read back in page_a240c694e170819189a0b873bac9ecf1.",
-      "PR70 merged once under owner authorization as b04be06939bb960f44197b40ec70e75c4d83fe3b; final exact-head preview 6aeacc6af86786a5bfb91549 READY. Main baseline rechecked unchanged immediately before merge.",
-      "Production deployment 6aeaccf2eb5c48789048b15e READY at b04be06939bb960f44197b40ec70e75c4d83fe3b, published 2026-11-04T06:14:39.548Z.",
-      "Live homepage retains stadium hero and women imagery, uses Jeff for men tile; live men markup uses approved Suzuki hero and Quarter Zip lower banner.",
-      "All six live image URLs returned200 and SHA256 matched exact approved derivatives.",
-      "Live Core Sweatpant short description confirmed beside gallery at desktop2820x1355; four color selections show identical new paragraph and $38. Existing dropdowns preserved and closed; no horizontal overflow. No bag or payment action performed.",
-      "Root research record, imagery brief and new description research Page updated with live evidence; PR70 updated with production proof."
+      "Read common contract, validator PASS; prior owner imagery release completed and lease released.",
+      "18 approved tee image sources selected; retain corrected Jessica front/quarter only. Apliiq current saved3 designs found."
     ],
-    "contract_version": "2.0",
-    "engine": "codex",
-    "external_effects": [
-      {
-        "branch": "codex/approved-editorial-imagery-98740673",
-        "reference": "goal-editorial-bootstrap",
-        "status": "baseline_branch_only"
-      },
-      {
-        "changed_paths": [
-          "public/goal-imagery-qa.html",
-          "public/v84/editorial/home-men-jeff-hoodie-20261104-mobile.webp",
-          "public/v84/editorial/home-men-jeff-hoodie-20261104.webp",
-          "public/v84/editorial/men-editorial-quarter-zip-20261104-mobile.webp",
-          "public/v84/editorial/men-editorial-quarter-zip-20261104.webp",
-          "public/v84/editorial/men-hero-suzuki-concrete-20261104-mobile.webp",
-          "public/v84/editorial/men-hero-suzuki-concrete-20261104.webp",
-          "src/lib/products.ts",
-          "src/v84/MobileImage.tsx",
-          "src/v84/mobile-images.json",
-          "src/v84/reference-experience.js",
-          "src/v84/style.css"
-        ],
-        "commit": "7b59de0e21b03ff0a3736880735036d5bafd69d6",
-        "expected_parent": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
-        "pr": 70,
-        "proposed_tree": "2fa607b2693a64a167943b3fca9d05779f75af9d",
-        "qa_fixture": "Temporary responsive frame harness in preview; remove before production.",
-        "reference": "goal-editorial-98740673-preview",
-        "status": "commit_and_pr_published"
-      },
-      {
-        "commit": "3947da8aa9438da04d94e9c9499cfd4a5b2ce498",
-        "expected_parent": "7b59de0e21b03ff0a3736880735036d5bafd69d6",
-        "pr": 70,
-        "proposed_tree": "c63be23af44498fbd09dc6422abcd0dc332dc406",
-        "reference": "goal-editorial-final-98740673",
-        "scope": "Three approved image swaps plus only Core Sweatpant short description; no QA route in production.",
-        "status": "final_task_commit_published",
-        "target": "https://goalathletics.shop"
-      },
-      {
-        "expected_head": "3947da8aa9438da04d94e9c9499cfd4a5b2ce498",
-        "expected_main": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
-        "final_preview": "6aeacc6af86786a5bfb91549",
-        "merge_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
-        "migrations": [],
-        "operation": "merge PR70 once after exact final preview passes",
-        "production_deploy": "6aeaccf2eb5c48789048b15e",
-        "published_at": "2026-11-04T06:14:39.548Z",
-        "reference": "goal-editorial-production-98740673",
-        "status": "production_ready_live_verified",
-        "target": "https://goalathletics.shop"
-      }
+    "tests": [],
+    "unresolved": [
+      "Supplier variant/placement verification needed before sale activation; images can be published with current effective purchase hold retained."
     ],
-    "head_commit": "3947da8aa9438da04d94e9c9499cfd4a5b2ce498",
-    "next_action": "Task complete. No further deployment or provider action required. Continue only a newly authorized task after acquiring shared ownership. Revert only this image/description diff if owner requests rollback.",
-    "release_status": "LIVE_VERIFIED",
-    "rollback": "Revert only approved imagery and Core Sweatpant description diff; retain prior Halo release and all paid data.",
-    "schema": "goal-agent-handoff-v2",
-    "session": "codex-goal-editorial-98740673",
-    "task_id": "goal-editorial-imagery-20261104",
-    "tests": [
-      "Eight route markup comparison PASS; all copy/layout/controls preserved, six unaffected routes byte-identical.",
-      "Three distinct images and 700px-only portrait routing PASS; prior mappings unchanged.",
-      "Production build PASS after hydrating missing tracked brand asset in sparse checkout. Three pre-existing img lint warnings.",
-      "Six payment preservation checks PASS against current live baseline fe6e4a7b; default historical 7659237 pin fails because it predates approved Tapstitch backend release, no assertions changed.",
-      "Final image+description production build PASS; typecheck/lint PASS with same three image warnings; git diff --check PASS.",
-      "Exact products.ts baseline replacement check PASS: only Core Sweatpant description changed, including all four colors/20 variants, $38, galleries and supplier references preserved.",
-      "Exact-head Netlify preview 6aeaca13e500ed20ddd2ab87 READY at 7b59de0e21b03ff0a3736880735036d5bafd69d6.",
-      "Browser desktop preview shows approved Suzuki hero, Jeff tile and Quarter Zip lower banner. 390px and 768px frames select correct phone/desktop assets and have no horizontal overflow. Product route intentionally shows CollectionComingSoon in MIGRATION_PREVIEW; built production HTML contains exact new description; live PDP verification required after publication.",
-      "17 isolated Halo integration checks PASS after final description edit; all20 exact variants covered; no production/provider writes.",
-      "Final GitHub compare against production base has exactly 11 approved files; exact final tree c63be23af44498fbd09dc6422abcd0dc332dc406, no temporary QA file.",
-      "Final exact-head Netlify preview PASS at 3947da8aa9438da04d94e9c9499cfd4a5b2ce498; final 11-file diff reviewed.",
-      "Live6 image HTTP/byte integrity PASS.",
-      "Live desktop PDP/right-of-gallery exact copy, 4 colors/$38 and dropdown preservation PASS."
-    ],
-    "unresolved": [],
-    "worktree_state": "clean_committed_and_pushed"
+    "external_effects": [],
+    "next_action": "Prepare exact18 image derivatives and first-product women gallery release; preserve remaining5 TEMPO holds."
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-tempo-core-tee-c60e8d03",
+    "task": "tempo-core-tee-gallery-20261104",
+    "branch": "codex/tempo-core-tee-c60e8d03",
+    "approval": "Owner c60e8d03-bca9-4650-aa42-9e9615af6fd2: upload approved18 tee images and expose this as first women's piece; preserve other product holds, layout and commerce settings. Existing name TEMPO Core Training Tee recommended.",
+    "start_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
+    "token_hash": "63fa523c8fa324efe6c1e9401b32b41d0a814e221d1c8cb8b29b813e9ee61e33",
+    "acquired_at": "2026-11-04T06:33:39.341Z"
+  },
   "last_released_holder": {
     "acquired_at": "2026-11-04T05:48:38.014329+00:00",
     "approval": "Owner be83dd4e-8a18-4c92-875f-854cbd6d5d62 approved attached concrete Suzuki men hero, Jeff homepage men tile, Quarter Zip men lower banner; owner 98740673-ceb7-48c3-9491-b7dbbeb9115b explicitly requested deploy live. Preserve layout, copy, other imagery and commerce.",
@@ -130,7 +42,7 @@
     "start_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
     "task": "goal-editorial-imagery-20261104"
   },
-  "revision": 22,
+  "revision": 23,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:22:37.583669+00:00"
+  "updated_at": "2026-11-04T06:33:39.341Z"
 }
