@@ -7,21 +7,60 @@
     "session": "codex-tempo-core-tee-c60e8d03",
     "branch": "codex/tempo-core-tee-c60e8d03",
     "base_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
-    "head_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
-    "worktree_state": "clean",
+    "head_commit": "0933efa48a8a78eaf39e046e1a7dd274ee15b188",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "Owner c60e8d03-bca9-4650-aa42-9e9615af6fd2: upload approved18 tee images and expose this as first women's piece; preserve other product holds, layout and commerce settings. Existing name TEMPO Core Training Tee recommended."
     ],
     "completed": [
-      "Read common contract, validator PASS; prior owner imagery release completed and lease released.",
-      "18 approved tee image sources selected; retain corrected Jessica front/quarter only. Apliiq current saved3 designs found."
+      "18 owner-approved images converted without cropping, all hashes verified including corrected Jessica sources; exact23-file commit pushed, PR71.",
+      "Only first TEMPO item exposed; purchase hold remains; other5 TEMPO hidden; other products and men objects unchanged."
     ],
-    "tests": [],
+    "tests": [
+      "Targeted women exposure/hold/asset integrity tests PASS",
+      "163-variant backend suite PASS",
+      "Typecheck PASS",
+      "Production build PASS,3 pre-existing img warnings",
+      "git diff --check PASS"
+    ],
     "unresolved": [
       "Supplier variant/placement verification needed before sale activation; images can be published with current effective purchase hold retained."
     ],
-    "external_effects": [],
-    "next_action": "Prepare exact18 image derivatives and first-product women gallery release; preserve remaining5 TEMPO holds."
+    "external_effects": [
+      {
+        "reference": "tempo-tee-gallery-release",
+        "status": "preview_pending",
+        "commit": "0933efa48a8a78eaf39e046e1a7dd274ee15b188",
+        "pr": 71,
+        "intent": "Merge this exact23-file imagery/exposure release after preview passes; target goalathletics.shop. No payment, supplier order, SQL or settings changes."
+      }
+    ],
+    "next_action": "Verify exact-head preview then publish under owner c60e8d03 approval; live desktop/mobile galleries, one women's item and other holds.",
+    "changed_paths": [
+      "src/lib/products.ts",
+      "src/lib/collection-launch.ts",
+      "src/v84/catalog-data.ts",
+      "scripts/test-tempo-core-gallery.cjs",
+      "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-detail-20261104-9d649d0e.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-model-back-20261104-b3657af0.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-model-front-20261104-a8f18bfb.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-model-quarter-20261104-a3e4f8ff.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-back-20261104-4ae4f3a4.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-20261104-5c36d887.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-detail-20261104-a87942a5.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-model-back-20261104-c77beeb2.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-model-front-20261104-d0e4e913.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-model-quarter-20261104-347f1998.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-back-20261104-fff100f1.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-20261104-c57c798f.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-detail-20261104-0885a910.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-model-back-20261104-4813bf0d.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-model-front-20261104-215d8ef1.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-model-quarter-20261104-8414ec3c.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-back-20261104-f30fa00f.webp",
+      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-20261104-5fc9afed.webp"
+    ]
   },
   "holder": {
     "engine": "codex",
@@ -42,7 +81,7 @@
     "start_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
     "task": "goal-editorial-imagery-20261104"
   },
-  "revision": 23,
+  "revision": 24,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:33:39.341Z"
+  "updated_at": "2026-11-04T06:38:37.496Z"
 }
