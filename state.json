@@ -1,86 +1,55 @@
 {
   "checkpoint": {
-    "approved_scope": [
-      "Owner request 135218e7-a503-47c5-ab42-9fd7ff626ad8: release all four ready Halo sweatpant colorways at $38 immediately before raincoat; verify/fix SKU, Stripe, and Tapstitch ordering and fulfillment. No real charges or supplier orders."
+    "approval_references": [
+      "be83dd4e-8a18-4c92-875f-854cbd6d5d62",
+      "98740673-ceb7-48c3-9491-b7dbbeb9115b",
+      "64b7a3b3-c368-4961-84ea-2f7e1b6cf96a"
     ],
-    "branch": "codex/halo-sweatpant-ordering-20261103",
+    "approved_scope": [
+      "Owner be83dd4e approved exact attached Suzuki concrete men hero, Jeff hoodie homepage men tile and Quarter Zip lower men banner.",
+      "Owner 98740673 explicitly requested deployment to goalathletics.shop.",
+      "Owner 64b7a3b3-c368-4961-84ea-2f7e1b6cf96a additionally requested research-backed Core Sweatpant description beside images: remove A goal is just the beginning; describe verified feel/construction without naming materials. Preserve all other product properties and presentation."
+    ],
+    "base_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
+    "branch": "codex/approved-editorial-imagery-98740673",
+    "changed_paths": [
+      "src/v84/reference-experience.js",
+      "src/v84/MobileImage.tsx",
+      "src/v84/mobile-images.json",
+      "src/v84/style.css",
+      "public/v84/editorial/*"
+    ],
     "completed": [
-      "Read shared contract/manifest; validator PASS; previous imagery release complete and shared holder null.",
-      "Verified GOAL Athletics live Stripe account and enabled live goalathletics.shop/api/stripe-webhook endpoint with required checkout/async/refund/dispute events.",
-      "Tapstitch current saved Halo designs found for all four colors, DTF, sizes S/M/L/XL/2XL, displayed cost $20.98; old pre-Halo product URL is discontinued.",
-      "Source audit reproduced null-Apliiq-ID mapping defect and concurrent order-line persistence race; fixes required before release.",
-      "Verified all four authoritative saved Halo design IDs, distinct ordering-page IDs, UB0050 S/M/L/XL/2XL, DTF 3x3 inches at 400 DPI. Both actual vendor PNG thumbnails preserve transparency; automated background warning reviewed, no supplier edits made.",
-      "Implemented 20 immutable internal TAP references, approved $38 price with sales still held, supplier-aware paid snapshot validation, stable UUIDv5 item keys/upsert, durable retryable manual handoff, independent Apliiq gate and accurate operator task content.",
-      "Added read-only checkout readiness checks for runtime context, email transport, order/task schema and deployed supplier/category compatibility. No credentials or private customer rows returned.",
-      "Documented operator workflow, missed-alert fallback, Stripe payment metadata supplier-order reference, duplicate prevention and tracking in docs/catalog/core-sweatpant-tapstitch-fulfillment.md.",
-      "Stage 1 exact 16-file repair/price commit 423984a7f02c96bdb95b3e6f9029f70db8da1425 pushed to preserved task branch; PR #68 created; local checkout/index match remote.",
-      "Stage 1 merged PR #68 as 34ff8dad1f0e1234c58615337240fdb0950a6583; production deploy 6aeac3684ca4e112c1a33e01 ready at exact commit. Live read-only Quarter Zip checkout preview returned 200, $36 + $6.95, proving manual supplier runtime/ledger/schema prerequisites.",
-      "Stage 2 conditional activation committed and pushed as fe59673b0ad20df3874fa939ea305ad949d5d6db, PR #69: four colors available at $38, original imagery/presentation/order unchanged.",
-      "Activation exact-head preview 6aeac50bb158b7e81533f335 READY. PR #69 merged once as fe6e4a7b316fc0002b0220b2adae8f48132bbaff under current owner approval.",
-      "Production activation deploy 6aeac58511a3899574f03836 READY at fe6e4a7b316fc0002b0220b2adae8f48132bbaff. All 20 live pricing previews returned $38 + $6.95, resisting submitted $0.01 prices; four colors/six photos/Add to bag live. Men listing confirmed immediately before raincoat.",
-      "LIVE VERIFIED: all four colorways at $38 with 24 approved photos; desktop and mobile gallery checks, live Men placement before raincoat, all20 live price previews and exact live Stripe unpaid handoff PASS. PR #69 updated with production evidence. Final main and current production deploy rechecked; task worktree clean at fe59673b0ad20df3874fa939ea305ad949d5d6db."
+      "Acquired shared coordinator revision15 after Halo session explicitly released; normal CLI Git writes unavailable, authenticated GitHub API transport publishes same shared ref with expected-head guard; official lease validation preserved.",
+      "Inherited latest approved production fe6e4a7b316fc0002b0220b2adae8f48132bbaff; three image swaps implemented with six 450238-byte WebP variants.",
+      "Read current live sweatpant product at Black/$38 and official Vuori, lululemon, Alphalete product wording plus current UB0050 supplier facts: 87/13 blend, 360gsm/thick, loose tapered leg, elastic waist, straight hem. New description contains no fiber names or unsupported stretch/wicking claims."
     ],
     "contract_version": "2.0",
+    "engine": "codex",
     "external_effects": [
       {
-        "commit": "423984a7f02c96bdb95b3e6f9029f70db8da1425",
-        "merge_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
-        "pr": 68,
-        "production_deploy": "6aeac3684ca4e112c1a33e01",
-        "reference": "halo-ordering-repair-stage1",
-        "status": "production_ready_live_runtime_check_pass"
-      },
-      {
-        "commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
-        "intent": "Merge exact tested activation after preview passes, verify storefront and 20 live read-only pricing previews.",
-        "merge_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
-        "pr": 69,
-        "preview_deploy": "6aeac50bb158b7e81533f335",
-        "production_deploy": "6aeac58511a3899574f03836",
-        "reference": "halo-ordering-activation-stage2",
-        "status": "production_ready_live_verified"
-      },
-      {
-        "amount_subtotal": 3800,
-        "amount_total": 4495,
-        "cleanup": "No expire operation exposed by connector. Unpaid Session expires automatically. No payment, supplier order, customer email or site order created.",
-        "email_supplied": false,
-        "expires_at": "2026-11-05T05:44:25.000Z",
-        "payment_intent": null,
-        "payment_status": "unpaid",
-        "reference": "halo-unpaid-checkout-verification",
-        "session_id": "cs_live_a1LkvQYsbdUVDDHHnNgRbbvhia9amPxW3WZq9MQn9rajEkLyPiY3OZn59Y",
-        "shipping": 695,
-        "status": "created_and_verified_unpaid_no_charge",
-        "stripe_account": "acct_1UHzboBG7q8OBDEm",
-        "supplier_sku_snapshot": "TAP-1567489152965033984-XXL"
+        "branch": "codex/approved-editorial-imagery-98740673",
+        "reference": "goal-editorial-bootstrap",
+        "status": "baseline_branch_only"
       }
     ],
-    "head_commit": "fe59673b0ad20df3874fa939ea305ad949d5d6db",
-    "next_action": "Task complete. Normal paid orders use exact immutable supplier references and the documented manual Tapstitch workflow; no further test transaction or release action required.",
-    "release_status": "LIVE_VERIFIED",
+    "head_commit": "fe6e4a7b316fc0002b0220b2adae8f48132bbaff",
+    "next_action": "Apply researched sweatpant description; verify only this catalog field changes; build and review exact image/copy release, deploy under current owner authorization.",
+    "rollback": "Revert only approved imagery and Core Sweatpant description diff; retain prior Halo release and all paid data.",
     "schema": "goal-agent-handoff-v2",
-    "task_id": "halo-sweatpant-ordering-20261103",
+    "session": "codex-goal-editorial-98740673",
+    "task_id": "goal-editorial-imagery-20261104",
     "tests": [
-      "Contract validator PASS",
-      "17 new integration checks PASS, including all 20 color-size variants through checkout, signed webhook, real local PostgreSQL constraints and manual task",
-      "Original null-Apliiq-ID defect and original duplicate-line race independently reproduced as baseline failures",
-      "Existing 143-variant backend/receipt/email queue suite PASS",
-      "10 Meta tracking/business-payload checks PASS, including 858 existing quantity/discount cases",
-      "9 shipment checks PASS",
-      "Typecheck and lint PASS; three pre-existing image warnings",
-      "Production build PASS",
-      "Catalog preservation PASS: only target price changed; sales still held; every other product, 24 images, catalog order, source supplier gates, shipping and presentation unchanged",
-      "Stage 2 expanded 163-variant supplier/price checks PASS; all prior 143 expectations unchanged; 978 quantity/discount payload cases PASS; 17 Halo checks/typecheck/lint/build/preservation PASS.",
-      "Live GOAL Stripe account retrieved the exact website-created unpaid Oat XXL Checkout Session: USD3800 item,4495 total,695 shipping, TAP-1567489152965033984-XXL, a:null, consent denied, no customer/email/payment intent. Exact Stripe line-item unit amount3800 PASS.",
-      "Browser PASS: 6 photos per color, matching front/detail swaps, Add to bag enabled after size selection, no horizontal overflow at mobile391; final live screenshot captured and user bag preserved."
+      "Eight route markup comparison PASS; all copy/layout/controls preserved, six unaffected routes byte-identical.",
+      "Three distinct images and 700px-only portrait routing PASS; prior mappings unchanged.",
+      "Production build PASS after hydrating missing tracked brand asset in sparse checkout. Three pre-existing img lint warnings.",
+      "Six payment preservation checks PASS against current live baseline fe6e4a7b; default historical 7659237 pin fails because it predates approved Tapstitch backend release, no assertions changed."
     ],
     "unresolved": [
-      "Tapstitch placement remains manual by Gary Dove using durable owner task and docs/catalog/core-sweatpant-tapstitch-fulfillment.md; no direct Tapstitch ordering API claimed.",
-      "No real paid test, supplier order or customer email performed. The single verification Session is unpaid with automatic expiry recorded; historical order remediation remains outside this task.",
-      "Landed contribution margin and physical sample verification remain UNKNOWN; retail $38 explicitly approved."
+      "Apply and verify the newly authorized Core Sweatpant description only; recheck exact product-property preservation.",
+      "Preview/browser QA and publication remain pending."
     ],
-    "worktree_state": "clean_committed_and_pushed"
+    "worktree_state": "scoped_uncommitted_imagery_changes"
   },
   "holder": {
     "acquired_at": "2026-11-04T05:48:38.014329+00:00",
@@ -101,7 +70,7 @@
     "start_commit": "596b9e040972fedca765404d8073c0f282f998c6",
     "task": "halo-sweatpant-ordering-20261103"
   },
-  "revision": 15,
+  "revision": 16,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T05:48:38.014353+00:00"
+  "updated_at": "2026-11-04T05:54:54.513125+00:00"
 }
