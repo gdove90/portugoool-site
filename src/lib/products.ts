@@ -185,7 +185,7 @@ const TEMPO_CORE_TEE_VARIANTS = [
     "skuFragment": "BLACK",
     "images": [
       {
-        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-20261104-5c36d887.webp",
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
         "alt": "TEMPO Core Training Tee in Black, ghost front view with the V1.3 GA monogram on the left chest"
       },
       {
@@ -213,7 +213,7 @@ const TEMPO_CORE_TEE_VARIANTS = [
     "skuFragment": "WHITE",
     "images": [
       {
-        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-20261104-5fc9afed.webp",
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-upper-chest-20261104-f68e64bb.webp",
         "alt": "TEMPO Core Training Tee in White, ghost front view with the V1.3 GA monogram on the left chest"
       },
       {
@@ -241,7 +241,7 @@ const TEMPO_CORE_TEE_VARIANTS = [
     "skuFragment": "IRONGREY",
     "images": [
       {
-        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-20261104-c57c798f.webp",
+        "src": "/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-upper-chest-20261104-b371fc94.webp",
         "alt": "TEMPO Core Training Tee in Iron Grey, ghost front view with the V1.3 GA monogram on the left chest"
       },
       {

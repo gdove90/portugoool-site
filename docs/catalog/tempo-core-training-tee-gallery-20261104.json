@@ -24,13 +24,14 @@
       "color": "Black",
       "view": "product-front",
       "model": null,
-      "source_file": "exec-41254097-8485-4e5b-a51c-d9b4ac84c914.png",
-      "source_sha256": "5c36d887fcba79d29904cde6d82ad54441e6f5ad428f4ebeacd81d4c2adcbc89",
-      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-20261104-5c36d887.webp",
-      "sha256": "84d6ce40946e09744a3553c2681765e0d54fb052c035f37dd34812454613240f",
+      "source_file": "exec-4cb2c8f0-e995-49e1-b341-1970369d07d9.png",
+      "source_sha256": "8ca71725e18890bb0231652932652d0e9cc8d7f94001764dcfe41c7567e02b19",
+      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
+      "sha256": "d8f8c36cb6469921fcae0a5907333a1f12379818383cd1b495912dfd03feb622",
       "width": 1024,
       "height": 1536,
-      "bytes": 35976
+      "bytes": 34604,
+      "supersedes": "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-20261104-5c36d887.webp"
     },
     {
       "color": "Black",
@@ -96,13 +97,14 @@
       "color": "White",
       "view": "product-front",
       "model": null,
-      "source_file": "exec-8834df97-ef19-4451-be4b-d68b9a165c43.png",
-      "source_sha256": "5fc9afedac0d1b28e2f0822ae8d90d5fc525f9ba960f93313bc173dc26bd193e",
-      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-20261104-5fc9afed.webp",
-      "sha256": "7cdff0a29885d279aa65f5e2f0b93cfe2f9c561aaee8f49ae53e84a8fa1acab2",
+      "source_file": "exec-a1ea00a0-78a6-4879-ab88-671031d99e0d.png",
+      "source_sha256": "f68e64bb58ea03629e9ff99389a151d1723304a4b7fa927193c92f395be34289",
+      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-upper-chest-20261104-f68e64bb.webp",
+      "sha256": "c1a5c47569a81186edfe7d7d859d61a89890d48a2ab56d3697dfdeb33f63c56e",
       "width": 1024,
       "height": 1536,
-      "bytes": 28368
+      "bytes": 27326,
+      "supersedes": "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-20261104-5fc9afed.webp"
     },
     {
       "color": "White",
@@ -168,13 +170,14 @@
       "color": "Iron Grey",
       "view": "product-front",
       "model": null,
-      "source_file": "exec-e03f166e-2d41-49d4-8247-61b12f3961a5.png",
-      "source_sha256": "c57c798f3bce557a7be0e50b057546046693522e9b9e4ac598a6c882ae932625",
-      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-20261104-c57c798f.webp",
-      "sha256": "f56f4e916978e47852847930b63bc85fd2128c26556edb277a670e8b5d08f05d",
+      "source_file": "exec-5ededabb-9170-461f-855f-1ae2f0eb32df.png",
+      "source_sha256": "b371fc9411bcf300e04e2b7082935dd0f923028337577edec9ae40e4fe319f27",
+      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-upper-chest-20261104-b371fc94.webp",
+      "sha256": "bc619711541d88fb32b6e088d3c51d432ac0613bab97ac75e1dc8094ef07b9c4",
       "width": 1024,
       "height": 1536,
-      "bytes": 59384
+      "bytes": 52878,
+      "supersedes": "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-20261104-c57c798f.webp"
     },
     {
       "color": "Iron Grey",
@@ -250,5 +253,15 @@
       "detail"
     ],
     "active_image_count": 15
+  },
+  "placement_revision": {
+    "owner_request": "67a44161-f211-47ea-a87d-16a22066ee64",
+    "scope_correction": "f393f451-6ab3-497c-96f2-363e8bb81bfe",
+    "status": "REVIEW_ONLY_SUPPLIER_PLACEMENT_ALIGNMENT_REQUIRED",
+    "changed_views": [
+      "product-front"
+    ],
+    "unchanged": "All model/front-quarter-back/detail views, other products, price, sizes, holds and layout",
+    "supplier": "Existing saved designs6241853/6241860/6241864 still show lower placement; no Apliiq writes performed. Do not release these higher placement visuals before supplier alignment decision."
   }
 }

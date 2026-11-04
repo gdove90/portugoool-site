@@ -1,0 +1,43 @@
+{
+  "status": "READY_FOR_REVIEW_NOT_LIVE",
+  "product": "TEMPO Core Training Tee",
+  "scope": "Only three ghost front images corrected to upper-left-chest placement matching owner preference and existing models",
+  "supplier_designs": {
+    "Black": 6241853,
+    "White": 6241860,
+    "Iron Grey": 6241864
+  },
+  "production_dimension_inches": [
+    2,
+    1.8
+  ],
+  "production_placement": "Supplier saved renders remain lower; no precise manufacturer offset verified. Need owner approval to move saved Apliiq designs before release. Physical sample not verified.",
+  "files": [
+    {
+      "color": "Black",
+      "source": "exec-4cb2c8f0-e995-49e1-b341-1970369d07d9.png",
+      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
+      "sha256": "d8f8c36cb6469921fcae0a5907333a1f12379818383cd1b495912dfd03feb622",
+      "prompt": "Use case: precise-object-edit. Image1 is the ONLY edit target, a ghost mannequin women's Black tee. Image2 is the approved existing model picture, reference for the HIGHER upper-left-chest logo position only. Correct Image1 ONLY by moving its existing GA monogram UP by approximately70pixels at original1024x1536 resolution. Current monogram top y~553 must become y~483; center x~650 remains the same; width~67px and height~60px unchanged. Keep exact monogram design, colors, shirt silhouette, neck shape, seams, material, folds, lighting, neutral grey background and crop identical. Move the actual logo, do not redraw it. Cleanly restore plain fabric at old logo position. Higher position should visually correspond to the same upper-chest placement worn by model in image2, above bust fullness and clearly below collar, not directly on the fullest bust point. Do not change source garment or create a person. Return ONE corrected ghost front image only, portrait1024x1536. No text, no dimensions, no second logo."
+    },
+    {
+      "color": "White",
+      "source": "exec-a1ea00a0-78a6-4879-ab88-671031d99e0d.png",
+      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-upper-chest-20261104-f68e64bb.webp",
+      "sha256": "c1a5c47569a81186edfe7d7d859d61a89890d48a2ab56d3697dfdeb33f63c56e",
+      "prompt": "Use case: precise-object-edit. Image1 is the ONLY edit target, a ghost mannequin women's White tee. Image2 is the approved existing model picture, reference for the HIGHER upper-left-chest logo position only. Correct Image1 ONLY by moving its existing GA monogram UP by approximately70pixels at original1024x1536 resolution. Current monogram top y~553 must become y~483; center x~650 remains the same; width~67px and height~60px unchanged. Keep exact monogram design, colors, shirt silhouette, neck shape, seams, material, folds, lighting, neutral grey background and crop identical. Move the actual logo, do not redraw it. Cleanly restore plain fabric at old logo position. Higher position should visually correspond to the same upper-chest placement worn by model in image2, above bust fullness and clearly below collar, not directly on the fullest bust point. Do not change source garment or create a person. Return ONE corrected ghost front image only, portrait1024x1536. No text, no dimensions, no second logo."
+    },
+    {
+      "color": "Iron Grey",
+      "source": "exec-5ededabb-9170-461f-855f-1ae2f0eb32df.png",
+      "path": "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-upper-chest-20261104-b371fc94.webp",
+      "sha256": "bc619711541d88fb32b6e088d3c51d432ac0613bab97ac75e1dc8094ef07b9c4",
+      "prompt": "Use case: precise-object-edit. Image1 is the ONLY edit target, a ghost mannequin women's Iron Grey tee. Image2 is the approved existing model picture, reference for the HIGHER upper-left-chest logo position only. Correct Image1 ONLY by moving its existing GA monogram UP by approximately70pixels at original1024x1536 resolution. Current monogram top y~553 must become y~483; center x~650 remains the same; width~67px and height~60px unchanged. Keep exact monogram design, colors, shirt silhouette, neck shape, seams, material, folds, lighting, neutral grey background and crop identical. Move the actual logo, do not redraw it. Cleanly restore plain fabric at old logo position. Higher position should visually correspond to the same upper-chest placement worn by model in image2, above bust fullness and clearly below collar, not directly on the fullest bust point. Do not change source garment or create a person. Return ONE corrected ghost front image only, portrait1024x1536. No text, no dimensions, no second logo."
+    }
+  ],
+  "research": [
+    "https://www.nike.com/t/victory-womens-dri-fit-short-sleeve-tennis-top-ROlVhWwQ/IB3776-010",
+    "https://www.underarmour.com/en-us/p/ua_tech_twist_womens_short_sleeve/1384230.html"
+  ],
+  "cancelled": "Broad initial batch cancelled after owner limited edits to ghost fronts; no model edits used"
+}
