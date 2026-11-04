@@ -18,7 +18,8 @@
       "Prepared corrected desktop and phone editorial assets; mens shorts GA follows current Core Shorts reference, footwear unbranded, no baked headline.",
       "Changed only shared PDP MobileImage source/alt/dimensions, one mobile mapping, two new WebPs and decision README.",
       "Published exact verified five-file tree362b5d140142cf70bafc837a6c0702da0fa2a383 at4d9566792b158c020df2d0e6453f9f24136fd703; local branch clean and matches remote. PR78 created; Netlify preview6aeb99ec6351ad1619b508c4 building.",
-      "Preview6aeb99ec READY exact4d956679. Desktop and390px phone asset files visually verified; both athletes, garment chest marks and mens shorts GA visible. Both hosted WebPs HTTP200 and byte-identical to reviewed files. Existing preview storegate prevents full PDP view; no gate change."
+      "Preview6aeb99ec READY exact4d956679. Desktop and390px phone asset files visually verified; both athletes, garment chest marks and mens shorts GA visible. Both hosted WebPs HTTP200 and byte-identical to reviewed files. Existing preview storegate prevents full PDP view; no gate change.",
+      "PR78 merged successfully at main03ae0cab284963c36c64f65755aac50a9f73af50 with the exact reviewed five-file image diff. Existing Netlify GitCD production deployment is pending."
     ],
     "tests": [
       "PASS typecheck.",
@@ -30,7 +31,7 @@
     "unresolved": [
       "Hosted preview desktop/mobile visual verification and production publication pending."
     ],
-    "next_action": "Merge exact approved PR78 after ownership/baseline checks; monitor existing production GitCD, verify mens/womens PDP banner and390px mobile layout. Do not change names.",
+    "next_action": "Observe production deployment of03ae0cab; verify mens/womens shared editorial,heading,shortslogo,mobile image/nooverflow; then checkpoint and release ownership.",
     "external_effects": [
       {
         "reference": "shared-predawn-banner-d8cbb24b",
@@ -46,6 +47,11 @@
         "reference": "shared-predawn-banner-d8cbb24b",
         "status": "preview_assets_verified_merge_intent",
         "details": "Owner-authorized merge of exact five-file PR78 head4d956679 to main8483b496 for existing GitCD. Preview store gate preserved; immediately verify actual production PDP layout desktop/mobile after deploy."
+      },
+      {
+        "reference": "shared-predawn-banner-d8cbb24b",
+        "status": "merge_confirmed_production_pending",
+        "details": "PR78 merged at main03ae0cab284963c36c64f65755aac50a9f73af50. Do not replay merge or start a manual deploy. Observe existing GitCD for exact commit and verify live PDP desktop/mobile."
       }
     ],
     "changed_paths": [
@@ -75,7 +81,7 @@
     "start_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
     "acquired_at": "2026-11-04T19:34:10.430261+00:00"
   },
-  "revision": 80,
+  "revision": 81,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T20:51:27.968403+00:00"
+  "updated_at": "2026-11-04T20:52:42.751278+00:00"
 }
