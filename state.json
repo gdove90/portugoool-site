@@ -67,7 +67,16 @@
       "src/v84/reference-experience.js"
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-predawn-d8cbb24b",
+    "task": "goal-shared-predawn-banner-20261104",
+    "branch": "codex/shared-predawn-product-banner-20261104",
+    "approval": "Owner fd43b744 deploy approved mixed-athlete banner; d8cbb24b add GA logo to mens shorts before deployment. Names remain proposals.",
+    "start_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
+    "token_hash": "a44840235c4b66cfa771321fea25a8dc1757678a49c22865dbe63d877256eb00",
+    "acquired_at": "2026-11-04T20:37:21.589071+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-women-lower-ea28ab9b",
@@ -77,7 +86,7 @@
     "start_commit": "64f8e8d06963fe90d9412c9a6316190f6cf770ff",
     "acquired_at": "2026-11-04T19:34:10.430261+00:00"
   },
-  "revision": 76,
+  "revision": 77,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T19:48:47.493052+00:00"
+  "updated_at": "2026-11-04T20:37:21.589098+00:00"
 }
