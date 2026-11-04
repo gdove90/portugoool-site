@@ -4,35 +4,35 @@
     "contract_version": "2.0",
     "task_id": "tempo-training-gallery-20261104",
     "engine": "codex",
-    "session": "codex-tempo-training-f07faa75",
+    "session": "codex-tempo-training-be9312aa",
     "branch": "codex/tempo-training-tee-f07faa75",
     "base_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "head_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
-    "worktree_state": "clean_committed_and_pushed",
+    "worktree_state": "scoped_local_edits",
     "approved_scope": [
-      "Owner f07faa75: add White, Lake Blue, Light Purple TEMPO Training Tee to website like previous tee. S-XL, existing $34, purchasing hold preserved."
+      "Owner be9312aa-5efb-4e06-b575-a7b89958f3f6: upload approved Blue Suzanne, Purple Amanda, White Molly 15-image galleries to website; continue f07faa75 publication scope, S-XL, existing $34 and purchasing hold."
     ],
     "completed": [
-      "Inspected existing hidden WT0216 product and saved supplier designs.",
-      "Verified supplier chart S-XL: flat chest 16.93/17.72/18.50/19.29 in; length 23.03/23.62/24.21/24.80 in.",
-      "Created model front mockups: White Molly exec-758826e4-7752-4d76-b047-7007b5dc678b.png; Lake Blue Suzanne exec-cec5bbd9-d6cf-4593-83cb-7d9506c6f88e.png; Light Purple Jessica exec-61dfae5d-66cc-48c9-9114-de0078713b6f.png."
+      "Completed and owner-approved five matching views for Lake Blue Suzanne, Light Purple Amanda and White Molly.",
+      "Prepared 15 original-framing 1024x1536 WebP assets and exact SHA256 manifest.",
+      "Updated only WT0216 catalog, three colors, S-XL, saved-design mapping, supplier size chart and women public inclusion; existing $34 and purchasing hold preserved."
     ],
     "tests": [
-      "Canonical contract validator PASS in review checkout",
-      "Supplier Lake Blue reopens 7.5x2 in,396DPI"
+      "PASS dedicated gallery, all other product preservation and actual checkout refusal checks",
+      "PASS typecheck",
+      "PASS lint with existing unrelated img warnings",
+      "Production build running"
     ],
     "unresolved": [
-      "Remaining quarter/back/detail image generation interrupted; reconcile generated files before retry.",
-      "No tracked catalog changes, PR, merge or deploy yet.",
-      "White supplier background-detection warning unresolved; keep purchasing held.",
-      "Broad Netlify environment read rejected by automatic review; no settings changed. Narrow follow-up was user-aborted."
+      "White supplier background-detection warning unresolved; purchasing held.",
+      "STORE_OPEN/APLIIQ_SUBMIT_ENABLED values unverified; their code/settings untouched."
     ],
-    "next_action": "Reconcile image outputs; complete galleries, update only WT0216 catalog/colors/SXL/mappings/size guide/public inclusion, validate then release within owner scope.",
+    "next_action": "Finish build, commit and push same task branch, create PR/preview then deploy owner-authorized gallery publication.",
     "external_effects": [
       {
-        "reference": "tempo-training-f07faa75",
-        "status": "preparation_only",
-        "details": "Created feature baseline branch; supplier read-only; three new model front mockups. No website deployment."
+        "reference": "be9312aa-gallery-publication",
+        "status": "intent",
+        "details": "Owner authorized publishing approved 15 images for TEMPO Training Tee. No deploy performed yet."
       }
     ]
   },
@@ -55,7 +55,7 @@
     "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "acquired_at": "2026-11-04T08:03:10.031538+00:00"
   },
-  "revision": 42,
+  "revision": 43,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T08:50:54.264125+00:00"
+  "updated_at": "2026-11-04T08:55:32.827Z"
 }
