@@ -2,70 +2,41 @@
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "contract_version": "2.0",
-    "task_id": "goal-shared-predawn-banner-20261104",
+    "task_id": "goal-labels-womens-purchase-20261104",
     "engine": "codex",
-    "session": "codex-predawn-d8cbb24b",
-    "branch": "codex/shared-predawn-product-banner-20261104",
-    "base_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
-    "head_commit": "4d9566792b158c020df2d0e6453f9f24136fd703",
+    "session": "codex-rect-tag-173c22e6",
+    "branch": "codex/goal-labels-womens-purchase-20261104",
+    "base_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
+    "head_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
     "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
-      "Owner fd43b744 deploy mixed-athlete predawn banner shared by all product pages. Owner d8cbb24b requires white/red GA on mens shorts before deployment. Product names are proposals only."
+      "Owner173c22e6-ed0c-4a1d-bc0a-3fb7a391e75b: implement approved V1.3 rectangular tag on necessary products. New 6cm wide x2cm high black-on-white label; first apply to four UB0050 sweatpants when supplier Approved. No new orders, charges, website, product photos or Apliiq men.",
+      "Ownerc05d24a0 approves rectangular layout conditional on standards; published size/white background/PNG format verified, final editor and supplier review required."
     ],
     "completed": [
-      "Read canonical v2 contract and setup branch; parity validator PASS. Current main8483b496 and prior bottom-only release verified; prior work preserved.",
-      "Acquired repository-wide coordination through canonical helper with authenticated native GitHub CAS publication transport; ownership verified.",
-      "Prepared corrected desktop and phone editorial assets; mens shorts GA follows current Core Shorts reference, footwear unbranded, no baked headline.",
-      "Changed only shared PDP MobileImage source/alt/dimensions, one mobile mapping, two new WebPs and decision README.",
-      "Published exact verified five-file tree362b5d140142cf70bafc837a6c0702da0fa2a383 at4d9566792b158c020df2d0e6453f9f24136fd703; local branch clean and matches remote. PR78 created; Netlify preview6aeb99ec6351ad1619b508c4 building.",
-      "Preview6aeb99ec READY exact4d956679. Desktop and390px phone asset files visually verified; both athletes, garment chest marks and mens shorts GA visible. Both hosted WebPs HTTP200 and byte-identical to reviewed files. Existing preview storegate prevents full PDP view; no gate change.",
-      "PR78 merged successfully at main03ae0cab284963c36c64f65755aac50a9f73af50 with the exact reviewed five-file image diff. Existing Netlify GitCD production deployment is pending.",
-      "LIVE VERIFIED: production6aeb9affcfd40ca8ec936fc5 published2026-11-04T20:53:51.024Z at exact main03ae0cab284963c36c64f65755aac50a9f73af50/tree362b5d14. Womens and mens PDPs use newsharedbanner; desktop and390px screenshots confirm bothathletes,mensshortsGA,existingheadingonce,nohorizontaloverflow."
+      "Continued existing task branch at pushed5ecf688; main separately advanced03ae0c... by PR78, preserve those changes.",
+      "Read latest shared coordinator revision83,noholder; acquired unique new session933d432... Canonical PR66 contract and15manifest files/parity validatorPASS; no tracked code changes.",
+      "Authenticated Tapstitch Branding shows exactly one existing My clothing label4x4cm,Approved,$0.99; no duplicate rectangular label.",
+      "Approved clean artwork:Librarylibfile_32d87b2521b48191bf3766ce3919b401,1440x480RGBA,609.6DPI,nominal60x20mm,32004bytes,SHA2562ac2f8e3a46938b3c1bd0200dd2e1f81478c822166a563e1967d9ad5d82a9399. Original16SVGpaths retained; proposed graphic48x12.17mm centered. Final suppliertemplateplacementpending."
     ],
     "tests": [
-      "PASS typecheck.",
-      "PASS production build after materializing the baseline brand asset omitted by initial sparse inspection; only preexisting img warnings.",
-      "PASS exact template comparison: only image element changed; HTML heading remains once.",
-      "PASS git diff --check, asset decode and scoped source review.",
-      "PASS hosted desktop/mobile asset decode, composition/logo checks and SHA256 equality. Full hosted PDP preview gated; production layout verification pending.",
-      "PASS production mens/womens shared source and heading;390px mobile mapping correct; both hosted WebPs HTTP200 and exact approved bytes."
+      "PASS canonical configuration parity from current PR66 review source; current task has no AGENTS/contract yet. Isolated inspection only.",
+      "PASS PNG decode/alpha/resolution/dimensions/exactsourcegeometry checks from approved preparation; filepresentforupload."
     ],
-    "unresolved": [],
-    "next_action": "Complete. Do not replay PR78 merge or deploy. Naming proposals await owner review: Session Tee,Pace Tee,Foundation Sports Bra.",
+    "unresolved": [
+      "New rectangular label not yet submitted or Approved; existing square branding must remain until valid replacement.",
+      "Browser upload must use supported file chooser, then current upload troubleshooting if it fails. Prior Library transfer route was blocked; do not use another host/raw API/browser workaround.",
+      "Apliiq women's tag audit and WT0093 complete saved production designs remain separate pending work; do not relaunch blocked products or replay prior WT0216 release."
+    ],
+    "next_action": "Open Addnewlabel,select2x6cmWhite,uploadexactapprovedPNGviafilechooser,placeinsideactualeditorboundsandverifyquality. Submitforreviewonce;reconciletableifuncertain. AssignonlyApprovedreplacementtofourUB0050colors,verifyfreshreload. IfPendingorfiletransferblocked,checkpointandhandoffwithoutremovingexistinglabels.",
     "external_effects": [
       {
-        "reference": "shared-predawn-banner-d8cbb24b",
+        "reference": "rect-label-2x6-173c22e6",
         "status": "intent",
-        "details": "Publish only corrected banner assets and shared image element/mobile mapping/docs; preserve all galleries,catalog,prices,checkout,collection pages,provider settings,SQL and emails. Existing GitCD deploys after reviewed PR merge; do not start a parallel manual deploy."
-      },
-      {
-        "reference": "shared-predawn-banner-d8cbb24b",
-        "status": "source_published_preview_building",
-        "details": "PR78 exact head4d956679; Netlify preview6aeb99ec building. Main unchanged8483b496. Do not replay source publication."
-      },
-      {
-        "reference": "shared-predawn-banner-d8cbb24b",
-        "status": "preview_assets_verified_merge_intent",
-        "details": "Owner-authorized merge of exact five-file PR78 head4d956679 to main8483b496 for existing GitCD. Preview store gate preserved; immediately verify actual production PDP layout desktop/mobile after deploy."
-      },
-      {
-        "reference": "shared-predawn-banner-d8cbb24b",
-        "status": "merge_confirmed_production_pending",
-        "details": "PR78 merged at main03ae0cab284963c36c64f65755aac50a9f73af50. Do not replay merge or start a manual deploy. Observe existing GitCD for exact commit and verify live PDP desktop/mobile."
-      },
-      {
-        "reference": "shared-predawn-banner-d8cbb24b",
-        "status": "confirmed_live",
-        "details": "PR78 main03ae0cab; Netlify6aeb9aff published exactcommit. Desktop/mobile layouts and shortslogo verified. DesktopSHA256 b36ba6f3640746b056f6c24e2855a71636c55bf73d2ad8527738e8cae1147656; mobile d3586aea55133947e786b4fa991c4abaac9cb391fa6ec068c5a7aefd1a8a29a9. Names remain unchanged; no catalog/provider/SQL/email changes."
+        "details": "Create exactly one named GOAL V1.3 Rectangular 2x6 cm label on authenticated Tapstitch, White background, exact approvedPNG. Submit for supplier review; only if Approved, replace4x4label on UB0050 saveddesigns1567484017748627456Black,1567487271354122240HazeBlue,1567489152965033984Apricot(siteOat),1567491247352987648FlowerGray. Preserve all otherlabels,artwork,retail,images,orders andgates. No charges/orders."
       }
     ],
-    "changed_paths": [
-      "src/v84/ProductDetail.tsx",
-      "src/v84/mobile-images.json",
-      "public/v84/editorial/product-editorial-predawn-training-20261104.webp",
-      "public/v84/editorial/product-editorial-predawn-training-20261104-mobile.webp",
-      "designs/product-editorial-predawn-20261104/README.md"
-    ]
+    "changed_paths": []
   },
   "holder": {
     "engine": "codex",
@@ -86,7 +57,7 @@
     "start_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
     "acquired_at": "2026-11-04T20:37:21.589071+00:00"
   },
-  "revision": 84,
+  "revision": 85,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T21:06:47.303203+00:00"
+  "updated_at": "2026-11-04T21:07:30.273764+00:00"
 }
