@@ -31,7 +31,7 @@ function memory(initial={}){
  process.env.STORE_OPEN='true'; delete process.env.PREVIEW_KEY;
  process.env.STRIPE_SECRET_KEY='sk_live_mock';process.env.STRIPE_SHIPPING_RATE_ID='shr_mock';process.env.STRIPE_WEBHOOK_SECRET='whsec_mock';process.env.RESEND_API_KEY='re_mock';
  let sessions=[];class Stripe{checkout={sessions:{create:async p=>{sessions.push(p);return {url:'https://checkout.stripe.com/mock'}}}}}
- const checkout=load('src/app/api/checkout/route.ts',{stripe:Stripe});const catalog=load('src/lib/products.ts');
+ const checkout=load('src/app/api/checkout/route.ts',{stripe:Stripe,'@/lib/tapstitch-readiness':{tapstitchFulfillmentReady:async()=>true}});const catalog=load('src/lib/products.ts');
  // The approved public catalog includes both caps for sale; use its first sellable rows.
  const sellable=catalog.getProducts().filter(x=>x.availableForSale);const p=sellable[0],p2=sellable[1];const item={productId:p.id,color:p.colorVariants?.[0].name??p.color,size:p.sizes[0],quantity:1};
  for(const [name,body] of Object.entries({nullBody:null,empty:{items:[]},nullLine:{items:[null]},missingQty:{items:[{...item,quantity:undefined}]},stringQty:{items:[{...item,quantity:'1'}]},fraction:{items:[{...item,quantity:1.5}]},negative:{items:[{...item,quantity:-1}]},excess:{items:[{...item,quantity:11}]},badCustom:{items:[{...item,customName:123}]},badSize:{items:[{...item,size:'BAD'}]},badColor:{items:[{...item,color:'BAD'}]}}))await test('Reject malformed checkout: '+name,async()=>assert.equal((await checkout.POST(request(body))).status,400));

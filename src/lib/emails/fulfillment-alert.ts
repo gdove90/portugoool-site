@@ -2,6 +2,7 @@ import { OrderItemRow, OrderRow } from "../orders-store";
 import { orderNumberFor } from "./order-confirmation";
 import { SUPPORT_EMAIL } from "../email";
 import { getProductById } from "../products";
+import { parseTapstitchSku, tapstitchOrderReference } from "../tapstitch";
 
 // ─────────────────────────────────────────────────────────────
 // Owner alert: sent to the owner's internal address the moment a PAID
@@ -55,6 +56,29 @@ export function buildFulfillmentAlert({ order, items, parkedAs, reason }: Fulfil
 } {
   const ref = orderNumberFor(order.id);
   const mode = order.livemode ? "" : "[TEST] ";
+  if (parkedAs === "tapstitch_manual") {
+    const manual = items.filter(it => parseTapstitchSku(it.apliiq_sku));
+    const lines = manual.map(it => `${it.quantity} x ${getProductById(it.product_id, { includeTempo: true })?.name ?? it.product_id}; ${it.color} / ${it.size}; ${tapstitchOrderReference(it.apliiq_sku)}`);
+    const address = order.shipping_address ?? {};
+    const shipTo = [order.shipping_name, address.line1, address.line2, address.city,
+      address.state, address.postal_code, address.country].filter(Boolean).join(", ");
+    const text = [
+      `Paid order ${ref}: place the following Tapstitch items manually.`,
+      `GOAL order ID: ${order.id}`,
+      `Stripe session: ${order.stripe_session_id}`,
+      `Stripe payment: ${order.stripe_payment_intent ?? "See the paid session"}`,
+      `Customer: ${order.customer_email ?? "-"}`,
+      `Ship to: ${shipTo}`,
+      "", ...lines, "",
+      "Before ordering, check the Stripe payment's tapstitch_order_id metadata and the Tapstitch Orders list for this GOAL order reference. If an order already exists, reconcile it; do not order again.",
+      "Use the exact saved design, supplier color and size above. The site's XXL is supplier 2XL; Oat is supplier Apricot. Include the GOAL reference on the supplier order when supported.",
+      "After placing once, record the Tapstitch order ID on the Stripe payment as tapstitch_order_id and record goal_order_ref. Retain the supplier receipt. If the result is uncertain, reconcile before any retry.",
+      "Record carrier/tracking through the existing manual-shipped operation when dispatched. Check Stripe paid orders against this task ledger daily if an email is missed.",
+      "Other supplier items, if present, are handled separately. This is a normal manual fulfillment task; no customer delay notice is required.",
+    ].join("\n");
+    return { subject: `${mode}Action needed: place Tapstitch order ${ref}`, text,
+      html: `<!doctype html><html><body><pre style="white-space:pre-wrap;font:15px/1.6 Arial,sans-serif">${esc(text)}</pre></body></html>` };
+  }
   const subject = `${mode}Action needed: ${ref} was not accepted by Apliiq`;
   const lines = items.map((it) => {
     const name = getProductById(it.product_id, { includeTempo: true })?.name ?? it.product_id;

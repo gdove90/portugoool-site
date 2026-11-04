@@ -215,16 +215,25 @@ class SupabaseStore implements OrdersStore {
   /**
    * Insert an order's line items. Throws on failure so the webhook
    * returns 500 and Stripe retries into the repair path above.
-   * Residual race: two deliveries of the same session arriving close
-   * enough together could both observe zero items and double-insert.
-   * Stripe retries with backoff rather than concurrently, and the
-   * quantities come from the same immutable metadata snapshot, so this
-   * stays a reconcile-and-correct case rather than a silent overcharge -
-   * no money moves off order_items.
+   * Stable primary keys make concurrent first writes and retry repairs
+   * idempotent without changing historical rows or adding a migration.
    */
   private async insertItems(orderId: string, items: OrderItemRow[]) {
-    const rows = items.map((it) => ({ ...it, order_id: orderId }));
-    const { error } = await this.db.from("order_items").insert(rows);
+    // UUIDv5 in the standard DNS namespace. The immutable session line
+    // index gives retries/concurrent repairs the SAME primary key, while
+    // repeated identical cart lines still receive distinct identifiers.
+    // Existing historical rows and IDs are never rewritten.
+    const rows = items.map((it, index) => {
+      const bytes = crypto.createHash("sha1")
+        .update(Buffer.from("6ba7b8109dad11d180b400c04fd430c8", "hex"))
+        .update(`goalathletics.shop/order-item/${orderId}/${index}`).digest();
+      bytes[6] = (bytes[6] & 0x0f) | 0x50;
+      bytes[8] = (bytes[8] & 0x3f) | 0x80;
+      const hex = bytes.subarray(0, 16).toString("hex");
+      const id = `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+      return { ...it, order_id: orderId, id };
+    });
+    const { error } = await this.db.from("order_items").upsert(rows, { onConflict: "id", ignoreDuplicates: true });
     if (error) throw new Error(`order_items insert failed: ${error.message}`);
   }
 

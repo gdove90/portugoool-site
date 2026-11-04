@@ -103,7 +103,8 @@ export async function queueFulfillmentAlert(
   const order = await store.getOrderById(orderId);
   if (!order || order.status !== "paid") return "not_paid";
   const items = await store.listOrderItems(orderId);
-  const attempt = order.submission_attempt_id ?? "first";
+  // One manual Tapstitch task per order, including mixed-supplier retries.
+  const attempt = parkedAs === "tapstitch_manual" ? "first" : order.submission_attempt_id ?? "first";
   const key = `alert/${livemode ? "live" : "test"}/${orderId}/${parkedAs}/${attempt}`;
   await queueEmail(key, "order", { to: OWNER_ALERT_TO, ...buildFulfillmentAlert({ order, items, parkedAs, reason }) }, livemode, orderId);
   try {

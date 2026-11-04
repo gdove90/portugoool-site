@@ -540,6 +540,14 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "White": tapstitch("1564523403115982848", ["S", "M", "L", "XL", "XXL"]),
     "Dark Gray": tapstitch("1564524205054324736", ["S", "M", "L", "XL", "XXL"]),
   },
+  // Saved UB0050 Halo designs: supplier 2XL is the site's XXL.
+  // Oat is the customer-facing name of supplier Apricot.
+  "90000000-0000-4000-8000-000000000001": {
+    "Black": tapstitch("1567484017748627456", ["S", "M", "L", "XL", "XXL"]),
+    "Haze Blue": tapstitch("1567487271354122240", ["S", "M", "L", "XL", "XXL"]),
+    "Oat": tapstitch("1567489152965033984", ["S", "M", "L", "XL", "XXL"]),
+    "Flower Gray": tapstitch("1567491247352987648", ["S", "M", "L", "XL", "XXL"]),
+  },
   // == end TEMPO ==
   // GOAL Athletics Core Jogger (Sport-Tek PST871, men): GA monogram 3.00 x
   // 2.70 in in the wearer's left front hip box, back blank, private label

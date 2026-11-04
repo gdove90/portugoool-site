@@ -39,7 +39,7 @@ const PERF_CARE = "Machine wash cold. Tumble dry low. Do not iron the print.";
 const CUSTOMIZATION_PRICE = 1500; // $15 name/number add-on (jerseys only)
 
 // Owner-approved V1.3 Halo imagery, November 3, 2026.
-// The gallery is public; ordering stays on hold pending price and fulfillment readiness.
+// The gallery is public; ordering stays on hold pending runtime fulfillment verification.
 // Oat is the customer-facing name for supplier Apricot.
 const CORE_SWEATPANT_VARIANTS = [
   {
@@ -4486,7 +4486,7 @@ export const products: Product[] = [
     slug: "goal-athletics-core-sweatpant",
     blank: "UB0050",
     description: "A goal is just the beginning. Tapered sweatpants with an open straight hem, finished with the Halo monogram on the left thigh. Made for downtime between sessions.",
-    priceCents: 0,
+    priceCents: 3800,
     color: "Black",
     colorHex: CORE_SWEATPANT_VARIANTS[0].hex,
     fabric: "87% cotton / 13% polyester. 360 GSM.",

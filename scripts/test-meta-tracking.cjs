@@ -22,7 +22,7 @@ function browser(country='US',gpc=false){global.localStorage=storage();global.se
   const base=cp.execFileSync('git',['show','24903a4:src/app/api/checkout/route.ts'],{cwd:ROOT,encoding:'utf8'});
   let submitted=[];class Stripe{checkout={sessions:{create:async p=>{submitted.push(p);return {url:'https://checkout.stripe.com/mock'}}}}}
   const discount=load('src/lib/discount.ts');
-  const mocks={stripe:Stripe,'@/lib/store-status':{storeClosed:()=>false},'@/lib/migration-preview':{MIGRATION_PREVIEW:false},'@/lib/mailchimp':{EMAIL_RE:/@/},'@/lib/signups':{EMAIL_RE:/@/},'@/lib/discount':{...discount,validatePromotionCode:async()=>({ok:true,promotionCodeId:'promo_qa',percentOff:20})}};
+  const mocks={stripe:Stripe,'@/lib/tapstitch-readiness':{tapstitchFulfillmentReady:async()=>true},'@/lib/store-status':{storeClosed:()=>false},'@/lib/migration-preview':{MIGRATION_PREVIEW:false},'@/lib/mailchimp':{EMAIL_RE:/@/},'@/lib/signups':{EMAIL_RE:/@/},'@/lib/discount':{...discount,validatePromotionCode:async()=>({ok:true,promotionCodeId:'promo_qa',percentOff:20})}};
   const module={exports:{}};const requireBase=id=>{if(mocks[id])return mocks[id];if(id==='next/server')return {NextResponse:{json:(body,o={})=>({body,status:o.status||200})}};if(id.startsWith('@/'))return load('src/'+id.slice(2)+'.ts',mocks);return require(id)};
   new Function('require','module','exports',ts.transpileModule(base,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText)(requireBase,module,module.exports);
   const current=load('src/app/api/checkout/route.ts',mocks);process.env.STRIPE_SECRET_KEY='sk_test_mock';

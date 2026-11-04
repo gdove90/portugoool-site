@@ -124,6 +124,8 @@ export interface SubmitOutcome {
     | "stale_result_discarded"
     | "failed"
     | "needs_reconcile"
+    | "manual_tapstitch"
+    | "manual_handoff_pending"
     | "not_eligible";
   detail?: string;
 }
@@ -145,15 +147,6 @@ export async function submitPaidOrder(
   if (order.submission_status !== "pending_submission") {
     return { action: "not_eligible", detail: `submission_status=${order.submission_status}` };
   }
-  if (!apliiqSubmitEnabled()) {
-    // Deliberate release gate: order stays queued and visible.
-    return { action: "left_pending_disabled", detail: "APLIIQ_SUBMIT_ENABLED is not 'true'." };
-  }
-  const env = submissionEnvironmentAllowed(opts.livemode);
-  if (!env.allowed) {
-    return { action: "left_pending_environment", detail: env.reason };
-  }
-
   const items = await store.listOrderItems(orderId);
 
   // Tapstitch lines (sku TAP-<design>-<size>) have no order API here yet.
@@ -163,18 +156,34 @@ export async function submitPaidOrder(
   const tapstitchItems = items.filter((it) => it.apliiq_sku?.startsWith("TAP-"));
   const apliiqItems = items.filter((it) => !it.apliiq_sku?.startsWith("TAP-"));
   if (tapstitchItems.length) {
+    const env = submissionEnvironmentAllowed(opts.livemode);
+    if (!env.allowed) return { action: "left_pending_environment", detail: env.reason };
     const reason =
       "Tapstitch lines to place on tapstitch.com: " +
       tapstitchItems.map((it) => `${it.quantity} x ${it.apliiq_sku} (${it.color} / ${it.size})`).join("; ");
-    await alertOwner(store, orderId, opts.livemode, "tapstitch_manual", reason);
+    // The durable manual task is required. Provider-delivery failures
+    // stay queued; storage failures must leave Stripe's event retryable.
+    // A normal manual handoff must not send a customer delay notice.
+    try {
+      await queueFulfillmentAlert(store, orderId, opts.livemode, "tapstitch_manual", reason);
+    } catch {
+      return { action: "manual_handoff_pending", detail: "Tapstitch task persistence unavailable." };
+    }
     if (!apliiqItems.length) {
-      await store.transitionSubmission(orderId, "pending_submission", "not_submitted", {
+      const won = await store.transitionSubmission(orderId, "pending_submission", "not_submitted", {
         submission_last_error: reason,
       });
-      await store.setFulfillmentStatus(orderId, "manual_tapstitch");
-      return { action: "not_eligible", detail: reason };
+      // 'unfulfilled' is the existing database state until the operator
+      // records shipping. manual_tapstitch is not a valid DB enum value.
+      return { action: won ? "manual_tapstitch" : "lock_not_acquired", detail: reason };
     }
   }
+  if (!apliiqSubmitEnabled()) {
+    // The Apliiq release gate never suppresses a Tapstitch manual task.
+    return { action: "left_pending_disabled", detail: "APLIIQ_SUBMIT_ENABLED is not 'true'." };
+  }
+  const env = submissionEnvironmentAllowed(opts.livemode);
+  if (!env.allowed) return { action: "left_pending_environment", detail: env.reason };
   const payload = buildApliiqPayload(order, apliiqItems);
   if ("error" in payload) {
     await store.transitionSubmission(orderId, "pending_submission", "failed", {
