@@ -18,23 +18,32 @@
       "Audited14savedTapstitch rows across2pages. All showAddBranding; WT0216LakeBlue and WT0092Black dialogs explicitly select do not apply clothing label.",
       "13current mapped Tapstitch designs: menMT0063three+UB0050four, womenWT0092three+WT0216three. Extra WT0216design1564325002000687104 is unmapped older draft.",
       "No WT0093 bra appears in savedDesigns. New unsaved draft productId1567634502975635456 opened for production/label eligibility inspection; no SaveDesign.",
-      "Apliiq women's12currentTEMPO rows observed. CoreteeBlack expanded showsfrontprintonly. Current label selection needs customizer inspection; Apliiq blocked by another Chrome extension UI. Asked owner to close that panel; no Apliiq men inspected/changed."
+      "Apliiq women's12currentTEMPO rows observed. CoreteeBlack expanded showsfrontprintonly. Current label selection needs customizer inspection; Apliiq blocked by another Chrome extension UI. Asked owner to close that panel; no Apliiq men inspected/changed.",
+      "Applied existing approved matching 4x4 cm label to all 13 current mapped Tapstitch designs: 3 WT0216, 3 WT0092, 3 MT0063, 4 UB0050. Each row displayed Clothing label with $0.99 quote increase; page reload verified persistence. Left unmapped retired WT0216 1564325002000687104 unchanged.",
+      "Unsaved WT0093 draft 1567634502975635456 accepted existing label in Branding panel ($7.98 total); no decorated bra save or order.",
+      "Read actual observed White WT0216 print PNG: RGBA 700x186, 70896 fully transparent pixels, transparent four corners, SHA256 1175968459e17e96f63d4456d26a3a90fba528c77dcf4464679d8aaf842d094e. Download resolution differs from displayed DPI Good396; not enough to certify full production resolution."
     ],
     "tests": [
-      "PASS shared-contract parity validator on verifiedPR66review source. No tracked modifications yet."
+      "PASS shared-contract parity validator on verifiedPR66review source. No tracked modifications yet.",
+      "PASS 13 supplier tag assignments persisted after Designs reload; no supplier order/payment."
     ],
     "unresolved": [
       "Apliiq browser blocker requires owner dismissing another extension panel; do not bypass.",
-      "Tapstitch approved tag not bound to current designs.",
       "WT0093savedcolored designs missing; some source artwork uploads remain unavailable, no invented references.",
-      "All3onlinewomen currentlyComingSoon; purchasing can release only verified supplier variants with matching branding."
+      "All3onlinewomen currentlyComingSoon; purchasing can release only verified supplier variants with matching branding.",
+      "Men's live checkout preflight POST was rejected by automatic approval review as outside women's purchase scope; did not execute or retry. Use isolated checks, no men checkout testing."
     ],
-    "next_action": "Bind existing exact approved label to13currentTapstitch designs and confirmpersistentselection. InspectWT0093label eligibility/artwork; finishreadyintake. ContinueApliiqwomen only afterowner clearsChromeextensionpanel. Enable verifiedonlinewomen prices/variants throughreviewedrelease, preserveothers.",
+    "next_action": "Record completed13tag assignments. Verify WT0216 real production artwork/dimensions/white warning and runtime purchase path before scoped women's release. Apliiq still blocked by extension panel pending owner action; bra exact Cream/Wine uploads and saved decorated variants unresolved.",
     "external_effects": [
       {
         "reference": "labels-womens-purchase-683b2d58",
         "status": "intent",
         "details": "Apply existing approved matching Tapstitch$0.99label to13currentdesigns, compatiblebra drafts when saved; inspect/apply exact existing Apliiqtag on women's12designs only when browserclear; no supplierorder/payment/newsubscription. Saveverifiedintake, enableonlyreadycurrentlyonlinewomen at existingprices and deployscopedrelease. No historicalorders, unrelatedproducts/artwork/photos orApliiqmen changes."
+      },
+      {
+        "reference": "labels-womens-purchase-683b2d58",
+        "status": "tapstitch_labels_confirmed",
+        "details": "13 current mapped supplier designs now persist matching existing approved $0.99 clothing label; extra old unmapped design unchanged. WT0093 label selected in unsaved draft only. No supplier order, checkout session, payment, code or deployment changes."
       }
     ],
     "changed_paths": []
@@ -58,7 +67,7 @@
     "start_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
     "acquired_at": "2026-11-04T11:47:53.152978+00:00"
   },
-  "revision": 65,
+  "revision": 66,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T12:22:11.831724+00:00"
+  "updated_at": "2026-11-04T13:12:31.014305+00:00"
 }
