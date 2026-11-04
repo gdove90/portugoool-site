@@ -1,6 +1,6 @@
 # WT0093 training bra gallery preparation
 
-Status: draft assets only. No catalog listing, price, purchasing state, supplier design save or production deployment has been changed.
+Status: draft assets only. The owner approved USD18 retail for all four colorways and S/M/L/XL sizes on November 4, 2026 (request 098690e7-d5c1-42a4-8271-ce6a9c1d8f39). This price is recorded in the readiness manifest. No live catalog price, purchasing state, supplier design save or production deployment has been changed.
 
 The owner authorized four colorways and the established neutral studio presentation, with a front ghost first and a back ghost last. The six positions are front ghost, model front, model quarter turn, model rear, rear fabric/print detail, and back ghost. Images retain 1024 x 1536 framing. They are generated product mockups, not photographs of physical samples.
 
@@ -21,8 +21,8 @@ All 24 prepared images and their order, dimensions, source identities and SHA256
 
 - Verify and save each decorated Tapstitch design with the correct monochrome GA, actual print dimensions, center and smallest-size scaling. No saved decorated record has been confirmed. An attempted file selection was rejected by Tapstitch; the browser blocked the Library download route. Temporary white and Halo test layers were removed without saving a design.
 - Resolve production detail/gap quality before asserting approval. [Tapstitch's current print guide](https://www.tapstitch.com/help-center/faq/detail/DTF-vs-DTG-Printing-Which-Should-You-Choose) says DTF lines under 0.4 mm may be thickened. An older quarter-zip source comment also mentions an owner 2 mm gap target; its global applicability and this smaller mark need reconciliation. Do not silently redraw the GA or claim all details pass.
-- Imagery is now complete: the owner explicitly approved Suzanne again for Brick after Amanda requests failed. The four new views preserve Suzanne's high braided bun, outfit, studio, angles and framing. Supplier verification and retail price remain the release blockers.
-- Obtain retail price and final product name. TEMPO Training Bra is a proposal only. No price is inferred from the other tees or shorts.
+- Imagery is now complete: the owner explicitly approved Suzanne again for Brick after Amanda requests failed. The four new views preserve Suzanne's high braided bun, outfit, studio, angles and framing. Supplier verification and the remaining intake checks still block release.
+- Confirm the final product name. TEMPO Training Bra is a proposal only. Retail price is owner-approved at USD18 for every colorway and size; this resolves the previous retail price hold.
 - Preserve every current purchasing hold and store gate. Verify the Tapstitch manual paid fulfillment path before enabling purchasing. A complete gallery is not fulfillment readiness.
 
 The supplier lists garment and decoration at $6.99 and $2.99 per print frame in the inspected editor, before shipping and tax. Landed cost and contribution margin remain unknown. No support rating, padding claim or decorated sample performance is approved.

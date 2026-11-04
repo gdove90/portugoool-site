@@ -34,7 +34,7 @@
   },
   "saved_decorated_designs": null,
   "draft_product_id": "1567601266220228608",
-  "retail_price_cents": null,
+  "retail_price_cents": 1800,
   "gallery_order": [
     "ghost-front",
     "model-front",
@@ -358,7 +358,7 @@
   ],
   "blockers": [
     "No saved decorated supplier designs verified. Direct workspace-path upload was rejected by Tapstitch; browser policy blocked ChatGPT Library download to browser device. No supplier save or order performed.",
-    "Retail price and final product name not approved.",
+    "Final product name not approved. Retail price is owner-approved at USD18 across all four colorways and S/M/L/XL sizes.",
     "Production detail/gap quality, smallest-size print and decorated sample stretch/wash unverified. Historical quarter-zip source comment mentions owner 2mm DTF gap target; global applicability and this small monogram not established.",
     "Manual Tapstitch paid fulfillment path must be verified separately before purchasing release."
   ],
@@ -405,10 +405,13 @@
     }
   ],
   "owner_model_change_reference": "2beee444-f1be-4e02-b5e4-3c86caecdb4c",
-  "gallery_status": "ALL_FOUR_COLORWAYS_HAVE_SIX_VIEWS; supplier/retail release requirements remain pending.",
+  "gallery_status": "ALL_FOUR_COLORWAYS_HAVE_SIX_VIEWS; supplier/name release requirements remain pending; USD18 retail is owner-approved.",
   "generation_history": [
     "Amanda standard sportswear requests rejected repeatedly by the built-in image tool.",
     "CLI route authorized but could not run because OPENAI_API_KEY was not configured. No API generation or Higgsfield credits spent.",
     "Owner permitted Suzanne substitution for Brick; four new matching views generated successfully with built-in image tool."
-  ]
+  ],
+  "retail_price_currency": "USD",
+  "retail_price_owner_reference": "098690e7-d5c1-42a4-8271-ce6a9c1d8f39",
+  "retail_price_scope": "All four colorways and S/M/L/XL sizes"
 }
