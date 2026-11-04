@@ -13,8 +13,11 @@
       "Owner c60e8d03-bca9-4650-aa42-9e9615af6fd2: upload approved18 tee images and expose this as first women's piece; preserve other product holds, layout and commerce settings. Existing name TEMPO Core Training Tee recommended."
     ],
     "completed": [
-      "18 owner-approved images converted without cropping, all hashes verified including corrected Jessica sources; exact23-file commit pushed, PR71.",
-      "Only first TEMPO item exposed; purchase hold remains; other5 TEMPO hidden; other products and men objects unchanged."
+      "Published TEMPO Core Training Tee as first and only public women's TEMPO piece at $38 in Black, White, Iron Grey.",
+      "All18 approved images live and hash verified; corrected Jessica portraits included.",
+      "Desktop and390px mobile galleries verified; other five TEMPO products hidden; men's products unchanged.",
+      "Production6aead373d6dba52e4d889296 READY at merged6b77f32f93d867e1f96ae89f51565f6804c433d; exact actual merge d6b77f32f93d867e1f96ae89f51565f6804c433d.",
+      "Read-only checkout preview400 Coming soon; no payment/fulfillment action."
     ],
     "tests": [
       "Targeted women exposure/hold/asset integrity tests PASS",
@@ -24,7 +27,7 @@
       "git diff --check PASS"
     ],
     "unresolved": [
-      "Supplier variant/placement verification needed before sale activation; images can be published with current effective purchase hold retained."
+      "Purchasing remains held pending fresh genuine size-specific Apliiq SKU verification; no additional sizes enabled."
     ],
     "external_effects": [
       {
@@ -63,28 +66,33 @@
       "public/products/tempo-core-training-tee/tempo-core-training-tee-white-model-quarter-20261104-8414ec3c.webp",
       "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-back-20261104-f30fa00f.webp",
       "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-20261104-5fc9afed.webp"
+    ],
+    "release_status": "LIVE_VERIFIED",
+    "external_operations": [
+      {
+        "reference": "tempo-tee-gallery-release",
+        "status": "live_verified_gallery_only_purchasing_held",
+        "commit": "0933efa48a8a78eaf39e046e1a7dd274ee15b188",
+        "pr": 71,
+        "preview_deploy": "6aead2d391d3306bf1f95883",
+        "production_deploy": "6aead373d6dba52e4d889296",
+        "merge_commit": "d6b77f32f93d867e1f96ae89f51565f6804c433d",
+        "target": "https://goalathletics.shop/women",
+        "reconciliation": "Merged once; production READY; all18 live image hashes matched, galleries and collection verified; read-only checkout hold verified. No replay required."
+      }
     ]
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-tempo-core-tee-c60e8d03",
     "task": "tempo-core-tee-gallery-20261104",
     "branch": "codex/tempo-core-tee-c60e8d03",
     "approval": "Owner c60e8d03-bca9-4650-aa42-9e9615af6fd2: upload approved18 tee images and expose this as first women's piece; preserve other product holds, layout and commerce settings. Existing name TEMPO Core Training Tee recommended.",
     "start_commit": "b04be06939bb960f44197b40ec70e75c4d83fe3b",
-    "token_hash": "63fa523c8fa324efe6c1e9401b32b41d0a814e221d1c8cb8b29b813e9ee61e33",
     "acquired_at": "2026-11-04T06:33:39.341Z"
   },
-  "last_released_holder": {
-    "acquired_at": "2026-11-04T05:48:38.014329+00:00",
-    "approval": "Owner be83dd4e-8a18-4c92-875f-854cbd6d5d62 approved attached concrete Suzuki men hero, Jeff homepage men tile, Quarter Zip men lower banner; owner 98740673-ceb7-48c3-9491-b7dbbeb9115b explicitly requested deploy live. Preserve layout, copy, other imagery and commerce.",
-    "branch": "codex/approved-editorial-imagery-98740673",
-    "engine": "codex",
-    "session": "codex-goal-editorial-98740673",
-    "start_commit": "34ff8dad1f0e1234c58615337240fdb0950a6583",
-    "task": "goal-editorial-imagery-20261104"
-  },
-  "revision": 25,
+  "revision": 26,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T06:41:22.171Z"
+  "updated_at": "2026-11-04T06:46:52.109Z"
 }
