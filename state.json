@@ -20,47 +20,43 @@
       "Approved clean artwork:Librarylibfile_32d87b2521b48191bf3766ce3919b401,1440x480RGBA,609.6DPI,nominal60x20mm,32004bytes,SHA2562ac2f8e3a46938b3c1bd0200dd2e1f81478c822166a563e1967d9ad5d82a9399. Original16SVGpaths retained; proposed graphic48x12.17mm centered. Final suppliertemplateplacementpending.",
       "Current Tapstitch rectangular draft1567767387741245440, selected2x6cm White. Actual printable zone5.4x1.7cm,638x201px at300DPI verified in upload dialog.",
       "Clean PNG file chooser transfer rejected by Tapstitch Invalid File Type despite validated PNG. No new file uploaded. Reused existing all-black V1.3 horizontal supplier source dfd5140be4c84d9e8f1dd62b544fb302,2973x793px,9.9x2.6in@300DPI.",
-      "One source layer resized proportionally with linked dimensions to4.8x1.3cm displayed,0rotation,Good1573DPI. Both horizontal and vertical center Align applied; screenshot verifies print stays within safe dashed area."
+      "One source layer resized proportionally with linked dimensions to4.8x1.3cm displayed,0rotation,Good1573DPI. Both horizontal and vertical center Align applied; screenshot verifies print stays within safe dashed area.",
+      "Submitted the single label draft1567767387741245440 once through UI. Generic background/design color notice acknowledged after visual transparent all-black artwork on white-label check. Supplier Branding table confirms Pending2x6cmWhite,$0.99; no Apply control until Approved.",
+      "Renamed supplier record GOAL V1.3 Rectangular 2x6 and confirmed same name/status after full page reload. Preview visually matches centered all-black V1.3horizontal lockup.",
+      "No product label replacements yet: fourUB0050 pants retain their existing approved4x4cm branding; all otherproducts/images/prices/orders/gates unchanged. No orders,charges,emails orwebsite deployment."
     ],
     "tests": [
       "PASS canonical configuration parity from current PR66 review source; current task has no AGENTS/contract yet. Isolated inspection only.",
       "PASS PNG decode/alpha/resolution/dimensions/exactsourcegeometry checks from approved preparation; filepresentforupload.",
-      "PASS current editor resolution and safe-area visual check; aspect link enabled and dimensions preserved; no supplier submission yet."
+      "PASS current editor resolution and safe-area visual check; aspect link enabled and dimensions preserved; no supplier submission yet.",
+      "PASS persisted supplier record read after reload: GOAL V1.3 Rectangular2x6,Pending,$0.99,2x6cm. Screenshot tapstitch-rectangular-tag-status.png.",
+      "HOLD supplier approval,quotedwithin2businessdays; assignment unavailable while Pending. Physical sample quality UNVERIFIED."
     ],
     "unresolved": [
-      "New rectangular label not yet submitted or Approved; preserve existing square labels until replacement available.",
-      "Apliiq women's audit and unsaved WT0093 production designs remain separate unresolved work."
+      "Supplier review Pending; 2x6 rectangular tag cannot yet be applied. No change to fourUB0050 labels until Approved.",
+      "Apliiq women's tag audit and WT0093 saved production designs remain separate unresolved work. Do not claim every supplier product verified."
     ],
-    "next_action": "Submit this single finished2x6cmWhite draft once; reconcile supplier result. Rename if offered. OnlyApproved label may replace fourUB0050 tags; ifPending, release with no assignments.",
+    "next_action": "Read Tapstitch Branding status for existing GOAL V1.3 Rectangular2x6 record; do not recreate/resubmit. OnceApproved, reacquire this same taskbranch and replace onlyfourUB0050 saveddesign labels, then verify each persists. IfRejected, read supplier reason and refine within ownerapproved branding. Preserve existing tags until replacement ready.",
     "external_effects": [
       {
         "reference": "rect-label-2x6-173c22e6",
-        "status": "intent",
-        "details": "Submit single2x6cmWhite label draft1567767387741245440 with existing supplier all-blackV1.3horizontal source dfd5140be4c84d9e8f1dd62b544fb302, centered4.8x1.3cm,Good1573DPI. This reuses uploaded approvedV1.3 geometry instead of rejected file transfer. Name GOAL V1.3 Rectangular2x6cm if possible. OnlyApproved assign to fourUB0050 saveddesigns1567484017748627456,1567487271354122240,1567489152965033984,1567491247352987648; preserve allotherproducts/artwork/retail/images/orders/gates. No orders orcharges."
+        "status": "confirmed",
+        "details": "Created and submitted exactlyone2x6cmWhite label draft1567767387741245440; existing supplier source dfd5140be4c84d9e8f1dd62b544fb302,centered4.8x1.3cm display,Good1573DPI. Renamed GOAL V1.3 Rectangular2x6 (supplier visible name has space before2x6). PersistedPending after reload,$0.99. No Apply control; no product assignments made. Existing square labels retained. Noorders/charges."
       }
     ],
     "changed_paths": []
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "engine": "codex",
     "session": "codex-rect-tag-173c22e6",
     "task": "goal-labels-womens-purchase-20261104",
     "branch": "codex/goal-labels-womens-purchase-20261104",
     "approval": "Owner173c22e6 authorizes implementing approved V1.3 rectangular 6x2cm tag on products where needed, starting four UB0050 pants. Submit new tag for review and assign only when Approved; preserve existing approved branding until replacement ready. No orders, charges, live catalog, images or Apliiq men.",
     "start_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
-    "token_hash": "b03ff20106e49af04a54624f297c0b7a3acada43b4dbf1ffabbce644a86a8fc8",
     "acquired_at": "2026-11-04T21:06:47.303184+00:00"
   },
-  "last_released_holder": {
-    "engine": "codex",
-    "session": "codex-predawn-d8cbb24b",
-    "task": "goal-shared-predawn-banner-20261104",
-    "branch": "codex/shared-predawn-product-banner-20261104",
-    "approval": "Owner fd43b744 deploy approved mixed-athlete banner; d8cbb24b add GA logo to mens shorts before deployment. Names remain proposals.",
-    "start_commit": "8483b4960add4fbc49de944be88ba415e05d8b09",
-    "acquired_at": "2026-11-04T20:37:21.589071+00:00"
-  },
-  "revision": 86,
+  "revision": 87,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T21:22:13.768611+00:00"
+  "updated_at": "2026-11-04T21:26:12.493824+00:00"
 }
