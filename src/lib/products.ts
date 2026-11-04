@@ -276,6 +276,94 @@ const DROP_II = {
   dropLimit: null,
 };
 
+// Owner-approved generated studio mockups. Five matching views per color.
+const TEMPO_TRAINING_TEE_VARIANTS = [
+  {
+    "name": "White",
+    "supplierColor": "White",
+    "hex": "#F7F7F5",
+    "skuFragment": "WHITE",
+    "images": [
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-white-ghost-front-20261104.webp",
+        "alt": "TEMPO Training Tee in White, ghost front view with the black and red V1.3 horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-white-model-front-20261104.webp",
+        "alt": "TEMPO Training Tee in White, Molly facing forward with the black and red horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-white-model-quarter-20261104.webp",
+        "alt": "TEMPO Training Tee in White, Molly in a front-left quarter turn with the black and red horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-white-model-back-20261104.webp",
+        "alt": "TEMPO Training Tee in White, Molly facing away, showing the unprinted back, curved yoke and shaped side-panel seams"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-white-detail-20261104.webp",
+        "alt": "TEMPO Training Tee in White, close-up of the black and red horizontal lockup and fine polyester knit"
+      }
+    ]
+  },
+  {
+    "name": "Lake Blue",
+    "supplierColor": "Lake Blue",
+    "hex": "#9DDDDC",
+    "skuFragment": "LAKEBLUE",
+    "images": [
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-lake-blue-ghost-front-20261104.webp",
+        "alt": "TEMPO Training Tee in Lake Blue, ghost front view with the white V1.3 horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-lake-blue-model-front-20261104.webp",
+        "alt": "TEMPO Training Tee in Lake Blue, Suzanne facing forward with the white horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-lake-blue-model-quarter-20261104.webp",
+        "alt": "TEMPO Training Tee in Lake Blue, Suzanne in a front-left quarter turn with the white horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-lake-blue-model-back-20261104.webp",
+        "alt": "TEMPO Training Tee in Lake Blue, Suzanne facing away, showing the unprinted back, curved yoke and shaped side-panel seams"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-lake-blue-detail-20261104.webp",
+        "alt": "TEMPO Training Tee in Lake Blue, close-up of the white horizontal lockup and fine polyester knit"
+      }
+    ]
+  },
+  {
+    "name": "Light Purple",
+    "supplierColor": "Light Purple",
+    "hex": "#C9B5EF",
+    "skuFragment": "LIGHTPURPLE",
+    "images": [
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-light-purple-ghost-front-20261104.webp",
+        "alt": "TEMPO Training Tee in Light Purple, ghost front view with the black V1.3 horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-light-purple-model-front-20261104.webp",
+        "alt": "TEMPO Training Tee in Light Purple, Amanda facing forward with the black horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-light-purple-model-quarter-20261104.webp",
+        "alt": "TEMPO Training Tee in Light Purple, Amanda in a front-left quarter turn with the black horizontal lockup"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-light-purple-model-back-20261104.webp",
+        "alt": "TEMPO Training Tee in Light Purple, Amanda facing away, showing the unprinted back, curved yoke and shaped side-panel seams"
+      },
+      {
+        "src": "/products/tempo-training-tee/tempo-training-tee-light-purple-detail-20261104.webp",
+        "alt": "TEMPO Training Tee in Light Purple, close-up of the black horizontal lockup and fine polyester knit"
+      }
+    ]
+  }
+];
+
 export const products: Product[] = [
   // ── Performance Jersey Collection ───────────────────────────
   {
@@ -4985,14 +5073,9 @@ export const products: Product[] = [
     customizationPriceCents: 0,
   },
   // == end TEMPO Warmup Hoodie ==
-  // == TEMPO Training Tee (built 2026-10-26) ==
-  // Tapstitch designs 1564324134866087936 White, 1564325002000687104 Red,
-  // 1564325488367988736 Purple: the V1.3 horizontal lockup 6.00 x 1.60 in
-  // (resized in place 2026-10-26, was 7.00 in) centred on the chest, top
-  // 3 in below the collar. Quote $9.98 a unit plus
-  // about $5 shipping: 25% model floor $29; priced $34. Tapstitch orders
-  // are placed by hand until an API is connected. Images are Tapstitch's
-  // mockups. Record: designs/62_tempo-collection-proofs-2026-10-26/.
+  // Owner-approved WT0216 galleries, 2026-11-04. DTF horizontal V1.3
+  // 7.5 x 2 in on reference L; supplier scales by garment size.
+  // White black/red, Lake Blue white, Light Purple black. Purchasing held.
   {
     id: "80000000-0000-4000-8000-000000000021",
     name: "TEMPO Training Tee",
@@ -5008,57 +5091,13 @@ export const products: Product[] = [
       "100% polyester, 130 gsm. Light, quick-drying and smooth against the skin.",
     fit: "Regular women's fit that sits closer to the body than the Core tees. Between sizes, go up.",
     careInstructions: "Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low. Cool iron, avoiding the print. Do not dry clean.",
-    images: [
-      {
-        src: "/products/tempo-training-tee-white-catalog-product-front-20261026.webp",
-        alt: "TEMPO Training Tee in White, product front with the black and red GA and GOAL ATHLETICS lockup across the chest",
-      },
-    ],
-    colorVariants: [
-      {
-        name: "White",
-        supplierColor: "White",
-        hex: "#F7F7F5",
-        skuFragment: "WHITE",
-        images: [
-          {
-            src: "/products/tempo-training-tee-white-catalog-product-front-20261026.webp",
-            alt: "TEMPO Training Tee in White, product front with the black and red GA and GOAL ATHLETICS lockup across the chest",
-          },
-        ],
-      },
-      {
-        name: "Red",
-        supplierColor: "Red",
-        hex: "#C3132B",
-        skuFragment: "RED",
-        images: [
-          {
-            src: "/products/tempo-training-tee-red-catalog-product-front-20261026.webp",
-            alt: "TEMPO Training Tee in Red, product front with the white GA and GOAL ATHLETICS lockup across the chest",
-          },
-        ],
-      },
-      {
-        name: "Purple",
-        supplierColor: "Purple",
-        hex: "#6B3F99",
-        skuFragment: "PURPLE",
-        images: [
-          {
-            src: "/products/tempo-training-tee-purple-catalog-product-front-20261026.webp",
-            alt: "TEMPO Training Tee in Purple, product front with the black GA and GOAL ATHLETICS lockup across the chest",
-          },
-        ],
-      },
-    ],
-    originLabel: "Printed in the USA",
-    disclosure: "Ships from our overseas partner: allow 10 to 17 days.",
-    sizes: ["S", "M", "L", "XL", "XXL"],
+    images: TEMPO_TRAINING_TEE_VARIANTS[0].images,
+    colorVariants: TEMPO_TRAINING_TEE_VARIANTS,
+    sizes: ["S", "M", "L", "XL"],
     category: "tshirt",
     supplierType: "tapstitch",
     isActive: true,
-    availableForSale: true,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,

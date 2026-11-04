@@ -140,6 +140,18 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
       { size: "XXL", chestIn: 24.5, lengthIn: 29, sleeveIn: null },
     ],
   },
+  // Saved WT0216 supplier design chart, inspected 2026-11-04.
+  wt0216: {
+    blank: "Women's lightweight polyester crew · 130 gsm",
+    source: "https://www.tapstitch.com/account/products-pool/product/1567566233338085376",
+    note: "Regular women's fit. Compare these flat measurements with a tee you own. Garment measurements may vary by 1 to 3 cm.",
+    rows: [
+      { size: "S", chestIn: 16.93, lengthIn: 23.03, sleeveIn: null },
+      { size: "M", chestIn: 17.72, lengthIn: 23.62, sleeveIn: null },
+      { size: "L", chestIn: 18.50, lengthIn: 24.21, sleeveIn: null },
+      { size: "XL", chestIn: 19.29, lengthIn: 24.80, sleeveIn: null },
+    ],
+  },
   bc7519: {
     blank: "Women's classic fleece hoodie",
     source: "https://www.blankstyle.com/bella-canvas-7519-ladies-classic-pullover-hooded-sweatshirt",
@@ -193,6 +205,7 @@ const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
   "80000000-0000-4000-8000-000000000016": "j333", // GOAL Athletics Core Everyday Raincoat (2026-10-26)
   "80000000-0000-4000-8000-000000000017": "lst350", // TEMPO Core Training Tee (2026-10-26)
   "80000000-0000-4000-8000-000000000019": "lpst800", // TEMPO Training Pants (2026-10-26)
+  "80000000-0000-4000-8000-000000000021": "wt0216", // TEMPO Training Tee
   "80000000-0000-4000-8000-000000000020": "bc7519", // TEMPO Warmup Hoodie (2026-10-26)
 };
 

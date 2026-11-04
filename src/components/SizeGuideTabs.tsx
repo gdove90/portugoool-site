@@ -84,10 +84,8 @@ export const GUIDE = [
   {
     id: "women-training-tee",
     label: "Training Tee",
-    chart: null,
+    chart: "wt0216",
     productIds: ["80000000-0000-4000-8000-000000000021"],
-    blank: "Women's lightweight polyester crew · 130 gsm",
-    note: "Sold S to XXL. A regular women's fit that sits closer to the body than the Core tees; between sizes, go up. The maker's flat measurements are still to be published here.",
   },
   {
     id: "women-hoodies",

@@ -527,10 +527,12 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "White": tapstitch("1564322937081917440", ["S", "M", "L", "XL"]),
     "Light Purple": tapstitch("1564323621013516288", ["S", "M", "L", "XL"]),
   },
+  // Saved decorated designs verified 2026-11-04. TAP refs are internal;
+  // this mapping does not authorize checkout or prove API fulfillment.
   "80000000-0000-4000-8000-000000000021": {
-    "White": tapstitch("1564324134866087936", ["S", "M", "L", "XL", "XXL"]),
-    "Red": tapstitch("1564325002000687104", ["S", "M", "L", "XL", "XXL"]),
-    "Purple": tapstitch("1564325488367988736", ["S", "M", "L", "XL", "XXL"]),
+    "White": tapstitch("1564324134866087936", ["S", "M", "L", "XL"]),
+    "Lake Blue": tapstitch("1567566232960516096", ["S", "M", "L", "XL"]),
+    "Light Purple": tapstitch("1564325488367988736", ["S", "M", "L", "XL"]),
   },
   // GOAL Athletics Core Quarter Zip (Tapstitch MT0063, men): GA monogram
   // 2.00 x 1.80 in on the wearer's left chest beside the zip, front only. Tapstitch runs S to 4XL;
