@@ -18,10 +18,12 @@
       "Updated only WT0216 catalog, three colors, S-XL, saved-design mapping, supplier size chart and women public inclusion; existing $34 and purchasing hold preserved."
     ],
     "tests": [
-      "PASS dedicated gallery, all other product preservation and actual checkout refusal checks",
+      "PASS 15-image gallery and full other-product preservation checks",
+      "PASS real isolated checkout refuses every color without provider calls",
       "PASS typecheck",
-      "PASS lint with existing unrelated img warnings",
-      "Production build running"
+      "PASS lint (three pre-existing img warnings)",
+      "PASS optimized production build",
+      "PASS all 15 WebP images decode at 1024x1536"
     ],
     "unresolved": [
       "White supplier background-detection warning unresolved; purchasing held.",
@@ -33,6 +35,11 @@
         "reference": "be9312aa-gallery-publication",
         "status": "intent",
         "details": "Owner authorized publishing approved 15 images for TEMPO Training Tee. No deploy performed yet."
+      },
+      {
+        "reference": "be9312aa-git-publication",
+        "status": "intent",
+        "details": "Publish exact scoped 22-file tree 71bb03fb8a3ea90ca2cd2af6ebe8c19181d2326f to existing task branch and open PR for deploy preview; no live deployment yet."
       }
     ]
   },
@@ -55,7 +62,7 @@
     "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "acquired_at": "2026-11-04T08:03:10.031538+00:00"
   },
-  "revision": 43,
+  "revision": 44,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T08:55:32.827Z"
+  "updated_at": "2026-11-04T08:57:58.259Z"
 }
