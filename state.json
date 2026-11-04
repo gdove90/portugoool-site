@@ -7,8 +7,8 @@
     "session": "codex-labels-purchase-683b2d58",
     "branch": "codex/goal-labels-womens-purchase-20261104",
     "base_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
-    "head_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
-    "worktree_state": "scoped_changes_tested_uncommitted",
+    "head_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
+    "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
       "7af95634: ensure GOAL tag or interior print on men/women. cfa89dcf: Tapstitch men/women first, then Apliiq women only.",
       "683b2d58: make currently online women's products purchasable.53f0ae83 confirms supplied PNG is exact tag. Current prices/artwork/images preserved."
@@ -23,7 +23,8 @@
       "Unsaved WT0093 draft 1567634502975635456 accepted existing label in Branding panel ($7.98 total); no decorated bra save or order.",
       "Read actual observed White WT0216 print PNG: RGBA 700x186, 70896 fully transparent pixels, transparent four corners, SHA256 1175968459e17e96f63d4456d26a3a90fba528c77dcf4464679d8aaf842d094e. Download resolution differs from displayed DPI Good396; not enough to certify full production resolution.",
       "Verified all three saved WT0216 editors: exact inks,7.5x2in,Good396DPI,referenceL,DTF,S-XL available. White automatic background warning is false positive in supplier red print mask with transparent checkerboard; no background removal or artwork edits.",
-      "Prepared scoped WT0216 purchasing release: only UUID21 availableForSale true, unchanged$34/S-XL/15images; add exact three ordering links and tag reminder in private Tapstitch task. Other women holds and all men catalog objects preserved."
+      "Prepared scoped WT0216 purchasing release: only UUID21 availableForSale true, unchanged$34/S-XL/15images; add exact three ordering links and tag reminder in private Tapstitch task. Other women holds and all men catalog objects preserved.",
+      "Published exact8file tree0b61b06daa2458dbf1e9021dd8a4ae2ada952db1 at5ecf688cf8bcdb344eaaf546aa8df98d27564f63; draftPR76. Netlify preview6aeb319de0532975e76cf073 enqueued. Local taskbranch clean and identical."
     ],
     "tests": [
       "PASS shared-contract parity validator on verifiedPR66review source. No tracked modifications yet.",
@@ -37,7 +38,7 @@
       "All3onlinewomen currentlyComingSoon; purchasing can release only verified supplier variants with matching branding.",
       "Men's live checkout preflight POST was rejected by automatic approval review as outside women's purchase scope; did not execute or retry. Use isolated checks, no men checkout testing."
     ],
-    "next_action": "Publish exact8file reviewed WT0216 release to same task branch/draftPR, verify CI/preview, then owner-authorized deploy. Confirm women-only read-only preview totals/live runtime; ifguardfails forwardcommitteehold. Apliiq/coretee and bra remainblocked.",
+    "next_action": "Verify existingpreview6aeb319d,markPR76ready,reviewexactdiff/mainhead,mergeexistingPRunderowner683b2d58authorization. Productionverifywomen-onlypreviewtotals;holdonlyteeifruntimeguardfails. Apliiq/coretee/bra stillblocked.",
     "external_effects": [
       {
         "reference": "labels-womens-purchase-683b2d58",
@@ -53,6 +54,11 @@
         "reference": "683b2d58-wt0216-purchase-release",
         "status": "intent",
         "details": "Publish8scopedsource/test/docsfiles to task branch andPR; afterchecks merge WT0216 availability at$34/S-XL/threecolors and exact tagged task links to goalathletics.shop. No other productstate,image,UI,providerpricing,SQL,storegate,email,supplierorder/payment changes. Live check limited to authorized women preview:true/noemail/nocode returning beforeStripeSessioncreation; ifreadinessfails restoreteehold viaforwardcommit."
+      },
+      {
+        "reference": "683b2d58-wt0216-purchase-release",
+        "status": "source_published_preview_pending",
+        "details": "Exact8file source at5ecf688;PR76draft;Netlifypreview6aeb319de0532975e76cf073 enqueued. Main/production still7e159... Do not replay sourcepublication."
       }
     ],
     "changed_paths": [
@@ -85,7 +91,7 @@
     "start_commit": "2f2852e6260393b59fb0528331d9bbf1dfa5c8b1",
     "acquired_at": "2026-11-04T11:47:53.152978+00:00"
   },
-  "revision": 67,
+  "revision": 68,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T13:21:08.227556+00:00"
+  "updated_at": "2026-11-04T13:23:12.999149+00:00"
 }
