@@ -76,7 +76,16 @@
       }
     ]
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-bra-239154a8",
+    "task": "tempo-training-bra-20261104",
+    "branch": "codex/tempo-training-bra-20261104",
+    "approval": "Owner 239154a8-d329-40d3-a832-a15f8936e0e8: verify WT0093 specifications; six-view galleries front ghost first, back ghost last, all four approved women; Suzanne in Black with new hairstyle; website preparation preserving holds.",
+    "start_commit": "7ea51b999cdcec386b5d5cf0ce579706ffaadc0b",
+    "token_hash": "ce874ce990f697b9c4632545caa1afd29ea9d04f44a2e1e43bdd12bcae965607",
+    "acquired_at": "2026-11-04T10:35:12.000495+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-tempo-training-be9312aa",
@@ -86,7 +95,7 @@
     "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "acquired_at": "2026-11-04T08:50:54.264103+00:00"
   },
-  "revision": 49,
+  "revision": 50,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T09:09:38.942504+00:00"
+  "updated_at": "2026-11-04T10:35:12.000514+00:00"
 }
