@@ -2,53 +2,39 @@
   "checkpoint": {
     "schema": "goal-agent-handoff-v2",
     "contract_version": "2.0",
-    "task_id": "tempo-placement-correction-20261104",
+    "task_id": "tempo-training-gallery-20261104",
     "engine": "codex",
-    "session": "codex-tempo-placement-67a44161",
-    "branch": "codex/tempo-placement-67a44161",
-    "base_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
-    "head_commit": "9cc81e4bc76bf9a2aae15bc18a390f108591adf3",
+    "session": "codex-tempo-training-f07faa75",
+    "branch": "codex/tempo-training-tee-f07faa75",
+    "base_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
+    "head_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
     "worktree_state": "clean_committed_and_pushed",
     "approved_scope": [
-      "Owner17ab6889-786c-4139-8d51-fe1f4cd66166: upload and replace exactly three approved higher-position ghost FRONT images, deploy now, do nothing else. Website-only authorization supersedes previous review hold; do not change supplier or model images."
+      "Owner f07faa75: add White, Lake Blue, Light Purple TEMPO Training Tee to website like previous tee. S-XL, existing $34, purchasing hold preserved."
     ],
     "completed": [
-      "Replaced exactly three live ghost front images for Black/White/Iron Grey.",
-      "All three live SHA256 hashes match approved new front derivatives; browser color swaps and front source URLs verified.",
-      "No model, gallery order/count, layout, price, sizes, purchasing hold or supplier changes."
+      "Inspected existing hidden WT0216 product and saved supplier designs.",
+      "Verified supplier chart S-XL: flat chest 16.93/17.72/18.50/19.29 in; length 23.03/23.62/24.21/24.80 in.",
+      "Created model front mockups: White Molly exec-758826e4-7752-4d76-b047-7007b5dc678b.png; Lake Blue Suzanne exec-cec5bbd9-d6cf-4593-83cb-7d9506c6f88e.png; Light Purple Jessica exec-61dfae5d-66cc-48c9-9114-de0078713b6f.png."
     ],
     "tests": [
-      "Existing gallery/isolation/hash tests PASS",
-      "Typecheck PASS",
-      "git diff --check PASS",
-      "1024x1536 outputs; layout and image ratio preserved"
+      "Canonical contract validator PASS in review checkout",
+      "Supplier Lake Blue reopens 7.5x2 in,396DPI"
     ],
     "unresolved": [
-      "Apliiq supplier placement remains lower; owner explicitly authorized website-only release, no supplier writes. Purchasing remains Coming soon."
+      "Remaining quarter/back/detail image generation interrupted; reconcile generated files before retry.",
+      "No tracked catalog changes, PR, merge or deploy yet.",
+      "White supplier background-detection warning unresolved; keep purchasing held.",
+      "Broad Netlify environment read rejected by automatic review; no settings changed. Narrow follow-up was user-aborted."
     ],
+    "next_action": "Reconcile image outputs; complete galleries, update only WT0216 catalog/colors/SXL/mappings/size guide/public inclusion, validate then release within owner scope.",
     "external_effects": [
       {
-        "reference": "tempo-three-front-replacement-pr73",
-        "status": "live_verified",
-        "head": "9cc81e4bc76bf9a2aae15bc18a390f108591adf3",
-        "pr": 73,
-        "preview": "6aeada43f4db37502ee6bad2",
-        "merge_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
-        "production_deploy": "6aeadac440a50d4973c22ea7",
-        "target": "https://goalathletics.shop/shop/tempo-core-training-tee",
-        "reconciliation": "Merged once; exact productionREADY and all three front hashes/URLs verified. No replay required."
+        "reference": "tempo-training-f07faa75",
+        "status": "preparation_only",
+        "details": "Created feature baseline branch; supplier read-only; three new model front mockups. No website deployment."
       }
-    ],
-    "next_action": "Owner's website-only task complete; no further action authorized.",
-    "changed_paths": [
-      "src/lib/products.ts",
-      "docs/catalog/tempo-core-training-tee-gallery-20261104.json",
-      "docs/catalog/tempo-core-tee-upper-chest-review-20261104.json",
-      "public/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
-      "public/products/tempo-core-training-tee/tempo-core-training-tee-white-product-front-upper-chest-20261104-f68e64bb.webp",
-      "public/products/tempo-core-training-tee/tempo-core-training-tee-iron-grey-product-front-upper-chest-20261104-b371fc94.webp"
-    ],
-    "release_status": "LIVE_VERIFIED"
+    ]
   },
   "holder": {
     "engine": "codex",
@@ -69,7 +55,7 @@
     "start_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
     "acquired_at": "2026-11-04T07:01:09.941Z"
   },
-  "revision": 39,
+  "revision": 40,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T08:03:10.031556+00:00"
+  "updated_at": "2026-11-04T08:10:08.323Z"
 }
