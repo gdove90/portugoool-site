@@ -50,7 +50,16 @@
     ],
     "release_status": "LIVE_VERIFIED"
   },
-  "holder": null,
+  "holder": {
+    "engine": "codex",
+    "session": "codex-tempo-training-f07faa75",
+    "task": "tempo-training-gallery-20261104",
+    "branch": "codex/tempo-training-tee-f07faa75",
+    "approval": "Owner f07faa75-586d-4b0b-a0aa-387f328ddc58: add White, Lake Blue and Light Purple TEMPO Training Tee to website just like previous tee, preserve purchasing hold.",
+    "start_commit": "522500ddc7aa94e9990734564a3fd309a682e868",
+    "token_hash": "b5e64069781a6d5dce0e3046eb320b0ee735ca6b7a0ba00a5e17d5bbcba02ce6",
+    "acquired_at": "2026-11-04T08:03:10.031538+00:00"
+  },
   "last_released_holder": {
     "engine": "codex",
     "session": "codex-tempo-placement-67a44161",
@@ -60,7 +69,7 @@
     "start_commit": "dbcf3c6bb7e9d45bf62d40add1bc82fdc6dd1ba9",
     "acquired_at": "2026-11-04T07:01:09.941Z"
   },
-  "revision": 38,
+  "revision": 39,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-04T07:14:41.669Z"
+  "updated_at": "2026-11-04T08:03:10.031556+00:00"
 }
