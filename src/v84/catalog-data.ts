@@ -82,13 +82,22 @@ const CATALOG_RANK: readonly string[] = [
   "90000000-0000-4000-8000-000000000001", // The Core Sweatpant
   "80000000-0000-4000-8000-000000000016", // Core Everyday Raincoat
 ];
-export function catalogOrder(list: Product[]): Product[] {
-  const rank = (p: Product) => { const i = CATALOG_RANK.indexOf(p.id); return i === -1 ? CATALOG_RANK.length : i; };
+// The women's landing page leads with the three black pieces, then the purple tee.
+const WOMENS_CATALOG_RANK = [...new Set([
+  "80000000-0000-4000-8000-000000000025", // TEMPO Training Bra
+  "80000000-0000-4000-8000-000000000017", // TEMPO Core Training Tee
+  "80000000-0000-4000-8000-000000000022", // TEMPO Training Shorts
+  "80000000-0000-4000-8000-000000000021", // TEMPO Training Tee
+  ...CATALOG_RANK,
+])];
+export function catalogOrder(list: Product[], order: readonly string[] = CATALOG_RANK): Product[] {
+  const rank = (p: Product) => { const i = order.indexOf(p.id); return i === -1 ? order.length : i; };
   return list.map((p, index) => ({ p, index })).sort((a, b) => rank(a.p) - rank(b.p) || a.index - b.index).map(x => x.p);
 }
 export function forAudience(audience: Audience) {
   // Public audience grids show individually released products only.
-  return catalogOrder(getProducts().filter(p => audienceAssignments[p.id]?.includes(audience)));
+  const list = getProducts().filter(p => audienceAssignments[p.id]?.includes(audience));
+  return catalogOrder(list, audience === "women" ? WOMENS_CATALOG_RANK : CATALOG_RANK);
 }
 function brightness(hex: string) {
   const rgb = hex.replace("#", "").match(/.{2}/g)?.map(v => parseInt(v, 16)) || [0, 0, 0];
