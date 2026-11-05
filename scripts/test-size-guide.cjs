@@ -48,6 +48,7 @@ for (const product of publicProducts) {
   assert.equal((html.match(/<table/g) || []).length, 1);
   assert.ok(!html.includes('<details'), 'Guide table is immediately visible');
   assert.equal((html.match(/<a /g) || []).length, 1, 'One guide link');
+  assert.ok(!/href="https?:|tapstitch|apliiq|sanmar|bellacanvas|ottocap|blankstyle/i.test(html), 'Customer guide has no supplier names or external links');
   assert.ok(html.includes('scope="row"') && html.includes('<caption'));
   assert.equal((html.match(/aria-pressed=/g) || []).length, 2);
   assert.ok(!/measure yourself|still to be published|Chest, around/.test(html));
@@ -64,8 +65,10 @@ for (const [key, source] of Object.entries(sources.charts)) {
   const chart = charts.SIZE_CHARTS[key];
   const actual = chart.rows.map(row => key === 'as5620' ? [row.chestIn,row.lengthIn,row.inseamIn] : key === 'pst871' ? [row.chestIn,row.lengthIn] : key === 'ub0050' ? [row.chestIn,row.hipIn,row.lengthIn] : [row.chestIn,row.lengthIn,row.sleeveIn]);
   assert.deepEqual(plain(actual), source.rows, key + ' independent source measurements');
-  assert.equal(chart.source, source.source);
+  assert.equal(chart.source, undefined, 'Source URLs stay outside public application data');
+  assert.ok(source.source.startsWith('https://'), 'Development evidence retains its source');
 }
+assert.ok(!/https?:\/\//.test(JSON.stringify(charts.SIZE_CHARTS)), 'No supplier URLs in browser-facing chart data');
 assert.deepEqual(plain(guides.sizeGuideFor('80000000-0000-4000-8000-000000000009').rows[0].values[0]), sources.headwear.headRangeIn);
 assert.equal(guides.sizeGuideFor('80000000-0000-4000-8000-000000000023').columns.at(-1).method, 'shoulder seam to cuff');
 assert.equal(guides.sizeGuideFor('90000000-0000-4000-8000-000000000001').columns.at(-1).label, 'Full length');

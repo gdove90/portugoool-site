@@ -4,7 +4,8 @@
 // These match the blanks in fulfillment.ts. Chest/bust and waist are
 // flat garment widths, never body-size recommendations. New source
 // measurements and methods were verified on 2026-11-04; provenance is
-// recorded in docs/catalog/size-guide-sources-20261104.json.
+// recorded separately in development documentation. Reference URLs must
+// never be included in this browser-facing module.
 // ─────────────────────────────────────────────────────────────
 
 export interface SizeRow {
@@ -27,10 +28,6 @@ export interface SizeChart {
   sleeveFrom?: "centre back" | "shoulder seam";
   /** Maximum published measurement variation, in inches. */
   toleranceIn?: number;
-  /** Manufacturer spec URL the numbers came from (internal; never rendered).
-      The blank label above is customer-facing and names the fabric only:
-      no supplier or garment brand appears on the site (owner, 2026-09-29). */
-  source: string;
   /** Anything a customer needs to know to size correctly on this blank. */
   note?: string;
   rows: SizeRow[];
@@ -39,7 +36,6 @@ export interface SizeChart {
 export const SIZE_CHARTS: Record<string, SizeChart> = {
   bc3010: {
     blank: "Heavyweight cotton tee · boxy, drop shoulder",
-    source: "https://www.bellacanvas.com/spec/3010_specs.pdf",
     // The published grade really is irregular: 1in per size up to M,
     // then 2in per size above it. Worth saying, because someone between
     // M and L has a genuinely larger gap to choose across than usual.
@@ -54,7 +50,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   bc4810: {
     blank: "Heavyweight garment-dyed cotton tee",
-    source: "https://www.bellacanvas.com/",
     note: "Garment dyed after making up, so a small amount of shrinkage and colour variation between pieces is normal and intended.",
     rows: [
       { size: "S", chestIn: 19.75, lengthIn: 27.75, sleeveIn: null },
@@ -66,7 +61,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   st720: {
     blank: "Recycled polyester performance tee",
-    source: "https://www.sanmar.com/p/10885/specSheetMeasurements",
     note: "Athletic cut, closer through the body than the cotton tees. True to size.",
     rows: [
       { size: "S", chestIn: 20, lengthIn: 28, sleeveIn: 18 },
@@ -78,7 +72,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   ind4000: {
     blank: "Heavyweight fleece hoodie",
-    source: "https://www.independenttradingco.com/",
     note: "Generous through the body. Sleeve is measured from centre back to cuff.",
     rows: [
       { size: "S", chestIn: 21, lengthIn: 28.5, sleeveIn: 35.5 },
@@ -90,7 +83,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   cc1717: {
     blank: "Garment-dyed heavyweight cotton tee",
-    source: "https://www.comfortcolors.com/",
     note: "Garment dyed, so expect slight colour variation piece to piece. Runs a little shorter in the body than our other cotton tees at the same letter.",
     rows: [
       { size: "S", chestIn: 18.25, lengthIn: 26.625, sleeveIn: null },
@@ -102,7 +94,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   as5150: {
     blank: "14.7 oz heavyweight cotton French terry crew",
-    source: "https://www.ascolour.com/",
     note: "Sits closer through the body than a typical fleece crew, and the chest grade is narrow between L and XL, so go by the measurement.",
     rows: [
       { size: "S", chestIn: 23, lengthIn: 27.25, sleeveIn: null },
@@ -114,7 +105,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   j333: {
     blank: "Waterproof shell jacket · mesh lined",
-    source: "https://www.blankstyle.com/files/specs/11793/SpecSheetMeasurements_J333.pdf",
     note: "Cut with room for a hoodie underneath. Chest is measured one inch below the armhole, laid flat; sleeve is a raglan measure from the centre back neck to the cuff.",
     rows: [
       { size: "S", chestIn: 22, lengthIn: 28.5, sleeveIn: 35.5 },
@@ -127,7 +117,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   lst350: {
     blank: "Women's performance tee · polyester interlock",
     measure: "bust",
-    source: "https://www.sanmar.com/p/4296_Black/specSheetMeasurements",
     note: "A women's cut, shaped through the body. Bust is measured one inch below the armhole, laid flat.",
     rows: [
       { size: "S", chestIn: 19, lengthIn: 25.5, sleeveIn: 14.5 },
@@ -141,7 +130,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   wt0093: {
     blank: "Women's cropped racerback · stretch knit",
     measure: "bust",
-    source: "https://www.tapstitch.com/custom/1484550248251678720",
     toleranceIn: 3 / 2.54,
     rows: [
       { size: "S", chestIn: 12.99, lengthIn: 12.17, sleeveIn: null },
@@ -153,7 +141,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   wt0216: {
     blank: "Women's lightweight polyester crew · 130 gsm",
     measure: "bust",
-    source: "https://www.tapstitch.com/account/products-pool/product/1567566233338085376",
     toleranceIn: 3 / 2.54,
     rows: [
       { size: "S", chestIn: 16.93, lengthIn: 23.03, sleeveIn: null },
@@ -164,7 +151,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   bc7519: {
     blank: "Women's classic fleece hoodie",
-    source: "https://www.blankstyle.com/bella-canvas-7519-ladies-classic-pullover-hooded-sweatshirt",
     note: "A women's fit that runs true to size, mid-length in the body.",
     rows: [
       { size: "S", chestIn: 20, lengthIn: 22.75, sleeveIn: null },
@@ -178,7 +164,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     blank: "Women's travel pant · recycled polyester",
     measure: "waist",
     lengthMeasure: "inseam",
-    source: "https://assets.dc-onesource.com/4/8/48319e73a835172c2ffbc2f8161aa155.pdf",
     note: "Waist is measured point to point across the waistband, laid flat; inseam from the crotch seam to the hem. The drawcord waist gives a couple of inches of play.",
     rows: [
       { size: "S", chestIn: 15, lengthIn: 28.5, sleeveIn: null },
@@ -193,7 +178,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     measure: "waist",
     lengthMeasure: "outseam",
     toleranceIn: 1,
-    source: "https://cdn11.bigcommerce.com/s-hsi95a83fz/product_images/uploaded_images/SIZE_GUIDES/5620_SIZE_GUIDE.jpg",
     note: "Our S, M, L, XL and XXL correspond to waist sizes 30, 32, 34, 36 and 38. The waist widths below are measured with the elastic relaxed.",
     rows: [
       { size: "S", chestIn: 14.25, lengthIn: 17.75, inseamIn: 6.5, sleeveIn: null },
@@ -207,7 +191,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     blank: "Stretch performance jogger",
     measure: "waist",
     lengthMeasure: "inseam",
-    source: "https://www.sanmar.com/p/18475_DeepBlack/specSheetMeasurements",
     rows: [
       { size: "S", chestIn: 13.5, lengthIn: 29, sleeveIn: null },
       { size: "M", chestIn: 15, lengthIn: 29.5, sleeveIn: null },
@@ -218,7 +201,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   mt0063: {
     blank: "Lightweight performance quarter zip",
-    source: "https://www.tapstitch.com/custom/1549095814578778112",
     sleeveFrom: "shoulder seam",
     toleranceIn: 3 / 2.54,
     rows: [
@@ -233,7 +215,6 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     blank: "Heavyweight cotton-blend sweatpant",
     measure: "waist",
     lengthMeasure: "outseam",
-    source: "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
     toleranceIn: 3 / 2.54,
     rows: [
       { size: "S", chestIn: 12.99, hipIn: 22.05, lengthIn: 40.94, sleeveIn: null },
