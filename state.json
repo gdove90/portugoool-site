@@ -22,28 +22,30 @@
       "src/lib/products.ts"
     ],
     "completed": [
-      "14-file exact tree 3fe51bf7e337b309f749d0d51fdfd22d95637ab1, PR 83. All images are 1024\u00d71536 WebP with product visualization captions. One ghost front then front, quarter and rear per color. Corrected shell/waistband/liner composition and benefits."
+      "14-file exact tree 3fe51bf7e337b309f749d0d51fdfd22d95637ab1, PR 83. All images are 1024\u00d71536 WebP with product visualization captions. One ghost front then front, quarter and rear per color. Corrected shell/waistband/liner composition and benefits.",
+      "PR 83 merged as de473e42aa6677c9a5d33954c3ee62c15485d8a1 with the exact tested tree. Netlify production deploy 6aec1cee9547653665d9c8fb is ready and published."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "After hosted preview verification and main/head check, merge exact PR 83 to trigger production deploy of the authorized gallery and copy. Reconcile before repeating.",
+        "details": "Merged exact reviewed PR 83; live production deploy 6aec1cee9547653665d9c8fb confirmed by Netlify and public HTTP checks.",
         "reference": "github:gdove90/portugoool-site#83@ccd44e282e481667953b9294cfd5e2bdbc309168",
-        "status": "intent"
+        "status": "confirmed"
       }
     ],
     "head_commit": "ccd44e282e481667953b9294cfd5e2bdbc309168",
-    "next_action": "Verify hosted preview and main baseline; merge exact authorized PR 83, verify current production deploy and 12 images, record outcome and release.",
+    "next_action": "Gallery and copy release complete. Verify inside-tag and fulfillment evidence before any separately authorized purchase release.",
     "rollback": "Revert scoped PR commit to remove public shorts gallery and restore prior visibility. No SQL or provider order changes.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-tempo-shorts-20261105-3a4b",
     "task_id": "tempo-shorts-gallery-20261105",
     "tests": [
-      "PASS contract parity, production build and local HTTP smoke test, all 12 image bytes, women catalog, other products unchanged, offline checkout rejection for 15 size/color combinations. Legacy payment snapshot compares current baseline with an old webhook and fails on unchanged webhook."
+      "PASS contract parity, production build and local HTTP smoke test, all 12 image bytes, women catalog, other products unchanged, offline checkout rejection for 15 size/color combinations. Legacy payment snapshot compares current baseline with an old webhook and fails on unchanged webhook.",
+      "LIVE VERIFIED public product page, women collection, new benefits copy, disabled Coming Soon button and all 12 byte-identical images. Hosted preview delivered the same 12 assets. Browser interaction was not exercised."
     ],
     "unresolved": [
-      "Inside-tag check pending. Purchase remains held. Hosted preview pending."
+      "Apliiq inside-tag verification pending. Product remains Coming Soon and unavailable for purchase."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -66,7 +68,7 @@
     "start_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
     "task": "goal-labels-womens-purchase-20261104"
   },
-  "revision": 91,
+  "revision": 92,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T06:04:39.011191+00:00"
+  "updated_at": "2026-11-05T06:09:36.499074+00:00"
 }
