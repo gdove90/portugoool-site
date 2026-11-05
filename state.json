@@ -1,48 +1,49 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Owner173c22e6-ed0c-4a1d-bc0a-3fb7a391e75b: implement approved V1.3 rectangular tag on necessary products. New 6cm wide x2cm high black-on-white label; first apply to four UB0050 sweatpants when supplier Approved. No new orders, charges, website, product photos or Apliiq men.",
-      "Ownerc05d24a0 approves rectangular layout conditional on standards; published size/white background/PNG format verified, final editor and supplier review required."
+      "Owner asked to upload the 12 reviewed shorts images and update the description with benefits on goalathletics.shop. Public Coming Soon presentation only."
     ],
-    "base_commit": "7e159131932aa59317507986f1c3c54b4d5cf50f",
-    "branch": "codex/goal-labels-womens-purchase-20261104",
-    "changed_paths": [],
+    "base_commit": "f50f1f68dbc02cf3f5caa1aab3081b831ca5b240",
+    "branch": "codex/tempo-shorts-gallery-20261105",
+    "changed_paths": [
+      "public/products/tempo-training-shorts/tempo-training-shorts-black-01-ghost-front-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-black-02-model-front-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-black-03-model-quarter-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-black-04-model-back-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-01-ghost-front-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-02-model-front-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-03-model-quarter-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-04-model-back-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-01-ghost-front-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-02-model-front-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-03-model-quarter-20261105.webp",
+      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-04-model-back-20261105.webp",
+      "src/lib/collection-launch.ts",
+      "src/lib/products.ts"
+    ],
     "completed": [
-      "Continued existing task branch at pushed5ecf688; main separately advanced03ae0c... by PR78, preserve those changes.",
-      "Read latest shared coordinator revision83,noholder; acquired unique new session933d432... Canonical PR66 contract and15manifest files/parity validatorPASS; no tracked code changes.",
-      "Authenticated Tapstitch Branding shows exactly one existing My clothing label4x4cm,Approved,$0.99; no duplicate rectangular label.",
-      "Approved clean artwork:Librarylibfile_32d87b2521b48191bf3766ce3919b401,1440x480RGBA,609.6DPI,nominal60x20mm,32004bytes,SHA2562ac2f8e3a46938b3c1bd0200dd2e1f81478c822166a563e1967d9ad5d82a9399. Original16SVGpaths retained; proposed graphic48x12.17mm centered. Final suppliertemplateplacementpending.",
-      "Current Tapstitch rectangular draft1567767387741245440, selected2x6cm White. Actual printable zone5.4x1.7cm,638x201px at300DPI verified in upload dialog.",
-      "Clean PNG file chooser transfer rejected by Tapstitch Invalid File Type despite validated PNG. No new file uploaded. Reused existing all-black V1.3 horizontal supplier source dfd5140be4c84d9e8f1dd62b544fb302,2973x793px,9.9x2.6in@300DPI.",
-      "One source layer resized proportionally with linked dimensions to4.8x1.3cm displayed,0rotation,Good1573DPI. Both horizontal and vertical center Align applied; screenshot verifies print stays within safe dashed area.",
-      "Submitted the single label draft1567767387741245440 once through UI. Generic background/design color notice acknowledged after visual transparent all-black artwork on white-label check. Supplier Branding table confirms Pending2x6cmWhite,$0.99; no Apply control until Approved.",
-      "Renamed supplier record GOAL V1.3 Rectangular 2x6 and confirmed same name/status after full page reload. Preview visually matches centered all-black V1.3horizontal lockup.",
-      "No product label replacements yet: fourUB0050 pants retain their existing approved4x4cm branding; all otherproducts/images/prices/orders/gates unchanged. No orders,charges,emails orwebsite deployment."
+      "14-file exact tree 3fe51bf7e337b309f749d0d51fdfd22d95637ab1, PR 83. All images are 1024\u00d71536 WebP with product visualization captions. One ghost front then front, quarter and rear per color. Corrected shell/waistband/liner composition and benefits."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "Created and submitted exactlyone2x6cmWhite label draft1567767387741245440; existing supplier source dfd5140be4c84d9e8f1dd62b544fb302,centered4.8x1.3cm display,Good1573DPI. Renamed GOAL V1.3 Rectangular2x6 (supplier visible name has space before2x6). PersistedPending after reload,$0.99. No Apply control; no product assignments made. Existing square labels retained. Noorders/charges.",
-        "reference": "rect-label-2x6-173c22e6",
-        "status": "confirmed"
+        "details": "After hosted preview verification and main/head check, merge exact PR 83 to trigger production deploy of the authorized gallery and copy. Reconcile before repeating.",
+        "reference": "github:gdove90/portugoool-site#83@ccd44e282e481667953b9294cfd5e2bdbc309168",
+        "status": "intent"
       }
     ],
-    "head_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
-    "next_action": "Read Tapstitch Branding status for existing GOAL V1.3 Rectangular2x6 record; do not recreate/resubmit. OnceApproved, reacquire this same taskbranch and replace onlyfourUB0050 saveddesign labels, then verify each persists. IfRejected, read supplier reason and refine within ownerapproved branding. Preserve existing tags until replacement ready.",
+    "head_commit": "ccd44e282e481667953b9294cfd5e2bdbc309168",
+    "next_action": "Verify hosted preview and main baseline; merge exact authorized PR 83, verify current production deploy and 12 images, record outcome and release.",
+    "rollback": "Revert scoped PR commit to remove public shorts gallery and restore prior visibility. No SQL or provider order changes.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-rect-tag-173c22e6",
-    "task_id": "goal-labels-womens-purchase-20261104",
+    "session": "codex-tempo-shorts-20261105-3a4b",
+    "task_id": "tempo-shorts-gallery-20261105",
     "tests": [
-      "PASS canonical configuration parity from current PR66 review source; current task has no AGENTS/contract yet. Isolated inspection only.",
-      "PASS PNG decode/alpha/resolution/dimensions/exactsourcegeometry checks from approved preparation; filepresentforupload.",
-      "PASS current editor resolution and safe-area visual check; aspect link enabled and dimensions preserved; no supplier submission yet.",
-      "PASS persisted supplier record read after reload: GOAL V1.3 Rectangular2x6,Pending,$0.99,2x6cm. Screenshot tapstitch-rectangular-tag-status.png.",
-      "HOLD supplier approval,quotedwithin2businessdays; assignment unavailable while Pending. Physical sample quality UNVERIFIED."
+      "PASS contract parity, production build and local HTTP smoke test, all 12 image bytes, women catalog, other products unchanged, offline checkout rejection for 15 size/color combinations. Legacy payment snapshot compares current baseline with an old webhook and fails on unchanged webhook."
     ],
     "unresolved": [
-      "Supplier review Pending; 2x6 rectangular tag cannot yet be applied. No change to fourUB0050 labels until Approved.",
-      "Apliiq women's tag audit and WT0093 saved production designs remain separate unresolved work. Do not claim every supplier product verified."
+      "Inside-tag check pending. Purchase remains held. Hosted preview pending."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -65,7 +66,7 @@
     "start_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
     "task": "goal-labels-womens-purchase-20261104"
   },
-  "revision": 90,
+  "revision": 91,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T05:54:25.267864+00:00"
+  "updated_at": "2026-11-05T06:04:39.011191+00:00"
 }
