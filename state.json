@@ -33,26 +33,17 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-05T07:25:11.775428+00:00",
     "approval": "Owner requested black training bra, black Core Training Tee, black Training Shorts, and purple Training Tee in that order on the Women page.",
     "branch": "codex/womens-tempo-grid-order",
     "engine": "codex",
     "session": "codex-womens-tempo-grid-order-20261105",
     "start_commit": "3cdbc0d8bce33f4ba766a160018b8f3b12a277db",
-    "task": "womens-tempo-grid-order",
-    "token_hash": "be1b97d4ee2782ad08da95750655d6e3e00c8fb6346155f1e4eefafffb0a7add"
+    "task": "womens-tempo-grid-order"
   },
-  "last_released_holder": {
-    "acquired_at": "2026-11-05T06:47:45.327886+00:00",
-    "approval": "Owner asked to retry the women\u2019s purchase setup; existing approved GOAL tag on the remaining Core Tee designs.",
-    "branch": "codex/tempo-womens-purchase-20261105",
-    "engine": "codex",
-    "session": "codex-tempo-womens-purchase-20261105-retry-7c19",
-    "start_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
-    "task": "tempo-womens-purchase-20261105"
-  },
-  "revision": 103,
+  "revision": 104,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T07:32:11.496384+00:00"
+  "updated_at": "2026-11-05T07:32:34.755269+00:00"
 }
