@@ -41,12 +41,17 @@ const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value
   assert.equal(response.status, 200);
   const nodes = all(parse5.parse(await response.text()));
   collectScripts(nodes);
-  assert.equal(nodes.filter(node => node.tagName === 'option').length, products.length);
+  const audienceTabs = nodes.filter(node => attr(node, 'role') === 'tab' && attr(node, 'id')?.startsWith('size-guide-audience-'));
+  assert.deepEqual(audienceTabs.map(node => node.childNodes.map(child => child.value || '').join('')), ['Men', 'Women']);
+  assert.ok(!nodes.some(node => node.tagName === 'select'), 'Sizing navigation has no dropdown');
+  const productTabs = nodes.filter(node => attr(node, 'data-guide-product'));
+  assert.deepEqual(productTabs.map(node => attr(node, 'data-guide-product')), Array.from(guide.guideProducts('men'), product => product.id));
+  assert.equal(productTabs.filter(node => attr(node, 'aria-selected') === 'true').length, 1);
   for (const src of scripts) {
     const response = await fetch(base + src);
     assert.equal(response.status, 200, src);
     assert.ok(!/(?:apliiq|tapstitch|sanmar|bellacanvas|independenttradingco|comfortcolors|ascolour|ottocap|blankstyle|bigcommerce|dc-onesource)\.com/i.test(await response.text()), 'No supplier website references in public JavaScript: ' + src);
   }
-  if (process.env.SIZE_GUIDE_EVIDENCE) fs.writeFileSync(process.env.SIZE_GUIDE_EVIDENCE, JSON.stringify({ base, products: results, mainGuideOptions: products.length, publicScriptsChecked: scripts.size, passed: true }, null, 2));
+  if (process.env.SIZE_GUIDE_EVIDENCE) fs.writeFileSync(process.env.SIZE_GUIDE_EVIDENCE, JSON.stringify({ base, products: results, mainGuideAudiences: ['Men', 'Women'], initialProductTabs: productTabs.length, publicScriptsChecked: scripts.size, passed: true }, null, 2));
   console.log(`PASS ${base}: all ${products.length} product guides and ${scripts.size} public scripts; correct tables/sizes/links and no supplier website references.`);
 })().catch(error => { console.error(error); process.exitCode = 1; });
