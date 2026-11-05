@@ -524,6 +524,88 @@ const TEMPO_TRAINING_BRA_VARIANTS = [
   }
 ];
 
+// Owner-approved Tempo shorts product visualizations. Four views per color.
+const TEMPO_TRAINING_SHORTS_VARIANTS = [
+  {
+    "name": "Black",
+    "supplierColor": "Black",
+    "hex": "#252525",
+    "skuFragment": "BLACK",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-black-01-ghost-front-20261105.webp",
+        "alt": "Tempo Training Shorts in Black, front ghost view with the white and red GA monogram"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-black-02-model-front-20261105.webp",
+        "alt": "Model wearing Black Tempo Training Shorts, front view"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-black-03-model-quarter-20261105.webp",
+        "alt": "Model wearing Black Tempo Training Shorts, quarter-turn view"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-black-04-model-back-20261105.webp",
+        "alt": "Model wearing Black Tempo Training Shorts, back view"
+      }
+    ]
+  },
+  {
+    "name": "Iron Grey",
+    "supplierColor": "Iron Grey",
+    "hex": "#5F5F5F",
+    "skuFragment": "IRONGREY",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-iron-grey-01-ghost-front-20261105.webp",
+        "alt": "Tempo Training Shorts in Iron Grey, front ghost view with the black GA monogram"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-iron-grey-02-model-front-20261105.webp",
+        "alt": "Model wearing Iron Grey Tempo Training Shorts, front view"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-iron-grey-03-model-quarter-20261105.webp",
+        "alt": "Model wearing Iron Grey Tempo Training Shorts, quarter-turn view"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-iron-grey-04-model-back-20261105.webp",
+        "alt": "Model wearing Iron Grey Tempo Training Shorts, back view"
+      }
+    ]
+  },
+  {
+    "name": "True Navy",
+    "supplierColor": "True Navy",
+    "hex": "#202030",
+    "skuFragment": "TRUENAVY",
+    "comingSoon": true,
+    "images": [
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-true-navy-01-ghost-front-20261105.webp",
+        "alt": "Tempo Training Shorts in True Navy, front ghost view with the cream GA monogram"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-true-navy-02-model-front-20261105.webp",
+        "alt": "Model wearing True Navy Tempo Training Shorts, front view"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-true-navy-03-model-quarter-20261105.webp",
+        "alt": "Model wearing True Navy Tempo Training Shorts, quarter-turn view"
+      },
+      {
+        "src": "/products/tempo-training-shorts/tempo-training-shorts-true-navy-04-model-back-20261105.webp",
+        "alt": "Model wearing True Navy Tempo Training Shorts, back view"
+      }
+    ]
+  }
+].map((variant) => ({
+  ...variant,
+  images: variant.images.map((image) => ({ ...image, caption: "Product visualization." })),
+}));
+
 export const products: Product[] = [
   // ── Performance Jersey Collection ───────────────────────────
   {
@@ -5077,72 +5159,30 @@ export const products: Product[] = [
   // 2.00 x 1.80 in filling the wearer's left leg print box (2 x 2 in, the
   // only box on the blank), the size the 2026-10-26 design update accepted.
   // Apliiq quote $23.99 (XXL +$2): 25% model floor $46, priced $48 (model
-  // price, not owner-set). Images are Apliiq's renders on the studio
-  // backdrop. Record: designs/62_tempo-collection-proofs-2026-10-26/.
+  // price, not owner-set). Gallery is public with purchasing held.
+  // Supplier record: designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000022",
     name: "TEMPO Training Shorts",
     slug: "tempo-training-shorts",
     blank: "LST485",
     description:
-      "Women's lightweight stretch short with the GA monogram on the left leg above the hem. Wide flat waistband, curved hem, clean back.",
+      "Lightweight stretch gives you room to move through warmups, runs, and drills. The wide, flat waistband sits smoothly, the built-in liner adds coverage, and a back waistband pocket keeps your phone close.",
     priceCents: 4800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#252525",
-    fabric: "86% polyester, 14% spandex. Lightweight four-way stretch that moves with every stride.",
-    fit: "Women's cut with a wide, flat waistband and a curved hem. True to size.",
+    fabric: "The shell is 90% polyester and 10% spandex. The waistband is 86% polyester and 14% spandex. The liner is 100% polyester.",
+    fit: "Short, relaxed cut with a curved hem. Use the fit guide to compare measurements.",
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
-    images: [
-      {
-        src: "/products/tempo-training-shorts-black-catalog-product-front-20261026.webp",
-        alt: "TEMPO Training Shorts in Black, product front with the white and red GA monogram on the left leg above the hem",
-      },
-    ],
-    colorVariants: [
-      {
-        name: "Black",
-        supplierColor: "Black",
-        hex: "#252525",
-        skuFragment: "BLACK",
-        images: [
-          {
-            src: "/products/tempo-training-shorts-black-catalog-product-front-20261026.webp",
-            alt: "TEMPO Training Shorts in Black, product front with the white and red GA monogram on the left leg above the hem",
-          },
-        ],
-      },
-      {
-        name: "Iron Grey",
-        supplierColor: "Iron Grey",
-        hex: "#5F5F5F",
-        skuFragment: "IRONGREY",
-        images: [
-          {
-            src: "/products/tempo-training-shorts-iron-grey-catalog-product-front-20261026.webp",
-            alt: "TEMPO Training Shorts in Iron Grey, product front with the black GA monogram on the left leg above the hem",
-          },
-        ],
-      },
-      {
-        name: "True Navy",
-        supplierColor: "True Navy",
-        hex: "#202030",
-        skuFragment: "TRUENAVY",
-        images: [
-          {
-            src: "/products/tempo-training-shorts-true-navy-catalog-product-front-20261026.webp",
-            alt: "TEMPO Training Shorts in True Navy, product front with the cream GA monogram on the left leg above the hem",
-          },
-        ],
-      },
-    ],
+    images: TEMPO_TRAINING_SHORTS_VARIANTS[0].images,
+    colorVariants: TEMPO_TRAINING_SHORTS_VARIANTS,
     originLabel: "Printed in the USA",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "shorts",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: true,
+    availableForSale: false,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
