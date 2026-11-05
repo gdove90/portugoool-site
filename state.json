@@ -49,26 +49,17 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-05T05:54:25.267840+00:00",
     "approval": "Owner request to upload all twelve approved Tempo shorts images and benefits copy to goalathletics.shop; public gallery with purchasing held.",
     "branch": "codex/tempo-shorts-gallery-20261105",
     "engine": "codex",
     "session": "codex-tempo-shorts-20261105-3a4b",
     "start_commit": "f50f1f68dbc02cf3f5caa1aab3081b831ca5b240",
-    "task": "tempo-shorts-gallery-20261105",
-    "token_hash": "9f613afaa221416a22cce4b709ffbd6d749e4c2f957b0fd5d02fe92146432d82"
+    "task": "tempo-shorts-gallery-20261105"
   },
-  "last_released_holder": {
-    "acquired_at": "2026-11-04T21:06:47.303184+00:00",
-    "approval": "Owner173c22e6 authorizes implementing approved V1.3 rectangular 6x2cm tag on products where needed, starting four UB0050 pants. Submit new tag for review and assign only when Approved; preserve existing approved branding until replacement ready. No orders, charges, live catalog, images or Apliiq men.",
-    "branch": "codex/goal-labels-womens-purchase-20261104",
-    "engine": "codex",
-    "session": "codex-rect-tag-173c22e6",
-    "start_commit": "5ecf688cf8bcdb344eaaf546aa8df98d27564f63",
-    "task": "goal-labels-womens-purchase-20261104"
-  },
-  "revision": 92,
+  "revision": 93,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T06:09:36.499074+00:00"
+  "updated_at": "2026-11-05T06:10:00.684340+00:00"
 }
