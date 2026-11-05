@@ -193,3 +193,19 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
 IMPLICATION: the catalog can change overnight in both directions, so a one-day 404 is not proof of removal; earlier notes that the Sweatpant left the catalog are INVALIDATED. Each report must fetch the live grid and sitemap before naming products.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, confirm intended catalog state, fix the TEMPO colour mismatch, and supply the missing measurements in the TEMPO chart format.
+
+DATE: 2026-11-05
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-11-05/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: comments queried directly (IGPO08 for feed posts, IGRE07 for Reels) are 0 on all seven feed items and the Reel; three different carousel closers (open question, none, black-or-gray choice) drew no comment.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: MEDIUM (direct measurement, consistent across three closers, but a tiny follower-only base)
+IMPLICATION: the earlier "inferred zero" is now measured; caption questions are not a working reply mechanic at this size, so no audience language is being captured.
+RECOMMENDED FUTURE ACTION: stop testing caption questions on carousels; for OWNER REVIEW run the Story question-sticker test. Add IGPO08 and IGRE07 to the Performance query recipe.
+
+DATE: 2026-11-05
+SOURCE: Performance & Consumer Intelligence, same report
+OBSERVATION: the 11-02 carousel read 15 reach / 38 views at about 51 h and the same at about 75 h; the 10-31 carousel read 10 / 46 at about 87 h and the same at about 111 h; the 11-03 carousel moved 9 to 11 reach between about 29 h and 53 h.
+CLASSIFICATION: SUPPORTED INFERENCE
+CONFIDENCE: LOW (three carousels, tiny base)
+IMPLICATION: feed carousels at this size stop growing roughly two days after posting, so a 48 to 72 h reading is close to final and waiting longer adds little.
+RECOMMENDED FUTURE ACTION: judge carousels at 48 to 72 h; re-test if reach per carousel rises above about 30.
