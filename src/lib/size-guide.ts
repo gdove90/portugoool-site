@@ -1,5 +1,6 @@
 import { getProducts, products } from "./products";
 import { sizeChartFor, type SizeRow } from "./size-charts";
+import { audienceAssignments, catalogOrder, type Audience } from "@/v84/catalog-data";
 
 // Saved category hashes remain aliases. New links identify individual
 // products, including styles that share a garment chart.
@@ -30,8 +31,16 @@ export function sizeGuideHref(productId: string) {
   return product && guideTabFor(productId) ? `/size-guide#${product.slug}` : "/size-guide";
 }
 
-export function guideProducts() {
-  return getProducts().filter(product => guideTabFor(product.id));
+export type GuideAudience = Audience;
+
+export function guideAudienceFor(productId: string): GuideAudience {
+  const audiences = audienceAssignments[productId];
+  return audiences?.includes("women") && !audiences.includes("men") ? "women" : "men";
+}
+
+export function guideProducts(audience?: GuideAudience) {
+  const visible = getProducts().filter(product => guideTabFor(product.id));
+  return audience ? catalogOrder(visible.filter(product => audienceAssignments[product.id]?.includes(audience))) : visible;
 }
 
 export function productForGuideHash(hash: string) {

@@ -7,6 +7,7 @@ const { renderToStaticMarkup } = require('react-dom/server');
 const { createSourceLoader, root } = require('./fixtures/test-source-loader.cjs');
 const load = createSourceLoader();
 const catalog = load('src/lib/products.ts');
+const audienceCatalog = load('src/v84/catalog-data.ts');
 const charts = load('src/lib/size-charts.ts');
 const guides = load('src/lib/size-guide.ts');
 const sources = require('../docs/catalog/size-guide-sources-20261104.json');
@@ -59,8 +60,96 @@ assert.equal(new Set(ids).size, ids.length, 'No ambiguous product mappings');
 assert.equal(guides.productForGuideHash('unknown-product'), undefined);
 assert.equal(guides.sizeGuideFor('unknown-product'), null);
 const pickerHtml = renderToStaticMarkup(React.createElement(Picker));
-assert.equal((pickerHtml.match(/<option /g) || []).length, publicProducts.length);
+assert.ok(!/<select|Choose your product/.test(pickerHtml), 'Product navigation has no dropdown');
+assert.ok(pickerHtml.includes('aria-label="Collection"') && pickerHtml.includes('>Men</button>') && pickerHtml.includes('>Women</button>'));
+assert.equal((pickerHtml.match(/data-guide-product=/g) || []).length, guides.guideProducts('men').length);
 assert.equal((pickerHtml.match(/<table/g) || []).length, 1);
+for (const audience of ['men', 'women']) {
+  const expected = audienceCatalog.catalogOrder(publicProducts.filter(product => audienceCatalog.audienceAssignments[product.id]?.includes(audience)));
+  assert.deepEqual(plain(guides.guideProducts(audience).map(product => product.id)), plain(expected.map(product => product.id)), audience + ' uses public catalog assignment and order');
+  for (const product of expected) assert.equal(guides.guideAudienceFor(product.id), audience);
+}
+assert.equal(guides.guideProducts('men').length + guides.guideProducts('women').length, publicProducts.length, 'Every public garment belongs to a navigation row');
+
+// Drive the component's event handlers without a browser or provider calls.
+let selection;
+let collectMountEffects = true;
+const mountEffects = [];
+const events = new Map();
+const replaced = [];
+const originalWindow = global.window;
+global.window = {
+  location: { hash: '' }, history: { replaceState: (_state, _title, url) => replaced.push(url) },
+  addEventListener: (event, callback) => events.set(event, callback), removeEventListener: event => events.delete(event),
+};
+const InteractivePicker = component('src/components/SizeGuideTabs.tsx', {
+  './SizeGuide': SizeGuide,
+  react: {
+    ...React,
+    useState: initial => [selection ??= initial, next => { selection = typeof next === 'function' ? next(selection) : next; }],
+    useRef: () => ({ current: null }),
+    useEffect: (effect, dependencies) => { if (collectMountEffects && dependencies.length === 0) mountEffects.push(effect); },
+  },
+});
+const elements = tree => !tree || typeof tree !== 'object' ? [] : [tree, ...React.Children.toArray(tree.props?.children).flatMap(elements)];
+const tabs = (tree, group) => elements(tree).filter(element => element.props?.role === 'tablist' && element.props['aria-label'] === group).flatMap(element => React.Children.toArray(element.props.children));
+let tree = InteractivePicker();
+collectMountEffects = false;
+for (const effect of mountEffects) effect();
+assert.equal(events.has('hashchange'), true);
+const clickTab = (group, name) => {
+  const tab = tabs(tree, group).find(tab => (tab.props['aria-label'] ?? tab.props.children) === name);
+  assert.ok(tab, group + ': ' + name);
+  tab.props.onClick(); tree = InteractivePicker();
+};
+clickTab('Collection', 'Women');
+assert.equal(selection.audience, 'women');
+assert.equal(tabs(tree, "Women's garments").length, guides.guideProducts('women').length);
+const womenProduct = guides.guideProducts('women').at(-1);
+clickTab("Women's garments", womenProduct.name);
+assert.equal(selection.productId, womenProduct.id);
+assert.equal(replaced.at(-1), guides.sizeGuideHref(womenProduct.id));
+assert.ok(renderToStaticMarkup(tree).includes('data-size-guide="' + womenProduct.id + '"'));
+clickTab('Collection', 'Men');
+const menProduct = guides.guideProducts('men').at(-1);
+clickTab("Men's garments", menProduct.name);
+assert.equal(selection.productId, menProduct.id);
+assert.ok(renderToStaticMarkup(tree).includes('data-size-guide="' + menProduct.id + '"'));
+for (const entry of guides.GUIDE) {
+  global.window.location.hash = '#' + entry.id;
+  events.get('hashchange')(); tree = InteractivePicker();
+  const product = guides.productForGuideHash(entry.id);
+  assert.equal(selection.productId, product.id, entry.id + ' hash selects product');
+  assert.equal(selection.audience, guides.guideAudienceFor(product.id), entry.id + ' hash selects audience');
+  assert.ok(elements(tree).some(element => element.props?.['data-guide-product'] === product.id), entry.id + ' hash exposes product tab');
+}
+for (const product of publicProducts) {
+  global.window.location.hash = '#' + product.slug;
+  events.get('hashchange')(); tree = InteractivePicker();
+  assert.equal(selection.productId, product.id, product.slug + ' direct hash');
+  assert.equal(selection.audience, guides.guideAudienceFor(product.id), product.slug + ' audience');
+}
+function keyTab(group, fromIndex, key, expectedIndex) {
+  const groupTabs = tabs(tree, group);
+  let focused;
+  let prevented = false;
+  const buttons = groupTabs.map((tab, index) => ({ click: tab.props.onClick, focus: () => { focused = index; } }));
+  const currentTarget = buttons[fromIndex];
+  currentTarget.parentElement = { querySelectorAll: () => buttons };
+  groupTabs[fromIndex].props.onKeyDown({ key, currentTarget, preventDefault: () => { prevented = true; } });
+  assert.equal(prevented, true, key + ' handled');
+  assert.equal(focused, expectedIndex, key + ' moves focus');
+  tree = InteractivePicker();
+}
+keyTab('Collection', 1, 'ArrowRight', 0);
+assert.equal(selection.audience, 'men');
+keyTab("Men's garments", 0, 'End', guides.guideProducts('men').length - 1);
+assert.equal(selection.productId, guides.guideProducts('men').at(-1).id);
+keyTab("Men's garments", guides.guideProducts('men').length - 1, 'ArrowRight', 0);
+assert.equal(selection.productId, guides.guideProducts('men')[0].id);
+keyTab("Men's garments", 1, 'Home', 0);
+keyTab("Men's garments", 0, 'ArrowLeft', guides.guideProducts('men').length - 1);
+global.window = originalWindow;
 for (const [key, source] of Object.entries(sources.charts)) {
   const chart = charts.SIZE_CHARTS[key];
   const actual = chart.rows.map(row => key === 'as5620' ? [row.chestIn,row.lengthIn,row.inseamIn] : key === 'pst871' ? [row.chestIn,row.lengthIn] : key === 'ub0050' ? [row.chestIn,row.hipIn,row.lengthIn] : [row.chestIn,row.lengthIn,row.sleeveIn]);
@@ -80,4 +169,4 @@ assert.equal(guides.formatMeasurement(100, 'in'), '100');
 assert.equal(guides.formatMeasurement([20.5,24], 'in'), '20.5–24');
 assert.equal(guides.formatMeasurement(3 / 2.54, 'cm'), '3');
 assert.equal(guides.formatMeasurement(null, 'in'), '—');
-console.log('PASS all 14 public product guides: complete tables, exact offered sizes, source measurements, correct garment methods, unit conversion, direct/legacy links, semantic immediate rendering and one navigation link. No provider calls.');
+console.log('PASS all 14 public product guides: audience/product tabs, click and keyboard switching, direct/legacy hashes, complete tables, exact offered sizes, source measurements, methods, units and supplier-free rendering. No provider calls.');
