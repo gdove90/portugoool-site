@@ -209,3 +209,11 @@ CLASSIFICATION: SUPPORTED INFERENCE
 CONFIDENCE: LOW (three carousels, tiny base)
 IMPLICATION: feed carousels at this size stop growing roughly two days after posting, so a 48 to 72 h reading is close to final and waiting longer adds little.
 RECOMMENDED FUTURE ACTION: judge carousels at 48 to 72 h; re-test if reach per carousel rises above about 30.
+
+DATE: 2026-11-05
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-05/03-search-ecommerce.md (live pages fetched 2026-11-05)
+OBSERVATION: the Core Quarter Zip and Core Jogger now carry flat size charts (Jogger without rise) that were placeholders on 11-04; the TEMPO Training Tee went from Coming soon to buyable while still showing Light Purple on the page and White on the home list; the catalog is 15 products and 31 sitemap URLs (TEMPO Shorts buyable, TEMPO Bra Coming soon). The Quarter Zip still says "overseas partner, 10 to 17 days" against 7-12 business days on the policy page. The /size-guide tabs remain empty except the Warm-Up Tee.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
+IMPLICATION: sizing placeholders are being closed on product pages, not in the size guide, so earlier "no measurements" notes for the Quarter Zip and Jogger are INVALIDATED. Launch status and details change between daily fetches, so re-fetch before citing any page.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, fix the delivery contradiction and the TEMPO tee colour, and either mirror the product charts in the size guide or hide empty tabs.
