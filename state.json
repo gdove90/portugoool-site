@@ -45,26 +45,17 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-05T06:21:26.175330+00:00",
     "approval": "Owner request to make the four public women\u2019s products purchasable, with prior authorization to apply the exact approved GOAL inside tag. Verify saved supplier records and checkout; no orders, charges or new subscriptions.",
     "branch": "codex/tempo-womens-purchase-20261105",
     "engine": "codex",
     "session": "codex-tempo-womens-purchase-20261105-291f",
     "start_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
-    "task": "tempo-womens-purchase-20261105",
-    "token_hash": "c753a7aece681213887ca077210ad588f93bc97a331d161bbc5fe787f3fa9c94"
+    "task": "tempo-womens-purchase-20261105"
   },
-  "last_released_holder": {
-    "acquired_at": "2026-11-05T05:54:25.267840+00:00",
-    "approval": "Owner request to upload all twelve approved Tempo shorts images and benefits copy to goalathletics.shop; public gallery with purchasing held.",
-    "branch": "codex/tempo-shorts-gallery-20261105",
-    "engine": "codex",
-    "session": "codex-tempo-shorts-20261105-3a4b",
-    "start_commit": "f50f1f68dbc02cf3f5caa1aab3081b831ca5b240",
-    "task": "tempo-shorts-gallery-20261105"
-  },
-  "revision": 96,
+  "revision": 97,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T06:36:04.007805+00:00"
+  "updated_at": "2026-11-05T06:36:29.439310+00:00"
 }
