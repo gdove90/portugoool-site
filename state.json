@@ -29,26 +29,17 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-05T06:47:45.327886+00:00",
     "approval": "Owner asked to retry the women\u2019s purchase setup; existing approved GOAL tag on the remaining Core Tee designs.",
     "branch": "codex/tempo-womens-purchase-20261105",
     "engine": "codex",
     "session": "codex-tempo-womens-purchase-20261105-retry-7c19",
     "start_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
-    "task": "tempo-womens-purchase-20261105",
-    "token_hash": "83ce06bceaf3ee786f875faa907a247eba413f32703ba8cf11be93fb46c5bfdf"
-  },
-  "last_released_holder": {
-    "acquired_at": "2026-11-05T06:21:26.175330+00:00",
-    "approval": "Owner request to make the four public women\u2019s products purchasable, with prior authorization to apply the exact approved GOAL inside tag. Verify saved supplier records and checkout; no orders, charges or new subscriptions.",
-    "branch": "codex/tempo-womens-purchase-20261105",
-    "engine": "codex",
-    "session": "codex-tempo-womens-purchase-20261105-291f",
-    "start_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
     "task": "tempo-womens-purchase-20261105"
   },
-  "revision": 100,
+  "revision": 101,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T07:05:02.656979+00:00"
+  "updated_at": "2026-11-05T07:05:26.207320+00:00"
 }
