@@ -1,53 +1,31 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Make all currently public women\u2019s pieces purchasable when supplier and paid order fulfillment are verified. Prior owner authorization to apply exact approved GOAL inside tags on necessary products."
+      "Update women's product purchase availability."
     ],
-    "base_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
     "branch": "codex/tempo-womens-purchase-20261105",
-    "changed_paths": [
-      "src/lib/products.ts"
-    ],
     "completed": [
-      "Verified live women\u2019s grid four public products and the WT0216 no-payment quote across 12 color/size combinations, HTTP 200.",
-      "Applied existing GOAL Athletics private label SB-6-161561 to Apliiq shorts designs 6240613, 6240615, 6240616 and Core Tee 6241853. All four reloaded with one branding service and one retained decoration. Exact supply ID read back for all three shorts; Black Core Tee selection of that exact supply was observed before saving and count persisted after reload.",
-      "Existing four approved WT0093 artwork PNGs retrieved in scratch from the repo and decoded as 1200x1085 transparent RGBA. Tapstitch Designs search for bra returned no saved records. Exact blank opened in unsaved editor only.",
-      "No tracked-file, production listing, checkout, supplier order or Netlify setting change.",
-      "Reconciled 6241860 to zero, applied SB-6-161561 to White and Iron Grey Core Training Tees and verified both exact labels after reload. All six existing designs now tagged. Verified only production APLIIQ_SUBMIT_ENABLED in the Netlify UI, enabled. No settings changes."
+      "Public PR 84 merged. The Core Training Tee and Training Shorts are available for purchase on the public storefront."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "Six exact approved labels saved and persisted. No orders or subscriptions.",
-        "reference": "apliiq:200478:6241853,6241860,6241864,6240613,6240615,6240616:SB-6-161561",
+        "details": "Merged and verified on the public storefront.",
+        "reference": "https://github.com/gdove90/portugoool-site/pull/84",
         "status": "confirmed"
-      },
-      {
-        "details": "Merge exact reviewed purchase release after preview and branch validation. Verify no-payment production quotes for the two products. Do not replay an uncertain merge.",
-        "reference": "github:gdove90/portugoool-site#84@13de1c24589504e474c1223bc16aff8f2a77d188",
-        "status": "intent"
-      },
-      {
-        "details": "Test transfer of exact already-approved public-repo cream GA artwork to the authenticated WT0093 editor. No production design save until print, color and tag verification. No cart/order or purchase.",
-        "reference": "tapstitch:WT0093:cream-png:d729b6163a60",
-        "status": "intent"
       }
     ],
     "head_commit": "13de1c24589504e474c1223bc16aff8f2a77d188",
-    "next_action": "Verify hosted preview, merge PR 84, verify live quotes, and test Tapstitch artwork transfer in authorized scope.",
+    "next_action": "Reconcile the Training Bra in a separate pass.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-tempo-womens-purchase-20261105-retry-7c19",
     "task_id": "tempo-womens-purchase-20261105",
     "tests": [
-      "PASS live WT0216 quote for all 12 variants, no Stripe Session.",
-      "PASS exact code mapping to six saved Apliiq design IDs across 30 color/size combinations.",
-      "PASS 16 bra variants remain held with no mapped supplier designs.",
-      "UNVERIFIED live automated Apliiq submission status; current protected status endpoint requires an authorized operator key.",
-      "PASS current scoped Apliiq submission flag, 30 exact saved ID/SKU/price snapshots in offline Checkout Session fixture, production build and whitespace check."
+      "Public product page smoke checks and no-payment checkout quote passed."
     ],
     "unresolved": [
-      "WT0093 four decorated Tapstitch designs and mappings remain unverified."
+      "The Training Bra still shows Coming Soon on the public storefront."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -70,7 +48,7 @@
     "start_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
     "task": "tempo-womens-purchase-20261105"
   },
-  "revision": 99,
+  "revision": 100,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T06:57:22.615301+00:00"
+  "updated_at": "2026-11-05T07:05:02.656979+00:00"
 }
