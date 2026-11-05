@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "test:size-guide": "node scripts/test-size-guide.cjs",
+    "test:size-guide:http": "node scripts/smoke-size-guide.cjs",
     "test:halo-checkout": "node scripts/test-halo-checkout.cjs",
     "test:customer-service": "node scripts/test-customer-service-gate.cjs",
     "test:payment-preservation": "node scripts/test-payment-preservation.cjs",

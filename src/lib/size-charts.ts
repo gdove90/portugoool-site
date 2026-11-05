@@ -1,20 +1,10 @@
 // ─────────────────────────────────────────────────────────────
 // Garment measurements, per blank.
 //
-// These are the ACTUAL blanks Apliiq prints and ships (the mapping in
-// fulfillment.ts decides which), so a customer reading this grid is
-// reading the garment that arrives.
-//
-// EVERY CHEST FIGURE IS A HALF CHEST: the garment laid flat, measured
-// pit to pit. Not the circumference. That distinction is the single
-// most damaging thing to get wrong here - reading it as circumference
-// halves the apparent size and sends someone up two sizes - so the UI
-// states it explicitly and offers the doubled figure alongside.
-//
-// Sourced from each manufacturer's published spec on 2026-09-22 and
-// then verified against a second, independent source. Where a
-// manufacturer publishes no sleeve length, it is null rather than
-// estimated: an invented number here becomes a return.
+// These match the blanks in fulfillment.ts. Chest/bust and waist are
+// flat garment widths, never body-size recommendations. New source
+// measurements and methods were verified on 2026-11-04; provenance is
+// recorded in docs/catalog/size-guide-sources-20261104.json.
 // ─────────────────────────────────────────────────────────────
 
 export interface SizeRow {
@@ -25,12 +15,18 @@ export interface SizeRow {
   lengthIn: number;
   /** Centre back or shoulder to cuff, in inches. Null when unpublished. */
   sleeveIn: number | null;
+  hipIn?: number;
+  inseamIn?: number;
 }
 
 export interface SizeChart {
   blank: string;
-  /** "waist" relabels the columns for bottoms: waist flat / around, inseam. */
+  /** chestIn stores the flat chest, bust or waist width for this chart. */
   measure?: "chest" | "waist" | "bust";
+  lengthMeasure?: "length" | "inseam" | "outseam";
+  sleeveFrom?: "centre back" | "shoulder seam";
+  /** Maximum published measurement variation, in inches. */
+  toleranceIn?: number;
   /** Manufacturer spec URL the numbers came from (internal; never rendered).
       The blank label above is customer-facing and names the fabric only:
       no supplier or garment brand appears on the site (owner, 2026-09-29). */
@@ -70,7 +66,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   st720: {
     blank: "Recycled polyester performance tee",
-    source: "https://www.sanmar.com/",
+    source: "https://www.sanmar.com/p/10885/specSheetMeasurements",
     note: "Athletic cut, closer through the body than the cotton tees. True to size.",
     rows: [
       { size: "S", chestIn: 20, lengthIn: 28, sleeveIn: 18 },
@@ -130,22 +126,23 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   lst350: {
     blank: "Women's performance tee · polyester interlock",
-    source: "https://www.blankstyle.com/files/specs/6100/SpecSheetMeasurements_LST350.pdf",
+    measure: "bust",
+    source: "https://www.sanmar.com/p/4296_Black/specSheetMeasurements",
     note: "A women's cut, shaped through the body. Bust is measured one inch below the armhole, laid flat.",
     rows: [
-      { size: "S", chestIn: 19, lengthIn: 25.5, sleeveIn: null },
-      { size: "M", chestIn: 20, lengthIn: 26, sleeveIn: null },
-      { size: "L", chestIn: 21.5, lengthIn: 27, sleeveIn: null },
-      { size: "XL", chestIn: 23, lengthIn: 28, sleeveIn: null },
-      { size: "XXL", chestIn: 24.5, lengthIn: 29, sleeveIn: null },
+      { size: "S", chestIn: 19, lengthIn: 25.5, sleeveIn: 14.5 },
+      { size: "M", chestIn: 20, lengthIn: 26, sleeveIn: 15 },
+      { size: "L", chestIn: 21.5, lengthIn: 27, sleeveIn: 15.75 },
+      { size: "XL", chestIn: 23, lengthIn: 28, sleeveIn: 16.5 },
+      { size: "XXL", chestIn: 24.5, lengthIn: 29, sleeveIn: 17.25 },
     ],
   },
-  // Saved WT0216 supplier design chart, inspected 2026-11-04.
+  // WT0093 and WT0216 supplier charts, inspected 2026-11-04.
   wt0093: {
     blank: "Women's cropped racerback · stretch knit",
     measure: "bust",
     source: "https://www.tapstitch.com/custom/1484550248251678720",
-    note: "Unstretched garment measurements, not body measurements. Compare with a similar bra you own. Actual measurements may vary by 1 to 3 cm.",
+    toleranceIn: 3 / 2.54,
     rows: [
       { size: "S", chestIn: 12.99, lengthIn: 12.17, sleeveIn: null },
       { size: "M", chestIn: 13.78, lengthIn: 12.48, sleeveIn: null },
@@ -155,8 +152,9 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   },
   wt0216: {
     blank: "Women's lightweight polyester crew · 130 gsm",
+    measure: "bust",
     source: "https://www.tapstitch.com/account/products-pool/product/1567566233338085376",
-    note: "Regular women's fit. Compare these flat measurements with a tee you own. Garment measurements may vary by 1 to 3 cm.",
+    toleranceIn: 3 / 2.54,
     rows: [
       { size: "S", chestIn: 16.93, lengthIn: 23.03, sleeveIn: null },
       { size: "M", chestIn: 17.72, lengthIn: 23.62, sleeveIn: null },
@@ -179,6 +177,7 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   lpst800: {
     blank: "Women's travel pant · recycled polyester",
     measure: "waist",
+    lengthMeasure: "inseam",
     source: "https://assets.dc-onesource.com/4/8/48319e73a835172c2ffbc2f8161aa155.pdf",
     note: "Waist is measured point to point across the waistband, laid flat; inseam from the crotch seam to the hem. The drawcord waist gives a couple of inches of play.",
     rows: [
@@ -187,6 +186,61 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
       { size: "L", chestIn: 17.5, lengthIn: 29.5, sleeveIn: null },
       { size: "XL", chestIn: 19, lengthIn: 30, sleeveIn: null },
       { size: "XXL", chestIn: 20.5, lengthIn: 30.5, sleeveIn: null },
+    ],
+  },
+  as5620: {
+    blank: "Lightweight stretch training shorts",
+    measure: "waist",
+    lengthMeasure: "outseam",
+    toleranceIn: 1,
+    source: "https://cdn11.bigcommerce.com/s-hsi95a83fz/product_images/uploaded_images/SIZE_GUIDES/5620_SIZE_GUIDE.jpg",
+    note: "Our S, M, L, XL and XXL correspond to waist sizes 30, 32, 34, 36 and 38. The waist widths below are measured with the elastic relaxed.",
+    rows: [
+      { size: "S", chestIn: 14.25, lengthIn: 17.75, inseamIn: 6.5, sleeveIn: null },
+      { size: "M", chestIn: 15.25, lengthIn: 18, inseamIn: 6.5, sleeveIn: null },
+      { size: "L", chestIn: 16.25, lengthIn: 18.5, inseamIn: 6.5, sleeveIn: null },
+      { size: "XL", chestIn: 17.25, lengthIn: 19, inseamIn: 6.5, sleeveIn: null },
+      { size: "XXL", chestIn: 18.25, lengthIn: 19.25, inseamIn: 6.5, sleeveIn: null },
+    ],
+  },
+  pst871: {
+    blank: "Stretch performance jogger",
+    measure: "waist",
+    lengthMeasure: "inseam",
+    source: "https://www.sanmar.com/p/18475_DeepBlack/specSheetMeasurements",
+    rows: [
+      { size: "S", chestIn: 13.5, lengthIn: 29, sleeveIn: null },
+      { size: "M", chestIn: 15, lengthIn: 29.5, sleeveIn: null },
+      { size: "L", chestIn: 16.5, lengthIn: 30, sleeveIn: null },
+      { size: "XL", chestIn: 18, lengthIn: 30.5, sleeveIn: null },
+      { size: "XXL", chestIn: 19.5, lengthIn: 31, sleeveIn: null },
+    ],
+  },
+  mt0063: {
+    blank: "Lightweight performance quarter zip",
+    source: "https://www.tapstitch.com/custom/1549095814578778112",
+    sleeveFrom: "shoulder seam",
+    toleranceIn: 3 / 2.54,
+    rows: [
+      { size: "S", chestIn: 18.11, lengthIn: 25.20, sleeveIn: 23.54 },
+      { size: "M", chestIn: 18.90, lengthIn: 25.98, sleeveIn: 24.02 },
+      { size: "L", chestIn: 19.68, lengthIn: 26.77, sleeveIn: 24.49 },
+      { size: "XL", chestIn: 20.47, lengthIn: 27.56, sleeveIn: 24.96 },
+      { size: "XXL", chestIn: 21.26, lengthIn: 28.35, sleeveIn: 25.43 },
+    ],
+  },
+  ub0050: {
+    blank: "Heavyweight cotton-blend sweatpant",
+    measure: "waist",
+    lengthMeasure: "outseam",
+    source: "https://www.tapstitch.com/account/products-pool/product/1567486704926019584",
+    toleranceIn: 3 / 2.54,
+    rows: [
+      { size: "S", chestIn: 12.99, hipIn: 22.05, lengthIn: 40.94, sleeveIn: null },
+      { size: "M", chestIn: 13.78, hipIn: 22.83, lengthIn: 41.73, sleeveIn: null },
+      { size: "L", chestIn: 14.57, hipIn: 23.62, lengthIn: 42.52, sleeveIn: null },
+      { size: "XL", chestIn: 15.35, hipIn: 24.41, lengthIn: 43.31, sleeveIn: null },
+      { size: "XXL", chestIn: 16.14, hipIn: 25.20, lengthIn: 44.09, sleeveIn: null },
     ],
   },
 };
@@ -199,6 +253,10 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
  * meaningless.
  */
 const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
+  "90000000-0000-4000-8000-000000000001": "ub0050", // The Core Sweatpant
+  "80000000-0000-4000-8000-000000000013": "as5620", // Core Shorts
+  "80000000-0000-4000-8000-000000000023": "mt0063", // Core Quarter Zip
+  "80000000-0000-4000-8000-000000000024": "pst871", // Core Jogger
   "80000000-0000-4000-8000-000000000025": "wt0093", // TEMPO Training Bra
   "70000000-0000-4000-8000-000000000001": "st720", // Core Badge Tee
   "70000000-0000-4000-8000-000000000002": "ind4000", // Core Hoodie · Red
