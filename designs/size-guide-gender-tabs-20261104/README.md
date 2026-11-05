@@ -7,3 +7,5 @@ Reuse the catalog's audience assignments and ordering. Show each public product 
 Direct product hashes and historical category hashes select the matching audience and product, including an explicitly linked gated product. Browsing either audience otherwise lists only public products. Retain product-modal behavior, all measurement values, availability, prices, galleries and checkout unchanged. Keep supplier names and URLs out of the customer-facing guide and its browser data.
 
 Verify the two audience tabs, catalog coverage, product switching, hash selection, keyboard behavior, narrow viewport overflow and the existing measurement/source regressions in local and hosted previews.
+
+Owner follow-up, November 4: omit the How to measure heading and instruction paragraph on the main size guide page. Keep the fit notes, measurement labels and tables, units, and Men/Women product navigation. The shared guide retains measuring instructions in product-page dialogs.
