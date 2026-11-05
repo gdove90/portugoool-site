@@ -1,51 +1,33 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Owner asked to upload the 12 reviewed shorts images and update the description with benefits on goalathletics.shop. Public Coming Soon presentation only."
+      "Make all currently public women\u2019s pieces purchasable when supplier and paid order fulfillment are verified. Prior owner authorization to apply exact approved GOAL inside tags on necessary products."
     ],
-    "base_commit": "f50f1f68dbc02cf3f5caa1aab3081b831ca5b240",
-    "branch": "codex/tempo-shorts-gallery-20261105",
-    "changed_paths": [
-      "public/products/tempo-training-shorts/tempo-training-shorts-black-01-ghost-front-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-black-02-model-front-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-black-03-model-quarter-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-black-04-model-back-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-01-ghost-front-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-02-model-front-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-03-model-quarter-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-iron-grey-04-model-back-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-01-ghost-front-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-02-model-front-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-03-model-quarter-20261105.webp",
-      "public/products/tempo-training-shorts/tempo-training-shorts-true-navy-04-model-back-20261105.webp",
-      "src/lib/collection-launch.ts",
-      "src/lib/products.ts"
-    ],
+    "base_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
+    "branch": "codex/tempo-womens-purchase-20261105",
+    "changed_paths": [],
     "completed": [
-      "14-file exact tree 3fe51bf7e337b309f749d0d51fdfd22d95637ab1, PR 83. All images are 1024\u00d71536 WebP with product visualization captions. One ghost front then front, quarter and rear per color. Corrected shell/waistband/liner composition and benefits.",
-      "PR 83 merged as de473e42aa6677c9a5d33954c3ee62c15485d8a1 with the exact tested tree. Netlify production deploy 6aec1cee9547653665d9c8fb is ready and published."
+      "Live public women\u2019s grid has four products. WT0216 all 12 color-size checkout quote passed. Apliiq saved women\u2019s tee/shorts and exact V1.3 stacked private label SB-6-161561 visually verified."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "Merged exact reviewed PR 83; live production deploy 6aec1cee9547653665d9c8fb confirmed by Netlify and public HTTP checks.",
-        "reference": "github:gdove90/portugoool-site#83@ccd44e282e481667953b9294cfd5e2bdbc309168",
-        "status": "confirmed"
+        "details": "Add existing exact approved GOAL private label to six already-saved women\u2019s designs only if offered and no prior correct assignment exists. Reconcile each saved product id, unchanged decoration and confirmed branding after reload before purchase release. No orders or subscriptions.",
+        "reference": "apliiq:200478:6241853,6241860,6241864,6240613,6240615,6240616:SB-6-161561",
+        "status": "intent"
       }
     ],
-    "head_commit": "ccd44e282e481667953b9294cfd5e2bdbc309168",
-    "next_action": "Gallery and copy release complete. Verify inside-tag and fulfillment evidence before any separately authorized purchase release.",
-    "rollback": "Revert scoped PR commit to remove public shorts gallery and restore prior visibility. No SQL or provider order changes.",
+    "head_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
+    "next_action": "Apply approved tag to six existing Apliiq designs, read back, then build and verify eligible women\u2019s purchase release.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-tempo-shorts-20261105-3a4b",
-    "task_id": "tempo-shorts-gallery-20261105",
+    "session": "codex-tempo-womens-purchase-20261105-291f",
+    "task_id": "tempo-womens-purchase-20261105",
     "tests": [
-      "PASS contract parity, production build and local HTTP smoke test, all 12 image bytes, women catalog, other products unchanged, offline checkout rejection for 15 size/color combinations. Legacy payment snapshot compares current baseline with an old webhook and fails on unchanged webhook.",
-      "LIVE VERIFIED public product page, women collection, new benefits copy, disabled Coming Soon button and all 12 byte-identical images. Hosted preview delivered the same 12 assets. Browser interaction was not exercised."
+      "PASS live no-payment quote for all 12 WT0216 variants."
     ],
     "unresolved": [
-      "Apliiq inside-tag verification pending. Product remains Coming Soon and unavailable for purchase."
+      "Core Training Tee and Training Shorts tag assignment not yet verified. WT0093 missing four saved decorated designs."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -68,7 +50,7 @@
     "start_commit": "f50f1f68dbc02cf3f5caa1aab3081b831ca5b240",
     "task": "tempo-shorts-gallery-20261105"
   },
-  "revision": 94,
+  "revision": 95,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T06:21:26.175368+00:00"
+  "updated_at": "2026-11-05T06:22:43.823289+00:00"
 }
