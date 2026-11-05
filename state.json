@@ -5,43 +5,49 @@
     ],
     "base_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
     "branch": "codex/tempo-womens-purchase-20261105",
-    "changed_paths": [],
+    "changed_paths": [
+      "src/lib/products.ts"
+    ],
     "completed": [
       "Verified live women\u2019s grid four public products and the WT0216 no-payment quote across 12 color/size combinations, HTTP 200.",
       "Applied existing GOAL Athletics private label SB-6-161561 to Apliiq shorts designs 6240613, 6240615, 6240616 and Core Tee 6241853. All four reloaded with one branding service and one retained decoration. Exact supply ID read back for all three shorts; Black Core Tee selection of that exact supply was observed before saving and count persisted after reload.",
       "Existing four approved WT0093 artwork PNGs retrieved in scratch from the repo and decoded as 1200x1085 transparent RGBA. Tapstitch Designs search for bra returned no saved records. Exact blank opened in unsaved editor only.",
-      "No tracked-file, production listing, checkout, supplier order or Netlify setting change."
+      "No tracked-file, production listing, checkout, supplier order or Netlify setting change.",
+      "Reconciled 6241860 to zero, applied SB-6-161561 to White and Iron Grey Core Training Tees and verified both exact labels after reload. All six existing designs now tagged. Verified only production APLIIQ_SUBMIT_ENABLED in the Netlify UI, enabled. No settings changes."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "Exact existing label selected and updates persisted after reload. Existing saved product IDs and artwork count retained.",
-        "reference": "apliiq:200478:6240613,6240615,6240616,6241853:SB-6-161561",
+        "details": "Six exact approved labels saved and persisted. No orders or subscriptions.",
+        "reference": "apliiq:200478:6241853,6241860,6241864,6240613,6240615,6240616:SB-6-161561",
         "status": "confirmed"
       },
       {
-        "details": "UI sequence interrupted with deadline, then Chrome explicitly blocked by another extension UI. Reconcile saved branding after owner clears panel; do not replay save blindly.",
-        "reference": "apliiq:200478:6241860:SB-6-161561",
-        "status": "uncertain"
+        "details": "Merge exact reviewed purchase release after preview and branch validation. Verify no-payment production quotes for the two products. Do not replay an uncertain merge.",
+        "reference": "github:gdove90/portugoool-site#84@13de1c24589504e474c1223bc16aff8f2a77d188",
+        "status": "intent"
+      },
+      {
+        "details": "Test transfer of exact already-approved public-repo cream GA artwork to the authenticated WT0093 editor. No production design save until print, color and tag verification. No cart/order or purchase.",
+        "reference": "tapstitch:WT0093:cream-png:d729b6163a60",
+        "status": "intent"
       }
     ],
-    "head_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
-    "next_action": "After Gary dismisses the Chrome extension panel, reconcile White Core Tee and apply/verify Iron Grey. Obtain scoped current nonsecret Apliiq runtime submission status. Save and verify four approved Tapstitch bra designs with authorized artwork upload and tag. Open only verified products, run checkout preview, and verify live. Do not access unrelated secrets or bypass review.",
+    "head_commit": "13de1c24589504e474c1223bc16aff8f2a77d188",
+    "next_action": "Verify hosted preview, merge PR 84, verify live quotes, and test Tapstitch artwork transfer in authorized scope.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-tempo-womens-purchase-20261105-291f",
+    "session": "codex-tempo-womens-purchase-20261105-retry-7c19",
     "task_id": "tempo-womens-purchase-20261105",
     "tests": [
       "PASS live WT0216 quote for all 12 variants, no Stripe Session.",
       "PASS exact code mapping to six saved Apliiq design IDs across 30 color/size combinations.",
       "PASS 16 bra variants remain held with no mapped supplier designs.",
-      "UNVERIFIED live automated Apliiq submission status; current protected status endpoint requires an authorized operator key."
+      "UNVERIFIED live automated Apliiq submission status; current protected status endpoint requires an authorized operator key.",
+      "PASS current scoped Apliiq submission flag, 30 exact saved ID/SKU/price snapshots in offline Checkout Session fixture, production build and whitespace check."
     ],
     "unresolved": [
-      "White Core Tee 6241860 interrupted by Chrome extension panel; do read-only reload and reconcile actual branding before retry.",
-      "Iron Grey Core Tee 6241864 currently unverified.",
-      "WT0093 needs four saved decorated production designs with exact owner-approved artwork, existing GOAL tag, and fulfillment mapping.",
-      "Automatic approval review rejected a Netlify flag lookup that could alter configuration, a broader env-var listing that could expose secrets, and the purchase enablement before label and live submission verification."
+      "WT0093 four decorated Tapstitch designs and mappings remain unverified."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -64,7 +70,7 @@
     "start_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
     "task": "tempo-womens-purchase-20261105"
   },
-  "revision": 98,
+  "revision": 99,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T06:47:45.327905+00:00"
+  "updated_at": "2026-11-05T06:57:22.615301+00:00"
 }
