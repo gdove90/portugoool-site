@@ -531,7 +531,6 @@ const TEMPO_TRAINING_SHORTS_VARIANTS = [
     "supplierColor": "Black",
     "hex": "#252525",
     "skuFragment": "BLACK",
-    "comingSoon": true,
     "images": [
       {
         "src": "/products/tempo-training-shorts/tempo-training-shorts-black-01-ghost-front-20261105.webp",
@@ -556,7 +555,6 @@ const TEMPO_TRAINING_SHORTS_VARIANTS = [
     "supplierColor": "Iron Grey",
     "hex": "#5F5F5F",
     "skuFragment": "IRONGREY",
-    "comingSoon": true,
     "images": [
       {
         "src": "/products/tempo-training-shorts/tempo-training-shorts-iron-grey-01-ghost-front-20261105.webp",
@@ -581,7 +579,6 @@ const TEMPO_TRAINING_SHORTS_VARIANTS = [
     "supplierColor": "True Navy",
     "hex": "#202030",
     "skuFragment": "TRUENAVY",
-    "comingSoon": true,
     "images": [
       {
         "src": "/products/tempo-training-shorts/tempo-training-shorts-true-navy-01-ghost-front-20261105.webp",
@@ -4957,7 +4954,7 @@ export const products: Product[] = [
     category: "tshirt",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: false,
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
@@ -5159,7 +5156,7 @@ export const products: Product[] = [
   // 2.00 x 1.80 in filling the wearer's left leg print box (2 x 2 in, the
   // only box on the blank), the size the 2026-10-26 design update accepted.
   // Apliiq quote $23.99 (XXL +$2): 25% model floor $46, priced $48 (model
-  // price, not owner-set). Gallery is public with purchasing held.
+  // price, not owner-set). Each saved design uses the approved GOAL private label.
   // Supplier record: designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000022",
@@ -5182,7 +5179,7 @@ export const products: Product[] = [
     category: "shorts",
     supplierType: "apliiq",
     isActive: true,
-    availableForSale: false,
+    availableForSale: true,
     isLimitedDrop: false,
     dropVersion: null,
     dropLimit: null,
