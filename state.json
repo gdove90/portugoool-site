@@ -1,31 +1,35 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Update women's product purchase availability."
+      "Reorder four cards on the Women page with the three black pieces first."
     ],
-    "branch": "codex/tempo-womens-purchase-20261105",
+    "base_commit": "3cdbc0d8bce33f4ba766a160018b8f3b12a277db",
+    "branch": "codex/womens-tempo-grid-order",
+    "changed_paths": [
+      "src/v84/catalog-data.ts"
+    ],
     "completed": [
-      "Public PR 84 merged. The Core Training Tee and Training Shorts are available for purchase on the public storefront."
+      "Implemented the requested order for the Women page and prepared public draft PR 85."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "Merged and verified on the public storefront.",
-        "reference": "https://github.com/gdove90/portugoool-site/pull/84",
+        "details": "Draft review PR opened for the tested commit.",
+        "reference": "https://github.com/gdove90/portugoool-site/pull/85",
         "status": "confirmed"
       }
     ],
-    "head_commit": "13de1c24589504e474c1223bc16aff8f2a77d188",
-    "next_action": "Reconcile the Training Bra in a separate pass.",
+    "head_commit": "dc58401bd9a9227cb20c9d7f81e5a6a8802505ae",
+    "next_action": "Review the desktop grid mockup and exact PR before releasing to the live site.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-tempo-womens-purchase-20261105-retry-7c19",
-    "task_id": "tempo-womens-purchase-20261105",
+    "session": "codex-womens-tempo-grid-order-20261105",
+    "task_id": "womens-tempo-grid-order",
     "tests": [
-      "Public product page smoke checks and no-payment checkout quote passed."
+      "Production build and local rendered grid passed with exact card colors and order. Other catalog sequences match the current base. The broader suite stops at its older pinned inventory baseline, whose protected paths are unchanged by this PR."
     ],
     "unresolved": [
-      "The Training Bra still shows Coming Soon on the public storefront."
+      "Owner review before release. Hosted review deploy compiles and hides product cards by configuration."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -48,7 +52,7 @@
     "start_commit": "de473e42aa6677c9a5d33954c3ee62c15485d8a1",
     "task": "tempo-womens-purchase-20261105"
   },
-  "revision": 102,
+  "revision": 103,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-05T07:25:11.775450+00:00"
+  "updated_at": "2026-11-05T07:32:11.496384+00:00"
 }
