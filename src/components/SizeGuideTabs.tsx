@@ -71,7 +71,7 @@ export default function SizeGuideTabs() {
           >{product.name.replace(/^(GOAL Athletics |TEMPO )/, "")}</button>)}
         </div>
         <div className="size-guide-product-panel" role="tabpanel" id="size-guide-product-panel" aria-labelledby={`size-guide-product-${productId}`} tabIndex={0}>
-          <SizeGuide key={productId} productId={productId} showGuideLink={false} />
+          <SizeGuide key={productId} productId={productId} showGuideLink={false} showMeasuringInstructions={false} />
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useId, useState } from "react";
 import Link from "next/link";
 import { formatMeasurement, sizeGuideFor, sizeGuideHref, type MeasurementUnit } from "@/lib/size-guide";
 
-export default function SizeGuide({ productId, showGuideLink = true }: { productId: string; showGuideLink?: boolean }) {
+export default function SizeGuide({ productId, showGuideLink = true, showMeasuringInstructions = true }: { productId: string; showGuideLink?: boolean; showMeasuringInstructions?: boolean }) {
   const [unit, setUnit] = useState<MeasurementUnit>("in");
   const id = useId();
   const guide = sizeGuideFor(productId);
@@ -17,10 +17,10 @@ export default function SizeGuide({ productId, showGuideLink = true }: { product
         <p>{guide.fit}</p>
         <p className="size-guide-fabric">{guide.blank}</p>
       </div>
-      <div className="size-guide-measuring">
+      {showMeasuringInstructions && <div className="size-guide-measuring">
         <h3>How to measure</h3>
         <p>{guide.instructions}</p>
-      </div>
+      </div>}
       {guide.rows.length > 0 && (
         <>
           <div className="size-guide-table-heading">
