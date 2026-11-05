@@ -12,10 +12,18 @@ const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value
 
 (async () => {
   const results = [];
+  const scripts = new Set();
+  const collectScripts = nodes => {
+    for (const node of nodes) {
+      const src = attr(node, 'src');
+      if (node.tagName === 'script' && src?.startsWith('/_next/static/')) scripts.add(src);
+    }
+  };
   for (const product of products) {
     const response = await fetch(base + '/shop/' + product.slug);
     assert.equal(response.status, 200, product.slug);
     const nodes = all(parse5.parse(await response.text()));
+    collectScripts(nodes);
     const dialog = nodes.find(node => node.tagName === 'dialog' && attr(node, 'class') === 'info-dialog');
     assert.ok(dialog, product.slug + ' fit dialog');
     const inside = all(dialog);
@@ -26,12 +34,19 @@ const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value
     const links = inside.filter(node => node.tagName === 'a');
     assert.equal(links.length, 1);
     assert.equal(attr(links[0], 'href'), guide.sizeGuideHref(product.id));
+    assert.ok(!links.some(node => /^https?:/i.test(attr(node, 'href') || '')), 'No external links in ' + product.slug + ' sizing guide');
     results.push({ slug: product.slug, status: response.status, rows: sizes.length, table: 'PASS', directLink: 'PASS' });
   }
   const response = await fetch(base + '/size-guide');
   assert.equal(response.status, 200);
   const nodes = all(parse5.parse(await response.text()));
+  collectScripts(nodes);
   assert.equal(nodes.filter(node => node.tagName === 'option').length, products.length);
-  if (process.env.SIZE_GUIDE_EVIDENCE) fs.writeFileSync(process.env.SIZE_GUIDE_EVIDENCE, JSON.stringify({ base, products: results, mainGuideOptions: products.length, passed: true }, null, 2));
-  console.log(`PASS ${base}: all ${products.length} product dialogs have a matching table, exact offered sizes and one direct guide link; main guide lists every product.`);
+  for (const src of scripts) {
+    const response = await fetch(base + src);
+    assert.equal(response.status, 200, src);
+    assert.ok(!/(?:apliiq|tapstitch|sanmar|bellacanvas|independenttradingco|comfortcolors|ascolour|ottocap|blankstyle|bigcommerce|dc-onesource)\.com/i.test(await response.text()), 'No supplier website references in public JavaScript: ' + src);
+  }
+  if (process.env.SIZE_GUIDE_EVIDENCE) fs.writeFileSync(process.env.SIZE_GUIDE_EVIDENCE, JSON.stringify({ base, products: results, mainGuideOptions: products.length, publicScriptsChecked: scripts.size, passed: true }, null, 2));
+  console.log(`PASS ${base}: all ${products.length} product guides and ${scripts.size} public scripts; correct tables/sizes/links and no supplier website references.`);
 })().catch(error => { console.error(error); process.exitCode = 1; });

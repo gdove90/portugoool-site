@@ -53,5 +53,19 @@
   },
   "preservedCharts": ["bc3010","bc4810","st720","ind4000","cc1717","as5150","j333","wt0093","wt0216","bc7519","lpst800"],
   "rendering": "Decimal inches (up to 2 places) and centimeters (up to 1 place), derived from the same unrounded source values; no doubled flat-width columns",
-  "unpublishedMeasurements": "Omitted, never estimated"
+  "unpublishedMeasurements": "Omitted, never estimated",
+  "additionalChartSources": {
+    "bc3010": "https://www.bellacanvas.com/spec/3010_specs.pdf",
+    "bc4810": "https://www.bellacanvas.com/",
+    "st720": "https://www.sanmar.com/p/10885/specSheetMeasurements",
+    "ind4000": "https://www.independenttradingco.com/",
+    "cc1717": "https://www.comfortcolors.com/",
+    "as5150": "https://www.ascolour.com/",
+    "j333": "https://www.blankstyle.com/files/specs/11793/SpecSheetMeasurements_J333.pdf",
+    "wt0093": "https://www.tapstitch.com/custom/1484550248251678720",
+    "wt0216": "https://www.tapstitch.com/account/products-pool/product/1567566233338085376",
+    "bc7519": "https://www.blankstyle.com/bella-canvas-7519-ladies-classic-pullover-hooded-sweatshirt",
+    "lpst800": "https://assets.dc-onesource.com/4/8/48319e73a835172c2ffbc2f8161aa155.pdf"
+  },
+  "publicationPolicy": "Development reference only. Never import supplier URLs or source references into public application data or link customers to them."
 }
