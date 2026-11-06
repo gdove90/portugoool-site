@@ -21,5 +21,5 @@ export default async function Page() {
       return <TempoComingSoon collection="Tempo" audience="Women" image="/v84/assets/women.png" imageAlt="Woman in black athleticwear against warm stone" />;
     }
   }
-  return <Editorial route="women" />;
+  return <Editorial route="women" ownerPreview={TEMPO_COLLECTION_COMING_SOON} />;
 }

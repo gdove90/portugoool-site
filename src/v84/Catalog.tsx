@@ -24,13 +24,17 @@ export function ProductGrid({ products }: { products: Product[] }) {
   return <div className="product-grid">{products.map(p => <ProductCard key={p.id} product={p} />)}</div>;
 }
 
-export function CollectionGrid({ audience }: { audience?: Audience }) {
+export function CollectionGrid({ audience, includeTempoForOwner = false }: { audience?: Audience; includeTempoForOwner?: boolean }) {
   const [type, setType] = useState("all");
   const [filter, setFilter] = useState("all");
   const [sort, setSort] = useState("featured");
   const [open, setOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
-  const list = audience ? forAudience(audience) : catalogOrder(getProducts());
+  // The public catalog stays gated. Only the server-verified owner's /women
+  // page enables the complete active TEMPO grid for private product review.
+  const list = audience === "women" && includeTempoForOwner
+    ? catalogOrder(getProducts({ includeTempo: true }).filter(p => audienceAssignments[p.id]?.includes("women")))
+    : audience ? forAudience(audience) : catalogOrder(getProducts());
   const types = ["tees", "sports bras", "tanks", "leggings", "shorts", "pants", "hoodies", "layers", "jackets", "hats"].filter(t => list.some(p => productType(p) === t));
   const options = [["featured", "Featured"], ["low", "Price: low to high"], ["high", "Price: high to low"]];
   useEffect(() => {
