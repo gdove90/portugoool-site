@@ -3,6 +3,8 @@ name: apliiq-asset-to-website
 description: Take a print package (files, measurements, renders) for a GOOOL garment, file it, update or create the Apliiq saved design, wire the SKUs, and put the product on goool.shop. Use for any new colourway, print revision or new product.
 ---
 
+> **Historical supplier mechanics only:** First read `docs/agents/goal-product-integration/OPERATING_CONTRACT.md` from the repository root. Its current owner-approved rules govern branding, domain, permissions, image layout, store state and cross-agent coordination. This older checklist does not grant supplier saves, product publication, real orders or deployment. Preserve unrelated verified mechanics below.
+
 # From print package to Apliiq to goool.shop
 
 The owner hands over a package (usually a zip in Downloads) with print
@@ -200,3 +202,4 @@ deploy id, and the PDP URL returning 200. What is still unverified
   `blob.apliiq.com/sitestorage/products/<id>_<template>.jpg` on white; put it
   on the studio backdrop with `scripts/studio-backdrop-product-shot.py`
   (`--mask-from` the Black render for light colours).
+
