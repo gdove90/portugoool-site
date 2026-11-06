@@ -217,3 +217,11 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
 IMPLICATION: sizing placeholders are being closed on product pages, not in the size guide, so earlier "no measurements" notes for the Quarter Zip and Jogger are INVALIDATED. Launch status and details change between daily fetches, so re-fetch before citing any page.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, fix the delivery contradiction and the TEMPO tee colour, and either mirror the product charts in the size guide or hide empty tabs.
+
+DATE: 2026-11-06
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-11-06/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: every populated day since 10-29 without a returned Story had account reach of 8 or less (10-29: 5, 10-30: 3, 11-03: 8, 11-04: 2), including 11-03 with a carousel live; days with a Story returned 16 to 98. No Story has been returned after 11-02, and the 11-05 Core Warm-up Tee carousel opened at reach 3 at about 15 h with no Story support.
+CLASSIFICATION: SUPPORTED INFERENCE
+CONFIDENCE: LOW to MEDIUM (about eight days, consistent direction, 38-follower base, Story sync can lag two days)
+IMPLICATION: at this size the Story, not the feed post, sets the day's reach, so a missing Story costs more reach than any caption or product choice tested so far.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, keep a Story on every standing-grid day and confirm in the app whether 11-03 to 11-05 Stories were posted.
