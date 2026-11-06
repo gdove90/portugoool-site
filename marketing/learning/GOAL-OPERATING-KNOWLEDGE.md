@@ -225,3 +225,11 @@ CLASSIFICATION: SUPPORTED INFERENCE
 CONFIDENCE: LOW to MEDIUM (about eight days, consistent direction, 38-follower base, Story sync can lag two days)
 IMPLICATION: at this size the Story, not the feed post, sets the day's reach, so a missing Story costs more reach than any caption or product choice tested so far.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, keep a Story on every standing-grid day and confirm in the app whether 11-03 to 11-05 Stories were posted.
+
+DATE: 2026-11-06
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-06/03-search-ecommerce.md (live pages fetched 2026-11-06)
+OBSERVATION: the catalog shrank from 15 products and 31 sitemap URLs (11-05) to 11 products and 27 URLs: the TEMPO Training Tee, Shorts and Bra are absent from the sitemap and home list, and /women is a signup-only "TheTempoCollection" Coming soon page. The Quarter Zip still says "overseas partner, 10 to 17 days".
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text (summarised fetch); reason for the change and conversion impact NO DATA
+IMPLICATION: launches can be pulled back as well as added overnight; earlier notes that TEMPO tee and shorts were buyable are stale, and the TEMPO colour conflict is moot until relaunch.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, confirm TEMPO status and redirect old TEMPO URLs to /women; keep TEMPO out of captions until it is live.
