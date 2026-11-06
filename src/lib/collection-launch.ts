@@ -1,6 +1,7 @@
-// Owner, 2026-11-04: publish the completed women's tees and WT0093 bra galleries.
-// The remaining TEMPO pieces stay hidden until individually approved.
-export const TEMPO_COLLECTION_COMING_SOON = false;
+// Owner, 2026-11-06: keep the complete women's TEMPO collection behind the
+// existing Coming Soon gate until every piece is ready for public launch.
+// Preserve the existing product records and owner-only preview flow.
+export const TEMPO_COLLECTION_COMING_SOON = true;
 
 export const TEMPO_PUBLIC_PRODUCT_IDS: ReadonlySet<string> = new Set([
   "80000000-0000-4000-8000-000000000017",
