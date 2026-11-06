@@ -1,0 +1,93 @@
+{
+  "status": "concept-only",
+  "source": "Owner-approved V1.3 reconstruction paths; original master pending",
+  "withdrawnConcepts": [
+    "clean-badge"
+  ],
+  "galleries": [
+    {
+      "src": "/brand/cap-review/OTTO-31-069-Two-Concepts.png",
+      "width": 1774,
+      "height": 887,
+      "alt": "Two structured Black/Natural cap concepts: GA monogram and compact GOAL ATHLETICS wordmark; manufacturing proof pending",
+      "caption": "OTTO 31-069 · Black/Natural · two directions; clean badge withdrawn."
+    },
+    {
+      "src": "/brand/cap-review/OTTO-18-772-Dad-Hat-Concepts.png",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Black dad-hat concepts with white and tonal-black GA embroidery, plus side, blank rear and embroidery detail",
+      "caption": "OTTO 18-772 · black only · white and tonal-black thread concepts. Front, side, rear and detail views; no production dimensions implied."
+    }
+  ],
+  "products": [
+    {
+      "key": "70000000-0000-4000-8000-000000000004",
+      "productId": "70000000-0000-4000-8000-000000000004",
+      "name": "GOAL Athletics Touchline Cap",
+      "blank": "OTTO 31-069 structured seamless five-panel cap",
+      "color": "Black/Natural",
+      "size": "One Size",
+      "description": "Approved blank retained. GA monogram or compact wordmark direction to be selected; existing design untouched.",
+      "priceCents": 3200,
+      "legacyDesignId": 6098980,
+      "legacySku": "APQ-6098980S34A1",
+      "replacementDesignId": null,
+      "finalWidthInches": null,
+      "stitchCount": null,
+      "isActive": false,
+      "availableForSale": false
+    },
+    {
+      "key": "80000000-0000-4000-8000-000000000007",
+      "productId": "80000000-0000-4000-8000-000000000007",
+      "name": "GOAL Athletics Badge Cap — replacement direction pending",
+      "blank": "OTTO 31-069 structured seamless five-panel cap",
+      "color": "Black/Natural",
+      "size": "One Size",
+      "description": "Approved blank retained. GA monogram or compact wordmark direction to be selected; existing design untouched.",
+      "priceCents": 3200,
+      "legacyDesignId": 6117349,
+      "legacySku": "APQ-6117349S34A1",
+      "replacementDesignId": null,
+      "finalWidthInches": null,
+      "stitchCount": null,
+      "isActive": false,
+      "availableForSale": false
+    },
+    {
+      "key": "80000000-0000-4000-8000-000000000008",
+      "productId": "80000000-0000-4000-8000-000000000008",
+      "name": "GOAL Athletics Stacked Cap",
+      "blank": "OTTO 31-069 structured seamless five-panel cap",
+      "color": "Black/Natural",
+      "size": "One Size",
+      "description": "Approved blank retained. GA monogram or compact wordmark direction to be selected; existing design untouched.",
+      "priceCents": 3200,
+      "legacyDesignId": 6117282,
+      "legacySku": "APQ-6117282S34A1",
+      "replacementDesignId": null,
+      "finalWidthInches": null,
+      "stitchCount": null,
+      "isActive": false,
+      "availableForSale": false
+    },
+    {
+      "key": "goal-athletics-dad-hat-concept",
+      "productId": null,
+      "name": "GOAL Athletics Dad Hat",
+      "blank": "OTTO 18-772 unstructured low-profile six-panel washed cotton",
+      "color": "Black",
+      "size": "One Size Fits Most",
+      "description": "Small centered GA monogram. Curved visor; matching strap with antique brass buckle. White and tonal-black thread options only. Blank side and rear.",
+      "priceCents": null,
+      "legacyDesignId": null,
+      "legacySku": null,
+      "replacementDesignId": null,
+      "finalWidthInches": null,
+      "stitchCount": null,
+      "isActive": false,
+      "availableForSale": false
+    }
+  ]
+}
