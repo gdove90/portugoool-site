@@ -516,5 +516,6 @@
   :where(.v84) .mobile-hide-emoji-arrow { display: none !important; }
 }
 
-/* Approved men’s hero: retain the athlete across landscape and phone crops. */
+/* Approved brighter men’s hero: preserve both crops and keep shading below the face. */
 :where(.v84) .collection-hero.men .hero-photo{object-position:75% center}
+:where(.v84) .collection-hero.men:after{background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,.12) 30%,transparent 55%)}
