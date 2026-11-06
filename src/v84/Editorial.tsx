@@ -6,7 +6,7 @@ import { featuredProducts } from "./catalog-data";
 import { normalizeInterfaceMarkup } from "./InterfaceIcon";
 import { mobileImageMarkup } from "./MobileImage";
 
-export default function Editorial({ route }: { route: "home" | "men" | "women" | "about" | "references" }) {
+export default function Editorial({ route, ownerPreview = false }: { route: "home" | "men" | "women" | "about" | "references"; ownerPreview?: boolean }) {
   type Node = DefaultTreeAdapterMap["childNode"];
   const slot = (node: Node) => "attrs" in node && node.attrs.some(a => a.name === "data-v84-slot");
   const containsSlot = (node: Node): boolean => slot(node) || ("childNodes" in node && node.childNodes.some(containsSlot));
@@ -14,7 +14,7 @@ export default function Editorial({ route }: { route: "home" | "men" | "women" |
   function render(node: Node, key: number): ReactNode {
     if (slot(node)) return route === "home"
       ? <ProductGrid key={key} products={featuredProducts()} />
-      : <CollectionGrid key={key} audience={route === "men" ? "men" : "women"} />;
+      : <CollectionGrid key={key} audience={route === "men" ? "men" : "women"} includeTempoForOwner={route === "women" && ownerPreview} />;
     if (containsSlot(node) && "tagName" in node) {
       const props = Object.fromEntries(node.attrs.map(a => [a.name === "class" ? "className" : a.name, a.value]));
       return createElement(node.tagName, { ...props, key }, node.childNodes.map(render));
