@@ -5119,12 +5119,21 @@ export const products: Product[] = [
         skuFragment: "TRUENAVYWHITE",
         images: [
           {
-            src: "/products/tempo-training-pants-true-navy-white-catalog-product-front-20261026.webp",
+            src: "/products/tempo-training-pants-true-navy-white-catalog-apliiq-front-6241833.jpg",
             alt: "TEMPO Training Pants in True Navy/White, product front with the cream GA monogram on the left thigh",
+            caption: "Apliiq design preview. Sport-Tek LPST800 in 100% recycled polyester double knit.",
           },
           {
-            src: "/products/tempo-training-pants-true-navy-white-catalog-product-back-20261026.webp",
-            alt: "TEMPO Training Pants in True Navy/White, product back with the cream GOAL ATHLETICS wordmark on the right hip",
+            src: "/products/tempo-training-pants-true-navy-white-jessica-model-front-20261106.webp",
+            alt: "Jessica wearing True Navy/White TEMPO Training Pants and the White TEMPO Core Training Tee, front view",
+          },
+          {
+            src: "/products/tempo-training-pants-true-navy-white-jessica-model-three-quarter-20261106.webp",
+            alt: "Three-quarter view of Jessica in the True Navy/White TEMPO Training Pants, with the cream GA monogram on her left thigh",
+          },
+          {
+            src: "/products/tempo-training-pants-true-navy-white-jessica-model-back-20261106.webp",
+            alt: "Back view of Jessica in the True Navy/White TEMPO Training Pants, with the cream GOAL ATHLETICS wordmark on her right seat",
           },
         ],
       },
