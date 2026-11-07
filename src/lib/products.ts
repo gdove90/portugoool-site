@@ -5097,8 +5097,16 @@ export const products: Product[] = [
             alt: "TEMPO Training Pants in Black/White, product front with the white and red GA monogram on the left thigh",
           },
           {
-            src: "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp",
-            alt: "TEMPO Training Pants in Black/White, product back with the white and red GOAL ATHLETICS wordmark on the right hip",
+            src: "/products/tempo-training-pants-black-white-model-front-20261106.webp",
+            alt: "Michaela wearing Black/White TEMPO Training Pants, front view with the GA monogram on her left thigh",
+          },
+          {
+            src: "/products/tempo-training-pants-black-white-model-three-quarter-20261106.webp",
+            alt: "Michaela wearing Black/White TEMPO Training Pants in a front three-quarter pose",
+          },
+          {
+            src: "/products/tempo-training-pants-black-white-model-back-20261106.webp",
+            alt: "Back view of Michaela wearing Black/White TEMPO Training Pants, with the GOAL ATHLETICS wordmark on her right seat",
           },
         ],
       },
