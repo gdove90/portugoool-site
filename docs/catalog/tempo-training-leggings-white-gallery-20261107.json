@@ -2,7 +2,7 @@
   "date": "2026-11-07",
   "model": "Molly",
   "scope": "White TEMPO leggings gallery, styled with the actual Blue WT0093 TEMPO sports bra. Leggings only.",
-  "publication_status": "Owner requested upload on 2026-11-07. Added as the White color on the existing owner-only leggings preview.",
+  "publication_status": "Owner requested replacement of the first image with a dimensional floating product visualization on 2026-11-07. Existing owner-only preview scope retained.",
   "model_reference_directory": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Molly-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Molly",
   "leggings": {
     "style": "WB0025-O001-V2",
@@ -55,9 +55,9 @@
       }
     ]
   },
-  "review": "Compared with Molly brand references, the saved WB0025 White supplier front/back mockups and approved Blue WT0093 front/back references. Rear monogram size calibrated; white leggings have black waistband-only branding and blue bra has its existing white rear monogram. Product visualizations; supplier print file remains the physical-size authority.",
+  "review": "Current first image is a dimensional floating visualization based on the supplier garment and worn fit references. Model views remain in positions 2-4; back view last. Original supplier ghost retained as a reference.",
   "gallery_order": [
-    "ghost-front",
+    "floating-ghost-front",
     "front",
     "quarter",
     "back"
@@ -65,14 +65,14 @@
   "files": [
     {
       "view": "ghost-front",
-      "name": "00 White TEMPO Leggings - Original Tapstitch Ghost Front.png",
-      "source": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png",
-      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\00 White TEMPO Leggings - Original Tapstitch Ghost Front.png",
-      "collection_path": null,
-      "width": 1400,
-      "height": 1400,
-      "sha256": "aa5851c4c23671101f8d4f8261a056876289af3c9dece796e1617f6551ff29ea",
-      "bytes": 245489
+      "name": "00 White TEMPO Leggings - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-2d906ff0-017a-4086-9300-50ea72edf324.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\00 White TEMPO Leggings - Floating Ghost Front.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 White TEMPO Leggings - Floating Ghost Front.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d8c819f6126793e54ac9a3ad0e1aeea3720f2038756a680189afa74ade5dff0b",
+      "bytes": 1552227
     },
     {
       "view": "front",
@@ -164,11 +164,11 @@
   "website_preview": "https://goalathletics.shop/women/preview/tempo-training-leggings?color=White",
   "website_images": [
     {
-      "src": "/products/tempo-training-leggings/tempo-training-leggings-white-ghost-front-20261107.png",
-      "alt": "White TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
-      "caption": "Supplier product preview.",
-      "sha256": "aa5851c4c23671101f8d4f8261a056876289af3c9dece796e1617f6551ff29ea",
-      "bytes": 245489
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-white-floating-ghost-front-20261107.webp",
+      "alt": "White TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "a5a12db5bf293aff94acda752a73d401c472bf794ffbadf3484be0709170d1c2",
+      "bytes": 24958
     },
     {
       "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-front-20261107.webp",
@@ -196,5 +196,36 @@
   "slug": "tempo-training-leggings",
   "price_cents": 0,
   "available_for_sale": false,
-  "publication_scope": "Existing owner-only Women preview; public collection gate unchanged."
+  "publication_scope": "Existing owner-only Women preview; public collection gate unchanged.",
+  "original_supplier_ghost": {
+    "view": "ghost-front",
+    "name": "00 White TEMPO Leggings - Original Tapstitch Ghost Front.png",
+    "source": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png",
+    "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\00 White TEMPO Leggings - Original Tapstitch Ghost Front.png",
+    "collection_path": null,
+    "width": 1400,
+    "height": 1400,
+    "sha256": "aa5851c4c23671101f8d4f8261a056876289af3c9dece796e1617f6551ff29ea",
+    "bytes": 245489
+  },
+  "ghost_front_update": {
+    "date": "2026-11-07",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional invisible-mannequin leggings photograph to edit. Image 2 is the exact White WB0025 garment color and construction reference. Change ONLY the leggings fabric in image 1 from black to opaque true white, matching image 2. Recolor the entire garment, including stitching, flat hems and inside of the waistband, to white with natural soft gray shading. Preserve exactly the filled, worn shape, rounded waistband, thigh and calf volume, natural knee creases, relaxed leg stance and hollow waistband opening of image 1. Keep the same smooth matte performance-knit texture, actual cut and seam layout. Keep the same light gray studio background, soft floating shadow, lighting, camera angle, margins and 1024x1536 framing. The front remains completely unprinted. Only the garment is present, with no person, mannequin parts, feet, shoes, additional objects, text or logos. One photograph.",
+    "supplier_reference": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png",
+    "source_generated_png": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-2d906ff0-017a-4086-9300-50ea72edf324.png",
+    "saved_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Leggings - Floating Ghost Fronts\\00 White TEMPO Leggings - Floating Ghost Front.png",
+    "collection_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 White TEMPO Leggings - Floating Ghost Front.png",
+    "shoot_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\00 White TEMPO Leggings - Floating Ghost Front.png",
+    "website_image": {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-white-floating-ghost-front-20261107.webp",
+      "alt": "White TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "a5a12db5bf293aff94acda752a73d401c472bf794ffbadf3484be0709170d1c2",
+      "bytes": 24958
+    },
+    "source_record": "docs/catalog/tempo-training-leggings-floating-ghosts-20261107.json",
+    "review": "Natural worn volume, hollow shaped waistband, subtle knee creases, matte stretch-knit texture and flat ankle hems. Front unprinted, complete garment visible on a consistent gray studio background."
+  },
+  "initial_gallery_review": "Compared with Molly brand references, the saved WB0025 White supplier front/back mockups and approved Blue WT0093 front/back references. Rear monogram size calibrated; white leggings have black waistband-only branding and blue bra has its existing white rear monogram. Product visualizations; supplier print file remains the physical-size authority."
 }

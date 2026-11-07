@@ -5462,9 +5462,9 @@ export const products: Product[] = [
     "customizationPriceCents": 0,
     "images": [
       {
-        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-ghost-front-20261106.png",
-        "alt": "Black TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
-        "caption": "Supplier product preview."
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
+        "alt": "Black TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+        "caption": "Product visualization."
       },
       {
         "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-front-20261106.webp",
@@ -5491,9 +5491,9 @@ export const products: Product[] = [
         "comingSoon": true,
         "images": [
           {
-            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-ghost-front-20261106.png",
-            "alt": "Black TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
-            "caption": "Supplier product preview."
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
+            "alt": "Black TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+            "caption": "Product visualization."
           },
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-front-20261106.webp",
@@ -5520,9 +5520,9 @@ export const products: Product[] = [
         "comingSoon": true,
         "images": [
           {
-            "src": "/products/tempo-training-leggings/tempo-training-leggings-white-ghost-front-20261107.png",
-            "alt": "White TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
-            "caption": "Supplier product preview."
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-white-floating-ghost-front-20261107.webp",
+            "alt": "White TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+            "caption": "Product visualization."
           },
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-front-20261107.webp",
@@ -5549,9 +5549,9 @@ export const products: Product[] = [
         "comingSoon": true,
         "images": [
           {
-            "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-ghost-front-20261107.png",
-            "alt": "Haze Blue TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
-            "caption": "Supplier product preview."
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-floating-ghost-front-20261107.webp",
+            "alt": "Haze Blue TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+            "caption": "Product visualization."
           },
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-front-20261107.webp",

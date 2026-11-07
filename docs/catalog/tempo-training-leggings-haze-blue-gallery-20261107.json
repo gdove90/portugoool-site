@@ -2,7 +2,7 @@
   "date": "2026-11-07",
   "model": "Suzanne",
   "scope": "Haze Blue TEMPO leggings gallery styled with the actual light Blue WT0093 TEMPO sports bra. Leggings only.",
-  "publication_status": "Owner requested upload on 2026-11-07. Haze Blue added to the existing owner-only Women preview.",
+  "publication_status": "Owner requested replacement of the first image with a dimensional floating product visualization on 2026-11-07. Existing owner-only preview scope retained.",
   "model_reference_directory": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Suzanne-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Suzanne",
   "leggings": {
     "style": "WB0025-O001-V2",
@@ -95,9 +95,9 @@
       }
     }
   },
-  "review": "Compared Suzanne identity with the saved brand model views and both garments with their actual product references. Plain fronts, actual broad-strap WT0093 construction, WB0025 high waistband and flat ankle hems preserved. Leggings monogram light blue and waistband-only; bra monogram white. Both logo proportion checks pass. Original supplier ghost copied without changes.",
+  "review": "Current first image is a dimensional floating visualization based on the supplier garment and worn fit references. Model views remain in positions 2-4; back view last. Original supplier ghost retained as a reference.",
   "gallery_order": [
-    "ghost-front",
+    "floating-ghost-front",
     "front",
     "quarter",
     "back"
@@ -105,14 +105,14 @@
   "files": [
     {
       "view": "ghost-front",
-      "name": "00 Haze Blue TEMPO Leggings - Original Tapstitch Ghost Front.png",
-      "source": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-front.png",
-      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\00 Haze Blue TEMPO Leggings - Original Tapstitch Ghost Front.png",
-      "collection_path": null,
-      "width": 1400,
-      "height": 1400,
-      "sha256": "5abf0a716e5c6fed666c4969431710ed4cf1b967db3c2708b315e67f135b4305",
-      "bytes": 343038
+      "name": "00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-f4700668-863e-4c27-b721-6d822633e826.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "3484ea03d1261b73697aedb2804e279d75e02515f06d705abd7a7c8ab1c4aaf2",
+      "bytes": 1717102
     },
     {
       "view": "front",
@@ -160,11 +160,11 @@
   },
   "website_images": [
     {
-      "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-ghost-front-20261107.png",
-      "alt": "Haze Blue TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
-      "caption": "Supplier product preview.",
-      "sha256": "5abf0a716e5c6fed666c4969431710ed4cf1b967db3c2708b315e67f135b4305",
-      "bytes": 343038
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-floating-ghost-front-20261107.webp",
+      "alt": "Haze Blue TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "558ba5c9f9b78369753ec1c7b926d1af5058d6ae443ae69ebb2ab1487a7fe0d9",
+      "bytes": 60154
     },
     {
       "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-front-20261107.webp",
@@ -187,5 +187,36 @@
       "sha256": "4edbf0b1c2369304cd87f3188209819ce697f35895c3387b7df6a0dc67c2bfc5",
       "bytes": 57578
     }
-  ]
+  ],
+  "original_supplier_ghost": {
+    "view": "ghost-front",
+    "name": "00 Haze Blue TEMPO Leggings - Original Tapstitch Ghost Front.png",
+    "source": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-front.png",
+    "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\00 Haze Blue TEMPO Leggings - Original Tapstitch Ghost Front.png",
+    "collection_path": null,
+    "width": 1400,
+    "height": 1400,
+    "sha256": "5abf0a716e5c6fed666c4969431710ed4cf1b967db3c2708b315e67f135b4305",
+    "bytes": 343038
+  },
+  "ghost_front_update": {
+    "date": "2026-11-07",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional invisible-mannequin leggings photograph to edit. Image 2 is the actual Haze Blue WB0025 garment color and construction reference. Change ONLY the leggings fabric in image 1 from black to the exact muted medium Haze Blue in image 2, with a representative midtone #7C9CB5 and natural dimensional shading. Recolor the full garment including stitching, flat hems and the waistband interior consistently. Preserve the exact filled, worn shape, rounded waistband, thigh and calf volume, gentle knee creases, relaxed leg stance and hollow waistband opening of image 1. Keep the smooth matte performance-knit texture, actual cut, seams, light gray studio background, soft floating shadow, lighting, camera angle, margins and 1024x1536 framing unchanged. Front completely unprinted. Only the garment is present, with no person, mannequin parts, feet, shoes, additional objects, text or logos. One photograph.",
+    "supplier_reference": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-front.png",
+    "source_generated_png": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-f4700668-863e-4c27-b721-6d822633e826.png",
+    "saved_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Leggings - Floating Ghost Fronts\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+    "collection_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+    "shoot_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+    "website_image": {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-floating-ghost-front-20261107.webp",
+      "alt": "Haze Blue TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "558ba5c9f9b78369753ec1c7b926d1af5058d6ae443ae69ebb2ab1487a7fe0d9",
+      "bytes": 60154
+    },
+    "source_record": "docs/catalog/tempo-training-leggings-floating-ghosts-20261107.json",
+    "review": "Natural worn volume, hollow shaped waistband, subtle knee creases, matte stretch-knit texture and flat ankle hems. Front unprinted, complete garment visible on a consistent gray studio background."
+  },
+  "initial_gallery_review": "Compared Suzanne identity with the saved brand model views and both garments with their actual product references. Plain fronts, actual broad-strap WT0093 construction, WB0025 high waistband and flat ankle hems preserved. Leggings monogram light blue and waistband-only; bra monogram white. Both logo proportion checks pass. Original supplier ghost copied without changes."
 }

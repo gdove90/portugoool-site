@@ -39,7 +39,7 @@
     "gallery_decoration_override": "User requested only the bra rear monogram changed from cream to white/red on 2026-11-07. Existing bra product listing and production holds unchanged."
   },
   "gallery_order": [
-    "original-supplier-ghost-front",
+    "floating-ghost-front",
     "michaela-front",
     "michaela-quarter",
     "michaela-back"
@@ -107,9 +107,11 @@
   },
   "files": [
     {
-      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-ghost-front-20261106.png",
-      "alt": "Black TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
-      "caption": "Supplier product preview."
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
+      "alt": "Black TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "87790dfb8ca30cc41e5acd4c25e44f6dbb7e855c72e3d45bd052e3de1b705835",
+      "bytes": 46172
     },
     {
       "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-front-20261106.webp",
@@ -126,5 +128,60 @@
       "alt": "Michaela in Black TEMPO Training Leggings, back view with white and red GA monograms centered on the leggings waistband and the lower back of the Black TEMPO racerback bra",
       "caption": "Product visualization. Leggings only; bra shown for styling."
     }
-  ]
+  ],
+  "original_supplier_ghost": {
+    "src": "/products/tempo-training-leggings/tempo-training-leggings-black-ghost-front-20261106.png",
+    "alt": "Black TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+    "caption": "Supplier product preview."
+  },
+  "website_images": [
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
+      "alt": "Black TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "87790dfb8ca30cc41e5acd4c25e44f6dbb7e855c72e3d45bd052e3de1b705835",
+      "bytes": 46172
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-front-20261106.webp",
+      "alt": "Michaela facing forward in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "36a5658e619a8504242e716f27d5d93154bf7ed2db898773b360b160268a3374",
+      "bytes": 64110
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-quarter-20261106.webp",
+      "alt": "Michaela laughing at a front-left quarter turn in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "788c76a9014ab8576f2d57eb82974a1efebf5a88dc292dff8e20f2949647558e",
+      "bytes": 61972
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-red-white-bra-20261107.webp",
+      "alt": "Michaela in Black TEMPO Training Leggings, back view with white and red GA monograms centered on the leggings waistband and the lower back of the Black TEMPO racerback bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "5edf2d185ea099c26e00d0bd2f0588ecdf07ce43ee07408585718903ebf9fa81",
+      "bytes": 63198
+    }
+  ],
+  "ghost_front_update": {
+    "date": "2026-11-07",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: product-mockup. Create a premium three-dimensional INVISIBLE-MANNEQUIN FRONT product photograph of the Black WB0025 high-rise leggings. Image 1 is the exact garment reference for cut, high wide waistband, curved waistband seam, unprinted front, smooth nylon/spandex knit and flat ankle hems. Image 2 is a fit reference only: use the leggings' natural fitted shape on the wearer, without including the person or any other garment. Present the leggings ALONE, filled out exactly as if being worn by an invisible athletic model: rounded waistband and hip volume, softly shaped thighs, knees and calves, realistic fabric tension and a few subtle natural knee creases. Relaxed standing stance with one knee gently relaxed and a slight offset between the two legs. Waistband opening has a believable elliptical rim and natural interior depth. Keep the garment's actual seams and proportions, matte performance-knit texture and true black color. Clean front view with slight photographic depth, no added design details, logos, pockets, stripes, drawstrings or ribbed cuffs. No visible person, skin, mannequin parts, torso, feet, shoes or bra. Float the complete pair just above a soft diffuse oval shadow on a light neutral-gray seamless studio background, using soft side lighting to show fabric volume clearly. Portrait 1024x1536. Entire waistband and both hems visible, product fills about 85 percent of image height, generous margins and consistent premium catalog framing. One photograph, no text or watermark.",
+    "supplier_reference": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-front.png",
+    "source_generated_png": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-86edd94a-e44c-4691-a503-b46adcba0fcf.png",
+    "saved_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Leggings - Floating Ghost Fronts\\00 Black TEMPO Leggings - Floating Ghost Front.png",
+    "collection_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 Black TEMPO Leggings - Floating Ghost Front.png",
+    "shoot_png": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Michaela - Black TEMPO Leggings\\00 Black TEMPO Leggings - Floating Ghost Front.png",
+    "website_image": {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
+      "alt": "Black TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "87790dfb8ca30cc41e5acd4c25e44f6dbb7e855c72e3d45bd052e3de1b705835",
+      "bytes": 46172
+    },
+    "source_record": "docs/catalog/tempo-training-leggings-floating-ghosts-20261107.json",
+    "review": "Natural worn volume, hollow shaped waistband, subtle knee creases, matte stretch-knit texture and flat ankle hems. Front unprinted, complete garment visible on a consistent gray studio background."
+  },
+  "publication_status": "Owner requested replacement of the first image with a dimensional floating product visualization on 2026-11-07. Existing owner-only preview scope retained."
 }

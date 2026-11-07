@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-07",
+  "product_id": "80000000-0000-4000-8000-000000000026",
+  "slug": "tempo-training-leggings",
+  "request": "Replace the flat leggings ghosts with floating fronts that look naturally worn.",
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "color": "Black",
+      "prompt": "Use case: product-mockup. Create a premium three-dimensional INVISIBLE-MANNEQUIN FRONT product photograph of the Black WB0025 high-rise leggings. Image 1 is the exact garment reference for cut, high wide waistband, curved waistband seam, unprinted front, smooth nylon/spandex knit and flat ankle hems. Image 2 is a fit reference only: use the leggings' natural fitted shape on the wearer, without including the person or any other garment. Present the leggings ALONE, filled out exactly as if being worn by an invisible athletic model: rounded waistband and hip volume, softly shaped thighs, knees and calves, realistic fabric tension and a few subtle natural knee creases. Relaxed standing stance with one knee gently relaxed and a slight offset between the two legs. Waistband opening has a believable elliptical rim and natural interior depth. Keep the garment's actual seams and proportions, matte performance-knit texture and true black color. Clean front view with slight photographic depth, no added design details, logos, pockets, stripes, drawstrings or ribbed cuffs. No visible person, skin, mannequin parts, torso, feet, shoes or bra. Float the complete pair just above a soft diffuse oval shadow on a light neutral-gray seamless studio background, using soft side lighting to show fabric volume clearly. Portrait 1024x1536. Entire waistband and both hems visible, product fills about 85 percent of image height, generous margins and consistent premium catalog framing. One photograph, no text or watermark."
+    },
+    {
+      "color": "White",
+      "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional invisible-mannequin leggings photograph to edit. Image 2 is the exact White WB0025 garment color and construction reference. Change ONLY the leggings fabric in image 1 from black to opaque true white, matching image 2. Recolor the entire garment, including stitching, flat hems and inside of the waistband, to white with natural soft gray shading. Preserve exactly the filled, worn shape, rounded waistband, thigh and calf volume, natural knee creases, relaxed leg stance and hollow waistband opening of image 1. Keep the same smooth matte performance-knit texture, actual cut and seam layout. Keep the same light gray studio background, soft floating shadow, lighting, camera angle, margins and 1024x1536 framing. The front remains completely unprinted. Only the garment is present, with no person, mannequin parts, feet, shoes, additional objects, text or logos. One photograph."
+    },
+    {
+      "color": "Haze Blue",
+      "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional invisible-mannequin leggings photograph to edit. Image 2 is the actual Haze Blue WB0025 garment color and construction reference. Change ONLY the leggings fabric in image 1 from black to the exact muted medium Haze Blue in image 2, with a representative midtone #7C9CB5 and natural dimensional shading. Recolor the full garment including stitching, flat hems and the waistband interior consistently. Preserve the exact filled, worn shape, rounded waistband, thigh and calf volume, gentle knee creases, relaxed leg stance and hollow waistband opening of image 1. Keep the smooth matte performance-knit texture, actual cut, seams, light gray studio background, soft floating shadow, lighting, camera angle, margins and 1024x1536 framing unchanged. Front completely unprinted. Only the garment is present, with no person, mannequin parts, feet, shoes, additional objects, text or logos. One photograph."
+    }
+  ],
+  "colors": [
+    "Black",
+    "White",
+    "Haze Blue"
+  ],
+  "publication_scope": "First image only on the existing owner-only Women leggings preview. Price, checkout holds and product specifications preserved.",
+  "garment_reference": "Tapstitch WB0025-O001-V2; smooth 75% nylon / 25% spandex, 220 gsm knit; wide high waistband and flat ankle hems; unprinted front.",
+  "fit_reference": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Michaela - Black TEMPO Leggings/01 Michaela Black TEMPO Leggings - Front.png",
+  "style": "Consistent worn volume and relaxed stance with a shaped hollow waistband, natural fabric tension, soft knee creases, neutral gray studio and diffuse floating shadow.",
+  "images_are": "Product visualizations based on garment references, not supplier photography.",
+  "original_supplier_ghosts": "Retained unchanged for reference; not the current first gallery images.",
+  "files": [
+    {
+      "color": "Black",
+      "view": "ghost-front",
+      "name": "00 Black TEMPO Leggings - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-86edd94a-e44c-4691-a503-b46adcba0fcf.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Leggings - Floating Ghost Fronts\\00 Black TEMPO Leggings - Floating Ghost Front.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 Black TEMPO Leggings - Floating Ghost Front.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "217120a951d80f74dfcaea3b683c67799ad8195555b56a6b164d627b2bab1c07",
+      "bytes": 1708358,
+      "shoot_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Michaela - Black TEMPO Leggings\\00 Black TEMPO Leggings - Floating Ghost Front.png",
+      "website_image": {
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
+        "alt": "Black TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+        "caption": "Product visualization.",
+        "sha256": "87790dfb8ca30cc41e5acd4c25e44f6dbb7e855c72e3d45bd052e3de1b705835",
+        "bytes": 46172
+      },
+      "supplier_reference": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-front.png"
+    },
+    {
+      "color": "White",
+      "view": "ghost-front",
+      "name": "00 White TEMPO Leggings - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-2d906ff0-017a-4086-9300-50ea72edf324.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Leggings - Floating Ghost Fronts\\00 White TEMPO Leggings - Floating Ghost Front.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 White TEMPO Leggings - Floating Ghost Front.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d8c819f6126793e54ac9a3ad0e1aeea3720f2038756a680189afa74ade5dff0b",
+      "bytes": 1552227,
+      "shoot_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\00 White TEMPO Leggings - Floating Ghost Front.png",
+      "website_image": {
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-white-floating-ghost-front-20261107.webp",
+        "alt": "White TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+        "caption": "Product visualization.",
+        "sha256": "a5a12db5bf293aff94acda752a73d401c472bf794ffbadf3484be0709170d1c2",
+        "bytes": 24958
+      },
+      "supplier_reference": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png"
+    },
+    {
+      "color": "Haze Blue",
+      "view": "ghost-front",
+      "name": "00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-f4700668-863e-4c27-b721-6d822633e826.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Leggings - Floating Ghost Fronts\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "3484ea03d1261b73697aedb2804e279d75e02515f06d705abd7a7c8ab1c4aaf2",
+      "bytes": 1717102,
+      "shoot_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\00 Haze Blue TEMPO Leggings - Floating Ghost Front.png",
+      "website_image": {
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-floating-ghost-front-20261107.webp",
+        "alt": "Haze Blue TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+        "caption": "Product visualization.",
+        "sha256": "558ba5c9f9b78369753ec1c7b926d1af5058d6ae443ae69ebb2ab1487a7fe0d9",
+        "bytes": 60154
+      },
+      "supplier_reference": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-front.png"
+    }
+  ]
+}
