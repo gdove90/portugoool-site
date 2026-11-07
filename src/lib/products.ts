@@ -5076,9 +5076,25 @@ export const products: Product[] = [
         skuFragment: "LIGHTPURPLE",
         images: [
           {
-            src: "/products/tempo-quarter-zip-light-purple-catalog-product-front-20261026.webp",
-            alt: "TEMPO Quarter Zip in Light Purple, product front with the black GA monogram on the left chest beside the zip",
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-floating-ghost-front-20261107.webp",
+            "alt": "Light Purple TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and tonal lavender GA on the left chest",
+            "caption": "Product visualization."
           },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-michaela-front-20261107.webp",
+            "alt": "Michaela facing forward with low folded arms in the Light Purple TEMPO Quarter Zip with a tonal lavender GA on her left chest, styled with White TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-michaela-front-quarter-20261107.webp",
+            "alt": "Michaela laughing at a front quarter turn in the Light Purple TEMPO Quarter Zip with her hands at her outer hips, styled with White TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-michaela-back-quarter-20261107.webp",
+            "alt": "Michaela at a rear quarter turn with her face in profile and hands behind her back, showing the plain back of the Light Purple TEMPO Quarter Zip, styled with White TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          }
         ],
       },
       {

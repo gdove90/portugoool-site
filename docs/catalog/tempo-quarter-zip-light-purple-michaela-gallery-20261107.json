@@ -1,0 +1,178 @@
+{
+  "date": "2026-11-07",
+  "product_id": "80000000-0000-4000-8000-000000000018",
+  "slug": "tempo-quarter-zip",
+  "model": "Michaela",
+  "color": "Light Purple",
+  "scope": "Replace only the Light Purple quarter-zip gallery with four approved images styled with White WB0025 leggings. Quarter zip only.",
+  "publication_status": "Owner requested upload on 2026-11-07.",
+  "publication_scope": "Existing owner collection preview; pricing, fulfillment, other galleries and launch settings preserved.",
+  "website_preview": "https://goalathletics.shop/women/preview/tempo-quarter-zip?color=Light%20Purple",
+  "quarter_zip": {
+    "supplier": "Tapstitch",
+    "name": "Women's Quarter-Zip Yoga Pullover",
+    "brand_name": "TEMPO Quarter Zip",
+    "style": "WT0092-P001-V2",
+    "color": "Light Purple",
+    "saved_design_id": "1564323621013516288",
+    "saved_detail_id": "1564324002208669696",
+    "saved_design_url": "https://www.tapstitch.com/account/products-pool/product/1564324002208669696",
+    "fabric": "91% polyester / 9% spandex, 165 gsm",
+    "monogram": {
+      "position": "wearer's left chest",
+      "ink": "#B5AFCA",
+      "width_inches": 2,
+      "height_inches": 1.8
+    },
+    "back": "Plain"
+  },
+  "styling_leggings": {
+    "name": "TEMPO Training Leggings",
+    "style": "WB0025-O001-V2",
+    "color": "White",
+    "saved_design_id": "1568599593921474560",
+    "saved_detail_id": "1568599594131214336",
+    "saved_design_url": "https://www.tapstitch.com/account/products-pool/product/1568599594131214336",
+    "fabric": "75% nylon / 25% spandex, 220 gsm",
+    "monogram": {
+      "position": "center back waistband",
+      "inks": [
+        "#000000"
+      ],
+      "width_inches": 1.4,
+      "height_inches": 1.27,
+      "visibility": "Naturally covered by the regular-length quarter zip in rear view"
+    },
+    "front": "Plain and unbranded",
+    "footwear": "Plain white trainers"
+  },
+  "gallery_order": [
+    "ghost-front",
+    "front",
+    "front-quarter",
+    "back-quarter"
+  ],
+  "review": {
+    "identity": "Saved Michaela identity references used: natural freckles, warm medium skin, dark curly high bun with honey highlights, loose tendrils and gold hoops.",
+    "garments": "Saved supplier references used. Tonal lavender chest monogram, plain top back, White leggings with no front or seat graphics and no relocated waistband mark.",
+    "poses": [
+      "Dimensional floating ghost front",
+      "Front with low folded arms and a warm smile",
+      "Laughing left-facing front quarter with relaxed hands at outer hips",
+      "Right-facing rear quarter, face side-on in profile, hands lightly clasped behind low back"
+    ],
+    "physical_print_size_note": "Saved nominal supplier measurements and colors guide the render; a generated photograph is not physical print-size or color verification.",
+    "standing_direction": "Ghost first, rear quarter-turn last, varied poses for each model."
+  },
+  "files": [
+    {
+      "position": 1,
+      "key": "ghost-front",
+      "filename": "00 Light Purple TEMPO Quarter Zip - Floating Ghost Front.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-b0fa969d-fe22-4eb4-b3d8-b5b0d5abd42e.png",
+      "references": [
+        "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-f8b4ada6-40a5-4eba-9ef0-a200ae980106.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Light-Purple-front.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional floating quarter-zip photograph to edit; image 2 is the exact saved LIGHT PURPLE WT0092 garment and its tonal lavender GA. Change only image 1's garment color and monogram ink to match image 2. Match the very pale cool lavender fabric accurately, including collar interior, seams, hems and zipper tape; retain the dark metal zipper pull in image 2. Replace the black mark with the exact one-color muted lavender #B5AFCA GA from image 2, slightly darker than the garment, retaining the precise silhouette, wearer's-left chest position and discreet saved 2.00 by 1.80 inch size. Preserve image 1's filled natural worn form, fitted regular hip-length body, hollow stand mock neck, closed quarter-length zipper, set-in long sleeves, thumbhole slits, empty cuffs, smooth fine lightweight matte 165 gsm performance knit, subtle folds, camera angle and margins. Keep the same light neutral-gray seamless studio, lighting, floating shadow and 1024x1536 portrait framing. One complete quarter-zip top only. No person, hands, mannequin parts, hanger, legs, hood, ribbed waistband, extra graphics or words.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Michaela - Light Purple TEMPO Quarter Zip\\00 Light Purple TEMPO Quarter Zip - Floating Ghost Front.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 Light Purple TEMPO Quarter Zip - Floating Ghost Front.png",
+      "sha256": "cfa08d4117449bb546f2625959cea7cd87c4808e4d6f7161ecb39315443742db",
+      "bytes": 1695441,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "position": 2,
+      "key": "front",
+      "filename": "01 Michaela Light Purple TEMPO Quarter Zip - Front.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-cb2c1e7c-649c-4040-8fb7-95800ae590b3.png",
+      "references": [
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Michaela-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Michaela/01 Michaela Front.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Light-Purple-front.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png"
+      ],
+      "prompt": "Use case: identity-preserve. Professional full-length activewear catalog photograph of adult brand model MICHAELA in the actual Light Purple TEMPO quarter zip and White TEMPO leggings. Image 1 is Michaela's canonical identity: preserve her exact face, natural freckles, warm medium complexion, dark curly high bun with honey highlights, loose tendrils, small gold hoops and natural athletic build. Image 2 is the actual saved Light Purple WT0092 top; image 3 is the actual White WB0025 leggings. Match the top's very pale cool lavender fabric and discreet muted lavender #B5AFCA GA precisely, one-color slightly darker than the garment, exact native GA shape on the wearer's LEFT chest, saved 2.00 by 1.80 inches. Keep the closed stand mock neck and center quarter zipper, set-in long sleeves, thumbhole cuffs, fitted regular hip-length untucked flat hem and smooth lightweight matte 91% polyester/9% spandex 165 gsm performance knit. White leggings match image 3: plain unbranded front, high waistband naturally covered by the top, fitted full-length legs, flat ankle hems, smooth matte stretch knit. Style with plain white training sneakers. Give Michaela her own confident FRONT pose: face and torso toward camera, warm broad smile, arms loosely folded LOW across her waist below the chest logo, relaxed shoulders, feet comfortably apart and weight slightly shifted onto one leg. Keep the entire chest monogram clearly unobstructed. Soft even commercial light, realistic skin and garment folds, neutral gray seamless studio, complete head and both shoes visible with margins. One 1024x1536 portrait photograph. No additional accessories, props, words, logos, stripes, pockets or crop-top alterations.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Michaela - Light Purple TEMPO Quarter Zip\\01 Michaela Light Purple TEMPO Quarter Zip - Front.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\01 Michaela Light Purple TEMPO Quarter Zip - Front.png",
+      "sha256": "d0b107110ca1375de5187f2052d4551d739e0e06cab027aaaed89f0735e3dc24",
+      "bytes": 1704100,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "position": 3,
+      "key": "front-quarter",
+      "filename": "02 Michaela Light Purple TEMPO Quarter Zip - Front Quarter.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-8798af44-f984-4499-b181-5056e3d107bb.png",
+      "references": [
+        "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-cb2c1e7c-649c-4040-8fb7-95800ae590b3.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Michaela-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Michaela/02 Michaela Front Left Quarter.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Light-Purple-front.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png"
+      ],
+      "prompt": "Use case: identity-preserve. Create Michaela's FRONT QUARTER-TURN professional quarter-zip catalog photograph. Image 1 is her approved front identity, complete Light Purple WT0092 top and White WB0025 leggings outfit, white trainers and gray studio. Image 2 is the canonical Michaela left-facing quarter identity and anchors her face, freckles, dark curly high bun with honey highlights and gold hoops. Images 3 and 4 are the exact saved supplier garments. Keep her exact natural athletic build, proportions, garment colors and construction. Rotate her WHOLE BODY AND FEET about 40-45 degrees toward the LEFT side of the frame, clearly between front and side, with her wearer's left shoulder/chest nearer camera. This must be a real front quarter torso angle. Give her a bright candid laugh looking off camera to the left, both hands resting easily at the outer hips below the chest mark, elbows relaxed, and one foot a little forward with a soft knee. Keep the exact small muted lavender #B5AFCA GA shape and wearer's-left chest location from images 1 and 3, saved 2.00 by 1.80 inches, unobstructed with natural perspective. Match the very pale cool lavender fabric, closed stand mock neck, center quarter zipper, set-in long sleeves, thumbhole cuffs, fitted regular hip-length untucked hem and smooth lightweight matte 165 gsm knit. White leggings have a plain front and sides, fitted full-length legs and flat ankle hems; their high waistband remains naturally under the top. Same plain white sneakers and soft even commercial light as image 1. Neutral gray seamless studio, realistic skin and garment folds, entire bun and both shoes fully visible with margins. One 1024x1536 portrait photograph. No new logos, wording, props, stripes, pockets or accessories.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Michaela - Light Purple TEMPO Quarter Zip\\02 Michaela Light Purple TEMPO Quarter Zip - Front Quarter.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\02 Michaela Light Purple TEMPO Quarter Zip - Front Quarter.png",
+      "sha256": "ae671566c3f38e5351aec5ade1836c67f4d03a8d4f82e175c4ae9ae2957b4325",
+      "bytes": 1697544,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "position": 4,
+      "key": "back-quarter",
+      "filename": "03 Michaela Light Purple TEMPO Quarter Zip - Back Quarter.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-4141b32b-fc68-46f4-9666-72cf1b24a4cb.png",
+      "references": [
+        "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-cb2c1e7c-649c-4040-8fb7-95800ae590b3.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Michaela-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Michaela/07 Michaela Right Profile.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Michaela-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Michaela/06 Michaela Rear Right Quarter.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Light-Purple-back.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-back.png"
+      ],
+      "prompt": "Use case: identity-preserve. Create Michaela's REAR QUARTER-TURN full-length quarter-zip catalog photograph with her face SIDE-ON IN PROFILE. Image 1 is approved Michaela identity, Light Purple WT0092 top, White WB0025 leggings, white trainers and gray studio. Image 2 is her exact RIGHT-FACING facial profile. Image 3 anchors her rear-quarter body, dark curly high bun with honey highlights, loose tendrils, natural freckles and gold hoops. Image 4 is the exact PLAIN Light Purple quarter-zip back; image 5 is the exact White leggings back. Turn her whole body about 40 degrees from straight back toward the RIGHT side of the frame. Her back and right side are clearly visible; turn her head naturally just enough to show the right-facing SIDE PROFILE in image 2, with a warm playful smile looking sideways off camera, not at the lens. Distinct relaxed pose: hands lightly clasped behind her LOW back at hip level, elbows easy, weight on the far leg with the nearer foot angled diagonally outward. Keep shoulders relaxed and the upper back unobstructed. Preserve the very pale cool lavender top's closed stand mock neck, set-in long sleeves, thumbhole cuffs, fitted regular hip-length untucked flat hem and smooth lightweight matte 165 gsm knit. The top BACK IS COMPLETELY PLAIN as image 4. White leggings match image 5, full length, fitted smooth matte stretch knit, flat ankle hems. Their small black GA belongs only at the center back waistband, is naturally covered by the regular-length top and MUST NOT be moved onto the seat or the top back. No other branding on the back or legs. Same plain white training shoes, neutral gray seamless studio and soft even commercial lighting as image 1. Natural proportions, realistic skin and fabric folds. One 1024x1536 portrait photograph, entire bun and both shoes fully visible with margins. No extra text, logos, accessories, props, pockets or stripes.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Michaela - Light Purple TEMPO Quarter Zip\\03 Michaela Light Purple TEMPO Quarter Zip - Back Quarter.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\03 Michaela Light Purple TEMPO Quarter Zip - Back Quarter.png",
+      "sha256": "a8b6ec21d30e2a283fc5ac2b654a63d12e3a23832296cb5257083e1f54ef08f5",
+      "bytes": 1675608,
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "website_images": [
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-floating-ghost-front-20261107.webp",
+      "alt": "Light Purple TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and tonal lavender GA on the left chest",
+      "caption": "Product visualization.",
+      "sha256": "b25e7c6fe41c92ffbb67ef5d7307f003a76cebfb0fca880ac7523608d94806e6",
+      "bytes": 42970
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-michaela-front-20261107.webp",
+      "alt": "Michaela facing forward with low folded arms in the Light Purple TEMPO Quarter Zip with a tonal lavender GA on her left chest, styled with White TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "a3940c566fa9f0a09dbbbd06c5500f330f4c544599955f1afba08d7d7517b4dc",
+      "bytes": 49036
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-michaela-front-quarter-20261107.webp",
+      "alt": "Michaela laughing at a front quarter turn in the Light Purple TEMPO Quarter Zip with her hands at her outer hips, styled with White TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "a92ce94a9794520d618c55efdf761b42701ee949e2650c10e352c13e70d9aaba",
+      "bytes": 53514
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-light-purple-michaela-back-quarter-20261107.webp",
+      "alt": "Michaela at a rear quarter turn with her face in profile and hands behind her back, showing the plain back of the Light Purple TEMPO Quarter Zip, styled with White TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "1ad1f0f4f0b8002ed0975d71b8faebce1dfcfd1cc045c287350fc075af170015",
+      "bytes": 51434
+    }
+  ],
+  "generation": {
+    "mode": "Built-in image_gen",
+    "source_record": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Michaela - Light Purple TEMPO Quarter Zip/Gallery Sources and Prompts.json"
+  },
+  "catalog_price_cents": 4400
+}
