@@ -4930,7 +4930,7 @@ export const products: Product[] = [
   // the V1.3 GA monogram 2.00 x 1.80 in at the top of the wearer's left
   // chest print area, art centre 4 in from centre front (Apliiq's box
   // starts about 4 in below the collar on this blank). Apliiq quote $14.59 (XXL +$2): the 25% model's floor is $32;
-  // priced $38 to sit with the men's tees. Images are Apliiq's renders on
+  // owner price $26 (2026-11-07). Images are Apliiq's renders on
   // the studio backdrop; no owner photos or sample yet. Record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
@@ -4940,7 +4940,7 @@ export const products: Product[] = [
     blank: "LST350",
     description:
       "Women's performance tee with the GA monogram on the left chest. Lightweight, moisture-wicking polyester that holds its colour and its print, wash after wash.",
-    priceCents: 3800,
+    priceCents: 2600,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#141414",
@@ -4971,7 +4971,7 @@ export const products: Product[] = [
   // V1.3 GA monogram 2.00 x 1.80 in
   // (resized in place 2026-10-26, was 3.00 in) on the wearer's left chest,
   // centred 4 in from the zip, top 3 in below the collar. Tapstitch sells S to XL only. Quote $11.98 a unit plus
-  // about $5 shipping: the 25% model's floor is $32; priced $44. Tapstitch
+  // about $5 shipping: the 25% model's floor is $32; owner price $28 (2026-11-07). Tapstitch
   // orders are placed by hand (see fulfillment-submit.ts) until an API is
   // connected. Black gallery: Molly's approved shoot, updated 2026-11-07.
   // Original supplier references:
@@ -4983,7 +4983,7 @@ export const products: Product[] = [
     blank: "WT0092",
     description:
       "Women's stretch quarter zip with the GA monogram on the left chest, a mock neck and thumbholes. The warm-up layer that goes from the car to the pitch.",
-    priceCents: 4400,
+    priceCents: 2800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#141414",
@@ -5152,8 +5152,8 @@ export const products: Product[] = [
   // opposite sides (owner, 2026-10-26: the second build had both on the
   // back of one leg; those designs, 6240609/610/611, are gone). The brief's
   // Black/Black is a separate Apliiq listing; Black/White was built from
-  // this one. Apliiq quote $41.98 (XXL +$2): 25% model floor $72, priced
-  // $72. Images: Apliiq's front and back renders on the studio backdrop.
+  // this one. Apliiq quote $41.98 (XXL +$2): 25% model floor $72, owner
+  // price $58 (2026-11-07). Images: Apliiq's front and back renders on the studio backdrop.
   // Record: designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000019",
@@ -5162,7 +5162,7 @@ export const products: Product[] = [
     blank: "LPST800",
     description:
       "Women's travel pant in recycled polyester with the GA monogram on the left thigh and the GOAL ATHLETICS wordmark on the back of the right leg. Drawcord waist, side pockets, tapered leg with zips at the ankle.",
-    priceCents: 7200,
+    priceCents: 5800,
     compareAtPriceCents: null,
     color: "Black/White",
     colorHex: "#141414",
@@ -5278,8 +5278,8 @@ export const products: Product[] = [
   // the Sport-Tek LST485 ladies repeat short: the V1.3 GA monogram at
   // 2.00 x 1.80 in filling the wearer's left leg print box (2 x 2 in, the
   // only box on the blank), the size the 2026-10-26 design update accepted.
-  // Apliiq quote $23.99 (XXL +$2): 25% model floor $46, priced $48 (model
-  // price, not owner-set). Each saved design uses the approved GOAL private label.
+  // Apliiq quote $23.99 (XXL +$2): 25% model floor $46, owner price $38
+  // (2026-11-07). Each saved design uses the approved GOAL private label.
   // Supplier record: designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000022",
@@ -5288,7 +5288,7 @@ export const products: Product[] = [
     blank: "LST485",
     description:
       "Lightweight stretch gives you room to move through warmups, runs, and drills. The wide, flat waistband sits smoothly, the built-in liner adds coverage, and a back waistband pocket keeps your phone close.",
-    priceCents: 4800,
+    priceCents: 3800,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#252525",
@@ -5317,7 +5317,7 @@ export const products: Product[] = [
   // (rebuilt 2026-10-26 at the owner's smallest size; 6240580/81/82 renamed
   // delete): the V1.3 GA monogram 2.00 x 1.80 in centred on the chest, top
   // 3 in below the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
-  // priced $68. Mauve (6265064) uses a wine-red chest transfer and inside-neck
+  // owner price $52 (2026-11-07). Mauve (6265064) uses a wine-red chest transfer and inside-neck
   // label SB-6-161561. All colors use owner-supplied galleries. Supplier record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
@@ -5327,7 +5327,7 @@ export const products: Product[] = [
     blank: "7519",
     description:
       "Women's classic fleece hoodie with the GA monogram centred on the chest. Mid-length, soft-brushed inside, no drawcord to fuss with.",
-    priceCents: 6800,
+    priceCents: 5200,
     compareAtPriceCents: null,
     color: "Black",
     colorHex: "#161616",
@@ -5465,7 +5465,7 @@ export const products: Product[] = [
     blank: "WT0216",
     description:
       "Women's lightweight training tee with the GA and GOAL ATHLETICS lockup across the chest. Featherweight polyester for the session itself.",
-    priceCents: 3400,
+    priceCents: 2400,
     compareAtPriceCents: null,
     color: "White",
     colorHex: "#F7F7F5",
@@ -5525,14 +5525,14 @@ export const products: Product[] = [
   // Tapstitch WB0025: Black 1568598186191417344, White 1568599593921474560,
   // Haze Blue 1568600115416072192, Purple 1568600560352030720.
   // Owner's galleries uploaded 2026-11-06/07.
-  // Retail price and purchase release pending.
+  // Owner set retail $32 on 2026-11-07; purchase release pending.
   {
     "id": "80000000-0000-4000-8000-000000000026",
     "name": "TEMPO Training Leggings",
     "slug": "tempo-training-leggings",
     "blank": "WB0025",
     "description": "High-rise, ankle-length stretch leggings with a clean front and the GA monogram centered on the back waistband. Shown with a TEMPO Training Bra for styling. Leggings only.",
-    "priceCents": 0,
+    "priceCents": 3200,
     "compareAtPriceCents": null,
     "color": "Black",
     "colorHex": "#1E1E1E",
