@@ -49,9 +49,9 @@ export const WOMENS_FIT: Record<string, WomensFit> = {
     "Compare bust and shoulder widths with a tee that fits comfortably. This tee is narrower than the Core Training Tee at the same letter size; use its own chart."
   ),
   "80000000-0000-4000-8000-000000000022": profile(
-    "Relaxed short with a wide stretch waistband and built-in liner. Inseam varies from 3.5 to 4.25 inches across the offered sizes.",
+    "Relaxed short with a wide stretch waistband and built-in liner. Inseam is 3.5 inches for S/M and 3.75 inches for L/XL.",
     "Relaxed leg opening, wide flat knit waistband and a built-in liner, with an exterior waistband phone pocket.",
-    "Short cut with a curved hem. Inseam is 3.5 in for S/M, 3.75 in for L/XL and 4.25 in for XXL; the table also converts to centimeters.",
+    "Short cut with a curved hem. Inseam is 3.5 in for S/M and 3.75 in for L/XL; the table also converts to centimeters.",
     "90% polyester / 10% spandex shell; 86% polyester / 14% spandex waistband; 100% polyester liner.",
     "Check both body waist and hip ranges, then compare flat waist and hip widths. If your waist and hips fall in different rows, use the larger size. Check the inseam for your size."
   ),

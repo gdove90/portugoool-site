@@ -1,6 +1,6 @@
 {
   "reviewedOn": "2026-11-07",
-  "scope": "All eight women's TEMPO styles; existing catalog sizes, media, prices, availability, fulfillment and launch gates preserved.",
+  "scope": "All eight women TEMPO styles reviewed individually. Owner limited website sizes to S, M, L and XL on 2026-11-07; supplier-only larger sizes are excluded from customer tables.",
   "standard": [
     "Fit",
     "Length & coverage",
@@ -21,8 +21,7 @@
         "S",
         "M",
         "L",
-        "XL",
-        "XXL"
+        "XL"
       ],
       "columns": [
         "Bust, flat",
@@ -60,14 +59,6 @@
             23,
             28,
             16.5
-          ]
-        },
-        {
-          "size": "XXL",
-          "values": [
-            24.5,
-            29,
-            17.25
           ]
         }
       ],
@@ -114,19 +105,12 @@
               44
             ]
           ]
-        },
-        {
-          "size": "XXL",
-          "usSize": "20/22",
-          "values": [
-            [
-              45,
-              47
-            ]
-          ]
         }
       ],
-      "review": "Supplier describes roomy women's cut. Bust measured 1 inch below armhole; body length at back from HPS; sleeve from center back neck. Regular fit with room; no universal true-to-size promise."
+      "review": "Supplier describes roomy women's cut. Bust measured 1 inch below armhole; body length at back from HPS; sleeve from center back neck. Regular fit with room; no universal true-to-size promise.",
+      "excludedSupplierSizes": [
+        "XXL"
+      ]
     },
     {
       "productId": "80000000-0000-4000-8000-000000000018",
@@ -199,8 +183,7 @@
         "S",
         "M",
         "L",
-        "XL",
-        "XXL"
+        "XL"
       ],
       "columns": [
         "Waist, flat",
@@ -238,14 +221,6 @@
             19,
             24,
             30
-          ]
-        },
-        {
-          "size": "XXL",
-          "values": [
-            20.5,
-            25.5,
-            30.5
           ]
         }
       ],
@@ -309,23 +284,12 @@
               46
             ]
           ]
-        },
-        {
-          "size": "XXL",
-          "usSize": "20/22",
-          "values": [
-            [
-              37,
-              39
-            ],
-            [
-              47,
-              49
-            ]
-          ]
         }
       ],
-      "review": "Tapered leg, drawcord waist, extended side zipper. Added published hip widths. Removed unsupported claim that drawcord adds a couple of inches. No rise height or outseam inferred."
+      "review": "Tapered leg, drawcord waist, extended side zipper. Added published hip widths. Removed unsupported claim that drawcord adds a couple of inches. No rise height or outseam inferred.",
+      "excludedSupplierSizes": [
+        "XXL"
+      ]
     },
     {
       "productId": "80000000-0000-4000-8000-000000000020",
@@ -339,8 +303,7 @@
         "S",
         "M",
         "L",
-        "XL",
-        "XXL"
+        "XL"
       ],
       "columns": [
         "Bust, flat",
@@ -374,16 +337,12 @@
             22.75,
             24.625
           ]
-        },
-        {
-          "size": "XXL",
-          "values": [
-            23.75,
-            25.25
-          ]
         }
       ],
-      "review": "Classic women's fit, mid-length body, semi-set-in sleeves and no hood drawcord. Native manufacturer flat chest widths labeled Bust, flat consistently with other women's tops. Sleeve length not published; omitted. 52/48 blend for offered colors, Athletic Heather 90/10 not offered."
+      "review": "Classic women's fit, mid-length body, semi-set-in sleeves and no hood drawcord. Native manufacturer flat chest widths labeled Bust, flat consistently with other women's tops. Sleeve length not published; omitted. 52/48 blend for offered colors, Athletic Heather 90/10 not offered.",
+      "excludedSupplierSizes": [
+        "XXL"
+      ]
     },
     {
       "productId": "80000000-0000-4000-8000-000000000021",
@@ -457,8 +416,7 @@
         "S",
         "M",
         "L",
-        "XL",
-        "XXL"
+        "XL"
       ],
       "columns": [
         "Waist, flat",
@@ -496,14 +454,6 @@
             17.5,
             24.125,
             3.75
-          ]
-        },
-        {
-          "size": "XXL",
-          "values": [
-            19,
-            25.625,
-            4.25
           ]
         }
       ],
@@ -567,23 +517,12 @@
               46
             ]
           ]
-        },
-        {
-          "size": "XXL",
-          "usSize": "20/22",
-          "values": [
-            [
-              37,
-              39
-            ],
-            [
-              47,
-              49
-            ]
-          ]
         }
       ],
-      "review": "Stretch shell, wide knit waistband and built-in liner. Added chart. Use size-specific inseam from measurement rows instead of applying marketing's nominal 3.5-inch length to all sizes. No outseam inferred."
+      "review": "Stretch shell, wide knit waistband and built-in liner. Added chart. Use size-specific inseam from measurement rows instead of applying marketing's nominal 3.5-inch length to all sizes. No outseam inferred.",
+      "excludedSupplierSizes": [
+        "XXL"
+      ]
     },
     {
       "productId": "80000000-0000-4000-8000-000000000025",

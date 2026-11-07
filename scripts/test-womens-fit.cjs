@@ -13,7 +13,7 @@ assert.equal(women.length,8);assert.deepEqual(plain(women.map(p=>p.id).sort()),s
 for(const source of sources.records){
  const product=women.find(p=>p.id===source.productId),guide=guides.sizeGuideFor(product.id),profile=fits.womensFitFor(product.id);
  assert.ok(guide&&profile,source.slug+' has chart and fit facts');
- assert.equal(product.slug,source.slug);assert.deepEqual(plain(product.sizes),source.sizes);
+ assert.equal(product.slug,source.slug);assert.deepEqual(plain(product.sizes),source.sizes);assert.deepEqual(plain(product.sizes),['S','M','L','XL'],'Owner-approved women sizes only');
  assert.deepEqual(plain(guide.rows),source.rows,source.slug+' independently reviewed supplier measurements');
  assert.deepEqual(plain(guide.columns.map(c=>c.label)),source.columns,source.slug+' explicit measurement labels');
  assert.deepEqual(plain(profile.facts.map(f=>f.label)),sources.standard,source.slug+' common four-field standard');
@@ -39,7 +39,7 @@ assert.equal(bra.columns[1].label,'Underbust, flat');assert.ok(!bra.columns.some
 const leggings=guides.sizeGuideFor('80000000-0000-4000-8000-000000000026');
 assert.equal(leggings.columns.at(-1).label,'Full length');assert.equal(leggings.columns.at(-1).method,'waistband to hem');
 const shorts=guides.sizeGuideFor('80000000-0000-4000-8000-000000000022');
-assert.deepEqual(plain(shorts.rows.map(r=>r.values.at(-1))),[3.5,3.5,3.75,3.75,4.25]);
+assert.deepEqual(plain(shorts.rows.map(r=>r.values.at(-1))),[3.5,3.5,3.75,3.75]);
 const hoodie=guides.sizeGuideFor('80000000-0000-4000-8000-000000000020');
 assert.ok(!hoodie.columns.some(c=>/sleeve/i.test(c.label)),'Unpublished hoodie sleeves are omitted');
 assert.equal(guides.formatMeasurement(4.25,'cm'),'10.8');assert.equal(guides.formatMeasurement(12.20,'cm'),'31');
@@ -50,8 +50,8 @@ const elements=tree=>!tree||typeof tree!=='object'?[]:[tree,...React.Children.to
 let tree=InteractiveGuide({productId:'80000000-0000-4000-8000-000000000022'});
 const cm=elements(tree).find(e=>e.type==='button'&&e.props.children==='Centimeters');assert.ok(cm);cm.props.onClick();
 const cmHtml=renderToStaticMarkup(React.createElement(InteractiveGuide,{productId:'80000000-0000-4000-8000-000000000022'}));
-assert.ok(cmHtml.includes('<td>10.8</td>'),'Garment inseam switches to centimeters');
-assert.ok(cmHtml.includes('<td>119.4–124.5</td>'),'Body hip range switches with the same unit control');
+assert.ok(cmHtml.includes('<td>9.5</td>'),'Garment inseam switches to centimeters');
+assert.ok(cmHtml.includes('<td>111.8–116.8</td>'),'Body hip range switches with the same unit control');
 const pdp=fs.readFileSync(path.join(root,'src/v84/ProductDetail.tsx'),'utf8');
 assert.ok(pdp.includes('<FitDetails facts={fitProfile?.facts} fallbackFit={product.fit}/>'));
 assert.ok(pdp.includes('product.fitNote || fitProfile?.summary'),'Fit summary is visible by size selection');
