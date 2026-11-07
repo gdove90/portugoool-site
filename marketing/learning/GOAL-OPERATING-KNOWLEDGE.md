@@ -249,3 +249,11 @@ CLASSIFICATION: NO DATA (conversion of Reel reach into follows cannot yet be sta
 CONFIDENCE: LOW
 IMPLICATION: the Reel's reach has not yet been shown to convert; judging it as growth needs the populated 11-06 to 11-08 follower rows.
 RECOMMENDED FUTURE ACTION: re-read follower count and followers gained on the 11-08 and 11-09 runs before concluding anything about conversion.
+
+DATE: 2026-11-07
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-07/03-search-ecommerce.md (live pages fetched 2026-11-07)
+OBSERVATION: the delivery conflict is page-specific, not site-wide: the Quarter Zip alone says "overseas partner, 10 to 17 days", while the Jogger and Raincoat show "Printed in the USA" and no delivery time, and the shipping page and FAQ say 7-12 business days (US). Catalog unchanged from 11-06 (11 products, 27 URLs).
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
+IMPLICATION: fixing one line on the Quarter Zip page removes the partner mention, but the origin and timing story still differs between pages; one shared wording is needed.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, approve one delivery and origin line for all product pages.
