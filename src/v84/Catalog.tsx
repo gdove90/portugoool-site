@@ -9,14 +9,14 @@ import { getProducts } from "@/lib/products";
 import { tempoHidden } from "@/lib/collection-launch";
 import { formatPrice } from "@/lib/format";
 import { catalogImageSrc } from "@/lib/product-image";
-import { hasPrice, type Product } from "@/lib/types";
+import { hasPrice, isAvailableForSale, type Product } from "@/lib/types";
 import { catalogOrder, audienceAssignments, collectionLabel, defaultVariant, forAudience, orderedVariants, productType, type Audience } from "./catalog-data";
 import { Strike } from "./Brand";
 
 export function ProductCard({ product }: { product: Product }) {
   const variant = defaultVariant(product)?.variant;
   const image = variant?.cardImage || (variant?.images || product.images)[0];
-  return <Link className="product-card" href={tempoHidden(product.id) ? `/women/preview/${product.slug}` : `/shop/${product.slug}`}><div className="product-image"><Image className="asset" src={catalogImageSrc(image.src)} alt={image.alt} fill sizes="(max-width:1023px) 46vw, 23vw" /><span className="product-tag">{collectionLabel(product)}</span></div><div className="product-meta"><h3>{product.name}</h3><span>{hasPrice(product) ? formatPrice(product.priceCents) : "Price to be announced"}</span></div><div className="product-sub">{orderedVariants(product).map(({ variant: v }) => <i key={v.name} className="swatch-small" style={{ background: v.hex }} />)} {variant?.name || product.color}</div></Link>;
+  return <Link className="product-card" href={tempoHidden(product.id) ? `/women/preview/${product.slug}` : `/shop/${product.slug}`}><div className="product-image"><Image className="asset" src={catalogImageSrc(image.src)} alt={image.alt} fill sizes="(max-width:1023px) 46vw, 23vw" /><span className="product-tag">{collectionLabel(product)}{!isAvailableForSale(product) || !hasPrice(product) ? " · Coming soon" : ""}</span></div><div className="product-meta"><h3>{product.name}</h3><span>{hasPrice(product) ? formatPrice(product.priceCents) : "Price to be announced"}</span></div><div className="product-sub">{orderedVariants(product).map(({ variant: v }) => <i key={v.name} className="swatch-small" style={{ background: v.hex }} />)} {variant?.name || product.color}</div></Link>;
 }
 
 export function ProductGrid({ products }: { products: Product[] }) {

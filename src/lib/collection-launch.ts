@@ -1,13 +1,18 @@
-// Owner, 2026-11-06: keep the complete women's TEMPO collection behind the
-// existing Coming Soon gate until every piece is ready for public launch.
-// Preserve the existing product records and owner-only preview flow.
-export const TEMPO_COLLECTION_COMING_SOON = true;
+// Owner opened the women's TEMPO collection to the public on 2026-11-07.
+// Visibility is separate from purchase readiness: product and colour
+// Coming Soon holds (Training Bra, Training Leggings, Quarter Zip Teal)
+// still apply at checkout.
+export const TEMPO_COLLECTION_COMING_SOON = false;
 
 export const TEMPO_PUBLIC_PRODUCT_IDS: ReadonlySet<string> = new Set([
   "80000000-0000-4000-8000-000000000017",
+  "80000000-0000-4000-8000-000000000018",
+  "80000000-0000-4000-8000-000000000019",
+  "80000000-0000-4000-8000-000000000020",
   "80000000-0000-4000-8000-000000000021",
   "80000000-0000-4000-8000-000000000025",
   "80000000-0000-4000-8000-000000000022",
+  "80000000-0000-4000-8000-000000000026",
 ]);
 
 // The TEMPO catalog rows. While the collection is coming soon they leave
