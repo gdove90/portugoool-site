@@ -5195,7 +5195,7 @@ export const products: Product[] = [
   // delete): the V1.3 GA monogram 2.00 x 1.80 in centred on the chest, top
   // 3 in below the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
   // priced $68. Mauve (6265064) uses a wine-red chest transfer and inside-neck
-  // label SB-6-161561. Black, Navy and Mauve use owner-supplied galleries. Supplier record:
+  // label SB-6-161561. All colors use owner-supplied galleries. Supplier record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000020",
@@ -5250,8 +5250,20 @@ export const products: Product[] = [
         skuFragment: "VINTAGEWHITE",
         images: [
           {
-            src: "/products/tempo-warmup-hoodie-vintage-white-catalog-product-front-20261026.webp",
-            alt: "TEMPO Warmup Hoodie in Vintage White, product front with the black and red GA monogram centred on the chest",
+            src: "/products/tempo-warmup-hoodie-vintage-white-product-front-20261106.webp",
+            alt: "Vintage White TEMPO Warmup Hoodie, product front with the black and red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-vintage-white-model-front-20261106.webp",
+            alt: "Front view of the Vintage White TEMPO Warmup Hoodie on a model, showing the black and red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-vintage-white-model-laughing-20261106.webp",
+            alt: "Laughing model in the Vintage White TEMPO Warmup Hoodie",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-vintage-white-model-back-20261106.webp",
+            alt: "Over-the-shoulder view of the Vintage White TEMPO Warmup Hoodie, showing the hood and plain back",
           },
         ],
       },
