@@ -5194,7 +5194,8 @@ export const products: Product[] = [
   // (rebuilt 2026-10-26 at the owner's smallest size; 6240580/81/82 renamed
   // delete): the V1.3 GA monogram 2.00 x 1.80 in centred on the chest, top
   // 3 in below the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
-  // priced $68. Navy uses the owner-supplied gallery. Supplier record:
+  // priced $68. Mauve (6265064) uses a wine-red chest transfer and inside-neck
+  // label SB-6-161561. Navy and Mauve use owner-supplied galleries. Supplier record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000020",
@@ -5263,6 +5264,30 @@ export const products: Product[] = [
           {
             src: "/products/tempo-warmup-hoodie-navy-model-three-quarter-20261106.webp",
             alt: "Three-quarter view of the Navy TEMPO Warmup Hoodie on a model",
+          },
+        ],
+      },
+      {
+        name: "Mauve",
+        supplierColor: "Mauve",
+        hex: "#C18483",
+        skuFragment: "MAUVE",
+        images: [
+          {
+            src: "/products/tempo-warmup-hoodie-mauve-model-front-20261106.webp",
+            alt: "Seated model in the Mauve TEMPO Warmup Hoodie with the wine-red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-mauve-product-front-20261106.webp",
+            alt: "Mauve TEMPO Warmup Hoodie, product front with the wine-red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-mauve-model-back-20261106.webp",
+            alt: "Back view of the Mauve TEMPO Warmup Hoodie on a model, showing the hood and plain back",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-mauve-model-three-quarter-20261106.webp",
+            alt: "Three-quarter view of the Mauve TEMPO Warmup Hoodie on a model",
           },
         ],
       },

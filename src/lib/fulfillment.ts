@@ -517,6 +517,7 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "Black": { apliiqProductId: 6241875, skus: { S: "APQ-6241875S6A1", M: "APQ-6241875S7A1", L: "APQ-6241875S8A1", XL: "APQ-6241875S1A1", XXL: "APQ-6241875S2A1" } },
     "Vintage White": { apliiqProductId: 6241879, skus: { S: "APQ-6241879S6A1", M: "APQ-6241879S7A1", L: "APQ-6241879S8A1", XL: "APQ-6241879S1A1", XXL: "APQ-6241879S2A1" } },
     "Navy": { apliiqProductId: 6241888, skus: { S: "APQ-6241888S6A1", M: "APQ-6241888S7A1", L: "APQ-6241888S8A1", XL: "APQ-6241888S1A1", XXL: "APQ-6241888S2A1" } },
+    "Mauve": { apliiqProductId: 6265064, skus: { S: "APQ-6265064S6A1", M: "APQ-6265064S7A1", L: "APQ-6265064S8A1", XL: "APQ-6265064S1A1", XXL: "APQ-6265064S2A1" } },
   },
   // == TEMPO (women) · Tapstitch designs built 2026-10-26 ==
   // Design ids from the Tapstitch Designs list. Quarter Zip WT0092 (S to XL,
