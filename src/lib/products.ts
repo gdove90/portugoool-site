@@ -5048,9 +5048,25 @@ export const products: Product[] = [
         skuFragment: "WHITE",
         images: [
           {
-            src: "/products/tempo-quarter-zip-white-catalog-product-front-20261026.webp",
-            alt: "TEMPO Quarter Zip in White, product front with the black and red GA monogram on the left chest beside the zip",
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-floating-ghost-front-20261107.webp",
+            "alt": "White TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and solid black GA on the left chest",
+            "caption": "Product visualization."
           },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-suzanne-front-20261107.webp",
+            "alt": "Suzanne facing forward in the White TEMPO Quarter Zip with a solid black GA on her left chest, styled with Black TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-suzanne-front-quarter-20261107.webp",
+            "alt": "Suzanne laughing at a front quarter turn in the White TEMPO Quarter Zip while brushing a strand of hair, styled with Black TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-suzanne-back-quarter-20261107.webp",
+            "alt": "Suzanne at a walking rear quarter turn with her face in profile, showing the plain back of the White TEMPO Quarter Zip, styled with Black TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          }
         ],
       },
       {

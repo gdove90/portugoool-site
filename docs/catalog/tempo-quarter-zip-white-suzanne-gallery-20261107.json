@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-07",
+  "product_id": "80000000-0000-4000-8000-000000000018",
+  "slug": "tempo-quarter-zip",
+  "model": "Suzanne",
+  "color": "White",
+  "scope": "Replace only the White quarter-zip gallery with four approved images styled with Black WB0025 leggings. Quarter zip only.",
+  "publication_status": "Owner requested upload on 2026-11-07.",
+  "publication_scope": "Existing owner collection preview; pricing, fulfillment, other galleries and launch settings preserved.",
+  "website_preview": "https://goalathletics.shop/women/preview/tempo-quarter-zip?color=White",
+  "quarter_zip": {
+    "supplier": "Tapstitch",
+    "name": "Women's Quarter-Zip Yoga Pullover",
+    "brand_name": "TEMPO Quarter Zip",
+    "style": "WT0092-P001-V2",
+    "color": "White",
+    "saved_design_id": "1564322937081917440",
+    "saved_detail_id": "1564323479661305856",
+    "saved_design_url": "https://www.tapstitch.com/account/products-pool/product/1564323479661305856",
+    "fabric": "91% polyester / 9% spandex, 165 gsm",
+    "monogram": {
+      "position": "wearer's left chest",
+      "ink": "#000000",
+      "width_inches": 2,
+      "height_inches": 1.8
+    },
+    "back": "Plain"
+  },
+  "styling_leggings": {
+    "name": "TEMPO Training Leggings",
+    "style": "WB0025-O001-V2",
+    "color": "Black",
+    "saved_design_id": "1568598186191417344",
+    "saved_detail_id": "1568599146607366144",
+    "fabric": "75% nylon / 25% spandex, 220 gsm",
+    "monogram": {
+      "position": "center back waistband",
+      "inks": [
+        "#FFFFFF",
+        "#E51226"
+      ],
+      "width_inches": 1.4,
+      "height_inches": 1.27,
+      "visibility": "Naturally covered by the regular-length quarter zip in rear view"
+    },
+    "footwear": "Plain white trainers"
+  },
+  "gallery_order": [
+    "ghost-front",
+    "front",
+    "front-quarter",
+    "back-quarter"
+  ],
+  "review": {
+    "identity": "Matches saved Suzanne front, quarter and rear references, blonde high ponytail and freckles",
+    "garments": "Saved supplier product references used; solid-black chest monogram, plain back, no seat wording or relocated leggings mark",
+    "poses": [
+      "Dimensional floating ghost front",
+      "Front, relaxed hands behind back and playful head tilt",
+      "Front quarter, laughing and brushing a loose strand of hair",
+      "Rear quarter, walking pause and side-profile face"
+    ],
+    "physical_print_size_note": "Saved nominal supplier measurements guide the render; a generated photograph is not physical print-size verification.",
+    "standing_direction": "Ghost first, rear quarter-turn last, varied poses for each model."
+  },
+  "files": [
+    {
+      "position": 1,
+      "key": "ghost-front",
+      "filename": "00 White TEMPO Quarter Zip - Floating Ghost Front.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-f8b4ada6-40a5-4eba-9ef0-a200ae980106.png",
+      "references": [
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Molly - Black TEMPO Quarter Zip/00 Black TEMPO Quarter Zip - Floating Ghost Front.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-White-front.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional floating quarter-zip photo to edit; image 2 is the exact saved WHITE WT0092 garment and solid-black monogram reference. Change only the garment color and monogram ink in image 1 to match image 2. All fabric, collar interior, seams, hems and zipper tape become the actual clean cool WHITE with natural gray shading. Keep the dark metal zipper pull as in image 2. Replace BOTH parts of the white/red chest GA with one SOLID BLACK #000000 monogram, preserving its exact silhouette, wearer's-left chest position and discreet size, representing the saved 2.00 by 1.80 inch print. Preserve image 1's filled natural worn form, fitted regular hip-length body, hollow stand mock neck, closed quarter-length zipper, set-in long sleeves, thumbhole slits, empty cuffs, fine smooth matte 165 gsm performance knit, subtle folds, camera angle and margins. Keep the same light neutral-gray studio background, light, floating shadow and 1024x1536 portrait framing. Show only the complete quarter-zip top. No person, hands, mannequin parts, legs, shoes, hanger, hood, ribbed waistband, text or extra graphics. One product photograph.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - White TEMPO Quarter Zip\\00 White TEMPO Quarter Zip - Floating Ghost Front.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\00 White TEMPO Quarter Zip - Floating Ghost Front.png",
+      "sha256": "54ab75f5917f787bdb7d8d75b7a699879572f66587d43544d4f0b8af61f0d142",
+      "bytes": 1740198,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "position": 2,
+      "key": "front",
+      "filename": "01 Suzanne White TEMPO Quarter Zip - Front.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-625ecb7d-635c-44a7-b6e7-4974f96e7b42.png",
+      "references": [
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Suzanne-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Suzanne/01 Suzanne Front.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-White-front.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-front.png"
+      ],
+      "prompt": "Professional full-length activewear catalog photograph of adult brand model Suzanne. Image 1 is Suzanne's exact identity reference: preserve her face, freckles, natural skin texture, blonde high ponytail and lean athletic soccer build. Image 2 is the actual WHITE WT0092 quarter zip with its SOLID BLACK GA; image 3 is the actual Black WB0025 leggings. Dress Suzanne in those exact garments with plain white training sneakers. Match the quarter zip's clean cool White color, closed stand mock neck, quarter-length center zipper, set-in long sleeves, thumbhole cuffs, fitted regular hip-length untucked hem and lightweight smooth matte 91% polyester/9% spandex 165 gsm fabric. Keep the small SOLID BLACK #000000 GA in the precise wearer's LEFT chest position, shape and saved 2.00 by 1.80 inch size in image 2; its width is about half the horizontal distance from the zipper to its center. Black leggings have a completely plain front, fitted full-length legs and flat ankle hems. The top covers their waistband naturally with no exposed midriff. Give Suzanne her own front pose: shoulders relaxed, warm open smile with a small playful head tilt, both hands loosely held BEHIND her back, feet softly staggered with one toe turned outward and easy weight on one leg. Chest mark unobstructed. Natural thumbhole-cuff wear and realistic fabric folds. Soft even commercial light, neutral gray seamless studio, complete head and both shoes visible with margins. One 1024x1536 portrait photograph. No additional accessories, props, text overlays, stripes, pockets or logos.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - White TEMPO Quarter Zip\\01 Suzanne White TEMPO Quarter Zip - Front.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\01 Suzanne White TEMPO Quarter Zip - Front.png",
+      "sha256": "463dda76236a844aec2e2c450e389492bf5483357fdb8e500ae732712a9d8219",
+      "bytes": 1721935,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "position": 3,
+      "key": "front-quarter",
+      "filename": "02 Suzanne White TEMPO Quarter Zip - Front Quarter.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-774d9e3b-3e73-4b2d-b655-098e19bdaa10.png",
+      "references": [
+        "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-625ecb7d-635c-44a7-b6e7-4974f96e7b42.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Suzanne-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Suzanne/02 Suzanne Front Left Quarter.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-White-front.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-front.png"
+      ],
+      "prompt": "Use case: identity-preserve. Create Suzanne's FRONT QUARTER-TURN professional quarter-zip catalog photograph. Image 1 is her approved front outfit, identity and gray studio. Image 2 confirms Suzanne's exact face, freckles and blonde high ponytail. Image 3 is the actual White WT0092 quarter zip with solid-black GA; image 4 is the actual Black WB0025 leggings. Preserve her identity, natural lean athletic build, garment colors and construction, and plain white trainers. Turn her body roughly 30 degrees into a clear front quarter view. Give her a playful candid pose: an easy laugh looking just off camera, a relaxed small step and her RIGHT hand gently brushing a loose strand of hair at her temple while her other arm hangs naturally. Keep the wearer's LEFT chest logo fully visible. Preserve the exact small SOLID BLACK #000000 GA shape and placement from images 1 and 3, saved 2.00 by 1.80 inches with natural perspective. White top retains its CLOSED stand mock neck and quarter zipper, set-in long sleeves, thumbhole cuffs, fitted regular hip-length untucked hem and smooth lightweight matte 165 gsm performance knit. Top falls over the leggings waistband naturally; leggings front remains plain, with fitted full-length legs and flat ankle hems. Same neutral gray seamless studio, soft even commercial light and realistic folds as image 1. One 1024x1536 portrait photo, complete head and both shoes visible with margins. No added logos, graphics, words, accessories, props, stripes or pockets.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - White TEMPO Quarter Zip\\02 Suzanne White TEMPO Quarter Zip - Front Quarter.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\02 Suzanne White TEMPO Quarter Zip - Front Quarter.png",
+      "sha256": "5133e66205227ad2fc3332c5e141414530ef68c3124549f3f3f48bdcc3627144",
+      "bytes": 1661566,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "position": 4,
+      "key": "back-quarter",
+      "filename": "03 Suzanne White TEMPO Quarter Zip - Back Quarter.png",
+      "original_generated_path": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-ac1dc931-5b8e-451e-89cf-15b5766c4d0b.png",
+      "references": [
+        "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-625ecb7d-635c-44a7-b6e7-4974f96e7b42.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Suzanne-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Suzanne/02 Suzanne Front Left Quarter.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Suzanne-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Suzanne/05 Suzanne Back.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-White-back.png",
+        "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-back.png"
+      ],
+      "prompt": "Use case: identity-preserve. Create Suzanne's REAR QUARTER-TURN full-length activewear catalog photograph, with her face SIDE-ON IN PROFILE. Image 1 is the approved Suzanne identity, White WT0092 quarter zip, Black WB0025 leggings, white trainers and gray studio. Images 2 and 3 confirm her exact face, freckles, natural athletic build and blonde high ponytail. Image 4 is the actual completely PLAIN BACK of the White top; image 5 is the actual Black leggings back. Rotate her whole body about 40 degrees from straight back toward the LEFT side of the frame, clearly showing back and left side. Her face is a natural left-facing SIDE PROFILE, smiling warmly and looking sideways off camera rather than back into the lens. Give Suzanne a distinctive walking-pause pose: a small natural step away, one heel softly lifted, shoulders relaxed and BOTH ARMS DOWN with a gentle natural walking swing. Keep her hands away from her hips, collar and hair. Preserve the real garment shapes, clean cool White and true Black colors, closed mock neck, set-in long thumbhole sleeves, fitted regular hip-length untucked hem, lightweight matte knit, fitted leggings and flat ankle hems. The White quarter zip BACK IS ENTIRELY PLAIN as image 4. The leggings' small white/red mark belongs only at the back waistband as image 5 and is naturally covered by the top; do not relocate it to the seat or top back. A front chest mark is only visible if physically visible from this angle. Same white trainers, gray seamless studio and soft even commercial light as image 1, natural skin and realistic fabric folds. One 1024x1536 portrait photograph, complete head and both shoes visible with margins. No extra graphics, wording, accessories, props, stripes or pockets.",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - White TEMPO Quarter Zip\\03 Suzanne White TEMPO Quarter Zip - Back Quarter.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\03 Suzanne White TEMPO Quarter Zip - Back Quarter.png",
+      "sha256": "c8886a56fb9bb080fc7ae623c7305979393602f7e5f912784b53d34f47b73d73",
+      "bytes": 1696196,
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "website_images": [
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-floating-ghost-front-20261107.webp",
+      "alt": "White TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and solid black GA on the left chest",
+      "caption": "Product visualization.",
+      "sha256": "8085f1ce67b254b8f10b4d4fe5fd467451276c45925bc3384ef0456307901393",
+      "bytes": 46038
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-suzanne-front-20261107.webp",
+      "alt": "Suzanne facing forward in the White TEMPO Quarter Zip with a solid black GA on her left chest, styled with Black TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "37887c8b11c8b4be738e7db4b1a6c5907b74b8848fc0d661d56f0d5706b5a583",
+      "bytes": 46946
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-suzanne-front-quarter-20261107.webp",
+      "alt": "Suzanne laughing at a front quarter turn in the White TEMPO Quarter Zip while brushing a strand of hair, styled with Black TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "ea390500516c7d49850c4529d71555139c20d74655d978ea91237133af652dae",
+      "bytes": 48228
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-white-suzanne-back-quarter-20261107.webp",
+      "alt": "Suzanne at a walking rear quarter turn with her face in profile, showing the plain back of the White TEMPO Quarter Zip, styled with Black TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "fa281622bc47d5a6df9a61ab40561bdbd3e70e18db9f30d4c384b87ac6454005",
+      "bytes": 50382
+    }
+  ],
+  "generation": {
+    "mode": "Built-in image_gen",
+    "source_record": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - White TEMPO Quarter Zip\\Gallery Sources and Prompts.json"
+  },
+  "catalog_price_cents": 4400
+}
