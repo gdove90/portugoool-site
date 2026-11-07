@@ -5103,7 +5103,7 @@ export const products: Product[] = [
         "supplierColor": "Light Green",
         "hex": "#D4EDE4",
         "skuFragment": "",
-        "comingSoon": true,
+        "comingSoon": false,
         "images": [
           {
             "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-floating-ghost-front-20261107.webp",
@@ -5525,7 +5525,8 @@ export const products: Product[] = [
   // Tapstitch WB0025: Black 1568598186191417344, White 1568599593921474560,
   // Haze Blue 1568600115416072192, Purple 1568600560352030720.
   // Owner's galleries uploaded 2026-11-06/07.
-  // Owner set retail $32 on 2026-11-07; purchase release pending.
+  // Owner set retail $32 on 2026-11-07; released for sale 2026-11-07,
+  // all four designs carrying the 4 x 4 cm GOAL clothing label ($15.97 unit).
   {
     "id": "80000000-0000-4000-8000-000000000026",
     "name": "TEMPO Training Leggings",
@@ -5548,7 +5549,7 @@ export const products: Product[] = [
     "category": "pants",
     "supplierType": "tapstitch",
     "isActive": true,
-    "availableForSale": false,
+    "availableForSale": true,
     "isLimitedDrop": false,
     "dropVersion": null,
     "dropLimit": null,
@@ -5584,7 +5585,7 @@ export const products: Product[] = [
         "supplierColor": "Black",
         "hex": "#1E1E1E",
         "skuFragment": "",
-        "comingSoon": true,
+        "comingSoon": false,
         "images": [
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
@@ -5613,7 +5614,7 @@ export const products: Product[] = [
         "supplierColor": "White",
         "hex": "#F5F5F5",
         "skuFragment": "",
-        "comingSoon": true,
+        "comingSoon": false,
         "images": [
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-white-floating-ghost-front-20261107.webp",
@@ -5642,7 +5643,7 @@ export const products: Product[] = [
         "supplierColor": "Haze Blue",
         "hex": "#7C9CB5",
         "skuFragment": "",
-        "comingSoon": true,
+        "comingSoon": false,
         "images": [
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-floating-ghost-front-20261107.webp",
@@ -5671,7 +5672,7 @@ export const products: Product[] = [
         "supplierColor": "Purple",
         "hex": "#96437B",
         "skuFragment": "",
-        "comingSoon": true,
+        "comingSoon": false,
         "images": [
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-floating-ghost-front-20261107.webp",

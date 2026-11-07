@@ -527,6 +527,18 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "Black": tapstitch("1564321596708188160", ["S", "M", "L", "XL"]),
     "White": tapstitch("1564322937081917440", ["S", "M", "L", "XL"]),
     "Light Purple": tapstitch("1564323621013516288", ["S", "M", "L", "XL"]),
+    // Teal (supplier Light Green), saved 2026-11-06; GOAL clothing label
+    // saved 2026-11-07 ($12.97 unit, same as the other three colours).
+    "Teal": tapstitch("1568594063412883456", ["S", "M", "L", "XL"]),
+  },
+  // TEMPO Training Leggings (Tapstitch WB0025): GA monogram 1.4 x 1.27 in on
+  // the back waistband, front blank. Designs saved 2026-11-06; the 4 x 4 cm
+  // GOAL clothing label was added to all four on 2026-11-07 ($15.97 unit).
+  "80000000-0000-4000-8000-000000000026": {
+    "Black": tapstitch("1568598186191417344", ["S", "M", "L", "XL"]),
+    "White": tapstitch("1568599593921474560", ["S", "M", "L", "XL"]),
+    "Haze Blue": tapstitch("1568600115416072192", ["S", "M", "L", "XL"]),
+    "Purple": tapstitch("1568600560352030720", ["S", "M", "L", "XL"]),
   },
   // Saved decorated designs verified 2026-11-04. TAP refs are internal;
   // this mapping does not authorize checkout or prove API fulfillment.
