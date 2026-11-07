@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import BrandWordmark from "@/components/BrandWordmark";
 import GAMonogram from "@/components/GAMonogram";
 
@@ -7,5 +8,11 @@ export function Strike() {
 }
 
 export function Brand({ footer = false }: { footer?: boolean }) {
-  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOAL Athletics home"><span className="brand-ga"><GAMonogram /></span><BrandWordmark inline={!footer} className="brand-wordmark" /></Link>;
+  return <Link className={`brand${footer ? " footer-brand" : ""}`} href="/" aria-label="GOAL Athletics home">
+    {footer ? (
+      <Image src="/brand/goal-athletics-horizontal-white-footer-v13.png" alt="GOAL Athletics" width={3000} height={821} className="footer-logo" unoptimized />
+    ) : (
+      <><span className="brand-ga"><GAMonogram /></span><BrandWordmark inline={!footer} className="brand-wordmark" /></>
+    )}
+  </Link>;
 }

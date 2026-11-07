@@ -25,3 +25,7 @@
 
 @media(max-width:1279px) { .v84 #header > nav { display:none; } }
 .v84 .brand-ga { display:block; width:38px; flex:none; }
+.v84 .footer-brand .footer-logo { display:block; width:181px; max-width:100%; height:auto; }
+@media (max-width:700px) {
+  .v84 .footer-brand .footer-logo { width:167px; }
+}
