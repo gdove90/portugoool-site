@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-07",
+  "product_id": "80000000-0000-4000-8000-000000000026",
+  "slug": "tempo-training-leggings",
+  "model": "Jessica",
+  "scope": "Purple leggings gallery styled with the actual Black WT0093 TEMPO sports bra. Leggings only.",
+  "publication_status": "Owner approved the four selected images for the existing owner-only website preview on 2026-11-07.",
+  "website_preview": "https://goalathletics.shop/women/preview/tempo-training-leggings?color=Purple",
+  "publication_scope": "Existing collection gate, price and production holds preserved.",
+  "leggings": {
+    "style": "WB0025-O001-V2",
+    "design_id": "1568600560352030720",
+    "detail_id": "1568600560607899648",
+    "url": "https://www.tapstitch.com/account/products-pool/product/1568600560607899648",
+    "logo_width_in": 1.4,
+    "logo_height_in": 1.27,
+    "logo_ink": "#DBAED0",
+    "placement": "Centered in back waistband print area",
+    "color": "Purple",
+    "fabric": "75% nylon / 25% spandex, 220 gsm"
+  },
+  "styling_bra": {
+    "style": "WT0093-P001-V2",
+    "catalog_product_id": "80000000-0000-4000-8000-000000000025",
+    "color": "Black",
+    "ink": "Cream #F9F1DF",
+    "features": "Plain scoop front, solid racerback, broad bound straps and narrow flat hem; small GA low at center back.",
+    "production_status": "WT0093 construction and cream ink match existing catalog references. Saved supplier bra print dimensions remain unverified; no production holds or product settings were changed."
+  },
+  "catalog_swatch": {
+    "hex": "#96437B",
+    "source": "Mean RGB from a 160x100 central supplier-front fabric panel at x600,y270 after extracting the panel; screen approximation."
+  },
+  "gallery_order": [
+    "floating-ghost-front",
+    "front",
+    "front-quarter",
+    "back-quarter"
+  ],
+  "files": [
+    {
+      "order": 1,
+      "name": "00 Purple TEMPO Leggings - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-6b89895d-7682-411d-b6de-b1b7027b96aa.png",
+      "generation_step": "ghost-front",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Jessica - Purple TEMPO Leggings/00 Purple TEMPO Leggings - Floating Ghost Front.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/00 Purple TEMPO Leggings - Floating Ghost Front.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "sha256": "6466b5f10e633d5ac7ea0535cf3f03375887218e33ea3de85364f9beb7cc1ef1"
+    },
+    {
+      "order": 2,
+      "name": "01 Jessica Purple TEMPO Leggings - Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-93a65f0c-3b85-4d7c-81ea-e32303e50e24.png",
+      "generation_step": "front",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Jessica - Purple TEMPO Leggings/01 Jessica Purple TEMPO Leggings - Front.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/01 Jessica Purple TEMPO Leggings - Front.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "sha256": "d713ab77f61da1f66847b35b6f84433cc1221648ab36d735a4c31595f14bf15a"
+    },
+    {
+      "order": 3,
+      "name": "02 Jessica Purple TEMPO Leggings - Quarter.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-7bef34ae-f2cb-4767-a22a-2cca1df14579.png",
+      "generation_step": "quarter",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Jessica - Purple TEMPO Leggings/02 Jessica Purple TEMPO Leggings - Quarter.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/02 Jessica Purple TEMPO Leggings - Quarter.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "sha256": "a56ec431d838bda022340b97ce423ffc7c4806066484d0532d7ea79093846f26"
+    },
+    {
+      "order": 4,
+      "name": "03 Jessica Purple TEMPO Leggings - Back Quarter Turn v2.png",
+      "source": "C:\\Users\\gdove\\.codex\\generated_images\\01a1b337-f257-7361-a51b-5ac697ecf73b\\exec-5881acbd-dfc0-4073-8c45-ee467662745b.png",
+      "generation_step": "back-quarter-turn",
+      "saved_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Jessica - Purple TEMPO Leggings\\03 Jessica Purple TEMPO Leggings - Back Quarter Turn v2.png",
+      "root_copy": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\03 Jessica Purple TEMPO Leggings - Back Quarter Turn v2.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "sha256": "ae1033a9a86ea301b4fed2322dd344d167621c781c4985ea81ab85327f592410"
+    }
+  ],
+  "website_images": [
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-floating-ghost-front-20261107.webp",
+      "alt": "Purple TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+      "caption": "Product visualization.",
+      "sha256": "13afc7021689adc87f23083591f56482b4663962e346fdc168ed994915dba8e3",
+      "bytes": 49948
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-jessica-front-20261107.webp",
+      "alt": "Jessica facing forward in Purple TEMPO Training Leggings and the Black TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "abd6111ce2d9fc0d8f081b1121c01a918dd932382bc6f2000427debf84e83285",
+      "bytes": 64592
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-jessica-quarter-20261107.webp",
+      "alt": "Jessica laughing at a front-left quarter turn in Purple TEMPO Training Leggings and the Black TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "81a4351ccb9cfb9921a48d5b6e2147f6cb79bc3d2dfc24d2847862ef25ba9d80",
+      "bytes": 64532
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-jessica-back-quarter-20261107.webp",
+      "alt": "Jessica at a rear quarter turn with her face in profile, light-purple GA centered on the leggings back waistband and cream GA on the Black TEMPO racerback bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "1e6354a639c71690da265727897af15b03ddf484ccf6b99fcbecc75cf1584376",
+      "bytes": 61698
+    }
+  ],
+  "generation": {
+    "mode": "Built-in image_gen; no CLI or external provider",
+    "source_record": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Jessica - Purple TEMPO Leggings\\Gallery Sources and Prompts.json",
+    "prompts": [
+      {
+        "key": "ghost-front",
+        "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional floating leggings front to edit. Image 2 is the exact Purple WB0025 garment color and construction reference. Change ONLY the leggings fabric in image 1 from black to the rich Purple color in image 2, matching its hue faithfully with natural dimensional shading. Recolor the entire garment, stitching, flat hems and waistband interior consistently. Preserve the exact filled worn shape, shaped hollow waistband, natural thigh and calf volume, soft knee creases, relaxed leg stance, matte performance-knit texture and real seams from image 1. Keep the same light-gray studio background, soft floating shadow, lighting, camera angle, margins and 1024x1536 framing. Front completely unprinted. Only the garment is present, with no person, mannequin parts, feet, shoes, additional objects, text or logos. One photograph.",
+        "refs": [
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Leggings - Floating Ghost Fronts/00 Black TEMPO Leggings - Floating Ghost Front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Purple-front.png"
+        ],
+        "output": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-6b89895d-7682-411d-b6de-b1b7027b96aa.png",
+        "selected": true
+      },
+      {
+        "key": "front",
+        "prompt": "Edit this professional activewear catalog photograph. Image 1 is Jessica's existing front photograph to edit. Image 2 is the actual Black WT0093 sports bra reference. Change only the Brick-colored sports bra in image 1 to black, matching image 2's plain front, broad bound straps, scoop neckline, seams, narrow flat bottom hem and matte fabric. Preserve Jessica's exact face, dark curly hairstyle, skin, expression, body, pose, rich Purple leggings, white shoes, gray studio background, lighting and complete head-to-shoes 1024x1536 portrait framing. Both garment fronts remain unprinted. Nothing else changes.",
+        "refs": [
+          "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-2abd8c58-5c4b-424c-ab48-d6d11454feee.png",
+          "C:/Users/gdove/OneDrive/Documents/ChatGPT/Goalathletics.shop/tempo-navy-gallery/public/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp"
+        ],
+        "selected": true,
+        "output": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-93a65f0c-3b85-4d7c-81ea-e32303e50e24.png"
+      },
+      {
+        "key": "quarter",
+        "refs": [
+          "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-93a65f0c-3b85-4d7c-81ea-e32303e50e24.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Jessica-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Jessica/02 Jessica Front Left Quarter.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Purple-front.png",
+          "C:/Users/gdove/OneDrive/Documents/ChatGPT/Goalathletics.shop/tempo-navy-gallery/public/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp"
+        ],
+        "prompt": "Professional full-length activewear catalog photograph of adult brand model Jessica. Image 1 is the approved outfit, identity, colors and studio style; image 2 is Jessica's additional identity reference; image 3 is the actual Purple WB0025 leggings front; image 4 is the actual plain Black WT0093 sports bra. Preserve Jessica's face, skin tone, dark curly updo and natural athletic build. Wear exactly these rich Purple leggings and Black scoop-front racerback sports bra, with the same white sneakers. Both garment fronts are completely plain. Give the pose personality: a relaxed front-left quarter angle, taking a small natural walking step, arms swinging loosely, laughing warmly toward someone just off camera. Keep garment construction and cut faithful, broad bound bra straps, narrow flat hem, wide high leggings waistband, matte fabric and flat ankle hems. Clean gray seamless studio, even commercial lighting, natural shadows, full head and both shoes visible with margins. One 1024x1536 portrait photograph. No text, extra logos, props or accessories.",
+        "selected": true,
+        "output": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-7bef34ae-f2cb-4767-a22a-2cca1df14579.png"
+      },
+      {
+        "key": "back-quarter-turn",
+        "prompt": "Use case: identity-preserve. Edit image 1's activewear catalog pose to the user's requested REAR QUARTER TURN, with Jessica's face MORE SIDE-ON IN PROFILE. Image 1 is the pose/outfit to edit; image 2 confirms Jessica's exact identity; images 3 and 4 are garment and print references. Rotate Jessica's whole body roughly 40 degrees from straight back into a clear rear three-quarter angle, showing her back and right side. This must be visibly angled, not square to the camera. Her face should be a natural side profile, smiling and looking sideways in the direction her body turns, rather than looking back toward the lens. Keep the playful raised hand casually touching her curls, the other arm relaxed, natural weight on one leg and a comfortable standing stance. Both the bra's lower back and leggings' back waistband must remain visible and unobstructed. Preserve Jessica's exact face, skin tone, curly hairstyle and natural athletic build; actual Black WT0093 racerback sports bra and rich Purple WB0025 leggings, correct garment construction, matte materials, flat ankle hems and white sneakers. Bra monogram is small solid CREAM #F9F1DF low center back, about 8.2 percent of band width before natural perspective. Leggings monogram is LIGHT PURPLE #DBAED0 centered on the BACK WAISTBAND, about 11.6 percent of waistband width before natural perspective, representing the saved 1.4 by 1.27 inch print. Keep exact logo shapes and discreet physical size, allow natural foreshortening at this angle, no enlargement. No seat print or wording. Same gray studio, even commercial lighting, full head and both shoes visible with margins, 1024x1536 portrait photograph. Change pose and viewing angle only, no extra objects or accessories.",
+        "refs": [
+          "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-a3d16f80-6d26-42b1-ad4f-3139d98b61e3.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Jessica - Purple TEMPO Leggings/01 Jessica Purple TEMPO Leggings - Front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Purple-back.png",
+          "C:/Users/gdove/OneDrive/Documents/ChatGPT/Goalathletics.shop/tempo-navy-gallery/public/products/tempo-training-bra/goal-training-bra-black-06-ghost-back-20261104.webp"
+        ],
+        "output": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-5881acbd-dfc0-4073-8c45-ee467662745b.png",
+        "selected": true
+      }
+    ]
+  },
+  "review": {
+    "pose": "Rear quarter turn, face in side profile, raised hand in curls and relaxed smile",
+    "logos": "Cream #F9F1DF GA low center back of Black WT0093 bra; light-purple #DBAED0 GA centered on back waistband of Purple WB0025 leggings; both visible",
+    "scale": "Discreet size and shape visually compared with previous back and product references. Perspective differs; previous flat band-ratio measurements apply only to the prior straight back pose.",
+    "physical_bra_print_dimensions": "Still unverified; no supplier design or product setting changed",
+    "scene": "1024x1536 full-length gray studio; white sneakers; no extra wording or seat print"
+  },
+  "price_cents": 0,
+  "available_for_sale": false
+}

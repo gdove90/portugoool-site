@@ -5428,7 +5428,8 @@ export const products: Product[] = [
     "colorVariants": TEMPO_TRAINING_BRA_VARIANTS
   },
   // Tapstitch WB0025: Black 1568598186191417344, White 1568599593921474560,
-  // Haze Blue 1568600115416072192. Owner's galleries uploaded 2026-11-06/07.
+  // Haze Blue 1568600115416072192, Purple 1568600560352030720.
+  // Owner's galleries uploaded 2026-11-06/07.
   // Retail price and purchase release pending.
   {
     "id": "80000000-0000-4000-8000-000000000026",
@@ -5566,6 +5567,35 @@ export const products: Product[] = [
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-back-20261107.webp",
             "alt": "Suzanne in Haze Blue TEMPO Training Leggings, back view with the light-blue GA centered on the back waistband and the smaller white GA on the light blue TEMPO racerback bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          }
+        ]
+      },
+      {
+        "name": "Purple",
+        "supplierColor": "Purple",
+        "hex": "#96437B",
+        "skuFragment": "",
+        "comingSoon": true,
+        "images": [
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-floating-ghost-front-20261107.webp",
+            "alt": "Purple TEMPO Training Leggings, floating front view with natural worn shape, shaped waistband and fabric detail",
+            "caption": "Product visualization."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-jessica-front-20261107.webp",
+            "alt": "Jessica facing forward in Purple TEMPO Training Leggings and the Black TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-jessica-quarter-20261107.webp",
+            "alt": "Jessica laughing at a front-left quarter turn in Purple TEMPO Training Leggings and the Black TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-purple-jessica-back-quarter-20261107.webp",
+            "alt": "Jessica at a rear quarter turn with her face in profile, light-purple GA centered on the leggings back waistband and cream GA on the Black TEMPO racerback bra",
             "caption": "Product visualization. Leggings only; bra shown for styling."
           }
         ]
