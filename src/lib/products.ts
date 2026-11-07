@@ -5476,8 +5476,8 @@ export const products: Product[] = [
         "caption": "Product visualization. Leggings only; bra shown for styling."
       },
       {
-        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-20261106.webp",
-        "alt": "Michaela in Black TEMPO Training Leggings, back view showing the white and red GA monogram centered on the waistband, styled with the cream-monogram Black TEMPO racerback bra",
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-red-white-bra-20261107.webp",
+        "alt": "Michaela in Black TEMPO Training Leggings, back view with white and red GA monograms centered on the leggings waistband and the lower back of the Black TEMPO racerback bra",
         "caption": "Product visualization. Leggings only; bra shown for styling."
       }
     ],
@@ -5505,8 +5505,8 @@ export const products: Product[] = [
             "caption": "Product visualization. Leggings only; bra shown for styling."
           },
           {
-            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-20261106.webp",
-            "alt": "Michaela in Black TEMPO Training Leggings, back view showing the white and red GA monogram centered on the waistband, styled with the cream-monogram Black TEMPO racerback bra",
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-red-white-bra-20261107.webp",
+            "alt": "Michaela in Black TEMPO Training Leggings, back view with white and red GA monograms centered on the leggings waistband and the lower back of the Black TEMPO racerback bra",
             "caption": "Product visualization. Leggings only; bra shown for styling."
           }
         ]

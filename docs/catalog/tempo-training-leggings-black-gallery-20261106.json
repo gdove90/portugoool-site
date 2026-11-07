@@ -34,8 +34,9 @@
     "color": "Black",
     "front_reference": "public/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp",
     "back_reference": "public/products/tempo-training-bra/goal-training-bra-black-06-ghost-back-20261104.webp",
-    "features": "Wide-strap racerback, plain front, small cream GA monogram low at center back",
-    "supplier_save_status": "Existing catalog visualization. See tempo-training-bra-gallery-20261104.json for its separate production holds."
+    "features": "Wide-strap racerback, plain front, small white/red GA monogram low at center back",
+    "supplier_save_status": "Existing catalog visualization. See tempo-training-bra-gallery-20261104.json for its separate production holds.",
+    "gallery_decoration_override": "User requested only the bra rear monogram changed from cream to white/red on 2026-11-07. Existing bra product listing and production holds unchanged."
   },
   "gallery_order": [
     "original-supplier-ghost-front",
@@ -96,9 +97,13 @@
       {
         "key": "back",
         "prompt": "Create an alternate full-body rear catalog view of the same adult athlete Michaela from image 1, wearing the same black GOAL Athletics training outfit and white trainers. Use images 2 and 3 as exact product back references. Bra: broad-strap black solid racerback with a small cream GA monogram centered on its lower back panel above the flat hem. Leggings: black WB0025 high waistband and ankle-length cut, with a separate small white/red GA monogram centered on the back waistband exactly like image 3. Preserve the actual garment seams and logo shapes, colors and placements. No extra logos or wording. Michaela stands naturally with one foot slightly back, arms relaxed, head gently turned toward camera with a friendly smile. Preserve her face and highlighted curly bun. Same gray studio, restrained professional product photography, 1024x1536 portrait with head and shoes fully visible."
+      },
+      {
+        "key": "back-bra-monogram-edit",
+        "prompt": "Use case: precise-object-edit. Image 1 is the edit target: this existing finished GOAL Athletics clothing catalog photograph. Change ONLY the small existing cream GA monogram centered low on the back of the black racerback sports bra: make its G white and its A red, matching the white/red GA monogram already on the leggings waistband. Preserve the bra monogram's exact silhouette, size, position, perspective, and flat printed texture. Keep the leggings and their existing monogram completely unchanged. Preserve everything else in the photo unchanged: the same adult Michaela, face, expression, hair, pose, body proportions, actual broad-strap WT0093 racerback bra construction, WB0025 leggings, shoes, fabric, seams, lighting, gray studio background, framing, and 1024x1536 composition. No other edits, additions, rescaling, or text."
       }
     ],
-    "review": "Matched the WB0025 front/back seams, high waistband, plain front, flat ankle hems and white/red rear waistband monogram. Styling bra matched approved WT0093 wide straps, racerback and smaller cream rear logo. Earlier renders using the wrong thin-strap top were discarded and are not website assets."
+    "review": "Final gallery uses the actual WT0093 racerback shape and WB0025 leggings. On 2026-11-07 the existing back photo was edited only to recolor the bra GA monogram white/red as requested. Front and quarter image files unchanged; ghost first and back last."
   },
   "files": [
     {
@@ -117,8 +122,8 @@
       "caption": "Product visualization. Leggings only; bra shown for styling."
     },
     {
-      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-20261106.webp",
-      "alt": "Michaela in Black TEMPO Training Leggings, back view showing the white and red GA monogram centered on the waistband, styled with the cream-monogram Black TEMPO racerback bra",
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-red-white-bra-20261107.webp",
+      "alt": "Michaela in Black TEMPO Training Leggings, back view with white and red GA monograms centered on the leggings waistband and the lower back of the Black TEMPO racerback bra",
       "caption": "Product visualization. Leggings only; bra shown for styling."
     }
   ]
