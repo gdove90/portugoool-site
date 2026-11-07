@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-07",
+  "model": "Suzanne",
+  "scope": "Haze Blue TEMPO leggings gallery styled with the actual light Blue WT0093 TEMPO sports bra. Leggings only.",
+  "publication_status": "Owner requested upload on 2026-11-07. Haze Blue added to the existing owner-only Women preview.",
+  "model_reference_directory": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Suzanne-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Suzanne",
+  "leggings": {
+    "style": "WB0025-O001-V2",
+    "color": "Haze Blue",
+    "design_id": "1568600115416072192",
+    "detail_url": "https://www.tapstitch.com/account/products-pool/product/1568600115764219904",
+    "fabric": "75% nylon / 25% spandex, 220 gsm",
+    "decoration": "Light-blue GA #BBD6E9 centered on the back waistband only",
+    "print_width_in": 1.4,
+    "print_height_in": 1.27,
+    "artwork": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\designs\\tempo-training-leggings-wb0025-2026-11-06\\print\\GA-V13-Leggings-HazeBlue-LightBlue-1200px.png"
+  },
+  "styling_bra": {
+    "style": "WT0093-P001-V2",
+    "catalog_product_id": "80000000-0000-4000-8000-000000000025",
+    "catalog_color": "Blue",
+    "catalog_hex": "#B8DCE3",
+    "features": "Wide bound straps, scoop front, solid racerback, narrow flat hem, plain front and small white GA low at center back",
+    "references": [
+      "public/products/tempo-training-bra/goal-training-bra-blue-01-ghost-front-20261104.webp",
+      "public/products/tempo-training-bra/goal-training-bra-blue-06-ghost-back-20261104.webp"
+    ],
+    "production_status": "Existing bra listing and production holds unchanged. Exact physical supplier print dimensions remain unverified; visual proportions match the approved reference."
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompts": [
+      {
+        "key": "front",
+        "prompt": "Create a professional full-length sportswear catalog photograph of Suzanne, the adult brand model in reference 1, wearing the exact Haze Blue training leggings in reference 2 and the light blue racerback sports bra in reference 3. Preserve Suzanne's face, freckles and blonde ponytail. Match the real garment colors, cuts, seams, high legging waistband and flat hems. Both garment fronts are plain with no logos. Include plain white training shoes. Suzanne faces the camera with a warm confident smile, a slight head tilt, hands resting lightly at her hips and relaxed weight on one leg. Neutral gray seamless studio, soft commercial lighting, natural stance and realistic fabric. One 1024x1536 portrait photograph showing her complete head and both shoes. No text, props or additional accessories."
+      },
+      {
+        "key": "quarter",
+        "prompt": "Create an alternate full-length professional sportswear catalog photo of the same adult Suzanne from image 1 in the same Haze Blue leggings, light blue WT0093 racerback sports bra and plain white training shoes. Image 2 confirms her identity at a quarter turn, and images 3-4 show the actual garment fronts. Preserve her exact face, freckles, blonde ponytail, natural build, garment colors and construction. Turn her body 30 degrees to a front-left quarter view. Give her an easy candid laugh looking just off camera, one hand casually at the back of her neck, the other relaxed, and a natural small step forward. Both garment fronts remain plain. Same gray studio and soft catalog lighting as image 1, realistic seams and smooth performance fabric. One 1024x1536 portrait photograph with her complete head and both shoes visible; no additional accessories, props, wording or logos."
+      },
+      {
+        "key": "back",
+        "prompt": "Create an alternate full-length REAR professional sportswear catalog photo of the same adult Suzanne from image 1, wearing the Haze Blue WB0025 leggings and light blue WT0093 racerback sports bra. Image 2 confirms her blonde ponytail and natural build. Images 3-4 are the exact garment back references. Match all garment colors, shapes and seams. Leggings: one small light-blue GA monogram #BBD6E9 centered on the back waistband, with its width about 11.5 percent of the waistband width at the logo height, following image 3 and the saved 1.4-inch design. Bra: one smaller white GA centered low on its back above the narrow flat hem, about 8.2 percent of the bra band width, following image 4. Preserve these exact GA silhouettes, colors and discreet proportions. Suzanne's shoulders and hips face away square to camera; only her head turns gently toward the camera over her left shoulder with a friendly playful smile. Arms relaxed, one heel softly lifted in a natural standing pose, ponytail falling to one side so the racerback and both monograms remain visible. Same white trainers, neutral gray studio, soft product lighting and realistic fabric as image 1. One 1024x1536 portrait photograph with full head and both shoes visible. No extra graphics, words, accessories or props."
+      },
+      {
+        "key": "back-final-monogram-size-and-ink",
+        "prompt": "Precise local branding edit of this finished professional GOAL Athletics catalog photograph. Change ONLY the two existing rear GA monograms. On the Haze Blue leggings waistband, keep the existing GA silhouette and center position, set the print to the saved light-blue ink #BBD6E9, and make the logo approximately 26 pixels wide by 23 pixels tall on the 1024x1536 image. It should occupy about 11.5 percent of the waistband width, matching the saved 1.4-inch design. On the light-blue racerback sports bra, keep the existing white GA silhouette and center position and reduce it slightly from about 18 pixels wide to 16 pixels wide, preserving its aspect ratio; it should occupy about 8.2 percent of that band width. Keep both prints small, flat and crisp with natural fabric lighting. Preserve every other part of the image unchanged: Suzanne's face, hair, expression, pose, natural build, actual garment cuts and seams, clothing colors, shoes, gray studio, lighting and framing. No other edits or added marks."
+      }
+    ]
+  },
+  "monogram_size_check": {
+    "method": "Read-only comparison of logo width relative to the local garment band in the final model image and saved references.",
+    "reference_consistency_tolerance_percent": 10,
+    "criterion_scope": "Rendering-reference comparison only; not a supplier production tolerance.",
+    "measurements": {
+      "leggings": {
+        "reference_logo_box_px": [
+          674,
+          115,
+          725,
+          161
+        ],
+        "model_logo_box_px": [
+          503,
+          588,
+          530,
+          612
+        ],
+        "reference_band_width_px": 440,
+        "model_band_width_px": 229,
+        "reference_logo_to_band_percent": 11.59,
+        "model_logo_to_band_percent": 11.79,
+        "relative_difference_percent": 1.72,
+        "visual_proportion_check": true
+      },
+      "bra": {
+        "reference_logo_box_px": [
+          489,
+          943,
+          537,
+          983
+        ],
+        "model_logo_box_px": [
+          496,
+          449,
+          513,
+          463
+        ],
+        "reference_band_width_px": 588,
+        "model_band_width_px": 202,
+        "reference_logo_to_band_percent": 8.16,
+        "model_logo_to_band_percent": 8.42,
+        "relative_difference_percent": 3.09,
+        "visual_proportion_check": true
+      }
+    }
+  },
+  "review": "Compared Suzanne identity with the saved brand model views and both garments with their actual product references. Plain fronts, actual broad-strap WT0093 construction, WB0025 high waistband and flat ankle hems preserved. Leggings monogram light blue and waistband-only; bra monogram white. Both logo proportion checks pass. Original supplier ghost copied without changes.",
+  "gallery_order": [
+    "ghost-front",
+    "front",
+    "quarter",
+    "back"
+  ],
+  "files": [
+    {
+      "view": "ghost-front",
+      "name": "00 Haze Blue TEMPO Leggings - Original Tapstitch Ghost Front.png",
+      "source": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-front.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\00 Haze Blue TEMPO Leggings - Original Tapstitch Ghost Front.png",
+      "collection_path": null,
+      "width": 1400,
+      "height": 1400,
+      "sha256": "5abf0a716e5c6fed666c4969431710ed4cf1b967db3c2708b315e67f135b4305",
+      "bytes": 343038
+    },
+    {
+      "view": "front",
+      "name": "01 Suzanne Haze Blue TEMPO Leggings - Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-0850dcd7-a871-4502-a015-0d8c871cca2e.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\01 Suzanne Haze Blue TEMPO Leggings - Front.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\01 Suzanne Haze Blue TEMPO Leggings - Front.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b501ab953c2a75111da418bd06881bea9eb339372f7be4c8150d185b5cc7b61f",
+      "bytes": 1707812
+    },
+    {
+      "view": "quarter",
+      "name": "02 Suzanne Haze Blue TEMPO Leggings - Quarter.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-ea4e4db8-06ca-419d-96b1-1b09905dd994.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\02 Suzanne Haze Blue TEMPO Leggings - Quarter.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\02 Suzanne Haze Blue TEMPO Leggings - Quarter.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "88511db38d5f53bf233ed34c226996b76c18de74e996631511c4a96461090529",
+      "bytes": 1672676
+    },
+    {
+      "view": "back",
+      "name": "03 Suzanne Haze Blue TEMPO Leggings - Back.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-fe56fa24-5b0e-43b8-b345-4b5e9e09046d.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Suzanne - Haze Blue TEMPO Leggings\\03 Suzanne Haze Blue TEMPO Leggings - Back.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\03 Suzanne Haze Blue TEMPO Leggings - Back.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "304732281c77911f36c84c780bf57978517737c01be931cf955985a395b95099",
+      "bytes": 1650800
+    }
+  ],
+  "product_id": "80000000-0000-4000-8000-000000000026",
+  "slug": "tempo-training-leggings",
+  "publication_scope": "Public collection gate, retail price and production holds unchanged.",
+  "price_cents": 0,
+  "available_for_sale": false,
+  "website_preview": "https://goalathletics.shop/women/preview/tempo-training-leggings?color=Haze%20Blue",
+  "catalog_swatch": {
+    "hex": "#7C9CB5",
+    "source": "Sampled from the original supplier front preview."
+  },
+  "website_images": [
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-ghost-front-20261107.png",
+      "alt": "Haze Blue TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+      "caption": "Supplier product preview.",
+      "sha256": "5abf0a716e5c6fed666c4969431710ed4cf1b967db3c2708b315e67f135b4305",
+      "bytes": 343038
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-front-20261107.webp",
+      "alt": "Suzanne facing forward in Haze Blue TEMPO Training Leggings and the light blue TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "2c02148161b29772c447810971305ea4796e83bca4557fb3866341b5561a4cf7",
+      "bytes": 53698
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-quarter-20261107.webp",
+      "alt": "Suzanne laughing at a front-left quarter turn in Haze Blue TEMPO Training Leggings and the light blue TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "5b799f7cfa5dfbe1209f57b8f8bd8b83c5fd4c32f931063076361da423f9071f",
+      "bytes": 53458
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-back-20261107.webp",
+      "alt": "Suzanne in Haze Blue TEMPO Training Leggings, back view with the light-blue GA centered on the back waistband and the smaller white GA on the light blue TEMPO racerback bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "4edbf0b1c2369304cd87f3188209819ce697f35895c3387b7df6a0dc67c2bfc5",
+      "bytes": 57578
+    }
+  ]
+}

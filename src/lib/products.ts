@@ -5427,8 +5427,9 @@ export const products: Product[] = [
     "images": TEMPO_TRAINING_BRA_VARIANTS[0].images,
     "colorVariants": TEMPO_TRAINING_BRA_VARIANTS
   },
-  // Tapstitch WB0025, Black 1568598186191417344 and White 1568599593921474560.
-  // Owner's gallery upload, 2026-11-06. Retail price and purchase release pending.
+  // Tapstitch WB0025: Black 1568598186191417344, White 1568599593921474560,
+  // Haze Blue 1568600115416072192. Owner's galleries uploaded 2026-11-06/07.
+  // Retail price and purchase release pending.
   {
     "id": "80000000-0000-4000-8000-000000000026",
     "name": "TEMPO Training Leggings",
@@ -5536,6 +5537,35 @@ export const products: Product[] = [
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-back-20261107.webp",
             "alt": "Molly in White TEMPO Training Leggings, back view with the black GA centered on the back waistband and the smaller white GA on the Blue TEMPO racerback bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          }
+        ]
+      },
+      {
+        "name": "Haze Blue",
+        "supplierColor": "Haze Blue",
+        "hex": "#7C9CB5",
+        "skuFragment": "",
+        "comingSoon": true,
+        "images": [
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-ghost-front-20261107.png",
+            "alt": "Haze Blue TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+            "caption": "Supplier product preview."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-front-20261107.webp",
+            "alt": "Suzanne facing forward in Haze Blue TEMPO Training Leggings and the light blue TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-quarter-20261107.webp",
+            "alt": "Suzanne laughing at a front-left quarter turn in Haze Blue TEMPO Training Leggings and the light blue TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-haze-blue-suzanne-back-20261107.webp",
+            "alt": "Suzanne in Haze Blue TEMPO Training Leggings, back view with the light-blue GA centered on the back waistband and the smaller white GA on the light blue TEMPO racerback bra",
             "caption": "Product visualization. Leggings only; bra shown for styling."
           }
         ]
