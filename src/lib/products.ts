@@ -5195,7 +5195,7 @@ export const products: Product[] = [
   // delete): the V1.3 GA monogram 2.00 x 1.80 in centred on the chest, top
   // 3 in below the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
   // priced $68. Mauve (6265064) uses a wine-red chest transfer and inside-neck
-  // label SB-6-161561. Navy and Mauve use owner-supplied galleries. Supplier record:
+  // label SB-6-161561. Black, Navy and Mauve use owner-supplied galleries. Supplier record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000020",
@@ -5214,8 +5214,8 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold, inside out, with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/tempo-warmup-hoodie-black-catalog-product-front-20261026.webp",
-        alt: "TEMPO Warmup Hoodie in Black, product front with the white and red GA monogram centred on the chest",
+        src: "/products/tempo-warmup-hoodie-black-model-front-20261106.webp",
+        alt: "Front view of the Black TEMPO Warmup Hoodie on a model, showing the white and red GA monogram",
       },
     ],
     colorVariants: [
@@ -5226,8 +5226,20 @@ export const products: Product[] = [
         skuFragment: "BLACK",
         images: [
           {
-            src: "/products/tempo-warmup-hoodie-black-catalog-product-front-20261026.webp",
-            alt: "TEMPO Warmup Hoodie in Black, product front with the white and red GA monogram centred on the chest",
+            src: "/products/tempo-warmup-hoodie-black-model-front-20261106.webp",
+            alt: "Front view of the Black TEMPO Warmup Hoodie on a model, showing the white and red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-black-product-front-20261106.webp",
+            alt: "Black TEMPO Warmup Hoodie, product front with the white and red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-black-model-three-quarter-20261106.webp",
+            alt: "Three-quarter view of a model adjusting the cuff of the Black TEMPO Warmup Hoodie",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-black-model-smiling-20261106.webp",
+            alt: "Smiling model in the Black TEMPO Warmup Hoodie with the white and red GA monogram",
           },
         ],
       },
