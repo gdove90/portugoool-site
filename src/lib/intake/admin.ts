@@ -1,5 +1,6 @@
 import "server-only";
 import { requireOwner } from "./auth";
+import { emailEnabled } from "@/lib/email";
 import { bodyJSON, checked, fail, intakeClient, response, sameOrigin } from "./server";
 // Mirrors migration 0053: new/reviewing = pending review, approved = eligible
 // for use, featured = used on a GOAL channel, achieved = goal reached,
@@ -10,7 +11,7 @@ export async function adminRequest(request: Request, path: string[]) {
   const user = await requireOwner();
   const client = intakeClient(), url = new URL(request.url);
   if (request.method !== "GET") sameOrigin(request);
-  if(path.length === 1 && path[0] === "session" && request.method === "GET") return response({email:user.email,notifications:"not_configured"});
+  if(path.length === 1 && path[0] === "session" && request.method === "GET") return response({email:user.email,notifications:emailEnabled()?"configured":"not_configured"});
   if(path.length === 1 && path[0] === "submissions" && request.method === "GET") {
     const kind=url.searchParams.get("kind") || "", status=url.searchParams.get("status") || "", q=(url.searchParams.get("q") || "").slice(0,100);
     const offset=Math.max(0,Math.min(100000,Math.floor(Number(url.searchParams.get("offset")) || 0)));

@@ -45,6 +45,18 @@ async function main() {
     await new Promise(resolve => setImmediate(resolve));
     assert.equal(h.element('#admin-email').textContent, ''); assert.equal(h.requests.length, 1);
   });
+  await check('configured email alerts are reported without promising delivery', async () => {
+    const h = harness(); h.requests[0].reply({ email: 'fixture@example.test', notifications: 'configured' });
+    await new Promise(resolve => setImmediate(resolve));
+    assert.match(h.element('#admin-notifications').textContent, /email alerts are configured/i);
+    assert.doesNotMatch(h.element('#admin-notifications').textContent, /not configured|delivered/i); h.cleanup();
+  });
+  await check('missing email configuration directs the owner to the inbox', async () => {
+    const h = harness(); h.requests[0].reply({ email: 'fixture@example.test', notifications: 'not_configured' });
+    await new Promise(resolve => setImmediate(resolve));
+    assert.match(h.element('#admin-notifications').textContent, /not configured/i);
+    assert.match(h.element('#admin-notifications').textContent, /check this inbox/i); h.cleanup();
+  });
   await check('refresh failures after unmount cannot redirect another page', async () => {
     const h = harness(), refresh = h.intervals[0](); h.cleanup();
     h.requests[1].reply({ error: 'Expired' }, false); await refresh;
