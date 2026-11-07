@@ -22,6 +22,7 @@ export const TEMPO_PRODUCT_IDS: ReadonlySet<string> = new Set([
   "80000000-0000-4000-8000-000000000021",
   "80000000-0000-4000-8000-000000000025",
   "80000000-0000-4000-8000-000000000022",
+  "80000000-0000-4000-8000-000000000026",
 ]);
 
 /** True for a TEMPO product while the collection is gated. */

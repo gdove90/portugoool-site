@@ -18,6 +18,7 @@ export const GUIDE = [
   { id: "women-sports-bras", garment: "bra", productIds: ["80000000-0000-4000-8000-000000000025"] },
   { id: "women-hoodies", garment: "hoodie", productIds: ["80000000-0000-4000-8000-000000000020"] },
   { id: "pants", garment: "pair of pants", productIds: ["80000000-0000-4000-8000-000000000019"] },
+  { id: "women-leggings", garment: "pair of leggings", productIds: ["80000000-0000-4000-8000-000000000026"] },
   { id: "women-shorts", garment: "pair of shorts", productIds: ["80000000-0000-4000-8000-000000000022"] },
   { id: "layers", garment: "quarter zip", productIds: ["80000000-0000-4000-8000-000000000018"] },
 ] as const;

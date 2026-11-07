@@ -138,6 +138,19 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
       { size: "XL", chestIn: 15.35, lengthIn: 13.11, sleeveIn: null },
     ],
   },
+  // Supplier WB0025 flat garment chart, inspected 2026-11-06.
+  wb0025: {
+    blank: "Women's high-rise ankle-length leggings · nylon stretch knit",
+    measure: "waist",
+    lengthMeasure: "outseam",
+    toleranceIn: 3 / 2.54,
+    rows: [
+      { size: "S", chestIn: 9.45, hipIn: 12.99, lengthIn: 32.28, sleeveIn: null },
+      { size: "M", chestIn: 10.24, hipIn: 13.78, lengthIn: 33.07, sleeveIn: null },
+      { size: "L", chestIn: 11.02, hipIn: 14.57, lengthIn: 33.86, sleeveIn: null },
+      { size: "XL", chestIn: 11.81, hipIn: 15.35, lengthIn: 34.65, sleeveIn: null },
+    ],
+  },
   wt0216: {
     blank: "Women's lightweight polyester crew · 130 gsm",
     measure: "bust",
@@ -239,6 +252,7 @@ const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
   "80000000-0000-4000-8000-000000000023": "mt0063", // Core Quarter Zip
   "80000000-0000-4000-8000-000000000024": "pst871", // Core Jogger
   "80000000-0000-4000-8000-000000000025": "wt0093", // TEMPO Training Bra
+  "80000000-0000-4000-8000-000000000026": "wb0025", // TEMPO Training Leggings
   "70000000-0000-4000-8000-000000000001": "st720", // Core Badge Tee
   "70000000-0000-4000-8000-000000000002": "ind4000", // Core Hoodie · Red
   "70000000-0000-4000-8000-000000000006": "ind4000", // Core Hoodie · Club Blue (own product from 2026-09-24)

@@ -5427,6 +5427,93 @@ export const products: Product[] = [
     "images": TEMPO_TRAINING_BRA_VARIANTS[0].images,
     "colorVariants": TEMPO_TRAINING_BRA_VARIANTS
   },
+  // Tapstitch WB0025, Black design 1568598186191417344.
+  // Owner's gallery upload, 2026-11-06. Retail price and purchase release pending.
+  {
+    "id": "80000000-0000-4000-8000-000000000026",
+    "name": "TEMPO Training Leggings",
+    "slug": "tempo-training-leggings",
+    "blank": "WB0025",
+    "description": "High-rise, ankle-length stretch leggings with a clean front and the GA monogram centered on the back waistband. Shown with the Black TEMPO Training Bra for styling. Leggings only.",
+    "priceCents": 0,
+    "compareAtPriceCents": null,
+    "color": "Black",
+    "colorHex": "#1E1E1E",
+    "fabric": "75% nylon, 25% spandex. 220 gsm stretch knit.",
+    "fit": "Close-fitting with a high waist and ankle-length legs. Compare the relaxed flat garment measurements with leggings you own before choosing your size.",
+    "careInstructions": "Machine wash at 30°C on a gentle cycle. Do not bleach. Tumble dry low. Iron on low away from the print. Do not dry clean.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "category": "pants",
+    "supplierType": "tapstitch",
+    "isActive": true,
+    "availableForSale": false,
+    "isLimitedDrop": false,
+    "dropVersion": null,
+    "dropLimit": null,
+    "dropSoldCount": 0,
+    "customNameAvailable": false,
+    "customNumberAvailable": false,
+    "customizationPriceCents": 0,
+    "images": [
+      {
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-ghost-front-20261106.png",
+        "alt": "Black TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+        "caption": "Supplier product preview."
+      },
+      {
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-front-20261106.webp",
+        "alt": "Michaela facing forward in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+        "caption": "Product visualization. Leggings only; bra shown for styling."
+      },
+      {
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-quarter-20261106.webp",
+        "alt": "Michaela laughing at a front-left quarter turn in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+        "caption": "Product visualization. Leggings only; bra shown for styling."
+      },
+      {
+        "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-20261106.webp",
+        "alt": "Michaela in Black TEMPO Training Leggings, back view showing the white and red GA monogram centered on the waistband, styled with the cream-monogram Black TEMPO racerback bra",
+        "caption": "Product visualization. Leggings only; bra shown for styling."
+      }
+    ],
+    "colorVariants": [
+      {
+        "name": "Black",
+        "supplierColor": "Black",
+        "hex": "#1E1E1E",
+        "skuFragment": "",
+        "comingSoon": true,
+        "images": [
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-ghost-front-20261106.png",
+            "alt": "Black TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+            "caption": "Supplier product preview."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-front-20261106.webp",
+            "alt": "Michaela facing forward in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-quarter-20261106.webp",
+            "alt": "Michaela laughing at a front-left quarter turn in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-20261106.webp",
+            "alt": "Michaela in Black TEMPO Training Leggings, back view showing the white and red GA monogram centered on the waistband, styled with the cream-monogram Black TEMPO racerback bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          }
+        ]
+      }
+    ],
+    "imageBackdrop": "light"
+  },
 ];
 
 // ── Data access (swap these for Supabase queries later) ───────

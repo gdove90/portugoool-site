@@ -1,0 +1,125 @@
+{
+  "product_id": "80000000-0000-4000-8000-000000000026",
+  "slug": "tempo-training-leggings",
+  "color": "Black",
+  "model": "Michaela",
+  "scope": "Leggings gallery only. Black TEMPO Training Bra WT0093 used as the styling top. No changes to the bra listing.",
+  "supplier": {
+    "name": "Tapstitch",
+    "style": "WB0025-O001-V2",
+    "design_id": "1568598186191417344",
+    "detail_url": "https://www.tapstitch.com/account/products-pool/product/1568599146607366144",
+    "product_url": "https://www.tapstitch.com/custom/1490729236984643584",
+    "fabric": "75% nylon / 25% spandex, 220 gsm",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "decoration": {
+      "location": "Center back waistband",
+      "width_in": 1.4,
+      "height_in": 1.27,
+      "ink": [
+        "#FFFFFF",
+        "#E51226"
+      ],
+      "front": "Undecorated"
+    }
+  },
+  "styling_bra": {
+    "product_id": "80000000-0000-4000-8000-000000000025",
+    "style": "WT0093-P001-V2",
+    "color": "Black",
+    "front_reference": "public/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp",
+    "back_reference": "public/products/tempo-training-bra/goal-training-bra-black-06-ghost-back-20261104.webp",
+    "features": "Wide-strap racerback, plain front, small cream GA monogram low at center back",
+    "supplier_save_status": "Existing catalog visualization. See tempo-training-bra-gallery-20261104.json for its separate production holds."
+  },
+  "gallery_order": [
+    "original-supplier-ghost-front",
+    "michaela-front",
+    "michaela-quarter",
+    "michaela-back"
+  ],
+  "price_cents": 0,
+  "price_status": "Retail price not set. Existing Price to be announced behavior used.",
+  "available_for_sale": false,
+  "publication_scope": "Existing owner-only Women collection preview. Public collection gate remains enabled.",
+  "size_chart": {
+    "source": "Tapstitch WB0025 product Size Guide dialog inspected 2026-11-06",
+    "measurement_type": "Relaxed flat garment measurements in inches",
+    "tolerance_cm": [
+      1,
+      3
+    ],
+    "rows": [
+      {
+        "size": "S",
+        "waist": 9.45,
+        "hip": 12.99,
+        "length": 32.28
+      },
+      {
+        "size": "M",
+        "waist": 10.24,
+        "hip": 13.78,
+        "length": 33.07
+      },
+      {
+        "size": "L",
+        "waist": 11.02,
+        "hip": 14.57,
+        "length": 33.86
+      },
+      {
+        "size": "XL",
+        "waist": 11.81,
+        "hip": 15.35,
+        "length": 34.65
+      }
+    ],
+    "length_method": "Waistband to hem; not inseam"
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompts": [
+      {
+        "key": "front",
+        "prompt": "Use case: photorealistic-natural\nCreate a professional full-body activewear catalog photograph of the adult athlete Michaela in reference 1, preserving her exact face, freckles, highlighted curly bun, small gold hoops and athletic proportions.\nDress her in the actual Black GOAL Athletics garments pictured in references 2-5. References 2-3 are the WB0025 fitted ankle-length leggings, high waistband, smooth matte performance jersey, plain front, curved waistband seams, flat ankle hems and one small white/red GA logo centered on the back waistband. No other branding or added details on the leggings. References 4-5 are the actual Black TEMPO WT0093 sports bra: broad shoulder straps, scoop neckline, proper solid racerback, bound edges and flat elastic hem. Bra front plain. Bra back has a small cream GA logo centered above the hem, matching reference 5. Match the garments' actual shapes and seam layouts faithfully. Include ordinary unbranded white trainers.\nStudio setting: neutral gray seamless backdrop and floor, soft natural product lighting and contact shadows. Realistic professional sportswear photography, natural skin texture, no retouching of body shape, no props or lettering. Portrait 1024x1536, one photograph, full head and both shoes visible, clothing clearly shown.\nFront view, hips and shoulders square to camera. Warm confident smile, one hand resting lightly at her hip and the other relaxed at her side, a little weight on one leg. Both garment fronts are plain black, with no visible logos in this view."
+      },
+      {
+        "key": "quarter",
+        "prompt": "Create an alternate professional activewear catalog photo of the same adult athlete in image 1 wearing exactly the same black racerback sports bra, black ankle-length leggings and white trainers. Preserve Michaela's identity, highlighted curly bun, freckles, build and outfit. Turn her body 30 degrees to a front-left quarter view, with a natural small walking step and cheerful laugh looking just off camera, one hand casually near her hair. Images 2 and 3 confirm the actual product cuts: plain wide-strap WT0093 bra front and plain WB0025 legging front with high curved waistband. Keep both fronts unbranded. Same gray studio, lighting, full-body portrait 1024x1536. One image, no text or added accessories."
+      },
+      {
+        "key": "back",
+        "prompt": "Create an alternate full-body rear catalog view of the same adult athlete Michaela from image 1, wearing the same black GOAL Athletics training outfit and white trainers. Use images 2 and 3 as exact product back references. Bra: broad-strap black solid racerback with a small cream GA monogram centered on its lower back panel above the flat hem. Leggings: black WB0025 high waistband and ankle-length cut, with a separate small white/red GA monogram centered on the back waistband exactly like image 3. Preserve the actual garment seams and logo shapes, colors and placements. No extra logos or wording. Michaela stands naturally with one foot slightly back, arms relaxed, head gently turned toward camera with a friendly smile. Preserve her face and highlighted curly bun. Same gray studio, restrained professional product photography, 1024x1536 portrait with head and shoes fully visible."
+      }
+    ],
+    "review": "Matched the WB0025 front/back seams, high waistband, plain front, flat ankle hems and white/red rear waistband monogram. Styling bra matched approved WT0093 wide straps, racerback and smaller cream rear logo. Earlier renders using the wrong thin-strap top were discarded and are not website assets."
+  },
+  "files": [
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-ghost-front-20261106.png",
+      "alt": "Black TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+      "caption": "Supplier product preview."
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-front-20261106.webp",
+      "alt": "Michaela facing forward in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling."
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-quarter-20261106.webp",
+      "alt": "Michaela laughing at a front-left quarter turn in Black TEMPO Training Leggings and the Black TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling."
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-20261106.webp",
+      "alt": "Michaela in Black TEMPO Training Leggings, back view showing the white and red GA monogram centered on the waistband, styled with the cream-monogram Black TEMPO racerback bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling."
+    }
+  ]
+}
