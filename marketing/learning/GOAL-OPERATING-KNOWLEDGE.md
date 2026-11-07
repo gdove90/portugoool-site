@@ -233,3 +233,19 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text (summarised fetch); reason for the change and conversion impact NO DATA
 IMPLICATION: launches can be pulled back as well as added overnight; earlier notes that TEMPO tee and shorts were buyable are stale, and the TEMPO colour conflict is moot until relaunch.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, confirm TEMPO status and redirect old TEMPO URLs to /women; keep TEMPO out of captions until it is live.
+
+DATE: 2026-11-07
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-11-07/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: a second Reel (11-06, generic brand mood, no product or person named in the caption) reached 336 accounts and 416 views on 38 followers, against 181 and 209 for the named-subject GOALZIL Reel; no feed item has exceeded 25 reach. It also drew the account's first comment (1), with shares 3 and saves 0.
+CLASSIFICATION: SUPPORTED INFERENCE (reach numbers are OBSERVED; that format rather than subject drives reach is the inference)
+CONFIDENCE: LOW to MEDIUM (two Reels, creative not visible, tiny base, follower-type split NOT POPULATED)
+IMPLICATION: Reel format, not a named subject, is the better explanation for non-follower reach; Reels are 7x to 13x any feed post at this size.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, keep Reels on the standing grid and test one with a named product (EXP-003) before more carousel variants.
+
+DATE: 2026-11-07
+SOURCE: Performance & Consumer Intelligence, same report
+OBSERVATION: followers stayed at 38 through 11-05 despite the 11-06 Reel (336 reach); follows are 0 on every feed item and the 11-06 and 11-07 account rows are still partial.
+CLASSIFICATION: NO DATA (conversion of Reel reach into follows cannot yet be stated)
+CONFIDENCE: LOW
+IMPLICATION: the Reel's reach has not yet been shown to convert; judging it as growth needs the populated 11-06 to 11-08 follower rows.
+RECOMMENDED FUTURE ACTION: re-read follower count and followers gained on the 11-08 and 11-09 runs before concluding anything about conversion.

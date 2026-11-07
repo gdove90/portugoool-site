@@ -40,3 +40,15 @@ RESULT: DATA NOT AVAILABLE (not yet approved or run)
 LESSON: none yet
 CONFIDENCE: LOW
 FUTURE ACTION: owner reads the 11-02 15:00 Story in the app and decides whether to repeat the element; Performance Intelligence reads the result.
+
+ID: EXP-003
+STATUS: PROPOSED
+PROPOSED BY / DATE: Performance & Consumer Intelligence, 2026-11-07 (report 01 of that date)
+HYPOTHESIS: a Reel that shows and names one product holds the non-follower reach of the 11-06 brand-mood Reel (336) and adds product-page intent, which the brand-mood Reel could not show.
+VARIABLE CHANGED: one named product (for example the Core Warm-up Tee) in the Reel and caption, with link-in-bio CTA, instead of brand mood only.
+WHAT STAYED CONSTANT: format (Reel), caption rules, no prices, no named player, standing-grid slot, owner-filmed content.
+PRIMARY METRIC: reach, shares, saves, comments and follows at about 24 h, 72 h and 7 d. Controls: 11-06 Reel (reach 336, views 416, shares 3, comments 1) and 10-27 GOALZIL Reel (181). Winning condition: reach at least 180 with at least 2 shares and at least 1 save or follow; repeat on a second product before it counts as a pattern.
+RESULT: DATA NOT AVAILABLE (not yet approved or published)
+LESSON: none yet
+CONFIDENCE: LOW
+FUTURE ACTION: owner decides whether to film and publish; Performance Intelligence captures the readings if it runs.
