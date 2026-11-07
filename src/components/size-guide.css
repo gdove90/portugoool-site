@@ -11,6 +11,13 @@
 .size-guide-content .size-guide-intro { display:flex; flex-direction:column; gap:12px; }
 .size-guide-content .size-guide-intro h2 { font-size:clamp(22px,4vw,28px); line-height:1.2; letter-spacing:0; text-transform:none; overflow-wrap:anywhere; }
 .size-guide-content p { margin:0; }
+.fit-facts { margin:0; display:grid; gap:16px; font-size:14px; line-height:1.6; }
+.fit-facts>div { display:grid; grid-template-columns:minmax(105px,140px) minmax(0,1fr); gap:8px 18px; }
+.fit-facts dt { font-weight:600; }
+.fit-facts dd { margin:0; }
+.v84 .pdp-fit-summary { color:#595752; font-size:14px; line-height:1.6; }
+.size-guide-body-reference { display:flex; flex-direction:column; gap:12px; }
+.size-guide-body-reference h3 { font-size:16px; font-weight:600; }
 .size-guide-content .size-guide-fabric,.size-guide-content .size-guide-tolerance { color:#595752; font-size:14px; }
 .size-guide-measuring h3 { margin-bottom:6px; font-size:16px; font-weight:600; }
 .size-guide-table-heading { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
@@ -29,6 +36,7 @@
 .size-guide-content .size-guide-link { align-self:flex-start; text-decoration:underline; text-underline-offset:4px; min-height:44px; display:inline-flex; align-items:center; }
 .v84 .info-dialog:has(.size-guide-content) { width:min(760px,calc(100vw - 32px)); max-width:calc(100vw - 32px); }
 @media(max-width:480px) {
+  .fit-facts>div { grid-template-columns:1fr; gap:3px; }
   .size-guide-table th,.size-guide-table td { padding:10px 6px; }
   .size-guide-table thead th { min-width:65px; }
   .size-guide-table thead th:first-child { min-width:40px; }

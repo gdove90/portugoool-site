@@ -1,0 +1,734 @@
+{
+  "reviewedOn": "2026-11-07",
+  "scope": "All eight women's TEMPO styles; existing catalog sizes, media, prices, availability, fulfillment and launch gates preserved.",
+  "standard": [
+    "Fit",
+    "Length & coverage",
+    "Fabric & stretch",
+    "Choosing your size"
+  ],
+  "measurementPolicy": "Flat, relaxed garment widths and circumferential body ranges remain distinct. Only published measurements are included. Inches use source values; centimeters derive from those same values. Supplier URLs remain development references, outside customer modules.",
+  "limitations": "Supplier specifications and approved product visuals reviewed; no physical fit trial. AI brand-model images do not establish a model's height or worn size.",
+  "records": [
+    {
+      "productId": "80000000-0000-4000-8000-000000000017",
+      "blank": "LST350",
+      "slug": "tempo-core-training-tee",
+      "sources": [
+        "https://www.sanmar.com/p/4296_Black/specSheetMeasurements"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "columns": [
+        "Bust, flat",
+        "Body length",
+        "Sleeve length"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            19,
+            25.5,
+            14.5
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            20,
+            26,
+            15
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            21.5,
+            27,
+            15.75
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            23,
+            28,
+            16.5
+          ]
+        },
+        {
+          "size": "XXL",
+          "values": [
+            24.5,
+            29,
+            17.25
+          ]
+        }
+      ],
+      "bodyColumns": [
+        "Bust"
+      ],
+      "bodyRows": [
+        {
+          "size": "S",
+          "usSize": "4/6",
+          "values": [
+            [
+              35,
+              36
+            ]
+          ]
+        },
+        {
+          "size": "M",
+          "usSize": "8/10",
+          "values": [
+            [
+              37,
+              38
+            ]
+          ]
+        },
+        {
+          "size": "L",
+          "usSize": "12/14",
+          "values": [
+            [
+              39,
+              41
+            ]
+          ]
+        },
+        {
+          "size": "XL",
+          "usSize": "16/18",
+          "values": [
+            [
+              42,
+              44
+            ]
+          ]
+        },
+        {
+          "size": "XXL",
+          "usSize": "20/22",
+          "values": [
+            [
+              45,
+              47
+            ]
+          ]
+        }
+      ],
+      "review": "Supplier describes roomy women's cut. Bust measured 1 inch below armhole; body length at back from HPS; sleeve from center back neck. Regular fit with room; no universal true-to-size promise."
+    },
+    {
+      "productId": "80000000-0000-4000-8000-000000000018",
+      "blank": "WT0092-P001-V2",
+      "slug": "tempo-quarter-zip",
+      "sources": [
+        "https://www.tapstitch.com/custom/1483492130176507904"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "columns": [
+        "Bust, flat",
+        "Body length",
+        "Shoulder width",
+        "Sleeve length"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            16.93,
+            23.23,
+            14.88,
+            23.07
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            17.72,
+            24.02,
+            15.51,
+            23.54
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            18.5,
+            24.8,
+            16.14,
+            24.02
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            19.29,
+            25.59,
+            16.77,
+            24.49
+          ]
+        }
+      ],
+      "review": "Bodycon/fitted, 91/9 polyester/spandex, mock neck and thumbholes. New chart inspected live in supplier Size Guide; length from shoulder at collar, sleeve from shoulder seam. No body-range conversion inferred.",
+      "toleranceCm": 3
+    },
+    {
+      "productId": "80000000-0000-4000-8000-000000000019",
+      "blank": "LPST800",
+      "slug": "tempo-training-pants",
+      "sources": [
+        "https://www.sanmar.com/p/38695_BlkWhite/specSheetMeasurements"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "columns": [
+        "Waist, flat",
+        "Hip, flat",
+        "Inseam"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            15,
+            20,
+            28.5
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            16,
+            21,
+            29
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            17.5,
+            22.5,
+            29.5
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            19,
+            24,
+            30
+          ]
+        },
+        {
+          "size": "XXL",
+          "values": [
+            20.5,
+            25.5,
+            30.5
+          ]
+        }
+      ],
+      "bodyColumns": [
+        "Waist",
+        "Hip"
+      ],
+      "bodyRows": [
+        {
+          "size": "S",
+          "usSize": "4/6",
+          "values": [
+            [
+              27,
+              28
+            ],
+            [
+              37,
+              38
+            ]
+          ]
+        },
+        {
+          "size": "M",
+          "usSize": "8/10",
+          "values": [
+            [
+              29,
+              30
+            ],
+            [
+              39,
+              40
+            ]
+          ]
+        },
+        {
+          "size": "L",
+          "usSize": "12/14",
+          "values": [
+            [
+              31,
+              33
+            ],
+            [
+              41,
+              43
+            ]
+          ]
+        },
+        {
+          "size": "XL",
+          "usSize": "16/18",
+          "values": [
+            [
+              34,
+              36
+            ],
+            [
+              44,
+              46
+            ]
+          ]
+        },
+        {
+          "size": "XXL",
+          "usSize": "20/22",
+          "values": [
+            [
+              37,
+              39
+            ],
+            [
+              47,
+              49
+            ]
+          ]
+        }
+      ],
+      "review": "Tapered leg, drawcord waist, extended side zipper. Added published hip widths. Removed unsupported claim that drawcord adds a couple of inches. No rise height or outseam inferred."
+    },
+    {
+      "productId": "80000000-0000-4000-8000-000000000020",
+      "blank": "7519",
+      "slug": "tempo-warmup-hoodie",
+      "sources": [
+        "https://www.bellacanvas.com/spec/7519spec.pdf",
+        "https://www.apliiq.com/customize/womens/hoodies/womens-classic-hoodie-sweatshirt"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "columns": [
+        "Bust, flat",
+        "Body length"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            20,
+            22.75
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            20.75,
+            23.375
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            21.75,
+            24
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            22.75,
+            24.625
+          ]
+        },
+        {
+          "size": "XXL",
+          "values": [
+            23.75,
+            25.25
+          ]
+        }
+      ],
+      "review": "Classic women's fit, mid-length body, semi-set-in sleeves and no hood drawcord. Native manufacturer flat chest widths labeled Bust, flat consistently with other women's tops. Sleeve length not published; omitted. 52/48 blend for offered colors, Athletic Heather 90/10 not offered."
+    },
+    {
+      "productId": "80000000-0000-4000-8000-000000000021",
+      "blank": "WT0216-P001-V2",
+      "slug": "tempo-training-tee",
+      "sources": [
+        "https://www.tapstitch.com/custom/1521567164749025280",
+        "https://www.tapstitch.com/account/products-pool/product/1567566233338085376"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "columns": [
+        "Bust, flat",
+        "Body length",
+        "Shoulder width",
+        "Sleeve length"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            16.93,
+            23.03,
+            13.7,
+            5.51
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            17.72,
+            23.62,
+            14.17,
+            5.91
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            18.5,
+            24.21,
+            14.65,
+            6.3
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            19.29,
+            24.8,
+            15.12,
+            6.69
+          ]
+        }
+      ],
+      "review": "Public title says Regular Fit; Features says Slim-fit. Use close cut and measured comparison to Core tee, not a true-to-size claim. Added published shoulder/sleeve measurements from live saved-design guide. Supplier 2XL exists but site and fulfillment currently offer S-XL; no size expansion.",
+      "toleranceCm": 3
+    },
+    {
+      "productId": "80000000-0000-4000-8000-000000000022",
+      "blank": "LST485",
+      "slug": "tempo-training-shorts",
+      "sources": [
+        "https://www.sanmar.com/p/18479/specSheetMeasurements"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "columns": [
+        "Waist, flat",
+        "Hip, flat",
+        "Inseam"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            13.5,
+            20.125,
+            3.5
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            14.5,
+            21.125,
+            3.5
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            16,
+            22.625,
+            3.75
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            17.5,
+            24.125,
+            3.75
+          ]
+        },
+        {
+          "size": "XXL",
+          "values": [
+            19,
+            25.625,
+            4.25
+          ]
+        }
+      ],
+      "bodyColumns": [
+        "Waist",
+        "Hip"
+      ],
+      "bodyRows": [
+        {
+          "size": "S",
+          "usSize": "4/6",
+          "values": [
+            [
+              27,
+              28
+            ],
+            [
+              37,
+              38
+            ]
+          ]
+        },
+        {
+          "size": "M",
+          "usSize": "8/10",
+          "values": [
+            [
+              29,
+              30
+            ],
+            [
+              39,
+              40
+            ]
+          ]
+        },
+        {
+          "size": "L",
+          "usSize": "12/14",
+          "values": [
+            [
+              31,
+              33
+            ],
+            [
+              41,
+              43
+            ]
+          ]
+        },
+        {
+          "size": "XL",
+          "usSize": "16/18",
+          "values": [
+            [
+              34,
+              36
+            ],
+            [
+              44,
+              46
+            ]
+          ]
+        },
+        {
+          "size": "XXL",
+          "usSize": "20/22",
+          "values": [
+            [
+              37,
+              39
+            ],
+            [
+              47,
+              49
+            ]
+          ]
+        }
+      ],
+      "review": "Stretch shell, wide knit waistband and built-in liner. Added chart. Use size-specific inseam from measurement rows instead of applying marketing's nominal 3.5-inch length to all sizes. No outseam inferred."
+    },
+    {
+      "productId": "80000000-0000-4000-8000-000000000025",
+      "blank": "WT0093-P001-V2",
+      "slug": "tempo-training-bra",
+      "sources": [
+        "https://www.tapstitch.com/custom/1484550248251678720"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "columns": [
+        "Bust, flat",
+        "Underbust, flat",
+        "Body length"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            12.99,
+            12.2,
+            12.17
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            13.78,
+            12.99,
+            12.48
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            14.57,
+            13.78,
+            12.8
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            15.35,
+            14.57,
+            13.11
+          ]
+        }
+      ],
+      "review": "Fitted cropped racerback, fixed straps, scoop/U neck. Added live published underbust widths. Source has no cup-size conversion, pad specification or graded impact rating; none invented.",
+      "toleranceCm": 3
+    },
+    {
+      "productId": "80000000-0000-4000-8000-000000000026",
+      "blank": "WB0025-O001-V2",
+      "slug": "tempo-training-leggings",
+      "sources": [
+        "https://www.tapstitch.com/custom/1490729236984643584"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "columns": [
+        "Waist, flat",
+        "Hip, flat",
+        "Full length"
+      ],
+      "rows": [
+        {
+          "size": "S",
+          "values": [
+            9.45,
+            12.99,
+            32.28
+          ]
+        },
+        {
+          "size": "M",
+          "values": [
+            10.24,
+            13.78,
+            33.07
+          ]
+        },
+        {
+          "size": "L",
+          "values": [
+            11.02,
+            14.57,
+            33.86
+          ]
+        },
+        {
+          "size": "XL",
+          "values": [
+            11.81,
+            15.35,
+            34.65
+          ]
+        }
+      ],
+      "review": "Bodycon, high-rise, ankle-length, 75/25 nylon/spandex. Verified live relaxed flat measurements. Full length is waistband to hem, not inseam. No body size, compression grade or squat-proof claim inferred.",
+      "toleranceCm": 3
+    }
+  ],
+  "visualReview": [
+    [
+      "Core Training Tee",
+      "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/62_tempo-collection-proofs-2026-10-26/apliiq-renders/tee2-white-6241860.jpg"
+    ],
+    [
+      "Training Pants",
+      "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/62_tempo-collection-proofs-2026-10-26/apliiq-renders/pants3-black-white-front-6241843.jpg"
+    ],
+    [
+      "Training Shorts",
+      "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/62_tempo-collection-proofs-2026-10-26/apliiq-renders/shorts-black-6240613.jpg"
+    ],
+    [
+      "Warmup Hoodie",
+      "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/62_tempo-collection-proofs-2026-10-26/apliiq-renders/hoodie2-navy-6241888.jpg"
+    ],
+    [
+      "Training Tee",
+      "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/62_tempo-collection-proofs-2026-10-26/tapstitch-mockups/training-tee-white-v2.png"
+    ],
+    [
+      "Quarter Zip",
+      "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Light-Purple-front.png"
+    ],
+    [
+      "Training Leggings",
+      "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png"
+    ],
+    [
+      "Training Bra front/back gallery inspected in Chrome",
+      "https://www.tapstitch.com/custom/1484550248251678720"
+    ]
+  ],
+  "tapstitchLiveEvidence": "Four live Size Guide modals inspected in Chrome. Archived outside repo as womens-sizing-supplier-evidence-20261107.json."
+}

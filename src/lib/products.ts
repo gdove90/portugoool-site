@@ -1,3 +1,4 @@
+import { WOMENS_FIT } from "./womens-fit";
 import { Product, SHIRT_SIZES, JERSEY_SIZES, OVERSIZED_TEE_SIZES, ONE_SIZE, ProductCategory } from "./types";
 import { tempoHidden } from "./collection-launch";
 
@@ -4945,7 +4946,7 @@ export const products: Product[] = [
     colorHex: "#141414",
     fabric:
       "3.8 oz 100% polyester interlock, moisture-wicking, with a colour-locking finish so the fabric and the print stay sharp. Women's cut.",
-    fit: "Women's cut, easy through the body. True to size.",
+    fit: WOMENS_FIT["80000000-0000-4000-8000-000000000017"].summary,
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: TEMPO_CORE_TEE_VARIANTS[0].images,
     colorVariants: TEMPO_CORE_TEE_VARIANTS,
@@ -4988,7 +4989,7 @@ export const products: Product[] = [
     colorHex: "#141414",
     fabric:
       "91% polyester, 9% spandex, 165 gsm. Four-way stretch, mock neck, quarter zip and thumbhole cuffs.",
-    fit: "Close, body-skimming fit. Size up for room to layer.",
+    fit: WOMENS_FIT["80000000-0000-4000-8000-000000000018"].summary,
     careInstructions: "Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low. Cool iron, avoiding the print. Do not dry clean.",
     images: [
       {
@@ -5168,7 +5169,7 @@ export const products: Product[] = [
     colorHex: "#141414",
     fabric:
       "100% recycled polyester, moisture-wicking. Drawcord waist, side slash pockets, colourblock side panel, tapered leg with extended side zippers.",
-    fit: "Women's cut, tapered through the leg. True to size; the drawcord waist gives room.",
+    fit: WOMENS_FIT["80000000-0000-4000-8000-000000000019"].summary,
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
@@ -5293,7 +5294,7 @@ export const products: Product[] = [
     color: "Black",
     colorHex: "#252525",
     fabric: "The shell is 90% polyester and 10% spandex. The waistband is 86% polyester and 14% spandex. The liner is 100% polyester.",
-    fit: "Short, relaxed cut with a curved hem. Use the fit guide to compare measurements.",
+    fit: WOMENS_FIT["80000000-0000-4000-8000-000000000022"].summary,
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: TEMPO_TRAINING_SHORTS_VARIANTS[0].images,
     colorVariants: TEMPO_TRAINING_SHORTS_VARIANTS,
@@ -5333,7 +5334,7 @@ export const products: Product[] = [
     colorHex: "#161616",
     fabric:
       "8 oz combed and ring-spun cotton and polyester fleece (52/48), brushed inside. Women's mid-length cut with semi-set-in sleeves and a lined hood.",
-    fit: "Women's fit, true to size, mid-length in the body.",
+    fit: WOMENS_FIT["80000000-0000-4000-8000-000000000020"].summary,
     careInstructions: "Machine wash cold, inside out, with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
@@ -5471,7 +5472,7 @@ export const products: Product[] = [
     colorHex: "#F7F7F5",
     fabric:
       "100% polyester, 130 gsm. Light, quick-drying and smooth against the skin.",
-    fit: "Regular women's fit that sits closer to the body than the Core tees. Between sizes, go up.",
+    fit: WOMENS_FIT["80000000-0000-4000-8000-000000000021"].summary,
     careInstructions: "Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low. Cool iron, avoiding the print. Do not dry clean.",
     images: TEMPO_TRAINING_TEE_VARIANTS[0].images,
     colorVariants: TEMPO_TRAINING_TEE_VARIANTS,
@@ -5500,7 +5501,7 @@ export const products: Product[] = [
     "color": "Black",
     "colorHex": "#1B1B1B",
     "fabric": "89% polyester, 11% spandex. 230 gsm stretch knit.",
-    "fit": "Close-fitting cropped racerback. Compare the flat measurements with a similar bra you own before choosing your size.",
+    "fit": WOMENS_FIT["80000000-0000-4000-8000-000000000025"].summary,
     "careInstructions": "Follow the garment care label. Avoid ironing directly over the print.",
     "sizes": [
       "S",
@@ -5537,7 +5538,7 @@ export const products: Product[] = [
     "color": "Black",
     "colorHex": "#1E1E1E",
     "fabric": "75% nylon, 25% spandex. 220 gsm stretch knit.",
-    "fit": "Close-fitting with a high waist and ankle-length legs. Compare the relaxed flat garment measurements with leggings you own before choosing your size.",
+    "fit": WOMENS_FIT["80000000-0000-4000-8000-000000000026"].summary,
     "careInstructions": "Machine wash at 30°C on a gentle cycle. Do not bleach. Tumble dry low. Iron on low away from the print. Do not dry clean.",
     "sizes": [
       "S",

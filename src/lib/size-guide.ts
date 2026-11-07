@@ -1,6 +1,7 @@
 import { getProducts, products } from "./products";
 import { sizeChartFor, type SizeRow } from "./size-charts";
 import { audienceAssignments, catalogOrder, type Audience } from "@/v84/catalog-data";
+import { womensFitFor, type FitFact } from "./womens-fit";
 
 // Saved category hashes remain aliases. New links identify individual
 // products, including styles that share a garment chart.
@@ -57,6 +58,7 @@ export interface ProductSizeGuide {
   productId: string;
   title: string;
   fit: string;
+  fitFacts?: FitFact[];
   blank: string;
   instructions: string;
   columns: GuideColumn[];
@@ -64,13 +66,19 @@ export interface ProductSizeGuide {
   note?: string;
   toleranceIn?: number;
   headwear: boolean;
+  bodyReference?: {
+    instructions: string;
+    columns: GuideColumn[];
+    rows: { size: string; usSize: string; values: GuideValue[] }[];
+  };
 }
 
 export function sizeGuideFor(productId: string): ProductSizeGuide | null {
   const product = products.find(item => item.id === productId);
   const guide = guideTabFor(productId);
   if (!product || !guide) return null;
-  const common = { productId, title: product.name, fit: product.fit };
+  const womensFit = womensFitFor(productId);
+  const common = { productId, title: product.name, fit: product.fit, ...(womensFit ? { fitFacts: womensFit.facts } : {}) };
   if (guide.garment === "cap") {
     return {
       ...common, blank: "Structured cotton-blend twill cap", headwear: true,
@@ -80,28 +88,54 @@ export function sizeGuideFor(productId: string): ProductSizeGuide | null {
     };
   }
   const chart = sizeChartFor(productId);
-  const instructions = `Lay a similar ${guide.garment} you like flat without stretching it. Compare the garment measurements below, rather than your body measurements.`;
+  const instructions = womensFit
+    ? `Lay a similar ${guide.garment} you like flat without stretching it and compare the same measuring points. The garment table and any body size reference are labeled separately.`
+    : `Lay a similar ${guide.garment} you like flat without stretching it. Compare the garment measurements below, rather than your body measurements.`;
   if (!chart) {
     return { ...common, blank: "Fit advice", headwear: false, instructions, columns: [], rows: [], note: "Contact support for help choosing your size." };
   }
   const waist = chart.measure === "waist";
   const length = chart.lengthMeasure ?? (waist ? "inseam" : "length");
-  const columns: GuideColumn[] = [{ key: "width", label: waist ? "Waist, flat" : chart.measure === "bust" ? "Bust, flat" : "Chest, flat", method: waist ? "across relaxed waistband" : "across below armholes" }];
+  const columns: GuideColumn[] = [{ key: "width", label: waist ? "Waist, flat" : chart.measure === "bust" ? "Bust, flat" : "Chest, flat", method: chart.widthMethod ?? (waist ? "across relaxed waistband" : "across below armholes") }];
   const values: ((row: SizeRow) => GuideValue)[] = [row => row.chestIn];
+  if (chart.rows.some(row => row.underbustIn != null)) {
+    columns.push({ key: "underbust", label: "Underbust, flat", method: "across lower band, relaxed" });
+    values.push(row => row.underbustIn ?? null);
+  }
   if (chart.rows.some(row => row.hipIn != null)) {
     columns.push({ key: "hip", label: "Hip, flat", method: "across widest point" });
     values.push(row => row.hipIn ?? null);
   }
-  columns.push({ key: "length", label: length === "inseam" ? "Inseam" : length === "outseam" ? "Full length" : "Length", method: length === "inseam" ? "crotch seam to hem" : length === "outseam" ? "waistband to hem" : "shoulder to hem" });
+  columns.push({ key: "length", label: length === "inseam" ? "Inseam" : length === "outseam" ? "Full length" : womensFit ? "Body length" : "Length", method: chart.lengthMethod ?? (length === "inseam" ? "crotch seam to hem" : length === "outseam" ? "waistband to hem" : "shoulder to hem") });
   values.push(row => row.lengthIn);
   if (chart.rows.some(row => row.inseamIn != null)) {
     columns.push({ key: "inseam", label: "Inseam", method: "crotch seam to hem" });
     values.push(row => row.inseamIn ?? null);
   }
   if (chart.rows.some(row => row.sleeveIn != null)) {
-    columns.push({ key: "sleeve", label: "Sleeve", method: `${chart.sleeveFrom ?? "centre back"} to cuff` });
+    if (chart.rows.some(row => row.shoulderIn != null)) {
+      columns.push({ key: "shoulder", label: "Shoulder width", method: "sleeve seam to sleeve seam" });
+      values.push(row => row.shoulderIn ?? null);
+    }
+    columns.push({ key: "sleeve", label: womensFit ? "Sleeve length" : "Sleeve", method: chart.sleeveMethod ?? `${chart.sleeveFrom ?? "centre back"} to cuff` });
     values.push(row => row.sleeveIn);
   }
+  const bodyColumns: GuideColumn[] = [];
+  const bodyValues: ("bustIn" | "waistIn" | "hipIn")[] = [];
+  for (const [key, label, method] of [
+    ["bustIn", "Bust", "around fullest part"],
+    ["waistIn", "Waist", "around natural waist"],
+    ["hipIn", "Hip", "around fullest part"],
+  ] as const) {
+    if (chart.bodyRows?.some(row => row[key] != null)) {
+      bodyColumns.push({ key, label, method });
+      bodyValues.push(key);
+    }
+  }
+  const bodyRows = product.sizes.flatMap(size => {
+    const row = chart.bodyRows?.find(item => item.size === size);
+    return row ? [{ size, usSize: row.usSize, values: bodyValues.map(key => row[key] ?? null) }] : [];
+  });
   return {
     ...common, blank: chart.blank, headwear: false, instructions, columns,
     rows: product.sizes.flatMap(size => {
@@ -110,6 +144,12 @@ export function sizeGuideFor(productId: string): ProductSizeGuide | null {
     }),
     note: guide.id === "shorts" ? chart.note : undefined,
     toleranceIn: chart.toleranceIn,
+    ...(bodyRows.length ? { bodyReference: {
+      instructions: waist
+        ? "Measure around your natural waist and the fullest part of your hips, keeping the tape level. If they fall in different size rows, choose the larger size."
+        : "With your arms down, measure around the fullest part of your bust, keeping the tape level.",
+      columns: bodyColumns, rows: bodyRows,
+    } } : {}),
   };
 }
 

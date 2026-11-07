@@ -2,8 +2,9 @@
 // Garment measurements, per blank.
 //
 // These match the blanks in fulfillment.ts. Chest/bust and waist are
-// flat garment widths, never body-size recommendations. New source
-// measurements and methods were verified on 2026-11-04; provenance is
+// flat garment widths. Published body-size references are stored
+// separately in bodyRows. Women's charts were reviewed on 2026-11-07;
+// other measurements and methods were verified on 2026-11-04. Provenance is
 // recorded separately in development documentation. Reference URLs must
 // never be included in this browser-facing module.
 // ─────────────────────────────────────────────────────────────
@@ -12,12 +13,22 @@ export interface SizeRow {
   size: string;
   /** Half chest: laid flat, pit to pit, in inches. */
   chestIn: number;
-  /** High point shoulder to hem, in inches. */
+  /** Garment length in inches; use the chart's lengthMeasure and lengthMethod. */
   lengthIn: number;
   /** Centre back or shoulder to cuff, in inches. Null when unpublished. */
   sleeveIn: number | null;
   hipIn?: number;
   inseamIn?: number;
+  underbustIn?: number;
+  shoulderIn?: number;
+}
+
+export interface BodySizeRow {
+  size: string;
+  usSize: string;
+  bustIn?: readonly [number, number];
+  waistIn?: readonly [number, number];
+  hipIn?: readonly [number, number];
 }
 
 export interface SizeChart {
@@ -26,6 +37,10 @@ export interface SizeChart {
   measure?: "chest" | "waist" | "bust";
   lengthMeasure?: "length" | "inseam" | "outseam";
   sleeveFrom?: "centre back" | "shoulder seam";
+  widthMethod?: string;
+  lengthMethod?: string;
+  sleeveMethod?: string;
+  bodyRows?: BodySizeRow[];
   /** Maximum published measurement variation, in inches. */
   toleranceIn?: number;
   /** Anything a customer needs to know to size correctly on this blank. */
@@ -117,6 +132,16 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   lst350: {
     blank: "Women's performance tee · polyester interlock",
     measure: "bust",
+    widthMethod: "one inch below armholes",
+    lengthMethod: "high shoulder point to back hem",
+    sleeveMethod: "center back neck to sleeve hem",
+    bodyRows: [
+      { size: "S", usSize: "4/6", bustIn: [35, 36] },
+      { size: "M", usSize: "8/10", bustIn: [37, 38] },
+      { size: "L", usSize: "12/14", bustIn: [39, 41] },
+      { size: "XL", usSize: "16/18", bustIn: [42, 44] },
+      { size: "XXL", usSize: "20/22", bustIn: [45, 47] },
+    ],
     note: "A women's cut, shaped through the body. Bust is measured one inch below the armhole, laid flat.",
     rows: [
       { size: "S", chestIn: 19, lengthIn: 25.5, sleeveIn: 14.5 },
@@ -126,16 +151,33 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
       { size: "XXL", chestIn: 24.5, lengthIn: 29, sleeveIn: 17.25 },
     ],
   },
-  // WT0093 and WT0216 supplier charts, inspected 2026-11-04.
+  // Women's supplier charts rechecked individually on 2026-11-07.
+  wt0092: {
+    blank: "Women's fitted quarter zip · stretch knit",
+    measure: "bust",
+    sleeveFrom: "shoulder seam",
+    widthMethod: "across just below armholes",
+    lengthMethod: "shoulder at collar to hem",
+    sleeveMethod: "shoulder seam to cuff",
+    toleranceIn: 3 / 2.54,
+    rows: [
+      { size: "S", chestIn: 16.93, lengthIn: 23.23, shoulderIn: 14.88, sleeveIn: 23.07 },
+      { size: "M", chestIn: 17.72, lengthIn: 24.02, shoulderIn: 15.51, sleeveIn: 23.54 },
+      { size: "L", chestIn: 18.50, lengthIn: 24.80, shoulderIn: 16.14, sleeveIn: 24.02 },
+      { size: "XL", chestIn: 19.29, lengthIn: 25.59, shoulderIn: 16.77, sleeveIn: 24.49 },
+    ],
+  },
   wt0093: {
     blank: "Women's cropped racerback · stretch knit",
     measure: "bust",
+    widthMethod: "across just below armholes",
+    lengthMethod: "high shoulder point to hem",
     toleranceIn: 3 / 2.54,
     rows: [
-      { size: "S", chestIn: 12.99, lengthIn: 12.17, sleeveIn: null },
-      { size: "M", chestIn: 13.78, lengthIn: 12.48, sleeveIn: null },
-      { size: "L", chestIn: 14.57, lengthIn: 12.80, sleeveIn: null },
-      { size: "XL", chestIn: 15.35, lengthIn: 13.11, sleeveIn: null },
+      { size: "S", chestIn: 12.99, underbustIn: 12.20, lengthIn: 12.17, sleeveIn: null },
+      { size: "M", chestIn: 13.78, underbustIn: 12.99, lengthIn: 12.48, sleeveIn: null },
+      { size: "L", chestIn: 14.57, underbustIn: 13.78, lengthIn: 12.80, sleeveIn: null },
+      { size: "XL", chestIn: 15.35, underbustIn: 14.57, lengthIn: 13.11, sleeveIn: null },
     ],
   },
   // Supplier WB0025 flat garment chart, inspected 2026-11-06.
@@ -143,6 +185,8 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     blank: "Women's high-rise ankle-length leggings · nylon stretch knit",
     measure: "waist",
     lengthMeasure: "outseam",
+    widthMethod: "across narrowest waist, relaxed",
+    lengthMethod: "waistband to hem",
     toleranceIn: 3 / 2.54,
     rows: [
       { size: "S", chestIn: 9.45, hipIn: 12.99, lengthIn: 32.28, sleeveIn: null },
@@ -154,17 +198,24 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
   wt0216: {
     blank: "Women's lightweight polyester crew · 130 gsm",
     measure: "bust",
+    sleeveFrom: "shoulder seam",
+    widthMethod: "across just below armholes",
+    lengthMethod: "shoulder at collar to hem",
+    sleeveMethod: "shoulder seam to sleeve hem",
     toleranceIn: 3 / 2.54,
     rows: [
-      { size: "S", chestIn: 16.93, lengthIn: 23.03, sleeveIn: null },
-      { size: "M", chestIn: 17.72, lengthIn: 23.62, sleeveIn: null },
-      { size: "L", chestIn: 18.50, lengthIn: 24.21, sleeveIn: null },
-      { size: "XL", chestIn: 19.29, lengthIn: 24.80, sleeveIn: null },
+      { size: "S", chestIn: 16.93, lengthIn: 23.03, shoulderIn: 13.70, sleeveIn: 5.51 },
+      { size: "M", chestIn: 17.72, lengthIn: 23.62, shoulderIn: 14.17, sleeveIn: 5.91 },
+      { size: "L", chestIn: 18.50, lengthIn: 24.21, shoulderIn: 14.65, sleeveIn: 6.30 },
+      { size: "XL", chestIn: 19.29, lengthIn: 24.80, shoulderIn: 15.12, sleeveIn: 6.69 },
     ],
   },
   bc7519: {
     blank: "Women's classic fleece hoodie",
-    note: "A women's fit that runs true to size, mid-length in the body.",
+    measure: "bust",
+    widthMethod: "across below armholes",
+    lengthMethod: "high shoulder point to hem",
+    note: "Classic women's fit with a mid-length body. Compare flat bust width and body length with a similar hoodie.",
     rows: [
       { size: "S", chestIn: 20, lengthIn: 22.75, sleeveIn: null },
       { size: "M", chestIn: 20.75, lengthIn: 23.375, sleeveIn: null },
@@ -177,13 +228,39 @@ export const SIZE_CHARTS: Record<string, SizeChart> = {
     blank: "Women's travel pant · recycled polyester",
     measure: "waist",
     lengthMeasure: "inseam",
-    note: "Waist is measured point to point across the waistband, laid flat; inseam from the crotch seam to the hem. The drawcord waist gives a couple of inches of play.",
+    note: "Waist and hip widths are measured flat with the garment relaxed. Inseam runs from crotch seam to hem. Use the drawcord to adjust the waist.",
+    bodyRows: [
+      { size: "S", usSize: "4/6", waistIn: [27, 28], hipIn: [37, 38] },
+      { size: "M", usSize: "8/10", waistIn: [29, 30], hipIn: [39, 40] },
+      { size: "L", usSize: "12/14", waistIn: [31, 33], hipIn: [41, 43] },
+      { size: "XL", usSize: "16/18", waistIn: [34, 36], hipIn: [44, 46] },
+      { size: "XXL", usSize: "20/22", waistIn: [37, 39], hipIn: [47, 49] },
+    ],
     rows: [
-      { size: "S", chestIn: 15, lengthIn: 28.5, sleeveIn: null },
-      { size: "M", chestIn: 16, lengthIn: 29, sleeveIn: null },
-      { size: "L", chestIn: 17.5, lengthIn: 29.5, sleeveIn: null },
-      { size: "XL", chestIn: 19, lengthIn: 30, sleeveIn: null },
-      { size: "XXL", chestIn: 20.5, lengthIn: 30.5, sleeveIn: null },
+      { size: "S", chestIn: 15, hipIn: 20, lengthIn: 28.5, sleeveIn: null },
+      { size: "M", chestIn: 16, hipIn: 21, lengthIn: 29, sleeveIn: null },
+      { size: "L", chestIn: 17.5, hipIn: 22.5, lengthIn: 29.5, sleeveIn: null },
+      { size: "XL", chestIn: 19, hipIn: 24, lengthIn: 30, sleeveIn: null },
+      { size: "XXL", chestIn: 20.5, hipIn: 25.5, lengthIn: 30.5, sleeveIn: null },
+    ],
+  },
+  lst485: {
+    blank: "Women's stretch training shorts · built-in liner",
+    measure: "waist",
+    lengthMeasure: "inseam",
+    bodyRows: [
+      { size: "S", usSize: "4/6", waistIn: [27, 28], hipIn: [37, 38] },
+      { size: "M", usSize: "8/10", waistIn: [29, 30], hipIn: [39, 40] },
+      { size: "L", usSize: "12/14", waistIn: [31, 33], hipIn: [41, 43] },
+      { size: "XL", usSize: "16/18", waistIn: [34, 36], hipIn: [44, 46] },
+      { size: "XXL", usSize: "20/22", waistIn: [37, 39], hipIn: [47, 49] },
+    ],
+    rows: [
+      { size: "S", chestIn: 13.5, hipIn: 20.125, lengthIn: 3.5, sleeveIn: null },
+      { size: "M", chestIn: 14.5, hipIn: 21.125, lengthIn: 3.5, sleeveIn: null },
+      { size: "L", chestIn: 16, hipIn: 22.625, lengthIn: 3.75, sleeveIn: null },
+      { size: "XL", chestIn: 17.5, hipIn: 24.125, lengthIn: 3.75, sleeveIn: null },
+      { size: "XXL", chestIn: 19, hipIn: 25.625, lengthIn: 4.25, sleeveIn: null },
     ],
   },
   as5620: {
@@ -270,9 +347,11 @@ const PRODUCT_BLANK: Record<string, keyof typeof SIZE_CHARTS> = {
   "80000000-0000-4000-8000-000000000015": "ind4000", // GOAL Athletics Lockup Hoodie (hidden until renders and ids land)
   "80000000-0000-4000-8000-000000000016": "j333", // GOAL Athletics Core Everyday Raincoat (2026-10-26)
   "80000000-0000-4000-8000-000000000017": "lst350", // TEMPO Core Training Tee (2026-10-26)
+  "80000000-0000-4000-8000-000000000018": "wt0092", // TEMPO Quarter Zip
   "80000000-0000-4000-8000-000000000019": "lpst800", // TEMPO Training Pants (2026-10-26)
   "80000000-0000-4000-8000-000000000021": "wt0216", // TEMPO Training Tee
   "80000000-0000-4000-8000-000000000020": "bc7519", // TEMPO Warmup Hoodie (2026-10-26)
+  "80000000-0000-4000-8000-000000000022": "lst485", // TEMPO Training Shorts
 };
 
 export function sizeChartFor(productId: string): SizeChart | null {
