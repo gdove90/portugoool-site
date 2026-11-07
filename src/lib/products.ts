@@ -4966,7 +4966,8 @@ export const products: Product[] = [
   // == end TEMPO Core Training Tee ==
   // == TEMPO Quarter Zip (built 2026-10-26) ==
   // Tapstitch designs 1564321596708188160 Black, 1564322937081917440 White,
-  // 1564323621013516288 Light Purple: the V1.3 GA monogram 2.00 x 1.80 in
+  // 1564323621013516288 Light Purple, 1568594063412883456 Teal.
+  // V1.3 GA monogram 2.00 x 1.80 in
   // (resized in place 2026-10-26, was 3.00 in) on the wearer's left chest,
   // centred 4 in from the zip, top 3 in below the collar. Tapstitch sells S to XL only. Quote $11.98 a unit plus
   // about $5 shipping: the 25% model's floor is $32; priced $44. Tapstitch
@@ -5063,6 +5064,35 @@ export const products: Product[] = [
             alt: "TEMPO Quarter Zip in Light Purple, product front with the black GA monogram on the left chest beside the zip",
           },
         ],
+      },
+      {
+        "name": "Teal",
+        "supplierColor": "Light Green",
+        "hex": "#D4EDE4",
+        "skuFragment": "",
+        "comingSoon": true,
+        "images": [
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-floating-ghost-front-20261107.webp",
+            "alt": "Teal TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and tonal GA on the left chest",
+            "caption": "Product visualization."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-amanda-front-20261107.webp",
+            "alt": "Amanda facing forward in the Teal TEMPO Quarter Zip with a muted-teal GA on her left chest, styled with Haze Blue TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-amanda-front-quarter-20261107.webp",
+            "alt": "Amanda laughing at a front quarter turn in the Teal TEMPO Quarter Zip with her hand at the collar zipper, styled with Haze Blue TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-amanda-back-quarter-20261107.webp",
+            "alt": "Amanda at a rear quarter turn with her face in profile, showing the plain back of the Teal TEMPO Quarter Zip, styled with Haze Blue TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          }
+        ]
       },
     ],
     originLabel: "Printed in the USA",

@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-07",
+  "product_id": "80000000-0000-4000-8000-000000000018",
+  "slug": "tempo-quarter-zip",
+  "model": "Amanda",
+  "color": "Teal",
+  "scope": "Four approved Teal quarter-zip gallery images styled with Haze Blue WB0025 leggings. Quarter zip only.",
+  "publication_status": "Owner requested upload on 2026-11-07.",
+  "publication_scope": "Existing owner-only collection preview; existing colors, price, fulfillment mappings and collection launch settings preserved. New Teal color remains coming soon with no purchasable SKU.",
+  "website_preview": "https://goalathletics.shop/women/preview/tempo-quarter-zip?color=Teal",
+  "quarter_zip": {
+    "supplier": "Tapstitch",
+    "style": "WT0092-P001-V2",
+    "product_name": "Women's Quarter-Zip Yoga Pullover",
+    "color": "Teal",
+    "supplier_color": "Light Green",
+    "design_id": "1568594063412883456",
+    "detail_id": "1568594063677149184",
+    "design_url": "https://www.tapstitch.com/account/products-pool/product/1568594063677149184",
+    "fabric": "91% polyester / 9% spandex, 165 gsm",
+    "features": "Stand mock neck, quarter zipper, set-in long sleeves, thumbhole cuffs, fitted regular hip-length untucked hem",
+    "mark": "Solid muted-teal GA #A2CDC5 on wearer's left chest",
+    "print_width_in": 2,
+    "print_height_in": 1.8,
+    "back": "Plain"
+  },
+  "styling_leggings": {
+    "supplier": "Tapstitch",
+    "style": "WB0025-O001-V2",
+    "color": "Haze Blue",
+    "design_id": "1568600115416072192",
+    "detail_id": "1568600115764219904",
+    "design_url": "https://www.tapstitch.com/account/products-pool/product/1568600115764219904",
+    "fabric": "75% nylon / 25% spandex, 220 gsm",
+    "mark": "Light-blue GA #BBD6E9 centered on back waistband only, saved 1.4 x 1.27 in",
+    "front": "Plain",
+    "styling_note": "Quarter zip covers the leggings waistband naturally; no logo moved onto the seat or top back."
+  },
+  "color_clarification": "User initially said blue quarter zip, then explicitly selected the saved Teal quarter zip (supplier Light Green) with Haze Blue leggings.",
+  "catalog_swatch": {
+    "hex": "#D4EDE4",
+    "source": "Mean of an extracted 160x100 central supplier-front fabric panel at x600,y270; screen approximation."
+  },
+  "collection_pose_guidance": "User direction: four images per girl including a rear quarter-turn with face in side profile; distinct natural poses, gestures and expressions for each model. Ghost first, rear quarter-turn last.",
+  "gallery_order": [
+    "ghost-front",
+    "front",
+    "front-quarter",
+    "back-quarter"
+  ],
+  "poses": {
+    "front": "Warm smile, slight head tilt, softly staggered feet and loosely resting hands below the waist",
+    "front_quarter": "Candid laugh, easy step, right hand lightly at the closed collar zipper and left chest mark clear",
+    "back_quarter": "Right-facing rear quarter-turn, face in profile, arms relaxed together in front and soft heel lift; distinct from Molly's hand-on-hip pose"
+  },
+  "review": {
+    "identity": "Compared with Amanda's saved front, quarter and back model references; brunette low ponytail, freckles and natural skin texture preserved",
+    "products": "Actual Teal WT0092 and Haze Blue WB0025 references used; mock neck, zip, thumbhole cuffs, regular top length and flat leggings hems retained",
+    "branding": "Tonal muted-teal left chest GA follows saved reference; top back plain and waistband logo naturally covered",
+    "sizing": "2 x 1.8 in quarter-zip and 1.4 x 1.27 in leggings marks are saved supplier settings, not physical measurements of generated photographs",
+    "ghost": "Approved filled quarter-zip shape and gray studio preserved; garment and monogram recolored to actual saved Teal design",
+    "framing": "Four 1024x1536 portrait PNGs; full top on ghost, full model head and shoes in all model views"
+  },
+  "files": [
+    {
+      "order": 1,
+      "key": "ghost-front",
+      "name": "00 Teal TEMPO Quarter Zip - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-e2c043fd-256c-4e2c-8ce2-10f557afaf6f.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Amanda - Teal TEMPO Quarter Zip/00 Teal TEMPO Quarter Zip - Floating Ghost Front.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/00 Teal TEMPO Quarter Zip - Floating Ghost Front.png",
+      "sha256": "a428946fb52a6140663d87f922d93831515c557023694d75555f1a5947411eac",
+      "bytes": 1682177,
+      "dimensions_px": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "order": 2,
+      "key": "front",
+      "name": "01 Amanda Teal TEMPO Quarter Zip - Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-20ec8f38-46e0-4c02-acc8-eba4d95873d7.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Amanda - Teal TEMPO Quarter Zip/01 Amanda Teal TEMPO Quarter Zip - Front.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/01 Amanda Teal TEMPO Quarter Zip - Front.png",
+      "sha256": "f6a5b64f2e2532cb3b556e2c0bf514d5c1c08e1a6d202da01ad7c54f7c3bc6a2",
+      "bytes": 1741851,
+      "dimensions_px": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "order": 3,
+      "key": "front-quarter",
+      "name": "02 Amanda Teal TEMPO Quarter Zip - Front Quarter.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-cd9fc7f6-ea73-4315-8220-e2310480ad5b.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Amanda - Teal TEMPO Quarter Zip/02 Amanda Teal TEMPO Quarter Zip - Front Quarter.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/02 Amanda Teal TEMPO Quarter Zip - Front Quarter.png",
+      "sha256": "98da5f38518feb4d4eaf90f33d1d79bf818a563af40603f2ee676fb50cdbf025",
+      "bytes": 1693742,
+      "dimensions_px": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "order": 4,
+      "key": "back-quarter",
+      "name": "03 Amanda Teal TEMPO Quarter Zip - Back Quarter.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-1b9fe08f-e5b3-426c-a05d-e829ce5f6f83.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Amanda - Teal TEMPO Quarter Zip/03 Amanda Teal TEMPO Quarter Zip - Back Quarter.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/03 Amanda Teal TEMPO Quarter Zip - Back Quarter.png",
+      "sha256": "b4fca351eaea074809dfa017ef2aac022dc111154cde264fabb626402262ca8d",
+      "bytes": 1664735,
+      "dimensions_px": [
+        1024,
+        1536
+      ]
+    }
+  ],
+  "website_images": [
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-floating-ghost-front-20261107.webp",
+      "alt": "Teal TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and tonal GA on the left chest",
+      "caption": "Product visualization.",
+      "sha256": "d633fc05c969ceddab36a0b3fb61453916efc8639985dde6b26bfa4515a9d5fb",
+      "bytes": 47870
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-amanda-front-20261107.webp",
+      "alt": "Amanda facing forward in the Teal TEMPO Quarter Zip with a muted-teal GA on her left chest, styled with Haze Blue TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "803c3753b95a75f2a8a46cea3145de8755b44fd18bc0adac41178f5512746610",
+      "bytes": 47008
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-amanda-front-quarter-20261107.webp",
+      "alt": "Amanda laughing at a front quarter turn in the Teal TEMPO Quarter Zip with her hand at the collar zipper, styled with Haze Blue TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "d2d18eaa7ee0e6cb06b47179b041914650b7929be8b80bf1bf70b4ddca4bea29",
+      "bytes": 46844
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-teal-amanda-back-quarter-20261107.webp",
+      "alt": "Amanda at a rear quarter turn with her face in profile, showing the plain back of the Teal TEMPO Quarter Zip, styled with Haze Blue TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "52c7870fdaa881ff8818780fcab5ebb877239218128b4d61051d0807e5e9884a",
+      "bytes": 42238
+    }
+  ],
+  "generation": {
+    "mode": "Built-in image_gen; no CLI or external provider",
+    "source_record": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Amanda - Teal TEMPO Quarter Zip\\Gallery Sources and Prompts.json",
+    "prompts": [
+      {
+        "key": "ghost-front",
+        "refs": [
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Molly - Black TEMPO Quarter Zip/00 Black TEMPO Quarter Zip - Floating Ghost Front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Teal-front.png"
+        ],
+        "prompt": "Use case: precise-object-edit. Image 1 is the approved dimensional floating quarter-zip photograph to edit. Image 2 is the exact saved Teal WT0092 garment and tonal monogram reference. Change ONLY image 1's garment color and ink to match image 2: the top is the actual very pale mint TEAL (supplier Light Green), with a solid muted-teal GA #A2CDC5 on the wearer's LEFT chest. Replace both parts of the white/red mark with this single tonal ink. Preserve the exact GA silhouette, position and size, representing the saved 2.00 by 1.80 inch print. Recolor all fabric, thread, hems, inner collar and zipper tape consistently to the actual garment color; retain the dark metal zipper pull as in image 2. Keep the filled natural worn shape, fitted regular hip-length cut, hollow stand mock neck, closed quarter-length zipper, set-in long sleeves, thumbhole slits, empty cuffs, fine matte lightweight 165 gsm performance-knit texture and subtle folds of image 1. Keep the same neutral light-gray studio, lighting, soft floating shadow, camera, margins and 1024x1536 framing. Only the top is present; no person, mannequin parts, hands, legs, shoes, hanger, text or extra graphics. One product photograph."
+      },
+      {
+        "key": "front",
+        "refs": [
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Amanda-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Amanda/01 Amanda Front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Teal-front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-front.png"
+        ],
+        "prompt": "Professional full-length activewear catalog photograph of adult brand model Amanda. Image 1 is her exact identity: preserve Amanda's face, freckles, visible natural skin texture, brown eyes, brunette low ponytail and natural athletic soccer build. Image 2 is the actual pale mint-Teal WT0092 quarter zip (supplier Light Green); image 3 is the actual muted Haze Blue WB0025 leggings. Amanda wears exactly those garments and plain white training sneakers. Quarter zip: closed stand mock neck, quarter-length center zipper, set-in long sleeves, thumbhole cuffs, fitted regular hip-length untucked hem and smooth matte lightweight 91% polyester/9% spandex 165 gsm performance knit. Keep the small solid MUTED TEAL GA #A2CDC5 on her LEFT chest in image 2's precise silhouette, position and proportions: saved 2.00 by 1.80 inches, logo width about half the horizontal distance between zipper and logo center. Leggings: actual muted Haze Blue color, smooth fitted legs and flat ankle hems, front completely plain. The regular top covers the waistband naturally with no exposed midriff. Give Amanda her own approachable front pose: a warm relaxed smile, slight head tilt, one foot a little forward and hands loosely resting together in front below the waist, keeping the chest logo clear. Natural thumbhole-cuff wear and realistic fabric folds. Neutral gray seamless studio, soft even commercial lighting, full head and both shoes visible with margins. One 1024x1536 portrait photograph. No text overlays, accessories, props, extra graphics, stripes or added pockets."
+      },
+      {
+        "key": "front-quarter",
+        "refs": [
+          "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-20ec8f38-46e0-4c02-acc8-eba4d95873d7.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Amanda-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Amanda/02 Amanda Front Left Quarter.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Teal-front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-front.png"
+        ],
+        "prompt": "Use case: identity-preserve. Create Amanda's FRONT QUARTER-TURN photograph for the same professional quarter-zip catalog shoot. Image 1 is her approved front outfit, identity, colors and studio; image 2 confirms Amanda's exact face, freckles and brunette low ponytail; images 3 and 4 are the actual pale mint-Teal WT0092 quarter zip and muted Haze Blue WB0025 leggings. Preserve Amanda's identity and natural athletic build, exact garment cuts, colors and white trainers. Turn her body about 30 degrees into a clear front quarter view, showing front and side of the top. Give her a distinct candid pose: a cheerful laugh toward someone just off camera, one foot taking a small easy step, her RIGHT hand lightly resting on the zipper pull at the collar while the other arm relaxes. Keep the zip CLOSED, the mock-neck shape intact and the left chest monogram unobstructed. Match the small solid muted-teal GA #A2CDC5 on the wearer's LEFT chest, precise saved 2.00 by 1.80 inch size and actual silhouette and placement from images 1 and 3, with natural foreshortening. Preserve thumbhole sleeves, flat hip-length untucked hem, lightweight smooth matte 165 gsm performance fabric, fitted Haze Blue leggings with plain front and flat ankle hems. Top naturally covers waistband and midriff. Same soft gray seamless studio and even commercial lighting, realistic folds and natural skin. One 1024x1536 portrait photograph, complete head and both shoes visible with margins. No extra logos, back graphics, words, props, pockets, stripes or accessories."
+      },
+      {
+        "key": "back-quarter",
+        "refs": [
+          "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-20ec8f38-46e0-4c02-acc8-eba4d95873d7.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Amanda-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Amanda/02 Amanda Front Left Quarter.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Amanda-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Amanda/05 Amanda Back.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Teal-back.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Haze-Blue-back.png"
+        ],
+        "prompt": "Use case: identity-preserve. Create Amanda's REAR QUARTER-TURN full-length catalog photograph with her face SIDE-ON IN PROFILE. Image 1 is the approved Amanda identity, pale mint-Teal WT0092 quarter zip, muted Haze Blue WB0025 leggings, white trainers and gray studio. Images 2 and 3 confirm Amanda's exact facial profile, freckles, natural build and brunette low ponytail. Image 4 shows the exact PLAIN BACK of the Teal quarter zip; image 5 is the actual Haze Blue leggings back design. Turn her whole body about 40 degrees from straight back toward the RIGHT of the frame, with the camera seeing her back and right side. Her face should be a natural right-facing SIDE PROFILE, smiling softly and looking sideways off camera rather than back into the lens. Give Amanda a different pose from Molly: arms lightly folded together in FRONT of her lower torso, leaving the back unobstructed, relaxed shoulders, a gently staggered stance and a soft heel lift as if pausing mid-step. Preserve her face, skin, low ponytail and natural athletic proportions. Match actual garment colors and construction: pale mint-Teal stand mock neck, closed zip, set-in long thumbhole sleeves, fitted regular hip-length untucked top, smooth matte lightweight performance knit; muted Haze Blue fitted leggings with flat ankle hems. Quarter zip back stays entirely PLAIN as image 4. The leggings' only light-blue GA belongs on the back waistband as image 5, which is naturally covered by this regular-length top. Never relocate it below the hem or add a logo to the seat or back of the top. Front chest logo only appears if naturally visible at this angle. Same white trainers, neutral gray studio and even commercial light as image 1. One 1024x1536 portrait photograph showing full head and both shoes with margins. No added graphics, words, accessories, pockets, stripes or props."
+      }
+    ]
+  },
+  "catalog_price_cents": 4400
+}
