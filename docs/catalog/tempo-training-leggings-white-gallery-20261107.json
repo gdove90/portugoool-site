@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-07",
+  "model": "Molly",
+  "scope": "White TEMPO leggings gallery, styled with the actual Blue WT0093 TEMPO sports bra. Leggings only.",
+  "publication_status": "Owner requested upload on 2026-11-07. Added as the White color on the existing owner-only leggings preview.",
+  "model_reference_directory": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Molly-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Molly",
+  "leggings": {
+    "style": "WB0025-O001-V2",
+    "color": "White",
+    "design_id": "1568599593921474560",
+    "detail_url": "https://www.tapstitch.com/account/products-pool/product/1568599594131214336",
+    "fabric": "75% nylon / 25% spandex, 220 gsm",
+    "decoration": "Solid-black GA, centered on back waistband only",
+    "print_width_in": 1.4,
+    "print_height_in": 1.27
+  },
+  "styling_bra": {
+    "style": "WT0093-P001-V2",
+    "catalog_product_id": "80000000-0000-4000-8000-000000000025",
+    "catalog_color": "Blue",
+    "catalog_hex": "#B8DCE3",
+    "features": "Wide-strap scoop front, solid racerback, narrow flat hem, plain front, small white GA centered low on back",
+    "references": [
+      "public/products/tempo-training-bra/goal-training-bra-blue-01-ghost-front-20261104.webp",
+      "public/products/tempo-training-bra/goal-training-bra-blue-06-ghost-back-20261104.webp"
+    ],
+    "production_status": "Existing bra listing and production holds unchanged; exact supplier blue color name remains unverified in its existing manifest."
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompts": [
+      {
+        "key": "front",
+        "prompt": "Use case: photorealistic-natural. Create one full-body GOAL Athletics activewear catalog photograph of the adult model Molly from image 1. Preserve her exact East Asian face, natural skin texture, brown eyes, dark ponytail with loose face-framing strands, and naturally athletic proportions. Images 2 and 3 are the actual White Tapstitch WB0025 high-rise ankle-length leggings: match their smooth nylon stretch knit, wide waistband, curved seams, close-fitting cut and flat ankle hems faithfully. Front completely plain, with only the small solid-black GA monogram centered on the BACK waistband as in image 3. Images 4 and 5 are the actual pale blue WT0093 TEMPO sports bra, blue color #B8DCE3: match the broad bound shoulder straps, scoop neckline, solid racerback construction and narrow flat hem. Front completely plain; only a small white GA monogram centered low on its back, as in image 5. Use these real garment designs without substituting a generic bra or changing the seams. Opaque white leggings, natural fabric shading and stitching, no added pockets, stripes, drawstrings, front logos or words. Ordinary unbranded white trainers. Front-facing pose, shoulders and hips square to camera, warm confident smile, one hand resting lightly at her hip and the other relaxed, weight softly on one leg and one toe angled outward. Give her relaxed lively character. Neutral gray seamless studio backdrop and floor, soft even catalog lighting, realistic contact shadows. Portrait 1024x1536, one photograph, complete head and both shoes visible, consistent with the existing GOAL leggings shoot. No new accessories, text, props or watermark."
+      },
+      {
+        "key": "quarter",
+        "prompt": "Create an alternate full-body activewear catalog photograph of the same adult Molly in image 1, wearing exactly the same White WB0025 leggings, pale blue WT0093 racerback sports bra and unbranded white trainers. Image 2 is Molly's identity at a quarter turn; preserve her exact face, dark ponytail, natural build and loose hair strands. Images 3 and 4 confirm the actual garment fronts: broad bound bra straps, scoop neckline, narrow flat hem; white leggings with the wide curved high waistband and flat ankle hems. Both fronts plain and unbranded. Turn her body 30 degrees to a front-left quarter view. Give her character: a spontaneous cheerful laugh looking just off camera, one hand lightly tucking a loose strand behind her ear, the other relaxed, and a small natural step forward. Keep realistic opaque white stretch fabric, original garment construction and consistent pale blue hue. Same neutral gray studio and soft light as image 1. Portrait 1024x1536, complete head and both shoes visible. One photograph, no added text, accessories, graphics, pockets or stripes."
+      },
+      {
+        "key": "back",
+        "prompt": "Create an alternate full-body REAR catalog photograph of the same adult Molly from image 1, in the same white WB0025 leggings, pale blue WT0093 sports bra and unbranded white trainers. Image 2 confirms Molly's dark ponytail and natural proportions. Images 3 and 4 are exact product BACK references. White leggings: wide high waistband, curved lower waistband seam, central seam and flat ankle hems as pictured, with ONE small SOLID-BLACK GA monogram centered horizontally and vertically on the back waistband, matching image 3 and the exact black artwork in image 5. Preserve its discreet supplier scale, 1.4 inches wide; no logos on the front, legs or seat, and no wording. Pale blue bra: actual broad-strap solid racerback construction and bound edges as image 4; ONE smaller WHITE GA monogram centered low on the bra back above the narrow flat hem, same shape and placement as image 4. No red ink. Molly stands naturally facing away with shoulders and hips square to camera, one foot gently angled outward, arms relaxed with one elbow softly bent, and glances over her left shoulder with a friendly playful smile. Ponytail falls naturally to one side, leaving the racerback and both monograms visible. Preserve Molly's identity, natural build and outfit from image 1. Same gray seamless studio and soft even light, opaque white performance stretch fabric, natural seams and folds. Portrait 1024x1536, one photograph, full head and both shoes visible, no new accessories, props, text or watermark."
+      },
+      {
+        "key": "back-logo-size-edit",
+        "prompt": "Use case: precise-object-edit. Image 1 is the edit target, a finished full-body GOAL catalog photograph. Change ONLY the size of the existing small SOLID-BLACK GA monogram centered on the white leggings BACK waistband. Enlarge that one logo by approximately 40 percent, from about 20 pixels wide to about 28 pixels wide and 25 pixels tall in this 1024x1536 image, keeping its center at the same location. This matches the approved 1.4-inch logo's proportion to the waistband. Use image 2 only as the exact black GA artwork reference, preserving its silhouette and solid-black ink. Keep the smaller WHITE logo on the blue sports bra completely unchanged. Preserve everything else unchanged: same adult Molly, face, ponytail, expression, pose, body proportions, white leggings and all seams, blue racerback bra and all seams, shoes, lighting, gray studio background, framing and composition. No other edits or extra marks."
+      },
+      {
+        "key": "back-final-logo-calibration",
+        "prompt": "Precise local edit of image 1. Reduce ONLY the black GA logo on the white leggings rear waistband to THREE QUARTERS of its present size: approximately 29 pixels wide by 26 pixels tall instead of the current 39 by 34 pixels on this 1024x1536 image. Keep the logo centered at exactly its current position. Keep the same solid black GA silhouette. Preserve the blue bra's white logo exactly as is. Leave every other part of this finished catalog photo unchanged, including Molly, face, hair, pose, clothing shapes, fabric and seams, shoes, gray studio, light and framing. No other modifications."
+      },
+      {
+        "key": "back-publish-monogram-size-check",
+        "prompt": "Precise local edit of this finished GOAL Athletics catalog photo. Change ONLY the small solid-black GA monogram on the white leggings rear waistband. Reduce its width from the current 30 pixels to approximately 25 pixels, and height from 26 to approximately 22 pixels, on the 1024x1536 image. This is about 83 percent of its present size. Keep its center at the same location, about x509 y594. Preserve the same black GA shape and print appearance. Leave the blue sports bra's small white monogram completely unchanged at its existing size, and preserve every other part of the photo unchanged: Molly's face, hair, expression, pose, body, garments, fabric and seams, footwear, lighting, studio background and framing. No other edits."
+      }
+    ]
+  },
+  "review": "Compared with Molly brand references, the saved WB0025 White supplier front/back mockups and approved Blue WT0093 front/back references. Rear monogram size calibrated; white leggings have black waistband-only branding and blue bra has its existing white rear monogram. Product visualizations; supplier print file remains the physical-size authority.",
+  "gallery_order": [
+    "ghost-front",
+    "front",
+    "quarter",
+    "back"
+  ],
+  "files": [
+    {
+      "view": "ghost-front",
+      "name": "00 White TEMPO Leggings - Original Tapstitch Ghost Front.png",
+      "source": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-White-front.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\00 White TEMPO Leggings - Original Tapstitch Ghost Front.png",
+      "collection_path": null,
+      "width": 1400,
+      "height": 1400,
+      "sha256": "aa5851c4c23671101f8d4f8261a056876289af3c9dece796e1617f6551ff29ea",
+      "bytes": 245489
+    },
+    {
+      "view": "front",
+      "name": "01 Molly White TEMPO Leggings - Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-f2d3f890-f2d4-41f0-ba5b-4e1a9f403dfb.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\01 Molly White TEMPO Leggings - Front.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\01 Molly White TEMPO Leggings - Front.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8216c71cbedfb61a2bc27c4729608d24e6a497fc69c1bd5a64440014f10b5f84",
+      "bytes": 1727427
+    },
+    {
+      "view": "quarter",
+      "name": "02 Molly White TEMPO Leggings - Quarter.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-d796be85-2b5e-44d2-b687-50457fe4f570.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\02 Molly White TEMPO Leggings - Quarter.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\02 Molly White TEMPO Leggings - Quarter.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d342ffb79d787573a6c8615412b49f080075b8e3dbe5d2dbd9676243ebce67ec",
+      "bytes": 1661890
+    },
+    {
+      "view": "back",
+      "name": "03 Molly White TEMPO Leggings - Back.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-4349fb24-3a84-44b6-a723-b3ccc67a3be5.png",
+      "path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - White TEMPO Leggings\\03 Molly White TEMPO Leggings - Back.png",
+      "collection_path": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\03 Molly White TEMPO Leggings - Back.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "983e4dd5fb1c9a7ae85dc8591652b683c24db5492eebe6f60188048320035586",
+      "bytes": 1609190
+    }
+  ],
+  "monogram_size_check": {
+    "method": "Read-only comparison of each logo width relative to the surrounding garment band, using the saved supplier leggings mockup and approved blue bra ghost reference.",
+    "reference_consistency_tolerance_percent": 10,
+    "criterion_scope": "Rendering comparison only, not a supplier print tolerance.",
+    "leggings_physical_size": {
+      "width_in": 1.4,
+      "height_in": 1.27,
+      "source": "Saved Tapstitch design 1568599593921474560"
+    },
+    "bra_physical_size": "No verified saved decorated supplier design or exact print dimensions. Visual scale matched to approved WT0093 Blue bra reference; existing production holds unchanged.",
+    "measurements": {
+      "leggings": {
+        "reference_logo_box_px": [
+          674,
+          115,
+          725,
+          160
+        ],
+        "model_logo_box_px": [
+          496,
+          584,
+          520,
+          603
+        ],
+        "reference_band_width_px": 442,
+        "model_band_width_px": 220,
+        "reference_logo_to_band_percent": 11.54,
+        "model_logo_to_band_percent": 10.91,
+        "relative_difference_percent": -5.45,
+        "visual_proportion_check": true
+      },
+      "bra": {
+        "reference_logo_box_px": [
+          489,
+          943,
+          537,
+          983
+        ],
+        "model_logo_box_px": [
+          488,
+          438,
+          506,
+          452
+        ],
+        "reference_band_width_px": 588,
+        "model_band_width_px": 206,
+        "reference_logo_to_band_percent": 8.16,
+        "model_logo_to_band_percent": 8.74,
+        "relative_difference_percent": 7.04,
+        "visual_proportion_check": true
+      }
+    }
+  },
+  "website_preview": "https://goalathletics.shop/women/preview/tempo-training-leggings?color=White",
+  "website_images": [
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-white-ghost-front-20261107.png",
+      "alt": "White TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+      "caption": "Supplier product preview.",
+      "sha256": "aa5851c4c23671101f8d4f8261a056876289af3c9dece796e1617f6551ff29ea",
+      "bytes": 245489
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-front-20261107.webp",
+      "alt": "Molly facing forward in White TEMPO Training Leggings and the Blue TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "3173bc7c9a311a84d06f307f7444c55a4dabc6ce71836e3088fd627961c4549b",
+      "bytes": 55798
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-quarter-20261107.webp",
+      "alt": "Molly laughing at a front-left quarter turn in White TEMPO Training Leggings and the Blue TEMPO Training Bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "1177bbd7089ddc44dee7b429368088547332e4cedca5dbfab73cde5c99813e27",
+      "bytes": 54846
+    },
+    {
+      "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-back-20261107.webp",
+      "alt": "Molly in White TEMPO Training Leggings, back view with the black GA centered on the back waistband and the smaller white GA on the Blue TEMPO racerback bra",
+      "caption": "Product visualization. Leggings only; bra shown for styling.",
+      "sha256": "11d524e35b722560efd21490ef8bbd815271370d43517bbc8808ac9fcb5cbf72",
+      "bytes": 55730
+    }
+  ],
+  "product_id": "80000000-0000-4000-8000-000000000026",
+  "slug": "tempo-training-leggings",
+  "price_cents": 0,
+  "available_for_sale": false,
+  "publication_scope": "Existing owner-only Women preview; public collection gate unchanged."
+}

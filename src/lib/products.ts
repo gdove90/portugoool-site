@@ -5427,14 +5427,14 @@ export const products: Product[] = [
     "images": TEMPO_TRAINING_BRA_VARIANTS[0].images,
     "colorVariants": TEMPO_TRAINING_BRA_VARIANTS
   },
-  // Tapstitch WB0025, Black design 1568598186191417344.
+  // Tapstitch WB0025, Black 1568598186191417344 and White 1568599593921474560.
   // Owner's gallery upload, 2026-11-06. Retail price and purchase release pending.
   {
     "id": "80000000-0000-4000-8000-000000000026",
     "name": "TEMPO Training Leggings",
     "slug": "tempo-training-leggings",
     "blank": "WB0025",
-    "description": "High-rise, ankle-length stretch leggings with a clean front and the GA monogram centered on the back waistband. Shown with the Black TEMPO Training Bra for styling. Leggings only.",
+    "description": "High-rise, ankle-length stretch leggings with a clean front and the GA monogram centered on the back waistband. Shown with a TEMPO Training Bra for styling. Leggings only.",
     "priceCents": 0,
     "compareAtPriceCents": null,
     "color": "Black",
@@ -5507,6 +5507,35 @@ export const products: Product[] = [
           {
             "src": "/products/tempo-training-leggings/tempo-training-leggings-black-michaela-back-red-white-bra-20261107.webp",
             "alt": "Michaela in Black TEMPO Training Leggings, back view with white and red GA monograms centered on the leggings waistband and the lower back of the Black TEMPO racerback bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          }
+        ]
+      },
+      {
+        "name": "White",
+        "supplierColor": "White",
+        "hex": "#F5F5F5",
+        "skuFragment": "",
+        "comingSoon": true,
+        "images": [
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-white-ghost-front-20261107.png",
+            "alt": "White TEMPO Training Leggings, original Tapstitch WB0025 ghost front view",
+            "caption": "Supplier product preview."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-front-20261107.webp",
+            "alt": "Molly facing forward in White TEMPO Training Leggings and the Blue TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-quarter-20261107.webp",
+            "alt": "Molly laughing at a front-left quarter turn in White TEMPO Training Leggings and the Blue TEMPO Training Bra",
+            "caption": "Product visualization. Leggings only; bra shown for styling."
+          },
+          {
+            "src": "/products/tempo-training-leggings/tempo-training-leggings-white-molly-back-20261107.webp",
+            "alt": "Molly in White TEMPO Training Leggings, back view with the black GA centered on the back waistband and the smaller white GA on the Blue TEMPO racerback bra",
             "caption": "Product visualization. Leggings only; bra shown for styling."
           }
         ]
