@@ -5077,8 +5077,9 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/tempo-training-pants-black-white-catalog-product-front-20261026.webp",
+        src: "/products/tempo-training-pants-black-white-catalog-apliiq-front-6241843.jpg",
         alt: "TEMPO Training Pants in Black/White, product front with the white and red GA monogram on the left thigh",
+        caption: "Apliiq design preview. Sport-Tek LPST800 in 100% recycled polyester double knit.",
       },
       {
         src: "/products/tempo-training-pants-black-white-catalog-product-back-20261026.webp",
@@ -5093,8 +5094,9 @@ export const products: Product[] = [
         skuFragment: "BLACKWHITE",
         images: [
           {
-            src: "/products/tempo-training-pants-black-white-catalog-product-front-20261026.webp",
+            src: "/products/tempo-training-pants-black-white-catalog-apliiq-front-6241843.jpg",
             alt: "TEMPO Training Pants in Black/White, product front with the white and red GA monogram on the left thigh",
+            caption: "Apliiq design preview. Sport-Tek LPST800 in 100% recycled polyester double knit.",
           },
           {
             src: "/products/tempo-training-pants-black-white-model-front-20261106.webp",
