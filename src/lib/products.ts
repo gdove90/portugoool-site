@@ -365,14 +365,16 @@ const TEMPO_TRAINING_TEE_VARIANTS = [
   }
 ];
 
-// WT0093 owner-approved gallery publication. Supplier production checks remain held.
+// WT0093 owner-approved gallery publication. Released for sale 2026-11-07: four
+// Tapstitch designs (GA 1.4 x 1.3 in centred on the lower back, GOAL 4 x 4 cm
+// clothing label, $10.97 unit) in designs/tempo-training-bra-wt0093-2026-11-07.
 const TEMPO_TRAINING_BRA_VARIANTS = [
   {
     "name": "Black",
     "supplierColor": "Black",
     "hex": "#1B1B1B",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp",
@@ -408,10 +410,10 @@ const TEMPO_TRAINING_BRA_VARIANTS = [
   },
   {
     "name": "Blue",
-    "supplierColor": "Blue",
+    "supplierColor": "Sky Blue",
     "hex": "#B8DCE3",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/tempo-training-bra/goal-training-bra-blue-01-ghost-front-20261104.webp",
@@ -450,7 +452,7 @@ const TEMPO_TRAINING_BRA_VARIANTS = [
     "supplierColor": "Flower Gray",
     "hex": "#A4A5A5",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/tempo-training-bra/goal-training-bra-grey-01-ghost-front-20261104.webp",
@@ -489,7 +491,7 @@ const TEMPO_TRAINING_BRA_VARIANTS = [
     "supplierColor": "Brick Red",
     "hex": "#BD776C",
     "skuFragment": "",
-    "comingSoon": true,
+    "comingSoon": false,
     "images": [
       {
         "src": "/products/tempo-training-bra/goal-training-bra-brick-01-ghost-front-20261104.webp",
@@ -5511,7 +5513,7 @@ export const products: Product[] = [
     "category": "bra",
     "supplierType": "tapstitch",
     "isActive": true,
-    "availableForSale": false,
+    "availableForSale": true,
     "isLimitedDrop": false,
     "dropVersion": null,
     "dropLimit": null,

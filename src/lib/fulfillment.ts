@@ -540,6 +540,16 @@ const MAPPING: Record<string, Record<string, SupplierVariant>> = {
     "Haze Blue": tapstitch("1568600115416072192", ["S", "M", "L", "XL"]),
     "Purple": tapstitch("1568600560352030720", ["S", "M", "L", "XL"]),
   },
+  // TEMPO Training Bra (Tapstitch WT0093): GA 1.4 x 1.3 in centred in the
+  // lower-back panel, front blank, 4 x 4 cm GOAL clothing label. Designs
+  // saved 2026-11-07 ($10.97 unit). Site Blue is supplier Sky Blue, Grey is
+  // Flower Gray, Brick is Brick Red.
+  "80000000-0000-4000-8000-000000000025": {
+    "Black": tapstitch("1568776159259455488", ["S", "M", "L", "XL"]),
+    "Blue": tapstitch("1568776912975880192", ["S", "M", "L", "XL"]),
+    "Grey": tapstitch("1568777690977337344", ["S", "M", "L", "XL"]),
+    "Brick": tapstitch("1568778318927560704", ["S", "M", "L", "XL"]),
+  },
   // Saved decorated designs verified 2026-11-04. TAP refs are internal;
   // this mapping does not authorize checkout or prove API fulfillment.
   "80000000-0000-4000-8000-000000000021": {
