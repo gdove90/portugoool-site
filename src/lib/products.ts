@@ -5144,12 +5144,21 @@ export const products: Product[] = [
         skuFragment: "DEEPREDWHITE",
         images: [
           {
-            src: "/products/tempo-training-pants-deep-red-white-catalog-product-front-20261026.webp",
+            src: "/products/tempo-training-pants-deep-red-white-catalog-apliiq-front-6241817.jpg",
             alt: "TEMPO Training Pants in Deep Red/White, product front with the white GA monogram on the left thigh",
+            caption: "Apliiq design preview. Sport-Tek LPST800 in 100% recycled polyester double knit.",
           },
           {
-            src: "/products/tempo-training-pants-deep-red-white-catalog-product-back-20261026.webp",
-            alt: "TEMPO Training Pants in Deep Red/White, product back with the white GOAL ATHLETICS wordmark on the right hip",
+            src: "/products/tempo-training-pants-deep-red-white-molly-model-front-20261106.webp",
+            alt: "Molly wearing Deep Red/White TEMPO Training Pants and the White TEMPO Core Training Tee, front view",
+          },
+          {
+            src: "/products/tempo-training-pants-deep-red-white-molly-model-three-quarter-20261106.webp",
+            alt: "Three-quarter view of Molly in the Deep Red/White TEMPO Training Pants, with the white GA monogram on her left thigh",
+          },
+          {
+            src: "/products/tempo-training-pants-deep-red-white-molly-model-back-20261106.webp",
+            alt: "Back view of Molly in the Deep Red/White TEMPO Training Pants, with the white GOAL ATHLETICS wordmark on her right seat",
           },
         ],
       },
