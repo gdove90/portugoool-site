@@ -46,12 +46,19 @@ async function main() {
       const collection = nodes(footer).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === '/shop'));
       assert.ok(collection, 'Footer needs its collection link');
       assert.equal(nodes(collection).filter(node => node.nodeName === '#text').map(node => node.value).join('').trim(), 'The collection', 'Match the approved footer label');
-      // Your Story and Match Highlights are owner-only since 2026-10-22: no
-      // desktop, mobile or footer link reaches them.
+      // What's Your GOAL? is back in the desktop menu, mobile menu and footer
+      // since 2026-11-07 (owner). Match Highlights stays owner-only and the
+      // legacy slug is only a redirect, so neither is linked anywhere.
+      const navs = tree.filter(node => node.tagName === 'nav' && node.attrs.some(attr => attr.name === 'aria-label' && ['Main navigation', 'Mobile navigation'].includes(attr.value)));
+      assert.equal(navs.length, 2, 'Homepage needs the desktop and mobile menus');
+      for (const scope of [...navs, footer]) {
+        const campaign = nodes(scope).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === '/whats-your-goal'));
+        assert.ok(campaign, 'Shared navigation links /whats-your-goal');
+      }
       for (const scope of [...tree.filter(node => node.tagName === 'nav'), footer]) {
-        for (const href of ['/whats-your-goal', '/whats-your-goool', '/share-your-goals']) {
+        for (const href of ['/whats-your-goool', '/share-your-goals']) {
           const link = nodes(scope).find(node => node.tagName === 'a' && node.attrs.some(attr => attr.name === 'href' && attr.value === href));
-          assert.equal(link, undefined, 'Shared navigation no longer links ' + href);
+          assert.equal(link, undefined, 'Shared navigation does not link ' + href);
         }
       }
     }
