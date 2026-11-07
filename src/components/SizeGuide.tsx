@@ -65,7 +65,7 @@ export default function SizeGuide({ productId, showGuideLink = true, showMeasuri
             <tbody>{guide.bodyReference.rows.map(row => <tr key={row.size}><th scope="row">{row.size}</th><td>{row.usSize}</td>{row.values.map((value,index) => <td key={guide.bodyReference!.columns[index].key}>{formatMeasurement(value,unit)}</td>)}</tr>)}</tbody>
           </table>
         </div>
-        <p className="size-guide-fabric">These ranges measure your body. U.S. sizes are a reference for this style; use each product's own guide.</p>
+        <p className="size-guide-fabric">These ranges measure your body. U.S. sizes are a reference for this style; use each product&apos;s own guide.</p>
       </div>}
       {guide.note && <p>{guide.note}</p>}
       {showGuideLink && <Link href={sizeGuideHref(productId)} className="size-guide-link">All size guides</Link>}
