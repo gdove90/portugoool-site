@@ -4971,7 +4971,8 @@ export const products: Product[] = [
   // centred 4 in from the zip, top 3 in below the collar. Tapstitch sells S to XL only. Quote $11.98 a unit plus
   // about $5 shipping: the 25% model's floor is $32; priced $44. Tapstitch
   // orders are placed by hand (see fulfillment-submit.ts) until an API is
-  // connected. Images are Tapstitch's mockups. Record:
+  // connected. Black gallery: Molly's approved shoot, updated 2026-11-07.
+  // Original supplier references:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000018",
@@ -4990,9 +4991,25 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low. Cool iron, avoiding the print. Do not dry clean.",
     images: [
       {
-        src: "/products/tempo-quarter-zip-black-catalog-product-front-20261026.webp",
-        alt: "TEMPO Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
+        "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-floating-ghost-front-20261107.webp",
+        "alt": "Black TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and white-red GA on the left chest",
+        "caption": "Product visualization."
       },
+      {
+        "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-front-20261107.webp",
+        "alt": "Molly facing forward in the Black TEMPO Quarter Zip with the white-red GA on her left chest, styled with Black TEMPO Training Leggings",
+        "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+      },
+      {
+        "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-front-quarter-20261107.webp",
+        "alt": "Molly laughing at a front quarter turn in the Black TEMPO Quarter Zip while adjusting a thumbhole cuff, styled with Black TEMPO Training Leggings",
+        "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+      },
+      {
+        "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-back-quarter-20261107.webp",
+        "alt": "Molly at a rear quarter turn with her face in profile, showing the plain back of the Black TEMPO Quarter Zip, styled with Black TEMPO Training Leggings",
+        "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+      }
     ],
     colorVariants: [
       {
@@ -5002,9 +5019,25 @@ export const products: Product[] = [
         skuFragment: "BLACK",
         images: [
           {
-            src: "/products/tempo-quarter-zip-black-catalog-product-front-20261026.webp",
-            alt: "TEMPO Quarter Zip in Black, product front with the white and red GA monogram on the left chest beside the zip",
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-floating-ghost-front-20261107.webp",
+            "alt": "Black TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and white-red GA on the left chest",
+            "caption": "Product visualization."
           },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-front-20261107.webp",
+            "alt": "Molly facing forward in the Black TEMPO Quarter Zip with the white-red GA on her left chest, styled with Black TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-front-quarter-20261107.webp",
+            "alt": "Molly laughing at a front quarter turn in the Black TEMPO Quarter Zip while adjusting a thumbhole cuff, styled with Black TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          },
+          {
+            "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-back-quarter-20261107.webp",
+            "alt": "Molly at a rear quarter turn with her face in profile, showing the plain back of the Black TEMPO Quarter Zip, styled with Black TEMPO Training Leggings",
+            "caption": "Product visualization. Quarter zip only; leggings shown for styling."
+          }
         ],
       },
       {

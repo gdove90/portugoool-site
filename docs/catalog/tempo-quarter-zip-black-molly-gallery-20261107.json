@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-07",
+  "product_id": "80000000-0000-4000-8000-000000000018",
+  "slug": "tempo-quarter-zip",
+  "model": "Molly",
+  "color": "Black",
+  "scope": "Four approved Black quarter-zip gallery photos, styled with Black WB0025 leggings. Quarter zip only.",
+  "publication_scope": "Existing owner-only collection preview; all launch, checkout, price and fulfillment settings preserved.",
+  "publication_status": "Owner approved upload on 2026-11-07.",
+  "website_preview": "https://goalathletics.shop/women/preview/tempo-quarter-zip?color=Black",
+  "quarter_zip": {
+    "supplier": "Tapstitch",
+    "style": "WT0092-P001-V2",
+    "product_name": "Women's Quarter-Zip Yoga Pullover",
+    "color": "Black",
+    "design_id": "1564321596708188160",
+    "detail_id": "1564322436105879552",
+    "design_url": "https://www.tapstitch.com/account/products-pool/product/1564322436105879552",
+    "fabric": "91% polyester / 9% spandex, 165 gsm",
+    "features": "Stand mock neck, quarter zipper, set-in long sleeves, thumbhole cuffs, fitted regular hip-length hem",
+    "mark": "White #FFFFFF and red #E51226 GA, wearer's left chest",
+    "print_width_in": 2,
+    "print_height_in": 1.8,
+    "back": "Plain"
+  },
+  "styling_leggings": {
+    "supplier": "Tapstitch",
+    "style": "WB0025-O001-V2",
+    "color": "Black",
+    "design_id": "1568598186191417344",
+    "detail_id": "1568599146607366144",
+    "fabric": "75% nylon / 25% spandex, 220 gsm",
+    "front": "Plain",
+    "mark": "White/red GA centered on back waistband only, nominal saved 1.4 x 1.27 in",
+    "styling_note": "The regular hip-length quarter zip covers the waistband naturally. No waistband print is moved onto the seat or the quarter-zip back."
+  },
+  "collection_pose_guidance": "User direction 2026-11-07: four images per girl, including a rear quarter-turn with face more in side profile. Use distinct natural poses, gestures and expressions for each model. Ghost front first; rear quarter-turn last.",
+  "gallery_order": [
+    "ghost-front",
+    "front",
+    "front-quarter",
+    "back-quarter"
+  ],
+  "poses": {
+    "front": "Warm front-facing smile, relaxed weight shift and hand at outer hip",
+    "front_quarter": "Candid laugh, small step and casual thumbhole-cuff adjustment below the chest print",
+    "back_quarter": "Left-facing rear quarter-turn with face in profile, one hand at outer hip, other arm relaxed and natural weight shift; distinct from Jessica's raised-hand pose"
+  },
+  "review": {
+    "identity": "Compared with Molly's saved front, quarter and back brand references; dark low ponytail and natural build preserved",
+    "product": "Compared with saved WT0092 front/back and WB0025 front/back; mock neck, zip, regular hem, thumbhole sleeves and flat leggings hems retained",
+    "branding": "White/red chest GA follows the saved design; nominal 2 x 1.8 in is a supplier design setting, not a physical measurement of a generated photograph",
+    "ghost": "Dimensional worn-volume front of the quarter zip only, hollow collar and sleeve cuffs, soft floating shadow",
+    "framing": "All four 1024x1536 portrait PNGs on neutral gray studio backgrounds; full garments and full model head/shoes visible"
+  },
+  "files": [
+    {
+      "order": 1,
+      "key": "ghost-front",
+      "name": "00 Black TEMPO Quarter Zip - Floating Ghost Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-32ce2217-8f5c-4cce-9e0e-b4d123cae2aa.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Molly - Black TEMPO Quarter Zip/00 Black TEMPO Quarter Zip - Floating Ghost Front.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/00 Black TEMPO Quarter Zip - Floating Ghost Front.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "bytes": 1807166,
+      "sha256": "20127e8df888dada0f45c86c238670e66c77492a9721f1e3e0c3c3419eaeab63"
+    },
+    {
+      "order": 2,
+      "key": "front",
+      "name": "01 Molly Black TEMPO Quarter Zip - Front.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-01361a65-5125-40ec-9c2a-13f7ac82cb92.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Molly - Black TEMPO Quarter Zip/01 Molly Black TEMPO Quarter Zip - Front.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/01 Molly Black TEMPO Quarter Zip - Front.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "bytes": 1716730,
+      "sha256": "960d09f150dbf924153015c5f8c6b59633dc48ff79c370c8e672e0a4c53b981e"
+    },
+    {
+      "order": 3,
+      "key": "front-quarter",
+      "name": "02 Molly Black TEMPO Quarter Zip - Front Quarter.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-09643d58-0b7d-4825-8677-8cafa076914b.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Molly - Black TEMPO Quarter Zip/02 Molly Black TEMPO Quarter Zip - Front Quarter.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/02 Molly Black TEMPO Quarter Zip - Front Quarter.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "bytes": 1664042,
+      "sha256": "366ed3a70f7f9d2251e41e821f99d6a775287f0314fccd86dd7add7dc274a83b"
+    },
+    {
+      "order": 4,
+      "key": "back-quarter",
+      "name": "03 Molly Black TEMPO Quarter Zip - Back Quarter.png",
+      "source": "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-e17a8636-2a07-4a90-95c2-141e3358f07e.png",
+      "saved_path": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Molly - Black TEMPO Quarter Zip/03 Molly Black TEMPO Quarter Zip - Back Quarter.png",
+      "root_copy": "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/03 Molly Black TEMPO Quarter Zip - Back Quarter.png",
+      "dimensions_px": [
+        1024,
+        1536
+      ],
+      "bytes": 1686865,
+      "sha256": "e4ebc0a3cd32c639c7d9252567c82763f3132d82d1e4ddc8319278948d3f0705"
+    }
+  ],
+  "website_images": [
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-floating-ghost-front-20261107.webp",
+      "alt": "Black TEMPO Quarter Zip, dimensional floating front view with mock neck, thumbhole cuffs and white-red GA on the left chest",
+      "caption": "Product visualization.",
+      "sha256": "9795f420b231b903db0293684d1b42f8b635b13b98c051a6e13acd1e412735da",
+      "bytes": 53758
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-front-20261107.webp",
+      "alt": "Molly facing forward in the Black TEMPO Quarter Zip with the white-red GA on her left chest, styled with Black TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "52dd324243657ad21fe1e21b003a44f9ec6e6c13b8e68f983c3caf84fc4bf75f",
+      "bytes": 45754
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-front-quarter-20261107.webp",
+      "alt": "Molly laughing at a front quarter turn in the Black TEMPO Quarter Zip while adjusting a thumbhole cuff, styled with Black TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "8a15d064da03b0d8464438591a535c2f20d17b25d3813cd7b898fc02e5627ed5",
+      "bytes": 43696
+    },
+    {
+      "src": "/products/tempo-quarter-zip/tempo-quarter-zip-black-molly-back-quarter-20261107.webp",
+      "alt": "Molly at a rear quarter turn with her face in profile, showing the plain back of the Black TEMPO Quarter Zip, styled with Black TEMPO Training Leggings",
+      "caption": "Product visualization. Quarter zip only; leggings shown for styling.",
+      "sha256": "7503ccb451d7d7b87ea858bcacbba4d8ca38bf20696a94d1456baff944f3fa05",
+      "bytes": 43444
+    }
+  ],
+  "generation": {
+    "mode": "Built-in image_gen; no CLI or external provider",
+    "source_record": "C:\\Users\\gdove\\OneDrive\\Desktop\\GoalAthletics\\02 Apparel\\Concepts and Collections\\womens v1.3 core collection\\Molly - Black TEMPO Quarter Zip\\Gallery Sources and Prompts.json",
+    "prompts": [
+      {
+        "key": "ghost-front",
+        "refs": [
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Black-front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/02 Apparel/Concepts and Collections/womens v1.3 core collection/Leggings - Floating Ghost Fronts/00 Black TEMPO Leggings - Floating Ghost Front.png"
+        ],
+        "prompt": "Use case: product-mockup. Create a premium dimensional floating ghost FRONT product photograph of the exact Black WT0092 quarter-zip top in image 1. Image 2 is ONLY a reference for realistic filled, worn garment volume, light-gray studio backdrop and floating shadow; do not include leggings. Show ONLY the quarter-zip top, front-facing, suspended naturally with softly shaped shoulders, torso and gently bent empty sleeves as though worn by an invisible person. Preserve image 1's actual stand mock neck, quarter-length center zipper closed to the collar, fitted regular hip-length cut, set-in sleeves, long straight sleeve ends with thumbhole slits, flat hem and real seams. Fabric is lightweight smooth matte 91% polyester/9% spandex performance knit, 165 gsm, with subtle realistic folds and fine texture. Match the precise WHITE G/RED A monogram silhouette, colors, wearer-left chest placement and discreet size in image 1: saved print 2.00 by 1.80 inches. Keep the logo's width approximately half the horizontal distance from the zipper to the logo center, following the reference proportions. Natural hollow collar opening and empty sleeve cuffs, clean dimensional garment silhouette, evenly lit black fabric with readable details, soft floating shadow on a seamless light neutral-gray studio. One 1024x1536 portrait product photograph, whole collar, hem and sleeve ends visible with balanced margins. No human, mannequin parts, hands, legs, shoes, hanger, hood, drawstrings, ribbed waistband, wording or extra graphics."
+      },
+      {
+        "key": "front",
+        "refs": [
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Molly-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Molly/01 Molly Front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Black-front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-front.png"
+        ],
+        "prompt": "Professional full-length activewear catalog photograph of adult brand model Molly. Image 1 is Molly's exact identity reference: preserve her face, natural skin texture, dark low ponytail and compact athletic build. Image 2 is the exact Black WT0092 mock-neck quarter-zip top; image 3 is the exact Black WB0025 leggings. Dress Molly in these actual Black garments and plain white training sneakers. Match the quarter zip's stand mock neck, center zipper closed up to the collar, set-in long sleeves, thumbhole cuffs, fitted hip-length untucked hem and smooth matte lightweight 165 gsm stretch performance knit. Match image 2's WHITE G/RED A GA monogram on the wearer's LEFT chest, saved 2.00 by 1.80 inches, with width about half the horizontal distance from zipper to logo center. Preserve its precise small silhouette and placement, not oversized. Leggings have a high waistband, smooth fitted legs and flat ankle hems, with a completely plain front. Molly faces forward, smiling warmly, relaxed weight on one leg, one hand resting lightly at her outer hip below the chest logo and the other arm relaxed; wear the thumbhole cuffs naturally. The top falls over the leggings waistband with realistic garment lengths and no exposed midriff. Neutral gray seamless studio, soft even commercial lighting, natural fabric folds, complete head and both shoes visible with margins. One 1024x1536 portrait photograph. No accessories, text overlays, extra graphics, pockets or stripes."
+      },
+      {
+        "key": "front-quarter",
+        "refs": [
+          "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-01361a65-5125-40ec-9c2a-13f7ac82cb92.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Molly-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Molly/02 Molly Front Left Quarter.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Black-front.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-front.png"
+        ],
+        "prompt": "Use case: identity-preserve. Create the FRONT QUARTER-TURN photograph for Molly's professional quarter-zip catalog shoot. Image 1 is the approved Molly front outfit and studio style. Image 2 confirms her exact face and dark low ponytail at a quarter angle. Images 3 and 4 are actual Black WT0092 quarter zip and WB0025 leggings references. Preserve Molly's identity, natural athletic build, all actual garment cuts, Black colors, closed mock-neck zipper, thumbhole cuffs, hip-length untucked hem, plain Black leggings and white sneakers. Turn her body roughly 30 degrees into a front-left quarter angle, both the front and side of the top visible. Give her personality: an easy spontaneous laugh looking just off camera, a small relaxed step, and hands casually adjusting one thumbhole cuff down at waist height, well below the chest print. Keep the small WHITE G/RED A monogram in exactly the approved wearer's-left chest position and the same discreet saved 2.00 by 1.80 inch physical size, with natural perspective, following images 1 and 3. Real lightweight smooth matte 165 gsm performance stretch knit, subtle folds, no fleece bulk or ribbing. The regular-length top covers the leggings waistband naturally. Same neutral gray seamless studio and even commercial lighting. Full head and both shoes visible with margins, one 1024x1536 portrait photo. No extra logos, text, pockets, stripes, accessories or props."
+      },
+      {
+        "key": "back-quarter",
+        "refs": [
+          "C:/Users/gdove/.codex/generated_images/01a1b337-f257-7361-a51b-5ac697ecf73b/exec-01361a65-5125-40ec-9c2a-13f7ac82cb92.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Molly-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Molly/02 Molly Front Left Quarter.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/brand-assets/avatars/Molly-360-Brand-Assets/GOAL Athletics/Brand Assets/Models/Molly/05 Molly Back.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-quarter-zip-tonal-2026-11-06/supplier-mockups/TEMPO-Quarter-Zip-Black-back.png",
+          "C:/Users/gdove/OneDrive/Desktop/GoalAthletics/designs/tempo-training-leggings-wb0025-2026-11-06/supplier-mockups/TEMPO-Leggings-Black-back.png"
+        ],
+        "prompt": "Use case: identity-preserve. Create Molly's REAR QUARTER-TURN full-length activewear catalog photograph, with her face SIDE-ON IN PROFILE. Image 1 is Molly's approved identity, Black WT0092 quarter-zip and Black WB0025 leggings outfit, white sneakers and gray studio. Images 2 and 3 confirm Molly's face, natural build and dark low ponytail; image 4 is the exact PLAIN BACK of the quarter zip; image 5 is the actual leggings back design. Rotate her whole body about 40 degrees from straight back toward the LEFT of the frame, so the camera sees her back and left side clearly. Her face is in a natural left-facing side profile with a cheerful smile, looking sideways rather than back into the lens. Give Molly her own pose: one hand resting casually at her OUTER hip, the other arm relaxed down, soft weight shift to one leg with the other knee easy. Keep her ponytail down and her arms away from her head. Preserve exact garment construction: closed stand mock neck, set-in long sleeves, natural thumbhole cuffs, fitted regular hip-length untucked top hem; lightweight matte performance knit; fitted full-length leggings and flat ankle hems. The quarter zip BACK IS COMPLETELY PLAIN as image 4. The leggings' only small white/red GA is on the back waistband as image 5, which is naturally covered by this hip-length top; do not relocate it below the hem, do not show a logo on the seat or lower back of the top. Any front chest logo is visible only if physically visible at this angle. Match the same black shades, natural fabric folds, white sneakers, neutral gray studio and even commercial lighting as image 1. One 1024x1536 portrait photograph with complete head and both shoes visible and balanced margins. No wording, added back graphics, stripes, pockets, accessories or props."
+      }
+    ]
+  },
+  "catalog_price_cents": 4400,
+  "public_launch_unchanged": true
+}
