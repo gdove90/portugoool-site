@@ -5194,7 +5194,7 @@ export const products: Product[] = [
   // (rebuilt 2026-10-26 at the owner's smallest size; 6240580/81/82 renamed
   // delete): the V1.3 GA monogram 2.00 x 1.80 in centred on the chest, top
   // 3 in below the hood seam. Apliiq quote $37.28 (XXL +$2): 25% model floor $65,
-  // priced $68. Images are Apliiq's renders on the studio backdrop. Record:
+  // priced $68. Navy uses the owner-supplied gallery. Supplier record:
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000020",
@@ -5249,8 +5249,20 @@ export const products: Product[] = [
         skuFragment: "NAVY",
         images: [
           {
-            src: "/products/tempo-warmup-hoodie-navy-catalog-product-front-20261026.webp",
-            alt: "TEMPO Warmup Hoodie in Navy, product front with the cream GA monogram centred on the chest",
+            src: "/products/tempo-warmup-hoodie-navy-model-front-20261106.webp",
+            alt: "Front view of the Navy TEMPO Warmup Hoodie on a model, showing the cream GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-navy-product-front-20261106.webp",
+            alt: "Navy TEMPO Warmup Hoodie, product front with the cream GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-navy-model-back-20261106.webp",
+            alt: "Back view of the Navy TEMPO Warmup Hoodie on a model, showing the hood and plain back",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-navy-model-three-quarter-20261106.webp",
+            alt: "Three-quarter view of the Navy TEMPO Warmup Hoodie on a model",
           },
         ],
       },
