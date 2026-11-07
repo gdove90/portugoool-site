@@ -5214,8 +5214,8 @@ export const products: Product[] = [
     careInstructions: "Machine wash cold, inside out, with like colours. Do not bleach. Tumble dry low. Do not iron directly on the print.",
     images: [
       {
-        src: "/products/tempo-warmup-hoodie-black-model-front-20261106.webp",
-        alt: "Front view of the Black TEMPO Warmup Hoodie on a model, showing the white and red GA monogram",
+        src: "/products/tempo-warmup-hoodie-black-product-front-20261106.webp",
+        alt: "Black TEMPO Warmup Hoodie, product front with the white and red GA monogram",
       },
     ],
     colorVariants: [
@@ -5226,12 +5226,12 @@ export const products: Product[] = [
         skuFragment: "BLACK",
         images: [
           {
-            src: "/products/tempo-warmup-hoodie-black-model-front-20261106.webp",
-            alt: "Front view of the Black TEMPO Warmup Hoodie on a model, showing the white and red GA monogram",
-          },
-          {
             src: "/products/tempo-warmup-hoodie-black-product-front-20261106.webp",
             alt: "Black TEMPO Warmup Hoodie, product front with the white and red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-black-model-front-20261106.webp",
+            alt: "Front view of the Black TEMPO Warmup Hoodie on a model, showing the white and red GA monogram",
           },
           {
             src: "/products/tempo-warmup-hoodie-black-model-three-quarter-20261106.webp",
@@ -5262,12 +5262,12 @@ export const products: Product[] = [
         skuFragment: "NAVY",
         images: [
           {
-            src: "/products/tempo-warmup-hoodie-navy-model-front-20261106.webp",
-            alt: "Front view of the Navy TEMPO Warmup Hoodie on a model, showing the cream GA monogram",
-          },
-          {
             src: "/products/tempo-warmup-hoodie-navy-product-front-20261106.webp",
             alt: "Navy TEMPO Warmup Hoodie, product front with the cream GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-navy-model-front-20261106.webp",
+            alt: "Front view of the Navy TEMPO Warmup Hoodie on a model, showing the cream GA monogram",
           },
           {
             src: "/products/tempo-warmup-hoodie-navy-model-back-20261106.webp",
@@ -5286,12 +5286,12 @@ export const products: Product[] = [
         skuFragment: "MAUVE",
         images: [
           {
-            src: "/products/tempo-warmup-hoodie-mauve-model-front-20261106.webp",
-            alt: "Seated model in the Mauve TEMPO Warmup Hoodie with the wine-red GA monogram",
-          },
-          {
             src: "/products/tempo-warmup-hoodie-mauve-product-front-20261106.webp",
             alt: "Mauve TEMPO Warmup Hoodie, product front with the wine-red GA monogram",
+          },
+          {
+            src: "/products/tempo-warmup-hoodie-mauve-model-front-20261106.webp",
+            alt: "Seated model in the Mauve TEMPO Warmup Hoodie with the wine-red GA monogram",
           },
           {
             src: "/products/tempo-warmup-hoodie-mauve-model-back-20261106.webp",
