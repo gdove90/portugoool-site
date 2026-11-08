@@ -9,6 +9,14 @@
     "changed_paths": [
       "docs/growth/bf2026-campaign.json",
       "docs/growth/bf2026-review.md",
+      "docs/growth/evidence/e3d1dc5/correctness-copy-scope.json",
+      "docs/growth/evidence/e3d1dc5/halo-unmasked.json",
+      "docs/growth/evidence/e3d1dc5/legacy-comparison.json",
+      "docs/growth/evidence/e3d1dc5/payment-behavior.json",
+      "docs/growth/evidence/e3d1dc5/payment-pin-all-files.json",
+      "docs/growth/evidence/e3d1dc5/remote-preview-http-checks.json",
+      "docs/growth/evidence/e3d1dc5/size-guide-render-comparison.json",
+      "docs/growth/release-verification-e3d1dc5.md",
       "docs/growth/supplier-routing-audit.json",
       "docs/growth/verification.md",
       "scripts/preview-bf2026.cjs",
@@ -38,7 +46,11 @@
       "Stale discount responses and successful checkout event timing repaired; persisted paid-state and granted-consent checks applied to purchase analytics.",
       "Existing Warm-Up Tee campaign A/B conventions, offline attribution proposal preview and internal UNKNOWN-cost economics workbook prepared.",
       "Local Chrome mobile 390px and desktop 1440px checks; private loopback servers left running for owner review.",
-      "Attributed engineer handoff saved and read-back verified in the existing GOAL Operations Publisher Handoff; previous contributions preserved."
+      "Attributed engineer handoff saved and read-back verified in the existing GOAL Operations Publisher Handoff; previous contributions preserved.",
+      "Formal same-condition base 7b98ba4 and candidate e3d1dc5 comparison of all three failing legacy suites, deeper assertions, all pin paths and 19 exact guide renders.",
+      "PGlite actual store/webhook/CAPI capture: one order/line and one logical Purchase ID; concurrent send attempts unchanged, post-refund send suppressed on candidate.",
+      "Password-protected remotely accessible Netlify live session verified with HTTP 401 / read-only page 200 / operational API 503, Chrome 390px and 1440px checks and screenshots.",
+      "Prepared apply-checked 20-file correctness/copy patch; campaign offer explicitly UNSELECTED, contribution UNKNOWN. Documentation-only follow-up commit f43a3e7 pushed; original e3d1dc5 preserved."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -59,13 +71,23 @@
         "status": "confirmed"
       },
       {
-        "details": "Netlify live tunnel to authenticated read-only proxy on loopback; all operational API paths denied, no production credentials, no deploy. Owner requested remote private preview.",
+        "details": "https://f94480c1--goool-shop.netlify.live to authenticated proxy. Unauthenticated page/API 401, authenticated product 200, checkout/signup/webhook 503. No deploy or production settings changed. Credentials outside repository.",
         "reference": "goal-release-e3d1dc5-private-live-preview",
+        "status": "confirmed"
+      },
+      {
+        "details": "Documentation and compact evidence pushed with skip ci / skip netlify; no runtime changes from e3d1dc5, main remains 7b98ba4.",
+        "reference": "f43a3e7d96f5d9a93e2f021c8e2cf3a79a59be0a",
+        "status": "confirmed"
+      },
+      {
+        "details": "Refresh only own existing engineer contribution, expected-hash guarded; preserve all other contributions and a single attributed handoff.",
+        "reference": "page_3124dbaf9afc8191b24af917963f42c8 / goal.growth.implementation.20261107 / release-verification-f43a3e7",
         "status": "intent"
       }
     ],
-    "head_commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
-    "next_action": "Expose password-protected local review via existing Netlify live tunnel; no production deployment/settings changes. No real provider payment test.",
+    "head_commit": "f43a3e7d96f5d9a93e2f021c8e2cf3a79a59be0a",
+    "next_action": "Update only the existing attributed engineer handoff with evidence and split release scope; then release writer lock. No production deployment or provider payment test.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-growth-release-verification-20261107",
     "task_id": "growth-bf2026-20261107",
@@ -73,14 +95,16 @@
       "Typecheck, lint and production build PASS (four existing img warnings).",
       "13 growth commerce, 4 actual CartPage interaction, 10 Meta (978 money/snapshot combinations), 6 discount, 10 signup/email, 8 popup checks and women fit suite PASS; providers isolated.",
       "Halo suite: 17 PG checks PASS then stale $34 vs production $24 fixture failure; reproduced on baseline. Size-guide suite old single-table assertion fails on existing women guides. Old payment-preservation raw equality pin fails and is not functional proof.",
-      "Economics formulas, UNKNOWN/zero handling, input-change recalculation, error scan and render PASS. No real payment, email, supplier order or native iPhone/Safari test."
+      "Economics formulas, UNKNOWN/zero handling, input-change recalculation, error scan and render PASS. No real payment, email, supplier order or native iPhone/Safari test.",
+      "All three original suites fail at the same first assertions on both exact refs; additional Halo totals/held-product failures also match. All 19 guides render byte-identically.",
+      "13 commerce, 4 CartPage, 10 Meta including 978 quote/snapshot combinations, 6 discount, 10 welcome, 8 popup and women-fit regressions pass. Typecheck/lint/build pass; four prior img warnings.",
+      "Provider test payment explicitly blocked by owner because enabled sandbox callbacks point to shared production/preview endpoints. No session/charge created."
     ],
     "unresolved": [
-      "Confirm product-specific production/transit and Tapstitch origin/service; current itemized garment/decoration/label/handling/freight/packed weight/actual fees/defect allowance are unknown.",
-      "GOAL sandbox linkage is unverified for the existing local test key; connected Stripe tool is live-only. Supabase connector did not resolve the GOAL project; deployed constraints unverified.",
-      "Meta dashboard receipts and order-level attribution unverified; four-field consent-gated attribution collection/retention is proposed only.",
-      "Owner selects Black and exact assets/slots; no production release approval requested while dependencies remain.",
-      "Shared setup helper has a Windows CRLF stdin/mktree bug; NUL-delimited temporary helper used here. Preserve same lock; no second coordinator."
+      "Provider-backed payment/order/webhook verification remains blocked by explicit owner choice; sandbox identified as legacy GOAL, no endpoints changed.",
+      "Existing concurrent Meta sends share one logical event ID, but actual Meta dedup receipt unverified. No retained-revenue/refund exporter. Deployed Supabase constraints unverified.",
+      "Actual iPhone/Safari owner review pending. Remote live preview requires host and local processes to remain online and authentication expires 2026-11-11T04:53:45Z.",
+      "Campaign launch: complete current costs, creative/slot choice, product-specific timing for promises, Meta receipt and attribution collection/retention approval. Contribution UNKNOWN; Black Friday offer UNSELECTED."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -103,7 +127,7 @@
     "start_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "task": "growth-bf2026-20261107"
   },
-  "revision": 110,
+  "revision": 111,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T04:49:25.093843+00:00"
+  "updated_at": "2026-11-08T04:59:40.067971+00:00"
 }
