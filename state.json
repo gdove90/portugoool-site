@@ -1,111 +1,74 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Owner 2026-11-07: audit, fix verified purchase/delivery/measurement defects, verify in isolation and prepare a private Black Friday preview and attributed existing-team handoff. No production deploy, merge, promotions, spend, outreach, schedule changes or production SQL.",
-      "Owner followup verification e3d1dc5; remotely accessible private review without deployment; provider payment verification left BLOCKED by explicit owner reply."
+      "Owner BUILD + REVIEW attachment 86cb58e4 on 2026-11-08: dedicated branch from production; selective cart quotes/tracking guards; footer/story wording; hide Collective. Draft PR only.",
+      "Production payment and every shipping/delivery claim remain unchanged. No provider-backed payment tests/sessions/charges, settings/modes changes, merge, deploy, promotion, campaign work or SQL."
     ],
     "base_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
-    "branch": "codex/growth-bf2026-20261107",
+    "branch": "codex/correctness-story-review-20261108",
     "changed_paths": [
-      "docs/growth/bf2026-campaign.json",
-      "docs/growth/bf2026-review.md",
-      "docs/growth/evidence/e3d1dc5/correctness-copy-scope.json",
-      "docs/growth/evidence/e3d1dc5/halo-unmasked.json",
-      "docs/growth/evidence/e3d1dc5/legacy-comparison.json",
-      "docs/growth/evidence/e3d1dc5/payment-behavior.json",
-      "docs/growth/evidence/e3d1dc5/payment-pin-all-files.json",
-      "docs/growth/evidence/e3d1dc5/remote-preview-http-checks.json",
-      "docs/growth/evidence/e3d1dc5/size-guide-render-comparison.json",
-      "docs/growth/release-verification-e3d1dc5.md",
-      "docs/growth/supplier-routing-audit.json",
-      "docs/growth/verification.md",
-      "scripts/preview-bf2026.cjs",
+      "docs/reviews/correctness-story-20261108.md",
+      "docs/reviews/correctness-story-20261108/build-results.json",
+      "docs/reviews/correctness-story-20261108/checks.json",
+      "docs/reviews/correctness-story-20261108/http-checks.json",
+      "docs/reviews/correctness-story-20261108/legacy-comparison.json",
+      "scripts/import-v84.cjs",
       "scripts/test-cart-quotes.cjs",
-      "scripts/test-growth-commerce.cjs",
-      "scripts/test-meta-tracking.cjs",
+      "scripts/test-correctness-review.cjs",
+      "scripts/test-launch-backend.cjs",
+      "scripts/test-story-review.cjs",
+      "src/app/about/page.tsx",
       "src/app/api/checkout/route.ts",
       "src/app/api/order-status/route.ts",
       "src/app/api/stripe-webhook/route.ts",
       "src/app/cart/page.tsx",
-      "src/app/terms/page.tsx",
-      "src/app/track-order/page.tsx",
+      "src/app/page.tsx",
+      "src/app/sitemap.ts",
       "src/components/Footer.tsx",
-      "src/components/ProductDetail.tsx",
-      "src/components/TrustBar.tsx",
       "src/lib/checkout-quote.ts",
-      "src/lib/delivery.ts",
-      "src/lib/faq.ts",
       "src/lib/meta-capi.ts",
-      "src/lib/products.ts",
-      "src/lib/shipping.ts",
-      "src/v84/ProductDetail.tsx",
-      "src/v84/Shell.tsx"
+      "src/middleware.ts",
+      "src/v84/Shell.tsx",
+      "src/v84/reference-experience.js",
+      "src/v84/story-content.js"
     ],
     "completed": [
-      "Shared delivery source, unsupported Tapstitch claims removed, retired footer descriptor removed.",
-      "Stale discount responses and successful checkout event timing repaired; persisted paid-state and granted-consent checks applied to purchase analytics.",
-      "Existing Warm-Up Tee campaign A/B conventions, offline attribution proposal preview and internal UNKNOWN-cost economics workbook prepared.",
-      "Local Chrome mobile 390px and desktop 1440px checks; private loopback servers left running for owner review.",
-      "Attributed engineer handoff saved and read-back verified in the existing GOAL Operations Publisher Handoff; previous contributions preserved.",
-      "Formal same-condition base 7b98ba4 and candidate e3d1dc5 comparison of all three failing legacy suites, deeper assertions, all pin paths and 19 exact guide renders.",
-      "PGlite actual store/webhook/CAPI capture: one order/line and one logical Purchase ID; concurrent send attempts unchanged, post-refund send suppressed on candidate.",
-      "Password-protected remotely accessible Netlify live session verified with HTTP 401 / read-only page 200 / operational API 503, Chrome 390px and 1440px checks and screenshots.",
-      "Prepared apply-checked 20-file correctness/copy patch; campaign offer explicitly UNSELECTED, contribution UNKNOWN. Documentation-only follow-up commit f43a3e7 pushed; original e3d1dc5 preserved.",
-      "Existing engineering handoff refreshed, expected-hash guarded and read-back verified; all other contributions preserved."
+      "Full cart/email/variant/customization quote context with stale/unmount/duplicate-click guards, authoritative quote values, successful-only InitiateCheckout, tracking cannot block handoff.",
+      "Granted-consent and persisted-paid/mode Purchase guards kept separate from payment/order/fulfillment/receipts; refund suppression preserved.",
+      "Our Story navigation/footer/metadata/home link and approved prose via one canonical markup module shared with the importer, preserving layout/images; retired footer adjective removed with legal/non-affiliation preserved.",
+      "Collective homepage/nav/footer/sitemap exposure removed; temporary 307 to /shop; original page/assets retained.",
+      "Source-preservation, local HTTP and Chrome 390/1440 browser checks pass; production STORE_OPEN=true confirmed read-only."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "Forward-only correction of state.json CR filename, preserving owned lease and previous task checkpoint.",
-        "reference": "4194aafc74609ef949b324a85af79af3b7e0ad2f",
+        "details": "Two scoped commits pushed to task branch with skip ci/skip netlify. Main remains7b98ba4; previous growth branch and unrelated worktrees untouched.",
+        "reference": "d3cfcca408d68e2031f4780939061d227f560fa8",
         "status": "confirmed"
       },
       {
-        "details": "Task branch pushed with skip ci and skip netlify; main unchanged.",
-        "reference": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
-        "status": "confirmed"
-      },
-      {
-        "details": "Engineer contribution appended and read back at sequence 39. One marker found; every earlier contribution ID/hash preserved. Scheduled Command Brief consumption unverified.",
-        "reference": "page_3124dbaf9afc8191b24af917963f42c8 / goal.growth.implementation.20261107",
-        "status": "confirmed"
-      },
-      {
-        "details": "https://f94480c1--goool-shop.netlify.live to authenticated proxy. Unauthenticated page/API 401, authenticated product 200, checkout/signup/webhook 503. No deploy or production settings changed. Credentials outside repository.",
-        "reference": "goal-release-e3d1dc5-private-live-preview",
-        "status": "confirmed"
-      },
-      {
-        "details": "Documentation and compact evidence pushed with skip ci / skip netlify; no runtime changes from e3d1dc5, main remains 7b98ba4.",
-        "reference": "f43a3e7d96f5d9a93e2f021c8e2cf3a79a59be0a",
-        "status": "confirmed"
-      },
-      {
-        "details": "Updated four owned existing engineer blocks; read-back receipt sequence 40. All 17 untouched blocks retained exact ID/hash, all 21 total blocks retained and one attribution marker. Command Brief scheduled consumption unverified.",
-        "reference": "page_3124dbaf9afc8191b24af917963f42c8 / goal.growth.implementation.20261107 / release-verification-f43a3e7",
-        "status": "confirmed"
+        "details": "Owner explicitly requested reviewable draft PR; no merge/deployment. Search confirmed no existing open PR for this head. Title and commits carry skip markers.",
+        "reference": "gdove90/portugoool-site / codex/correctness-story-review-20261108 -> main / draft PR",
+        "status": "intent"
       }
     ],
-    "head_commit": "f43a3e7d96f5d9a93e2f021c8e2cf3a79a59be0a",
-    "next_action": "Owner reviews the protected remote iPhone preview and exact correctness/copy patch. No production action is authorized. Campaign costs/creative/attribution remain on hold; provider payment verification remains blocked by owner choice.",
+    "head_commit": "d3cfcca408d68e2031f4780939061d227f560fa8",
+    "next_action": "Create one draft PR from the pushed exact task branch into main with skip markers; verify draft/base/head and production remains unchanged, then checkpoint and release writer lock.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-growth-release-verification-20261107",
-    "task_id": "growth-bf2026-20261107",
+    "session": "codex-correctness-story-review-20261108",
+    "task_id": "correctness-story-review-20261108",
     "tests": [
-      "Typecheck, lint and production build PASS (four existing img warnings).",
-      "13 growth commerce, 4 actual CartPage interaction, 10 Meta (978 money/snapshot combinations), 6 discount, 10 signup/email, 8 popup checks and women fit suite PASS; providers isolated.",
-      "Halo suite: 17 PG checks PASS then stale $34 vs production $24 fixture failure; reproduced on baseline. Size-guide suite old single-table assertion fails on existing women guides. Old payment-preservation raw equality pin fails and is not functional proof.",
-      "Economics formulas, UNKNOWN/zero handling, input-change recalculation, error scan and render PASS. No real payment, email, supplier order or native iPhone/Safari test.",
-      "All three original suites fail at the same first assertions on both exact refs; additional Halo totals/held-product failures also match. All 19 guides render byte-identically.",
-      "13 commerce, 4 CartPage, 10 Meta including 978 quote/snapshot combinations, 6 discount, 10 welcome, 8 popup and women-fit regressions pass. Typecheck/lint/build pass; four prior img warnings.",
-      "Provider test payment explicitly blocked by owner because enabled sandbox callbacks point to shared production/preview endpoints. No session/charge created."
+      "8 cart + 14 correctness + 4 story regressions pass. Existing Meta10 (978 combinations), discount6, welcome10, popup8 and women-fit1 grouped suite pass.",
+      "Typecheck/lint/build pass with four prior img warnings; no new warnings.",
+      "All three original legacy suites fail on both exact base and candidate at same assertions: Halo after17 pass stale3400vs2400; size guide2vs1; old payment raw pin mismatch.",
+      "Two broader suites retain baseline failures: backend public-product count19vs11 (44otherchecks pass); v84 migration list after27pass. Updated only tracking test fixture to return persisted row, retaining all assertions.",
+      "No provider payment/session/charge/fulfillment/email/Meta dashboard tests. No Safari/iPhone test available."
     ],
     "unresolved": [
-      "Provider-backed payment/order/webhook verification remains blocked by explicit owner choice; sandbox identified as legacy GOAL, no endpoints changed.",
-      "Existing concurrent Meta sends share one logical event ID, but actual Meta dedup receipt unverified. No retained-revenue/refund exporter. Deployed Supabase constraints unverified.",
-      "Actual iPhone/Safari owner review pending. Remote live preview requires host and local processes to remain online and authentication expires 2026-11-11T04:53:45Z.",
-      "Campaign launch: complete current costs, creative/slot choice, product-specific timing for promises, Meta receipt and attribution collection/retention approval. Contribution UNKNOWN; Black Friday offer UNSELECTED."
+      "Five legacy/broad suites retain documented baseline fixture/pin failures; no claim they pass.",
+      "Actual iPhone/Safari and Meta provider deduplication unverified; not provider-payment release gates for this authorized scope.",
+      "Owner review/explicit approval required for future merge/deployment. Contribution UNKNOWN, BF offer UNSELECTED, no campaign work."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -128,7 +91,7 @@
     "start_commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
     "task": "growth-bf2026-20261107"
   },
-  "revision": 114,
+  "revision": 115,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T06:15:37.833141+00:00"
+  "updated_at": "2026-11-08T06:30:19.828384+00:00"
 }
