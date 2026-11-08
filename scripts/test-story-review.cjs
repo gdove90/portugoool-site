@@ -9,16 +9,22 @@ const story=moduleFrom(text('src/v84/story-content.js'));
 const mocks={'./story-content':story,'./upload-client':{sendIntake(){throw Error('No intake in presentation tests')}},'./number-art':{originalNumberMarkup(){},drawOriginalNumbers(){}}};
 const before=moduleFrom(original('src/v84/reference-experience.js'),mocks).referenceExperience();
 const after=moduleFrom(text('src/v84/reference-experience.js'),mocks).referenceExperience();
-let expected=before.markup('about');
-for(const [old,next]of[
- ['Soccer is our founding sport.','Soccer is our heritage.'],
- ['Our pursuit goes beyond one sport.','Athleticwear is our identity.'],
- ['We make performance athleticwear for the next goal.','Evolution is our purpose.'],
- ['Born in Rhode Island, GOAL Athletics began with soccer. The game remains part of our culture. We make performance athleticwear for training, competition, and the work toward your next goal.','Soccer is our heritage. Athleticwear is our identity. Evolution is our purpose. A goal is just the beginning. What’s yours?'],
-]){assert(expected.includes(old));expected=expected.replace(old,next);}
-assert.equal(after.markup('about'),expected,'Every story element, image and class remains unchanged apart from approved prose');
+const about=after.markup('about');
+const photographs=markup=>[...markup.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1]).filter(src=>src.startsWith('/v84/'));
+assert.deepEqual(photographs(about),photographs(before.markup('about')),'Original huddle and woman photographs remain in order');
+for(const approved of[
+ '<h1>Our roots.<br>Our future.</h1>',
+ 'A goal is just the beginning.<br>Then comes the work.',
+ '<h2>The GOAL<br>mindset.</h2>',
+ 'Soccer is our heritage.', 'Athleticwear is our identity.', 'Evolution is our purpose.',
+ 'GOAL Athletics is rooted in Rhode Island and inspired by soccer. The game shaped our identity: the discipline, the shared ambition, and the commitment to keep getting better. We carry that spirit beyond the pitch into athleticwear for training, play, and recovery, whatever your sport. Evolution is our purpose. It guides the brand we’re building and reflects the people we’re building it for: people with something to work toward, and the drive to keep going.',
+ '<h2><span>Train. Play. Recover.</span><span>Then go again.</span></h2>',
+ 'src="/brand/goal-athletics-horizontal-black-v13.png" alt="GOAL Athletics" width="3000" height="821"',
+ 'href="/shop">Shop GOAL Athletics', 'href="/men">Shop men', 'href="/women">Shop women',
+])assert(about.includes(approved),'Approved story content: '+approved);
+assert(!/MOVE WITH PURPOSE|Movement is our purpose\./.test(about),'Retired purpose wording remains absent');
 assert.equal(after.markup('home'),before.markup('home').replace('>Our world <','>Our Story <'));
-console.log('PASS Story/home rendered markup preserves approved images, layout and all unrelated wording');
+console.log('PASS Approved story wording, supplied logo, original photographs and unchanged homepage');
 
 // Execute the real importer extraction/template in memory, without its file/asset writes.
 const importer=text('scripts/import-v84.cjs'),tree=ts.createSourceFile('import.cjs',importer,ts.ScriptTarget.Latest,true);

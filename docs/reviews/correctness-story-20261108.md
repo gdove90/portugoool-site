@@ -2,6 +2,8 @@
 
 Prepared November 8, 2026, America/New_York. Branch: `codex/correctness-story-review-20261108`. Production base: `7b98ba4e2cf44de4117923542f7de61f22a1903c`, Netlify published deploy `6aef814247b2319bbaedebb1`. Runtime implementation commit: `ac67af7`. Follow-up changes refine the existing backend test fixture/importer and add this review evidence. This task selectively reuses cart/tracking work; it does not apply e3d1dc5 wholesale. Existing worktrees and historical commits are preserved.
 
+**Latest draft:** see [the owner-approved copy follow-up](#owner-approved-copy-follow-up). The original correctness findings and test results below are historical evidence for the earlier implementation; those test suites were not rerun for the copy follow-up.
+
 ## Scope and behavior
 
 - `src/app/cart/page.tsx`, `src/lib/checkout-quote.ts`: quote identity includes every checkout line field (product, color, size, quantity, custom name/number) and normalized buyer email. Request generations and mounted/context checks discard stale responses after edits, removals, newer requests or unmount. Current server subtotal/discount/shipping/total drive the summary. Checkout waits only during repricing, remains available when settled, ignores duplicate clicks and does not redirect after unmount or a changed cart/discount.
@@ -57,3 +59,16 @@ Review artifacts are local under `output/correctness-story-review-20261108`: `st
 Draft PR only. No merge, deploy, publish, promotion, production SQL, supplier write or settings change is authorized or performed. The draft title and commits carry skip ci / skip netlify markers. Owner reviews the exact scoped PR; no provider-backed payment test is required by this work. After any separately approved release, use a scoped forward revert or corrective commit on then-current main, preserving unrelated work and all paid records. No database rollback is needed. The retained Collective page/assets can be restored to public routing in a separately approved change.
 
 Owner wording correction, November 8: “Evolution is our purpose.” replaces “Movement is our purpose.” in both story placements and the metadata. Reaching goals expresses growth and evolution. Existing screenshots predate this wording-only correction; images and layout remain unchanged.
+
+## Owner-approved copy follow-up
+
+Owner direction, November 8: finish the verbal changes in draft PR #92, retain the huddle and existing photography for now, and create new imagery separately later. No merge or deployment.
+
+- `src/v84/story-content.js`: the hero reads “Our roots. Our future.” with “A goal is just the beginning. Then comes the work.” beneath it. The middle heading is “The GOAL mindset.” with the approved heritage/identity/evolution statements. The approved full About paragraph sits below the supplied horizontal black GOAL Athletics logo. The close reads “Train. Play. Recover. Then go again.” The hero links to `/shop`; the close links to `/men` and `/women`.
+- Original huddle and woman photographs, alt text, dimensions, responsive sources and crop rules are retained. No new photography was generated or substituted. The supplied `Horizontal Black.png` is copied without alteration to `public/brand/goal-athletics-horizontal-black-v13.png`; SHA256 equality with the supplied original was confirmed.
+- `src/v84/story-refresh.css` and the `/about` CSS import scope headline sizing, readable paragraph typography, centered logo placement and responsive shop links to this story presentation. Source order remains hero, identity statements, photo/About paragraph, closing shop links and the existing footer.
+- `scripts/test-story-review.cjs`: aligned the existing story expectations with the approved copy and supplied logo while retaining photograph/homepage preservation and all importer, footer, Collective and redirect checks. No new test cases or suites were added, and no test suites were run for this follow-up.
+- `npm run build`: PASS, including its lint and type validation. Four existing `no-img-element` warnings remain. `git diff --check`: PASS. Fresh Chrome review of the production build at 1440px and 390px returned HTTP 200, loaded every story image, showed the exact approved paragraph and centered logo, and found no horizontal overflow or page errors. [Browser review details](our-world-copy-20261108/browser-review.json).
+- Diff review against the preceding PR head `be5f7b1` confirms no edits to cart, checkout/payment APIs, shipping modules or claims, store configuration, footer, shell, middleware or hosting configuration. No payment session, charge, provider-backed test, production setting change, campaign action, merge or deployment was performed. Existing cart/tracking changes in this PR are retained without further modification.
+
+Full-page review screenshots, including header and footer: [desktop, 1440px](our-world-copy-20261108/desktop-1440.jpg) and [mobile, 390px](our-world-copy-20261108/mobile-390.jpg). They depict the final copy with the retained original photographs; the experimental track/quarter-zip imagery is not part of this draft.
