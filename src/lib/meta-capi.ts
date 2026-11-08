@@ -4,7 +4,7 @@
 // route (Lead). Each server event carries the same event_id its browser
 // twin used (see meta-events.ts), so Meta deduplicates the pair. Sends
 // only when the visitor's consent, captured at the moment of the action,
-// is not "denied". Never throws and never blocks the caller: a failure
+// is "granted". Never throws and never blocks the caller: a failure
 // is logged and the order or sign-up proceeds.
 //
 // Env (Netlify): NEXT_PUBLIC_META_PIXEL_ID, META_CAPI_ACCESS_TOKEN and,
@@ -41,7 +41,7 @@ export function metaCapiConfigured(): boolean {
 
 export async function sendMetaServerEvent(ev: MetaServerEvent): Promise<MetaSendResult> {
   if (!metaCapiConfigured()) return "skipped";
-  if (ev.consent === "denied") return "skipped";
+  if (ev.consent !== "granted") return "skipped";
   if (ev.livemode === false && !process.env.META_TEST_EVENT_CODE) return "skipped";
   try {
     const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;

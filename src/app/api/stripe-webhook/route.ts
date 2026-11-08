@@ -48,7 +48,7 @@ interface MetaItem {
 }
 
 // Server-side Purchase (owner decision 2026-09-30). Sent only when the
-// consent captured at checkout is not denied; failures are logged and
+// consent captured at checkout is granted; failures are logged and
 // never touch the order. content_ids are product slugs, order_id is the
 // customer-facing order number.
 async function sendPurchaseToMeta(session: Stripe.Checkout.Session, orderId: string, items: OrderItemRow[], livemode: boolean, eventTime: number): Promise<void> {
@@ -436,7 +436,16 @@ export async function POST(req: NextRequest) {
     }
 
     // Complete payment, fulfillment and receipt work before optional advertising.
-    if (paid) await sendPurchaseToMeta(session, orderId, built.items, event.livemode, event.created);
+    if (paid) {
+      try {
+        const persisted = await store.getOrderBySession(session.id);
+        if (persisted?.status === "paid" && persisted.livemode === event.livemode) {
+          await sendPurchaseToMeta(session, orderId, built.items, event.livemode, event.created);
+        }
+      } catch {
+        console.error("[meta] Paid-state verification unavailable; purchase tracking skipped.");
+      }
+    }
     await store.recordEvent(event.id, event.type);
     return NextResponse.json({
       received: true,

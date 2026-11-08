@@ -111,6 +111,14 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
+  // Temporary retirement: keep the Collective page/assets intact for a later release.
+  if (pathname === "/the-goal-collective" || pathname.startsWith("/the-goal-collective/")) {
+    const destination = req.nextUrl.clone();
+    destination.pathname = "/shop";
+    destination.search = "";
+    return NextResponse.redirect(destination, 307);
+  }
+
   // /customize advertised name-and-number printing on jerseys for a flat
   // $15. No jersey is sellable, no active product sets customNameAvailable,
   // and the supplier record has no variable-text placement on any blank, so

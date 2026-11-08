@@ -129,7 +129,7 @@ export default function Footer() {
             © {new Date().getFullYear()} The Goal Brand Group LLC. All rights reserved.
           </p>
           <p>
-            GOAL Athletics is an independent brand. Not affiliated with,
+            GOAL Athletics. Not affiliated with,
             endorsed by, or connected to any soccer federation, club, league,
             or governing body. All designs and marks are original.
           </p>
