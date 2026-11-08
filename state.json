@@ -1,35 +1,79 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Reorder four cards on the Women page with the three black pieces first."
+      "Owner 2026-11-07: audit, fix verified purchase/delivery/measurement defects, verify in isolation and prepare a private Black Friday preview and attributed existing-team handoff. No production deploy, merge, promotions, spend, outreach, schedule changes or production SQL."
     ],
-    "base_commit": "3cdbc0d8bce33f4ba766a160018b8f3b12a277db",
-    "branch": "codex/womens-tempo-grid-order",
+    "base_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
+    "branch": "codex/growth-bf2026-20261107",
     "changed_paths": [
-      "src/v84/catalog-data.ts"
+      "docs/growth/bf2026-campaign.json",
+      "docs/growth/bf2026-review.md",
+      "docs/growth/supplier-routing-audit.json",
+      "docs/growth/verification.md",
+      "scripts/preview-bf2026.cjs",
+      "scripts/test-cart-quotes.cjs",
+      "scripts/test-growth-commerce.cjs",
+      "scripts/test-meta-tracking.cjs",
+      "src/app/api/checkout/route.ts",
+      "src/app/api/order-status/route.ts",
+      "src/app/api/stripe-webhook/route.ts",
+      "src/app/cart/page.tsx",
+      "src/app/terms/page.tsx",
+      "src/app/track-order/page.tsx",
+      "src/components/Footer.tsx",
+      "src/components/ProductDetail.tsx",
+      "src/components/TrustBar.tsx",
+      "src/lib/checkout-quote.ts",
+      "src/lib/delivery.ts",
+      "src/lib/faq.ts",
+      "src/lib/meta-capi.ts",
+      "src/lib/products.ts",
+      "src/lib/shipping.ts",
+      "src/v84/ProductDetail.tsx",
+      "src/v84/Shell.tsx"
     ],
     "completed": [
-      "Implemented the requested order for the Women page and prepared public draft PR 85."
+      "Shared delivery source, unsupported Tapstitch claims removed, retired footer descriptor removed.",
+      "Stale discount responses and successful checkout event timing repaired; persisted paid-state and granted-consent checks applied to purchase analytics.",
+      "Existing Warm-Up Tee campaign A/B conventions, offline attribution proposal preview and internal UNKNOWN-cost economics workbook prepared.",
+      "Local Chrome mobile 390px and desktop 1440px checks; private loopback servers left running for owner review."
     ],
     "contract_version": "2.0",
     "engine": "codex",
     "external_effects": [
       {
-        "details": "Draft review PR opened for the tested commit.",
-        "reference": "https://github.com/gdove90/portugoool-site/pull/85",
+        "details": "Forward-only correction of state.json CR filename, preserving owned lease and previous task checkpoint.",
+        "reference": "4194aafc74609ef949b324a85af79af3b7e0ad2f",
         "status": "confirmed"
+      },
+      {
+        "details": "Task branch pushed with skip ci and skip netlify; main unchanged.",
+        "reference": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
+        "status": "confirmed"
+      },
+      {
+        "details": "Append one attributed engineer handoff to existing team record, preserve all existing contributions. Reconcile by reading exact record marker before retry.",
+        "reference": "page_3124dbaf9afc8191b24af917963f42c8 / goal.growth.implementation.20261107",
+        "status": "intent"
       }
     ],
-    "head_commit": "dc58401bd9a9227cb20c9d7f81e5a6a8802505ae",
-    "next_action": "Review the desktop grid mockup and exact PR before releasing to the live site.",
+    "head_commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
+    "next_action": "Save and read back the single attributed GOAL Ecommerce Growth Implementation Engineer contribution in the existing GOAL Operations Publisher Handoff, then checkpoint outcome and release the writer lock. Owner reviews exact e3d1dc5 scope and blockers before any future release.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-womens-tempo-grid-order-20261105",
-    "task_id": "womens-tempo-grid-order",
+    "session": "codex-growth-bf2026-20261107",
+    "task_id": "growth-bf2026-20261107",
     "tests": [
-      "Production build and local rendered grid passed with exact card colors and order. Other catalog sequences match the current base. The broader suite stops at its older pinned inventory baseline, whose protected paths are unchanged by this PR."
+      "Typecheck, lint and production build PASS (four existing img warnings).",
+      "13 growth commerce, 4 actual CartPage interaction, 10 Meta (978 money/snapshot combinations), 6 discount, 10 signup/email, 8 popup checks and women fit suite PASS; providers isolated.",
+      "Halo suite: 17 PG checks PASS then stale $34 vs production $24 fixture failure; reproduced on baseline. Size-guide suite old single-table assertion fails on existing women guides. Old payment-preservation raw equality pin fails and is not functional proof.",
+      "Economics formulas, UNKNOWN/zero handling, input-change recalculation, error scan and render PASS. No real payment, email, supplier order or native iPhone/Safari test."
     ],
     "unresolved": [
-      "Owner review before release. Hosted review deploy compiles and hides product cards by configuration."
+      "Confirm product-specific production/transit and Tapstitch origin/service; current itemized garment/decoration/label/handling/freight/packed weight/actual fees/defect allowance are unknown.",
+      "GOAL sandbox linkage is unverified for the existing local test key; connected Stripe tool is live-only. Supabase connector did not resolve the GOAL project; deployed constraints unverified.",
+      "Meta dashboard receipts and order-level attribution unverified; four-field consent-gated attribution collection/retention is proposed only.",
+      "Owner selects Black and exact assets/slots; no production release approval requested while dependencies remain.",
+      "Shared setup helper has a Windows CRLF stdin/mktree bug; NUL-delimited temporary helper used here. Preserve same lock; no second coordinator."
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -52,7 +96,7 @@
     "start_commit": "3cdbc0d8bce33f4ba766a160018b8f3b12a277db",
     "task": "womens-tempo-grid-order"
   },
-  "revision": 105,
+  "revision": 106,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T04:13:07.323745+00:00"
+  "updated_at": "2026-11-08T04:37:50.087978+00:00"
 }
