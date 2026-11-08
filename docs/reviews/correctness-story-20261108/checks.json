@@ -1,0 +1,45 @@
+{
+  "test-cart-quotes.cjs": {
+    "exit": 0,
+    "passes": 8
+  },
+  "test-correctness-review.cjs": {
+    "exit": 0,
+    "passes": 14
+  },
+  "test-story-review.cjs": {
+    "exit": 0,
+    "passes": 4
+  },
+  "test-meta-tracking.cjs": {
+    "exit": 0,
+    "passes": 10
+  },
+  "test-discount-prefix.cjs": {
+    "exit": 0,
+    "passes": 6
+  },
+  "test-footer-welcome.cjs": {
+    "exit": 0,
+    "passes": 10
+  },
+  "test-discount-popup.cjs": {
+    "exit": 0,
+    "passes": 8
+  },
+  "test-womens-fit.cjs": {
+    "exit": 0,
+    "passes": 1
+  },
+  "test-launch-backend.cjs": {
+    "exit": 1,
+    "passes": 44,
+    "baseExit": 1,
+    "fixtureUpdate": "Model persisted row for the paid-state tracking guard; all original assertions retained."
+  },
+  "test-v84.cjs": {
+    "exit": 1,
+    "passes": 27,
+    "baseExit": 1
+  }
+}

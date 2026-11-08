@@ -1,0 +1,48 @@
+{
+  "node": "v24.14.1",
+  "conditions": "Same node, timezone, cleared provider credentials, exact package-lock and shared npm-ci dependency install",
+  "runs": {
+    "base": {
+      "commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
+      "lockSha256": "3272aaa993a7ded7d50aaf339070f53de6331079e7e0cbb808c7e5f6b7792762",
+      "suites": {
+        "test-halo-checkout.cjs": {
+          "exit": 1,
+          "passedBeforeFailure": 17,
+          "suiteSha256": "80cc36698690381f867a8d5017c9570a43670c590463ce79240ebd3d8912379e"
+        },
+        "test-size-guide.cjs": {
+          "exit": 1,
+          "passedBeforeFailure": 0,
+          "suiteSha256": "a75329b59f9f1b472b8e2dc1e7d6d72c8553b06ff35060233b7f08718b029e6f"
+        },
+        "test-payment-preservation.cjs": {
+          "exit": 1,
+          "passedBeforeFailure": 0,
+          "suiteSha256": "d2c24952028d78f9f7d3ed4b408315349d542784a77cdefee7f4e3a1bcb73721"
+        }
+      }
+    },
+    "candidate": {
+      "commit": "ac67af7240b470349c5657e04c96168f3d67058b",
+      "lockSha256": "3272aaa993a7ded7d50aaf339070f53de6331079e7e0cbb808c7e5f6b7792762",
+      "suites": {
+        "test-halo-checkout.cjs": {
+          "exit": 1,
+          "passedBeforeFailure": 17,
+          "suiteSha256": "80cc36698690381f867a8d5017c9570a43670c590463ce79240ebd3d8912379e"
+        },
+        "test-size-guide.cjs": {
+          "exit": 1,
+          "passedBeforeFailure": 0,
+          "suiteSha256": "a75329b59f9f1b472b8e2dc1e7d6d72c8553b06ff35060233b7f08718b029e6f"
+        },
+        "test-payment-preservation.cjs": {
+          "exit": 1,
+          "passedBeforeFailure": 0,
+          "suiteSha256": "d2c24952028d78f9f7d3ed4b408315349d542784a77cdefee7f4e3a1bcb73721"
+        }
+      }
+    }
+  }
+}
