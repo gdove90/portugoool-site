@@ -37,7 +37,8 @@
       "Granted-consent and persisted-paid/mode Purchase guards kept separate from payment/order/fulfillment/receipts; refund suppression preserved.",
       "Our Story navigation/footer/metadata/home link and approved prose via one canonical markup module shared with the importer, preserving layout/images; retired footer adjective removed with legal/non-affiliation preserved.",
       "Collective homepage/nav/footer/sitemap exposure removed; temporary 307 to /shop; original page/assets retained.",
-      "Source-preservation, local HTTP and Chrome 390/1440 browser checks pass; production STORE_OPEN=true confirmed read-only."
+      "Source-preservation, local HTTP and Chrome 390/1440 browser checks pass; production STORE_OPEN=true confirmed read-only.",
+      "Draft PR92 opened and read-back verified with exact base/head, draft and unmerged state; final remote main and production deploy unchanged."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -48,13 +49,13 @@
         "status": "confirmed"
       },
       {
-        "details": "Owner explicitly requested reviewable draft PR; no merge/deployment. Search confirmed no existing open PR for this head. Title and commits carry skip markers.",
+        "details": "Draft PR https://github.com/gdove90/portugoool-site/pull/92 created and read back: draft=true, merged=false, base main7b98ba4, head d3cfcca. Production Netlify deploy remains6aef814247b2319bbaedebb1. No deploy or settings changes.",
         "reference": "gdove90/portugoool-site / codex/correctness-story-review-20261108 -> main / draft PR",
-        "status": "intent"
+        "status": "confirmed"
       }
     ],
     "head_commit": "d3cfcca408d68e2031f4780939061d227f560fa8",
-    "next_action": "Create one draft PR from the pushed exact task branch into main with skip markers; verify draft/base/head and production remains unchanged, then checkpoint and release writer lock.",
+    "next_action": "Owner reviews draft PR92 and exact scoped diff. No further implementation required by this request; do not merge/deploy without a separate explicit instruction. Provider payment tests remain excluded, not a release prerequisite.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-correctness-story-review-20261108",
     "task_id": "correctness-story-review-20261108",
@@ -91,7 +92,7 @@
     "start_commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
     "task": "growth-bf2026-20261107"
   },
-  "revision": 115,
+  "revision": 116,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T06:30:19.828384+00:00"
+  "updated_at": "2026-11-08T06:31:38.865110+00:00"
 }
