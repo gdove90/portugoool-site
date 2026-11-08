@@ -13,8 +13,8 @@ let expected=before.markup('about');
 for(const [old,next]of[
  ['Soccer is our founding sport.','Soccer is our heritage.'],
  ['Our pursuit goes beyond one sport.','Athleticwear is our identity.'],
- ['We make performance athleticwear for the next goal.','Movement is our purpose.'],
- ['Born in Rhode Island, GOAL Athletics began with soccer. The game remains part of our culture. We make performance athleticwear for training, competition, and the work toward your next goal.','Soccer is our heritage. Athleticwear is our identity. Movement is our purpose. A goal is just the beginning. What’s yours?'],
+ ['We make performance athleticwear for the next goal.','Evolution is our purpose.'],
+ ['Born in Rhode Island, GOAL Athletics began with soccer. The game remains part of our culture. We make performance athleticwear for training, competition, and the work toward your next goal.','Soccer is our heritage. Athleticwear is our identity. Evolution is our purpose. A goal is just the beginning. What’s yours?'],
 ]){assert(expected.includes(old));expected=expected.replace(old,next);}
 assert.equal(after.markup('about'),expected,'Every story element, image and class remains unchanged apart from approved prose');
 assert.equal(after.markup('home'),before.markup('home').replace('>Our world <','>Our Story <'));
