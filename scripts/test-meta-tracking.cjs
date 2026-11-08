@@ -16,9 +16,10 @@ function browser(country='US',gpc=false){global.localStorage=storage();global.se
  await check('Email and external_id are provided together at pixel init when known',()=>{const {px}=browser();px.setKnownEmail(' QA@example.com ');px.trackPageView();assert.deepEqual(window.fbq.queue.find(e=>e[0]==='init')[2],{em:'qa@example.com',external_id:'qa@example.com'})});
  await check('Browser and CAPI Purchase share verified test-mode ID and order data; denied/refunded orders stay suppressed',async()=>{let denied=false,status='paid';const session={id:'cs_test_tracking',livemode:false,payment_status:'paid',status:'complete',amount_total:44_95,currency:'usd',metadata:{items_0:JSON.stringify([{p:'70000000-0000-4000-8000-000000000004',q:1}])}};class Stripe{checkout={sessions:{retrieve:async()=>({...session,metadata:{...session.metadata,consent:denied?'denied':'granted'}})}}}const route=load('src/app/api/order-status/route.ts',{stripe:Stripe,'@/lib/orders-store':{getOrdersStore:()=>({getOrderBySession:async()=>({id:'11111111-2222-4333-8444-555555555555',status,livemode:false})})}});process.env.STRIPE_SECRET_KEY='sk_test_mock';process.env.META_TEST_EVENT_CODE='TEST14102';const req={nextUrl:new URL('https://goool.shop/api/order-status?session_id=cs_test_tracking')};const r=await route.GET(req);assert.equal(r.body.state,'paid');assert.equal(r.body.purchaseEvent.id,await load('src/lib/meta-events.ts').metaEventId('Purchase',session.id));assert.equal(r.body.purchaseEvent.order_id,'GOOOL-11111111');assert.equal(r.body.purchaseEvent.value,44.95);denied=true;assert.equal((await route.GET(req)).body.purchaseEvent,null);denied=false;status='refunded';assert.equal((await route.GET(req)).body.purchaseEvent,null);delete process.env.META_TEST_EVENT_CODE;status='paid';assert.equal((await route.GET(req)).body.purchaseEvent,null)});
  await check('A hashing failure cannot hide verified payment confirmation',async()=>{class Stripe{checkout={sessions:{retrieve:async()=>({id:'cs_live_qa',livemode:true,payment_status:'paid',amount_total:3800,currency:'usd'})}}}const route=load('src/app/api/order-status/route.ts',{stripe:Stripe,'@/lib/meta-events':{metaEventId:async()=>{throw Error('hash failed')}},'@/lib/orders-store':{getOrdersStore:()=>({getOrderBySession:async()=>({id:'11111111-2222-4333-8444-555555555555',status:'paid',livemode:true})})}});const r=await route.GET({nextUrl:new URL('https://goool.shop/api/order-status?session_id=cs_live_qa')});assert.equal(r.status,200);assert.equal(r.body.state,'paid');assert.equal(r.body.purchaseEvent,null)});
- await check('Checkout business payload preserves the pre-tracking baseline for all suppliers, quantities and discounts',async()=>{
+ await check('Checkout money and snapshots preserve the baseline; delivery text matches the shared source for all suppliers',async()=>{
   const ts=require(ROOT+'/node_modules/typescript');
   const approved=require('./fixtures/approved-supplier-catalog-20261103.json');
+  const delivery=load('src/lib/delivery.ts');
   const base=cp.execFileSync('git',['show','24903a4:src/app/api/checkout/route.ts'],{cwd:ROOT,encoding:'utf8'});
   let submitted=[];class Stripe{checkout={sessions:{create:async p=>{submitted.push(p);return {url:'https://checkout.stripe.com/mock'}}}}}
   const discount=load('src/lib/discount.ts');
@@ -50,6 +51,9 @@ function browser(country='US',gpc=false){global.localStorage=storage();global.se
     for(const key of Object.keys(submitted[i].metadata))delete submitted[i].metadata[key];
     submitted[i].metadata.items_0=JSON.stringify(i===0?legacyItems:currentItems);
    }
+   assert.equal(submitted[0].custom_text.shipping_address.message,'Delivery is 7 to 12 business days in the US. Canada, the UK and Portugal take about 2 to 3 weeks, and your country may charge import duty or VAT on arrival.');
+   assert.deepEqual(submitted[1].custom_text,{shipping_address:{message:delivery.cartDelivery(body.items)+' '+delivery.IMPORT_DUTY_COPY}});
+   delete submitted[0].custom_text;delete submitted[1].custom_text;
    assert.deepEqual(submitted[0],submitted[1]);supplierCases[mapping.supplier]++;cases++;
   }
   assert.equal(cases,978);assert.deepEqual(supplierCases,{apliiq:768,tapstitch:210});

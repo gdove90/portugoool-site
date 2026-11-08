@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import { storeClosed } from "@/lib/store-status";
+import { cartDelivery, IMPORT_DUTY_COPY } from "@/lib/delivery";
 import { shippingCentsFor } from "@/lib/shipping";
 import { CODE_REJECTION_MESSAGE, discountCentsFor, validatePromotionCode, type CodeValidation } from "@/lib/discount";
 import { EMAIL_RE } from "@/lib/signups";
@@ -291,7 +292,7 @@ export async function POST(req: NextRequest) {
       custom_text: {
         shipping_address: {
           message:
-            "Delivery is 7 to 12 business days in the US. Canada, the UK and Portugal take about 2 to 3 weeks, and your country may charge import duty or VAT on arrival.",
+            `${cartDelivery(items)} ${IMPORT_DUTY_COPY}`,
         },
       },
       metadata,
@@ -300,7 +301,7 @@ export async function POST(req: NextRequest) {
       // Customer email is collected by Stripe Checkout itself.
     });
 
-    return NextResponse.json({ url: session.url });
+    return NextResponse.json({ url: session.url, subtotalCents, discountCents, shippingCents, totalCents: subtotalCents - discountCents + shippingCents });
   } catch (err) {
     console.error("Stripe checkout error:", err);
     return NextResponse.json(

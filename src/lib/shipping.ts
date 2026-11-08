@@ -1,3 +1,5 @@
+import { formatPrice } from "./format";
+
 // The shipping rule, in one place (owner decision 2026-09-29).
 //
 // One flat rate per order and free shipping at the threshold. The Stripe
@@ -10,7 +12,9 @@
 export const SHIPPING_FLAT_CENTS = 695;
 export const FREE_SHIPPING_THRESHOLD_CENTS = 7000;
 
-/** Shipping charged for a merchandise subtotal, before any discount code. */
+export const SHIPPING_PRICE_COPY = `${formatPrice(SHIPPING_FLAT_CENTS)} per order. Free shipping from ${formatPrice(FREE_SHIPPING_THRESHOLD_CENTS)} after discounts.`;
+
+/** Shipping charged for the merchandise subtotal AFTER discounts. */
 export function shippingCentsFor(subtotalCents: number): number {
   return subtotalCents >= FREE_SHIPPING_THRESHOLD_CENTS ? 0 : SHIPPING_FLAT_CENTS;
 }

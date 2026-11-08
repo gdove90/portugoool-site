@@ -1,5 +1,6 @@
 import { MAILING_STREET, MAILING_CITY_LINE } from "@/lib/business-address";
 import Link from "next/link";
+import { DELIVERY_OVERVIEW } from "@/lib/delivery";
 import Image from "next/image";
 import { CookieSettingsButton } from "./MarketingConsent";
 import FooterSignup from "./FooterSignup";
@@ -46,7 +47,7 @@ const COLUMNS: { heading: string; links: FooterLink[] }[] = [
 const TRUST = [
   "Secure checkout",
   "Ships to the US, Canada, UK & Portugal",
-  "7–12 business days in the US",
+  DELIVERY_OVERVIEW,
 ];
 
 export default function Footer() {
@@ -129,7 +130,7 @@ export default function Footer() {
             © {new Date().getFullYear()} The Goal Brand Group LLC. All rights reserved.
           </p>
           <p>
-            GOAL Athletics is an independent brand. Not affiliated with,
+            GOAL Athletics is a brand. Not affiliated with,
             endorsed by, or connected to any soccer federation, club, league,
             or governing body. All designs and marks are original.
           </p>

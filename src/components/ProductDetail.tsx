@@ -5,6 +5,7 @@ import { catalogImageSrc } from "@/lib/product-image";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Product, Size, remainingUnits, isSoldOut, isAvailableForSale, hasPrice } from "@/lib/types";
+import { productDelivery } from "@/lib/delivery";
 import { formatPrice } from "@/lib/format";
 import SizeGuide from "./SizeGuide";
 import { useCart } from "@/lib/cart";
@@ -392,7 +393,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 <TrustIcon /> Secure checkout
               </li>
               <li className="flex items-center gap-1.5">
-                <TrustIcon /> Est. delivery 7–12 business days in the US
+                <TrustIcon /> {productDelivery(product).timing}
               </li>
               {product.isLimitedDrop && (
                 <li className="flex items-center gap-1.5">

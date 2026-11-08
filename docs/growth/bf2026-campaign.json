@@ -1,0 +1,33 @@
+{
+  "status": "PRIVATE_REVIEW_ONLY",
+  "timezone": "America/New_York",
+  "blackFriday": "2026-11-27",
+  "cyberMonday": "2026-11-30",
+  "productId": "80000000-0000-4000-8000-000000000011",
+  "product": "Warm-Up Tee",
+  "color": "Black (provisional)",
+  "destination": "https://goalathletics.shop/shop/goal-athletics-ga-minimal-tee",
+  "cta": "Shop the Warm-Up Tee.",
+  "offer": "Existing evergreen 20% first-order welcome offer, subject to existing eligibility and 14-day code expiry. Not an exclusive Black Friday sale.",
+  "utm_source": "instagram",
+  "utm_medium": "organic_social",
+  "utm_campaign": "goal_bf2026_tee",
+  "variants": [
+    {
+      "id": "A",
+      "utm_content": "juggle_first_a",
+      "opening": "Movement first",
+      "url": "https://goalathletics.shop/shop/goal-athletics-ga-minimal-tee?utm_source=instagram&utm_medium=organic_social&utm_campaign=goal_bf2026_tee&utm_content=juggle_first_a"
+    },
+    {
+      "id": "B",
+      "utm_content": "detail_first_b",
+      "opening": "Product detail first",
+      "url": "https://goalathletics.shop/shop/goal-athletics-ga-minimal-tee?utm_source=instagram&utm_medium=organic_social&utm_campaign=goal_bf2026_tee&utm_content=detail_first_b"
+    }
+  ],
+  "communityDestination": "https://goalathletics.shop/whats-your-goal",
+  "measurementWindowHours": 48,
+  "publicationTime": "Owner selection within existing approved schedule; no scheduling change made",
+  "attribution": "Existing Meta standard events found. No verified GOAL order-level UTM capture. New persistence remains an owner-review proposal."
+}

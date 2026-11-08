@@ -3,130 +3,120 @@
 import Image from "next/image";
 import { catalogImageSrc } from "@/lib/product-image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { consentForServer, trackInitiateCheckout } from "@/lib/meta-pixel";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
-import { FREE_SHIPPING_THRESHOLD_CENTS, shippingCentsFor } from "@/lib/shipping";
+import { SHIPPING_PRICE_COPY, shippingCentsFor } from "@/lib/shipping";
+import { cartDelivery, IMPORT_DUTY_COPY } from "@/lib/delivery";
+import { createQuoteRequests, quoteContext, type CheckoutQuote } from "@/lib/checkout-quote";
 import { MAX_LINE_QUANTITY } from "@/lib/types";
 
 export default function CartPage() {
   const { items, notices, dismissNotices, removeItem, updateQuantity, subtotalCents } = useCart();
   const [checkingOut, setCheckingOut] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // GOOOL20 lives here now, not in Stripe's checkout page. The code is
-  // checked by /api/checkout (preview mode) and the discount it returns
-  // is what shipping is decided on, so the total shown is the total
-  // Stripe will charge. The same call re-runs whenever the cart changes
-  // while a code is applied, so the numbers never go stale.
-  type Applied = { code: string; discountCents: number };
   const [email, setEmail] = useState("");
   const [codeInput, setCodeInput] = useState("");
-  const [applied, setApplied] = useState<Applied | null>(null);
+  const [applied, setApplied] = useState<CheckoutQuote | null>(null);
   const [applying, setApplying] = useState(false);
   const [codeError, setCodeError] = useState<string | null>(null);
-  const discountCents = applied?.discountCents ?? 0;
-  const shippingCents = shippingCentsFor(subtotalCents - discountCents);
-  const totalCents = subtotalCents - discountCents + shippingCents;
+  const requests = useRef(createQuoteRequests());
+  const payload = items.map(i => ({ productId: i.productId, size: i.size,
+    color: i.color, quantity: i.quantity, customName: i.customName ?? null,
+    customNumber: i.customNumber ?? null }));
+  const context = quoteContext(payload, email);
+  const currentContext = useRef(context);
+  currentContext.current = context;
+  const quote = applied?.context === context ? applied : null;
+  const quotePending = applying || Boolean(applied && !quote);
+  const discountCents = quote?.discountCents ?? 0;
+  const shippingCents = quote?.shippingCents ?? shippingCentsFor(subtotalCents);
+  const totalCents = quote?.totalCents ?? subtotalCents + shippingCents;
 
-  function cartPayload() {
-    return items.map((i) => ({
-      productId: i.productId,
-      size: i.size,
-      color: i.color,
-      quantity: i.quantity,
-      customName: i.customName ?? null,
-      customNumber: i.customNumber ?? null,
-    }));
-  }
-
-  async function applyCode(codeToApply = codeInput): Promise<Applied | null> {
+  async function applyCode(codeToApply = codeInput): Promise<CheckoutQuote | null> {
     const code = codeToApply.trim();
     if (!code) return null;
+    const request = requests.current.begin();
     if (!email.trim()) {
+      setApplied(null);
+      setApplying(false);
       setCodeError("Enter the email your code was sent to.");
       return null;
     }
     setApplying(true);
     setCodeError(null);
+    const isCurrent = () => requests.current.current(request) && currentContext.current === context;
     try {
       const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ items: cartPayload(), email: email.trim(), code, preview: true }),
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: payload, email: email.trim(), code, preview: true }),
       });
       const data = await res.json();
+      if (!isCurrent()) return null;
       if (!res.ok) {
         setApplied(null);
         setCodeError(data.error ?? "That code could not be applied.");
         return null;
       }
-      const next: Applied = { code: data.code, discountCents: data.discountCents };
+      const next: CheckoutQuote = { code: data.code, discountCents: data.discountCents,
+        subtotalCents: data.subtotalCents, shippingCents: data.shippingCents,
+        totalCents: data.totalCents, context };
       setApplied(next);
       return next;
     } catch {
-      setApplied(null);
-      setCodeError("We could not check that code right now. Try again in a moment.");
+      if (isCurrent()) {
+        setApplied(null);
+        setCodeError("We could not check that code right now. Try again in a moment.");
+      }
       return null;
     } finally {
-      setApplying(false);
+      if (requests.current.current(request)) setApplying(false);
     }
   }
 
   function removeCode() {
+    requests.current.invalidate();
+    setApplying(false);
     setApplied(null);
     setCodeInput("");
     setCodeError(null);
   }
 
-  // Cart changed while a code is applied: re-price it.
   useEffect(() => {
-    if (!applied) return;
-    if (items.length === 0) {
-      setApplied(null);
-      return;
-    }
-    void applyCode(applied.code);
+    if (!items.length) { removeCode(); return; }
+    if (applied && applied.context !== context) void applyCode(applied.code);
+    else { requests.current.invalidate(); setApplying(false); }
+    // Revalidate variants and email too, including equal-price cart edits.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [subtotalCents]);
+  }, [context]);
+  useEffect(() => () => { requests.current.invalidate(); }, []);
 
   async function handleCheckout() {
-    if (items.length === 0 || checkingOut) return;
+    if (!items.length || checkingOut || quotePending) return;
     setCheckingOut(true);
     setError(null);
-    // A code typed but never applied is applied now, so the discount is
-    // not silently dropped; if it is rejected, checkout does not start.
-    let promo = applied;
+    let promo = quote;
     if (!promo && codeInput.trim()) {
       promo = await applyCode();
-      if (!promo) {
-        setCheckingOut(false);
-        return;
-      }
+      if (!promo) { setCheckingOut(false); return; }
     }
-    trackInitiateCheckout({
-      slugs: Array.from(new Set(items.map((i) => i.slug))),
-      value: totalCents / 100,
-      currency: "USD",
-      numItems: items.reduce((n, i) => n + i.quantity, 0),
-    });
     try {
       const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: cartPayload(),
-          consent: consentForServer(),
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: payload, consent: consentForServer(),
           ...(email.trim() ? { email: email.trim() } : {}),
-          ...(promo ? { code: promo.code } : {}),
-        }),
+          ...(promo ? { code: promo.code } : {}) }),
       });
       const data = await res.json();
-      if (!res.ok || !data.url) {
-        throw new Error(data.error ?? "Something went wrong starting checkout. Try again.");
-      }
-      window.location.href = data.url; // hand off to Stripe Checkout
+      if (!res.ok || !data.url) throw new Error(data.error ?? "Something went wrong starting checkout. Try again.");
+      if (currentContext.current !== context) throw new Error("Your bag changed. Check your updated total and try again.");
+      // Recognize a successful handoff, with the server's final discounted total.
+      // Checkout creation is never a purchase or revenue event.
+      trackInitiateCheckout({ slugs: Array.from(new Set(items.map(i => i.slug))),
+        value: data.totalCents / 100, currency: "USD",
+        numItems: items.reduce((n, i) => n + i.quantity, 0) });
+      window.location.href = data.url;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong.");
       setCheckingOut(false);
@@ -297,11 +287,11 @@ export default function CartPage() {
               <dd className="font-semibold text-ink">{formatPrice(totalCents)}</dd>
             </div>
           </dl>
-          <p className="mt-2 text-xs text-ink/50">
-            {shippingCents === 0
-              ? "Free shipping applied."
-              : `Free shipping on orders of ${formatPrice(FREE_SHIPPING_THRESHOLD_CENTS)} or more${applied ? " after your discount" : ""}.`}
+          <p className="mt-2 text-xs text-ink/50" role="status">
+            {quotePending ? "Updating your discount and shipping…" : SHIPPING_PRICE_COPY}
           </p>
+
+          <p className="mt-2 text-xs text-ink/50">Tax, if applicable, is shown separately at checkout.</p>
 
           {/* Email first: a code is tied to the address it was sent to. */}
           <div className="mt-5 border-t border-ink/10 pt-4">
@@ -368,7 +358,7 @@ export default function CartPage() {
           <button
             type="button"
             onClick={handleCheckout}
-            disabled={checkingOut}
+            disabled={checkingOut || quotePending}
             className="mt-6 w-full rounded-full bg-red px-8 py-4 text-base font-semibold text-paper transition-colors hover:bg-red-dark disabled:opacity-60"
           >
             {checkingOut ? "Redirecting…" : "Checkout"}
@@ -382,7 +372,7 @@ export default function CartPage() {
 
           <ul className="mt-5 space-y-1.5 text-xs text-ink/60">
             <li>✓ Secure checkout via Stripe</li>
-            <li>✓ Est. delivery 7–12 business days in the US</li>
+            <li>✓ {cartDelivery(items)}</li>
             <li>✓ Original design</li>
           </ul>
 
@@ -393,9 +383,7 @@ export default function CartPage() {
               looked paid for. Both are stated here, in the last block
               before the Checkout button's destination. */}
           <p className="mt-5 border-t border-ink/10 pt-4 text-xs leading-relaxed text-ink/50">
-            Shipping to Canada, the UK or Portugal takes about 2 to 3 weeks,
-            and your country may charge import duty or VAT on arrival, which
-            is paid by the recipient. All sales are final: see the{" "}
+            {IMPORT_DUTY_COPY} All sales are final: see the{" "}
             <Link
               href="/refunds"
               className="font-medium text-ink/70 underline underline-offset-2"

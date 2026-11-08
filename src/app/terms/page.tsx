@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/page-metadata";
 import { LEGAL_NAME } from "@/lib/business-address";
 import Link from "next/link";
+import { DELIVERY_OVERVIEW } from "@/lib/delivery";
 
 export const metadata = pageMetadata("/terms", "Terms of Service", "The terms that govern purchases and use of goalathletics.shop.");
 
@@ -51,10 +52,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-semibold text-ink">Shipping</h2>
           <p className="mt-2">
-            Orders arrive within 7–12 business days in the US. Orders to
-            Canada, the UK and Portugal typically take 2 to 3 weeks, since
-            every order ships from the United States and
-            customs clearance can add time.
+            {DELIVERY_OVERVIEW}
             Dates are estimates, not guarantees; if
             we can&apos;t ship within 30 days we&apos;ll notify you and offer
             a refund. See <Link href="/track-order" className="font-medium text-ink underline underline-offset-2">Track Order</Link> for how delivery works.

@@ -436,7 +436,16 @@ export async function POST(req: NextRequest) {
     }
 
     // Complete payment, fulfillment and receipt work before optional advertising.
-    if (paid) await sendPurchaseToMeta(session, orderId, built.items, event.livemode, event.created);
+    if (paid) {
+      try {
+        const persisted = await store.getOrderBySession(session.id);
+        if (persisted?.status === "paid" && persisted.livemode === event.livemode) {
+          await sendPurchaseToMeta(session, orderId, built.items, event.livemode, event.created);
+        }
+      } catch {
+        console.error("[meta] Paid-state verification unavailable; purchase tracking skipped.");
+      }
+    }
     await store.recordEvent(event.id, event.type);
     return NextResponse.json({
       received: true,

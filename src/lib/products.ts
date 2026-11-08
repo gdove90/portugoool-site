@@ -4755,8 +4755,6 @@ export const products: Product[] = [
         ],
       },
     ],
-    originLabel: "Printed in the USA",
-    disclosure: "Ships from our overseas partner: allow 10 to 17 days.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "pullover",
     supplierType: "tapstitch",
@@ -5130,7 +5128,6 @@ export const products: Product[] = [
         ]
       },
     ],
-    disclosure: "Ships from our overseas partner: allow 10 to 17 days.",
     sizes: ["S", "M", "L", "XL"],
     category: "pullover",
     supplierType: "tapstitch",

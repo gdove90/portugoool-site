@@ -1,6 +1,8 @@
 // FAQ content — plain data module so both server components (home page
 // preview) and the client accordion can import it.
 
+import { DELIVERY_OVERVIEW, IMPORT_DUTY_COPY } from "./delivery";
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -10,12 +12,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "When will my order ship?",
     answer:
-      "Orders arrive within 7–12 business days in the US. Canada, the UK and Portugal typically take 2 to 3 weeks, because every order ships from the United States and customs can add time. Track yours anytime on the Track Order page with your order reference.",
+      DELIVERY_OVERVIEW,
   },
   {
     question: "Do I pay customs or import tax?",
     answer:
-      "Not in the US. Orders to Canada, the UK and Portugal ship from the United States, so your country may charge import duty or VAT when the parcel arrives. That charge is set by your customs authority, is not collected by us, and is paid by the person receiving the order.",
+      IMPORT_DUTY_COPY,
   },
   {
     question: "How does sizing run?",
@@ -35,6 +37,6 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Is this official team merchandise?",
     answer:
-      "No. GOAL Athletics is an independent brand. We are not affiliated with any federation, club, league, or governing body. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
+      "No. GOAL Athletics is a brand. We are not affiliated with any federation, club, league, or governing body. Original designs and marks only: nothing official, nothing licensed, just love for the game.",
   },
 ];
