@@ -73,26 +73,17 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-08T06:15:37.833141+00:00",
     "approval": "Owner BUILD+REVIEW attachment 86cb58e4: cart quote reliability, tracking safeguards, footer/story wording and Collective hiding; preserve production shipping/payment and no provider tests, merge or deployment",
     "branch": "codex/correctness-story-review-20261108",
     "engine": "codex",
     "session": "codex-correctness-story-review-20261108",
     "start_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
-    "task": "correctness-story-review-20261108",
-    "token_hash": "f0daaea1a8871555b7a088a38d5afdcf8c2985fb53902dec68285cdbdb235c8e"
+    "task": "correctness-story-review-20261108"
   },
-  "last_released_holder": {
-    "acquired_at": "2026-11-08T04:44:25.453528+00:00",
-    "approval": "Owner followup: verify e3d1dc5 against unchanged base, isolated payment tests, protected remote preview and split release recommendation; no production deploy",
-    "branch": "codex/growth-bf2026-20261107",
-    "engine": "codex",
-    "session": "codex-growth-release-verification-20261107",
-    "start_commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
-    "task": "growth-bf2026-20261107"
-  },
-  "revision": 116,
+  "revision": 117,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T06:31:38.865110+00:00"
+  "updated_at": "2026-11-08T06:31:43.388950+00:00"
 }
