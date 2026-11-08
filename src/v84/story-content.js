@@ -8,10 +8,10 @@ export function storyMarkup(hero) {
     title: 'Our roots.<br>Our future.',
     subtitle: 'A goal is just the beginning.<br>Then comes the work.',
     actions: '<a class="btn white depth-button story-cta" href="/shop">Shop GOAL Athletics <span class="mobile-hide-emoji-arrow" aria-hidden="true">↗</span></a>',
-    bottom: true,
-    bottomContent: '<span class="story-bottom-rule" aria-hidden="true"></span><span>BORN IN RHODE ISLAND. INSPIRED BY SOCCER.</span>',
+    bottom: false,
   }) + `
 <section class="story-open">
+  <p class="eyebrow">BORN IN RHODE ISLAND.<br>INSPIRED BY SOCCER.</p>
   <h2>The GOAL<br>mindset.</h2>
   <div class="story-moments" id="brand-purpose">
     <p><span>01</span>Soccer is our heritage.</p>
