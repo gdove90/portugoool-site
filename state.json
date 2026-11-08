@@ -83,26 +83,17 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-08T07:50:47.827829+00:00",
     "approval": "Owner copy correction 2026-11-08: Evolution is our purpose replaces Movement is our purpose; update existing draft PR92 only, preserve all other scope and production.",
     "branch": "codex/correctness-story-review-20261108",
     "engine": "codex",
     "session": "codex-story-evolution-20261108",
     "start_commit": "d3cfcca408d68e2031f4780939061d227f560fa8",
-    "task": "correctness-story-review-20261108",
-    "token_hash": "7550bde2d5cd71f8c7c63a5a04a91d9a2d8286449f3414453ffeae70bb62d996"
-  },
-  "last_released_holder": {
-    "acquired_at": "2026-11-08T06:15:37.833141+00:00",
-    "approval": "Owner BUILD+REVIEW attachment 86cb58e4: cart quote reliability, tracking safeguards, footer/story wording and Collective hiding; preserve production shipping/payment and no provider tests, merge or deployment",
-    "branch": "codex/correctness-story-review-20261108",
-    "engine": "codex",
-    "session": "codex-correctness-story-review-20261108",
-    "start_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "task": "correctness-story-review-20261108"
   },
-  "revision": 120,
+  "revision": 121,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T07:53:51.613654+00:00"
+  "updated_at": "2026-11-08T07:53:59.214617+00:00"
 }
