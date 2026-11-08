@@ -50,7 +50,8 @@
       "Formal same-condition base 7b98ba4 and candidate e3d1dc5 comparison of all three failing legacy suites, deeper assertions, all pin paths and 19 exact guide renders.",
       "PGlite actual store/webhook/CAPI capture: one order/line and one logical Purchase ID; concurrent send attempts unchanged, post-refund send suppressed on candidate.",
       "Password-protected remotely accessible Netlify live session verified with HTTP 401 / read-only page 200 / operational API 503, Chrome 390px and 1440px checks and screenshots.",
-      "Prepared apply-checked 20-file correctness/copy patch; campaign offer explicitly UNSELECTED, contribution UNKNOWN. Documentation-only follow-up commit f43a3e7 pushed; original e3d1dc5 preserved."
+      "Prepared apply-checked 20-file correctness/copy patch; campaign offer explicitly UNSELECTED, contribution UNKNOWN. Documentation-only follow-up commit f43a3e7 pushed; original e3d1dc5 preserved.",
+      "Existing engineering handoff refreshed, expected-hash guarded and read-back verified; all other contributions preserved."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -81,13 +82,13 @@
         "status": "confirmed"
       },
       {
-        "details": "Refresh only own existing engineer contribution, expected-hash guarded; preserve all other contributions and a single attributed handoff.",
+        "details": "Updated four owned existing engineer blocks; read-back receipt sequence 40. All 17 untouched blocks retained exact ID/hash, all 21 total blocks retained and one attribution marker. Command Brief scheduled consumption unverified.",
         "reference": "page_3124dbaf9afc8191b24af917963f42c8 / goal.growth.implementation.20261107 / release-verification-f43a3e7",
-        "status": "intent"
+        "status": "confirmed"
       }
     ],
     "head_commit": "f43a3e7d96f5d9a93e2f021c8e2cf3a79a59be0a",
-    "next_action": "Update only the existing attributed engineer handoff with evidence and split release scope; then release writer lock. No production deployment or provider payment test.",
+    "next_action": "Owner reviews the protected remote iPhone preview and exact correctness/copy patch. No production action is authorized. Campaign costs/creative/attribution remain on hold; provider payment verification remains blocked by owner choice.",
     "schema": "goal-agent-handoff-v2",
     "session": "codex-growth-release-verification-20261107",
     "task_id": "growth-bf2026-20261107",
@@ -127,7 +128,7 @@
     "start_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "task": "growth-bf2026-20261107"
   },
-  "revision": 111,
+  "revision": 112,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T04:59:40.067971+00:00"
+  "updated_at": "2026-11-08T05:00:42.085648+00:00"
 }
