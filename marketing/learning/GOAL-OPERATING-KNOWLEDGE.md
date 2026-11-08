@@ -257,3 +257,19 @@ CLASSIFICATION: OBSERVED
 CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
 IMPLICATION: fixing one line on the Quarter Zip page removes the partner mention, but the origin and timing story still differs between pages; one shared wording is needed.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, approve one delivery and origin line for all product pages.
+
+DATE: 2026-11-08
+SOURCE: Performance & Consumer Intelligence, marketing/daily-brief/2026-11-08/01-performance-intelligence.md (Metricool, brand 7164856)
+OBSERVATION: the 11-06 brand-mood Reel rose from reach 336 / views 416 (~17.5 h) to reach 493 / views 584 (~41 h), comments 2, shares 4, saves 0; its average watch time (3.998) and view rate (27.8) are lower than the earlier Reel's (5.017, 37.2). Followers were still 38 on the 11-06 row (day reach 478); 11-07 and 11-08 follower rows are NOT POPULATED.
+CLASSIFICATION: OBSERVED (numbers); SUPPORTED INFERENCE (watch depth falls as a Reel reaches colder audiences)
+CONFIDENCE: LOW (two Reels, tiny base, provider units unstated, follower rows incomplete)
+IMPLICATION: a Reel needs a 48 h or later reading, and Reel reach has not yet been shown to convert to followers; the first seconds matter more as the audience widens.
+RECOMMENDED FUTURE ACTION: re-read followers on the 11-09 and 11-10 runs before judging conversion; read EXP-003 at 48 h and later (OWNER REVIEW before publishing).
+
+DATE: 2026-11-08
+SOURCE: Performance & Consumer Intelligence, same report
+OBSERVATION: the 11-05 Core Warm-up Tee carousel grew from reach 4 / views 11 (~39 h) to 12 / 27 (~91 h), and the 11-03 carousel from 12 to 16; the 11-07 goals-theme carousel with no product named reached 28 / 66 at ~12 h, the best feed item since the welcome post (26).
+CLASSIFICATION: OBSERVED (numbers); SUPPORTED INFERENCE (theme may beat product in the feed)
+CONFIDENCE: LOW (one theme carousel, Saturday slot confounded, tiny base)
+IMPLICATION: the 11-05 entry that carousels plateau at 48 to 72 h is weakened (INVALIDATED for the Warm-up Tee: it was 2 to 3 reach short of final or growing at 91 h); the 11-07 reading is early, so read it at 48 to 72 h and beyond.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, run EXP-004 (theme vs product carousel) and read carousels at 72 h and 7 d.

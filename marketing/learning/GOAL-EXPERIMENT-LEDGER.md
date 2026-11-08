@@ -52,3 +52,15 @@ RESULT: DATA NOT AVAILABLE (not yet approved or published)
 LESSON: none yet
 CONFIDENCE: LOW
 FUTURE ACTION: owner decides whether to film and publish; Performance Intelligence captures the readings if it runs.
+
+ID: EXP-004
+STATUS: PROPOSED
+PROPOSED BY / DATE: Performance & Consumer Intelligence, 2026-11-08 (report 01 of that date)
+HYPOTHESIS: a feed carousel on a people / goals theme with no product named out-reaches a product carousel at the same age.
+VARIABLE CHANGED: theme carousel (no product) vs product carousel.
+WHAT STAYED CONSTANT: format (carousel), caption rules, no prices, comparable standing-grid slot and day type.
+PRIMARY METRIC: reach, views, shares, saves, follows at about 24 h, 48 h and 72 h. Control: 11-07 theme carousel (reach 28 at ~12 h) vs product carousels (final 12 to 19). Winning condition: reach at least 1.5x the product carousel at the same age, repeated once because the Saturday slot is confounded.
+RESULT: DATA NOT AVAILABLE (11-07 carousel is the first theme reading, ~12 h, reach 28; not yet a test)
+LESSON: none yet
+CONFIDENCE: LOW
+FUTURE ACTION: owner decides whether to publish a matched pair; Performance Intelligence captures the readings.
