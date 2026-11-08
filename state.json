@@ -109,26 +109,17 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-08T04:44:25.453528+00:00",
     "approval": "Owner followup: verify e3d1dc5 against unchanged base, isolated payment tests, protected remote preview and split release recommendation; no production deploy",
     "branch": "codex/growth-bf2026-20261107",
     "engine": "codex",
     "session": "codex-growth-release-verification-20261107",
     "start_commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
-    "task": "growth-bf2026-20261107",
-    "token_hash": "63fe7a2962c336e78233c127644a5ccf42b64f6310df815cc0ef81cb7657f35e"
-  },
-  "last_released_holder": {
-    "acquired_at": "2026-11-08T04:13:07.323745+00:00",
-    "approval": "Owner implementation assignment 2026-11-07: AUDIT FIX VERIFY PRIVATE PREVIEW; no production deploy or migration",
-    "branch": "codex/growth-bf2026-20261107",
-    "engine": "codex",
-    "session": "codex-growth-bf2026-20261107",
-    "start_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "task": "growth-bf2026-20261107"
   },
-  "revision": 112,
+  "revision": 113,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T05:00:42.085648+00:00"
+  "updated_at": "2026-11-08T05:00:46.807998+00:00"
 }
