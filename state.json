@@ -1,7 +1,8 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Owner 2026-11-07: audit, fix verified purchase/delivery/measurement defects, verify in isolation and prepare a private Black Friday preview and attributed existing-team handoff. No production deploy, merge, promotions, spend, outreach, schedule changes or production SQL."
+      "Owner 2026-11-07: audit, fix verified purchase/delivery/measurement defects, verify in isolation and prepare a private Black Friday preview and attributed existing-team handoff. No production deploy, merge, promotions, spend, outreach, schedule changes or production SQL.",
+      "Owner followup verification e3d1dc5; remotely accessible private review without deployment; provider payment verification left BLOCKED by explicit owner reply."
     ],
     "base_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "branch": "codex/growth-bf2026-20261107",
@@ -56,12 +57,17 @@
         "details": "Engineer contribution appended and read back at sequence 39. One marker found; every earlier contribution ID/hash preserved. Scheduled Command Brief consumption unverified.",
         "reference": "page_3124dbaf9afc8191b24af917963f42c8 / goal.growth.implementation.20261107",
         "status": "confirmed"
+      },
+      {
+        "details": "Netlify live tunnel to authenticated read-only proxy on loopback; all operational API paths denied, no production credentials, no deploy. Owner requested remote private preview.",
+        "reference": "goal-release-e3d1dc5-private-live-preview",
+        "status": "intent"
       }
     ],
     "head_commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
-    "next_action": "Owner reviews exact commit e3d1dc5 and resolves supplier delivery/cost evidence, confirmed GOAL test environment, database/Meta verification and attribution collection/retention before separately authorizing any release. Current task is complete for independent authorized scope; production remains unchanged.",
+    "next_action": "Expose password-protected local review via existing Netlify live tunnel; no production deployment/settings changes. No real provider payment test.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-growth-bf2026-20261107",
+    "session": "codex-growth-release-verification-20261107",
     "task_id": "growth-bf2026-20261107",
     "tests": [
       "Typecheck, lint and production build PASS (four existing img warnings).",
@@ -97,7 +103,7 @@
     "start_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "task": "growth-bf2026-20261107"
   },
-  "revision": 109,
+  "revision": 110,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T04:44:25.453528+00:00"
+  "updated_at": "2026-11-08T04:49:25.093843+00:00"
 }
