@@ -273,3 +273,12 @@ CLASSIFICATION: OBSERVED (numbers); SUPPORTED INFERENCE (theme may beat product 
 CONFIDENCE: LOW (one theme carousel, Saturday slot confounded, tiny base)
 IMPLICATION: the 11-05 entry that carousels plateau at 48 to 72 h is weakened (INVALIDATED for the Warm-up Tee: it was 2 to 3 reach short of final or growing at 91 h); the 11-07 reading is early, so read it at 48 to 72 h and beyond.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, run EXP-004 (theme vs product carousel) and read carousels at 72 h and 7 d.
+
+DATE: 2026-11-08
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-08/03-search-ecommerce.md (live pages fetched 2026-11-08)
+OBSERVATION: the live catalog grew from 11 products and 27 sitemap URLs (11-07) to 19 products and 35 URLs: eight women's TEMPO pieces ($18 to $58) now show Add to bag with no "Coming soon" label. The Quarter Zip still says "overseas partner, 10 to 17 days" while the shipping page says every order ships from the United States, 7-12 business days; the TEMPO Training Tee colour is White on one surface and Light Purple on another.
+CLASSIFICATION: OBSERVED
+CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
+IMPLICATION: women's product links are now safe to use; the delivery and colour conflicts now affect more pages, so catalog state must be re-fetched each day before any copy names a product, colour or delivery claim.
+RECOMMENDED FUTURE ACTION: for OWNER REVIEW, approve one delivery line for all product pages and confirm the Training Tee colour.
+
