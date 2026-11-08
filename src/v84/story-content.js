@@ -20,7 +20,7 @@ export function storyMarkup(hero) {
   </div>
 </section>
 <section class="story-split">
-  <div class="story-photo"><img src="/v84/assets/women.png" alt="GOAL athlete in black athletic wear against warm concrete" loading="lazy" width="1672" height="941"></div>
+  <div class="story-photo"><img src="/v84/editorial/our-world-recovery-20261108.png" alt="Athlete in a navy GOAL Athletics hoodie seated beside a floodlit field" loading="lazy" width="1122" height="1402" style="object-position:center top"></div>
   <div class="story-statement">
     <div class="story-opening">
       <h2 class="story-brand"><img src="/brand/goal-athletics-horizontal-black-v13.png" alt="GOAL Athletics" width="3000" height="821" loading="lazy"></h2>
