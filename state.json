@@ -2,7 +2,8 @@
   "checkpoint": {
     "approved_scope": [
       "Owner BUILD + REVIEW attachment 86cb58e4 on 2026-11-08: dedicated branch from production; selective cart quotes/tracking guards; footer/story wording; hide Collective. Draft PR only.",
-      "Production payment and every shipping/delivery claim remain unchanged. No provider-backed payment tests/sessions/charges, settings/modes changes, merge, deploy, promotion, campaign work or SQL."
+      "Production payment and every shipping/delivery claim remain unchanged. No provider-backed payment tests/sessions/charges, settings/modes changes, merge, deploy, promotion, campaign work or SQL.",
+      "Owner wording correction: Evolution is our purpose replaces Movement is our purpose in existing story and metadata; update draft PR92, no production release."
     ],
     "base_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "branch": "codex/correctness-story-review-20261108",
@@ -38,7 +39,8 @@
       "Our Story navigation/footer/metadata/home link and approved prose via one canonical markup module shared with the importer, preserving layout/images; retired footer adjective removed with legal/non-affiliation preserved.",
       "Collective homepage/nav/footer/sitemap exposure removed; temporary 307 to /shop; original page/assets retained.",
       "Source-preservation, local HTTP and Chrome 390/1440 browser checks pass; production STORE_OPEN=true confirmed read-only.",
-      "Draft PR92 opened and read-back verified with exact base/head, draft and unmerged state; final remote main and production deploy unchanged."
+      "Draft PR92 opened and read-back verified with exact base/head, draft and unmerged state; final remote main and production deploy unchanged.",
+      "Replaced both canonical story occurrences and metadata; updated existing story expectations and review record, preserving every other story/layout/image field."
     ],
     "contract_version": "2.0",
     "engine": "codex",
@@ -52,19 +54,25 @@
         "details": "Draft PR https://github.com/gdove90/portugoool-site/pull/92 created and read back: draft=true, merged=false, base main7b98ba4, head d3cfcca. Production Netlify deploy remains6aef814247b2319bbaedebb1. No deploy or settings changes.",
         "reference": "gdove90/portugoool-site / codex/correctness-story-review-20261108 -> main / draft PR",
         "status": "confirmed"
+      },
+      {
+        "details": "Update only heritage/identity/movement phrase to heritage/identity/evolution and review-report commit link; keep draft state and all other PR metadata/content.",
+        "reference": "PR92 / Evolution wording body update",
+        "status": "intent"
       }
     ],
-    "head_commit": "d3cfcca408d68e2031f4780939061d227f560fa8",
-    "next_action": "Owner reviews draft PR92 and exact scoped diff. No further implementation required by this request; do not merge/deploy without a separate explicit instruction. Provider payment tests remain excluded, not a release prerequisite.",
+    "head_commit": "be5f7b1735c297281614ac6788656cf56ff71656",
+    "next_action": "Verify build and local story, update/read back PR92 wording, checkpoint final outcome and release lock. No production merge/deploy.",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-correctness-story-review-20261108",
+    "session": "codex-story-evolution-20261108",
     "task_id": "correctness-story-review-20261108",
     "tests": [
       "8 cart + 14 correctness + 4 story regressions pass. Existing Meta10 (978 combinations), discount6, welcome10, popup8 and women-fit1 grouped suite pass.",
       "Typecheck/lint/build pass with four prior img warnings; no new warnings.",
       "All three original legacy suites fail on both exact base and candidate at same assertions: Halo after17 pass stale3400vs2400; size guide2vs1; old payment raw pin mismatch.",
       "Two broader suites retain baseline failures: backend public-product count19vs11 (44otherchecks pass); v84 migration list after27pass. Updated only tracking test fixture to return persisted row, retaining all assertions.",
-      "No provider payment/session/charge/fulfillment/email/Meta dashboard tests. No Safari/iPhone test available."
+      "No provider payment/session/charge/fulfillment/email/Meta dashboard tests. No Safari/iPhone test available.",
+      "All four existing story/importer/preservation/redirect checks PASS after evolution wording correction."
     ],
     "unresolved": [
       "Five legacy/broad suites retain documented baseline fixture/pin failures; no claim they pass.",
@@ -92,7 +100,7 @@
     "start_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
     "task": "correctness-story-review-20261108"
   },
-  "revision": 118,
+  "revision": 119,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-08T07:50:47.827829+00:00"
+  "updated_at": "2026-11-08T07:52:11.679413+00:00"
 }
