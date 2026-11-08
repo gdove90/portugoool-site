@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/shop/goal-athletics-ga-minimal-tee",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/cart",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/the-goal-collective",
+    "status": 307,
+    "location": "http://localhost:3067/shop"
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "location": null
+  }
+]

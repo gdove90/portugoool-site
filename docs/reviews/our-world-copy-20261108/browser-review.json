@@ -1,0 +1,164 @@
+[
+  {
+    "status": 200,
+    "title": "Our Story · GOAL",
+    "heading": "Our roots.\nOur future.",
+    "subtitle": "A goal is just the beginning.\nThen comes the work.",
+    "oldCopyVisible": false,
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "headingFontSize": "100.8px",
+    "paragraph": "GOAL Athletics is rooted in Rhode Island and inspired by soccer. The game shaped our identity: the discipline, the shared ambition, and the commitment to keep getting better. We carry that spirit beyond the pitch into athleticwear for training, play, and recovery, whatever your sport. Evolution is our purpose. It guides the brand we’re building and reflects the people we’re building it for: people with something to work toward, and the drive to keep going.",
+    "middleHeading": "The GOAL\nmindset.",
+    "closingHeading": "Train. Play. Recover.\nThen go again.",
+    "logo": {
+      "source": "/brand/goal-athletics-horizontal-black-v13.png",
+      "loaded": true,
+      "horizontalCenterOffset": 0,
+      "photoRight": 720,
+      "statementLeft": 720,
+      "paragraphFontSize": "20.16px"
+    },
+    "contentHeight": 2097,
+    "images": [
+      {
+        "src": "http://127.0.0.1:3067/v84/optimized/our-world-huddle.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:3067/v84/optimized/women.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:3067/brand/goal-athletics-horizontal-black-v13.png",
+        "loaded": true
+      }
+    ],
+    "shopLinks": [
+      {
+        "label": "SHOP GOAL ATHLETICS",
+        "href": "/shop"
+      },
+      {
+        "label": "SHOP MEN",
+        "href": "/men"
+      },
+      {
+        "label": "SHOP WOMEN",
+        "href": "/women"
+      }
+    ],
+    "sections": [
+      {
+        "selector": ".our-world-hero",
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 680
+      },
+      {
+        "selector": ".story-open",
+        "x": 0,
+        "y": 680,
+        "width": 1440,
+        "height": 334.171875
+      },
+      {
+        "selector": ".story-split",
+        "x": 0,
+        "y": 1014.171875,
+        "width": 1440,
+        "height": 564.953125
+      },
+      {
+        "selector": ".story-close",
+        "x": 0,
+        "y": 1579.125,
+        "width": 1440,
+        "height": 517.1875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "status": 200,
+    "title": "Our Story · GOAL",
+    "heading": "Our roots.\nOur future.",
+    "subtitle": "A goal is just the beginning.\nThen comes the work.",
+    "oldCopyVisible": false,
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "headingFontSize": "52px",
+    "paragraph": "GOAL Athletics is rooted in Rhode Island and inspired by soccer. The game shaped our identity: the discipline, the shared ambition, and the commitment to keep getting better. We carry that spirit beyond the pitch into athleticwear for training, play, and recovery, whatever your sport. Evolution is our purpose. It guides the brand we’re building and reflects the people we’re building it for: people with something to work toward, and the drive to keep going.",
+    "middleHeading": "The GOAL\nmindset.",
+    "closingHeading": "Train. Play. Recover.\nThen go again.",
+    "logo": {
+      "source": "/brand/goal-athletics-horizontal-black-v13.png",
+      "loaded": true,
+      "horizontalCenterOffset": 0,
+      "photoRight": 390,
+      "statementLeft": 0,
+      "paragraphFontSize": "18px"
+    },
+    "contentHeight": 2537,
+    "images": [
+      {
+        "src": "http://127.0.0.1:3067/v84/mobile/our-world-huddle.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:3067/v84/mobile/women.webp",
+        "loaded": true
+      },
+      {
+        "src": "http://127.0.0.1:3067/brand/goal-athletics-horizontal-black-v13.png",
+        "loaded": true
+      }
+    ],
+    "shopLinks": [
+      {
+        "label": "SHOP GOAL ATHLETICS",
+        "href": "/shop"
+      },
+      {
+        "label": "SHOP MEN",
+        "href": "/men"
+      },
+      {
+        "label": "SHOP WOMEN",
+        "href": "/women"
+      }
+    ],
+    "sections": [
+      {
+        "selector": ".our-world-hero",
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 720
+      },
+      {
+        "selector": ".story-open",
+        "x": 0,
+        "y": 720,
+        "width": 390,
+        "height": 433.15625
+      },
+      {
+        "selector": ".story-split",
+        "x": 0,
+        "y": 1153.15625,
+        "width": 390,
+        "height": 938.625
+      },
+      {
+        "selector": ".story-close",
+        "x": 0,
+        "y": 2091.78125,
+        "width": 390,
+        "height": 444.5625
+      }
+    ],
+    "errors": []
+  }
+]

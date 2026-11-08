@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // share-your-goals is owner-only (2026-10-22); whats-your-goal is the
     // public "What's Your GOAL?" submission funnel (2026-10-28; the legacy
     // GOOOL slug redirects and is deliberately absent).
-    ...["men", "women", "kit-wear", "the-goal-collective", "whats-your-goal", "shipping-returns", "references"].map(path => ({ url: `${SITE_URL}/${path}`, changeFrequency: "monthly" as const, priority: 0.6 })),
+    ...["men", "women", "kit-wear", "whats-your-goal", "shipping-returns", "references"].map(path => ({ url: `${SITE_URL}/${path}`, changeFrequency: "monthly" as const, priority: 0.6 })),
     { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/faq`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/contact`, changeFrequency: "yearly", priority: 0.4 },

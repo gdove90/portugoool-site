@@ -300,7 +300,7 @@ export async function POST(req: NextRequest) {
       // Customer email is collected by Stripe Checkout itself.
     });
 
-    return NextResponse.json({ url: session.url });
+    return NextResponse.json({ url: session.url, subtotalCents, discountCents, shippingCents, totalCents: subtotalCents - discountCents + shippingCents });
   } catch (err) {
     console.error("Stripe checkout error:", err);
     return NextResponse.json(

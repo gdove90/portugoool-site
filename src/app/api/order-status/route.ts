@@ -77,7 +77,7 @@ export async function GET(req: NextRequest) {
 
   let purchaseEvent = null;
   try {
-    purchaseEvent = paid && trackingMode && purchaseEligible && session.metadata?.consent !== "denied" && req.headers?.get?.("sec-gpc") !== "1" && session.amount_total != null ? {
+    purchaseEvent = paid && trackingMode && purchaseEligible && session.metadata?.consent === "granted" && req.headers?.get?.("sec-gpc") !== "1" && session.amount_total != null ? {
       // Same id scheme as the server-side Purchase in the webhook.
       id: await metaEventId("Purchase", session.id),
       value: session.amount_total / 100,
