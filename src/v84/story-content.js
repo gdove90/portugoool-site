@@ -2,7 +2,7 @@
 export function storyMarkup(hero) {
   return hero({
     kind: 'collection-hero our-world-hero',
-    image: '/v84/editorial/our-world-staircase-20261108.webp',
+    image: '/v84/editorial/our-world-stairwell-hero-20261108.png',
     imageAlt: 'Three stages of an athlete ascending a white tiled staircase in GOAL Athletics apparel, with red GOAL Athletics lettering on the wall',
     label: '',
     title: 'Our roots.<br>Our future.',
