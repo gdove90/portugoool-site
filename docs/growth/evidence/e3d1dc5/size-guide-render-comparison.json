@@ -1,0 +1,234 @@
+{
+  "base": [
+    {
+      "id": "80000000-0000-4000-8000-000000000009",
+      "name": "GA Matchday Cap",
+      "tables": 1,
+      "htmlSha256": "2056af42a6a966a9ec2b3c8459ab449605fb24abe7598858878fca16be0dd983"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000010",
+      "name": "Stacked Stadium Cap",
+      "tables": 1,
+      "htmlSha256": "75f12a1e127ff718b86012e977fa02ebc63ac2baac47294d6b2e53f380d2b129"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000011",
+      "name": "GOAL Athletics Warm-Up Tee",
+      "tables": 1,
+      "htmlSha256": "1360612a91f90e1d3961d0f21dbc45d8ff6bbbf9033b05be9dd0cd33d0cdfeb0"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000012",
+      "name": "GOAL Athletics Match Day Tee",
+      "tables": 1,
+      "htmlSha256": "5dc851b8d007610e778f1933e31a883fa64d8bf53aa71e0abae8d7b718cf1537"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000013",
+      "name": "GOAL Athletics Core Shorts",
+      "tables": 1,
+      "htmlSha256": "dfc7d5fa5232d18550b9892dcb06a985b8e7625a3f3a6258a5d2f4decc02c603"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000014",
+      "name": "GOAL Athletics Heritage Hoodie",
+      "tables": 1,
+      "htmlSha256": "d955b1d4c4d910acdba251b66687958ee10e7b9f7af454a96e27a35e3901d1f2"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000015",
+      "name": "GOAL Athletics Core Hoodie",
+      "tables": 1,
+      "htmlSha256": "21d10f50b085770e274c8302d5e92d3cc677ecbeef7e800f255f06b860b125f2"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000016",
+      "name": "GOAL Athletics Core Everyday Raincoat",
+      "tables": 1,
+      "htmlSha256": "85ab856a161c0142cc2d4eaa8b9cc4414121e2866b0b77a3d83588b3de65b6e5"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000023",
+      "name": "GOAL Athletics Core Quarter Zip",
+      "tables": 1,
+      "htmlSha256": "cb8bd7a5dc91bf31aff475cdf2baf2dfabfd833527a97f1c58367184d9af151d"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000024",
+      "name": "GOAL Athletics Core Jogger",
+      "tables": 1,
+      "htmlSha256": "a39d1d6d751eba05e9daf0b0e5acf03ce892a27fd2b426d29839c58cf83aa879"
+    },
+    {
+      "id": "90000000-0000-4000-8000-000000000001",
+      "name": "The Core Sweatpant",
+      "tables": 1,
+      "htmlSha256": "33105064c44d237503952b4f91fcb9710e3b834f36610f86447e62734da256d1"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000017",
+      "name": "TEMPO Core Training Tee",
+      "tables": 2,
+      "htmlSha256": "097bc3ec1631b67aae669a2d163ada234d7d11dfbe3513c7da44644ef9ecd161"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000018",
+      "name": "TEMPO Quarter Zip",
+      "tables": 1,
+      "htmlSha256": "8621cf29237fe427d7178a89292e31813e67f21b48f5e76f80b18629f73612ed"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000019",
+      "name": "TEMPO Training Pants",
+      "tables": 2,
+      "htmlSha256": "fa7d52496e4ab8d2e6d31c066720c503bee422d07708782c97f5493a016c8e5f"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000022",
+      "name": "TEMPO Training Shorts",
+      "tables": 2,
+      "htmlSha256": "82a98b36e98e8f26604807c9a00cd0cacecf88f7228b45b9258e414af20dee22"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000020",
+      "name": "TEMPO Warmup Hoodie",
+      "tables": 1,
+      "htmlSha256": "887fa0c93f64923c29bf413cf40ea6e714503e6af1f49266bedfed1fc483f4b4"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000021",
+      "name": "TEMPO Training Tee",
+      "tables": 1,
+      "htmlSha256": "ed73e923f76ca732aee44ddf94487979e14edf4fc51796db88f104d5f194ef5d"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000025",
+      "name": "TEMPO Training Bra",
+      "tables": 1,
+      "htmlSha256": "28d7429d32089cc0b0544dd2a08543ac6e3ed97826a69f03303382b4f0a44a1b"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000026",
+      "name": "TEMPO Training Leggings",
+      "tables": 1,
+      "htmlSha256": "cfc8dded372a96888a14e41540195c93ce3b1b99cdf54317ade57b5d9296dc4e"
+    }
+  ],
+  "candidate": [
+    {
+      "id": "80000000-0000-4000-8000-000000000009",
+      "name": "GA Matchday Cap",
+      "tables": 1,
+      "htmlSha256": "2056af42a6a966a9ec2b3c8459ab449605fb24abe7598858878fca16be0dd983"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000010",
+      "name": "Stacked Stadium Cap",
+      "tables": 1,
+      "htmlSha256": "75f12a1e127ff718b86012e977fa02ebc63ac2baac47294d6b2e53f380d2b129"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000011",
+      "name": "GOAL Athletics Warm-Up Tee",
+      "tables": 1,
+      "htmlSha256": "1360612a91f90e1d3961d0f21dbc45d8ff6bbbf9033b05be9dd0cd33d0cdfeb0"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000012",
+      "name": "GOAL Athletics Match Day Tee",
+      "tables": 1,
+      "htmlSha256": "5dc851b8d007610e778f1933e31a883fa64d8bf53aa71e0abae8d7b718cf1537"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000013",
+      "name": "GOAL Athletics Core Shorts",
+      "tables": 1,
+      "htmlSha256": "dfc7d5fa5232d18550b9892dcb06a985b8e7625a3f3a6258a5d2f4decc02c603"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000014",
+      "name": "GOAL Athletics Heritage Hoodie",
+      "tables": 1,
+      "htmlSha256": "d955b1d4c4d910acdba251b66687958ee10e7b9f7af454a96e27a35e3901d1f2"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000015",
+      "name": "GOAL Athletics Core Hoodie",
+      "tables": 1,
+      "htmlSha256": "21d10f50b085770e274c8302d5e92d3cc677ecbeef7e800f255f06b860b125f2"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000016",
+      "name": "GOAL Athletics Core Everyday Raincoat",
+      "tables": 1,
+      "htmlSha256": "85ab856a161c0142cc2d4eaa8b9cc4414121e2866b0b77a3d83588b3de65b6e5"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000023",
+      "name": "GOAL Athletics Core Quarter Zip",
+      "tables": 1,
+      "htmlSha256": "cb8bd7a5dc91bf31aff475cdf2baf2dfabfd833527a97f1c58367184d9af151d"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000024",
+      "name": "GOAL Athletics Core Jogger",
+      "tables": 1,
+      "htmlSha256": "a39d1d6d751eba05e9daf0b0e5acf03ce892a27fd2b426d29839c58cf83aa879"
+    },
+    {
+      "id": "90000000-0000-4000-8000-000000000001",
+      "name": "The Core Sweatpant",
+      "tables": 1,
+      "htmlSha256": "33105064c44d237503952b4f91fcb9710e3b834f36610f86447e62734da256d1"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000017",
+      "name": "TEMPO Core Training Tee",
+      "tables": 2,
+      "htmlSha256": "097bc3ec1631b67aae669a2d163ada234d7d11dfbe3513c7da44644ef9ecd161"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000018",
+      "name": "TEMPO Quarter Zip",
+      "tables": 1,
+      "htmlSha256": "8621cf29237fe427d7178a89292e31813e67f21b48f5e76f80b18629f73612ed"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000019",
+      "name": "TEMPO Training Pants",
+      "tables": 2,
+      "htmlSha256": "fa7d52496e4ab8d2e6d31c066720c503bee422d07708782c97f5493a016c8e5f"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000022",
+      "name": "TEMPO Training Shorts",
+      "tables": 2,
+      "htmlSha256": "82a98b36e98e8f26604807c9a00cd0cacecf88f7228b45b9258e414af20dee22"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000020",
+      "name": "TEMPO Warmup Hoodie",
+      "tables": 1,
+      "htmlSha256": "887fa0c93f64923c29bf413cf40ea6e714503e6af1f49266bedfed1fc483f4b4"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000021",
+      "name": "TEMPO Training Tee",
+      "tables": 1,
+      "htmlSha256": "ed73e923f76ca732aee44ddf94487979e14edf4fc51796db88f104d5f194ef5d"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000025",
+      "name": "TEMPO Training Bra",
+      "tables": 1,
+      "htmlSha256": "28d7429d32089cc0b0544dd2a08543ac6e3ed97826a69f03303382b4f0a44a1b"
+    },
+    {
+      "id": "80000000-0000-4000-8000-000000000026",
+      "name": "TEMPO Training Leggings",
+      "tables": 1,
+      "htmlSha256": "cfc8dded372a96888a14e41540195c93ce3b1b99cdf54317ade57b5d9296dc4e"
+    }
+  ]
+}

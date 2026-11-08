@@ -1,0 +1,54 @@
+{
+  "node": "v24.14.1",
+  "conditions": "Same Node, shared exact npm-ci dependency install, identical lockfile and suite hashes, credentials removed, no real providers",
+  "runs": {
+    "base": {
+      "commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
+      "lock_sha256": "3272aaa993a7ded7d50aaf339070f53de6331079e7e0cbb808c7e5f6b7792762",
+      "suites": {
+        "test-halo-checkout.cjs": {
+          "exit": 1,
+          "suite_sha256": "80cc36698690381f867a8d5017c9570a43670c590463ce79240ebd3d8912379e",
+          "passes_before_failure": 17,
+          "log": "base-test-halo-checkout.cjs.log"
+        },
+        "test-size-guide.cjs": {
+          "exit": 1,
+          "suite_sha256": "a75329b59f9f1b472b8e2dc1e7d6d72c8553b06ff35060233b7f08718b029e6f",
+          "passes_before_failure": 0,
+          "log": "base-test-size-guide.cjs.log"
+        },
+        "test-payment-preservation.cjs": {
+          "exit": 1,
+          "suite_sha256": "d2c24952028d78f9f7d3ed4b408315349d542784a77cdefee7f4e3a1bcb73721",
+          "passes_before_failure": 0,
+          "log": "base-test-payment-preservation.cjs.log"
+        }
+      }
+    },
+    "candidate": {
+      "commit": "e3d1dc5caaa18359bd939ccea2dafc4a7e2eda7a",
+      "lock_sha256": "3272aaa993a7ded7d50aaf339070f53de6331079e7e0cbb808c7e5f6b7792762",
+      "suites": {
+        "test-halo-checkout.cjs": {
+          "exit": 1,
+          "suite_sha256": "80cc36698690381f867a8d5017c9570a43670c590463ce79240ebd3d8912379e",
+          "passes_before_failure": 17,
+          "log": "candidate-test-halo-checkout.cjs.log"
+        },
+        "test-size-guide.cjs": {
+          "exit": 1,
+          "suite_sha256": "a75329b59f9f1b472b8e2dc1e7d6d72c8553b06ff35060233b7f08718b029e6f",
+          "passes_before_failure": 0,
+          "log": "candidate-test-size-guide.cjs.log"
+        },
+        "test-payment-preservation.cjs": {
+          "exit": 1,
+          "suite_sha256": "d2c24952028d78f9f7d3ed4b408315349d542784a77cdefee7f4e3a1bcb73721",
+          "passes_before_failure": 0,
+          "log": "candidate-test-payment-preservation.cjs.log"
+        }
+      }
+    }
+  }
+}

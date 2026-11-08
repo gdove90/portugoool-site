@@ -49,3 +49,7 @@ Chrome on Windows, actual overridden CSS viewports 390 × 844 and 1440 × 1000. 
 - Screenshots: `desktop-product-delivery-1440.jpg`, `desktop-cart-1440.jpg`, `mobile-product-delivery-390.jpg`, `mobile-cart-390.jpg`, `mobile-fit-390.jpg`, `quarter-zip-delivery-1440.jpg`, `campaign-review-1440.jpg` in the private output directory.
 
 Both servers bind to loopback only. There is no public hosted preview and no production release. Existing Netlify previews were not reused because their configured audience is not private. Current production flags, supplier submission gates and schedules are unchanged.
+
+## Follow-up release verification
+
+The exact unchanged base and e3d1dc5 were compared under equivalent conditions. See [release verification](release-verification-e3d1dc5.md) for all three failures, the additional unmasked Halo failures, 19 identical guide renders, real local PostgreSQL retry/refund behavior, protected remote preview and separate production/campaign scopes. Provider payment verification is blocked by the owner because existing sandbox callbacks target shared external endpoints; no provider payment was attempted. Contribution remains UNKNOWN and the Black Friday offer is UNSELECTED.

@@ -1,0 +1,97 @@
+{
+  "src/app/api/stripe-webhook/route.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": true
+  },
+  "src/app/api/apliiq-fulfillment/route.ts": {
+    "base_differs_from_old_pin": false,
+    "candidate_differs_from_old_pin": false,
+    "candidate_differs_from_base": false
+  },
+  "src/app/api/fulfillment-ops/route.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/app/api/track-order/route.ts": {
+    "base_differs_from_old_pin": false,
+    "candidate_differs_from_old_pin": false,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/apliiq.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/fulfillment.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/fulfillment-submit.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/orders-store.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/products.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": true
+  },
+  "src/lib/shipping.ts": {
+    "base_differs_from_old_pin": false,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": true
+  },
+  "src/lib/discount.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/email.ts": {
+    "base_differs_from_old_pin": false,
+    "candidate_differs_from_old_pin": false,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/email-delivery.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/shipment.ts": {
+    "base_differs_from_old_pin": false,
+    "candidate_differs_from_old_pin": false,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/types.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/supabase.ts": {
+    "base_differs_from_old_pin": false,
+    "candidate_differs_from_old_pin": false,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/emails/order-confirmation.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": false
+  },
+  "src/lib/emails/shipment-notification.ts": {
+    "base_differs_from_old_pin": false,
+    "candidate_differs_from_old_pin": false,
+    "candidate_differs_from_base": false
+  },
+  "src/app/api/checkout/route.ts": {
+    "base_differs_from_old_pin": true,
+    "candidate_differs_from_old_pin": true,
+    "candidate_differs_from_base": true
+  }
+}

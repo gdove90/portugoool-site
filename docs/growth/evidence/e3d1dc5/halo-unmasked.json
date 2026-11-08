@@ -1,0 +1,62 @@
+{
+  "base": {
+    "WT0216 totals": {
+      "exit": 1,
+      "out": "",
+      "err": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+        "",
+        "3095 !== 4095",
+        "",
+        "    at C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-release-base-7b98ba4\\scripts\\test-halo-checkout.cjs:276:41",
+        "    at async check (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-release-base-7b98ba4\\scripts\\test-halo-checkout.cjs:29:3)",
+        "    at async main (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-release-base-7b98ba4\\scripts\\test-halo-checkout.cjs:272:3) {",
+        "  generatedMessage: true,"
+      ]
+    },
+    "WT0216 invalid": {
+      "exit": 1,
+      "out": "",
+      "err": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+        "",
+        "200 !== 400",
+        "",
+        "    at C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-release-base-7b98ba4\\scripts\\test-halo-checkout.cjs:282:268",
+        "    at async check (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-release-base-7b98ba4\\scripts\\test-halo-checkout.cjs:29:3)",
+        "    at async main (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-release-base-7b98ba4\\scripts\\test-halo-checkout.cjs:280:3) {",
+        "  generatedMessage: true,"
+      ]
+    }
+  },
+  "candidate": {
+    "WT0216 totals": {
+      "exit": 1,
+      "out": "",
+      "err": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+        "",
+        "3095 !== 4095",
+        "",
+        "    at C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-implementation\\scripts\\test-halo-checkout.cjs:276:41",
+        "    at async check (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-implementation\\scripts\\test-halo-checkout.cjs:29:3)",
+        "    at async main (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-implementation\\scripts\\test-halo-checkout.cjs:272:3) {",
+        "  generatedMessage: true,"
+      ]
+    },
+    "WT0216 invalid": {
+      "exit": 1,
+      "out": "",
+      "err": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:",
+        "",
+        "200 !== 400",
+        "",
+        "    at C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-implementation\\scripts\\test-halo-checkout.cjs:282:268",
+        "    at async check (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-implementation\\scripts\\test-halo-checkout.cjs:29:3)",
+        "    at async main (C:\\Users\\gdove\\OneDrive\\Desktop\\Portugoool\\goal-growth-implementation\\scripts\\test-halo-checkout.cjs:280:3) {",
+        "  generatedMessage: true,"
+      ]
+    }
+  }
+}

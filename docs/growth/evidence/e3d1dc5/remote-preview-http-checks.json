@@ -1,0 +1,74 @@
+[
+  {
+    "method": "GET",
+    "path": "/",
+    "authenticated": false,
+    "status": 401,
+    "bytes": 40,
+    "noindex": "noindex, nofollow, noarchive",
+    "no_store": "no-cache"
+  },
+  {
+    "method": "GET",
+    "path": "/shop/goal-athletics-ga-minimal-tee",
+    "authenticated": false,
+    "status": 401,
+    "bytes": 40,
+    "noindex": "noindex, nofollow, noarchive",
+    "no_store": "no-cache"
+  },
+  {
+    "method": "GET",
+    "path": "/api/order-status?session_id=cs_fake",
+    "authenticated": false,
+    "status": 401,
+    "bytes": 40,
+    "noindex": "noindex, nofollow, noarchive",
+    "no_store": "no-cache"
+  },
+  {
+    "method": "GET",
+    "path": "/shop/goal-athletics-ga-minimal-tee",
+    "authenticated": true,
+    "status": 200,
+    "bytes": 191684,
+    "noindex": "noindex, nofollow, noarchive",
+    "no_store": "private, no-store"
+  },
+  {
+    "method": "POST",
+    "path": "/api/checkout",
+    "authenticated": true,
+    "status": 503,
+    "bytes": 89,
+    "noindex": "noindex, nofollow, noarchive",
+    "no_store": "no-cache"
+  },
+  {
+    "method": "POST",
+    "path": "/api/newsletter",
+    "authenticated": true,
+    "status": 503,
+    "bytes": 89,
+    "noindex": "noindex, nofollow, noarchive",
+    "no_store": "no-cache"
+  },
+  {
+    "method": "POST",
+    "path": "/api/stripe-webhook",
+    "authenticated": true,
+    "status": 503,
+    "bytes": 89,
+    "noindex": "noindex, nofollow, noarchive",
+    "no_store": "no-cache"
+  },
+  {
+    "method": "GET",
+    "path": "/.netlify/functions/test",
+    "authenticated": false,
+    "status": 404,
+    "bytes": 21,
+    "noindex": "noindex, nofollow",
+    "no_store": null
+  }
+]

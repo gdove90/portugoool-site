@@ -1,0 +1,12 @@
+{
+  "base": {
+    "exit": 0,
+    "output": "{\"counts\":{\"orders\":1,\"lines\":1},\"purchaseSendAttemptsBeforeRefund\":3,\"uniquePurchaseIds\":1,\"purchaseSendAttemptsAfterRefund\":1,\"providerCalls\":0,\"finalStatus\":\"refunded\"}",
+    "error": ""
+  },
+  "candidate": {
+    "exit": 0,
+    "output": "{\"counts\":{\"orders\":1,\"lines\":1},\"purchaseSendAttemptsBeforeRefund\":3,\"uniquePurchaseIds\":1,\"purchaseSendAttemptsAfterRefund\":0,\"providerCalls\":0,\"finalStatus\":\"refunded\"}",
+    "error": ""
+  }
+}
