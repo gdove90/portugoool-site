@@ -12,13 +12,6 @@ const STATS = [
   { value: "Free replacement", label: "Or a full refund if we can't replace the item" },
 ];
 
-const SECTIONS = [
-  { id: "defects", title: "Defects & damage" },
-  { id: "not-covered", title: "What doesn't qualify" },
-  { id: "lost", title: "Lost in transit" },
-  { id: "cancellations", title: "Cancellations" },
-];
-
 const NOT_COVERED = [
   "Wrong size ordered. Check the fit notes on each product page before buying.",
   "Change of mind or style preference.",
@@ -32,18 +25,34 @@ export default function RefundsPage() {
     "The item's tag must still be attached.",
     <>Email <a className="help-link" href={"mailto:" + CONTACT_EMAIL}>{CONTACT_EMAIL}</a> or use the <Link className="help-link" href="/contact">contact page</Link>.</>,
   ];
-  const policyContent = [
-    <>
-      <p>If your order arrives defective, damaged, misprinted, or it&apos;s the wrong item, we make it right at no cost with a free replacement or a full refund if we can&apos;t replace it.</p>
-      <ol className="help-policy-list">
-        {steps.map((step, index) => <li key={index}><span className="help-number" aria-hidden="true">Step {index + 1}</span><span>{step}</span></li>)}
-      </ol>
-    </>,
-    <ul className="help-policy-list">
-      {NOT_COVERED.map(item => <li key={item}><span className="help-number" aria-hidden="true">–</span><span>{item}</span></li>)}
-    </ul>,
-    <p>If tracking shows your order never arrived, contact us within 30 days of the ship date and we&apos;ll replace it free.</p>,
-    <p>Orders are processed fast. If you need to cancel, email us immediately, since we can only cancel before your order is processed.</p>,
+  const sections = [
+    {
+      id: "defects",
+      title: "Defects & damage",
+      content: <>
+        <p>If your order arrives defective, damaged, misprinted, or it&apos;s the wrong item, we make it right at no cost with a free replacement or a full refund if we can&apos;t replace it.</p>
+        <ol className="help-policy-list">
+          {steps.map((step, index) => <li key={index}><span className="help-number" aria-hidden="true">Step {index + 1}</span><span>{step}</span></li>)}
+        </ol>
+      </>,
+    },
+    {
+      id: "not-covered",
+      title: "What doesn't qualify",
+      content: <ul className="help-policy-list">
+        {NOT_COVERED.map(item => <li key={item}><span className="help-number" aria-hidden="true">–</span><span>{item}</span></li>)}
+      </ul>,
+    },
+    {
+      id: "lost",
+      title: "Lost in transit",
+      content: <p>If tracking shows your order never arrived, contact us within 30 days of the ship date and we&apos;ll replace it free.</p>,
+    },
+    {
+      id: "cancellations",
+      title: "Cancellations",
+      content: <p>Orders are processed fast. If you need to cancel, email us immediately, since we can only cancel before your order is processed.</p>,
+    },
   ];
 
   return <div className="help-page help-wrap">
@@ -60,7 +69,7 @@ export default function RefundsPage() {
         <nav className="help-policy-index" aria-label="On this page">
           <p className="help-eyebrow">On this page</p>
           <ol>
-            {SECTIONS.map((section, index) => <li key={section.id}>
+            {sections.map((section, index) => <li key={section.id}>
               <a href={"#" + section.id}><span className="help-number" aria-hidden="true">0{index + 1}</span> {section.title}</a>
             </li>)}
           </ol>
@@ -73,12 +82,12 @@ export default function RefundsPage() {
       </aside>
 
       <article className="help-policy">
-        {SECTIONS.map((section, index) => <section key={section.id} aria-labelledby={section.id}>
+        {sections.map((section, index) => <section key={section.id} aria-labelledby={section.id}>
           <div className="help-policy-heading">
             <span className="help-number" aria-hidden="true">0{index + 1}</span>
             <h2 className="help-section-title" id={section.id}>{section.title}</h2>
           </div>
-          {policyContent[index]}
+          {section.content}
         </section>)}
         <p className="help-policy-date">This policy is linked from the cart before you pay, and from the footer of every page. It applies to all orders. Last updated September 2026.</p>
       </article>
