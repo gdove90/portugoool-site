@@ -282,3 +282,11 @@ CONFIDENCE: HIGH for page text (summarised fetch); conversion impact NO DATA
 IMPLICATION: women's product links are now safe to use; the delivery and colour conflicts now affect more pages, so catalog state must be re-fetched each day before any copy names a product, colour or delivery claim.
 RECOMMENDED FUTURE ACTION: for OWNER REVIEW, approve one delivery line for all product pages and confirm the Training Tee colour.
 
+
+DATE: 2026-11-09
+SOURCE: AEO, SEO & Ecommerce, marketing/daily-brief/2026-11-09/03-search-ecommerce.md (live pages fetched 2026-11-09)
+OBSERVATION: /size-guide shows measurement numbers only for the Warm-Up Tee in the fetched text; ten other tabs appear empty, while the Quarter Zip, Raincoat and TEMPO product pages carry complete flat charts. The Raincoat page has no delivery time (link only) while the Quarter Zip still carries the "overseas partner, 10 to 17 days" line. Catalog unchanged from 11-08 (19 products, 35 URLs).
+CLASSIFICATION: OBSERVED
+CONFIDENCE: MEDIUM (summarised fetch; tabs may load on selection); conversion impact NO DATA
+IMPLICATION: the fit guide is a weaker data source than the product pages; the data already exists on-site and could be reused.
+RECOMMENDED FUTURE ACTION: re-check /size-guide tabs in a rendered view if one becomes available; propose populating them from product-page charts (OWNER REVIEW).
