@@ -1,7 +1,7 @@
 import studioBackgrounds from "@/v84/studio-backgrounds-v5.json";
 
 const studioPaths = new Map(studioBackgrounds.map(image => [image.originalSrc, image.src]));
-const tempoLeadImages = new Set([
+const referenceGrayLeadImages = new Set([
   "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
   "/products/tempo-training-tee/tempo-training-tee-light-purple-ghost-front-20261104.webp",
   "/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp",
@@ -10,6 +10,17 @@ const tempoLeadImages = new Set([
   "/products/tempo-training-pants-black-white-catalog-apliiq-front-6241843.jpg",
   "/products/tempo-quarter-zip/tempo-quarter-zip-black-floating-ghost-front-20261107.webp",
   "/products/tempo-warmup-hoodie-black-product-front-20261106.webp",
+  "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp",
+  "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
+  "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
+  "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
+  "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
+  "/products/goal-core-jogger-deep-black-catalog-product-front-owner-20261027.webp",
+  "/products/goal-core-quarter-zip-black-catalog-product-front-20261026.webp",
+  "/products/goal-heritage-hoodie-black-catalog-product-front-20261022.webp",
+  "/products/goal-lockup-hoodie-black-catalog-product-front-20261022.webp",
+  "/products/core-sweatpant/goal-core-sweatpant-black-halo-product-front-20261103-c4d8ebf0.webp",
+  "/products/goal-core-everyday-raincoat-black-catalog-product-front-20261026.webp",
 ]);
 
 // Change this revision when replacing catalog image bytes at existing paths.
@@ -17,7 +28,7 @@ const tempoLeadImages = new Set([
 export function catalogImageSrc(src: string): string {
   if (!src.startsWith("/products/")) return src;
   const url = new URL(src, "https://goool.shop");
-  if (tempoLeadImages.has(url.pathname)) {
+  if (referenceGrayLeadImages.has(url.pathname)) {
     return url.pathname.replace(/\.(webp|jpg)$/, "-neutral-gray-20261109.webp?v=reference-gray");
   }
   const studioPath = studioPaths.get(url.pathname);
