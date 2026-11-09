@@ -5,6 +5,33 @@
 .shell > main { flex:1; }
 .footer { padding:24px 4vw; border-top:1px solid var(--line); font-size:13px; }
 .footer p { margin-top:16px; }
+.helpHeader { background:#fff; border-bottom:1px solid var(--line); }
+.helpHeaderInner { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:70px; }
+.helpHeaderInner :global(.brand), .helpFooterInner :global(.brand) { display:inline-flex; align-items:center; gap:7px; }
+.helpHeaderInner :global(.brand-ga svg) { display:block; width:30px; height:28px; }
+.helpHeaderInner :global(.brand-wordmark) { display:block; width:174px; height:auto; }
+.helpHeader nav, .helpFooter nav { display:flex; align-items:center; gap:8px 20px; }
+.helpHeader nav a, .helpFooter nav a { display:inline-flex; align-items:center; min-height:44px; font-size:11px; }
+.helpHeader nav a { white-space:nowrap; }
+.helpHeader nav a[aria-current="page"], .helpHeader nav a:hover, .helpFooter nav a:hover { text-decoration:underline; text-underline-offset:4px; }
+.helpFooter { background:var(--ink); color:var(--paper); padding-block:33px; }
+.helpFooterInner { display:grid; grid-template-columns:minmax(185px,1.1fr) minmax(0,1fr); gap:30px; align-items:start; }
+.helpFooterInner :global(.brand-ga svg) { display:block; width:24px; height:22px; }
+.helpFooterInner :global(.brand-wordmark) { display:block; width:145px; height:auto; }
+.helpFooter address { margin-top:13px; color:#d4d1ca; font-size:11px; font-style:normal; }
+.helpFooter nav { flex-wrap:wrap; gap:0 20px; }
+@media (max-width:585px) {
+  .helpHeaderInner { min-height:60px; }
+  .helpHeader nav { gap:10px; }
+  .helpHeaderInner :global(.brand-ga svg) { width:24px; height:22px; }
+  .helpHeaderInner :global(.brand-wordmark) { width:130px; }
+  .helpFooter { padding-block:26px; }
+  .helpFooterInner { grid-template-columns:1fr; gap:16px; }
+}
+@media (max-width:360px) {
+  .helpHeaderInner { padding-inline:13px; }
+  .helpHeaderInner :global(.brand-wordmark) { width:108px; }
+}
 @media (max-width:480px) {
   .header { padding:20px; }
   .header nav { width:100%; }

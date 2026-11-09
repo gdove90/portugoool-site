@@ -1,8 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState, type KeyboardEvent } from "react";
+import { catalogImageSrc } from "@/lib/product-image";
+import { collectionLabel, defaultVariant } from "@/v84/catalog-data";
+import { Strike } from "@/v84/Brand";
+import FitDetails from "./FitDetails";
 import SizeGuide from "./SizeGuide";
-import { guideAudienceFor, guideProducts, productForGuideHash, sizeGuideHref, type GuideAudience } from "@/lib/size-guide";
+import { guideAudienceFor, guideProducts, productForGuideHash, sizeGuideFor, sizeGuideHref, type GuideAudience } from "@/lib/size-guide";
 
 export { GUIDE, guideTabFor } from "@/lib/size-guide";
 
@@ -21,7 +27,6 @@ function moveTab(event: KeyboardEvent<HTMLButtonElement>) {
 export default function SizeGuideTabs() {
   const first = productForGuideHash("performance") ?? guideProducts("men")[0];
   const [{ audience, productId }, setSelection] = useState({ audience: guideAudienceFor(first?.id ?? ""), productId: first?.id ?? "" });
-  const productRow = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const onHash = () => {
       const product = productForGuideHash(window.location.hash.slice(1));
@@ -32,17 +37,14 @@ export default function SizeGuideTabs() {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  useEffect(() => {
-    const row = productRow.current;
-    const tab = row?.querySelector<HTMLButtonElement>('[aria-selected="true"]');
-    if (!row || !tab) return;
-    if (tab.offsetLeft < row.scrollLeft) row.scrollLeft = tab.offsetLeft;
-    else if (tab.offsetLeft + tab.offsetWidth > row.scrollLeft + row.clientWidth) row.scrollLeft = tab.offsetLeft + tab.offsetWidth - row.clientWidth;
-  }, [audience, productId]);
-
   const selected = productForGuideHash(sizeGuideHref(productId).split("#")[1] ?? "");
   const visibleProducts = guideProducts(audience);
-  const options = selected && !visibleProducts.some(product => product.id === selected.id) ? [...visibleProducts, selected] : visibleProducts;
+  const publicProduct = visibleProducts.find(product => product.id === productId);
+  const options = selected && !publicProduct ? [...visibleProducts, selected] : visibleProducts;
+  const guide = sizeGuideFor(productId);
+  const variant = publicProduct && defaultVariant(publicProduct)?.variant;
+  const image = variant?.cardImage || (variant?.images || publicProduct?.images)?.[0];
+  const [fitSummary, ...fitDetails] = guide?.fitFacts ?? [];
 
   function select(nextAudience: GuideAudience, id: string) {
     setSelection({ audience: nextAudience, productId: id });
@@ -50,30 +52,45 @@ export default function SizeGuideTabs() {
   }
 
   return (
-    <div className="size-guide-picker">
-      <div className="size-guide-audiences" role="tablist" aria-label="Collection">
-        {audiences.map(item => <button
-          key={item.id} type="button" role="tab" id={`size-guide-audience-${item.id}`}
-          aria-selected={audience === item.id} aria-controls="size-guide-audience-panel" tabIndex={audience === item.id ? 0 : -1}
-          onKeyDown={moveTab} onClick={() => {
-            const products = guideProducts(item.id);
-            const product = products.find(product => product.id === productId) ?? products[0];
-            if (product) select(item.id, product.id);
-          }}
-        >{item.label}</button>)}
-      </div>
-      <div role="tabpanel" id="size-guide-audience-panel" aria-labelledby={`size-guide-audience-${audience}`}>
-        <div ref={productRow} className="size-guide-products" role="tablist" aria-label={`${audience === "men" ? "Men's" : "Women's"} garments`}>
-          {options.map(product => <button
-            key={product.id} type="button" role="tab" id={`size-guide-product-${product.id}`}
-            aria-label={product.name} aria-selected={product.id === productId} aria-controls="size-guide-product-panel" tabIndex={product.id === productId ? 0 : -1}
-            data-guide-product={product.id} onKeyDown={moveTab} onClick={() => select(audience, product.id)}
-          >{product.name.replace(/^(GOAL Athletics |TEMPO )/, "")}</button>)}
+    <div className="help-fit">
+      <div className="help-fit-controls">
+        <div>
+          <p className="help-eyebrow">Collection</p>
+          <div className="help-fit-audiences" role="tablist" aria-label="Collection">
+            {audiences.map(item => <button
+              key={item.id} type="button" role="tab" id={`size-guide-audience-${item.id}`}
+              aria-selected={audience === item.id} aria-controls="size-guide-audience-panel" tabIndex={audience === item.id ? 0 : -1}
+              onKeyDown={moveTab} onClick={() => {
+                const products = guideProducts(item.id);
+                const product = products.find(product => product.id === productId) ?? products[0];
+                if (product) select(item.id, product.id);
+              }}
+            >{item.label}</button>)}
+          </div>
         </div>
-        <div className="size-guide-product-panel" role="tabpanel" id="size-guide-product-panel" aria-labelledby={`size-guide-product-${productId}`} tabIndex={0}>
-          <SizeGuide key={productId} productId={productId} showGuideLink={false} showMeasuringInstructions={false} />
+        <div role="tabpanel" id="size-guide-audience-panel" aria-labelledby={`size-guide-audience-${audience}`}>
+          <label className="help-eyebrow" htmlFor="fit-guide-garment">Choose a garment</label>
+          <select id="fit-guide-garment" value={productId} onChange={event => select(audience, event.target.value)}>
+            {options.map(product => <option key={product.id} value={product.id}>{product.name}</option>)}
+          </select>
         </div>
       </div>
+      {selected && guide && <section className="help-fit-result" aria-labelledby="fit-guide-product-title">
+        <div className={image ? "help-fit-info has-photo" : "help-fit-info"} key={productId}>
+          {image && <Image className="help-fit-photo" src={catalogImageSrc(image.src)} alt={image.alt} width={360} height={270} sizes="(max-width: 585px) 25vw, 330px" loading="eager" />}
+          <p className="help-eyebrow">{collectionLabel(selected)} collection</p>
+          <h2 className="help-section-title" id="fit-guide-product-title" aria-live="polite">{guide.title}</h2>
+          <div className="help-fit-copy">
+            <p>{fitSummary?.value ?? guide.fit}</p>
+            {fitSummary ? <details className="help-disclosure">
+              <summary>Fit &amp; sizing <Strike /></summary>
+              <FitDetails facts={fitDetails} fallbackFit={guide.fit} />
+            </details> : <p>{guide.blank}</p>}
+          </div>
+          {publicProduct && <Link className="help-action" href={`/shop/${publicProduct.slug}`}>View product</Link>}
+        </div>
+        <SizeGuide productId={productId} showProductIntro={false} showGuideLink={false} showMeasuringInstructions={false} />
+      </section>}
     </div>
   );
 }

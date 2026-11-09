@@ -16,6 +16,7 @@ import "@/v84/mobile.css";
 import "@/v84/v13-web.css";
 import "@/components/size-guide.css";
 import "@/v84/mobile-header.css";
+import "@/v84/help-pages.css";
 import { organizationJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
 import Shell from "@/v84/Shell";

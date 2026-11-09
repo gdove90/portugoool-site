@@ -27,9 +27,10 @@ const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value
     const dialog = nodes.find(node => node.tagName === 'dialog' && attr(node, 'class') === 'info-dialog');
     assert.ok(dialog, product.slug + ' fit dialog');
     const inside = all(dialog);
-    assert.equal(inside.filter(node => node.tagName === 'table').length, 1, product.slug);
+    const tables = inside.filter(node => node.tagName === 'table');
+    assert.equal(tables.length, guide.sizeGuideFor(product.id).bodyReference ? 2 : 1, product.slug);
     assert.ok(inside.some(node => attr(node, 'data-size-guide') === product.id));
-    const sizes = inside.filter(node => node.tagName === 'th' && attr(node, 'scope') === 'row').map(node => node.childNodes.map(child => child.value || '').join(''));
+    const sizes = all(tables[0]).filter(node => node.tagName === 'th' && attr(node, 'scope') === 'row').map(node => node.childNodes.map(child => child.value || '').join(''));
     assert.deepEqual(sizes, Array.from(product.sizes, size => size === 'OS' ? 'One size' : size));
     const links = inside.filter(node => node.tagName === 'a');
     assert.equal(links.length, 1);
@@ -43,15 +44,16 @@ const attr = (node, name) => node.attrs?.find(item => item.name === name)?.value
   collectScripts(nodes);
   const audienceTabs = nodes.filter(node => attr(node, 'role') === 'tab' && attr(node, 'id')?.startsWith('size-guide-audience-'));
   assert.deepEqual(audienceTabs.map(node => node.childNodes.map(child => child.value || '').join('')), ['Men', 'Women']);
-  assert.ok(!nodes.some(node => node.tagName === 'select'), 'Sizing navigation has no dropdown');
-  const productTabs = nodes.filter(node => attr(node, 'data-guide-product'));
-  assert.deepEqual(productTabs.map(node => attr(node, 'data-guide-product')), Array.from(guide.guideProducts('men'), product => product.id));
-  assert.equal(productTabs.filter(node => attr(node, 'aria-selected') === 'true').length, 1);
+  const picker = nodes.find(node => node.tagName === 'select' && attr(node, 'id') === 'fit-guide-garment');
+  assert.ok(picker, 'Sizing navigation has a garment picker');
+  const options = all(picker).filter(node => node.tagName === 'option');
+  assert.deepEqual(options.map(node => attr(node, 'value')), Array.from(guide.guideProducts('men'), product => product.id));
+  assert.equal(options.filter(node => attr(node, 'selected') !== undefined).length, 1);
   for (const src of scripts) {
     const response = await fetch(base + src);
     assert.equal(response.status, 200, src);
     assert.ok(!/(?:apliiq|tapstitch|sanmar|bellacanvas|independenttradingco|comfortcolors|ascolour|ottocap|blankstyle|bigcommerce|dc-onesource)\.com/i.test(await response.text()), 'No supplier website references in public JavaScript: ' + src);
   }
-  if (process.env.SIZE_GUIDE_EVIDENCE) fs.writeFileSync(process.env.SIZE_GUIDE_EVIDENCE, JSON.stringify({ base, products: results, mainGuideAudiences: ['Men', 'Women'], initialProductTabs: productTabs.length, publicScriptsChecked: scripts.size, passed: true }, null, 2));
+  if (process.env.SIZE_GUIDE_EVIDENCE) fs.writeFileSync(process.env.SIZE_GUIDE_EVIDENCE, JSON.stringify({ base, products: results, mainGuideAudiences: ['Men', 'Women'], initialGarmentOptions: options.length, publicScriptsChecked: scripts.size, passed: true }, null, 2));
   console.log(`PASS ${base}: all ${products.length} product guides and ${scripts.size} public scripts; correct tables/sizes/links and no supplier website references.`);
 })().catch(error => { console.error(error); process.exitCode = 1; });

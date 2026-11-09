@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import ShipmentTracking from "@/components/ShipmentTracking";
+import HelpPageHeading from "@/v84/HelpPageHeading";
 import {
   normalizeCarrier,
   uniqueShipmentPackages,
@@ -17,9 +18,7 @@ import {
 // "status is on its way" promises — every message reflects what the
 // backend actually did.
 //
-// Design 3a (2026-09-29): black hero band with the page title, then a
-// lookup card that overlaps the hero on desktop beside the three-step
-// timeline. Carrier enrichment reads a separate authenticated cache after
+// Carrier enrichment reads a separate authenticated cache after
 // the original lookup succeeds; it cannot replace that lookup's result.
 // ─────────────────────────────────────────────────────────────
 
@@ -133,116 +132,78 @@ export default function TrackOrderPage() {
   // Render every persisted package even when enrichment has only some of them.
   const packages = fallbackPackages.map(pkg => enrichedPackages.get(packageKey(pkg)) ?? pkg);
 
-  return (
-    <>
-      <section className="border-t border-paper/10 bg-ink px-5 pb-10 pt-11 text-paper sm:px-6 md:pb-[60px] md:pt-[72px] lg:px-12">
-        <p className="font-display text-sm uppercase tracking-[0.2em] text-paper/60">Help</p>
-        <h1 className="mt-4 font-display text-[56px] uppercase leading-[0.92] md:text-[104px]">
-          Track Order
-        </h1>
-        <div aria-hidden className="mt-4 h-1.5 w-24 origin-left -skew-x-[30deg] bg-red" />
+  return <div className="help-page help-wrap">
+    <HelpPageHeading title="Track your order.">
+      Use the reference from your order confirmation and the email address you used at checkout.
+    </HelpPageHeading>
+
+    <div className="help-track-layout">
+      <section aria-labelledby="track-form-heading">
+        <h2 className="help-section-title" id="track-form-heading">Check your order status</h2>
+        <form className="help-track-form" onSubmit={lookup}>
+          <div className="help-track-field">
+            <label className="help-eyebrow" htmlFor="track-ref">Order reference</label>
+            <input
+              id="track-ref"
+              type="text"
+              required
+              maxLength={32}
+              value={reference}
+              onChange={event => setReference(event.target.value)}
+              placeholder="GOOOL-1A2B3C4D"
+              autoCapitalize="characters"
+              spellCheck={false}
+            />
+          </div>
+          <div className="help-track-field">
+            <label className="help-eyebrow" htmlFor="track-email">Order email</label>
+            <input
+              id="track-email"
+              type="email"
+              required
+              maxLength={254}
+              value={email}
+              onChange={event => setEmail(event.target.value)}
+              placeholder="you@example.com"
+              autoComplete="email"
+            />
+          </div>
+          <button className="help-action help-check-status" type="submit" disabled={result.kind === "loading"}>
+            {result.kind === "loading" ? "Checking…" : "Check status"}
+          </button>
+          {result.kind === "error" && <p className="help-track-error" role="alert">{result.message}</p>}
+        </form>
       </section>
 
-      <div className="flex flex-col gap-9 px-5 pb-12 pt-8 sm:px-6 md:flex-row md:items-start md:gap-[72px] md:pb-[88px] md:pt-16 lg:px-12">
-        {/* Lookup card: pulled up over the hero on desktop only */}
-        <div className="relative flex w-full flex-col gap-4 border border-ink/15 bg-paper p-[22px] md:-mt-[110px] md:w-[480px] md:shrink-0 md:p-8">
-          <h2 className="font-display text-[26px] uppercase leading-tight">Check your order status</h2>
-          <p className="text-base text-ink/70">
-            Enter your order reference (it looks like GOOOL-1A2B3C4D) and the
-            email you ordered with.
-          </p>
-
-          <form className="flex flex-col gap-4" onSubmit={lookup}>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="track-ref" className="text-sm font-semibold">
-                Order reference
-              </label>
-              <input
-                id="track-ref"
-                type="text"
-                required
-                maxLength={32}
-                value={reference}
-                onChange={(e) => setReference(e.target.value)}
-                placeholder="GOOOL-1A2B3C4D"
-                className="w-full rounded-full border border-ink/25 px-5 py-4 text-base focus:border-ink focus:outline-none"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="track-email" className="text-sm font-semibold">
-                Order email
-              </label>
-              <input
-                id="track-email"
-                type="email"
-                required
-                maxLength={254}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@email.com"
-                className="w-full rounded-full border border-ink/25 px-5 py-4 text-base focus:border-ink focus:outline-none"
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={result.kind === "loading"}
-              className="min-h-[52px] w-full rounded-full bg-ink px-6 font-display text-[17px] uppercase tracking-[0.1em] text-paper transition-colors hover:bg-ink/85 disabled:opacity-60"
-            >
-              {result.kind === "loading" ? "Checking…" : "Check status"}
-            </button>
-          </form>
-
-          {result.kind === "found" && (
-            <div className="border-l-4 border-red bg-smoke px-[18px] py-4" role="status">
-              <p className="text-sm font-semibold text-ink/70">{["Refunded.", "Cancelled."].includes(result.status) ? "Order status" : "Supplier fulfillment status"}</p>
-              <p className="text-[17px] font-bold">{result.status}</p>
-              {fallbackPackages.length > 0 && <p className="mt-2 text-base leading-relaxed text-ink/70">See each package&apos;s carrier status alongside. A shipment notice does not confirm carrier acceptance.</p>}
-            </div>
-          )}
-          {result.kind === "error" && (
-            <p className="text-[15px] font-semibold text-red" role="alert">
-              {result.message}
-            </p>
-          )}
-        </div>
-
-        {/* Timeline */}
-        <div className="flex min-w-0 flex-1 flex-col gap-2">
-          {result.kind === "found" ? (
-            <ShipmentTracking packages={packages} loading={detailsLoading} available={details?.available ?? false} />
-          ) : (
-            <>
-          <p className="text-[17px] text-ink/70">Here&apos;s how the timeline works:</p>
-
-          <ol>
+      <div className="help-track-side">
+        {result.kind === "found" ? <section className="help-track-result" aria-labelledby="shipment-progress-title">
+          <h2 className="help-section-title" id="shipment-progress-title">Shipment progress</h2>
+          <div className="help-order-status" role="status">
+            <p className="help-eyebrow">{["Refunded.", "Cancelled."].includes(result.status) ? "Order status" : "Supplier fulfillment status"}</p>
+            <p className="help-subheading">{result.status}</p>
+            {fallbackPackages.length > 0 && <p className="help-copy">See the carrier status for each package below. A shipment notice does not confirm carrier acceptance.</p>}
+          </div>
+          <ShipmentTracking packages={packages} loading={detailsLoading} available={details?.available ?? false} />
+        </section> : <section aria-labelledby="track-timeline-heading">
+          <h2 className="help-section-title" id="track-timeline-heading">From checkout to delivery</h2>
+          <ol className="help-track-steps">
             {[
-              ["Order confirmed", "Instant receipt from our secure checkout, with your order reference."],
-              ["Shipped", "Tracking number lands in your inbox."],
-              ["Delivered", "Within 7–12 business days in the US. Canada, the UK and Portugal typically take 2 to 3 weeks."],
-            ].map(([title, body], i) => (
-              <li key={title} className="flex items-start gap-4 border-t border-ink/10 py-[18px]">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-ink font-display text-lg text-paper">
-                  {i + 1}
-                </span>
-                <div>
-                  <p className="text-lg font-bold">{title}</p>
-                  <p className="text-base leading-relaxed text-ink/70">{body}</p>
-                </div>
-              </li>
-            ))}
+              ["Order confirmed", "Your confirmation email includes your order reference."],
+              ["Shipped", "We email your tracking number when your order ships."],
+              ["Delivered", "Orders arrive within 7–12 business days in the US. Canada, the UK and Portugal typically take 2 to 3 weeks."],
+            ].map(([title, body], index) => <li key={title}>
+              <span className="help-number" aria-hidden="true">0{index + 1}</span>
+              <div><p className="help-track-step-title">{title}</p><p className="help-copy">{body}</p></div>
+            </li>)}
           </ol>
-            </>
-          )}
+        </section>}
 
-          <p className="border-t border-ink/10 pt-[18px] text-base text-ink/70">
-            Still stuck?{" "}
-            <Link href="/contact" className="font-bold text-ink underline underline-offset-[3px]">
-              Contact us
-            </Link>{" "}
-            and we reply within one business day.
-          </p>
+        <div className="help-track-support">
+          <p className="help-eyebrow">Still need help?</p>
+          <p className="help-copy">Contact us and we’ll reply within one business day.</p>
+          <Link className="help-action" href="/contact">Contact support</Link>
         </div>
       </div>
-    </>
-  );
+    </div>
+  </div>;
 }

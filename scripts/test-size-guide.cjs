@@ -29,7 +29,15 @@ function component(file, overrides = {}) {
 }
 const FitDetails = component('src/components/FitDetails.tsx');
 const SizeGuide = component('src/components/SizeGuide.tsx', { './FitDetails': FitDetails });
-const Picker = component('src/components/SizeGuideTabs.tsx', { './SizeGuide': SizeGuide });
+const pickerDependencies = {
+  './SizeGuide': SizeGuide,
+  './FitDetails': FitDetails,
+  '@/v84/catalog-data': audienceCatalog,
+  '@/v84/Brand': { Strike: () => null },
+  '@/lib/product-image': load('src/lib/product-image.ts'),
+  'next/image': props => React.createElement('img', props),
+};
+const Picker = component('src/components/SizeGuideTabs.tsx', pickerDependencies);
 const publicProducts = catalog.getProducts();
 assert.ok(publicProducts.length > 0, 'Public catalog has guides to review');
 assert.deepEqual(plain(guides.guideProducts().map(p => p.id)), plain(publicProducts.map(p => p.id)));
@@ -47,7 +55,7 @@ for (const product of publicProducts) {
     for (const value of row.values.flat()) assert.ok(typeof value === 'number' && Number.isFinite(value) && value > 0, product.slug);
   }
   const html = renderToStaticMarkup(React.createElement(SizeGuide, { productId: product.id }));
-  assert.equal((html.match(/<table/g) || []).length, 1);
+  assert.equal((html.match(/<table/g) || []).length, guide.bodyReference ? 2 : 1);
   assert.ok(!html.includes('<details'), 'Guide table is immediately visible');
   assert.equal((html.match(/<a /g) || []).length, 1, 'One guide link');
   assert.ok(!/href="https?:|tapstitch|apliiq|sanmar|bellacanvas|ottocap|blankstyle/i.test(html), 'Customer guide has no supplier names or external links');
@@ -61,9 +69,9 @@ assert.equal(new Set(ids).size, ids.length, 'No ambiguous product mappings');
 assert.equal(guides.productForGuideHash('unknown-product'), undefined);
 assert.equal(guides.sizeGuideFor('unknown-product'), null);
 const pickerHtml = renderToStaticMarkup(React.createElement(Picker));
-assert.ok(!/<select|Choose your product/.test(pickerHtml), 'Product navigation has no dropdown');
+assert.match(pickerHtml, /<select id="fit-guide-garment"/);
 assert.ok(pickerHtml.includes('aria-label="Collection"') && pickerHtml.includes('>Men</button>') && pickerHtml.includes('>Women</button>'));
-assert.equal((pickerHtml.match(/data-guide-product=/g) || []).length, guides.guideProducts('men').length);
+assert.equal((pickerHtml.match(/<option /g) || []).length, guides.guideProducts('men').length);
 assert.equal((pickerHtml.match(/<table/g) || []).length, 1);
 for (const audience of ['men', 'women']) {
   const expected = audienceCatalog.catalogOrder(publicProducts.filter(product => audienceCatalog.audienceAssignments[product.id]?.includes(audience)));
@@ -84,16 +92,16 @@ global.window = {
   addEventListener: (event, callback) => events.set(event, callback), removeEventListener: event => events.delete(event),
 };
 const InteractivePicker = component('src/components/SizeGuideTabs.tsx', {
-  './SizeGuide': SizeGuide,
+  ...pickerDependencies,
   react: {
     ...React,
     useState: initial => [selection ??= initial, next => { selection = typeof next === 'function' ? next(selection) : next; }],
-    useRef: () => ({ current: null }),
     useEffect: (effect, dependencies) => { if (collectMountEffects && dependencies.length === 0) mountEffects.push(effect); },
   },
 });
 const elements = tree => !tree || typeof tree !== 'object' ? [] : [tree, ...React.Children.toArray(tree.props?.children).flatMap(elements)];
 const tabs = (tree, group) => elements(tree).filter(element => element.props?.role === 'tablist' && element.props['aria-label'] === group).flatMap(element => React.Children.toArray(element.props.children));
+const garmentSelect = tree => elements(tree).find(element => element.type === 'select');
 let tree = InteractivePicker();
 collectMountEffects = false;
 for (const effect of mountEffects) effect();
@@ -111,15 +119,19 @@ if (guides.guideProducts('women').length === 0) {
   events.get('hashchange')(); tree = InteractivePicker();
 }
 assert.equal(selection.audience, 'women');
-assert.equal(tabs(tree, "Women's garments").length, Math.max(1, guides.guideProducts('women').length));
+assert.equal(React.Children.count(garmentSelect(tree).props.children), Math.max(1, guides.guideProducts('women').length));
 const womenProduct = guides.guideProducts('women').at(-1) ?? catalog.products.find(product => product.id === selection.productId);
-clickTab("Women's garments", womenProduct.name);
+function selectGarment(product) {
+  garmentSelect(tree).props.onChange({ target: { value: product.id } });
+  tree = InteractivePicker();
+}
+selectGarment(womenProduct);
 assert.equal(selection.productId, womenProduct.id);
 assert.equal(replaced.at(-1), guides.sizeGuideHref(womenProduct.id));
 assert.ok(renderToStaticMarkup(tree).includes('data-size-guide="' + womenProduct.id + '"'));
 clickTab('Collection', 'Men');
 const menProduct = guides.guideProducts('men').at(-1);
-clickTab("Men's garments", menProduct.name);
+selectGarment(menProduct);
 assert.equal(selection.productId, menProduct.id);
 assert.ok(renderToStaticMarkup(tree).includes('data-size-guide="' + menProduct.id + '"'));
 for (const entry of guides.GUIDE) {
@@ -128,7 +140,7 @@ for (const entry of guides.GUIDE) {
   const product = guides.productForGuideHash(entry.id);
   assert.equal(selection.productId, product.id, entry.id + ' hash selects product');
   assert.equal(selection.audience, guides.guideAudienceFor(product.id), entry.id + ' hash selects audience');
-  assert.ok(elements(tree).some(element => element.props?.['data-guide-product'] === product.id), entry.id + ' hash exposes product tab');
+  assert.equal(garmentSelect(tree).props.value, product.id, entry.id + ' hash exposes selected garment');
 }
 for (const product of publicProducts) {
   global.window.location.hash = '#' + product.slug;
@@ -150,12 +162,12 @@ function keyTab(group, fromIndex, key, expectedIndex) {
 }
 keyTab('Collection', 1, 'ArrowRight', 0);
 assert.equal(selection.audience, 'men');
-keyTab("Men's garments", 0, 'End', guides.guideProducts('men').length - 1);
-assert.equal(selection.productId, guides.guideProducts('men').at(-1).id);
-keyTab("Men's garments", guides.guideProducts('men').length - 1, 'ArrowRight', 0);
-assert.equal(selection.productId, guides.guideProducts('men')[0].id);
-keyTab("Men's garments", 1, 'Home', 0);
-keyTab("Men's garments", 0, 'ArrowLeft', guides.guideProducts('men').length - 1);
+if (guides.guideProducts('women').length) {
+  keyTab('Collection', 0, 'End', 1);
+  assert.equal(selection.audience, 'women');
+  keyTab('Collection', 1, 'Home', 0);
+  assert.equal(selection.audience, 'men');
+}
 global.window = originalWindow;
 for (const [key, source] of Object.entries(sources.charts)) {
   const chart = charts.SIZE_CHARTS[key];
@@ -176,4 +188,4 @@ assert.equal(guides.formatMeasurement(100, 'in'), '100');
 assert.equal(guides.formatMeasurement([20.5,24], 'in'), '20.5–24');
 assert.equal(guides.formatMeasurement(3 / 2.54, 'cm'), '3');
 assert.equal(guides.formatMeasurement(null, 'in'), '—');
-console.log('PASS all ' + publicProducts.length + ' public product guides: audience/product tabs, gated women direct links, click and keyboard switching, direct/legacy hashes, complete tables, exact offered sizes, source measurements, methods, units and supplier-free rendering. No provider calls.');
+console.log('PASS all ' + publicProducts.length + ' public product guides: collection tabs, garment picker, gated women direct links, keyboard switching, direct/legacy hashes, complete tables, exact offered sizes, source measurements, methods, units and supplier-free rendering. No provider calls.');
