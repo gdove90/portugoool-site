@@ -1,5 +1,5 @@
 import { getProducts } from "@/lib/products";
-import type { Product } from "@/lib/types";
+import { hasPrice, isAvailableForSale, isSoldOut, type Product } from "@/lib/types";
 
 export type Audience = "men" | "women";
 // Owner assignment is deliberately separate from fulfillment and product identity.
@@ -41,16 +41,44 @@ export const audienceAssignments: Record<string, Audience[]> = {
   "80000000-0000-4000-8000-000000000025": ["women"],
   "80000000-0000-4000-8000-000000000026": ["women"],
 };
-// The GOOOL pieces that filled this grid were retired on 2026-10-15, so the
-// home page features the GOAL Athletics pieces on sale.
-export const featuredProductIds: string[] = [
-  "80000000-0000-4000-8000-000000000011",
-  "80000000-0000-4000-8000-000000000012",
-  "80000000-0000-4000-8000-000000000013",
+// Curate four weeks of Core and TEMPO favorites in display order.
+const favoriteProductIds = [
+  "80000000-0000-4000-8000-000000000011", // Warm-Up Tee
+  "80000000-0000-4000-8000-000000000023", // Core Quarter Zip
+  "80000000-0000-4000-8000-000000000025", // TEMPO Training Bra
+  "80000000-0000-4000-8000-000000000026", // TEMPO Training Leggings
+  "80000000-0000-4000-8000-000000000012", // Match Day Tee
+  "80000000-0000-4000-8000-000000000024", // Core Jogger
+  "80000000-0000-4000-8000-000000000021", // TEMPO Training Tee
+  "80000000-0000-4000-8000-000000000020", // TEMPO Warmup Hoodie
+  "80000000-0000-4000-8000-000000000014", // Heritage Hoodie
+  "80000000-0000-4000-8000-000000000013", // Core Shorts
+  "80000000-0000-4000-8000-000000000017", // TEMPO Core Training Tee
+  "80000000-0000-4000-8000-000000000022", // TEMPO Training Shorts
+  "80000000-0000-4000-8000-000000000015", // Core Hoodie
+  "90000000-0000-4000-8000-000000000001", // The Core Sweatpant
+  "80000000-0000-4000-8000-000000000018", // TEMPO Quarter Zip
+  "80000000-0000-4000-8000-000000000019", // TEMPO Training Pants
 ];
-export function featuredProducts() {
-  const products = getProducts();
-  return featuredProductIds.flatMap(id => products.filter(product => product.id === id));
+const favoritesDate = new Intl.DateTimeFormat("en-US", {
+  timeZone: "America/New_York", year: "numeric", month: "numeric", day: "numeric",
+});
+const favoritesStart = Date.UTC(2026, 10, 9); // Monday in the store's calendar.
+const weekMilliseconds = 7 * 24 * 60 * 60 * 1000;
+const favoritesPerWeek = 4;
+
+export function featuredProducts(now = new Date()) {
+  const products = getProducts().filter(p => hasPrice(p) && isAvailableForSale(p) && !isSoldOut(p));
+  const favorites = favoriteProductIds.flatMap(id => products.filter(product => product.id === id));
+  if (favorites.length <= favoritesPerWeek) return favorites;
+
+  // Compare calendar dates so the switch stays at midnight through daylight saving changes.
+  const { year, month, day } = Object.fromEntries(favoritesDate.formatToParts(now).map(part => [part.type, part.value]));
+  const date = Date.UTC(Number(year), Number(month) - 1, Number(day));
+  const week = Math.floor((date - favoritesStart) / weekMilliseconds);
+  const offset = (week * favoritesPerWeek) % favorites.length;
+  const start = (offset + favorites.length) % favorites.length;
+  return [...favorites.slice(start), ...favorites.slice(0, start)].slice(0, favoritesPerWeek);
 }
 export function productType(product: Product) {
   if (product.slug === "tempo-training-leggings") return "leggings";

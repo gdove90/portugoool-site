@@ -26,10 +26,15 @@ async function main() {
     '80000000-0000-4000-8000-000000000010',
     '80000000-0000-4000-8000-000000000011', '80000000-0000-4000-8000-000000000012',
   ];
+  let catalogFixture = [...approvedMenIds, 'unapproved-product'].map(id => ({ id, priceCents: 3800 }));
+  const catalogTypes = {};
+  const typesCode = ts.transpileModule(fs.readFileSync('src/lib/types.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
+  vm.runInNewContext(typesCode, { exports: catalogTypes });
   const catalogCode = ts.transpileModule(fs.readFileSync('src/v84/catalog-data.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText;
   vm.runInNewContext(catalogCode, { exports: catalogExports, require: name => {
+    if (name === '@/lib/types') return catalogTypes;
     assert.equal(name, '@/lib/products');
-    return { getProducts: () => [...approvedMenIds, 'unapproved-product'].map(id => ({ id })) };
+    return { getProducts: () => catalogFixture };
   } });
   await check('only approved existing products appear in Men; Women remains unassigned', () => {
     assert.deepEqual(Array.from(catalogExports.forAudience('men'), p => p.id), [
@@ -42,9 +47,19 @@ async function main() {
       '80000000-0000-4000-8000-000000000008',
     ]);
     assert.equal(catalogExports.forAudience('women').length, 0);
-    assert.deepEqual(Array.from(catalogExports.featuredProducts(), p => p.id), [
-      '80000000-0000-4000-8000-000000000011', '80000000-0000-4000-8000-000000000012',
-    ]);
+  });
+  await check('Current Favorites rotate four available products on Monday in Eastern time', () => {
+    const firstWeek = ['011', '023', '025', '026'];
+    const secondWeek = ['012', '024', '021', '020'];
+    catalogFixture = [...firstWeek, ...secondWeek, '014'].map(suffix => ({
+      id: `80000000-0000-4000-8000-000000000${suffix}`, priceCents: 3800, availableForSale: suffix !== '014',
+    }));
+    const lineup = date => Array.from(catalogExports.featuredProducts(new Date(date)), p => p.id.slice(-3));
+    assert.deepEqual(lineup('2026-11-09T05:00:00Z'), firstWeek);
+    assert.deepEqual(lineup('2026-11-16T04:59:59Z'), firstWeek);
+    assert.deepEqual(lineup('2026-11-16T05:00:00Z'), secondWeek);
+    assert.deepEqual(lineup('2026-11-23T05:00:00Z'), firstWeek);
+    assert.notDeepEqual(lineup('2027-03-15T03:59:59Z'), lineup('2027-03-15T04:00:00Z'));
   });
   const numeralExports = {};
   const numeralCode = ts.transpileModule(fs.readFileSync('src/v84/number-art.js', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
