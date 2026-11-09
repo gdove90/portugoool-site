@@ -40,26 +40,17 @@
       }
     ]
   },
-  "holder": {
+  "holder": null,
+  "last_released_holder": {
     "acquired_at": "2026-11-09T07:08:06.660850+00:00",
     "approval": "Owner requests 2026-11-09: rename all women’s TEMPO product titles on the website and update matching Apliiq/Tapstitch product title fields to those names; lighter T-shirts named Daily Contour Tee. Change titles only.",
     "branch": "codex/tempo-womens-product-names-20261109",
     "engine": "codex",
     "session": "codex-20261109-tempo-names-a0b7",
     "start_commit": "fc5adec681f20e64756d5ff3a5711925a0560c52",
-    "task": "tempo-womens-product-names-20261109",
-    "token_hash": "7c692b61d8b44c319ed17ed8faf28759e7bef36ed3ea60de12832e48b340df99"
+    "task": "tempo-womens-product-names-20261109"
   },
-  "last_released_holder": {
-    "acquired_at": "2026-11-08T07:50:47.827829+00:00",
-    "approval": "Owner copy correction 2026-11-08: Evolution is our purpose replaces Movement is our purpose; update existing draft PR92 only, preserve all other scope and production.",
-    "branch": "codex/correctness-story-review-20261108",
-    "engine": "codex",
-    "session": "codex-story-evolution-20261108",
-    "start_commit": "d3cfcca408d68e2031f4780939061d227f560fa8",
-    "task": "correctness-story-review-20261108"
-  },
-  "revision": 124,
+  "revision": 125,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-09T08:22:20.138Z"
+  "updated_at": "2026-11-09T08:23:51.311Z"
 }
