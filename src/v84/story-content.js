@@ -29,7 +29,7 @@ export function storyMarkup(hero) {
   </div>
 </section>
 <section class="story-close">
-  <p class="eyebrow">THE ATHLETIC CYCLE. ACROSS SPORTS.</p>
+  <p class="eyebrow">THE ATHLETIC CYCLE.</p>
   <h2><span>Train. Play. Recover.</span><span>Then go again.</span></h2>
   <div class="story-shop-links">
     <a class="btn white depth-button story-cta" href="/men">Shop men <span class="mobile-hide-emoji-arrow" aria-hidden="true">↗</span></a>
