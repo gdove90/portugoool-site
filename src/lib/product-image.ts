@@ -1,12 +1,25 @@
 import studioBackgrounds from "@/v84/studio-backgrounds-v5.json";
 
 const studioPaths = new Map(studioBackgrounds.map(image => [image.originalSrc, image.src]));
+const tempoLeadImages = new Set([
+  "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
+  "/products/tempo-training-tee/tempo-training-tee-light-purple-ghost-front-20261104.webp",
+  "/products/tempo-training-bra/goal-training-bra-black-01-ghost-front-20261104.webp",
+  "/products/tempo-training-shorts/tempo-training-shorts-black-01-ghost-front-20261105.webp",
+  "/products/tempo-training-leggings/tempo-training-leggings-black-floating-ghost-front-20261107.webp",
+  "/products/tempo-training-pants-black-white-catalog-apliiq-front-6241843.jpg",
+  "/products/tempo-quarter-zip/tempo-quarter-zip-black-floating-ghost-front-20261107.webp",
+  "/products/tempo-warmup-hoodie-black-product-front-20261106.webp",
+]);
 
 // Change this revision when replacing catalog image bytes at existing paths.
 // Source records remain plain file paths for supplier/launch-folder tooling.
 export function catalogImageSrc(src: string): string {
   if (!src.startsWith("/products/")) return src;
   const url = new URL(src, "https://goool.shop");
+  if (tempoLeadImages.has(url.pathname)) {
+    return url.pathname.replace(/\.(webp|jpg)$/, "-neutral-gray-20261109.webp");
+  }
   const studioPath = studioPaths.get(url.pathname);
   if (studioPath) url.pathname = studioPath;
   const isRevisedBack = /^\/products\/GOOOL_MODERN_PERFORMANCE_(?:ROYAL_|WHITE_)?BACK_DETAIL_V6\.png$/.test(url.pathname);
