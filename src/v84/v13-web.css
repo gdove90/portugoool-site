@@ -5,6 +5,10 @@
 .v84 #header > .brand { display:flex; align-items:center; gap:8px; color:inherit; }
 .v84 #header > .brand .brand-ga { width:38px; height:36px; flex:none; }
 .v84 #header > .brand .brand-wordmark { width:250px; height:auto; flex:none; }
+/* Owner requirement: keep desktop links visible, including in zoomed windows.
+   The touch layout in mobile-header.css is the only collapsed header.
+   Change this behavior only at the owner's explicit request. */
+.v84 #header > nav { display:flex; }
 .v84 #header .header-actions .menu-button { display:none; }
 @media (max-width:1279px) {
   .v84 #header { display:flex; gap:6px; justify-content:space-between; padding:0 12px; }
@@ -12,7 +16,6 @@
   .v84 #header > .brand .brand-ga { width:27px; height:29px; }
   .v84 #header > .brand .brand-wordmark { width:165px; max-width:calc(100vw - 192px); }
   .v84 #header .header-actions { gap:0; flex:none; }
-  .v84 #header .header-actions .menu-button { display:flex; }
   .v84 #header .header-actions .icon-button,
   .v84 #header .header-actions .bag-button { min-width:44px; min-height:44px; padding:7px; }
 }
@@ -23,7 +26,11 @@
   .v84 #header .header-actions .bag-button { min-width:44px; padding:5px; }
 }
 
-@media(max-width:1279px) { .v84 #header > nav { display:none; } }
+@media (max-width:700px) and (pointer:fine), (max-width:700px) and (pointer:none) {
+  .v84 #header { height:auto; min-height:72px; flex-wrap:wrap; align-content:center; padding-block:4px; }
+  .v84 #header > nav { order:1; flex:0 0 100%; justify-content:center; flex-wrap:wrap; gap:4px 12px; margin:0; }
+  .v84 #header > nav a { padding-block:2px; }
+}
 .v84 .brand-ga { display:block; width:38px; flex:none; }
 .v84 .footer-brand .footer-logo { display:block; width:181px; max-width:100%; height:auto; }
 @media (max-width:700px) {
