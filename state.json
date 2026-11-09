@@ -1,91 +1,48 @@
 {
   "checkpoint": {
+    "schema": "goal-agent-handoff-v2",
+    "task_id": "tempo-womens-product-names-20261109",
+    "branch": "codex/tempo-womens-product-names-20261109",
+    "head_commit": "5162e32c01ae1adafb5094c1eda9831e47a1d6b0",
+    "base_commit": "fc5adec681f20e64756d5ff3a5711925a0560c52",
+    "contract_version": "2.0",
+    "session": "codex-20261109-tempo-names-a0b7",
+    "engine": "codex",
     "approved_scope": [
-      "Owner BUILD + REVIEW attachment 86cb58e4 on 2026-11-08: dedicated branch from production; selective cart quotes/tracking guards; footer/story wording; hide Collective. Draft PR only.",
-      "Production payment and every shipping/delivery claim remain unchanged. No provider-backed payment tests/sessions/charges, settings/modes changes, merge, deploy, promotion, campaign work or SQL.",
-      "Owner wording correction: Evolution is our purpose replaces Movement is our purpose in existing story and metadata; update draft PR92, no production release."
-    ],
-    "base_commit": "7b98ba4e2cf44de4117923542f7de61f22a1903c",
-    "branch": "codex/correctness-story-review-20261108",
-    "changed_paths": [
-      "docs/reviews/correctness-story-20261108.md",
-      "docs/reviews/correctness-story-20261108/build-results.json",
-      "docs/reviews/correctness-story-20261108/checks.json",
-      "docs/reviews/correctness-story-20261108/http-checks.json",
-      "docs/reviews/correctness-story-20261108/legacy-comparison.json",
-      "scripts/import-v84.cjs",
-      "scripts/test-cart-quotes.cjs",
-      "scripts/test-correctness-review.cjs",
-      "scripts/test-launch-backend.cjs",
-      "scripts/test-story-review.cjs",
-      "src/app/about/page.tsx",
-      "src/app/api/checkout/route.ts",
-      "src/app/api/order-status/route.ts",
-      "src/app/api/stripe-webhook/route.ts",
-      "src/app/cart/page.tsx",
-      "src/app/page.tsx",
-      "src/app/sitemap.ts",
-      "src/components/Footer.tsx",
-      "src/lib/checkout-quote.ts",
-      "src/lib/meta-capi.ts",
-      "src/middleware.ts",
-      "src/v84/Shell.tsx",
-      "src/v84/reference-experience.js",
-      "src/v84/story-content.js"
+      "Owner requests title-only renaming of all women’s TEMPO items on the website and matching Apliiq/Tapstitch records; lighter tee name is Daily Contour Tee."
     ],
     "completed": [
-      "Full cart/email/variant/customization quote context with stale/unmount/duplicate-click guards, authoritative quote values, successful-only InitiateCheckout, tracking cannot block handoff.",
-      "Granted-consent and persisted-paid/mode Purchase guards kept separate from payment/order/fulfillment/receipts; refund suppression preserved.",
-      "Our Story navigation/footer/metadata/home link and approved prose via one canonical markup module shared with the importer, preserving layout/images; retired footer adjective removed with legal/non-affiliation preserved.",
-      "Collective homepage/nav/footer/sitemap exposure removed; temporary 307 to /shop; original page/assets retained.",
-      "Source-preservation, local HTTP and Chrome 390/1440 browser checks pass; production STORE_OPEN=true confirmed read-only.",
-      "Draft PR92 opened and read-back verified with exact base/head, draft and unmerged state; final remote main and production deploy unchanged.",
-      "Replaced both canonical story occurrences and metadata; updated existing story expectations and review record, preserving every other story/layout/image field.",
-      "Owner evolution wording pushed as be5f7b1; draft PR92 refreshed/read back and local preview rebuilt/restarted."
+      "Renamed and verified 13 Apliiq saved-design titles across Core Tee, Travel Pant, Session Short, and Warm-Up Hoodie colors.",
+      "Renamed and verified 15 Tapstitch saved-design titles across Layer Quarter-Zip, Repeat Legging, Anchor Bra, and Daily Contour Tee colors.",
+      "Merged PR #98, changing only eight website product name fields in src/lib/products.ts; production deploy 6af180bb35ff14a2f9f1d62d is ready and the live /shop catalog shows all eight names."
     ],
-    "contract_version": "2.0",
-    "engine": "codex",
+    "tests": [
+      "No tests run; user requested title changes only."
+    ],
+    "unresolved": [],
+    "next_action": "Task complete; release the shared writer lock.",
+    "worktree_state": "clean_committed_and_pushed",
     "external_effects": [
       {
-        "details": "Two scoped commits pushed to task branch with skip ci/skip netlify. Main remains7b98ba4; previous growth branch and unrelated worktrees untouched.",
-        "reference": "d3cfcca408d68e2031f4780939061d227f560fa8",
-        "status": "confirmed"
+        "status": "confirmed",
+        "reference": "Apliiq saved designs",
+        "details": "13 product title fields updated; stable product IDs and all other fields retained."
       },
       {
-        "details": "Draft PR https://github.com/gdove90/portugoool-site/pull/92 created and read back: draft=true, merged=false, base main7b98ba4, head d3cfcca. Production Netlify deploy remains6aef814247b2319bbaedebb1. No deploy or settings changes.",
-        "reference": "gdove90/portugoool-site / codex/correctness-story-review-20261108 -> main / draft PR",
-        "status": "confirmed"
+        "status": "confirmed",
+        "reference": "Tapstitch products pool",
+        "details": "15 product title fields updated; stable product IDs and all other fields retained."
       },
       {
-        "details": "PR92 body/readback uses heritage/identity/evolution, remains draft and unmerged, and head is be5f7b1735c297281614ac6788656cf56ff71656. Remote main remains7b98ba4. No deploy.",
-        "reference": "PR92 / Evolution wording body update",
-        "status": "confirmed"
+        "status": "confirmed",
+        "reference": "PR #98 / Netlify production",
+        "details": "PR #98 merged as 60391da16e6eaf6a1ce3b85f65c39bd12680e215; production deploy 6af180bb35ff14a2f9f1d62d is ready."
       }
-    ],
-    "head_commit": "be5f7b1735c297281614ac6788656cf56ff71656",
-    "next_action": "Owner reviews draft PR92 with Evolution is our purpose. Production stays unchanged; no merge/deploy or provider payment tests authorized.",
-    "schema": "goal-agent-handoff-v2",
-    "session": "codex-story-evolution-20261108",
-    "task_id": "correctness-story-review-20261108",
-    "tests": [
-      "8 cart + 14 correctness + 4 story regressions pass. Existing Meta10 (978 combinations), discount6, welcome10, popup8 and women-fit1 grouped suite pass.",
-      "Typecheck/lint/build pass with four prior img warnings; no new warnings.",
-      "All three original legacy suites fail on both exact base and candidate at same assertions: Halo after17 pass stale3400vs2400; size guide2vs1; old payment raw pin mismatch.",
-      "Two broader suites retain baseline failures: backend public-product count19vs11 (44otherchecks pass); v84 migration list after27pass. Updated only tracking test fixture to return persisted row, retaining all assertions.",
-      "No provider payment/session/charge/fulfillment/email/Meta dashboard tests. No Safari/iPhone test available.",
-      "All four existing story/importer/preservation/redirect checks PASS after evolution wording correction.",
-      "Evolution correction: production build PASS; rebuilt local /about HTTP confirms Evolution present and Movement sentence absent."
-    ],
-    "unresolved": [
-      "Five legacy/broad suites retain documented baseline fixture/pin failures; no claim they pass.",
-      "Actual iPhone/Safari and Meta provider deduplication unverified; not provider-payment release gates for this authorized scope.",
-      "Owner review/explicit approval required for future merge/deployment. Contribution UNKNOWN, BF offer UNSELECTED, no campaign work."
-    ],
-    "worktree_state": "clean_committed_and_pushed"
+    ]
   },
   "holder": {
     "acquired_at": "2026-11-09T07:08:06.660850+00:00",
-    "approval": "Owner requests 2026-11-09: rename all women\u2019s TEMPO product titles on the website and update matching Apliiq/Tapstitch product title fields to those names; lighter T-shirts named Daily Contour Tee. Change titles only.",
+    "approval": "Owner requests 2026-11-09: rename all women’s TEMPO product titles on the website and update matching Apliiq/Tapstitch product title fields to those names; lighter T-shirts named Daily Contour Tee. Change titles only.",
     "branch": "codex/tempo-womens-product-names-20261109",
     "engine": "codex",
     "session": "codex-20261109-tempo-names-a0b7",
@@ -102,7 +59,7 @@
     "start_commit": "d3cfcca408d68e2031f4780939061d227f560fa8",
     "task": "correctness-story-review-20261108"
   },
-  "revision": 123,
+  "revision": 124,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-09T07:35:14.761895+00:00"
+  "updated_at": "2026-11-09T08:22:20.138Z"
 }
