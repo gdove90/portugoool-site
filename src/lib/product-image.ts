@@ -1,6 +1,12 @@
 import studioBackgrounds from "@/v84/studio-backgrounds-v5.json";
 
 const studioPaths = new Map(studioBackgrounds.map(image => [image.originalSrc, image.src]));
+export const warmUpTeeFronts = new Map([
+  ["/products/goal-ga-minimal-black-catalog-product-front-20261022.webp", "/products/goal-ga-minimal-black-catalog-front-standard-20261109.webp"],
+  ["/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp", "/products/goal-ga-minimal-true-red-catalog-front-standard-20261109.webp"],
+  ["/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp", "/products/goal-ga-minimal-true-royal-catalog-front-standard-20261109.webp"],
+  ["/products/goal-ga-minimal-white-black-red-catalog-product-front-20261014.webp", "/products/goal-ga-minimal-white-catalog-front-standard-20261109.webp"],
+]);
 const referenceGrayLeadImages = new Set([
   "/products/tempo-core-training-tee/tempo-core-training-tee-black-product-front-upper-chest-20261104-8ca71725.webp",
   "/products/tempo-training-tee/tempo-training-tee-light-purple-ghost-front-20261104.webp",
@@ -12,7 +18,6 @@ const referenceGrayLeadImages = new Set([
   "/products/tempo-warmup-hoodie-black-product-front-20261106.webp",
   "/products/goal-monogram-cap-black-catalog-product-front-20261022.webp",
   "/products/goal-wordmark-cap-black-catalog-product-front-20261022.webp",
-  "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp",
   "/products/goal-ga-big-tee-black-catalog-product-front-20261022.webp",
   "/products/goal-ga-minimal-shorts-black-catalog-product-front-20261022.webp",
   "/products/goal-core-jogger-deep-black-catalog-product-front-owner-20261027.webp",
@@ -28,6 +33,8 @@ const referenceGrayLeadImages = new Set([
 export function catalogImageSrc(src: string): string {
   if (!src.startsWith("/products/")) return src;
   const url = new URL(src, "https://goool.shop");
+  const warmUpFront = warmUpTeeFronts.get(url.pathname);
+  if (warmUpFront) return warmUpFront;
   if (referenceGrayLeadImages.has(url.pathname)) {
     return url.pathname.replace(/\.(webp|jpg)$/, "-neutral-gray-20261109.webp?v=reference-gray");
   }
@@ -40,8 +47,6 @@ export function catalogImageSrc(src: string): string {
   // keep every image cache from serving an earlier file.
   const replaced: Record<string, string> = {
     "/products/goal-ga-minimal-true-royal-catalog-product-back-20261022.webp": "true-royal-back-v3-20261022",
-    "/products/goal-ga-minimal-true-royal-catalog-product-front-20261022.webp": "true-royal-front-v2-20261022",
-    "/products/goal-ga-minimal-black-catalog-product-front-20261022.webp": "black-front-v2-20261022",
     "/products/goal-ga-minimal-black-catalog-product-back-20261022.webp": "black-back-v2-20261022",
     "/products/goal-ga-minimal-true-red-catalog-product-back-20261022.webp": "true-red-back-v2-20261022",
     // Heritage Hoodie Grey Heather: the owner's product shot replaced the
