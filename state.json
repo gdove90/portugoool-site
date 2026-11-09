@@ -85,7 +85,7 @@
   },
   "holder": {
     "acquired_at": "2026-11-09T07:08:06.660850+00:00",
-    "approval": "Owner request 2026-11-09: change all women\u2019s product names on the website; lighter T-shirts named Daily Contour Tee.",
+    "approval": "Owner requests 2026-11-09: rename all women\u2019s TEMPO product titles on the website and update matching Apliiq/Tapstitch product title fields to those names; lighter T-shirts named Daily Contour Tee. Change titles only.",
     "branch": "codex/tempo-womens-product-names-20261109",
     "engine": "codex",
     "session": "codex-20261109-tempo-names-a0b7",
@@ -102,7 +102,7 @@
     "start_commit": "d3cfcca408d68e2031f4780939061d227f560fa8",
     "task": "correctness-story-review-20261108"
   },
-  "revision": 122,
+  "revision": 123,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-09T07:08:06.660803+00:00"
+  "updated_at": "2026-11-09T07:35:14.761895+00:00"
 }
