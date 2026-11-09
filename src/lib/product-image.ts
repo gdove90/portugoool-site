@@ -18,7 +18,7 @@ export function catalogImageSrc(src: string): string {
   if (!src.startsWith("/products/")) return src;
   const url = new URL(src, "https://goool.shop");
   if (tempoLeadImages.has(url.pathname)) {
-    return url.pathname.replace(/\.(webp|jpg)$/, "-neutral-gray-20261109.webp");
+    return url.pathname.replace(/\.(webp|jpg)$/, "-neutral-gray-20261109.webp?v=reference-gray");
   }
   const studioPath = studioPaths.get(url.pathname);
   if (studioPath) url.pathname = studioPath;
