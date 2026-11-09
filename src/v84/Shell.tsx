@@ -32,9 +32,8 @@ export default function Shell({ children }: { children: ReactNode }) {
   // Public service pages must not mount the store's searchable catalog,
   // shopping dialogs, or discount popup behind the renovation gate.
   if (path === "/gate") return <main id="main">{children}</main>;
-  const helpPage = path === "/track-order" || path === "/refunds" ? path : undefined;
-  if (helpPage || ["/contact", "/support", "/faq", "/shipping-returns", "/success", "/privacy", "/terms"].includes(path)) {
-    return <CustomerServiceShell immersive={path === "/success"} helpPage={helpPage}>{children}</CustomerServiceShell>;
+  if (["/contact", "/support", "/faq", "/shipping-returns", "/track-order", "/success", "/privacy", "/terms", "/refunds"].includes(path)) {
+    return <CustomerServiceShell immersive={path === "/success"} path={path}>{children}</CustomerServiceShell>;
   }
   return <StoreShell comingSoonOnly={path === "/women" && TEMPO_COLLECTION_COMING_SOON}>{children}</StoreShell>;
 }
