@@ -8,7 +8,7 @@
 /* Owner requirement: keep desktop links visible, including in zoomed windows.
    The touch layout in mobile-header.css is the only collapsed header.
    Change this behavior only at the owner's explicit request. */
-.v84 #header > nav { display:flex; }
+.v84 #header > nav { display:flex; column-gap:clamp(20px, calc(8vw - 40px), 64px); }
 .v84 #header .header-actions .menu-button { display:none; }
 @media (max-width:1279px) {
   .v84 #header { display:flex; gap:6px; justify-content:space-between; padding:0 12px; }
@@ -28,7 +28,7 @@
 
 @media (max-width:700px) and (pointer:fine), (max-width:700px) and (pointer:none) {
   .v84 #header { height:auto; min-height:72px; flex-wrap:wrap; align-content:center; padding-block:4px; }
-  .v84 #header > nav { order:1; flex:0 0 100%; justify-content:center; flex-wrap:wrap; gap:4px 12px; margin:0; }
+  .v84 #header > nav { order:1; flex:0 0 100%; justify-content:center; flex-wrap:wrap; gap:6px 18px; margin:0; }
   .v84 #header > nav a { padding-block:2px; }
 }
 .v84 .brand-ga { display:block; width:38px; flex:none; }
