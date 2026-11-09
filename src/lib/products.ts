@@ -4937,7 +4937,7 @@ export const products: Product[] = [
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000017",
-    name: "TEMPO Core Training Tee",
+    name: "TEMPO Core Tee",
     slug: "tempo-core-training-tee",
     blank: "LST350",
     description:
@@ -4980,7 +4980,7 @@ export const products: Product[] = [
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000018",
-    name: "TEMPO Quarter Zip",
+    name: "TEMPO Layer Quarter-Zip",
     slug: "tempo-quarter-zip",
     blank: "WT0092",
     description:
@@ -5159,7 +5159,7 @@ export const products: Product[] = [
   // Record: designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000019",
-    name: "TEMPO Training Pants",
+    name: "TEMPO Travel Pant",
     slug: "tempo-training-pants",
     blank: "LPST800",
     description:
@@ -5285,7 +5285,7 @@ export const products: Product[] = [
   // Supplier record: designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000022",
-    name: "TEMPO Training Shorts",
+    name: "TEMPO Session Short",
     slug: "tempo-training-shorts",
     blank: "LST485",
     description:
@@ -5324,7 +5324,7 @@ export const products: Product[] = [
   // designs/62_tempo-collection-proofs-2026-10-26/.
   {
     id: "80000000-0000-4000-8000-000000000020",
-    name: "TEMPO Warmup Hoodie",
+    name: "TEMPO Warm-Up Hoodie",
     slug: "tempo-warmup-hoodie",
     blank: "7519",
     description:
@@ -5462,7 +5462,7 @@ export const products: Product[] = [
   // purchasing 2026-11-04 after saved artwork and clothing-label checks.
   {
     id: "80000000-0000-4000-8000-000000000021",
-    name: "TEMPO Training Tee",
+    name: "Daily Contour Tee",
     slug: "tempo-training-tee",
     blank: "WT0216",
     description:
@@ -5493,7 +5493,7 @@ export const products: Product[] = [
   // == end TEMPO Training Tee ==
   {
     "id": "80000000-0000-4000-8000-000000000025",
-    "name": "TEMPO Training Bra",
+    "name": "TEMPO Anchor Bra",
     "slug": "tempo-training-bra",
     "blank": "WT0093",
     "description": "A close-fitting racerback with a cropped length and stretch that moves with you. An easy addition to your daily rotation.",
@@ -5531,7 +5531,7 @@ export const products: Product[] = [
   // all four designs carrying the 4 x 4 cm GOAL clothing label ($15.97 unit).
   {
     "id": "80000000-0000-4000-8000-000000000026",
-    "name": "TEMPO Training Leggings",
+    "name": "TEMPO Repeat Legging",
     "slug": "tempo-training-leggings",
     "blank": "WB0025",
     "description": "High-rise, ankle-length stretch leggings with a clean front and the GA monogram centered on the back waistband. Shown with a TEMPO Training Bra for styling. Leggings only.",
