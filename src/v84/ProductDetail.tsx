@@ -26,6 +26,7 @@ function ProductView({ product }: {
 }) {
     const { addItem } = useCart();
     const [variantIndex, setVariantIndex] = useState(defaultVariant(product)?.index ?? 0);
+    const [previewVariantIndex, setPreviewVariantIndex] = useState<number | null>(null);
     const [size, setSize] = useState<Size | null>(product.sizes.length === 1 ? product.sizes[0] : null);
     const [imageIndex, setImageIndex] = useState(0);
     const [error, setError] = useState("");
@@ -35,6 +36,7 @@ function ProductView({ product }: {
     const viewed = useRef<string | null>(null);
     const variant = product.colorVariants?.[variantIndex];
     const images = productGalleryImages(product, variantIndex);
+    const previewImages = previewVariantIndex === null ? null : productGalleryImages(product, previewVariantIndex);
     const color = variant?.name || product.color;
     const fitProfile = womensFitFor(product.id);
     const women = collectionLabel(product) === "TEMPO";
@@ -44,6 +46,24 @@ function ProductView({ product }: {
     const soldOut = isSoldOut(product);
     const custom = Boolean(customName.trim() || customNumber.trim());
     const price = product.priceCents + (custom ? product.customizationPriceCents : 0);
+    const colorOptions = orderedVariants(product).map(({ variant: option, index }) => (
+        <button
+            key={option.name}
+            className="color-swatch"
+            style={{ "--swatch": option.hex } as React.CSSProperties}
+            aria-label={`${option.name}${option.comingSoon ? ", coming soon" : ""}`}
+            aria-pressed={variantIndex === index}
+            onPointerEnter={event => {
+                if (event.pointerType === "mouse") setPreviewVariantIndex(index);
+            }}
+            onPointerLeave={() => setPreviewVariantIndex(null)}
+            onClick={() => {
+                setPreviewVariantIndex(null);
+                setVariantIndex(index);
+                setImageIndex(0);
+            }}
+        />
+    ));
     useEffect(() => {
         const query = new URLSearchParams(window.location.search);
         const wanted = query.get("color");
@@ -58,6 +78,10 @@ function ProductView({ product }: {
             trackViewContent({ slug: product.slug, name: product.name, value: product.priceCents / 100, currency: "USD" });
         }
     }, [product]);
+    function changeGalleryImage(index: number) {
+        setPreviewVariantIndex(null);
+        setImageIndex(index);
+    }
     function add() {
         if (comingSoon || soldOut || !hasPrice(product))
             return;
@@ -70,7 +94,7 @@ function ProductView({ product }: {
         trackAddToCart({ slug: product.slug, name: product.name, value: price / 100, currency: "USD", quantity: 1, lineKey: `${product.id}:${color}:${size}` });
         document.dispatchEvent(new Event("goool:open-bag"));
     }
-    return <><div className="breadcrumb pdp-breadcrumb"><Link href="/">Home</Link> / <Link href="/shop">Collection</Link> / {product.name}</div><section className="pdp"><ProductGallery images={images} index={imageIndex} onChange={setImageIndex} /><div className="pdp-info"><p className="eyebrow">{collectionLabel(product)} COLLECTION</p><h1>{product.name}</h1><p className="pdp-price">{hasPrice(product) ? formatPrice(price) : "Price to be announced"}{product.compareAtPriceCents && product.compareAtPriceCents > product.priceCents ? <del className="note"> {formatPrice(product.compareAtPriceCents)}</del> : null}</p><p className="pdp-description">{product.description}</p><div className="field-label color-label"><span>COLOR</span><Strike /><span>{color}</span></div><div className="color-options" role="group" aria-label="Choose color">{orderedVariants(product).map(({ variant: v, index }) => <button key={v.name} className="color-swatch" style={{ "--swatch": v.hex } as React.CSSProperties} aria-label={`${v.name}${v.comingSoon ? ", coming soon" : ""}`} aria-pressed={variantIndex === index} onClick={() => { setVariantIndex(index); setImageIndex(0); }}/>)}</div><div className="field-label"><span>SELECT SIZE</span><button onClick={() => fit.current?.showModal()}>Fit guide</button></div><div className="sizes" role="group" aria-label="Choose size">{product.sizes.map(s => <button className="size" key={s} aria-pressed={size === s} onClick={() => { setSize(s); setError(""); }}>{s === "OS" ? "One size" : s}</button>)}</div>{(product.fitNote || fitProfile?.summary) && <p className={fitProfile ? "pdp-fit-summary" : "note"}>{product.fitNote || fitProfile?.summary}</p>}{product.customNameAvailable && <label>Name<input maxLength={24} value={customName} onChange={e => setCustomName(e.target.value)}/></label>}{product.customNumberAvailable && <label>Number<input inputMode="numeric" maxLength={2} value={customNumber} onChange={e => setCustomNumber(e.target.value.replace(/\D/g, ""))}/></label>}{custom && <p className="note">Customization: {formatPrice(product.customizationPriceCents)}</p>}<button className="btn add-button" onClick={add} disabled={Boolean(comingSoon || soldOut || !hasPrice(product))}>{soldOut ? "Sold out" : comingSoon ? "Coming soon" : "Add to bag"}<Strike /></button><p role="alert" className="form-error">{error}</p>{remainingUnits(product) !== null && <p className="note">{remainingUnits(product)} remaining</p>}{product.disclosure && <p className="pdp-note">{product.disclosure}</p>}{product.originLabel && <p className="note">{product.originLabel}</p>}<Detail title="FIT & SIZING"><FitDetails facts={fitProfile?.facts} fallbackFit={product.fit}/><button className="text-link" onClick={() => fit.current?.showModal()}>View fit guide</button></Detail><Detail title="MATERIALS">{product.fabric}</Detail><Detail title="CARE">{product.careInstructions}</Detail><Detail title="SHIPPING & RETURNS"><Link className="nav-underline" href="/shipping-returns">Delivery and shipping</Link><p>All sales are final. See the <Link className="nav-underline" href="/refunds">refund policy</Link> for damaged, defective or wrong items.</p></Detail></div></section><section className="editorial">{women
+    return <><div className="breadcrumb pdp-breadcrumb"><Link href="/">Home</Link> / <Link href="/shop">Collection</Link> / {product.name}</div><section className="pdp"><ProductGallery images={previewImages ?? images} index={previewImages ? 0 : imageIndex} onChange={changeGalleryImage} /><div className="pdp-info"><p className="eyebrow">{collectionLabel(product)} COLLECTION</p><h1>{product.name}</h1><p className="pdp-price">{hasPrice(product) ? formatPrice(price) : "Price to be announced"}{product.compareAtPriceCents && product.compareAtPriceCents > product.priceCents ? <del className="note"> {formatPrice(product.compareAtPriceCents)}</del> : null}</p><p className="pdp-description">{product.description}</p><div className="field-label color-label"><span>COLOR</span><Strike /><span>{color}</span></div><div className="color-options" role="group" aria-label="Choose color">{colorOptions}</div><div className="field-label"><span>SELECT SIZE</span><button onClick={() => fit.current?.showModal()}>Fit guide</button></div><div className="sizes" role="group" aria-label="Choose size">{product.sizes.map(s => <button className="size" key={s} aria-pressed={size === s} onClick={() => { setSize(s); setError(""); }}>{s === "OS" ? "One size" : s}</button>)}</div>{(product.fitNote || fitProfile?.summary) && <p className={fitProfile ? "pdp-fit-summary" : "note"}>{product.fitNote || fitProfile?.summary}</p>}{product.customNameAvailable && <label>Name<input maxLength={24} value={customName} onChange={e => setCustomName(e.target.value)}/></label>}{product.customNumberAvailable && <label>Number<input inputMode="numeric" maxLength={2} value={customNumber} onChange={e => setCustomNumber(e.target.value.replace(/\D/g, ""))}/></label>}{custom && <p className="note">Customization: {formatPrice(product.customizationPriceCents)}</p>}<button className="btn add-button" onClick={add} disabled={Boolean(comingSoon || soldOut || !hasPrice(product))}>{soldOut ? "Sold out" : comingSoon ? "Coming soon" : "Add to bag"}<Strike /></button><p role="alert" className="form-error">{error}</p>{remainingUnits(product) !== null && <p className="note">{remainingUnits(product)} remaining</p>}{product.disclosure && <p className="pdp-note">{product.disclosure}</p>}{product.originLabel && <p className="note">{product.originLabel}</p>}<Detail title="FIT & SIZING"><FitDetails facts={fitProfile?.facts} fallbackFit={product.fit}/><button className="text-link" onClick={() => fit.current?.showModal()}>View fit guide</button></Detail><Detail title="MATERIALS">{product.fabric}</Detail><Detail title="CARE">{product.careInstructions}</Detail><Detail title="SHIPPING & RETURNS"><Link className="nav-underline" href="/shipping-returns">Delivery and shipping</Link><p>All sales are final. See the <Link className="nav-underline" href="/refunds">refund policy</Link> for damaged, defective or wrong items.</p></Detail></div></section><section className="editorial">{women
         ? <MobileImage src="/v84/editorial/women-editorial-track-20261104.webp" alt="Athlete warming up beside a running track in GOAL Athletics TEMPO gear" loading="lazy" width={1925} height={817}/>
         : <MobileImage src="/v84/editorial/product-editorial-predawn-training-20261104.webp" alt="Two athletes training before sunrise in GOAL Athletics, with the GA monogram on the men’s shorts" loading="lazy" width={2048} height={768}/>}<div><h2>For the session.<br />And what’s next.</h2></div></section>{recommendations.length > 0 && <section className="section"><div className="section-heading"><div><p className="eyebrow">MAKE IT YOUR ROTATION</p><h2>Goes with your day.</h2></div></div><ProductGrid products={recommendations}/></section>}<dialog className="info-dialog" ref={fit} aria-label={`Fit guide for ${product.name}`}><div className="dialog-head"><h2>Find your fit.</h2><button className="close-button" aria-label="Close fit guide" onClick={() => fit.current?.close()}>Close &times;</button></div><SizeGuide productId={product.id}/></dialog></>;
 }
