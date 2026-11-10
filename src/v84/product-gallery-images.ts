@@ -1,5 +1,5 @@
 import type { Product } from "@/lib/types";
-import { warmUpTeeFronts } from "@/lib/product-image";
+import { catalogStudioImageSrc, warmUpTeeFronts } from "@/lib/product-image";
 import manifest from "./mens-on-body-v2.json";
 import studioManifest from "./mens-studio-v3.json";
 import latestStudioManifest from "./mens-studio-v4.json";
@@ -52,10 +52,12 @@ function sourceGalleryImages(product: Product, variantIndex: number): Product["i
 const backgrounds = new Map(backgroundManifest.map(image => [image.originalSrc, image]));
 export function productGalleryImages(product: Product, variantIndex: number): Product["images"] {
   return sourceGalleryImages(product, variantIndex).map(image => {
-    const warmUpFront = warmUpTeeFronts.get(image.src);
-    if (warmUpFront) return { ...image, src: warmUpFront };
     const replacement = backgrounds.get(image.src);
+    const warmUpFront = warmUpTeeFronts.get(image.src);
     // Owner, 2026-10-23: no visualization captions under product images.
-    return replacement ? { src: replacement.src, alt: image.alt } : image;
+    const current = warmUpFront ? { ...image, src: warmUpFront }
+      : replacement ? { src: replacement.src, alt: image.alt } : image;
+    const src = catalogStudioImageSrc(current.src);
+    return src === current.src ? current : { ...current, src };
   });
 }

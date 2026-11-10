@@ -1,6 +1,8 @@
 import studioBackgrounds from "@/v84/studio-backgrounds-v5.json";
+import catalogStudioImages from "@/v84/catalog-studio-images.json";
 
 const studioPaths = new Map(studioBackgrounds.map(image => [image.originalSrc, image.src]));
+const catalogStudioPaths = new Map(Object.entries<string>(catalogStudioImages));
 export const warmUpTeeFronts = new Map([
   ["/products/goal-ga-minimal-black-catalog-product-front-20261022.webp", "/products/goal-ga-minimal-black-catalog-front-standard-20261109.webp"],
   ["/products/goal-ga-minimal-true-red-catalog-product-front-20261022.webp", "/products/goal-ga-minimal-true-red-catalog-front-standard-20261109.webp"],
@@ -30,8 +32,8 @@ const referenceGrayLeadImages = new Set([
 
 // Change this revision when replacing catalog image bytes at existing paths.
 // Source records remain plain file paths for supplier/launch-folder tooling.
-export function catalogImageSrc(src: string): string {
-  if (!src.startsWith("/products/")) return src;
+function versionedCatalogImageSrc(src: string): string {
+  if (!src.startsWith("/products/") || src.startsWith("/products/catalog-studio/")) return src;
   const url = new URL(src, "https://goool.shop");
   const warmUpFront = warmUpTeeFronts.get(url.pathname);
   if (warmUpFront) return warmUpFront;
@@ -116,4 +118,17 @@ export function catalogImageSrc(src: string): string {
     : "backdrop-20260925";
   url.searchParams.set("v", revision);
   return url.pathname + url.search + url.hash;
+}
+
+function catalogStudioPath(src: string): string | undefined {
+  return catalogStudioPaths.get(src.split(/[?#]/, 1)[0]);
+}
+
+export function catalogImageSrc(src: string): string {
+  const versioned = versionedCatalogImageSrc(src);
+  return catalogStudioPath(versioned) ?? versioned;
+}
+
+export function catalogStudioImageSrc(src: string): string {
+  return catalogStudioPath(versionedCatalogImageSrc(src)) ?? src;
 }

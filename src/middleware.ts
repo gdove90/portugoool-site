@@ -3,6 +3,7 @@ import { TEMPO_COLLECTION_COMING_SOON } from "@/lib/collection-launch";
 import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
 import { storeClosed, SERVICE_PATHS } from "@/lib/store-status";
 import { GATE_COOKIE, LEGACY_COOKIE, gateToken } from "@/lib/gate";
+import catalogStudioImages from "@/v84/catalog-studio-images.json";
 
 // Public launch: 2026-09-25. Keep canonical and retired-route redirects here.
 //
@@ -61,6 +62,7 @@ const PUBLIC_PATHS = new Set([
   "/apple-icon.png",
 ]);
 const PUBLIC_PREFIXES = ["/icons/", "/print/", "/fonts/", "/brand/", "/unsubscribe/", "/opengraph-image", "/.well-known/", "/.netlify/"];
+const PUBLIC_CATALOG_STUDIO_IMAGES = new Set<string>(Object.values(catalogStudioImages));
 // Preserve existing payment returns and order links on their original host.
 // Public support and legal pages instead canonicalize after the cutover.
 const LEGACY_RETURN_PATHS = new Set(["/success", "/track-order"]);
@@ -81,6 +83,7 @@ const LOCKUP_HOODIE_CATALOG_IMAGE = /^\/products\/goal-lockup-hoodie-(?:black|gr
 const HERITAGE_HOODIE_CATALOG_IMAGE = /^\/products\/goal-heritage-hoodie-(?:black|grey-heather|bone|navy)-catalog-(?:product-front|model-(?:front|quarter-left|quarter-right))-20261022\.webp$/;
 
 function isPublic(pathname: string): boolean {
+  if (PUBLIC_CATALOG_STUDIO_IMAGES.has(pathname)) return true;
   return ST720_IMAGE.test(pathname) || GA_MINIMAL_WHITE_CATALOG_IMAGE.test(pathname) || GA_MINIMAL_PRODUCT_IMAGE.test(pathname) || GA_BIG_TEE_PRODUCT_IMAGE.test(pathname) || GA_MINIMAL_SHORTS_CATALOG_IMAGE.test(pathname) || GA_MATCHDAY_CAP_CATALOG_IMAGE.test(pathname) || STADIUM_CAP_CATALOG_IMAGE.test(pathname) ||GA_MINIMAL_MODEL_CATALOG_IMAGE.test(pathname) || GA_BIG_TEE_MODEL_CATALOG_IMAGE.test(pathname) || LOCKUP_HOODIE_CATALOG_IMAGE.test(pathname) || HERITAGE_HOODIE_CATALOG_IMAGE.test(pathname) ||(TEMPO_COLLECTION_COMING_SOON && ["/women", "/v84/assets/women.png"].includes(pathname)) || SERVICE_PATHS.has(pathname) || PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
