@@ -11,7 +11,7 @@ Owner decision 2026-10-28. One shared record for every Claude-side GOAL agent, s
 Nobody rediscovers what is already recorded here. Nobody deletes another agent's entry; a superseded entry is marked INVALIDATED with a pointer to the newer one.
 
 ## EVIDENCE CLASSES (use exactly one per entry)
-- OBSERVED: directly inspected evidence (a metric returned by Metricool, a page fetched, a file downloaded and inspected).
+- OBSERVED: directly inspected evidence, such as a verified account metric, a page fetched, or a file read. Dated historical records retain their original source. Follow the retired-service rule in `marketing/daily-agents/00-GLOBAL-RULES.md`.
 - SUPPORTED INFERENCE: a reasoned conclusion supported by identified evidence.
 - EXPERIMENT: a hypothesis to test (record it in the experiment ledger too).
 - NO DATA: insufficient evidence.

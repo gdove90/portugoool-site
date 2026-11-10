@@ -15,7 +15,7 @@ Six Claude cloud routines run every morning in sequence, Eastern Time, and hand 
 
 | Routine | State | Connector |
 |---|---|---|
-| 1/6 Performance & Consumer Intelligence | scheduled, `0 10 * * *` UTC | Metricool, read-only (4 tools) |
+| 1/6 Performance & Consumer Intelligence | scheduled, `0 10 * * *` UTC | Authorized evidence only |
 | 2/6 Marketing Director strategy | paused, on demand | none |
 | 3/6 AEO, SEO & Ecommerce | scheduled, `30 11 * * *` UTC | none |
 | 4/6 Creative QA & Second-Opinion Specialist | paused, on demand | Google Drive, read-only (4 tools) |
@@ -26,4 +26,4 @@ Six Claude cloud routines run every morning in sequence, Eastern Time, and hand 
 
 Each routine's message is `00-GLOBAL-RULES.md` followed by its role file. The live copies are at https://claude.ai/code/routines (edit, pause or delete there). Cron times are UTC and set for Eastern Standard Time (UTC-5); until DST ends on 2026-11-01 they run one hour later in local time, and in March 2027 they need moving back one hour.
 
-Routine limits: no Instagram, Metricool, Meta Ads, Stripe or email access (agents write DATA NOT AVAILABLE); website and web research only. Nothing is posted, bought or emailed. Model: claude-sonnet-5-5. Environment: goal athletics. Repo: gdove90/portugoool-site.
+Routine limits follow `00-GLOBAL-RULES.md`, including the owner directive retiring Metricool. When verified account data is unavailable, agents write DATA NOT AVAILABLE and use verified website, public research and dated historical evidence. Nothing is posted, bought or emailed. Model: claude-sonnet-5-5. Environment: goal athletics. Repo: gdove90/portugoool-site.
