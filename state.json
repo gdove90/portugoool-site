@@ -1,25 +1,31 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Owner authorized stale lock recovery for analytics on 2026-11-11"
+      "Owner-authorized website analytics and Command Center reporting"
     ],
-    "branch": "codex/goal-product-photo-background-20261110",
+    "branch": "codex/command-center-tracking",
     "completed": [
-      "Preserved unchanged remote task branch in isolated recovery checkout; no image files modified"
+      "PR 100 merged; production dfa0bdb deployed",
+      "Browser session, product and bag events observed centrally with verification=true",
+      "Read-only scheduled Stripe checkout reconciliation deployed"
     ],
     "contract_version": "2.0",
     "external_effects": [
-      "Owner-authorized coordination takeover only"
+      "GOAL production deploy 6af4dd7aefddab8a65931acf",
+      "Functions-only production CC_EVENTS_TOKEN set"
     ],
-    "head_commit": "3942a1b73e151f560bb1775dcd9295269efe6ac6",
-    "next_action": "Release recovered lock; acquire new analytics task",
+    "head_commit": "883aee13c168c9db367e764f1297f22402e7351d",
+    "next_action": "Monitor normal consented traffic; analytics task complete and lock available",
     "schema": "goal-agent-handoff-v2",
-    "task_id": "goal-product-photo-background-20261110",
+    "task_id": "command-center-analytics-20261111",
     "tests": [
-      "Exact task remote HEAD verified"
+      "TypeScript passes",
+      "Website analytics tests pass",
+      "Payment preservation checks pass for 18 protected files"
     ],
     "unresolved": [
-      "Photo task completion is not asserted; original local worktrees remain untouched"
+      "Legacy halo-checkout test expects stale 34-dollar price; production catalog is unchanged at 24 dollars",
+      "No real purchase was made during verification"
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
@@ -56,7 +62,7 @@
     "start_commit": "3942a1b73e151f560bb1775dcd9295269efe6ac6",
     "task": "goal-product-photo-background-20261110"
   },
-  "revision": 130,
+  "revision": 131,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-11T21:07:00.968533+00:00"
+  "updated_at": "2026-11-11T21:33:11.903103+00:00"
 }
