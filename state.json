@@ -1,43 +1,26 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Owner requests title-only renaming of all women\u2019s TEMPO items on the website and matching Apliiq/Tapstitch records; lighter tee name is Daily Contour Tee."
+      "Owner authorized stale lock recovery for analytics on 2026-11-11"
     ],
-    "base_commit": "fc5adec681f20e64756d5ff3a5711925a0560c52",
-    "branch": "codex/tempo-womens-product-names-20261109",
+    "branch": "codex/goal-product-photo-background-20261110",
     "completed": [
-      "Renamed and verified 13 Apliiq saved-design titles across Core Tee, Travel Pant, Session Short, and Warm-Up Hoodie colors.",
-      "Renamed and verified 15 Tapstitch saved-design titles across Layer Quarter-Zip, Repeat Legging, Anchor Bra, and Daily Contour Tee colors.",
-      "Merged PR #98, changing only eight website product name fields in src/lib/products.ts; production deploy 6af180bb35ff14a2f9f1d62d is ready and the live /shop catalog shows all eight names."
+      "Preserved unchanged remote task branch in isolated recovery checkout; no image files modified"
     ],
     "contract_version": "2.0",
-    "engine": "codex",
     "external_effects": [
-      {
-        "details": "13 product title fields updated; stable product IDs and all other fields retained.",
-        "reference": "Apliiq saved designs",
-        "status": "confirmed"
-      },
-      {
-        "details": "15 product title fields updated; stable product IDs and all other fields retained.",
-        "reference": "Tapstitch products pool",
-        "status": "confirmed"
-      },
-      {
-        "details": "PR #98 merged as 60391da16e6eaf6a1ce3b85f65c39bd12680e215; production deploy 6af180bb35ff14a2f9f1d62d is ready.",
-        "reference": "PR #98 / Netlify production",
-        "status": "confirmed"
-      }
+      "Owner-authorized coordination takeover only"
     ],
-    "head_commit": "5162e32c01ae1adafb5094c1eda9831e47a1d6b0",
-    "next_action": "Task complete; release the shared writer lock.",
+    "head_commit": "3942a1b73e151f560bb1775dcd9295269efe6ac6",
+    "next_action": "Release recovered lock; acquire new analytics task",
     "schema": "goal-agent-handoff-v2",
-    "session": "codex-20261109-tempo-names-a0b7",
-    "task_id": "tempo-womens-product-names-20261109",
+    "task_id": "goal-product-photo-background-20261110",
     "tests": [
-      "No tests run; user requested title changes only."
+      "Exact task remote HEAD verified"
     ],
-    "unresolved": [],
+    "unresolved": [
+      "Photo task completion is not asserted; original local worktrees remain untouched"
+    ],
     "worktree_state": "clean_committed_and_pushed"
   },
   "holder": {
@@ -73,7 +56,7 @@
     "start_commit": "fc5adec681f20e64756d5ff3a5711925a0560c52",
     "task": "tempo-womens-product-names-20261109"
   },
-  "revision": 127,
+  "revision": 128,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-11T21:05:59.506502+00:00"
+  "updated_at": "2026-11-11T21:06:23.647919+00:00"
 }
