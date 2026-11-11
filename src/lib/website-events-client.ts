@@ -15,7 +15,7 @@ export function websiteSession(): Session | null {
     }
     const now = Date.now();
     let s: Session | null = JSON.parse(sessionStorage.getItem(key) ?? 'null');
-    if (!s || !/^[a-f0-9-]{36}$/.test(s.id) || !channels.includes(s.channel) || now < s.last || now - s.last > 1800000) {
+    if (!s || (new URLSearchParams(location.search).get('cc_verify') === '1' && !s.verification) || !/^[a-f0-9-]{36}$/.test(s.id) || !channels.includes(s.channel) || now < s.last || now - s.last > 1800000) {
       const medium = new URLSearchParams(location.search).get('utm_medium') ?? '';
       let ref = ''; try { ref = new URL(document.referrer).hostname; } catch { /* Direct. */ }
       const channel = /^(cpc|ppc|paid|paid_social|display)$/.test(medium) ? 'paid' : medium === 'email' ? 'email'

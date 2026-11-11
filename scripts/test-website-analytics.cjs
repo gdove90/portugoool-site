@@ -1,0 +1,18 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs'); const vm = require('node:vm'); const ts = require('typescript'); const crypto = require('node:crypto');
+let consent = 'denied'; let calls = []; const store = new Map();
+const memory = {getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)};
+const sandbox = { exports:{}, require:n=> n === './meta-pixel' ? {marketingConsent:()=>consent} : require(n), sessionStorage:memory, document:{cookie:'',referrer:'https://google.com/'}, location:{hostname:'goalathletics.shop',pathname:'/shop/item',search:''}, navigator:{doNotTrack:'0'}, crypto, URL, URLSearchParams, Date, console, fetch:async (url,args)=>{calls.push({url,args});return {ok:true,status:204};} };
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/lib/website-events-client.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,sandbox);
+const client = sandbox.exports;
+client.trackWebsiteEvent('session_started'); assert.equal(calls.length,0);
+consent='granted';client.trackWebsiteEvent('session_started');client.trackWebsiteEvent('product_viewed');client.trackWebsiteEvent('session_started');
+const payloads=calls.map(c=>JSON.parse(c.args.body));assert.equal(payloads[0].session,payloads[1].session);assert.equal(payloads[0].id,payloads[2].id);assert.equal(payloads[0].channel,'search');assert(!JSON.stringify(payloads).includes('google.com'));
+sandbox.location.search='?cc_verify=1';client.trackWebsiteEvent('session_started');assert.equal(JSON.parse(calls.at(-1).args.body).verification,true);assert.notEqual(JSON.parse(calls.at(-1).args.body).session,payloads[0].session);
+consent='denied';client.trackWebsiteEvent('bag_item_added');assert.equal(calls.length,4);assert.equal(store.size,0);
+console.log('PASS consent, stable session identity, traffic-source minimization, verification isolation and withdrawal');
+(async()=>{calls=[];const server={exports:{},require,process:{env:{CC_EVENTS_TOKEN:'synthetic-token'}},console,AbortSignal,Date,fetch:async(url,args)=>{calls.push({url,args});return {ok:true,status:204};}};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('src/lib/website-events-server.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,server);
+const e={name:'session_started',id:'fixture-event',actor:'fixture-actor',session:'fixture-session',channel:'direct',verification:true};
+await server.exports.sendWebsiteEvent(e);await server.exports.sendWebsiteEvent(e);const a=JSON.parse(calls[0].args.body),b=JSON.parse(calls[1].args.body);assert.equal(a.event_id,b.event_id);assert.match(a.actor,/^[a-f0-9]{64}$/);assert(!calls[0].args.body.includes('fixture'));assert.equal(a.verification,true);
+console.log('PASS pseudonymization and replay idempotency');})().catch(e=>{console.error(e);process.exitCode=1});
