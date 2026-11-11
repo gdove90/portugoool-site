@@ -1,0 +1,21 @@
+{
+  "schema": "goal-agent-handoff-v2",
+  "contract_version": "2.0",
+  "task_id": null,
+  "engine": null,
+  "session": null,
+  "branch": null,
+  "base_commit": null,
+  "head_commit": null,
+  "worktree_state": "UNVERIFIED",
+  "approved_scope": [],
+  "approval_references": [],
+  "changed_paths": [],
+  "completed": [],
+  "tests": [],
+  "unresolved": [],
+  "external_effects": [],
+  "next_action": null,
+  "blocked_by": [],
+  "rollback": null
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "goal-product-readiness-v2",
+  "status": "HOLD",
+  "owner_approval": {
+    "audit": "not_required",
+    "build": "missing",
+    "deploy": "missing",
+    "real_supplier_order": "missing"
+  },
+  "product": {
+    "uuid": null,
+    "slug": null,
+    "name": null,
+    "category": null,
+    "collection": null,
+    "price_cents": null,
+    "previously_removed_or_gated": null
+  },
+  "supplier": {
+    "name": null,
+    "verified_saved_design_ids": [],
+    "blank_or_style": null,
+    "fulfillment_mode": "UNVERIFIED",
+    "source_reference": null
+  },
+  "variants": [
+    {
+      "site_color": null,
+      "supplier_color": null,
+      "size": null,
+      "supplier_sku": null,
+      "sku_source_reference": null,
+      "image_coverage": "UNVERIFIED",
+      "available_for_sale": false
+    }
+  ],
+  "imagery": {
+    "required_views_by_color": {},
+    "verified_assets": [],
+    "missing_views": [],
+    "physical_sample_confirmed": false,
+    "layout_policy": "preserve_existing_until_separate_owner_approval"
+  },
+  "commerce_checks": {
+    "cost_verified": false,
+    "margin_verified": false,
+    "checkout_price_matches": false,
+    "fulfillment_route_verified": false,
+    "real_order_test_authorized": false
+  },
+  "quality": {
+    "tests": [],
+    "visual_preview": null,
+    "rollback_plan": null,
+    "open_blockers": []
+  },
+  "handoff": {
+    "implementation_owner": null,
+    "branch": null,
+    "commit": null,
+    "pr": null,
+    "other_agent_review": null,
+    "shared_coordination_ref": "refs/heads/goal/agent-coordination"
+  },
+  "contract_version": "2.0"
+}
