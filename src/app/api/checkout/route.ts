@@ -249,6 +249,14 @@ export async function POST(req: NextRequest) {
   // Advertising consent and matching data, captured with the purchase so
   // the webhook can send (or not send) the server-side Purchase event.
   metadata.consent = consent;
+  const analyticsSession = req.cookies.get('cc_session')?.value ?? '';
+  const analyticsChannel = req.cookies.get('cc_channel')?.value ?? '';
+  if (consent === 'granted' && /^[a-f0-9-]{36}$/.test(analyticsSession)
+    && ['direct','search','social','paid','email','referral'].includes(analyticsChannel)) {
+    metadata.cc_session = analyticsSession;
+    metadata.cc_channel = analyticsChannel;
+    metadata.cc_verification = req.cookies.get('cc_verification')?.value === '1' ? '1' : '0';
+  }
   const ip = clientIpFrom({ get: (n) => req.headers?.get?.(n) ?? null });
   if (ip && consent === "granted") metadata.ip = ip.slice(0, 100);
   const ua = req.headers?.get?.("user-agent");

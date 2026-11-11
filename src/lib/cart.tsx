@@ -1,4 +1,5 @@
 "use client";
+import { trackWebsiteEvent } from './website-events-client';
 
 import {
   createContext,
@@ -124,6 +125,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [items, hydrated]);
 
   const addItem = useCallback((item: Omit<CartItem, "key">) => {
+    trackWebsiteEvent('session_started');
+    trackWebsiteEvent('bag_item_added');
     const key = makeKey(item);
     setItems((prev) => {
       const existing = prev.find((i) => i.key === key);

@@ -46,7 +46,18 @@ check('checkout differs only by the explicit renovation/preview refusal', () => 
     'import { storeClosed } from "@/lib/store-status";\n',
     '  if (MIGRATION_PREVIEW || storeClosed()) return NextResponse.json({ error: "The store is closed for renovation. Existing orders remain supported." }, { status: 503 });\n',
   ];
+  const analyticsBlock = `  const analyticsSession = req.cookies.get('cc_session')?.value ?? '';
+  const analyticsChannel = req.cookies.get('cc_channel')?.value ?? '';
+  if (consent === 'granted' && /^[a-f0-9-]{36}$/.test(analyticsSession)
+    && ['direct','search','social','paid','email','referral'].includes(analyticsChannel)) {
+    metadata.cc_session = analyticsSession;
+    metadata.cc_channel = analyticsChannel;
+    metadata.cc_verification = req.cookies.get('cc_verification')?.value === '1' ? '1' : '0';
+  }
+`;
+  assert.equal(checkout.split(analyticsBlock).length, 2, 'Only the reviewed analytics metadata block is permitted');
   const stripAdditions = source => {
+    source = source.replace(analyticsBlock, '');
     for (const addition of additions) {assert.equal(source.split(addition).length, 2);source = source.replace(addition,'');}
     return source;
   };
