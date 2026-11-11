@@ -19,6 +19,7 @@ import "@/v84/mobile-header.css";
 import "@/v84/help-pages.css";
 import { organizationJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import { CartProvider } from "@/lib/cart";
+import { WebsiteAnalytics } from "@/components/WebsiteAnalytics";
 import Shell from "@/v84/Shell";
 import { BRAND_SEARCH_TITLE, BRAND_SEARCH_DESCRIPTION } from "@/v84/brand-metadata";
 
@@ -98,6 +99,7 @@ export default function RootLayout({
         <style>{'[data-goool-consent]{display:none}html[data-goool-prompt="true"] [data-goool-consent]{display:block}[data-goool-us]{display:none}html[data-goool-region="US"] [data-goool-us]{display:block}html[data-goool-region="US"] [data-goool-nonus]{display:none}'}</style>
       </head>
       <body>
+        <WebsiteAnalytics />
         {/* Organization and WebSite, emitted once for the whole site.
             Product schema lives on the product pages. */}
         <script

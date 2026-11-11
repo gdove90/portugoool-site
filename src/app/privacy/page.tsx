@@ -27,6 +27,7 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-lg font-semibold text-ink">How we use it</h2>
+          <p className="mt-2">When measurement is allowed by your cookie choice, we use a random visit identifier to measure traffic sources, product views, bag additions and completed checkouts in our private business dashboard. A visit ends after 30 minutes of inactivity. Supabase stores these pseudonymous measurements. We exclude Global Privacy Control and Do Not Track browsers, and do not send names, emails, addresses or payment details to this dashboard.</p>
           <p className="mt-2">
             To produce and ship your order, send order updates, respond to
             support requests, and announce new drops if you opted in.
