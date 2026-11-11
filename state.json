@@ -29,16 +29,7 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
-    "acquired_at": "2026-11-11T21:07:00.968533+00:00",
-    "approval": "Owner 2026-11-11 authorizes missing live website tracking and 24/7 Command Center analytics, dashboard stays draft",
-    "branch": "codex/command-center-tracking",
-    "engine": "codex",
-    "session": "codex-cc-analytics-20261111",
-    "start_commit": "bd145011d07dd10131732a71a89226adbfd773ad",
-    "task": "command-center-analytics-20261111",
-    "token_hash": "78536c0e559f01ba436d9f0d8c4a70275a21fa7ac7a4f1a8cc435dbc93abb99c"
-  },
+  "holder": null,
   "last_intervention": {
     "approval": "Owner reply 2026-11-11: whatever you need to do to get command center fully live and functioning 24/7 do it",
     "at": "2026-11-11T21:05:59.502318+00:00",
@@ -54,15 +45,15 @@
     "reason": "Owner authorized takeover in response to stale writer lock question for Command Center analytics; preserve existing remote branch and all other worktrees"
   },
   "last_released_holder": {
-    "acquired_at": "2026-11-11T21:05:59.505944+00:00",
-    "approval": "Owner reply 2026-11-11: whatever you need to do to get command center fully live and functioning 24/7 do it",
-    "branch": "codex/goal-product-photo-background-20261110",
+    "acquired_at": "2026-11-11T21:07:00.968533+00:00",
+    "approval": "Owner 2026-11-11 authorizes missing live website tracking and 24/7 Command Center analytics, dashboard stays draft",
+    "branch": "codex/command-center-tracking",
     "engine": "codex",
     "session": "codex-cc-analytics-20261111",
-    "start_commit": "3942a1b73e151f560bb1775dcd9295269efe6ac6",
-    "task": "goal-product-photo-background-20261110"
+    "start_commit": "bd145011d07dd10131732a71a89226adbfd773ad",
+    "task": "command-center-analytics-20261111"
   },
-  "revision": 131,
+  "revision": 132,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-11T21:33:11.903103+00:00"
+  "updated_at": "2026-11-11T21:33:15.533564+00:00"
 }
