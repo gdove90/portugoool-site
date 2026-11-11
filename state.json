@@ -23,16 +23,7 @@
     ],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
-    "acquired_at": "2026-11-11T21:05:59.505944+00:00",
-    "approval": "Owner reply 2026-11-11: whatever you need to do to get command center fully live and functioning 24/7 do it",
-    "branch": "codex/goal-product-photo-background-20261110",
-    "engine": "codex",
-    "session": "codex-cc-analytics-20261111",
-    "start_commit": "3942a1b73e151f560bb1775dcd9295269efe6ac6",
-    "task": "goal-product-photo-background-20261110",
-    "token_hash": "1515dec00e056345fb5d798e9505c01b1aa437f519e109d1cca129f23585b57f"
-  },
+  "holder": null,
   "last_intervention": {
     "approval": "Owner reply 2026-11-11: whatever you need to do to get command center fully live and functioning 24/7 do it",
     "at": "2026-11-11T21:05:59.502318+00:00",
@@ -48,15 +39,15 @@
     "reason": "Owner authorized takeover in response to stale writer lock question for Command Center analytics; preserve existing remote branch and all other worktrees"
   },
   "last_released_holder": {
-    "acquired_at": "2026-11-09T07:08:06.660850+00:00",
-    "approval": "Owner requests 2026-11-09: rename all women\u2019s TEMPO product titles on the website and update matching Apliiq/Tapstitch product title fields to those names; lighter T-shirts named Daily Contour Tee. Change titles only.",
-    "branch": "codex/tempo-womens-product-names-20261109",
+    "acquired_at": "2026-11-11T21:05:59.505944+00:00",
+    "approval": "Owner reply 2026-11-11: whatever you need to do to get command center fully live and functioning 24/7 do it",
+    "branch": "codex/goal-product-photo-background-20261110",
     "engine": "codex",
-    "session": "codex-20261109-tempo-names-a0b7",
-    "start_commit": "fc5adec681f20e64756d5ff3a5711925a0560c52",
-    "task": "tempo-womens-product-names-20261109"
+    "session": "codex-cc-analytics-20261111",
+    "start_commit": "3942a1b73e151f560bb1775dcd9295269efe6ac6",
+    "task": "goal-product-photo-background-20261110"
   },
-  "revision": 128,
+  "revision": 129,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-11T21:06:23.647919+00:00"
+  "updated_at": "2026-11-11T21:06:29.287167+00:00"
 }
