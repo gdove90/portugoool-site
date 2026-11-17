@@ -26,16 +26,7 @@
     "unresolved": [],
     "worktree_state": "clean_committed_and_pushed"
   },
-  "holder": {
-    "acquired_at": "2026-11-17T01:33:34.417608+00:00",
-    "approval": "Owner 2026-11-16 requests Dove-style live analytics and immediate deployment while preserving existing features",
-    "branch": "codex/live-presence-20261116",
-    "engine": "codex",
-    "session": "codex-cc-presence-20261116",
-    "start_commit": "dfa0bdb92118cd702c82f0a65c2b4f3fb0343930",
-    "task": "command-center-presence",
-    "token_hash": "60805d8365c587b91a0f46705265d8924d365ba9512233965be76720b2588cfd"
-  },
+  "holder": null,
   "last_intervention": {
     "approval": "Owner reply 2026-11-11: whatever you need to do to get command center fully live and functioning 24/7 do it",
     "at": "2026-11-11T21:05:59.502318+00:00",
@@ -51,15 +42,15 @@
     "reason": "Owner authorized takeover in response to stale writer lock question for Command Center analytics; preserve existing remote branch and all other worktrees"
   },
   "last_released_holder": {
-    "acquired_at": "2026-11-11T21:07:00.968533+00:00",
-    "approval": "Owner 2026-11-11 authorizes missing live website tracking and 24/7 Command Center analytics, dashboard stays draft",
-    "branch": "codex/command-center-tracking",
+    "acquired_at": "2026-11-17T01:33:34.417608+00:00",
+    "approval": "Owner 2026-11-16 requests Dove-style live analytics and immediate deployment while preserving existing features",
+    "branch": "codex/live-presence-20261116",
     "engine": "codex",
-    "session": "codex-cc-analytics-20261111",
-    "start_commit": "bd145011d07dd10131732a71a89226adbfd773ad",
-    "task": "command-center-analytics-20261111"
+    "session": "codex-cc-presence-20261116",
+    "start_commit": "dfa0bdb92118cd702c82f0a65c2b4f3fb0343930",
+    "task": "command-center-presence"
   },
-  "revision": 134,
+  "revision": 135,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-17T01:55:52.891064+00:00"
+  "updated_at": "2026-11-17T01:55:58.972328+00:00"
 }
