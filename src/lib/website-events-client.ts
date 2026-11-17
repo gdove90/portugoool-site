@@ -1,7 +1,8 @@
 'use client';
+import { campaignFields, campaignTags, type CampaignTags } from './campaign-tags';
 import { marketingConsent } from './meta-pixel';
 
-type Session = { id: string; channel: string; last: number; started: number; verification: boolean };
+type Session = { id: string; channel: string; last: number; started: number; verification: boolean; tags?: CampaignTags };
 const key = 'goal_website_session_v1';
 const channels = ['direct', 'search', 'social', 'paid', 'email', 'referral'];
 export function websiteSession(): Session | null {
@@ -11,24 +12,34 @@ export function websiteSession(): Session | null {
       sessionStorage.removeItem(key);
       document.cookie = 'cc_session=; Max-Age=0; Path=/; Secure; SameSite=Lax';
       document.cookie = 'cc_channel=; Max-Age=0; Path=/; Secure; SameSite=Lax';
+      document.cookie = 'cc_verification=; Max-Age=0; Path=/; Secure; SameSite=Lax';
+      for (const field of campaignFields) document.cookie = `cc_utm_${field}=; Max-Age=0; Path=/; Secure; SameSite=Lax`;
       return null;
     }
     const now = Date.now();
+    const params = new URLSearchParams(location.search);
+    const tags = campaignTags(field => params.get(`utm_${field}`));
     let s: Session | null = JSON.parse(sessionStorage.getItem(key) ?? 'null');
     if (!s || (new URLSearchParams(location.search).get('cc_verify') === '1' && !s.verification) || !/^[a-f0-9-]{36}$/.test(s.id) || !channels.includes(s.channel) || now < s.last || now - s.last > 1800000) {
-      const medium = new URLSearchParams(location.search).get('utm_medium') ?? '';
+      const medium = tags.medium ?? '';
       let ref = ''; try { ref = new URL(document.referrer).hostname; } catch { /* Direct. */ }
       const channel = /^(cpc|ppc|paid|paid_social|display)$/.test(medium) ? 'paid' : medium === 'email' ? 'email'
         : /^(social|social_media)$/.test(medium) || /(^|\.)(instagram\.com|facebook\.com|tiktok\.com|t\.co|x\.com|youtube\.com)$/.test(ref) ? 'social'
         : medium === 'organic' || /(^|\.)(google\.[a-z.]+|bing\.com|duckduckgo\.com|search\.yahoo\.com)$/.test(ref) ? 'search'
         : ref && !/(^|\.)(goalathletics\.shop|goool\.shop|portugoool\.com)$/.test(ref) ? 'referral' : 'direct';
-      s = { id: crypto.randomUUID(), channel, last: now, started: now, verification: new URLSearchParams(location.search).get('cc_verify') === '1' };
+      s = { id: crypto.randomUUID(), channel, last: now, started: now, verification: params.get('cc_verify') === '1' };
     }
+    if ((!s.tags || Object.keys(s.tags).length === 0) && Object.keys(tags).length > 0) s.tags = tags;
     s.last = now;
     sessionStorage.setItem(key, JSON.stringify(s));
     document.cookie = `cc_session=${s.id}; Max-Age=1800; Path=/; Secure; SameSite=Lax`;
     document.cookie = `cc_channel=${s.channel}; Max-Age=1800; Path=/; Secure; SameSite=Lax`;
     document.cookie = `cc_verification=${s.verification ? '1' : '0'}; Max-Age=1800; Path=/; Secure; SameSite=Lax`;
+    const saved = campaignTags(field => s?.tags?.[field]);
+    for (const field of campaignFields) {
+      const tag = saved[field];
+      document.cookie = `cc_utm_${field}=${tag ?? ''}; Max-Age=${tag ? 1800 : 0}; Path=/; Secure; SameSite=Lax`;
+    }
     return s;
   } catch { return null; }
 }

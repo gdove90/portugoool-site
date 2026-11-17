@@ -97,8 +97,8 @@ function loader(env, mocks) {
       if (['crypto', 'node:crypto', 'fs', 'path'].includes(name)) return require(name);
       throw new Error('Unexpected provider dependency: ' + name);
     }
-    vm.runInNewContext(code, { module, exports:module.exports, require:req, process:{env}, Buffer, URL, Date, AbortSignal,
-      fetch() { throw new Error('No network is permitted in Halo integration tests.'); },
+    vm.runInNewContext(code, { module, exports:module.exports, require:req, process:{env}, Buffer, URL, URLSearchParams, Date, AbortSignal, Response,
+      fetch(...args) { if (mocks.fixtureFetch) return mocks.fixtureFetch(...args); throw new Error('No network is permitted in Halo integration tests.'); },
       console:{log(){},error(){}}, setTimeout, clearTimeout }, {filename:full});
     return module.exports;
   }
@@ -180,6 +180,42 @@ async function main() {
   async function start(color='Black',size='M',quantity=1) {
     const response=await checkout.POST(req({items:[cart(color,size,quantity)]}));assert.equal(response.status,200,JSON.stringify(response));return state.sessions.at(-1);
   }
+
+  await check('Campaign tags survive checkout and scheduled Stripe verification into a paid order record',async()=>{
+    await pg.exec('create role anon; create role authenticated; create role service_role;');
+    await pg.exec(fs.readFileSync('supabase/migrations/20261117022609_goal_order_attribution.sql','utf8'));
+    const cookies = {cc_session:'11111111-1111-4111-8111-111111111111',cc_channel:'paid',cc_verification:'0',
+      cc_utm_campaign:'Holiday-Drop',cc_utm_source:'Instagram',cc_utm_medium:'Paid_Social'};
+    async function makeCheckout(tags, grant) {
+      const request=req({items:[cart('Black','M')],consent:grant});
+      request.cookies.get=name=>tags[name]===undefined ? undefined : {value:tags[name]};
+      assert.equal((await checkout.POST(request)).status,200);
+      return state.sessions.at(-1);
+    }
+    const params=await makeCheckout(cookies,'granted');
+    assert.equal(params.metadata.cc_utm_campaign,'holiday-drop');
+    assert.equal(params.metadata.cc_utm_source,'instagram');
+    assert.equal(params.metadata.cc_utm_medium,'paid_social');
+    assert.equal((await makeCheckout(cookies,'denied')).metadata.cc_utm_campaign,undefined);
+    const s=event(params,{session:{id:'cs_live_CampaignFixture',livemode:true,mode:'payment',success_url:params.success_url}});
+    assert.equal((await deliver(s)).status,200);
+    mocks['../../src/lib/website-events-server']={sendWebsiteEvent:async()=>true};
+    env.CC_EVENTS_TOKEN='fixture-token';
+    mocks.fixtureFetch=async url=>{
+      assert.match(url,/^https:\/\/api\.stripe\.com\/v1\/checkout\/sessions\?/);
+      return {ok:true,json:async()=>({data:[{...s.data.object,created:s.created}],has_more:false})};
+    };
+    const run=load('netlify/functions/website-analytics.mts').default;
+    await run(); await run();
+    const result=await pg.query(`select m.campaign,m.source,m.medium,m.channel,m.verification from orders o
+      join order_checkout_measurements m on m.session_hash=encode(sha256(convert_to(o.stripe_session_id,'UTF8')),'hex')
+      where o.stripe_session_id=$1 and o.paid_at is not null`, [s.data.object.id]);
+    assert.deepEqual(result.rows,[{campaign:'holiday-drop',source:'instagram',medium:'paid_social',channel:'paid',verification:false}]);
+    const grants=await pg.query("select has_table_privilege('anon','order_checkout_measurements','SELECT') as allowed");
+    assert.equal(grants.rows[0].allowed,false);
+    delete mocks.fixtureFetch;
+    state.alerts.clear();
+  });
 
   await check('All 20 exact supplier references and $38 server prices survive Checkout, signed payment, persisted rows and manual handoff',async()=>{
     for(const [color,design] of Object.entries(EXPECTED))for(const size of SIZES){

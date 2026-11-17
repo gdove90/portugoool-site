@@ -1,3 +1,4 @@
+import { campaignFields, campaignTags } from "@/lib/campaign-tags";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { MIGRATION_PREVIEW } from "@/lib/migration-preview";
@@ -265,6 +266,14 @@ export async function POST(req: NextRequest) {
   if (fbp && consent === "granted") metadata.fbp = fbp.slice(0, 400);
   const fbc = req.cookies?.get?.("_fbc")?.value;
   if (fbc && consent === "granted") metadata.fbc = fbc.slice(0, 400);
+  if (consent === 'granted' && req.headers?.get?.("dnt") !== "1" && metadata.cc_session) {
+    const tags = campaignTags(field => req.cookies.get(`cc_utm_${field}`)?.value);
+    for (const field of campaignFields) {
+      if (Object.keys(metadata).length >= 50) break;
+      const tag = tags[field];
+      if (tag) metadata[`cc_utm_${field}`] = tag;
+    }
+  }
   if (itemMetadataCount > 40) {
     return NextResponse.json(
       { error: "Cart is too large for a single checkout. Please split it up." },
