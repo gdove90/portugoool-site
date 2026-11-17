@@ -1,32 +1,29 @@
 {
   "checkpoint": {
     "approved_scope": [
-      "Owner-authorized website analytics and Command Center reporting"
+      "Owner November 16: Dove-style live analytics and immediate deployment preserving existing features"
     ],
-    "branch": "codex/command-center-tracking",
+    "branch": "codex/live-presence-20261116",
     "completed": [
-      "PR 100 merged; production dfa0bdb deployed",
-      "Browser session, product and bag events observed centrally with verification=true",
-      "Read-only scheduled Stripe checkout reconciliation deployed"
+      "PR 101 merged as 3e188f7; production deploy 6afbb03f04a5d64d3c01194d",
+      "Browser heartbeat verified centrally with verification=true; repeated updates preserve one row and first_seen",
+      "No visible layout or commerce changes"
     ],
     "contract_version": "2.0",
     "external_effects": [
-      "GOAL production deploy 6af4dd7aefddab8a65931acf",
-      "Functions-only production CC_EVENTS_TOKEN set"
+      "GOAL production analytics release 6afbb03f04a5d64d3c01194d"
     ],
-    "head_commit": "883aee13c168c9db367e764f1297f22402e7351d",
-    "next_action": "Monitor normal consented traffic; analytics task complete and lock available",
+    "head_commit": "3b12f6a5d0531f5811e93482cdcad0c1934087bb",
+    "next_action": "GOAL task deployed and verified; lock available",
     "schema": "goal-agent-handoff-v2",
-    "task_id": "command-center-analytics-20261111",
+    "task_id": "command-center-presence",
     "tests": [
       "TypeScript passes",
+      "Nine shared presence privacy/proxy tests pass",
       "Website analytics tests pass",
-      "Payment preservation checks pass for 18 protected files"
+      "18 protected commerce files match deployed baseline dfa0bdb"
     ],
-    "unresolved": [
-      "Legacy halo-checkout test expects stale 34-dollar price; production catalog is unchanged at 24 dollars",
-      "No real purchase was made during verification"
-    ],
+    "unresolved": [],
     "worktree_state": "clean_committed_and_pushed"
   },
   "holder": {
@@ -62,7 +59,7 @@
     "start_commit": "bd145011d07dd10131732a71a89226adbfd773ad",
     "task": "command-center-analytics-20261111"
   },
-  "revision": 133,
+  "revision": 134,
   "schema": "goal-agent-coordination-v2",
-  "updated_at": "2026-11-17T01:33:34.417608+00:00"
+  "updated_at": "2026-11-17T01:55:52.891064+00:00"
 }
