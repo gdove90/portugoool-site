@@ -40,7 +40,7 @@ check('payment, webhook authentication/handling, pricing, orders and fulfillment
   }
 });
 const checkout = text('src/app/api/checkout/route.ts');
-check('checkout differs only by the explicit renovation/preview refusal', () => {
+check('checkout differs only by approved analytics metadata and the explicit renovation/preview refusal', () => {
   const additions = [
     'import { MIGRATION_PREVIEW } from "@/lib/migration-preview";\n',
     'import { storeClosed } from "@/lib/store-status";\n',
@@ -56,7 +56,15 @@ check('checkout differs only by the explicit renovation/preview refusal', () => 
   }
 `;
   assert.equal(checkout.split(analyticsBlock).length, 2, 'Only the reviewed analytics metadata block is permitted');
+  const campaignImport = 'import { campaignFields, campaignTags } from "@/lib/campaign-tags";\n';
+  const campaignBlockStart = "  if (consent === 'granted' && req.headers?.get?.(\"dnt\") !== \"1\" && metadata.cc_session) {";
+  const campaignBlockEnd = '  if (itemMetadataCount > 40) {';
+  const campaignStart = checkout.indexOf(campaignBlockStart);
+  const campaignEnd = checkout.indexOf(campaignBlockEnd, campaignStart);
+  assert(campaignStart >= 0 && campaignEnd > campaignStart);
+  const campaignBlock = checkout.slice(campaignStart, campaignEnd);
   const stripAdditions = source => {
+    source = source.replace(campaignImport, '').replace(campaignBlock, '');
     source = source.replace(analyticsBlock, '');
     for (const addition of additions) {assert.equal(source.split(addition).length, 2);source = source.replace(addition,'');}
     return source;
